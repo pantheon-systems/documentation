@@ -10,3 +10,9 @@ walkthrough:
 ![Alt text](/path/to/img.jpg "Optional title")
 
 `terminusdrushcli commands`
+
+## 2. Imperative instruction
+
+![Alt text](/path/to/img.jpg "Optional title")
+
+`terminusdrushcli commands`
