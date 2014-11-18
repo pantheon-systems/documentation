@@ -5,7 +5,7 @@ problems:
 slides_embed:
 video: 
 ---
-Enter overview text here. This should include prerequistes, context, and the overall
+Overview text
 
 ### Before You Begin
  -  If this problem type has conditions that create variants, list the applicable set of conditions here. Create new guides for variants on the overall process.
