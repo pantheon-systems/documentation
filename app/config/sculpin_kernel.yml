@@ -1,16 +1,5 @@
 sculpin:
 sculpin_content_types:
-    posts:
-        permalink: blog/:year/:month/:day/:slug_title/
-    pages:
-
-    sites:
-        type: path
-        path: _sites
-        singular_name: site
-        enabled: true
-        taxonomies:
-            - framework
 
     guides:
         type: path
@@ -19,19 +8,18 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - parent_guide
-            - tags
             - framework
-        permalink: guide-to/:slug_title/
+        permalink: guides/:slug_title/
 
-    procedures:
+    common-tasks:
         type: path
-        path: _procedures
-        singular_name: procedure
+        path: _common-tasks
+        singular_name: common-task
         enabled: true
         taxonomies:
             - tools
             - framework
-        permalink: how-to/:slug_title/
+        permalink: common-tasks/:slug_title/
 
     tools:
         type: path
@@ -40,25 +28,13 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - framework
-        permalink: tool/:slug_title/
+        permalink: tools/:slug_title/
 
-    errors:
+    sites:
         type: path
-        path: _errors
-        singular_name: error
+        path: _sites
+        singular_name: site
         enabled: true
         taxonomies:
-            - tools
             - framework
-        permalink: error/:slug_title/
-
-    questions:
-        type: path
-        path: _questions
-        singular_name: question
-        enabled: true
-        taxonomies:
-            - tools
-            - errors
-            - guides
-        permalink: question/:slug_title/
+        permalink: sites/:slug_title/
