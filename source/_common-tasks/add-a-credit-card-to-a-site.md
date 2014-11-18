@@ -10,11 +10,9 @@ filename: source/_docs/add-a-credit-card-to-a-site.md
 
 2. Select **Settings**, then **Billing**.
 
-
 ![Settings >> Billling >> Add Credit Card](https://pantheon-systems.desk.com/customer/portal/attachments/305319)
 
 3. Enter the credit card information, and click **Add Card**.
-
 
 ![Click Plan, Fill out Card Info](https://pantheon-systems.desk.com/customer/portal/attachments/87048)
 
@@ -34,7 +32,7 @@ For example, when adding SSL you will be prompted to update your site's plan:
  ![To enable SSL - choose at least a Pro plan](https://pantheon-systems.desk.com/customer/portal/attachments/309237)
 
 
-Clicking the highlighted message will take you to the Settings page to either select a plan or proceed to Billing to enter your billing information.
+Clicking the message will take you to the Settings page to either select a plan or proceed to Billing to enter your billing information.
 
 <!--<p><strong>NOTE: In order to change the actively billed card for a specific site, you will need already have <a href="http://helpdesk.getpantheon.com/customer/portal/articles/688411-adding-a-credit-card-to-your-account">a card associated with your user account.</a> If you do not have a credit card on your account you will not have a payment method available in the dropdown.</strong></p>-->
 ### Additional Resources
