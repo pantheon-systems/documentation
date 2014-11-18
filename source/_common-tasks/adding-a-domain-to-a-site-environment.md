@@ -18,7 +18,7 @@ For general information about launching your site, see [Going Live and Launching
   
   
 
-2. On the Domain Setup tab, enter the domain you want associated with that environment, and click **Add New Domain to the ... Environment** button.  
+2. On the Domain Setup tab, enter the domain you want associated with that environment, and click **Add New Domain to the ... Environment**.  
   
   
 
