@@ -1,15 +1,13 @@
 ---
-title: Doing something with something else under conditions
-parent_guide:
-problems:
+title: Add the goal, using a gerund phrase
+parent_guide: developing
+problems: 
 slides_embed:
-video:
+video: 
 ---
-## Overview
-
 Enter overview text here. This should include prerequistes, context, and the overall
-###Goal:
-###Conditions
+
+### Before You Begin
  -  If this problem type has conditions that create variants, list the applicable set of conditions here. Create new guides for variants on the overall process.
 
 [TOC]
@@ -17,17 +15,19 @@ Enter overview text here. This should include prerequistes, context, and the ove
 <copy this block and follow its structure for each phase in the approach.>
 
 ---------------
-## Problem Solving Phase 1
-####Goal: State phase goal here
+## 1: Goal
 
 <copy this block for each relevant condition in the phase>
-####Rules of Thumb
-If you want to __condition__
+###If you want to __condition__
+
 You should:
  - imperative statement 1
  - imperative statement 2
 
 #### Watch out for
+
+Warning conditions and steps to remediate
 ----
-###Sub-phase 1.1
+### 1.1
+
 <paste the phase template here (goals/rules of thumb)>
