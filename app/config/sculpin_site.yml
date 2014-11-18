@@ -1,0 +1,5 @@
+# The contents of this file are parsed and made available as
+# via `site.*`. So for example, {{ site.title }} can be used
+# in a template to get the contents of the `title` key.
+title: Pantheon Documentation
+subtitle: Instruction, support, and guidance for building dynamic sites on the Pantheon platform

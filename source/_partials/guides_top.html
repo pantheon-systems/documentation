@@ -1,0 +1,9 @@
+; @TODO Edit for statement to retrieve only top-level guides
+{% for doc in data.guides %}
+  <ul>
+    <div class="row portal-row" style="margin-bottom: 20px;">
+        <h3><li><a href="{{ guide.url }}">{{ guide.title }}</a></h3
+        <p>{% guide.description}</p></li>
+    <div class="col-sm-4">
+  </ul>
+{% endfor %}

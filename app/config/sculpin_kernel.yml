@@ -1,0 +1,64 @@
+sculpin:
+sculpin_content_types:
+    posts:
+        permalink: blog/:year/:month/:day/:slug_title/
+    pages:
+
+    sites:
+        type: path
+        path: _sites
+        singular_name: site
+        enabled: true
+        taxonomies:
+            - framework
+
+    guides:
+        type: path
+        path: _guides
+        singular_name: guide
+        enabled: true
+        taxonomies:
+            - parent_guide
+            - tags
+            - framework
+        permalink: guide-to/:slug_title/
+
+    procedures:
+        type: path
+        path: _procedures
+        singular_name: procedure
+        enabled: true
+        taxonomies:
+            - tools
+            - framework
+        permalink: how-to/:slug_title/
+
+    tools:
+        type: path
+        path: _tools
+        singular_name: tool
+        enabled: true
+        taxonomies:
+            - framework
+        permalink: tool/:slug_title/
+
+    errors:
+        type: path
+        path: _errors
+        singular_name: error
+        enabled: true
+        taxonomies:
+            - tools
+            - framework
+        permalink: error/:slug_title/
+
+    questions:
+        type: path
+        path: _questions
+        singular_name: question
+        enabled: true
+        taxonomies:
+            - tools
+            - errors
+            - guides
+        permalink: question/:slug_title/
