@@ -1,5 +1,5 @@
 ---
-title: Content
+title: Gerund form of the action
 tool:
   -
 how-to_video:
