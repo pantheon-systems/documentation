@@ -100,13 +100,13 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
 * Avoid abbreviating common words. It is preferable to spell it out unless there are major space limitations, such as in a table. 
 
-**Example**: Use account (not acct.) and number (not no.).
+  **Example**: Use account (not acct.) and number (not no.).
 
 * Use abbreviations and acronyms only when the outcome helps the reader and simplifies the experience. 
 
 * If it is not a commonly used acronym, spell it out at out at least once per page and abbreviate in parentheses afterward. 
 
-**Example**: Drupal Runtime Optimized Process (DROPs)
+  **Example**: Drupal Runtime Optimized Process (DROPs)
 
 ## Capitalization
 
@@ -225,7 +225,7 @@ When using headings or subheadings to group a large amount of text or instructio
 
 **Example**: 
 
-#### Merge Core Releases.
+**Merge Core Releases.**
 
 Upstream maintainers update Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with: 
 
