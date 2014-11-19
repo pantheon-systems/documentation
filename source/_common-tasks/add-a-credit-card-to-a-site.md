@@ -5,16 +5,8 @@ filename: source/_docs/add-a-credit-card-to-a-site.md
 1. From your user dashboard, choose the site you want to add a card to.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/305317)
 2. Select **Settings**, then **Billing**.
-<<<<<<< HEAD
-=======
-
->>>>>>> d8afcc674ee6077e295911cca1013442c4ae3080
 ![Settings >> Billling >> Add Credit Card](https://pantheon-systems.desk.com/customer/portal/attachments/305319)
 3. Enter the credit card information, and click **Add Card**.
-<<<<<<< HEAD
-=======
-
->>>>>>> d8afcc674ee6077e295911cca1013442c4ae3080
 ![Click Plan, Fill out Card Info](https://pantheon-systems.desk.com/customer/portal/attachments/87048)
 Once you have successfully entered in the payment information, you will be redirected to the Plan tab to select a plan for your site. Learn more about [pricing and features](https://www.getpantheon.com/pricing).
 4. Select a plan.
