@@ -6,7 +6,7 @@
 
 # About This Guide
 
-This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the glossary for an alphabetical listing of commonly used words, terms, UI elements, and titles.
+This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit) for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
 For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.com). 
 
@@ -42,13 +42,13 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 
 * Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent. For instance,  when referring to a button or page name in technical documentation. 
 
-## Content Types for the Web
+## Web Content Types 
 
 ### Fonts
 
 The preferred font at Pantheon is Futura Medium and Open Sans. Body font should always use Open Sans. 
 
-It is best practice to limit the amount of fonts used in a document and remain consistent throughout the entire doc.
+The best practice is to limit the amount of fonts used in a document and remain consistent throughout the entire document.
 
 ### User Interface Images/Screenshots
 
@@ -146,7 +146,7 @@ Capitalize the proper noun Git in sentences, but leave the ‘g’ lowercase in 
 
 **Example:**
 
-I work with Git on my local machine.
+I use Git on my local machine.
 
 Run "`git add`".
 
@@ -197,13 +197,11 @@ How do I change my Pantheon password?
 
 1. Select **Sites & Accounts **from the user account drop-down menu.
 
-	
+2. Click the **Account** tab.
 
-1. Click the **Account** tab.
+3. Select **Change Password**.
 
-2. Select **Change Password**.
-
-3. Enter the information, and click **Save**. 
+4. Enter the information, and click **Save**. 
 
 ## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0)
 
@@ -266,11 +264,11 @@ When writing procedures, steps should be written in parallel style, as sentences
 
 **Example**:
 
-Create your site. 
+Create Your Site. 
 
-Choose your framework.
+Choose Your Framework.
 
-Visit the Dev environment.
+Visit the Dev Environment.
 
 ## Notes
 
