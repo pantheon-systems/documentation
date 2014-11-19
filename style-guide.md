@@ -229,7 +229,7 @@ When using headings or subheadings to group a large amount of text or instructio
 
 **Example**: 
 
-## 1. Merge Core Releases.
+#### 1. Merge Core Releases.
 
 Upstream maintainers update Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with: 
 
@@ -241,7 +241,7 @@ or
 
 ## Listing Prerequisites (Before You Begin)
 
-If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Format “Before You Begin” as a header.
+If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as a header.
 
 **
 ****Example**:
@@ -261,7 +261,6 @@ In technical documentation or the UI, this can be a rollover glossary definition
 
 See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document  may or may not include all of those items.
 
-	
 
 When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing). 
 
@@ -339,7 +338,7 @@ The link can:
 
 One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr).
 
-Best practices:
+Best Practices:
 
 * Link the term or concept only, not the entire sentence.
 
@@ -359,7 +358,7 @@ For documents that have a large amount of content (more than two pages), include
 
 ## Titles
 
-For titles of helpdesk articles and walkme files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for.
+For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for.
 
 **Examples**:
 
