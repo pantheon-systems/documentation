@@ -1,14 +1,12 @@
 **DOCUMENTATION STYLE GUIDE**
 
 
-
-[[TOC]]
-
 # About This Guide
 
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit) for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
 For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.com). 
+
 
 ## Writing Style
 
@@ -227,7 +225,7 @@ When using headings or subheadings to group a large amount of text or instructio
 
 **Example**: 
 
-#### 1. Merge Core Releases.
+#### Merge Core Releases.
 
 Upstream maintainers update Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with: 
 
@@ -288,7 +286,7 @@ Incorrect: Joe has 9 sites and needs to add twelve more.
 
 ## Punctuation
 
-Ampersand (&):   Use "&" only in headings where items are grouped or in proper names. Do not use in sentences.
+Ampersand (&): Use "&" only in headings where items are grouped or in proper names. Do not use in sentences.
 
 Colon (:) introduces lists or series.   
 
@@ -395,64 +393,6 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 ### Tool Tabs
 
-# Document Revision History
-
-<table>
-  <tr>
-    <td>Version</td>
-    <td>Date</td>
-    <td>Description</td>
-    <td>Initials</td>
-  </tr>
-  <tr>
-    <td>0.1</td>
-    <td>10/6/14</td>
-    <td>Initial Creation</td>
-    <td>BDM</td>
-  </tr>
-  <tr>
-    <td>0.2</td>
-    <td>10/7/14</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.3</td>
-    <td>10/9/14</td>
-    <td>Revision</td>
-    <td>BDM</td>
-  </tr>
-  <tr>
-    <td>0.4</td>
-    <td>10/17/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.5</td>
-    <td>10/20/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.6</td>
-    <td>10/21/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.7</td>
-    <td>10/24/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.8</td>
-    <td>11/03/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-</table>
 
 ## Resources 
 
