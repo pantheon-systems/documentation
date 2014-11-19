@@ -3,10 +3,9 @@
 
 # About This Guide
 
-This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit) for an alphabetical listing of commonly used words, terms, UI elements, and titles.
+This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
 For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.com). 
-
 
 ## Writing Style
 
@@ -94,7 +93,7 @@ Use headings in a logical manner. The system we use should generate these from t
 
 * Provide alt text for all images so that the screen reader can interpret the purpose of the image and convey that to the user. The alt text should include any content shown in the image so that screen reader can read it to the user. 
 
-For more information regarding accessibility guidelines, see [W3C Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html#contents).
+For more information regarding accessibility guidelines, see [W3C Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html#contents "W3C, Guidelines").
 
 ## Acronyms and Abbreviations
 
@@ -161,7 +160,7 @@ When linking to an article in a sentence, use the exact title of the article if 
 For help with SSH keys, see Generating SSH Keys.
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
-In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). 
+In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, Wordpress post"). 
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
 
@@ -201,7 +200,7 @@ How do I change my Pantheon password?
 
 4. Enter the information, and click **Save**. 
 
-## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0)
+## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary")
 
 The glossary includes an A-Z usage list of common terms used in Pantheon documentation.
 
@@ -239,12 +238,11 @@ or
 
 If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as a header.
 
-**
-****Example**:
+**Example**:
 
-## **Before You Begin**
+##### Before You Begin
 
-You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr) page on Drupal.org for more information.
+You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
 ## 
 Identifying Instances of Concepts
@@ -255,10 +253,10 @@ In technical documentation or the UI, this can be a rollover glossary definition
 
 ## Procedures
 
-See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document  may or may not include all of those items.
+See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
 
 
-When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing). 
+When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing"). 
 
 **Example**:
 
@@ -316,7 +314,7 @@ Atomic/Official Documentation: When you’re writing technical documentation and
 
 **Example**:
 
-There are many modules and themes available in Drupal. For more information, see [Installing Modules](https://www.drupal.org/documentation/install/modules-themes/modules-7). [This links directly to Drupal’s existing documentation.]
+There are many modules and themes available in Drupal. For more information, see [Installing Modules](https://www.drupal.org/documentation/install/modules-themes/modules-7 "Drupal.org, installing modules"). [This links directly to Drupal’s existing documentation.]
 
 ## Referring to Rules and Concepts
 
@@ -332,7 +330,7 @@ The link can:
 
 **Example**:
 
-One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr).
+One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr "github.com, drops 7").
 
 Best Practices:
 
@@ -364,7 +362,7 @@ Generating SSH Keys
 
 ## User Interface Terminology
 
-See below for visual examples of the terms to use when referring to specific pages. Also see the [Glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0).
+See below for visual examples of the terms to use when referring to specific pages. Also see the [Glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary").
 
 ### User Dashboard
 
@@ -400,7 +398,7 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 [Drupal - Content Style Guide](https://www.drupal.org/style-guide/content) 
 
-[Knowledge Base Best Practices](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices)
+[Knowledge Base Best Practices](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices "MIT.edu, KB best practices")
 
 [Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
 
@@ -408,4 +406,4 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 [Apple Style Guide](https://help.apple.com/asg/mac/2013/ASG_2013.pdf)
 
-[Marketing/Brand Style Guide](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit)
+[Marketing/Brand Style Guide](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit "Pantheon google drive, Brand Style Guide")
