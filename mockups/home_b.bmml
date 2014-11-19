@@ -1,0 +1,73 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1060" measuredH="800" mockupW="1060" mockupH="800">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="1060" h="800" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pantheon%20Documentation%0Ahttp%3A//docs.getpantheon.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="70" w="1060" h="46" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="50" y="70" w="171" h="46" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="50" y="131" w="960" h="150" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="68" y="238" w="-1" h="-1" measuredW="104" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16776960</color>
+        <text>Fork%20the%20Docs</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Title" x="68" y="151" w="-1" h="-1" measuredW="449" measuredH="43" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pantheon%20Documentation</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::SubTitle" x="70" y="201" w="-1" h="-1" measuredW="939" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Instructions%20for%20building%2C%20launching%2C%20and%20running%20your%20amazing%20website%20on%20our%20Platform.</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextArea" x="280" y="305" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="541" y="305" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextArea" x="802" y="306" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextArea" x="280" y="486" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TextArea" x="541" y="486" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextArea" x="802" y="487" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23%23Get%20Started%0AUpgrade%20your%20life%20by%20starting%20here.%20Get%20ready%20to%20meet%20your%20new%20hardware%2C%20tools%2C%20and%20support%20that%20will%20improve%20your%20life.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Accordion" x="50" y="303" w="171" h="324" measuredW="150" measuredH="321" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Getting%20Started%0ADeveloping%0A-%20SFTP%20Mode%0A-%20Git%20Mode%0AOptimizing%0AGoing%20Live%0AManaging%0AServing%0ASupporting</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
