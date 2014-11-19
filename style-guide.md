@@ -1,63 +1,5 @@
 **DOCUMENTATION STYLE GUIDE**
 
-# Document Revision History
-
-<table>
-  <tr>
-    <td>Version</td>
-    <td>Date</td>
-    <td>Description</td>
-    <td>Initials</td>
-  </tr>
-  <tr>
-    <td>0.1</td>
-    <td>10/6/14</td>
-    <td>Initial Creation</td>
-    <td>BDM</td>
-  </tr>
-  <tr>
-    <td>0.2</td>
-    <td>10/7/14</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.3</td>
-    <td>10/9/14</td>
-    <td>Revision</td>
-    <td>BDM</td>
-  </tr>
-  <tr>
-    <td>0.4</td>
-    <td>10/17/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.5</td>
-    <td>10/20/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.6</td>
-    <td>10/21/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.7</td>
-    <td>10/24/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-  <tr>
-    <td>0.8</td>
-    <td>11/03/2014</td>
-    <td>Revision</td>
-    <td>NJ</td>
-  </tr>
-</table>
 
 
 [[TOC]]
@@ -67,22 +9,6 @@
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the glossary for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
 For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.com). 
-
-## Resources 
-
-[Basho - Documentation - Designing for Clarity and Comprehension](http://basho.com/documentation-designing-for-clarity-and-comprehension/) 
-
-[Drupal - Content Style Guide](https://www.drupal.org/style-guide/content) 
-
-[Knowledge Base Best Practices ](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices)
-
-[Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
-
-[Atlassian Writing Style](https://design.atlassian.com/latest/product/foundations/writing-style/)
-
-[Apple Style Guide](https://help.apple.com/asg/mac/2013/ASG_2013.pdf)
-
-[Marketing/Brand Style Guide ](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit)
 
 ## Writing Style
 
@@ -472,3 +398,77 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 ### Tool Tabs
 
+# Document Revision History
+
+<table>
+  <tr>
+    <td>Version</td>
+    <td>Date</td>
+    <td>Description</td>
+    <td>Initials</td>
+  </tr>
+  <tr>
+    <td>0.1</td>
+    <td>10/6/14</td>
+    <td>Initial Creation</td>
+    <td>BDM</td>
+  </tr>
+  <tr>
+    <td>0.2</td>
+    <td>10/7/14</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+  <tr>
+    <td>0.3</td>
+    <td>10/9/14</td>
+    <td>Revision</td>
+    <td>BDM</td>
+  </tr>
+  <tr>
+    <td>0.4</td>
+    <td>10/17/2014</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+  <tr>
+    <td>0.5</td>
+    <td>10/20/2014</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+  <tr>
+    <td>0.6</td>
+    <td>10/21/2014</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+  <tr>
+    <td>0.7</td>
+    <td>10/24/2014</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+  <tr>
+    <td>0.8</td>
+    <td>11/03/2014</td>
+    <td>Revision</td>
+    <td>NJ</td>
+  </tr>
+</table>
+
+## Resources 
+
+[Basho - Documentation - Designing for Clarity and Comprehension](http://basho.com/documentation-designing-for-clarity-and-comprehension/) 
+
+[Drupal - Content Style Guide](https://www.drupal.org/style-guide/content) 
+
+[Knowledge Base Best Practices ](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices)
+
+[Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
+
+[Atlassian Writing Style](https://design.atlassian.com/latest/product/foundations/writing-style/)
+
+[Apple Style Guide](https://help.apple.com/asg/mac/2013/ASG_2013.pdf)
+
+[Marketing/Brand Style Guide ](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit)
