@@ -8,10 +8,10 @@ filename: source/_docs/clone-a-drupal-site-on-pantheon-using-drush.md
 ### **Step 1. Archiving Your Live Code/Files/Database**
  **Prerequisites:**  
  [Current drush aliases](/documentation/advanced-topics/drush-command-line-utility/-using-drush-on-pantheon)
-1. From the command line, run [the drush ard](http://www.drushcommands.com/drush-6x/archive/archive-dump) command against the live environment. Be sure to set the destination parameter to include a file name.  
-(ex: drush @pantheon.your-site.live ard --strict=0 --destination=sites/default/files/site\_export.tar.gz)
+1. From the command line, run [the drush ard](http://www.drushcommands.com/drush-6x/archive/archive-dump) command against the live environment. Set the destination parameter to include a file name.  
+ex: `drush @pantheon.your-site.live ard --strict=0 --destination=sites/default/files/site\_export.tar.gz`
 
-### **Step 2. Creating A New Pantheon Site​, Importing Your Archive**
+### **Step 2. Importing your archive to a new p**
 
 1. Within your dashboard click link below to "Create A New Site".
 2. Name your new site, and then select "Import site" from the "Choose your Start State" options. Next, select “import archive”.
