@@ -162,7 +162,7 @@ Use it as the Intermediary Certificate.
 
 ### What combination do I use for a Comodo SSL pack?
 
-Visit Somodo's support site to read about [SSL packs](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/620/1/).
+Visit Comodo's support site to read about [SSL packs](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/620/1/).
 
 ### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
 
