@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /new-relic-performance-analysis-on-pantheon/
 Metadata
-filename: source/_docs/new-relic-performance-analysis-on-pantheon.md
+filename: source/_guides/go-live/new-relic-performance-analysis-on-pantheon.md
 ---
 
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.

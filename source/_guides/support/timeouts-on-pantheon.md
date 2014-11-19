@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/timeouts-on-pantheon/
 Metadata
-filename: source/_docs/timeouts-on-pantheon.md
+filename: source/_guides/support/timeouts-on-pantheon.md
 ---
 
 Rules are for the good of the group, and timeouts are no exception. At Pantheon, we've configured our timeouts to fit normal program execution. Sometimes, these limits can be reached when working with a particularly inefficient bit of code. In order to set expectations, the following chart describes the various user-facing timeouts on Pantheon.

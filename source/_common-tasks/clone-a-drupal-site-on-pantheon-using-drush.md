@@ -1,6 +1,6 @@
 ---
 title: Clone a Drupal site on Pantheon using Drush
-filename: source/_docs/clone-a-drupal-site-on-pantheon-using-drush.md
+filename: source/_common-tasks/clone-a-drupal-site-on-pantheon-using-drush.md
 ---
 
 ## Clone a Drupal site on Pantheon using Drush

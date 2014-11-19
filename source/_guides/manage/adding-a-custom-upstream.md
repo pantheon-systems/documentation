@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/adding-a-custom-upstream/
 Metadata
-filename: source/_docs/adding-a-custom-upstream.md
+filename: source/_guides/manage/adding-a-custom-upstream.md
 ---
 
 # Setting Up Your Upstream

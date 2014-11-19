@@ -1,6 +1,6 @@
 ---
 title: Using the Pantheon Workflow
-filename: source/_docs/using-the-pantheon-workflow.md
+filename: source/_common-tasks/using-the-pantheon-workflow.md
 ---
 
 ### Pantheon Academy - Pantheon Workflow

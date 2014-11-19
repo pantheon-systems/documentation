@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /load-and-performance-testing/
 Metadata
-filename: source/_docs/load-and-performance-testing.md
+filename: source/_guides/go-live/load-and-performance-testing.md
 ---
 
 Load testing a site both prior and post launch is highly recommend to ensure your site is optimally configured.​

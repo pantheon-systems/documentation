@@ -1,6 +1,6 @@
 ---
 title: Using MySQL Workbench to access a database
-filename: source/_docs/using-mysql-workbench-to-access-a-database.md
+filename: source/_common-tasks/using-mysql-workbench-to-access-a-database.md
 ---
 
 [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/) provides DBAs and developers an integrated tools environment for: Database Design & Modeling, SQL Development, database adminstration and support for Windows, Mac OS X and Linux.

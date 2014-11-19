@@ -4,7 +4,7 @@ categories:
     - getting-started
 permalink: documentation/getting-started/sftp-faqs/
 Metadata
-filename: source/_docs/sftp-faqs.md
+filename: source/_common-tasks/sftp-faqs.md
 ---
 
 ## SFTP Connection Issues

@@ -1,6 +1,6 @@
 ---
 title: Adding a Credit Card to a Site
-filename: source/_docs/add-a-credit-card-to-a-site.md
+filename: source/_common-tasks/add-a-credit-card-to-a-site.md
 ---
 1. From your user dashboard, choose the site you want to add a card to.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/305317)

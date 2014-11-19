@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/debugging-slow-performance/
 Metadata
-filename: source/_docs/debugging-slow-performance.md
+filename: source/_guides/optimize/debugging-slow-performance.md
 ---
 
 ## Pantheon Academy

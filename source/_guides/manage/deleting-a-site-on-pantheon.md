@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /deleting-a-site-on-pantheon/
 Metadata
-filename: source/_docs/deleting-a-site-on-pantheon.md
+filename: source/_guides/manage/deleting-a-site-on-pantheon.md
 ---
 
 At some point, you may need or want to delete one of your sites on Pantheon. Deleting a site requires just a few simple steps.

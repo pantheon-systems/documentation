@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/caching-in-drupal-modules/
 Metadata
-filename: source/_docs/caching-in-drupal-modules.md
+filename: source/_guides/optimize/caching-in-drupal-modules.md
 ---
 
 While configuring [Drupal's performance and caching settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/) and using [redis as a Drupal caching backend](/documentation/howto/redis-as-a-caching-backend/) will make a significant performance difference, not every module uses Drupal's caching out-of-the-box.

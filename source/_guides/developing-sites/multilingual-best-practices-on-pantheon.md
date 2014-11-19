@@ -2,7 +2,7 @@
 title: Multilingual best practices on Pantheon
 parent_guide:
   - developing
-filename: source/_docs/multilingual-best-practices-on-pantheon.md
+filename: source/_guides/developing-sites/multilingual-best-practices-on-pantheon.md
 ---
 
 Pantheon is home to many polylingual and non-English sites, and hosting a multi-language site on Pantheon requires no additional platform configuration.  

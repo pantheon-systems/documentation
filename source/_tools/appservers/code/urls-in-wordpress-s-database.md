@@ -4,7 +4,7 @@ categories:
     - getting-started
 permalink: documentation/getting-started/urls-in-wordpress-s-database/
 Metadata
-filename: source/_docs/urls-in-wordpress-s-database.md
+filename: source/_tools/urls-in-wordpress-s-database.md
 ---
 
 ## Summary

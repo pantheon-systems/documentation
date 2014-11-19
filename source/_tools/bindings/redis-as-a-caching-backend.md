@@ -4,7 +4,7 @@ categories:
     - howto
 /redis-as-a-caching-backend/
 Metadata
-filename: source/_docs/redis-as-a-caching-backend.md
+filename: source/_tools/redis-as-a-caching-backend.md
 ---
 
 ## Pantheon Academy - Redis on Pantheon

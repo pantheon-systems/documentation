@@ -1,6 +1,6 @@
 ---
 title: How to configure your site to work with the Pantheon Enterprise Gateway
-filename: source/_docs/how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway.md
+filename: source/_common-tasks/how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway.md
 ---
 
 [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway) creates a secure tunnel between your firewall and your public-facing website.

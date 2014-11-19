@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 permalink: documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/
 Metadata
-filename: source/_docs/dns-records-for-directing-your-domain-to-your-pantheon-site.md
+filename: source/_guides/go-live/dns-records-for-directing-your-domain-to-your-pantheon-site.md
 ---
 
 ## Overview

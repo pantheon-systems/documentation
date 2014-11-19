@@ -2,7 +2,7 @@
 title: Using WinSCP on Pantheon
 parent_guide:
     - getting-started
-filename: source/_docs/using-winscp-on-pantheon.md
+filename: source/_guides/get-started/using-winscp-on-pantheon.md
 ---
 
 [WinSCP](http://winscp.net/eng/index.php) is an Open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.

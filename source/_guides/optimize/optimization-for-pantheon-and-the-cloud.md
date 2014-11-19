@@ -4,7 +4,7 @@ parent_guide:
     - getting-started
 permalink: documentation/getting-started/optimization-for-pantheon-and-the-cloud/
 Metadata
-filename: source/_docs/optimization-for-pantheon-and-the-cloud.md
+filename: source/_guides/optimize/optimization-for-pantheon-and-the-cloud.md
 ---
 
 <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/3IMk8oYoFsg" width="420"></iframe>  

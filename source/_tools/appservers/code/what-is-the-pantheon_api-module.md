@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/what-is-the-pantheon_api-module/
 Metadata
-filename: source/_docs/what-is-the-pantheon_api-module.md
+filename: source/_tools/what-is-the-pantheon_api-module.md
 ---
 
 Pantheon supplies a few modules with all sites to provide better integration with the platform. There is a module dedicated to serving the ApacheSolr use-case, and there is the general `pantheon_api.module`.

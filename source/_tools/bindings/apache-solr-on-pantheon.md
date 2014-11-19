@@ -4,7 +4,7 @@ categories:
     - running-drupal
 permalink: documentation/running-drupal/apache-solr-on-pantheon/
 Metadata
-filename: source/_docs/apache-solr-on-pantheon.md
+filename: source/_tools/apache-solr-on-pantheon.md
 ---
 
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox. No permission or action is required from Pantheon to use Solr.  

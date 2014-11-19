@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/branching-git-workflows-for-teams-with-multidev/
 Metadata
-filename: source/_docs/branching-git-workflows-for-teams-with-multidev.md
+filename: source/_tools/branching-git-workflows-for-teams-with-multidev.md
 ---
 
 ## Pantheon Academy

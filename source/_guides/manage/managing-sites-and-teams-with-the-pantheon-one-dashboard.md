@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/managing-sites-and-teams-with-the-pantheon-one-dashboard/
 Metadata
-filename: source/_docs/managing-sites-and-teams-with-the-pantheon-one-dashboard.md
+filename: source/_guides/manage/managing-sites-and-teams-with-the-pantheon-one-dashboard.md
 ---
 
 NOTE: Only organization admins can see the Pantheon One for Agencies dashboard. Regular organization users can create sites and associate them with the organization, from their account dashboard.  

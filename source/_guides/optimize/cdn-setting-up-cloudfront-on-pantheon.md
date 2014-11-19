@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /cdn-setting-up-cloudfront-on-pantheon/
 Metadata
-filename: source/_docs/cdn-setting-up-cloudfront-on-pantheon.md
+filename: source/_guides/optimize/cdn-setting-up-cloudfront-on-pantheon.md
 ---
 
 ## Pantheon Academy

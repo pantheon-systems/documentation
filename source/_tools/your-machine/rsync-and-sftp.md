@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/rsync-and-sftp/
 Metadata
-filename: source/_docs/rsync-and-sftp.md
+filename: source/_tools/rsync-and-sftp.md
 ---
 
  **NOTE: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.**  

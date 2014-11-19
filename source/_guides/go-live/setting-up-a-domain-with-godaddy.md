@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /setting-up-a-domain-with-godaddy/
 Metadata
-filename: source/_docs/setting-up-a-domain-with-godaddy.md
+filename: source/_guides/go-live/setting-up-a-domain-with-godaddy.md
 ---
 
 #### Choose your domain name

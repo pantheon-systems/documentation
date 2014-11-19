@@ -4,7 +4,7 @@ categories:
     - howto
 /update-wordpress-core/
 Metadata
-filename: source/_docs/update-wordpress-core.md
+filename: source/_guides/support/update-wordpress-core.md
 ---
 
 

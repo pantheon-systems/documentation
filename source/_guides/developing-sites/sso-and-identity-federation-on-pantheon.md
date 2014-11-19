@@ -2,7 +2,7 @@
 title: SSO and Identity Federation on Pantheon
 parent_guide:
   - developing
-filename: source/_docs/sso-and-identity-federation-on-pantheon.md
+filename: source/_guides/developing-sites/sso-and-identity-federation-on-pantheon.md
 ---
 
 Many organizations need to centrally manage their users identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments and other groups use a variety of Single Sign-On (SSO) solutions.  

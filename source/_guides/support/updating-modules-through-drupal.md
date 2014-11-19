@@ -4,7 +4,7 @@ categories:
     - howto
 /updating-modules-through-drupal/
 Metadata
-filename: source/_docs/updating-modules-through-drupal.md
+filename: source/_guides/support/updating-modules-through-drupal.md
 ---
 
 ## **Updating Modules Through Drupal**

@@ -4,7 +4,7 @@ parent_guide:
     - getting-started
 permalink: documentation/getting-started/frequently-asked-questions/
 Metadata
-filename: source/_docs/frequently-asked-questions.md
+filename: source/_guides/get-started/frequently-asked-questions.md
 ---
 
 #### Can I put production sites on Pantheon?

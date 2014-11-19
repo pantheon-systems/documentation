@@ -1,6 +1,6 @@
 ---
 title: Adding a Domain to a Site Environment
-filename: source/_docs/adding-a-domain-to-a-site-environment.md
+filename: source/_common-tasks/adding-a-domain-to-a-site-environment.md
 ---
 
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.

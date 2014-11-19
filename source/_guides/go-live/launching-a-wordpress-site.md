@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 permalink: documentation/getting-started/launching-a-wordpress-site/
 Metadata
-filename: source/_docs/launching-a-wordpress-site.md
+filename: source/_guides/go-live/launching-a-wordpress-site.md
 ---
 
 ### **1. Add & Name your site**

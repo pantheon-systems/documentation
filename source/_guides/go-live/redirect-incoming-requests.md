@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /redirect-incoming-requests/
 Metadata
-filename: source/_docs/redirect-incoming-requests.md
+filename: source/_guides/go-live/redirect-incoming-requests.md
 ---
 
 Often, it's useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  

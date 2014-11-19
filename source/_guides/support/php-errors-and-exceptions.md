@@ -4,7 +4,7 @@ categories:
     - getting-started
 permalink: documentation/getting-started/php-errors-and-exceptions/
 Metadata
-filename: source/_docs/php-errors-and-exceptions.md
+filename: source/_guides/support/php-errors-and-exceptions.md
 ---
 
 ## Pantheon Academy

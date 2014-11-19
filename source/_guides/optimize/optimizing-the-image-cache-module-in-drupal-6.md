@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/optimizing-the-image-cache-module-in-drupal-6/
 Metadata
-filename: source/_docs/optimizing-the-image-cache-module-in-drupal-6.md
+filename: source/_guides/optimize/optimizing-the-image-cache-module-in-drupal-6.md
 ---
 
 Imagecache is a widely used Drupal 6 contributed module for dynamically generating thumbnails and other derivative images. Unfortunately, its internal logic relies heavily on a locally attached filesystem and suffers from performance issues in cloud environments like Pantheon.

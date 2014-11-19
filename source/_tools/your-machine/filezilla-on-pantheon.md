@@ -4,7 +4,7 @@ categories:
     - howto
 /filezilla-on-pantheon/
 Metadata
-filename: source/_docs/filezilla-on-pantheon.md
+filename: source/_tools/filezilla-on-pantheon.md
 ---
 
 [Filezilla](http://winscp.net/eng/index.php) is a free Open source FTP client that is available for Windows, Mac OS X and Linux.

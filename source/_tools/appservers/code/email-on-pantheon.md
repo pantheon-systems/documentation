@@ -4,7 +4,7 @@ categories:
     - running-drupal
 permalink: documentation/running-drupal/email-on-pantheon/
 Metadata
-filename: source/_docs/email-on-pantheon.md
+filename: source/_tools/email-on-pantheon.md
 ---
 
 ## Incoming Email

@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/git-commit-best-practices/
 Metadata
-filename: source/_docs/git-commit-best-practices.md
+filename: source/_common-tasks/git-commit-best-practices.md
 ---
 
 ## Commit often

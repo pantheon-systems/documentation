@@ -1,6 +1,6 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Pantheon
-filename: source/_docs/configuring-jetbrains-phpstorm-ide-with-pantheon.md
+filename: source/_common-tasks/configuring-jetbrains-phpstorm-ide-with-pantheon.md
 ---
 
 ## Pantheon Academy

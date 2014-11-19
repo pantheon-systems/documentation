@@ -4,7 +4,7 @@ parent_guide:
     - getting-started
 permalink: documentation/getting-started/team-management/
 Metadata
-filename: source/_docs/team-management.md
+filename: source/_guides/manage/team-management.md
 ---
 
 One of the strengths of Pantheon are the powerful workflow tools that are packed with real-time features that are great for people working in teams and getting started is easy and simple.

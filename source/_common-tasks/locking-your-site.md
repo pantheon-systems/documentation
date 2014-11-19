@@ -1,6 +1,6 @@
 ---
 title: Locking your site
-filename: source/_docs/locking-your-site.md
+filename: source/_common-tasks/locking-your-site.md
 ---
 
  **NOTE: When a dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.**

@@ -2,7 +2,7 @@
 title: Filesystem FAQs
 parent_guide:
     - getting-started
-filename: source/_docs/filesystem-faqs.md
+filename: source/_guides/get-started/filesystem-faqs.md
 ---
 
 Question: _I am curious why the Pantheon dashboard lists my file system as: Error, Writable (public download method)?_  

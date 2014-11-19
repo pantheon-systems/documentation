@@ -2,7 +2,7 @@
 title: Starting With Git
 parent_guide:
     - getting-started
-filename: source/_docs/starting-with-git.md
+filename: source/_guides/get-started/starting-with-git.md
 ---
 
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use local development, it's likely the best way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon development environment.

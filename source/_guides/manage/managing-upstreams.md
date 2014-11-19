@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/managing-upstreams/
 Metadata
-filename: source/_docs/managing-upstreams.md
+filename: source/_guides/manage/managing-upstreams.md
 ---
 
 # Updating Upstreams

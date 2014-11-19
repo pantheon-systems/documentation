@@ -1,6 +1,6 @@
 ---
 title: Using PHPMyAdmin to locally administer a database
-filename: source/_docs/using-phpmyadmin-to-locally-administer-a-database.md
+filename: source/_common-tasks/using-phpmyadmin-to-locally-administer-a-database.md
 ---
 
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to adminster databases locally and can also be provides DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it isit is possible to install this on Windows, Mac OS X and Linux.

@@ -4,7 +4,7 @@ parent_guide:
     - running-drupal
 permalink: documentation/running-drupal/database-connection-errors/
 Metadata
-filename: source/_docs/database-connection-errors.md
+filename: source/_guides/serve/database-connection-errors.md
 ---
 
 If your site suddenly reverts to install.php, or you see database connection errors like the following:

@@ -4,7 +4,7 @@ parent_guide:
     - running-drupal
 permalink: documentation/running-drupal/drupal-s-performance-and-caching-settings/
 Metadata
-filename: source/_docs/drupal-s-performance-and-caching-settings.md
+filename: source/_guides/optimize/drupal-s-performance-and-caching-settings.md
 ---
 
 To maximise your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/documentation/advanced-topics/varnish-caching-for-high-performance/).

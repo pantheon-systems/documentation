@@ -4,7 +4,7 @@ parent_guide:
     - getting-started
 permalink: documentation/getting-started/errors-and-server-responses/
 Metadata
-filename: source/_docs/errors-and-server-responses.md
+filename: source/_guides/serve/errors-and-server-responses.md
 ---
 
 ## Pantheon Academy

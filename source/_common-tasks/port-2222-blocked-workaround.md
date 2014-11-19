@@ -1,6 +1,6 @@
 ---
 title: Port 2222 Blocked Workaround
-filename: source/_docs/port-2222-blocked-workaround.md
+filename: source/_common-tasks/port-2222-blocked-workaround.md
 ---
 
 ​

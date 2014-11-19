@@ -1,6 +1,6 @@
 ---
 title: Adding a SSL certificate for secure HTTPS communication
-filename: source/_docs/adding-a-ssl-certificate-for-secure-https-communication.md
+filename: source/_common-tasks/adding-a-ssl-certificate-for-secure-https-communication.md
 ---
 ## SSL on Pantheon
 

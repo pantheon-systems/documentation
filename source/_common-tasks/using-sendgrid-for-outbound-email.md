@@ -1,6 +1,6 @@
 ---
 title: Using SendGrid for Outbound Email
-filename: source/_docs/using-sendgrid-for-outbound-email.md
+filename: source/_common-tasks/using-sendgrid-for-outbound-email.md
 ---
 
 Your Drupal application running on Pantheon will need to send email for a variety of reasons — new user registrations, password resets and social notifications, for example. We provide a working mail tool with every environment, but because Pantheon's platform utilizes a very large array of machines, and your application could be running on any one of them on any given day, you may have problems with deliverability using the built-in mail agent.

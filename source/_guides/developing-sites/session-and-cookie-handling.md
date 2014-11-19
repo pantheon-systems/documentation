@@ -2,7 +2,7 @@
 title: Session and cookie handling
 parent_guide:
   - developing
-filename: source/_docs/session-and-cookie-handling.md
+filename: source/_guides/developing-sites/session-and-cookie-handling.md
 ---
 
 ## How can I control session expiration length?

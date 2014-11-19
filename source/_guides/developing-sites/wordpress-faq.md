@@ -2,7 +2,7 @@
 title: WordPress FAQ
 parent_guide:
   - developing
-filename: source/_docs/wordpress-faq.md
+filename: source/_guides/developing-sites/wordpress-faq.md
 ---
 
 Can I import my site?

@@ -1,6 +1,6 @@
 ---
 title: Importing a large site
-filename: source/_docs/importing-a-large-site.md
+filename: source/_common-tasks/importing-a-large-site.md
 ---
 
 While the Pantheon Dashboard works exceptionally well for small to mid sized sites, there are some instances where a more manual approach is needed. This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. You will need to follow this procedure if:

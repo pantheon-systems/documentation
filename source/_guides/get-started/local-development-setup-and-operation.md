@@ -2,7 +2,7 @@
 title: Local development setup and operation
 parent_guide:
   - getting-started
-filename: source/_docs/local-development-setup-and-operation.md
+filename: source/_guides/get-started/local-development-setup-and-operation.md
 ---
 
 While Pantheon provides a number of options for on-server development, local development has a number of advantages - especially if continuous internet access is a concern. While Pantheon cannot troubleshoot or support local development solution, we can provide some suggestions and known working solutions.  

@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/all-about-application-containers/
 Metadata
-filename: source/_docs/all-about-application-containers.md
+filename: source/_tools/all-about-application-containers.md
 ---
 
 ## Pantheon Academy

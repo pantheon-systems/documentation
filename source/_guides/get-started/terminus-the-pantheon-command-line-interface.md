@@ -2,7 +2,7 @@
 title: Terminus - the Pantheon command-line interface
 parent_guide:
   - getting-started
-filename: source/_docs/terminus-the-pantheon-command-line-interface.md
+filename: source/_guides/get-started/terminus-the-pantheon-command-line-interface.md
 ---
 
 <head>

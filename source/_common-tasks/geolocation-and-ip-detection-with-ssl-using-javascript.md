@@ -1,6 +1,6 @@
 ---
 title: Geolocation and IP detection with SSL using JavaScript
-filename: source/_docs/geolocation-and-ip-detection-with-ssl-using-javascript.md
+filename: source/_common-tasks/geolocation-and-ip-detection-with-ssl-using-javascript.md
 ---
 
 When using SSL on Pantheon, the client's IP is not reliably available via PHP, which in turn makes Geolocation impossible. Instead, client-side JavaScript can be used to reliably determine both the client's IP and their location - even with a reverse proxy like CloudFlare and SSL.

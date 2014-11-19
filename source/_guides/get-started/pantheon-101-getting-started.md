@@ -2,7 +2,7 @@
 title: Pantheon 101: Getting Started
 parent_guide:
     - getting-started
-filename: source/_docs/pantheon-101-getting-started.md
+filename: source/_guides/get-started/pantheon-101-getting-started.md
 ---
 
 ## Pantheon Academy

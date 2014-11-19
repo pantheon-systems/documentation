@@ -2,7 +2,7 @@
 title: Configuring wp-config.php
 parent_guide:
   - developing
-filename: source/_docs/configuring-wp-config-php.md
+filename: source/_guides/developing-sites/configuring-wp-config-php.md
 ---
 
 ## Overview

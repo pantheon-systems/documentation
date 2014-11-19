@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /deleting-your-pantheon-account/
 Metadata
-filename: source/_docs/deleting-your-pantheon-account.md
+filename: source/_guides/manage/deleting-your-pantheon-account.md
 ---
 
 Completely deleting your Pantheon account requires three major steps.

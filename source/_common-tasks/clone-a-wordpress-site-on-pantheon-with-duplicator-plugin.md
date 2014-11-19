@@ -1,6 +1,6 @@
 ---
 title: Clone a WordPress site on Pantheon with Duplicator plugin
-filename: source/_docs/clone-a-wordpress-site-on-pantheon-with-duplicator-plugin.md
+filename: source/_common-tasks/clone-a-wordpress-site-on-pantheon-with-duplicator-plugin.md
 ---
 
 ## Clone a WordPress site on Pantheon with Duplicator plugin

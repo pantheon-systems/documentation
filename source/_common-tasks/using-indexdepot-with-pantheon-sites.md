@@ -1,6 +1,6 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-filename: source/_docs/using-indexdepot-with-pantheon-sites.md
+filename: source/_common-tasks/using-indexdepot-with-pantheon-sites.md
 ---
 
 ## Overview

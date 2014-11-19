@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /removing-a-credit-card/
 Metadata
-filename: source/_docs/removing-a-credit-card.md
+filename: source/_guides/manage/removing-a-credit-card.md
 ---
 
 If you would like to remove you credit card because it has expired, or if you would like to change or remove a credit card from your account it is quick and easy.

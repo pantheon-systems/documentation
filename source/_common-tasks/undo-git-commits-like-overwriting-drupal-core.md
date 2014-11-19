@@ -1,6 +1,6 @@
 ---
 title: Undo git commits like overwriting Drupal core
-filename: source/_docs/undo-git-commits-like-overwriting-drupal-core.md
+filename: source/_common-tasks/undo-git-commits-like-overwriting-drupal-core.md
 ---
 
 We all make mistakes, and git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/documentation/getting-started/required-reading-essential-pantheon-documentation/-required-reading-essential-pantheon-documentation) [our](/documentation/advanced-topics/git-faq/-git-faq) [best](/documentation/running-drupal/drupal-core-updates/-core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.' There, that felt better! But presumably you are here because that has already happened.

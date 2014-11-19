@@ -2,7 +2,7 @@
 title: Developing on Pantheon directly with SFTP mode
 parent_guide:
   - developing 
-filename: source/_docs/developing-on-pantheon-directly-with-sftp-mode.md
+filename: source/_guides/developing-sites/developing-on-pantheon-directly-with-sftp-mode.md
 ---
 
 In some cases working via `git push` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.

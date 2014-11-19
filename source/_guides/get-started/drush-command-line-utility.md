@@ -2,7 +2,7 @@
 title: Drush command-line utility
 parent_guide:
     - getting-started
-filename: source/_docs/drush-command-line-utility.md
+filename: source/_guides/get-started/drush-command-line-utility.md
 ---
 
 ## Pantheon Academy

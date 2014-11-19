@@ -1,6 +1,6 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
-filename: source/_docs/more-ways-of-managing-code-in-sftp-mode.md
+filename: source/_common-tasks/more-ways-of-managing-code-in-sftp-mode.md
 ---
 
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.

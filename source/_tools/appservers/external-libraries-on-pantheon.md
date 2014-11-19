@@ -4,7 +4,7 @@ categories:
     - howto
 /external-libraries-on-pantheon/
 Metadata
-filename: source/_docs/external-libraries-on-pantheon.md
+filename: source/_tools/external-libraries-on-pantheon.md
 ---
 
 ## Overview

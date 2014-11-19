@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /rename-a-site-on-pantheon/
 Metadata
-filename: source/_docs/rename-a-site-on-pantheon.md
+filename: source/_guides/manage/rename-a-site-on-pantheon.md
 ---
 
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to adminster databases locally and can also be provides DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it isit is possible to install this on Windows, Mac OS X and Linux.

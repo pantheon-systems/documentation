@@ -2,7 +2,7 @@
 title: Creating Your First Site
 parent_guide:
     - getting-started
-filename: source/_docs/creating-your-first-site.md
+filename: source/_guides/get-started/creating-your-first-site.md
 ---
 
 ### 1. Create Your First Site

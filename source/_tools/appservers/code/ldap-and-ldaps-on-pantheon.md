@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/ldap-and-ldaps-on-pantheon/
 Metadata
-filename: source/_docs/ldap-and-ldaps-on-pantheon.md
+filename: source/_tools/ldap-and-ldaps-on-pantheon.md
 ---
 
  **LDAP as a provider:**  

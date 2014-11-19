@@ -1,6 +1,6 @@
 ---
 title: SSH tunnels for secure connections to Pantheon services
-filename: source/_docs/ssh-tunnels-for-secure-connections-to-pantheon-services.md
+filename: source/_common-tasks/ssh-tunnels-for-secure-connections-to-pantheon-services.md
 ---
 
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [s](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling) [ecure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  

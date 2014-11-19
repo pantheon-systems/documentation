@@ -1,6 +1,6 @@
 ---
 title: Manually apply Drupal 7.32 security update
-filename: source/_docs/manually-apply-drupal-7-32-security-update.md
+filename: source/_common-tasks/manually-apply-drupal-7-32-security-update.md
 ---
 
 If your Drupal 7 site is based on the Pantheon Drupal 7 upstream then you will be able to apply a 1-click update in your dashboard. If you are running a site that does not yet have a 1-click update available, however, we recommend you immediately manually make the update.

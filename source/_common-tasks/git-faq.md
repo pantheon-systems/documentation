@@ -1,6 +1,6 @@
 ---
 title: Git FAQ
-filename: source/_docs/git-faq.md
+filename: source/_common-tasks/git-faq.md
 ---
 
 ## Conflicts when performing core update

@@ -2,7 +2,7 @@
 title: Selecting a Plan
 parent_guide:
     - getting-started
-filename: source/_docs/selecting-a-plan.md
+filename: source/_guides/get-started/selecting-a-plan.md
 ---
 
 Pantheon offers multiple service levels, called ["Plans"](https://www.getpantheon.com/pricing). You can select the plan that works best for you and your needs. As you grow you can start on the Basic Plan. The once you start to grow and have more specific requirements, you can take a look at the Pro Plan, which can be part of the recipe to get your site or application scale and perform better.

@@ -4,7 +4,7 @@ categories:
     - howto
 /pantheon_stripped-get-parameter-values/
 Metadata
-filename: source/_docs/pantheon_stripped-get-parameter-values.md
+filename: source/_tools/pantheon_stripped-get-parameter-values.md
 ---
 
 ## Overview

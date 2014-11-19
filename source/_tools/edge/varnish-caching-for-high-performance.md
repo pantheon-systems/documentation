@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/varnish-caching-for-high-performance/
 Metadata
-filename: source/_docs/varnish-caching-for-high-performance.md
+filename: source/_tools/varnish-caching-for-high-performance.md
 ---
 
 ## Pantheon Academy

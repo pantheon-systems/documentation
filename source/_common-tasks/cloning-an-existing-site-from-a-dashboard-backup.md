@@ -1,6 +1,6 @@
 ---
 title: Cloning an Existing Site from a Dashboard Backup
-filename: source/_docs/cloning-an-existing-site-from-a-dashboard-backup.md
+filename: source/_common-tasks/cloning-an-existing-site-from-a-dashboard-backup.md
 ---
 
 ## Cloning an Existing Site from a Dashboard Backup

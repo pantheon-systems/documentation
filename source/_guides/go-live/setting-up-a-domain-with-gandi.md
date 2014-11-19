@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /setting-up-a-domain-with-gandi/
 Metadata
-filename: source/_docs/setting-up-a-domain-with-gandi.md
+filename: source/_guides/go-live/setting-up-a-domain-with-gandi.md
 ---
 
 This article assumes that you have already purchased a domain from Gandi.

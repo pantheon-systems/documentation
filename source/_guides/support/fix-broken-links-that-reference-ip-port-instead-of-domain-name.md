@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/fix-broken-links-that-reference-ip-port-instead-of-domain-name/
 Metadata
-filename: source/_docs/fix-broken-links-that-reference-ip-port-instead-of-domain-name.md
+filename: source/_guides/support/fix-broken-links-that-reference-ip-port-instead-of-domain-name.md
 ---
 
 ## Scenario:

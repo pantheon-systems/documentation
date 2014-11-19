@@ -1,6 +1,6 @@
 ---
 title: Importing an existing Drupal site to Pantheon
-filename: source/_docs/importing-an-existing-drupal-site-to-pantheon.md
+filename: source/_common-tasks/importing-an-existing-drupal-site-to-pantheon.md
 ---
 
 ## Pantheon Academy

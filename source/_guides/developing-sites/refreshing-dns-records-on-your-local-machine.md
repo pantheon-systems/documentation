@@ -2,7 +2,7 @@
 title: Refreshing DNS Records on your Local Machine
 parent_guide:
   - developing
-filename: source/_docs/refreshing-dns-records-on-your-local-machine.md
+filename: source/_guides/developing-sites/refreshing-dns-records-on-your-local-machine.md
 ---
 
 DNS is the main naming system for the internet, allowing computers to exchange data over TCP/IP. It takes any domain name, such as "getpantheon.com" and "ties" it to an IP address like 24.102.112.16. The numbers identify computers to each other, and the names are easier for humanoids to remember.  

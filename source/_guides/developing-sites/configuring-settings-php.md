@@ -2,7 +2,7 @@
 title: Configuring Settings.php
 parent_guide:
   - developing
-filename: source/_docs/configuring-settings-php.md
+filename: source/_guides/developing-sites/configuring-settings-php.md
 ---
 
 ## Pantheon Academy

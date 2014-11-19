@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /bots-and-indexing-on-pantheon/
 Metadata
-filename: source/_docs/bots-and-indexing-on-pantheon.md
+filename: source/_guides/serve/bots-and-indexing-on-pantheon.md
 ---
 
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site. As a web developer or admin, knowing how to handle bots comes with the territory.

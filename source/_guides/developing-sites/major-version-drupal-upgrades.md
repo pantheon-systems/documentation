@@ -4,7 +4,7 @@ parent_guide:
     - howto
 /major-version-drupal-upgrades/
 Metadata
-filename: source/_docs/major-version-drupal-upgrades.md
+filename: source/_guides/developing-sites/major-version-drupal-upgrades.md
 ---
 
 ### Upgrades are new sites

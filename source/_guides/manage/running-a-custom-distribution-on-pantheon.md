@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/running-a-custom-distribution-on-pantheon/
 Metadata
-filename: source/_docs/running-a-custom-distribution-on-pantheon.md
+filename: source/_guides/manage/running-a-custom-distribution-on-pantheon.md
 ---
 
 Pantheon provides support for running three types of custom distribution on the platform:

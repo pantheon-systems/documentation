@@ -1,6 +1,6 @@
 ---
 title: Getting the Client IP address
-filename: source/_docs/getting-the-client-ip-address.md
+filename: source/_common-tasks/getting-the-client-ip-address.md
 ---
 
 There are occasions when you may need to get the remote address of the client requesting resources from your application.

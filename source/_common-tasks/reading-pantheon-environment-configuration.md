@@ -1,6 +1,6 @@
 ---
 title: Reading Pantheon Environment Configuration
-filename: source/_docs/reading-pantheon-environment-configuration.md
+filename: source/_common-tasks/reading-pantheon-environment-configuration.md
 ---
 
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.

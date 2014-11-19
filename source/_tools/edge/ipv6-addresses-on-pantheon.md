@@ -4,7 +4,7 @@ categories:
   - getting-started
 permalink: documentation/advanced-topics/ipv6-addresses-on-pantheon/
 Metadata
-filename: source/_docs/ipv6-addresses-on-pantheon.md
+filename: source/_tools/ipv6-addresses-on-pantheon.md
 ---
 
 ## What is IPv6?

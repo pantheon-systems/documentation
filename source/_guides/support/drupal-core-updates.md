@@ -4,7 +4,7 @@ categories:
     - running-drupal
 permalink: documentation/running-drupal/drupal-core-updates/
 Metadata
-filename: source/_docs/drupal-core-updates.md
+filename: source/_guides/support/drupal-core-updates.md
 ---
 
 <head>

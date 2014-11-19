@@ -4,7 +4,7 @@ parent_guide:
     - getting-started
 permalink: documentation/getting-started/backup-creation/
 Metadata
-filename: source/_docs/backup-creation.md
+filename: source/_guides/manage/backup-creation.md
 ---
 
 ## Pantheon Academy

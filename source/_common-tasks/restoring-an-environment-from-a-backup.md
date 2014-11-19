@@ -1,6 +1,6 @@
 ---
 title: Restoring an Environment from a Backup
-filename: source/_docs/restoring-an-environment-from-a-backup.md
+filename: source/_common-tasks/restoring-an-environment-from-a-backup.md
 ---
 
 Each site environment's backups can be found on the Backups subtab for the environment in the Pantheon Dashboard.  

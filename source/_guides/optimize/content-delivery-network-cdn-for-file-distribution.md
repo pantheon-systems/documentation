@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/content-delivery-network-cdn-for-file-distribution/
 Metadata
-filename: source/_docs/content-delivery-network-cdn-for-file-distribution.md
+filename: source/_guides/optimize/content-delivery-network-cdn-for-file-distribution.md
 ---
 
 ## Overview

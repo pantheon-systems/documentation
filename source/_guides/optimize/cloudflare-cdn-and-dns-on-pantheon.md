@@ -4,7 +4,7 @@ parent_guide:
   - getting-started
 permalink: documentation/advanced-topics/cloudflare-cdn-and-dns-on-pantheon/
 Metadata
-filename: source/_docs/cloudflare-cdn-and-dns-on-pantheon.md
+filename: source/_guides/optimize/cloudflare-cdn-and-dns-on-pantheon.md
 ---
 
 ## Summary & Contents

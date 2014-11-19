@@ -4,7 +4,7 @@ parent_guide:
     - going-live
 /gandi-pantheon-pointing-your-dns/
 Metadata
-filename: source/_docs/gandi-pantheon-pointing-your-dns.md
+filename: source/_guides/go-live/gandi-pantheon-pointing-your-dns.md
 ---
 
  **NOTE:** This guide assumes you have already registered your domain through Gandi.net.

@@ -4,7 +4,7 @@ categories:
     - howto
 /running-drupal-8-on-pantheon/
 Metadata
-filename: source/_docs/running-drupal-8-on-pantheon.md
+filename: source/_tools/running-drupal-8-on-pantheon.md
 ---
 
 # Coming Soon
