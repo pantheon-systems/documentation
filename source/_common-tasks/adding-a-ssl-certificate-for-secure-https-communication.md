@@ -13,16 +13,10 @@ If you're running a Windows environment, you'll need to have Cygwin installed. F
 ## Generate a Key and CSR
 
 1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain. 
-  
-  
  ![Generate CSR command](https://pantheon-systems.desk.com/customer/portal/attachments/40331)
-
 **Note**: Do not add a password to your key. We will not be able to work with it.  
-
 2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal. 
-
-  It is important to keep your .key file that you generate and make sure it's secure; you will need it later when you set up SSL with Pantheon.  
-  
+    It is important to keep your .key file that you generate and make sure it's secure; you will need it later when you set up SSL with Pantheon.  
 
 The command will be similar to the following:
 
@@ -64,9 +58,7 @@ To validate your own files before submitting them to Pantheon, check out this li
 1. From your Dashboard, click **Domains** on the environment you want to add the SSL cert to. 
 2. Select the **SSL tab**.
 **Note**: If you have not added a card to your site, you will get a message in the main workspace letting you know you need to select a plan.
-
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/259878)
-
 3. Paste in the .key you generated earlier, as well as your SSL certificate that you purchased from your provider.
 4. If your provider issued an intermediary certificate, copy and paste it into the SSL Certificate field also.
 
