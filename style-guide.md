@@ -400,7 +400,7 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 [Drupal - Content Style Guide](https://www.drupal.org/style-guide/content) 
 
-[Knowledge Base Best Practices ](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices)
+[Knowledge Base Best Practices](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices)
 
 [Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
 
@@ -408,4 +408,4 @@ Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
 [Apple Style Guide](https://help.apple.com/asg/mac/2013/ASG_2013.pdf)
 
-[Marketing/Brand Style Guide ](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit)
+[Marketing/Brand Style Guide](https://docs.google.com/a/getpantheon.com/file/d/0ByQAGaXeMZgJQmp1Yzk2SnlLdzg/edit)
