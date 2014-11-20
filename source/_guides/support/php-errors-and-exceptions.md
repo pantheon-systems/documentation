@@ -6,9 +6,6 @@ permalink: documentation/getting-started/php-errors-and-exceptions/
 Metadata
 filename: source/_guides/support/php-errors-and-exceptions.md
 ---
-
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/ypWcVLlTxaA" width="420"></iframe>  
  
 ## PHP errors on Pantheon
 
@@ -97,14 +94,14 @@ To learn more about PHP error logs, see our article on  [debugging sites with l
 ## PHP errors will slow your site down - fix them!
 
 An error, no matter what severity, is a problem that needs to be addressed. Any PHP error - even a notice - will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.  
-  
-  
+
+
 If database logging is enabled, your site will be even slower, requiring a database write for every error. However, disabling logging does not address the problem, it only hides the symptom. Disabling logging to avoid errors is like changing doctors because you don't like that they asked you stop smoking ten packs of cigarettes a day.  
-  
-  
+
+
 Best practice is to fix every notice, warning and error as you discover them. If they're in a contrib module, roll a patch and submit it to the project's issue queue.  
-  
-  
+
+
 See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP unhandled exceptions on Pantheon
@@ -136,5 +133,3 @@ When this error surfaces, it simply means that the file in question is not where
     Fatal error: require_once(): Failed opening required ‘/srv/bindings/xxxxx/code/sites/all/modules/redis/redis.autoload.inc’ (include_path=‘.:/usr/share/pear:/usr/share/php’) in /srv/bindings/xxxxxx/code/includes/bootstrap.inc on line 2394
 
 To fix this error, look for the correct path to the file and update the require\_once().
-
-

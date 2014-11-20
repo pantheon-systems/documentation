@@ -7,8 +7,7 @@ Metadata
 filename: source/_tools/branching-git-workflows-for-teams-with-multidev.md
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/BI5azevzBZs" width="560"></iframe>
+
 ## Overview
 
 **Multidev** is cloud development environments for teams. Multidev allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
@@ -120,8 +119,8 @@ Yes, you can; your git repository is not restricted. If you do not use Multidev,
 ### Is there a limit on the number of branches or environments?
 
 There is no limit on the number of branches you can have in your git repository.  
-  
-  
+
+
 The limit on forked environments is 5 for Business, 10 for Enterprise.
 
 ### Can I associate a domain with a branch environment?
@@ -143,5 +142,3 @@ Not at this time, but it is on the development roadmap.
 ### Can you backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
-
-

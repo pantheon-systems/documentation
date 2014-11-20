@@ -5,8 +5,6 @@ parent_guide:
 filename: source/_guides/get-started/pantheon-101-getting-started.md
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>
 ## Overview
 Welcome to Pantheon! In a few simple steps, your Drupal sites will be up and running faster than ever. Use this checklist to get the most out of the platform.
 

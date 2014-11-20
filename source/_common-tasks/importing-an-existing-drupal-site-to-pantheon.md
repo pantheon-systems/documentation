@@ -3,8 +3,7 @@ title: Importing an existing Drupal site to Pantheon
 filename: source/_common-tasks/importing-an-existing-drupal-site-to-pantheon.md
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube-nocookie.com/embed/jH7n62io14E" width="560"></iframe>
+
 ## Overview
 
 The easiest way to import an existing Drupal site into Pantheon is to create a new site, then select "Import manually" when asked to choose a Start State.

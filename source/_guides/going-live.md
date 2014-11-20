@@ -10,8 +10,6 @@ Congratulations, you're almost ready to launch your site on Pantheon! There's a 
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch** date, so give yourself time. If you rush a launch, you'll increase the probability of avoidable mistakes and problems. Take a step back, breathe, and let's do this!
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/cG-Bp4PYcPU" width="420"></iframe>
 ### Best practices to prepare for launch
 
 Making sure that your site code is current as possible reduces the potential for later issues and makes your site easier to maintain. Ensure you've updated both any contrib modules and Drupal core to the latest recommended release to ensure stability and security.

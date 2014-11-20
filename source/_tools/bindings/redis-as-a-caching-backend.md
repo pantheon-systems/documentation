@@ -7,8 +7,7 @@ Metadata
 filename: source/_tools/redis-as-a-caching-backend.md
 ---
 
-## Pantheon Academy - Redis on Pantheon
-<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/xlLENb1S1Hw?rel=0" width="560"></iframe>  
+ 
 Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
 ## What is Redis?
 
@@ -69,15 +68,15 @@ Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugi
 
 The common community module for Drupal to use Redis is simply called [redis](http://drupal.org/project/redis). Enabling it on Pantheon takes only a few steps:
 
-1. 
+1.
 
 Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
 
-2. 
+2.
 
 Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
 
-3. 
+3.
 
 Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
 
@@ -85,11 +84,11 @@ Ignore the directions bundled with the Redis module. Pantheon automatically mana
   - `redis_client_port`
   - `redis_client_password`
 
-4. 
+4.
 
 Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory** , required configurations for Redis for every site.  
-  
-  
+
+
 **NOTE:**** _Distributions may vary in their directory structure._ ****_You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path._**
 
     // All Pantheon Environments.
@@ -105,7 +104,7 @@ Edit `sites/default/settings.php` to add the Redis cache configuration. These a
       $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
     }
 
-5. 
+5.
 
 _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
 
@@ -119,7 +118,7 @@ _Optional_ `sites/default/settings.php` configuration A - Higher performance for
       $conf['page_cache_maximum_age'] = 900;
     }
 
-6. 
+6.
 
 _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
 
@@ -132,23 +131,23 @@ _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for la
       $conf['cache_class_cache_page'] = 'DrupalDatabaseCache';
     }
 
-7. 
+7.
 
 Enable the module via admin/build/modules. This is necessary for cache clearing to work in all cases.
 
-8. 
+8.
 
 Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
 
 ![Redis connect string](https://pantheon-systems.desk.com/customer/portal/attachments/301638)
 
-  - 
+  -
 
 For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/71423)
 
-  - 
+  -
 
 For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
@@ -214,7 +213,7 @@ To check the # of keys in the cache, you can use the "DBSIZE" command. The follo
 
 If you push your updates via git you may get the error that the "Cache" directory is not found, Class not found or the `Cache.php` file was not found, this is because of a `.gitignore` issue which did not allow commiting of the Redis cache files. Here is an error that you may see.
 
-    Fatal error: Class 'Redis_Cache' not found in 
+    Fatal error: Class 'Redis_Cache' not found in
     /srv/bindings/xxxxxxxx/code/sites/all/modules/cache_backport/cache.inc on line 71
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your . To resolve this please make sure you do not have any pending core updates.
@@ -236,11 +235,9 @@ See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HE
 
 Mp>If you see the following message:
 
-    File not found: 
+    File not found:
     'sites/all/modules/cache_backport/system.admin.inc'
 
 then you skipped a step; settings.php must include the cache\_backport files. Add the following to settings.php before the redis configuration:
 
     $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
-
-

@@ -4,9 +4,7 @@ parent_guide:
   - developing
 filename: source/_guides/developing-sites/configuring-settings-php.md
 ---
-
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/hO-b9SNgJ1I" width="560"></iframe>  
+  
  
 ## Overview
 

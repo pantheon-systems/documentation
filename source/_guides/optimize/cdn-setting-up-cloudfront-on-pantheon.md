@@ -7,8 +7,7 @@ Metadata
 filename: source/_guides/optimize/cdn-setting-up-cloudfront-on-pantheon.md
 ---
 
-## Pantheon Academy
-<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/zgUdAXbMm98" frameborder="0" allowfullscreen></iframe>
+
 ## Overview
 
 This article assumes that you have signed-up for Amazon Web Services and are familiar with the interface.
@@ -115,4 +114,3 @@ But _wait_! We can't just assume that a CDN wizard is magically teleporting site
 - [Content Delivery Network (CDN) for file distribution](/documentation/advanced-topics/content-delivery-network-cdn-for-file-distribution/)
 - [CDN Developer's Article](http://wimleers.com/article/easy-drupal-cdn-integration-for-fun-and-profit)
 - [CDN Module](https://drupal.org/project/CDN)
-

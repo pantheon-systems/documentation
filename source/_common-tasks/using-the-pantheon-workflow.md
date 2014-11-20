@@ -3,8 +3,6 @@ title: Using the Pantheon Workflow
 filename: source/_common-tasks/using-the-pantheon-workflow.md
 ---
 
-### Pantheon Academy - Pantheon Workflow
-<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/nOWajA0qQqQ?rel=0" width="560"></iframe>  
  
 ### Overview
 

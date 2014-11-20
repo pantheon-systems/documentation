@@ -1,7 +1,7 @@
 ---
 title: Developing on Pantheon directly with SFTP mode
 parent_guide:
-  - developing 
+  - developing
 filename: source/_guides/developing-sites/developing-on-pantheon-directly-with-sftp-mode.md
 ---
 
@@ -103,9 +103,6 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 - [FileZilla](/documentation/howto/filezilla-on-pantheon/)
 - [WinSCP](/documentation/howto/using-winscp-on-pantheon/)
 
-### Pantheon Academy
-
-​<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/BqatUtBlHGI?rel=0" width="650"></iframe>
 
 ### Troubleshooting
 

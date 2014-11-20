@@ -7,16 +7,15 @@ Metadata
 filename: source/_tools/varnish-caching-for-high-performance.md
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/gJTxAdaVn8k?rel=0" width="420"></iframe>
+
 ## Overview
 
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees DROP workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second - much faster than Drupal alone.  
-  
-  
+
+
 Every site on Pantheon already uses Varnish; each HTTP request first goes to the pool of Varnish servers to seamlessly cache your site content. If a current cache isn't found, the request will continue to the DROP worker, then the response will be cached on the way back to the browser.  
-  
-  
+
+
 Varnish can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by Varnish and end-users won't realize something is wrong.
 
 ## Check if Varnish is working on your Pantheon Site
@@ -26,11 +25,11 @@ Use the web utility at  [http://varnishcheck.getpantheon.com/](http://varnishch
 ## Configuring your site for Varnish
 
 No module installation is required; do  **not**  install the Drupal Varnish module.  
-  
-  
+
+
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as request. If your site sends headers that forbid caching, Varnish won't cache your content.  
-  
-  
+
+
 See  [Drupal's Performance Settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/) for step-by-step instructions on how to optimize your caching configuration.
 
 ## Test if Varnish is working by reading HTTP headers
@@ -74,8 +73,8 @@ First, install  [Firebug](http://getfirebug.com/), the in-browser debugging plu
 ### Testing Varnish with curl
 
 Open up a terminal and type in the following command. Using the  **-I ** (uppercase i) flag that prints out only the HTTP headers for the url you specify type in the following command with your full Pantheon domain URL.  
-  
-  
+
+
 Using curl you can then verify that you have all the correct headers displaying for your site.
 
     $ curl -I http://dev.pantheon.gotpantheon.com/
@@ -128,8 +127,8 @@ Varnish caches cannot be selectively cleared.
 ### No HTTP cache headers
 
 If you have checked your HTTP headers and found that the cache is not working, make sure that you have configured  [Drupal's performance settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/-drupal-s-performance-settings). Once you have completed this step you can go back and try to check the HTTP headers to verify that Varnish is working.  
-  
-  
+
+
 If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check the theme to see if Drupal messages are being set in an attempt to suppress user facing messages.
 
 ### Theme images getting stuck
@@ -149,11 +148,11 @@ If you have cleared the Caches from your Pantheon dashboard and are still seeing
 ### Cookies & Varnish
 
 By default, Pantheon's edge will ignore most cookies, preventing them from breaking the cache and being passed to the backend. These cookies are still available to javascript however, so popular analytics tools (e.g. Google, Chartbeat, etc) will function out of the box on Pantheon.   
-  
-  
+
+
 There is a list of special cookie name exceptions below in the Advanced Topics section.  
-  
-  
+
+
 To test whether or not a cookie is preventing Varnish from caching, you can examine the headers output(Age, Max-Age, Cookie) via the following curl command:
 
     $ curl -I dev.mysite.com
@@ -248,41 +247,41 @@ For example, you could set a cookie named `STYXKEY-country` to `ca` or `de`
 
 **Example `STYXKEY` cookie names (and why you might use them):**
 
-- 
+-
 
 `STYXKEY-mobile-ios`: you want to deliver totally different stylesheets and content for iOS devices
 
-- 
+-
 
 `STYXKEY_european_user`: you present different privacy options to E.U. users
 
-- 
+-
 
 `STYXKEY-under21`: parts of your site market alcohol, and you want to change the content for minors
 
-- 
+-
 
 `STYXKEY-school`: your site changes content depending on the user's school affiliation
 
 **Invalid names that won't work (and why):**
 
-- 
+-
 
 `STYXKEY`: needs something after the `STYXKEY` text
 
-- 
+-
 
 `styxkey-android`: the text `STYXKEY` must be uppercase
 
-- 
+-
 
 `STYX-KEY-android`: the text `STYXKEY` cannot be hyphenated or contain other punctuation
 
-- 
+-
 
 `STYXKEY.tablet`: the only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
-- 
+-
 
 `tablet-STYXKEY`: the cookie name must start with `STYXKEY`
 
@@ -326,5 +325,3 @@ The following is the contents of Pantheon's Varnish configuration (.vcl) file fo
         STYXKEY[a-zA-Z0-9-_]+
         has_js
         Drupal[a-zA-Z0-9-_\.]+
-
-

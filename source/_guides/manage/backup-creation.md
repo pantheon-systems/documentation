@@ -7,9 +7,6 @@ Metadata
 filename: source/_guides/manage/backup-creation.md
 ---
 
-## Pantheon Academy
-
-## <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/M9QSLVTt-GI" width="560"></iframe>
 
 Note: The current process is nearly the same as shown in video. Please see updated screenshots below.
 
@@ -26,7 +23,7 @@ Note: The current process is nearly the same as shown in video. Please see updat
 
 ![Create Backup](https://pantheon-systems.desk.com/customer/portal/attachments/305275)
 
-###   
+###
 Sit back and Relax
 
 You will notice the job indicator will turn green and let you know the current number of currently running jobs.
@@ -41,8 +38,8 @@ When the backup has finished, the jobs indicator will return to its start state 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/305286)
 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the the retention period expires for a particular backup, it will no longer be in the list of available archives.  
-  
-  
+
+
 Clicking on the down arrow of next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
 
 Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/documentation/howto/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
@@ -103,5 +100,3 @@ In comparison, Pantheon’s backup mechanism:
 - Secures access to archives through Pantheon authentication (no anonymous user can access)
 
 Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [terminus](https://github.com/pantheon-systems/terminus) and can directly get S3 download links for retrieval (the links have a timed expiration and must be renewed for additional security).
-
-

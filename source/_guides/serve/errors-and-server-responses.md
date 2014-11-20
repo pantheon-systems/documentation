@@ -6,40 +6,38 @@ permalink: documentation/getting-started/errors-and-server-responses/
 Metadata
 filename: source/_guides/serve/errors-and-server-responses.md
 ---
-
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/ypWcVLlTxaA" width="420"></iframe>  
+ 
  
 ## Error messages served by Pantheon, not by Drupal
 
 Sometimes, there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
-  
-  
+
+
 Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
-  
-  
+
+
 There are two variations on the messages; one for sites hosted on \*.gotpantheon.com (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
-  
-  
+
+
 There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
-  
-  
+
+
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
 ### Pantheon 401 Unauthorized
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/184676)  
 "This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
-  
-  
+
+
 In some circumstances, a 401 can be triggered by Drupal inadvertently if a site environment is locked, a user passes the HTTP auth but Drupal sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/184677)  
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
-  
-  
+
+
 Pantheon also prevents public access via the webserver to private files, Drupal's .htaccess, and directory listings.
 
 ### Pantheon - 404 Unknown Site
@@ -148,5 +146,3 @@ Drush is a great workaround for most administrative bottlenecks. Because it runs
 ## How to handle more traffic
 
 See our article on [debugging performance bottlenecks](/documentation/advanced-topics/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.
-
-

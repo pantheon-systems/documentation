@@ -7,9 +7,7 @@ Metadata
 filename: source/_tools/all-about-application-containers.md
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/IOZ-esZs-nY" width="560"></iframe>  
- 
+ 
 ## Overview
 
 Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real "horsepower" is in the Runtime Matrix, which is our way of provisioning and scaling application containers.
@@ -50,5 +48,3 @@ While these are related topics - e.g. performance often suffers under high concu
 Typically the best practice is to optimize for performance first, and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
 Because Pantheon does not handicap either limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. Support is happy to answer questions about site performance if you feel it's not up to where it should be. We also provide tools like [New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/) to give you insight into where time is being spent in your application.
-
-
