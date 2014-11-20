@@ -37,14 +37,14 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 **Drush Support**  
   We recommend [enabling Drush support](http://www.jetbrains.com/phpstorm/webhelp/drush.html).   
-1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click Plus.
+1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click Plus.  
 2. Choose Tool > Drush, and specify the path.
 
 ### Configure On-Server Development
 
 1. Put your [Dev environment into SFTP mode](http://helpdesk.getpantheon.com/customer/portal/articles/376107-developing-on-pantheon-directly-with-sftp-mode), and click **Connection Info** to see the connection settings.
 2. Within PhpStorm, go to Tools > Deployment > Configuration.
-3. Click Plus for the [add server dialog](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html). 
+3. Click plus for the [add server dialog](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html). 
 4. Enter the Pantheon site name followed by a dash, and the environment. Example: Yoursite-dev. 
 5. Type SFTP and click OK.
 
