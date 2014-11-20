@@ -4,26 +4,29 @@ filename: source/_common-tasks/cloning-an-existing-site-from-a-dashboard-backup.
 ---
 
 ## Cloning an Existing Site from a Dashboard Backup
-All Pantheon sites consist of three parts:
-1. Code: The code that makes up your Drupal or WordPress site . This is contained within your Pantheon Git repository.
-2. Files: Images, user uploads and other files which are not stored in version control, located in /sites/default/files (Drupal) or /wherever/wp-uploads/go (WordPress).
-3. Database: The MySQL database utilized by your code to store content, settings, etc.
 
-### **Step 1. Copying Your Code/Files/Database**
+All Pantheon sites consist of three parts:
 
-1. In the Dashboard for the site you want to copy, go to the Live environment and click on "Backups".
-2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking on the download icon. 
+* Code: The code that makes up your Drupal or WordPress site. This is contained within your Pantheon Git repository.
+* Files: Images, user uploads, and other files that are not stored in version control, located in /sites/default/files (Drupal) or /wherever/wp-uploads/go (WordPress).
+* Database: The MySQL database utilized by your code to store content, settings, etc.
 
-### **Step 2. Creating A New Pantheon Site​, Importing Your Code/Files/Database.**
+### Copy Your Code/Files/Database
 
-1. Go to your Sites and Account page on [https://dashboard.getpantheon.com/](https://dashboard.getpantheon.com/)
-2. Click on "Create A New Site".
+1. From your site Dashboard, go to the live environment and click **Backups**.
+2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the download icon.
+
+### Import Your Code/Files/Database
+
+1. Go to the Account page on [https://dashboard.getpantheon.com/](https://dashboard.getpantheon.com/)
+2. Click **Create A New Site**.
 3. Name your new site.
-4. Select "Import site" from the "Choose your Start State" options.
-5. Choose the "click here to provide separate code, files and database archives" link.
-6. In each of the form fields provided, change the option from URL to File, then select the respective archives previously downloaded. Then click the "Import Site" button.  
+4. Select **Import site** from the "Choose your Start State" options.
+5. Choose the **Click here to provide separate code, files, and database archives** link.
+6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded. 
+7. Click **Import Site**.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/344272)
-7. The import process will create and deploy a new site based on the files uploaded. If there are issues, please refer to our [importing](/documentation/advanced-topics/importing-an-existing-drupal-site-to-pantheon/-importing-an-existing-site) document for possible solutions or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+7. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/documentation/advanced-topics/importing-an-existing-drupal-site-to-pantheon/-importing-an-existing-site) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
 
 
 
