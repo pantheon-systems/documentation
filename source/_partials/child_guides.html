@@ -7,7 +7,7 @@ generator: guides_parent_guide_index
             <div class="sidebar-nav-fixed affix">
                   <div class="well">
                       <ul>
-                          {% for project in page.parent_guide_guides %}
+                          {% for guide in page.parent_guide_guides %}
                               <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
                           {% endfor %}
                       </ul>
