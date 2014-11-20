@@ -5,11 +5,12 @@
    ========================================================================== */
 @font-face {
     font-family: 'open_sansregular';
-    src: url(/source/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
-    src: url(/source/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
-         url(/source/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
-         url(/source/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
-         url(/source/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
+    src: url(/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
+    src: url(/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype');
+    src: url(/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff');
+    src: url(/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg');
+    src: url(/assets/fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
+
     font-weight: normal;
     font-style: normal;
 
@@ -48,6 +49,7 @@ ul li,
 ol li,
 p {
   font-family: "open_sansregular";
+  font-size: 1.15em;
 }
 
 /**
@@ -55,8 +57,8 @@ p {
  */
 h1.title {
   text-align: center;
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 55px;
+  line-height: 55px;
   font-weight: bold;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -96,15 +98,15 @@ h6 {
 }
 
 h1 {
-  font-size: 1.538em;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 1.385em;
+  font-size: 1.8em;
 }
 
 h3 {
-  font-size: 1.231em;
+  font-size: 1.5em;
 }
 
 h4 {

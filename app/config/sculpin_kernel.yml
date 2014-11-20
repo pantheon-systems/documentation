@@ -1,4 +1,6 @@
 sculpin:
+sculpin_theme:
+    theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
 
     guides:
