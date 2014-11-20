@@ -1,2 +1,5 @@
-output_dev
-output_prod
+/output_*/
+/.sculpin/
+/app/logs/*
+/source/components/
+/app/cache/*

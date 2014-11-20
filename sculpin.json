@@ -11,7 +11,7 @@
         },
         {
             "name": "Brian MacKinney",
-            "email": "brian@getpantheon.com.com",
+            "email": "brian@getpantheon.com"
         }
     ],
     "require": {
@@ -21,8 +21,7 @@
     },
     "config": {
         "component-dir": "source/components"
-    }
-    {
+    },
     "repositories": [
         {
             "type": "vcs",
@@ -32,5 +31,4 @@
     "require": {
         "sculpin/bootstrap-3-blog-theme": "dev-master"
     }
-}
 }
