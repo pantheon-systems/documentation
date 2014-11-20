@@ -4,6 +4,6 @@
 
 ## Embedding images
 
-`![Image Title](/assets/images/pantheon-fistbump.png "Pantheon Fistbump")` will yield
+`![Pantheon Fistbump](/source/assets/images/pantheon-fistbump.png "Pantheon Fistbump")` will yield
 
-![Image Title](../assets/images/pantheon-fistbump.png "Pantheon Fistbump")
+![Pantheon Fistbump](/source/assets/images/pantheon-fistbump.png "Pantheon Fistbump")
