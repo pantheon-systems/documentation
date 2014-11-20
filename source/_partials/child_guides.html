@@ -1,9 +1,18 @@
 ---
 generator: guides_parent_guide_index
 ---
-<h1></h1>
-<ul>
-    {% for project in page.parent_guide_guides %}
-        <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="sidebar-nav-fixed affix">
+                  <div class="well">
+                      <ul>
+                          {% for guide in page.parent_guide_guides %}
+                              <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

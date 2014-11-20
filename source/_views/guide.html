@@ -48,7 +48,18 @@
   </p>
   <![endif]-->
     {% include("navbar.html") %}
-    <div class="container">
+                    {% include("child_guides.html") %}
+                    <ul class="nav ">
+                        <li class="nav-header"></li>
+
+                    </ul>
+              </div>
+              <!--/.well -->
+          </div>
+          <!--/sidebar-nav-fixed -->
+      </div>
+    </div>
+      <div class="container">
         <div class="row-fluid">
             <div class="col-lg-9">
             {% block content_wrapper %}
@@ -59,11 +70,11 @@
                     <div>
                         {{ page.blocks.content|raw }}
                     </div>
-                    {% if page.categories %}
-                        <p class="categories">
-                        Categories:
-                        {% for category in page.categories %}
-                        <a href="{{ site.url }}/documentation/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+                    {% if page.parent_guide %}
+                        <p class="parent_guides">
+                        parent_guide:
+                        {% for parent_guide in page.parent_guides %}
+                        <a href="{{ site.url }}/guides/{{ parent_guide|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
                         {% endfor %}
                         </p>
                     {% endif %}
@@ -71,7 +82,7 @@
                         <p class="tags">
                         Tags:
                         {% for tag in page.tags %}
-                        <a href="{{ site.url }}/documentation/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                        <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
                         {% endfor %}
                         </p>
                     {% endif %}

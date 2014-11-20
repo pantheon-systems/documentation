@@ -1,18 +1,17 @@
 {
-    "name": "sculpin/blog-skeleton",
-    "description": "A Skeleton for a Sculpin Based Blog",
-    "type": "sculpin-skeleton",
+    "name": "pantheon-systems/documentation",
+    "description": "Pantheon's Documentation Site",
+    "type": "sculpin-docs",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dragonfly Development Inc.",
-            "email": "info@dflydev.com",
-            "homepage": "http://dflydev.com"
+            "name": "Pantheon Training and Technical Content",
+            "email": "docs@getpantheon.com",
+            "homepage": "https://www.getpantheon.com"
         },
         {
-            "name": "Beau Simensen",
-            "email": "beau@dflydev.com",
-            "homepage": "http://beausimensen.com"
+            "name": "Brian MacKinney",
+            "email": "brian@getpantheon.com.com",
         }
     ],
     "require": {
@@ -23,4 +22,15 @@
     "config": {
         "component-dir": "source/components"
     }
+    {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:sculpin/bootstrap-3-blog-theme.git"
+        }
+    ],
+    "require": {
+        "sculpin/bootstrap-3-blog-theme": "dev-master"
+    }
+}
 }
