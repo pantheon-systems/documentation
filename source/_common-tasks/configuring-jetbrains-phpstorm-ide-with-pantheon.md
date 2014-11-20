@@ -1,29 +1,28 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Pantheon
-filename: source/_common-tasks/configuring-jetbrains-phpstorm-ide-with-pantheon.md
+filename: "source/_common-tasks/configuring-jetbrains-phpstorm-ide-with-pantheon.md"
+published: true
 ---
 
-## Pantheon Academy
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube-nocookie.com/embed/2K20B0cEC4g" width="560"></iframe>
 ## Overview
 
-[JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a popular commercial PHP IDE that can be configured to work with Drupal sites.
+[JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with Drupal sites.
 
-JetBrains has comprehensive documentation on how to configure PhpStorm with Drupal - see their article [Drupal Development using PhpStorm](http://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm) for details.
+JetBrains has comprehensive documentation on [Drupal development using PhpStorm](http://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm) for details.
 
-This article will cover some best practices and recommendations for building a Drupal site on Pantheon using PhpStorm after you've followed the JetBrains guide.
+This article will cover some best practices and recommendations for building a Drupal site on Pantheon using PhpStorm.
 
-## Initial site setup
+## Initial Site Setup
 
-After you've [created your site on Pantheon](/documentation/howto/pantheon-101-getting-started/), you'll need to set up your local environment.
+After you've [created your site on Pantheon](http://helpdesk.getpantheon.com/customer/portal/articles/717236-pantheon-101-getting-started), you'll need to set up your local environment.
 
-### Clone the code repository from git
+### Clone the Code Repository From Git
 
-First, make sure your dev environment is in Git mode, then [clone your git repository](/documentation/getting-started/starting-with-git/) to your local workstation.
+First, make sure your Dev environment is in Git mode, then [clone your Git repository](http://helpdesk.getpantheon.com/customer/portal/articles/361247-starting-with-git) to your local workstation.
 
-### Create new PhpStorm project
+### Create New PhpStorm Project
 
-Then, open PhpStorm and Create New Project from Existing Files.
+Open PhpStorm and create a new project from existing files.
 
 Create New Project: [Create New Project:](<a href=) [Choose Project Directory](http://www.jetbrains.com/phpstorm/webhelp/create-new-project-choose-project-directory.html) - Project root - Select the folder which is the parent for all the project sources and click this icon or choose Project Root on the context menu of the selection. Click Finish
 
