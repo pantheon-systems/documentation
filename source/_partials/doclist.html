@@ -1,0 +1,30 @@
+<ul>
+    {% for guide in data.guides %}
+        <li><a href="{{ guide.url }}">{{ guide.title }}</a>
+        #@TODO Mike van Winkle: list by directory with accordion
+        </li>
+    {% endfor %}
+</ul>
+<ul>
+    {% for common-task in data.common-tasks %}
+        <li><a href="{{ common-task.url }}">{{ common-task.title }}</a>
+        #@TODO Mike van Winkle: list by directory with accordion
+        </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for tool in data.tools %}
+        <li><a href="{{ tool.url }}">{{ tool.title }}</a>
+        #@TODO Mike van Winkle: list by directory with accordion
+        </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for sites in data.sites %}
+        <li><a href="{{ guide.url }}">{{ guide.title }}</a>
+        #@TODO Mike van Winkle: list by directory with accordion
+        </li>
+    {% endfor %}
+</ul>
