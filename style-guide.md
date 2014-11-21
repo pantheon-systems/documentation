@@ -61,27 +61,21 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 ### Videos
 
-Videos enable visual learners to get information in a way that works for them (vs. content only). 
-
-Best practices for using video in web-based help documentation:
-
 * Use video sparingly, and only for more complex tasks. 
 
 * Videos must be hosted on YouTube.
 
 * Videos should be as short as possible, typically no more than 30 seconds.
 
-* By default, videos should display in a paused state until the user clicks  it.  Display a prominent play button to direct user attention to the Play option. 
-
-* Video should be embedded within the page rather than opening in a new window.  
+* Embed videos with an iframe: `<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>` will yeild <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>.  
 
 ### Code Snippets
 
-Any bits of code should be wrapped in `code `tags. Any standalone code blocks should be wrapped in `pre` tags.
+Any bits of code should be wrapped in backticks. `` Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.
 
 ### Links
 
-Links should be displayed in blue, with no additional formatting. Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For more information, see [Cross-Referencing Documents](#bookmark=id.r632os5owzq1).
+Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/guide/guid-title "Pantheon's Guide to doing something somewhere")` will yeild [Guide Title](/guide/guid-title "Pantheon's Guide to doing something somewhere").
 
 ### Anchor Tags 
 
