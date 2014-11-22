@@ -11,3 +11,5 @@ From the command line, `cd documentation` and `cp guide_template.md source/_guid
 - [ ] link-to [Style Guide](https://docs.getpantheon.com/style-guide.html)
 - [ ] Identify contribution types
 - [ ] Create contribution examples
+- [ ] Add github flow example
+- 
