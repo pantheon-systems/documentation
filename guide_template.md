@@ -1,33 +1,31 @@
 ---
-title: Add the goal, using a gerund phrase
+title: Gerund phrase of goal
 parent_guide: developing
 problems: 
 slides_embed:
 video: 
 ---
+---------------
 Overview text
 
 ### Before You Begin
- -  If this problem type has conditions that create variants, list the applicable set of conditions here. Create new guides for variants on the overall process.
-
-[TOC]
+ -  List
+ -  Prerequistes
 
 <copy this block and follow its structure for each phase in the approach.>
-
 ---------------
-## 1: Goal
-
-<copy this block for each relevant condition in the phase>
-###If you want to __condition__
+## 1: If you want to (goal)
 
 You should:
  - imperative statement 1
  - imperative statement 2
 
-#### Watch out for
+### If you see
 
-Warning conditions and steps to remediate
+ - Warning conditions and steps to remediate
+ - 
+ 
 ----
-### 1.1
+## 1.1: 
 
 <paste the phase template here (goals/rules of thumb)>
