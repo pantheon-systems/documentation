@@ -1,6 +1,8 @@
 ---
 title: Getting the Client IP Address
 filename: source/_common-tasks/getting-the-client-ip-address.md
+tools:
+  -
 ---
 ###Overview
 
@@ -33,5 +35,3 @@ IP-based security schemes are not recommended. However, services such as Geoloca
 **Spam and Failed Logins**
 
 Drupal manages the thresholds for spam and flood detection using configuration variables you can set via settings.php. There are also modules such as [flood control](https://drupal.org/project/flood_control) that will give you more flexibility and allow you to manage the thresholds via the Drupal admin.
-
-

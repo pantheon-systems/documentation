@@ -1,6 +1,8 @@
 ---
 title: Git FAQs
 filename: source/_common-tasks/git-faq.md
+tools:
+  -
 ---
 
 ## Conflicts When Updating Core
@@ -97,7 +99,7 @@ If you're importing a site that has an existing Git history, you may be able to 
 
     'git pull -Xours [your existing repo] [existing site branch]'
 
-4. If there are any conflicts, you'll need to resolve them. 
+4. If there are any conflicts, you'll need to resolve them.
   **Note**: You will get conflicts on all the binary files (e.g. favicion.ico), but you can just Git add them again.
 5. Once this is done, push back to Patheon:
 
@@ -146,7 +148,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/documentation/howto/generating-ssh-keys/-generating-ssh-keys).
 
-**Why am I being prompted for my password after adding the public key?** 
+**Why am I being prompted for my password after adding the public key?**
 
 This occurs if you have multiple SSH keys. For more information,  see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
@@ -207,7 +209,7 @@ When looking for a commit ID, you can find the last instance where the missing f
 
     'git push origin master'
 
-**How do I fix fast forward errors?** 
+**How do I fix fast forward errors?**
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 

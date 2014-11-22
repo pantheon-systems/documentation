@@ -1,6 +1,8 @@
 ---
 title: Hot Fixes
 filename: source/_common-tasks/hot-fixes.md
+tools:
+  -
 ---
 
 Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and here's how you do it on Pantheon:

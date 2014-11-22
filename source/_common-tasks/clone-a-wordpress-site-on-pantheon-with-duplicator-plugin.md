@@ -1,5 +1,5 @@
 ---
-title: Clone a WordPress site on Pantheon with Duplicator plugin
+title: Clone a WordPress site to Pantheon using Duplicator plugin
 filename: source/_common-tasks/clone-a-wordpress-site-on-pantheon-with-duplicator-plugin.md
 tools:
   - WordPress Duplicator
@@ -7,13 +7,11 @@ tools:
 framework:
   - WordPress
 ---
-### 1. Install [The Duplicator WordPress Plugin](https://wordpress.org/plugins/duplicator/) on your existing site.
+### 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.
 
-### 2. Archive Your Live Code/Files/Database
+### 2. Archive Your Site's Code/Files/Database
 
-1. Log into the site’s dashboard on Pantheon.
-2. Enable [SFTP mode](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode) on the dev environment’s code tab.
-3. Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click “Next” and then “Build.” When complete, click “Archive” to download the resulting file.
+Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click “Next” and then “Build.” When complete, click “Archive” to download the resulting file.
 
 ### 3. Create A New Pantheon Site​, Importing Your Archive
 

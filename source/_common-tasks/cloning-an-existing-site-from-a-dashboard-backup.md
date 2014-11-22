@@ -1,6 +1,8 @@
 ---
 title: Cloning an Existing Site from a Dashboard Backup
 filename: source/_common-tasks/cloning-an-existing-site-from-a-dashboard-backup.md
+tools:
+  -
 ---
 
 ## Cloning an Existing Site from a Dashboard Backup
@@ -23,7 +25,7 @@ All Pantheon sites consist of three parts:
 3. Name your new site.
 4. Select **Import site** from the "Choose your Start State" options.
 5. Choose the **Click here to provide separate code, files, and database archives** link.
-6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded. 
+6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
 7. Click **Import Site**.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/344272)
 7. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/documentation/advanced-topics/importing-an-existing-drupal-site-to-pantheon/-importing-an-existing-site) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.

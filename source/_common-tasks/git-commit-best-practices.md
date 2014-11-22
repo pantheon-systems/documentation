@@ -5,6 +5,8 @@ categories:
 permalink: documentation/advanced-topics/git-commit-best-practices/
 Metadata
 filename: source/_common-tasks/git-commit-best-practices.md
+tools:
+  -
 ---
 
 ## Commit often
@@ -20,6 +22,6 @@ drush @pantheon.site-name.dev en -y views 
 [shift+enter] views module will be used to create lists of content filtered by content type. Ctools is the only dependency of views.
 ## Write clear commit messages
 Do not write, "fixed a bunch of stuff" - it doesn't clearly articulate what changes the commit represents.   
-  
-  
+
+
 Your git logs should become a list of instructions that someone can follow to rebuild your site. Having small, m
