@@ -3,3 +3,35 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/**
+ * Embedded Open Sans Font
+ */
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
+    src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
+         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
+         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "open_sansregular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1px transparent;
+  font-smoothing: antialiased;
+}
+
+p {
+  font-family: "open_sansregular";
+  font-size: 1.14em;
+}
+
+a {
+  font-size: 1.14em;
+}
