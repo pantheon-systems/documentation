@@ -1,0 +1,28 @@
+{% extends "default" %}
+{% block content_wrapper %}
+    <article>
+        <header>
+            <h1>{{ page.title }} <small>Common Task</small></h1>
+        </header>
+        <div>
+            {{ page.blocks.content|raw }}
+        </div>
+        {% if page.framework %}
+            <p class="categories">
+            Frameworks:
+            {% for framework in page.framework %}
+            <a href="{{ site.url }}/tool/{{ framework|url_encode(true) }}">{{ framework }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+        {% if page.tools %}
+            <p class="tools">
+            tools:
+            {% for tool in page.tools %}
+            <a href="{{ site.url }}/tool/{{ tool|url_encode(true) }}">{{ tool }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+
+    </article>
+{% endblock %}

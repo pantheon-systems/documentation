@@ -1,99 +1,40 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7">
-<![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8">
-<![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9">
-<![endif]-->
-<!--[if gt IE 8]>
-<!-->
-<html class="no-js">
-  <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
-  <style>
-      body {
-        padding-bottom: 20px;
-      }
-      .navbar-inverse .navbar-nav>li>a {
-        color: #fff;
-      }
-      .navbar-inverse {
-        background: #222;
-        background-image: none;
-      }
-  </style>
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-
-  <script src="//www.google-analytics.com/analytics.js"></script>
-  <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
-  <body>
-  <!--[if lt IE 7]>
-  <p class="browsehappy">
-    You are using an <strong>outdated</strong>
-    browser. Please
-    <a href="http://browsehappy.com/">upgrade your browser</a>
-    to improve your experience.
-  </p>
-  <![endif]-->
-    {% include("navbar.html") %}
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-lg-9">
-            {% block content_wrapper %}
-                <article>
-                    <header>
-                        <h2>How to {{ page.title }}</h2>
-                    </header>
-                    <div>
-                        {{ page.blocks.content|raw }}
-                    </div>
-                    {% if page.categories %}
-                        <p class="categories">
-                        Categories:
-                        {% for category in page.categories %}
-                        <a href="{{ site.url }}/documentation/csategories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-                        {% endfor %}
-                        </p>
-                    {% endif %}
-                    {% if page.tags %}
-                        <p class="tags">
-                        Tags:
-                        {% for tag in page.tags %}
-                        <a href="{{ site.url }}/documentation/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-                        {% endfor %}
-                        </p>
-                    {% endif %}
-
-                </article>
-            {% endblock %}
-
-
-                {% include("footer_content.html") %}
-            </div>
-            <div class="col-lg-3 sidebar">
-                {% if page.filename %}
-                <div class="well" align="center">
-                  <a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
-                    <button type="button" class="btn btn-warning">Improve This Guide</button>
-                  </a>
-                </div>
-                {% endif %}
-            </div>
+{% extends "default" %}
+{% block content_wrapper %}
+    <article>
+        <header>
+            <h2>{{ page.title }} <small>Tool</small></h2>
+        </header>
+        <div>
+            {{ page.blocks.content|raw }}
         </div>
-    </div>
-    <!-- /container -->
-  {% include("footer_scripts.html") %}
-</body>
-</html>
+        {% if page.categories %}
+            <p class="categories">
+            Categories:
+            {% for category in page.categories %}
+            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+        {% if page.tags %}
+            <p class="tags">
+            Tags:
+            {% for tag in page.tags %}
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+
+        {% if page.previous_post or page.next_post %}
+            <nav class="article">
+                <ul>
+                    {% if page.next_post %}
+                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                    {% endif %}
+                    {% if page.previous_post %}
+                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    </article>
+{% endblock %}

@@ -11,17 +11,17 @@ sculpin_content_types:
         taxonomies:
             - parent_guide
             - framework
-        permalink: guides/:slug_title/
+        permalink: guide/:slug_title/
 
     common-tasks:
         type: path
         path: _common-tasks
-        singular_name: common-task
+        singular_name: common_task
         enabled: true
         taxonomies:
             - tools
             - framework
-        permalink: common-tasks/:slug_title/
+        permalink: common_task/:slug_title/
 
     tools:
         type: path
@@ -30,7 +30,7 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - framework
-        permalink: tools/:slug_title/
+        permalink: tool/:slug_title/
 
     sites:
         type: path
@@ -39,4 +39,4 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - framework
-        permalink: sites/:slug_title/
+        permalink: site/:slug_title/

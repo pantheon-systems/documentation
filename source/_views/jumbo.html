@@ -1,59 +1,8 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7">
-<![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8">
-<![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9">
-<![endif]-->
-<!--[if gt IE 8]>
-<!-->
-<html class="no-js">
-  <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
-  <style>
-      body {
-        padding-bottom: 20px;
-      }
-      .navbar-inverse .navbar-nav>li>a {
-        color: #fff;
-      }
-      .navbar-inverse {
-        background: #222;
-        background-image: none;
-      }
-  </style>
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-
-  <script src="//www.google-analytics.com/analytics.js"></script>
-  <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
-  <body>
-  <!--[if lt IE 7]>
-  <p class="browsehappy">
-    You are using an <strong>outdated</strong>
-    browser. Please
-    <a href="http://browsehappy.com/">upgrade your browser</a>
-    to improve your experience.
-  </p>
-  <![endif]-->
-    {% include("navbar.html") %}
-    <div class="container">
-
-      {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-
-      {% include("footer_content.html") %}
-    </div>
-    <!-- /container -->
-  {% include("footer_scripts.html") %}</body>
-</html>
+{% extends "default" %}
+  {% block content_wrapper %}
+    <article>
+        <div>
+            {{ page.blocks.content|raw }}
+        </div>
+</article>
+{% endblock %}
