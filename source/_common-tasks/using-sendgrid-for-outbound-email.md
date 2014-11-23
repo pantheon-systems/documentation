@@ -3,18 +3,17 @@ title: Using SendGrid for Outbound Email
 filename: source/_common-tasks/using-sendgrid-for-outbound-email.md
 ---
 
-Your Drupal application running on Pantheon will need to send email for a variety of reasons — new user registrations, password resets and social notifications, for example. We provide a working mail tool with every environment, but because Pantheon's platform utilizes a very large array of machines, and your application could be running on any one of them on any given day, you may have problems with deliverability using the built-in mail agent.
+Your application will need to send email for a variety of reasons — new user registrations, password resets and social notifications, for example. We provide a working mail tool with every environment, but because our platform utilizes a very large array of machines, and your application could be running on any one of them on any given day, you may have problems with deliverability using the built-in mail agent.
 
 To insure that email is delivered, we recommend using an email gateway which insures your mail originates from a constant source. SendGrid is a cloud service for email which provides such a service, and helps you eliminate the complexity of sending high-deliverability email e.g. maintaining good relations with other internet postmasters, helping with DKIM and SPF setup, etc.
 
 There are three simple steps to sending email from Pantheon using SendGrid.
 
 #### 1. Create a SendGrid Account
-You can send up to 200 emails per day **for free** with SendGrid, so it's risk free to try out. Also, as a Pantheon customer, we are also able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
 
- 
+You can send up to 200 emails per day **for free** with SendGrid, so it's risk free to try out. Also, as a Pantheon customer, we are also able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
 
-#### 2. Download Drupal's SMTP Module
+#### 2. Download Drupal's SMTP Module @TODO WordPress
 
 Pantheon recommends using the actively maintained [SMTP module](http://drupal.org/project/smtp) to send email with Drupal, regardless of your email gateway. Luckily, SendGrid plugs right in.
 
@@ -29,9 +28,12 @@ Login to your Drupal dev site with your Pantheon username and password, which gi
 First, make sure to activate the module by selecting "On" in the Install Options box.
 
 SMTP server: `smtp.sendgrid.net`  
-SMTP port: `25`  
-Username: _Your SendGrid username_  
-Password: _Your SendGrid password_
+
+SMTP port: `25`  
+
+Username: _Your SendGrid username_  
+
+Password: _Your SendGrid password_
 
 Under email options, be sure to include a valid from address and a name for the sender of the email (such as your name or your website's name).
 
