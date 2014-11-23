@@ -4,6 +4,7 @@
         <header>
             <h1>How to {{ page.title }}</h1>
         </header>
+
         {% if page.framework %}
             <p class="framework">
             Frameworks:
@@ -23,7 +24,5 @@
         <div>
             {{ page.blocks.content|raw }}
         </div>
-
-
     </article>
 {% endblock %}
