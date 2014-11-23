@@ -52,15 +52,28 @@
         <div class="row-fluid">
             <div class="col-lg-9">
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-                {% include("footer_content.html") %}
-            </div>
-            <div class="col-lg-3">
-              {% include("doclist.html") %}
-            </div>
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="col-lg-3">
+                          {% include("doclist.html") %}
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+{% if page.filename %}
+      <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
+        <button type="button" class="btn btn-warning">Improve This Doc</button>
+      </a></p>
+{% endif %}
+              </div>
         </div>
     </div>
+        <div class="footer">
+            <div class="row-fluid">
+                  {% include("footer_content.html") %}
+            </div>
+        </div>
+
     <!-- /container -->
   {% include("footer_scripts.html") %}
 </body>
