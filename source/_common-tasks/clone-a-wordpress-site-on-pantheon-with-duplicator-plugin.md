@@ -7,6 +7,7 @@ tools:
 framework:
   - WordPress
 ---
+
 ### 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.
 
 ### 2. Archive Your Site's Code/Files/Database
