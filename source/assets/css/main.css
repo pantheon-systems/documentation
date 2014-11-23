@@ -43,7 +43,7 @@ li{
   padding: 0px;
   margin-bottom: 0px;
   color: inherit;
-  background-color: #eee;
+  background-color: #fff;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -73,3 +73,10 @@ li{
   .jumbotron .h1 {
     font-size: 63px;
   }
+.col-sm-3 {
+  padding-left:2px;
+}
+
+.col-sm-4 {
+  padding-left:2px;
+}
