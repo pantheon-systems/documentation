@@ -176,38 +176,25 @@ To manually delete merge conflicts from the terminal, use the following commands
 
 1.Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
-
-    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree."
-
-2. From your local repository, run the following Git command to get a copy of the file in conflict:
-
-    'git checkout <commit ID> -- <file>'
-
-When looking for a commit ID, you can find the last instance where the missing file was in the repository.
-
-3. Run git status and verify that there is a new file to add to the repository:
-
+CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.  
+2. From your local repository, run the following Git command to get a copy of the file in conflict: 
+   'git checkout <commit ID> -- <file>'
+When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
+3. Run git status and verify that there is a new file to add to the repository:  
     'git status
     # On branch master
     # Changes to be committed:
     # (use "git reset HEAD ..." to unstage)
     #
     # new file: README.txt
-    #'
-
-4. Run the Git add command:
-
-    'git add .'
-
-5. After performing the add, commit the file with an accompanying commit message.
-
-    'git commit -am "verifying missing README.txt"'
-
-  You will receive confirmation from Git that the file has been committed.
-
-6. Run the Git push command:
-
-    'git push origin master'
+    #'  
+4. Run the Git add command:  
+ 'git add .'  
+5. After performing the add, commit the file with an accompanying commit message.  
+  'git commit -am "verifying missing README.txt"'
+  You will receive confirmation from Git that the file has been committed.  
+6. Run the Git push command:  
+  'git push origin master'
 
 **How do I fix fast forward errors?**
 
