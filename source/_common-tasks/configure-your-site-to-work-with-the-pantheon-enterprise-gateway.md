@@ -1,5 +1,5 @@
 ---
-title: Configuring a site to Use the Pantheon Enterprise Gateway
+title: Configuring a Site to Use the Pantheon Enterprise Gateway
 filename: source/_common-tasks/how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway.md
 tools:
   -
@@ -7,7 +7,7 @@ tools:
 
 [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway) creates a secure tunnel between your firewall and your public website and is available for enterprise customers. [Contact us](https://www.getpantheon.com/contact/enterprise) for more information.
 
-### Configure a Pantheon site to Use the Pantheon Enterprise Gateway
+### Configure a Site to Use the Pantheon Enterprise Gateway
 
 After purchasing the Pantheon Enterprise Gateway, a support ticket will be created and we will guide you through the process. We set up the gateway on our end, and you'll need to do a one time setup on your end.
 
