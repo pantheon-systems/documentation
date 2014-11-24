@@ -89,7 +89,7 @@ From your local clone, you should be able to run the `git apply` command as per 
 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
-## Importing with Existing History
+## Import with Existing History
 
 If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.
 
@@ -111,7 +111,7 @@ If you're importing a site that has an existing Git history, you may be able to 
 
 Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
 
-When you switch to On Server Development, you will not have the ability to interact with your code via Git. If you try pushing it will be blocked.
+When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked.
 
 If you have On Server Development disabled, you can interact with your code vit Git.
 
@@ -121,7 +121,7 @@ We are currently running Git 1.7.
 
 **Why were pushes denied because of changes in sites/default/files?**
 
-If you find that you are running into issues with commits that reference sites/default/files, you can use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
+If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
 From within the Drupal root of your site:
 
@@ -134,7 +134,7 @@ The commit `f4160148` is one from pretty far back in the Drupal 7 history, guara
 
 We are updating our infrastructure so that code repositories do not have a single point of failure. To do this, we are moving to a more distributed code server binding model.
 
-**How and Why we are making this change:**
+**How and why we are making this change:**
 
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt-in to evaluate the settings.
 
@@ -176,38 +176,25 @@ To manually delete merge conflicts from the terminal, use the following commands
 
 1.Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
-
-    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree."
-
-From your local repository, run the following Git command to get a copy of the file in conflict:
-
-    'git checkout <commit ID> -- <file>'
-
-When looking for a commit ID, you can find the last instance where the missing file was in the repository.
-
-2.Run git status and verify that there is a new file to add to the repository:
-
+CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.  
+2. From your local repository, run the following Git command to get a copy of the file in conflict: 
+   'git checkout <commit ID> -- <file>'
+When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
+3. Run git status and verify that there is a new file to add to the repository:  
     'git status
     # On branch master
     # Changes to be committed:
     # (use "git reset HEAD ..." to unstage)
     #
     # new file: README.txt
-    #'
-
-3. Run this command:
-
-    'git add .'
-
-4. After performing the add, commit the file with an accompanying commit message.
-
-    'git commit -am "verifying missing README.txt"'
-
-  You will receive confirmation from Git that the file has been committed.
-
-5. Run this command:
-
-    'git push origin master'
+    #'  
+4. Run the Git add command:  
+ 'git add .'  
+5. After performing the add, commit the file with an accompanying commit message.  
+  'git commit -am "verifying missing README.txt"'
+  You will receive confirmation from Git that the file has been committed.  
+6. Run the Git push command:  
+  'git push origin master'
 
 **How do I fix fast forward errors?**
 
@@ -229,7 +216,7 @@ There are a number of patterns and strategies of Git code management for single 
 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
-**How can I delete a remote branch?**
+**How do I delete a remote branch?**
 
     'git push origin :branchname'
 
