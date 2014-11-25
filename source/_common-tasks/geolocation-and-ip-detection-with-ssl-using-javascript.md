@@ -11,8 +11,8 @@ For example, the [MaxMind GeoIP2 JavaScript API](http://www.maxmind.com/en/javas
 
 This code is only for demonstration purposes; if you were to develop your own custom functionality, **executable code should only reside in the codebase, not the database**.
 
-1. Sign up for [MaxMind's Free Service](http://www.maxmind.com/en/javascript)
-2. Add your Dev, Test and Live domains to GeoIP JavaScript Domains.
+1. Sign up for [MaxMind's Free Service](http://www.maxmind.com/en/javascript).
+2. Add your Dev, Test, and Live domains to GeoIP JavaScript Domains.
 3. Add a block to your site as full HTML with the following content:  
 <textarea cols="80" rows="25">&lt;script type="text/javascript" src="//j.maxmind.com/js/apis/geoip2/v2.0/geoip2.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
