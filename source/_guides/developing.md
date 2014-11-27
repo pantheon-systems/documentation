@@ -1,7 +1,7 @@
 ---
-title: Developing
+title: Developing Sites on Pantheon
 filename: source/_guides/developing.md
-layout: default
+layout: guide
 ---
 The practice of professional web development has been thoroughly and professionally documented elsewhere. We built much of the most common advice and decisions into the opinion of the Pantheon. Yes, our platform has a well-developed opinion about how you can and should build awesome websites. Step into our guides and procedures to upgrade your trade. Take your development game to the next level by letting our robots handle the dirty work, so that you can focus on the art and science of web-based communication.
 

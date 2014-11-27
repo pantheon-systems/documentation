@@ -75,10 +75,6 @@ li{
     font-size: 63px;
   }
 
-  .footer{
-
-  }
-
   .docs {color: white;
     font-weight: bold;
     padding-top: 10px;
@@ -102,24 +98,19 @@ li{
   .sidebar {
     position: fixed;
     top: 51px;
-    bottom: 0;
+    bottom: 60px;
     left: 0;
     z-index: 1000;
     display: block;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
+    background-color: ;
     border-right: 1px solid #eee;
   }
 }
 
 /* Sidebar navigation */
-
-.nav-sidebar > li > a {
-  padding-right: 0px;
-  padding-left: 0px;
-  font-weight: bold;
 
 }
 .nav-sidebar > .active > a,
@@ -193,4 +184,43 @@ li{
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #222;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #222;
 }
