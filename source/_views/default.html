@@ -47,24 +47,22 @@
     to improve your experience.
   </p>
   <![endif]-->
+    <div class="container-fluid">
     {% include("navbar.html") %}
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-lg-9">
+  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 col md-2 sidebar sidebar-offcanvas nav nav-sidebar">
+              {% include("doclist.html") %}
+            </div>
+            <div class="class=col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-                <div class="container">
-                    <div class="row-fluid">
-                        <div class="col-lg-3">
-                          {% include("doclist.html") %}
-                        </div>
-                    </div>
-                </div>
 
-{% if page.filename %}
-      <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
-        <button type="button" class="btn btn-warning">Improve This Doc</button>
-      </a></p>
-{% endif %}
+    {% if page.filename %}
+          <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
+            <button type="button" class="btn btn-warning">Improve This Doc</button>
+          </a></p>
+    {% endif %}
               </div>
         </div>
     </div>
