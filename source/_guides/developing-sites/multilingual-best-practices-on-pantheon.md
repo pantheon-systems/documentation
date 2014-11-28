@@ -1,7 +1,7 @@
 ---
 title: Multilingual best practices on Pantheon
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/multilingual-best-practices-on-pantheon.md
 ---
 

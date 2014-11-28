@@ -1,7 +1,7 @@
 ---
 title: WordPress FAQ
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/wordpress-faq.md
 ---
 

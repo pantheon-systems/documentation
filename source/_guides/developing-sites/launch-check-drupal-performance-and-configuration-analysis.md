@@ -1,7 +1,7 @@
 ---
 title: Launch Check - Drupal performance and configuration analysis
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/launch-check-drupal-performance-and-configuration-analysis.md
 ---
 

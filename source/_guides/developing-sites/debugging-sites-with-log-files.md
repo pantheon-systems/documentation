@@ -1,7 +1,7 @@
 ---
 title: Debugging sites with log files
 parent_guide:
-  - developing
+  - Developing
 framework:
 	- drupal
 filename: source/_guides/developing-sites/debugging-sites-with-log-files.md

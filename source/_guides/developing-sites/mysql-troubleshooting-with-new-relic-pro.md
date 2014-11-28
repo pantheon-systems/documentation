@@ -1,7 +1,7 @@
 ---
 title: MySQL Troubleshooting with New Relic Pro
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/mysql-troubleshooting-with-new-relic-pro.md
 ---
 

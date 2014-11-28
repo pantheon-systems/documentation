@@ -1,7 +1,7 @@
 ---
 title: Configuring Settings.php
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/configuring-settings-php.md
 ---
   

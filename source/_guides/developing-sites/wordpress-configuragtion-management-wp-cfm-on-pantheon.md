@@ -1,7 +1,7 @@
 ---
 title: WordPress Configuragtion Management (wp-cfm) on Pantheon
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/wordpress-configuragtion-management-wp-cfm-on-pantheon.md
 ---
 

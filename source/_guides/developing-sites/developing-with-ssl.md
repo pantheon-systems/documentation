@@ -1,7 +1,7 @@
 ---
 title: Developing with SSL
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/developing-with-ssl.md
 ---
 

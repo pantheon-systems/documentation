@@ -1,7 +1,7 @@
 ---
 title: Developing on Pantheon directly with SFTP mode
 parent_guide:
-  - developing
+  - Developing
 filename: source/_guides/developing-sites/developing-on-pantheon-directly-with-sftp-mode.md
 ---
 
