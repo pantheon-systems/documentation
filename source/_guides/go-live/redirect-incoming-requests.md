@@ -1,25 +1,25 @@
 ---
 title: Redirect Incoming Requests
 parent_guide:
-    - going-live
+    - Going Live
 /redirect-incoming-requests/
 Metadata
 filename: source/_guides/go-live/redirect-incoming-requests.md
 ---
 
 Often, it's useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
-  
-  
+
+
 **Note** : Drupal sites on Pantheon technically do not require a sites/default/settings.php file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see [configuring settings.php](/documentation/howto/configuring-settings-php/-configuring-settings-php).
 
 ## Why redirect with settings.php or wp-config.php and not .htaccess?
 
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
-  
-  
+
+
 Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
-  
-  
+
+
 Configuration also tends to be more maintainable as Drupal and WordPress developers are typically literate in PHP, but very few people are naturally fluent in Apache2 rewrite rules and conditions.
 
 Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well!
@@ -31,23 +31,23 @@ Finally, as settings.php or wp-config.php is parsed very early in the bootstrap 
 While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
     // Require WWW.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-      if ($_SERVER['HTTP_HOST'] == 'yoursite.com' || 
+      if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
           $_SERVER['HTTP_HOST'] == 'live-yoursite.gotpantheon.com') {
-        header('HTTP/1.0 301 Moved Permanently'); 
-        header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']); 
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
       }
     }
 
     // Remove WWW.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-      if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' || 
+      if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' ||
           $_SERVER['HTTP_HOST'] == 'live-yoursite.gotpantheon.com') {
-        header('HTTP/1.0 301 Moved Permanently'); 
-        header('Location: http://yoursite.com'. $_SERVER['REQUEST_URI']); 
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: http://yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
       }
     }
@@ -76,14 +76,14 @@ If you don't want to have your whole site under HTTPS, we recommend using a secu
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require SSL for admin pages.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         // If admin, redirect to secure.
         if (preg_match('/^\/admin/', $_SERVER['REQUEST_URI'])) {
-          header('HTTP/1.0 301 Moved Permanently'); 
+          header('HTTP/1.0 301 Moved Permanently');
           header('Location: https://secure.yoursite.com'. $_SERVER['REQUEST_URI']);
-          exit(); 
+          exit();
         }
       }
     }
@@ -93,15 +93,15 @@ You can implement a secure domain for a specific set of page with Drupal modules
 If you want to use SSL everywhere and standardize on your domain, you can combine this kind of logic into a single block:
 
     // Require SSL, www.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-      if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' || 
+      if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
-          $_SERVER['HTTP_X_SSL'] != 'ON' ) { 
-        header('HTTP/1.0 301 Moved Permanently'); 
-        header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']); 
+          $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
-      } 
+      }
     }
 
 ### Require SSL everywhere except specific pages
@@ -139,7 +139,7 @@ If you would like to redirect from a subdomain to a specific area of the site, u
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') {
       $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
-      header('HTTP/1.0 301 Moved Permanently'); 
+      header('HTTP/1.0 301 Moved Permanently');
       header("Location: $newurl");
       exit();
     }
@@ -188,5 +188,3 @@ When transitioning from a system that used a tilde to indicate a home directory,
     if ($legacy_username) {
       // Your custom logic.
     }
-
-

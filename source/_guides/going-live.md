@@ -2,6 +2,8 @@
 title: Going Live
 title-slug: going-live
 filename: source/_docs/going-live-and-launching-your-site.md
+parent_guide:
+		- Going Live
 ---
 
 ## Preparing for your site launch

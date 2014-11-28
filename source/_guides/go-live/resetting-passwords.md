@@ -1,7 +1,7 @@
 ---
 title: Resetting Passwords
 parent_guide:
-    - going-live
+    - Going Live
 /resetting-passwords/
 Metadata
 filename: source/_guides/go-live/resetting-passwords.md

@@ -1,7 +1,8 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
 parent_guide:
-    - getting-startedsource/_guides/get-started/required-reading-essential-pantheon-documentation.md
+    - getting-started
+    filename:source/_guides/get-started/required-reading-essential-pantheon-documentation.md
 ---
 
 Pantheon is unlike any traditional web hosting service that you may have used in the past.

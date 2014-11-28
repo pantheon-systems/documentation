@@ -1,9 +1,8 @@
 ---
 title: Generating SSH Keys
 parent_guide:
-    - going-live
-/generating-ssh-keys/
-Metadata
+    - Going Live
+slug:generating-ssh-keys
 filename: source/_guides/go-live/generating-ssh-keys.md
 ---
 
@@ -19,11 +18,11 @@ To fix this, please edit the user or hostname and remove spaces and/or odd chara
 
 Genrating SSH keys is different for every platform. Please follow the directions that are most appropriate for you below:
 
-1. 
+1.
 
 [MacOS and Linux](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
 
-2. 
+2.
 
 [Windows / Git GUI and OpenSSH](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-openssh)
 
@@ -96,19 +95,19 @@ Ensure the whole key is selected (white text on a blue background). If it's not 
 
 Here we will only cover the basics, but if you need more detailed instructions on this section, then take a look at the [Loading SSH Keys](/documentation/getting-started/loading-ssh-keys/) section of the wiki.
 
-1. 
+1.
 
 Sign on to Pantheon and visit the "Your Sites & Account" page.
 
-2. 
+2.
 
 Click the button in the lower right to add a new key.
 
-3. 
+3.
 
 Paste the copied public key into the box and click to save it.
 
-4. 
+4.
 
 Your computer is now set up to securely connect to the Pantheon git server.
 
@@ -270,5 +269,3 @@ There are two steps that you can try to fix this error:
 #### Server refused to allocate pty
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#message_391).
-
-

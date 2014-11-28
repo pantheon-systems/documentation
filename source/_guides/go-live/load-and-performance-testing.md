@@ -1,7 +1,7 @@
 ---
 title: Load and Performance Testing
 parent_guide:
-    - going-live
+    - Going Live
 /load-and-performance-testing/
 Metadata
 filename: source/_guides/go-live/load-and-performance-testing.md

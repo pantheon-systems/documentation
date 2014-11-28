@@ -1,7 +1,7 @@
 ---
 title: Setting up a domain with Godaddy
 parent_guide:
-    - going-live
+    - Going Live
 /setting-up-a-domain-with-godaddy/
 Metadata
 filename: source/_guides/go-live/setting-up-a-domain-with-godaddy.md

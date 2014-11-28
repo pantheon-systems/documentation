@@ -1,9 +1,9 @@
 ---
 title: Gandi & Pantheon: Pointing your DNS
 parent_guide:
-    - going-live
-/gandi-pantheon-pointing-your-dns/
-Metadata
+    - Going Live
+gandi-pantheon-pointing-your-dns
+
 filename: source/_guides/go-live/gandi-pantheon-pointing-your-dns.md
 ---
 

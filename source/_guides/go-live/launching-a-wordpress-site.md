@@ -1,7 +1,7 @@
 ---
 title: Launching a WordPress Site
 parent_guide:
-    - going-live
+    - Going Live
 permalink: documentation/getting-started/launching-a-wordpress-site/
 Metadata
 filename: source/_guides/go-live/launching-a-wordpress-site.md
@@ -82,5 +82,3 @@ You are ready to start development!
 
 Developing with SFTP  
 /documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode
-
-

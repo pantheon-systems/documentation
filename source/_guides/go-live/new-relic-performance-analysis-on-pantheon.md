@@ -1,7 +1,7 @@
 ---
 title: New Relic performance analysis on Pantheon
 parent_guide:
-    - going-live
+    - Going Live
 /new-relic-performance-analysis-on-pantheon/
 Metadata
 filename: source/_guides/go-live/new-relic-performance-analysis-on-pantheon.md
@@ -14,23 +14,23 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 ## Enabling New Relic
 
 To enable New Relic on your Pantheon site, click Settings in the upper-right corner of your site dashboard.  
-  
-  
+
+
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/218051)  
-  
-  
+
+
 Within the "Add Ons" tab, click "Add" next to New Relic.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/218052)  
 Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
-  
-  
+
+
 You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
-  
-  
+
+
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/280225)  
-  
-  
+
+
 You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, you can go to the New Relic workspace on your dashboard and click "_Open New Relic_". You will be taken to the New Relic interface.
 
 The New Relic Interface provides severals views that display information about various aspects of your website's performance.
@@ -58,8 +58,8 @@ The New Relic Interface provides severals views that display information about v
 ## Only logging authenticated users
 
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using Drupal's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as /admin.  
-  
-  
+
+
 If you want to disable New Relic for anonymous traffic, add the following to your sites/default/settings.php:
 
     <?php
@@ -116,4 +116,3 @@ Yes you can! Open a support ticket and provide your account ID and license key.
 - [What is Real user monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
 - [Finding help from the New Relic UI](https://newrelic.com/docs/site/finding-help)
 - [Interface overview](https://newrelic.com/docs/site/the-new-relic-ui)
-

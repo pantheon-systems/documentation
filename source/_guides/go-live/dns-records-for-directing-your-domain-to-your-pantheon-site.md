@@ -1,7 +1,7 @@
 ---
 title: DNS records for directing your domain to your Pantheon site
 parent_guide:
-    - going-live
+    - Going Live
 permalink: documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/
 Metadata
 filename: source/_guides/go-live/dns-records-for-directing-your-domain-to-your-pantheon-site.md
