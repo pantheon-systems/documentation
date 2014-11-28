@@ -96,8 +96,7 @@ li{
 }
 @media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    top: 51px;
+    top: 10px;
     bottom: 60px;
     left: 0;
     z-index: 1000;
@@ -155,6 +154,7 @@ li{
 
 .main {
   padding: 20px;
+  margin-left: 0;
 }
 @media (min-width: 768px) {
   .main {
@@ -223,4 +223,11 @@ body > .container {
   padding-right: 15px;
   padding-left: 15px;
   background-color: #222;
+}
+
+.previous {
+  font-weight: bold;
+}
+.next {
+  font-weight: bold;
 }
