@@ -1,9 +1,10 @@
 ---
 title: Gerund phrase of goal
 parent_guide: developing
-problems: 
+problems:
 slides_embed:
-video: 
+video:
+draft: true
 ---
 ---------------
 Overview text
@@ -23,9 +24,9 @@ You should:
 ### If you see
 
  - Warning conditions and steps to remediate
- - 
- 
+ -
+
 ----
-## 1.1: 
+## 1.1:
 
 <paste the phase template here (goals/rules of thumb)>
