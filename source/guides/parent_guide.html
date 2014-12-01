@@ -6,15 +6,17 @@ pagination:
     provider: page.parent_guide_guides
 
 ---
-{% block title %}{{ page.title }}{{ page.parent_guide }}{% endblock %}
+{% block title %}{{ page.parent_guide }} {{ page.title }}{% endblock %}
 {% block content %}
-<h2>Guides to {{ page.parent_guide }} </h2>
-{% for guide in page.pagination.items %}
+<h1> {{ page.parent_guide|replace({'-': ' '})|title }} Guides </h1>
+<ul>{% for guide in page.pagination.items %}
 <article>
-  <div><a href="{{ site.url }}{{ guide.url }}">{{ guide.title }}</a></div>
-</article>
+  <div><h4><a href="{{ site.url }}{{ guide.url }}">{{ guide.title }}</a></h4>
+  <p>{{ guide.blocks.description }}</p>
+<div>
+ <article>
 {% endfor %}
-
+</ul>
 <div>
 {% if page.pagination.previous_page or page.pagination.next_page %}
     <nav class="article clearfix">

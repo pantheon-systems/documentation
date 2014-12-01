@@ -2,7 +2,6 @@
 use: [common_tasks]
 layout: default
 ---
-
 # Common Tasks
 
 <ul>
