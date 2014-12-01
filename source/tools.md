@@ -2,11 +2,14 @@
 use: [tools]
 layout: default
 ---
+
 # Tools
 
 <ul>
     {% for tool in data.tools %}
-        <h4><li><a href="{{ tool.url }}">{{ tool.title }}</a></li></h4>
+        <article>
+          <div><h4><a href="{{ tool.url }}">{{ tool.title }}</a></h4></div>
+          </article>
     {% endfor %}
 </ul>
 
