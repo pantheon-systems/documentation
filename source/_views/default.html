@@ -58,12 +58,14 @@
             <div class="class=col-sm-8 col-md-8 main">
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
-    {% if page.filename %}
-          <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
-            <button type="button" class="btn btn-warning">Improve This Doc</button>
-          </a></p>
-    {% endif %}
-              </div>
+                {% if page.filename %}
+                      <p>
+                      </p>
+                      <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
+                        <button type="button" class="btn btn-warning">Improve This Doc</button>
+                      </a></p>
+                {% endif %}
+            </div>
         </div>
   </div>
 
