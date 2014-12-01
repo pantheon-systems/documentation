@@ -240,3 +240,7 @@ body > .container {
 .next {
   font-weight: bold;
 }
+
+#toc {
+  float:right;
+}
