@@ -1,6 +1,7 @@
 ---
 use: [common_tasks]
 layout: default
+title: Commmon Tasks
 ---
 
 # Common Tasks
