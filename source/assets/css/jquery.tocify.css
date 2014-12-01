@@ -5,10 +5,8 @@
 
 /* The Table of Contents container element */
 .tocify {
-    width: 20%;
     max-height: 90%;
     overflow: auto;
-    margin-left: 2%;
     position: fixed;
     border: 1px solid #ccc;
     webkit-border-radius: 6px;
@@ -29,12 +27,11 @@
 
 /* Top level header elements */
 .tocify-header {
-    text-indent: 10px;
 }
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
 .tocify-subheader {
-    text-indent: 20px;
+    text-indent: 10px;
     display: none;
 }
 

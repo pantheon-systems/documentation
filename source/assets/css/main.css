@@ -241,6 +241,4 @@ body > .container {
   font-weight: bold;
 }
 
-#toc {
-  float:right;
-}
+.content-type {float:right;}
