@@ -90,6 +90,15 @@ margin-right: auto;
 margin-left: auto;
 }
 
+/* limit img width*/
+
+img {max-width: 1000px;
+}
+
+/* edit button*/
+
+.btn-warning {float:right;
+}
 /* Hide for mobile, show later */
 .sidebar {
   display: none;
