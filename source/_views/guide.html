@@ -2,8 +2,7 @@
   {% block content_wrapper %}
     <article>
         <header>
-            <h1>{{ page.title }}</h1>
-            <small>Guide</small>
+            <h1>{{ page.title|title }}</h1>
             </header>
               {% if page.framework %}
                   <p class="framework">
@@ -20,7 +19,8 @@
                   <a href="{{ site.url }}/tool/{{ tool|url_encode(true) }}">{{ tool }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}
                   </p>
-              {% endif %}  <div>
+              {% endif %}
+                <div>
                     {{ page.blocks.content|raw }}
                 </div>
     </article>

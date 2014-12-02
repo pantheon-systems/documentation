@@ -51,11 +51,9 @@
     {% include("navbar.html") %}
   </div>
     <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-sm-2 col md-2 sidebar sidebar-offcanvas nav nav-sidebar">
-              {% include("doclist.html") %}
-            </div>
-            <div class="class=col-sm-8 col-md-8 main">
+        <div class="row">
+            <div class="col-sm-9 col-md-9 main">
+
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
                 {% if page.filename %}
@@ -66,10 +64,10 @@
                       </a></p>
                 {% endif %}
             </div>
-            <div id="toc" class="col-sm-2 col-sm-offset-8 col-md-2 col-md-offset-8">
+            <div id="toc" class="col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-8 tocify">
             </div>
+          </div>
         </div>
-    </div>
 
 
 
