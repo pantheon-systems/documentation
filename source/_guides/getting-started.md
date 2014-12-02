@@ -1,6 +1,8 @@
 ---
 title: Get Started
 filename: source/_guides/get-started.md
+parent_guide:
+  - getting-started
 ---
 The practice of professional web development has been thoroughly and professionally documented elsewhere. We built much of the most advanced and common performance-improving decsions directly into the Platform. Yes, our platform has a well-developed opinion about how you can and should build awesome websites, and it forces and nudges you into using them, for free. Step into our guides and common tasks to upgrade your trade.
 

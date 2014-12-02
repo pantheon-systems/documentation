@@ -1,6 +1,7 @@
 ---
 use: [tools]
 layout: default
+title: Tools
 ---
 
 # Tools

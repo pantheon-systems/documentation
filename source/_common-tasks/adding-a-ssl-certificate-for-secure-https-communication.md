@@ -12,21 +12,21 @@ If you're running a Windows environment, you'll need to have Cygwin installed. F
 
 ## Generate a Key and CSR
 
-1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain. 
+1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.
  ![Generate CSR command](https://pantheon-systems.desk.com/customer/portal/attachments/40331)
 
 **Note**: Do not add a password to your key. We will not be able to work with it.  
-2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal. 
+2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal.
     It is important to keep your .key file that you generate and make sure it's secure; you will need it later when you set up SSL with Pantheon.  
 
 The command will be similar to the following:
 
     openssl req -new -newkey rsa:2048 -nodes -out www_pantheon_com.csr
-    -keyout www_pantheon_com.key -subj "/C=US/ST=California/L=San Francisco/O=Pantheon 
+  -keyout www_pantheon_com.key -subj "/C=US/ST=California/L=San Francisco/O=Pantheon
     Systems/OU=Support/CN=www.pantheon.com";
 
 The output of this should be two files:  
-  
+
 `www_pantheon_com.csr`  
 `www_pantheon_com.key`
 
@@ -54,9 +54,9 @@ If you get more than one intermediary certificate file, you'll need to combine t
 
 To validate your own files before submitting them to Pantheon, check out this list of [the most common OpenSSL commands](http://www.sslshopper.com/article-most-common-openssl-commands.html).
 
-**Note**: You'll need to have a [Pro level plan](https://www.getpantheon.com/pricing) or higher to take advantage of SSL on Pantheon. 
+**Note**: You'll need to have a [Pro level plan](https://www.getpantheon.com/pricing) or higher to take advantage of SSL on Pantheon.
 
-1. From your Dashboard, click **Domains** on the environment you want to add the SSL cert to. 
+1. From your Dashboard, click **Domains** on the environment you want to add the SSL cert to.
 2. Select the **SSL tab**.
 **Note**: If you have not added a card to your site, you will get a message in the main workspace letting you know you need to select a plan.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/259878)
@@ -73,7 +73,7 @@ You can upload the same wildcard SSL certificate for multiple sites that share a
 
 ## Verify Your SSL IP Address
 
-Before you point your DNS to the custom IP address you received after entering your SSL, you can verify that the certificate is correct by visiting the HTTPS IP address. 
+Before you point your DNS to the custom IP address you received after entering your SSL, you can verify that the certificate is correct by visiting the HTTPS IP address.
 
 ![Site dashboard domain setup section](https://pantheon-systems.desk.com/customer/portal/attachments/259889)​
 
@@ -92,18 +92,18 @@ Before you point your DNS to the custom IP address you received after entering y
 **Important:** This allows you to verify that the SSL certificate matches what you uploaded. Do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/66611)  
-  
+
 
 In Chrome, check the certificate by clicking on the padlock in the address bar, then click **Certificate Information**.
-  
+
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/66609)
 
 ## Check End-To-End Routing
 
 Visiting your SSL IP directly will display a 404 Site Not Found error. Pantheon's routing uses the hostname to route traffic to particular backends; without a hostname, the router cannot determine which site was requested.  
-  
+
 To test the end-to-end routing of a new SSL site, you need to specify a hostname. One way to do this is to add a host entry to your local computer's /etc/hosts file, which (for your computer only) maps the specified domain name to the specified IP address. Don't forget to remove the entry after testing.  
-  
+
 You can also test with curl on the command line. It's not very visual but you'll see your site's content, just substitute your SSL IP and hostname:
 
     $: curl -I -v https://192.168.0.1 --header "Host: mywebsite.com"
@@ -128,7 +128,7 @@ If you receive SSL chain errors on a mobile device, make sure that the certifica
 There are a number of ways to check the certificate has broad support by using an [SSL checker](http://www.sslshopper.com/ssl-checker.html).  
 
 This will perform a number of checks, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain.  
-  
+
 
 If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
@@ -139,7 +139,7 @@ If you notice that the SSL chain is broken or you experience issues with mobile 
 ## HTTPS vs HTTP Redirection
 
 We recommend choosing a single protocol and redirecting traffic to either HTTPS or HTTP rather than in a mixed mode. However, if you do need both HTTP and HTTPS, you can use the secure pages module to set this up. For more information, see [Redirecting Incoming Requests](http://helpdesk.getpantheon.com/customer/portal/articles/368354 "Pantheon helpdesk, incoming requests").  
-  
+
 
 ## Frequently Asked Questions
 
@@ -160,5 +160,3 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 ### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
 
 This indicates that some part of the chain is out of order. Check that you have the main & intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.
-
-
