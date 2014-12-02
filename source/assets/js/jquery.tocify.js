@@ -61,7 +61,7 @@
 
             // **showEffect**: Accepts String: "none", "fadeIn", "show", or "slideDown"
             // Used to display any of the table of contents nested items
-            showEffect: "none",
+            showEffect: "show",
 
             // **showEffectSpeed**: Accepts Number (milliseconds) or String: "slow", "medium", or "fast"
             // The time duration of the show animation
@@ -85,11 +85,11 @@
 
             // **scrollTo**: Accepts Number (pixels)
             // The amount of space between the top of page and the selected table of contents item after the page has been scrolled
-            scrollTo: 70,
+            scrollTo: 75,
 
             // **showAndHideOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be shown and hidden while scrolling
-            showAndHideOnScroll: true,
+            showAndHideOnScroll: false,
 
             // **highlightOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be highlighted (set to a different color) while scrolling
