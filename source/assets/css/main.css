@@ -78,11 +78,11 @@ li{
   .docs {color: white;
     font-weight: bolder;
     padding-top: 10px;
-    font-size: 1.24em;
   }
   a.docs {
     color: white;
     font-weight:bold;
+    font-size: 1em;
   }
 #navbar {
   padding-top: 6px;
@@ -92,6 +92,7 @@ li{
 background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
 background-repeat: repeat-x;
   border-color: #101010;
+  padding:0px;
 }
 
 .btn-doclist:hover, .btn-doclist:focus, .btn-doclist:active, .btn-doclist.active, .open .dropdown-toggle.btn-doclist {
@@ -385,6 +386,8 @@ a.gsc-trailing-more-results:link {
   color: #008000;
 }
 
-#cse-search-form.navbar-right {
+#cse-search-form {
   width:30%;
+  vertical-align:middle;
+  padding-top: 20px;
 }
