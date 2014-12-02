@@ -9,7 +9,7 @@ pagination:
 {% block title %}{{ page.parent_guide }} {{ page.title }}{% endblock %}
 {% block content %}
 <h1> {{ page.parent_guide|replace({'-': ' '})|title }} Guides </h1>
-<ul>{% for guide in page.pagination.items %}
+<ul class="guide-list">{% for guide in page.pagination.items %}
 <article>
   <div><h4><a href="{{ site.url }}{{ guide.url }}">{{ guide.title }}</a></h4>
   <p>{{ guide.blocks.description }}</p>
