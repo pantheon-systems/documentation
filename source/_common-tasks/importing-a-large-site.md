@@ -5,7 +5,7 @@ tools:
   -
 ---
 
-While the Pantheon Dashboard works exceptionally well for small to mid-sized sites, there are times where a manual approach is needed. This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
+This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).
 * Your site’s code, files, or SQL archive is greater than 500MB (the URL upload import file limit).
@@ -23,13 +23,13 @@ From your pantheon Dashboard, choose **Create a new site**. Name your site, sele
 
 
 **Import the Code**  
-As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc...) as the starting point of your Pantheon site, you can use Git to import your existing code with commit history intact. If you don’t have a version controlled codebase, the following will still work, though there won’t be a commit history for Pantheon’s Git repository to reference.
+As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with commit history intact. If you don’t have a version controlled codebase, the following will still work, though there won’t be a commit history for Pantheon’s Git repository to reference.
 
 1. Go to your code directory within your terminal.
 2. Bring in the Pantheon core files. If your existing site code is not version controlled with Git, run 'git init' first.
 3. From your site's Dashboard, go to the Dev environment.
 4. Click **Settings**, then select **About Site**. 
-5. Place your mouse over the upstream value, left click and select **Copy link**. That will get the site's Pantheon upstream location.  
+5. Place your mouse over the upstream value, left click and select **Copy link** to get the site's Pantheon upstream location.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/343668)  
 6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:  
 **Original:** 'git pull --no-rebase -Xtheirs --squash {paste-value-here} master'    
