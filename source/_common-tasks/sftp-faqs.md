@@ -1,9 +1,5 @@
 ---
 title: SFTP FAQs
-categories:
-  - getting-started
-permalink: documentation/getting-started/sftp-faqs/
-Metadata
 filename: source/_common-tasks/sftp-faqs.md
 ---
 
