@@ -52,7 +52,7 @@
   </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-9 col-md-9 main">
+            <div class="col-lg-9 col-sm-9 col-md-9 main">
 
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
@@ -64,26 +64,26 @@
                       </a></p>
                 {% endif %}
             </div>
-            <div id="toc" class="col-lg-3 col-lg-offset-8 col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-9 tocify">
-              <div id="cse-search-form">Loading</div>
-  <script src='//www.google.com/jsapi' type='text/javascript'></script>
-  <script type='text/javascript'>
-  google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
-  google.setOnLoadCallback(function() {
-  var customSearchOptions = {};
-  var orderByOptions = {};
-  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-  customSearchOptions['enableOrderBy'] = true;
-  customSearchOptions['orderByOptions'] = orderByOptions;
-  var customSearchControl =   new google.search.CustomSearchControl('017416971424255486898:moj1j4obfwm', customSearchOptions);
-  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-  var options = new google.search.DrawOptions();
-  options.setSearchFormRoot('cse-search-form');
-  options.setAutoComplete(true);
-  customSearchControl.draw('cse', options);
-  }, true);
-  </script>
-            </div>
+            <div id="toc" class="col-lg-3 col-lg-offset-9 col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-9 docs-search-nav">
+              <div id="cse-search-form" class=" row">Loading</div>
+                <script src='//www.google.com/jsapi' type='text/javascript'></script>
+                <script type='text/javascript'>
+                google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
+                google.setOnLoadCallback(function() {
+                var customSearchOptions = {};
+                var orderByOptions = {};
+                orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+                customSearchOptions['enableOrderBy'] = true;
+                customSearchOptions['orderByOptions'] = orderByOptions;
+                var customSearchControl =   new google.search.CustomSearchControl('017416971424255486898:moj1j4obfwm', customSearchOptions);
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                var options = new google.search.DrawOptions();
+                options.setSearchFormRoot('cse-search-form');
+                options.setAutoComplete(true);
+                customSearchControl.draw('cse', options);
+                }, true);
+                </script>
+
           </div>
         </div>
 

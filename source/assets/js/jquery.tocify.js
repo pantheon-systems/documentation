@@ -61,7 +61,7 @@
 
             // **showEffect**: Accepts String: "none", "fadeIn", "show", or "slideDown"
             // Used to display any of the table of contents nested items
-            showEffect: "show",
+            showEffect: "none",
 
             // **showEffectSpeed**: Accepts Number (milliseconds) or String: "slow", "medium", or "fast"
             // The time duration of the show animation
@@ -89,7 +89,7 @@
 
             // **showAndHideOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be shown and hidden while scrolling
-            showAndHideOnScroll: false,
+            showAndHideOnScroll: true,
 
             // **highlightOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be highlighted (set to a different color) while scrolling
@@ -97,7 +97,7 @@
 
             // **highlightOffset**: Accepts a number
             // The offset distance in pixels to trigger the next active table of contents item
-            highlightOffset: 40,
+            highlightOffset: 5,
 
             // **theme**: Accepts a string: "bootstrap", "jqueryui", or "none"
             // Determines if Twitter Bootstrap, jQueryUI, or Tocify classes should be added to the table of contents
@@ -105,7 +105,7 @@
 
             // **extendPage**: Accepts a boolean: true or false
             // If a user scrolls to the bottom of the page and the page is not tall enough to scroll to the last table of contents item, then the page height is increased
-            extendPage: true,
+            extendPage: false,
 
             // **extendPageOffset**: Accepts a number: pixels
             // How close to the bottom of the page a user must scroll before the page is extended

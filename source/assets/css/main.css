@@ -39,7 +39,15 @@ a {
 li{
   font-size: 1.14em;
 }
-
+.docs-search-nav {
+  margin-top: 40px;
+  max-height: 90%;
+  overflow: auto;
+  position: fixed;
+  border-radius: 6px;
+  right: 4%;
+  text-align: left;
+}
 .jumbotron {
   padding: 0px;
   margin-bottom: 0px;
@@ -257,10 +265,6 @@ body > .container {
   font-weight: bold;
 }
 
-.content-type {
-  float:right;
-}
-
 .guide-list {
   padding-top: 70px;
 }
@@ -387,7 +391,6 @@ a.gsc-trailing-more-results:link {
 }
 
 #cse-search-form {
-  width:30%;
   vertical-align:middle;
   padding-top: 20px;
 }
