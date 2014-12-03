@@ -8,10 +8,12 @@ filename: source/_common-tasks/importing-an-existing-drupal-site-to-pantheon.md
 
 The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/213957)  
+Ah! We can dance if we want to, we can leave your friends behind Cause your friends don't dance and if they don't dance, well then they're no friends of mine.
 
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500MB max) to import an archive.  
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/213971)​​
+![](https://pantheon-systems.desk.com/customer/portal/attachments/213957)
+
+Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500MB max) to import an archive.
+ ![](https://pantheon-systems.desk.com/customer/portal/attachments/213971)
 
 ## Components of a Drupal Site
 
@@ -34,7 +36,7 @@ To log back into your imported site that is in maintenance mode, just go to /use
 
 ## Export Your Executable Code
 
-Your codebase is required to import your site into Pantheon, as it will be used to create the initial code repository. This archive should include your entire Drupal codebase, including modules, themes, installation profiles, libraries, etc.  
+Your codebase is required to import your site into Pantheon, as it will be used to create the initial code repository. This archive should include your entire Drupal codebase, including modules, themes, installation profiles, libraries, etc.
 
 The code archive should not include the "files" directory (e.g. sites/default/files) or any other static assets that should not be tracked in version control.
 
@@ -97,7 +99,7 @@ This is optional, but recommended. Export a tar.gz or .zip file of your files di
 
 ## Upload Files to Pantheon
 
-The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.  
+The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
