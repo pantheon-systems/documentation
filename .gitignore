@@ -3,3 +3,4 @@
 /app/logs/*
 /source/components/
 /app/cache/*
+/sculpin.phar
