@@ -23,7 +23,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 - All containers are created equally; free accounts are not underpowered.
 - All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [phpinfo()](http://php.net/manual/en/function.phpinfo.php)
   - **Packages**: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
-  - **Extensions** : APC, New Relic, OAuth, Redis
+  - **Extensions**: APC, New Relic, OAuth, Redis
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
   - Maximum PHP execution time is 90 seconds
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB
