@@ -2,8 +2,6 @@
 title: Email on Pantheon
 categories:
     - running-drupal
-/email-on-pantheon/
-Metadata
 filename: source/_tools/email-on-pantheon.md
 ---
 
@@ -14,8 +12,8 @@ Pantheon does not host inboxes for you. We recommend making use of an externally
 ## Outgoing Email
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
-  
-  
+
+
 Pantheon has a partner relationship with SendGrid, a high-deliverability email service, which offers up to 200 emails a day for free, and can scale to millions if needed. Find more information, see the [SendGrid HOWTO](/documentation/howto/using-sendgrid-for-outbound-email/).
 
 We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails - account registration, forgot password, etc - you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.

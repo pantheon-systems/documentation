@@ -2,12 +2,10 @@
 title: Redis as a caching backend
 categories:
     - howto
-/redis-as-a-caching-backend/
-Metadata
 filename: source/_tools/redis-as-a-caching-backend.md
 ---
 
- 
+
 Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
 ## What is Redis?
 
