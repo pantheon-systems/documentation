@@ -6,8 +6,6 @@ parent_guide:
 filename: source/_guides/managing-upstreams.md
 ---
 
-# Updating Upstreams
-
 Once you have a distribution running on Pantheon, keep it and its downstream sites up-to-date by merging in updates to core, extensions, and themes.
 
 ## Merging Core Releases

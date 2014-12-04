@@ -2,7 +2,7 @@
 title: Varnish caching for high performance
 categories:
   - getting-started
-permalink: documentation/advanced-topics/varnish-caching-for-high-performance/
+/varnish-caching-for-high-performance/
 Metadata
 filename: source/_tools/varnish-caching-for-high-performance.md
 ---

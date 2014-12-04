@@ -2,9 +2,9 @@
 title: All About Application Containers
 categories:
   - getting-started
-permalink: documentation/advanced-topics/all-about-application-containers/
-Metadata
 filename: source/_tools/all-about-application-containers.md
+slug: sites
+
 ---
 
  

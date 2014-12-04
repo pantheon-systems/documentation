@@ -3,7 +3,7 @@ title: Non-Standard Files Locations
 categories:
     - needs wp
 layout: tool
-permalink: documentation/advanced-topics/non-standard-files-locations/
+/non-standard-files-locations/
 Metadata
 filename: source/_tools/non-standard-files-locations.md
 ---
@@ -22,5 +22,3 @@ Your legacy file paths should now work, and your fies will be stored in our clou
 So long as the path you've chosen for your symlink does not conflict with a future Drupal core update, this link will persist indefinitely.
 
 **Note:** adding a symlink for a legacy directory path will _not_ work with private files. If you have a private files use-case, you will need to migrate the file paths and drop references to the legacy location.
-
-

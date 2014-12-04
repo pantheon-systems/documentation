@@ -2,7 +2,7 @@
 title: Private Files
 categories:
     - running-drupal
-permalink: documentation/running-drupal/private-files/
+/private-files/
 Metadata
 filename: source/_tools/private-files.md
 ---
@@ -56,9 +56,7 @@ This can be done via Drush:
     # Set this to Test/Live
     $: drush @pantheon.example.test vset uc_credit_encryption_path 'private'
     # verify the path is set on Test/Live
-    $: drush @pantheon.example.test vget uc_credit_encryption_path 
+    $: drush @pantheon.example.test vget uc_credit_encryption_path
     uc_credit_encryption_path: "private"
 
 **Note: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.**
-
-

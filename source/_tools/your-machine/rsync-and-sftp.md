@@ -2,7 +2,7 @@
 title: rsync and SFTP
 categories:
   - getting-started
-permalink: documentation/advanced-topics/rsync-and-sftp/
+/rsync-and-sftp/
 Metadata
 filename: source/_tools/rsync-and-sftp.md
 ---

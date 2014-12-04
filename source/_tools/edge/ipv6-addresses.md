@@ -2,7 +2,7 @@
 title: IPv6 addresses on Pantheon
 categories:
   - getting-started
-permalink: documentation/advanced-topics/ipv6-addresses-on-pantheon/
+/ipv6-addresses-on-pantheon/
 Metadata
 filename: source/_tools/ipv6-addresses-on-pantheon.md
 ---

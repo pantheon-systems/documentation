@@ -7,8 +7,6 @@ filename: source/_guides/backup-creation.md
 ---
 
 
-Note: The current process is nearly the same as shown in video. Please see updated screenshots below.
-
 ## Overview
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 

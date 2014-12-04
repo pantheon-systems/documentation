@@ -1,8 +1,10 @@
 ---
-title: Cron on Pantheon
+title: Cron
 categories:
     - howto
 filename: source/_tools/cron-on-pantheon.md
+slug: sites/code
+
 ---
 
  **NOTE:** Cron will always run _UNLESS_ all jobs are specifically set to 'OFF' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.

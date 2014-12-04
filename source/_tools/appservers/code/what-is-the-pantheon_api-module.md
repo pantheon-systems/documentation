@@ -2,7 +2,7 @@
 title: What is the "pantheon_api.module"
 categories:
   - getting-started
-permalink: documentation/advanced-topics/what-is-the-pantheon_api-module/
+/what-is-the-pantheon_api-module/
 Metadata
 filename: source/_tools/what-is-the-pantheon_api-module.md
 ---
@@ -19,5 +19,3 @@ The code for the api modules is available within our upstream reporitories:
 It should always be enabled for all sites on Pantheon, and should not cause adverse effects if you export the site locally or to another environment.
 
 Please feel free to contact us if you have any concerns with this module.
-
-

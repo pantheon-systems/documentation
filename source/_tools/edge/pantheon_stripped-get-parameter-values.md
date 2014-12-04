@@ -1,8 +1,5 @@
 ---
 title: PANTHEON_STRIPPED GET parameter values
-categories:
-    - howto
-/pantheon_stripped-get-parameter-values/
 Metadata
 filename: source/_tools/pantheon_stripped-get-parameter-values.md
 ---
@@ -29,22 +26,20 @@ Most use cases where values need to be read from GET parameters that are affecte
     function getQueryParams(qs) {
       qs = qs.split("+").join(" ");
       var params = {}, tokens, re = /[?&]?([^=]+)=([^&]*)/g;
-    
-    
+
+
       while (tokens = re.exec(qs)) {
         params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
       }
-    
-    
+
+
       return params;
     }
-    
-    
+
+
     var query_params = getQueryParams(document.location.search);
     console.log(query_params);
 
 ## PHP redirects
 
 If you redirect a request in PHP that contains the replaced values, then the URL will contain PANTHEON\_STRIPPED values. Therefore, if you want to direct traffic to your Pantheon site with using a campaign containing utm or similar GET parameters, avoid sending them to a page that redirects in PHP.
-
-

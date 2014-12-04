@@ -2,7 +2,7 @@
 title: Apache Solr on Pantheon
 categories:
     - running-drupal
-permalink: documentation/running-drupal/apache-solr-on-pantheon/
+documentation/running-drupal/apache-solr-on-pantheon/
 Metadata
 filename: source/_tools/apache-solr-on-pantheon.md
 ---

@@ -2,7 +2,7 @@
 title: What is APC and what is it used for?
 categories:
   - getting-started
-permalink: documentation/advanced-topics/what-is-apc-and-what-is-it-used-for/
+/what-is-apc-and-what-is-it-used-for/
 Metadata
 filename: source/_tools/what-is-apc-and-what-is-it-used-for.md
 ---
@@ -78,5 +78,3 @@ APC shared memory is separate and distinct for each environment. A corruption in
 ### The site has been online a while, what would trigger the error now?
 
 When the cache is cleared from the dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.
-
-

@@ -30,7 +30,7 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - framework
-        permalink: tool/:slug_title/
+        permalink: :slug_title/:basename/
 
     sites:
         type: path

@@ -2,7 +2,7 @@
 title: Email on Pantheon
 categories:
     - running-drupal
-permalink: documentation/running-drupal/email-on-pantheon/
+/email-on-pantheon/
 Metadata
 filename: source/_tools/email-on-pantheon.md
 ---
