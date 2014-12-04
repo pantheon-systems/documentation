@@ -5,10 +5,10 @@ sculpin_content_types:
 
     documents:
         type: path
-        path: at/
+        path: articles
         singular_name: document
         enabled: true
         taxonomies:
             - parent_guide
             - framework
-        permalink: /:slug_title/:basename
+        permalink: pretty
