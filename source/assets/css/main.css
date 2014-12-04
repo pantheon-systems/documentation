@@ -116,7 +116,9 @@ margin-left: auto;
 
 /* limit img width*/
 
-img {max-width: 650px;
+img {
+  max-width: 650px;
+  max-height: 400px;
 }
 
 /* edit button*/
