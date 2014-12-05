@@ -32,7 +32,7 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 
   - **Origin ID: Custom-dev-static.pantheonsupport.com**. An identifier to easily identify the distribution.
 
-  - **Alternate Domain Names(CNAMEs):** www.example-domain.com. Any alternative domains that point to your site should also be added. 
+  - **Alternate Domain Names (CNAMEs):** www.example-domain.com. Any alternative domains that point to your site should also be added. 
 
   - **Distribution State:** Enabled. Be sure to enable the distribution or your assets will not be delivered through the CDN.
 
@@ -41,7 +41,7 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 ### Configure the CDN Module In Drupal
 
 1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/documentation/advanced-topics/drush-command-line-utility/-drush-command-line-utility) to learn how to work with modules using Drush.
-2. Go to admin/config/development/cdn, to get to the General Configuration tab. 
+2. Go to admin/config/development/cdn to get to the General Configuration tab. 
 3. Select **Enabled** and click **Save Configuration**.
 4. Go to the Details tab. There are a couple of items to address:
   - **Mode:** Origin Pull. For the CloudFront configuration, use Origin Pull mode. File Conveyor mode allows integration with [File Conveyor](http://fileconveyor.org) for more complicated configurations. Pantheon does not support File Conveyor.
