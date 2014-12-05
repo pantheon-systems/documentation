@@ -1,5 +1,5 @@
 ---
-title: CDN: Setting up CloudFront on Pantheon
+title: CDN Setting up CloudFront on Pantheon
 framework:
     - Drupal
 filename: source/_guides/cdn-setting-up-cloudfront-on-pantheon.md
