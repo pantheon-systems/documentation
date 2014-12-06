@@ -3,40 +3,12 @@ sculpin_theme:
     theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
 
-    guides:
+    documents:
         type: path
-        path: _guides
-        singular_name: guide
+        path: articles
+        singular_name: document
         enabled: true
         taxonomies:
             - parent_guide
             - framework
-        permalink: guide/:slug_title/
-
-    common-tasks:
-        type: path
-        path: _common-tasks
-        singular_name: common_task
-        enabled: true
-        taxonomies:
-            - tools
-            - framework
-        permalink: common_task/:slug_title/
-
-    tools:
-        type: path
-        path: _tools
-        singular_name: tool
-        enabled: true
-        taxonomies:
-            - framework
-        permalink: tool/:slug_title/
-
-    sites:
-        type: path
-        path: _sites
-        singular_name: site
-        enabled: true
-        taxonomies:
-            - framework
-        permalink: site/:slug_title/
+        permalink: pretty
