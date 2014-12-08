@@ -7,7 +7,7 @@ filename: source/_docs/continuous-integration-solutions-on-pantheon.md
 
 Continuous Integration is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by sending a support ticket.
 
-## Terminus Command-line Interface
+## Terminus Command-Line Interface
 
 [Terminus](/documentation/advanced-topics/terminus-the-pantheon-command-line-interface/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon dashboard can be performed with Terminus, including:
 
