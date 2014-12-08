@@ -1,5 +1,6 @@
 ---
 title: Cloning an Existing Site from a Dashboard Backup
+description: Make a copy of your existing code, files, and database.
 filename: source/_common-tasks/cloning-an-existing-site-from-a-dashboard-backup.md
 tools:
   -
