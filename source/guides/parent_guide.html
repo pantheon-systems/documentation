@@ -8,13 +8,14 @@ pagination:
 ---
 {% block title %}{{ page.parent_guide }} {{ page.title }}{% endblock %}
 {% block content %}
-<h1> {{ page.parent_guide|replace({'-': ' '})|title }} Guides </h1>
+<article>
+<div class="container">
+<h1> {{ page.parent_guide|replace({'-': ' '})|title }} Articles </h1>
 <ul class="guide-list">{% for guide in page.pagination.items %}
 <article>
-  <div><h4><a href="{{ site.url }}{{ guide.url }}">{{ guide.title }}</a></h4>
-  <p>{{ guide.blocks.description }}</p>
-<div>
- <article>
+  <a href="{{ site.url }}{{ document.url }}">{{ guide.title }}</a>
+  <p>{{ guide.description }}</p>
+ </article>
 {% endfor %}
 </ul>
 <div>
@@ -29,4 +30,6 @@ pagination:
     </nav>
 {% endif %}
 </div>
+</div>
+</article>
 {% endblock content %}
