@@ -5,14 +5,12 @@
 
 /* The Table of Contents container element */
 .tocify {
-    margin-top: 40px;
+    margin-top: 50px;
     max-height: 90%;
     overflow: auto;
-    position: fixed;
     webkit-border-radius: 6px;
     moz-border-radius: 6px;
     border-radius: 6px;
-    float:right;
     text-align: left;
 }
 

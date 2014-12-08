@@ -1,8 +1,10 @@
 {% extends "default" %}
   {% block content_wrapper %}
     <article>
-        <header>
-            <h1>{{ page.title }}</h1>
+        <div class="container">
+          <div class="col-md-9">
+            <header>
+              <h1 class="pio-docs-title">{{ page.title }}</h1>
             </header>
               {% if page.framework %}
                   <p class="framework">
@@ -23,5 +25,20 @@
                 <div>
                     {{ page.blocks.content|raw }}
                 </div>
-    </article>
+                {% if page.filename %}
+                      <p>
+                      </p>
+                      <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
+                        <button type="button" class="btn btn-warning">Improve This Doc</button>
+                      </a></p>
+                {% endif %}
+          </div>
+            <div class="col-md-3">
+              <div class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                <div id="toc">
+                </div>
+              </div>
+            </div>
+    </div>
+  </article>
     {% endblock %}

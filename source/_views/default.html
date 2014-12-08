@@ -20,21 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
-  <style>
-      body {
-        padding-bottom: 20px;
-      }
-      .navbar-inverse .navbar-nav>li>a {
-        color: #fff;
-      }
-      .navbar-inverse {
-        background: #222;
-        background-image: none;
-      }
-  </style>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-  <link type="text/css" rel="stylesheet" href="{{ site.url }}/assets/css/jquery.tocify.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.tocify.css">
   <script src="//www.google-analytics.com/analytics.js"></script>
   <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
@@ -47,48 +44,12 @@
     to improve your experience.
   </p>
   <![endif]-->
-    <div class="container-fluid">
     {% include("navbar.html") %}
-  </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-9 col-sm-9 col-md-9 main">
+
+        <div class="row main">
 
                 {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-
-                {% if page.filename %}
-                      <p>
-                      </p>
-                      <p><a href="https://github.com/pantheon-systems/documentation/edit/master/{{ page.filename }}">
-                        <button type="button" class="btn btn-warning">Improve This Doc</button>
-                      </a></p>
-                {% endif %}
-            </div>
-            <div id="toc" class="col-lg-3 col-lg-offset-9 col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-9 docs-search-nav">
-              <div id="cse-search-form" class=" row">Loading</div>
-                <script src='//www.google.com/jsapi' type='text/javascript'></script>
-                <script type='text/javascript'>
-                google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
-                google.setOnLoadCallback(function() {
-                var customSearchOptions = {};
-                var orderByOptions = {};
-                orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-                customSearchOptions['enableOrderBy'] = true;
-                customSearchOptions['orderByOptions'] = orderByOptions;
-                var customSearchControl =   new google.search.CustomSearchControl('017416971424255486898:moj1j4obfwm', customSearchOptions);
-                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-                var options = new google.search.DrawOptions();
-                options.setSearchFormRoot('cse-search-form');
-                options.setAutoComplete(true);
-                customSearchControl.draw('cse', options);
-                }, true);
-                </script>
-
-          </div>
         </div>
-
-
-
     <!-- /container -->
   {% include("footer_scripts.html") %}
 </body>
