@@ -1,6 +1,6 @@
 ---
 title: Adding a Custom Upstream
-parent_guide:
+category:
   - managing
 filename: source/_guides/adding-a-custom-upstream.md
 ---

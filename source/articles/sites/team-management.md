@@ -1,6 +1,6 @@
 ---
 title: Team Management
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/team-management.md
 ---

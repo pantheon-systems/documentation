@@ -1,6 +1,6 @@
 ---
 title: Optimization for Pantheon and the Cloud
-parent_guide:
+category:
   - optimizing
 framework:
   - Drupal

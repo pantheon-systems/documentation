@@ -1,6 +1,6 @@
 ---
 title: Generating SSH Keys
-parent_guide:
+category:
   - going-live
 filename: source/_guides/generating-ssh-keys.md
 ---

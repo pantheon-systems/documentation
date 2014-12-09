@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/frequently-asked-questions.md
 ---

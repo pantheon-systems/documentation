@@ -1,6 +1,6 @@
 ---
 title: Fix broken links that reference IP:PORT instead of domain name
-parent_guide:
+category:
   - debugging
   - supporting
 filename: source/_guides/fix-broken-links-that-reference-ip-port-instead-of-domain-name.md

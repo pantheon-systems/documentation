@@ -1,6 +1,6 @@
 ---
 title: Errors and server responses
-parent_guide:
+category:
   - supporting
   - debugging
 filename: source/_guides/errors-and-server-responses.md

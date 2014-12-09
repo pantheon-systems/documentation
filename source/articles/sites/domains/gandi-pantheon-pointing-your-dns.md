@@ -1,6 +1,6 @@
 ---
 title: Gandi & Pantheon: Pointing your DNS
-parent_guide:
+category:
   - going-live
 
 filename: source/_guides/gandi-pantheon-pointing-your-dns.md

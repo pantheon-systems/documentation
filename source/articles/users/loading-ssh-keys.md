@@ -1,6 +1,6 @@
 ---
 title: Loading SSH Keys
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/loading-ssh-keys.md
 ---

@@ -1,6 +1,6 @@
 ---
 title: Selecting a Plan
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/selecting-a-plan.md
 ---

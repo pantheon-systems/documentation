@@ -1,6 +1,6 @@
 ---
 title: Major Version Drupal Upgrades
-parent_guide:
+category:
   - developing
 filename: source/_guides/major-version-drupal-upgrades.md
 ---

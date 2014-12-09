@@ -1,6 +1,6 @@
 ---
 title: Content Delivery Network (CDN) for file distribution
-parent_guide:
+category:
   - optimizing
 framework:
   - Drupal

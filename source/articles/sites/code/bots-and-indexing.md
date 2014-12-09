@@ -1,6 +1,6 @@
 ---
 title: Bots and Indexing on Pantheon
-parent_guide:
+category:
   - supporting
   - developing
 filename: source/_guides/bots-and-indexing-on-pantheon.md
