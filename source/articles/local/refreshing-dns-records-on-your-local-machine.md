@@ -1,6 +1,6 @@
 ---
 title: Refreshing DNS Records on your Local Machine
-parent_guide:
+category:
   - developing
 filename: source/_guides/refreshing-dns-records-on-your-local-machine.md
 ---

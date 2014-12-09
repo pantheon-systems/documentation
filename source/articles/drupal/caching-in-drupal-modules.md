@@ -1,6 +1,6 @@
 ---
 title: Caching in Drupal Modules
-parent_guide:
+category:
   - optimizing
 framework:
   - Drupal

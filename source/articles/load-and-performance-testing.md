@@ -1,6 +1,6 @@
 ---
 title: Load and Performance Testing
-parent_guide:
+category:
   - going-live
 filename: source/_guides/load-and-performance-testing.md
 ---

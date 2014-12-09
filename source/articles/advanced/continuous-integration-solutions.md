@@ -1,6 +1,6 @@
 ---
 title: Continuous Integration solutions on Pantheon
-parent_guide:
+category:
   - going-live
 filename: source/_docs/continuous-integration-solutions-on-pantheon.md
 ---

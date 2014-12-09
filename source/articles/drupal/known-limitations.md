@@ -1,6 +1,6 @@
 ---
 title: Drupal Known Limitations
-parent_guide:
+category:
   - getting-started
 framework:
   - Drupal

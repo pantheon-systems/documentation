@@ -1,7 +1,7 @@
 ---
 title: Going Live
 filename: source/_docs/going-live-and-launching-your-site.md
-parent_guide:
+category:
 		- going-live
 ---
 

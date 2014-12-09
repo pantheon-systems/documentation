@@ -1,6 +1,6 @@
 ---
 title: Drupal Core Updates
-parent_guide:
+category:
   - supporting
   - debugging
 framework:

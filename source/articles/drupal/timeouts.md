@@ -1,6 +1,6 @@
 ---
 title: Timeouts on Pantheon
-parent_guide:
+category:
   - supporting
   - debugging
 framework:

@@ -1,6 +1,6 @@
 ---
 title: Managing Upstreams
-parent_guide:
+category:
   - getting-started
 
 filename: source/_guides/managing-upstreams.md

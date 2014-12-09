@@ -1,6 +1,6 @@
 ---
 title: New Relic performance analysis on Pantheon
-parent_guide:
+category:
   - going-live
 filename: source/_guides/new-relic-performance-analysis-on-pantheon.md
 ---

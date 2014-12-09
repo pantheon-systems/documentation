@@ -1,6 +1,6 @@
 ---
 title: Debugging slow performance
-parent_guide:
+category:
   - debugging
 framework:
   - Drupal

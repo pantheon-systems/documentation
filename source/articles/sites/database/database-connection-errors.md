@@ -1,6 +1,6 @@
 ---
 title: Database Connection Errors
-parent_guide:
+category:
   - supporting
   - debugging
 framework:

@@ -1,6 +1,6 @@
 ---
 title: Removing a Credit Card
-parent_guide:
+category:
   - howto
 /removing-a-credit-card/
 Metadata

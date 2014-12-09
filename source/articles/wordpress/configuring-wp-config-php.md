@@ -1,6 +1,6 @@
 ---
 title: Configuring wp-config.php
-parent_guide:
+category:
   - developing
 filename: source/_guides/configuring-wp-config-php.md
 ---

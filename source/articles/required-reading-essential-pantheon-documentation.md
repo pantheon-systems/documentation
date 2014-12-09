@@ -1,6 +1,6 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
-parent_guide:
+category:
   - getting-started
     filename:source/_guides/required-reading-essential-pantheon-documentation.md
 ---

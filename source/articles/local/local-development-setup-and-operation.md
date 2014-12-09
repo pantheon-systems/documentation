@@ -1,6 +1,6 @@
 ---
 title: Local development setup and operation
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/local-development-setup-and-operation.md
 ---
