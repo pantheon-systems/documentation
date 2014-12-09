@@ -1,6 +1,6 @@
 ---
 title: Gerund phrase of goal
-parent_guide: developing
+category: developing
 problems:
 slides_embed:
 video:
