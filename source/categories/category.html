@@ -1,0 +1,33 @@
+---
+layout: default
+title: Articles
+generator: [documents_category_index]
+
+---
+{% block title %}{{ page.category }} {{ page.title }}{% endblock %}
+{% block content %}
+<article>
+<div class="container">
+<h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
+<ul class="document-list">{% for document in page.category_documents %}
+<article>
+  <a href="{{ document.url }}">{{ document.title }}</a>
+  <p>{{ document.description }}</p>
+ </article>
+{% endfor %}
+</ul>
+<div>
+{% if page.pagination.previous_page or page.pagination.next_page %}
+    <nav class="article clearfix">
+    {% if page.pagination.previous_page %}
+    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
+    {% endif %}
+    {% if page.pagination.next_page %}
+    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
+    {% endif %}
+    </nav>
+{% endif %}
+</div>
+</div>
+</article>
+{% endblock content %}

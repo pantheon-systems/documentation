@@ -9,6 +9,5 @@ sculpin_content_types:
         singular_name: document
         enabled: true
         taxonomies:
-            - parent_guide
-            - framework
+            - category
         permalink: pretty
