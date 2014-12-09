@@ -1,12 +1,23 @@
-
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/**
- * Embedded Open Sans Font
+ /*!
+ * Pantheon Docs (http://docs.getpantheon.com)
+ * Copyright 2014 Pantheon, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see http://creativecommons.org/licenses/by/3.0/.
+ * Source Attribution: Twitter Bootstrap. THANKS!
  */
 
+
+/*
+ * Pantheon Documentation
+ * Special styles for presenting Pantheon's documentation and code examples.
+ */
+
+
+/*
+ * Scaffolding
+ *
+ * Update the basics of our documents to prep for docs content.
+ */
 @font-face {
     font-family: 'open_sansregular';
     src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
@@ -27,370 +38,1474 @@ body {
   font-smoothing: antialiased;
   padding-top: 50px;
 }
-
-p {
-  font-family: "open_sansregular";
-  font-size: 1.14em;
+body.row.main {
+  position: relative;
+  top:50px;
+  /* For scrollspy */
 }
 
-a {
+/* Keep code small in tables on account of limited space */
+.table code {
+  font-size: 13px;
+  font-weight: normal;
+}
 
+/* Outline button for use within the docs */
+.btn-outline {
+  color: #563d7c;
+  background-color: transparent;
+  border-color: #563d7c;
 }
-li{
-  font-size: 1.14em;
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #563d7c;
+  border-color: #563d7c;
 }
-.docs-search-nav {
-  margin-top: 40px;
-  max-height: 90%;
-  overflow: auto;
-  position: fixed;
-  border-radius: 6px;
-  right: 4%;
-  text-align: left;
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #cdbfe3;
 }
-.jumbotron {
-  padding: 0px;
-  margin-bottom: 0px;
-  color: inherit;
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #563d7c;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* Pantheon "B" icon */
+.pio-docs-booticon {
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  cursor: default;
+  background-color: #563d7c;
+  border-radius: 15%;
+}
+.pio-docs-booticon-sm {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 28px;
+}
+.pio-docs-booticon-lg {
+  width: 144px;
+  height: 144px;
+  font-size: 108px;
+  line-height: 140px;
+}
+.pio-docs-booticon-inverse {
+  color: #563d7c;
   background-color: #fff;
 }
-.jumbotron h1,
-.jumbotron .h1 {
-  color: inherit;
-}
-.jumbotron p {
-  margin-bottom: 15px;
-  font-size: 21px;
-  font-weight: 200;
-}
-.container .jumbotron {
-  border-radius: 6px;
-}
-.jumbotron .container {
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .container .jumbotron {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
-  }
-
-  .docs {color: white;
-    font-weight: bolder;
-    padding-top: 10px;
-  }
-  a.docs {
-    color: white;
-    font-weight:bold;
-    font-size: 1em;
-  }
-#navbar {
-  padding-top: 6px;
-  }
-
-.btn-doclist {
-background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
-background-repeat: repeat-x;
-  border-color: #101010;
-  padding:0px;
+.pio-docs-booticon-outline {
+  background-color: transparent;
+  border: 1px solid #cdbfe3;
 }
 
-.btn-doclist:hover, .btn-doclist:focus, .btn-doclist:active, .btn-doclist.active, .open .dropdown-toggle.btn-doclist {
-color: #101010;
-background-color: #101010;
-border-color: #101010;
-}
-/*center */
-.container-fluid {max-width: 1170px;
-margin-right: auto;
-margin-left: auto;
-}
 
-/* limit img width*/
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
 
-img {max-width: 650px;
+.pio-docs-nav {
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0;
 }
-
-/* edit button*/
-
-.btn-warning {float:right;
-}
-/* Hide for mobile, show later */
-.sidebar {
+.pio-home-nav .pio-nav-b {
   display: none;
 }
-@media (min-width: 768px) {
-  .sidebar {
-    top: 10px;
-    bottom: 60px;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: ;
-    border-right: 1px solid #eee;
-  }
+.pio-docs-nav .navbar-brand,
+.pio-docs-nav .navbar-nav > li > a {
+  font-weight: 700;
+  color: #EFD01B;
 }
-
-/* Sidebar navigation */
-
+.pio-docs-nav .navbar-nav > li > a:hover,
+.pio-docs-nav .navbar-nav > .active > a,
+.pio-docs-nav .navbar-nav > .active > a:hover {
+  color: #222;
+  background-color: #f9f9f9;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+.pio-docs-nav .navbar-toggle .icon-bar {
+  background-color: #563d7c;
 }
-
-/* collapsed sidebar styles */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-  }
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -41.6%;
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -41.6%;
-  }
-  .row-offcanvas-right.active {
-    right: 41.6%;
-  }
-  .row-offcanvas-left.active {
-    left: 41.6%;
-  }
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 41.6%;
-  }
-
-/*
- * Main content
- */
-
-.main {
-  padding: 20px;
-  margin-left: 0;
+.pio-docs-nav .navbar-header .navbar-toggle {
+  border-color: #fff;
 }
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-.main .page-header {
-  margin: 20 20 40 60;
+.pio-docs-nav .navbar-header .navbar-toggle:hover,
+.pio-docs-nav .navbar-header .navbar-toggle:focus {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
 }
 
 
 /*
- * Placeholder dashboard ideas
+ * Footer
+ *
+ * Separated section of content at the bottom of all pages, save the homepage.
  */
 
-.placeholders {
-  margin-bottom: 30px;
+.pio-docs-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+.pio-docs-footer-links {
+  padding-left: 0;
+  margin-top: 20px;
+}
+.pio-docs-footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.pio-docs-footer-links li:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .pio-docs-footer p {
+    margin-bottom: 0;
+  }
+}
+
+
+/*
+ * Social buttons
+ *
+ * Twitter and GitHub social action buttons (for homepage and footer).
+ */
+
+.pio-docs-social {
+  margin-bottom: 20px;
   text-align: center;
 }
-.placeholders h4 {
+.pio-docs-social-buttons {
+  display: inline-block;
+  padding-left: 0;
   margin-bottom: 0;
+  list-style: none;
 }
-.placeholder {
+.pio-docs-social-buttons li {
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+}
+.pio-docs-social-buttons .twitter-follow-button {
+  width: 225px !important;
+}
+.pio-docs-social-buttons .twitter-share-button {
+  width: 98px !important;
+}
+/* Style the GitHub buttons via CSS instead of inline attributes */
+.github-btn {
+  overflow: hidden;
+  border: 0;
+}
+
+
+/*
+ * Homepage
+ *
+ * Tweaks to the custom homepage and the masthead (main jumbotron).
+ */
+
+/* Share masthead with page headers */
+.pio-docs-masthead,
+.pio-docs-header {
+  position: relative;
+  padding: 30px 15px;
+  color: #000000;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #FFFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+  background-repeat: repeat-x;
+}
+
+/* Masthead (headings and download button) */
+.pio-docs-masthead .pio-docs-booticon {
+  margin: 0 auto 30px;
+}
+.pio-docs-masthead h1 {
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+.pio-docs-masthead .lead {
+  margin: 0 auto 30px;
+  font-size: 20px;
+  color: #fff;
+}
+.pio-docs-masthead .version {
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #9783b9;
+}
+.pio-docs-masthead .btn {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+@media (min-width: 480px) {
+  .pio-docs-masthead .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .pio-docs-masthead {
+    padding: 80px 0;
+  }
+  .pio-docs-masthead h1 {
+    font-size: 60px;
+  }
+  .pio-docs-masthead .lead {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pio-docs-masthead .lead {
+    width: 80%;
+    font-size: 30px;
+  }
+}
+
+
+/*
+ * Page headers
+ *
+ * Jumbotron-esque headers at the top of every page that's not the homepage.
+ */
+
+/* Page headers */
+.pio-docs-header {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+.pio-docs-header h1 {
+  margin-top: 0;
+  color: #000;
+}
+.pio-docs-header p {
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.pio-docs-header .container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .pio-docs-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: left;
+  }
+  .pio-docs-header h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .pio-docs-header h1,
+  .pio-docs-header p {
+    margin-right: 380px;
+  }
+}
+
+
+/*
+ * Homepage featurettes
+ *
+ * Reasons to use Pantheon, entries from the Expo, and more.
+ */
+
+.pio-docs-featurette {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.pio-docs-featurette + .pio-docs-footer {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.pio-docs-featurette-title {
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #333;
+}
+.half-rule {
+  width: 100px;
+  margin: 40px auto;
+}
+.pio-docs-featurette h3 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #333;
+}
+.pio-docs-featurette-img {
+  display: block;
+  margin-bottom: 20px;
+  color: #333;
+}
+.pio-docs-featurette-img:hover {
+  color: #337ab7;
+  text-decoration: none;
+}
+.pio-docs-featurette-img img {
+  display: block;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 480px) {
+  .pio-docs-featurette .img-responsive {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .pio-docs-featurette {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .pio-docs-featurette-title {
+    font-size: 40px;
+  }
+  .pio-docs-featurette .lead {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .pio-docs-featurette .img-responsive {
+    margin-top: 0;
+  }
+}
+
+/*
+ * Document Layout
+ *
+ */
+
+.pio-docs-title {
+  color: #000000;
+  display: block;
+  border-bottom: 2px solid #EFD01B;
+  margin-bottom: 40px;
+}
+/*
+ * Featured sites
+ *
+ * Homepage thumbnails from the Expo.
+ */
+
+.pio-docs-featured-sites {
+  margin-right: -1px;
+  margin-left: -1px;
+}
+.pio-docs-featured-sites .col-xs-6 {
+  padding: 1px;
+}
+.pio-docs-featured-sites .img-responsive {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .pio-docs-featured-sites .col-sm-3:first-child img {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pio-docs-featured-sites .col-sm-3:last-child img {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+
+/*
+ * Examples
+ *
+ * Linked docs examples.
+ */
+
+.pio-examples .thumbnail {
+  margin-bottom: 10px;
+}
+.pio-examples h4 {
+  margin-bottom: 5px;
+}
+.pio-examples p {
   margin-bottom: 20px;
 }
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+
+@media (max-width: 480px) {
+  .pio-examples {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .pio-examples > [class^="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.pio-docs-sidebar.affix {
+  position: static;
+  top: 70px;
+  max-height: 90%;
 }
-body {
-  /* Margin bottom by footer height */
+@media (min-width: 768px) {
+  .pio-docs-sidebar {
+    padding-left: 20px;
+  }
+}
+
+/* First level of nav */
+.pio-docs-sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* All levels of nav */
+.pio-docs-sidebar .nav > li > a {
+  display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+}
+.pio-docs-sidebar .nav > li > a:hover,
+.pio-docs-sidebar .nav > li > a:focus {
+  padding-left: 19px;
+  color: #EFD01B;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid #EFD01B;
+}
+.pio-docs-sidebar .nav > .active > a,
+.pio-docs-sidebar .nav > .active:hover > a,
+.pio-docs-sidebar .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: bold;
+  color: #00e4b3;
+  background-color: transparent;
+  border-left: 2px solid #00e4b3;
+}
+
+/* Nav: second level (shown on .active) */
+.pio-docs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  padding-bottom: 10px;
+}
+.pio-docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.pio-docs-sidebar .nav .nav > li > a:hover,
+.pio-docs-sidebar .nav .nav > li > a:focus {
+  padding-left: 29px;
+}
+.pio-docs-sidebar .nav .nav > .active > a,
+.pio-docs-sidebar .nav .nav > .active:hover > a,
+.pio-docs-sidebar .nav .nav > .active:focus > a {
+  padding-left: 28px;
+  font-weight: 500;
+}
+
+/* Back to top (hidden on mobile) */
+.back-to-top,
+.pio-docs-theme-toggle {
+  display: none;
+  padding: 4px 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+.back-to-top:hover,
+.pio-docs-theme-toggle:hover {
+  color: #563d7c;
+  text-decoration: none;
+}
+.pio-docs-theme-toggle {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .back-to-top,
+  .pio-docs-theme-toggle {
+    display: block;
+  }
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .pio-docs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .pio-docs-sidebar.affix,
+  .pio-docs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .pio-docs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 20px;
+  }
+  .pio-docs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .pio-docs-sidebar.affix-bottom .pio-docs-sidenav,
+  .pio-docs-sidebar.affix .pio-docs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .pio-docs-sidebar.affix-bottom,
+  .pio-docs-sidebar.affix {
+    width: 25%;
+  }
+}
+
+
+/*
+ * Docs sections
+ *
+ * Content blocks for each component or feature.
+ */
+
+/* Space things out */
+.pio-docs-section {
   margin-bottom: 60px;
 }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #222;
+.pio-docs-section:last-child {
+  margin-bottom: 0;
 }
 
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  background-color: #222;
-}
-
-.previous {
-  font-weight: bold;
-}
-.next {
-  font-weight: bold;
-}
-
-.guide-list {
-  padding-top: 70px;
-}
-
-
-/*Search Styles*/
-.gsc-control-cse {
-  font-family: Arial, sans-serif;
-  border-color: #FFFFFF;
-  background-color: #FFFFFF;
-}
-.gsc-control-cse .gsc-table-result {
-  font-family: Arial, sans-serif;
-}
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
-  border-color: #D9D9D9;
-}
-input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
-  border-color: #666666;
-  background-color: #CECECE;
-  background-image: none;
-  filter: none;
-
-}
-.gsc-tabHeader.gsc-tabhInactive {
-  border-color: #FF9900;
-  background-color: #FFFFFF;
-}
-.gsc-tabHeader.gsc-tabhActive {
-  border-color: #E9E9E9;
-  background-color: #E9E9E9;
-  border-bottom-color: #FF9900
-}
-.gsc-tabsArea {
-  border-color: #FF9900;
-}
-.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
-  border-color: #FFFFFF;
-  background-color: #FFFFFF;
-}
-.gsc-webResult.gsc-result:hover, .gsc-imageResult:hover {
-  border-color: #FFFFFF;
-  background-color: #FFFFFF;
-}
-.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b  {
-  color: #0000CC;
-}
-.gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-  color: #0000CC;
-}
-.gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover b, .gs-imageResult a.gs-title:hover, .gs-imageResult a.gs-title:hover b {
-  color: #0000CC;
-}
-.gs-webResult.gs-result a.gs-title:active, .gs-webResult.gs-result a.gs-title:active b, .gs-imageResult a.gs-title:active, .gs-imageResult a.gs-title:active b {
-  color: #0000CC;
-}
-.gsc-cursor-page {
-  color: #0000CC;
-}
-a.gsc-trailing-more-results:link {
-  color: #0000CC;
-}
-.gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
-  color: #000000;
-}
-.gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
-  color: #008000;
-}
-.gs-webResult div.gs-visibleUrl-short {
-  color: #008000;
-}
-.gs-webResult div.gs-visibleUrl-short  {
-  display: none;
-}
-.gs-webResult div.gs-visibleUrl-long {
-  display: block;
-}
-.gs-promotion div.gs-visibleUrl-short {
-  display: none;
-}
-.gs-promotion div.gs-visibleUrl-long  {
-  display: block;
-}
-.gsc-cursor-box {
-  border-color: #FFFFFF;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-page {
-  border-color: #E9E9E9;
-  background-color: #FFFFFF;
-  color: #0000CC;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-  border-color: #FF9900;
-  background-color: #FFFFFF;
-  color: #0000CC;
-}
-.gsc-webResult.gsc-result.gsc-promotion {
-  border-color: #336699;
-  background-color: #FFFFFF;
-}
-.gsc-completion-title {
-  color: #0000CC;
-}
-.gsc-completion-snippet {
-  color: #000000;
-}
-.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link  {
-  color: #0000CC;
-}
-.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited {
-  color: #0000CC;
-}
-.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover  {
-  color: #0000CC;
-}
-.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active {
-  color: #0000CC;
-}
-.gs-promotion .gs-snippet, .gs-promotion .gs-title .gs-promotion-title-right, .gs-promotion .gs-title .gs-promotion-title-right * {
-  color: #000000;
-}
-.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short  {
-  color: #008000;
-}
-
-#cse-search-form {
-  vertical-align:middle;
+h1[id] {
   padding-top: 20px;
+  margin-top: 0;
+}
+
+
+/*
+ * Callouts
+ *
+ * Not quite alerts, but custom and helpful notes for folks reading the docs.
+ * Requires a base and modifier class.
+ */
+
+/* Common styles for all types */
+.pio-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.pio-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.pio-callout p:last-child {
+  margin-bottom: 0;
+}
+.pio-callout code {
+  border-radius: 3px;
+}
+
+/* Tighten up space between multiple callouts */
+.pio-callout + .pio-callout {
+  margin-top: -5px;
+}
+
+/* Variations */
+.pio-callout-danger {
+  border-left-color: #d9534f;
+}
+.pio-callout-danger h4 {
+  color: #d9534f;
+}
+.pio-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.pio-callout-warning h4 {
+  color: #f0ad4e;
+}
+.pio-callout-info {
+  border-left-color: #5bc0de;
+}
+.pio-callout-info h4 {
+  color: #5bc0de;
+}
+
+
+/*
+ * Color swatches
+ *
+ * Color swatches and associated values for our grayscale and brand colors.
+ */
+
+.color-swatches {
+  margin: 0 -5px;
+  overflow: hidden; /* clearfix */
+}
+.color-swatch {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .color-swatch {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Framework colors */
+.color-swatches .gray-darker {
+  background-color: #222;
+}
+.color-swatches .gray-dark {
+  background-color: #333;
+}
+.color-swatches .gray {
+  background-color: #555;
+}
+.color-swatches .gray-light {
+  background-color: #999;
+}
+.color-swatches .gray-lighter {
+  background-color: #eee;
+}
+.color-swatches .brand-primary {
+  background-color: #337ab7;
+}
+.color-swatches .brand-success {
+  background-color: #5cb85c;
+}
+.color-swatches .brand-warning {
+  background-color: #f0ad4e;
+}
+.color-swatches .brand-danger {
+  background-color: #d9534f;
+}
+.color-swatches .brand-info {
+  background-color: #5bc0de;
+}
+
+/* Docs colors */
+.color-swatches .pio-purple {
+  background-color: #563d7c;
+}
+.color-swatches .pio-purple-light {
+  background-color: #c7bfd3;
+}
+.color-swatches .pio-purple-lighter {
+  background-color: #e5e1ea;
+}
+.color-swatches .pio-gray {
+  background-color: #f9f9f9;
+}
+
+
+/*
+ * Team members
+ *
+ * Avatars, names, and usernames for core team.
+ */
+
+.pio-team .team-member {
+  line-height: 32px;
+  color: #555;
+}
+.pio-team .team-member:hover {
+  color: #333;
+  text-decoration: none;
+}
+.pio-team .github-btn {
+  float: right;
+  width: 180px;
+  height: 20px;
+  margin-top: 6px;
+}
+.pio-team img {
+  float: left;
+  width: 32px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+
+/*
+ * Wall of Browser Bugs
+ *
+ * Better display for the responsive table on the Wall of Browser Bugs.
+ */
+
+.pio-docs-browser-bugs td p {
+  margin-bottom: 0;
+}
+
+.pio-docs-browser-bugs th:first-child {
+  width: 18%;
+}
+
+
+/*
+ * Grid examples
+ *
+ * Highlight the grid columns within the docs so folks can see their padding,
+ * alignment, sizing, etc.
+ */
+
+.show-grid {
+  margin-bottom: 15px;
+}
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+
+/*
+ * Examples
+ *
+ * Isolated sections of example content for each component or feature. Usually
+ * followed by a code snippet.
+ */
+
+.pio-example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+          box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+/* Echo out a label for the example */
+.pio-example:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "Example";
+}
+
+/* Tweak display of the code snippets when following an example */
+.pio-example + .highlight,
+.pio-example + .zero-clipboard + .highlight {
+  margin: -15px -15px 15px;
+  border-width: 0 0 1px;
+  border-radius: 0;
+}
+
+/* Make the examples and snippets not full-width */
+@media (min-width: 768px) {
+  .pio-example {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .pio-example + .highlight,
+  .pio-example + .zero-clipboard + .highlight {
+    margin-top: -16px;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pio-example-standalone {
+    border-radius: 4px;
+  }
+}
+
+/* Undo width of container */
+.pio-example .container {
+  width: auto;
+}
+
+/* Tweak content of examples for optimum awesome */
+.pio-example > p:last-child,
+.pio-example > ul:last-child,
+.pio-example > ol:last-child,
+.pio-example > blockquote:last-child,
+.pio-example > .form-control:last-child,
+.pio-example > .table:last-child,
+.pio-example > .navbar:last-child,
+.pio-example > .jumbotron:last-child,
+.pio-example > .alert:last-child,
+.pio-example > .panel:last-child,
+.pio-example > .list-group:last-child,
+.pio-example > .well:last-child,
+.pio-example > .progress:last-child,
+.pio-example > .table-responsive:last-child > .table {
+  margin-bottom: 0;
+}
+.pio-example > p > .close {
+  float: none;
+}
+
+/* Typography */
+.pio-example-type .table .type-info {
+  color: #999;
+  vertical-align: middle;
+}
+.pio-example-type .table td {
+  padding: 15px 0;
+  border-color: #eee;
+}
+.pio-example-type .table tr:first-child td {
+  border-top: 0;
+}
+.pio-example-type h1,
+.pio-example-type h2,
+.pio-example-type h3,
+.pio-example-type h4,
+.pio-example-type h5,
+.pio-example-type h6 {
+  margin: 0;
+}
+
+/* Contextual background colors */
+.pio-example-bg-classes p {
+  padding: 15px;
+}
+
+/* Images */
+.pio-example > .img-circle,
+.pio-example > .img-rounded,
+.pio-example > .img-thumbnail {
+  margin: 5px;
+}
+
+/* Tables */
+.pio-example > .table-responsive > .table {
+  background-color: #fff;
+}
+
+/* Buttons */
+.pio-example > .btn,
+.pio-example > .btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pio-example > .btn-toolbar + .btn-toolbar {
+  margin-top: 10px;
+}
+
+/* Forms */
+.pio-example-control-sizing select,
+.pio-example-control-sizing input[type="text"] + input[type="text"] {
+  margin-top: 10px;
+}
+.pio-example-form .input-group {
+  margin-bottom: 10px;
+}
+.pio-example > textarea.form-control {
+  resize: vertical;
+}
+
+/* List groups */
+.pio-example > .list-group {
+  max-width: 400px;
+}
+
+/* Navbars */
+.pio-example .navbar:last-child {
+  margin-bottom: 0;
+}
+.pio-navbar-top-example,
+.pio-navbar-bottom-example {
+  z-index: 1;
+  padding: 0;
+  overflow: hidden; /* cut the drop shadows off */
+}
+.pio-navbar-top-example .navbar-header,
+.pio-navbar-bottom-example .navbar-header {
+  margin-left: 0;
+}
+.pio-navbar-top-example .navbar-fixed-top,
+.pio-navbar-bottom-example .navbar-fixed-bottom {
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
+}
+.pio-navbar-top-example {
+  padding-bottom: 45px;
+}
+.pio-navbar-top-example:after {
+  top: auto;
+  bottom: 15px;
+}
+.pio-navbar-top-example .navbar-fixed-top {
+  top: -1px;
+}
+.pio-navbar-bottom-example {
+  padding-top: 45px;
+}
+.pio-navbar-bottom-example .navbar-fixed-bottom {
+  bottom: -1px;
+}
+.pio-navbar-bottom-example .navbar {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .pio-navbar-top-example .navbar-fixed-top,
+  .pio-navbar-bottom-example .navbar-fixed-bottom {
+    position: absolute;
+  }
+}
+
+/* Pagination */
+.pio-example .pagination {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Pager */
+.pio-example > .pager {
+  margin-top: 0;
+}
+
+/* Example modals */
+.pio-example-modal {
+  background-color: #f5f5f5;
+}
+.pio-example-modal .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+}
+.pio-example-modal .modal-dialog {
+  left: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Example dropdowns */
+.pio-example > .dropdown > .dropdown-toggle {
+  float: left;
+}
+.pio-example > .dropdown > .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 5px;
+  clear: left;
+}
+
+/* Example tabbable tabs */
+.pio-example-tabs .nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* Tooltips */
+.pio-example-tooltips {
+  text-align: center;
+}
+.pio-example-tooltips > .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pio-example-tooltip .tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+  opacity: 1;
+}
+
+/* Popovers */
+.pio-example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+.pio-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
+
+/* Scrollspy demo on fixed height div */
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+/* Simple collapse example */
+#collapseExample .well {
+  margin-bottom: 0;
+}
+
+/* Don't wrap event names in Events tables in JS plugin docs */
+.pio-events-table > thead > tr > th:first-child,
+.pio-events-table > tbody > tr > td:first-child {
+  white-space: nowrap;
+}
+
+/*
+ * Code snippets
+ *
+ * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
+ */
+
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.highlight pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: normal;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.highlight pre code {
+  font-size: inherit;
+  color: #333; /* Effectively the base text color */
+}
+.highlight pre code:first-child {
+  display: inline-block;
+  padding-right: 45px;
+}
+
+
+/*
+ * Responsive tests
+ *
+ * Generate a set of tests to show the responsive utilities in action.
+ */
+
+/* Responsive (scrollable) doc tables */
+.table-responsive .highlight pre {
+  white-space: normal;
+}
+
+/* Utility classes table  */
+.pio-table th small,
+.responsive-utilities th small {
+  display: block;
+  font-weight: normal;
+  color: #999;
+}
+.responsive-utilities tbody th {
+  font-weight: normal;
+}
+.responsive-utilities td {
+  text-align: center;
+}
+.responsive-utilities td.is-visible {
+  color: #468847;
+  background-color: #dff0d8 !important;
+}
+.responsive-utilities td.is-hidden {
+  color: #ccc;
+  background-color: #f9f9f9 !important;
+}
+
+/* Responsive tests */
+.responsive-utilities-test {
+  margin-top: 5px;
+}
+.responsive-utilities-test .col-xs-6 {
+  margin-bottom: 10px;
+}
+.responsive-utilities-test span {
+  display: block;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 4px;
+}
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
+  color: #999;
+  border: 1px solid #ddd;
+}
+.visible-on .col-xs-6 .visible-xs-block,
+.visible-on .col-xs-6 .visible-sm-block,
+.visible-on .col-xs-6 .visible-md-block,
+.visible-on .col-xs-6 .visible-lg-block,
+.hidden-on .col-xs-6 .visible-xs-block,
+.hidden-on .col-xs-6 .visible-sm-block,
+.hidden-on .col-xs-6 .visible-md-block,
+.hidden-on .col-xs-6 .visible-lg-block {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+
+/*
+ * Glyphicons
+ *
+ * Special styles for displaying the icons and their classes in the docs.
+ */
+
+.pio-glyphicons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.pio-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.pio-glyphicons li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  padding: 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #fff;
+}
+.pio-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.pio-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.pio-glyphicons li:hover {
+  color: #fff;
+  background-color: #563d7c;
+}
+
+@media (min-width: 768px) {
+  .pio-glyphicons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .pio-glyphicons li {
+    width: 12.5%;
+    font-size: 12px;
+  }
+}
+
+
+/*
+ * Customizer
+ *
+ * Since this is so form control heavy, we have quite a few styles to customize
+ * the display of inputs, headings, and more. Also included are all the download
+ * buttons and actions.
+ */
+
+.pio-customizer .toggle {
+  float: right;
+  margin-top: 25px;
+}
+
+/* Headings and form contrls */
+.pio-customizer label {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #555;
+}
+.pio-customizer h2 {
+  padding-top: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.pio-customizer h3 {
+  margin-bottom: 0;
+}
+.pio-customizer h4 {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.pio-customizer .pio-callout h4 {
+  margin-top: 0; /* lame, but due to specificity we have to duplicate */
+  margin-bottom: 5px;
+}
+.pio-customizer input[type="text"] {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  background-color: #fafafa;
+}
+.pio-customizer .help-block {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+/* For the variables, use regular weight */
+#less-section label {
+  font-weight: normal;
+}
+
+/* Downloads */
+.pio-customize-download .btn-outline {
+  padding: 20px;
+}
+
+/* Error handling */
+.pio-customizer-alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 15px 0;
+  color: #fff;
+  background-color: #d9534f;
+  border-bottom: 1px solid #b94441;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.pio-customizer-alert .close {
+  margin-top: -4px;
+  font-size: 24px;
+}
+.pio-customizer-alert p {
+  margin-bottom: 0;
+}
+.pio-customizer-alert .glyphicon {
+  margin-right: 5px;
+}
+.pio-customizer-alert pre {
+  margin: 10px 0 0;
+  color: #fff;
+  background-color: #a83c3a;
+  border-color: #973634;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
+}
+
+.pio-dropzone {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #777;
+  text-align: center;
+  border: 2px dashed #eee;
+  border-radius: 4px;
+}
+.pio-dropzone h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.pio-dropzone hr {
+  width: 100px;
+}
+.pio-dropzone .lead {
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #333;
+}
+/*.pio-dropzone*/ #import-manual-trigger {
+  cursor: pointer;
+}
+.pio-dropzone p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Brand guidelines
+ *
+ * Extra styles for displaying wordmarks, logos, etc.
+ */
+
+/* Logo series wrapper */
+.pio-brand-logos {
+  display: table;
+  width: 100%;
+  margin-bottom: 15px;
+  overflow: hidden;
+  color: #563d7c;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Individual items */
+.pio-brand-item {
+  padding: 60px 0;
+  text-align: center;
+}
+.pio-brand-item + .pio-brand-item {
+  border-top: 1px solid #fff;
+}
+.pio-brand-logos .inverse {
+  color: #fff;
+  background-color: #563d7c;
+}
+.pio-brand-item .svg {
+  width: 144px;
+  height: 144px;
+}
+
+/* Heading content within */
+.pio-brand-item h1,
+.pio-brand-item h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.pio-brand-item .pio-docs-booticon {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Make the icons stand out on what is/isn't okay */
+.pio-brand-item .glyphicon {
+  width: 30px;
+  height: 30px;
+  margin: 10px auto -10px;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 50%;
+}
+.pio-brand-item .glyphicon-ok {
+  background-color: #5cb85c;
+}
+.pio-brand-item .glyphicon-remove {
+  background-color: #d9534f;
+}
+
+@media (min-width: 768px) {
+  .pio-brand-item {
+    display: table-cell;
+    width: 1%;
+  }
+  .pio-brand-item + .pio-brand-item {
+    border-top: 0;
+    border-left: 1px solid #fff;
+  }
+  .pio-brand-item h1 {
+    font-size: 60px;
+  }
+}
+
+
+/*
+ * ZeroClipboard styles
+ */
+
+.zero-clipboard {
+  position: relative;
+  display: none;
+}
+.btn-clipboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e1e1e8;
+  border-radius: 0 4px 0 4px;
+}
+.btn-clipboard-hover {
+  color: #fff;
+  background-color: #563d7c;
+  border-color: #563d7c;
+}
+
+@media (min-width: 768px) {
+  .zero-clipboard {
+    display: block;
+  }
+  .pio-example + .zero-clipboard .btn-clipboard {
+    top: -16px;
+    border-top-right-radius: 0;
+  }
+}
+
+
+/*
+ * Miscellaneous
+ *
+ * Odds and ends for optimum docs display.
+ */
+
+/* Pseudo :focus state for showing how it looks in the docs */
+#focusedInput {
+  border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
+  border-color: rgba(82,168,236,.8);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+  -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
+          box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
