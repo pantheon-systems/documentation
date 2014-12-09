@@ -1,5 +1,6 @@
 ---
 title: Deleting Your Pantheon Account
+description: Learn how to completely remove your Pantheon account. 
 filename: source/_guides/deleting-your-pantheon-account.md
 ---
 

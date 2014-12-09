@@ -1,5 +1,6 @@
 ---
 title: Non-Standard Files Locations
+description: Learn how to address non-standard file locations from within the Pantheon filesystem. 
 categories:
     - needs wp
 layout: tool

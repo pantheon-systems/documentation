@@ -1,5 +1,6 @@
 ---
 title: Generating SSH Keys
+description: Understand how to generate SSH keys to configure Drush or SFTP.
 parent_guide:
   - going-live
 filename: source/_guides/generating-ssh-keys.md

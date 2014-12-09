@@ -1,5 +1,6 @@
 ---
 title: WordPress and PHP Sessions
+description: Understand the behaviors of WordPress and PHP sessions.
 parent_guide:
   - developing
 filename: source/_guides/wordpress-and-php-sessions.md

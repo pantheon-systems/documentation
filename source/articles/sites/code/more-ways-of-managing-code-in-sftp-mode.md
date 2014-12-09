@@ -1,5 +1,6 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
+description: Understand alternative code management options when using SFTP Mode.
 filename: source/_common-tasks/more-ways-of-managing-code-in-sftp-mode.md
 ---
 
@@ -9,7 +10,7 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 - Install and update modules and themes with Drupal's update manager.
 - Command line tools for managing code.
 
-### Using wp-admin to Manage Plugins and Themes
+## Using wp-admin to Manage Plugins and Themes
 
 WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main `wordpress.org` repository on your site.
 
@@ -21,11 +22,11 @@ And for themes:
 
 ![Installing WP Themes](https://pantheon-systems.desk.com/customer/portal/attachments/278883)
 
-Note that you still need to turn these changes into _commits_ in your Pantheon site dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
+Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
 **ProTip** : you should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!
 
-### Installing Modules and Themes with Drupal's Update Manager
+## Installing Modules and Themes with Drupal's Update Manager
 
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface). When in SFTP mode this will work seamlessly on Pantheon.
 
@@ -41,7 +42,7 @@ Note that you still need to turn these changes into _commits_ in your Pantheon s
 
 **ProTip** : you should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!
 
-### Installing Code with Terminus: the Pantheon CLI
+## Installing Code with Terminus: the Pantheon CLI
 
 Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](https://github.com/pantheon-systems/cli). This section is for developers who are CLI savvy only.
 
@@ -56,7 +57,7 @@ Assuming you've already set up and authenticated with [terminus](https://github.
     | community-plumbing-20 | drupal | free | 17cff28f-e6ec-4a9e-97ce-cee418070490 |
     +-----------------------+-----------+---------------+--------------------------------------+
 
-#### Drush example
+### Drush example
 
     joshk@steppinrazor ~$ terminus --site=community-plumbing-20 drush dl pathauto devel admin_menu zen search_api search_api_solr
     Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
@@ -78,9 +79,9 @@ Assuming you've already set up and authenticated with [terminus](https://github.
 
 That just downloaded five modules and a theme in under a minute. Pretty cool.
 
-#### WP-CLI example
+### WP-CLI example
 
-Wordpress has a similar capability:
+WordPress has a similar capability:
 
     joshk@steppinrazor ~$ terminus --site=bensons-big-demo wp plugin install akismet wordpress-seo jetpack google-sitemap-generator
     Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
@@ -108,8 +109,8 @@ Wordpress has a similar capability:
 
 Sweet!
 
-### Troubleshooting
+## Troubleshooting
 
-#### I can't write to my codebase on Test or Live!
+### I can't write to my codebase on Test or Live!
 
 This is by design. Please read [this section](/documentation/howto/using-the-pantheon-workflow/-using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.

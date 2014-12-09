@@ -1,5 +1,6 @@
 ---
-title: External Libraries on Pantheon 
+title: External Libraries on Pantheon
+description: Learn to incorporate external libraries for Drupal modules on the Pantheon platform.
 categories:
     - howto
 /external-libraries-on-pantheon/
@@ -65,8 +66,8 @@ PhantomJS is located @ /srv/bin/phantomjs on your application server.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/110698)
 
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
-  
-  
+
+
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats and PDFs and more.
 
 ### Tika Configuration
@@ -89,8 +90,8 @@ If everything is working correctly, you should see the success message, _"Text c
  ![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)
 
 ImageMagick<u> </u>is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
-  
-  
+
+
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.7.8-9 2013-03-10 Q16.
 
 ## I Need a Library Not Listed Here
@@ -110,11 +111,11 @@ If there is some additional information that may help in the setup we can add it
 ### How long does the process take?
 
 This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.  
-  
-  
+
+
 If it is approved, we will let you know as well as give a timeline when the library may be included.  
-  
-  
+
+
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
 ### What version of XYZ library is installed?

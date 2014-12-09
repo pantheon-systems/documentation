@@ -1,5 +1,6 @@
 ---
 title: Apache Solr on Pantheon
+description: Using Apache Solr on the Pantheon platform. 
 categories:
     - running-drupal
 documentation/running-drupal/apache-solr-on-pantheon/

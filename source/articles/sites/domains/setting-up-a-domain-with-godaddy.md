@@ -1,5 +1,6 @@
 ---
 title: Setting up a domain with Godaddy
+description: Learn how to point a new Godaddy domain name to your Pantheon site.
 parent_guide:
   - going-live
 filename: source/_guides/setting-up-a-domain-with-godaddy.md

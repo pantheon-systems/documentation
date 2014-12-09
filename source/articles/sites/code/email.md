@@ -1,5 +1,6 @@
 ---
 title: Email on Pantheon
+description: Understand email hosting on Pantheon.
 categories:
     - running-drupal
 filename: source/_tools/email-on-pantheon.md
