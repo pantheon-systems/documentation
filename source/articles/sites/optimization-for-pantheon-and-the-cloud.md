@@ -1,7 +1,7 @@
 ---
 title: Optimization for Pantheon and the Cloud
 description: Learn how to optimize your site to efficiently function on Pantheon's cloud.  
-parent_guide:
+category:
   - optimizing
 framework:
   - Drupal

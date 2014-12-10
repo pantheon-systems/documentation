@@ -1,7 +1,7 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Use SFTP Mode to develop directly on the Pantheon Dashboard.
-parent_guide:
+category:
   - developing
 filename: source/_guides/developing-on-pantheon-directly-with-sftp-mode.md
 ---

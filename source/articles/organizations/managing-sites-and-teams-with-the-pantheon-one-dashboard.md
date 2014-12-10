@@ -1,7 +1,7 @@
 ---
 title: Managing Sites and Teams with the Pantheon One Dashboard
 description: Learn to add users and sites to your organization. 
-parent_guide:
+category:
   - managing
 filename: source/_guides/managing-sites-and-teams-with-the-pantheon-one-dashboard.md
 ---

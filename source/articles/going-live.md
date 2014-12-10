@@ -2,7 +2,7 @@
 title: Going Live
 description: Best practices for preparing your site launch.
 filename: source/_docs/going-live-and-launching-your-site.md
-parent_guide:
+category:
 		- going-live
 ---
 

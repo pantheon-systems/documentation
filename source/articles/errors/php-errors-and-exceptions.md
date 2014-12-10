@@ -1,7 +1,7 @@
 ---
 title: PHP Errors and Exceptions
 Description: Detailed information about basic PHP errors.  
-parent_guide:
+category:
   - debugging
   - supporting
 framework:

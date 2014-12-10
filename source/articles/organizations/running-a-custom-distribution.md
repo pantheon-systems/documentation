@@ -1,7 +1,7 @@
 ---
 title: Running a Custom Distribution on Pantheon
 description: Detailed information about running custom distributions.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/running-a-custom-distribution-on-pantheon.md
 ---

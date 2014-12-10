@@ -1,7 +1,7 @@
 ---
 title: Developing with SSL
 description: Learn how to develop sites using SSL and HTTPS.
-parent_guide:
+category:
   - developing
 filename: source/_guides/developing-with-ssl.md
 ---

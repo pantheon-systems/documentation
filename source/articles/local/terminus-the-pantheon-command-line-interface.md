@@ -1,7 +1,7 @@
 ---
 title: Terminus - the Pantheon Command-Line Interface
 description: Learn the most common Terminus commands.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/terminus-the-pantheon-command-line-interface.md
 ---

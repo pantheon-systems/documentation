@@ -1,7 +1,7 @@
 ---
 title: Drush Command-Line Utility
 description: Administer and maintain your site using Drush.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/drush-command-line-utility.md
 ---

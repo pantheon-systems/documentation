@@ -1,7 +1,7 @@
 ---
 title: WordPress FAQ
 description: Answer questions to Frequently Asked Questions concerning WordPress on the Pantheon platform. 
-parent_guide:
+category:
   - developing
 filename: source/_guides/wordpress-faq.md
 ---

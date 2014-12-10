@@ -1,7 +1,7 @@
 ---
 title: Updating Modules Through Drupal
 description: Learn how to update Drupal modules.
-parent_guide:
+category:
   - developing
   - supporting
 framework:

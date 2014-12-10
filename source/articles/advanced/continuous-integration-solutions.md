@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests.
-parent_guide:
+category:
   - going-live
 filename: source/_docs/continuous-integration-solutions-on-pantheon.md
 ---

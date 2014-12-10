@@ -1,7 +1,7 @@
 ---
 title: Debugging slow performance
 description: Learn how to identify common problems with performance speeds and deploy solutions. 
-parent_guide:
+category:
   - debugging
 framework:
   - Drupal

@@ -1,7 +1,7 @@
 ---
 title: Managing Upstreams
 description: Merge updates to core, extensions, and themes. 
-parent_guide:
+category:
   - getting-started
 
 filename: source/_guides/managing-upstreams.md

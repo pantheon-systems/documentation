@@ -1,7 +1,7 @@
 ---
 title: Refreshing DNS Records on Your Local Machine
 description: Flush your DNS cache to clear and update the data.
-parent_guide:
+category:
   - developing
 filename: source/_guides/refreshing-dns-records-on-your-local-machine.md
 ---

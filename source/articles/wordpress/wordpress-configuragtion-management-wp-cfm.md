@@ -1,7 +1,7 @@
 ---
 title: WordPress Configuration Management (wp-cfm) on Pantheon
 description: Learn how to install and use the WordPress Configuration Management plugin.
-parent_guide:
+category:
   - developing
 filename: source/_guides/wordpress-configuration-management-wp-cfm-on-pantheon.md
 ---

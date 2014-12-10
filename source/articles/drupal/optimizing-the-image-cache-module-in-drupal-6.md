@@ -1,6 +1,6 @@
 ---
 title: Optimizing the ImageCache Module in Drupal 6
-parent_guide: Important details about the ImageCache Module.
+category: Important details about the ImageCache Module.
   - optimizing
 framework:
   - Drupal

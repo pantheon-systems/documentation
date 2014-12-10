@@ -1,7 +1,7 @@
 ---
 title: Adding a Custom Upstream
 description: Add and test a custom version of WordPress or Drupal.
-parent_guide:
+category:
   - managing
 filename: source/_guides/adding-a-custom-upstream.md
 ---

@@ -1,7 +1,7 @@
 ---
 title: Gandi & Pantheon: Pointing your DNS
 description: Learn how to point your domain's DNS to Pantheon using Gandi.
-parent_guide:
+category:
   - going-live
 
 filename: source/_guides/gandi-pantheon-pointing-your-dns.md

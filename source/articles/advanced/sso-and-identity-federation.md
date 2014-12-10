@@ -1,7 +1,7 @@
 ---
 title: SSO and Identity Federation on Pantheon
 description: Centrally manage user identities and provide seamless integration across multiple applications.
-parent_guide:
+category:
   - developing
 filename: source/_guides/sso-and-identity-federation-on-pantheon.md
 ---

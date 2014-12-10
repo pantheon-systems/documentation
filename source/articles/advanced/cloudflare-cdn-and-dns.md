@@ -1,7 +1,7 @@
 ---
 title: CloudFlare CDN and DNS on Pantheon
 description: Learn how to setup and test CloudFlare CDN.
-parent_guide:
+category:
   - optimizing
 filename: source/_guides/cloudflare-cdn-and-dns-on-pantheon.md
 ---

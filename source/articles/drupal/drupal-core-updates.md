@@ -1,7 +1,7 @@
 ---
 title: Drupal Core Updates
 description: Apply and debug core updates.
-parent_guide:
+category:
   - supporting
   - debugging
 framework:

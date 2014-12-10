@@ -1,7 +1,7 @@
 ---
 title: Errors and server responses
 description: Understand server responses and error messages. 
-parent_guide:
+category:
   - supporting
   - debugging
 filename: source/_guides/errors-and-server-responses.md

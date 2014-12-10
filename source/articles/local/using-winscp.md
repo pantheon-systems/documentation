@@ -1,7 +1,7 @@
 ---
 title: Using WinSCP on Pantheon
 description: Detailed information about the WinSCP SFTP client.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/using-winscp-on-pantheon.md
 ---

@@ -1,7 +1,7 @@
 ---
 title: Multilingual Best Practices on Pantheon
 description: Configure a multilingual site on Pantheon.
-parent_guide:
+category:
   - developing
 filename: source/_guides/multilingual-best-practices-on-pantheon.md
 ---

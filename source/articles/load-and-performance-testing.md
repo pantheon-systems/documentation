@@ -1,7 +1,7 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance.
-parent_guide:
+category:
   - going-live
 filename: source/_guides/load-and-performance-testing.md
 ---

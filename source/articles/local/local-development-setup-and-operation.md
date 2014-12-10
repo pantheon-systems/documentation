@@ -1,7 +1,7 @@
 ---
 title: Local Development Setup and Operation
 description: Suggestions and solutions for working locally.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/local-development-setup-and-operation.md
 ---

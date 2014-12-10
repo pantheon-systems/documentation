@@ -1,7 +1,7 @@
 ---
 title: Starting With Git
 description: Use Git version control with your Pantheon site.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/starting-with-git.md
 ---

@@ -1,7 +1,7 @@
 ---
 title: Installing Cygwin on Windows
 description: Learn how to install and configure Cygwin.
-parent_guide:
+category:
   - getting-started
 filename: source/_guides/installing-cygwin-on-windows.md
 ---

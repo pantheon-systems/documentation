@@ -1,7 +1,7 @@
 ---
 title: Bots and Indexing on Pantheon
 description: Manage bots and indexing within the Pantheon workflow.
-parent_guide:
+category:
   - supporting
   - developing
 filename: source/_guides/bots-and-indexing-on-pantheon.md

@@ -1,7 +1,7 @@
 ---
 title: Removing a Credit Card
 description: Learn how to remove a credit card as a payment method for your site.
-parent_guide:
+category:
   - howto
 /removing-a-credit-card/
 Metadata

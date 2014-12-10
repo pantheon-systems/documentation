@@ -1,7 +1,7 @@
 ---
 title: Database Connection Errors
 description: Understand the causes and solutions for Database Connection Errors.
-parent_guide:
+category:
   - supporting
   - debugging
 framework:

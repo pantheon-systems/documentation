@@ -1,7 +1,7 @@
 ---
 title: Content Delivery Network (CDN) for file distribution
 description: Learn about the benefits of using a Content Delivery Network (CDN).
-parent_guide:
+category:
   - optimizing
 framework:
   - Drupal

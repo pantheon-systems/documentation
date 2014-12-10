@@ -1,7 +1,7 @@
 ---
 title: Drupal Known Limitations
 description: A list of Pantheon's known limitations.
-parent_guide:
+category:
   - getting-started
 framework:
   - Drupal
