@@ -1,0 +1,26 @@
+---
+layout: default
+title: Articles
+generator: [documents_category_index]
+
+---
+{% block title %}{{ page.category }} {{ page.title }}{% endblock %}
+{% block content %}
+<div class="container">
+  <article>
+    <div class="col-md-9">
+      <h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
+      <ul class="document-list">{% for document in page.category_documents %}
+        <article>
+          <a href="{{ document.url }}">{{ document.title }}</a>
+          <p>{{ document.description }}</p>
+        </article>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+  <div class="zappy col-md-3">
+    <img src="/assets/images/zappy.png">
+  </div>
+</div>
+{% endblock content %}
