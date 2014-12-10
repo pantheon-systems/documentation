@@ -127,7 +127,7 @@ To check caching settings on Pantheon (recommendation is to disable page compres
 
 Drush-savvy developers should also install and utilize [terminus](https://github.com/pantheon-systems/terminus), which is a Drush extension that allows you to control your Pantheon account and site from the command-line. Virtually anything you can do in the dashboard, you can script with Terminus.
 
-For instance, you can automatically udpate your drush aliases:
+For instance, you can automatically update your drush aliases:
 
     # drush pantheon-auth
     Pantheon dashboard password for you@yourdomain.com: xxxxxxx
@@ -159,7 +159,7 @@ You cannot use drush sql-sync on Pantheon. Instead, Pantheon has enabled  [sql-
 
     drush sql-sync-pipe @pantheon.SITENAME.ENV @self --progress
 
-If you need support for sql-sync-pipe, please visit the [Drush SQL Sync Pipe issue queue](https://drupal.org/project/issues/drush_sql_sync_pipe?categories=All) and create a new issue if necessary. Currently, sql-sync-pipe can not be used to transfer a database from a local instance to Pantheon.
+If you need support for sql-sync-pipe, please visit the [Drush SQL Sync Pipe issue queue](https://drupal.org/project/issues/drush_sql_sync_pipe?categories=All) and create a new issue if necessary. Currently, sql-sync-pipe cannot be used to transfer a database from a local instance to Pantheon.
 
 ## Timeouts When Using Long-Running Migrate or Other Drush Commands
 
@@ -200,7 +200,7 @@ Pantheon uses Pressflow and includes some additional functionality; Drush assume
 
 If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the community forum: [http://drupal.stackexchange.com/questions/tagged/drush](http://drupal.stackexchange.com/questions/tagged/drush)
 
-### Drush Commands on Remote liases Not Working from Inside Local Drupal Install
+### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
 Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a known issue with Drush 5: [https://github.com/drush-ops/drush/issues/313](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context would look like the following:
 

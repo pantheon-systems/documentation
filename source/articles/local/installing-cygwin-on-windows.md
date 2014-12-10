@@ -14,7 +14,7 @@ Before you begin, you should be sure to take a look at the [Getting an SSL Cert]
 
 ##Download Cygwin
 
-Get started by downloading the lastest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page. 
+Get started by downloading the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page. 
 
 ##Install Cygwin
 

@@ -52,7 +52,7 @@ At this point, you are all set and can administer your database. There will be a
 
 #### Database Credentials are No Longer Valid
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not grab the new information from the site's dashboard.
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, copy the new information from the site's dashboard.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/224670)​
 

@@ -11,4 +11,4 @@ ImageCache is a widely used Drupal 6 contributed module for dynamically generati
 
 To help with this, we have produced a patch that can be applied against the latest version of ImageCache (2.0-rc2). You can download the patch here:
 
-[http://pantheon-content.s3.amazonaws.com/patches/imagecache\_patheon.patch](http://pantheon-content.s3.amazonaws.com/patches/imagecache_patheon.patch)
+[http://pantheon-content.s3.amazonaws.com/patches/imagecache\_patheon.patch](http://pantheon-content.s3.amazonaws.com/patches/imagecache_pantheon.patch)

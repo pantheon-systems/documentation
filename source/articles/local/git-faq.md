@@ -74,7 +74,7 @@ The "update\_drops" tags are from our upstream updates in the past (we don't tag
 
 The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
-Savvy Git users may wonder, "if I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
+Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
 
 #### How do I revert or undo changes?
 
@@ -101,7 +101,7 @@ If you're importing a site that has an existing Git history, you may be able to 
     'git pull -Xours [your existing repo] [existing site branch]'
 
 4. If there are any conflicts, you'll need to resolve them.
-  **Note**: You will get conflicts on all the binary files (e.g. favicion.ico), but you can just Git add them again.
+  **Note**: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.
 
 5. Once this is done, push back to Patheon:
 
@@ -115,7 +115,7 @@ Not simultaneously. It's an either/or decision, but it's easy to switch back and
 
 When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked.
 
-If you have On Server Development disabled, you can interact with your code vit Git.
+If you have On Server Development disabled, you can interact with your code via Git.
 
 #### What version of Git does Pantheon run?
 

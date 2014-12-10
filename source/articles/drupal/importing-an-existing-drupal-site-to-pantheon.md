@@ -59,7 +59,7 @@ The code archive should include the following directories:
 
 ## Create a Code Archive
 
-Create an archive that is stored outside of your Drupal siteroot that contains only the executable code associated with your site and skips the contents of sites/default/files.
+Create an archive that is stored outside of your Drupal site root that contains only the executable code associated with your site and skips the contents of sites/default/files.
 
     # Specify the destination folder.
     TARGET=~/Desktop

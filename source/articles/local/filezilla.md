@@ -1,6 +1,6 @@
 ---
-title: Filezilla on Pantheon
-description: Detailed information about using the Filezilla FTP client.
+title: FileZilla on Pantheon
+description: Detailed information about using the FileZilla FTP client.
 categories:
     - howto
 /filezilla-on-pantheon/
@@ -8,19 +8,19 @@ Metadata
 filename: source/_tools/filezilla-on-pantheon.md
 ---
 
-[Filezilla](http://winscp.net/eng/index.php) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
+[FileZilla](http://winscp.net/eng/index.php) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
 ## Getting Started
 
-The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using Filezilla. There is some documentation on [how to find the SFTP credentials](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-on-server-development#connecting-via-sftp) for your site.
+The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-on-server-development#connecting-via-sftp) for your site.
 
-## Download Filezilla
+## Download FileZilla
 
-If you do not have filezilla installed then go ahead and [download the latest version](https://filezilla-project.org/) and get it running on your computer. The installation process is straightforward so we won't go over that here.
+If you do not have FileZilla installed then go ahead and [download the latest version](https://FileZilla-project.org/) and get it running on your computer. The installation process is straightforward so we won't go over that here.
 
-## Start Filezilla
+## Start FileZilla
 
-Look for the package in the start menu and start the Filezilla application and enter in the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP and **protocol** needs to be SFTP, not FTP.
+Look for the package in the start menu and start the FileZilla application and enter in the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP and **protocol** needs to be SFTP, not FTP.
 
  ![start filezilla](https://pantheon-systems.desk.com/customer/portal/attachments/50374) 
 

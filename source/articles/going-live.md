@@ -14,7 +14,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Best Practices to Prepare for Launch
 
-Making sure that your site code is current to reduces the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
+Making sure that your site code is current to reduce the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
 
 While it's good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). To do this, just update your settings.php configuration to redirect site traffic to your preferred domain. If you don't, there will be an SEO penalty due to duplicate content, among other problems.
 

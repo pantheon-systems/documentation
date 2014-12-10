@@ -10,7 +10,7 @@ By following this guide, you'll go from creating a custom version of WordPress o
 
 ## 1. Create a Remote Repository.
 
-Each site on Pantheon is generated from an unique public or private Git repository maintained by an upstream author and contains all the code needed to deploy the sites.
+Each site on Pantheon is generated from a unique public or private Git repository maintained by an upstream author and contains all the code needed to deploy the sites.
 
 Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pantheon-compatible, publicly maintained base upstream (Drupal distributions running our drops-7 core).
 

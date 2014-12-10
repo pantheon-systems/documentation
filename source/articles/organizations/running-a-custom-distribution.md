@@ -16,7 +16,7 @@ Pantheon provides support for running three types of custom distribution on the 
 
 Assuming you meet the above qualification, you will need to:
 
-1. **Create a Repository for Pantheon** - Each distribution on Pantheon is deployed from an unique public or private git repository which is maintained by the distribution author which contains all the code needed to deploy the distribution. Many distribution authors prefer to use git hosting services like [GitHub](https://github.com/) or [Bitbucket](https://bitbucket.org/), but any git repository will do.
+1. **Create a Repository for Pantheon** - Each distribution on Pantheon is deployed from a unique public or private git repository which is maintained by the distribution author which contains all the code needed to deploy the distribution. Many distribution authors prefer to use git hosting services like [GitHub](https://github.com/) or [Bitbucket](https://bitbucket.org/), but any git repository will do.
 
 2. **Use Pantheon's Drupal Core Upstream** - Pantheon maintains its own copy of both Drupal 6 and Drupal 7 core which are available at [https://github.com/pantheon-systems/drops-6](https://github.com/pantheon-systems/drops-6) or  [https://github.com/pantheon-systems/drops-7](https://github.com/pantheon-systems/drops-7) respectively and need to be used for all distributions on Pantheon. To include Pantheon's Drupal core upstream simply pull in that code by running:
 
@@ -41,7 +41,7 @@ After you have a distribution that works on Pantheon, go ahead and get in [conta
 
 -
 
-**Read Access to the Git Repository** - This is the the Git repository which contains the code you just set up. This can be in the form of a public URL or a private one with a username and password. It is also possible to share private URLs to use directly using our accounts on either [GitHub](http://github.com/gf-pantheon) or [Bitbucket](https://bitbucket.org/pantheon_distributions). 
+**Read Access to the Git Repository** - This is the Git repository which contains the code you just set up. This can be in the form of a public URL or a private one with a username and password. It is also possible to share private URLs to use directly using our accounts on either [GitHub](http://github.com/gf-pantheon) or [Bitbucket](https://bitbucket.org/pantheon_distributions). 
 
 -
 

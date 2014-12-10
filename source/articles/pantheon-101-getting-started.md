@@ -112,7 +112,7 @@ When you're ready to launch your site, you'll need to add a credit card to the s
 
 #### Does Pantheon offer professional services?
 
-Pantheon does not provide development, module, or site building as a service, so we can not write code or develop the sites for you. There are a number of development firms and skilled contractors who are available if you do not have a developer available. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon does not provide development, module, or site building as a service, so we cannot write code or develop the sites for you. There are a number of development firms and skilled contractors who are available if you do not have a developer available. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has some comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 

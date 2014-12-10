@@ -25,7 +25,7 @@ For instance, if you are upgrading from Drupal 6 to Drupal 7, follow these steps
 3. Import your existing data.
 4. Debug, QA, release.
 
-As always, the details are where the work is, but this is the best order in wich to approach these tasks.
+As always, the details are where the work is, but this is the best order in which to approach these tasks.
 
 ## Content and Configuration
 

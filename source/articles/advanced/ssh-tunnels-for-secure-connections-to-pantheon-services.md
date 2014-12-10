@@ -1,6 +1,6 @@
 ---
 title: SSH Tunnels for Secure Connections to Pantheon Services
-descripion: Securely connect to your database and caching service over an encrypted connection using secure shell tunneling.
+description: Securely connect to your database and caching service over an encrypted connection using secure shell tunneling.
 filename: source/_common-tasks/ssh-tunnels-for-secure-connections-to-pantheon-services.md
 ---
 

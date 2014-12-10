@@ -11,7 +11,7 @@ Git is the version control tool at the heart of the Pantheon workflow. If you're
 
 ## Clone Your Site Codebase
 
-The first step is to get a `git clone` a of your code from Pantheon to your local computer.
+The first step is to get a `git clone` of your code from Pantheon to your local computer.
 
 ### Step 1: Go to Your Site Dashboard
 

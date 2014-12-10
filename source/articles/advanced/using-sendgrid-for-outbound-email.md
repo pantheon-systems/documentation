@@ -14,7 +14,7 @@ There are three simple steps to sending email from Pantheon using SendGrid.
 
 ## 1. Create a SendGrid Account
 
-You can send up to 200 emails per day for free with SendGrid, so it's risk free to try out. Also, as a Pantheon customer, we are also able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
+You can send up to 200 emails per day for free with SendGrid, so it's risk-free to try out. Also, as a Pantheon customer, we are also able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
 
 ## 2. Download the Drupal SMTP Module
 
