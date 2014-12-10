@@ -3,7 +3,7 @@ title: Frequently Asked Questions
 description: Answers to common questions about using Pantheon.
 category:
   - getting-started
-filename: source/_guides/frequently-asked-questions.md
+
 ---
 
 ## Can I put production sites on Pantheon?

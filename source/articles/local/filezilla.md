@@ -1,10 +1,10 @@
 ---
 title: FileZilla on Pantheon
 description: Detailed information about using the FileZilla FTP client.
-categories:
+category:
     - howto
 /filezilla-on-pantheon/
-Metadata
+
 filename: source/_tools/filezilla-on-pantheon.md
 ---
 

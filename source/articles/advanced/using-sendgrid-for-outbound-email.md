@@ -1,7 +1,7 @@
 ---
 title: Using SendGrid for Outbound Email
 description: Send email from Pantheon using SendGrid.
-filename: source/_common-tasks/using-sendgrid-for-outbound-email.md
+
 ---
 
 ## Overview

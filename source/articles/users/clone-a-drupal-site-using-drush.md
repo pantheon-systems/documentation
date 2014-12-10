@@ -1,7 +1,7 @@
 ---
 title: Clone a Drupal Site on Pantheon Using Drush
 description: Learn how to copy an existing Drupal site using Drush on Pantheon. 
-filename: source/_common-tasks/clone-a-drupal-site-on-pantheon-using-drush.md
+
 ---
 
 There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. This article will walk you through the basic method of doing so.

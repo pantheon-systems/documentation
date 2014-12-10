@@ -6,7 +6,7 @@ category:
   - debugging
 category:
   - Drupal
-filename: source/_guides/database-connection-errors.md
+
 ---
 
 If your site suddenly reverts to install.php, or you see database connection errors like the following:

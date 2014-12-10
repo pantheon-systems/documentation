@@ -1,6 +1,6 @@
 ---
 title: Developing Sites on Pantheon
-filename: source/_guides/developing.md
+
 category:
   - developing
 draft: true

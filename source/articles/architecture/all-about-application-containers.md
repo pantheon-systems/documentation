@@ -1,10 +1,9 @@
 ---
 title: All About Application Containers
 description: Learn more about Pantheon's grid-model infrastructure.
-categories:
+category:
   - getting-started
-filename: source/_tools/all-about-application-containers.md
-slug: sites
+
 
 ---
 

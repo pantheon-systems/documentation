@@ -1,6 +1,6 @@
 ---
 title: Get Started
-filename: source/_guides/get-started.md
+
 category:
   - getting-started
 ---

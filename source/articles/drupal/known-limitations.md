@@ -5,7 +5,7 @@ category:
   - getting-started
 category:
   - Drupal
-filename: source/_guides/known-limitations.md
+
 ---
 
 No platform is perfect, and Pantheon is no exception. This page is used to keep track of the common/known limitations know about. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve pantheon to address these limitations.

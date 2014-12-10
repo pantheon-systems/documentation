@@ -1,7 +1,7 @@
 ---
 title: SFTP FAQs
 description: Understand common SFTP connection problems.
-filename: source/_common-tasks/sftp-faqs.md
+
 ---
 
 ## SFTP Connection Issues

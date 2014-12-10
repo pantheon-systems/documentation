@@ -1,9 +1,9 @@
 ---
 title: Cron
 description: Understand Pantheon cron execution and management.
-categories:
+category:
     - howto
-filename: source/_tools/cron-on-pantheon.md
+
 slug: sites/code
 
 ---

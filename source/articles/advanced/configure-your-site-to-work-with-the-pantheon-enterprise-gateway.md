@@ -1,8 +1,8 @@
 ---
 title: Configuring a Site to Use the Pantheon Enterprise Gateway
 description: Create a secure tunnel between your firewall and public site.
-filename: source/_common-tasks/how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway.md
-tools:
+
+category:
   -
 ---
 

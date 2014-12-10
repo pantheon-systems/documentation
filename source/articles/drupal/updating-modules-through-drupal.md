@@ -6,7 +6,7 @@ category:
   - supporting
 category:
   - drupal
-filename: source/_guides/updating-modules-through-drupal.md
+
 ---
 
 ## **Updating Modules Through Drupal**

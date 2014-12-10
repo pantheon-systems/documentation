@@ -3,7 +3,7 @@ title: Session and Cookie Handling
 description: Details about configuring settings for session expiration and cookies.
 category:
   - developing
-filename: source/_guides/session-and-cookie-handling.md
+
 ---
 
 ## How can I control session expiration length?

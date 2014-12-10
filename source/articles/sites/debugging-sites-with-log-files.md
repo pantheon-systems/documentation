@@ -5,7 +5,7 @@ category:
   - developing
 category:
 	- drupal
-filename: source/_guides/debugging-sites-with-log-files.md
+
 ---
 
 ## Database Logging

@@ -1,7 +1,9 @@
 ---
 title: Accessing MySQL Databases
 description: Configure and troubleshoot database connections.
-filename: source/_common-tasks/accessing-mysql-databases.md
+
+category:
+  - developing
 ---
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your Drupal configuration.
 

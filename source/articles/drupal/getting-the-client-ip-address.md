@@ -1,8 +1,8 @@
 ---
 title: Getting the Client IP Address
 description: Set up geolocation capabilities on your site.
-filename: source/_common-tasks/getting-the-client-ip-address.md
-tools:
+
+category:
   -
 ---
 ## Overview

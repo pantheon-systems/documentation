@@ -4,7 +4,7 @@ description: Understand server responses and error messages.
 category:
   - supporting
   - debugging
-filename: source/_guides/errors-and-server-responses.md
+
 ---
 
  

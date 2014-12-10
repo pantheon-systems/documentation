@@ -1,11 +1,10 @@
 ---
 title: IPv6 Addresses on Pantheon
 description: Detailed information about IPv6.
-categories:
+category:
   - getting-started
-/ipv6-addresses-on-pantheon/
-Metadata
-filename: source/_tools/ipv6-addresses-on-pantheon.md
+
+
 ---
 
 ## What is IPv6?

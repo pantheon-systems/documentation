@@ -2,10 +2,9 @@
 title: Removing a Credit Card
 description: Learn how to remove a credit card as a payment method for your site.
 category:
-  - howto
-/removing-a-credit-card/
-Metadata
-filename: source/_guides/removing-a-credit-card.md
+  - run
+
+
 ---
 
 If you would like to remove you credit card because it has expired, or if you would like to change or remove a credit card from your account it is quick and easy.

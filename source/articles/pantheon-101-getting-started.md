@@ -3,7 +3,7 @@ title: Pantheon 101: Getting Started
 description: Everything you need to know to spinup a site.
 category:
   - getting-started
-filename: source/_guides/pantheon-101-getting-started.md
+
 ---
 
 ## Overview

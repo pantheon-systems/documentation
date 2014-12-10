@@ -1,11 +1,10 @@
 ---
 title: What is APC and what is it used for?
-description: Understand Alternative PHP Cache and it's uses within the Pantheon workflow. 
-categories:
+description: Understand Alternative PHP Cache and it's uses within the Pantheon workflow.
+category:
   - getting-started
-/what-is-apc-and-what-is-it-used-for/
-Metadata
-filename: source/_tools/what-is-apc-and-what-is-it-used-for.md
+
+
 ---
 
 APC stands for the [Alternative PHP Cache](http://php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a high-level language that is compiled on-demand into bytecode at execution time. To improve performance, APC optimizes compiled PHP and stores the result in shared memory (SHM).

@@ -3,7 +3,7 @@ title: New Relic performance analysis on Pantheon
 description: Learn how to utilize New Relic performance metrics and reports. 
 category:
   - going-live
-filename: source/_guides/new-relic-performance-analysis-on-pantheon.md
+
 ---
 
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.

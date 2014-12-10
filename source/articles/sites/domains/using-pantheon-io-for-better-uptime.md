@@ -3,7 +3,7 @@ title: Using Pantheon.io For Better Uptime
 description: Understand the new pantheon.io system and how it improves uptime.
 category:
   - going-live
-filename: source/_guides/using-pantheon-io-for-better-uptime.md
+
 ---
 
 As of October 22nd, 2014, Pantheon is no longer offering shared static IP addresses for customer sites. The new pantheon.io system provides higher-uptime alternatives.

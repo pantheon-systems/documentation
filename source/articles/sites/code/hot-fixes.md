@@ -1,8 +1,8 @@
 ---
 title: Hot Fixes
 description: Learn how to deploy a hotfix on Pantheon.
-filename: source/_common-tasks/hot-fixes.md
-tools:
+
+category:
   -
 ---
 

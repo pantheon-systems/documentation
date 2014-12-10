@@ -1,11 +1,10 @@
 ---
 title: Apache Solr on Pantheon
-description: Using Apache Solr on the Pantheon platform. 
-categories:
-    - running-drupal
-documentation/running-drupal/apache-solr-on-pantheon/
-Metadata
-filename: source/_tools/apache-solr-on-pantheon.md
+description: Using Apache Solr on the Pantheon platform.
+category:
+    - drupal
+
+
 ---
 
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox. No permission or action is required from Pantheon to use Solr.  

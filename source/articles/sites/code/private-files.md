@@ -1,11 +1,11 @@
 ---
 title: Private Files
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
-categories:
-    - running-drupal
-/private-files/
-Metadata
-filename: source/_tools/private-files.md
+category:
+    - development
+    - drupal
+
+
 ---
 
 Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
