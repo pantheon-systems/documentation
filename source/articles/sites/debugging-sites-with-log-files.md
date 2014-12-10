@@ -1,6 +1,6 @@
 ---
 title: Debugging sites with log files
-category:
+parent_guide:
   - developing
 framework:
 	- drupal

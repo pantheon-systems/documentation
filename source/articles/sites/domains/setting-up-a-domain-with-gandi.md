@@ -1,6 +1,6 @@
 ---
 title: Setting Up a Domain with Gandi
-category:
+parent_guide:
   - going-live
 filename: source/_guides/setting-up-a-domain-with-gandi.md
 ---

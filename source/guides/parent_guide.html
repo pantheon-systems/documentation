@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Articles
-generator: [documents_category_index]
+title: Guides
+generator: [documents_parent_guide_index, pagination]
+pagination:
+    provider: page.parent_guide_documents
 
 ---
-{% block title %}{{ page.category }} {{ page.title }}{% endblock %}
+{% block title %}{{ page.parent_guide }} {{ page.title }}{% endblock %}
 {% block content %}
 <article>
 <div class="container">
-<h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
-<ul class="document-list">{% for document in page.category_documents %}
+<h1> {{ page.parent_guide|replace({'-': ' '})|title }} Articles </h1>
+<ul class="guide-list">{% for guide in page.pagination.items %}
 <article>
-  <a href="{{ document.url }}">{{ document.title }}</a>
-  <p>{{ document.description }}</p>
+  <a href="{{ site.url }}{{ document.url }}">{{ guide.title }}</a>
+  <p>{{ guide.description }}</p>
  </article>
 {% endfor %}
 </ul>

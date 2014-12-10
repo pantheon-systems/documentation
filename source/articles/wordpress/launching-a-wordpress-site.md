@@ -1,6 +1,6 @@
 ---
 title: Launching a WordPress Site
-category:
+parent_guide:
   - going-live
 filename: source/_guides/launching-a-wordpress-site.md
 ---

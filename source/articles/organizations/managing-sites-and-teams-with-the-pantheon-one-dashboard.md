@@ -1,6 +1,6 @@
 ---
 title: Managing Sites and Teams with the Pantheon One Dashboard
-category:
+parent_guide:
   - managing
 filename: source/_guides/managing-sites-and-teams-with-the-pantheon-one-dashboard.md
 ---

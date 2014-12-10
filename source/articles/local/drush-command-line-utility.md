@@ -1,6 +1,6 @@
 ---
 title: Drush command-line utility
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/drush-command-line-utility.md
 ---

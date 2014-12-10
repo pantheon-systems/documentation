@@ -1,6 +1,6 @@
 ---
 title: Drupal's performance and caching settings
-category:
+parent_guide:
   - optimizing
 framework:
   - Drupal

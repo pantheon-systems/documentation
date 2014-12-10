@@ -1,6 +1,6 @@
 ---
 title: Optimizing the Image Cache Module in Drupal 6
-category:
+parent_guide:
   - optimizing
 framework:
   - Drupal

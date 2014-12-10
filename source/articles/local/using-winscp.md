@@ -1,6 +1,6 @@
 ---
 title: Using WinSCP on Pantheon
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/using-winscp-on-pantheon.md
 ---

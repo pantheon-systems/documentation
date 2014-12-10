@@ -1,6 +1,6 @@
 ---
 title: CloudFlare CDN and DNS on Pantheon
-category:
+parent_guide:
   - optimizing
 filename: source/_guides/cloudflare-cdn-and-dns-on-pantheon.md
 ---

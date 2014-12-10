@@ -1,7 +1,7 @@
 ---
 title: Developing Sites on Pantheon
 filename: source/_guides/developing.md
-category:
+parent_guide:
   - developing
 draft: true
 ---

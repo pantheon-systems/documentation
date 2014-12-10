@@ -1,6 +1,6 @@
 ---
 title: WordPress and PHP Sessions
-category:
+parent_guide:
   - developing
 filename: source/_guides/wordpress-and-php-sessions.md
 ---

@@ -1,6 +1,6 @@
 ---
 title: SSO and Identity Federation on Pantheon
-category:
+parent_guide:
   - developing
 filename: source/_guides/sso-and-identity-federation-on-pantheon.md
 ---
