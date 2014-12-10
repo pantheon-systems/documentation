@@ -1,18 +1,21 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
+description: Recommended documentation to learn about Pantheon's technologies.
 parent_guide:
   - getting-started
     filename:source/_guides/required-reading-essential-pantheon-documentation.md
 ---
+
+## Overview
 
 Pantheon is unlike any traditional web hosting service that you may have used in the past.
 
 Though it incorporates many familiar open-source technologies, it presents a fresh and unique deployment topology, matched with a highly-functional toolbox and uber-efficient workflow to create an all-in-one cloud-based development solution for Drupal.  
 
 
-Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
+Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
 
-### Know More!
+## Helpful Docs
 
 We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an efficient Developer on Pantheon should quickly understand:
 
@@ -38,10 +41,9 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - SSO, LDAP, Shibboleth and other [authentication](/documentation/advanced-topics/sso-and-identity-federation-on-pantheon/) methods.
 - Pantheon servers spin down after ~2 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
 
-### Understanding Support
+## Support
 
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope.  
- 
 
 - We don't touch client code.
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.

@@ -1,16 +1,17 @@
 ---
 title: LDAP and LDAPS
+description: Configure LDAP on your Pantheon site.
 categories:
   - getting-starte
 slug: "sites/code"
 
 ---
 
- **LDAP as a Provider**  
+ ## LDAP as a Provider  
 
 This not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway).
 
-**LDAP as a Consumer**  
+## LDAP as a Consumer  
 
 Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details will be up to the user as not all _instances_ can be supported.
 
@@ -73,13 +74,13 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 
 ## Troubleshooting
 
-The vast majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
+The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
 
 The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your siteroot with a name like ldap-test.php. You can execute it remotely using drush to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
     drush @pantheon.SITENAME.ENV scr ldap-test.php
 
-The script in its entirety:
+The entire script:
 
     <?php
     $settings = array(

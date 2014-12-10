@@ -1,5 +1,6 @@
 ---
 title: Port 2222 Blocked Workaround
+description: Instructions for accessing Port 2222.
 filename: source/_common-tasks/port-2222-blocked-workaround.md
 ---
 
@@ -7,14 +8,14 @@ filename: source/_common-tasks/port-2222-blocked-workaround.md
 
 In order to push and pull code to your Pantheon site you'll need access to port 2222. If for some reason this port isn't open to you, either because of a corporate firewall or router configuration, you'll get an error resembling the following:
 
-    ssh: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
-    fatal: Could not read from remote repository.
+    SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
+    Fatal: Could not read from remote repository.
 
 ## Prerequisites
 
-You can use an SSH tunnel to get around this barrier. In order to set this up you'll need SSH access to an another server somewhere outside of your network that can access port 2222 and reach Pantheon's git servers. Once you get the command to open a tunnel working, keep it handy somewhere because you'll need to open the tunnel before performing any remote git operations.
+You can use an SSH tunnel to get around this barrier. In order to set this up you'll need SSH access to an another server somewhere outside of your network that can access port 2222 and reach Pantheon's git servers. Once you get the command to open a tunnel working, keep it handy somewhere because you'll need to open the tunnel before performing any remote Git operations.
 
-## Set up the tunnel
+## Set Up the Tunnel
 
 Open a terminal window where you'll initiate the SSH tunnel. The form of the command is:
 
@@ -26,7 +27,7 @@ Following is an example with some Pantheon credentials plugged in (site UUID omi
 
 You should now be logged in to the other server, but simultaneously you've just set up your local port 3333 as a tunnel to your Pantheon git repo.
 
-## Clone the repo
+## Clone the Repo
 
 Open a second terminal window where you'll clone the repository. The form of the command is:
 
@@ -38,7 +39,7 @@ Here's an example with Pantheon credentials plugged in (site UUID omitted):
 
 Now you should have a fully cloned repo that you can push and pull from.
 
-## Optional: Add a remote
+### Optional: Add a Remote
 
 If you use GitHub or Bitbucket in parallel you can run something like the following (as with any remote git operations, the tunnel must be open already):
 
