@@ -1,5 +1,6 @@
 ---
 title: Spinup
+description: Learn how to create a new spinup with Pantheon.
 filename: /source/_common-tasks/spinup.md
 tools:
   - Spinup

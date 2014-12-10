@@ -1,5 +1,6 @@
 ---
 title: Removing a Credit Card
+desctription: Learn how to remove a credit card as a payment method for your site.
 parent_guide:
   - howto
 /removing-a-credit-card/
@@ -24,4 +25,3 @@ Click the "Delete" button next to the card you would like to delete. A modal wil
 ### Additional Resources
 
 - [Adding a Credit Card to a Specific Site](/documentation/howto/add-a-credit-card-to-a-site/-add-a-credit-card-to-a-specific-site)
-
