@@ -29,7 +29,7 @@ If you don't see that, you'll want to look into recent changes and revert or rem
 ## Non-Standard Bootstraps
 Some modules — for instance the **domain.module** — change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
 
-However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippit in your settings.php _before_ the module's include call. An example for using domain's include would be as follows:
+However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippet in your settings.php _before_ the module's include call. An example for using domain's include would be as follows:
 
 ### Drupal 6 Style
     $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);

@@ -1,6 +1,6 @@
 ---
 title: URLs in WordPress's Database
-description: Understanding URLs within the WordPress database. 
+description: Understanding URLs within the WordPress database.
 categories:
     - getting-started
 permalink: documentation/getting-started/urls-in-wordpress-s-database/
@@ -14,6 +14,6 @@ WordPress stores URLs in various places in the database, considering Pantheon's 
 
 ## Example
 
-[Pantheon's workflow](/documentation/howto/using-the-pantheon-workflow/) for wordpress includes an additional feature to update URLs automatically! Note that the defaults that're selected when performing a clone operation aren't overidable, as we update the URL to match whatever environment you're cloning to. We do offer the option to convert http to https & vice versa; in the case you have https in one environment and not another.
+[Pantheon's workflow](/documentation/howto/using-the-pantheon-workflow/) for wordpress includes an additional feature to update URLs automatically! Note that the defaults that are selected when performing a clone operation aren't overridable, as we update the URL to match whatever environment you're cloning to. We do offer the option to convert http to https & vice versa; in the case you have https in one environment and not another.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/272464)​

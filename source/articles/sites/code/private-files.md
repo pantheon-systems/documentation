@@ -44,7 +44,7 @@ In the case where you have a private code library which needs to have a specific
     git commit simplesaml -m "adding simplsaml symlink"
     git push origin master
 
-The result will be a web-accessible URL at http://dev.yoursite.gotpantheon.com/simplesaml which will point to the code in /private/simplsamlphp/www.
+The result will be a web-accessible URL at http://dev.yoursite.gotpantheon.com/simplesaml which will point to the code in /private/simplesamlphp/www.
 
 ### Commerce kickstart or Ubercart key path between environments
 
