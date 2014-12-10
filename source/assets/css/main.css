@@ -305,7 +305,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 /* Page headers */
 .pio-docs-header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 .pio-docs-header h1 {
@@ -323,8 +323,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 @media (min-width: 768px) {
   .pio-docs-header {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 24px;
     text-align: left;
   }
@@ -425,6 +425,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
   display: block;
   border-bottom: 2px solid #EFD01B;
   margin-bottom: 40px;
+  padding-bottom: 5px;
 }
 /*
  * Featured sites
