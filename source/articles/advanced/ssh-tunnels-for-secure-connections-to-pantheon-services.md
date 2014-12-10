@@ -1,32 +1,29 @@
 ---
-title: SSH tunnels for secure connections to Pantheon services
+title: SSH Tunnels for Secure Connections to Pantheon Services
+descripion: Securely connect to your database and caching service over an encrypted connection using secure shell tunneling.
 filename: source/_common-tasks/ssh-tunnels-for-secure-connections-to-pantheon-services.md
 ---
 
-For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [s](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling) [ecure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
+For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 
+This technique configures an SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.  
 
-This technique configures a SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.  
-
-
-Currently, there are two services on Pantheon that supported SSH tunneling:
+Currently, there are two services on Pantheon that support SSH tunneling:
 
 - [MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) (dbserver)
 - [Redis cache](/documentation/howto/redis-as-a-caching-backend/) (cacheserver)
 
-## Requirements to create a SSH tunnel
+## Requirements to Create an SSH Tunnel
 
-There are a few requirements for a SSH tunnel:
-
-1. SSH client, such as OpenSSH (ssh command already installed on Mac and Linux) or PuTTY (Windows)
+1. An SSH client, such as OpenSSH (ssh command already installed on Mac and Linux) or PuTTY (Windows)
 2. Target site UUID (found in the dashboard URL)
-3. Target environment name (dev, test, or live)
+3. Target environment name (Dev, Test, or Live)
 4. The service you want to connect to (dbserver or cacheserver)
 5. Target port for the service ("Connection Info" tab in the site environment dashboard)
 
-## Manually creating a SSH tunnel to connect to a MySQL database
+## Manually Create an SSH Tunnel toConnect to a MySQL Database
 
-These instructions require the use of the ssh command-line client.
+These instructions require the use of the SSH command-line client.
 
     # Site UUID from Dashboard URL
     SITE=SITE_UUID
@@ -47,19 +44,15 @@ These instructions require the use of the ssh command-line client.
     # Destroy tunnel.
     ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
 
-## Using Sequel Pro to SSH tunnel to a MySQL database
+## Use Sequel Pro to SSH tunnel to a MySQL Database
 
-[Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
+[Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
 
+## Manually Creati an SSH tunnel to a Redis Cache Server
 
-​ ![](https://pantheon-systems.desk.com/customer/portal/attachments/182510)
+These instructions require using the redis command-line client; see the [main redis article](/documentation/howto/redis-as-a-caching-backend/#redis-cli) for details.  
 
-## Manually creating a SSH tunnel to a redis cache server
-
-These instructions require the use of the redis command-line client; see the [main redis article](/documentation/howto/redis-as-a-caching-backend/#redis-cli) for details.  
-
-
-From the site environment, get the one-line connection string. It will be in the following format:
+From the site environment, get the one-line connection string. It will be in the following format:
 
     redis-cli -h HOSTNAME -p PORT -a PASSWORD
 
