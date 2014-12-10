@@ -4,7 +4,7 @@ description: Understand the causes and solutions for Database Connection Errors.
 category:
   - supporting
   - debugging
-framework:
+category:
   - Drupal
 filename: source/_guides/database-connection-errors.md
 ---

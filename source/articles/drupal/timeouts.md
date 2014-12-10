@@ -4,7 +4,7 @@ description: Detailed information about timeout errors.
 category:
   - supporting
   - debugging
-framework:
+category:
   - Drupal
 slug:
 filename: source/_guides/timeouts-on-pantheon.md

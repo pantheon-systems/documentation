@@ -2,7 +2,7 @@
 title: Optimizing the ImageCache Module in Drupal 6
 category: Important details about the ImageCache Module.
   - optimizing
-framework:
+category:
   - Drupal
 filename: source/_guides/optimizing-the-image-cache-module-in-drupal-6.md
 ---

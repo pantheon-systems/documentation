@@ -4,7 +4,7 @@ description: Apply and debug core updates.
 category:
   - supporting
   - debugging
-framework:
+category:
   - Drupal
 filename: source/_guides/drupal-core-updates.md
 ---

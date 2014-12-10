@@ -4,7 +4,7 @@ description: Learn how to update Drupal modules.
 category:
   - developing
   - supporting
-framework:
+category:
   - drupal
 filename: source/_guides/updating-modules-through-drupal.md
 ---

@@ -10,7 +10,7 @@ Pantheon provides static site analysis as a service for Drupal 7 sites to make b
 
 ## Overview
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon they're all built with the same framework: Drupal, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis - ** performance & behavior gathering to see how a site works.  
+Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis - ** performance & behavior gathering to see how a site works.  
 This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
 In short, you get a fast, repeatable report that can help detect common problems and provide introspection into your site.
 

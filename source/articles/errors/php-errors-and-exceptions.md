@@ -4,7 +4,7 @@ Description: Detailed information about basic PHP errors.
 category:
   - debugging
   - supporting
-framework:
+category:
   - Drupal
 filename: source/_guides/php-errors-and-exceptions.md
 ---

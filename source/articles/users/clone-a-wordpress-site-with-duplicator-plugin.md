@@ -5,7 +5,7 @@ filename: source/_common-tasks/clone-a-wordpress-site-on-pantheon-with-duplicato
 tools:
   - WordPress Duplicator
   - Spinup Importer
-framework:
+category:
   - WordPress
 ---
 

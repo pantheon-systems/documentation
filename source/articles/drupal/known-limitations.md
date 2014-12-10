@@ -3,7 +3,7 @@ title: Drupal Known Limitations
 description: A list of Pantheon's known limitations.
 category:
   - getting-started
-framework:
+category:
   - Drupal
 filename: source/_guides/known-limitations.md
 ---
