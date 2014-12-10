@@ -1,5 +1,6 @@
 ---
 title: All About Application Containers
+description: Learn more about Pantheon's grid-model infrastructure.
 categories:
   - getting-started
 filename: source/_tools/all-about-application-containers.md
@@ -41,7 +42,7 @@ It is important to understand the distinction between _performance_ and _scalabi
 - **Performance**: the speed at which an individual request is handled.
 - **Scalability**: the ability to handle many concurrent requests.
 
-While these are related topics, they need to be evaluated separately for your project. 
+While these are related topics, they need to be evaluated separately for your project.
 
 Typically, the best practice is to optimize for performance first, and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 

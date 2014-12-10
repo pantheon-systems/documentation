@@ -1,5 +1,6 @@
 ---
 title: Content Delivery Network (CDN) for file distribution
+description: Learn about the benefits of using a Content Delivery Network (CDN).
 parent_guide:
   - optimizing
 framework:
@@ -13,7 +14,7 @@ A CDN (Content Delivery Network) is a distributed system for rapidly serving fil
 
 A CDN quickly delivers content using a mix of caching, advanced seek/indexing technology, and multiple synchronized origins across a geographic area. By minimizing physical latency and allowing quick, smart retrieval of assets from a localized cache, delivery time can be greatly improved.
 
-## When should I use a CDN?
+## When to Use a CDN
 
 While Pantheon's Valhalla networked file system and Varnish edge cache provide Enterprise-grade high-performance, high-availability solutions for static content, there are some limitations. Specifically, this configuration:
 
@@ -38,11 +39,11 @@ If you don't meet those specific criteria, strongly consider just using Pantheon
 
 A more in-depth description of CDN properties can be found in Wim Leer's [Key Properties of a CDN](http://wimleers.com/article/key-properties-of-a-cdn) article.
 
-## What do I need to use a CDN?
+## Requirements for Using a CDN
 
-You do not need permission, action or configuration from Pantheon to use a CDN. You will, however, need to make alterations to your site code and configuration.
+You do not need permission, action, or configuration from Pantheon to use a CDN. However, you will need to make alterations to your site code and configuration.
 
-Most sites use the [cdn module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
+Most sites use the [CDN module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
 
 First, download the module. If you use drush:
 
@@ -55,9 +56,9 @@ Then, enable the module.
 To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/196366)
-## Best practices
+## Best Practices
 
-As files are not shared between environments, you need to have a separate CDN for dev, test and live.
+As files are not shared between environments, you need to have a separate CDN for Dev, Test and Live.
 
 Here's logic that you can use in settings.php to hard-code the URL of the CDN per-environment:
 
@@ -78,7 +79,7 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 
 The [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module can be configured to directly upload to Amazon S3 from within your browser without needing to upload to Pantheon. This has numerous advantages and avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
 
-### Installation
+## Installation
 
 This is not the only way to install this, but these directions are known good and assume that you have an AWS S3 bucket set up.
 

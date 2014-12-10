@@ -1,19 +1,20 @@
 ---
 title: Going Live
+description: Best practices for preparing your site launch.
 filename: source/_docs/going-live-and-launching-your-site.md
 parent_guide:
 		- going-live
 ---
 
-## Preparing for your site launch
+## Preparing for Your Site Launch
 
 Congratulations, you're almost ready to launch your site on Pantheon! There's a couple things to do to get ready, but we'll help you with every step.
 
-We recommend that you **prepare the Live environment at least 24 hours before your launch** date, so give yourself time. If you rush a launch, you'll increase the probability of avoidable mistakes and problems. Take a step back, breathe, and let's do this!
+We recommend that you **prepare the Live environment at least 24 hours before your launch** date, so give yourself time. If you rush a launch, you'll increase the probability of avoidable mistakes and problems.
 
-### Best practices to prepare for launch
+## Best Practices to Prepare for Launch
 
-Making sure that your site code is current as possible reduces the potential for later issues and makes your site easier to maintain. Ensure you've updated both any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
+Making sure that your site code is current to reduces the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
 
 While it's good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). To do this, just update your settings.php configuration to redirect site traffic to your preferred domain. If you don't, there will be an SEO penalty due to duplicate content, among other problems.
 
@@ -40,7 +41,7 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 		</tr>
 	</tbody>
 
-### Deploy your code to the Live environment
+## Deploy Code to the Live Environment
 
 When all code changes are complete, pull the code changes into the Live environment.
 
@@ -57,13 +58,13 @@ When all code changes are complete, pull the code changes into the Live environm
 		</tr>
 	</tbody>
 
-### Test and optimize your site
+## Test and Optimize Your Site
 
-Next, you'll want to test and optimize your site. Start by disabling development modules, as they hurt performance by increasing overhead and can introduce security problems by disclosing structural and debugging information about your site to visitors.
+Start by disabling development modules, as they hurt performance by increasing overhead and can introduce security problems by disclosing structural and debugging information about your site to visitors.
 
 You should also consider enabling New Relic monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
 
-Take a look at your performance settings, including enabling anonymous page caching, enabling aggregated stylesheets and so forth. This will make a drastic difference in how fast your site can deliver content.
+Take a look at your performance settings, including enabling anonymous page caching, enabling aggregated stylesheets, and so forth. This will make a drastic difference in how fast your site can deliver content.
 
 Then, check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.getpantheon.com](http://varnishcheck.getpantheon.com/).
 
@@ -102,9 +103,9 @@ Finally, you should load test your Live environment to make sure everything is o
 		</tr>
 	</tbody>
 
-### Select a Paid Plan
+## Select a Paid Plan
 
-Once you're satisfied with your site configuration, you'll need to select a paid plan. Among other reasons, free sandbox sites can't have custom domains. You, or someone else associated with the site will need to add a credit card to either the site or the account to set up billing.
+Once you're satisfied with your site configuration, you'll need to select a paid plan. Among other reasons, free sandbox sites can't have custom domains. You will need to add a credit card to either the site or the account to set up billing.
 
 <tbody>
 		<tr>
@@ -119,7 +120,7 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 		</tr>
 	</tbody>
 
-### Schedule backups
+## Schedule backups
 
 Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way, you've got a fallback in case you want to revert your site content.
 
@@ -136,9 +137,9 @@ Ensure that your Live environment content is protected by scheduling daily and w
 		</tr>
 	</tbody>
 
-### Add domain to the Live environment
+## Add Domain to the Live Environment
 
-Now that the site is on a paying plan, you can associate your domain with the live environment. This tells Pantheon where to send site traffic.
+Now that the site is on a paid plan, you can associate your domain with the Live environment. This tells Pantheon where to send site traffic.
 
 <tbody>
 		<tr>
@@ -153,11 +154,11 @@ Now that the site is on a paying plan, you can associate your domain with the li
 		</tr>
 	</tbody>
 
-### Get DNS record and update your DNS
+## Get DNS Record and Update Your DNS
 
-After you've added your domain to the Live environment, you will need to update your domain's DNS with the appropriate DNS record, which will depend on your site's configuration. This is the last step; once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched!
+After you've added your domain to the Live environment, you will need to update your domain's DNS with the appropriate DNS record, which will depend on your site's configuration. This is the last step; once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched.
 
-**Pantheon does not manage your domain name or DNS** . You will need to make these changes yourself, we cannot do it for you. DNS changes can take up to 48 hours to propagate across the entire Internet, so be patient - it'll happen. With that said, most updates happen in a couple hours.
+**Pantheon does not manage your domain name or DNS**. You will need to make these changes yourself. DNS changes can take up to 48 hours to propagate across the Internet, so be patient - it will happen. With that said, most updates happen in a couple hours.
 
 ​If you are an **ENTERPRISE** customer **or** using **HTTPS** to identify your site and encrypt traffic:
 
@@ -189,12 +190,9 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 		</tr>
 	</tbody>
 
-##
+## Frequently Asked Questions
 
-
-Frequently Asked Questions
-
-### What are the differences between the environments?
+#### What are the differences between the environments?
 
 - Dev has lower TTL on Varnish caching and shows errors to site users.
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
@@ -202,13 +200,13 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 
 ​To learn more, see [using the Pantheon workflow](/documentation/howto/using-the-pantheon-workflow/).
 
-### Why is robots.txt is disallowing crawlers to my Live environment?
+#### Why is robots.txt is disallowing crawlers to my Live environment?
 
 Pantheon serves a default robots.txt that disallows crawlers for any \*.gotpantheon.com domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
 
-If you attempt to access your live environment with a gotpantheon.com domain - even if you have a domain associated with the environment - the default robots.txt will be served.
+If you attempt to access your live environment with a gotpantheon.com domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
-Pantheon does not allow crawlers on dev, test, and any branch environment. Adding a domain to an environment other than live will not permit crawlers to that environment.
+Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
 
 <style type="text/css">.checklist .complete {
   width: 75px;

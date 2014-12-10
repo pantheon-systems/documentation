@@ -1,5 +1,6 @@
 ---
 title: Restoring an Environment from a Backup
+description: Learn how to restore a backup to an environment.
 filename: source/_common-tasks/restoring-an-environment-from-a-backup.md
 ---
 

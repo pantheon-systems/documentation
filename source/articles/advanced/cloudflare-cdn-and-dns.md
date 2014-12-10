@@ -1,5 +1,6 @@
 ---
 title: CloudFlare CDN and DNS on Pantheon
+description: Learn how to setup and test CloudFlare CDN.
 parent_guide:
   - optimizing
 filename: source/_guides/cloudflare-cdn-and-dns-on-pantheon.md
@@ -12,8 +13,6 @@ filename: source/_guides/cloudflare-cdn-and-dns-on-pantheon.md
 - A hybrid [Content Delivery System](/documentation/advanced-topics/content-delivery-network-cdn-for-file-distribution/) (CDN) & DNS host, providing your website to visitors around the world faster from multiple locations.
 - CloudFlare's optimizer enables your site to load faster through asynchronous resource loading, browser optimization, and caching.
 - Provides an impressive security layer shielding your site from malicious scripts, DDOS attacks, and other internet evils.
-
-This article will help you set up a site on CloudFlare.
 
 
 ## Before You Begin

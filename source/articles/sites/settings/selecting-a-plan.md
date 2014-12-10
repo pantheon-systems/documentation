@@ -1,5 +1,6 @@
 ---
 title: Selecting a Plan
+description: Learn the various plans offered and understand which plan meets your unique needs.
 parent_guide:
   - getting-started
 filename: source/_guides/selecting-a-plan.md

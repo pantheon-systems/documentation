@@ -1,5 +1,6 @@
 ---
 title: Git commit best practices
+description: 
 categories:
   - getting-started
 permalink: documentation/advanced-topics/git-commit-best-practices/
