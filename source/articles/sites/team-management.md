@@ -1,6 +1,7 @@
 ---
 title: Team Management
-category:
+description: Working with the Pantheon deployment tools in a team driven environment. 
+parent_guide:
   - getting-started
 filename: source/_guides/team-management.md
 ---

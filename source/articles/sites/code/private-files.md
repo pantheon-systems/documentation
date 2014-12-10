@@ -1,5 +1,6 @@
 ---
 title: Private Files
+description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 categories:
     - running-drupal
 /private-files/
@@ -11,13 +12,13 @@ Pantheon provides two spaces for non-web-accessible data. Take some time to unde
 
 **Note: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.**
 
-### For private files and uploads within Drupal
+## For private files and uploads within Drupal
 
 This can be done by setting your file-system settings to private. These files will be we accessible based on the access control rules that you set for your site and will use the following directory:
 
     sites/default/files/private
 
-### Storing private keys and certs
+## Storing private keys and certs
 
 This method covers private code, Commerce Kickstart or Ubercart encryption keys, certificates, or other data you want to manage with version-control, but do not want to make web-accessible.
 
@@ -27,25 +28,25 @@ If you opt for this technique, the _private/_ directory within your Drupal root 
 
 This folder will need to be on the same level as index.php, within the code/ folder if you are using SFTP. You should create this manually if it does not exist.
 
-### Troubleshooting
+## Troubleshooting
 
-#### Resolving `"Warning: file_put_contents(private:///.htaccess)"`
+### Resolving `"Warning: file_put_contents(private:///.htaccess)"`
 
 If you receive the above error, you may need to visit and re-submit the file systems settings page in your Drupal admin interface.
 
-#### Selectively exposing code
+### Selectively exposing code
 
 In the case where you have a private code library which needs to have a specific sub-directory exposed (e.g. using SimpleSamlPHP), you can do this with symlinks:
 
     # from within a git checkout
     ln -s private/simplesamlphp/www ./simplesaml
     git add simplesaml
-    git commit simplesaml -m "adding simplsaml symlink"
+    git commit simplesaml -m "adding simplesaml symlink"
     git push origin master
 
-The result will be a web-accessible URL at http://dev.yoursite.gotpantheon.com/simplesaml which will point to the code in /private/simplsamlphp/www.
+The result will be a web-accessible URL at http://dev.yoursite.gotpantheon.com/simplesaml which will point to the code in /private/simplesamlphp/www.
 
-#### Commerce kickstart or Ubercart key path between environments
+### Commerce kickstart or Ubercart key path between environments
 
 This depends on the workflow and that you are planning to implement. If you set the encryption key path in Dev the system variable for _uc\_credit\_encryption\_path_ needs to be set to _private/_ when you move between environments. If you sync your databases this variable will be moved between your other environments.
 

@@ -1,6 +1,7 @@
 ---
 title: Creating Sites
-category:
+description: Learn to sign up for a new site on Pantheon.
+parent_guide:
   - getting-started
 filename: source/_guides/creating-sites.md
 ---

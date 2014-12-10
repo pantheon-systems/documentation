@@ -1,6 +1,7 @@
 ---
 title: Frequently Asked Questions
-category:
+description: Answers to common questions about using Pantheon.
+parent_guide:
   - getting-started
 filename: source/_guides/frequently-asked-questions.md
 ---

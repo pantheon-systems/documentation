@@ -1,11 +1,13 @@
 ---
-title: Continuous Integration solutions on Pantheon
-category:
+title: Continuous Integration Solutions on Pantheon
+description: Run automated unit and integration tests.
+parent_guide:
   - going-live
 filename: source/_docs/continuous-integration-solutions-on-pantheon.md
 ---
 
-Continuous Integration is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by sending a support ticket.
+## Overview
+Continuous Integration is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by opening a support ticket.
 
 ## Terminus Command-Line Interface
 
@@ -16,9 +18,9 @@ Continuous Integration is a method of running automated unit and integration tes
 - Content cloning
 - Code pushes
 
-Terminus can be used for scripting many operations. For example, a post-commit hook could trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](http://www.seleniumhq.org/).
+Terminus can be used for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](http://www.seleniumhq.org/).
 
-## SimpleTest on Pantheon
+## Drupal SimpleTest
 
 [SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](http://simpletest.sourceforge.net/) that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
 

@@ -1,25 +1,27 @@
 ---
-title: Using PHPMyAdmin to locally administer a database
+title: Using PHPMyAdmin to Locally Administer a Database
+description: Configure and troubleshoot MySQL connections.
 filename: source/_common-tasks/using-phpmyadmin-to-locally-administer-a-database.md
 ---
 
-[PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to adminster databases locally and can also be provides DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it isit is possible to install this on Windows, Mac OS X and Linux.
+## Overview
+[PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it is possible to install this on Windows, Mac OS X, and Linux.
 
-#### Download PHPMyAdmin
+## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to get this via github. can review the [Accessing MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) for your site.
+The recommended way to get a copy of PHPMyAdmin is to download it via Github. You can review our instructions for [Accessing MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) for your site.
 
     $ git clone https://github.com/phpmyadmin/phpmyadmin.git
 
-Alternatively you can download a zip archive of the latest code from the github repository.
+Alternatively, you can download a zip archive of the latest code from the Github repository.
 
-**Note:** A repository for PHPMyAdmin exists on sourceforge but we recommend the github version as you get direct access to the code.
+**Note:** A repository for PHPMyAdmin exists on SourceForge, but we recommend the Github version as you get direct access to the code.
 
-#### Configuring a new MyySQL connection
+## Configure a New MySQL Connection
 
-Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection create a copy of `config.sample.inc.php` and renaming this to `config.php`.
+Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection, create a copy of `config.sample.inc.php` and rename this to `config.php`.
 
-Add in the necessary parameters for the environment's MySQL connection. These can be found on the "Connection Information" widget available on the site's dashboard above the code log:
+Add the necessary parameters for the environment's MySQL connection. These can be found on the "Connection Information" widget available on the site's dashboard above the code log:
 
     /* Authentication type */
     $cfg['Servers'][$i]['auth_type'] = 'config';
@@ -34,38 +36,38 @@ Add in the necessary parameters for the environment's MySQL connection. These ca
     $cfg['Servers'][$i]['extension'] = 'mysqli';
     $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
-Once this is done the permissions on the `config.php` should be set to 755 at least, this can be done via a GUI or using the command line:
+Once this is done, the permissions on the `config.php` should be set to at least 755. This can be done via a GUI or using the command line:
 
     $ chmod 755 config.inc.php
 
-If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so it is not writeable.
+If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so that it's not writeable.
 
  
 
 ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/224903)
 
-After the configuration is complete, the new connection will available on the MySQL Workbench workspace. 
+After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
-#### Connecting to the database
+## Connecting to the Database
 
-At this point you are all set and can begin to administer your database as you need to. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
+At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
 
 ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/224907)
 
-### Troubleshooting
+## Troubleshooting
 
-#### Unable to connect to remote database
+#### Unable to Connect to Remote Database
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not grab the new information from the site's dashboard.
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/224915)​
 
-##### Database credentials are no longer valid
+##### Database Credentials are Invalid
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not grab the new information from the site's dashboard.
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
 
-##### Database is reaped
+##### Database is Reaped
 
-To conserve resources environments will be spun down after about two hours of inactivity. If your site is in a sleep mode you can get the following error:
+To conserve resources environments will be spun down after about two hours of inactivity. If your site is in sleep mode, you may get the following error:
 
-Visit the environment's URL in the browser and this will "wake up" the reaped site. Once the page has loaded you can try to connect again and this time the database should be accessible. More information about this is available on the known limitations page.
+Go to the environment's URL in your browser to"wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. More information about this is available on the [known limitations](articles/drupal/knownlimitations.md) page.

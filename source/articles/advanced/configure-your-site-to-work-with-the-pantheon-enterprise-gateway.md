@@ -1,13 +1,15 @@
 ---
 title: Configuring a Site to Use the Pantheon Enterprise Gateway
+description: Create a secure tunnel between your firewall and public site.
 filename: source/_common-tasks/how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway.md
 tools:
   -
 ---
 
+## Overview
 [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway) creates a secure tunnel between your firewall and your public website and is available for enterprise customers. [Contact us](https://www.getpantheon.com/contact/enterprise) for more information.
 
-### Configure a Site to Use the Pantheon Enterprise Gateway
+## Configure a Site to Use the Pantheon Enterprise Gateway
 
 After purchasing the Pantheon Enterprise Gateway, a support ticket will be created and we will guide you through the process. We set up the gateway on our end, and you'll need to do a one time setup on your end.
 
@@ -15,7 +17,7 @@ If you’re using the LDAP module you can [apply the patch](https://www.drupal.o
 
 If you’re not using the LDAP module, you’ll need to modify your code to accept a PHP constant for the port number. The code in the patch gives a good example of how to do so.
 
-###Frequently Asked Questions
+##Frequently Asked Questions
 
 ####Once it's set up, how do I test it with my site?
 

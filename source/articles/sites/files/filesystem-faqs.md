@@ -1,6 +1,7 @@
 ---
 title: Filesystem FAQs
-category:
+description: Understand writable errors and the Pantheon filesystem. 
+parent_guide:
   - getting-started
 filename: source/_guides/filesystem-faqs.md
 ---

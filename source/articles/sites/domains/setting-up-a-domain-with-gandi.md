@@ -1,6 +1,7 @@
 ---
 title: Setting Up a Domain with Gandi
-category:
+description: Learn how to edit a domain's Zone Record in Gandi so that it resolves to your Pantheon site.
+parent_guide:
   - going-live
 filename: source/_guides/setting-up-a-domain-with-gandi.md
 ---

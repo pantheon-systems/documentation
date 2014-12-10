@@ -1,6 +1,7 @@
 ---
 title: WordPress Known Issues
-category:
+description: Learn the recommended solutions for known issues on the Pantheon platform for Wordpress.
+parent_guide:
   - getting-started
 filename: source/_guides/wordpress-known-issues.md
 ---

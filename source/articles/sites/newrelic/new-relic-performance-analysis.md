@@ -1,6 +1,7 @@
 ---
 title: New Relic performance analysis on Pantheon
-category:
+description: Learn how to utilize New Relic performance metrics and reports. 
+parent_guide:
   - going-live
 filename: source/_guides/new-relic-performance-analysis-on-pantheon.md
 ---

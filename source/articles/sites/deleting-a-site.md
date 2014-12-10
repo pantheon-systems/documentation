@@ -1,6 +1,7 @@
 ---
 title: Deleting a Site on Pantheon
-category:
+description: Learn how to remove a site from Pantheon.
+parent_guide:
   - managing
 filename: source/_guides/deleting-a-site-on-pantheon.md
 ---

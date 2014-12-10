@@ -1,6 +1,7 @@
 ---
 title: Drupal Core Updates
-category:
+description: Apply and debug core updates.
+parent_guide:
   - supporting
   - debugging
 framework:
@@ -14,7 +15,7 @@ filename: source/_guides/drupal-core-updates.md
 
 ## Overview
 
-**NOTE:**  **Only use the one-click updates on the dashboard to update your Drupal core. Do not update core using Drush. You will overwrite your core.**
+**Note: Only use the one-click updates on the dashboard to update your Drupal core. Do not update core using Drush; you will overwrite your core.**
 
 **You cannot unpack a tarball from Drupal.org; this will overwrite the Pressflow core's auto-configuration feature and your site will lose its database connection.**
 
@@ -31,35 +32,28 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 - If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
 - Change the development environment connection to Git. (NOTE: Changing the connection mode to Git without committing code will delete those changes.)
 
-## Applying a Core Update
+## Apply a Core Update
 
 1. Check the options you want to run after pulling the update.
-2. Click “Apply Updates”. ![]()
-
+2. Click “Apply Updates”.
 ![A Pantheon site dashboard with upstream updates available.](https://pantheon-systems.desk.com/customer/portal/attachments/357403)
-
 ![Pantheon dashboard showing upstream update in progress.](https://pantheon-systems.desk.com/customer/portal/attachments/357428)
-
-1. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
-2. If you find errors, you can [<u>revert to the last stable commit</u>](/documentation/advanced-topics/git-faq/#how-to-revert-or-undo-changes) using Git.
-3. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
-4. Click “Visit Testing Environment” to test the update against your Live site’s content base.
-
+3. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
+4. If you find errors, you can [<u>revert to the last stable commit</u>](/documentation/advanced-topics/git-faq/#how-to-revert-or-undo-changes) using Git.
+5. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
+6. Click “Visit Testing Environment” to test the update against your Live site’s content base.
 ![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://pantheon-systems.desk.com/customer/portal/attachments/357430)
-
-1. Deploy the upstream updates to your Live Environment by clicking “Pull Code from Testing” in the Code Workspace in the Live Environment.
-
+7. Deploy the upstream updates to your Live Environment by clicking “Pull Code from Testing” in the Code Workspace in the Live environment.
 ![The Code tab in a Pantheon site's dashboard's Live environment](https://pantheon-systems.desk.com/customer/portal/attachments/357432)
-
-- Click “Visit Live Environment” to verify the update is live.
+8. Click “Visit Live Environment” to verify the update is live.
 
 ![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](https://pantheon-systems.desk.com/customer/portal/attachments/357435)
 
-## Debugging Failed Merges
+## Debug Failed Merges
 
 If the automated Drupal core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve. Here are debugging steps to find and correct the conflicts.
 
-### Auto-Resolve Conflicts
+## Auto-Resolve Conflicts
 
 In the event that the update fails you may see an error indicating a conflict with some files in core.
 
@@ -69,7 +63,7 @@ Try the "Auto-Resolve" option when applying updates. Pantheon will try to automa
 
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 
-### Resolving Conflicts Locally With Drupal 7
+## Resolve Conflicts Locally With Drupal 7
 
 From within an up-to date Git clone on your local machine:
 
@@ -79,7 +73,7 @@ From within an up-to date Git clone on your local machine:
 
 You can add the `-Xtheirs` flag if you want to accept all changes.
 
-### Resolving Conflicts Locally With Drupal 6
+## Resolve Conflicts Locally With Drupal 6
 
 From within an up-to-date Git clone in your local environment:
 
@@ -126,7 +120,7 @@ For example:
 
 - Next, you will need to run:
 
-    git add .
+    git add.
 
 - After performing the add, commit the file with a commit message.
 

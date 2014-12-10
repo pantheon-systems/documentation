@@ -1,6 +1,7 @@
 ---
-title: Session and cookie handling
-category:
+title: Session and Cookie Handling
+description: Details about configuring settings for session expiration and cookies.
+parent_guide:
   - developing
 filename: source/_guides/session-and-cookie-handling.md
 ---

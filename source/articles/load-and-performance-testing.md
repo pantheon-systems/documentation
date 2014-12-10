@@ -1,13 +1,14 @@
 ---
 title: Load and Performance Testing
-category:
+description: Learn how to monitor internal execution performance.
+parent_guide:
   - going-live
 filename: source/_guides/load-and-performance-testing.md
 ---
 
 Load testing a site both prior and post launch is highly recommend to ensure your site is optimally configured.​
 
-## Before you begin
+## Before You Begin
 
 You should [Enable New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/-enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.  
 
@@ -15,18 +16,18 @@ You should [Enable New Relic](/documentation/howto/new-relic-performance-analysi
 Next, make sure you have access to a command-line environment, preferably with administrative privileges.  
 
 
-Finally, **load testing should only be performed on the Live environment** . There's a number of reasons for this. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, except Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
+Finally, **load testing should only be performed on the Live environment** . There's a number of reasons for this. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
 
 ## Performance vs. Scalability
 
 There are two things to test for:
 
-1. **Performance** : the response time for an individual request
-2. **Scalability** : the ability to deliver with optimal response time to a larger number of concurrent requests
+1. **Performance**: the response time for an individual request
+2. **Scalability**: the ability to deliver with optimal response time to a larger number of concurrent requests
 
 For instance, high-performance is the ability to deliver a page in under a second; scalability is the ability to deliver that page in under a second for many requests. It's important to understand the difference between these two dimensions and that there are certain trade-offs between performance and scalability.
 
-## Verifying that Varnish is working
+## Verify That Varnish is Working
 
 To verify that the [Varnish](/documentation/advanced-topics/varnish-caching-for-high-performance/-working-with-varnish-on-pantheon) cache is working, the "curl" command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
@@ -50,7 +51,7 @@ The "Age" field should be greater than 0. If the max age is not greater than 0, 
 
 **Until Varnish has been correctly configured, you shouldn't worry about further testing.**
 
-## Timing an uncached page request
+## Timing an Uncached Page Request
 
 Passing the curl command with "time" before it, as well as sending a NO\_CACHE cookie, which prevents Varnish from caching the response, will test the actual response of the DROPs backend:
 
@@ -86,9 +87,9 @@ As an added bonus, you can test specific-pages of a site by passing a specific U
 
 If you're not satisfied with the response time, then focus should be shifted to optimizing the performance of the site, which is an entire discipline within itself.
 
-## Testing scale and throughput
+## Testing Scale and Throughput
 
-In order to test Scale and Throughput, we will use AB, a simple tool made available by the Apache Project.
+In order to test scale and throughput, we will use AB, a simple tool made available by the Apache Project.
 
 _NOTE: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results._
 
@@ -96,7 +97,7 @@ Run the following command:
 
     ab -n 100 -c 5 http://live-yoursite.gotpantheon.com/
 
-If you've been following along, Varnished should be properly configured at this point, and what you've tested should generate good response times and a high requests per second.
+Varnish should be properly configured at this point, and what you've tested should generate good response times and a high requests per second.
 
 As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 parameter to stop Varnish from caching the response. 'ab' returns the following output:
 
@@ -158,7 +159,7 @@ Testing with a session cookie to emulate the experience of a logged-in user is e
 
 Response times vary from site to site depending on the size of your modules stack, database queries, and so forth. Different sites see different response times. Generally speaking, anything under 1 second is considered excellent, but this is up to you.
 
-Emulating a logged-in-user's experience with "ab" is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional DROPs.
+Emulating a logged in user's experience with "ab" is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional DROPs.
 
 ## Testing Tools
 
@@ -192,7 +193,7 @@ There are also a number of other tools to consider when you are planning your lo
 		</tr>
 	</tbody>
 
-## Where to go from here?
+## Next Steps
 
-- Enable Redis if you haven't already to alleviate database bottle necks
-- Debug and Profile your Drupal codebase. If you find a bottleneck you can't resolve, lets talk about it.
+- Enable Redis (if you haven't already) to alleviate database bottle necks
+- Debug and Profile your Drupal codebase. If you find a bottleneck you can't resolve, contact us.

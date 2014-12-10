@@ -1,6 +1,7 @@
 ---
 title: Using Pantheon.io For Better Uptime
-category:
+description: Understand the new pantheon.io system and how it improves uptime.
+parent_guide:
   - going-live
 filename: source/_guides/using-pantheon-io-for-better-uptime.md
 ---

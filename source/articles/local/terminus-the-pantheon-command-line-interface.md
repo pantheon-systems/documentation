@@ -1,6 +1,7 @@
 ---
-title: Terminus - the Pantheon command-line interface
-category:
+title: Terminus - the Pantheon Command-Line Interface
+description: Learn the most common Terminus commands.
+parent_guide:
   - getting-started
 filename: source/_guides/terminus-the-pantheon-command-line-interface.md
 ---
@@ -16,19 +17,19 @@ filename: source/_guides/terminus-the-pantheon-command-line-interface.md
 ## What is Terminus?
 <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/xMd6sKLAE00" width="420"></iframe>
 
-Terminus is a Drush-based command-line interface (CLI) into the Pantheon core API. Terminus is open-source and MIT licensed.
+Terminus is a Drush-based command-line interface (CLI) in the Pantheon core API. Terminus is open-source and MIT licensed.
 
-## How can I get Terminus?
+## Get Terminus
 
 Visit [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus) and follow the installation instructions.
 
-## How can I get support for Terminus?
+## Support for Terminus?
 
 Please use the [Terminus issue tracker](https://github.com/pantheon-systems/terminus/issues) if you find any bugs or wish to contribute.
 
-## What can I do with Terminus?
+## All About Terminus?
 
-### All commands in terminus
+### Commands
 
 <tbody>
 		<tr>

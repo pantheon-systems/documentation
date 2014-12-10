@@ -1,6 +1,7 @@
 ---
-title: Developing on Pantheon directly with SFTP mode
-category:
+title: Developing on Pantheon Directly with SFTP Mode
+description: Use SFTP Mode to develop directly on the Pantheon Dashboard.
+parent_guide:
   - developing
 filename: source/_guides/developing-on-pantheon-directly-with-sftp-mode.md
 ---
@@ -9,7 +10,7 @@ In some cases working via `git push` is not the best option. You may not like lo
 
 This is why we offer **SFTP mode** . This allows you to develop <me>directly on Pantheon, and can be a major time-saver.</me>
 
-**NOTE: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.**
+**Note:** Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.
 
 **ProTip:**  If you want to use your website framework's built-in update systems (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first!
 
@@ -21,7 +22,7 @@ As you work via SFTP, the Pantheon developer dashboard will track your changes. 
 
 **Note:**  This does mean you won't be able to save anything that's being excluded from version control via `.gitignore`.
 
-### SFTP mode
+## SFTP mode
 
 Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the toggle.
 
