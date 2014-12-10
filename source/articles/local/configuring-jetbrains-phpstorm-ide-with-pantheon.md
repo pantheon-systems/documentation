@@ -1,5 +1,6 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Pantheon
+description: Best practices and recommendations for building a site using PhpStorm.
 filename: "source/_common-tasks/configuring-jetbrains-phpstorm-ide-with-pantheon.md"
 published: true
 tools:
@@ -14,22 +15,22 @@ For detailed information, see [Drupal development using PhpStorm](http://conflue
 
 This article will cover some best practices and recommendations for building a Drupal site on Pantheon using PhpStorm.
 
-### Initial Site Setup
+## Initial Site Setup
 
 After you've [created your site on Pantheon](http://helpdesk.getpantheon.com/customer/portal/articles/717236-pantheon-101-getting-started), you'll need to set up your local environment.
 
-### Clone the Code Repository
+## Clone the Code Repository
 
 Make sure your Dev environment is in Git mode, then [clone your Git repository](http://helpdesk.getpantheon.com/customer/portal/articles/361247-starting-with-git) to your local workstation.
 
-### Create a New PhpStorm Project
+## Create a New PhpStorm Project
 
 1. Open PhpStorm and create a new project from existing files.
 2. [Choose the project directory](http://www.jetbrains.com/phpstorm/webhelp/create-new-project-choose-project-directory.html).
 3. Project root: Select the parent folder for all the project sources and click the icon, or choose Project Root on the menu.
 4. Click Finish.
 
-### Configure a PhpStorm Project
+## Configure a PhpStorm Project
 
 1. Ensure that PhpStorm uses [Drupal settings](http://www.jetbrains.com/phpstorm/webhelp/drupal.html) by going to Preferences > Drupal.
 2. Enable Drupal integration and select the Drupal installation path.
@@ -42,7 +43,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click Plus.  
 2. Choose Tool > Drush, and specify the path.
 
-### Configure On-Server Development
+## Configure On-Server Development
 
 1. Put your [Dev environment into SFTP mode](http://helpdesk.getpantheon.com/customer/portal/articles/376107-developing-on-pantheon-directly-with-sftp-mode), and click **Connection Info** to see the connection settings.
 2. Within PhpStorm, go to Tools > Deployment > Configuration.

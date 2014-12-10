@@ -1,5 +1,6 @@
 ---
 title: Caching in Drupal Modules
+description: Configure Drupal's performance and caching settings to make significant improvements.
 parent_guide:
   - optimizing
 framework:
@@ -7,11 +8,12 @@ framework:
 filename: source/_guides/caching-in-drupal-modules.md
 ---
 
-While configuring [Drupal's performance and caching settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/) and using [redis as a Drupal caching backend](/documentation/howto/redis-as-a-caching-backend/) will make a significant performance difference, not every module uses Drupal's caching out-of-the-box.
+## Overview
+While configuring [Drupal's performance and caching settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/) and using [redis as a Drupal caching backend](/documentation/howto/redis-as-a-caching-backend/) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 
-Views has a very granular caching system, down to the individual View display. Sorry, but there's no no single control that will just turn on views caching, and the caching is off by default. There are three different kinds of user-configurable caching within Views:
+Views has a very granular caching system, down to the individual View display. There's no single control that will just turn on views caching, and the caching is off by default. There are three different kinds of user-configurable caching within Views:
 
 <dl>
 	<dt>Query results caching</dt>
@@ -42,7 +44,7 @@ To configure Views block caching, which will only work if Drupal is caching bloc
 - Next to Block caching, click to edit
 - Block caching type - choose the status for Drupal's built-in block caching method
 
-### Views Caching Plugins
+## Views Caching Plugins
 
 You can also force caching for all your views using a module like [Views cache bully](https://drupal.org/project/views_cache_bully).
 

@@ -1,9 +1,10 @@
 ---
 title: SSH Tunnels for Secure Connections to Pantheon Services
-descripion: Securely connect to your database and caching service over an encrypted connection using secure shell tunneling.
+description: Securely connect to your database and caching service over an encrypted connection using secure shell tunneling.
 filename: source/_common-tasks/ssh-tunnels-for-secure-connections-to-pantheon-services.md
 ---
 
+## Overview
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 
 This technique configures an SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.  
@@ -21,7 +22,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 4. The service you want to connect to (dbserver or cacheserver)
 5. Target port for the service ("Connection Info" tab in the site environment dashboard)
 
-## Manually Create an SSH Tunnel toConnect to a MySQL Database
+## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
 These instructions require the use of the SSH command-line client.
 
@@ -48,7 +49,7 @@ These instructions require the use of the SSH command-line client.
 
 [Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
 
-## Manually Creati an SSH tunnel to a Redis Cache Server
+## Manually Create an SSH tunnel to a Redis Cache Server
 
 These instructions require using the redis command-line client; see the [main redis article](/documentation/howto/redis-as-a-caching-backend/#redis-cli) for details.  
 

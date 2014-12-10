@@ -1,5 +1,6 @@
 ---
 title: Drupal Known Limitations
+description: A list of Pantheon's known limitations.
 parent_guide:
   - getting-started
 framework:
@@ -13,25 +14,25 @@ No platform is perfect, and Pantheon is no exception. This page is used to keep 
 
 We do not support [multisite](http://drupal.org/documentation/install/multi-site). For a more in-depth explanation, see our blog post [Much Ado About Drupal Multisite](https://www.getpantheon.com/blog/much-ado-about-drupal-multisite).
 
-## Highly populated directories
+## Highly Populated Directories
 
-If you have individual directories with 10s of 1000s of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files/directory, and performance drops off precipitously at over 100,000 files/directory.
+If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files/directory, and performance drops off suddenly at over 100,000 files/directory.
 
 Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
 
 ## Email and Deliverability
 
-Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your DROPs, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (Sendgrid, for example) in production to insure that your email is delivered.
+Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your DROPs, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-Please see [the email documentation](/documentation/running-drupal/email-on-pantheon/), for more details and suggestions.
+See [the email documentation](/documentation/running-drupal/email-on-pantheon/), for more details and suggestions.
 
-## Streaming media
+## Streaming Media
 
 Streaming media on Pantheon is not supported. Pantheon does not provide FFMPEG or other media libraries, and our edge caching system is currently not optimized for streaming files.
 
-However, you can run a great streaming media _website_! It's recommended that you find another more suitable host for the actual streaming, whether that's YouTube, Brightcove, or another provider.
+However, you can run a great streaming media website. It's recommended that you find a more suitable host for the actual streaming, whether that's YouTube, Brightcove, or another provider.
 
-## Very large files
+## Large Files
 
 Pantheon's file serving infrastructure is not optimized to store and deliver very large files. The bigger the file, the slower the transfer. Files over 50MB will experience a noticeable performance degradation due to our caching infrastructure configuration.
 
@@ -43,7 +44,7 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
 File directories on Pantheon's file serving infrastructure cannot be moved or renamed. To move or rename a directory, create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
 
-## IP-address Based Security Schemes
+## IP-Address Based Security Schemes
 
 All enterprise customers and customers with SSL will have a dedicated incoming IP to route public traffic. The actual IP address location where code executes can change on Pantheon, as application containers are migrated throughout the infrastructure.
 
@@ -52,8 +53,6 @@ As a result, it is not possible to support access to external web services via a
 ## Maintenance Mode
 
 Drupal's built-in Maintenance Mode works and can be customized; clear caches when toggling.
-
-​
 
 ​Pantheon may send a generic Maintenance Mode message during platform problems; this message cannot be customized.
 
@@ -77,7 +76,7 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 ## LESS (css)
 
-Pantheon does not currently support less. Less will need to be compiled to make traditional CSS stylesheets before being pushed to the platform.
+Pantheon does not currently support Less. Less will need to be compiled to make traditional CSS stylesheets before being pushed to the platform.
 
 ## Background Process
 
@@ -89,4 +88,4 @@ Pantheon does not currently support the [HTTPRL](http://www.drupal.org/project/h
 
 #nginx.conf
 
-Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file. We're considering adding support for this in the future, but it's currently not on the roadmap.
+Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file. 

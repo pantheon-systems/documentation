@@ -1,5 +1,6 @@
 ---
-title: DNS records for directing your domain to your Pantheon site
+title: DNS Records for Directing Your Domain to Your Pantheon Site
+description: Learn how to adjust DNS settings for your domain in order to redirect traffic to your Pantheon site.
 parent_guide:
   - going-live
 filename: source/_guides/dns-records-for-directing-your-domain-to-your-pantheon-site.md

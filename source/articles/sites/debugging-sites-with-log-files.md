@@ -1,5 +1,6 @@
 ---
 title: Debugging sites with log files
+description: Learn to debug sites using log files with Drupal. 
 parent_guide:
   - developing
 framework:

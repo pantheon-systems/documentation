@@ -1,5 +1,6 @@
 ---
 title: Timeouts on Pantheon
+description: Detailed information about timeout errors.
 parent_guide:
   - supporting
   - debugging

@@ -1,5 +1,6 @@
 ---
-title: Varnish caching for high performance
+title: Varnish Caching for High Performance
+description: Benefits and details about using Varnish.
 categories:
   - getting-started
 filename: source/_tools/varnish-caching-for-high-performance.md
@@ -8,7 +9,7 @@ filename: source/_tools/varnish-caching-for-high-performance.md
 
 ## Overview
 
-Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees DROP workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second - much faster than Drupal alone.  
+Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees DROP workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second.  
 
 
 

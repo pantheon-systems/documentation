@@ -1,16 +1,17 @@
 ---
-title: Local development setup and operation
+title: Local Development Setup and Operation
+description: Suggestions and solutions for working locally.
 parent_guide:
   - getting-started
 filename: source/_guides/local-development-setup-and-operation.md
 ---
 
-While Pantheon provides a number of options for on-server development, local development has a number of advantages - especially if continuous internet access is a concern. While Pantheon cannot troubleshoot or support local development solution, we can provide some suggestions and known working solutions.  
+While Pantheon provides a number of options for on-server development, local development has a number of advantages, especially if continuous internet access is a concern. While Pantheon cannot troubleshoot or support local development solution, we can provide some suggestions and known working solutions.  
 
 
 As an alternative, if you're looking for self-contained local development solution on Mac, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
 
-## Setting up local development for a Pantheon site
+## Setting up Local Development for a Pantheon Site
 
 At a high level, you'll need:
 
@@ -23,17 +24,17 @@ To save time, clear the target site environment's cache from the Pantheon dashbo
 
 There are three parts to a Drupal website:
 
-1. Code (Drupal, modules and themes)
+1. Code (Drupal, modules, and themes)
 2. Database (content)
 3. Files (user uploaded and Drupal generated)
 
 Each will need to be transferred from Pantheon to your local environment.
 
-### Get the code
+### Get the Code
 
 [Checkout the codebase using Git.](/documentation/getting-started/starting-with-git/)
 
-### Get the database
+### Get the Database
 
 There are several ways that you can get a copy of your Pantheon database.
 
@@ -50,7 +51,7 @@ Alternatively, you can directly sync the content of your remote database to your
 
     drush sql-sync-pipe @pantheon.SITENAME.ENV @self
 
-### Get the files
+### Get the Files
 
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/documentation/advanced-topics/rsync-and-sftp/).
 
@@ -66,13 +67,13 @@ Alternatively, you can use SFTP which is slower but can be easier to use. If you
     get -r files
     exit
 
-## Putting changes on Pantheon
+## Submitting Changes to Pantheon
 
-### Send the code
+### Send the Code
 
 Test your changes, then [git commit locally and push to Pantheon](/documentation/getting-started/starting-with-git/).
 
-### Send the database
+### Send the Database
 
 You can perform a local database dump using the MySQL utility mysqldump:
 
@@ -80,7 +81,7 @@ You can perform a local database dump using the MySQL utility mysqldump:
 
 Then, import the resulting file into Pantheon from Workflow > Import
 
-### Send the files
+### Send the Files
 
 If you have drush and rsync, this is by far the easiest way:
 

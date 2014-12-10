@@ -1,5 +1,6 @@
 ---
 title: Running a Custom Upstream on Pantheon
+description: Detailed information about running custom distributions. 
 parent_guide:
   - getting-started
   - managing

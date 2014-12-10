@@ -1,5 +1,6 @@
 ---
 title: Database Connection Errors
+description: Understand the causes and solutions for Database Connection Errors.
 parent_guide:
   - supporting
   - debugging
@@ -16,8 +17,7 @@ If your site suddenly reverts to install.php, or you see database connection err
 
 This indicates that there's an issue connecting to the Pantheon database. There are two common causes.
 
-###Overwritten Pressflow Core
-
+## Overwritten Pressflow Core
 Pantheon provides Pressflow core as the underlying basis for all Drupal sites. This is important for performance reasons, but also to take advantage of the ability to load configuration out of the server environment. You can literally run Drupal on Pantheon with no `settings.php` file, though there are still plenty of great uses for `settings.php`.
 
 However, if you overwrite the Pressflow core — most commonly by unpacking a tarball from drupal.org "over" your git checkout and then pushing the change, or updating core via drush — your site loses the ability to read the environmental configuration.
@@ -26,14 +26,12 @@ To see if this is the case, examine your `includes/bootstrap.inc` file, and be s
 
 If you don't see that, you'll want to look into recent changes and revert or remove whatever overwrote your core.
 
-###Non-Standard Bootstraps
-
+## Non-Standard Bootstraps
 Some modules — for instance the **domain.module** — change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
 
-However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippit in your settings.php _before_ the module's include call. An example for using domain's include would be as follows:
+However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippet in your settings.php _before_ the module's include call. An example for using domain's include would be as follows:
 
-####Drupal 6 Style
-
+### Drupal 6 Style
     $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
       $info = $settings['databases']['default']['default'];
       $db_url = sprintf("%s://%s:%s@%s:%s/%s",
@@ -47,7 +45,7 @@ However, because the Pantheon environment data is not loaded at this time, any b
       # Include any other settings.php magic here.
       include './sites/all/modules/domain/settings.inc';
 
-####Drupal 7 Style
+###Drupal 7 Style
 
     # Include any other settings.php magic here.
       extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
