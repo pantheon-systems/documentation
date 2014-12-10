@@ -1,6 +1,6 @@
 ---
-title: Setting up a domain with Godaddy
-description: Learn how to point a new Godaddy domain name to your Pantheon site.
+title: Setting up a domain with GoDaddy
+description: Learn how to point a new GoDaddy domain name to your Pantheon site.
 parent_guide:
   - going-live
 filename: source/_guides/setting-up-a-domain-with-godaddy.md
@@ -14,7 +14,7 @@ filename: source/_guides/setting-up-a-domain-with-godaddy.md
 
  ![Select your domin](https://pantheon-systems.desk.com/customer/portal/attachments/49493)
 #### Domain Registration Info
-To complete the checkout process you will need to create a user account if you do not have one. If you are already a Godaddy customer, log into your account and proceed to the next step.  
+To complete the checkout process you will need to create a user account if you do not have one. If you are already a GoDaddy customer, log into your account and proceed to the next step.  
 
 
  ![Login or Create your godaddy account](https://pantheon-systems.desk.com/customer/portal/attachments/49494)
@@ -34,12 +34,12 @@ filename: source/_guides/setting-up-a-domain-with-godaddy.md
 
  ![Review your order](https://pantheon-systems.desk.com/customer/portal/attachments/49497)
 #### Go to you account page
-After you complete the purchase process you can begin configuring your domain and you will be presented with the order summary. Click the "My Account" button that will take you to your global Godaddy Account page.   
+After you complete the purchase process you can begin configuring your domain and you will be presented with the order summary. Click the "My Account" button that will take you to your global GoDaddy Account page.   
 
 
  ![Sign in to your Godaddy account](https://pantheon-systems.desk.com/customer/portal/attachments/49498)
 #### Launch the Domain Control Panel
-Now you can get to the next stage and click on the "Launch" button which will give you access to your Godaddy domain control panel. We have instructions if you are using either the _Old_ or the _ [New](new-dns-dashboard) _versions of the DNS manager.  
+Now you can get to the next stage and click on the "Launch" button which will give you access to your GoDaddy domain control panel. We have instructions if you are using either the _Old_ or the _ [New](new-dns-dashboard) _versions of the DNS manager.  
 
 
  ![Launch your control panel](https://pantheon-systems.desk.com/customer/portal/attachments/49499)  
@@ -51,17 +51,17 @@ filename: source/_guides/setting-up-a-domain-with-godaddy.md
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/49521)  
 
 
-Next you will see the Zone summary screen that will give you the information associated with this domain. Click on the "Launch" button to be taken to the Godaddy Zone config tool.  
+Next you will see the Zone summary screen that will give you the information associated with this domain. Click on the "Launch" button to be taken to the GoDaddy Zone config tool.  
 
 
  ![Edit the DNS information](https://pantheon-systems.desk.com/customer/portal/attachments/49502)
 ##### New DNS Dashboard
-If you are using the New Standard DNS dashboard you can click on the "Edit Zone" link which will take you directly to the Godaddy Zone configuration tool.  
+If you are using the New Standard DNS dashboard you can click on the "Edit Zone" link which will take you directly to the GoDaddy Zone configuration tool.  
 
 
  ![DNS dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/49520)
 #### Setting up the Zone Record
-The last step on Godaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/documentation/running-drupal/going-live-and-launching-your-site/-going-live) documentation page. 
+The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/documentation/running-drupal/going-live-and-launching-your-site/-going-live) documentation page. 
 
 
 **Note: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.**  
