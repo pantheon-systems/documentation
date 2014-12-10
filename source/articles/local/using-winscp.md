@@ -28,7 +28,7 @@ Select to accept the server's host key for the current session so it is stored i
 
 ![RSA fingerprint](https://pantheon-systems.desk.com/customer/portal/attachments/50345)
 
-## Manage your Site's Files
+## Manage Files
 
 Once you are logged in, you are directed to the root directory of your appserver. On the left side you will see your local computer, and on the right you will have access to your site's appserver. To get to the Drupal  or WordPress root, simply navigate to the `code` directory and you will be able to continue managing your files as normal.
 

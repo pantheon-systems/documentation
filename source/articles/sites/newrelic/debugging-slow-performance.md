@@ -1,6 +1,6 @@
 ---
 title: Debugging slow performance
-description: Learn how to identify common problems with performance speeds and deploy solutions. 
+description: Learn how to identify common problems with performance speeds and deploy solutions.
 category:
   - debugging
 category:
@@ -13,7 +13,7 @@ filename: source/_guides/debugging-slow-performance.md
 
 When your site is fast, everybody wins. When it’s slow, nobody's happy... so how can you fix it? In this article, we’ll discuss the most common causes for performance problems, demonstrate how to diagnose bottlenecks, and provide actionable solutions for developers.
 
-## Every PHP error slows execution
+## Every PHP Error Slows Execution
 
 An often ignored cause of bad performance is [PHP errors within site code](/documentation/getting-started/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
@@ -93,7 +93,7 @@ Turning off error reporting suppresses the symptom, not the problem, and PHP exe
 
 Learn more about [debugging sites with log files](/documentation/advanced-topics/debugging-sites-with-log-files/).
 
-## Too many database queries
+## Too Many Database Queries
 
 The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/documentation/howto/new-relic-performance-analysis-on-pantheon/) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
 
@@ -106,7 +106,7 @@ The next performance killer is an excessive number of database queries per reque
 
 The moral? Query count matters, so keep it low through caching and avoiding queries in loops.
 
-## Not caching
+## Not Caching
 
 Non-optimized caching also is a huge problem. If you’re not caching anonymous pages, well, anonymous performance will be bad - especially as our Varnish caching respects your headers - which won’t be set if anonymous page caching is turned off.  
 
@@ -119,7 +119,7 @@ Non-optimized caching also is a huge problem. If you’re not caching anonymous 
 
 Other caching systems that aren’t on by default that should be enabled include [block caching](/documentation/running-drupal/drupal-s-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
-## Using the database to cache
+## Using the Database to Cache
 
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.  
 
@@ -132,7 +132,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 One of the services Pantheon offers is [redis as a caching backend](/documentation/howto/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
 
-## Not enough traffic
+## Not Enough Traffic
 
 The next problem is when a site doesn’t have enough traffic, which may seem paradoxical.  
 

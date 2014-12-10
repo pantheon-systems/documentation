@@ -4,7 +4,7 @@ description: Configure a single-sign on system for your Drupal site.
 filename: source/_common-tasks/using-simplesamlphp-with-shibboleth-sso.md
 ---
 
-##Overview
+## Overview
 
 **Note** This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the [simplesaml\_php auth module](http://drupal.org/project/simplesamlphp_auth) from drupal.org.
 

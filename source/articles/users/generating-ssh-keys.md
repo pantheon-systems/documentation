@@ -6,11 +6,9 @@ category:
 filename: source/_guides/generating-ssh-keys.md
 ---
 
- **NOTE:** SSH as a protocol is not supported on Pantheon. <!--You can not connect via SSH using Putty.--> These directions are to allow you have passwordless access if you configure Drush or SFTP to use the keys setup by putty
+SSH as a protocol is not supported on Pantheon. <!--You can not connect via SSH using Putty.--> These directions are to allow you have passwordless access if you configure Drush or SFTP to use the keys setup by putty.
 
-NOTE: SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file.
-
-NOTE: If you experience errors, see the troubleshooting section at the end of the document.
+Note: SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the troubleshooting section at the end of the document.
 
 Spaces and non-standard alphanumeric characters in the user or hostname can cause an SSH key to appear invalid to Pantheon.
 
@@ -18,18 +16,14 @@ To fix this, please edit the user or hostname and remove spaces and/or odd chara
 
 Genrating SSH keys is different for every platform. Please follow the directions that are most appropriate for you below:
 
-1.
+1. [MacOS and Linux](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
 
-[MacOS and Linux](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
-
-2.
-
-[Windows / Git GUI and OpenSSH](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-openssh)
+2. [Windows / Git GUI and OpenSSH](/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-openssh)
 
 <!--<li>
 	<p><a href="/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
 	</li>-->
-### MacOS and Linux
+## MacOS and Linux
 
 Open your favorite terminal utility and generate a key:
 
@@ -43,7 +37,7 @@ Still from the Terminal, output your SSH key to a file you can use:
 
 Open the `key_for_pantheon.txt` on your desktop, select all and copy. You're now ready to paste this into the "Add Key" form on your account page.
 
-### Windows / OpenSSH
+## Windows / OpenSSH
 
 [Download](http://git-scm.com/downloads) and install Git.
 
@@ -238,7 +232,7 @@ If you have added a password to your key earlier then you will be prompted to en
 
 
 <p>Your computer is now set up to securely connect to the Pantheon git server.</p>-->
-### Troubleshooting
+## Troubleshooting
 
 #### Control Path Error
 

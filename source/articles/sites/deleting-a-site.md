@@ -8,7 +8,7 @@ filename: source/_guides/deleting-a-site-on-pantheon.md
 
 At some point, you may need or want to delete one of your sites on Pantheon. Deleting a site requires just a few simple steps.
 
-### Deleting Your Site
+### Delete Your Site
 
 Click the “_Settings_” link in the upper-right corner of your site's workspace.
 

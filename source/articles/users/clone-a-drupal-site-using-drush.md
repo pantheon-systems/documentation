@@ -1,12 +1,12 @@
 ---
 title: Clone a Drupal Site on Pantheon Using Drush
-description: Learn how to copy an existing Drupal site using Drush on Pantheon. 
+description: Learn how to copy an existing Drupal site using Drush on Pantheon.
 filename: source/_common-tasks/clone-a-drupal-site-on-pantheon-using-drush.md
 ---
 
 There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. This article will walk you through the basic method of doing so.
 
-### Archive Your Live Code/Files/Database
+## Archive Your Live Code/Files/Database
  *Prerequisites:**  
  [Current drush aliases](/documentation/advanced-topics/drush-command-line-utility/-using-drush-on-pantheon)
 
@@ -15,7 +15,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 
 **Example**: `drush @pantheon.your-site.live ard --strict=0 --destination=sites/default/files/site\_export.tar.gz`
 
-###  Import Your Archive
+##  Import Your Archive
 
 1. From your dashboard, click **Create A New Site**.
 2. Name your new site, and then select **Import Site** from the "Choose your Start State" options.

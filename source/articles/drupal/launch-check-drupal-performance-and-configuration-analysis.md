@@ -60,7 +60,7 @@ If you want to permanently opt-out of a check, you can use the [$conf array in s
 
     $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 
-### I want to Contribute and/or I found a mistake. How Should I Proceed?
+#### I Want to Contribute/I Found a Mistake. How Should I Proceed?
 
 Use the [Site Audit issue queue](https://drupal.org/project/issues/site_audit) to add and request features, or to report inaccuracies.
 

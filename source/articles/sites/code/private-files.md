@@ -8,17 +8,18 @@ Metadata
 filename: source/_tools/private-files.md
 ---
 
+## Overview
 Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
 
 **Note: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.**
 
-## For private files and uploads within Drupal
+## Private Files and Uploads In Drupal
 
 This can be done by setting your file-system settings to private. These files will be we accessible based on the access control rules that you set for your site and will use the following directory:
 
     sites/default/files/private
 
-## Storing private keys and certs
+## Storing Private Keys and Certs
 
 This method covers private code, Commerce Kickstart or Ubercart encryption keys, certificates, or other data you want to manage with version-control, but do not want to make web-accessible.
 
@@ -34,7 +35,7 @@ This folder will need to be on the same level as index.php, within the code/ fol
 
 If you receive the above error, you may need to visit and re-submit the file systems settings page in your Drupal admin interface.
 
-### Selectively exposing code
+### Selectively Exposing Code
 
 In the case where you have a private code library which needs to have a specific sub-directory exposed (e.g. using SimpleSamlPHP), you can do this with symlinks:
 
@@ -46,7 +47,7 @@ In the case where you have a private code library which needs to have a specific
 
 The result will be a web-accessible URL at http://dev.yoursite.gotpantheon.com/simplesaml which will point to the code in /private/simplesamlphp/www.
 
-### Commerce kickstart or Ubercart key path between environments
+### Commerce Kickstart or Ubercart Key Path Between Environments
 
 This depends on the workflow and that you are planning to implement. If you set the encryption key path in Dev the system variable for _uc\_credit\_encryption\_path_ needs to be set to _private/_ when you move between environments. If you sync your databases this variable will be moved between your other environments.
 

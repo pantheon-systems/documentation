@@ -1,6 +1,6 @@
 ---
 title: Adding a SSL Certificate for Secure HTTPS Communication
-description: Learn how to implement an SSL Certificate and utilize a static IP address. 
+description: Learn how to implement an SSL Certificate and utilize a static IP address.
 filename: source/_common-tasks/adding-a-ssl-certificate-for-secure-https-communication.md
 ---
 ## Overview of SSL on Pantheon
@@ -144,20 +144,20 @@ We recommend choosing a single protocol and redirecting traffic to either HTTPS 
 
 ## Frequently Asked Questions
 
-### What should I do with a GoDaddy gd\_bundle.crt?
+#### What should I do with a GoDaddy gd\_bundle.crt?
 
 Use it as the Intermediary Certificate.
 
-### What combination do I use for a basic Network Solutions SSL pack?
+#### What combination do I use for a basic Network Solutions SSL pack?
 
     MYSITE_COM.crt-------------------Cert
     UTNAddTrustServer_CA----------Intermediate
     mysite_com.key---------------------Private Key
 
-### What combination do I use for a Comodo SSL pack?
+#### What combination do I use for a Comodo SSL pack?
 
 Visit Comodo's support site to read about [SSL packs](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/620/1/).
 
-### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
+#### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
 
 This indicates that some part of the chain is out of order. Check that you have the main & intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.

@@ -1,24 +1,25 @@
 ---
 title: Importing a Large Site
-description: Lear how to import a large site into Pantheon outside of the Dashboard API. 
+description: Lear how to import a large site into Pantheon outside of the Dashboard API.
 filename: source/_common-tasks/importing-a-large-site.md
 tools:
   -
 ---
 
+## Overview
 This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).
 * Your site’s code, files, or SQL archive is greater than 500MB (the URL upload import file limit).
 
-####Requirements & Tools
+## Requirements & Tools
 
 1. Intermediate to advanced [Git](http://git-scm.com/) command line interface (CLI) knowledge.
 2. Familiarity with using [bash](http://www.gnu.org/software/bash/) and [rsync](http://rsync.samba.org/) or an FTP program that supports [SFTP](http://en.wikipedia.org/wiki/SFTP).
 3. Intermediate to advanced [MySQL CLI](https://mariadb.com/kb/en/mariadb/documentation/clients-and-utilities/mysql-client/mysql-command-line-client/) knowledge.
 4. Access to the code, database, and files of the site being imported.  
 
-###Create A New Pantheon Site  
+## Create A New Pantheon Site  
 
 From your pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
 

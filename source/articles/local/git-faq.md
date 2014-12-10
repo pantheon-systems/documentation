@@ -50,7 +50,7 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 - **Open Public: ** https://github.com/phase2/openpublic-drops-7.git
 - **Panopoly: ** https://github.com/populist/panopoly-drops-7.git
 
-##Frequently Asked Questions
+## Frequently Asked Questions
 
 #### Does Pantheon support Git submodules?
 

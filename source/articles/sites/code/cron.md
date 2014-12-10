@@ -8,6 +8,8 @@ slug: sites/code
 
 ---
 
+## Overview
+
  **Note**: Cron will always run _UNLESS_ all jobs are specifically set to 'OFF' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
@@ -24,7 +26,7 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 
 There is no way to configure when Pantheon executes Drupal cron.
 
-**IMPORTANT:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
+**Important:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
 
 ## Managing Cron
 
@@ -50,7 +52,7 @@ If cron has been recently run, entries will appear in the log. The two entries f
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/74077)
 
-## How Can I Schedule Cron to Run More Often?
+### How Can I Schedule Cron to Run More Often?
 
 While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute drush cron once an hour, usually within 5 to 10 minutes of the top of the hour.
 

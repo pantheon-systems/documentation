@@ -23,11 +23,11 @@ Terminus is a Drush-based command-line interface (CLI) in the Pantheon core API.
 
 Visit [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus) and follow the installation instructions.
 
-## Support for Terminus?
+## Support for Terminus
 
 Please use the [Terminus issue tracker](https://github.com/pantheon-systems/terminus/issues) if you find any bugs or wish to contribute.
 
-## All About Terminus?
+## All About Terminus
 
 ### Commands
 

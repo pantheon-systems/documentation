@@ -7,7 +7,7 @@ slug: "sites/code"
 
 ---
 
- ## LDAP as a Provider  
+## LDAP as a Provider  
 
 This not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway).
 

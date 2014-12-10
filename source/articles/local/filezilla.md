@@ -45,7 +45,6 @@ Select to accept the server's host key for the current session so it is stored i
 **Password-Based:** To get to the Drupal root simply navigate to the `code` directory and you will be able to continue managing your files as normal.
 
  ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/50376)
-#### Create a New Site
 
 Select to accept the server's host key for the current session so it is stored in cache. This will allow you to connect to the server and to manage your files for the current session.
 

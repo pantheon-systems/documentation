@@ -95,7 +95,7 @@ Drush can be a very quick way to set up a new site by adding modules and themes.
     /srv/bindings/xxx/code/sites/all/modules/media.
     Project media contains 3 modules: media_internet, file_entity, media.
 
-This is hands-down the fastest way to install a suite of modules or themes into your Pantheon project.
+This is the fastest way to install a suite of modules or themes into your Pantheon project.
 
 ## Using Registry Rebuild on Pantheon
 

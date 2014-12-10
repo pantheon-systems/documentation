@@ -9,7 +9,7 @@ category:
 filename: source/_guides/updating-modules-through-drupal.md
 ---
 
-## **Updating Modules Through Drupal**
+## Updating Modules Through Drupal
 Drupal has a very good, built-in system for updating contributed modules through the administrative interface.
 1. Log in to Pantheon, and choose the site you want to update.
 2. Once you’re in that site’s Dashboard, click the Code tab in the Dev environment.
