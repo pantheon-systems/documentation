@@ -61,23 +61,25 @@ body.row.main {
 
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #563d7c;
+  color: #FE4A45;
   background-color: transparent;
-  border-color: #563d7c;
+  border-color: #FE4A45;
+  margin-top: 30px;
+  font-weight: 700;
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
   color: #fff;
-  background-color: #563d7c;
-  border-color: #563d7c;
+  background-color: #FE4A45;
+  border-color: #FE4A45;
 }
 
 /* Inverted outline button (white on dark) */
 .btn-outline-inverse {
   color: #fff;
   background-color: transparent;
-  border-color: #cdbfe3;
+  border-color: #FE4A45;
 }
 .btn-outline-inverse:hover,
 .btn-outline-inverse:focus,
