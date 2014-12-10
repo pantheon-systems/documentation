@@ -1,6 +1,6 @@
 ---
 title: Creating Sites
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/creating-sites.md
 ---

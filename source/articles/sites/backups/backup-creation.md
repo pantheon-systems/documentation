@@ -1,6 +1,6 @@
 ---
 title: Backup creation
-category:
+parent_guide:
   - managing
 
 filename: source/_guides/backup-creation.md

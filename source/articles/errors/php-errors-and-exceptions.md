@@ -1,6 +1,6 @@
 ---
 title: PHP errors and exceptions
-category:
+parent_guide:
   - debugging
   - supporting
 framework:

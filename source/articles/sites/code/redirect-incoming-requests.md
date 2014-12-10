@@ -1,6 +1,6 @@
 ---
 title: Redirect Incoming Requests
-category:
+parent_guide:
   - going-live
 filename: source/_guides/redirect-incoming-requests.md
 ---

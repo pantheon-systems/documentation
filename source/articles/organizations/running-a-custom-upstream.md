@@ -1,6 +1,6 @@
 ---
 title: Running a Custom Upstream on Pantheon
-category:
+parent_guide:
   - getting-started
   - managing
 filename: source/_guides/running-a-custom-upstream-on-pantheon.md

@@ -1,6 +1,6 @@
 ---
 title: Session and cookie handling
-category:
+parent_guide:
   - developing
 filename: source/_guides/session-and-cookie-handling.md
 ---

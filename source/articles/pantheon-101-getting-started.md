@@ -1,6 +1,6 @@
 ---
 title: Pantheon 101: Getting Started
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/pantheon-101-getting-started.md
 ---

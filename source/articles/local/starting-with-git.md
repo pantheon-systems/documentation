@@ -1,6 +1,6 @@
 ---
 title: Starting With Git
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/starting-with-git.md
 ---

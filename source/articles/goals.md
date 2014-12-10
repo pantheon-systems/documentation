@@ -1,6 +1,6 @@
 ---
 title: Goals
-category:
+parent_guide:
   - getting-started
 
 ---

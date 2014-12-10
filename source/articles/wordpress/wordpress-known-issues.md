@@ -1,6 +1,6 @@
 ---
 title: WordPress Known Issues
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/wordpress-known-issues.md
 ---

@@ -1,6 +1,6 @@
 ---
 title: Updating Modules Through Drupal
-category:
+parent_guide:
   - developing
   - supporting
 framework:

@@ -1,6 +1,6 @@
 ---
 title: Setting up a domain with Godaddy
-category:
+parent_guide:
   - going-live
 filename: source/_guides/setting-up-a-domain-with-godaddy.md
 ---

@@ -1,6 +1,6 @@
 ---
 title: Filesystem FAQs
-category:
+parent_guide:
   - getting-started
 filename: source/_guides/filesystem-faqs.md
 ---
