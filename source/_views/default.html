@@ -18,7 +18,7 @@
   <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script type="text/javascript" src="{{ site.url }}/assets/js/src/autoBreadcrumbs.js"></script>
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
 
   <!-- Latest compiled and minified CSS -->
@@ -52,6 +52,6 @@
         </div>
     <!-- /container -->
   {% include("footer_content.html") %}
-  {% include("footer_scripts.html") %}
+  <!--{% include("footer_scripts.html") %}-->
 </body>
 </html>
