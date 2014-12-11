@@ -51,12 +51,24 @@ body {
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
   padding-top: 50px;
+  background-color: #F4F4F4;
 }
 body.row.main {
   position: relative;
   top:50px;
   /* For scrollspy */
 }
+
+.article {
+  background-color: white;
+}
+
+.topnav {
+  font-size: 0.8em;
+  color: #000;
+  padding: 0.5em;
+}
+
 
 /* Keep code small in tables on account of limited space */
 .table code {
@@ -144,7 +156,7 @@ body.row.main {
 .pio-docs-nav .navbar-brand,
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 700;
-  color: #EFD01B;
+  color: white;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
@@ -428,8 +440,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 .pio-docs-title {
   color: #000000;
   display: block;
-  border-bottom: 2px solid #EFD01B;
-  margin-bottom: 40px;
+  border-bottom: 2px solid #000000;
   padding-bottom: 5px;
 }
 /*
@@ -525,19 +536,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 .pio-docs-sidebar .nav > li > a:hover,
 .pio-docs-sidebar .nav > li > a:focus {
   padding-left: 19px;
-  color: #EFD01B;
+  color: #000;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #EFD01B;
+  border-left: 1px solid #000;
 }
 .pio-docs-sidebar .nav > .active > a,
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
   font-weight: bold;
-  color: #00e4b3;
+  color: #000;
   background-color: transparent;
-  border-left: 2px solid #00e4b3;
+  border-left: 2px solid #000;
 }
 
 /* Nav: second level (shown on .active) */
@@ -617,7 +628,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
   /* Widen the fixed sidebar again */
   .pio-docs-sidebar.affix-bottom,
   .pio-docs-sidebar.affix {
-    width: 25%;
+    width: 292px;
   }
 }
 
