@@ -1,27 +1,21 @@
 ---
 title: Importing a WordPress Site
-filename: source/_common-tasks/importing-a-wordpress-site.md
-tools:
-  -
+description: Learn how to import an existing Wordpress site.
+category:
+  - wordpress
+  - getting-started
 ---
 
- **NOTE:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/documentation/advanced-topics/wordpress-and-php-sessions/-wordpress-and-php-sessions).
+ ## Overview
+ **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/documentation/advanced-topics/wordpress-and-php-sessions/-wordpress-and-php-sessions).
 
-1. Prepare for import
+1. Prepare for import. You will need a zip or tar.gz archive of your site in three separate files:
 
-You will need a zip or tar.gz archive of your site in three separate files:
+* Codebase - all executable code, plugins, themes, and so forth.
 
-1.
+* Database - contains the content of the site and some site configurations.
 
-Codebase - all executable code, plugins, themes, and so forth.
-
-2.
-
-Database - contains the content of the site and some site configurations.
-
-3.
-
-Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, and so forth.
+* Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, and so forth.
 
 ​There are two ways to import. Direct uploads from your desktop can be 100MB max; using a remote URL can be up to 500MB.
 
@@ -29,7 +23,7 @@ Popular plugins like [Duplicator](http://wordpress.org/plugins/duplicator/) and 
 
 Of course you can make an import archive by hand. You simply dump your existing database into a file ending with “.sql”, and make an archive file (zip or tar.gz) that contains that dump along with all your WordPress code.
 
-2. Add and name a site
+2. Add and Name a Site
 
 After you have created an account, you can log in and will be directed to your dashboard.
 

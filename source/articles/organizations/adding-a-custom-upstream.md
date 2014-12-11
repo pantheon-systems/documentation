@@ -1,17 +1,18 @@
 ---
 title: Adding a Custom Upstream
-parent_guide:
+description: Add and test a custom version of WordPress or Drupal.
+category:
   - managing
-filename: source/_guides/adding-a-custom-upstream.md
+
 ---
 
 By following this guide, you'll go from creating a custom version of WordPress or Drupal, to having it ready for us to add to the platform for members of your organization to spin up.
 
 ## 1. Create a Remote Repository.
 
-Each site on Pantheon is generated from an unique public or private Git repository maintained by an upstream author and contains all the code needed to deploy the sites.
+Each site on Pantheon is generated from a unique public or private Git repository maintained by an upstream author and contains all the code needed to deploy the sites.
 
-Clone the repository localy, and then pull in Pantheonâ€™s Core Upstream, or a Pantheon compatible, publicly maintained base upstream (Drupal distributions running our drops-7 core).
+Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pantheon-compatible, publicly maintained base upstream (Drupal distributions running our drops-7 core).
 
 **Drupal 6**
 
@@ -40,7 +41,7 @@ Follow conventions for using the /profiles directory in Drupal. With WordPress, 
 
 ## 3. Test Your Upstream.
 
-#### Create the Testing Site
+### Create the Testing Site
 
 Create a (core) Drupal or WordPress site on Pantheon that will be used for testing the upstream.
 
@@ -66,9 +67,9 @@ Push back to Pantheon
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the â€œwipeâ€ functionality as part of the workflow tools to easily run through the install process multiple times. Terminus command: `drush psite-ewipe $UUID dev`
+Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. Terminus command: `drush psite-ewipe $UUID dev`
 
-#### Acceptance tests
+#### Acceptance Tests
 
 Run your automated acceptance tests, using behat, casper.js, or by manually executing user stories.
 
@@ -78,7 +79,7 @@ When testing is complete, merge your pull requests into or git push to the branc
 
 ## 5. Submit Product Information.
 
-After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon One support tab, titled â€œProduct submission for [organization]â€ and include the following information about the distribution:
+After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon One support tab, titled "Product submission for [organization]"" and include the following information about the distribution:
 
 - Name
 - Upstream URL (https)\*\*

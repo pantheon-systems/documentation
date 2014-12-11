@@ -1,12 +1,10 @@
 ---
 title: Git commit best practices
-categories:
+description:
+category:
   - getting-started
-permalink: documentation/advanced-topics/git-commit-best-practices/
-Metadata
-filename: source/_common-tasks/git-commit-best-practices.md
-tools:
-  -
+
+draft: true
 ---
 
 ## Commit often

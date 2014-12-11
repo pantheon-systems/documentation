@@ -1,8 +1,9 @@
 ---
 title: Redis as a caching backend
-categories:
+description: Understand how to use Redis as a caching mechanism.
+category:
     - howto
-filename: source/_tools/redis-as-a-caching-backend.md
+
 ---
 
 

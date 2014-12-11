@@ -1,6 +1,7 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-filename: source/_common-tasks/using-indexdepot-with-pantheon-sites.md
+description: Create and configure IndexDepot and Solr.
+
 ---
 
 ## Overview
@@ -19,19 +20,11 @@ However, If you are looking for additional features for more advanced use cases,
 - Geo-search
 - REST-like API
 
-# Table of Contents
+**Note:** This article assumes that you have already enabled the ApacheSolr module.
 
-- Getting Started: Creating a new index
-- Setting up the index
-- Configuring Drupal’s ApacheSolr Module
-- Testing Your New Solr Connection
-- Resources
+## Create a New Index
 
-**NOTE:** This article assumes that you have already enabled the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr) page on Drupal.org for more info.
-
-## Getting Started: Creating a new index
-
-Once you have signed-up at indexdepot.com, login and visit the “Search Indexes” section by clicking on the “Search Indexes” button.
+Once you have signed-up at indexdepot.com, login and visit the “Search Indexes” section by clicking on the **Search Indexes** button.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/272823)
 
@@ -39,7 +32,7 @@ Next, create a new index by clicking on the button.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/272825)
 
-## Setting up the Index
+## Set Up the Index
 
 To create your index, you’ll need to supply some information about it:
 
@@ -64,7 +57,7 @@ After the index has been saved, you will be provided with an Index URI and a Hos
 
  
 
-## Configuring Drupal’s ApacheSolr Module
+## Configure Drupal’s ApacheSolr Module
 
 To get your index working with our Drupal site, we need to set some configuration options in the ApacheSolr module.
 
@@ -78,13 +71,11 @@ Here we need to provide two items to the ApacheSolr configuration:
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/272833)
 
-When you’ve finished click Save.
+When you’ve finished click **Save**.
 
-**NOTE: A schema must be pushed in each environment (dev/test/live).**
+**Note: A schema must be pushed in each environment (Dev/Test/Live).**
 
-## Testing Your New Solr Connection
-
-Almost done.
+## Test Your New Solr Connection
 
 Now that we’ve created our index and configured our ApacheSolr Drupal module to point to our new index, we’ll want to test the connection and make sure ApacheSolr can communicate with the IndexDepot Solr index.
 
@@ -98,7 +89,7 @@ If Drupal returns a success message like _ **“Your site has contacted the Apac
 
 If not, you’ll want to retrace the steps in this document to make sure that you’ve done each and every one.
 
-## Customizing Your Configuration
+## Customize Your Configuration
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the "Edit Configuration Files" icon on the Search Indexes page. See example below:
 

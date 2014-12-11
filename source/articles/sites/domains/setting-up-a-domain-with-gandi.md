@@ -1,13 +1,14 @@
 ---
 title: Setting Up a Domain with Gandi
-parent_guide:
+description: Learn how to edit a domain's Zone Record in Gandi so that it resolves to your Pantheon site.
+category:
   - going-live
-filename: source/_guides/setting-up-a-domain-with-gandi.md
+
 ---
 
 This article assumes that you have already purchased a domain from Gandi.
 
-#### Setting up the Zone Record
+## Setting Up the Zone Record
 
 In order to get your domain resolving to your Pantheon site, you will need to edit and associate a Zone Record with the domain in the Gandi domain administration panel.
 
@@ -42,6 +43,6 @@ Change the editing mode to Expert in the dropdown menu on the right.
 
 **When you have entered your configuration (and double-checked that it is correct twice!), click the 'Use Version' button. If you've followed the steps in this article, your DNS configuration for your new domain is now complete on the Gandi end.**
 
-##### **Add Your Domain to Pantheon**
+## Add Your Domain to Pantheon
 
 **In order for your domain to resolve to your Pantheon site, it will need to be added to your sites Pantheon dashboard. This [helpdesk article](/documentation/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site#setting-up-a-domain-with-Pantheon) will walk you through the process.**

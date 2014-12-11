@@ -1,19 +1,22 @@
 ---
 title: Cron
-categories:
+description: Understand Pantheon cron execution and management.
+category:
     - howto
-filename: source/_tools/cron-on-pantheon.md
+
 slug: sites/code
 
 ---
 
- **NOTE:** Cron will always run _UNLESS_ all jobs are specifically set to 'OFF' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.
+## Overview
+
+ **Note**: Cron will always run _UNLESS_ all jobs are specifically set to 'OFF' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
 Both Drupal core and many contributed modules have tasks that need to be performed on a regular basis. Cron can be configured when and how often these tasks are executed.
 
-## Pantheon cron execution
+## Pantheon Cron Execution
 
 For every site environment, Pantheon executes cron at the top of each hour to allow Drupal to perform any scheduled tasks. To do that, Pantheon internally invokes the drush command:
 
@@ -23,7 +26,7 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 
 There is no way to configure when Pantheon executes Drupal cron.
 
-**IMPORTANT:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
+**Important:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
 
 ## Managing Cron
 
@@ -49,7 +52,7 @@ If cron has been recently run, entries will appear in the log. The two entries f
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/74077)
 
-## How can I schedule cron to run more often?
+### How Can I Schedule Cron to Run More Often?
 
 While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute drush cron once an hour, usually within 5 to 10 minutes of the top of the hour.
 
@@ -67,9 +70,9 @@ As an alternative solution - if you have anything that is executing a cron on 
 
 Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging, either through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at _/admin/config/system/cron_
 
-## Troubleshooting cron
+## Troubleshooting Cron
 
-### Why didn't cron run?
+### Why Didn't Cron Run?
 
 The most common causes are:
 
@@ -78,18 +81,18 @@ The most common causes are:
 - [Invalid redirection logic in settings.php](/documentation/howto/redirect-incoming-requests/)
 - Setting a cron key in Elysia Cron's settings: admin/config/system/cron/settings
 
-### What is the maximum execution time of cron?
+### What is the Maximum Execution Time of Cron?
 
 The maximum execution time of cron is 180 seconds (3 minutes).
 
-### How can I find out when cron last run?
+### How Can I Find Out When Cron Last Ran?
 
 You can check the log messages through the Drupal Admin interface, as mentioned above.  
 You can also use Drush to see when cron was last run with the following command:
 
     drush wd-show --type='cron'
 
-### Can I prevent Drupal cron from running?
+### Can I Prevent Drupal Cron From Running?
 
 Yes - in Drupal at _admin/system/config/cron_. Select "Never" from the "Run cron every" dropdown menu as shown below, then Save the configuration. 
 

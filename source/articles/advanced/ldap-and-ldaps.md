@@ -1,40 +1,39 @@
 ---
 title: LDAP and LDAPS
-categories:
-  - getting-starte
+description: Configure LDAP on your Pantheon site.
+category:
+  - getting-started
 slug: "sites/code"
 
 ---
 
- **LDAP as a provider:**  
-This not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, please contact your sales representative regarding [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway).
+## LDAP as a Provider  
 
-**LDAP as a consumer:**  
-Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details will be up to the user as not all _instances_ can be supported.
+This not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway).
+
+## LDAP as a Consumer  
+
+Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details will be up to the user as not all _instances_ can be supported.
 
 [Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many Drupal sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
 
+PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon Drupal site.  
 
-PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon Drupal site.  
+Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
 
+**Note:** Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
 
-Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
+## OpenLDAP Configuration for Client Certificates for LDAPS
 
-**Note:** Pantheon does not support I.P. authentication schemes. We recommend certificate based authentication to be compatible with distributed application servers.
+Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-## OpenLDAP configuration for client certificates for LDAPS
-
-Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function  [putenv()](http://php.net/manual/en/function.putenv.php).  
-
-
-If your LDAP server uses security certificate(s), place them in the  [private file directory](/documentation/running-drupal/private-files/) in your codebase:
+If your LDAP server uses security certificate(s), place them in the [private file directory](/documentation/running-drupal/private-files/) in your codebase:
 
     SITEROOT/private
 
-Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your individual configuration. If you don't need a particular settings, don't include it - there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
+Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
 
-
-Ensure that your certificates do  **not**  have a password. There is an extremely strong probability that these certificates are different than the certificates used to secure a site environment using HTTPS. If you're unsure, check with your sever administrator to make sure that you are using the correct TLS certificates to communicate with your LDAP server.
+Ensure that your certificates do **not** have a password. There is an extremely strong probability that these certificates are different than the certificates used to secure a site environment using HTTPS. If you're unsure, check with your sever administrator to make sure that you are using the correct TLS certificates to communicate with your LDAP server.
 
     // LDAP - specify file that contains the TLS CA Certificate.
     // Can also be used to provide intermediate certificate to trust remote servers.
@@ -59,31 +58,29 @@ Additional configurations, such as whether to perform server certificate checks,
     // LDAP - Never perform server certificate check in a TLS session.
     putenv('LDAPTLS_REQCERT=never');
 
-For general information about implementing LDAPS, see  [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and  [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
+For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
 
-For more information about working with settings.php, see  [configuring settings.php](/documentation/howto/configuring-settings-php/).
+For more information about working with settings.php, see [configuring settings.php](/documentation/howto/configuring-settings-php/).
 
 ## Frequently Asked Questions
 
-### How can I make changes to the OpenLDAP configuration file?
+#### How can I make changes to the OpenLDAP configuration file?
 
 Users do not have access to make modifications to ldap.conf. Instead, use putenv within settings.php as described above.
 
-### Is ldap\_sso supported?
+#### Is ldap\_sso supported?
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP will need to be PHP-based and not webserver-based.  
- 
 
-## ​Troubleshooting
+## Troubleshooting
 
-The vast majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
+The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
 
-
-The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your siteroot with a name like ldap-test.php. You can execute it remotely using drush to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using drush to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
     drush @pantheon.SITENAME.ENV scr ldap-test.php
 
-The script in its entirety:
+The entire script:
 
     <?php
     $settings = array(

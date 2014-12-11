@@ -1,20 +1,21 @@
 ---
 title: Bots and Indexing on Pantheon
-parent_guide:
+description: Manage bots and indexing within the Pantheon workflow.
+category:
   - supporting
   - developing
-filename: source/_guides/bots-and-indexing-on-pantheon.md
+
 ---
+
+## Overview
 
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site. As a web developer or admin, knowing how to handle bots comes with the territory.
 
-## Bots in my Logs: Real World Scenarios and Identifiers
+## Bots in My Logs: Real World Scenarios and Identifiers
 
 Bots don't browse like humans. Analyzing access patterns in the Nginx log is one of the quickest ways to determine the presence of bots.
 
-### Rapid fire requests and/or duplicates.
-
-###  
+## Rapid Fire Requests/Duplicates.
 
 In the log snippet below, there are multiple requests coming in for the same path in rapid fire succession. The time stamp reflects 5 identical requests at the same milisecond. Requests of this nature should be investigated.
 
@@ -26,7 +27,7 @@ In the log snippet below, there are multiple requests coming in for the same pat
     unix:\xC8\xFB\x7F - - [11/Nov/2013:19:05:24 +0000] "POST /index.php?q=comment/reply/545 HTTP/1.0" 500 588 "http://www.mywebsite.com/node/545?page=399" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MRA 4.3 (build 51720))" 1.481 "195.200.54.200, 10.200.200.21, ::ffff:127.0.0.1,::ffff:127.0.0.1"
     127.0.0.1 - - [11/Nov/2013:19:05:24 +0000] "POST /index.php?q=comment/reply/545 HTTP/1.0" 500 588 "http://www.mywebsite.com/node/545?page=399" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MRA 4.3 (build 51720))" 1.482 "195.200.54.200, 10.200.200.21, ::ffff:127.0.0.1,::ffff:127.0.0.1"
 
-### Bots Converging on Erroring Pages
+## Bots Converging on Erroring Pages
 
 Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (such as BingBot or AdsBotGoogle) will identify themselves. Since search-indexing is desirable for most sites, tread carefully in order to avoid wreaking havoc on a site's SEO. That said, there may be instances in which crawlers/spiders converge on a page that is erroring out ( [502s](/documentation/getting-started/errors-and-server-responses/-errors-and-server-responses) in the example below). These repetitive requests can exasperate the pageload issues by putting more load on the server. These errors should be investigated immediately. When the error has been fixed, the bots/crawlers should crawl on their merry way and will no longer be hung-up on the give path.
 

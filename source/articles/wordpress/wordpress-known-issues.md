@@ -1,8 +1,9 @@
 ---
 title: WordPress Known Issues
-parent_guide:
+description: Learn the recommended solutions for known issues on the Pantheon platform for Wordpress.
+category:
   - getting-started
-filename: source/_guides/wordpress-known-issues.md
+
 ---
 
 This page tracks known issues and the recommended solution (if any) for running WordPress on the Pantheon website platform. Most sites work fine, but there are some common gotchas we are tracking and working to address.

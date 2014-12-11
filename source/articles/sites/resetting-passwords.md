@@ -1,10 +1,10 @@
 ---
 title: Resetting Passwords
-Metadata
-filename: source/_guides/go-live/resetting-passwords.md
+description: Learn how to reset your Pantheon and Drupal dashboard passwords.
+category:
+  - management
 ---
 
-# Resetting Passwords
 
 ## Pantheon Dashboard User
 

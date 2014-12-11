@@ -1,10 +1,9 @@
 ---
 title: Apache Solr on Pantheon
-categories:
-    - running-drupal
-documentation/running-drupal/apache-solr-on-pantheon/
-Metadata
-filename: source/_tools/apache-solr-on-pantheon.md
+description: Using Apache Solr on the Pantheon platform.
+category:
+    - drupal
+
 ---
 
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox. No permission or action is required from Pantheon to use Solr.  
@@ -58,12 +57,12 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 5. Post the schema.xml using the Pantheon Apache Solr module
 6. Enable and configure your Solr module
 
-### Add the IndexServer from the Dashboard
+## Add the IndexServer from the Dashboard
 
 First, you will need to add the IndexServer to your site. This can be done under 'Settings - Add Ons - Solr' from the dashboard:
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/290603)
-### Add Apache Solr Search OR Search API Solr search module
+## Add Apache Solr Search OR Search API Solr search module
 
 Two contributed modules are supported by Pantheon:
 
@@ -78,7 +77,7 @@ For most users, the apachesolr module is the easiest to configure and maintain, 
 
 Choose one or the the other and add it to your code base. Do not enable or configure it yet.
 
-### Enable the Pantheon Apache Solr module
+## Enable the Pantheon Apache Solr Module
 
 The Pantheon Apache Solr module must be enabled in order to use Pantheon's Solr Service.  
 ​ ![](https://pantheon-systems.desk.com/customer/portal/attachments/192432)  
@@ -87,7 +86,7 @@ The Pantheon Apache Solr module must be enabled in order to use Pantheon's Solr 
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/192434)
 
-### Post the schema.xml using the Pantheon Apache Solr module
+## Post the schema.xml using the Pantheon Apache Solr Module
 
 The next step is to post the schema.xml, which describes Drupal fields to the Solr search indexer. Additionally, posting the schema will activate the Solr server for the site environment. Click **Post schema.xml** .  
 
@@ -100,9 +99,9 @@ The next step is to post the schema.xml, which describes Drupal fields to the So
 ​  
 **You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.**
 
-### Enable and configure your Solr module
+### Enable and Configure Your Solr Module
 
-#### Apache Solr Search (apachesolr)
+### Apache Solr Search (apachesolr)
 
 Enable both the **Apache Solr framework** and **Apache Solr search** modules.
 
@@ -114,7 +113,7 @@ Browse to the main Apache Solr settings screen and you should now see an index i
 
 Note that the default connection parameters are correct and do not need changing. After this point, your configuration and settings will be the same as any generic Apache Solr use-case.
 
-#### Search API Solr search (search\_api\_solr)
+#### Search API Solr Search (search\_api\_solr)
 
 Three modules are required; [entity](https://drupal.org/project/entity),  [search\_api](https://drupal.org/project/search_api) and  [search\_api\_solr](https://drupal.org/project/search_api) need to be installed and enabled.  
 
@@ -159,7 +158,7 @@ Here are a number of key terms that are useful for understanding Apache Solr.
 
 The Pantheon Solr module provides a comprehensive help section that describes a number of key Solr concepts and terms. Visit Administration > Help > Pantheon Apache Solr to access.
 
-## Pantheon Solr service status
+## Pantheon Solr Service Status
 
 The Pantheon Solr module provides several interfaces for troubleshooting the health of the service, along with the ability to manually perform queries. These checks are independent of contrib module configurations in order to determine whether the service itself is performing properly, or if there is there is a problem with your site configuration.
 
@@ -201,7 +200,7 @@ The following are Pantheon-specific variables that you can check for, depending 
 </dl>
 **Keep in Mind:** Newly indexed items have a 2-minute delay, until cron has been run or manually indexed before they become available in Solr search.
 
-### Error during Search API Solr installation
+### Error During Search API Solr Installation
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
 
@@ -213,10 +212,10 @@ If you receive the following error, be sure that you have followed all of the in
 #### Did you post the schema into all your environments?
 It needs to be done for dev, test and live individually. You can do this at `admin/config/search/pantheon`
 -
-#### Re-index your content.
+#### Re-index Content
 You can do this at _admin/config/search/apachesolr_. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting). <
 -
-#### Check Index and Batch Sizes.
+#### Check Index and Batch Sizes
 Are you only indexing only 50 items at a time and wondering why 100s of new content nodes generated in the last hour aren't being indexed? Numbers are important here. If you need to increase the number of items being indexed with each Solr indexing run, feel free to do so. However, don't get ridiculous here: setting 1000 items to be indexed per run could cause a page timeout. If a specific request times out, that could be because it's trying to POST too much data at once; try reducing the quantity of items being indexed per batch and see if that allows the items to be indexed.
 
 ### Apache Spatial Search on Pantheon

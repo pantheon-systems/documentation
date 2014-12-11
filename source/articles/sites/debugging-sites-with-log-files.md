@@ -1,10 +1,11 @@
 ---
 title: Debugging sites with log files
-parent_guide:
+description: Learn to debug sites using log files with Drupal.
+category:
   - developing
-framework:
+category:
 	- drupal
-filename: source/_guides/debugging-sites-with-log-files.md
+
 ---
 
 ## Database Logging
@@ -25,7 +26,7 @@ Drush can be used to "watch" events in real-time; tail can be used to continuous
 
 drush @pantheon.SITENAME.ENV watchdog-show --tail
 
-## Raw webserver log files
+## Raw Webserver Log Files
 
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
@@ -52,7 +53,7 @@ When developing a site, it can be useful to directly access the server logs for 
 
 No, Pantheon does not have a mechanism for combining server logs across multiple Application Containers.
 
-### Can I access the logs on a specific DROP worker?
+#### Can I access the logs on a specific DROP worker?
 
 Yes, but it'll take a couple steps.
 
@@ -69,22 +70,22 @@ If you wanted to download all the access logs from a particular site:
 
     sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
 
-### How can I parse my Nginx access logs?
+#### How can I parse my Nginx access logs?
 
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
     date_format d/%b/%Y:%T %z
     log_format %^ %^ %^ [%d] “%r” %s %b “%R” “%u” %T "%h,^"
 
-### Can I log to the system logger? Can I access syslog?
+#### Can I log to the system logger? Can I access syslog?
 
 The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.
 
-### Can I access Apache Solr logs?
+#### Can I access Apache Solr logs?
 
 No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/documentation/running-drupal/apache-solr-on-pantheon/).
 
-### My Drupal database logs are huge. Should I disable dblog?
+#### My Drupal database logs are huge. Should I disable dblog?
 
 Best practice is to find and resolve the problems. PHP notices, warnings and errors mean more work for PHP, the database and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
 

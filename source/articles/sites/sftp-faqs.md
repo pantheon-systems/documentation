@@ -1,10 +1,7 @@
 ---
 title: SFTP FAQs
-categories:
-  - getting-started
-permalink: documentation/getting-started/sftp-faqs/
-Metadata
-filename: source/_common-tasks/sftp-faqs.md
+description: Understand common SFTP connection problems.
+
 ---
 
 ## SFTP Connection Issues
@@ -25,5 +22,3 @@ If you're already using Google's DNS, or you're still having connection issues a
 _We're performing system maintenance on your development environment right now which prevents us from being able to commit your changes. The system maintenance shouldn't take long and this message will disappear once it's done._
 
 If your _Dev_ environment's app-container is ever being migrated (which occasionally happens automatically) you may see this message if you have pending SFTP changes. Check back shortly and the migration should be complete, the error message will go away, and you can commit the pending changes.
-
-

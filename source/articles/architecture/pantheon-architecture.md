@@ -1,40 +1,41 @@
 ---
 title: Pantheon Architecture
-filename: source/_tools/pantheon-architecture.md
+description: Detailed information about our infrastructure.
+
 draft: true
 ---
 
-##Cloud Infrastructure Provider
+## Cloud Infrastructure Provider
 Pantheon proudly runs on RackSpace and Amazon S3. We utilize the most advanced hardware our infrastructure providers can provide, and we do so very efficiently.
 
-##Endpoint VM
+## Endpoint VM
 Each of the bare-metal physical machines we run on is called an endpoint. We manage a single VM on each endpoint, running Fedora 20 and CoreOS.
 
 ##System D custom C-groups (Containers)
 
 
-##Edge
+## Edge
 Traffic coming to your site first hits the Edge routing and caching layer.
 
-##STYX Boxes
+## STYX Boxes
 
 
-##HA Proxy
+## HA Proxy
 
 
-##Varnish
+## Varnish
 
 
-##NGINX
+## NGINX
 
 
-##Application containers
+## Application containers
 
 
-###NGINX
+## NGINX
 
 
-###[PHP-FPM](http://php-fpm.org)
+## [PHP-FPM](http://php-fpm.org)
 
 "PHP FastCGI Process Manager is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites.""
 
@@ -51,19 +52,19 @@ Traffic coming to your site first hits the Edge routing and caching layer.
 
 If you connect to your Dev environment's codebase via SFTP, you'll notice your site's codebase is inside the /code directory. Git pushes end up in this directory.
 
-##Drupal
+## Drupal
 
 
-##WordPress
+## WordPress
 
 
-##Pantheon File System
+## Pantheon File System
 Pantheon uses a proprietary implementation of FuseDav to manage files between environments.
 
-###Drupal /sites/default/files/
+## Drupal /sites/default/files/
 
 
-###WordPress /wp-uploads/
+## WordPress /wp-uploads/
 
 
 ##Bindings

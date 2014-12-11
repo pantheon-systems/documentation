@@ -1,7 +1,8 @@
 ---
 title: Geolocation and IP detection with SSL Using JavaScript
-filename: source/_common-tasks/geolocation-and-ip-detection-with-ssl-using-javascript.md
-tools:
+description: Use JavaScript to reliably determine the client's IP and location. 
+
+category:
   -
 ---
 

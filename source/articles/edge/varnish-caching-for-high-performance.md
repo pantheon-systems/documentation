@@ -1,9 +1,9 @@
 ---
 title: Varnish Caching for High Performance
-categories:
+description:Configure and verify Varnish is working on your site. 
+category:
   - getting-started
-/varnish-caching-for-high-performance/
-filename: source/_tools/varnish-caching-for-high-performance.md
+
 ---
 
 

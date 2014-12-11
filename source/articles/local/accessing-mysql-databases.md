@@ -1,9 +1,14 @@
 ---
 title: Accessing MySQL Databases
-filename: source/_common-tasks/accessing-mysql-databases.md
----
-Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your Drupal configuration. 
+description: Configure and troubleshoot database connections.
 
+category:
+  - developing
+---
+
+## Overview
+
+Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your Drupal configuration.
 
 **Note: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the dashboard periodically or when you can’t connect.**
 
@@ -15,11 +20,11 @@ MySQL credentials for each site environment can be found in the dashboard:
 
 The following required fields are provided:
 
-- **Server** : The hostname of the MySQL server.
-- **Port** : The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site.
-- **Username** : MySQL user name to use when connecting to server.
-- **Password** : The password to use when connecting to the server.
-- **Database** : The database to use; the value will always be pantheon and cannot be altered.
+- **Server**: The hostname of the MySQL server.
+- **Port**: The TCP/IP port number to use for the connection. There is no default and will differ for every environment on each site.
+- **Username**: MySQL user name to use when connecting to server.
+- **Password**: The password to use when connecting to the server.
+- **Database**: The database to use; the value will always be pantheon and cannot be altered.
 
 As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a Drupal site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your dashboard for the current credentials.
 

@@ -1,12 +1,13 @@
 ---
-title: Manually apply Drupal 7.32 security update
-filename: source/_common-tasks/manually-apply-drupal-7-32-security-update.md
+title: Manually Apply Drupal 7.32 Security Update
+description: Instructions on updating to Drupal 7.32.
+
 ---
 
-If your Drupal 7 site is based on the Pantheon Drupal 7 upstream then you will be able to apply a 1-click update in your dashboard. If you are running a site that does not yet have a 1-click update available, however, we recommend you immediately manually make the update.
+If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be able to apply a one-click update in your dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.
 
 1. Download [https://github.com/drupal/drupal/commit/26a7752c34321fd9cb889308f507ca6bdb777f08.patch](https://github.com/drupal/drupal/commit/26a7752c34321fd9cb889308f507ca6bdb777f08.patch)
-2. Apply patch per usual [https://www.drupal.org/patch/apply](https://www.drupal.org/patch/apply) or if you don’t use Git you can connect to your Dev environment via SFTP and edit includes/database/database.inc changing line 739 from
+2. Apply the patch per usual [https://www.drupal.org/patch/apply](https://www.drupal.org/patch/apply) or if you don’t use Git you can connect to your Dev environment via SFTP and edit includes/database/database.inc changing line 739 from
 
     foreach ($data as $i => $value) {
 

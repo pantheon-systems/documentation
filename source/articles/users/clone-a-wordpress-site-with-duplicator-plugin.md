@@ -1,20 +1,21 @@
 ---
 title: Clone a WordPress site to Pantheon using Duplicator plugin
-filename: source/_common-tasks/clone-a-wordpress-site-on-pantheon-with-duplicator-plugin.md
-tools:
+description: Learn to copy a WordPress site using the Duplicator plugin on Pantheon.
+
+category:
   - WordPress Duplicator
   - Spinup Importer
-framework:
+category:
   - WordPress
 ---
 
-### 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.
+## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.
 
-### 2. Archive Your Site's Code/Files/Database
+## 2. Archive Your Site's Code/Files/Database
 
 Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click “Next” and then “Build.” When complete, click “Archive” to download the resulting file.
 
-### 3. Create A New Pantheon Site​, Importing Your Archive
+## 3. Create A New Pantheon Site​, Importing Your Archive
 
 1. Within your dashboard click link below to "Create A New Site".
 2. Name your new site, and then select "Import site" from the "Choose your Start State" options. Next, select “Import Archive”.

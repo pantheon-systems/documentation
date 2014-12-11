@@ -1,8 +1,10 @@
 ---
 title: Reading Pantheon Environment Configuration
-filename: source/_common-tasks/reading-pantheon-environment-configuration.md
+description: Understand the separation of configuration and code within the Pantheon framework.
+
 ---
 
+## Overview 
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.
 
 Database credentials, Redis authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.

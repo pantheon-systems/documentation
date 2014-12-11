@@ -1,8 +1,9 @@
 ---
 title: WordPress FAQ
-parent_guide:
+description: Answer questions to Frequently Asked Questions concerning WordPress on the Pantheon platform. 
+category:
   - developing
-filename: source/_guides/wordpress-faq.md
+
 ---
 
 Can I import my site?

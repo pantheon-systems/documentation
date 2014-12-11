@@ -1,7 +1,8 @@
 ---
 title: Git FAQs
-filename: source/_common-tasks/git-faq.md
-tools:
+description: Answers to commonly asked questions about Git.
+
+category:
   -
 ---
 
@@ -49,15 +50,15 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 - **Open Public: ** https://github.com/phase2/openpublic-drops-7.git
 - **Panopoly: ** https://github.com/populist/panopoly-drops-7.git
 
-##Frequently Asked Questions
+## Frequently Asked Questions
 
-**Does Pantheon support Git submodules?**
+#### Does Pantheon support Git submodules?
 
 We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes.
 
 Right now, the best approach is to add and commit the code to Git as normal files.
 
-**What are the Git tags?**
+#### What are the Git tags?
 
     $: git tag
     jenkins-ellis_update_drops_7-3
@@ -73,13 +74,13 @@ The "update\_drops" tags are from our upstream updates in the past (we don't tag
 
 The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
-Savvy Git users may wonder, "if I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
+Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
 
-**How do I revert or undo changes?**
+#### How do I revert or undo changes?
 
 See [Undo Git commits like overwriting Drupal core](/documentation/howto/undo-git-commits-like-overwriting-drupal-core/).
 
-**How do I apply a patch from Drupal.org on Pantheon?**
+#### How do I apply a patch from Drupal.org on Pantheon?
 
 If you want to patch core or a module, you should use Git. You will need to switch from “on server development” if it's enabled.
 
@@ -100,26 +101,27 @@ If you're importing a site that has an existing Git history, you may be able to 
     'git pull -Xours [your existing repo] [existing site branch]'
 
 4. If there are any conflicts, you'll need to resolve them.
-  **Note**: You will get conflicts on all the binary files (e.g. favicion.ico), but you can just Git add them again.
+  **Note**: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.
+
 5. Once this is done, push back to Patheon:
 
     'git push origin master'
 
 6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run _git log_ from within your repository to view your full history.
 
-**Can I use Git with On Server Development?**
+#### Can I use Git with On Server Development?
 
 Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
 
 When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked.
 
-If you have On Server Development disabled, you can interact with your code vit Git.
+If you have On Server Development disabled, you can interact with your code via Git.
 
-**What version of Git does Pantheon run?**
+#### What version of Git does Pantheon run?
 
 We are currently running Git 1.7.
 
-**Why were pushes denied because of changes in sites/default/files?**
+#### Why were pushes denied because of changes in sites/default/files?
 
 If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
@@ -130,7 +132,7 @@ From within the Drupal root of your site:
 
 The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. If you're on Drupal 6, you'll need to find your starting point by looking at the Git log. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
-**Why are pushes denied because the remote upstream URL changed?**
+#### Why are pushes denied because the remote upstream URL changed?
 
 We are updating our infrastructure so that code repositories do not have a single point of failure. To do this, we are moving to a more distributed code server binding model.
 
@@ -144,13 +146,13 @@ If you have created a local clone of your site, you will need to update the defa
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream to something else you will have to change origin in the command above.
 
-**Why can't I connect to Git?**
+#### Why can't I connect to Git?
 
 If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/documentation/howto/generating-ssh-keys/-generating-ssh-keys).
 
-**Why am I being prompted for my password after adding the public key?**
+#### Why am I being prompted for my password after adding the public key?
 
-This occurs if you have multiple SSH keys. For more information,  see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
+This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 
@@ -172,22 +174,20 @@ Conflicts can occur when the upstream you are trying to merge your code with has
 
 _"When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge." - [Git Manual](http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge)_
 
-To manually delete merge conflicts from the terminal, use the following commands in sequence:
-
-1.Start by identifying the file that is generating a delete error.
-For example, the Git log may contain an entry similar to the following:
-CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.  
-2. From your local repository, run the following Git command to get a copy of the file in conflict: 
+To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+For example, the Git log may contain an entry similar to the following:  
+CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+2. From your local repository, run the following Git command to get a copy of the file in conflict:
    'git checkout <commit ID> -- <file>'
 When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
 3. Run git status and verify that there is a new file to add to the repository:  
     'git status
-    # On branch master
-    # Changes to be committed:
-    # (use "git reset HEAD ..." to unstage)
-    #
-    # new file: README.txt
-    #'  
+    On branch master
+    Changes to be committed:
+    (use "git reset HEAD ..." to unstage)
+
+   new file: README.txt
+    '  
 4. Run the Git add command:  
  'git add .'  
 5. After performing the add, commit the file with an accompanying commit message.  
@@ -196,7 +196,7 @@ When looking for a commit ID, you can find the last instance where the missing f
 6. Run the Git push command:  
   'git push origin master'
 
-**How do I fix fast forward errors?**
+#### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 
@@ -208,7 +208,7 @@ If you're getting errors after committing your reverted changes, make sure you h
     Merge the remote changes (e.g. 'git pull') before pushing again. See the
     'Note about fast-forwards' section of 'git push --help' for details.'
 
-**I have a Git conflict; can you fix it for me?**
+#### I have a Git conflict; can you fix it for me?
 
 No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/documentation/advanced-topics/git-faq/-git-faq#importing-existing-git-history), [Git issues performing core updates](/documentation/advanced-topics/git-faq/-git-faq#problems-with-gitignore-conflicts), and [resetting your code to a specific commit](/documentation/advanced-topics/git-faq/-git-faq#how-to-revert-or-undo-changes).
 
@@ -216,11 +216,11 @@ There are a number of patterns and strategies of Git code management for single 
 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
-**How do I delete a remote branch?**
+#### How do I delete a remote branch?
 
     'git push origin :branchname'
 
-**Why isn't every commit shown in the Pantheon dashboard?**
+#### Why isn't every commit shown in the Pantheon dashboard?
 
 Pantheon uses the following command to display commits in the dashboard:
 

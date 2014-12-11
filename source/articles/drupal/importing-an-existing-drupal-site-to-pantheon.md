@@ -1,6 +1,7 @@
 ---
-title: Importing an existing Drupal site to Pantheon
-filename: source/_common-tasks/importing-an-existing-drupal-site-to-pantheon.md
+title: Importing an Existing Drupal Site to Pantheon
+description: Detailed information on how to prepare and import your site to Pantheon.
+
 ---
 
 
@@ -10,7 +11,7 @@ The easiest way to import an existing Drupal site into Pantheon is to create a n
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/213957)  
 
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500MB max) to import an archive.  
+Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/213971)​​
 
 ## Components of a Drupal Site
@@ -54,11 +55,11 @@ The code archive should include the following directories:
            └── settings.php
     └── themes
 
-**NOTE: The "files" directory has been omitted. Remember not to include it in your codebase.**
+**Note: The "files" directory has been omitted. Remember not to include it in your codebase.**
 
-### Create a Code Archive
+## Create a Code Archive
 
-Create an archive that is stored outside of your Drupal siteroot that contains only the executable code associated with your site and skips the contents of sites/default/files.
+Create an archive that is stored outside of your Drupal site root that contains only the executable code associated with your site and skips the contents of sites/default/files.
 
     # Specify the destination folder.
     TARGET=~/Desktop
@@ -80,7 +81,7 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
     # Compress the backup.
     gzip $TARGET/db.sql
 
-### Table Prefixes
+## Table Prefixes
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
 

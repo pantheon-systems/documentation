@@ -1,20 +1,21 @@
 ---
 title: Hot Fixes
-filename: source/_common-tasks/hot-fixes.md
-tools:
+description: Learn how to deploy a hotfix on Pantheon.
+
+category:
   -
 ---
 
-Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and here's how you do it on Pantheon:
+Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.
 
-#### Requirements
+## Requirements
 
 - A working knowledge of Git tools.
 - An up-to-date clone of your Pantheon Git repository.
 
-#### Get Into the Right Tag
+## Get Into the Right Tag
 
-From within your Git clone, get a quick list of the existing Git tags:
+1. From within your Git clone, get a quick list of the existing Git tags:
 
     #> git tag
     pantheon.initialize
@@ -24,7 +25,7 @@ From within your Git clone, get a quick list of the existing Git tags:
     pantheon_test_3
     pantheon_test_4
 
-Select the highest `live` tag and check it out:
+2. Select the highest `live` tag and check it out:
 
     #> git checkout pantheon_live_1
     Note: checking out 'pantheon_live_1'.
@@ -45,7 +46,7 @@ Select the highest `live` tag and check it out:
 
 You are now ready to start work based on the state of the live site.
 
-#### Generate a New Hotfix Test Tag
+## Generate a New Hotfix Test Tag
 
 Make your hotfixes and commit them locally. Then tag and push them to test by creating a _new_ test tag with a higher number value:
 
@@ -54,13 +55,13 @@ Make your hotfixes and commit them locally. Then tag and push them to test by cr
 
 **Note**: Your tag numbers will vary. We are showing 5 since in the list of tags above the highest number was 4. Be sure you have the right number before pushing.
 
-#### Test and Deploy
+## Test and Deploy
 
 **Note:** Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
 
 If your tests are good, you can use the "Pull Code" option on the dashboard to deploy your hotfix. This will automatically create a new live tag for you and deploy it.
 
-### Orphan Commits
+## Orphan Commits
 
 On Pantheon an orphan commit is any commit that exists on the Test or Live environment but not in the master branch.
 
