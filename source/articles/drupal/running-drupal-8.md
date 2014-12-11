@@ -1,11 +1,10 @@
 ---
 title: Running Drupal 8 on Pantheon
 description: Important information about running Drupal 8.
-categories:
+category:
     - howto
-/running-drupal-8-on-pantheon/
 
-filename: source/_tools/running-drupal-8-on-pantheon.md
+
 ---
 
 # Coming Soon

@@ -15,7 +15,7 @@ category:
 
 Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click  the "Create Your Free Account" button in the header.
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/179991)
+ ![](/assets/images/interface/179991.jpg)
 
 Then, fill out your account information and click Continue.
 
