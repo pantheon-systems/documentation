@@ -3,7 +3,7 @@ title: Team Management
 description: Working with the Pantheon deployment tools in a team driven environment.
 category:
   - getting-started
-filename: source/_guides/team-management.md
+
 ---
 
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams and getting started is easy and simple.

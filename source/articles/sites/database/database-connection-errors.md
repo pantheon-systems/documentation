@@ -6,7 +6,7 @@ category:
   - debugging
 category:
   - Drupal
-filename: source/_guides/database-connection-errors.md
+
 ---
 
 ## Overview

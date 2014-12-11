@@ -1,7 +1,7 @@
 ---
 title: Adding a Credit Card to a Site
 description: Learn how to add a credit card as a payment method for your site.
-filename: source/_common-tasks/add-a-credit-card-to-a-site.md
+
 ---
 ## Add a Card and Select a Plan
 1. From your user dashboard, choose the site you want to add a card to.

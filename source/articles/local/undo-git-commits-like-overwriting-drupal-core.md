@@ -1,7 +1,7 @@
 ---
 title: Undo Git Commits Like Overwriting Drupal Core
 description: Instructions on how to undo a Git commit.
-filename: source/_common-tasks/undo-git-commits-like-overwriting-drupal-core.md
+
 ---
 
 ## Overview

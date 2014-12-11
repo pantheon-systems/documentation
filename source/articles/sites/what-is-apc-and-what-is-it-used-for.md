@@ -1,11 +1,9 @@
 ---
 title: What is APC and what is it used for?
 description: Understand Alternative PHP Cache and its uses within the Pantheon workflow.
-categories:
+category:
   - getting-started
-/what-is-apc-and-what-is-it-used-for/
-Metadata
-filename: source/_tools/what-is-apc-and-what-is-it-used-for.md
+
 ---
 
 ## Overview

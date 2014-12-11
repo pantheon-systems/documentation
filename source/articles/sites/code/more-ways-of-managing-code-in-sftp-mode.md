@@ -1,7 +1,7 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
 description: Understand alternative code management options when using SFTP Mode.
-filename: source/_common-tasks/more-ways-of-managing-code-in-sftp-mode.md
+
 ---
 
 ## Overview

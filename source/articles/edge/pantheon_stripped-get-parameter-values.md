@@ -1,8 +1,8 @@
 ---
 title: PANTHEON_STRIPPED GET Parameter Values
 description: Learn how Pantheon's edge cache uses the request URL as the cache key.
-Metadata
-filename: source/_tools/pantheon_stripped-get-parameter-values.md
+category:
+  - developing
 ---
 
 ## Overview

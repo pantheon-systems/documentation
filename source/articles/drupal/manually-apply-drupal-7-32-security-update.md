@@ -1,7 +1,7 @@
 ---
 title: Manually Apply Drupal 7.32 Security Update
 description: Instructions on updating to Drupal 7.32.
-filename: source/_common-tasks/manually-apply-drupal-7-32-security-update.md
+
 ---
 
 If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be able to apply a one-click update in your dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.

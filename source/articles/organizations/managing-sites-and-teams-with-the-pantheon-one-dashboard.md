@@ -3,7 +3,7 @@ title: Managing Sites and Teams with the Pantheon One Dashboard
 description: Learn to add users and sites to your organization.
 category:
   - managing
-filename: source/_guides/managing-sites-and-teams-with-the-pantheon-one-dashboard.md
+
 ---
 
 NOTE: Only organization admins can see the Pantheon One for Agencies dashboard. Regular organization users can create sites and associate them with the organization, from their account dashboard.  

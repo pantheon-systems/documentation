@@ -1,8 +1,8 @@
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git.
-filename: source/_common-tasks/git-faq.md
-tools:
+
+category:
   -
 ---
 

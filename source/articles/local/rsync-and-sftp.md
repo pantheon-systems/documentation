@@ -1,11 +1,10 @@
 ---
 title: rsync and SFTP
 description: Transfer large files using an SFTP client or rsync.
-categories:
+category:
   - getting-started
-/rsync-and-sftp/
-Metadata
-filename: source/_tools/rsync-and-sftp.md
+
+
 ---
 
  ## Overview

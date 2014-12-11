@@ -1,11 +1,10 @@
 ---
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries for Drupal modules on the Pantheon platform.
-categories:
-    - howto
-/external-libraries-on-pantheon/
-Metadata
-filename: source/_tools/external-libraries-on-pantheon.md
+category:
+    - developing
+
+
 ---
 
 ## Overview

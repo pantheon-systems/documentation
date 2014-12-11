@@ -3,7 +3,7 @@ title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
 category:
   - developing
-filename: source/_guides/configuring-settings-php.md
+
 ---
 
  

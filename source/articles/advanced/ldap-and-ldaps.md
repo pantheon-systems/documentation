@@ -1,7 +1,7 @@
 ---
 title: LDAP and LDAPS
 description: Configure LDAP on your Pantheon site.
-categories:
+category:
   - getting-started
 slug: "sites/code"
 

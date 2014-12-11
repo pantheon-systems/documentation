@@ -3,7 +3,7 @@ title: Loading SSH Keys
 description: Learn how to load your public SSH key into your Pantheon account.
 category:
   - getting-started
-filename: source/_guides/loading-ssh-keys.md
+
 ---
 
 ## Overview

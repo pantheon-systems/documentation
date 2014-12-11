@@ -1,9 +1,9 @@
 ---
 title: Importing a WordPress Site
 description: Learn how to import an existing Wordpress site.
-filename: source/_common-tasks/importing-a-wordpress-site.md
-tools:
-  -
+category:
+  - wordpress
+  - getting-started
 ---
 
  ## Overview

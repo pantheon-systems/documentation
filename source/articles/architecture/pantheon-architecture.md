@@ -1,7 +1,7 @@
 ---
 title: Pantheon Architecture
 description: Detailed information about our infrastructure.
-filename: source/_tools/pantheon-architecture.md
+
 draft: true
 ---
 

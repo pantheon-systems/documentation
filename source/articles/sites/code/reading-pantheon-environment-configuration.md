@@ -1,7 +1,7 @@
 ---
 title: Reading Pantheon Environment Configuration
 description: Understand the separation of configuration and code within the Pantheon framework.
-filename: source/_common-tasks/reading-pantheon-environment-configuration.md
+
 ---
 
 ## Overview 

@@ -4,7 +4,7 @@ description: Learn how to update broken links so that the URL references the cor
 category:
   - debugging
   - supporting
-filename: source/_guides/fix-broken-links-that-reference-ip-port-instead-of-domain-name.md
+
 ---
 
 ## Overview

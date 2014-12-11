@@ -3,7 +3,7 @@ title: Developing with SSL
 description: Learn how to develop sites using SSL and HTTPS.
 category:
   - developing
-filename: source/_guides/developing-with-ssl.md
+
 ---
 
 Every free Pantheon development site comes ready to roll with SSL for development. Simply switch your connection method to HTTPS and your `dev-yoursite.gotpantheon.com` domain will work.

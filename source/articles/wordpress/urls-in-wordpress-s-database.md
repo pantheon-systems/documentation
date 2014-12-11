@@ -1,11 +1,9 @@
 ---
 title: URLs in WordPress's Database
 description: Understanding URLs within the WordPress database.
-categories:
+category:
     - getting-started
-permalink: documentation/getting-started/urls-in-wordpress-s-database/
-Metadata
-filename: source/_tools/urls-in-wordpress-s-database.md
+
 ---
 
 ## Summary

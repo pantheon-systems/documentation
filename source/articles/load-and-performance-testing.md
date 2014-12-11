@@ -3,7 +3,7 @@ title: Load and Performance Testing
 description: Learn how to monitor internal execution performance.
 category:
   - going-live
-filename: source/_guides/load-and-performance-testing.md
+
 ---
 
 Load testing a site both prior and post launch is highly recommend to ensure your site is optimally configured.​

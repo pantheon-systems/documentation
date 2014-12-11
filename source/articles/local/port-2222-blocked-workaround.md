@@ -1,7 +1,7 @@
 ---
 title: Port 2222 Blocked Workaround
 description: Instructions for accessing Port 2222.
-filename: source/_common-tasks/port-2222-blocked-workaround.md
+
 ---
 
 ​

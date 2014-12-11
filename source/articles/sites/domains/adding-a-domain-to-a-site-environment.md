@@ -1,7 +1,7 @@
 ---
 title: Adding a Domain to a Site Environment
 description: Learn how to associate a domain to an environment from within the Pantheon dashboard.
-filename: source/_common-tasks/adding-a-domain-to-a-site-environment.md
+
 ---
 
 ## Overview

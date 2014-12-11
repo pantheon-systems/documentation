@@ -1,9 +1,9 @@
 ---
 title: Varnish Caching for High Performance
 description: Benefits and details about using Varnish.
-categories:
+category:
   - getting-started
-filename: source/_tools/varnish-caching-for-high-performance.md
+
 ---
 
 

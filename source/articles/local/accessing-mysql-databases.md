@@ -1,7 +1,9 @@
 ---
 title: Accessing MySQL Databases
 description: Configure and troubleshoot database connections.
-filename: source/_common-tasks/accessing-mysql-databases.md
+
+category:
+  - developing
 ---
 
 ## Overview

@@ -1,9 +1,8 @@
 ---
 title: Importing a Large Site
 description: Lear how to import a large site into Pantheon outside of the Dashboard API.
-filename: source/_common-tasks/importing-a-large-site.md
-tools:
-  -
+category:
+  - getting-started
 ---
 
 ## Overview

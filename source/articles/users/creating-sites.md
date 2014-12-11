@@ -3,7 +3,7 @@ title: Creating Sites
 description: Learn to sign up for a new site on Pantheon.
 category:
   - getting-started
-filename: source/_guides/creating-sites.md
+
 ---
 
 ## If you need to change major Drupal versions,

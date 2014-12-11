@@ -1,12 +1,12 @@
 ---
 title: Non-Standard Files Locations
 description: Learn how to address non-standard file locations from within the Pantheon filesystem. 
-categories:
+category:
     - needs wp
 layout: tool
 /non-standard-files-locations/
-Metadata
-filename: source/_tools/non-standard-files-locations.md
+
+
 ---
 
 Pantheon provides one location for files that are part of your sites content — those that are managed through Drupal upload forms, e.g. user profile pictures: `/sites/default/files`. This is the _only_ location you can use as the Drupal "files" directory.

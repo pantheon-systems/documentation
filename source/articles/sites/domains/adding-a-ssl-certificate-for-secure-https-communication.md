@@ -1,7 +1,8 @@
 ---
 title: Adding a SSL Certificate for Secure HTTPS Communication
 description: Learn how to implement an SSL Certificate and utilize a static IP address.
-filename: source/_common-tasks/adding-a-ssl-certificate-for-secure-https-communication.md
+category:
+  - developing
 ---
 ## Overview of SSL on Pantheon
 

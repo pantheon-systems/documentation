@@ -5,7 +5,7 @@ category:
   - optimizing
 category:
   - Drupal
-filename: source/_guides/optimization-for-pantheon-and-the-cloud.md
+
 ---
 
 <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/3IMk8oYoFsg" width="420"></iframe>  

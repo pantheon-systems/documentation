@@ -4,7 +4,7 @@ description: Detailed information about running custom distributions.
 category:
   - getting-started
   - managing
-filename: source/_guides/running-a-custom-upstream-on-pantheon.md
+
 ---
 
 Pantheon provides support for running three types of custom distribution on the platform:

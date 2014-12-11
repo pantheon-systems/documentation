@@ -1,7 +1,8 @@
 ---
 title: Importing Drush Site Archives with Terminus
 description: Learn how to import a Drush archive using Pantheon's Terminus command-line interface.
-filename: source/_common-tasks/importing-drush-site-archives-with-terminus.md
+category
+  - getting-started
 ---
 
 ## Overview

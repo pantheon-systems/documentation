@@ -1,7 +1,7 @@
 ---
 title: Using IndexDepot With Pantheon Sites
 description: Create and configure IndexDepot and Solr.
-filename: source/_common-tasks/using-indexdepot-with-pantheon-sites.md
+
 ---
 
 ## Overview

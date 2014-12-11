@@ -5,7 +5,7 @@ category:
   - debugging
 category:
   - Drupal
-filename: source/_guides/debugging-slow-performance.md
+
 ---
 
 
