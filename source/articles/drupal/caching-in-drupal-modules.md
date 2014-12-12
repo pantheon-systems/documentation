@@ -3,7 +3,7 @@ title: Caching in Drupal Modules
 description: Configure Drupal's performance and caching settings to make significant improvements.
 category:
   - optimizing
-  - Drupal
+  - drupal
 
 ---
 
