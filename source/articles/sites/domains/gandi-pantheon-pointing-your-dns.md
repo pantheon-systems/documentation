@@ -8,19 +8,19 @@ category:
 ---
 
  **NOTE:** This guide assumes you have already registered your domain through Gandi.net.
-#### Your Domains
+## Your Domains
 
 Gandi provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.
 
  ![]()
-#### Domain Configuration Page
+## Domain Configuration Page
 
 The domain portal contains all relevant registration information for your domain. For pointing DNS, we are concerned with the DNS configuration section on the right.
 
 In traditional webhosting, you could often times just point your domain name to your hosts nameservers and, after propagation, all would resolve as desired. Proper resolution for your Pantheon site depends on CNAMEs and A records. To configure these entries, you'll have to edit the DNS Zone Record. Click "Edit the Zone" to proceed to the configuration page.
 
  ![]() ![](https://pantheon-systems.desk.com/customer/portal/attachments/198816)​
-#### Configuring Zone Records on Gandi
+## Configuring Zone Records on Gandi
 
 Gandi requires you to make a copy of your default Zone Record to ensure that you don't botch your default configuration. Click "Make New Version" to create a new version to edit.
 

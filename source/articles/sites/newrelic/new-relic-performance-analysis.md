@@ -1,11 +1,12 @@
 ---
 title: New Relic performance analysis on Pantheon
-description: Learn how to utilize New Relic performance metrics and reports. 
+description: Learn how to utilize New Relic performance metrics and reports.
 category:
   - going-live
 
 ---
 
+## Overview
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 Enabling New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping out support team visualize corresponding performance and symptoms.
@@ -54,7 +55,7 @@ The New Relic Interface provides severals views that display information about v
 4. **Throughput** displays the number of requests per minute.
 5. The **Servers** display shows the number of [DROPs](/documentation/advanced-topics/all-about-application-containers/-all-about-drops), or appservers, associated with the given environment.
 
-## Only logging authenticated users
+## Only Logging Authenticated Users
 
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using Drupal's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as /admin.  
 
@@ -82,28 +83,28 @@ If your site consists of mostly authenticated traffic, it can be useful to exclu
 
 ## Frequently Asked Questions
 
-### How can I share a link to a particular metric?
+#### How can I share a link to a particular metric?
 
 In the lower-right hand corner of a New Relic performance page, click the link labeled **Permalink** . This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/218071)
 
-### How much is New Relic?
+#### How much is New Relic?
 
 Pantheon provides New Relic Standard at no cost. You can upgrade your site monitoring to Professional or above by contacting New Relic through your New Relic interface, and they can provide a quote. Pantheon cannot provide a New Relic quote. Make sure they know you're a Pantheon customer for a discount!
 
-### How does New Relic price Pantheon sites for the Professional service?
+#### How does New Relic price Pantheon sites for the Professional service?
 
 New Relic sites on Pantheon are priced per DROP, rather than by core. For example, a site with three environments with two DROPs in the live environment will be priced as 4 total DROPs.
 
-### Will turning on New Relic slow my site down?
+#### Will turning on New Relic slow my site down?
 
 Basically, no, New Relic will not make your site slower. There is a very small amount of overhead, but for all intents and purposes it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
-### What is the difference between app server response time and browser page load time?
+#### What is the difference between app server response time and browser page load time?
 
 App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), and so forth, and browser page load time measures the additional time of client-side page rendering, DOM processing, how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
-### Can I use my existing New Relic license with my Pantheon Site?
+#### Can I use my existing New Relic license with my Pantheon Site?
 
 Yes you can! Open a support ticket and provide your account ID and license key.
 

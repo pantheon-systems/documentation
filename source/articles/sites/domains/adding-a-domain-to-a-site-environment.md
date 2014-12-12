@@ -4,6 +4,7 @@ description: Learn how to associate a domain to an environment from within the P
 
 ---
 
+## Overview
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
 
 This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/).

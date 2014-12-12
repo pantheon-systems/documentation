@@ -99,7 +99,7 @@ If you need a library not listed on this page, please submit a support ticket in
 
 All library's will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
-## Troubleshooting and FAQ
+## Troubleshooting and FAQs
 
 ### Will you setup and configure the module for me?
 

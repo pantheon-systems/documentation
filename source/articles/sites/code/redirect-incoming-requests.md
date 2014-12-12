@@ -1,17 +1,18 @@
 ---
 title: Redirect Incoming Requests
-description: Learn to redirect requests to an alternate domain name or path. 
+description: Learn to redirect requests to an alternate domain name or path.
 category:
   - going-live
 
 ---
 
+## Overview
 Often, it's useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 
 
 **Note** : Drupal sites on Pantheon technically do not require a sites/default/settings.php file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see [configuring settings.php](/documentation/howto/configuring-settings-php/-configuring-settings-php).
 
-## Why redirect with settings.php or wp-config.php and not .htaccess?
+#### Why redirect with settings.php or wp-config.php and not .htaccess?
 
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
 
@@ -25,7 +26,7 @@ Finally, as settings.php or wp-config.php is parsed very early in the bootstrap 
 
 **Note:** Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the  [Pantheon site's dashboard](/documentation/running-drupal/going-live-and-launching-your-site/).
 
-## Redirect to a common domain
+## Redirect to a Common Domain
 
 While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
@@ -53,7 +54,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
 
 ## Redirecting to HTTPS
 
-### Require SSL for all pages
+### Require SSL for All Pages
 
 If you'd like to put all traffic on your site under HTTPS (a best-practice if you have an SSL cert) you should be checking for the `HTTP_X_SSL` code like so:
 
@@ -68,7 +69,7 @@ If you'd like to put all traffic on your site under HTTPS (a best-practice if yo
       }
     }
 
-### Require SSL for specific pages
+### Require SSL for Specific Pages
 
 If you don't want to have your whole site under HTTPS, we recommend using a secure subdomain (e.g. secure.yoursite.com). Mixed-mode secure sessions are vulnerable. There are also edge cases with caching that can create bugs with mixed-mode SSL. Putting the secure pages on a secure domain prevents confusion in caching between secure/insecure content.
 
@@ -87,7 +88,7 @@ You can implement a secure domain for a specific set of page with Drupal modules
       }
     }
 
-### Require SSL and standardize domain
+### Require SSL and Standardize Domain
 
 If you want to use SSL everywhere and standardize on your domain, you can combine this kind of logic into a single block:
 
@@ -103,7 +104,7 @@ If you want to use SSL everywhere and standardize on your domain, you can combin
       }
     }
 
-### Require SSL everywhere except specific pages
+### Require SSL Everywhere Except Specific Pages
 
 If you want to use SSL for everything except some specific pages, such as a RSS feed:
 
@@ -173,7 +174,7 @@ The same technique works for single subdomain redirects. Just specify the path i
       }
     }
 
-## Redirecting legacy UNIX-style user home folder paths
+## Redirecting Legacy UNIX-Style User Home Folder Paths
 
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 

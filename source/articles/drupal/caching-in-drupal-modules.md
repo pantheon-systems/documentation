@@ -15,33 +15,31 @@ While configuring [Drupal's performance and caching settings](/documentation/run
 Views has a very granular caching system, down to the individual View display. There's no single control that will just turn on views caching, and the caching is off by default. There are three different kinds of user-configurable caching within Views:
 
 <dl>
-	<dt>Query results caching</dt>
-	<dd>Raw query results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.</dd>
-	<dt>Rendered output caching</dt>
+	<dt>Query Results Caching</dt>
+	<dd>Raw Query Results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.</dd>
+	<dt>Rendered Output Caching</dt>
 	<dd>Generated markup, which should be cached for as long as possible (if the query changes, the output will be refreshed)</dd>
-	<dt>Block caching</dt>
+	<dt>Block Caching</dt>
 	<dd>If you're generating a block, this will expose the block to Drupal's built-in block caching.</dd>
 </dl>
 
-To configure Views caching:
+### Configure Views Caching
 
-- Go to /admin/structure/views/
-- Edit the View in question
-- Select the Display
-- Click Advanced
-- Next to Caching, click to edit
-- Choose Time-based Caching and click Apply
-- Rendered output: (something other than Never cache)
-- Query results: (something other than Never cache)
+1. Go to /admin/structure/views/
+2. Edit the View in question.
+3. Select the display and click **Advanced**.
+4. Click the option next to Caching.
+5. Choose **Time-Based Caching** and click **Apply**.  
+  Rendered output: (something other than Never cache)  
+  Query results: (something other than Never cache)
 
-To configure Views block caching, which will only work if Drupal is caching blocks:
+### Configure Views Block Caching
 
-- Go to /admin/structure/views/
-- Edit the View in question
-- Select the Display
-- Click Advanced
-- Next to Block caching, click to edit
-- Block caching type - choose the status for Drupal's built-in block caching method
+1. Go to /admin/structure/views/
+2. Edit the View in question.
+3. Select the block display and click Advanced.
+4. Click the option next to Block Caching.
+5. Block Caching Type: Choose an option for Drupal's built-in block caching method.
 
 ## Views Caching Plugins
 

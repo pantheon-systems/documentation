@@ -50,13 +50,13 @@ At this point, you are all set and can administer your database. There will be a
 
 ## Troubleshooting
 
-#### Database Credentials are No Longer Valid
+### Database Credentials are Invalid
 
 The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, copy the new information from the site's dashboard.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/224670)​
 
-#### Database is Reaped
+### Database is Reaped
 
 To conserve resources, environments will be spun down after about two hours of inactivity. If your site is in  sleep mode you may get the following error:
 

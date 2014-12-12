@@ -40,7 +40,7 @@ A patch is available [here.](https://drupal.org/node/1369736#comment-5644064)
 
 ## Frequently Asked Questions
 
-### Can Pantheon provide, publish or support SPF records?
+### Can Pantheon provide, publish, or support SPF records?
 
 As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, so at this time we’re not in a position to do that due to sustainably.
 
