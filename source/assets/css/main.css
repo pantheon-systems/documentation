@@ -136,18 +136,20 @@ img {
 
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #FE4A45;
-  background-color: transparent;
+  color: #FFF;
+  background-color: #FE4A45;
   border-color: #FE4A45;
   margin-top: 30px;
   font-weight: 700;
+  width: 100%;
+  padding: 15px;
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
   color: #fff;
   background-color: #FE4A45;
-  border-color: #FE4A45;
+  border-color: #000;
 }
 
 /* Inverted outline button (white on dark) */
@@ -686,7 +688,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
   /* Widen the fixed sidebar again */
   .pio-docs-sidebar.affix-bottom,
   .pio-docs-sidebar.affix {
-    width: 292px;
+    width: 280px;
   }
 }
 
