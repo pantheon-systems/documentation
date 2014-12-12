@@ -22,7 +22,7 @@ Pantheon supports Drupal 6 and 7, as well as development sandboxes for Drupal 8.
 
 ## How does Pantheon work with DNS?
 
-Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/articles/running-drupal/going-live-and-launching-your-site/-going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider.
+Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider.
 
 In order for your site to begin "listening" for your domain, you must first become a paying customer. We consider placing a real domain on on a site to be the point at which the site starts to go live.
 

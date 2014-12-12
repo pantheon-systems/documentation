@@ -1,10 +1,9 @@
-
 ---
 title: Varnish Caching for High Performance
 description:Configure and verify Varnish is working on your site.
 category:
   - getting-started
-
+  - advanced
 ---
 
 

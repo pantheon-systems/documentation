@@ -1,7 +1,8 @@
 ---
 title: Using SendGrid for Outbound Email
 description: Send email from Pantheon using SendGrid.
-
+category:
+  - advanced
 ---
 
 ## Overview
