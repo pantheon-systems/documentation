@@ -4,7 +4,7 @@ Description: Detailed information about basic PHP errors.
 category:
   - debugging
   - supporting
-  - Drupal
+  - drupal
 
 ---
 

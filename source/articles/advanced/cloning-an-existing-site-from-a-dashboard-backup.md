@@ -3,7 +3,7 @@ title: Cloning an Existing Site from a Dashboard Backup
 description: Make a copy of your existing code, files, and database.
 
 category:
-  -
+  - developing
 ---
 
 ## Clone an Existing Site from a Dashboard Backup

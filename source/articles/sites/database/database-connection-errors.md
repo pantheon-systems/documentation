@@ -5,7 +5,7 @@ category:
   - supporting
   - debugging
 category:
-  - Drupal
+  - drupal
 
 ---
 

@@ -1,9 +1,8 @@
 ---
 title: Going Live
-description: Best practices for preparing your site launch.
-
+description: Best practices for preparing your site launch
 category:
-		- going-live
+	- going-live
 ---
 
 ## Preparing for Your Site Launch

@@ -3,7 +3,6 @@ title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon's technologies.
 category:
   - getting-started
-    filename:source/_guides/required-reading-essential-pantheon-documentation.md
 ---
 
 ## Overview

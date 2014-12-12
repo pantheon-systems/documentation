@@ -4,7 +4,7 @@ description: Learn how to identify common problems with performance speeds and d
 category:
   - debugging
 category:
-  - Drupal
+  - drupal
 
 ---
 

@@ -4,7 +4,7 @@ description: Apply and debug core updates.
 category:
   - supporting
   - debugging
-  - Drupal
+  - drupal
 
 ---
 

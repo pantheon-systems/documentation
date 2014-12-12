@@ -4,7 +4,7 @@ description: A list of Pantheon's known limitations.
 category:
   - getting-started
 category:
-  - Drupal
+  - drupal
 
 ---
 
