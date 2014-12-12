@@ -4,7 +4,7 @@
 
 /*!
  * JavaScript for Pantheon's docs (http://getpantheon.com)
- * Copyright 2011-2014 Twitter, Inc.
+ * Copyright 2014 Pantheon Systems, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see http://creativecommons.org/licenses/by/3.0/.
  * Attribution to Twitter Bootstrap (http://getbootstrap.com)
