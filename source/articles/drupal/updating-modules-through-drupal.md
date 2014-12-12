@@ -10,7 +10,10 @@ category:
 ---
 
 ## Updating Modules Through Drupal
-Drupal has a very good, built-in system for updating contributed modules through the administrative interface.
+Drupal has a very good, built-in system for updating contributed modules through the administrative interface.
+
+Note: This article does not apply to Drupal 6.
+
 1. Log in to Pantheon, and choose the site you want to update.
 2. Once you’re in that site’s Dashboard, click the Code tab in the Dev environment.
 3. Make sure  SFTP mode is selected.  
