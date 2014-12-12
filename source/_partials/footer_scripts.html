@@ -14,7 +14,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-20272439-5', 'auto');
+  ga('create', '{{ site.google_analytics_tracking_id }}', 'auto');
   ga('send', 'pageview');
 
   </script>
@@ -22,4 +22,4 @@
   <script type="text/javascript">
   document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
   </script>
-  <script>Munchkin.init('316-GSV-089');</script>
+  <script>Munchkin.init('{{ site.marketo_munchkin_id}}');</script>
