@@ -1,0 +1,5 @@
+services:
+    sculpin_content_types.types.documents.collection.sorter:
+        class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
+        arguments:
+             - title

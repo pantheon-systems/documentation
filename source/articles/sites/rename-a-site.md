@@ -8,7 +8,7 @@ description: Learn how to configure and use PHPMyAdmin to administrate databases
 
 ## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to get this via github. can review the [Accessing MySQL database](/articles/advanced-topics/accessing-mysql-databases/) for your site.
+The recommended way to get a copy of PHPMyAdmin is to get this via github. can review the [Accessing MySQL database](/articles/local/accessing-mysql-databases/) for your site.
 
     $ git clone https://github.com/phpmyadmin/phpmyadmin.git
 

@@ -14,7 +14,7 @@ Pantheon’s flexible infrastructure does not restrict protocols or ports used f
 
 ## LDAP and LDAPS (LDAP over SSL)
 
-Both LDAP and LDAPS are supported on Pantheon. For more information, see our article [LDAP and LDAPS on Pantheon](/articles/developing-on-pantheon/ldap-and-ldaps-on-pantheon/).
+Both LDAP and LDAPS are supported on Pantheon. For more information, see our article [LDAP and LDAPS on Pantheon](/articles/sites/code/ldap-and-ldaps-on-pantheon/).
 
 ## Shibboleth and SimpleSAMLphp
 

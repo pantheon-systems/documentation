@@ -10,7 +10,7 @@ category:
 
 [CloudFlare](https://www.cloudflare.com) is awesome and we highly recommend them. Here's a list of benefits:
 
-- A hybrid [Content Delivery System](/articles/advanced-topics/content-delivery-network-cdn-for-file-distribution/) (CDN) & DNS host, providing your website to visitors around the world faster from multiple locations.
+- A hybrid [Content Delivery System](/articles/drupal/content-delivery-network-cdn-for-file-distribution/) (CDN) & DNS host, providing your website to visitors around the world faster from multiple locations.
 - CloudFlare's optimizer enables your site to load faster through asynchronous resource loading, browser optimization, and caching.
 - Provides an impressive security layer shielding your site from malicious scripts, DDOS attacks, and other internet evils.
 
@@ -21,7 +21,7 @@ Be sure that you have:
 
 - A registered domain name
 - The ability to modify your domain's nameservers
-- [A paid Pantheon plan](/articles/howto/selecting-a-plan/)
+- [A paid Pantheon plan](/sites/settings/howto/selecting-a-plan/)
 
 ## CloudFlare Setup
 

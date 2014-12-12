@@ -15,9 +15,9 @@ category:
 
 ## Steps
 
-1. [Start](/articles/getting-started/backup-creation/-creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
-2. [Relax](/articles/getting-started/backup-creation/-creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
-3. After completion, you can [access your backups.](/articles/getting-started/backup-creation/-creating-a-backup#access)
+1. [Start](/articles/sites/backups/backup-creation/-creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
+2. [Relax](/articles/sites/backups/backup-creation/-creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
+3. After completion, you can [access your backups.](/articles/sites/backups/backup-creation/-creating-a-backup#access)
 
 ![Create Backup](https://pantheon-systems.desk.com/customer/portal/attachments/305275)
 
@@ -37,7 +37,7 @@ The newest backup will appear at the top of the list, with the name of the envir
 
 Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
 
-Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/articles/howto/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
+Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
 
 **Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
 
@@ -49,7 +49,7 @@ Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
 ### How do I restore from my site from a full environment backup? 
 
-In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/articles/howto/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/articles/sites/backups/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
 
 #### How long does a backup take? 
 
@@ -57,7 +57,7 @@ This depends on how much content you have. When you are doing a full environment
 
 #### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard but this requires a site to have an associated plan. See [selecting a plan](/articles/howto/selecting-a-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard but this requires a site to have an associated plan. See [selecting a plan](/articles/sites/settings/selecting-a-plan/) for details about site plans on Pantheon.
 
 #### What timezone is the backup time marked in?
 

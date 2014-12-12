@@ -197,7 +197,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
-​To learn more, see [using the Pantheon workflow](/articles/howto/using-the-pantheon-workflow/).
+​To learn more, see [using the Pantheon workflow](/articles/sites/code/using-the-pantheon-workflow/).
 
 #### Why is robots.txt is disallowing crawlers to my Live environment?
 

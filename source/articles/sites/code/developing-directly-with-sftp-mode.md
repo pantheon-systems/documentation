@@ -73,7 +73,7 @@ The main directory listing includes Pantheon, logs, environment data and configu
 There are two ways to get access to your Pantheon site via SFTP. One method is by using you Pantheon account's dashboard password.  
 
 
-Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/articles/getting-started/loading-ssh-keys/-loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/articles/howto/generating-ssh-keys/-generating-ssh-keys) you can get more information on the wiki.
+Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/articles/users/loading-ssh-keys/-loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/articles/users/generating-ssh-keys/-generating-ssh-keys) you can get more information on the wiki.
 
 ## Committing SFTP Changes
 
@@ -101,13 +101,13 @@ The blocking UI will appear for all users on the team who are looking at that en
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- [PHPStorm](/articles/howto/configuring-jetbrains-phpstorm-ide-with-pantheon/)
-- [FileZilla](/articles/howto/filezilla-on-pantheon/)
-- [WinSCP](/articles/howto/using-winscp-on-pantheon/)
+- [PHPStorm](/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon/)
+- [FileZilla](/articles/local/filezilla-on-pantheon/)
+- [WinSCP](/articles/local/using-winscp-on-pantheon/)
 
 
 ## Troubleshooting
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/articles/howto/using-the-pantheon-workflow/-using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.
+This is by design. Please read [this section](/articles/sites/code/using-the-pantheon-workflow/-using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.

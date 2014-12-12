@@ -32,7 +32,7 @@ There's a wide array of MySQL clients that can be used, including [MySQL Workben
 
 ## SSH Tunneling
 
-Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to setup tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/articles/advanced-topics/ssh-tunnels-for-secure-connections-to-pantheon-services/).
+Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to setup tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/).
 
 ## Troubleshooting MySQL Connections
 
@@ -48,11 +48,11 @@ This indicates that there's an issue connecting to the Pantheon database. There 
 
 Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your dashboard will also report this as an error.  
 
-If you've overwritten core, see [Core Updates](/articles/running-drupal/drupal-core-updates/-core-updates) for instructions on how to get back to Pressflow.
+If you've overwritten core, see [Core Updates](/articles/drupal/drupal-core-updates/-core-updates) for instructions on how to get back to Pressflow.
 
 #### 2. Non-Standard Bootstraps
 
-If you need to access the MySQL database credentials outside of Drupal, or need to implement the Domain Access module, see [Read Pantheon Environment Configuration](/articles/howto/reading-pantheon-environment-configuration/-read-pantheon-environment-configuration).
+If you need to access the MySQL database credentials outside of Drupal, or need to implement the Domain Access module, see [Read Pantheon Environment Configuration](/articles/sites/code/reading-pantheon-environment-configuration/-read-pantheon-environment-configuration).
 
 ## Frequently Asked Questions
 
