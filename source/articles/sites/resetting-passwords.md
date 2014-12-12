@@ -25,4 +25,4 @@ If you still can’t get access to your site using password reset, for example i
 
     drush @pantheon.SITENAME.ENV user-login
 
-For further information about using Drush with Pantheon, see our article on the [Drush command-line utility](/documentation/advanced-topics/drush-command-line-utility/).
+For further information about using Drush with Pantheon, see our article on the [Drush command-line utility](/articles/advanced-topics/drush-command-line-utility/).

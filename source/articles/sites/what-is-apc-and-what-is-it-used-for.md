@@ -15,7 +15,7 @@ Pantheon provides APC by default across all plans, but the size of the APC memor
 
 #### Can APC be used as a cache backend on Pantheon?
 
-While APC can be used as an explicit cache backend for Drupal using the [APC module](http://drupal.org/project/apc "APC project page on drupal.org"), it's not recommended as a Drupal cache backend due to its inability to span multiple server environments and less than optimal performance. Instead, Pantheon provides  [Redis as a caching backend](/documentation/howto/redis-as-a-caching-backend/ "Redis as a caching backend
+While APC can be used as an explicit cache backend for Drupal using the [APC module](http://drupal.org/project/apc "APC project page on drupal.org"), it's not recommended as a Drupal cache backend due to its inability to span multiple server environments and less than optimal performance. Instead, Pantheon provides  [Redis as a caching backend](/articles/howto/redis-as-a-caching-backend/ "Redis as a caching backend
 "), which has better performance.
 
 #### What happens if the APC memory cache is too small?
@@ -24,7 +24,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 
     Warning: require_once(): Unable to allocate memory for pool.
 
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.getpantheon.com/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/-enabling-new-relic "Enabling New Relic") to log and visualize performance.
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.getpantheon.com/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/articles/howto/new-relic-performance-analysis-on-pantheon/-enabling-new-relic "Enabling New Relic") to log and visualize performance.
 
 #### How can I determine what my current APC settings are?
 

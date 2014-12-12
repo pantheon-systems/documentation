@@ -9,7 +9,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 
 ## Archive Your Live Code/Files/Database
  *Prerequisites:**  
- [Current drush aliases](/documentation/advanced-topics/drush-command-line-utility/-using-drush-on-pantheon)
+ [Current drush aliases](/articles/advanced-topics/drush-command-line-utility/-using-drush-on-pantheon)
 
 1. From the command line, run [the drush ard](http://www.drushcommands.com/drush-6x/archive/archive-dump) command against the live environment.
 2. Set the destination parameter to include a file name.  

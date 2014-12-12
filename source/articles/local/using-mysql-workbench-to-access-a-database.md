@@ -8,7 +8,7 @@ description: Use MySQL Workbench for creating, executing, and optimizing SQL que
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment that you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's dashboard. For more detailed information, review [Accessing MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) for your site.
+Start by getting the MySQL connection for the environment that you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's dashboard. For more detailed information, review [Accessing MySQL database](/articles/advanced-topics/accessing-mysql-databases/) for your site.
 
 ## Create a New MySQL Connection
 

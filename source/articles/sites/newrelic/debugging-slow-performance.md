@@ -15,7 +15,7 @@ When your site is fast, everybody wins. When it’s slow, nobody's happy... so h
 
 ## Every PHP Error Slows Execution
 
-An often ignored cause of bad performance is [PHP errors within site code](/documentation/getting-started/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
+An often ignored cause of bad performance is [PHP errors within site code](/articles/getting-started/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
 
 Here's a graphic example of how PHP errors can slow down a site. This benchmark was performed with [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of watchdog before each test to avoid tainting results from the aggregate.  
@@ -91,11 +91,11 @@ Turning off error reporting suppresses the symptom, not the problem, and PHP exe
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/200891)  
 
 
-Learn more about [debugging sites with log files](/documentation/advanced-topics/debugging-sites-with-log-files/).
+Learn more about [debugging sites with log files](/articles/advanced-topics/debugging-sites-with-log-files/).
 
 ## Too Many Database Queries
 
-The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/documentation/howto/new-relic-performance-analysis-on-pantheon/) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
+The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/articles/howto/new-relic-performance-analysis-on-pantheon/) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
 
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
@@ -114,10 +114,10 @@ Non-optimized caching also is a huge problem. If you’re not caching anonymous 
 If your cache lifetime is set to something that doesn’t make sense for your traffic, like if only get one hit per hour yet only have a 5 minute cache? That’s not enough to help.  
 
 
-See our [guidelines on Drupal's performance settings](/documentation/running-drupal/drupal-s-performance-and-caching-settings/) for more details.  
+See our [guidelines on Drupal's performance settings](/articles/running-drupal/drupal-s-performance-and-caching-settings/) for more details.  
 
 
-Other caching systems that aren’t on by default that should be enabled include [block caching](/documentation/running-drupal/drupal-s-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren’t on by default that should be enabled include [block caching](/articles/running-drupal/drupal-s-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 ## Using the Database to Cache
 
@@ -130,7 +130,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 Also note the impact of watchdog INSERTs - this is why you should fix your PHP errors.  
 
 
-One of the services Pantheon offers is [redis as a caching backend](/documentation/howto/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
+One of the services Pantheon offers is [redis as a caching backend](/articles/howto/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
 
 ## Not Enough Traffic
 
@@ -142,9 +142,9 @@ The next problem is when a site doesn’t have enough traffic, which may seem pa
 
 There are a large number of caches involved in every single request, including:
 
-- [Varnish](/documentation/advanced-topics/varnish-caching-for-high-performance/) - spread out across multiple servers, and the cache is not shared between servers.
-- [APC](/documentation/advanced-topics/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
-- [Drupal](https://drupal.org/node/326504) and [redis](/documentation/howto/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
+- [Varnish](/articles/advanced-topics/varnish-caching-for-high-performance/) - spread out across multiple servers, and the cache is not shared between servers.
+- [APC](/articles/advanced-topics/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
+- [Drupal](https://drupal.org/node/326504) and [redis](/articles/howto/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 ## Too much traffic
 
@@ -154,7 +154,7 @@ Of course, too much site traffic can be a problem if you just don't have enough 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.  
 
 
-If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/documentation/howto/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Enterprise](https://www.getpantheon.com/enterprise) is an option - and the sky’s the limit.
+If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/articles/howto/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Enterprise](https://www.getpantheon.com/enterprise) is an option - and the sky’s the limit.
 
 <style type="text/css">.raw_data th {
   font-weight: bold;

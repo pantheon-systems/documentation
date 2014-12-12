@@ -25,7 +25,7 @@ Of course, people still need to reach your site if they type in the bare domain 
 
 The simplest and most reliable option is to use a service through your DNS provider to redirect requests for your bare domain to the www subdomain. Most DNS services — even bargain operators like GoDaddy — offer this as a feature. This is preferable because it will ensure that the universe of bookmarks and SEO links for your site are all built up as www urls, not the bare domain.
 
-If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
+If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/articles/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
 
 ## Advanced DNS Services
 

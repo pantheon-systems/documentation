@@ -7,9 +7,9 @@ description: Learn how to associate a domain to an environment from within the P
 ## Overview
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
 
-This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/).
+This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/articles/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/).
 
-For general information about launching your site, see [Going Live and Launching Your Site](/documentation/running-drupal/going-live-and-launching-your-site/).
+For general information about launching your site, see [Going Live and Launching Your Site](/articles/running-drupal/going-live-and-launching-your-site/).
 
 ## Add a Domain to a Site Environment
 
@@ -49,7 +49,7 @@ This will not change your DNS configuration. However, if your domain's DNS is st
 
 * You must add every domain (hostname) to the site environment that you want Pantheon to be able to serve. Automatic resolution of domains and wildcards are not supported.
 
-* You must have a paying plan in order to add a domain to a site environment. For more information, see [Selecting a Plan](/documentation/howto/selecting-a-plan/).
+* You must have a paying plan in order to add a domain to a site environment. For more information, see [Selecting a Plan](/articles/howto/selecting-a-plan/).
 
 * A specific domain or subdomain can only be associated with one environment at any time. You can associate any combination of domains or subdomains, but you can't associate a specific domain or subdomain simultaneously on two separate site environments. You could associate domain.com with one site and archive.domain.com with another. Therefore, the following is possible:
 

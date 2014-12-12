@@ -9,7 +9,7 @@ description: Configure and troubleshoot MySQL connections.
 
 ## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to download it via Github. You can review our instructions for [Accessing MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) for your site.
+The recommended way to get a copy of PHPMyAdmin is to download it via Github. You can review our instructions for [Accessing MySQL database](/articles/advanced-topics/accessing-mysql-databases/) for your site.
 
     $ git clone https://github.com/phpmyadmin/phpmyadmin.git
 

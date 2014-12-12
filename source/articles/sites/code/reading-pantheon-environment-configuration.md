@@ -43,7 +43,7 @@ If you are using a common CMS framework the code you need to load this configura
 
 ## Drupal 7 and Drupal 8
 
-**Note:** Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/documentation/howto/configuring-settings-php/-configuring-settings-php) for details.
+**Note:** Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/articles/howto/configuring-settings-php/-configuring-settings-php) for details.
 
 Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this would be done in settings.php.
 
@@ -78,4 +78,4 @@ Domain Access requires [customization of settings.php](http://drupal.org/node/10
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information see [configuring wp-config.php](/documentation/getting-started/configuring-wp-config-php/).
+For more information see [configuring wp-config.php](/articles/getting-started/configuring-wp-config-php/).

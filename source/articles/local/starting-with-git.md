@@ -35,7 +35,7 @@ If everything worked you should see Git fetching the data:
 
 ![Git Clone During](https://pantheon-systems.desk.com/customer/portal/attachments/27623)
 
-If you run into permission problems, check your [SSH key](/documentation/getting-started/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
+If you run into permission problems, check your [SSH key](/articles/getting-started/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
 
 ## Make a Change
 
@@ -106,4 +106,4 @@ For further learning, we recommend checking out the following resources:
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [SourceTree - Git GUI client](http://www.sourcetreeapp.com/)
 
-For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/documentation/advanced-topics/git-faq/)
+For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/articles/advanced-topics/git-faq/)

@@ -61,7 +61,7 @@ category:
 
  ![DNS dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/49520)
 #### Setting Up the Zone Record
-The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/documentation/running-drupal/going-live-and-launching-your-site/-going-live) documentation page. 
+The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/articles/running-drupal/going-live-and-launching-your-site/-going-live) documentation page. 
 
 
 **Note: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.**  

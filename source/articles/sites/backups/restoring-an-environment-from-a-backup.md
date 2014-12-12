@@ -56,7 +56,7 @@ Once you have the downloaded parts and/or links, navigate to the target environ
 Once the URL or File is specified, click Import for each backup part to start the process.  
 
 
-Once the content has been uploaded, you will have to import the Code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/documentation/advanced-topics/git-faq/#how-to-revert-or-undo-changes).  
+Once the content has been uploaded, you will have to import the Code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/articles/advanced-topics/git-faq/#how-to-revert-or-undo-changes).  
 
 
-If the code belongs to a different site, then you will need to determine your best strategy. You can take the Code archive, remove the .git directory and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you could attempt to merge the old git repository history with the new; see the [Git FAQ on importing an existing site with history](/documentation/advanced-topics/git-faq/#importing-existing-git-history).
+If the code belongs to a different site, then you will need to determine your best strategy. You can take the Code archive, remove the .git directory and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you could attempt to merge the old git repository history with the new; see the [Git FAQ on importing an existing site with history](/articles/advanced-topics/git-faq/#importing-existing-git-history).

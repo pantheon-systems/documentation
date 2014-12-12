@@ -77,8 +77,8 @@ Another very effective solution is to leverage a service such as [EasyCron](http
 The most common causes are:
 
 - Missing sites/default/settings.php
-- [PHP fatal errors](/documentation/getting-started/php-errors-and-exceptions/)
-- [Invalid redirection logic in settings.php](/documentation/howto/redirect-incoming-requests/)
+- [PHP fatal errors](/articles/getting-started/php-errors-and-exceptions/)
+- [Invalid redirection logic in settings.php](/articles/howto/redirect-incoming-requests/)
 - Setting a cron key in Elysia Cron's settings: admin/config/system/cron/settings
 
 ### What is the Maximum Execution Time of Cron?
