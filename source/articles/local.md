@@ -16,10 +16,10 @@ As an alternative, if you're looking for self-contained local development soluti
 
 At a high level, you'll need:
 
-- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/articles/advanced-topics/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
+- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/articles/architecture/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
 - Git client for tracking code changes
 - SFTP client for transferring files OR rsync
-- [Drush](/articles/advanced-topics/drush-command-line-utility/) (recommended, not required)
+- [Drush](/articles/local/drush-command-line-utility/) (recommended, not required)
 
 To save time, clear the target site environment's cache from the Pantheon dashboard or from Drupal.
 
@@ -33,7 +33,7 @@ Each will need to be transferred from Pantheon to your local environment.
 
 ### Get the Code
 
-[Checkout the codebase using Git.](/articles/getting-started/starting-with-git/)
+[Checkout the codebase using Git.](/articles/local/starting-with-git/)
 
 ### Get the Database
 
@@ -54,7 +54,7 @@ drush sql-sync-pipe @pantheon.SITENAME.ENV @self
 
 ### Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/articles/advanced-topics/rsync-and-sftp/).
+For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/articles/local/rsync-and-sftp/).
 
 You can use Drush to rsync the files over.
 
@@ -72,7 +72,7 @@ exit
 
 ### Send the Code
 
-Test your changes, then [git commit locally and push to Pantheon](/articles/getting-started/starting-with-git/).
+Test your changes, then [git commit locally and push to Pantheon](/articles/local/starting-with-git/).
 
 ### Send the Database
 

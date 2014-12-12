@@ -36,7 +36,7 @@ When developing a site, it can be useful to directly access the server logs for 
 
 Once connected, several directories will be shown:
 
-- **code** - All executable code; stored in git. Cannot upload code unless site Connection Mode is set to [SFTP mode](/articles/getting-started/developing-on-pantheon-directly-with-sftp-mode/) on Development environment.
+- **code** - All executable code; stored in git. Cannot upload code unless site Connection Mode is set to [SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/) on Development environment.
 - **logs** - Environment's access, error logs. Read only.
   - **newrelic.log** - New Relic log; check if an environment is not logging.
   - **nginx-access.log** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt.
@@ -83,7 +83,7 @@ The short answer is no, syslog is not available. Technically, you can log Drupal
 
 #### Can I access Apache Solr logs?
 
-No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/articles/running-drupal/apache-solr-on-pantheon/).
+No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/articles/drupal/apache-solr-on-pantheon/).
 
 #### My Drupal database logs are huge. Should I disable dblog?
 

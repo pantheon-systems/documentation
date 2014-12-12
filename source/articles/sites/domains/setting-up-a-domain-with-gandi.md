@@ -45,4 +45,4 @@ Change the editing mode to Expert in the dropdown menu on the right.
 
 ## Add Your Domain to Pantheon
 
-**In order for your domain to resolve to your Pantheon site, it will need to be added to your sites Pantheon dashboard. This [helpdesk article](/articles/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site#setting-up-a-domain-with-Pantheon) will walk you through the process.**
+**In order for your domain to resolve to your Pantheon site, it will need to be added to your sites Pantheon dashboard. This [helpdesk article](/articles/drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site#setting-up-a-domain-with-Pantheon) will walk you through the process.**

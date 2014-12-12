@@ -5,7 +5,7 @@ description: Instructions on how to undo a Git commit.
 ---
 
 ## Overview
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/articles/getting-started/required-reading-essential-pantheon-documentation/-required-reading-essential-pantheon-documentation) [our](/articles/advanced-topics/git-faq/-git-faq) [best](/articles/running-drupal/drupal-core-updates/-core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/articles/sites/required-reading-essential-pantheon-documentation/-required-reading-essential-pantheon-documentation) [our](/articles/local/git-faq/-git-faq) [best](/articles/drupal/drupal-core-updates/-core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
 
 A bit of context: To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform.
 

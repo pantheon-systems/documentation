@@ -24,4 +24,4 @@ Click the "Delete" button next to the card you would like to delete. A modal wil
 
 ### Additional Resources
 
-- [Adding a Credit Card to a Specific Site](/articles/howto/add-a-credit-card-to-a-site/-add-a-credit-card-to-a-specific-site)
+- [Adding a Credit Card to a Specific Site](/articles/sites/settings/add-a-credit-card-to-a-site/-add-a-credit-card-to-a-specific-site)

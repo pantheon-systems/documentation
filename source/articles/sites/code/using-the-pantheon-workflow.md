@@ -76,7 +76,7 @@ If we allowed SFTP changes to be applied it would break a lot of functionality o
 1. **Using the Workflow Tools**  
 You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk. /documentation/howto/using-the-pantheon-workflow/
 2. **A hotfix using git**  
-If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/articles/advanced-topics/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
+If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/articles/sites/code/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
 
 ## Other Workflow Operations: Import, Export & Wipe
 
