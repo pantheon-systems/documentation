@@ -3,7 +3,6 @@ title: Debugging sites with log files
 description: Learn to debug sites using log files with Drupal.
 category:
   - developing
-category:
 	- drupal
 
 ---
