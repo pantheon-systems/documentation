@@ -14,7 +14,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 It's a good idea to double-check the conflicted files before going forward, and make sure no bugs were introduced.
 
-### Drupal 7
+## Drupal 7
 
 Run the following commands within your local environment:
 
@@ -22,7 +22,7 @@ Run the following commands within your local environment:
     # resolve conflicts here if needed...
     git push origin master
 
-### Drupal 6
+## Drupal 6
 
 Run the following commands from inside your local Git repository:
 
@@ -30,7 +30,7 @@ Run the following commands from inside your local Git repository:
     # resolve conflicts here if needed...
     git push origin master
 
-### WordPress
+## WordPress
 
 Run the following commands from inside your local Git repository:
 
@@ -52,13 +52,13 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 
 ## Frequently Asked Questions
 
-#### Does Pantheon support Git submodules?
+### Does Pantheon support Git submodules?
 
 We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes.
 
 Right now, the best approach is to add and commit the code to Git as normal files.
 
-#### What are the Git tags?
+### What are the Git tags?
 
     $: git tag
     jenkins-ellis_update_drops_7-3
@@ -76,11 +76,11 @@ The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pa
 
 Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
 
-#### How do I revert or undo changes?
+### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/articles/howto/undo-git-commits-like-overwriting-drupal-core/).
+See [Undo Git commits like overwriting Drupal core](/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
-#### How do I apply a patch from Drupal.org on Pantheon?
+### How do I apply a patch from Drupal.org on Pantheon?
 
 If you want to patch core or a module, you should use Git. You will need to switch from “on server development” if it's enabled.
 
@@ -109,7 +109,7 @@ If you're importing a site that has an existing Git history, you may be able to 
 
 6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run _git log_ from within your repository to view your full history.
 
-#### Can I use Git with On Server Development?
+### Can I use Git with On Server Development?
 
 Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
 
@@ -117,11 +117,11 @@ When you switch to On Server Development, you will not be able to interact with 
 
 If you have On Server Development disabled, you can interact with your code via Git.
 
-#### What version of Git does Pantheon run?
+### What version of Git does Pantheon run?
 
 We are currently running Git 1.7.
 
-#### Why were pushes denied because of changes in sites/default/files?
+### Why were pushes denied because of changes in sites/default/files?
 
 If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
@@ -132,7 +132,7 @@ From within the Drupal root of your site:
 
 The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. If you're on Drupal 6, you'll need to find your starting point by looking at the Git log. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
-#### Why are pushes denied because the remote upstream URL changed?
+### Why are pushes denied because the remote upstream URL changed?
 
 We are updating our infrastructure so that code repositories do not have a single point of failure. To do this, we are moving to a more distributed code server binding model.
 
@@ -146,11 +146,11 @@ If you have created a local clone of your site, you will need to update the defa
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream to something else you will have to change origin in the command above.
 
-#### Why can't I connect to Git?
+### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/articles/howto/generating-ssh-keys/-generating-ssh-keys).
+If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/articles/users/generating-ssh-keys).
 
-#### Why am I being prompted for my password after adding the public key?
+### Why am I being prompted for my password after adding the public key?
 
 This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
@@ -196,7 +196,7 @@ When looking for a commit ID, you can find the last instance where the missing f
 6. Run the Git push command:  
   'git push origin master'
 
-#### How do I fix fast forward errors?
+### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 
@@ -208,19 +208,19 @@ If you're getting errors after committing your reverted changes, make sure you h
     Merge the remote changes (e.g. 'git pull') before pushing again. See the
     'Note about fast-forwards' section of 'git push --help' for details.'
 
-#### I have a Git conflict; can you fix it for me?
+### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/articles/advanced-topics/git-faq/-git-faq#importing-existing-git-history), [Git issues performing core updates](/articles/advanced-topics/git-faq/-git-faq#problems-with-gitignore-conflicts), and [resetting your code to a specific commit](/articles/advanced-topics/git-faq/-git-faq#how-to-revert-or-undo-changes).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/articles/local/git-faq#HowdoIrevertorundochanges?).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
-#### How do I delete a remote branch?
+### How do I delete a remote branch?
 
     'git push origin :branchname'
 
-#### Why isn't every commit shown in the Pantheon dashboard?
+### Why isn't every commit shown in the Pantheon dashboard?
 
 Pantheon uses the following command to display commits in the dashboard:
 

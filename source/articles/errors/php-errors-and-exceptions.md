@@ -90,7 +90,7 @@ Here's a breakdown of what errors are shown and where:
 		</tr>
 	</tbody>
 
-To learn more about PHP error logs, see our article on  [debugging sites with log files](/articles/advanced-topics/debugging-sites-with-log-files/-debugging-sites-with-log-files).
+To learn more about PHP error logs, see our article on  [debugging sites with log files](/articles/sites/debugging-sites-with-log-files/).
 
 ## PHP Errors Slow Down a Site
 

@@ -9,7 +9,7 @@ category:
 [Cygwin](http://cygwin.com/install.html) is a collection of tools which provide a Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment you can use Cygwin to generate the .key and .csr file that are needed to get a SSL certificate from a provider.
 
 ## Getting Started
-Before you begin, you should be sure to take a look at the [Getting an SSL Cert](/articles/howto/adding-a-ssl-certificate-for-secure-https-communication/) documentation. Once you have one through the process of generating the command to get a valid CSR certificate for your domain, you can proceed with the rest of this tutorial.
+Before you begin, you should be sure to take a look at the [Getting an SSL Cert](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) documentation. Once you have one through the process of generating the command to get a valid CSR certificate for your domain, you can proceed with the rest of this tutorial.
 
 ## Download Cygwin
 Get started by downloading the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page. 
@@ -64,4 +64,4 @@ Finally, you can navigate to the home directory within Cygwin's root and get a c
  
 
 ## Complete the Installation
-You can now navigate to the  [Getting an SSL Cert](/articles/howto/adding-a-ssl-certificate-for-secure-https-communication/#getting-the-SSL-certificate) documentation where you can complete the rest of the installation process on Pantheon.
+You can now navigate to the  [Getting an SSL Cert](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#GetanSSLCertificate) documentation where you can complete the rest of the installation process on Pantheon.

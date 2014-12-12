@@ -18,7 +18,7 @@ category:
 
 **You cannot unpack a tarball from Drupal.org; this will overwrite the Pressflow core's auto-configuration feature and your site will lose its database connection.**
 
-If you have overwritten core, see [Undo git commits like overwriting Drupal core](/articles/howto/undo-git-commits-like-overwriting-drupal-core/).
+If you have overwritten core, see [Undo git commits like overwriting Drupal core](/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
 Drupal Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we we will add new features to the Pantheon API module, and deploy bug fixes ahead of a Drupal Core release. Typically, if there’s an update available, you're better off merging it. 
 
@@ -26,7 +26,7 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 
 ## Preparation
 
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream Updates, see  [Undo git commits like overwriting Drupal core](/articles/howto/undo-git-commits-like-overwriting-drupal-core/).
+- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream Updates, see  [Undo git commits like overwriting Drupal core](/articles/local/undo-git-commits-like-overwriting-drupal-core).
 - If the development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
 - If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
 - Change the development environment connection to Git. (NOTE: Changing the connection mode to Git without committing code will delete those changes.)
@@ -38,7 +38,7 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 ![A Pantheon site dashboard with upstream updates available.](https://pantheon-systems.desk.com/customer/portal/attachments/357403)
 ![Pantheon dashboard showing upstream update in progress.](https://pantheon-systems.desk.com/customer/portal/attachments/357428)
 3. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
-4. If you find errors, you can [<u>revert to the last stable commit</u>](/articles/advanced-topics/git-faq/#how-to-revert-or-undo-changes) using Git.
+4. If you find errors, you can [<u>revert to the last stable commit</u>](/articles/local/git-faq#HowdoIrevertorundochanges?) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
 6. Click “Visit Testing Environment” to test the update against your Live site’s content base.
 ![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://pantheon-systems.desk.com/customer/portal/attachments/357430)
@@ -80,7 +80,7 @@ From within an up-to-date Git clone in your local environment:
     # resolve other conflicts
     git push origin master
 
-For more information on resolving conflicts, see the [Git FAQ page](/articles/advanced-topics/git-faq/-git-faq).
+For more information on resolving conflicts, see the [Git FAQ page](/articles/local/git-faq).
 
 ## Troubleshooting
 

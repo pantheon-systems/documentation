@@ -8,7 +8,7 @@ category:
 ---
 
 ## Overview
-While configuring [Drupal's performance and caching settings](/articles/running-drupal/drupal-s-performance-and-caching-settings/) and using [redis as a Drupal caching backend](/articles/howto/redis-as-a-caching-backend/) will make a significant performance difference, not every module uses Drupal's caching out of the box.
+While configuring [Drupal's performance and caching settings](/articles/drupal/drupal-s-performance-and-caching-settings) and using [redis as a Drupal caching backend](/articles/sites/redis-as-a-caching-backend) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 
