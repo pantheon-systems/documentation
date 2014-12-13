@@ -11,6 +11,7 @@ machine:
 dependencies:
   pre: 
     # Install Drush  
+    - composer install --prefer-source --no-interaction --no-dev
     - composer global require drush/drush:6.2.0
     - composer global require sculpin/sculpin:2.0.x-dev 
     # Install Terminus.
