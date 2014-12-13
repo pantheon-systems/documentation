@@ -2,7 +2,7 @@
 machine:
   php:
     # https://circleci.com/docs/environment#php
-    version: 5.3.10
+    version: 5.5.1
   environment:
     PUUID: 'ed64345a-aa95-4e9e-b919-1fe9e8537ce6'  
     
