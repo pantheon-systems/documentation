@@ -1,10 +1,8 @@
 ---
 title: Debugging Cache
-categories:
+category:
   - getting-started
-/varnish-caching-for-high-performance/
-Metadata
-filename: source/_tools/debuggingcache.md
+
 ---
 
 ## Debugging Cache

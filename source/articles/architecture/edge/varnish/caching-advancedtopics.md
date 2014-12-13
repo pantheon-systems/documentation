@@ -1,8 +1,9 @@
 ---
-title: "Caching: Advanced Topics"
-categories:
+title: Advanced Caching
+description:
+category:
   - getting-started
-filename: source/_tools/cachingadvancedtopics.md
+  
 ---
 
 ## Caching: Advanced Topics

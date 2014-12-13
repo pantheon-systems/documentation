@@ -1,9 +1,8 @@
 ---
 title: Testing Varnish
-
-categories:
+description: Test whether Varnish is working or not.
+category:
   - getting-started
-filename: source/_tools/testingvarnish.md
 ---
 
 ## Test If Varnish Is Working by Reading HTTP Headers
