@@ -81,7 +81,7 @@ done`
 
 ---------------------------  
 This will connect to your Pantheon site's Dev environment, and start uploading your files. If an error occurs  during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to /code/sites/default/files/. You can now start your file upload.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to /code/sites/default/files/. You can now start your file upload.  
 
 
 **Database**  

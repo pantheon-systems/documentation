@@ -20,7 +20,7 @@ No module installation is required; do **not** install the Drupal Varnish module
 
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as requested. If your site sends headers that forbid caching, Varnish won't cache your content.  
 
-See [Drupal's Performance Settings](/articles/running-drupal/drupal-s-performance-and-caching-settings/) for step-by-step instructions on how to optimize your caching configuration.
+See [Drupal's Performance Settings](/articles/drupal/drupal-s-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
 
 ## Verify Varnish is Working on Your Pantheon Site
 

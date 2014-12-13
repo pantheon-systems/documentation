@@ -51,7 +51,7 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 ## Enabling Solr for a Pantheon Site
 
 1. Add the IndexServer from the Dashboard (Settings -> Add-Ons -> Solr)
-2. Make sure you have the [latest version of Drupal](/articles/drupal/drupal-core-updates/-core-updates)
+2. Make sure you have the [latest version of Drupal](/articles/drupal/drupal-core-updates#core-updates)
 3. Add either the Apache Solr Search OR Search API Solr search module to your code base
 4. Enable the Pantheon Apache Solr module
 5. Post the schema.xml using the Pantheon Apache Solr module
