@@ -5,6 +5,7 @@
     "homepage": "https://www.getpantheon.com/",
     "type": "project",
     "require": {
+        "drush/drush": "6.2.0",
         "sculpin/sculpin": "2.*@dev",
 
         "dflydev/embedded-composer-console": "@dev",
