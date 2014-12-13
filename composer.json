@@ -1,4 +1,9 @@
 {
+    "name": "Pantheon Systems",
+    "description": "Documentation for Pantheon",
+    "keywords": ["pantheon", "drupal", "wordpress"],
+    "homepage": "https://www.getpantheon.com/",
+    "type": "project",
     "require": {
         "sculpin/sculpin": "2.*@dev",
 
