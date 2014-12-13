@@ -32,7 +32,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 - For a comprehensive list of MySQL settings [access your database](/articles/advanced-topics/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common-sense libraries available globally.
-- Your containers can access a whitelisted set of [binary tools](/articles/howto/external-libraries-on-pantheon/-external-libraries-on-pantheon-) (e.g. wkhtmltopdf). Contact us if you have specific needs.
+- Your containers can access a whitelisted set of [binary tools](/articles/howto/external-libraries-on-pantheon#external-libraries-on-pantheon-) (e.g. wkhtmltopdf). Contact us if you have specific needs.
 
 ## Performance and Scalability
 

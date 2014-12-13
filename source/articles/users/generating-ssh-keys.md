@@ -16,12 +16,12 @@ To fix this, please edit the user or hostname and remove spaces and/or odd chara
 
 Genrating SSH keys is different for every platform. Please follow the directions that are most appropriate for you below:
 
-1. [MacOS and Linux](/articles/users/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
+1. [MacOS and Linux](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
 
-2. [Windows / Git GUI and OpenSSH](/articles/users/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-openssh)
+2. [Windows / Git GUI and OpenSSH](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-openssh)
 
 <!--<li>
-	<p><a href="/documentation/howto/generating-ssh-keys/-generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
+	<p><a href="/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
 	</li>-->
 ## MacOS and Linux
 
@@ -262,4 +262,4 @@ There are two steps that you can try to fix this error:
 
 #### Server refused to allocate pty
 
-This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/articles/users/generating-ssh-keys/-generating-ssh-keys#message_391).
+This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/articles/users/generating-ssh-keys#generating-ssh-keys#message_391).

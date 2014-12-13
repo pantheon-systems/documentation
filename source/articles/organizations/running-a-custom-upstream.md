@@ -17,5 +17,5 @@ Pantheon provides support for running three types of custom distribution on the 
 
 Organizational and Partner upstreams are available under contractual terms. Please contact Sales or our Partner Program to start the process.
 
-When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/articles/organizations/adding-a-custom-upstream/-adding-a-custom-upstream).  
-If you already have an upstream on the platform, see our guidance for   [Managing Upstreams](/articles/organizations/managing-upstreams/-managing-upstreams).
+When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/articles/organizations/adding-a-custom-upstream#adding-a-custom-upstream).  
+If you already have an upstream on the platform, see our guidance for   [Managing Upstreams](/articles/organizations/managing-upstreams#managing-upstreams).

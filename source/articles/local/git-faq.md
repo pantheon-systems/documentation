@@ -148,7 +148,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 #### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/articles/users/generating-ssh-keys/-generating-ssh-keys).
+If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/articles/users/generating-ssh-keys#generating-ssh-keys).
 
 #### Why am I being prompted for my password after adding the public key?
 
@@ -210,7 +210,7 @@ If you're getting errors after committing your reverted changes, make sure you h
 
 #### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/articles/local/git-faq/-git-faq#importing-existing-git-history), [Git issues performing core updates](/articles/local/git-faq/-git-faq#problems-with-gitignore-conflicts), and [resetting your code to a specific commit](/articles/local/git-faq/-git-faq#how-to-revert-or-undo-changes).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/articles/local/git-faq#git-faq#importing-existing-git-history), [Git issues performing core updates](/articles/local/git-faq#git-faq#problems-with-gitignore-conflicts), and [resetting your code to a specific commit](/articles/local/git-faq#git-faq#how-to-revert-or-undo-changes).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 

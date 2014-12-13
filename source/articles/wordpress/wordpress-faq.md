@@ -9,13 +9,13 @@ category:
 Can I import my site?
 
 
-Yes! Please see our documentation, " [Importing a WordPress Site](/articles/wordpress/importing-a-wordpress-site/-importing-a-wordpress-site)" for step-by-step instructions.  
+Yes! Please see our documentation, " [Importing a WordPress Site](/articles/wordpress/importing-a-wordpress-site#importing-a-wordpress-site)" for step-by-step instructions.  
 
 
 How do I configure wp-config?  
 
 
-See our documentation, " [Configuring wp-config](/articles/wordpress/configuring-wp-config-php/-configuring-wp-config-php-)."  
+See our documentation, " [Configuring wp-config](/articles/wordpress/configuring-wp-config-php#configuring-wp-config-php-)."  
 
 
 Why isn't my status tab displaying a report like my Drupal site does?  
@@ -64,7 +64,7 @@ Pantheon provides a web-scale infrastructure, which includes a super-tuned PHP e
 **Do you support cache backends?**  
 
 
-Yes, we support Redis. Please see [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend/-redis-as-a-caching-backend).  
+Yes, we support Redis. Please see [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend#redis-as-a-caching-backend).  
 
 
 **Which caches do you clear?**  

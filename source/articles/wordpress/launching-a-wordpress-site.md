@@ -80,4 +80,4 @@ You are ready to start development!
 Using the Pantheon Workflow /documentation/howto/using-the-pantheon-workflow/
 
 Developing with SFTP  
-/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode
+/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode

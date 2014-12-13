@@ -10,7 +10,7 @@ category:
 Often, it's useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 
 
-**Note** : Drupal sites on Pantheon technically do not require a sites/default/settings.php file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see [configuring settings.php](/articles/drupal/configuring-settings-php/-configuring-settings-php).
+**Note** : Drupal sites on Pantheon technically do not require a sites/default/settings.php file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see [configuring settings.php](/articles/drupal/configuring-settings-php#configuring-settings-php).
 
 #### Why redirect with settings.php or wp-config.php and not .htaccess?
 

@@ -7,7 +7,7 @@ category:
 ---
 
  ## Overview
- **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/articles/wordpress/wordpress-and-php-sessions/-wordpress-and-php-sessions).
+ **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 
 1. Prepare for import. You will need a zip or tar.gz archive of your site in three separate files:
 
@@ -127,12 +127,12 @@ Using the Pantheon Workflow
 
 Developing with SFTP
 
-<u><a href="/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode</span></span></span></a></u>
+<u><a href="/articles/sites/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode</span></span></span></a></u>
 
  
 
 Going Live
 
-<u><a href="/documentation/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site</span></span></span></a></u>
+<u><a href="/articles/drupal/going-live-and-launching-your-site#going-live-and-launching-your-site"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/running-drupal/going-live-and-launching-your-site#going-live-and-launching-your-site</span></span></span></a></u>
 
  

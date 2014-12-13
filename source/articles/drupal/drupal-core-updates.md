@@ -80,7 +80,7 @@ From within an up-to-date Git clone in your local environment:
     # resolve other conflicts
     git push origin master
 
-For more information on resolving conflicts, see the [Git FAQ page](/articles/advanced-topics/git-faq/-git-faq).
+For more information on resolving conflicts, see the [Git FAQ page](/articles/advanced-topics/git-faq#git-faq).
 
 ## Troubleshooting
 
