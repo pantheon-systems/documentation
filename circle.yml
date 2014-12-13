@@ -12,7 +12,7 @@ dependencies:
   pre: 
     # Install Drush  
     - composer global require drush/drush:6.2.0
-    - composer global require sculpin/sculpin:2.0.*@dev
+    - composer global require sculpin/sculpin:1.0.x-dev 
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus 
     - drush cc drush
