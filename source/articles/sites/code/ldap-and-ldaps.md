@@ -26,7 +26,7 @@ Users have reported success using [https://drupal.org/project/ldap](https://drup
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/articles/running-drupal/private-files/) in your codebase:
+If your LDAP server uses security certificate(s), place them in the [private file directory](/articles/drupal/private-files/) in your codebase:
 
     SITEROOT/private
 
@@ -59,7 +59,7 @@ Additional configurations, such as whether to perform server certificate checks,
 
 For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
 
-For more information about working with settings.php, see [configuring settings.php](/articles/howto/configuring-settings-php/).
+For more information about working with settings.php, see [configuring settings.php](/articles/drupal/configuring-settings-php/).
 
 ## Frequently Asked Questions
 

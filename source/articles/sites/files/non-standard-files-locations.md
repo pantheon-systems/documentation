@@ -1,11 +1,8 @@
 ---
 title: Non-Standard Files Locations
-description: Learn how to address non-standard file locations from within the Pantheon filesystem. 
+description: Learn how to address non-standard file locations from within the Pantheon filesystem.
 category:
-    - needs wp
-layout: tool
-/non-standard-files-locations/
-
+    - files
 
 ---
 

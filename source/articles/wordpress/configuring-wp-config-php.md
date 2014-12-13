@@ -27,7 +27,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/articles/howto/redirect-incoming-requests/-redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (dev, test or live).
+For web only actions, like [redirects](/articles/sites/code/redirect-incoming-requests/-redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (dev, test or live).
 
 <script src="https://gist.github.com/timani/6bd845402c7f8d0939a4.js"></script>
 
@@ -40,11 +40,11 @@ As an example, here's how you can hard-code your Wordpress debug configuration b
 <script src="https://gist.github.com/timani/3e7f882c5ca49709b4e4.js"></script>
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
-See  [Reading the Pantheon Environment configuration](/articles/howto/reading-pantheon-environment-configuration/).
+See  [Reading the Pantheon Environment configuration](/articles/sites/code/reading-pantheon-environment-configuration/).
 
 #### How do I perform redirection?
 
-See  [Redirect Incoming Requests](/articles/howto/redirect-incoming-requests/-redirect-incoming-requests).
+See  [Redirect Incoming Requests](/articles/sites/code/redirect-incoming-requests/-redirect-incoming-requests).
 
 #### Where do I specify database credentials?
 
@@ -57,4 +57,4 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [this](/articles/advanced-topics/importing-an-existing-drupal-site-to-pantheon/-importing-an-existing-site#table-prefixes) article.
+For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon/-importing-an-existing-site#table-prefixes) article.

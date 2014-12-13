@@ -1,9 +1,8 @@
 ---
 title: Content
-tool_type:
-  -
-tool_url:
-tool_image:
+description: TBD.
+category:
+  - none
 ---
 
 ##Account
