@@ -20,6 +20,8 @@ dependencies:
 
   # Install additional test dependencies here (like Casper, Behat, etc).
   override:  
+    # Install the LinkChecker
+    - pip install LinkChecker
     # Build the documentation 
     - sculpin generate
 test:
