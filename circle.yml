@@ -11,7 +11,9 @@ machine:
 dependencies:
   pre: 
     # Install Drush  
-    - composer install --prefer-source --no-interaction --no-dev 
+    - composer --version
+    - composer global require drush/drush:6.2.0
+    - composer global require sculpin/sculpin:2.0.x-dev 		    
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus 
     - drush cc drush
@@ -26,7 +28,7 @@ test:
     # or otherwise. Here's a SimpleTest example.  
   override:
     # Run the link checker
-    - linkchecker http://dev-pantheon-documentation.pantheon.io/ --anchors --no-status --ignore-url=^mailto
+    - linkchecker http://dev-pantheon-documentation.pantheon.io/ --anchors --no-status --ignore-url=^mailto --no-warnings 
   post:
   # Destroy the Pantheon environment
   # - drush psite-edelete $PUUID $PSITE -y
