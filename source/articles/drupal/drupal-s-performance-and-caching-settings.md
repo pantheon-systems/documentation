@@ -7,7 +7,7 @@ category:
 
 ---
 
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/articles/advanced-topics/varnish-caching-for-high-performance/).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/articles/architecture/edge/varnish).
 
 ## Drupal 7 Performance Configuration
 
