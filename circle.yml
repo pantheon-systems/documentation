@@ -10,7 +10,7 @@ dependencies:
   pre: 
     # Install Drush 
     - composer global require drush/drush:6.2.0
-    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+    - composer install
  
     # Install Terminus.
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus 
