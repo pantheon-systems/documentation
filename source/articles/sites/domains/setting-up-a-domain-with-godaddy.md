@@ -23,17 +23,17 @@ category:
 
 
  ![Edit your domain settings](https://pantheon-systems.desk.com/customer/portal/attachments/49495)
-#### Activate your Domain (Optional)
+#### Activate Your Domain (Optional)
 In the event that you need to get email setup to work with your new domain you can select the option that works for you. Pantheon does not provide email hosting services so you will need to make sure to look at the option that best suits your needs.  
 
 
  ![Activate your domain](https://pantheon-systems.desk.com/customer/portal/attachments/49496)
-#### Review your cart
+#### Review Your Cart
 This is the last time you will be able to make any corrections before you become the owner a brand new domain. You should review the cart to make sure everything is correct before you proceed.  
 
 
  ![Review your order](https://pantheon-systems.desk.com/customer/portal/attachments/49497)
-#### Go to you account page
+#### Go to Your Account Page
 After you complete the purchase process you can begin configuring your domain and you will be presented with the order summary. Click the "My Account" button that will take you to your global GoDaddy Account page.   
 
 
@@ -60,15 +60,15 @@ category:
 
 
  ![DNS dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/49520)
-#### Setting up the Zone Record
-The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/documentation/running-drupal/going-live-and-launching-your-site/-going-live) documentation page. 
+#### Setting Up the Zone Record
+The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/articles/drupal/going-live-and-launching-your-site#going-live) documentation page. 
 
 
 **Note: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.**  
  ![Configure the A records](https://pantheon-systems.desk.com/customer/portal/attachments/49503)  
  
 
-##### Add you domain to Pantheon
+##### Add Your Domain to Pantheon
 
 The final step is logging in to your site's dashboard and going to the Live environment's tab. Proceed by clicking the "Edit" button and enter you custom domain name for you site.  
 

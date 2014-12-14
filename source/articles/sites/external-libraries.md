@@ -99,11 +99,11 @@ If you need a library not listed on this page, please submit a support ticket in
 
 All library's will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
-## Troubleshooting and FAQ
+## Troubleshooting and FAQs
 
 ### Will you setup and configure the module for me?
 
-No. It is important to be aware of how a module is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/documentation/howto/pantheon-101-getting-started/).
+No. It is important to be aware of how a module is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/articles/getting-started).
 
 If there is some additional information that may help in the setup we can add it to the documentation.
 

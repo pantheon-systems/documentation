@@ -95,7 +95,7 @@ Drush can be a very quick way to set up a new site by adding modules and themes.
     /srv/bindings/xxx/code/sites/all/modules/media.
     Project media contains 3 modules: media_internet, file_entity, media.
 
-This is hands-down the fastest way to install a suite of modules or themes into your Pantheon project.
+This is the fastest way to install a suite of modules or themes into your Pantheon project.
 
 ## Using Registry Rebuild on Pantheon
 
@@ -139,7 +139,7 @@ For instance, you can automatically update your drush aliases:
 
 ## Transferring Files Using rsync and Drush
 
-Pantheon provides [rsync](/documentation/advanced-topics/rsync-and-sftp/) as an option for transferring the contents of sites/default/files to and from Pantheon.
+Pantheon provides [rsync](/articles/local/rsync-and-sftp/) as an option for transferring the contents of sites/default/files to and from Pantheon.
 
     # Sync files from local to Pantheon site environment.
     drush -r . rsync @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
@@ -184,17 +184,17 @@ As an alternative to `sql-dump`, you can use sql-sync-pipe or drush sql-dump.
 
 ## Drush Commands that Alter Site Code
 
-Commands that alter site code, such as pm-download (dl) will only work on a Dev environment that has been set to [SFTP mode](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/) from the Pantheon dashboard.
+Commands that alter site code, such as pm-download (dl) will only work on a Dev environment that has been set to [SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/) from the Pantheon dashboard.
 
 ## Use Drush to Update Modules on Pantheon
 
-First, make sure the dev environment is set to [SFTP mode](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/). Then:
+First, make sure the dev environment is set to [SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/). Then:
 
     drush @pantheon.SITENAME.dev up --no-core
 
 ## Do Not Use Drush to Update Drupal Core on Pantheon
 
-Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. In short, **do not use Drush to update Drupal core on Pantheon** . For more details, see the [Core Updates](/documentation/running-drupal/drupal-core-updates/) article.
+Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. In short, **do not use Drush to update Drupal core on Pantheon** . For more details, see the [Core Updates](/articles/drupal/drupal-core-updates/) article.
 
 ## Troubleshooting
 

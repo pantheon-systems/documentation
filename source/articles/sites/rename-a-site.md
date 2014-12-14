@@ -6,9 +6,9 @@ description: Learn how to configure and use PHPMyAdmin to administrate databases
 
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and also provides DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it isn't possible to install this on  Windows, Mac OS X and Linux.
 
-#### Download PHPMyAdmin
+## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to get this via github. can review the [Accessing MySQL database](/documentation/advanced-topics/accessing-mysql-databases/) for your site.
+The recommended way to get a copy of PHPMyAdmin is to get this via github. can review the [Accessing MySQL database](/articles/local/accessing-mysql-databases/) for your site.
 
     $ git clone https://github.com/phpmyadmin/phpmyadmin.git
 
@@ -16,7 +16,7 @@ Alternatively you can download a zip archive of the latest code from the github 
 
 **Note:** A repository for PHPMyAdmin exists on sourceforge but we recommend the github version as you get direct access to the code.
 
-#### Configuring a new MyySQL connection
+## Configuring a new MyySQL connection
 
 Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection create a copy of `config.sample.inc.php` and renaming this to `config.php`.
 
@@ -47,25 +47,25 @@ If the permissions are not correctly set, PHPMyAdmin will return an error prompt
 
 After the configuration is complete, the new connection will available on the MySQL Workbench workspace. 
 
-#### Connecting to the database
+#### Connecting to the Database
 
 At this point you are all set and can begin to administer your database as you need to. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
 
 ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/224907)
 
-### Troubleshooting
+## Troubleshooting
 
-#### Unable to connect to remote database
+#### Unable to Connect to Remote Database
 
 The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not grab the new information from the site's dashboard.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/224915)​
 
-##### Database credentials are no longer valid
+#### Database Credentials are Invalid
 
 The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not grab the new information from the site's dashboard.
 
-##### Database is reaped
+#### Database is Reaped
 
 To conserve resources environments will be spun down after about two hours of inactivity. If your site is in a sleep mode you can get the following error:
 

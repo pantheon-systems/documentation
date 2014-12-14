@@ -1,28 +1,21 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing Wordpress site. 
-
+description: Learn how to import an existing Wordpress site.
 category:
-  -
+  - wordpress
+  - getting-started
 ---
 
- **NOTE:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/documentation/advanced-topics/wordpress-and-php-sessions/-wordpress-and-php-sessions).
+ ## Overview
+ **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 
-1. Prepare for import
+1. Prepare for import. You will need a zip or tar.gz archive of your site in three separate files:
 
-You will need a zip or tar.gz archive of your site in three separate files:
+* Codebase - all executable code, plugins, themes, and so forth.
 
-1.
+* Database - contains the content of the site and some site configurations.
 
-Codebase - all executable code, plugins, themes, and so forth.
-
-2.
-
-Database - contains the content of the site and some site configurations.
-
-3.
-
-Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, and so forth.
+* Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, and so forth.
 
 ​There are two ways to import. Direct uploads from your desktop can be 100MB max; using a remote URL can be up to 500MB.
 
@@ -30,7 +23,7 @@ Popular plugins like [Duplicator](http://wordpress.org/plugins/duplicator/) and 
 
 Of course you can make an import archive by hand. You simply dump your existing database into a file ending with “.sql”, and make an archive file (zip or tar.gz) that contains that dump along with all your WordPress code.
 
-2. Add and name a site
+2. Add and Name a Site
 
 After you have created an account, you can log in and will be directed to your dashboard.
 
@@ -128,18 +121,18 @@ It sets a default cache lifetime of 10 minutes, and will automatically clear pos
 **Further Reading:**
 
 Using the Pantheon Workflow  
- [/documentation/howto/using-the-pantheon-workflow/](/documentation/howto/using-the-pantheon-workflow/)
+ [/documentation/howto/using-the-pantheon-workflow/](/articles/sites/code/using-the-pantheon-workflow/)
 
  
 
 Developing with SFTP
 
-<u><a href="/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode</span></span></span></a></u>
+<u><a href="/articles/sites/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode</span></span></span></a></u>
 
  
 
 Going Live
 
-<u><a href="/documentation/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/running-drupal/going-live-and-launching-your-site/-going-live-and-launching-your-site</span></span></span></a></u>
+<u><a href="/articles/drupal/going-live-and-launching-your-site#going-live-and-launching-your-site"><span style="color:#0000FF;"><span id="docs-internal-guid-1dbb1e92-5726-5b99-e61c-33bc84fe656b"><span style="font-size: 15px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">/documentation/running-drupal/going-live-and-launching-your-site#going-live-and-launching-your-site</span></span></span></a></u>
 
  

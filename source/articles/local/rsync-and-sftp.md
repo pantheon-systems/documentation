@@ -98,7 +98,7 @@ Next we will download the `sites/default/settings.php` file into a Drupal instal
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
 
-#### Upload a Directory to Pantheon
+## Upload a Directory to Pantheon
 
 If you need to upload the files directory from a local Drupal installation called Foo in our home directory to a Pantheon site's Test environment `sites/default/files` directory we can use the following commands.
 
@@ -107,7 +107,7 @@ If you need to upload the files directory from a local Drupal installation calle
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
-#### Upload a File to Pantheon
+## Upload a File to Pantheon
 
 Some cases will require you to update a single file on your Pantheon site. Here we will upload the `logo.png` file into a Pantheon site's theme folder.
 
@@ -117,6 +117,6 @@ Some cases will require you to update a single file on your Pantheon site. Here 
        ~/Foo/sites/all/themes/foo/logo.png \
        $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 
-#### Known Issues
+## Known Issues
 
 If you're using rsync to upload a large amount of files, and your _Live_ environment has multiple app-containers, we recommend first uploading to your _Dev_ environment, then using the clone operation in the dashboard to move the files into the other environments. There's a known issue with uploading a large amount of files into a multi-container _Live_ environment where some transfers may fail and temporary files are left in place. Unfortunately this is a silent failure; rsync reports everything transferred successfully.

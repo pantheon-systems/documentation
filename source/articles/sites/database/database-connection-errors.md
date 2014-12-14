@@ -1,14 +1,15 @@
 ---
 title: Database Connection Errors
-description: Understand the causes and solutions for Database Connection Errors.
+description: Understand the causes and solutions for database connection errors.
 category:
   - supporting
   - debugging
 category:
-  - Drupal
+  - drupal
 
 ---
 
+## Overview
 If your site suddenly reverts to install.php, or you see database connection errors like the following:
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/64774)
@@ -53,4 +54,4 @@ However, because the Pantheon environment data is not loaded at this time, any b
 
 You can also use the above to develop Drupal 8 on Pantheon!
 
-Note, if you use any other advanced `settings.php` tricks (e.g. enabling redis), you will need to do this _before_ the snippit in D7, or _after_ in D6 to insure you have a consistent `$conf` array.
+**Note:** If you use any other advanced `settings.php` tricks (e.g. enabling redis), you will need to do this _before_ the snippit in D7, or _after_ in D6 to insure you have a consistent `$conf` array.

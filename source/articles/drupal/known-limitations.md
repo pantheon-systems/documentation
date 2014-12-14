@@ -4,7 +4,7 @@ description: A list of Pantheon's known limitations.
 category:
   - getting-started
 category:
-  - Drupal
+  - drupal
 
 ---
 
@@ -24,7 +24,7 @@ Drupal itself is capable of managing uploaded content into different directories
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your DROPs, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See [the email documentation](/documentation/running-drupal/email-on-pantheon/), for more details and suggestions.
+See [the email documentation](/articles/sites/code/email), for more details and suggestions.
 
 ## Streaming Media
 
@@ -88,4 +88,4 @@ Pantheon does not currently support the [HTTPRL](http://www.drupal.org/project/h
 
 #nginx.conf
 
-Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file. 
+Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.

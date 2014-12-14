@@ -15,7 +15,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+  <title>{% block title %}{{ site.title }} | {{ page.title }}{% endblock %}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="{{ site.url }}/assets/js/src/autoBreadcrumbs.js"></script>
@@ -47,11 +47,10 @@
     {% include("navbar.html") %}
 
         <div class="row main">
-
-                {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
     <!-- /container -->
   {% include("footer_content.html") %}
-  <!--{% include("footer_scripts.html") %}-->
+  {% include("footer_scripts.html") %}
 </body>
 </html>

@@ -6,6 +6,7 @@ category:
 
 ---
 
+## Overview
 In some cases working via `git push` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
 This is why we offer **SFTP mode** . This allows you to develop <me>directly on Pantheon, and can be a major time-saver.</me>
@@ -28,7 +29,7 @@ Every development environment has a toggle to switch between SFTP and Git modes;
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase you will see all the pending changes appear.
 
-### SFTP connection information
+## SFTP Connection Information
 
 To get your SFTP login credentials you can click on the "Connection Info" button. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
 
@@ -67,14 +68,14 @@ There are links to specific guides for other GUI tools at the end of this doc pa
 
 The main directory listing includes Pantheon, logs, environment data and configuration. You're free to take a look there, but your website is in the "code" directory.
 
-### Authenticating
+## Authenticating
 
 There are two ways to get access to your Pantheon site via SFTP. One method is by using you Pantheon account's dashboard password.  
 
 
-Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/documentation/getting-started/loading-ssh-keys/-loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/documentation/howto/generating-ssh-keys/-generating-ssh-keys) you can get more information on the wiki.
+Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/articles/users/loading-ssh-keys#loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/articles/users/generating-ssh-keys#generating-ssh-keys) you can get more information on the wiki.
 
-### Committing SFTP Changes
+## Committing SFTP Changes
 
 Even though you are unable to use git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or to push them to test/live. You should commit early and commit often. As soon as you are happy with a change, make a commit.
 
@@ -96,17 +97,17 @@ The blocking UI will appear for all users on the team who are looking at that en
 
 **ProTip** : Your dashboard will track all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control.
 
-### GUI Tool Guides
+## GUI Tool Guides
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- [PHPStorm](/documentation/howto/configuring-jetbrains-phpstorm-ide-with-pantheon/)
-- [FileZilla](/documentation/howto/filezilla-on-pantheon/)
-- [WinSCP](/documentation/howto/using-winscp-on-pantheon/)
+- [PHPStorm](/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon/)
+- [FileZilla](/articles/local/filezilla-on-pantheon/)
+- [WinSCP](/articles/local/using-winscp-on-pantheon/)
 
 
-### Troubleshooting
+## Troubleshooting
 
-#### I can't write to my codebase on Test or Live!
+### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/documentation/howto/using-the-pantheon-workflow/-using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.
+This is by design. Please read [this section](/articles/sites/code/using-the-pantheon-workflow#using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.

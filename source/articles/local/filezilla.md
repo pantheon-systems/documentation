@@ -11,7 +11,7 @@ category:
 
 ## Getting Started
 
-The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-on-server-development#connecting-via-sftp) for your site.
+The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode#on-server-development#connecting-via-sftp) for your site.
 
 ## Download FileZilla
 
@@ -44,7 +44,6 @@ Select to accept the server's host key for the current session so it is stored i
 **Password-Based:** To get to the Drupal root simply navigate to the `code` directory and you will be able to continue managing your files as normal.
 
  ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/50376)
-#### Create a New Site
 
 Select to accept the server's host key for the current session so it is stored in cache. This will allow you to connect to the server and to manage your files for the current session.
 

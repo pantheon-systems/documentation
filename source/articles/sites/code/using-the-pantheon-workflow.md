@@ -55,7 +55,7 @@ Dealing with changes to your site's configuration can be a challenge in Drupal. 
 
 Drupal core manages database/configuration changes via the use of [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7), and you can too. If you have a custom module, you can add update functions to your .install file which encapsulate your config changes, deploy them along with your code, and run update.php to make the changes in test and live.
 
-### Exporting Configuration
+## Exporting Configuration
 
 A growing array of common configurations are "exportable". In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). [ForumOne created](http://forumone.com/insights/configuration-management-finally-comes-to-wordpress/) the  [WP-CFM plugin](https://github.com/forumone/wp-cfm), which exports bundles of WordPress configuration to .json files in wp-content/config. In Drupal,  [views are easily exported to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code). The  [features module](http://drupal.org/project/features) allows you to export sets of configuration like content types and their associated fields, to code as modules. It is a best practice to take advantage of this. Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system, while in SFTP mode.
 
@@ -65,7 +65,7 @@ Of course, manually making configuration changes as part of your deployment is a
 
 Ultimately, the right answer for managing configuration updates to your site depends on your use-case and comfort-level with these techniques. It's an ongoing debate in the Drupal and WordPress universe, with new solutions being developed all the time.
 
-### Understanding Write Permissions in Test & Live
+## Understanding Write Permissions in Test & Live
 
 Preventing write permissions to the code in the Live environment via SFTP is not a bug but rather a feature and the desired functionality on the platform. We will not allow for changes to code to be made in Live via SFTP because these paths are managed by version control. Uploading the changes to Live directly would result in unstaged changes and this would be problematic as we use version control for code backups and when you pull code between environments.
 
@@ -76,7 +76,7 @@ If we allowed SFTP changes to be applied it would break a lot of functionality o
 1. **Using the Workflow Tools**  
 You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk. /documentation/howto/using-the-pantheon-workflow/
 2. **A hotfix using git**  
-If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/documentation/advanced-topics/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
+If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/articles/sites/code/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
 
 ## Other Workflow Operations: Import, Export & Wipe
 

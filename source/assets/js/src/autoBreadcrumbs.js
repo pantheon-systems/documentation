@@ -6,7 +6,7 @@ function breadcrumbs() {
   bits = new Object;
   var x = 0;
   var stop = 0;
-  var output = "<div class=topnav><a href=/>home</a> » ";
+  var output = "<div class=topnav><a href=/>Home</a> » ";
 
   sURL = location.href;
   sURL = sURL.slice(8,sURL.length);

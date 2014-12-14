@@ -35,15 +35,15 @@ If everything worked you should see Git fetching the data:
 
 ![Git Clone During](https://pantheon-systems.desk.com/customer/portal/attachments/27623)
 
-If you run into permission problems, check your [SSH key](/documentation/getting-started/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
+If you run into permission problems, check your [SSH key](/articles/users/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
 
 ## Make a Change
 
-#### Step 1: Edit a File
+### Step 1: Edit a File
 
 You can now edit your site code using any text editor. We recommend using [a butterfly](http://xkcd.com/378/).
 
-#### Step 2: Add a File
+### Step 2: Add a File
 
 If you want to add a new file to your codebase you will need to tell Git about it. Otherwise, Git will not track the file.
 
@@ -63,7 +63,7 @@ You can then cut and paste the paths to these files when using _git add_.
 
 Sending code to Pantheon is a two-step process with Git. First, you need to commit the files locally. Then you need to "push" them to the Pantheon cloud.
 
-#### Step 1: Commit the Files Locally
+### Step 1: Commit the Files Locally
 
 In order to tell Git the files are ready, you need to commit them. Every commit includes a brief message to this commit so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your change(s).
 
@@ -75,7 +75,7 @@ If you don't specify a message on the command-line, git will open your default t
 
 There is a handy list of Git commands (along with a lot of other documentation) over [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf)
 
-#### Step 2: Send the Changes to Pantheon
+### Step 2: Send the Changes to Pantheon
 
 You have committed the file locally, but you still need to send the changes to Pantheon. To do this you use the push command:
 
@@ -87,13 +87,13 @@ If you have a password on your SSH key, you may need to enter it to authorize th
 
 ![Git Push](https://pantheon-systems.desk.com/customer/portal/attachments/27625)
 
-#### Step 3: View the Changes on Pantheon
+### Step 3: View the Changes on Pantheon
 
 When the push command completes Pantheon instantly deploys the changes to your development server. It's time to check them out.
 
 Go back to your site's dev tab in Pantheon and find the site sidebar. Click on the URL under "Development site" and browse to your changes.
 
-### Additional Resources
+## Additional Resources
 
 For further learning, we recommend checking out the following resources:
 
@@ -106,4 +106,4 @@ For further learning, we recommend checking out the following resources:
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [SourceTree - Git GUI client](http://www.sourcetreeapp.com/)
 
-For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/documentation/advanced-topics/git-faq/)
+For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/articles/local/git-faq/)

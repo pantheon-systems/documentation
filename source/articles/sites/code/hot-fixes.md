@@ -6,7 +6,7 @@ category:
   -
 ---
 
-Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and here's how you do it on Pantheon:
+Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Sometimes it's necessary to push a quick fix without pushing everything that's b
 
 ## Get Into the Right Tag
 
-From within your Git clone, get a quick list of the existing Git tags:
+1. From within your Git clone, get a quick list of the existing Git tags:
 
     #> git tag
     pantheon.initialize
@@ -25,7 +25,7 @@ From within your Git clone, get a quick list of the existing Git tags:
     pantheon_test_3
     pantheon_test_4
 
-Select the highest `live` tag and check it out:
+2. Select the highest `live` tag and check it out:
 
     #> git checkout pantheon_live_1
     Note: checking out 'pantheon_live_1'.

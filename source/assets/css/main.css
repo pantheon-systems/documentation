@@ -35,8 +35,7 @@
   color:#fff;
   font-weight: 700;
   font-size: 1.3em;
-  vertical-align: middle;
-  padding-top: 5px;
+  margin-top: 7px;
 }
 
 .zappy{
@@ -64,10 +63,69 @@ body.row.main {
 }
 
 .topnav {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #000;
-  padding: 0.5em;
+  padding-bottom: 20px;
 }
+
+.search-form {
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+.search a:before {
+  width:6px;
+  height:6px;
+  border:3px solid #c55500;
+  background:transparent;
+  /* css3 */
+  -webkit-border-radius:12px;
+  -moz-border-radius:12px;
+  border-radius:12px;
+}
+
+.search a:after {
+  left:10px;
+  width:3px;
+  height:7px;
+  margin-top:0;
+  /* css3 */
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+
+.search a:hover:before,
+.search a:focus:before,
+.search a:active:before {
+  border-color:#730800;
+  background:transparent;
+}
+
+.search a:hover:after,
+.search a:focus:after,
+.search a:active:after {
+  background:#730800;
+}
+
+.has-feedback .form-control-feedback {
+  top:0px;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+.search-landing {
+  margin-left: 16.6666667%;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  }
 
 
 /* Keep code small in tables on account of limited space */
@@ -78,18 +136,20 @@ body.row.main {
 
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #FE4A45;
-  background-color: transparent;
+  color: #FFF;
+  background-color: #FE4A45;
   border-color: #FE4A45;
   margin-top: 30px;
   font-weight: 700;
+  width: 100%;
+  padding: 15px;
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
   color: #fff;
   background-color: #FE4A45;
-  border-color: #FE4A45;
+  border-color: #000;
 }
 
 /* Inverted outline button (white on dark) */
@@ -186,7 +246,7 @@ body.row.main {
 .pio-docs-footer {
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 100px;
+  margin-top: 40px;
   color: #777;
   text-align: center;
   border-top: 1px solid #e5e5e5;
@@ -628,7 +688,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
   /* Widen the fixed sidebar again */
   .pio-docs-sidebar.affix-bottom,
   .pio-docs-sidebar.affix {
-    width: 292px;
+    width: 280px;
   }
 }
 

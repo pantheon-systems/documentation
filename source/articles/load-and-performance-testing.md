@@ -10,7 +10,7 @@ Load testing a site both prior and post launch is highly recommend to ensure you
 
 ## Before You Begin
 
-You should [Enable New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/-enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.  
+You should [Enable New Relic](/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon#enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.  
 
 
 Next, make sure you have access to a command-line environment, preferably with administrative privileges.  
@@ -29,7 +29,7 @@ For instance, high-performance is the ability to deliver a page in under a secon
 
 ## Verify That Varnish is Working
 
-To verify that the [Varnish](/documentation/advanced-topics/varnish-caching-for-high-performance/-working-with-varnish-on-pantheon) cache is working, the "curl" command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+To verify that the [Varnish](/articles/architecture/edge/varnish-caching-for-high-performance#working-with-varnish-on-pantheon) cache is working, the "curl" command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
     $ curl -I http://live-yoursite.gotpantheon.com
     HTTP/1.1 200 OK
@@ -47,7 +47,7 @@ To verify that the [Varnish](/documentation/advanced-topics/varnish-caching-for-
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review the [documentation.](/documentation/running-drupal/drupal-s-performance-and-caching-settings/-drupal-s-performance-settings) and consult the [Working With Varnish on Pantheon](/documentation/advanced-topics/varnish-caching-for-high-performance/-working-with-varnish-on-pantheon) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review the [documentation.](/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and consult the [Working With Varnish on Pantheon](/articles/architecture/edge/varnish-caching-for-high-performance#working-with-varnish-on-pantheon) documentation.
 
 **Until Varnish has been correctly configured, you shouldn't worry about further testing.**
 
@@ -133,7 +133,7 @@ As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 p
 
 
     Connection Times (ms)
-                  min mean[+/-sd] median max
+                  min mean[+#sd] median max
     Connect: 60 81 32.5 73 258
     Processing: 411 554 150.2 496 1213
     Waiting: 82 131 100.5 109 794

@@ -1,24 +1,24 @@
 ---
 title: Importing a Large Site
-description: Lear how to import a large site into Pantheon outside of the Dashboard API. 
-
+description: Lear how to import a large site into Pantheon outside of the Dashboard API.
 category:
-  -
+  - getting-started
 ---
 
+## Overview
 This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).
 * Your site’s code, files, or SQL archive is greater than 500MB (the URL upload import file limit).
 
-####Requirements & Tools
+## Requirements & Tools
 
 1. Intermediate to advanced [Git](http://git-scm.com/) command line interface (CLI) knowledge.
 2. Familiarity with using [bash](http://www.gnu.org/software/bash/) and [rsync](http://rsync.samba.org/) or an FTP program that supports [SFTP](http://en.wikipedia.org/wiki/SFTP).
 3. Intermediate to advanced [MySQL CLI](https://mariadb.com/kb/en/mariadb/documentation/clients-and-utilities/mysql-client/mysql-command-line-client/) knowledge.
 4. Access to the code, database, and files of the site being imported.  
 
-###Create A New Pantheon Site  
+## Create A New Pantheon Site  
 
 From your pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
 
@@ -81,7 +81,7 @@ done`
 
 ---------------------------  
 This will connect to your Pantheon site's Dev environment, and start uploading your files. If an error occurs  during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/documentation/getting-started/developing-on-pantheon-directly-with-sftp-mode/-enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to /code/sites/default/files/. You can now start your file upload.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to /code/sites/default/files/. You can now start your file upload.  
 
 
 **Database**  

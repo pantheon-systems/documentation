@@ -1,9 +1,8 @@
 ---
 title: Going Live
 description: Best practices for preparing your site launch.
-
 category:
-		- going-live
+  - going-live
 ---
 
 ## Preparing for Your Site Launch
@@ -27,7 +26,7 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update core</td>
-			<td class="help"><a href="/documentation/running-drupal/drupal-core-updates/">Core updates</a></td>
+			<td class="help"><a href="/articles/drupal/drupal-core-updates/">Core updates</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>
@@ -37,7 +36,7 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update settings to redirect to a common domain</td>
-			<td class="help"><a href="/documentation/howto/redirect-incoming-requests/#redirect_common">Redirect incoming requests</a></td>
+			<td class="help"><a href="/articles/sites/code/redirect-incoming-requests/#redirect_common">Redirect incoming requests</a></td>
 		</tr>
 	</tbody>
 
@@ -54,7 +53,7 @@ When all code changes are complete, pull the code changes into the Live environm
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Pull code to Live</td>
-			<td class="help"><a href="/documentation/howto/using-the-pantheon-workflow/">Using the Pantheon Workflow</a></td>
+			<td class="help"><a href="/articles/sites/code/using-the-pantheon-workflow/">Using the Pantheon Workflow</a></td>
 		</tr>
 	</tbody>
 
@@ -84,22 +83,22 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Enable New Relic</td>
-			<td class="help"><a href="/documentation/howto/new-relic-performance-analysis-on-pantheon/">Using New Relic on Pantheon</a></td>
+			<td class="help"><a href="/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon/">Using New Relic on Pantheon</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Optimize Performance Settings</td>
-			<td class="help"><a href="/documentation/running-drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
+			<td class="help"><a href="/articles/drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Ensure Varnish caching works</td>
-			<td class="help"><a href="/documentation/advanced-topics/varnish-caching-for-high-performance/">Varnish caching for high performance</a></td>
+			<td class="help"><a href="/articles/drupal/varnish-caching-for-high-performance/">Varnish caching for high performance</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Load test Live environment</td>
-			<td class="help"><a href="/documentation/howto/load-and-performance-testing/">Load and performance testing</a></td>
+			<td class="help"><a href="/articles/load-and-performance-testing/">Load and performance testing</a></td>
 		</tr>
 	</tbody>
 
@@ -116,7 +115,7 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Select a paid plan</td>
-			<td class="help"><a href="/documentation/howto/selecting-a-plan/">Selecting a plan</a></td>
+			<td class="help"><a href="/articles/sites/settings/selecting-a-plan/">Selecting a plan</a></td>
 		</tr>
 	</tbody>
 
@@ -133,7 +132,7 @@ Ensure that your Live environment content is protected by scheduling daily and w
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Schedule backups</td>
-			<td class="help"><a href="/documentation/getting-started/backup-creation/#can-i-get-automatic-daily-backups">Creating a backup</a></td>
+			<td class="help"><a href="/articles/sites/backups/backup-creation/#can-i-get-automatic-daily-backups">Creating a backup</a></td>
 		</tr>
 	</tbody>
 
@@ -150,7 +149,7 @@ Now that the site is on a paid plan, you can associate your domain with the Live
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Add domain(s) to Live environment</td>
-			<td class="help"><a href="/documentation/getting-started/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a></td>
+			<td class="help"><a href="/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a></td>
 		</tr>
 	</tbody>
 
@@ -171,7 +170,7 @@ After you've added your domain to the Live environment, you will need to update 
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update DNS with custom load-balanced IP for SSL</td>
-			<td class="help"><a href="/documentation/howto/adding-a-ssl-certificate-for-secure-https-communication/">Adding a SSL certificate for secure HTTPS communication</a></td>
+			<td class="help"><a href="/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">Adding a SSL certificate for secure HTTPS communication</a></td>
 		</tr>
 	</tbody>
 
@@ -186,7 +185,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update DNS with Pantheon DNS record</td>
-			<td><a href="/documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS records for directing your domain to your Pantheon site</a></td>
+			<td><a href="/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS records for directing your domain to your Pantheon site</a></td>
 		</tr>
 	</tbody>
 
@@ -198,7 +197,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
-​To learn more, see [using the Pantheon workflow](/documentation/howto/using-the-pantheon-workflow/).
+​To learn more, see [using the Pantheon workflow](/articles/sites/code/using-the-pantheon-workflow/).
 
 #### Why is robots.txt is disallowing crawlers to my Live environment?
 

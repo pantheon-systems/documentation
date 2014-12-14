@@ -6,6 +6,7 @@ category:
 
 ---
 
+## Overview
 As of October 22nd, 2014, Pantheon is no longer offering shared static IP addresses for customer sites. The new pantheon.io system provides higher-uptime alternatives.
 
 Existing sites are not affected, and cannot use pantheon.io yet. This information applies only to sites _created_ after Oct 22nd.
@@ -20,13 +21,13 @@ Shared IPs mean shared problems, and are not compatible with the level of servic
 
 Of course, people still need to reach your site if they type in the bare domain name. Here's how.
 
-#### Redirecting to "www"
+## Redirecting to "www"
 
 The simplest and most reliable option is to use a service through your DNS provider to redirect requests for your bare domain to the www subdomain. Most DNS services — even bargain operators like GoDaddy — offer this as a feature. This is preferable because it will ensure that the universe of bookmarks and SEO links for your site are all built up as www urls, not the bare domain.
 
-If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/documentation/getting-started/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
+If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
 
-#### Advanced DNS Services
+## Advanced DNS Services
 
 Some advanced DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are two general implementations.
 
@@ -49,7 +50,7 @@ It is also possible to use DNS level redirect in order to direct traffic to the 
 
 Please understand that we cannot specifically support third-party DNS configuration, nor do we endorse or guarantee their service. These links are provided as a convenience for our users. With the range of options available, we are certain there is something workable for any budget.
 
-#### Measure Twice, Cut Once
+## Measure Twice, Cut Once
 
 Going live and changing DNS settings can be stressful, but so long as you have a clear plan of action you should be able to pull it off without a hitch. Planning how you're handling the question of the domain name is a good decision to get out of the way well before the actual launch day.
 

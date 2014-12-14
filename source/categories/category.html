@@ -6,17 +6,22 @@ generator: [documents_category_index]
 ---
 {% block title %}{{ page.category }} {{ page.title }}{% endblock %}
 {% block content %}
-<div class="container">
+<div class="container article">
   <article>
     <div class="col-md-9">
       <h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
-      <ul class="document-list">{% for document in page.category_documents %}
+      <script type="text/javascript">
+      <!--
+      breadcrumbs()
+      //-->
+      </script>
+      <div class="document-list">{% for document in page.category_documents %}
         <article>
           <a href="{{ document.url }}">{{ document.title }}</a>
           <p>{{ document.description }}</p>
         </article>
         {% endfor %}
-      </ul>
+      </div>
     </div>
   </article>
   <div class="zappy col-md-3">

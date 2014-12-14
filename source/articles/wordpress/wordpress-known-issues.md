@@ -18,7 +18,7 @@ If you see this error:
 
     Warning: session_start(): user session functions not defined
 
-It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. [Read more on WordPress and PHP Sessions](/documentation/advanced-topics/wordpress-and-php-sessions/).
+It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. [Read more on WordPress and PHP Sessions](/articles/wordpress/wordpress-and-php-sessions/).
 
 ## Site Networks / Multisite
 

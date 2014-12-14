@@ -1,6 +1,6 @@
 ---
 title: Errors and server responses
-description: Understand server responses and error messages. 
+description: Understand server responses and error messages.
 category:
   - supporting
   - debugging
@@ -8,7 +8,7 @@ category:
 ---
 
  
-## Error messages served by Pantheon, not by Drupal
+## Pantheon Error Messages
 
 Sometimes, there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
 
@@ -67,7 +67,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 
 We could increase the nginx queue above 100, but it would only mask the problem for longer. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
-This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the DROP for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/documentation/howto/selecting-a-plan/).
+This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the DROP for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/articles/sites/settings/selecting-a-plan/).
 
 ### Pantheon - 503 Database not responding
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/184855)
@@ -79,32 +79,32 @@ This can be caused by sustained spikes in traffic (often caused by search engine
 
 "The service is temporarily unavailable. Please try again later."
 
-This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/documentation/advanced-topics/timeouts-on-pantheon/) is available in our helpdesk.
+This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/articles/drupal/timeouts-on-pantheon/) is available in our helpdesk.
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP basic auth (the Security username/password), then that's a misleading message - best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon - 504 Gateway Timeout
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/185064)  
-"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/documentation/advanced-topics/timeouts-on-pantheon/) is available in our helpdesk.
+"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/articles/drupal/timeouts-on-pantheon/) is available in our helpdesk.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
 There are many things which could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
-#### Administrative Pages
+## Administrative Pages
 
 It is unfortunately possible for some normal operations in Drupal to outlast the request timeout. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on sites with large numbers of modules and/or a lot of data and activity.
 
 If you are seeing request timeouts for administrative operations, you may be able to address this by optimizing your application, or by using a work-around (see below).
 
-#### Slow Queries / High Query Volume
+## Slow Queries / High Query Volume
 
 Pages which leverage a large number of Drupal views can often bog down because of the slow speed of the queries. It can also happen that a sufficiently high query volume (1,000+ queries on one page) can push things over the edge.
 
 Individually slow queries should be refactored if possible. However, often cacheing can help mitigate slow queries or high query volumes quickly. There will still be slow page loads when the cache needs to be populated, but subsequent page-loads should be speedier.
 
-#### External Web Service Calls
+## External Web Service Calls
 
 It is not uncommon for API or web-service integration modules to make `curl()` or `drupal_http_request()` calls, which will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
 
@@ -112,7 +112,7 @@ Even the most reliable web services will occasionally experience slowness, and i
 
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
-#### Overloaded Workers
+## Overloaded Workers
 
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
@@ -125,24 +125,24 @@ Even with the watchdog off these errors will still be written to the PHP error l
 
 ##### 2. Optimize the site
 
-Long running processes like batch jobs, background tasks and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/-new-relic-performance-analysis-on-pantheon) to identify performance bottlenecks, fix errors and make changes to enhance performance.
+Long running processes like batch jobs, background tasks and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon#new-relic-performance-analysis-on-pantheon) to identify performance bottlenecks, fix errors and make changes to enhance performance.
 
 ##### 3. Upgrade your plan
 
 If the all the errors have been resolved and the views, batches and tasks have been optimized, the next step is to look into [upgrading your plan](https://www.getpantheon.com/pricing) for more resources. The recommendation here is to select the most appropriate plan for the resource usage of your site.
 
-#### Code Gone Wild
+### Unexpected Timeouts
 
 There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page-load, to the advanced\_help spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
 If you are seeing timeouts in unexpected places, debugging with New Relic or looking at your php slow logs can be informative.
 
-#### Admin Work-Arounds
+## Admin Work-Arounds
 
 In the best of all possible worlds, there are no slow queries, all external calls are fast, and the application is a finely-tuned highly-optimized cheetah of the web. In reality, sometimes we just need to get around a pesky timeout in order to get the job done.
 
 Drush is a great workaround for most administrative bottlenecks. Because it runs via the PHP command-line, there are no time limits. Enabling/disabling modules, running update.php, clearing caches; these are all supported by Drush.
 
-## How to handle more traffic
+## Handle More Traffic
 
-See our article on [debugging performance bottlenecks](/documentation/advanced-topics/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.
+See our article on [debugging performance bottlenecks](/articles/sites/newrelic/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.

@@ -29,10 +29,14 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB
   - Each PHP process can either 256MB or 512MB of memory ( [depends on the plan](https://www.getpantheon.com/pricing))
 
-- For a comprehensive list of MySQL settings [access your database](/documentation/advanced-topics/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
+- For a comprehensive list of MySQL settings [access your database](/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common-sense libraries available globally.
-- Your containers can access a whitelisted set of [binary tools](/documentation/howto/external-libraries-on-pantheon/-external-libraries-on-pantheon-) (e.g. wkhtmltopdf). Contact us if you have specific needs.
+<<<<<<< HEAD
+- Your containers can access a whitelisted set of [binary tools](/articles/howto/external-libraries-on-pantheon#external-libraries-on-pantheon-) (e.g. wkhtmltopdf). Contact us if you have specific needs.
+=======
+- Your containers can access a whitelisted set of [binary tools](/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
+>>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 ## Performance and Scalability
 
@@ -45,4 +49,4 @@ While these are related topics, they need to be evaluated separately for your pr
 
 Typically, the best practice is to optimize for performance first, and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
-Because Pantheon does not handicap or limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. Support is happy to answer questions about site performance if you feel it's not up to where it should be. We also provide tools like [New Relic](/documentation/howto/new-relic-performance-analysis-on-pantheon/) to give you insights about your site's performance.
+Because Pantheon does not handicap or limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. Support is happy to answer questions about site performance if you feel it's not up to where it should be. We also provide tools like [New Relic](/articles/sites/newrelic/new-relic-performance-analysis) to give you insights about your site's performance.

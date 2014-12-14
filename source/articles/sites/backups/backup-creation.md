@@ -15,20 +15,17 @@ category:
 
 ## Steps
 
-1. [Start](/documentation/getting-started/backup-creation/-creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
-2. [Relax](/documentation/getting-started/backup-creation/-creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
-3. After completion, you can [access your backups.](/documentation/getting-started/backup-creation/-creating-a-backup#access)
+1. [Start](/articles/sites/backups/backup-creation#creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
+2. [Relax](/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
+3. After completion, you can [access your backups.](/articles/sites/backups/backup-creation#creating-a-backup#access)
 
 ![Create Backup](https://pantheon-systems.desk.com/customer/portal/attachments/305275)
-
-###
-Sit back and Relax
 
 You will notice the job indicator will turn green and provide the number of active jobs.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/305276)
 
-**Note**: There is no need to worry, you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
+**Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files). 
@@ -40,41 +37,41 @@ The newest backup will appear at the top of the list, with the name of the envir
 
 Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
 
-Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/documentation/howto/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
+Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
 **Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
 
 ## Frequently Asked Questions
 
-### Where are the backups stored? 
+#### Where are the backups stored? 
 
 Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
 ### How do I restore from my site from a full environment backup? 
 
-In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/documentation/howto/restoring-an-environment-from-a-backup/-restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-### How long does a backup take? 
+#### How long does a backup take? 
 
 This depends on how much content you have. When you are doing a full environment backup this can take some time depending on the size of your code, database and files.
 
-### How can I specify the time for my backups to run?
+#### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard but this requires a site to have an associated plan. See [selecting a plan](/documentation/howto/selecting-a-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard but this requires a site to have an associated plan. See [selecting a plan](/articles/sites/settings/selecting-a-plan/) for details about site plans on Pantheon.
 
-### What timezone is the backup time marked in?
+#### What timezone is the backup time marked in?
 
 Backups are shown in your timezone!
 
-### Why do my automated backups not run when I scheduled them to run sometimes?
+#### Why do my automated backups not run when I scheduled them to run sometimes?
 
 If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label.
 
-### What's included in a backup?
+#### What's included in a backup?
 
 Backups include your entire codebase, everything that's been committed. Uncommitted SFTP changes are not backed up. Your database is backed up in the form of a MySQL dump. Various content generated by Drupal is not backed up e.g. generated images from image styles and aggregated CSS & JS assets. In the sites/default/files directory, the following items are not backed up: '/styles', '/css', '/js', '/backup\_migrate', '/private/backup\_migrate', and '/imagecache'. Within the code, Pantheon uses a .gitignore file, the contents of which [can be seen here](https://www.evernote.com/shard/s404/sh/69b56b77-34b2-4f77-aea2-bb05d6d99614/2f07255a0da933f59b6480d16d807290) (as of 8/28/14). 
 
-### Why is Backup & Migrate not recommended on Pantheon?
+#### Why is Backup & Migrate not recommended on Pantheon?
 
 As a product in general, Backup & Migrate is perfectly fine and fulfills many site owners’ needs, but within the context of the Pantheon platform it’s not recommended. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
 
