@@ -17,7 +17,7 @@ Sometimes it's necessary to push a quick fix without pushing everything that's b
 
 1. From within your Git clone, get a quick list of the existing Git tags:
 
-    #> git tag
+    > git tag
     pantheon.initialize
     pantheon_live_1
     pantheon_test_1
@@ -27,7 +27,7 @@ Sometimes it's necessary to push a quick fix without pushing everything that's b
 
 2. Select the highest `live` tag and check it out:
 
-    #> git checkout pantheon_live_1
+    > git checkout pantheon_live_1
     Note: checking out 'pantheon_live_1'.
 
 
