@@ -27,15 +27,21 @@ Of course you can make an import archive by hand. You simply dump your existing 
 
 After you have created an account, you can log in and will be directed to your dashboard.
 
- 
+
+ 
+
 
 ![Your sites & account dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/247520)
 
- 
+
+ 
+
 
 Click on "Add a site." You will first be prompted to name the site. The only valid characters are letters, numbers and dashes. Enter a name and click continue.
 
- 
+
+ 
+
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/247523)
 
@@ -49,12 +55,15 @@ You will then have a short wait while Pantheon creates and allocates the resourc
 
 You now have several options. Rather than start with one of our preconfigured start states, we will import our code, database and files.
 
- 
+
+ 
+
 
 Select “Import manually.”
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/247521)  
- 
+
+ 
 
 Once selected, you can upload a single URL or file archive of the site.  
 
@@ -62,51 +71,72 @@ Once selected, you can upload a single URL or file archive of the site.
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/259156)  
 
 
-Alternatively, you can enter the URL to your site code (required), user files (optional) and database (optional).
+
+Alternatively, you can enter the URL to your site code (required), user files (optional) and database (optional).
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/247522)
 
 5. Relax while we configure your codebase.
 
- 
+
+ 
+
 
 Click “Import site” and wait while we import and configure your site.
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/247524)
 
- 
+
+ 
+
 
 6. Completed Spinup
 
- 
+
+ 
+
 
 When complete, just click the button to visit your Pantheon Dashboard.
 
- 
+
+ 
+
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/247525)
 
- 
+
+ 
+
 
 7. View your site dashboard
 
- 
+
+ 
+
 
 Congratulations! Your site has been imported and your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
- 
+
+ 
+
 
 8. Launch Site
 
- 
+
+ 
+
 
 You will eventually have three environments (development, test, and live), each with a separate version of your website. Click the link at the top left of your dashboard to launch the your development site.
 
- 
+
+ 
+
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/247528)
 
- 
+
+ 
+
 
 9. See your site!
 
@@ -116,16 +146,16 @@ Currently we are shipping with one included/recommended plugin, which is designe
 
 It sets a default cache lifetime of 10 minutes, and will automatically clear post pages (and taxonomy lists) when new content is created or updated. You can also manually flush the whole cache for a site.
 
- 
 
 **Further Reading:**
 
-[Using the Pantheon Workflow](/documentation/howto/using-the-pantheon-workflow/)
+[Using the Pantheon Workflow](/articles/sites/code/using-the-pantheon-workflow/)
 
-[Developing with SFTP](/articles/sites/developing-directly-with-sftp-mode)
+
+[Developing with SFTP](/articles/sites/developing-directly-with-sftp-mode)
 
 [Going Live](/articles/going-live)
 
 
 
- 
+
