@@ -85,11 +85,8 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
 
-<<<<<<< HEAD
-You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/articles/howto/configuring-settings-php#working-with-settings-php).
-=======
 You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/articles/drupal/configuring-settings-php).
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
+
 
 ## Export Files
 
