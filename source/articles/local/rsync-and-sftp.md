@@ -7,18 +7,20 @@ category:
 
 ---
 
- ## Overview
+## Overview
 
  **Note: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.**  
 
-If you have more than 500 MB of content to be transferred to sites/default/files, you won't be able to use the dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
+
+If you have more than 500 MB of content to be transferred to sites/default/files, you won't be able to use the dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
 
 This method allows for transfer of (for all intents and purposes) unlimited data "server-to-server", which is much faster than transferring from your workstation. Additionally, files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
 There are two mechanisms for transferring files; SFTP and rsync.
 
 ## Pantheon Academy
-​<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/BqatUtBlHGI?rel=0" width="650"></iframe>
+
+​<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/BqatUtBlHGI?rel=0" width="650"></iframe>
 
 **Note: You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your git repository. Any file uploaded in this manner cannot be committed and will not be persistent or available for deployment.**
 
@@ -76,9 +78,9 @@ We will take a look at performing some basic actions using RSYNC on Pantheon.
 
 Before we get started let us make sure we have everything you need:
 
-**Site URL:** _https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83_  
-**Environment (ENV):** _Dev_  
-**Site (SITE):** _3ef6264e-51d9-43b9-a60b-6cc22c3129308as83_
+**Site URL:** https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83  
+**Environment (ENV):** Dev 
+**Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
 ## Download a Directory from Pantheon
 
