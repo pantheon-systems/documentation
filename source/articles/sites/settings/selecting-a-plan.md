@@ -36,7 +36,7 @@ Finally, choose the plan that you would like for the selected site and click "_S
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/336534)  
  
 
-Now that you have selected a plan, you can continue on with process of Going Live by [setting up a domain on your site.](/articles/drupal/going-live-and-launching-your-site/#setting-up-a-domain-with-Pantheon) The plan has now been selected.
+Now that you have selected a plan, you can continue on with process of Going Live by [setting up a domain on your site.](/articles/going-live) The plan has now been selected.
 
 ## Confirm the Plan
 

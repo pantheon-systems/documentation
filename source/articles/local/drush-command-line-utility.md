@@ -184,11 +184,11 @@ As an alternative to `sql-dump`, you can use sql-sync-pipe or drush sql-dump.
 
 ## Drush Commands that Alter Site Code
 
-Commands that alter site code, such as pm-download (dl) will only work on a Dev environment that has been set to [SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/) from the Pantheon dashboard.
+Commands that alter site code, such as pm-download (dl) will only work on a Dev environment that has been set to [SFTP mode](/articles/sites/code/developing-directly-with-sftp-mode/) from the Pantheon dashboard.
 
 ## Use Drush to Update Modules on Pantheon
 
-First, make sure the dev environment is set to [SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/). Then:
+First, make sure the dev environment is set to [SFTP mode](/articles/sites/code/developing-directly-with-sftp-mode/). Then:
 
     drush @pantheon.SITENAME.dev up --no-core
 

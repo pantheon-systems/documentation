@@ -83,7 +83,7 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Enable New Relic</td>
-			<td class="help"><a href="/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon/">Using New Relic on Pantheon</a></td>
+			<td class="help"><a href="/articles/sites/newrelic/new-relic-performance-analysis/">Using New Relic on Pantheon</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>

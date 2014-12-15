@@ -51,13 +51,13 @@ Then, enter a name for your Pantheon site. You can change the human readable nam
 
 ## Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/articles/users/choosing-your-start-state#choosing-your-start-state#starting-with-a-Drupal-product).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/articles/users/choosing--start-state).
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180017)
 
 ## Import Manually
 
-If you have an existing site that you want to import, choose "Import manually". For additional details, see [importing an existing site](/articles/drupal/importing-an-existing-drupal-site-to-pantheon#importing-an-existing-site).
+If you have an existing site that you want to import, choose "Import manually". For additional details, see [importing an existing site](/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
 
 ## 4. Interact With Your Code
 
@@ -74,7 +74,7 @@ To use Git, you'll need to go to your dashboard and add a public SSH key.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180030)  
 
 
-For detailed instructions, see the article [generating SSH keys](/articles/local/generating-ssh-keys/).
+For detailed instructions, see the article [generating SSH keys](/articles/users/generating-ssh-keys/).
 
 #### SFTP Connection Mode
 
@@ -96,7 +96,7 @@ There are a number of credentials available for developers; each of which can be
 
 ## 6. Learn About the Pantheon Workflow
 
-Familiarize yourself with the [Pantheon Workflow](/articles/sites.code/using-the-pantheon-workflow/), both for code deployment and content (database and files).
+Familiarize yourself with the [Pantheon Workflow](/articles/sites/code/using-the-pantheon-workflow/), both for code deployment and content (database and files).
 
 ## 7. Learn More About the Pantheon Platform
 
