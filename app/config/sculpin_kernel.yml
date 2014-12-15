@@ -5,7 +5,7 @@ sculpin_content_types:
 
     documents:
         type: path
-        path: articles
+        path: docs/articles
         singular_name: document
         enabled: true
         taxonomies:
