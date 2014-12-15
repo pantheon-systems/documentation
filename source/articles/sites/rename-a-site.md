@@ -12,11 +12,11 @@ The recommended way to get a copy of PHPMyAdmin is to get this via github. can r
 
     $ git clone https://github.com/phpmyadmin/phpmyadmin.git
 
-Alternatively you can download a zip archive of the latest code from the github repository.
+Alternatively you can download a zip archive of the latest code from the Github repository.
 
 **Note:** A repository for PHPMyAdmin exists on sourceforge but we recommend the github version as you get direct access to the code.
 
-## Configuring a new MyySQL connection
+## Configuring a New MySQL Connection
 
 Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection create a copy of `config.sample.inc.php` and renaming this to `config.php`.
 
@@ -41,7 +41,9 @@ Once this is done the permissions on the `config.php` should be set to 755 at le
 
 If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so it is not writeable.
 
- 
+
+ 
+
 
 ![enter your password](https://pantheon-systems.desk.com/customer/portal/attachments/224903)
 
