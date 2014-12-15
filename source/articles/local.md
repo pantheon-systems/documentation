@@ -63,9 +63,9 @@ drush -r . rsync @pantheon.SITENAME.ENV:%files @self:sites/default/
 
 Alternatively, you can use SFTP which is slower but can be easier to use. If you don't have a GUI client like FileZilla, you can use the command line:
 
-cd sites/default
-# Paste SFTP connection info from dashboard
-get -r files
+cd sites/default  
+Paste SFTP connection info from dashboard  
+get -r files  
 exit
 
 ## Submitting Changes to Pantheon
