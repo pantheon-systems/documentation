@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/bin/node',
+1 verbose cli   '/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/node_modules/npm/bin/npm-cli.js',
+1 verbose cli   '--globalconfig',
+1 verbose cli   '/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/.apmrc',
+1 verbose cli   '--userconfig',
+1 verbose cli   '/Users/Rachelwhitton/.atom/.apmrc',
+1 verbose cli   'install',
+1 verbose cli   '--target=0.18.0',
+1 verbose cli   '--arch=x64' ]
+2 info using npm@1.4.4
+3 info using node@v0.10.33
+4 error install Couldn't read dependencies
+5 error package.json ENOENT, open '/Users/Rachelwhitton/sites/documentation/package.json'
+5 error package.json This is most likely not a problem with npm itself.
+5 error package.json npm can't find a package.json file in your current directory.
+6 error System Darwin 14.0.0
+7 error command "/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/bin/node" "/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/node_modules/npm/bin/npm-cli.js" "--globalconfig" "/Applications/Atom.app/Contents/Resources/app/apm/node_modules/atom-package-manager/.apmrc" "--userconfig" "/Users/Rachelwhitton/.atom/.apmrc" "install" "--target=0.18.0" "--arch=x64"
+8 error cwd /Users/Rachelwhitton/sites/documentation
+9 error node -v v0.10.33
+10 error npm -v 1.4.4
+11 error path /Users/Rachelwhitton/sites/documentation/package.json
+12 error code ENOPACKAGEJSON
+13 error errno 34
+14 verbose exit [ 34, true ]
