@@ -91,11 +91,11 @@ Turning off error reporting suppresses the symptom, not the problem, and PHP exe
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/200891)  
 
 
-Learn more about [debugging sites with log files](/articles/sites/newrelic/debugging-sites-with-log-files/).
+Learn more about [debugging sites with log files](/articles/sites/debugging-sites-with-log-files).
 
 ## Too Many Database Queries
 
-The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon/) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
+The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/articles/sites/newrelic/new-relic-performance-analysis) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
 
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
@@ -142,7 +142,7 @@ The next problem is when a site doesn’t have enough traffic, which may seem pa
 
 There are a large number of caches involved in every single request, including:
 
-- [Varnish](/articles/edge/varnish-caching-for-high-performance/) - spread out across multiple servers, and the cache is not shared between servers.
+- [Varnish](/articles/architecture/edge/varnish) - spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/articles/sites/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
 - [Drupal](https://drupal.org/node/326504) and [redis](/articles/sites/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.

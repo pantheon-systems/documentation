@@ -21,7 +21,7 @@ Be sure that you have:
 
 - A registered domain name
 - The ability to modify your domain's nameservers
-- [A paid Pantheon plan](/sites/settings/howto/selecting-a-plan/)
+- [A paid Pantheon plan](/articles/sites/settings/selecting-a-plan)
 
 ## CloudFlare Setup
 

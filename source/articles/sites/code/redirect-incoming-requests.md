@@ -24,7 +24,7 @@ Configuration also tends to be more maintainable as Drupal and WordPress devel
 
 Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well!
 
-**Note:** Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the  [Pantheon site's dashboard](/articles/drupal/going-live-and-launching-your-site/).
+**Note:** Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the  [Pantheon site's dashboard](/articles/going-live).
 
 ## Redirect to a Common Domain
 

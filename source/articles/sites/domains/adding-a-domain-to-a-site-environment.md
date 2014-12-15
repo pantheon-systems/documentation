@@ -9,7 +9,7 @@ In order for Pantheon to know where to send your site traffic, you need to assoc
 
 This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/).
 
-For general information about launching your site, see [Going Live and Launching Your Site](/articles/drupal/going-live-and-launching-your-site/).
+For general information about launching your site, see [Going Live and Launching Your Site](/articles/going-live).
 
 ## Add a Domain to a Site Environment
 
