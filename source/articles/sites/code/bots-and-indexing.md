@@ -15,7 +15,7 @@ Bots are part of every public-facing website's lifecycle. We wouldn't be able to
 
 Bots don't browse like humans. Analyzing access patterns in the Nginx log is one of the quickest ways to determine the presence of bots.
 
-## Rapid Fire Requests/Duplicates.
+## Rapid Fire Requests/Duplicates
 
 In the log snippet below, there are multiple requests coming in for the same path in rapid fire succession. The time stamp reflects 5 identical requests at the same milisecond. Requests of this nature should be investigated.
 
