@@ -6,7 +6,8 @@ category:
 
 ---
 
- 
+
+ 
 ## Overview
 
 The Drupal system configuration in code is set in:
@@ -21,7 +22,6 @@ Pantheon uses a variant of Pressflow Drupal to allow the server to automatically
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
-<<<<<<< HEAD
 - [Reading Pantheon Environment configuration](/articles/howto/reading-pantheon-environment-configuration/) (including domain\_access)
 - [Redis as a caching backend](/articles/howto/redis-as-a-caching-backend#redis)
 - [Redirect incoming requests](/articles/howto/redirect-incoming-requests/) (including WWW and non-WWW, requiring SSL)
@@ -31,7 +31,6 @@ The following articles include techniques and configurations for settings.php on
 - [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend)
 - [Redirect incoming requests](/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
 - [SSO and Identity Federation](/articles/advanced/sso-and-identity-federation) (LDAP TLS certificate configuration)
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 ## Local Database Configuration for Development
 
