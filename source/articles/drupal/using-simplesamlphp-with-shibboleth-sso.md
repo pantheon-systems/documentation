@@ -22,27 +22,27 @@ When you're done following the quickstart instructions above and have completed 
     }
 
 
-    # Load necessary environmental data
+    Load necessary environmental data
     $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
     $host = $_SERVER['HTTP_HOST'];
     $drop_id = $ps['conf']['pantheon_binding'];
     $db = $ps['databases']['default']['default'];
 
 
-    # Set up base config
+    Set up base config
     $config = array (
       'baseurlpath' => 'http://'. $host .'/simplesaml/',
       'certdir' => 'cert/',
       'loggingdir' => 'log/',
       'datadir' => 'data/',
       'tempdir' => '/srv/bindings/'. $drop_id .'/tmp/simplesaml',
-    # Your $config array continues for a while...
-    # until we get to the "store.type" value, where we put in DB config...
+      Your $config array continues for a while...
+      until we get to the "store.type" value, where we put in DB config...
       'store.type' => 'sql',
       'store.sql.dsn' => 'mysql:host='. $db['host'] .';port='. $db['port'] .';dbname='. $db['database'],
       'store.sql.username' => $db['username'],
       'store.sql.password' => $db['password'],
-    # And that's all the config you should need to change!
+      And that's all the config you should need to change!
 
 You should now be able to visit your site/simplesaml and complete your metadata configuration.
 
