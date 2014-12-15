@@ -32,18 +32,15 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 - For a comprehensive list of MySQL settings [access your database](/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common-sense libraries available globally.
-<<<<<<< HEAD
 - Your containers can access a whitelisted set of [binary tools](/articles/howto/external-libraries-on-pantheon#external-libraries-on-pantheon-) (e.g. wkhtmltopdf). Contact us if you have specific needs.
-=======
 - Your containers can access a whitelisted set of [binary tools](/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 ## Performance and Scalability
 
 It is important to understand the distinction between _performance_ and _scalability_ when planning your project on Pantheon.
 
-- **Performance**: the speed at which an individual request is handled.
-- **Scalability**: the ability to handle many concurrent requests.
+- **Performance**: The speed at which an individual request is handled.
+- **Scalability**: The ability to handle many concurrent requests.
 
 While these are related topics, they need to be evaluated separately for your project.
 
