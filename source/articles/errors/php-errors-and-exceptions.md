@@ -90,30 +90,31 @@ Here's a breakdown of what errors are shown and where:
 		</tr>
 	</tbody>
 
-<<<<<<< HEAD
-To learn more about PHP error logs, see our article on  [debugging sites with log files](/articles/advanced-topics/debugging-sites-with-log-files#debugging-sites-with-log-files).
-=======
 To learn more about PHP error logs, see our article on  [debugging sites with log files](/articles/sites/debugging-sites-with-log-files/).
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 ## PHP Errors Slow Down a Site
 
 An error, no matter what severity, is a problem that needs to be addressed. Any PHP error, even a notice, will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.  
 
 
-If database logging is enabled, your site will be even slower, requiring a database write for every error. However, disabling logging does not address the problem, it only hides the symptom.
+
+If database logging is enabled, your site will be even slower, requiring a database write for every error. However, disabling logging does not address the problem, it only hides the symptom.
 
 
-Best practice is to fix every notice, warning, and error as you discover them. If they're in a contrib module, roll a patch and submit it to the project's issue queue.  
+
+Best practice is to fix every notice, warning, and error as you discover them. If they're in a contrib module, roll a patch and submit it to the project's issue queue.  
 
 
-See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
+
+See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP Unhandled Exceptions on Pantheon
 
 ​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the  [PHP documentation on Exceptions.  
-​](http://php.net/manual/en/language.exceptions.php)  
-PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will  [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
+
+​](http://php.net/manual/en/language.exceptions.php)  
+
+PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will  [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Handling Undefined Index Notices for PHP Variables
 
