@@ -12,7 +12,8 @@ Pantheon is unlike any traditional web hosting service that you may have used in
 Though it incorporates many familiar open-source technologies, it presents a fresh and unique deployment topology, matched with a highly-functional toolbox and uber-efficient workflow to create an all-in-one cloud-based development solution for Drupal.  
 
 
-Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
+
+Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
 
 ## Helpful Docs
 
@@ -32,7 +33,7 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - Using [Drush](/articles/local/drush-command-line-utility#using-drush-on-pantheon) on Pantheon.
 - [Cron](/articles/sites/code/cron/) and Pantheon.
 - How core [updates](/articles/drupal/drupal-core-updates) work (TL;DR: don't use 'drush up' for core!).
-- Caching, both with [Varnish](/articles/architecture/edge/varnish-caching-for-high-performance) and [Redis](/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
+- Caching, both with [Varnish](/articles/architecture/edge/varnish) and [Redis](/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
 ) and how to configure [Drupal Performance Settings.](/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDN](/articles/drupal/content-delivery-network-cdn-for-file-distribution/)s can make your site faster, and protect you from DDOS attacks.
 - How [SSL & HTTPS](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#getting-an-ssl-cert) are implemented on Pantheon.
