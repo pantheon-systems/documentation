@@ -32,4 +32,4 @@ All Pantheon sites consist of three parts:
 
 ## Additional Considerations
 Retaining Git history, importing large file structures or databases:
-The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see <a href="/common-tasks#importing-a-large-site" target="_blank">Importing A Large Site</a>.​</li --> ** **
+The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see[Importing a Large Site](articles/users/importing-a-large-site).
