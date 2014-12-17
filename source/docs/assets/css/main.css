@@ -1,32 +1,32 @@
- /*!
- * Pantheon Docs (http://docs.getpantheon.com)
- * Copyright 2014 Pantheon, Inc.
- * Licensed under the Creative Commons Attribution 3.0 Unported License. For
- * details, see http://creativecommons.org/licenses/by/3.0/.
- * Source Attribution: Twitter Bootstrap. THANKS!
- */
+/*!
+* Pantheon Docs (http://docs.getpantheon.com)
+* Copyright 2014 Pantheon, Inc.
+* Licensed under the Creative Commons Attribution 3.0 Unported License. For
+* details, see http://creativecommons.org/licenses/by/3.0/.
+* Source Attribution: Twitter Bootstrap. THANKS!
+*/
 
 
 /*
- * Pantheon Documentation
- * Special styles for presenting Pantheon's documentation and code examples.
- */
+* Pantheon Documentation
+* Special styles for presenting Pantheon's documentation and code examples.
+*/
 
 
 /*
- * Scaffolding
- *
- * Update the basics of our documents to prep for docs content.
- */
+* Scaffolding
+*
+* Update the basics of our documents to prep for docs content.
+*/
 @font-face {
-    font-family: 'open_sansregular';
-    src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
-    src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
-         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
-         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
-         url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'open_sansregular';
+  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
+  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
+  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
+  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
@@ -128,7 +128,7 @@ body.row.main {
 img {
   max-width: 100%;
   border:1px solid grey;
-  }
+}
 
 img.noborder {border:none;}
 
@@ -204,10 +204,10 @@ img.noborder {border:none;}
 
 
 /*
- * Main navigation
- *
- * Turn the `.navbar` at the top of the docs purple.
- */
+* Main navigation
+*
+* Turn the `.navbar` at the top of the docs purple.
+*/
 
 .pio-docs-nav {
   margin-bottom: 0;
@@ -221,6 +221,7 @@ img.noborder {border:none;}
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 700;
   color: white;
+  text-transform: uppercase;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
@@ -242,10 +243,10 @@ img.noborder {border:none;}
 
 
 /*
- * Footer
- *
- * Separated section of content at the bottom of all pages, save the homepage.
- */
+* Footer
+*
+* Separated section of content at the bottom of all pages, save the homepage.
+*/
 
 .pio-docs-footer {
   padding-top: 40px;
@@ -275,10 +276,10 @@ img.noborder {border:none;}
 
 
 /*
- * Social buttons
- *
- * Twitter and GitHub social action buttons (for homepage and footer).
- */
+* Social buttons
+*
+* Twitter and GitHub social action buttons (for homepage and footer).
+*/
 
 .pio-docs-social {
   margin-bottom: 20px;
@@ -309,10 +310,10 @@ img.noborder {border:none;}
 
 
 /*
- * Homepage
- *
- * Tweaks to the custom homepage and the masthead (main jumbotron).
- */
+* Homepage
+*
+* Tweaks to the custom homepage and the masthead (main jumbotron).
+*/
 
 /* Share masthead with page headers */
 .pio-docs-masthead,
@@ -323,7 +324,7 @@ img.noborder {border:none;}
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
   background-color: #FFFFFF;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
   background-repeat: repeat-x;
 }
 
@@ -379,10 +380,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 
 /*
- * Page headers
- *
- * Jumbotron-esque headers at the top of every page that's not the homepage.
- */
+* Page headers
+*
+* Jumbotron-esque headers at the top of every page that's not the homepage.
+*/
 
 /* Page headers */
 .pio-docs-header {
@@ -407,27 +408,27 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 24px;
-    text-align: left;
+    text-align: center;
   }
   .pio-docs-header h1 {
     font-size: 60px;
     line-height: 1;
+    text-transform: uppercase;
   }
 }
 
 @media (min-width: 992px) {
   .pio-docs-header h1,
   .pio-docs-header p {
-    margin-right: 380px;
   }
 }
 
 
 /*
- * Homepage featurettes
- *
- * Reasons to use Pantheon, entries from the Expo, and more.
- */
+* Homepage featurettes
+*
+* Reasons to use Pantheon, entries from the Expo, and more.
+*/
 
 .pio-docs-featurette {
   padding-top: 40px;
@@ -497,9 +498,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 }
 
 /*
- * Document Layout
- *
- */
+* Document Layout
+*
+*/
 
 .pio-docs-title {
   color: #000000;
@@ -508,10 +509,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
   padding-bottom: 5px;
 }
 /*
- * Featured sites
- *
- * Homepage thumbnails from the Expo.
- */
+* Featured sites
+*
+* Homepage thumbnails from the Expo.
+*/
 
 .pio-docs-featured-sites {
   margin-right: -1px;
@@ -537,10 +538,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 
 /*
- * Examples
- *
- * Linked docs examples.
- */
+* Examples
+*
+* Linked docs examples.
+*/
 
 .pio-examples .thumbnail {
   margin-bottom: 10px;
@@ -565,11 +566,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 
 /*
- * Side navigation
- *
- * Scrollspy and affixed enhanced navigation to highlight sections and secondary
- * sections of docs content.
- */
+* Side navigation
+*
+* Scrollspy and affixed enhanced navigation to highlight sections and secondary
+* sections of docs content.
+*/
 
 /* By default it's not affixed in mobile views, so undo that */
 .pio-docs-sidebar.affix {
@@ -698,10 +699,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endC
 
 
 /*
- * Docs sections
- *
- * Content blocks for each component or feature.
- */
+* Docs sections
+*
+* Content blocks for each component or feature.
+*/
 
 /* Space things out */
 .pio-docs-section {
@@ -718,11 +719,11 @@ h1[id] {
 
 
 /*
- * Callouts
- *
- * Not quite alerts, but custom and helpful notes for folks reading the docs.
- * Requires a base and modifier class.
- */
+* Callouts
+*
+* Not quite alerts, but custom and helpful notes for folks reading the docs.
+* Requires a base and modifier class.
+*/
 
 /* Common styles for all types */
 .pio-callout {
@@ -770,10 +771,10 @@ h1[id] {
 
 
 /*
- * Color swatches
- *
- * Color swatches and associated values for our grayscale and brand colors.
- */
+* Color swatches
+*
+* Color swatches and associated values for our grayscale and brand colors.
+*/
 
 .color-swatches {
   margin: 0 -5px;
@@ -842,10 +843,10 @@ h1[id] {
 
 
 /*
- * Team members
- *
- * Avatars, names, and usernames for core team.
- */
+* Team members
+*
+* Avatars, names, and usernames for core team.
+*/
 
 .pio-team .team-member {
   line-height: 32px;
@@ -870,10 +871,10 @@ h1[id] {
 
 
 /*
- * Wall of Browser Bugs
- *
- * Better display for the responsive table on the Wall of Browser Bugs.
- */
+* Wall of Browser Bugs
+*
+* Better display for the responsive table on the Wall of Browser Bugs.
+*/
 
 .pio-docs-browser-bugs td p {
   margin-bottom: 0;
@@ -885,11 +886,11 @@ h1[id] {
 
 
 /*
- * Grid examples
- *
- * Highlight the grid columns within the docs so folks can see their padding,
- * alignment, sizing, etc.
- */
+* Grid examples
+*
+* Highlight the grid columns within the docs so folks can see their padding,
+* alignment, sizing, etc.
+*/
 
 .show-grid {
   margin-bottom: 15px;
@@ -905,11 +906,11 @@ h1[id] {
 
 
 /*
- * Examples
- *
- * Isolated sections of example content for each component or feature. Usually
- * followed by a code snippet.
- */
+* Examples
+*
+* Isolated sections of example content for each component or feature. Usually
+* followed by a code snippet.
+*/
 
 .pio-example {
   position: relative;
@@ -919,7 +920,7 @@ h1[id] {
   border-style: solid;
   border-width: 1px 0;
   -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-          box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
 }
 /* Echo out a label for the example */
 .pio-example:after {
@@ -952,7 +953,7 @@ h1[id] {
     border-width: 1px;
     border-radius: 4px 4px 0 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .pio-example + .highlight,
   .pio-example + .zero-clipboard + .highlight {
@@ -1199,10 +1200,10 @@ h1[id] {
 }
 
 /*
- * Code snippets
- *
- * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
- */
+* Code snippets
+*
+* Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
+*/
 
 .highlight {
   padding: 9px 14px;
@@ -1231,10 +1232,10 @@ h1[id] {
 
 
 /*
- * Responsive tests
- *
- * Generate a set of tests to show the responsive utilities in action.
- */
+* Responsive tests
+*
+* Generate a set of tests to show the responsive utilities in action.
+*/
 
 /* Responsive (scrollable) doc tables */
 .table-responsive .highlight pre {
@@ -1305,10 +1306,10 @@ h1[id] {
 
 
 /*
- * Glyphicons
- *
- * Special styles for displaying the icons and their classes in the docs.
- */
+* Glyphicons
+*
+* Special styles for displaying the icons and their classes in the docs.
+*/
 
 .pio-glyphicons {
   margin: 0 -10px 20px;
@@ -1357,12 +1358,12 @@ h1[id] {
 
 
 /*
- * Customizer
- *
- * Since this is so form control heavy, we have quite a few styles to customize
- * the display of inputs, headings, and more. Also included are all the download
- * buttons and actions.
- */
+* Customizer
+*
+* Since this is so form control heavy, we have quite a few styles to customize
+* the display of inputs, headings, and more. Also included are all the download
+* buttons and actions.
+*/
 
 .pio-customizer .toggle {
   float: right;
@@ -1422,7 +1423,7 @@ h1[id] {
   background-color: #d9534f;
   border-bottom: 1px solid #b94441;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
 }
 .pio-customizer-alert .close {
   margin-top: -4px;
@@ -1440,7 +1441,7 @@ h1[id] {
   background-color: #a83c3a;
   border-color: #973634;
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-          box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
 }
 
 .pio-dropzone {
@@ -1465,17 +1466,17 @@ h1[id] {
   color: #333;
 }
 /*.pio-dropzone*/ #import-manual-trigger {
-  cursor: pointer;
+cursor: pointer;
 }
 .pio-dropzone p:last-child {
   margin-bottom: 0;
 }
 
 /*
- * Brand guidelines
- *
- * Extra styles for displaying wordmarks, logos, etc.
- */
+* Brand guidelines
+*
+* Extra styles for displaying wordmarks, logos, etc.
+*/
 
 /* Logo series wrapper */
 .pio-brand-logos {
@@ -1548,8 +1549,8 @@ h1[id] {
 
 
 /*
- * ZeroClipboard styles
- */
+* ZeroClipboard styles
+*/
 
 .zero-clipboard {
   position: relative;
@@ -1587,10 +1588,10 @@ h1[id] {
 
 
 /*
- * Miscellaneous
- *
- * Odds and ends for optimum docs display.
- */
+* Miscellaneous
+*
+* Odds and ends for optimum docs display.
+*/
 
 /* Pseudo :focus state for showing how it looks in the docs */
 #focusedInput {
@@ -1599,5 +1600,5 @@ h1[id] {
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
   -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
-          box-shadow: 0 0 8px rgba(82,168,236,.6);
+  box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
