@@ -93,13 +93,9 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Ensure Varnish caching works</td>
-<<<<<<< HEAD
-			<td class="help"><a href="/articles/architecture/edge/varnish/varnish-caching-for-high-performance/">Varnish caching for high performance</a></td>
-=======
 			<td class="help"><a href="/articles/architecture/edge/varnish/">Varnish caching for high performance</a></td>
->>>>>>> 6b6870d5052e683cdcaec6c573acb0bc20551a30
-		</tr>
-		<tr>
+
+			<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Load test Live environment</td>
 			<td class="help"><a href="/articles/load-and-performance-testing/">Load and performance testing</a></td>
@@ -195,7 +191,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 
 ## Frequently Asked Questions
 
-#### What are the differences between the environments?
+### What are the differences between the environments?
 
 - Dev has lower TTL on Varnish caching and shows errors to site users.
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
@@ -203,7 +199,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 
 ​To learn more, see [using the Pantheon workflow](/articles/sites/code/using-the-pantheon-workflow/).
 
-#### Why is robots.txt is disallowing crawlers to my Live environment?
+### Why is robots.txt is disallowing crawlers to my Live environment?
 
 Pantheon serves a default robots.txt that disallows crawlers for any \*.gotpantheon.com domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
 
