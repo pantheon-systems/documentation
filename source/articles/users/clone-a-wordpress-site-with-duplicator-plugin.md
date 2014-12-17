@@ -9,7 +9,7 @@ category:
   - WordPress
 ---
 
-## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.
+## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your Existing WordPress Site
 
 ## 2. Archive Your Site's Code/Files/Database
 
