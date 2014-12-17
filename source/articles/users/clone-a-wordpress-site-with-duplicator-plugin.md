@@ -13,7 +13,7 @@ category:
 
 ## 2. Archive Your Site's Code/Files/Database
 
-Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click “Next” and then “Build.” When complete, click “Archive” to download the .zip file.
+Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click **Next** and then **Build**. When complete, click **Archive** to download the .zip file.
 
 ## 3. Create A New Pantheon Site/Import Your Archive
 
