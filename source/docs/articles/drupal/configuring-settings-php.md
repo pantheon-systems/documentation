@@ -22,10 +22,10 @@ Pantheon uses a variant of Pressflow Drupal to allow the server to automatically
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
-- [Reading Pantheon Environment configuration](/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
-- [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend)
-- [Redirect incoming requests](/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
-- [SSO and Identity Federation](/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
+- [Reading Pantheon Environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
+- [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend)
+- [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
+- [SSO and Identity Federation](/docs/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
 
@@ -134,7 +134,7 @@ As an example, here's how you can hard-code your Drupal 7 caching configuration 
 
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
-See  [Reading the Pantheon Environment configuration](/articles/sites/code/reading-pantheon-environment-configuration).
+See  [Reading the Pantheon Environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration).
 
 #### Why does Drupal report that settings.php is not protected? I can't change the permissions on settings.php.
 
@@ -160,7 +160,7 @@ Pantheon automatically injects database credentials into the site environment; i
 #### Are table prefixes supported?
 
 
-For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon) article.
+For information about table prefixes on Pantheon, see [this](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) article.
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 

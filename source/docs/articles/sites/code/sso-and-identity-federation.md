@@ -14,11 +14,11 @@ Pantheon’s flexible infrastructure does not restrict protocols or ports used f
 
 ## LDAP and LDAPS (LDAP over SSL)
 
-Both LDAP and LDAPS are supported on Pantheon. For more information, see our article [LDAP and LDAPS on Pantheon](/articles/sites/code/ldap-and-ldaps/).
+Both LDAP and LDAPS are supported on Pantheon. For more information, see our article [LDAP and LDAPS on Pantheon](/docs/articles/sites/code/ldap-and-ldaps/).
 
 ## Shibboleth and SimpleSAMLphp
 
-[Shibboleth](http://shibboleth.net/) is an open-source single sign-on solution. [SimpleSAMLphp](http://simplesamlphp.org/) can be used as a Service Provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see our article  [Using SimpleSAMLphp](http://helpdesk.getpantheon.com/customer/portal/articles/555188-using-simplesamlphp).
+[Shibboleth](http://shibboleth.net/) is an open-source single sign-on solution. [SimpleSAMLphp](http://simplesamlphp.org/) can be used as a Service Provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see our article  [Using SimpleSAMLphp](http://helpdesk.getpantheon.com/customer/portal/docs/articles/555188-using-simplesamlphp).
 
 ## OAuth
 

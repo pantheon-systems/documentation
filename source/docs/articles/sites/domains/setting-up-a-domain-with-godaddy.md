@@ -39,7 +39,7 @@ category:
 
  ![Sign in to your Godaddy account](https://pantheon-systems.desk.com/customer/portal/attachments/49498)
 #### Launch the Domain Control Panel
-Now you can get to the next stage and click on the "Launch" button which will give you access to your GoDaddy domain control panel. We have instructions if you are using either the [Old](/articles/sites/domains/setting-up-a-domain-with-godaddy#OldDNSDashboard) or the [New](/articles/sites/domains/setting-up-a-domain-with-godaddy#NewDNSDashboard) versions of the DNS manager.  
+Now you can get to the next stage and click on the "Launch" button which will give you access to your GoDaddy domain control panel. We have instructions if you are using either the [Old](/docs/articles/sites/domains/setting-up-a-domain-with-godaddy#OldDNSDashboard) or the [New](/docs/articles/sites/domains/setting-up-a-domain-with-godaddy#NewDNSDashboard) versions of the DNS manager.  
 
 
  ![Launch your control panel](https://pantheon-systems.desk.com/customer/portal/attachments/49499)  
@@ -61,7 +61,7 @@ category:
 
  ![DNS dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/49520)
 #### Setting Up the Zone Record
-The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/articles/going-live/) documentation page. 
+The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/docs/articles/going-live/) documentation page. 
 
 
 **Note: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.**  

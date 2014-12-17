@@ -12,8 +12,8 @@ This technique configures an SSH client to forward a local port to a port on Pan
 
 Currently, there are two services on Pantheon that support SSH tunneling:
 
-- [MySQL database](/articles/local/accessing-mysql-databases/) (dbserver)
-- [Redis cache](/articles/sites/redis-as-a-caching-backend/) (cacheserver)
+- [MySQL database](/docs/articles/local/accessing-mysql-databases/) (dbserver)
+- [Redis cache](/docs/articles/sites/redis-as-a-caching-backend/) (cacheserver)
 
 ## Requirements to Create an SSH Tunnel
 
@@ -52,7 +52,7 @@ These instructions require the use of the SSH command-line client.
 
 ## Manually Create an SSH tunnel to a Redis Cache Server
 
-These instructions require using the redis command-line client; see the [main redis article](/articles/sites/redis-as-a-caching-backend/#redis-cli) for details.  
+These instructions require using the redis command-line client; see the [main redis article](/docs/articles/sites/redis-as-a-caching-backend/#redis-cli) for details.  
 
 From the site environment, get the one-line connection string. It will be in the following format:
 

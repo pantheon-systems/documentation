@@ -114,4 +114,4 @@ WordPress has a similar capability:
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/articles/sites/code/using-the-pantheon-workflow#using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.
+This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.

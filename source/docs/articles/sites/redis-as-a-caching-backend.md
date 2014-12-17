@@ -217,7 +217,7 @@ If you push your updates via git you may get the error that the "Cache" director
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your . To resolve this please make sure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration dashboard. Take a look at the [wiki page](/articles/drupal/drupal-core-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration dashboard. Take a look at the [wiki page](/docs/articles/drupal/drupal-core-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal error: require\_once()
 

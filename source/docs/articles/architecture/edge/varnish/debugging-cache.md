@@ -19,10 +19,10 @@ There are three ways to clear all Varnish caches. The first two require the **pa
 
 ### No HTTP Cache Headers
 
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1:source/articles/architecture/edge/varnish/debugging-cache.md
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
+>>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1:source/docs/articles/architecture/edge/varnish/debugging-cache.md
 
 If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check the theme to see if Drupal messages are being set in an attempt to suppress user facing messages.
 

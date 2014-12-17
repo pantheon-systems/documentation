@@ -25,7 +25,7 @@ Of course, people still need to reach your site if they type in the bare domain 
 
 The simplest and most reliable option is to use a service through your DNS provider to redirect requests for your bare domain to the www subdomain. Most DNS services — even bargain operators like GoDaddy — offer this as a feature. This is preferable because it will ensure that the universe of bookmarks and SEO links for your site are all built up as www urls, not the bare domain.
 
-If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
+If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
 
 ## Advanced DNS Services
 
@@ -44,7 +44,7 @@ ALIAS or ANAME records can be used as the root record for a domain as the result
 
 It is also possible to use DNS level redirect in order to direct traffic to the bare domain of your site. Some of the providers that offer either a flattened CNAME or a redirection service:
 
-- [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root)
+- [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root)
 - [ClouDNS](https://www.cloudns.net/features/)
 - [NameCheap](https://www.namecheap.com/domains/freedns.aspx)
 

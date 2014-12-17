@@ -36,7 +36,7 @@ We are concerned with two lines here. The A record, which reads something to the
 
  
 
-We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS document](/articles/going-live#GetDNSRecordandUpdateYourDNS). You will need to change the A record line in the zone file to the following:
+We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS document](/docs/articles/going-live#GetDNSRecordandUpdateYourDNS). You will need to change the A record line in the zone file to the following:
 
     @ 300 IN A 50.56.49.247
 

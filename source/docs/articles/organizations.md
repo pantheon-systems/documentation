@@ -19,7 +19,7 @@ Organizations are available to three types of customers.
 
 ## Custom Upstreams
 
-Upstreams are git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. They are available for all members of the organization to select when starting a new site. Reseller partners customers deliver SAAS products built with Drupal or WordPress, automatically creating a new site for each of their clients. Learn all about [custom upstreams](/articles/organizations/running-a-custom-upstream).
+Upstreams are git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. They are available for all members of the organization to select when starting a new site. Reseller partners customers deliver SAAS products built with Drupal or WordPress, automatically creating a new site for each of their clients. Learn all about [custom upstreams](/docs/articles/organizations/running-a-custom-upstream).
 
 ## Multidev
 

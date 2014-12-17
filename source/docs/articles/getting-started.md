@@ -36,7 +36,7 @@ If you don't see the email immediately, check your spam folder. If you still hav
 
 ## 3. Create a Site
 
-Once your email is verified, you can create your first site. See our article  [launching your first site](/articles/users/creating-sites/) for more detailed documentation.  
+Once your email is verified, you can create your first site. See our article  [launching your first site](/docs/articles/users/creating-sites/) for more detailed documentation.  
 
 
 
@@ -51,13 +51,13 @@ Then, enter a name for your Pantheon site. You can change the human readable nam
 
 ## Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/articles/users/choosing-start-state).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180017)
 
 ## Import Manually
 
-If you have an existing site that you want to import, choose "Import manually". For additional details, see [importing an existing site](/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
+If you have an existing site that you want to import, choose "Import manually". For additional details, see [importing an existing site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
 
 ## 4. Interact With Your Code
 
@@ -65,7 +65,7 @@ There are two ways to add and update your site's code; via Git source code manag
 
 #### Git Connection Mode
 
-Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/articles/local/starting-with-git#starting-with-git).  
+Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git#starting-with-git).  
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180025)  
 
 To use Git, you'll need to go to your dashboard and add a public SSH key.  
@@ -74,11 +74,11 @@ To use Git, you'll need to go to your dashboard and add a public SSH key.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180030)  
 
 
-For detailed instructions, see the article [generating SSH keys](/articles/users/generating-ssh-keys/).
+For detailed instructions, see the article [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
 
 #### SFTP Connection Mode
 
-You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/articles/sites/code/developing-directly-with-sftp-mode/) for details.
+You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180036)
@@ -89,28 +89,28 @@ Your getpantheon.com username and password is only used to access your dashboar
 
 There are a number of credentials available for developers; each of which can be found in the dashboard. For details, see the following articles:
 
-- [rsync and SFTP](/articles/local/rsync-and-sftp#rsync-and-sftp)
-- [Starting with Git](/articles/local/starting-with-git/)
-- [Accessing MySQL databases](/articles/local/accessing-mysql-databases/)
-- [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend#redis)
+- [rsync and SFTP](/docs/articles/local/rsync-and-sftp#rsync-and-sftp)
+- [Starting with Git](/docs/articles/local/starting-with-git/)
+- [Accessing MySQL databases](/docs/articles/local/accessing-mysql-databases/)
+- [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend#redis)
 
 ## 6. Learn About the Pantheon Workflow
 
-Familiarize yourself with the [Pantheon Workflow](/articles/sites/code/using-the-pantheon-workflow/), both for code deployment and content (database and files).
+Familiarize yourself with the [Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/), both for code deployment and content (database and files).
 
 ## 7. Learn More About the Pantheon Platform
 
-To gain a better understanding of how the Pantheon system architecture works, see [all about DROPs](/articles/architecture/all-about-application-containers/).
+To gain a better understanding of how the Pantheon system architecture works, see [all about DROPs](/docs/articles/architecture/all-about-application-containers/).
 
 ## 8. Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's  [known limitations](/articles/drupal/known-limitations#known-limitations) now and save yourself the headache later on!
+No platform is perfect; familiarize yourself with Pantheon's  [known limitations](/docs/articles/drupal/known-limitations#known-limitations) now and save yourself the headache later on!
 
 ## 9. Prepare for Launch by Adding a Credit Card
 
 When you're ready to launch your site, you'll need to add a credit card to the site. For details, see:
 
-- [Adding a Card to a Specific Site.](/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site)
+- [Adding a Card to a Specific Site.](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site)
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180046)
 

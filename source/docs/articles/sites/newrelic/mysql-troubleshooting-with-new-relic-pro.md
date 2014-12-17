@@ -64,7 +64,7 @@ From within Pantheon, get to the dashboard for whatever website you suspect is h
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/333271)  
 
 
-The New Relic Pro trace does not, however, give the full query. It only shows the query with the Drupal placeholders, which cannot be executed against MySQL as is. To do that, we now need to go hunting in the MySQL Slow log. Go back to the site's panel on the dashboard and get the SFTP connection information. Modify it per [this article](/articles/local/accessing-mysql-databases#accessing-mysql#slow-logs) to connect to MySQL via SFTP via your terminal or a FTP program that supports the SFTP protocol.  
+The New Relic Pro trace does not, however, give the full query. It only shows the query with the Drupal placeholders, which cannot be executed against MySQL as is. To do that, we now need to go hunting in the MySQL Slow log. Go back to the site's panel on the dashboard and get the SFTP connection information. Modify it per [this article](/docs/articles/local/accessing-mysql-databases#accessing-mysql#slow-logs) to connect to MySQL via SFTP via your terminal or a FTP program that supports the SFTP protocol.  
 
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/333273)  

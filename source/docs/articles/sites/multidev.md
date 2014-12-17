@@ -28,7 +28,7 @@ There are a number of terms that are used throughout the Multidev workflow:
 *   **commit** - record snapshot to history. [Read more »](http://gitref.org/basic/#commit)
 *   **push** - send changes to a remote repository. [Read more »](http://gitref.org/remotes/#push)
 *   **branch** - movable pointer to a set of commits, allowing independent development and history. [Read more »](http://git-scm.com/book/ch3-1.html)
-*   **environment** - independent infrastructure for a Drupal site, including code, database, files. [Read more »](http://helpdesk.getpantheon.com/customer/portal/articles/383609)
+*   **environment** - independent infrastructure for a Drupal site, including code, database, files. [Read more »](http://helpdesk.getpantheon.com/customer/portal/docs/articles/383609)
 *   **fork** - to divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking. [Read more »](http://en.wikipedia.org/wiki/Fork_(software_development))
 *   **merge** - combine contents of a&nbsp;branch into another, like a bugfix branch into master. [Read more »](http://gitref.org/branching/#merge)
 *   **master** - name of default branch; deployed to Pantheon dev, test and live environments.

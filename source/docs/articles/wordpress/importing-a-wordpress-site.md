@@ -7,7 +7,7 @@ category:
 ---
 
  ## Overview  
- **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
+ **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 
 1. Prepare for import. You will need a zip or tar.gz archive of your site in three separate files:
 
@@ -149,9 +149,9 @@ It sets a default cache lifetime of 10 minutes, and will automatically clear pos
 
 **Further Reading:**
 
-[Using the Pantheon Workflow](/articles/sites/code/using-the-pantheon-workflow/)
+[Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 
 
-[Developing with SFTP](/articles/sites/code/developing-directly-with-sftp-mode)
+[Developing with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode)
 
-[Going Live](/articles/going-live)
+[Going Live](/docs/articles/going-live)

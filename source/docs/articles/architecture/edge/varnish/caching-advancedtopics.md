@@ -25,7 +25,7 @@ For the purposes of caching, Varnish ignores any GET parameter that is prefixed 
 
 For example, <tt>?__dynamic_id=1234</tt> would be ignored, but <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> would be considered distinct pages.
 
-Query keys will still be passed to the application server, but the values will be changed to PANTHEON\_STRIPPED to indicate that the URL is being altered. For more information, see [PANTHEON\_STRIPPED parameters](/articles/architecture/edge/pantheon_stripped-get-parameter-values).
+Query keys will still be passed to the application server, but the values will be changed to PANTHEON\_STRIPPED to indicate that the URL is being altered. For more information, see [PANTHEON\_STRIPPED parameters](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
 
 ### External Authentication (e.g. Facebook login)
 

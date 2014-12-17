@@ -12,10 +12,10 @@ Continuous Integration is a method of running automated unit and integration tes
 
 ## Terminus Command-Line Interface
 
-[Terminus](/articles/local/terminus-the-pantheon-command-line-interface/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon dashboard can be performed with Terminus, including:
+[Terminus](/docs/articles/local/terminus-the-pantheon-command-line-interface/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon dashboard can be performed with Terminus, including:
 
 - Site creation
-- [Multidev environment](/articles/sites/multidev) creation and removal
+- [Multidev environment](/docs/articles/sites/multidev) creation and removal
 - Content cloning
 - Code pushes
 

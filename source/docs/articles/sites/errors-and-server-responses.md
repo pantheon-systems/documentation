@@ -67,7 +67,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 
 We could increase the nginx queue above 100, but it would only mask the problem for longer. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
-This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the DROP for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/articles/sites/settings/selecting-a-plan/).
+This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the DROP for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
 
 ### Pantheon - 503 Database not responding
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/184855)
@@ -79,14 +79,14 @@ This can be caused by sustained spikes in traffic (often caused by search engine
 
 "The service is temporarily unavailable. Please try again later."
 
-This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/articles/drupal/timeouts) is available in our helpdesk.
+This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP basic auth (the Security username/password), then that's a misleading message - best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon - 504 Gateway Timeout
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/185064)  
-"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/articles/drupal/timeouts) is available in our helpdesk.
+"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
@@ -126,7 +126,7 @@ Even with the watchdog off these errors will still be written to the PHP error l
 ##### 2. Optimize the site
 
 =======
-Long running processes like batch jobs, background tasks and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/articles/sites/newrelic/new-relic-performance-analysis#End-UserOverview) to identify performance bottlenecks, fix errors and make changes to enhance performance.
+Long running processes like batch jobs, background tasks and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#End-UserOverview) to identify performance bottlenecks, fix errors and make changes to enhance performance.
 
 
 ##### 3. Upgrade your plan
@@ -147,4 +147,4 @@ Drush is a great workaround for most administrative bottlenecks. Because it runs
 
 ## Handle More Traffic
 
-See our article on [debugging performance bottlenecks](/articles/sites/newrelic/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.
+See our article on [debugging performance bottlenecks](/docs/articles/sites/newrelic/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.

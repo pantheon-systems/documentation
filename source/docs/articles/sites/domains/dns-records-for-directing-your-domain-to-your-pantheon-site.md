@@ -8,7 +8,7 @@ category:
 
 ## Overview
 
-The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/articles/going-live/).
+The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/docs/articles/going-live/).
 
 ### Pantheon Does Not Manage Your Domain Name or DNS For Your Site
 
@@ -20,9 +20,9 @@ You should configure the DNS for both your non-www (bare domain) and www domain,
 
 1. DNS CNAME Record for www subdomain
 2. DNS A Record for non-www domain
-3. [Redirect non-www to www in settings.php or wp-config.php](/articles/sites/code/redirect-incoming-requests/#redirect_common)
+3. [Redirect non-www to www in settings.php or wp-config.php](/docs/articles/sites/code/redirect-incoming-requests/#redirect_common)
 
-See [Using Pantheon.io for Better Uptime](/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
+See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
 
 
 ## Pantheon's Legacy DNS Configuration for gotpantheon.com Sites
@@ -50,7 +50,7 @@ Your site dashboard recommends the specific DNS settings you should use. These c
 
 ## DNS Records for HTTPS Sites (SSL/TLS)
 
-If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
+If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
 
 ## DNS Vocabulary Terms
 <dl>
@@ -82,10 +82,10 @@ It depends on several factors, including the TTL of your DNS records. As a rule 
 
 #### Can I use a CNAME for my bare/naked/root domain?
 
-It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#Pantheon'sRecommendedDNSConfigurationForpantheon.ioSites/)
+It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#Pantheon'sRecommendedDNSConfigurationForpantheon.ioSites/)
 
 
-See [Using Pantheon.io for Better Uptime](/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
+See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
 
 #### How do I use Pantheon's WWW redirection service?
 
@@ -97,7 +97,7 @@ Yes; many Pantheon customers use third-party reverse proxies, such as [CloudFlar
 
 #### Can I test my domain name without making DNS changes?
 
-Yes; see [developing with a domain without changing DNS](/articles/sites/domains/adding-a-domain-to-a-site-environment/#dev_wo_dns).
+Yes; see [developing with a domain without changing DNS](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/#dev_wo_dns).
 
 #### Why isn't my site loaded when I ping the provided Pantheon IP?
 

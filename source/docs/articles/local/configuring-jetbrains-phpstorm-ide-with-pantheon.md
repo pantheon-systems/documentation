@@ -15,11 +15,11 @@ This article will cover some best practices and recommendations for building a D
 
 ## Initial Site Setup
 
-After you've [created your site on Pantheon](http://helpdesk.getpantheon.com/customer/portal/articles/717236-pantheon-101-getting-started), you'll need to set up your local environment.
+After you've [created your site on Pantheon](http://helpdesk.getpantheon.com/customer/portal/docs/articles/717236-pantheon-101-getting-started), you'll need to set up your local environment.
 
 ## Clone the Code Repository
 
-Make sure your Dev environment is in Git mode, then [clone your Git repository](http://helpdesk.getpantheon.com/customer/portal/articles/361247-starting-with-git) to your local workstation.
+Make sure your Dev environment is in Git mode, then [clone your Git repository](http://helpdesk.getpantheon.com/customer/portal/docs/articles/361247-starting-with-git) to your local workstation.
 
 ## Create a New PhpStorm Project
 
@@ -43,7 +43,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](http://helpdesk.getpantheon.com/customer/portal/articles/376107-developing-on-pantheon-directly-with-sftp-mode), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](http://helpdesk.getpantheon.com/customer/portal/docs/articles/376107-developing-on-pantheon-directly-with-sftp-mode), and click **Connection Info** to see the connection settings.
 2. Within PhpStorm, go to Tools > Deployment > Configuration.
 3. Click plus for the [add server dialog](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html).
 4. Enter the Pantheon site name followed by a dash, and the environment. Example: Yoursite-dev.

@@ -78,7 +78,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/articles/local/undo-git-commits-like-overwriting-drupal-core).
+See [Undo Git commits like overwriting Drupal core](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
 ### How do I apply a patch from Drupal.org on Pantheon?
 
@@ -148,12 +148,12 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/articles/users/generating-ssh-keys).
+If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
 
 
 ### Why am I being prompted for my password after adding the public key?
 
-This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
+This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/docs/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 
@@ -211,7 +211,7 @@ If you're getting errors after committing your reverted changes, make sure you h
 
 ### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/articles/local/git-faq#HowdoIrevertorundochanges?).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/docs/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/docs/articles/local/git-faq#HowdoIrevertorundochanges?).
 >>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.

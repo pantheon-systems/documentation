@@ -9,7 +9,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 
 ## Archive Your Live Code/Files/Database
  *Prerequisites:**  
- [Current drush aliases](/articles/local/drush-command-line-utility#using-drush-on-pantheon)
+ [Current drush aliases](/docs/articles/local/drush-command-line-utility#using-drush-on-pantheon)
 
 1. From the command line, run [the drush ard](http://www.drushcommands.com/drush-6x/archive/archive-dump) command against the live environment.
 2. Set the destination parameter to include a file name.  
@@ -25,4 +25,4 @@ There may be times when you need to copy an existing Drupal site to an entirely 
   **Example**: [https://your-live-site.gotpantheon.com/sites/default/site\_export.tar.gz](https://your-live-site.gotpantheon.com/sites/default/site_export.tar.gz))
 5. Click **Import Site**.
 
-The import process will create and deploy a new site based on the file uploaded. If there are issues, see [Importing an Existing Site to Pantheon](http://helpdesk.getpantheon.com/customer/portal/articles/361251-importing-an-existing-drupal-site-to-pantheon), or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+The import process will create and deploy a new site based on the file uploaded. If there are issues, see [Importing an Existing Site to Pantheon](http://helpdesk.getpantheon.com/customer/portal/docs/articles/361251-importing-an-existing-drupal-site-to-pantheon), or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
