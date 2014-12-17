@@ -25,7 +25,7 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - Using [SFTP](/articles/local/rsync-and-sftp#rsync-and-sftp) (and rsync!).
 - [Importing](/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) a site onto Pantheon.
 - How to enable [New Relic](/articles/sites/newrelic/new-relic-performance-analysis).
-- [Optimizing](/articles/sites/optimization) for the cloud.
+- [Optimizing](/articles/sites/optimizing) for the cloud.
 - How to work with [Settings.php](/articles/drupal/configuring-settings-php#working-with-settings-php)
 - Backups: [Set them up](/articles/sites/backups/backup-creation#creating-a-backup), make them on-demand before you push that bug change, check them from time to time, sleep easy.
 - Need to debug? Read [this](/articles/errors/php-errors-and-exceptions/) and [this](/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
@@ -37,7 +37,7 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - [CDN](/articles/drupal/content-delivery-network-cdn-for-file-distribution/)s can make your site faster, and protect you from DDOS attacks.
 - How [SSL & HTTPS](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#getting-an-ssl-cert) are implemented on Pantheon.
 - How to properly point your [DNS](/articles/going-live/) when going live.
-- SSO, LDAP, Shibboleth and other [authentication](/articles/sites/code/sso-and-identity-federation-on-pantheon/) methods.
+- SSO, LDAP, Shibboleth and other [authentication](/articles/sites/code/sso-and-identity-federation/) methods.
 - Pantheon servers spin down after ~2 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
 
 ## Support

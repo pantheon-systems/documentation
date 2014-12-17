@@ -122,7 +122,7 @@ It sets a default cache lifetime of 10 minutes, and will automatically clear pos
 
 [Using the Pantheon Workflow](/documentation/howto/using-the-pantheon-workflow/)
 
-[Developing with SFTP](/articles/sites/developing-directly-with-sftp-mode)
+[Developing with SFTP](/articles/sites/code/developing-directly-with-sftp-mode)
 
 [Going Live](/articles/going-live)
 

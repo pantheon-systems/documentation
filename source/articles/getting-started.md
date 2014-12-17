@@ -51,7 +51,7 @@ Then, enter a name for your Pantheon site. You can change the human readable nam
 
 ## Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/articles/users/choosing--start-state).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/articles/users/choosing-start-state).
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180017)
 
@@ -78,7 +78,7 @@ For detailed instructions, see the article [generating SSH keys](/articles/users
 
 #### SFTP Connection Mode
 
-You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode/) for details.
+You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/180036)
