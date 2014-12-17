@@ -3,7 +3,7 @@ title: Getting the Client IP Address
 description: Set up geolocation capabilities on your site.
 
 category:
-  -
+  - developing
 ---
 ## Overview
 

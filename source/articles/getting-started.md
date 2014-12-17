@@ -36,7 +36,7 @@ If you don't see the email immediately, check your spam folder. If you still hav
 
 ## 3. Create a Site
 
-Once your email is verified, you can create your first site. See our article  [launching your first site](/articles/users/creating-your-first-site/) for more detailed documentation.  
+Once your email is verified, you can create your first site. See our article  [launching your first site](/articles/users/creating-sites/) for more detailed documentation.  
 
 
 
