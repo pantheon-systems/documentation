@@ -7,7 +7,7 @@ category:
 
 ## Debugging Cache
 
-### How do I clear Varnish caches?
+### Clear Varnish Caches
 
 There are three ways to clear all Varnish caches. The first two require the **pantheon\_api** module to be enabled in order to allow Drupal send the request to clear the Varnish caches.
 
@@ -15,13 +15,12 @@ There are three ways to clear all Varnish caches. The first two require the **pa
 2. From Drush: drush cc all
 3. From the Pantheon Dashboard: Clear Caches
 
-Varnish caches cannot be selectively cleared.
+**Note:** Varnish caches cannot be selectively cleared.
 
 ### No HTTP Cache Headers
 
-<<<<<<< HEAD:source/articles/architecture/edge/varnish/debugging-cache
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/articles/running-drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
-=======
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
+
 If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/articles/drupal/drupal-s-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 >>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1:source/articles/architecture/edge/varnish/debugging-cache.md
 

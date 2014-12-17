@@ -66,6 +66,8 @@ body.row.main {
   font-size: 0.9em;
   color: #000;
   padding-bottom: 20px;
+  text-transform: capitalize;
+
 }
 
 .search-form {
@@ -125,8 +127,10 @@ body.row.main {
 
 img {
   max-width: 100%;
+  border:1px solid grey;
   }
 
+img.noborder {border:none;}
 
 /* Keep code small in tables on account of limited space */
 .table code {

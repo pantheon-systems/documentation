@@ -80,11 +80,8 @@ From within an up-to-date Git clone in your local environment:
     # resolve other conflicts
     git push origin master
 
-<<<<<<< HEAD
-For more information on resolving conflicts, see the [Git FAQ page](/articles/advanced-topics/git-faq#git-faq).
-=======
-For more information on resolving conflicts, see the [Git FAQ page](/articles/local/git-faq).
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
+
+For more information on resolving conflicts, see the [Git FAQ page](/articles/local/git-faq#FrequentlyAskedQuestions).
 
 ## Troubleshooting
 
@@ -114,12 +111,11 @@ For example:
 - When looking for a commit ID, you can find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
 
     git status
-    # On branch master
-    # Changes to be committed:
-    # (use "git reset HEAD ..." to unstage)
-    #
-    # new file: README.txt
-    #
+    On branch master
+    Changes to be committed:
+    (use "git reset HEAD ..." to unstage)
+    new file: README.txt
+
 
 - Next, you will need to run:
 

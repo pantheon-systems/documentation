@@ -102,8 +102,8 @@ The blocking UI will appear for all users on the team who are looking at that en
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
 - [PHPStorm](/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon/)
-- [FileZilla](/articles/local/filezilla-on-pantheon/)
-- [WinSCP](/articles/local/using-winscp-on-pantheon/)
+- [FileZilla](/articles/local/filezilla/)
+- [WinSCP](/articles/local/using-winscp/)
 
 
 ## Troubleshooting

@@ -2,7 +2,7 @@
 title: Generating SSH Keys
 description: Understand how to generate SSH keys to configure Drush or SFTP.
 category:
-  - going-live
+  - getting-started
 
 ---
 
@@ -16,13 +16,10 @@ To fix this, please edit the user or hostname and remove spaces and/or odd chara
 
 Genrating SSH keys is different for every platform. Please follow the directions that are most appropriate for you below:
 
-1. [MacOS and Linux](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
+1. [MacOS and Linux](/articles/users/generating-ssh-keys#macos-and-linux)
 
-2. [Windows / Git GUI and OpenSSH](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-openssh)
+2. [Windows / Git GUI and OpenSSH](/articles/users/generating-ssh-keys#windows-and-openssh)
 
-<!--<li>
-	<p><a href="/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
-	</li>-->
 ## MacOS and Linux
 
 Open your favorite terminal utility and generate a key:

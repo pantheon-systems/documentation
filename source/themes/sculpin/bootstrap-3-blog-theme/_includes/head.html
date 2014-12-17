@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "title" %}
+    {% if site.head_includes %}
+        {% for include in site.head_includes %}
+            {% include include %}
+        {% endfor %}
+    {% endif %}
+    {% include "custom/fonts" %}
+    {% include "custom/head" %}
+    {% for stylesheet in theme_paths("assets/css/style.css") %}
+        <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
+    {% endfor %}
+</head>

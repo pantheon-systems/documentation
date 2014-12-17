@@ -78,4 +78,4 @@ Domain Access requires [customization of settings.php](http://drupal.org/node/10
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information see [configuring wp-config.php](/articles/drupal/configuring-wp-config-php/).
+For more information see [configuring wp-config.php](/articles/wordpress/configuring-wp-config-php).

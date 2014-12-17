@@ -1,5 +1,5 @@
 ---
-title: Required Reading: Essential Pantheon Documentation
+title: "Required Reading: Essential Pantheon Documentation"
 description: Recommended documentation to learn about Pantheon's technologies.
 category:
   - getting-started
@@ -12,7 +12,8 @@ Pantheon is unlike any traditional web hosting service that you may have used in
 Though it incorporates many familiar open-source technologies, it presents a fresh and unique deployment topology, matched with a highly-functional toolbox and uber-efficient workflow to create an all-in-one cloud-based development solution for Drupal.  
 
 
-Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
+
+Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
 
 ## Helpful Docs
 
@@ -24,20 +25,20 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - The Pantheon [Workflow](/articles/sites/code/using-the-pantheon-workflow/).
 - Using [SFTP](/articles/local/rsync-and-sftp#rsync-and-sftp) (and rsync!).
 - [Importing](/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) a site onto Pantheon.
-- How to enable [New Relic](/articles/sites/newrelic/new-relic-performance-analysis-on-pantheon#enabling-new-relic).
-- [Optimizing](/articles/sites/optimization-for-pantheon-and-the-cloud#optimization-for-pantheon-and-the-cloud) for the cloud.
+- How to enable [New Relic](/articles/sites/newrelic/new-relic-performance-analysis).
+- [Optimizing](/articles/optimizing) for the cloud.
 - How to work with [Settings.php](/articles/drupal/configuring-settings-php#working-with-settings-php)
 - Backups: [Set them up](/articles/sites/backups/backup-creation#creating-a-backup), make them on-demand before you push that bug change, check them from time to time, sleep easy.
 - Need to debug? Read [this](/articles/errors/php-errors-and-exceptions/) and [this](/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
 - Using [Drush](/articles/local/drush-command-line-utility#using-drush-on-pantheon) on Pantheon.
-- [Cron](/articles/howto/cron-on-pantheon/) and Pantheon.
-- How core [updates](/articles/drupal/drupal-core-updates#core-updates) work (TL;DR: don't use 'drush up' for core!).
-- Caching, both with [Varnish](/articles/architecture/edge/varnish-caching-for-high-performance#working-with-varnish-on-pantheon) and [Redis](/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
-) and how to configure [Drupal Performance Settings.](/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings)
+- [Cron](/articles/sites/code/cron/) and Pantheon.
+- How core [updates](/articles/drupal/drupal-core-updates) work (TL;DR: don't use 'drush up' for core!).
+- Caching, both with [Varnish](/articles/architecture/edge/varnish) and [Redis](/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
+) and how to configure [Drupal Performance Settings.](/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDN](/articles/drupal/content-delivery-network-cdn-for-file-distribution/)s can make your site faster, and protect you from DDOS attacks.
 - How [SSL & HTTPS](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#getting-an-ssl-cert) are implemented on Pantheon.
-- How to properly point your [DNS](/articles/drupal/going-live-and-launching-your-site/) when going live.
-- SSO, LDAP, Shibboleth and other [authentication](/articles/sites/security/sso-and-identity-federation-on-pantheon/) methods.
+- How to properly point your [DNS](/articles/going-live/) when going live.
+- SSO, LDAP, Shibboleth and other [authentication](/articles/sites/code/sso-and-identity-federation/) methods.
 - Pantheon servers spin down after ~2 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
 
 ## Support

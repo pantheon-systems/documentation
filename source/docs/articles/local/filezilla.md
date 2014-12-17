@@ -11,7 +11,7 @@ category:
 
 ## Getting Started
 
-The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode#on-server-development#connecting-via-sftp) for your site.
+The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/articles/sites/code/developing-directly-with-sftp-mode/#SFTPConnectionInformation) for your site.
 
 ## Download FileZilla
 

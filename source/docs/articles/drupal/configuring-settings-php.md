@@ -6,7 +6,8 @@ category:
 
 ---
 
- 
+
+ 
 ## Overview
 
 The Drupal system configuration in code is set in:
@@ -21,17 +22,10 @@ Pantheon uses a variant of Pressflow Drupal to allow the server to automatically
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
-<<<<<<< HEAD
-- [Reading Pantheon Environment configuration](/articles/howto/reading-pantheon-environment-configuration/) (including domain\_access)
-- [Redis as a caching backend](/articles/howto/redis-as-a-caching-backend#redis)
-- [Redirect incoming requests](/articles/howto/redirect-incoming-requests/) (including WWW and non-WWW, requiring SSL)
-- [SSO and Identity Federation](/articles/advanced-topics/sso-and-identity-federation-on-pantheon/) (LDAP TLS certificate configuration)
-=======
 - [Reading Pantheon Environment configuration](/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
 - [Redis as a caching backend](/articles/sites/redis-as-a-caching-backend)
 - [Redirect incoming requests](/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
-- [SSO and Identity Federation](/articles/advanced/sso-and-identity-federation) (LDAP TLS certificate configuration)
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
+- [SSO and Identity Federation](/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
 
@@ -165,11 +159,8 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Are table prefixes supported?
 
-<<<<<<< HEAD
-For information about table prefixes on Pantheon, see [this](/articles/advanced-topics/importing-an-existing-drupal-site-to-pantheon#importing-an-existing-site#table-prefixes) article.
-=======
-For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon#TablePrefixes) article.
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
+
+For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon) article.
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 
