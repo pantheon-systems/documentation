@@ -33,23 +33,25 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 5. Place your mouse over the upstream value, left click and select **Copy link** to get the site's Pantheon upstream location.  
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/343668)  
 6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:  
-**Original:** 'git pull --no-rebase -Xtheirs --squash {paste-value-here} master'
-**Updated: ** 'git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master'
-**Important:** Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: http://github.com/pantheon-systems/drops-7 to git://github.com/pantheon-systems/drops-7.git.
-**Final Command: ** 'git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master'
-Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:
-Squash commit -- not updating HEAD
-Automatic merge went well; stopped before committing as requested
+**Original:** 'git pull --no-rebase -Xtheirs --squash {paste-value-here} master'  
+**Updated: ** 'git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master'  
+**Important:** Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: http://github.com/pantheon-systems/drops-7 to git://github.com/pantheon-systems/drops-7.git.  
+**Final Command: ** 'git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master'  
+
+Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:  
+Squash commit -- not updating HEAD  
+Automatic merge went well; stopped before committing as requested 
+
 7. From your Pantheon Dashboard, go to the Dev tab and select **Code**. Make sure your site is on Git mode, and copy the Git connection information found to the right of the Git tab.
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/335378)
-8. In your terminal, within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.
+8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.
 **From:** git remote add pantheon {pantheon-site-git-repo-information}
 **To:** git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
 **Important: ** Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:
 'git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import'
 9. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
 'git add -A'
-'git commit -m "Adding Pantheon core files'  
+'git commit -m "Adding Pantheon core files"  
 10. Now Git pull from your Pantheon repository master branch: 'git pull pantheon master'. Handle any conflicts as needed.  
 11. Git push back to your Pantheon site repository: 'git push pantheon master'  
 12. Go to the Code tab of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
@@ -87,14 +89,15 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 **Database**  
 
 You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your sql file much smaller and your import that much quicker.
-1. Go to your site's Dev environment. Get the MySQL CLI connection by clicking the **Connection Info** tab. The connection string will look something like this:
-mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon  
+
+1. Go to your site's Dev environment. Get the MySQL CLI connection by clicking the **Connection Info** tab. The connection string will look something like this:  
+mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon    
 2. In your command shell, navigate to the directory containing your SQL export. Place the MySQL connection information there, but add the following to the end:
 < {database\_dump\_file.sql}
 Your command will now look like:
 mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database\_dump.sql
-3. After you run the command, the sql file will be imported into your Pantheon Dev database.
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard and you are good to go.
+3. After you run the command, the sql file will be imported into your Pantheon Dev database.  
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard, and you are good to go.
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/343671)  
 
 
