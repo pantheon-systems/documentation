@@ -119,7 +119,7 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 		</tr>
 	</tbody>
 
-## Schedule backups
+## Schedule Backups
 
 Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way, you've got a fallback in case you want to revert your site content.
 
