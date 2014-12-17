@@ -2,7 +2,7 @@
 layout: default
 title: Articles
 generator: [documents_category_index]
-
+use: [documents_category]
 ---
 {% block title %}{{ page.category }} {{ page.title }}{% endblock %}
 {% block content %}
@@ -24,7 +24,13 @@ generator: [documents_category_index]
       </div>
     </div>
   </article>
-  <div class="zappy col-md-3">
+  <div class="categories col-md-3">
+    <h2>CATEGORIES</h2>
+    <div>
+      {% for category,documents in data.documents_category %}
+      <p><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title }}</a></p>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock content %}
