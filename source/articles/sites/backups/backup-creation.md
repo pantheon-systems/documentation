@@ -9,9 +9,11 @@ category:
 
 
 ## Overview
-Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-**Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
+Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a database backup, a files backup, and a code backup.
+
+
+**Note**: Backups need to be run separately for each environment (Dev, Test and Live). If you have changes in SFTP mode that you have not committed, these changes will be lost and there will be no way to recover them. The backups are based on the code currently in the Git log.
 
 ## Steps
 
@@ -28,42 +30,41 @@ You will notice the job indicator will turn green and provide the number of acti
 **Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
 
 ## Accessing Backups  
-When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files). 
+When the backup has finished, the jobs indicator will return to its start state to let you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database, and Files).
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/305286)
 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 
-
-Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
+Clicking on the down arrow next to the Code, DB, or Files for a particular backup will give you access to links for the offsite backup.
 
 Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-**Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
+**Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
 
 ## Frequently Asked Questions
 
-#### Where are the backups stored? 
+### Where are the backups stored?
 
 Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
-### How do I restore from my site from a full environment backup? 
+### How do I restore from my site from a full environment backup?
 
 In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-#### How long does a backup take? 
+### How long does a backup take?
 
-This depends on how much content you have. When you are doing a full environment backup this can take some time depending on the size of your code, database and files.
+This depends on how much content you have. When you are doing a full environment backup, this can take some time depending on the size of your code, database, and files.
 
-#### How can I specify the time for my backups to run?
+### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard but this requires a site to have an associated plan. See [selecting a plan](/articles/sites/settings/selecting-a-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You can select the day to run weekly backups by using the Dashboard, but this requires a site to have an associated plan. See [selecting a plan](/articles/sites/settings/selecting-a-plan/) for details about site plans on Pantheon.
 
-#### What timezone is the backup time marked in?
+### What time zone is the backup time marked in?
 
-Backups are shown in your timezone!
+Backups are shown in your time zone.
 
-#### Why do my automated backups not run when I scheduled them to run sometimes?
+### Why do my automated backups not run when I scheduled them to run sometimes?
 
 If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label.
 
@@ -73,22 +74,22 @@ Backups include your entire codebase, everything that's been committed. Uncommit
 
 #### Why is Backup & Migrate not recommended on Pantheon?
 
-As a product in general, Backup & Migrate is perfectly fine and fulfills many site owners’ needs, but within the context of the Pantheon platform it’s not recommended. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
+In general, Backup & Migrate is perfectly fine and fulfills many site owners' needs, but within the context of the Pantheon platform it’s not recommended. On Pantheon, Backup & Migrate can make your Drupal site work harder for a number of reasons:
 
 - Requires a full Drupal bootstrap
 - Monopolizes an appserver process and MySQL process while running
 - Backups are written to Valhalla, our Network File System that is not optimized for large files (and explicitly does not work for files above 256MB)
 - Does not use mysqldump by default (it is available as an experimental destination)
-- Can cause excessively long Drupal cron runs, which if it times out blocks other operations
+- Can cause excessively long Drupal cron runs, and if it times out blocks other operations
 - Creates monolithic archives by default
 
 Additionally, security vulnerabilities can be introduced by ignoring interface warnings and configuring backups to be placed in web accessible locations.
 
 In comparison, Pantheon’s backup mechanism:
 
-- Does not require a full - or any - Drupal bootstrap
+- Does not require a full (or any) Drupal bootstrap
 - Does not utilize an appserver process
-- Does not write to Valhalla, so no file size limitation; instead, stores backups in Amazon S3 for black-swan redundancy
+- Does not write to Valhalla, so no file size limitation; Instead, stores backups in Amazon S3 for black-swan redundancy
 - Uses mysqldump for minimal database impact
 - Executed using job scheduling, so will wait in queue if system is busy and execute as soon as its ready
 - Creates distinct archives (code, database, files)
