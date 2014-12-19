@@ -1,7 +1,8 @@
 ---
 title: SFTP FAQs
 description: Understand common SFTP connection problems.
-
+category:
+  - developing
 ---
 
 ## SFTP Connection Issues

@@ -2,7 +2,7 @@
 title: Redis as a caching backend
 description: Understand how to use Redis as a caching mechanism.
 category:
-    - howto
+    - developing
 
 ---
 

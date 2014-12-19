@@ -3,7 +3,6 @@ title: PHP Errors and Exceptions
 Description: Detailed information about basic PHP errors.  
 category:
   - debugging
-  - supporting
   - drupal
 
 ---

@@ -2,7 +2,8 @@
 title: FileZilla on Pantheon
 description: Detailed information about using the FileZilla FTP client.
 category:
-    - howto
+    - getting-started
+    - developing
 
 
 ---

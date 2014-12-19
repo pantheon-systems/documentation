@@ -1,7 +1,8 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Pantheon
 description: Best practices and recommendations for building a site using PhpStorm.
-
+category:
+  - developing
 
 ---
 

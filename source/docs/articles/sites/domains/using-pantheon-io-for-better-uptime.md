@@ -2,7 +2,7 @@
 title: Using Pantheon.io For Better Uptime
 description: Understand the new pantheon.io system and how it improves uptime.
 category:
-  - going-live
+  - developing
 
 ---
 

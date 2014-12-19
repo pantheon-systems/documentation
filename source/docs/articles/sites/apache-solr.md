@@ -3,6 +3,7 @@ title: Apache Solr on Pantheon
 description: Using Apache Solr on the Pantheon platform.
 category:
     - drupal
+    - developing
 
 ---
 
@@ -227,7 +228,7 @@ It needs to be done for dev, test and live individually. You can do this at `adm
 
 #### Re-index Content
 
-You can do this at _admin/config/search/apachesolr_. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting). 
+You can do this at _admin/config/search/apachesolr_. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
 
 #### Check Index and Batch Sizes
 

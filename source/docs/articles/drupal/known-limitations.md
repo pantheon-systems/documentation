@@ -2,8 +2,6 @@
 title: Drupal Known Limitations
 description: A list of Pantheon's known limitations.
 category:
-  - getting-started
-category:
   - drupal
 
 ---

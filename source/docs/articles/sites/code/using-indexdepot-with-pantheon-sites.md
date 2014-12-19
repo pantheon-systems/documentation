@@ -2,7 +2,7 @@
 title: Using IndexDepot With Pantheon Sites
 description: Create and configure IndexDepot and Solr.
 category:
-  - advanced
+  - developing
 ---
 
 ## Overview

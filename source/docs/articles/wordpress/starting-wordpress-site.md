@@ -3,7 +3,7 @@ title: Launching a WordPress Site
 description: Learn to launch a new WordPress site.  
 category:
   - going-live
-
+  - WordPress
 ---
 
 ## **1. Add & Name Your Site**

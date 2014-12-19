@@ -1,6 +1,8 @@
 ---
 title: Restoring an Environment from a Backup
 description: Learn how to restore a backup to an environment.
+category:
+  - managing
 
 ---
 

@@ -2,7 +2,8 @@
 title: WordPress FAQ
 description: Answer questions to Frequently Asked Questions concerning WordPress on the Pantheon platform.
 category:
-  - developing
+  - getting-started
+  - WordPress
 
 ---
 

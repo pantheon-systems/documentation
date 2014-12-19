@@ -11,6 +11,7 @@ To take full advantage of Pantheon, you should load your public SSH key into you
 
 **Note: For detailed help generating SSH keys, see [the HOWTO on key generation](/docs/articles/users/generating-ssh-keys#generate-ssh-keys).**
 
+
 ### Copy your public key
 You should load the public portion of your key. Typically this is the file ending in `.pub`. The text of a public key contains three components: the type, the key, and the comment. For instance:
 

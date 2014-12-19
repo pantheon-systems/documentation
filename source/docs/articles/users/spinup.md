@@ -3,7 +3,7 @@ title: Spinup
 description: Learn how to create a new spinup with Pantheon.
 filename: /source/_common-tasks/spinup.md
 category:
-  - Spinup
+  - managing
 next_post:
 ---
 ## 1. Create a New Site

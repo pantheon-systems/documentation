@@ -2,10 +2,7 @@
 title: Database Connection Errors
 description: Understand the causes and solutions for database connection errors.
 category:
-  - supporting
   - debugging
-category:
-  - drupal
 
 ---
 

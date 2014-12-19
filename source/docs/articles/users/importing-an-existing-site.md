@@ -1,7 +1,9 @@
 ---
 title: Importing an Existing Site to Pantheon
 description: Detailed information on how to prepare and import your site to Pantheon.
-
+category:
+  - drupal
+  - getting-started
 ---
 
 

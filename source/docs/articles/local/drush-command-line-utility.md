@@ -3,6 +3,7 @@ title: Drush Command-Line Utility
 description: Administer and maintain your site using Drush.
 category:
   - getting-started
+  - developing
 
 ---
  

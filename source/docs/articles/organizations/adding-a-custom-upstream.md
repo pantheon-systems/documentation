@@ -3,6 +3,7 @@ title: Adding a Custom Upstream
 description: Add and test a custom version of WordPress or Drupal.
 category:
   - managing
+  - going-live
 
 ---
 

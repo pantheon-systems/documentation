@@ -1,7 +1,8 @@
 ---
 title: Using PHPMyAdmin to Locally Administer a Database
 description: Configure and troubleshoot MySQL connections.
-
+category:
+  - developing
 ---
 
 ## Overview

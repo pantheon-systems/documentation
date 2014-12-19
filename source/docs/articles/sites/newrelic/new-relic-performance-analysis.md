@@ -3,6 +3,7 @@ title: New Relic performance analysis on Pantheon
 description: Learn how to utilize New Relic performance metrics and reports.
 category:
   - going-live
+  - managing
 
 ---
 

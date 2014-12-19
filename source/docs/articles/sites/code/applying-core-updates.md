@@ -2,7 +2,13 @@
 title: Applying Core Updates
 description: Apply and debug core updates.
 category:
+<<<<<<< HEAD:source/docs/articles/sites/code/applying-core-updates.md
   - developing
+=======
+  - debugging
+  - drupal
+
+>>>>>>> master:source/articles/drupal/drupal-core-updates.md
 ---
 
 <head>

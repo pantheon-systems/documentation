@@ -2,7 +2,6 @@
 title: Bots and Indexing on Pantheon
 description: Manage bots and indexing within the Pantheon workflow.
 category:
-  - supporting
   - developing
 
 ---

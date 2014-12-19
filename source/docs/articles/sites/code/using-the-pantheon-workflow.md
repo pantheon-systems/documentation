@@ -1,15 +1,15 @@
 ---
 title: Using the Pantheon Workflow
 description: Learn the Pantheon environments and overall workflow.
+category:
+  - going-live
+  - developing
 
 ---
 
- 
 ## Overview
 
 Pantheon provides 3 environments for your site. This allows you to develop and test your site without impacting the live site that's available to the world.
-
-![Pantheon Workflow Diagram](https://pantheon-systems.desk.com/customer/portal/attachments/29437)
 
 The **Dev** environment is connected directly to Git, and anything "pushed" via git ends up there immediately. The **Live** environment is, as the name suggests, the public/production instance for your site. The **Test** environment allows you to synchronize the latest code-changes from dev with the latest content from live so you can effectively simulate a deployment. This lets you preview and evaluate functionality before launching.
 
@@ -74,9 +74,11 @@ If we allowed SFTP changes to be applied it would break a lot of functionality o
 **NOTE: There are only two ways to achieve the goal of updating code files in Test or Live on Pantheon.**
 
 1. **Using the Workflow Tools**  
-You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk. /documentation/howto/using-the-pantheon-workflow/
+
+You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk. /documentation/howto/using-the-pantheon-workflow/
 2. **A hotfix using git**  
-If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/docs/articles/sites/code/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
+
+If you need to make the changes directly to Live this is against development best practices which are the core of the platform but we make this accessible via git: Read more about hotfixes [here](/articles/sites/code/hot-fixes/). Pushing a hotfix via git is the only option to push changes directly to Live without having to go through Dev and Test and there are no alternatives.
 
 ## Other Workflow Operations: Import, Export & Wipe
 

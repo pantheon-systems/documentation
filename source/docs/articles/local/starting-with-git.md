@@ -3,6 +3,7 @@ title: Starting With Git
 description: Use Git version control with your Pantheon site.
 category:
   - getting-started
+  - developing
 
 ---
 
