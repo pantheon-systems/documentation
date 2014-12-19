@@ -1,7 +1,8 @@
 ---
 title: Port 2222 Blocked Workaround
 description: Instructions for accessing Port 2222.
-
+category:
+  - developing
 ---
 
 ​

@@ -1,7 +1,7 @@
 ---
 title: Debugging Cache
 category:
-  - getting-started
+  - debugging
 
 ---
 
