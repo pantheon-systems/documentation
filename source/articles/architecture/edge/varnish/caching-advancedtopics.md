@@ -2,7 +2,7 @@
 title: Advanced Caching
 description:
 category:
-  - getting-started
+  - developing
 
 ---
 

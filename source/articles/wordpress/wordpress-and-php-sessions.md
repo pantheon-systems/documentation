@@ -3,6 +3,7 @@ title: WordPress and PHP Sessions
 description: Understand the behaviors of WordPress and PHP sessions.
 category:
   - developing
+  - WordPress
 
 ---
 

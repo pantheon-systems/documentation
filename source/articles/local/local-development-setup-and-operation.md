@@ -3,6 +3,7 @@ title: Local Development Setup and Operation
 description: Suggestions and solutions for working locally.
 category:
   - getting-started
+  - developing
 
 ---
 

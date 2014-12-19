@@ -2,7 +2,7 @@
 title: Email on Pantheon
 description: Understand email hosting on Pantheon.
 category:
-    - running-drupal
+    - drupal
 
 ---
 

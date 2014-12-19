@@ -2,7 +2,6 @@
 title: Drupal's Performance and Caching Settings
 description: Use Varnish caching to maximize your site's performance.  
 category:
-  - optimizing
   - drupal
 
 ---

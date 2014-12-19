@@ -2,7 +2,8 @@
 title: LDAP and LDAPS
 description: Configure LDAP on your Pantheon site.
 category:
-  - getting-started
+  - going-live
+  - developing
 
 ---
 

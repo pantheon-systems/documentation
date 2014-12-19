@@ -2,7 +2,8 @@
 title: Major Version Drupal Upgrades
 description: Learn how to upgrade to the next major revision of Drupal.
 category:
-  - developing
+  - drupal
+  - managing
 
 ---
 

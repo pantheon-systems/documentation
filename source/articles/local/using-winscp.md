@@ -3,6 +3,7 @@ title: Using WinSCP on Pantheon
 description: Detailed information about the WinSCP SFTP client.
 category:
   - getting-started
+  - developing
 
 ---
 

@@ -2,7 +2,7 @@
 title: Removing a Credit Card
 description: Learn how to remove a credit card as a payment method for your site.
 category:
-  - run
+  - managing
 
 
 ---
