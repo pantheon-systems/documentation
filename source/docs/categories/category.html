@@ -10,11 +10,11 @@ use: [documents_category]
   <article>
     <div class="col-md-9">
       <h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
-      <script type="text/javascript">
       <!--
+      <script type="text/javascript">
       breadcrumbs()
-      //-->
-      </script>
+      //
+      </script>-->
       <div class="document-list">{% for document in page.category_documents %}
         <article>
           <a href="{{ document.url }}">{{ document.title }}</a>
@@ -23,14 +23,15 @@ use: [documents_category]
         {% endfor %}
       </div>
     </div>
-  </article>
-  <div class="categories col-md-3">
-    <h2>CATEGORIES</h2>
-    <div>
-      {% for category,documents in data.documents_category %}
-      <p><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title }}</a></p>
-      {% endfor %}
+    <div class="categories col-md-3">
+      <h2>CATEGORIES</h2>
+      <div>
+        {% for category,documents in data.documents_category %}
+        <p><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }}</a></p>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  </article>
+
 </div>
 {% endblock content %}
