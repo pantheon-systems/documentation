@@ -1,6 +1,9 @@
 ---
 title: Using the Pantheon Workflow
 description: Learn the Pantheon environments and overall workflow.
+category:
+  - going-live
+  - developing
 
 ---
 

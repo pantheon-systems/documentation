@@ -3,6 +3,7 @@ title: Team Management
 description: Working with the Pantheon deployment tools in a team driven environment.
 category:
   - getting-started
+  - managing
 
 ---
 

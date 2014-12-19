@@ -3,7 +3,7 @@ title: URLs in WordPress's Database
 description: Understanding URLs within the WordPress database.
 category:
     - getting-started
-
+    - WordPress
 ---
 
 ## Summary

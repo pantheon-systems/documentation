@@ -7,6 +7,8 @@ category:
   - Spinup Importer
 category:
   - WordPress
+  - getting-started
+  - developing
 ---
 
 ## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your existing WordPress site.

@@ -3,6 +3,7 @@ title: Importing Drush Site Archives with Terminus
 description: Import a Drush archive using the Terminus command-line interface.
 category:
   - getting-started
+  - developing
 ---
 
 ## Overview

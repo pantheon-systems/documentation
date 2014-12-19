@@ -1,7 +1,8 @@
 ---
 title: PHPMyAdmin
 description: Learn how to configure and use PHPMyAdmin to administrate databases.
-
+category:
+  - managing
 ---
 
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and also provides DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it isn't possible to install this on  Windows, Mac OS X and Linux.
