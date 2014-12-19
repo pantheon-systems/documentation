@@ -63,4 +63,4 @@ To conserve resources, environments will be spun down after about two hours of i
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/224763)​
 
-Go to the environment's URL in your browser to "wake up" the reaped site. Once the page has loaded, try to connect again and the database should be accessible. More information about this is available on the [known limitations](articles/drupal/knownlimitations.md) page.
+Go to the environment's URL in your browser to "wake up" the reaped site. Once the page has loaded, try to connect again and the database should be accessible. More information about this is available on the [known limitations](/docs/articles/drupal/known-limitations) page.

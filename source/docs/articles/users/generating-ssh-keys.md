@@ -16,9 +16,9 @@ To fix this, please edit the user or hostname and remove spaces and/or odd chara
 
 Genrating SSH keys is different for every platform. Please follow the directions that are most appropriate for you below:
 
-1. [MacOS and Linux](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-mac-os-x-and-linux)
+1. [MacOS and Linux](/docs/articles/users/generating-ssh-keys#macos-and-linux)
 
-2. [Windows / Git GUI and OpenSSH](/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-openssh)
+2. [Windows / Git GUI and OpenSSH](/docs/articles/users/generating-ssh-keys#windows-/-openssh)
 
 <!--<li>
 	<p><a href="/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
@@ -87,7 +87,7 @@ Ensure the whole key is selected (white text on a blue background). If it's not 
 
 ### Add the key to your Pantheon account:
 
-Here we will only cover the basics, but if you need more detailed instructions on this section, then take a look at the [Loading SSH Keys](/articles/users/loading-ssh-keys/) section of the wiki.
+Here we will only cover the basics, but if you need more detailed instructions on this section, then take a look at the [Loading SSH Keys](/docs/articles/users/loading-ssh-keys) section of the wiki.
 
 1. Sign on to Pantheon and visit the "Your Sites & Account" page.
 
@@ -253,4 +253,4 @@ If this does not fix the problem, you can go a step further and add individual h
 
 #### Server Refused to Allocate pty
 
-This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/articles/users/generating-ssh-keys#generating-ssh-keys#message_391).
+This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/articles/users/generating-ssh-keys).

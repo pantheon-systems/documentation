@@ -71,4 +71,4 @@ The database credentials are updated whenever a server is migrated or updated. I
 
 To conserve resources environments will be spun down after about two hours of inactivity. If your site is in sleep mode, you may get the following error:
 
-Go to the environment's URL in your browser to"wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. More information about this is available on the [known limitations](articles/drupal/knownlimitations.md) page.
+Go to the environment's URL in your browser to"wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. More information about this is available on the [known limitations](/docs/articles/drupal/known-limitations) page.
