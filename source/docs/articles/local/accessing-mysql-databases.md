@@ -48,7 +48,7 @@ This indicates that there's an issue connecting to the Pantheon database. There 
 
 Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your dashboard will also report this as an error.  
 
-If you've overwritten core, see [Core Updates](/docs/articles/drupal/drupal-core-updates#core-updates) for instructions on how to get back to Pressflow.
+If you've overwritten core, see [Core Updates](/docs/articles/sites/code/applying-upstream-updates#core-updates) for instructions on how to get back to Pressflow.
 
 #### 2. Non-Standard Bootstraps
 

@@ -195,7 +195,7 @@ First, make sure the dev environment is set to [SFTP mode](/docs/articles/sites/
 
 ## Do Not Use Drush to Update Drupal Core on Pantheon
 
-Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. In short, **do not use Drush to update Drupal core on Pantheon** . For more details, see the [Core Updates](/docs/articles/drupal/drupal-core-updates/) article.
+Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. In short, **do not use Drush to update Drupal core on Pantheon** . For more details, see the [Core Updates](/docs/articles/sites/code/applying-upstream-updates/) article.
 
 ## Troubleshooting
 

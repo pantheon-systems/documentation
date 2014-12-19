@@ -6,7 +6,7 @@ category:
 ---
 
 ## Overview
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/drupal/drupal-core-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
 
 A bit of context: To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform.
 
