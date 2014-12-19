@@ -1,14 +1,10 @@
 ---
-title: Applying Core Updates
-description: Apply and debug core updates.
+title: Applying Upstream Updates
+description: Apply and debug upstream updates, like Drupal and WordPress releases.
 category:
-<<<<<<< HEAD:source/docs/articles/sites/code/applying-core-updates.md
   - developing
-=======
   - debugging
-  - drupal
 
->>>>>>> master:source/articles/drupal/drupal-core-updates.md
 ---
 
 <head>

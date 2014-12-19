@@ -31,7 +31,7 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - Need to debug? Read [this](/docs/articles/errors/php-errors-and-exceptions/) and [this](/docs/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
 - Using [Drush](/docs/articles/local/drush-command-line-utility#using-drush-on-pantheon) on Pantheon.
 - [Cron](/docs/articles/sites/code/cron/) and Pantheon.
-- How core [updates](/docs/articles/drupal/drupal-core-updates) work (TL;DR: don't use 'drush up' for core!).
+- How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!).
 - Caching, both with [Varnish](/docs/articles/architecture/edge/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
 ) and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/)s can make your site faster, and protect you from DDOS attacks.

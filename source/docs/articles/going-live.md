@@ -26,7 +26,7 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update core</td>
-			<td class="help"><a href="/docs/articles/drupal/drupal-core-updates/">Core updates</a></td>
+			<td class="help"><a href="/docs/articles/sites/code/applying-upstream-updates/">Core updates</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>
