@@ -87,7 +87,7 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
 
-You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/howto/configuring-settings-php#working-with-settings-php).
+You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/drupal/configuring-settings-php).
 
 ## Export Files
 
@@ -104,7 +104,7 @@ The import screen allows you to toggle between uploading your archive files or s
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
-If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/docs/articles/advanced-topics/accessing-mysql-databases/), [rsync or SFTP for files](/docs/articles/advanced-topics/rsync-and-sftp/)) after your codebase is imported.
+If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
 ## Drush Site Archive Format
 

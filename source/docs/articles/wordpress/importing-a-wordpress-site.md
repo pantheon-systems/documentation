@@ -108,19 +108,17 @@ It sets a default cache lifetime of 10 minutes, and will automatically clear pos
 
 **Further Reading:**
 
-<<<<<<< HEAD:source/docs/articles/wordpress/importing-a-wordpress-site.md
+
 [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
-=======
-[Using the Pantheon Workflow](/documentation/howto/using-the-pantheon-workflow/)
->>>>>>> master:source/articles/wordpress/importing-a-wordpress-site.md
+
+[Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 
 
 [Developing with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode)
 
-<<<<<<< HEAD:source/docs/articles/wordpress/importing-a-wordpress-site.md
+
 [Going Live](/docs/articles/going-live)
-=======
-[Going Live](/articles/going-live)
+
 
 
 

@@ -17,11 +17,11 @@ For more information about exporting a backup of an environment, see the [Restor
 
 ## 2. Delete Each of Your Sites
 
-Once you have backed-up your data and are ready to delete your sites, see the [Deleting a Site](/docs/articles/sites/deleting-a-site-on-pantheon#deleting-a-site-on-pantheon) document in the wiki. It is a simple one-click operation, but it is **_permanent_** . Don't worry. You will be prompted to confirm before the deletion occurs.
+Once you have backed-up your data and are ready to delete your sites, see the [Deleting a Site](/docs/articles/sites/deleting-a-site) document in the wiki. It is a simple one-click operation, but it is **_permanent_** . Don't worry. You will be prompted to confirm before the deletion occurs.
 
 ## 3. Delete Your Credit Cards
 
-The next step is to delete the associated credit cards. For more information, see the [Removing a Credit Card](/docs/articles/sites/settings/removing-a-credit-card#removing-a-credit-card) document.
+The next step is to delete the associated credit cards. For more information, see the [Removing a Credit Card](/docs/articles/sites/removing-a-credit-card#delete-your-card) document.
 
 ## 4. Submit a Final Support Request
 
@@ -31,8 +31,4 @@ In order to completely delete your account from our system, please open a suppor
 
 ###Can I come back to the platform?
 
-<<<<<<< HEAD:source/docs/articles/users/deleting-your-pantheon-account.md
 Of course. That's why the first step in this process is to backup & export your site. To restore your site from the backups, follow the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup) document.
-=======
-Of course. That's why the first step in this process is to backup and export your site. To restore your site from the backups, see [Restoring a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
->>>>>>> master:source/articles/users/deleting-your-pantheon-account.md

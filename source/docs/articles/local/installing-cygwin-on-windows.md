@@ -63,8 +63,4 @@ Finally, you can navigate to the home directory within Cygwin's root and get a c
 
 
 ## Complete the Installation
-<<<<<<< HEAD:source/docs/articles/local/installing-cygwin-on-windows.md
 You can now navigate to the  [Getting an SSL Cert](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#GetanSSLCertificate) documentation where you can complete the rest of the installation process on Pantheon.
-=======
-You can now navigate to the  [Getting an SSL Cert](/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#GetanSSLCertificate) documentation where you can complete the rest of the installation process on Pantheon.
->>>>>>> master:source/articles/local/installing-cygwin-on-windows.md

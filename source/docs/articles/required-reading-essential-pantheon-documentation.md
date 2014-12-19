@@ -19,7 +19,7 @@ Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We kno
 We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an efficient Developer on Pantheon should quickly understand:
 
 - [Known platform considerations](/docs/articles/drupal/known-limitations/) on Pantheon.
-- The [Pantheon Getting Started](/docs/articles/pantheon-101-getting-started#pantheon-101-getting-started) guide exists.
+- The [Pantheon Getting Started](/docs/articles/getting-started) guide exists.
 - The [technology](/docs/articles/architecture/all-about-application-containers/) behind Pantheon.
 - The Pantheon [Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
 - Using [SFTP](/docs/articles/local/rsync-and-sftp#rsync-and-sftp) (and rsync!).
@@ -52,4 +52,3 @@ We love helping developers succeed! We also have limits to the support we can pr
 - We recommend development on the platform, rather than on a local environment, whenever possible. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, or server configuration. Pantheon is not responsible for resolving such issues.
 - Pantheon support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
-
