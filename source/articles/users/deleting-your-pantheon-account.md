@@ -5,9 +5,9 @@ category:
   - sites
 ---
 
-Completely deleting your Pantheon account requires three major steps.
+Completely deleting your Pantheon account requires three major steps:
 
-## 1. Backup & Export Your Sites
+## 1. Backup and Export Your Sites
 
 The first thing to do is to backup and export your sites. Yes, you are leaving the platform, but you should always have a backup of your work just in case.
 
@@ -29,6 +29,6 @@ In order to completely delete your account from our system, please open a suppor
 
 ## Frequently Asked Questions
 
-**Can I come back to the platform?**
+###Can I come back to the platform?
 
-Of course. That's why the first step in this process is to backup & export your site. To restore your site from the backups, follow the [Restoring a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup) document.
+Of course. That's why the first step in this process is to backup and export your site. To restore your site from the backups, see [Restoring a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).

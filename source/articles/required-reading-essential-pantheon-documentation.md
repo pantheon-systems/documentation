@@ -1,5 +1,5 @@
 ---
-title: "Required Reading: Essential Pantheon Documentation"
+title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon's technologies.
 category:
   - getting-started
@@ -10,7 +10,6 @@ category:
 Pantheon is unlike any traditional web hosting service that you may have used in the past.
 
 Though it incorporates many familiar open-source technologies, it presents a fresh and unique deployment topology, matched with a highly-functional toolbox and uber-efficient workflow to create an all-in-one cloud-based development solution for Drupal.  
-
 
 
 Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
@@ -53,3 +52,4 @@ We love helping developers succeed! We also have limits to the support we can pr
 - We recommend development on the platform, rather than on a local environment, whenever possible. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, or server configuration. Pantheon is not responsible for resolving such issues.
 - Pantheon support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+

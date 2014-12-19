@@ -7,7 +7,7 @@ category:
 
 When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal version, a Pantheon optimized distribution, or import an existing Drupal site.
 
-## Start with Drupal core
+## Start with Drupal Core
 
 ![](http://helpdesk.getpantheon.com/customer/portal/attachments/214002)
 
@@ -17,7 +17,7 @@ This is useful if you are starting a new project, or if you have sophisticated g
 
 We base our repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment.
 
-## Start with a Drupal distribution
+## Start with a Drupal Distribution
 
 ![](http://helpdesk.getpantheon.com/customer/portal/attachments/214003)
 
@@ -31,13 +31,13 @@ Drupal products offer a much richer out of the box experience, but are more comp
 
 For details, see our dedicated article [Importing an existing Drupal site into Pantheon](http://helpdesk.getpantheon.com/customer/portal/articles/361251).
 
-## Sit back and relax
+## Sit Back and Relax
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your Drupal site. When complete, just click the button to visit your Pantheon Dashboard.
 
 ![](http://helpdesk.getpantheon.com/customer/portal/attachments/214006)
 
-## Enjoy your Pantheon site!
+## Enjoy your Pantheon Site!
 
 Congratulations! Your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
