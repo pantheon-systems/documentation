@@ -126,7 +126,7 @@
             // "pretty" - #looks-like-a-nice-url-and-is-easily-readable
             // function(text, element){} - Your own hash generation function that accepts the text as an
             // argument, and returns the hash value.
-            hashGenerator: "compact",
+            hashGenerator: "pretty",
 
             // **highlightDefault**: Accepts a boolean: true or false
             // Set's the first TOC item as active if no other TOC item is active.
