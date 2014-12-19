@@ -1,6 +1,8 @@
 ---
 title: Reading Pantheon Environment Configuration
 description: Understand the separation of configuration and code within the Pantheon framework.
+category:
+  - going-live
 
 ---
 

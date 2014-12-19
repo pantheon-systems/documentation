@@ -3,6 +3,7 @@ title: Gandi & Pantheon: Pointing your DNS
 description: Learn how to point your domain's DNS to Pantheon using Gandi.
 category:
   - going-live
+  - managing
 
 
 ---

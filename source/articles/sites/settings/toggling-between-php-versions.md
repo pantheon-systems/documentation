@@ -1,7 +1,8 @@
 ---
 title: Toggling Between PHP Versions
 description: Learn how to change between various PHP versions.
-
+category:
+  - developing
 ---
 
  **Upgrade Your PHP Version**

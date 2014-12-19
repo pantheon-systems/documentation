@@ -1,7 +1,9 @@
 ---
 title: Locking your site
 description: Learn how to keep your work hidden from the public for development or updates.
-
+category:
+  - getting-started
+  - drupal
 ---
 
 ## Overview

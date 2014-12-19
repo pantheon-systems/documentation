@@ -2,7 +2,6 @@
 title: Errors and server responses
 description: Understand server responses and error messages.
 category:
-  - supporting
   - debugging
 
 ---

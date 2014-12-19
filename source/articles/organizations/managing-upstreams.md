@@ -2,7 +2,7 @@
 title: Managing Upstreams
 description: Merge updates to core, extensions, and themes.
 category:
-  - getting-started
+  - managing
 
 
 ---

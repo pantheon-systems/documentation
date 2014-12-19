@@ -2,7 +2,7 @@
 title: Terminus - the Pantheon Command-Line Interface
 description: Learn the most common Terminus commands.
 category:
-  - getting-started
+  - developing
 
 ---
 

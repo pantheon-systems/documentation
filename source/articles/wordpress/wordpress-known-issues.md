@@ -2,7 +2,7 @@
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon platform for Wordpress.
 category:
-  - getting-started
+  - WordPress
 
 ---
 

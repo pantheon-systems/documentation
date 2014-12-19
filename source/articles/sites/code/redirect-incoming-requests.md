@@ -3,6 +3,7 @@ title: Redirect Incoming Requests
 description: Learn to redirect requests to an alternate domain name or path.
 category:
   - going-live
+  - managing
 
 ---
 
