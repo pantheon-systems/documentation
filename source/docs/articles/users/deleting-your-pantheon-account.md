@@ -31,8 +31,4 @@ In order to completely delete your account from our system, please open a suppor
 
 ###Can I come back to the platform?
 
-<<<<<<< HEAD:source/docs/articles/users/deleting-your-pantheon-account.md
 Of course. That's why the first step in this process is to backup & export your site. To restore your site from the backups, follow the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup) document.
-=======
-Of course. That's why the first step in this process is to backup and export your site. To restore your site from the backups, see [Restoring a Backup](/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
->>>>>>> master:source/articles/users/deleting-your-pantheon-account.md

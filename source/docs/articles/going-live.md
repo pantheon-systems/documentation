@@ -93,15 +93,11 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Ensure Varnish caching works</td>
-<<<<<<< HEAD:source/docs/articles/going-live.md
 			<td class="help"><a href="/docs/articles/architecture/edge/varnish/">Varnish caching for high performance</a></td>
 		</tr>
 		<tr>
-=======
 			<td class="help"><a href="/articles/architecture/edge/varnish/">Varnish caching for high performance</a></td>
-
 			<tr>
->>>>>>> master:source/articles/going-live.md
 			<td class="complete">[ ]</td>
 			<td class="action">Load test Live environment</td>
 			<td class="help"><a href="/docs/articles/load-and-performance-testing/">Load and performance testing</a></td>
