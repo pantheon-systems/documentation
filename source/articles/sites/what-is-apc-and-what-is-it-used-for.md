@@ -26,6 +26,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 
 In these circumstances, either increasing the SHM size by [upgrading your account](https://www.getpantheon.com/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/articles/sites/newrelic/new-relic-performance-analysis#EnablingNewRelic) to log and visualize performance.
 
+
 #### How can I determine what my current APC settings are?
 
 The PHP function [phpinfo()](http://php.net/manual/en/function.phpinfo.php "phpinfo() manual on php.net") will display the current environment's configuration, including APC settings. A word of caution; there are a number of environmental variables that are also disclosed using this technique, so only do this in a temporary file on a secured development server. Create a file named "delete\_me\_security\_hole.php" in your web root with the following contents:

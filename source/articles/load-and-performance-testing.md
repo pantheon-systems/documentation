@@ -10,13 +10,14 @@ Load testing a site both prior and post launch is highly recommend to ensure you
 
 ## Before You Begin
 
-You should [Enable New Relic](/articles/sites/newrelic/new-relic-performance-analysis#EnablingNewRelic) to monitor internal execution performance without needing any additional modules or tools.  
+
+You should [Enable New Relic](/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.  
+
+Next, make sure you have access to a command-line environment, preferably with administrative privileges.  
 
 
-Next, make sure you have access to a command-line environment, preferably with administrative privileges.  
 
-
-Finally, **load testing should only be performed on the Live environment** . There's a number of reasons for this. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
+Finally, **load testing should only be performed on the Live environment** . There's a number of reasons for this. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
 
 ## Performance vs. Scalability
 
@@ -30,6 +31,7 @@ For instance, high-performance is the ability to deliver a page in under a secon
 ## Verify That Varnish is Working
 
 To verify that the [Varnish](/articles/architecture/edge/varnish) cache is working, the "curl" command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+
 
     $ curl -I http://live-yoursite.gotpantheon.com
     HTTP/1.1 200 OK
@@ -47,7 +49,7 @@ To verify that the [Varnish](/articles/architecture/edge/varnish) cache is worki
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review the [documentation.](/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and consult the [Working With Varnish on Pantheon](/articles/architecture/edge/varnish#VerifyVarnishisWorkingonYourPantheonSite) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review the [documentation.](/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and consult the [Working With Varnish on Pantheon](/articles/architecture/edge/varnish) documentation.
 
 **Until Varnish has been correctly configured, you shouldn't worry about further testing.**
 

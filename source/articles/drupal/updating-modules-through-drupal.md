@@ -3,8 +3,6 @@ title: Updating Modules Through Drupal
 description: Learn how to update Drupal modules.
 category:
   - developing
-  - supporting
-category:
   - drupal
 
 ---

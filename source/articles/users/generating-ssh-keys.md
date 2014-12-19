@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Generating SSH Keys
 description: Understand how to generate SSH keys to configure Drush or SFTP.
@@ -111,6 +112,112 @@ If you have added a password to your key earlier then you will be prompted to en
 
 ![](https://pantheon-systems.desk.com/customer/portal/attachments/46916)
 
+=======
+---
+title: Generating SSH Keys
+description: Understand how to generate SSH keys to configure Drush or SFTP.
+category:
+  - getting-started
+
+---
+
+## Overview
+SSH as a protocol is not supported on Pantheon. **You can not connect via SSH using Putty.** These directions are to allow you have passwordless access if you configure Drush or SFTP to use the keys setup by putty.
+
+**Note:** SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the troubleshooting section at the end of the document.
+
+Spaces and non-standard alphanumeric characters in the user or hostname can cause an SSH key to be invalid.
+
+To fix this, edit the user or hostname and remove spaces and/or odd characters that exist. This will not affect the key itself, as the user/hostname are simply appended as a comment for reference.
+
+## Generate SSH Keys
+Generating SSH keys is different for every platform. Please follow the directions that are most appropriate for you:
+
+1. [Mac OS and Linux](/articles/users/generating-ssh-keys#macos-and-linux)
+
+2. [Windows/Git GUI and OpenSSH](/articles/users/generating-ssh-keys#windows-and-openssh)
+
+## Mac OS and Linux
+
+1. Open your favorite terminal utility and generate a key:
+
+    ssh-keygen
+
+Unless you're an advanced user, just press enter for every question/prompt. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
+
+2. Output your SSH key to a file you can use:
+
+    cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
+
+3. Open the `key_for_pantheon.txt` on your desktop, select all and copy. You're now ready to paste this into the "Add Key" form on your account page.
+
+## Windows/OpenSSH
+
+[Download](http://git-scm.com/downloads) and install Git.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46904)
+
+Once you have downloaded the Git GUI installer you can get started with the setup wizard.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46905)
+
+To continue, you will need to read and accept the license by clicking the **Next** button.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46906)
+
+Select the installation folder where you want to install Git. Unless you need to move this to another directory you can leave this with the default path.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46907)
+
+If want to have the Git GUI appear in the start menu you can go ahead and set the title. In this instance we simply set it to "Git".
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46908)
+
+A nice feature of the Git GUI is that it can set the PATH variable for you. If you are using Cygwin you will also need the Cygwin Git library installed to access Git via the command line.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46909)
+
+Choose the "Checkout Windows-style..." option (unless you prefer checking out with Unix line endings). It's really up to you, but most Drupal code has Unix line endings.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46910)
+
+You are now done with the installation of Git. Now you can move on the final steps of generating your SSH keys using the GUI.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46911)
+
+From the Start menu, open the Git Gui, and select **Show SSH Key** from the Help menu.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46912)
+
+Click **Generate Key**.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46915)
+
+We recommend using a passphrase, but it's optional. It doesn't have to be the same as your Pantheon password, and it will help protect your key.
+
+Select the whole key and click **Copy to Clipboard**. 
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46914)
+
+### Add the Key to Your Pantheon Account:
+
+Here we will only cover the basics, but if you need detailed instructions, please see [Loading SSH Keys](/articles/users/loading-ssh-keys/).
+
+1. Sign on to Pantheon and go to the "Your Sites & Account" page.
+
+2. Click the button in the lower right to add a new key.
+
+3. Paste the copied public key into the box and click Save.
+
+  Your computer is now set up to securely connect to the Pantheon Git server.
+
+Open the Git bash client and put in the command to clone your Pantheon site. You can find this in the Dev environment of yor site above the Git code log.
+
+If you have added a password to your key earlier, you will be prompted to enter the password for the key you created using the Git GUI tool.
+
+![](https://pantheon-systems.desk.com/customer/portal/attachments/46916)
+
+>>>>>>> b3bc66875f895484df0b0074eaddeadc7b387a13
 <!--<h3 id="generating-keys-on-windows-and-putty">Windows / PuTTY</h3>
 
 
@@ -138,7 +245,7 @@ If you have added a password to your key earlier then you will be prompted to en
 	<p>If it immediately shows a progress bar, it&#39;s generating a new key. Otherwise, click &quot;Generate.&quot;</p>
 	</li>
 	<li>
-	<p>Follow the instructions telling you to move your mouse around the box until PuTTY finishes generating the key.</p>
+	<p>Follow the instructions to move your mouse around the box until PuTTY finishes generating the key.</p>
 	</li>
 	<li>
 	<p>Fill in the &quot;Key comment&quot; with something memorable, like your email address.</p>
@@ -153,7 +260,7 @@ If you have added a password to your key earlier then you will be prompted to en
 	<p>Copy the text from the &quot;Public key for pasting into OpenSSH authorized_keys file&quot; box.</p>
 	</li>
 	<li>
-	<p>Close the window if you like, but you might want to keep it open for now in case you lose the key copied to your clipboard.</p>
+	<p>You may want to keep the window open for now in case you lose the key copied to your clipboard.</p>
 	</li>
 </ol>
 
@@ -246,7 +353,6 @@ Check your SSH config files (by default, $HOME/.ssh/config and /etc/ssh/ssh\_con
     ControlMaster auto
     ControlPath ~/.ssh/control-%l.%r@%h:%p
 
- 
 
 There are two steps that you can try to fix this error:
 
@@ -254,12 +360,11 @@ There are two steps that you can try to fix this error:
     ControlMaster auto
     ControlPath ~/.ssh/control-%r
 
-1. You can fix this by simplifying the switches as follows:
-2. If this does not fix the problem, you can go a step further and add individual hosts entries, remove ControlMaster auto, and simplify the switches:
+If this does not fix the problem, you can go a step further and add individual hosts entries, remove ControlMaster auto, and simplify the switches:
 
     Host myapp-myname.blahblah.com
     ControlPath ~/.ssh/control-%r
 
-#### Server refused to allocate pty
+#### Server Refused to Allocate pty
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/articles/users/generating-ssh-keys#generating-ssh-keys#message_391).

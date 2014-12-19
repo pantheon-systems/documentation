@@ -82,6 +82,7 @@ The short answer is no, syslog is not available. Technically, you can log Drupal
 
 #### Can I access Apache Solr logs?
 
+
 No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/articles/sites/apache-solr).
 
 #### My Drupal database logs are huge. Should I disable dblog?

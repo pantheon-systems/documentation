@@ -3,7 +3,7 @@ title: Git FAQs
 description: Answers to commonly asked questions about Git.
 
 category:
-  -
+  - developing
 ---
 
 ## Conflicts When Updating Core

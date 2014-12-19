@@ -3,6 +3,7 @@ title: Using WinSCP on Pantheon
 description: Detailed information about the WinSCP SFTP client.
 category:
   - getting-started
+  - developing
 
 ---
 
@@ -10,7 +11,7 @@ category:
 
 ## Getting Started
 
-Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, take a look at the documentation on [how to find the SFTP credentials](/articles/sites/code/developing-on-pantheon-directly-with-sftp-mode#enabling-sftp-mode#sftp-connection-information) for your site.
+Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, take a look at the documentation on [how to find the SFTP credentials](/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode#sftp-connection-information) for your site.
 
 ## Download WinSCP
 

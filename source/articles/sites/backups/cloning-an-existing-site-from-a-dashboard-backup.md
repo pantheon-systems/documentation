@@ -27,9 +27,9 @@ All Pantheon sites consist of three parts:
 5. Choose the **Click here to provide separate code, files, and database archives** link.
 6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
 7. Click **Import Site**.  
-8. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/articles/drupal/importing-an-existing-drupal-site-to-pantheon#importing-an-existing-site) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+8. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/articles/drupal/importing-an-existing-drupal-site-to-pantheon) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
 
 
 ## Additional Considerations
 Retaining Git history, importing large file structures or databases:
-The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see <a href="/common-tasks#importing-a-large-site" target="_blank">Importing A Large Site</a>.​</li --> ** **
+The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see[Importing a Large Site](/articles/users/importing-a-large-site).

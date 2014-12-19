@@ -159,7 +159,8 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon#TablePrefixes) article.
+
+For information about table prefixes on Pantheon, see [this](/articles/drupal/importing-an-existing-drupal-site-to-pantheon) article.
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 

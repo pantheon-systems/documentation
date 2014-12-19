@@ -2,8 +2,8 @@
 title: Advanced Caching
 description:
 category:
-  - getting-started
-  
+  - developing
+
 ---
 
 ## Caching: Advanced Topics
@@ -27,7 +27,7 @@ For example, <tt>?__dynamic_id=1234</tt> would be ignored, but <tt>?dynamic_id=1
 
 Query keys will still be passed to the application server, but the values will be changed to PANTHEON\_STRIPPED to indicate that the URL is being altered. For more information, see [PANTHEON\_STRIPPED parameters](/articles/architecture/edge/pantheon_stripped-get-parameter-values).
 
-### External Authentication (e.g. facebook login)
+### External Authentication (e.g. Facebook login)
 
 If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and login. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 

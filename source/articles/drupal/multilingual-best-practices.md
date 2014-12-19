@@ -23,6 +23,6 @@ Each of these configurations is possible with Drupal’s built-in language switc
 
 You can associate multiple domains with a single site environment. See [adding a domain to a site environment](/articles/sites/domains/adding-a-domain-to-a-site-environment) for details.  
 
-Pantheon does not include any geolocation libraries. If you’d like to automatically direct traffic to a particular domain or path, check out [Geolocation and IP detection with SSL using JavaScript](/articles/advanced/geolocation-and-ip-detection-with-ssl-using-javascript).  
+Pantheon does not include any geolocation libraries. If you’d like to automatically direct traffic to a particular domain or path, check out [Geolocation and IP detection with SSL using JavaScript](/articles/sites/code/geolocation-and-ip-detection-with-ssl-using-javascript).  
 
 If you have a particular Pantheon platform related question that is not addressed in this document, please submit a support ticket through your Pantheon dashboard and we’ll be happy to help.

@@ -2,7 +2,7 @@
 title: Testing Varnish
 description: Test whether Varnish is working or not.
 category:
-  - getting-started
+  - developing
 ---
 
 ## Test If Varnish Is Working by Reading HTTP Headers

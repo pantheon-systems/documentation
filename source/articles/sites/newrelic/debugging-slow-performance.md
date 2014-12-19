@@ -94,7 +94,9 @@ Turning off error reporting suppresses the symptom, not the problem, and PHP exe
 
 ## Too Many Database Queries
 
+
 The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/articles/sites/newrelic/new-relic-performance-analysis) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
+
 
 
  ![](https://pantheon-systems.desk.com/customer/portal/attachments/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
