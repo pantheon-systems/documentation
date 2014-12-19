@@ -15,7 +15,7 @@
               {% if page.category %}
                   <p class="category">Categories:
                   {% for category in page.category %}
-                  <a href="{{ site.url }}/docs/categories/{{ category|url_encode(true) }}">{{ category|title }}</a>{% if not loop.last %}, {% endif %}
+                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}
                   </p>
               {% endif %}
