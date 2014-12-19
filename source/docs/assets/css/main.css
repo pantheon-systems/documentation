@@ -38,6 +38,24 @@
   margin-top: 7px;
 }
 
+.featured > li > a {
+  text-transform: capitalize;
+}
+
+.featured {
+  display: block;
+
+}
+
+.start {
+  display: block;
+  background-color: white;
+  padding: 30px;
+}
+
+.start > li > a {
+  text-align: left;
+}
 .zappy{
   margin-top:40px;
 }
@@ -314,6 +332,14 @@ img.noborder {border:none;}
 *
 * Tweaks to the custom homepage and the masthead (main jumbotron).
 */
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 0px;
+  color: inherit;
+  background: transparent;
+  text-align: center;
+}
+
 
 /* Share masthead with page headers */
 .pio-docs-masthead,
@@ -1041,6 +1067,25 @@ h1[id] {
 }
 .pio-example > .btn-toolbar + .btn-toolbar {
   margin-top: 10px;
+}
+
+.btn-warning {
+  background-image: -webkit-linear-gradient(top, #FE4A45 0%, #FE4A45 100%);
+  background-image:         linear-gradient(to bottom, #FE4A45 0%, #FE4A45 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FE4A45', endColorstr='#FE4A45', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #FE4A45;
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #FE4A45;
+  background-position: 0 -15px;
+}
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #FE4A45;
+  border-color: #FE4A45;
 }
 
 /* Forms */
