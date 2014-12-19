@@ -1,6 +1,6 @@
 ---
 title: Get Started
-
+description: Learn how to spin up a site on Pantheon.
 category:
   - getting-started
 ---

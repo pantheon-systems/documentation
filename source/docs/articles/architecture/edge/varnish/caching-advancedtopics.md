@@ -1,6 +1,6 @@
 ---
 title: Advanced Caching
-description:
+description:Learn advanced details about cached and authentication.
 category:
   - developing
 

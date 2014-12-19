@@ -3,11 +3,7 @@ title: Hot Fixes
 description: Learn how to deploy a hotfix on Pantheon.
 
 category:
-<<<<<<< HEAD
-  - debugging
-=======
   - developing
->>>>>>> b3bc66875f895484df0b0074eaddeadc7b387a13
 ---
 
 Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.

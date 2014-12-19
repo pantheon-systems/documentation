@@ -1,7 +1,7 @@
 ---
 title: Readme
 description: About article types for Pantheon Documentation
-
+draft: true
 ---
 
 Documentation articles for the Pantheon website platform will initially be written in two types: Tools, which provide general information and step-by-step procedures for using different tools, and [Guides](./readme#GuideArticles), which explain how to solve website problems by breaking goals into phases and subphases, and providing rules-of-thumb as if-then statements.
