@@ -1,11 +1,8 @@
 ---
-title: Drupal Core Updates
+title: Applying Core Updates
 description: Apply and debug core updates.
 category:
-  - supporting
-  - debugging
-  - drupal
-
+  - developing
 ---
 
 <head>
