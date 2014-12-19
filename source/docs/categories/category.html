@@ -4,7 +4,7 @@ title: Articles
 generator: [documents_category_index]
 use: [documents_category]
 ---
-{% block title %}{{ page.category }} {{ page.title }}{% endblock %}
+{% block title %}{{ page.category|title }} {{ page.title }}{% endblock %}
 {% block content %}
 <div class="container article">
   <article>
@@ -27,7 +27,7 @@ use: [documents_category]
       <h2>CATEGORIES</h2>
       <div>
         {% for category,documents in data.documents_category %}
-        <p><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }}</a></p>
+        <p{% if document.category == page.slug %} class="active" {% endif %}><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }}</a></p>
         {% endfor %}
       </div>
     </div>
