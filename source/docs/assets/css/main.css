@@ -40,11 +40,16 @@
 
 .featured > li > a {
   text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.featured > li {
+  margin-top: 15px;
+  font-size: 17px;
 }
 
 .featured {
   display: block;
-
+  text-align: ;
 }
 
 .start {
@@ -56,8 +61,8 @@
 .start > li > a {
   text-align: left;
 }
-.zappy{
-  margin-top:40px;
+.cta{
+  display:block;
 }
 
 body {
@@ -93,6 +98,18 @@ body.row.main {
   margin-right: 4px;
 }
 
+.landing-search {
+  max-width: 50%;
+  height: 40px;
+  margin: 15px auto 25px auto;
+}
+.landing-search input{
+  padding: 1em 1em;
+  font-size: 20px;
+}
+.landing-search.form-control{
+  height:50px;
+}
 .search a:before {
   width:6px;
   height:6px;
@@ -158,19 +175,18 @@ img.noborder {border:none;}
 
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #FFF;
-  background-color: #FE4A45;
-  border-color: #FE4A45;
+  color: #000;
+  background-color: white;
   margin-top: 30px;
   font-weight: 700;
-  width: 100%;
+  width: 75%;
   padding: 15px;
+  border-color: #000;
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
-  color: #fff;
-  background-color: #FE4A45;
+  color: #000;
   border-color: #000;
 }
 
@@ -239,7 +255,6 @@ img.noborder {border:none;}
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 700;
   color: white;
-  text-transform: uppercase;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
