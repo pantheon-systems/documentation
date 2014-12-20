@@ -20,68 +20,37 @@ meta:
 use: [documents_category]
 ---
       <div class="container jumbotron">
-        <div><h2>Learn the Website Management Platform</h2>
-        </div>
-        <div class="col-md-6 start">
-          <a href="/docs/articles/required-reading-essential-pantheon-documentation"><button type="button" class="btn btn-warning">Required Reading</button></a>
-        </div>
-        <div class="col-md-6 start">
-          <h3>New to Pantheon?</h3><a href="https://dashboard.getpantheon.com/register"><button type="button" class="btn btn-warning">Create an Account</button></a>
-          <li><a href="/docs/articles/getting-started">Get Started</a></li>
-          <li><a href="/docs/articles/users/">article2</a></li>
-        </div>
-      </div>
+          <div class="landing-search">{% include("search_box.html") %}</div>
+                </div>
 
-    <div class="container article pio-docs-container">
+
+    <div class="container article pio-docs-container" style="padding-bottom: 40px; margin-bottom: 40px;">
         <div class="portal-section">
-            <div class="row portal-row" style="margin-bottom: 20px;">
-              <div class="col-md-4 featured">
-              <h3>FEATURED ARTICLES</h3>
-              <ul><li><a href="/docs/articles/local/drush-command-line-utility">Working with Drush</a></li>
-                <li><a href="/docs/articles/local/git-faq">Git Faq</a></li>
-                <li><a href="/docs/articles/architecture/edge/varnish">Varnish</a></li>
-                <li><a href="/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis">Launch Check</a></li>
-                <li><a href="/docs/articles/local/starting-with-git">Getting started with Git</a></li>
-                <li><a href="/docs/articles/drupal/configuring-settings-php">Configuring settings.php</a></li>
-                <li><a href="/docs/articles/sites/redis-as-a-caching-backend">Redis Caching</a></li>
-                <li><a href="/docs/articles/users/importing-an-existing-site">Importing an Existing Site</a></li>
-                <li><a href="/docs/articles/users/generating-ssh-keys">Generating SSH Keys</a></li>
-                <li><a href="/docs/articles/local/rsync-and-sftp">Rsync & FTP</a></li>
-                <li><a href="/docs/articles/local/undo-git-commits-like-overwriting-drupal-core">Undo Git Commits Like Overwriting Drupal Core</a></li>
-                <li><a href="/docs/articles/users/choosing-start-state">Choosing Your Start State</a></li>
-                <li><a href="/docs/articles/sites/code/applying-upstream-updates">Applying Core updates</a></li>
-                <li><a href="/docs/articles/sites/debugging-sites-with-log-files">Core updates</a></li>
-
-              </ul>
-            </div>
-            <div class="col-md-4">
-            <h3>BUILD</h3>
-            <ul><li>Development Article 1</li>
-              <li>Development Article 2</li>
-            </ul>
-            <h3>LAUNCH</h3>
-            <ul><li>Going Live Article 1</li>
-              <li>Going Live Article 2</li>
-            </ul>
-            <h3>RUN</h3>
-            <ul><li>Support/Update/Debug Article 1</li>
-              <li>Support Article 2</li>
-            </ul>
-            </div>
-            <div class="categories col-md-4">
-              <h3>CATEGORIES</h3>
-              <div>
-                <ul>
-                {% for category,documents in data.documents_category %}
-                <li><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title }}</a></li>
-                {% endfor %}
-              </ul>
+            <div class="row portal-row" style="text-align: center;">
+              <div class="col-md-4">
+                <h1><span class="glyphicon glyphicon-off jumbotron" aria-hidden="true"></span></h1>
+                <h3><a href="/docs/articles/getting-started">Getting Started</a></h3>
+              </div>
+              <div class="col-md-4">
+                <h1><span class="glyphicon glyphicon-star jumbotron" aria-hidden="true"></span></h1>
+                <h3><a href="/docs/articles/required-reading-essential-pantheon-documentation">Required Reading</a></h3>
+              </div>
+              <div class="col-md-4">
+                <h1><span class="glyphicon glyphicon-book jumbotron" aria-hidden="true"></span></h1>
+                <h3><a href="/docs/articles">All Articles</a></h3>
               </div>
             </div>
           </div>
+        </div>
+        <div class="row portal-row" style="">
+          <div class="cta container">
+            <div class=col-md-8><h3> New to Pantheon?</h3>
+              <p> Create your free account and start seeing how Pantheon can work for you.</p>
+            </div>
+            <div class="col-md-4"><a href="https://dashboard.getpantheon.com/register"><button type="button" class="btn btn-med btn-warning">Create Your Free Account</button></a>
+            </div>
 
         </div>
-      </div>
         <!-- /.portal-docs-section --> </div>
 
     </div>
