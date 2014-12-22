@@ -13,8 +13,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+          {% if page.home is not defined %}
             <li class="search-form"> {% include("search_box.html") %}</li>
-              <li><a href="https://dashboard.getpantheon.com" target="_blank">Dashboard</a></li>
+          {% endif %}
+            <li><a href="https://dashboard.getpantheon.com" target="_blank">Dashboard</a></li>
             <li><a href="https://dashboard.getpantheon.com/#support/support/all" target="_blank">Support</a></li>
             <li><a href="https://github.com/pantheon-systems/documentation/issues" target="_blank">Docs Issues</a></li>
           </ul>
