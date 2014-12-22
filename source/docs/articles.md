@@ -15,6 +15,7 @@ title: Articles
           </article>
     {% endfor %}
 </div>
-<div class="col-md-3">
+<div class="categories col-md-3">
+{% include("doclist.html") %}
 </div>
 </div>
