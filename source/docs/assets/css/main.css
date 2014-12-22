@@ -179,7 +179,6 @@ img.noborder {border:none;}
   background-color: white;
   margin-top: 30px;
   font-weight: 700;
-  width: 75%;
   padding: 15px;
   border-color: #000;
 }
@@ -546,7 +545,6 @@ img.noborder {border:none;}
 .pio-docs-title {
   color: #000000;
   display: block;
-  border-bottom: 2px solid #000000;
   padding-bottom: 5px;
 }
 /*
@@ -1091,6 +1089,11 @@ h1[id] {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #FE4A45;
+  margin: 30px 0px 0px 50px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 10px;
 }
 .btn-warning:hover,
 .btn-warning:focus {
