@@ -9,7 +9,7 @@ use: [documents_category]
 <div class="container article">
   <article>
     <div class="col-md-9">
-      <h1> All {{ page.category|replace({'-': ' '})|title }} Articles </h1>
+      <h1> {{ page.category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }} Articles </h1>
       <!--
       <script type="text/javascript">
       breadcrumbs()
@@ -24,12 +24,7 @@ use: [documents_category]
       </div>
     </div>
     <div class="categories col-md-3">
-      <h2>CATEGORIES</h2>
-      <div>
-        {% for category,documents in data.documents_category %}
-        <p{% if document.category == page.slug %} class="active" {% endif %}><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }}</a></p>
-        {% endfor %}
-      </div>
+      {% include("doclist.html") %}
     </div>
   </article>
 
