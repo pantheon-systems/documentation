@@ -18,10 +18,6 @@ This method allows for transfer of (for all intents and purposes) unlimited data
 
 There are two mechanisms for transferring files; SFTP and rsync.
 
-## Pantheon Academy
-
-​<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/BqatUtBlHGI?rel=0" width="650"></iframe>
-
 **Note: You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your git repository. Any file uploaded in this manner cannot be committed and will not be persistent or available for deployment.**
 
 ## SFTP
@@ -79,7 +75,7 @@ We will take a look at performing some basic actions using RSYNC on Pantheon.
 Before we get started let us make sure we have everything you need:
 
 **Site URL:** https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83  
-**Environment (ENV):** Dev 
+**Environment (ENV):** Dev
 **Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
 ## Download a Directory from Pantheon

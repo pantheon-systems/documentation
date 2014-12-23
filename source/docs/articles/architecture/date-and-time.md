@@ -4,7 +4,6 @@ description: UTC time zone information.
 category:
   - developing
 ---
-
 ## Overview
 Pantheon standardizes on [Coordinated Universal Time (UTC)](http://en.wikipedia.org/wiki/Coordinated_Universal_Time), the primary time standard by which the world regulates clocks and time. This includes all servers, PHP, and MySQL, and cannot be changed.
 
@@ -15,4 +14,3 @@ If you're looking to convert a UTC timestamp into your local time, try [http://w
 ## MySQL and Time Zones
 
 Pantheon provides [MySQL Server Time Zone support](http://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html) to facilitate functions like [CONVERT\_TZ](http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_convert-tz).
-

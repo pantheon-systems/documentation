@@ -16,7 +16,7 @@ Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will b
 
 Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click  the "Create Your Free Account" button in the header.
 
-![](/assets/images/interface/179991.png)
+![](https://pantheon-systems.desk.com/customer/portal/attachments/179991.png)
 
 Then, fill out your account information and click Continue.
 
