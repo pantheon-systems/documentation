@@ -81,8 +81,13 @@ body.row.main {
   /* For scrollspy */
 }
 
+.main{
+  margin-bottom: 40px;
+}
+
 .article {
   background-color: white;
+  padding-bottom: 40px;
 }
 
 .topnav {
@@ -96,19 +101,27 @@ body.row.main {
 .search-form {
   margin-top: 8px;
   margin-right: 4px;
+  width: 200px;
 }
 
 .landing-search {
-  max-width: 50%;
-  height: 40px;
+  height: 60px;
   margin: 15px auto 25px auto;
 }
 .landing-search input{
-  padding: 1em 1em;
-  font-size: 20px;
+  font-size: 30px;
+  height: 60px;
 }
 .landing-search.form-control{
-  height:50px;
+  height:70px;
+}
+.landing-search.form-control i{
+  font-size: 30px;
+  padding-top: 12px;
+}
+i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
+  font-size: 40px;
+  padding: 12px 45px 0px 0px;
 }
 .search a:before {
   width:6px;
@@ -347,7 +360,7 @@ img.noborder {border:none;}
 * Tweaks to the custom homepage and the masthead (main jumbotron).
 */
 .jumbotron {
-  padding: 30px 15px;
+  padding: 30px 0px;
   margin-bottom: 0px;
   color: inherit;
   background: transparent;
@@ -366,6 +379,15 @@ img.noborder {border:none;}
   background-color: #FFFFFF;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
   background-repeat: repeat-x;
+}
+
+.category {
+  margin-bottom: 35px;
+}
+
+.document-list {
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 /* Masthead (headings and download button) */
@@ -1089,11 +1111,12 @@ h1[id] {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #FE4A45;
-  margin: 30px 0px 0px 50px;
+  margin-top: 25px;
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   padding: 15px 10px;
+  float: right;
 }
 .btn-warning:hover,
 .btn-warning:focus {
