@@ -1,489 +1,493 @@
 <?php
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/373319-accessing-mysql-databases') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/373319') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/accessing-mysql-databases'); exit();
+  header('Location: /docs/articles/local/accessing-mysql-databases'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/694190-add-a-credit-card-to-a-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/694190') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/settings/add-a-credit-card-to-a-site'); exit();
+  header('Location: /docs/articles/sites/settings/add-a-credit-card-to-a-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1748942-adding-a-custom-upstream') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1748942') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/organizations/adding-a-custom-upstream'); exit();
+  header('Location: /docs/articles/organizations/adding-a-custom-upstream'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1318472-adding-a-domain-to-a-site-environment') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1318472') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/adding-a-domain-to-a-site-environment'); exit();
+  header('Location: /docs/articles/sites/domains/adding-a-domain-to-a-site-environment'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/385443-adding-a-ssl-certificate-for-secure-https-communication') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/385443') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication'); exit();
+  header('Location: /docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361254-all-about-application-containers') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361254') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/architecture/all-about-application-containers'); exit();
+  header('Location: /docs/articles/architecture/all-about-application-containers'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361249-apache-solr-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361249') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/apache-solr'); exit();
+  header('Location: /docs/articles/sites/apache-solr'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '//customer/portal/articles/361248-applying-core-updates') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles//361248') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/applying-upstream-updates'); exit();
+  header('Location: /docs/articles/sites/code/applying-upstream-updates'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/683566-backup-creation') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/683566') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/backups/backup-creation'); exit();
+  header('Location: /docs/articles/sites/backups/backup-creation'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1389628-bots-and-indexing-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1389628') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/bots-and-indexing'); exit();
+  header('Location: /docs/articles/sites/code/bots-and-indexing'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1346665-caching-in-drupal-modules') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1346665') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/caching-in-drupal-modules'); exit();
+  header('Location: /docs/articles/drupal/caching-in-drupal-modules'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1323605-cdn-setting-up-cloudfront-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1323605') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/cdn-setting-up-cloudfront'); exit();
+  header('Location: /docs/articles/sites/code/cdn-setting-up-cloudfront'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361245-choosing-your-start-state') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361245') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/choosing-start-state'); exit();
+  header('Location: /docs/articles/users/choosing-start-state'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1702315-clone-a-drupal-site-on-pantheon-using-drush') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1702315') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/clone-a-drupal-site-using-drush'); exit();
+  header('Location: /docs/articles/users/clone-a-drupal-site-using-drush'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1702359-clone-a-wordpress-site-on-pantheon-with-duplicator-plugin') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1702359') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/clone-a-wordpress-site-with-duplicator-plugin'); exit();
+  header('Location: /docs/articles/users/clone-a-wordpress-site-with-duplicator-plugin'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1690701-cloning-an-existing-site-from-a-dashboard-backup') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1690701') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup'); exit();
+  header('Location: /docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1328682-cloudflare-cdn-and-dns-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1328682') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/cloudflare-cdn-and-dns'); exit();
+  header('Location: /docs/articles/sites/cloudflare-cdn-and-dns'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1364264-configuring-jetbrains-phpstorm-ide-with-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1364264') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon'); exit();
+  header('Location: /docs/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/708588-configuring-settings-php') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/708588') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/configuring-settings-php'); exit();
+  header('Location: /docs/articles/drupal/configuring-settings-php'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1458044-configuring-wp-config-php') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1458044') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/configuring-wp-config-php'); exit();
+  header('Location: /docs/articles/wordpress/configuring-wp-config-php'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/733395-content-delivery-network-cdn-for-file-distribution') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/733395') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/content-delivery-network-cdn-for-file-distribution'); exit();
+  header('Location: /docs/articles/drupal/content-delivery-network-cdn-for-file-distribution'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1362915-continuous-integration-solutions-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1362915') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/continuous-integration-solutions'); exit();
+  header('Location: /docs/articles/local/continuous-integration-solutions'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/366900-creating-your-first-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/366900') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/spinup'); exit();
+  header('Location: /docs/articles/users/spinup'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/722387-cron-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/722387') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/cron'); exit();
+  header('Location: /docs/articles/sites/code/cron'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/394901-database-connection-errors') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/394901') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/database/database-connection-errors'); exit();
+  header('Location: /docs/articles/sites/database/database-connection-errors'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1350084-date-and-time') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1350084') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/architecture/date-and-time'); exit();
+  header('Location: /docs/articles/architecture/date-and-time'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1233606-debugging-sites-with-log-files') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1233606') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /docs/articles/sites/debugging-sites-with-log-files'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1325774-debugging-slow-performance') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1325774') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/newrelic/debugging-slow-performance'); exit();
+  header('Location: /docs/articles/sites/newrelic/debugging-slow-performance'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/733099-deleting-a-site-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/733099') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/deleting-a-site'); exit();
+  header('Location: /docs/articles/sites/deleting-a-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/732908-deleting-your-pantheon-account') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/732908') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/deleting-your-pantheon-account'); exit();
+  header('Location: /docs/articles/users/deleting-your-pantheon-account'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/376107-developing-on-pantheon-directly-with-sftp-mode') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/376107') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/developing-directly-with-sftp-mode'); exit();
+  header('Location: /docs/articles/sites/code/developing-directly-with-sftp-mode'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/984742-developing-with-ssl') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/984742') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/developing-with-ssl'); exit();
+  header('Location: /docs/articles/sites/domains/developing-with-ssl'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1319336-dns-records-for-directing-your-domain-to-your-pantheon-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1319336') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site'); exit();
+  header('Location: /docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/408428-drupal-s-performance-and-caching-settings') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/408428') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/drupal-s-performance-and-caching-settings'); exit();
+  header('Location: /docs/articles/drupal/drupal-s-performance-and-caching-settings'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/411388-drush-command-line-utility') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/411388') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/drush-command-line-utility'); exit();
+  header('Location: /docs/articles/local/drush-command-line-utility'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/515937-email-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/515937') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/email'); exit();
+  header('Location: /docs/articles/sites/code/email'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1266460-errors-and-server-responses') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1266460') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/errors-and-server-responses'); exit();
+  header('Location: /docs/articles/sites/errors-and-server-responses'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/873837-external-libraries-on-pantheon-') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/873837') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/external-libraries'); exit();
+  header('Location: /docs/articles/sites/external-libraries'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1556876-filesystem-faqs') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1556876') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/files/filesystem-faqs'); exit();
+  header('Location: /docs/articles/sites/files/filesystem-faqs'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/565680-filezilla-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/565680') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/filezilla'); exit();
+  header('Location: /docs/articles/local/filezilla'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1685295-fix-broken-links-that-reference-ip-port-instead-of-domain-name') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1685295') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/fix-broken-links-that-reference-ip-port-instead-of-domain-name'); exit();
+  header('Location: /docs/articles/sites/domains/fix-broken-links-that-reference-ip-port-instead-of-domain-name'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361723-frequently-asked-questions') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361723') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/frequently-asked-questions'); exit();
+  header('Location: /docs/articles/frequently-asked-questions'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/984876-gandi-pantheon-pointing-your-dns') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/984876') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/gandi-pantheon-pointing-your-dns'); exit();
+  header('Location: /docs/articles/sites/domains/gandi-pantheon-pointing-your-dns'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/366938-generating-ssh-keys') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/366938') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/generating-ssh-keys'); exit();
+  header('Location: /docs/articles/users/generating-ssh-keys'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/717236-pantheon-101-getting-started') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/717236') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/getting-started'); exit();
+  header('Location: /docs/articles/getting-started'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/507172-getting-the-client-ip-address') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/507172') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/getting-the-client-ip-address'); exit();
+  header('Location: /docs/articles/drupal/getting-the-client-ip-address'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/434572-git-faq') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/434572') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/git-faq'); exit();
+  header('Location: /docs/articles/local/git-faq'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361250-going-live-and-launching-your-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361250') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/going-live'); exit();
+  header('Location: /docs/articles/going-live'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/463515-hot-fixes') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/463515') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/hot-fixes'); exit();
+  header('Location: /docs/articles/sites/code/hot-fixes'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1668333-importing-a-large-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1668333') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/importing-a-large-site'); exit();
+  header('Location: /docs/articles/users/importing-a-large-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1458058-importing-a-wordpress-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1458058') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/importing-a-wordpress-site'); exit();
+  header('Location: /docs/articles/wordpress/importing-a-wordpress-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361251-importing-an-existing-drupal-site-to-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361251') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/importing-an-existing-site'); exit();
+  header('Location: /docs/articles/drupal/importing-an-existing-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1365505-importing-drush-site-archives-with-terminus') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1365505') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/importing-drush-site-archives-with-terminus'); exit();
+  header('Location: /docs/articles/users/importing-drush-site-archives-with-terminus'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/474151-installing-cygwin-on-windows') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/474151') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/installing-cygwin-on-windows'); exit();
+  header('Location: /docs/articles/local/installing-cygwin-on-windows'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1272699-ipv6-addresses-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1272699') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/architecture/edge/ipv6-addresses'); exit();
+  header('Location: /docs/articles/architecture/edge/ipv6-addresses'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/745361-known-limitations') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/745361') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/known-limitations'); exit();
+  header('Location: /docs/articles/drupal/known-limitations'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1386810-launch-check---drupal-performance-and-configuration-analysis') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1386810') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/launch-check---drupal-performance-and-configuration-analysis'); exit();
+  header('Location: /docs/articles/drupal/launch-check---drupal-performance-and-configuration-analysis'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1482224-launching-a-wordpress-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1482224') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/starting-a-wordpress-site'); exit();
+  header('Location: /docs/articles/wordpress/starting-a-wordpress-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1385877-ldap-and-ldaps-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1385877') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/codeldap-and-ldaps'); exit();
+  header('Location: /docs/articles/sites/codeldap-and-ldaps'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/690128-load-and-performance-testing') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/690128') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/load-and-performance-testing'); exit();
+  header('Location: /docs/articles/load-and-performance-testing'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361246-loading-ssh-keys') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361246') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/users/loading-ssh-keys'); exit();
+  header('Location: /docs/articles/users/loading-ssh-keys'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1341538-local-development-setup-and-operation') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1341538') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local'); exit();
+  header('Location: /docs/articles/local'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/636339-locking-your-site') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/636339') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/security/locking-your-site'); exit();
+  header('Location: /docs/articles/sites/security/locking-your-site'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/925284-major-version-drupal-upgrades') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/925284') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/major-version-drupal-upgrades'); exit();
+  header('Location: /docs/articles/drupal/major-version-drupal-upgrades'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1601176-managing-sites-and-teams-with-the-pantheon-one-dashboard') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1601176') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/organizations/managing-sites-and-teams-with-the-pantheon-one-dashboard'); exit();
+  header('Location: /docs/articles/organizations/managing-sites-and-teams-with-the-pantheon-one-dashboard'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1749039-managing-upstreams') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1749039') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/organizations/managing-upstreams'); exit();
+  header('Location: /docs/articles/organizations/managing-upstreams'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1729193-manually-apply-drupal-7-32-security-update') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1729193') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/manually-apply-drupal-7-32-security-update'); exit();
+  header('Location: /docs/articles/drupal/manually-apply-drupal-7-32-security-update'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1541929-more-ways-of-managing-code-in-sftp-mode') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1541929') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode'); exit();
+  header('Location: /docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1214976-branching-git-workflows-for-teams-with-multidev') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1214976') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/multidev'); exit();
+  header('Location: /docs/articles/sites/multidev'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1351632-multilingual-best-practices-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1351632') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/multilingual-best-practicies'); exit();
+  header('Location: /docs/articles/drupal/multilingual-best-practicies'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1666948-mysql-troubleshooting-with-new-relic-pro') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1666948') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro'); exit();
+  header('Location: /docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/758749-new-relic-performance-analysis-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/758749') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/newrelic/new-relic-performance-analysis'); exit();
+  header('Location: /docs/articles/sites/newrelic/new-relic-performance-analysis'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/384917-non-standard-files-locations') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/384917') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/files/non-standard-files-locations'); exit();
+  header('Location: /docs/articles/sites/files/non-standard-files-locations'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1200906-optimization-for-pantheon-and-the-cloud') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1200906') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/optimizing'); exit();
+  header('Location: /docs/articles/optimizing'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/718877-optimizing-the-image-cache-module-in-drupal-6') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/718877') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6'); exit();
+  header('Location: /docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1685542-how-to-configure-your-site-to-work-with-the-pantheon-enterprise-gateway') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1685542') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/pantheon-enterprise-gateway'); exit();
+  header('Location: /docs/articles/sites/code/pantheon-enterprise-gateway'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/696113-pantheon_stripped-get-parameter-values') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/696113') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/architecture/edge/pantheon_stripped-get-parameter-values'); exit();
+  header('Location: /docs/articles/architecture/edge/pantheon_stripped-get-parameter-values'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1267853-php-errors-and-exceptions') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1267853') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/php-errors-and-exceptions'); exit();
+  header('Location: /docs/articles/drupal/php-errors-and-exceptions'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1607118-port-2222-blocked-workaround') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1607118') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/port-2222-blocked-workaround'); exit();
+  header('Location: /docs/articles/local/port-2222-blocked-workaround'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/397551-private-files') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/397551') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/private-files'); exit();
+  header('Location: /docs/articles/sites/code/private-files'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/381152-reading-pantheon-environment-configuration') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/381152') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/reading-pantheon-environment-configuration'); exit();
+  header('Location: /docs/articles/sites/code/reading-pantheon-environment-configuration'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/368354-redirect-incoming-requests') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/368354') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/redirect-incoming-requests'); exit();
+  header('Location: /docs/articles/sites/code/redirect-incoming-requests'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/401317-redis-as-a-caching-backend') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/401317') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/redis-as-a-caching-backend'); exit();
+  header('Location: /docs/articles/sites/redis-as-a-caching-backend'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1058272-refreshing-dns-records-on-your-local-machine-') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1058272') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/refreshing-dns-records-on-your-local-machine-'); exit();
+  header('Location: /docs/articles/local/refreshing-dns-records-on-your-local-machine-'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/694224-removing-a-credit-card') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/694224') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/removing-a-credit-card'); exit();
+  header('Location: /docs/articles/sites/removing-a-credit-card'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/913686-required-reading-essential-pantheon-documentation') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/913686') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/required-reading-essential-pantheon-documentation'); exit();
+  header('Location: /docs/articles/required-reading-essential-pantheon-documentation'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1558729-resetting-passwords') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1558729') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/resetting-passwords'); exit();
+  header('Location: /docs/articles/sites/resetting-passwords'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/685368-restoring-an-environment-from-a-backup') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/685368') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/backups/restoring-an-environment-from-a-backup'); exit();
+  header('Location: /docs/articles/sites/backups/restoring-an-environment-from-a-backup'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/373311-rsync-and-sftp') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/373311') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/rsync-and-sftp'); exit();
+  header('Location: /docs/articles/local/rsync-and-sftp'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1150064-running-a-custom-upstream-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1150064') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/organizations/running-a-custom-upstream'); exit();
+  header('Location: /docs/articles/organizations/running-a-custom-upstream'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/442931-running-drupal-8-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/442931') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/running-drupal-8'); exit();
+  header('Location: /docs/articles/drupal/running-drupal-8'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/702499-selecting-a-plan') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/702499') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/settings/selecting-a-plan'); exit();
+  header('Location: /docs/articles/sites/settings/selecting-a-plan'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1248091-session-and-cookie-handling') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1248091') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/session-and-cookie-handling'); exit();
+  header('Location: /docs/articles/drupal/session-and-cookie-handling'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1315208-setting-up-a-domain-with-gandi') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1315208') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/setting-up-a-domain-with-gandi'); exit();
+  header('Location: /docs/articles/sites/domains/setting-up-a-domain-with-gandi'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/565150-setting-up-a-domain-with-godaddy') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/565150') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/setting-up-a-domain-with-godaddy'); exit();
+  header('Location: /docs/articles/sites/domains/setting-up-a-domain-with-godaddy'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1641139-sftp-faqs') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1641139') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/sftp-faqs'); exit();
+  header('Location: /docs/articles/sites/sftp-faqs'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/535767-ssh-tunnels-for-secure-connections-to-pantheon-services') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/535767') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/ssh-tunnels-for-secure-connections-to-pantheon-services'); exit();
+  header('Location: /docs/articles/sites/code/ssh-tunnels-for-secure-connections-to-pantheon-services'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1219468-sso-and-identity-federation-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1219468') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/sso-and-identity-federation'); exit();
+  header('Location: /docs/articles/sites/code/sso-and-identity-federation'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/361247-starting-with-git') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361247') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/starting-with-git'); exit();
+  header('Location: /docs/articles/local/starting-with-git'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/621653-team-management') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/621653') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/team-management'); exit();
+  header('Location: /docs/articles/sites/team-management'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1315417-terminus---the-pantheon-command-line-interface') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1315417') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/terminus-the-pantheon-command-line-interface'); exit();
+  header('Location: /docs/articles/local/terminus-the-pantheon-command-line-interface'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1384848-timeouts-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1384848') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/timeouts'); exit();
+  header('Location: /docs/articles/drupal/timeouts'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1722128-toggling-between-php-versions') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1722128') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/settings/toggling-between-php-versions'); exit();
+  header('Location: /docs/articles/sites/settings/toggling-between-php-versions'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1331801-undo-git-commits-like-overwriting-drupal-core') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1331801') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/undo-git-commits-like-overwriting-drupal-core'); exit();
+  header('Location: /docs/articles/local/undo-git-commits-like-overwriting-drupal-core'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1732501-updating-modules-through-drupal') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1732501') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/updating-modules-through-drupal'); exit();
+  header('Location: /docs/articles/drupal/updating-modules-through-drupal'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1523413-urls-in-wordpress-s-database') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1523413') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/urls-in-wordpress-s-database'); exit();
+  header('Location: /docs/articles/wordpress/urls-in-wordpress-s-database'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1524477-using-indexdepot-with-pantheon-sites') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1524477') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/using-indexdepot-with-pantheon-sites'); exit();
+  header('Location: /docs/articles/sites/code/using-indexdepot-with-pantheon-sites'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1389613-using-mysql-workbench-to-access-a-database') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1389613') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/using-mysql-workbench-to-access-a-database'); exit();
+  header('Location: /docs/articles/local/using-mysql-workbench-to-access-a-database'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1704710-using-pantheon-io-for-better-uptime') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1704710') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/domains/using-pantheon-io-for-better-uptime'); exit();
+  header('Location: /docs/articles/sites/domains/using-pantheon-io-for-better-uptime'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1390576-using-phpmyadmin-to-locally-administer-a-database') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1390576') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/using-phpmyadmin-to-locally-administer-a-database'); exit();
+  header('Location: /docs/articles/local/using-phpmyadmin-to-locally-administer-a-database'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1153430-using-sendgrid-for-outbound-email') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1153430') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/using-sendgrid-for-outbound-email'); exit();
+  header('Location: /docs/articles/sites/code/using-sendgrid-for-outbound-email'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/555188-using-simplesamlphp-with-shibboleth-sso') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/555188') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/drupal/using-simpleSAMLphp-with-shibboleth-sso'); exit();
+  header('Location: /docs/articles/drupal/using-simpleSAMLphp-with-shibboleth-sso'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/383609-using-the-pantheon-workflow') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/383609') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/using-the-pantheon-workflow'); exit();
+  header('Location: /docs/articles/sites/code/using-the-pantheon-workflow'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/565303-using-winscp-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/565303') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/local/using-winscp'); exit();
+  header('Location: /docs/articles/local/using-winscp'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/425726-varnish-caching-for-high-performance') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/425726') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/architecture/edge/varnish'); exit();
+  header('Location: /docs/articles/architecture/edge/varnish'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1027225-what-is-apc-and-what-is-it-used-for-') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1027225') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/what-is-apc-and-what-is-it-used-for-'); exit();
+  header('Location: /docs/articles/sites/what-is-apc-and-what-is-it-used-for-'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/987871-what-is-the-%22pantheon_api-module%22') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/987871') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/sites/code/what-is-the-pantheon-api-module'); exit();
+  header('Location: /docs/articles/sites/code/what-is-the-pantheon-api-module'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1505741-wordpress-and-php-sessions') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1505741') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/wordpress-and-php-sessions'); exit();
+  header('Location: /docs/articles/wordpress/wordpress-and-php-sessions'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1744959-wordpress-configuragtion-management-wp-cfm-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1744959') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/wordpress-configuration-management-wp-cfm'); exit();
+  header('Location: /docs/articles/wordpress/wordpress-configuration-management-wp-cfm'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1481956-wordpress-faq') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1481956') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/wordpress-faq'); exit();
+  header('Location: /docs/articles/wordpress/wordpress-faq'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1489431-wordpress-known-issues') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1489431') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/wordpress/wordpress-known-issues'); exit();
+  header('Location: /docs/articles/wordpress/wordpress-known-issues'); exit();
 }
-if ($_SERVER['REQUEST_URI'] == '/customer/portal/articles/1427001-rename-a-site-on-pantheon') {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1427001') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: //docs/articles/rename-a-site'); exit();
+  header('Location: /docs/articles/rename-a-site'); exit();
+}
+if (strpos($_SERVER['REQUEST_URI'], 'customer/portal/topics') !== FALSE) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: /docs/articles'); exit();
 }
