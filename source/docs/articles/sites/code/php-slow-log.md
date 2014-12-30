@@ -6,7 +6,7 @@ category:
 - debugging
 ---
 
-One of the key ways to find issues on your website is to check your PHP logs. Pantheon makes available to you many different logs, but in this case, we will look at how to use your PHP Slow Log and PHP FPM Error Logs to find performance issues and PHP errors on sites hosted by Pantheon. 
+One of the key ways to find issues on your website is to check your PHP logs. Pantheon makes available to you many different logs, but in this case, we will look at how to use your PHP Slow Log and PHP FPM Error Logs to find performance issues and PHP errors on sites hosted by Pantheon.
 
 ## Requirements
 
@@ -20,10 +20,10 @@ One of the key ways to find issues on your website is to check your PHP logs. Pa
 3. Open a command line prompt and paste the SFTP connection information there.
 4. Navigate to the Logs directory, and use a "get" command to download the PHP Slow Log to your local machine for analysis.
 
-    > $ sftp -o Port=2222 live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf@appserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in
-    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in's password:
-    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in's password:
-    > Connected to appserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in.  
+    > $ sftp -o Port=2222 live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in
+    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
+    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
+    > Connected to appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in.  
     > sftp> cd logs  
     > sftp> ls -l  
     > -rw-r--r--    1 16193    16193      153146 Dec 15 22:34 newrelic.log  
@@ -42,8 +42,8 @@ One of the key ways to find issues on your website is to check your PHP logs. Pa
     > -rw-------    1 16193    16193     1067358 Dec 12 20:07 php-fpm-error.log-20141212  
     > -rw-------    1 16193    16193     7209576 Dec 15 22:55 php-slow.log  
     > sftp> get php-slow.log  
-    > Fetching /srv/bindings/d142301948514750b2ff576f4b9158e5/logs/php-slow.log to php-slow.log  
-    > /srv/bindings/d142301948514750b2ff576f4b9158e5/logs/php-slow.log 100% 7041KB 370.6KB/s   00:19  
+    > Fetching /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log to php-slow.log  
+    > /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log 100% 7041KB 370.6KB/s   00:19  
     > sftp> get php-fpm-error.log  
     > Fetching /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log to php-fpm-error.log  
     > /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log                                                                              100%  717KB 238.9KB/s   00:03  
@@ -56,63 +56,63 @@ One of the key ways to find issues on your website is to check your PHP logs. Pa
 The first things to look for are custom modules or theme files (template.php file, &ast;.tpl.php files, etc.). This trace, for example, has both a custom Feature module (/sites/all/modules/features/tdm_community.module, field_get_items() function) and a .tpl file (/sites/all/themes/thedailymeal/templates/page.tpl.php, render() function).
 
     > 08-Dec-2014 19:04:01]  [pool www] pid 47289  
-    > script_filename = /srv/bindings/d142301948514750b2ff576f4b9158e5/code/index.php
-    > [0x000000000328e9e8] field_valid_language() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/modules/field/field.multilingual.inc:269  
-    > [0x000000000328e7d0] field_language() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/modules/field/field.module:925
-    > [0x000000000328e080] field_get_items() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/sites/all/modules/features/tdm_community/tdm_community.module:19  
-    > [0x000000000328c260] tdm_community_preprocess_node() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:1125  
-    > [0x000000000328b310] theme() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5952  
-    > [0x000000000328a3c8] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x0000000003289480] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x0000000003288db0] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/sites/all/modules/contrib/ds/modules/ds_extras/ds_extras.module:717  
-    > [0x0000000003286f98] theme_ds_field_minimal() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:1161  
-    > [0x0000000003286048] theme() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5952  
-    > [0x0000000003285100] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x00000000032841b8] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x0000000003280f48] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/sites/all/modules/contrib/ds/ds.module:747  
-    > [0x000000000327f128] ds_entity_variables() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:1125  
-    > [0x000000000327e1d8] theme() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5952  
-    > [0x000000000327d290] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x000000000327c348] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x000000000327b400] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5959  
-    > [0x000000000327b2d0] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:6053  
-    > [0x000000000327a240] render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/sites/all/themes/thedailymeal/templates/page.tpl.php:113  
+    > script_filename = /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php
+    > [0x000000000328e9e8] field_valid_language() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/modules/field/field.multilingual.inc:269  
+    > [0x000000000328e7d0] field_language() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/modules/field/field.module:925
+    > [0x000000000328e080] field_get_items() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/modules/features/tdm_community/tdm_community.module:19  
+    > [0x000000000328c260] tdm_community_preprocess_node() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:1125  
+    > [0x000000000328b310] theme() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5952  
+    > [0x000000000328a3c8] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x0000000003289480] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x0000000003288db0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/modules/contrib/ds/modules/ds_extras/ds_extras.module:717  
+    > [0x0000000003286f98] theme_ds_field_minimal() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:1161  
+    > [0x0000000003286048] theme() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5952  
+    > [0x0000000003285100] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x00000000032841b8] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x0000000003280f48] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/modules/contrib/ds/ds.module:747  
+    > [0x000000000327f128] ds_entity_variables() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:1125  
+    > [0x000000000327e1d8] theme() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5952  
+    > [0x000000000327d290] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x000000000327c348] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x000000000327b400] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
+    > [0x000000000327b2d0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:6053  
+    > [0x000000000327a240] render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/themes/thedailymeal/templates/page.tpl.php:113  
 
 The next thing to search for are contributed modules or plug-ins that could be used in ways that are detrimental to the site. stream_wrappers.inc is showing twice at the exact same time stamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
     > [08-Dec-2014 16:56:48]  [pool www] pid 3863  
-    > script_filename = /srv/bindings/d142301948514750b2ff576f4b9158e5/code/index.php
-    > [0x0000000005fbc2d0] realpath() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/stream_wrappers.inc:377
-    > [0x0000000005fbbdd0] getLocalPath()   /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/stream_wrappers.inc:695
+    > script_filename = /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php
+    > [0x0000000005fbc2d0] realpath() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/stream_wrappers.inc:377
+    > [0x0000000005fbbdd0] getLocalPath()   /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/stream_wrappers.inc:695
     > [0x00007ffff7ee1700] url_stat() unknown:0  
-    > [0x0000000005fbbb60] file_exists() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4945  
-    > [0x0000000005fbb058] drupal_aggregated_file_exists() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4994  
-    > [0x0000000005fb92c0] drupal_build_js_cache() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4429  
-    > [0x0000000005fb8d80] drupal_get_js() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:2703  
-    > [0x0000000005fb6f60] template_process_html() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:1125  
-    > [0x0000000005fb6010] theme() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5967  
-    > [0x0000000005fb5af0] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5814  
-    > [0x0000000005fb49b8] drupal_render_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:2701  
-    > [0x0000000005fb4600] drupal_deliver_html_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:2589  
-    > [0x0000000005fb3f50] drupal_deliver_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/menu.inc:532  
-    > [0x0000000005fb3d70] menu_execute_active_handler() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/index.php:21  
+    > [0x0000000005fbbb60] file_exists() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4945  
+    > [0x0000000005fbb058] drupal_aggregated_file_exists() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4994  
+    > [0x0000000005fb92c0] drupal_build_js_cache() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4429  
+    > [0x0000000005fb8d80] drupal_get_js() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:2703  
+    > [0x0000000005fb6f60] template_process_html() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:1125  
+    > [0x0000000005fb6010] theme() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5967  
+    > [0x0000000005fb5af0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5814  
+    > [0x0000000005fb49b8] drupal_render_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:2701  
+    > [0x0000000005fb4600] drupal_deliver_html_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:2589  
+    > [0x0000000005fb3f50] drupal_deliver_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/menu.inc:532  
+    > [0x0000000005fb3d70] menu_execute_active_handler() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php:21  
 
     > [08-Dec-2014 16:56:48]  [pool www] pid 3883  
-    script_filename = /srv/bindings/d142301948514750b2ff576f4b9158e5/code/index.php  
-    > [0x00000000027b95a0] realpath() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/stream_wrappers.inc:377  
-    [0x00000000027b90a0] getLocalPath() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/stream_wrappers.inc:695  
+    script_filename = /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php  
+    > [0x00000000027b95a0] realpath() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/stream_wrappers.inc:377  
+    [0x00000000027b90a0] getLocalPath() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/stream_wrappers.inc:695  
     > [0x00007ffff7ee1700] url_stat() unknown:0  
-    > [0x00000000027b8e30] file_exists() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4945  
-    > [0x00000000027b8328] drupal_aggregated_file_exists() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4994  
-    > [0x00000000027b6590] drupal_build_js_cache() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:4429  
-    > [0x00000000027b6050] drupal_get_js() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:2703  
-    > [0x00000000027b4230] template_process_html() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/theme.inc:1125  
-    > [0x00000000027b32e0] theme() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5967  
-    > [0x00000000027b2dc0] drupal_render() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:5814  
-    > [0x00000000027b1c88] drupal_render_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:2701  
-    > [0x00000000027b18d0] drupal_deliver_html_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/common.inc:2589  
-    > [0x00000000027b1220] drupal_deliver_page() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/includes/menu.inc:532  
-    > [0x00000000027b1040] menu_execute_active_handler() /srv/bindings/d142301948514750b2ff576f4b9158e5/code/index.php:21  
+    > [0x00000000027b8e30] file_exists() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4945  
+    > [0x00000000027b8328] drupal_aggregated_file_exists() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4994  
+    > [0x00000000027b6590] drupal_build_js_cache() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:4429  
+    > [0x00000000027b6050] drupal_get_js() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:2703  
+    > [0x00000000027b4230] template_process_html() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/theme.inc:1125  
+    > [0x00000000027b32e0] theme() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5967  
+    > [0x00000000027b2dc0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5814  
+    > [0x00000000027b1c88] drupal_render_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:2701  
+    > [0x00000000027b18d0] drupal_deliver_html_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:2589  
+    > [0x00000000027b1220] drupal_deliver_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/menu.inc:532  
+    > [0x00000000027b1040] menu_execute_active_handler() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php:21  
 
 To get a count of how many times any given file is called in a PHP Slow Log, use a grep command. Examples:
 
@@ -135,25 +135,25 @@ Another way to find issues is to examine the PHP FPM Error Log, which is generat
 
     // From the PHP Slow Log  
     [16-Dec-2014 03:13:50]  [pool www] pid 119057  
-    script_filename = /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/index.php  
-    [0x0000000003160c28] drupal_substr() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/sites/all/modules/contrib/cdn/cdn.module:37  
-    [0x000000000315f820] cdn_file_url_alter() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/module.inc:1101  
-    [0x000000000315f498] drupal_alter() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/file.inc:375  
-    [0x000000000315f148] file_create_url() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:155  
+    script_filename = /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/index.php  
+    [0x0000000003160c28] drupal_substr() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/sites/all/modules/contrib/cdn/cdn.module:37  
+    [0x000000000315f820] cdn_file_url_alter() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/module.inc:1101  
+    [0x000000000315f498] drupal_alter() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/file.inc:375  
+    [0x000000000315f148] file_create_url() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:155  
     [0x00007fff92553cb0] _cdn_build_css_path() unknown:0  
-    [0x000000000315e160] preg_replace_callback() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:95  
-    [0x000000000315d7e8] _cdn_build_css_cache() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:33  
-    [0x000000000315bce0] _cdn_aggregate_css() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:3391  
-    [0x000000000315ad98] drupal_pre_render_styles() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:5931  
-    [0x000000000315a568] drupal_render() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:3127  
-    [0x000000000315a030] drupal_get_css() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/theme.inc:2707  
-    [0x0000000003158210] template_process_html() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/theme.inc:1125  
-    [0x00000000031572c0] theme() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:5967  
-    [0x0000000003156da0] drupal_render() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:5814  
-    [0x0000000003155c68] drupal_render_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:2701  
-    [0x00000000031558b0] drupal_deliver_html_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/common.inc:2589  
-    [0x0000000003155200] drupal_deliver_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/includes/menu.inc:532  
-    [0x0000000003155020] menu_execute_active_handler() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791b/code/index.php:21  
+    [0x000000000315e160] preg_replace_callback() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:95  
+    [0x000000000315d7e8] _cdn_build_css_cache() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/sites/all/modules/contrib/cdn/cdn.basic.css.inc:33  
+    [0x000000000315bce0] _cdn_aggregate_css() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:3391  
+    [0x000000000315ad98] drupal_pre_render_styles() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:5931  
+    [0x000000000315a568] drupal_render() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:3127  
+    [0x000000000315a030] drupal_get_css() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/theme.inc:2707  
+    [0x0000000003158210] template_process_html() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/theme.inc:1125  
+    [0x00000000031572c0] theme() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:5967  
+    [0x0000000003156da0] drupal_render() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:5814  
+    [0x0000000003155c68] drupal_render_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:2701  
+    [0x00000000031558b0] drupal_deliver_html_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/common.inc:2589  
+    [0x0000000003155200] drupal_deliver_page() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/includes/menu.inc:532  
+    [0x0000000003155020] menu_execute_active_handler() /srv/bindings/d9e7c7e384eb453f8ac80cee5d4d791bad2wqq34d/code/index.php:21  
 
 
 By using these methods and files to find your PHP errors and performance issues, you will be able to improve the stability of your website greatly.
