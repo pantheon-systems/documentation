@@ -52,7 +52,7 @@ When developing a site, it can be useful to directly access the server logs for 
 
 No, Pantheon does not have a mechanism for combining server logs across multiple Application Containers.
 
-#### Can I access the logs on a specific DROP worker?
+#### Can I access the logs on a specific Application Container worker?
 
 Yes, but it'll take a couple steps.
 
