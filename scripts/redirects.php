@@ -9,7 +9,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     $row++;
     if ($row > 1) {
-$redirect = "if (\$_SERVER['REQUEST_URI'] == '/$data[0]') {
+$redirect = "if (strpos(\$_SERVER['REQUEST_URI'], '/customer/portal/articles/$data[0]') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /$data[1]'); exit();
 }\n";
@@ -17,6 +17,13 @@ $redirect = "if (\$_SERVER['REQUEST_URI'] == '/$data[0]') {
     }
   }
 }
+
+$categories_redirect = "if (strpos(\$_SERVER['REQUEST_URI'], 'customer/portal/topics') !== FALSE) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: /docs/articles'); exit();
+}\n";
+
+fwrite($index_file, $categories_redirect);
 
 fclose($handle);
 fclose($index_file);

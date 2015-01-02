@@ -22,25 +22,25 @@ In the above example the key type is "ssh-rsa", though you may also generate ssh
 ### Add your key
 To add your key, navigate to **Your Sites and Account** and use the "Add Key" button.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/87730)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87730)
 
 You need to copy the key text completely, and paste it into the form in the modal window. See below. 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/87731)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87731)
 
 Once the key has been successfully added it will appear under the list of available keys on your Pantheon Account page.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/87835)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87835)
 
 With that, you're set to make a git clone of your site codebase!
 
 ### Delete a key
 To delete a your key, navigate to **Your Sites and Account** and click the "Delete Key" link. Don't worry a modal will appear to asking you if you are sure you want to delete that key.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/87732)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87732)
 
 If you are sure that you want to delete a key, then you can go ahead and click on the button in the modal in order to remove it from your account.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/87733)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87733)
 
 If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP using your account password to authenticate. However, there will be no git access as you need a valid key uploaded to your account.

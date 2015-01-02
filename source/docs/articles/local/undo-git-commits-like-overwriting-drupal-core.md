@@ -1,22 +1,20 @@
 ---
-title: Undo Git Commits Like Overwriting Drupal Core
+title: Undo Git Commits 
 description: Instructions on how to undo a Git commit.
 category:
   - drupal
 ---
 
 ## Overview
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. A common problem is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. For the record: DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon.   **NOTE:** DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
 
-A bit of context: To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform.
-
-If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
+To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform. If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
 
 ## Getting Started
 
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite core re-write the Git log the changes are permanent.
 
-In order to get back to a version of Pressflow you can run a Git log on a core file. In this case we choose the `/includes/bootstrap.inc`. file as this has some references to "PRESSFLOW" when everything is working correctly
+In order to get back to a version of Pressflow, you can run a Git log on a core file. In this case we choose the `/includes/bootstrap.inc`. file as this has some references to "PRESSFLOW" when everything is working correctly
 
     $ git log bootstrap.inc
     commit 9a11sd8f67af9679a6fsafasdf802834207489328
@@ -30,7 +28,7 @@ At this point you will have to revert your code back to the commit before core w
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
-### Undo the Last Commit that Hasn't Been Sent to Pantheon
+### Undo the Last Commit That Hasn't Been Sent to Pantheon
 
 If you made the change locally but have not sent it to Pantheon, you locally delete that last commit. This is destructive and will undo all the changes.
 

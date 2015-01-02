@@ -28,19 +28,19 @@ Of course you can make an import archive by hand. You simply dump your existing 
 After you have created an account, you can log in and will be directed to your dashboard.
 
 
-![Your sites & account dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/247520)
+![Your sites & account dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/247520)
 
 
 Click on "Add a site." You will first be prompted to name the site. The only valid characters are letters, numbers and dashes. Enter a name and click continue.
 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/247523)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247523)
 
 3. Wait While This Happens
 
 You will then have a short wait while Pantheon creates and allocates the resources for your site's environments. This takes only a few minutes under normal circumstances.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/247524)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
 
 4. Choose Start State
 
@@ -49,25 +49,25 @@ You now have several options. Rather than start with one of our preconfigured st
 
 Select “Import manually.”
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/247521)  
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247521)  
 
 
 Once selected, you can upload a single URL or file archive of the site.  
 
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/259156)  
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/259156)  
 
 
 Alternatively, you can enter the URL to your site code (required), user files (optional) and database (optional).
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/247522)
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247522)
 
 5. Relax While We Configure Your Codebase
 
 
 Click “Import site” and wait while we import and configure your site.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/247524)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
 
 
 6. Completed Spinup
@@ -76,7 +76,7 @@ Click “Import site” and wait while we import and configure your site.
 When complete, just click the button to visit your Pantheon Dashboard.
 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/247525)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247525)
 
 
 
@@ -94,7 +94,7 @@ Congratulations! Your site has been imported and your Pantheon site environments
 You will eventually have three environments (development, test, and live), each with a separate version of your website. Click the link at the top left of your dashboard to launch the your development site.
 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/247528)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247528)
 
 
 9. View Your Site

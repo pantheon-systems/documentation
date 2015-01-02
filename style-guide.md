@@ -67,7 +67,7 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 * Videos should be as short as possible, typically no more than 30 seconds.
 
-* Embed videos with an iframe: `<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>` will yeild <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>.  
+* Embed videos with an iframe: `<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>` will yield <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/UZgMQ7DIxo8" width="560"></iframe>.  
 
 ### Code Snippets
 
