@@ -14,7 +14,7 @@ In order to get your domain resolving to your Pantheon site, you will need to ed
 
 First, navigate to the DNS Zones panel by clicking on the "DNS ZONES" button above the domains list.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/197253)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/197253)
 
 From the Zones panel, select the file that you will use for your domain. If one does not yet exist, create a new Zone file.
 
@@ -24,7 +24,7 @@ Change the editing mode to Expert in the dropdown menu on the right.
 
 **NOTICE: If you are editing a pre-existing Zone file, you will receive a notice (see image below, the notice is highlighted) that tells you that the zone file is currently being used and you will need to create a new version.**
 
-**![Configure the A records](https://pantheon-systems.desk.com/customer/portal/attachments/197261)**
+**![Configure the A records](https://www.getpantheon.com/sites/default/files/docs/desk_images/197261)**
 
 **The zone configuration in the above example is as folllows:**
 

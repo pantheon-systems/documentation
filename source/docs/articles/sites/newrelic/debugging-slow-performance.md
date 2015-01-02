@@ -20,7 +20,7 @@ An often ignored cause of bad performance is [PHP errors within site code](/docs
 Here's a graphic example of how PHP errors can slow down a site. This benchmark was performed with [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of watchdog before each test to avoid tainting results from the aggregate.  
 
 
-​ ![](https://pantheon-systems.desk.com/customer/portal/attachments/200873)  
+​ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200873)  
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
 
 <colgroup>
@@ -87,7 +87,7 @@ Turning off error reporting suppresses the symptom, not the problem, and PHP exe
 As a graphic example, if your slowest database operation is an INSERT to watchdog, then you really should address the problem and fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking literally 70.6% of the execution time.  
 
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/200891)  
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200891)  
 
 
 Learn more about [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files).
@@ -99,7 +99,7 @@ The next performance killer is an excessive number of database queries per reque
 
 
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
 
 
 Therefore, with an average of 110 queries taking 1.19 seconds means on average, each request will spend .132 seconds in the database. A second example with the same query duration, but with 239 queries per request, that’s .28 seconds in the database. A final example with 421 queries per request averaging 2.66 milliseconds equals **1.1** seconds per request in the database. Monstrously slow.  
@@ -125,7 +125,7 @@ Non-optimized caching also is a huge problem. If you’re not caching anonymous 
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.  
 
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/200898)  
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200898)  
 
 
 Also note the impact of watchdog INSERTs - this is why you should fix your PHP errors.  

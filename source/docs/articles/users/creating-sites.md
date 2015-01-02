@@ -3,7 +3,7 @@ title: Creating Sites
 description: Learn to sign up for a new site on Pantheon.
 category:
   - getting-started
-
+draft: true
 ---
 
 ## If you need to change major Drupal versions,

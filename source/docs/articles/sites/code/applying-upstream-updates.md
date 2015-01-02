@@ -30,18 +30,18 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 
 1. Check the options you want to run after pulling the update.
 2. Click “Apply Updates”.
-![A Pantheon site dashboard with upstream updates available.](https://pantheon-systems.desk.com/customer/portal/attachments/357403)
-![Pantheon dashboard showing upstream update in progress.](https://pantheon-systems.desk.com/customer/portal/attachments/357428)
+![A Pantheon site dashboard with upstream updates available.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357403)
+![Pantheon dashboard showing upstream update in progress.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357428)
 3. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
 4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/articles/local/git-faq#HowdoIrevertorundochanges?) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
 6. Click “Visit Testing Environment” to test the update against your Live site’s content base.
-![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://pantheon-systems.desk.com/customer/portal/attachments/357430)
+![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357430)
 7. Deploy the upstream updates to your Live Environment by clicking “Pull Code from Testing” in the Code Workspace in the Live environment.
-![The Code tab in a Pantheon site's dashboard's Live environment](https://pantheon-systems.desk.com/customer/portal/attachments/357432)
+![The Code tab in a Pantheon site's dashboard's Live environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/357432)
 8. Click “Visit Live Environment” to verify the update is live.
 
-![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](https://pantheon-systems.desk.com/customer/portal/attachments/357435)
+![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357435)
 
 ## Debug Failed Merges
 

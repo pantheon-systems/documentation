@@ -47,7 +47,7 @@ These DNS records are for Pantheon-hosted sites _already using a gotpantheon.com
 Your site dashboard recommends the specific DNS settings you should use. These can be found under the _Domains /  SSL_ tab, per environment. In most cases, you'll only need to configure DNS for the _Live_ environment:  
 
 
- ![Domain Setup Panel](https://pantheon-systems.desk.com/customer/portal/attachments/341988)
+ ![Domain Setup Panel](https://www.getpantheon.com/sites/default/files/docs/desk_images/341988)
 
 ## DNS Records for HTTPS Sites (SSL/TLS)
 

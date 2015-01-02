@@ -19,18 +19,18 @@ category:
 2. [Relax](/docs/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
 3. After completion, you can [access your backups.](/docs/articles/sites/backups/backup-creation#creating-a-backup#access)
 
-![Create Backup](https://pantheon-systems.desk.com/customer/portal/attachments/305275)
+![Create Backup](https://www.getpantheon.com/sites/default/files/docs/desk_images/305275)
 
 You will notice the job indicator will turn green and provide the number of active jobs.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/305276)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305276)
 
 **Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files). 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/305286)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305286)
 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 

@@ -19,11 +19,11 @@ WordPress's admin interface has built in tools to manage plugins and themes, all
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your dev environment. It works for plugins:
 
-![Installing WP Plugins](https://pantheon-systems.desk.com/customer/portal/attachments/278882)
+![Installing WP Plugins](https://www.getpantheon.com/sites/default/files/docs/desk_images/278882)
 
 And for themes:
 
-![Installing WP Themes](https://pantheon-systems.desk.com/customer/portal/attachments/278883)
+![Installing WP Themes](https://www.getpantheon.com/sites/default/files/docs/desk_images/278883)
 
 Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
@@ -35,11 +35,11 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 You'll need to grab the url to the code you want installed from Drupal.org:
 
-![Drupal.org views module](https://pantheon-systems.desk.com/customer/portal/attachments/278879)
+![Drupal.org views module](https://www.getpantheon.com/sites/default/files/docs/desk_images/278879)
 
 And then paste it into Drupal's update manager UI. You can also upload a tarball or zip file from your desktop:
 
-![Installing via update manager](https://pantheon-systems.desk.com/customer/portal/attachments/278880)
+![Installing via update manager](https://www.getpantheon.com/sites/default/files/docs/desk_images/278880)
 
 Note that you still need to turn these changes into _commits_ in your Pantheon site dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
