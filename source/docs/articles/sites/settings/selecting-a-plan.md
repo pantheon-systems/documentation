@@ -13,13 +13,13 @@ Pantheon offers multiple service levels, called ["Plans"](https://www.getpantheo
 
 To get started, pick a plan by select the site that you would like to associate with a plan.
 
-![select site](https://pantheon-systems.desk.com/customer/portal/attachments/336531)
+![select site](https://www.getpantheon.com/sites/default/files/docs/desk_images/336531)
 
 ## Select the Site Settings
 
 After you get to your site's dashboard, you can click the “_Settings_” link in the upper-right corner of your site's workspace.
 
-![settings button](https://pantheon-systems.desk.com/customer/portal/attachments/336532)
+![settings button](https://www.getpantheon.com/sites/default/files/docs/desk_images/336532)
 
 ## Choose or Add the Payment Method
 
@@ -27,13 +27,13 @@ If you have already added a Card to your account you can select the card you wou
 
 **Note: You won't be able to select a plan until you've associated a payment method with the site; e.g. selecting a card from the drop-down list & clicking _Update Payment Method_.**
 
-![add credit card](https://pantheon-systems.desk.com/customer/portal/attachments/336541)
+![add credit card](https://www.getpantheon.com/sites/default/files/docs/desk_images/336541)
 
 ## Pick a Plan
 
 Finally, choose the plan that you would like for the selected site and click "_Submit_".  Once this is done the email address associated with the account of the user who is associated with the credit card will receive the billing statements.
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/336534)  
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/336534)  
  
 
 Now that you have selected a plan, you can continue on with process of Going Live by [setting up a domain on your site.](/docs/articles/going-live) The plan has now been selected.
@@ -42,4 +42,4 @@ Now that you have selected a plan, you can continue on with process of Going Liv
 
 Identifying your site's service level is quick and easy. You can find this in the green label next your site's name.
 
-![confirm new plan](https://pantheon-systems.desk.com/customer/portal/attachments/336535)
+![confirm new plan](https://www.getpantheon.com/sites/default/files/docs/desk_images/336535)

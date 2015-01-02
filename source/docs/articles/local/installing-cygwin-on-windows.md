@@ -19,47 +19,47 @@ Get started by downloading the latest version of [Cygwin](http://cygwin.com/inst
 ## Install Cygwin
 Start the Cygwin installer using setup.exe. If you already have Cygwin installed or you would like to add extra packages after you have the program running on your system you can simply click setup.exe and running through the installer again.
 
- ![Start Cygwin Installer](https://pantheon-systems.desk.com/customer/portal/attachments/40750)  
+ ![Start Cygwin Installer](https://www.getpantheon.com/sites/default/files/docs/desk_images/40750)  
 
 ## Select the Cygwin Root
 We have opted to the root directory directly inside the `C:\` directory. This will make it easier when we are trying to locate the CSR files we are going to generate later in the tutorial.
 
- ![Cygwin Root install directory](https://pantheon-systems.desk.com/customer/portal/attachments/40751)  
+ ![Cygwin Root install directory](https://www.getpantheon.com/sites/default/files/docs/desk_images/40751)  
 
 ## Select the Package Directory
 Once you have chosen the default directory to install Cygwin, you will also need to select a Local Package directory. In this case we are using the same directory as the Cygwin Root directory.
 
 
 
- ![Cygwin Local package directory](https://pantheon-systems.desk.com/customer/portal/attachments/40752)
+ ![Cygwin Local package directory](https://www.getpantheon.com/sites/default/files/docs/desk_images/40752)
 
 ## Choose Your Internet Connection
 To download the necessary packages, the recommended settings for this is the _Direct Connection_
 
 
- ![Cygwin Connection Type](https://pantheon-systems.desk.com/customer/portal/attachments/40753)  
+ ![Cygwin Connection Type](https://www.getpantheon.com/sites/default/files/docs/desk_images/40753)  
 
 ## Select a Download Site
 Choose the nearest mirror site, or most stable location. If for some reason the download does not work you can always select another mirror.
 
 
- ![Choose Cygwin mirror](https://pantheon-systems.desk.com/customer/portal/attachments/40755)  
+ ![Choose Cygwin mirror](https://www.getpantheon.com/sites/default/files/docs/desk_images/40755)  
 
 ## Install the SSL Package
 Start Cygwin and paste in the command that you got from the Wizard.
 
- ![Select openSSL package](https://pantheon-systems.desk.com/customer/portal/attachments/40768)  
+ ![Select openSSL package](https://www.getpantheon.com/sites/default/files/docs/desk_images/40768)  
 
 ## Generate the CSR
 Once the installation is complete, you can run start a Cygwin terminal session. Here you can paste in the command you generated from the Wizard and get your private key and CSR certificate.
 
- ![Generate the CSR with Cygwin](https://pantheon-systems.desk.com/customer/portal/attachments/40769)
+ ![Generate the CSR with Cygwin](https://www.getpantheon.com/sites/default/files/docs/desk_images/40769)
 
 ## Get the CSR Certificate
 Finally, you can navigate to the home directory within Cygwin's root and get a copy of both your private key and CSR certificate.
 
 
- ![CSR cert in windows](https://pantheon-systems.desk.com/customer/portal/attachments/40770)  
+ ![CSR cert in windows](https://www.getpantheon.com/sites/default/files/docs/desk_images/40770)  
 
 
 ## Complete the Installation

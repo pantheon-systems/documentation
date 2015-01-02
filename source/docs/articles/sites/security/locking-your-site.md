@@ -24,18 +24,18 @@ You have the ability to password protect any of the available environments.
 - Choose a username and password
 - Click "Lock Environment"
 
-![Lock environment](https://pantheon-systems.desk.com/customer/portal/attachments/305964)
+![Lock environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/305964)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-![Credentials](https://pantheon-systems.desk.com/customer/portal/attachments/305968)
+![Credentials](https://www.getpantheon.com/sites/default/files/docs/desk_images/305968)
 
 Now when your page refreshes you will notice that the environment is now "Private". You will also be able to see the credentials needed to access that environment.
 
 In the event you want to set a different username and password for each environment you do so. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
 To verify that everything is working correctly try and visit the URL of the environment that you have made private. You should see a authentication form where you can enter the username and password for that environment to start your session.  
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/62465)
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/62465)
 ## Unlock a Site's Environment
  
 
