@@ -1,4 +1,5 @@
-<?php
+//301 redirect from /old to /new for docs.
+
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/373319') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /docs/articles/local/accessing-mysql-databases'); exit();
@@ -27,7 +28,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361249') !== FALS
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /docs/articles/sites/apache-solr'); exit();
 }
-if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles//361248') !== FALSE ) {
+if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361248') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /docs/articles/sites/code/applying-upstream-updates'); exit();
 }
@@ -205,7 +206,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1458058') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/361251') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/drupal/importing-an-existing-site'); exit();
+  header('Location: /docs/articles/users/importing-an-existing-site'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1365505') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -225,15 +226,15 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/745361') !== FALS
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1386810') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/drupal/launch-check---drupal-performance-and-configuration-analysis'); exit();
+  header('Location: /docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1482224') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/wordpress/starting-a-wordpress-site'); exit();
+  header('Location: /docs/articles/wordpress/starting-wordpress-site'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1385877') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/sites/codeldap-and-ldaps'); exit();
+  header('Location: /docs/articles/sites/code/ldap-and-ldaps'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/690128') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -277,7 +278,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1214976') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1351632') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/drupal/multilingual-best-practicies'); exit();
+  header('Location: /docs/articles/drupal/multilingual-best-practices'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1666948') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -333,7 +334,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/401317') !== FALS
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1058272') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/local/refreshing-dns-records-on-your-local-machine-'); exit();
+  header('Location: /docs/articles/local/refreshing-dns-records-on-your-local-machine'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/694224') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -385,7 +386,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1641139') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/535767') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/sites/code/ssh-tunnels-for-secure-connections-to-pantheon-services'); exit();
+  header('Location: /docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1219468') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -445,7 +446,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1153430') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/555188') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/drupal/using-simpleSAMLphp-with-shibboleth-sso'); exit();
+  header('Location: /docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/383609') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -461,11 +462,11 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/425726') !== FALS
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1027225') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/sites/what-is-apc-and-what-is-it-used-for-'); exit();
+  header('Location: /docs/articles/sites/what-is-apc-and-what-is-it-used-for'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/987871') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/sites/code/what-is-the-pantheon-api-module'); exit();
+  header('Location: /docs/articles/sites/code/what-is-the-pantheon_api-module'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1505741') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
@@ -485,7 +486,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1489431') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1427001') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/rename-a-site'); exit();
+  header('Location: /docs/articles/sites/rename-a-site'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], 'customer/portal/topics') !== FALSE) {
   header('HTTP/1.0 301 Moved Permanently');
