@@ -14,28 +14,28 @@ Drupal's performance settings can be found at Administration > Configuration > D
 
 ## Caching
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/180072)  
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180072)  
 Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/180073)  
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180073)  
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/180074)
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180074)
 
 **This is a key setting**. Determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 mins, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ## Bandwidth Optimization
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/180075)
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180075)
 
 On Pantheon, the _"Compress cached pages"_ setting should not checked, as pages are already compressed with gzip.  
 
 
- ![](https://pantheon-systems.desk.com/customer/portal/attachments/180077)
+ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180077)
 
 On the live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both checked. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
@@ -72,7 +72,7 @@ As above, can help with logged-in performance by preventing re-generation of blo
 
 This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser-render times significantly. You might want to turn it off in dev if you are building a theme (or developing JS), but this should always be Enabled in production.
 
-![Drupal 6 Performance cache settings](https://pantheon-systems.desk.com/customer/portal/attachments/31793)
+![Drupal 6 Performance cache settings](https://www.getpantheon.com/sites/default/files/docs/desk_images/31793)
 
 ### Contributed Modules
 

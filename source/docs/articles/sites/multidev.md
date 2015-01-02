@@ -17,7 +17,7 @@ category:
 
 &nbsp;
 
-![](http://helpdesk.getpantheon.com/customer/portal/attachments/170383)​
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/170383)​
 
 ## Branching and Multidev terminology
 

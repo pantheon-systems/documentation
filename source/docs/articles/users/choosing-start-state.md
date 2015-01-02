@@ -9,7 +9,7 @@ When you create a new site with Pantheon, you're asked to choose a start state. 
 
 ## Start with Drupal Core
 
-![](http://helpdesk.getpantheon.com/customer/portal/attachments/214002)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214002)
 
 Starting with core gives you a blank site with the Drupal code pulled from the [Pantheon repository on github](https://github.com/pantheon-systems). It's up to you to build from there.
 
@@ -19,7 +19,7 @@ We base our repository on the canonical source from drupal.org, and then extend 
 
 ## Start with a Drupal Distribution
 
-![](http://helpdesk.getpantheon.com/customer/portal/attachments/214003)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214003)
 
 We include a growing number of "Drupal products" as available start-states on Pantheon. These are also known as "installation profiles" or "distributions" and contain much more functionality than a Drupal core installation. Starting with a product will base your code off a maintained upstream maintained jointly by Pantheon and the product owner.
 
@@ -35,10 +35,10 @@ For details, see our dedicated article [Importing an existing Drupal site into P
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your Drupal site. When complete, just click the button to visit your Pantheon Dashboard.
 
-![](http://helpdesk.getpantheon.com/customer/portal/attachments/214006)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214006)
 
 ## Enjoy your Pantheon Site!
 
 Congratulations! Your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
-![](http://helpdesk.getpantheon.com/customer/portal/attachments/214008)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214008)

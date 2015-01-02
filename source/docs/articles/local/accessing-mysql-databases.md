@@ -16,7 +16,7 @@ Pantheon provides direct access for your MySQL databases, both for debugging an
 
 MySQL credentials for each site environment can be found in the dashboard:
 
-![MySQL Credentials](https://pantheon-systems.desk.com/customer/portal/attachments/168060)
+![MySQL Credentials](https://www.getpantheon.com/sites/default/files/docs/desk_images/168060)
 
 The following required fields are provided:
 
@@ -38,7 +38,7 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 
 If your site suddenly reverts to install.php, or you see database connection errors like the following:
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/64774)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/64774)
 
     Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 

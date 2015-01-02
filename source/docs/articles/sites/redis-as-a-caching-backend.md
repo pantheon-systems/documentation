@@ -57,7 +57,7 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 Enabling Redis Cache Server from Pantheon Site Dashboard (Settings >> Add Ons >> Add)
 
-![Enable Redis via Dashboard](https://pantheon-systems.desk.com/customer/portal/attachments/301650)
+![Enable Redis via Dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/301650)
 
 #### Using Redis with WordPress
 
@@ -138,13 +138,13 @@ Enable the module via admin/build/modules. This is necessary for cache clearing 
 
 Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
 
-![Redis connect string](https://pantheon-systems.desk.com/customer/portal/attachments/301638)
+![Redis connect string](https://www.getpantheon.com/sites/default/files/docs/desk_images/301638)
 
   -
 
 For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
 
-![](https://pantheon-systems.desk.com/customer/portal/attachments/71423)
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/71423)
 
   -
 

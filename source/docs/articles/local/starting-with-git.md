@@ -22,7 +22,7 @@ Log into Pantheon and load the dashboard page for the site you want to work on.
 
 At the top of the development panel you will see the `git clone` command. It will look something like this:
 
-![Copy Past Git Clone](https://pantheon-systems.desk.com/customer/portal/attachments/278869)
+![Copy Past Git Clone](https://www.getpantheon.com/sites/default/files/docs/desk_images/278869)
 
 Copy and paste that in your terminal to get started.
 
@@ -34,7 +34,7 @@ On your local environment, go to where you want the code to reside. Git will cre
 
 If everything worked you should see Git fetching the data:
 
-![Git Clone During](https://pantheon-systems.desk.com/customer/portal/attachments/27623)
+![Git Clone During](https://www.getpantheon.com/sites/default/files/docs/desk_images/27623)
 
 If you run into permission problems, check your [SSH key](/docs/articles/users/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
 
@@ -56,7 +56,7 @@ To find out if you have any files in your local clone that Git isn't yet trackin
 
 Any pending changes and files to be added will be listed like this:
 
-![Git Status](https://pantheon-systems.desk.com/customer/portal/attachments/27626)
+![Git Status](https://www.getpantheon.com/sites/default/files/docs/desk_images/27626)
 
 You can then cut and paste the paths to these files when using _git add_.
 
@@ -72,7 +72,7 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 
 If you don't specify a message on the command-line, git will open your default text-editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:
 
-![Git Commit](https://pantheon-systems.desk.com/customer/portal/attachments/27624)
+![Git Commit](https://www.getpantheon.com/sites/default/files/docs/desk_images/27624)
 
 There is a handy list of Git commands (along with a lot of other documentation) over [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf)
 
@@ -86,7 +86,7 @@ This executes a "push" to the "origin" location, which is Pantheon since that's 
 
 If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:
 
-![Git Push](https://pantheon-systems.desk.com/customer/portal/attachments/27625)
+![Git Push](https://www.getpantheon.com/sites/default/files/docs/desk_images/27625)
 
 ### Step 3: View the Changes on Pantheon
 
