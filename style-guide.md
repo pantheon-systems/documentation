@@ -99,7 +99,7 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
 * If it is not a commonly used acronym, spell it out at out at least once per page and abbreviate in parentheses afterward.
 
-  **Example**: Drupal Runtime Optimized Process (Application Containers)
+  **Example**: Content Management System (CMS)
 
 ## Capitalization
 
@@ -324,7 +324,7 @@ The link can:
 
 **Example**:
 
-One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr "github.com, Application Containers 7").
+One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr "github.com, drops 7").
 
 Best Practices:
 

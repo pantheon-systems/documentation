@@ -14,7 +14,7 @@ We do not support [multisite](http://drupal.org/documentation/install/multi-site
 
 ## Highly Populated Directories
 
-If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files/directory, and performance Application Containers off suddenly at over 100,000 files/directory.
+If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files/directory, and performance Application drops off suddenly at over 100,000 files/directory.
 
 Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
 
