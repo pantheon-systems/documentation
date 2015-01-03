@@ -41,15 +41,8 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 
 ## Web Content Types 
 
-### Fonts
-
-The preferred font at Pantheon is Futura Medium and Open Sans. Body font should always use Open Sans. 
-
-The best practice is to limit the amount of fonts used in a document and remain consistent throughout the entire document.
 
 ### User Interface Images/Screenshots
-
-* Screenshots must be responsive.
 
 * Every image should have descriptive alt text.
 
@@ -57,13 +50,13 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 * Screenshots should include the Environments bar and Tool tab.
 
-* Use arrows and callouts to help explain the elements in the image.
+* Use arrows and callouts to help explain the elements in the image that are not already highlighted by the interface. Do not use callouts to highlight the environment and tool, as they are apparent. 
 
 ### Videos
 
 * Use video sparingly, and only for more complex tasks. 
 
-* Videos must be hosted on YouTube.
+* Videos must be hosted by a third party (YouTube, Vimeo, etc.).
 
 * Videos should be as short as possible, typically no more than 30 seconds.
 
@@ -71,15 +64,15 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 ### Code Snippets
 
-Any bits of code should be wrapped in backticks. `` Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.
+Any bits of code should be wrapped in backticks. `` Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
 
 ### Links
 
-Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/guide/guid-title "Pantheon's Guide to doing something somewhere")` will yeild [Guide Title](/guide/guid-title "Pantheon's Guide to doing something somewhere").
+Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yeild [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
 
-### Anchor Tags 
+### Anchor Links 
 
-Use headings in a logical manner. The system we use should generate these from the headings as a TOC block. 
+Use headings in a logical manner. The site will automatically generate anchor links for H2 and H3 tags, and place them in a Table of Contents in the right column. Generated links will be "pretty". 
 
 ## Accessibility
 
@@ -168,16 +161,6 @@ For more information, see Article Title.
 
 See [The Elements of Style](http://www.bartleby.com/141/index.html)  by William Strunk and E.B. White for principles of composition, word usage, and writing style guidelines. 
 
-## Embedded Guidance (Walkthroughs)
-Walkthrough Titles - Use the associated procedure title
-Step title:
-Step description:
-
-
-Title - Task focused, very concise. **Example**: Add an SSH Key.
-
-Description - Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment. **Example**: Learn how to add and manage SSH keys. 
-
 ## FAQ’s
 
 Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. 
@@ -234,21 +217,13 @@ If there are tasks a user needs to have completed before continuing on with the 
 
 **Example**:
 
-##### Before You Begin
+## Before You Begin
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
-
-## 
-Identifying Instances of Concepts
-
-Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink. 
-
-In technical documentation or the UI, this can be a rollover glossary definition with a link to a helpdesk article, if needed.
 
 ## Procedures
 
 See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
-
 
 When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing"). 
 
@@ -324,7 +299,7 @@ The link can:
 
 **Example**:
 
-One of the modules already included in every Pantheon Drupal site is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr "github.com, drops 7").
+One of the modules already included in every Drupal site on Pantheon is [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr "github.com, drops 7").
 
 Best Practices:
 
@@ -342,7 +317,7 @@ Best Practices:
 
 ## Table of Contents 
 
-For documents that have a large amount of content (more than two pages), include a TOC listing the topics/sections. This allows the reader to jump to the section they are interested in reading without having to do a large amount of reading, scanning, or scrolling. 
+All H2 and H3 tags, created with `##` and `###`, will automatically be included in a table of contents on the right side of your articles.
 
 ## Titles
 
