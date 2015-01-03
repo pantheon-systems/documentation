@@ -4,9 +4,7 @@ description: Learn how to reset your Pantheon and Drupal dashboard passwords.
 category:
   - managing
 ---
-
-
-## Pantheon Dashboard User
+## Pantheon Dashboard User Password
 
 If you need to reset your Pantheon dashboard user password, visit this link and follow the instructions:  
  [https://dashboard.getpantheon.com/password](https://dashboard.getpantheon.com/password)

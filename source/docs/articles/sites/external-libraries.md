@@ -4,7 +4,6 @@ description: Learn to incorporate external libraries for Drupal modules on the P
 category:
     - developing
 
-
 ---
 
 ## Overview

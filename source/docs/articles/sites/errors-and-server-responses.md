@@ -5,8 +5,6 @@ category:
   - debugging
 
 ---
-
- 
 ## Pantheon Error Messages
 
 Sometimes, there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  

@@ -6,8 +6,7 @@ category:
 
 ---
 
-
-Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
+Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
 ## What is Redis?
 
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
