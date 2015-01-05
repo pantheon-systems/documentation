@@ -17,7 +17,7 @@ We love pull requests. Here's a quick guide.
 
 ## Submitting a pull request
 
-When you're done making changes, [submit a pull request!][pr] 
+When you're done making changes, [submit a pull request!][pr]
 [pr]: https://github.com/pantheon-systems/documentation/compare/
 
 At this point you're waiting on us. We like to at least comment on pull requests
@@ -35,7 +35,7 @@ Some things that will increase the chance that your pull request is accepted:
 
 ## Working with images
 
-See [Image Management](https://github.com/pantheon-systems/documentation/blob/master/source/assets/images/readme.md)
+(TODO)
 
 # Additional Resources
 
