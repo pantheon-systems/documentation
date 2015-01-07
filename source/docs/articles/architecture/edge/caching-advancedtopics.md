@@ -1,6 +1,5 @@
 
-
-## Caching: Advanced Topics
+## Caching - Advanced Topics
 
 ### Allow a User to Bypass the Cache
 
