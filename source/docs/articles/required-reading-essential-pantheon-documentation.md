@@ -7,12 +7,11 @@ category:
 
 ## Overview
 
-Pantheon is unlike any traditional web hosting service that you may have used in the past.
+Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Though it incorporates many familiar open-source technologies, it presents a fresh and unique deployment topology, matched with a highly-functional toolbox and uber-efficient workflow to create an all-in-one cloud-based development solution for Drupal.  
+Though it incorporates many familiar open-source technologies, it may seem different and new. Fear not!
 
-
-Pantheon's technologies include nginx, PHP, Redis, Varnish, Solr and Git. We know many developers are familiar with the technologies used by Pantheon, but to gain a proper understanding of how these technologies interact on Pantheon, and how they will play into your Drupal development, we highly recommend reading through the documentation provided below.
+Our tech includes nginx, PHP, Redis, Varnish, Solr and Git -- common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Here is our curated must-read list for developer success.
 
 ## Helpful Docs
 

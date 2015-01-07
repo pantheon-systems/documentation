@@ -1,10 +1,11 @@
 ---
-title: Advanced Caching
+title: Caching - Advanced Topics
 description: Learn advanced details about cached and authentication.
 category:
   - developing
 
 ---
+
 ## Allow a User to Bypass the Cache
 
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
@@ -35,7 +36,7 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
-### Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
+## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
 
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon supports this by allowing sites to set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
