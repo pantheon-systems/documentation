@@ -18,7 +18,7 @@ Often, it's useful to redirect requests to a different domain or path. While it'
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
 
 
-Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
+Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
 
 
 Configuration also tends to be more maintainable as Drupal and WordPress developers are typically literate in PHP, but very few people are naturally fluent in Apache2 rewrite rules and conditions.
@@ -155,7 +155,8 @@ The same technique works for single subdomain redirects. Just specify the path i
     // 301 Redirect from /old to /new.
     if ($_SERVER['REQUEST_URI'] == '/old') {
       header('HTTP/1.0 301 Moved Permanently');
-      header('Location: /new'); exit();
+      header('Location: /new'); 
+      exit();
     }
 
 ## Redirecting multiple subdomains to a single domain
