@@ -155,7 +155,8 @@ The same technique works for single subdomain redirects. Just specify the path i
     // 301 Redirect from /old to /new.
     if ($_SERVER['REQUEST_URI'] == '/old') {
       header('HTTP/1.0 301 Moved Permanently');
-      header('Location: /new'); exit();
+      header('Location: /new'); 
+      exit();
     }
 
 ## Redirecting multiple subdomains to a single domain
