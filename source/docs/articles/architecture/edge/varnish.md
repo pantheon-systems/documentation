@@ -28,9 +28,9 @@ See [Drupal's Performance Settings](/docs/articles/drupal/drupal-s-performance-a
 Use the web utility at  [http://varnishcheck.getpantheon.com/](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations on how to configure Drupal. If you have any feedback, let us know by sending in a support ticket.
 
 ##See Also
-[Debugging Cache](https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/architecture/edge/varnish/debugging-cache.md)
+[Debugging Cache](/docs/articles/architecture/edge/varnish/debugging-cache)
 
-[Testing Varnish](https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/architecture/edge/varnish/testing-varnish.md)
+[Testing Varnish](/docs/articles/architecture/edge/varnish/testing-varnish)
 
-[Caching: Advanced Topics](https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/architecture/edge/varnish/caching-advancedtopics.md)
+[Caching: Advanced Topics](/docs/articles/architecture/edge/varnish/caching-advancedtopics)
 
