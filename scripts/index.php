@@ -1,5 +1,4 @@
-//301 redirect from /old to /new for docs.
-
+<?php
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/373319') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: /docs/articles/local/accessing-mysql-databases'); exit();
@@ -310,7 +309,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/696113') !== FALS
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1267853') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/drupal/php-errors-and-exceptions'); exit();
+  header('Location: /docs/articles/sites/php-errors-and-exceptions'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1607118') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
