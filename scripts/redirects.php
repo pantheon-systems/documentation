@@ -11,7 +11,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     if ($row > 1) {
 $redirect = "if (strpos(\$_SERVER['REQUEST_URI'], '/customer/portal/articles/$data[0]') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /$data[1]'); exit();
+  header('Location: $data[1]'); exit();
 }\n";
       fwrite($index_file, $redirect);
     }
