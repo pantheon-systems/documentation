@@ -1,3 +1,10 @@
+---
+title: Caching - Advanced Topics
+description: Learn advanced details about cached and authentication.
+category:
+  - developing
+
+---
 
 ## Caching - Advanced Topics
 
