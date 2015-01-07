@@ -5,8 +5,6 @@ category:
   - getting-started
   - developing
 ---
-
-
 ## Overview
 
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees DROP workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second, much faster than Drupal alone.  
@@ -33,4 +31,3 @@ Use the web utility at  [http://varnishcheck.getpantheon.com/](http://varnishch
 [Testing Varnish](/docs/articles/architecture/edge/varnish/testing-varnish)
 
 [Caching: Advanced Topics](/docs/articles/architecture/edge/varnish/caching-advancedtopics)
-

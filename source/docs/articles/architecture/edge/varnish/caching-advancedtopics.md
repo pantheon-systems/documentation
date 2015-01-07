@@ -5,7 +5,6 @@ category:
   - developing
 
 ---
-
 ## Allow a User to Bypass the Cache
 
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.

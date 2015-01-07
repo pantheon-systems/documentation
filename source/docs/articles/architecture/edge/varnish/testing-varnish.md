@@ -4,7 +4,6 @@ description: Test whether Varnish is working or not.
 category:
   - developing
 ---
-
 ## Test If Varnish Is Working by Reading HTTP Headers
 
 Every HTTP response served by Pantheon is accompanied by a number of headers. These are the same headers that
