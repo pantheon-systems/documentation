@@ -28,7 +28,7 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - [Optimizing](/docs/articles/optimizing) for the cloud.
 - How to work with [Settings.php](/docs/articles/drupal/configuring-settings-php#working-with-settings-php)
 - Backups: [Set them up](/docs/articles/sites/backups/backup-creation#creating-a-backup), make them on-demand before you push that bug change, check them from time to time, sleep easy.
-- Need to debug? Read [this](/docs/articles/errors/php-errors-and-exceptions/) and [this](/docs/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
+- Need to debug? Read [this](/docs/articles/sites/php-errors-and-exceptions/) and [this](/docs/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
 - Using [Drush](/docs/articles/local/drush-command-line-utility#using-drush-on-pantheon) on Pantheon.
 - [Cron](/docs/articles/sites/code/cron/) and Pantheon.
 - How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!).
