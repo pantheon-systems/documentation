@@ -77,30 +77,30 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 
 ## Frequently Asked Questions
 
-#### How long do DNS changes typically take?
+### How long do DNS changes typically take?
 
 It depends on several factors, including the TTL of your DNS records. As a rule of thumb, DNS changes can take up to 48 hours to propagate across the entire Internet, so be patient - it'll happen. With that said, most updates happen in a couple hours.
 
-#### Can I use a CNAME for my bare/naked/root domain?
+### Can I use a CNAME for my bare/naked/root domain?
 
 It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#Pantheon'sRecommendedDNSConfigurationForpantheon.ioSites/)
 
 
 See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
 
-#### How do I use Pantheon's WWW redirection service?
+### How do I use Pantheon's WWW redirection service?
 
 If you need to direct traffic from a non-www domain (e.g. example.com), you can use our www-redirection service by setting an A record to 192.237.224.60. This is a simple web-server that will redirect to the www domain for your site. This option will only work correctly if the www domain for your site is configured correctly on Pantheon!
 
-#### Can a site on Pantheon be used with a third-party reverse proxy?
+### Can a site on Pantheon be used with a third-party reverse proxy?
 
 Yes; many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.gotpantheon.com domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
 
-#### Can I test my domain name without making DNS changes?
+### Can I test my domain name without making DNS changes?
 
 Yes; see [developing with a domain without changing DNS](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/#dev_wo_dns).
 
-#### Why isn't my site loaded when I ping the provided Pantheon IP?
+### Why isn't my site loaded when I ping the provided Pantheon IP?
 
 Your site won't load from the provided IP's because the Pantheon IP's used in the configurations above are the addresses of our load-balancers. When a request comes in, our load-balancers route the request to the proper site. 
 

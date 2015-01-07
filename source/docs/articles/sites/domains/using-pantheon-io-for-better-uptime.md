@@ -6,49 +6,97 @@ category:
 
 ---
 
-## Overview
-As of October 22nd, 2014, Pantheon is no longer offering shared static IP addresses for customer sites. The new pantheon.io system provides higher-uptime alternatives.
+**NOTE:** Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.
 
-Existing sites are not affected, and cannot use pantheon.io yet. This information applies only to sites _created_ after Oct 22nd.
+#### Table of contents
+
+*   [About pantheon.io](#about)
+*   [DNS settings for non-www or a subdomain](#dns-for-non-www)*   [Alias Record](#alias-records)
+*   [Flattened CNAME](#flattened-cname)
+*   [SSL](#ssl)
+*   [Troubleshooting](#troubleshooting-non-www-dns)
+*   [DNS settings for a www domain](#dns-settings-for-www)*   [Troubleshooting](#troubleshooting-www-dns)
+*   [Best Practices](#best-practices)
+
+## About pantheon.io
+
+The new pantheon.io system provides higher-uptime alternatives to our legacy method of providing shared IP addresses; after all, Shared IPs mean shared problems.
+
+Using a "www" subdomain allows you to avoid having your site's domain name tied to a static shared resource. This means that when Pantheon takes evasive action to route around network failure, there is less room for downtime.
+
+The following is an example of the optimal configuration:
+
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376194)
+
+Using “www” is considered an Internet-wide best practice and for best results we recommend you use the "www" prefix for your domain. This isn't really a Pantheon recommendation per-se; it's an internet-wide phenomena. Take a look at [http://www.yes-www.org/why-use-www/](http://www.yes-www.org/why-use-www/) for some good background on why bare domains are hard to use with modern platform providers.
+
+## DNS settings for non-www or a subdomain
+
+_NOTE: Legacy users with gotpantheon.com are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected. _
+
+Some DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are general options for the alternative implementations if you wish to use a non-www domain.
+
+### Alias Records (ALIAS/ANAME)
+
+[ALIAS or ANAME](http://help.dnsmadeeasy.com/spry_menu/aname-records/) records can be used as the root record for a domain as the resulting records created are A records which bypasses the limitation of allowing the alias at the root domain.
+
+*   [Route 53](http://aws.amazon.com/route53/faqs/#Supported_DNS_record_types)
+*   [DNSimple](https://dnsimple.com/plans)
+*   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
+*   [EasyDNS](http://docs.easydns.com/aname-records/)
+
+### Flattened CNAME/Redirect
+
+*   [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root)
+*   [ClouDNS](https://www.cloudns.net/features/)
+*   [NameCheap](https://www.namecheap.com/domains/freedns.aspx)
+
+### SSL
 
 If you require SSL, you will still get a dedicated IP address for your site. This IP can also be used to support any DNS configuration needed. The only sites who are "forced" to make a change are Personal-level sites, or Pro/Business sites which are not using SSL or who don't want to get a dedicated static IP.
 
-All customers going live without a site-specific dedicated IP should make use of our new pantheon.io routing system and DNS configuration. This is far superior to our legacy method of providing shared IP addresses for customers to use in DNS.
-
-For best results we recommend you use the "www" prefix for your domain. This isn't really a Pantheon recommendation per-se; it's an internet-wide phenomena. Take a look at [http://www.yes-www.org/why-use-www/](http://www.yes-www.org/why-use-www/) for some good background on why bare domains are hard to use with modern platform providers.
-
-Shared IPs mean shared problems, and are not compatible with the level of service Pantheon wants for its users. Using the "www" subdomain allows you to avoid having your site's domain name tied to a static shared resource. It will improve your uptime when Pantheon needs to take evasive action to route around network failure.
-
-Of course, people still need to reach your site if they type in the bare domain name. Here's how.
-
-## Redirecting to "www"
-
-The simplest and most reliable option is to use a service through your DNS provider to redirect requests for your bare domain to the www subdomain. Most DNS services — even bargain operators like GoDaddy — offer this as a feature. This is preferable because it will ensure that the universe of bookmarks and SEO links for your site are all built up as www urls, not the bare domain.
-
-If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon_www_redirection) as a fallback. Note this is not a general-purpose redirection service. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain.
-
-## Advanced DNS Services
-
-Some advanced DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are two general implementations.
-
-**Alias Records (ALIAS/ANAME)**
-
-ALIAS or ANAME records can be used as the root record for a domain as the resulting records created are A records which bypasses the limitation of allowing the alias at the root domain.
-
-- [Route 53](http://aws.amazon.com/route53/faqs/#Supported_DNS_record_types)
-- [DNSimple](https://dnsimple.com/plans)
-- [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
-- [EasyDNS](http://docs.easydns.com/aname-records/)
-
-**Flattened CNAME/Redirect**
-
-It is also possible to use DNS level redirect in order to direct traffic to the bare domain of your site. Some of the providers that offer either a flattened CNAME or a redirection service:
-
-- [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root)
-- [ClouDNS](https://www.cloudns.net/features/)
-- [NameCheap](https://www.namecheap.com/domains/freedns.aspx)
-
 Please understand that we cannot specifically support third-party DNS configuration, nor do we endorse or guarantee their service. These links are provided as a convenience for our users. With the range of options available, we are certain there is something workable for any budget.
+
+### Troubleshooting non-www DNS
+
+#### My domain sub.example.com resolves to&nbsp;www.sub.example.com
+
+If you would like to access a site using a subdomain, then you will need to use one of the methods described above. Pantheon will no longer be providing an I.P. address to point your DNS which is important to keep in mind.
+
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376209)
+
+To fix this problem, the DNS will need to be updated with one of the recommended methods above. There is no way to access the subdomain while it is pointed to the Dub Dub Dubber redirection address.
+
+## DNS settings for a www domain
+
+WWW sounds like the way to go. But how can I force traffic to use www?
+
+The simplest and most reliable option is to use a service to redirect requests from your bare domain to the www subdomain. Most DNS services offer this as a feature. These services ensure that the universe of bookmarks and SEO records for your site are built up as www urls and not the bare domain.
+
+​![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376216)​
+
+To get started, all you need to do is setup the DNS configuration for the www and non-www domain using the settings on the "Domains" tab of the environment where you wish to add a domain
+
+_NOTE: This is not a general-purpose redirection service. If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](http://helpdesk.getpantheon.com/customer/portal/articles/1319336#pantheon_www_redirection). It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain. All other redirects must be done via PHP logic. You can read more here._
+
+### Troubleshooting www DNS
+
+#### My domain www.example.com resolves to&nbsp;www.www.example.com
+
+If you find that you are getting a domain like www.www.example.com this means that you have set your DNS for the www domain to the Dub Dub Dubber I.P. address (192.237.224.60).
+
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376201)
+
+In order to correct this you should use the CNAME that is available on the dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
+
+## Best Practices
+
+*   Do **not** point to [legacy I.P. address](http://helpdesk.getpantheon.com/customer/portal/articles/1319336) if you are on a pantheon.io site
+*   Use www as the primary domain where possible
+*   Do **not** point subdomains to the Dub Dub Dubber, this will not work
+*   Use the recommended DNS config on dashboard for pantheon.io sites
+*   Do **not** point non-www domains to the Dub Dub Dubber unless to immediately redirect to www
+*   Set AAA record where possible for non-www domains
 
 ## Measure Twice, Cut Once
 

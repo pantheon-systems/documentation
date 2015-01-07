@@ -31,7 +31,7 @@ Please use the [Terminus issue tracker](https://github.com/pantheon-systems/term
 
 ### Commands
 
-<tbody>
+<table>
 		<tr>
 			<td><a href="#pantheon-aliases">pantheon-aliases</a></td>
 			<td>Update the Pantheon Drush alias file at ~/.drush/pantheon.aliases.drushrc.php.</td>
@@ -212,7 +212,7 @@ Please use the [Terminus issue tracker](https://github.com/pantheon-systems/term
 			<td><a href="#pantheon-sites">pantheon-sites</a></td>
 			<td>List your Pantheon sites.</td>
 		</tr>
-	</tbody>
+	</table>
 <dl>
 	<dt>pantheon-aliases</dt>
 	<dd>
@@ -221,26 +221,16 @@ Update the Pantheon Drush alias file at ~/.drush/pantheon.aliases.drushrc.php.
 
 
 Options:
- --destination Specify the destination to save the
-
-
-                                           alias file.
+ --destination Specify the destination to save the alias file.
 
 
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: paliases
@@ -261,39 +251,21 @@ Examples:
  --password=mypassword
 
 
-
-
-
-
 Arguments:
  email Email address of dashboard account
-
-
-
-
 
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
- --password=<mypassword> Optional: include password for  
-
-
-                                           script-friendly use.
-
-
-
-
+ --password=<mypassword> Optional: include password for script-friendly use.
 
 
 Aliases: pauth
@@ -316,25 +288,14 @@ Arguments:
  hostname The hostname (e.g. "www.mysite.com")
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-hostname-add
@@ -357,26 +318,14 @@ Arguments:
  hostname The hostname (e.g. "www.mysite.com")
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-hostname-remove
 </pre>
@@ -392,26 +341,14 @@ Examples:
  0 drush plogout
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: plogout
 </pre>
@@ -426,37 +363,18 @@ List the sites for an organization. Org admins only.
 Examples:
  drush porg-sites --nocache Get a fresh list of sites.
 
-
-
-
-
-
 Arguments:
- organization UUID of the organization you want to
-
-
-                                           use.
-
-
-
-
+ organization UUID of the organization you want to  use.
 
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: porg-sites
@@ -473,26 +391,14 @@ Examples:
  drush porgs --nocache Get a fresh list of sites.
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: porgs
 </pre>
@@ -508,37 +414,20 @@ Arguments:
  realm Are you asking about users or sites?
 
 
- uuid The unique id of the thing you want  
+ uuid The unique id of the thing you want to know about.
 
 
-                                           to know about.
-
-
- path Optional: path extension for more
-
-
-                                           specific commands.
-
-
-
-
+ path Optional: path extension for more specific commands.
 
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: pp
@@ -555,18 +444,10 @@ Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: pproducts
 </pre>
@@ -581,32 +462,17 @@ Get attributes for a particular site.
 Arguments:
  site The site UUID in question.
 
-
-
-
-
-
 Options:
- --attribute=<label> Specific attribute that you want to
-
-
-                                           get.
+ --attribute=<label> Specific attribute that you want to get.
 
 
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-attr
@@ -620,37 +486,19 @@ List site backups (and exports).
 
 
 Arguments:
- site UUID of the site you want to get  
+ site UUID of the site you want to get backups for.
 
 
-                                           backups for.
-
-
- environment The environment (e.g. "live") you
-
-
-                                           want to back up.
-
-
-
-
-
+ environment The environment (e.g. "live") you want to back up.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-backups
@@ -667,10 +515,6 @@ Arguments:
  site The site UUID in question.
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
@@ -678,18 +522,10 @@ Options:
  --name=<feature-123> Branch name to be created.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-bcreate
 </feature-123></pre>
@@ -704,11 +540,6 @@ Delete a Git branch from a particular site.
 Arguments:
  site The site UUID in question.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
@@ -716,18 +547,10 @@ Options:
  --name=<feature-123> Branch name to be deleted.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-bdel
 </feature-123></pre>
@@ -743,25 +566,14 @@ Arguments:
  site The site UUID in question.
 
 
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-blist
@@ -781,40 +593,20 @@ Examples:
  josh@getpantheon.com
 
 
-
-
-
-
 Arguments:
  site uuid of the site
 
 
- user team member you would like to make
-
-
-                                           the new owner: uuid or email
-
-
-
-
-
+ user team member you would like to make the new owner: uuid or email
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-change-owner
 </pre>
@@ -827,10 +619,7 @@ Clone content from one site environment to another.
 
 
 Examples:
- drush psite-clone SITE_UUID dev test Clone both database and files from
-
-
-                                           dev to test.
+ drush psite-clone SITE_UUID dev test Clone both database and files from dev to test.
 
 
  drush psite-clone SITE_UUID dev test Clone only database from dev to
@@ -846,28 +635,14 @@ Examples:
 
 
 
-
-
-
 Arguments:
  site UUID of the site containing content.
 
 
- source The source environment (e.g. "live")
+ source The source environment (e.g. "live") from which content will be cloned.
 
 
-                                           from which content will be cloned.
-
-
- target The target environment (e.g. "live")
-
-
-                                           to which content will be cloned.
-
-
-
-
-
+ target The target environment (e.g. "live") to which content will be cloned.
 
 Options:
  --db Clone database content.
@@ -879,24 +654,13 @@ Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
- --update Run update.php after cloning
-
-
-                                           database.
-
-
-
-
-
+ --update Run update.php after cloning database.
 
 Aliases: psite-clone
 </pre>
@@ -912,14 +676,7 @@ Arguments:
  site UUID or name of the site.
 
 
- environment Environment to commit: a dev or
-
-
-                                           multidev environment
-
-
-
-
+ environment Environment to commit: a dev or multidev environment
 
 
 Options:
@@ -929,17 +686,10 @@ Options:
  --message Commit message
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-commit
@@ -956,40 +706,19 @@ Arguments:
  site UUID or name of the site.
 
 
- environment The dev or multidev environment you
+ environment The dev or multidev environment you would like to target.
 
 
-                                           would like to target.
-
-
- mode Connection mode like to set (e.g.,  
-
-
-                                           "sftp" or "git"). Leave blank to
-
-
-                                           retrieve the current mode.
-
-
-
-
-
+ mode Connection mode like to set (e.g., "sftp" or "git"). Leave blank to retrieve the current mode.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
 
 
 Aliases: psite-cmode
@@ -1003,15 +732,7 @@ Create a new site on Pantheon
 
 
 Arguments:
- name Short name of the site to create.
-
-
-                                           Will be part of the URL.
-
-
-
-
-
+ name Short name of the site to create.  Will be part of the URL.
 
 Options:
  --json Return raw JSON if possible.
@@ -1020,39 +741,19 @@ Options:
  --label Human-friendly site label.
 
 
- --nocache Force a refresh of cached
+ --nocache Force a refresh of cached authentication session.
 
 
-                                           authentication session.
-
-
- --nopoll Do not hang around and wait for the  
-
-
-                                           site to be ready. Useful for
-
-
-                                           scripting a lot of spin-ups.
+ --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of spin-ups.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
- --organization UUID of an organization you want the
+ --organization UUID of an organization you want the site to be a part of.
 
 
-                                           site to be a part of.
-
-
- --product UUID of the product you want to
-
-
-                                           start with (see pantheon-products).  
-
-
-
-
-
+ --product UUID of the product you want to start with (see pantheon-products).
 
 Aliases: psite-create
 </pre>
@@ -1067,35 +768,17 @@ Get the dashboard link for a site.
 Examples:
  drush psite-dash mysite -y Open the dashboard for a site.
 
-
-
-
-
-
 Arguments:
  site UUID of the site.
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-dash
 </pre>
@@ -1110,27 +793,14 @@ Delete a site from Pantheon.
 Arguments:
  site UUID of the site you want to delete.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-delete
 </pre>
@@ -1151,24 +821,11 @@ Examples:
 
  --update --cc the run update.php and clear cache.
 
-
-
-
-
-
 Arguments:
  site UUID of the site.
 
 
- target The target environment (e.g. "live")
-
-
-                                           to which code will be deployed.
-
-
-
-
-
+ target The target environment (e.g. "live") to which code will be deployed.
 
 Options:
  --cc Clear cache after deploying code.
@@ -1177,21 +834,13 @@ Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
  --update Run update.php after deploying code.
-
-
-
-
-
 
 Aliases: psite-deploy
 </pre>
@@ -1208,32 +857,16 @@ Arguments:
  site UUID or name of the site.
 
 
- environment Environment to commit: a dev or
-
-
-                                           multidev environment
-
-
-
-
-
+ environment Environment to commit: a dev or multidev environment
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-diffs
 </pre>
@@ -1246,53 +879,28 @@ Download a backup file from a specific site.
 
 
 Arguments:
- site UUID of the site you want to get
+ site UUID of the site you want to get backups for.
 
 
-                                           backups for.
+ environment The environment (e.g. "live") you want to download a backup from.
 
 
- environment The environment (e.g. "live") you
+ bucket Bucket for the backup. Use "latest" for the most recent.
 
 
-                                           want to download a backup from.
-
-
- bucket Bucket for the backup. Use "latest"
-
-
-                                           for the most recent.
-
-
- element Which part of the backup do you
-
-
-                                           want? (e.g. database, files, code)  
+ element Which part of the backup do you want? (e.g. database, files, code)  
 
 
  destination Where would you like the backup?
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-dl-backup
 </pre>
@@ -1308,44 +916,19 @@ Arguments:
  site UUID or name of the site.
 
 
- environment Name of multidev site environment.
-
-
-                                           If branch does not exist, it will be
-
-
-                                           created.
-
-
-
-
-
+ environment Name of multidev site environment. If branch does not exist, it will be  created.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
- --source The source environment (e.g. "live")
-
-
-                                           from which content will be cloned.
-
-
-                                           If omitted, will default to dev.
-
-
-
-
-
+ --source The source environment (e.g. "live") from which content will be cloned. If omitted, will default to dev.
 
 Aliases: psite-ecreate
 </pre>
@@ -1363,27 +946,14 @@ Arguments:
 
  environment Name of multidev site environment.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-edelete
 </pre>
@@ -1398,27 +968,14 @@ Get a list of site environments.
 Arguments:
  site UUID or name of the site.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-elist
 </pre>
@@ -1436,27 +993,14 @@ Arguments:
 
  environment Name of site environment.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-erc
 </pre>
@@ -1469,47 +1013,25 @@ Get a download link to a specific site backup.
 
 
 Arguments:
- site UUID of the site you want to get  
+ site UUID of the site you want to get backups for.
 
 
-                                           backups for.
-
-
- environment The environment (e.g. "live") you
-
-
-                                           want to back up.
+ environment The environment (e.g. "live") you want to back up.
 
 
  bucket Bucket for the backup.
 
 
- element Which part of the backup do you
-
-
-                                           want?
-
-
-
-
-
+ element Which part of the backup do you want?
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-get-backup
 </pre>
@@ -1522,18 +1044,10 @@ Import an existing site to Pantheon
 
 
 Arguments:
- name Short name of the site to create.
-
-
-                                           Will be part of the URL.
+ name Short name of the site to create. Will be part of the URL.
 
 
  url URL of Drush Archive.
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
@@ -1542,33 +1056,16 @@ Options:
  --label Human-friendly site label.
 
 
- --nocache Force a refresh of cached
+ --nocache Force a refresh of cached authentication session.
 
 
-                                           authentication session.
-
-
- --nopoll Do not hang around and wait for the  
-
-
-                                           site to be ready. Useful for
-
-
-                                           scripting a lot of spin-ups.
+ --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of spin-ups.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
- --organization UUID of an organization you want the
-
-
-                                           site to be a part of.
-
-
-
-
-
+ --organization UUID of an organization you want the site to be a part of.
 
 Aliases: psite-import
 </pre>
@@ -1581,44 +1078,22 @@ Load db with a backup file from a specific site.
 
 
 Arguments:
- site UUID or name of the site you want to
+ site UUID or name of the site you want to get backups for.
 
 
-                                           get backups for.
+ environment The environment (e.g. "live") you want to use a backup from.
 
 
- environment The environment (e.g. "live") you
-
-
-                                           want to use a backup from.
-
-
- bucket Bucket for the backup. Use "latest"  
-
-
-                                           for the most recent.
-
-
-
-
-
+ bucket Bucket for the backup. Use "latest" for the most recent.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-load-backup
 </pre>
@@ -1631,38 +1106,19 @@ Trigger an on-demand backup for a site/environment.
 
 
 Arguments:
- site UUID of the site you want to make a
+ site UUID of the site you want to make a backup for.
 
 
-                                           backup for.
-
-
- environment The environment (e.g. "live") you
-
-
-                                           want to back up.
-
-
-
-
-
+ environment The environment (e.g. "live") you want to back up.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-backup
 </pre>
@@ -1675,47 +1131,22 @@ Mounts an environment file system to a local directory.
 
 
 Arguments:
- site UUID or name of the site. If left  
+ site UUID or name of the site. If left empty, all tunnels will be closed.
 
 
-                                           empty, all tunnels will be closed.
+ environment The target environment (e.g. "live"). If left empty, all site tunnels will be closed.
 
 
- environment The target environment (e.g.
-
-
-                                           "live"). If left empty, all site
-
-
-                                           tunnels will be closed.
-
-
- destination Where would you like to mount the  
-
-
-                                           file system?
-
-
-
-
-
+ destination Where would you like to mount the file system?
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-mount
 </pre>
@@ -1736,35 +1167,17 @@ Examples:
 
  --nocache
 
-
-
-
-
-
 Arguments:
  uuid UUID of the site.
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-name
 </pre>
@@ -1779,11 +1192,6 @@ Get a list of notifications for a site to track ongoing jobs.
 Arguments:
  site UUID or name of the site.
 
-
-
-
-
-
 Options:
  --count Number of notifications to show
 
@@ -1791,21 +1199,13 @@ Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
 
 
  --type Filter notifications by type
-
-
-
-
-
 
 Aliases: psite-notifications
 </pre>
@@ -1823,38 +1223,20 @@ Examples:
 
  <service-level>
 
-
-
-
-
-
 Arguments:
  site UUID of the site.
 
 
  service-level Service level to upgrade to.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-upgrade
 </service-level></site></pre>
@@ -1875,35 +1257,17 @@ Examples:
 
  --nocache
 
-
-
-
-
-
 Arguments:
  site uuid of the site
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-team
 </pre>
@@ -1921,41 +1285,20 @@ Examples:
 
  josh@getpantheon.com
 
-
-
-
-
-
 Arguments:
  site uuid of the site
 
 
- user user you would like to make a part
-
-
-                                           of the team: uuid or email
-
-
-
-
-
+ user user you would like to make a part of the team: uuid or email
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-team-add
 </pre>
@@ -1973,41 +1316,20 @@ Examples:
 
  josh@getpantheon.com
 
-
-
-
-
-
 Arguments:
  site uuid of the site
 
 
- user user you would like to remove: uuid
-
-
-                                           or email
-
-
-
-
-
+ user user you would like to remove: uuid or email
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-team-remove
 </pre>
@@ -2023,44 +1345,22 @@ Arguments:
  site UUID or name of the site.
 
 
- environment The target environment (e.g.
+ environment The target environment (e.g. "live").
 
 
-                                           "live").
-
-
- service The service (e.g., "mysql" or  
-
-
-                                           "redis") to open a tunnel for.
-
-
-                                           Defaults to "mysql".
+ service The service (e.g., "mysql" or "redis") to open a tunnel for. Defaults to "mysql".
 
 
  port Local port to connect to.
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-tunnel
 </pre>
@@ -2073,53 +1373,22 @@ Closes the tunnel to a specific site/environment/service.
 
 
 Arguments:
- site UUID or name of the site. If left
+ site UUID or name of the site. If left empty, all tunnels will be closed.  
 
 
-                                           empty, all tunnels will be closed.  
+ environment The target environment (e.g. "live"). If left empty, all site tunnels will be closed.
 
 
- environment The target environment (e.g.
-
-
-                                           "live"). If left empty, all site
-
-
-                                           tunnels will be closed.
-
-
- service The service (e.g., "mysql" or
-
-
-                                           "redis") to open a tunnel for. If
-
-
-                                           empty, all site/environment tunnels
-
-
-                                           will be closed.
-
-
-
-
-
+ service The service (e.g., "mysql" or "redis") to open a tunnel for. If empty, all site/environment tunnels will be closed.
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-tclose
 </pre>
@@ -2135,18 +1404,10 @@ Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-tunnels
 </pre>
@@ -2161,35 +1422,17 @@ Get the site UUID based on the name.
 Examples:
  drush psite-uuid mysite --nocache Get the UUID of your site.
 
-
-
-
-
-
 Arguments:
  site Name of the site.
-
-
-
-
-
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-uuid
 </pre>
@@ -2205,32 +1448,16 @@ Arguments:
  site UUID or name of the site.
 
 
- environment The target environment (e.g.
-
-
-                                           "live").
-
-
-
-
-
+ environment The target environment (e.g. "live").
 
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psite-wake
 </pre>
@@ -2245,27 +1472,14 @@ List your Pantheon sites.
 Examples:
  drush psites --nocache Get a fresh list of sites.
 
-
-
-
-
-
 Options:
  --json Return raw JSON if possible.
 
 
- --nocache Force a refresh of cached
-
-
-                                           authentication session.
+ --nocache Force a refresh of cached authentication session.
 
 
  --onebox Use onebox (Pantheon dev only).
-
-
-
-
-
 
 Aliases: psites
 </pre>
