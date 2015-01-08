@@ -1,5 +1,5 @@
 ---
-title: Gerund phrase of goal
+title: Guide Template
 category: developing
 problems:
 slides_embed:
@@ -7,31 +7,49 @@ video:
 draft: true
 ---
 ---------------
+
+##Resources for Authors:
+Please use the template below as a starting point when creating a new guide. A guide may or may not include all of the sections shown below. 
+
+See our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md) for any questions on formatting and style.
+
+-- 
+<hr>
+
 ## Overview 
+Write a summary about what information you will cover in the guide. 
 
 ## Before You Begin
- -  List of Prerequistes or technical requirements a user must have/understand before starting the task.
+ -  List of prerequistes or technical requirements a user must have or understand before starting the task. 
 
-<copy this block and follow its structure for each phase in the approach.>
----------------
-## 1: Add goal here. Example: Generate an SSH Key
+
+## Goal/Task. Example: Generate an SSH Key
 
 You should:
  1. imperative statement 1
  2. imperative statement 2
 
-## 2: Add goal here. Example: Add the Key to Your Account 
+## Goal/Task. Example: Add the Key to Your Account 
 
 You should:
  1. imperative statement 1
  2. imperative statement 2
  
-### Troubleshooting
+## Known Limitations
 
  - Warning conditions and steps to remediate
  - Warning conditions and steps to remediate
+
+## Troubleshooting
+
+ - Warning conditions and steps to remediate
+ - Warning conditions and steps to remediate
+
+## FAQs
+
+**How do I xyz?**  
+Enter the answer here.
+
 
 ----
-## 1.1:
 
-<paste the phase template here (goals/rules of thumb)>
