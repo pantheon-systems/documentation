@@ -22,7 +22,7 @@ dependencies:
     - sculpin generate
 test:
     #
-    # This is where you run your tests, be they SimpleTest, Casper, Behat,
+    # This is where the documentation will be built.
     # or otherwise. Here's a SimpleTest example.  
   override:
     # 
@@ -32,11 +32,8 @@ test:
     - git clone ssh://codeserver.dev.$site_uuid@codeserver.dev.$site_uuid.drush.in:2222/~/repository.git get-pantheon-v3
     - cd get-pantheon-v3
     - git checkout docs
+  # Perform post build operations  
   post:
-  # Prepare for post test operations 
-deployment:
-  production:
-    branch: production
 # Custom notifications
 notify:
   webhooks:
