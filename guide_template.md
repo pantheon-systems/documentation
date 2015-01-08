@@ -10,7 +10,7 @@ draft: true
 ## Overview 
 
 ## Before You Begin
- -  List of Prerequistes or technical requirements a user must have/undestand before starting the task.
+ -  List of Prerequistes or technical requirements a user must have/understand before starting the task.
 
 <copy this block and follow its structure for each phase in the approach.>
 ---------------
