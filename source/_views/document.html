@@ -5,17 +5,16 @@
           <div class="col-md-9">
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
-              <script type="text/javascript">
-              <!--
-              breadcrumbs()
-              //-->
-              </script>
+              <!-- <script type="text/javascript">
+            #  breadcrumbs()
+
+            </script> -->
 
             </header>
               {% if page.category %}
-                  <p class="category">
+                  <p class="category">Categories:
                   {% for category in page.category %}
-                  Category: <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title }}</a>{% if not loop.last %}, {% endif %}
+                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}
                   </p>
               {% endif %}

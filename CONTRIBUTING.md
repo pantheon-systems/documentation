@@ -1,41 +1,40 @@
 # Contributing
 
-We love pull requests. Here's a quick guide.
+Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests! We won't just thank you for your work, we will compensate you as well.
 
-## Getting Started
+## Get Started
 
-* Make sure you have a [GitHub account](https://github.com/signup/free)
-* Fork the repository on GitHub
+* If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
+* Fork the pantheon-systems/documentation repository on GitHub.
 
-## Making Changes
+## Edit Docs
 
-* Edit existing docs using GitHub's inline markdown editor or clone your fork, edit locally, commit changes, and push to your fork
+* Edit existing docs using GitHub's inline markdown editor or clone your fork, edit locally, commit changes, and push to your fork. You'll need to do this for every individual doc you edit.
 
-## Adding a New Guide
+## Add a New Doc
 
 * Copy the guide_template.md at the root of this repo into source/_guides/guide-section/guide-name.md
 
-## Submitting a pull request
+## Submit a Pull Request
 
-When you're done making changes, [submit a pull request!][pr] 
+
+When you're done making changes, [submit a pull request].[pr]
 [pr]: https://github.com/pantheon-systems/documentation/compare/
 
-At this point you're waiting on us. We like to at least comment on pull requests
-within three business days (and, typically, one business day). We may suggest
-some changes or improvements or alternatives.
+We will review and comment on pull requests within three business days. We may suggest some changes, improvements, or alternatives.
 
-Some things that will increase the chance that your pull request is accepted:
+Some things to follow to help increase the chance that your pull request will be accepted:
 
-* Follow our [style guide][style].
+* Follow our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
 * Write a [good commit message][commit].
 * Build and test locally to make sure everything looks good. Refer to [README](https://github.com/pantheon-systems/documentation/blob/master/README.md) for instructions.
 
 [style]: https://docs.getpantheon.com/style-guide.html
 [commit]: http://chris.beams.io/posts/git-commit/
 
-## Working with images
+## Use of Images
 
-See [Image Management](https://github.com/pantheon-systems/documentation/blob/master/source/assets/images/readme.md)
+(TODO)
 
 # Additional Resources
 
@@ -47,3 +46,4 @@ See [Image Management](https://github.com/pantheon-systems/documentation/blob/ma
 ####TODO
 - [ ] Identify contribution types
 - [ ] Create contribution examples
+- [ ] Create image contribution rules/mechanism

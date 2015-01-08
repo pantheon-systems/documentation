@@ -1,0 +1,32 @@
+---
+layout: default
+title: Articles
+generator: [documents_category_index]
+use: [documents_category]
+---
+{% block title %}{{ page.category|title }} {{ page.title }}{% endblock %}
+{% block content %}
+<div class="container article">
+  <article>
+    <div class="col-md-9">
+      <h1> {{ page.category|title|replace({'-': ' ', 'Wordpress': "WordPress"}) }} Articles </h1>
+      <!--
+      <script type="text/javascript">
+      breadcrumbs()
+      //
+      </script>-->
+      <div class="document-list">{% for document in page.category_documents %}
+        <article>
+          <a href="{{ document.url }}">{{ document.title }}</a>
+          <p>{{ document.description }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="categories col-md-3">
+      {% include("doclist.html") %}
+    </div>
+  </article>
+
+</div>
+{% endblock content %}
