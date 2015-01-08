@@ -1,9 +1,7 @@
 ---
 title: Guide Template
-category: developing
-problems:
-slides_embed:
-video:
+category: 
+ - developing
 draft: true
 ---
 ---------------
@@ -23,13 +21,13 @@ Write a summary about what information you will cover in the guide.
  -  List of prerequistes or technical requirements a user must have or understand before starting the task. 
 
 
-## Goal/Task. Example: Generate an SSH Key
+## Goal/Task
 
 You should:
  1. imperative statement 1
  2. imperative statement 2
 
-## Goal/Task. Example: Add the Key to Your Account 
+## Goal/Task
 
 You should:
  1. imperative statement 1
