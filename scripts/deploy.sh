@@ -1,3 +1,4 @@
+#!/bin/bash
 SITE_UUID="739913fa-0df2-4766-ac99-4ac57c819f28"
 cd ..
 git clone ssh://codeserver.dev.$SITE_UUID@codeserver.dev.$SITE_UUID.drush.in:2222/~/repository.git get-pantheon-v3
