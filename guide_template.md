@@ -7,24 +7,29 @@ video:
 draft: true
 ---
 ---------------
-Overview text
+## Overview 
 
-### Before You Begin
- -  List
- -  Prerequistes
+## Before You Begin
+ -  List of Prerequistes or technical requirements a user must have/undestand before starting the task.
 
 <copy this block and follow its structure for each phase in the approach.>
 ---------------
-## 1: If you want to (goal)
+## 1: Add goal here. Example: Generate an SSH Key
 
 You should:
- - imperative statement 1
- - imperative statement 2
+ 1. imperative statement 1
+ 2. imperative statement 2
 
-### If you see
+## 2: Add goal here. Example: Add the Key to Your Account 
+
+You should:
+ 1. imperative statement 1
+ 2. imperative statement 2
+ 
+### Troubleshooting
 
  - Warning conditions and steps to remediate
- -
+ - Warning conditions and steps to remediate
 
 ----
 ## 1.1:
