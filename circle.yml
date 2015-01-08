@@ -17,7 +17,7 @@ dependencies:
     - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus 
     - drush cc drush
   # Install additional test dependencies here (like Casper, Behat, etc).
-  override:   
+override:   
     # Build the documentation 
     - sculpin generate
 test:
