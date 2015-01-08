@@ -3,7 +3,10 @@ machine:
   php:
     # https://circleci.com/docs/environment#php
     version: 5.5.11 
-      
+  environment:
+    # Set the site UUID here for now -> Private Environment variable
+    site_uuid: 978708e5-0a2b-4031-a60e-47f3d5046dcb 
+
 dependencies:
   pre: 
     # Install Drush  
@@ -20,9 +23,10 @@ dependencies:
 test:
     #
     # This is where you run your tests, be they SimpleTest, Casper, Behat,
-    # or otherwise. Here's a SimpleTest example.  
+    # or otherwise. Here's a SimpleTest example.
+    - echo "Deploy docs"
   override:
-    # 
+    # cd ..
   post:
   # Prepare for post test operations 
 # Custom notifications
