@@ -24,8 +24,7 @@ test:
     #
     # This is where you run your tests, be they SimpleTest, Casper, Behat,
     # or otherwise. Here's a SimpleTest example.
-    - echo "Deploy docs"
-  override:
+    - echo "Deploy docs" 
     # cd ..
   post:
   # Prepare for post test operations 
