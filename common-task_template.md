@@ -1,18 +1,25 @@
 ---
-title: Gerund form of the action
-tool:
-  -
-how-to_video:
-walkthrough:
+title: Common Task Template
+description:
+  - developing
+draft: true
 ---
-## 1. Imperative instruction
+## Overview  
+Write an overview of the topic, which may include a summary of what will be accomplished after following the instructions. 
 
-![Alt text](/path/to/img.jpg "Optional title")
+## Before You Begin  
+List of prerequistes or technical requirements a user must have or understand before starting the task.
 
-`terminusdrushcli commands`
+## Imperative Instruction (task). Example: Generate an SSH Key
 
-## 2. Imperative instruction
+1. Do something.
+2. Do something else. 
 
-![Alt text](/path/to/img.jpg "Optional title")
+## Add an SSH Key to Your Account
 
-`terminusdrushcli commands`
+1. Do something.
+2. Do something else.
+
+##See Also
+[Title of Article/Guide](www.url.com)  
+[Title of Article/Guide](www.url.com)
