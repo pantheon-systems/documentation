@@ -27,6 +27,11 @@ test:
   override:
     # 
     - echo "Pantheon Documentation"
+    - cd ..
+    - ls -al
+    - git clone ssh://codeserver.dev.$site_uuid@codeserver.dev.$site_uuid.drush.in:2222/~/repository.git get-pantheon-v3
+    - cd get-pantheon-v3
+    - git checkout docs
   post:
   # Prepare for post test operations 
 deployment:
