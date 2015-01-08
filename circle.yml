@@ -3,6 +3,9 @@ machine:
   php:
     # https://circleci.com/docs/environment#php
     version: 5.5.11 
+  environment:
+    # Set the site UUID here for now -> Private Environment variable
+    site_uuid: 739913fa-0df2-4766-ac99-4ac57c819f28
       
 dependencies:
   pre: 
@@ -26,6 +29,9 @@ test:
     - echo "Pantheon Documentation"
   post:
   # Prepare for post test operations 
+deployment:
+  production:
+    branch: production
 # Custom notifications
 notify:
   webhooks:
