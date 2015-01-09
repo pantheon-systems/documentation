@@ -5,7 +5,6 @@ category:
   - developing
 
 ---
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">pre {
@@ -13,8 +12,6 @@ category:
 }
 </style>
 </head>
-
-
 ## What is Terminus?
 <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/xMd6sKLAE00" width="420"></iframe>
 
