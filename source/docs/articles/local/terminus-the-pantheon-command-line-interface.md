@@ -14,6 +14,7 @@ category:
 </style>
 </head>
 
+
 ## What is Terminus?
 <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/xMd6sKLAE00" width="420"></iframe>
 
@@ -213,8 +214,9 @@ Please use the [Terminus issue tracker](https://github.com/pantheon-systems/term
 			<td>List your Pantheon sites.</td>
 		</tr>
 	</table>
-<dl>
-	<dt>pantheon-aliases</dt>
+  <br />
+  <dl>
+  <dt id="pantheon-aliases">pantheon-aliases</dt>
 	<dd>
 	<pre>
 Update the Pantheon Drush alias file at ~/.drush/pantheon.aliases.drushrc.php.
@@ -236,8 +238,9 @@ Options:
 Aliases: paliases
 </pre>
 	</dd>
-</dl><dl>
-	<dt>pantheon-auth</dt>
+</dl>
+<dl>
+<dt id="pantheon-auth">pantheon-auth</dt>
 	<dd>
 	<pre>
 Authenticate against the Pantheon dashboard. Required before doing anything
@@ -272,7 +275,7 @@ Aliases: pauth
 </mypassword></pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-hostname-add</dt>
+	<dt id="pantheon-hostname-add">pantheon-hostname-add</dt>
 	<dd>
 	<pre>
 Add a hostname to a site you control.
@@ -302,7 +305,7 @@ Aliases: psite-hostname-add
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-hostname-remove</dt>
+	<dt id="pantheon-hostname-remove">pantheon-hostname-remove</dt>
 	<dd>
 	<pre>
 Remove a hostname from a site you control.
@@ -331,7 +334,7 @@ Aliases: psite-hostname-remove
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-logout</dt>
+	<dt id="pantheon-logout">pantheon-logout</dt>
 	<dd>
 	<pre>
 Clear any stored session data.
@@ -354,7 +357,7 @@ Aliases: plogout
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-organization-sites</dt>
+	<dt id="pantheon-organization-sites">pantheon-organization-sites</dt>
 	<dd>
 	<pre>
 List the sites for an organization. Org admins only.
@@ -381,7 +384,7 @@ Aliases: porg-sites
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-organizations</dt>
+	<dt id="pantheon-organizations">pantheon-organizations</dt>
 	<dd>
 	<pre>
 List your organization affiliations.
@@ -404,7 +407,7 @@ Aliases: porgs
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-pp</dt>
+	<dt id="pantheon-pp">pantheon-pp</dt>
 	<dd>
 	<pre>
 Direct pseudo-proxy interface. JSON only. For debugging.
@@ -434,7 +437,7 @@ Aliases: pp
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-products</dt>
+	<dt id="pantheon-products">pantheon-products</dt>
 	<dd>
 	<pre>
 Get the list of available Drupal product start-states.
@@ -453,7 +456,7 @@ Aliases: pproducts
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-attributes</dt>
+	<dt id="pantheon-site-attributes">pantheon-site-attributes</dt>
 	<dd>
 	<pre>
 Get attributes for a particular site.
@@ -479,7 +482,7 @@ Aliases: psite-attr
 </label></pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-backups</dt>
+	<dt id="pantheon-site-backups">pantheon-site-backups</dt>
 	<dd>
 	<pre>
 List site backups (and exports).
@@ -505,7 +508,7 @@ Aliases: psite-backups
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-branch-create</dt>
+	<dt id="pantheon-site-branch-create">pantheon-site-branch-create</dt>
 	<dd>
 	<pre>
 Create Git branch of master for a particular site.
@@ -531,7 +534,7 @@ Aliases: psite-bcreate
 </feature-123></pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-branch-delete</dt>
+	<dt id="pantheon-site-branch-delete">pantheon-site-branch-delete</dt>
 	<dd>
 	<pre>
 Delete a Git branch from a particular site.
@@ -556,7 +559,7 @@ Aliases: psite-bdel
 </feature-123></pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-branch-list</dt>
+	<dt id="pantheon-site-branch-list">pantheon-site-branch-list</dt>
 	<dd>
 	<pre>
 List Git branches for a particular site.
@@ -580,7 +583,7 @@ Aliases: psite-blist
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-change-owner</dt>
+	<dt id="pantheon-site-change-owner">pantheon-site-change-owner</dt>
 	<dd>
 	<pre>
 Change the owner of a site.
@@ -612,7 +615,7 @@ Aliases: psite-change-owner
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-clone</dt>
+	<dt id="pantheon-site-clone">pantheon-site-clone</dt>
 	<dd>
 	<pre>
 Clone content from one site environment to another.
@@ -666,7 +669,7 @@ Aliases: psite-clone
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-commit</dt>
+	<dt id="pantheon-site-commit">pantheon-site-commit</dt>
 	<dd>
 	<pre>
 Commit changes in an on-server-dev environment.
@@ -696,7 +699,7 @@ Aliases: psite-commit
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-connection-mode</dt>
+	<dt id="pantheon-site-connection-mode">pantheon-site-connection-mode</dt>
 	<dd>
 	<pre>
 Set or retrieve the connection mode of a specific site/environment.
@@ -725,7 +728,7 @@ Aliases: psite-cmode
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-create</dt>
+	<dt id="pantheon-site-create">pantheon-site-create</dt>
 	<dd>
 	<pre>
 Create a new site on Pantheon
@@ -759,7 +762,7 @@ Aliases: psite-create
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-dashboard</dt>
+	<dt id="pantheon-site-dashboard">pantheon-site-dashboard</dt>
 	<dd>
 	<pre>
 Get the dashboard link for a site.
@@ -784,7 +787,7 @@ Aliases: psite-dash
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-delete</dt>
+	<dt id="pantheon-site-delete">pantheon-site-delete</dt>
 	<dd>
 	<pre>
 Delete a site from Pantheon.
@@ -806,7 +809,7 @@ Aliases: psite-delete
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-deploy</dt>
+	<dt id="pantheon-site-deploy">pantheon-site-deploy</dt>
 	<dd>
 	<pre>
 Deploy code to a particular environment.
@@ -846,7 +849,7 @@ Aliases: psite-deploy
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-diffstat</dt>
+	<dt id="pantheon-site-diffstat">pantheon-site-diffstat</dt>
 	<dd>
 	<pre>
 Get a list of changes (diffstat) to be commited in a remote on-server-dev
@@ -872,7 +875,7 @@ Aliases: psite-diffs
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-download-backup</dt>
+	<dt id="pantheon-site-download-backup">pantheon-site-download-backup</dt>
 	<dd>
 	<pre>
 Download a backup file from a specific site.
@@ -906,7 +909,7 @@ Aliases: psite-dl-backup
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-environment-create</dt>
+	<dt id="pantheon-site-environment-create">pantheon-site-environment-create</dt>
 	<dd>
 	<pre>
 Create a new multidev site environment.
@@ -934,7 +937,7 @@ Aliases: psite-ecreate
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-environment-delete</dt>
+	<dt id="pantheon-site-environment-delete">pantheon-site-environment-delete</dt>
 	<dd>
 	<pre>
 Delete a multidev site environment.
@@ -959,7 +962,7 @@ Aliases: psite-edelete
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-environment-list</dt>
+	<dt id="pantheon-site-environment-list">pantheon-site-environment-list</dt>
 	<dd>
 	<pre>
 Get a list of site environments.
@@ -981,7 +984,7 @@ Aliases: psite-elist
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-environment-redis-clear</dt>
+	<dt id="pantheon-site-environment-redis-clear">pantheon-site-environment-redis-clear</dt>
 	<dd>
 	<pre>
 Clear redis cache of a site environment.
@@ -1006,7 +1009,7 @@ Aliases: psite-erc
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-get-backup</dt>
+	<dt id="pantheon-site-get-backup">pantheon-site-get-backup</dt>
 	<dd>
 	<pre>
 Get a download link to a specific site backup.
@@ -1037,7 +1040,7 @@ Aliases: psite-get-backup
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-import</dt>
+	<dt id="pantheon-site-import">pantheon-site-import</dt>
 	<dd>
 	<pre>
 Import an existing site to Pantheon
@@ -1071,7 +1074,7 @@ Aliases: psite-import
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-load-backup</dt>
+	<dt id="pantheon-site-load-backup">pantheon-site-load-backup</dt>
 	<dd>
 	<pre>
 Load db with a backup file from a specific site.
@@ -1099,7 +1102,7 @@ Aliases: psite-load-backup
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-make-backup</dt>
+	<dt id="pantheon-site-make-backup">pantheon-site-make-backup</dt>
 	<dd>
 	<pre>
 Trigger an on-demand backup for a site/environment.
@@ -1124,7 +1127,7 @@ Aliases: psite-backup
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-mount</dt>
+	<dt id="pantheon-site-mount">pantheon-site-mount</dt>
 	<dd>
 	<pre>
 Mounts an environment file system to a local directory.
@@ -1152,7 +1155,7 @@ Aliases: psite-mount
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-name</dt>
+	<dt id="pantheon-site-name">pantheon-site-name</dt>
 	<dd>
 	<pre>
 Get the site name based on the UUID.
@@ -1183,7 +1186,7 @@ Aliases: psite-name
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-notifications</dt>
+	<dt id="pantheon-site-notifications">pantheon-site-notifications</dt>
 	<dd>
 	<pre>
 Get a list of notifications for a site to track ongoing jobs.
@@ -1211,7 +1214,7 @@ Aliases: psite-notifications
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-service-level</dt>
+	<dt id="pantheon-site-service-level">pantheon-site-service-level</dt>
 	<dd>
 	<pre>
 Update the service level for the site.
@@ -1242,7 +1245,7 @@ Aliases: psite-upgrade
 </service-level></site></pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-team</dt>
+	<dt id="pantheon-site-team">pantheon-site-team</dt>
 	<dd>
 	<pre>
 Get the team for a site.
@@ -1273,7 +1276,7 @@ Aliases: psite-team
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-team-add</dt>
+	<dt id="pantheon-site-team-add">pantheon-site-team-add</dt>
 	<dd>
 	<pre>
 Add someone to the team for a site.
@@ -1304,7 +1307,7 @@ Aliases: psite-team-add
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-team-remove</dt>
+	<dt id="pantheon-site-team-remove">pantheon-site-team-remove</dt>
 	<dd>
 	<pre>
 Remove someone from the team for a site.
@@ -1335,7 +1338,7 @@ Aliases: psite-team-remove
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-tunnel</dt>
+	<dt id="pantheon-site-tunnel">pantheon-site-tunnel</dt>
 	<dd>
 	<pre>
 Opens a tunnel to a specific site/environment/service.
@@ -1366,7 +1369,7 @@ Aliases: psite-tunnel
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-tunnel-close</dt>
+	<dt id="pantheon-site-tunnel-close">pantheon-site-tunnel-close</dt>
 	<dd>
 	<pre>
 Closes the tunnel to a specific site/environment/service.
@@ -1394,7 +1397,7 @@ Aliases: psite-tclose
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-tunnels</dt>
+	<dt id="pantheon-site-tunnels">pantheon-site-tunnels</dt>
 	<dd>
 	<pre>
 Get a list of open tunnels.
@@ -1413,7 +1416,7 @@ Aliases: psite-tunnels
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-uuid</dt>
+	<dt id="pantheon-site-uuid">pantheon-site-uuid</dt>
 	<dd>
 	<pre>
 Get the site UUID based on the name.
@@ -1438,7 +1441,7 @@ Aliases: psite-uuid
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-site-wake</dt>
+	<dt id="pantheon-site-wake">pantheon-site-wake</dt>
 	<dd>
 	<pre>
 Ensure a site environment is online and not suspended due to inactivity.
@@ -1463,7 +1466,7 @@ Aliases: psite-wake
 </pre>
 	</dd>
 </dl><dl>
-	<dt>pantheon-sites</dt>
+	<dt id="pantheon-sites">pantheon-sites</dt>
 	<dd>
 	<pre>
 List your Pantheon sites.
