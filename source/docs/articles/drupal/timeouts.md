@@ -86,6 +86,7 @@ Rules are for the good of the group, and timeouts are no exception. At Pantheon,
 			<td>No</td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Frequently Asked Questions
 
