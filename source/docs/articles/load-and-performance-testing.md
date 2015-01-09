@@ -11,8 +11,8 @@ We highly recommend load testing a site both prior and post launch to ensure you
 ## Before You Begin
 
 
-You should: 
-- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.  
+You should:   
+- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.    
 
 - Have access to a command-line environment, preferably with administrative privileges.  
 
