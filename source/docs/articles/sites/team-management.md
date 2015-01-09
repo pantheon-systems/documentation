@@ -63,7 +63,7 @@ The new site owner now has the ability to add a credit card or change the site p
 
 ## Adding a Supporting Organization
 
-One of the best things about Pantheon is that it's a great way to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon partner or ally agency, you can add them formally as a "supporting organization", which will give their company the access they need to help build, launch, or maintain your site.
+One of the best things about Pantheon is that it's a great way to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon partner or ally agency, you can add them to the site as a "supporting organization", which will give their company the access they need to help build, launch, or maintain your site.
 
 1. Click "Team" in the upper-right of the site dashboard.
 2. Click "Add supporting organization" at the bottom of the team management modal.
@@ -72,4 +72,4 @@ One of the best things about Pantheon is that it's a great way to collaborate wi
 
 _(TODO: screenshot)_
 
-Please note: since supporting agencies have full access to a site, only the site owner can perform this action.
+Please note: since supporting organizations have full access to a site, only the site owner can perform this action.
