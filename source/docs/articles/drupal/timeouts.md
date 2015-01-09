@@ -8,7 +8,7 @@ category:
 
 Rules are for the good of the group, and timeouts are no exception. At Pantheon, we've configured our timeouts to fit normal program execution. Sometimes, these limits can be reached when working with a particularly inefficient bit of code. In order to set expectations, the following chart describes the various user-facing timeouts on Pantheon.
 
-<table>
+<table class=table>
 <thead>
 		<tr>
 			<th>Name</th>
@@ -86,8 +86,7 @@ Rules are for the good of the group, and timeouts are no exception. At Pantheon,
 			<td>No</td>
 		</tr>
 	</tbody>
-	</table>
-
+</table>
 ## Frequently Asked Questions
 
 #### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
