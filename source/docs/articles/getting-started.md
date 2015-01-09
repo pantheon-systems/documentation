@@ -44,13 +44,13 @@ Enter a name for your Pantheon site. You can change the human readable name for 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180013)
 
-## Start From Scratch
+### Start From Scratch
 
 If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180017)
 
-## Import Manually
+### Import Manually
 
 If you have an existing site that you want to import, choose "Import manually". For additional details, see [importing an existing site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
 
@@ -80,14 +80,14 @@ You can develop directly on the server using SFTP mode. See [enabling SFTP mode]
 
 ## 5. Credentials on Pantheon
 
-Your getpantheon.com username and password is only used to access your dashboard for managing sites and submitting support tickets. Any users on your Pantheon hosted Drupal sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
+Your getpantheon.com username and password is only used to access your dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
 
-There are a number of credentials available for developers; each of which can be found in the dashboard. For details, see the following articles:
+There are a number of credentials available for developers, each of which can be found in the dashboard. For details, see the following articles:
 
 - [rsync and SFTP](/docs/articles/local/rsync-and-sftp#rsync-and-sftp)
 - [Starting with Git](/docs/articles/local/starting-with-git/)
-- [Accessing MySQL databases](/docs/articles/local/accessing-mysql-databases/)
-- [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend#redis)
+- [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases/)
+- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend#redis)
 
 ## 6. Learn About the Pantheon Workflow
 
