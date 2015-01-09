@@ -7,16 +7,17 @@ category:
 
 ## Preparing for Your Site Launch
 
-Congratulations, you're almost ready to launch your site on Pantheon! There's a couple things to do to get ready, but we'll help you with every step.
+Congratulations, you're almost ready to launch your site on Pantheon! There are a couple things to do to get ready, but we'll help you with every step.
 
-We recommend that you **prepare the Live environment at least 24 hours before your launch** date, so give yourself time. If you rush a launch, you'll increase the probability of avoidable mistakes and problems.
+We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
 ## Best Practices to Prepare for Launch
 
-Making sure that your site code is current to reduce the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
+Making sure that your site code is current reduces the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
 
 While it's good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). To do this, just update your settings.php configuration to redirect site traffic to your preferred domain. If you don't, there will be an SEO penalty due to duplicate content, among other problems.
 
+<table class=table> 
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -39,11 +40,13 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 			<td class="help"><a href="/docs/articles/sites/code/redirect-incoming-requests/#redirect_common">Redirect incoming requests</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Deploy Code to the Live Environment
 
 When all code changes are complete, pull the code changes into the Live environment.
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -56,19 +59,21 @@ When all code changes are complete, pull the code changes into the Live environm
 			<td class="help"><a href="/docs/articles/sites/code/using-the-pantheon-workflow/">Using the Pantheon Workflow</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Test and Optimize Your Site
 
 Start by disabling development modules, as they hurt performance by increasing overhead and can introduce security problems by disclosing structural and debugging information about your site to visitors.
 
-You should also consider enabling New Relic monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
+Consider enabling New Relic monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
 
 Take a look at your performance settings, including enabling anonymous page caching, enabling aggregated stylesheets, and so forth. This will make a drastic difference in how fast your site can deliver content.
 
-Then, check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.getpantheon.com](http://varnishcheck.getpantheon.com/).
+Check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.getpantheon.com](http://varnishcheck.getpantheon.com/).
 
 Finally, you should load test your Live environment to make sure everything is optimally configured.
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -95,19 +100,19 @@ Finally, you should load test your Live environment to make sure everything is o
 			<td class="action">Ensure Varnish caching works</td>
 			<td class="help"><a href="/docs/articles/architecture/edge/varnish/">Varnish caching for high performance</a></td>
 		</tr>
-		<tr>
-			<td class="help"><a href="/docs/articles/architecture/edge/varnish">Varnish caching for high performance</a></td>
-			<tr>
+					<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Load test Live environment</td>
 			<td class="help"><a href="/docs/articles/load-and-performance-testing/">Load and performance testing</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Select a Paid Plan
 
 Once you're satisfied with your site configuration, you'll need to select a paid plan. Among other reasons, free sandbox sites can't have custom domains. You will need to add a credit card to either the site or the account to set up billing.
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -120,11 +125,13 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 			<td class="help"><a href="/docs/articles/sites/settings/selecting-a-plan/">Selecting a plan</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Schedule Backups
 
-Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way, you've got a fallback in case you want to revert your site content.
+Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content.
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -137,11 +144,13 @@ Ensure that your Live environment content is protected by scheduling daily and w
 			<td class="help"><a href="/docs/articles/sites/backups/backup-creation/#can-i-get-automatic-daily-backups">Creating a backup</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Add Domain to the Live Environment
 
 Now that the site is on a paid plan, you can associate your domain with the Live environment. This tells Pantheon where to send site traffic.
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -154,15 +163,17 @@ Now that the site is on a paid plan, you can associate your domain with the Live
 			<td class="help"><a href="/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Get DNS Record and Update Your DNS
 
-After you've added your domain to the Live environment, you will need to update your domain's DNS with the appropriate DNS record, which will depend on your site's configuration. This is the last step; once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched.
+After you've added your domain to the Live environment, update your domain's DNS with the appropriate DNS record, which will depend on your site's configuration. Once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched.
 
-**Pantheon does not manage your domain name or DNS**. You will need to make these changes yourself. DNS changes can take up to 48 hours to propagate across the Internet, so be patient - it will happen. With that said, most updates happen in a couple hours.
+**Pantheon does not manage your domain name or DNS**. You will need to make these changes yourself. DNS changes can take up to 48 hours to propagate across the Internet. However, most updates happen in a couple hours.
 
-​If you are an **ENTERPRISE** customer **or** using **HTTPS** to identify your site and encrypt traffic:
+If you are an **enterprise** customer **or** using **HTTPS** to identify your site and encrypt traffic:
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -175,9 +186,11 @@ After you've added your domain to the Live environment, you will need to update 
 			<td class="help"><a href="/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">Adding a SSL certificate for secure HTTPS communication</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 If your site plan is Business, Professional, or Personal **or** using **HTTP** and not using an identity certificate:
 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -190,6 +203,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 			<td><a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS records for directing your domain to your Pantheon site</a></td>
 		</tr>
 	</tbody>
+	</table>
 
 ## Frequently Asked Questions
 
@@ -199,7 +213,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
-​To learn more, see [using the Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
+To learn more, see [using the Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
 
 ### Why is robots.txt is disallowing crawlers to my Live environment?
 
