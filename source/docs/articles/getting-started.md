@@ -14,38 +14,33 @@ Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will b
 
 ## 1. Create Your Free Account
 
-Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click  the "Create Your Free Account" button in the header.
+Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click **Create Your Free Account**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/179991)
 
-Then, fill out your account information and click Continue.
+Next, enter your account information and click **Continue**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214016)
 
 ## 2. Verify Your Email Address
 
-Once you submit your account information, you will be taken to the Pantheon Dashboard.  
+Before you can create a site, you'll need to verify your email by clicking a one-time verification link sent to the email you specified. 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180002)  
 
-Before you can create a site, you'll need to verify your email by clicking a one-time verification link sent to the email you specified.  
-
-
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180004)
 
 If you don't see the email immediately, check your spam folder. If you still haven't received it after 15 minutes, click the resend verification link from the dashboard, or contact support by submitting a ticket.
 
 ## 3. Create a Site
 
-Once your email is verified, you can create your first site. See our article  [launching your first site](/docs/articles/users/creating-sites/) for more detailed documentation.  
+Once your email is verified, you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
 
 
-
-Start by clicking the "Create a site now" link.  
+Start by clicking **Create a site now**.  
 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180010)
 
-Then, enter a name for your Pantheon site. You can change the human readable name for the site, but the site development URL is permanent and cannot be changed.
+Enter a name for your Pantheon site. You can change the human readable name for the site, but the site development URL is permanent and cannot be changed.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180013)
 
@@ -61,20 +56,20 @@ If you have an existing site that you want to import, choose "Import manually". 
 
 ## 4. Interact With Your Code
 
-There are two ways to add and update your site's code; via Git source code management and SFTP.
+There are two ways to add and update your site's code: Git source code management and SFTP.
 
 #### Git Connection Mode
 
 Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git#starting-with-git).  
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
 
-To use Git, you'll need to go to your dashboard and add a public SSH key.  
+To use Git, you'll need to go to your dashboard and add a public SSH key.  
 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180030)  
 
 
-For detailed instructions, see the article [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
+For detailed instructions, see [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
 
 #### SFTP Connection Mode
 
@@ -85,7 +80,7 @@ You can develop directly on the server using SFTP mode. See [enabling SFTP mode]
 
 ## 5. Credentials on Pantheon
 
-Your getpantheon.com username and password is only used to access your dashboard for managing sites and submitting support tickets. Any users on your Pantheon hosted Drupal sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
+Your getpantheon.com username and password is only used to access your dashboard for managing sites and submitting support tickets. Any users on your Pantheon hosted Drupal sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
 
 There are a number of credentials available for developers; each of which can be found in the dashboard. For details, see the following articles:
 
@@ -104,13 +99,11 @@ To gain a better understanding of how the Pantheon system architecture works, se
 
 ## 8. Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's  [known limitations](/docs/articles/drupal/known-limitations#known-limitations) now and save yourself the headache later on!
+No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/drupal/known-limitations#known-limitations) now and save yourself the headache later on!
 
-## 9. Prepare for Launch by Adding a Credit Card
+## 9. Prepare for Launch by Adding a Credit Card
 
-When you're ready to launch your site, you'll need to add a credit card to the site. For details, see:
-
-- [Adding a Card to a Specific Site.](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site)
+When you're ready to launch your site, you'll need to add a credit card to the site. For details, see [Adding a Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site).
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180046)
 
