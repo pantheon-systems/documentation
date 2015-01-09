@@ -42,6 +42,10 @@ If you don't see the _\_\_cfduid=_ keypair, check that you're loading a URL that
 
 In Drupal, no modules are required to use CloudFlare, but there is an optional [CloudFlare contrib module](https://drupal.org/project/cloudflare) that provides integration with CloudFlare's API from within your Drupal site.
 
+## WordPress Plugins
+
+[The CloudFlare WordPress Plugin](https://wordpress.org/plugins/cloudflare/) is not required to use the CDN on your site. However, since CloudFlare works as a reverse proxy, connecting IP addresses will appear as CloudFlare IPs. This plugin's main function is to preserve the originating IP address for comments posted to your WordPress site.
+
 ## Known Limitations
 
 Drupal: CloudFlare's JavaScript Aggregation can cause problems when using Drupal's JavaScript Aggregation. Choose one or the other, but not both.
