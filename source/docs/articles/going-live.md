@@ -223,18 +223,3 @@ If you attempt to access your live environment with a gotpantheon.com domain, ev
 
 Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
 
-<style type="text/css">.checklist .complete {
-  width: 75px;
-  text-align: center;
-}
-.checklist .action {
-  width: 250px;
-  text-align: left;
-}
-.checklist .help {
-  text-align: left;
-}
-.checklist th {
-  border-bottom: 1px solid black;
-}
-</style>
