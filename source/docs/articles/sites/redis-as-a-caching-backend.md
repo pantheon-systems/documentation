@@ -1,5 +1,5 @@
 ---
-title: Redis as a caching backend
+title: Redis as a Caching Backend
 description: Understand how to use Redis as a caching mechanism.
 category:
     - developing
@@ -56,55 +56,43 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 Enabling Redis Cache Server from Pantheon Site Dashboard (Settings >> Add Ons >> Add)
 
-![Enable Redis via Dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/301650)
 
-#### Using Redis with WordPress
+### Using Redis with WordPress
 
 Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugin. On our platform you simply need to copy `object-cache.php` to the `wp-content/object-cache.php` and the settings will be automatically loaded from there.
 
-#### Using Redis with Drupal
+### Using Redis with Drupal
 
 The common community module for Drupal to use Redis is simply called [redis](http://drupal.org/project/redis). Enabling it on Pantheon takes only a few steps:
 
-1.
+1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
 
-Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
+2. Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
 
-2.
+3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
 
-Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
+    - `redis_client_host`
+    - `redis_client_port`
+    - `redis_client_password`
 
-3.
-
-Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
-
-  - `redis_client_host`
-  - `redis_client_port`
-  - `redis_client_password`
-
-4.
-
-Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory** , required configurations for Redis for every site.  
-
-
+4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory** , required configurations for Redis for every site.  
 **NOTE:**** _Distributions may vary in their directory structure._ ****_You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path._**
 
-    // All Pantheon Environments.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Use Redis for caching.
-      $conf['redis_client_interface'] = 'PhpRedis';
-      $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
-      $conf['cache_default_class'] = 'Redis_Cache';
-      $conf['cache_prefix'] = array('default' => 'pantheon-redis');
-      // Do not use Redis for cache_form (no performance difference).
-      $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-      // Use Redis for Drupal locks (semaphore).
-      $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-    }
-
-5.
-
-_Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
+  ```
+      // All Pantheon Environments.
+      if (defined('PANTHEON_ENVIRONMENT')) {
+        // Use Redis for caching.
+        $conf['redis_client_interface'] = 'PhpRedis';
+        $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+        $conf['cache_default_class'] = 'Redis_Cache';
+        $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+        // Do not use Redis for cache_form (no performance difference).
+        $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+        // Use Redis for Drupal locks (semaphore).
+        $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+      }
+  ```
+5. _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
 
     // Optional Pantheon redis settings.
     // Higher performance for smaller page counts.
@@ -116,40 +104,30 @@ _Optional_ `sites/default/settings.php` configuration A - Higher performance for
       $conf['page_cache_maximum_age'] = 900;
     }
 
-6.
+6. _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
 
-_Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
+  This technique avoids evictions due to redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
+  ```
+      // Optional Pantheon redis settings.
+      // Higher performance for larger page counts.
+      if (defined('PANTHEON_ENVIRONMENT')) {
+        // Use the database for cached HTML.
+        $conf['cache_class_cache_page'] = 'DrupalDatabaseCache';
+      }
+  ```
+7. Enable the module via admin/build/modules. This is necessary for cache clearing to work in all cases.
 
-This technique avoids evictions due to redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
-
-    // Optional Pantheon redis settings.
-    // Higher performance for larger page counts.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Use the database for cached HTML.
-      $conf['cache_class_cache_page'] = 'DrupalDatabaseCache';
-    }
-
-7.
-
-Enable the module via admin/build/modules. This is necessary for cache clearing to work in all cases.
-
-8.
-
-Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
+8. Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
 
 ![Redis connect string](https://www.getpantheon.com/sites/default/files/docs/desk_images/301638)
 
-  -
-
-For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
+  - For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/71423)
 
-  -
+  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
-For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
-
-### Using the Redis command-line client
+## Using the Redis command-line client
 
 You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon hosted Redis server for debugging, you'll need to install Redis locally. If you don't already have Redis installed, it can be downloaded from [http://redis.io/download](http://redis.io/download).
 
@@ -177,7 +155,7 @@ To check if a specific key exists, you can pass the "exists" command. For exampl
     (integer) 0
     redis>
 
-### Finding a Specific Key
+## Finding a Specific Key
 
 If you need to find a specific key, you can use search patterns that contain globs. For example:
 
@@ -191,14 +169,14 @@ If you need to find a specific key, you can use search patterns that contain glo
     $15
     englash english
 
-### Purging the Cache
+## Purging the Cache
 
 If you would like to purge your cache, you can pass the "flushall" command to flush all keys from the cache.
 
     redis> flushall
     OK
 
-### Checking the # of Keys in Cache
+## Checking the # of Keys in Cache
 
 To check the # of keys in the cache, you can use the "DBSIZE" command. The following is sample output:
 
@@ -207,7 +185,7 @@ To check the # of keys in the cache, you can use the "DBSIZE" command. The follo
 
 ## Troubleshooting
 
-### Cache directory is not found
+## Cache directory is not found
 
 If you push your updates via git you may get the error that the "Cache" directory is not found, Class not found or the `Cache.php` file was not found, this is because of a `.gitignore` issue which did not allow commiting of the Redis cache files. Here is an error that you may see.
 
@@ -218,14 +196,14 @@ It is possible that your `.gitignore` file is not up to date with the most recen
 
 The best and easiest way to update your core is by using Pantheon administration dashboard. Take a look at the [wiki page](/docs/articles/sites/code/applying-upstream-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
 
-### Fatal error: require\_once()
+## Fatal error: require\_once()
 
 Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the example code snippet to match your path to the Redis module. The error would like something like this:
 
     Fatal error: require_once(): Failed opening required
     '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'
 
-### Drupal 6 Cache Backport
+## Drupal 6 Cache Backport
 
 If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6.
 
