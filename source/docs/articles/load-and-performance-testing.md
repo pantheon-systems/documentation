@@ -12,8 +12,7 @@ We highly recommend load testing a site both prior and post launch to ensure you
 
 
 You should:   
-- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.    
-
+- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.
 - Have access to a command-line environment, preferably with administrative privileges.  
 
 **Please Note: Load testing should only be performed on the Live environment**. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
