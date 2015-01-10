@@ -24,9 +24,9 @@ Next, enter your account information and click **Continue**.
 
 ## Verify Your Email Address
 
-Before you can create a site, you'll need to verify your email by clicking a one-time verification link sent to the email you specified. 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180002)  
+Before you can create a site, you'll need to verify your email by clicking a one-time verification link sent to the email you specified.   
 
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180002)  
 
 If you don't see the email immediately, check your spam folder. If you still haven't received it after 15 minutes, click the resend verification link from the dashboard, or contact support by submitting a ticket.
 
