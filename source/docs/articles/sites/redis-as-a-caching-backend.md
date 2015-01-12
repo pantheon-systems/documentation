@@ -21,38 +21,16 @@ Redis provides an alternative caching backend, taking that work off the database
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
-<tbody>
-		<tr>
-			<th>Plan</th>
-			<th>Is Redis Available?</th>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>Sandbox</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Personal</td>
-			<td>No</td>
-		</tr>
-		<tr>
-			<td>Professional</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Business</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Enterprise</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Pantheon One</td>
-			<td>Yes</td>
-		</tr>
-	</tbody>
+| Plans        | Supported
+| ------------- |:-------------:|
+| Sandbox      | **Yes** |
+| Personal      | No      |
+| Professional | **Yes**      |
+| Business | **Yes**      |
+| Enterprise | **Yes**      |
+| Pantheon One | **Yes**      |
+
+---
 
 Enabling Redis Cache Server from Pantheon Site Dashboard (Settings >> Add Ons >> Add)
 
@@ -60,7 +38,7 @@ Enabling Redis Cache Server from Pantheon Site Dashboard (Settings >> Add Ons >>
 
 #### Using Redis with WordPress
 
-Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugin. On our platform you simply need to copy `object-cache.php` to the `wp-content/object-cache.php` and the settings will be automatically loaded from there.
+Pantheon has a dedicated page to using [Redis on WordPress](/docs/articles/sites/redis-on-wordpress).
 
 #### Using Redis with Drupal
 
