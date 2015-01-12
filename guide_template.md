@@ -15,10 +15,10 @@ See our [style guide](https://github.com/pantheon-systems/documentation/blob/mas
 <hr>
 
 ## Overview 
-Write a summary about what information you will cover in the guide. 
+Write a summary about what information you will cover in the guide. This should include a description of the goal state and problem state.
 
 ## Before You Begin
- -  List of prerequistes or technical requirements a user must have or understand before starting the task. 
+List of prerequisites or technical requirements a user must have or understand before starting the task. 
 
 
 ## Topic/Goal
@@ -26,24 +26,24 @@ Write a summary about what information you will cover in the guide.
 Explanatory content here. 
 
 If you want to, you should:
- 1. imperative statement 1
- 2. imperative statement 2
- 
+- imperative statement 1
+- imperative statement 2
+
+### Sub-Topic/Sub-Goal
+
+Explanatory content here. 
+
 If you want to, you should:
- 1. imperative statement 1
- 2. imperative statement 2
+- imperative statement 1
+- imperative statement 2
 
 ## Topic/Goal
 
 Explanatory content here. 
 
 If you want to, you should:
- 1. imperative statement 1
- 2. imperative statement 2
- 
-If you want to, you should:
- 1. imperative statement 1
- 2. imperative statement 2
+- imperative statement 1
+- imperative statement 2
 
 ## Known Limitations
 
@@ -64,7 +64,8 @@ Steps to remediate.
 Enter the answer here.
 
 ##See Also
-[Article Title](www.url/com)
-[Article Title](www.url/com)
+
+[Article Title](www.url/com)  
+
 ----
 
