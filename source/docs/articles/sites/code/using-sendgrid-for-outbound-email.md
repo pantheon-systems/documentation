@@ -2,7 +2,7 @@
 title: Using SendGrid for Outbound Email
 description: Send email from Pantheon using SendGrid.
 category:
-  - developing
+- developing
 ---
 
 ## Overview
@@ -11,20 +11,43 @@ Your application will need to send email for a variety of reasons — new user r
 
 To ensure that email is delivered, we recommend using an email gateway which insures your mail originates from a constant source. SendGrid is a cloud service for email which provides such a service, and helps you eliminate the complexity of sending high-deliverability email e.g. maintaining good relations with other internet postmasters, helping with DKIM and SPF setup, etc.
 
-There are three simple steps to sending email from Pantheon using SendGrid.
+There are three simple steps to sending email from Pantheon using SendGrid. For WordPress and Drupal users alike, the first step is the same:
+
 
 ## 1. Create a SendGrid Account
 
-You can send up to 200 emails per day for free with SendGrid, so it's risk-free to try out. Also, as a Pantheon customer, we are also able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
+You can send up to 400 emails per day for free with SendGrid, so it's risk-free to try out. Also, as a Pantheon customer, we are able to offer you a discount on higher-volume plans. [Sign up](http://sendgrid.com/partners/pantheon.html) for an account to get started.
 
-## 2. Download the Drupal SMTP Module
+
+## WordPress
+
+### 2. Download the WordPress SendGrid Plugin
+
+The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the wp_mail function with API integration. This allows users to send mail regardless of blocked ports by their ISP.
+
+**Note**: At this time, the SendGrid SMTP configuration is not compatible with Pantheon due to the requirement of short tags. See [Known Limitations](/docs/articles/drupal/known-limitations#php-short-tags) for more information on PHP short tags.
+
+To install, download the latest release and place it in the _code/wp-content/plugins_ directory.
+
+### 3. Add Your SendGrid Account Details
+
+Once you have installed and activated the plugin, simply enter your SendGrid account credentials and select _API_ as the protocol to send mail with. Next, enter the sending email address and a reply email address (optional). You can send test messages from the settings panel of the plugin to ensure your configuration is working.
+
+![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
+
+Your WordPress application is now setup to send email through SendGrid. For examples on how to incorporate this service into your application, please see [Code Examples](https://sendgrid.com/docs/Code_Examples/php.html).
+
+## Drupal
+
+
+### 2. Download the Drupal SMTP Module
 
 Pantheon recommends using the actively maintained [SMTP module](http://drupal.org/project/smtp) to send email with Drupal, regardless of your email gateway. Luckily, SendGrid plugs right in.
 
 Download the latest recommended release and install it in the _code/sites/all/modules_ directory. You can push it with git, use the SFTP account in your Pantheon dashboard, or even use `drush dl`, the same as you would with any other module.
 
 
-## 3. Add Your SendGrid Account Details
+### 3. Add Your SendGrid Account Details
 
 Login to your Drupal dev site with your Pantheon username and password, which gives you administrator access. Along the menu at the top of the screen, click on Modules, where you'll see _SMTP Authentication Support_ in the Mail section. Click "Configure" and you will see the SMTP settings page.
 
@@ -50,13 +73,13 @@ When making any changes to Pantheon installations, you first make the change on 
 
 If you don't want to re-enter the configuration, and can't push your database "up" to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the `$conf array, like so:`
 
-    $conf['smtp_on'] = TRUE;
-    $conf['smtp_host'] = 'smtp.sendgrid.net';
-    $conf['smtp_port'] = 25;
-    $conf['smtp_username'] = 'your-sendgrid-username';
-    $conf['smtp_password'] = 'your-sendgrid-password';
-    $conf['smtp_from'] = 'your-email@yoursite.com';
-    $conf['smtp_fromname'] = 'Your Name';
+$conf['smtp_on'] = TRUE;
+$conf['smtp_host'] = 'smtp.sendgrid.net';
+$conf['smtp_port'] = 25;
+$conf['smtp_username'] = 'your-sendgrid-username';
+$conf['smtp_password'] = 'your-sendgrid-password';
+$conf['smtp_from'] = 'your-email@yoursite.com';
+$conf['smtp_fromname'] = 'Your Name';
 
 ` `
 
