@@ -38,10 +38,10 @@ Pantheon is a cloud platform, so there are some considerations that you should b
 Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
 
 
-Each DROP worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
+Each Application Container worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
 
 
-Live sites on Pantheon on professional plans and above use multiple DROP workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
+Live sites on Pantheon on professional plans and above use multiple Application Container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
 
 
 In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.

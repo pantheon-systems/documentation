@@ -95,7 +95,7 @@ Familiarize yourself with the [Pantheon Workflow](/docs/articles/sites/code/usin
 
 ## Learn More About the Pantheon Platform
 
-To gain a better understanding of how the Pantheon system architecture works, see [all about DROPs](/docs/articles/architecture/all-about-application-containers/).
+To gain a better understanding of how the Pantheon system architecture works, see [all about Application Containers](/docs/articles/architecture/all-about-application-containers/).
 
 ## Known Limitations
 
