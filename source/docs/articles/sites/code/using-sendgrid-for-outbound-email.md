@@ -23,15 +23,15 @@ You can send up to 400 emails per day for free with SendGrid, so it's risk-free 
 
 ### 2. Download the WordPress SendGrid Plugin
 
-The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the wp_mail function with API integration. This allows users to send mail regardless of blocked ports by their ISP.
+The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the wp_mail function with API integration.
 
-**Note**: At this time, the SendGrid SMTP configuration is not compatible with Pantheon due to the requirement of short tags. See [Known Limitations](/docs/articles/drupal/known-limitations#php-short-tags) for more information on PHP short tags.
-
-To install, download the latest release and place it in the _code/wp-content/plugins_ directory.
+Install and activate the latest release and place it in the _code/wp-content/plugins_ directory.
 
 ### 3. Add Your SendGrid Account Details
 
 Once you have installed and activated the plugin, simply enter your SendGrid account credentials and select _API_ as the protocol to send mail with. Next, enter the sending email address and a reply email address (optional). You can send test messages from the settings panel of the plugin to ensure your configuration is working.
+
+**Note**: At this time, the SendGrid SMTP configuration is not compatible with Pantheon due to the requirement of short tags. See [Known Limitations](/docs/articles/drupal/known-limitations#php-short-tags) for more information on PHP short tags.
 
 ![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
 
