@@ -72,7 +72,7 @@ After you save the configuration, your Drupal application on Pantheon is now set
 When making any changes to Pantheon installations, you first make the change on your Dev installation. Next, move it to the test server using the Pantheon dashboard. After testing, you migrate your changes to the live server, using the Pantheon dashboard.
 
 If you don't want to re-enter the configuration, and can't push your database "up" to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the `$conf array, like so:`
-
+```
 $conf['smtp_on'] = TRUE;
 $conf['smtp_host'] = 'smtp.sendgrid.net';
 $conf['smtp_port'] = 25;
@@ -80,7 +80,7 @@ $conf['smtp_username'] = 'your-sendgrid-username';
 $conf['smtp_password'] = 'your-sendgrid-password';
 $conf['smtp_from'] = 'your-email@yoursite.com';
 $conf['smtp_fromname'] = 'Your Name';
-
+```
 ` `
 
 Using a code block like that will ensure that SendGrid is enabled wherever that settings.php file is used, and allows you to "push" the configuration up from Dev to Test to Live.
