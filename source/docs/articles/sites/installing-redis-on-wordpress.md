@@ -35,10 +35,9 @@ Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugi
 2. Go to the WP-Redis plugin directory (wp-content/plugins/wp-redis/) and **move** the file `object-cache.php` to the directory (wp-content/).
   * Make sure the `object-cache.php` file is deleted from the WP-Redis directory.
 3. Login to the WordPress dashboard and go to the *Plugins* section and click on **Drop-Ins**.
+  * This is one way to confirm that the plugin has been setup correctly. Another way to verify the configuration is by using the redis-cli. 
 
-![Test](http://img.photobucket.com/albums/v467/juchniewicz/wordpressobjectcacheplugins.jpg)
-
-This is one way to confirm that it's setup correctly. The other way is to check with **redis-cli**.
+![Drop-in](http://img.photobucket.com/albums/v467/juchniewicz/wordpressobjectcacheplugins.jpg)
 
 ### Use the Redis Command-Line Client
 
