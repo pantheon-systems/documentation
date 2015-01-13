@@ -6,20 +6,25 @@ category:
 
 ---
 
-Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
-## What is Redis?
+
+## About Redis
 
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-## Why should I use Redis?
+Note: You no longer need to submit a ticket to get Redis enabled. Please see updated screenshot below.
+
+## Benefits of Redis
 
 Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter resultes, etc), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increase load-times.
 
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for develoeprs looking to use it to manage queues, or do custom caching of their own.
 
-## How can I enable Redis on my site?
+## Enable Redis
+
+Enable Redis cache server from your Pantheon site dashboard by going to (Settings > Add Ons > Add).
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+
 
 | Plans        | Supported
 | ------------- |:-------------:|
@@ -32,12 +37,11 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 ---
 
-Enabling Redis Cache Server from Pantheon Site Dashboard (Settings >> Add Ons >> Add)
 
 
 ### Using Redis with WordPress
 
-Pantheon has made another article on [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress)
+For detailed information, see [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress).
 
 ### Using Redis with Drupal
 
@@ -84,7 +88,9 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 
 6. _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
 
-  This technique avoids evictions due to redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
+
+  This technique avoids evictions due to redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
+
   ```
       // Optional Pantheon redis settings.
       // Higher performance for larger page counts.
@@ -187,7 +193,10 @@ If you have a Drupal 6 site, you will also need the [Cache Backport](https://dru
 
 See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt) documentation for more details on how to configure Cache Backport.
 
-Mp>If you see the following message:
+
+
+Mp>If you see the following message:
+
 
     File not found:
     'sites/all/modules/cache_backport/system.admin.inc'
