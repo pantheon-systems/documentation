@@ -2,37 +2,21 @@
 machine:
   php:
     # https://circleci.com/docs/environment#php
-    version: 5.5.11 
-  environment:
-    # Set the site UUID here for now -> Private Environment variable
-    site_uuid: 739913fa-0df2-4766-ac99-4ac57c819f28
-      
+    version: 5.5.11
+
 dependencies:
-  pre: 
-    # Install Drush  
-    - mv composer.json $HOME/.composer/composer.json
-    - composer global require drush/drush:6.2.0
-    - composer global require sculpin/sculpin:2.0.x-dev 		    
-    # Install Terminus.
-    - git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus 
-    - drush cc drush
-  # Install additional test dependencies here (like Casper, Behat, etc).
-  override:   
-    # Build the documentation 
+  pre:
+    # Run composer
+    - composer install
+  override:
+    # Build the documentation
     - sculpin generate
 test:
     #
     # This is where the documentation will be built.
-    # or otherwise. Here's a SimpleTest example.  
+    # or otherwise. Here's a SimpleTest example.
   override:
-    # 
-    - echo "Pantheon Documentation"
-    - cd ..
-    - ls -al
-    - git clone ssh://codeserver.dev.$site_uuid@codeserver.dev.$site_uuid.drush.in:2222/~/repository.git get-pantheon-v3
-    - cd get-pantheon-v3
-    - git checkout docs
-  # Perform post build operations  
+  # Perform post build operations
   post:
 # Custom notifications
 notify:
