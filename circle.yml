@@ -8,13 +8,11 @@ dependencies:
   pre:
     # Run composer
     - composer install
-  override:
-    # Build the documentation
-    - ./vendor/sculpin/sculpin/bin/sculpin generate
 test:
     #
     # This is where the documentation will be built.
     # or otherwise. Here's a SimpleTest example.
+    - ./vendor/sculpin/sculpin/bin/sculpin generate
   override:
   # Perform post build operations
   post:
