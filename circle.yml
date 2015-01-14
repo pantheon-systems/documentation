@@ -9,10 +9,9 @@ dependencies:
     # Run composer
     - composer install
 test:
-    #
+  override:
     # This is where the documentation will be built.
-    # or otherwise. Here's a SimpleTest example.
-  - ./vendor/sculpin/sculpin/bin/sculpin generate
+    - ./vendor/sculpin/sculpin/bin/sculpin generate
   override:
   # Perform post build operations
   post:
