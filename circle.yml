@@ -11,10 +11,10 @@ dependencies:
   override:
     # Build and run Sculpin
     - ./vendor/bin/sculpin generate
-    - ./vendor/bin/sculpin serve &
 test:
   override:
     # This is where the documentation will be tested
+    - ./vendor/bin/sculpin serve &
     - ./vendor/bin/behat
   post:
 # Custom notifications
