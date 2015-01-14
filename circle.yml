@@ -10,7 +10,7 @@ dependencies:
     - composer install
   override:
     # Build the documentation
-    - sculpin generate
+    - ./vendor/sculpin/sculpin/bin/sculpin generate
 test:
     #
     # This is where the documentation will be built.
