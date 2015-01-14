@@ -10,13 +10,11 @@ draft: true
 ### <span style="color: red">Problem</span>
 <span style="color: red">Give a summary of what you plan to accomplish in this guide.</span>
 
-
 I'm proud of the Pantheon dashboard and all the technologies that feed it, but as a developer I am definitely in the **CLI4LIFE** camp. I can type faster than I can click, and I like being able to repeat, script and automate things. Don't make me use a browser when what I really want is a shell.
 
 ### <span style="color: red">Solution</span>
 
 <span style="color: red">Give a summary of how you plan to solve the problem.</span>
-
 
 That's why we took care to engineer a Drush interface into our [runtime matrix](https://www.getpantheon.com/blog/why-we-built-pantheon-containers-instead-virtual-machines) from the ground up; no small feat. Even though your site could be running from different locations in Pantheon's platform, you can still use Drush to control it. But if you've never used Drush before, here are 5 steps to "feeling the Drush"
 
