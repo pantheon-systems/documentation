@@ -1,7 +1,7 @@
 ---
 title: Guide Example
 description: Learn how to create a great guide.
-category:
+draft: true
 
 ---
 
