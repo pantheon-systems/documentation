@@ -8,3 +8,4 @@
 /app/config/sculpin_site_*.yml
 /.sculpin/
 composer.phar
+/vendor

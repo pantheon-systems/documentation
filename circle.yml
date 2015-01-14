@@ -11,9 +11,8 @@ dependencies:
 test:
   override:
     # This is where the documentation will be built.
-    - ./vendor/sculpin/sculpin/bin/sculpin generate
-  override:
-  # Perform post build operations
+    - ./vendor/bin/sculpin generate
+    - ./vendor/bin/behat
   post:
 # Custom notifications
 notify:
