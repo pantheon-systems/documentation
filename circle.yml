@@ -14,8 +14,8 @@ dependencies:
 test:
   override:
     # This is where the documentation will be tested
-    - ifconfig
     - ./vendor/bin/sculpin server
+      background: true
     - ./vendor/bin/behat
   post:
 # Custom notifications
