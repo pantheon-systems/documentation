@@ -5,6 +5,9 @@ machine:
     version: 5.5.11
 
 dependencies:
+  pre:
+    # Run composer
+    - composer install --prefer-source --no-interaction
   override:
     # Build and run Sculpin
     - ./vendor/bin/sculpin generate
