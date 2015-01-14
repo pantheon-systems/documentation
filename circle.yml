@@ -7,7 +7,7 @@ machine:
 dependencies:
   pre:
     # Run composer
-    - composer install
+    - composer install --prefer-source --no-interaction
   override:
     # Build and run Sculpin
     - ./vendor/bin/sculpin generate
