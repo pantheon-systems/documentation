@@ -10,10 +10,10 @@ We highly recommend load testing a site both prior and post launch to ensure you
 
 ## Before You Begin
 
+You should:
 
-You should:   
 - [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.
-- Have access to a command-line environment, preferably with administrative privileges.  
+- Have access to a command-line environment, preferably with administrative privileges.
 
 **Please Note: Load testing should only be performed on the Live environment**. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
 
@@ -29,7 +29,6 @@ High-performance is the ability to deliver a page in under a second; scalability
 ## Verify Varnish is Working
 
 To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the curl command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
-
 
     $ curl -I http://live-yoursite.gotpantheon.com
     HTTP/1.1 200 OK
@@ -76,12 +75,11 @@ The command returns the following results. Note the appended timestamp at the bo
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-
     real 0m0.874s
     user 0m0.036s
     sys 0m0.004s
 
-As an added bonus, you can test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID. 
+As an added bonus, you can test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID.
 
 To get the PHP-Session ID, log in to your site and check the browsers cookie setting and value. The Session ID can be passed in the following way:
 
@@ -108,18 +106,14 @@ As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 p
     Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
     Licensed to The Apache Software Foundation, http://www.apache.org/
 
-
     Benchmarking http://live-yoursite.gotpantheon.com (be patient).....done
-
 
     Server Software: 10.176.69.43
     Server Hostname: http://live-yoursite.gotpantheon.com
     Server Port: 80
 
-
     Document Path: /
     Document Length: 30649 bytes
-
 
     Concurrency Level: 5
     Time taken for tests: 12.854 seconds
@@ -133,14 +127,12 @@ As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 p
     Time per request: 128.541 [ms] (mean, across all concurrent requests)
     Transfer rate: 236.92 [Kbytes/sec] received
 
-
     Connection Times (ms)
                   min mean[+#sd] median max
     Connect: 60 81 32.5 73 258
     Processing: 411 554 150.2 496 1213
     Waiting: 82 131 100.5 109 794
     Total: 471 635 162.9 574 1280
-
 
     Percentage of the requests served within a certain time (ms)
       50% 574
@@ -155,7 +147,7 @@ As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 p
 
 The output provides insight into the requests per second, the most critical element in regards to the scalability of a site. Pay attention to the 90/95% response time as well, as this gives an idea of how the site is actually performing. Check that the number of failed requests is 0; if it's not, this should be investigated.
 
-**Note:** Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different. 
+**Note:** Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.
 
 ## Performance Goals
 
@@ -167,7 +159,7 @@ Emulating a logged in user's experience with "ab" is a key metric, as it provide
 
 There are a number of other tools to consider when you are planning your load testing strategy. This can vary by the need for detail, nature of your site, or requirements for quality analysis.
 
-<table class=table>
+<table class="table">
 <tbody>
 		<tr>
 			<th>Testing Tool</th>
@@ -195,9 +187,9 @@ There are a number of other tools to consider when you are planning your load te
 			<td><a href="https://secure.blitz.io/pricing">Pricing</a></td>
 		</tr>
 	</tbody>
-	</table>
-	
+</table>
+
 ## Next Steps
 
 - Enable Redis (if you haven't already) to alleviate database bottlenecks.
-- Debug and Profile your Drupal codebase. If you find a bottleneck you can't resolve, contact support.
+- Debug and Profile your website codebase. If you find a bottleneck you can't resolve, contact support.
