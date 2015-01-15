@@ -6,13 +6,16 @@ machine:
 
 dependencies:
   post:
-    # Build and run Sculpin
+    # Build the static site
     - ./vendor/bin/sculpin generate
 test:
   pre:
-    # This is where the documentation will be tested, so start the server.
+    # Start Sculpin
     - ./vendor/bin/sculpin server:
         background: true
+  override:
+    # Run behat
+    - ./vendor/bin/behat
 # Custom notifications
 notify:
   webhooks:
