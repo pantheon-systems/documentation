@@ -67,9 +67,11 @@ One of the best things about Pantheon is that it's a great way to collaborate wi
 
 1. Click "Team" in the upper-right of the site dashboard.
 2. Click "Add supporting organization" at the bottom of the team management modal.
-3. Type the complete name of the organization.
+3. Type the complete name of the organization. An exact match is required.
 4. Confirm that the organization is the one you expected.
 
-_(TODO: screenshot)_
+ ![Add a supporting organization button](/docs/assets/images/multi_org1.jpg)
+
+ ![Confirm supporting organization](/docs/assets/images/multi_org2.jpg)
 
 Please note: since supporting organizations have full access to a site, only the site owner can perform this action.
