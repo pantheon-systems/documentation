@@ -21,11 +21,11 @@ That's why we took care to engineer a Drush interface into our [runtime matrix](
 ### <span style="color: red">Background</span>
 <span style="color: red">Here you can provide any background information as needed. Any additional technical info or context. Optional, but this is highly valuable if done well.
 
-Things to consider including:
+<span style="color: red">Things to consider including:
 
-Environment: things you'll need in order to follow this guide.
+<span style="color: red">Environment: things you'll need in order to follow this guide.
 
-Key Concepts: stuff you'll need to understand; may link to external references. this is a great place to include a diagram to help the reader work with a solid "mental model" of the situation.</span>
+<span style="color: red">Key Concepts: stuff you'll need to understand; may link to external references. this is a great place to include a diagram to help the reader work with a solid "mental model" of the situation.</span>
 
 ## <span style="color: red">Action Section</span>
 
