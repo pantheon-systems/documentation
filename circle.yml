@@ -5,19 +5,17 @@ machine:
     version: 5.5.11
 
 dependencies:
-  pre:
-    # Run composer
-    - composer install --prefer-source --no-interaction
-  override:
-    # Build and run Sculpin
+  post:
+    # Build the static site
     - ./vendor/bin/sculpin generate
 test:
-  override:
-    # This is where the documentation will be tested
+  pre:
+    # Start Sculpin
     - ./vendor/bin/sculpin server:
         background: true
+  override:
+    # Run behat
     - ./vendor/bin/behat
-  post:
 # Custom notifications
 notify:
   webhooks:
