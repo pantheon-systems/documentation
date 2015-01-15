@@ -1,6 +1,5 @@
 **DOCUMENTATION STYLE GUIDE**
 
-
 # About This Guide
 
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
@@ -159,7 +158,7 @@ When linking to an article in a sentence, use the exact title of the article if 
 For help with SSH keys, see Generating SSH Keys.
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
-In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, Wordpress post").
+In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
 
@@ -308,9 +307,9 @@ Company-wide holiday, eight-hour day, long-term care
 
 Slash (/): Avoid. Use "or," “and,” or “or both” instead.
 
-## Referring to Drupal or Wordpress
+## Referring to Drupal or WordPress
 
-Atomic/Official Documentation: When you’re writing technical documentation and the instructions include steps performed in the Drupal or Wordpress systems,  refer the reader to the Drupal or Wordpress helpdesk by creating a link to it,  rather than writing the instructions yourself.  Otherwise, we will have to constantly update our documentation as the Drupal and Wordpress interfaces change (creating a maintenance headache).
+Atomic/Official Documentation: When you’re writing technical documentation and the instructions include steps performed in the Drupal or WordPress systems, refer the reader to the Drupal or WordPress helpdesk by creating a link to it,  rather than writing the instructions yourself.  Otherwise, we will have to constantly update our documentation as the Drupal and WordPress interfaces change (creating a maintenance headache).
 
 **Example**:
 
