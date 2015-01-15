@@ -6,10 +6,11 @@ category:
   - getting-started
 ---
 
- ## Overview  
+## Overview  
  **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 
-1. Prepare for import. You will need a zip or tar.gz archive of your site in three separate files:
+##Prepare for Import  
+You will need a zip or tar.gz archive of your site in three separate files:
 
 * Codebase - all executable code, plugins, themes, and so forth.
 
@@ -23,7 +24,7 @@ Popular plugins like [Duplicator](http://wordpress.org/plugins/duplicator/) and 
 
 Of course you can make an import archive by hand. You simply dump your existing database into a file ending with “.sql”, and make an archive file (zip or tar.gz) that contains that dump along with all your WordPress code.
 
-2. Add and Name a Site
+## Add and Name a Site
 
 After you have created an account, you can log in and will be directed to your dashboard.
 
@@ -31,23 +32,23 @@ After you have created an account, you can log in and will be directed to your d
 ![Your sites & account dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/247520)
 
 
-Click on "Add a site." You will first be prompted to name the site. The only valid characters are letters, numbers and dashes. Enter a name and click continue.
+Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click continue.
 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247523)
 
-3. Wait While This Happens
+## Wait While It's Configured
 
 You will then have a short wait while Pantheon creates and allocates the resources for your site's environments. This takes only a few minutes under normal circumstances.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
 
-4. Choose Start State
+## Choose a Start State
 
-You now have several options. Rather than start with one of our preconfigured start states, we will import our code, database and files.
+You now have several options. Rather than start with one of our preconfigured start states, we will import our code, database, and files.
 
 
-Select “Import manually.”
+Select “**mport manually**.
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247521)  
 
@@ -62,15 +63,15 @@ Alternatively, you can enter the URL to your site code (required), user files (o
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247522)
 
-5. Relax While We Configure Your Codebase
+## Relax While We Configure Your Codebase
 
 
-Click “Import site” and wait while we import and configure your site.
+Click **Import site** and wait while we import and configure your site.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
 
 
-6. Completed Spinup
+## Completed Spinup
 
 
 When complete, just click the button to visit your Pantheon Dashboard.
@@ -101,7 +102,7 @@ You will eventually have three environments (development, test, and live), each 
 
 You are ready to start development, or if your site is ready to go, to create your test and live environments!
 
-Currently we are shipping with one included/recommended plugin, which is designed to make WordPress play well with our high-performance Edge cache layer.
+Currently, we are shipping with one included/recommended plugin, which is designed to make WordPress play well with our high-performance Edge cache layer.
 
 It sets a default cache lifetime of 10 minutes, and will automatically clear post pages (and taxonomy lists) when new content is created or updated. You can also manually flush the whole cache for a site.
 

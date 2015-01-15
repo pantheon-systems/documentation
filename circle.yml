@@ -1,0 +1,24 @@
+# https://circleci.com/docs/configuration#machine
+machine:
+  php:
+    # https://circleci.com/docs/environment#php
+    version: 5.5.11
+
+dependencies:
+  pre:
+    # Run composer
+    - composer install --prefer-source --no-interaction
+  override:
+    # Build and run Sculpin
+    - ./vendor/bin/sculpin generate
+test:
+  override:
+    # This is where the documentation will be tested
+    - ./vendor/bin/sculpin server:
+        background: true
+    - ./vendor/bin/behat
+  post:
+# Custom notifications
+notify:
+  webhooks:
+    # A list of hashes representing hooks. Only the url field is supported.

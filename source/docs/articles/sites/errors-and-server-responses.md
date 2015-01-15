@@ -60,11 +60,11 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 ### Pantheon - 503 Target not responding
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184854)
 
-"The web page you were looking for could not be delivered." No DROPs are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each DROP has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the DROP cannot accept any more requests.
+"The web page you were looking for could not be delivered." No Application Containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each Application Container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the Application Container cannot accept any more requests.
 
 We could increase the nginx queue above 100, but it would only mask the problem for longer. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
-This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the DROP for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
+This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the Application Container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
 
 ### Pantheon - 503 Database not responding
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184855)

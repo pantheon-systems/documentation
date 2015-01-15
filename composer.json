@@ -1,0 +1,18 @@
+{
+    "name": "Pantheon Systems",
+    "description": "Documentation for Pantheon",
+    "keywords": ["pantheon", "drupal", "wordpress"],
+    "homepage": "https://www.getpantheon.com/",
+    "type": "project",
+    "require": {
+        "drush/drush": "6.2.0",
+        "sculpin/sculpin": "2.*@dev",
+        "dflydev/embedded-composer-console": "@dev",
+        "dflydev/embedded-composer-core": "@dev",
+        "composer/composer": "@dev",
+        "behat/behat": "2.5.*@stable",
+        "behat/mink": "1.5.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*"
+    }
+}
