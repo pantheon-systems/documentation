@@ -17,12 +17,12 @@ Click the **Team** link in the upper-right corner of your site's workspace.
 
 ## Add a Team Member
 
-If there is another person (e.g. client, manager, accountant, or developer) who has the payment information, you can add them as a team member and they can add their own card data and associate it with your site. The person paying for a site is considered the "owner" and cannot be removed from the site team.  
+If there is another person (e.g. client, manager, accountant, or developer) who has the payment information, you can add them as a team member and they can add their own card data and associate it with your site. The person paying for a site is considered the "owner" and cannot be removed from the site team.
 
 
  ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87612)
 
-Click the **Add team member** button in the team management modal and enter the email address of an existing Pantheon user.  
+Click the **Add team member** button in the team management modal and enter the email address of an existing Pantheon user.
 
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
@@ -38,12 +38,12 @@ Once they have successfully signed up for an account, they will be automatically
 
 ## Remove a Team Member
 
-In the event that you need to remove a team member from your site, you can do this from the "Configuration" tab. All users can be removed except the "site owner".   
+In the event that you need to remove a team member from your site, you can do this from the "Configuration" tab. All users can be removed except the "site owner".
 
 
  ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87604)
 
-After clicking the Remove button, a window will open and you can review your selection.  
+After clicking the Remove button, a window will open and you can review your selection.
 
 
 
@@ -56,7 +56,24 @@ The owner of a site can be changed in a few simple steps:
 1. Click **Team** in the upper-right of the site dashboard.
 2. Click **Make Owner** next to the team member that should receive ownership of the site.
 
-The new site owner now has the ability to add a credit card or change the site plan.  
+The new site owner now has the ability to add a credit card or change the site plan.
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/278835)
+ ![Make owner](https://www.getpantheon.com/sites/default/files/docs/desk_images/278835)
+
+
+## Add a Supporting Organization
+
+One of the best things about Pantheon the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon partner or ally agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
+
+1. Click **Team** in the upper-right of the site dashboard.
+2. Click **Add Supporting Organization** at the bottom of the team management modal.
+3. Enter the complete name of the agency. An exact match is required.
+4. Check that the agency is the one you expected.
+5. Click **Confirm** to make them a supporting organization.
+
+ ![Add a supporting organization button](/docs/assets/images/multi_org1.jpg)
+
+ ![Confirm supporting organization](/docs/assets/images/multi_org2.jpg)
+
+**Note:** Because supporting organizations have full access to a site, only the site owner can perform this action.
