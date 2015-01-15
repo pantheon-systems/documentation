@@ -25,7 +25,7 @@ That's why we took care to engineer a Drush interface into our [runtime matrix](
 
 <span style="color: red">Environment: things you'll need in order to follow this guide.
 
-<span style="color: red">Key Concepts: stuff you'll need to understand; may link to external references. this is a great place to include a diagram to help the reader work with a solid "mental model" of the situation.</span>
+<span style="color: red">Key Concepts: stuff you'll need to understand; may link to external references. This is a great place to include a diagram to help the reader work with a solid "mental model" of the situation.</span>
 
 ## <span style="color: red">Action Section</span>
 
@@ -102,4 +102,5 @@ Congratulations! You're now the proud owner of a lean, mean, command-line script
 <span style="color: red">Show links to related or more advanced guides.</span>
 
 Next Steps: Using drush for local development
+
 Using terminus for common dashboard commands
