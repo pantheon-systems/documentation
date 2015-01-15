@@ -5,19 +5,14 @@ machine:
     version: 5.5.11
 
 dependencies:
-  pre:
-    # Run composer
-    - composer install --prefer-source --no-interaction
-  override:
+  post:
     # Build and run Sculpin
     - ./vendor/bin/sculpin generate
 test:
-  override:
-    # This is where the documentation will be tested
+  pre:
+    # This is where the documentation will be tested, so start the server.
     - ./vendor/bin/sculpin server:
         background: true
-    - ./vendor/bin/behat
-  post:
 # Custom notifications
 notify:
   webhooks:
