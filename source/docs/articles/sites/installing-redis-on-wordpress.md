@@ -34,8 +34,11 @@ Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugi
   * After you install the plugin, do not activate the plugin.
 2. Go to the WP-Redis plugin directory (wp-content/plugins/wp-redis/) and **move** the file object-cache.php to the directory (wp-content/).
   * Make sure the object-cache.php file is deleted from the WP-Redis directory.
-3. Log in to the WordPress dashboard, go to the Plugins section, and click on **Drop-Ins**.
-  * This is one way to confirm that the plugin has been setup correctly. Another way to verify the configuration is by using the redis-cli. 
+3. Log in to the WordPress dashboard, go to the Plugins section, and click on **Drop-Ins**.  
+
+![Plugin drop ins](/docs/assets/images/plugin-drop-ins.png)  
+
+This is one way to confirm that the plugin has been setup correctly. Another way to verify the configuration is by using the redis-cli.
 
 
 ### Use the Redis Command-Line Client
@@ -72,5 +75,7 @@ To check if a specific key exists, you can pass the exists command. For example:
 You do not need to activate the plugin. Once you install it, move the `object-cache.php` file over the the **/wp-content/** directory and delete `object-cache.php` from the WP-Redis directory on the server.
 
 ### Fatal Error in the WordPress Dashboard
+
+![Plugin fatal error redis](/docs/assets/images/redis-plugin-fatal-error.png)
 
 If you are seeing the error message `Fatal error: Cannot redeclare class WP_Object_Cache...` then you have not deleted the `object-cache.php` from the WP-Redis plugin directory.
