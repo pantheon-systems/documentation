@@ -8,8 +8,8 @@ category:
 
 ## Before You Begin
 
-Make sure that you have:
-- A site w/ CDN module or plug-in installed
+Make sure that you have:  
+- A site w/ CDN module or plug-in installed  
 - Signed-up for Amazon Web Services and are familiar with the interface
 
 ## About Amazon CloudFront
