@@ -17,7 +17,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git -- common tools in we
 
 We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an efficient Developer on Pantheon should quickly understand:
 
-- [Known platform considerations](/docs/articles/drupal/known-limitations/) on Pantheon.
+- [Known platform considerations](/docs/articles/sites/known-limitations/) on Pantheon.
 - The [Pantheon Getting Started](/docs/articles/getting-started) guide exists.
 - The [technology](/docs/articles/architecture/all-about-application-containers/) behind Pantheon.
 - The Pantheon [Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
