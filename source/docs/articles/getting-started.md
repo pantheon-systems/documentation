@@ -22,20 +22,12 @@ Next, enter your account information and click **Continue**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214016)
 
-## Verify Your Email Address
-
-Before you can create a site, you'll need to verify your email by clicking a one-time verification link sent to the email you specified.   
-
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180002)  
-
-If you don't see the email immediately, check your spam folder. If you still haven't received it after 15 minutes, click the resend verification link from the dashboard, or contact support by submitting a ticket.
-
 ## Create a Site
 
-Once your email is verified, you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
+Now you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
 
 
-Start by clicking **Create a site now**.  
+Start by clicking **Create a site now**.
 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180010)
