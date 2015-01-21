@@ -24,7 +24,7 @@ Next, enter your account information and click **Continue**.
 
 ## Create a Site
 
-Now, you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
+Now you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
 
 
 Start by clicking **Create a site now**.
