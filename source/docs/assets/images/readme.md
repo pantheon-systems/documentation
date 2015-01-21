@@ -32,7 +32,7 @@ The Alt attribute should convey the meaning of the image as closely as possible.
 
 The code: `![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png)`
 
-will yeilds:
+will yeild:
 ![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png) 
 
 ## Committing Docs with Images
