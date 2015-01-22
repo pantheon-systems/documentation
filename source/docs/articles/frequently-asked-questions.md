@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: Answers to common questions about using Pantheon.
 category:
-  - getting-started
+- getting-started
 
 ---
 
@@ -20,6 +20,10 @@ You can read more about our support offerings on [our pricing page](https://getp
 
 Pantheon supports Drupal 6 and 7, as well as development sandboxes for Drupal 8.
 
+## What versions of WordPress does Pantheon support?
+
+Pantheon supports the most recent release of WordPress via [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured wp-config.php.
+
 ## How does Pantheon work with DNS?
 
 Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider.
@@ -30,7 +34,7 @@ In order for your site to begin "listening" for your domain, you must first beco
 
 Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://getpantheon.com/pricing).
 
-## Can Pantheon run Drupal on highly available server clusters?
+## Can Pantheon run sites on highly available server clusters?
 
 Yes. Pantheon sites run on a highly available clustered infrastructure. The primary upstream provider is Rackspace.
 
@@ -42,23 +46,34 @@ All Pantheon servers are currently located in the United States. We have plans t
 
 Not at the moment, but we're looking for a way to support it that allows us to maintain tight integration with our workflow visualization and tools.
 
-## Does Pantheon Support Drupal Multisite?
+## Does Pantheon support Drupal Multisite?
 
 No. Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. There are inherent risks when running multisite. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites. The codebase also becomes a single point of failure.
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
+## Does Pantheon support WordPress Multisite?
+
+No. While WordPress Mulitsites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
+
 ## Does Pantheon support Drush?
 
 Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/news/drush-aliases-available) to use in your local environment.
+
+## Does Pantheon support WP-CLI?
+
+Yes. [The Pantheon CLI (Terminus)](https://github.com/pantheon-systems/cli) incorporates WP-CLI commands so that users can perform operations on the Pantheon platform.
 
 ## Does Pantheon support local development?
 
 Yes. Local development is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
-## How does cron work on Pantheon?
+## How does cron work with Drupal on Pantheon?
 
 The plafrorm will use drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and drush aliases.
+
+## How does cron work with WordPress on Pantheon?
+
 
 ## Does Pantheon Have FTP or Shell access?
 
@@ -98,10 +113,10 @@ Live sites on Pantheon v1 will be supported as long as necessary, though we also
 
 Pantheon v1 is accessed via the bare \*getpantheon.com\* domain, and looks like this:
 
-![v1 Example](https://www.getpantheon.com/sites/default/files/docs/desk_images/27145)
+![v1 Example](https://pantheon-systems.desk.com/customer/portal/attachments/27145)
 
 The v2 product is accessible via \*dashboard.getpantheon.com\* and looks like this:
 
-![v2 screenshot](https://www.getpantheon.com/sites/default/files/docs/desk_images/27147)
+![v2 screenshot](https://pantheon-systems.desk.com/customer/portal/attachments/27147)
 
 Accounts between the two products are not linked. If you have sites on both, you will need to log into the dashboards separately.
