@@ -70,7 +70,7 @@ Create an archive that is stored outside of your Drupal site root that contains 
     # Change directory to the source folder.
     cd $SOURCE
     # Create an archive that excludes sites/default/files.
-    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files*.
+    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
 
 ## Export the Database
 
