@@ -100,23 +100,3 @@ Because PCI certifications have yet to catch up to modern cloud infrastructures,
 ## How do I increase the maximum execution time limit for a PHP script?
 
 The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
-
-## What is the difference between Pantheon v1 and v2?
-
-Pantheon v1 (sometimes referred to as the "legacy" version) was launched in early 2011 and has been supporting live sites since the middle of that year. It has had several iterations of revision and is considered stable and secure for all but the most extreme use-cases.
-
-Pantheon v2 is a complete rebuild of the platform, launched in October of 2011. It has many capabilities which were not possible in v1, as well as an improved dashboard and user-interface. New feature development is focused on the v2 product.
-
-Live sites on Pantheon v1 will be supported as long as necessary, though we also support migrations if site-owners or developers are interested.
-
-## How do I know if I am on v1 or v2?
-
-Pantheon v1 is accessed via the bare \*getpantheon.com\* domain, and looks like this:
-
-![v1 Example](https://pantheon-systems.desk.com/customer/portal/attachments/27145)
-
-The v2 product is accessible via \*dashboard.getpantheon.com\* and looks like this:
-
-![v2 screenshot](https://pantheon-systems.desk.com/customer/portal/attachments/27147)
-
-Accounts between the two products are not linked. If you have sites on both, you will need to log into the dashboards separately.
