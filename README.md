@@ -22,7 +22,8 @@ documentation, which is:
 Usage
 -----
 
-Fork this repository. Issue pull-requests one document at a time.
+#### 0. Get the code.
+Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Running Locally
 
