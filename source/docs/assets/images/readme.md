@@ -1,5 +1,5 @@
 # Images
-Images should show users single actions, in context. Use more than one image to show a procedure so that users can track the differences, especially cause/effect relationships. 
+Images represent a user's single action, in context. Use one image for each step of a procedure so that users can track the differences, especially cause/effect relationships. 
 Save images inside of this directory, no matter the location of the document(s) that contain them. 
 
 ## Capturing Screenshots
@@ -17,7 +17,7 @@ Use [Skitch](https://evernote.com/skitch/ "Skitch download page") to __add meani
     - User email addresses which show in team modals and on the org dashboard's people tab. 
     - Site names, if they cannot be cropped out.
     - Site connection information and passwords (add text to indicate what is missing if necessary)
- - __Arrow:__ Use sparingly. Arrows convey direction or motion. Rectangles are better at highlighting areas of the screen, and text proximity is better for indicating locations
+ - __Arrow:__ Use sparingly. Arrows convey direction or motion. Rectangles and underlines are better at highlighting areas of the screen, and text proximity is better for indicating locations. Arrows may also be used for labeling multiple things with the same word. (Ari's different target emails in the reroute_email guide may fit here) 
 
 ## Saving Images
 Use the .png file format.
@@ -30,10 +30,12 @@ Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title
 
 The Alt attribute should convey the meaning of the image as closely as possible. The Title attribute is optional, and if used, should only elaborate on the Alt attribute. It will be shown to users when their cursor hovers over the image. The example below omits the title attribute
 
-The code: `![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png)`
+The code: `![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/docs/assets/images/dev-code-pendingchanges-commit.png)`
 
 will yield:
 ![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png) 
+
+__Note:__ Images will not show on github, because the docroot is different than the production server. This is normal. To see images, you must preview on your local sculpin build. The code generating the image above prepends /source to the code snippet that generates it.
 
 ## Committing Docs with Images
 Add image files and the docs they are embedded in to a single commit. 
