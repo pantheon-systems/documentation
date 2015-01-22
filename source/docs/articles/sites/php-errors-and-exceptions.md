@@ -20,74 +20,75 @@ For a more in-depth discussion on errors in PHP in general, see the PHP document
 Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if db\_log is enabled for Drupal. The PHP constants WP_DEBUG and WP_DEBUG_LOG can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application server at logs/php-error.log.
 
 Here's a breakdown of what errors are shown and where:
-
+<table>
 <thead>
 		<tr>
-			<th>Environment</th>
-			<th>Severity</th>
-			<th>Browser</th>
-			<th>Watchdog</th>
+			<th align="left" style="width: 130px">Environment</th>
+			<th align="left" style="width: 130px">Severity</th>
+			<th align="left" style="width: 130px">Browser</th>
+			<th align="left" style="width: 130px">Watchdog</th>
 			<th>logs/php-error.log</th>
 		</tr>
 	</thead><tbody>
 		<tr>
-			<td align="center" rowspan="3" style="vertical-align:middle;">dev</td>
-			<td align="center">notice</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">dev</td>
+			<td align="left">notice</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center">warning</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left">warning</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center" style="border-bottom:1px solid black;">error</td>
-			<td align="center" style="border-bottom:1px solid black;"><strong>Y</strong></td>
-			<td align="center" style="border-bottom:1px solid black;">N</td>
-			<td align="center" style="border-bottom:1px solid black;"><strong>Y</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">error</td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">N</td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="center" rowspan="3" style="vertical-align:middle;">test</td>
-			<td align="center">notice</td>
-			<td align="center">N</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">test</td>
+			<td align="left">notice</td>
+			<td align="left">N</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center">warning</td>
-			<td align="center">N</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left">warning</td>
+			<td align="left">N</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center" style="border-bottom:1px solid black;">error</td>
-			<td align="center" style="border-bottom:1px solid black;">N</td>
-			<td align="center" style="border-bottom:1px solid black;">N</td>
-			<td align="center" style="border-bottom:1px solid black;"><strong>Y</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">error</td>
+			<td align="left" style="border-bottom:1px solid black;">N</td>
+			<td align="left" style="border-bottom:1px solid black;">N</td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="center" rowspan="3" style="vertical-align:middle;">live</td>
-			<td align="center">notice</td>
-			<td align="center">N</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left" rowspan="3" style="vertical-align:middle;">live</td>
+			<td align="left">notice</td>
+			<td align="left">N</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center">warning</td>
-			<td align="center">N</td>
-			<td align="center"><strong>Y</strong></td>
-			<td align="center">N</td>
+			<td align="left">warning</td>
+			<td align="left">N</td>
+			<td align="left"><strong>Y</strong></td>
+			<td align="left">N</td>
 		</tr>
 		<tr>
-			<td align="center">error</td>
-			<td align="center">N</td>
-			<td align="center">N</td>
-			<td align="center"><strong>Y</strong></td>
+			<td align="left">error</td>
+			<td align="left">N</td>
+			<td align="left">N</td>
+			<td align="left"><strong>Y</strong></td>
 		</tr>
 	</tbody>
+</table>
 
 To learn more about PHP error logs, see our article on  [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files/).
 
