@@ -13,11 +13,11 @@ There are three basic kinds of PHP errors:
 
 - **Notice**  - room for improvement; typically unset variables or missing array keys.
 - **Warning**  - errors will probably occur if not addressed.
-- **Error**  - fatal, execution terminated. Often known as the "white screen of death" in Drupal.
+- **Error**  - fatal, execution terminated. Often known as the "white screen of death".
 
 For a more in-depth discussion on errors in PHP in general, see the PHP documentation on  [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in Drupal's database logs if db\_log is enabled, and PHP errors are logged on the application server at logs/php-error.log.
+Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if db\_log is enabled for Drupal. The PHP constants WP_DEBUG and WP_DEBUG_LOG can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application server at logs/php-error.log.
 
 Here's a breakdown of what errors are shown and where:
 
@@ -101,19 +101,16 @@ If database logging is enabled, your site will be even slower, requiring a datab
 
 
 
-Best practice is to fix every notice, warning, and error as you discover them. If they're in a contrib module, roll a patch and submit it to the project's issue queue.  
-
+Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (Drupal module or WordPress plugin), roll a patch and submit it to the project's issue queue.
 
 
 See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP Unhandled Exceptions on Pantheon
 
-​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the  [PHP documentation on Exceptions.  
+​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](http://php.net/manual/en/language.exceptions.php)  
 
-​](http://php.net/manual/en/language.exceptions.php)  
-
-PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will  [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
+PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Handling Undefined Index Notices for PHP Variables
 
