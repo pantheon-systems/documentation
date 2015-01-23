@@ -43,7 +43,7 @@ However, because the Pantheon environment data is not loaded at this time, any b
       # Include any other settings.php magic here.
       include './sites/all/modules/domain/settings.inc';
 
-###Drupal 7 Style
+### Drupal 7 Style
 
     # Include any other settings.php magic here.
       extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
