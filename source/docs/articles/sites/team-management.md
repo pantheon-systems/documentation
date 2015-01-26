@@ -72,8 +72,8 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 4. Check that the agency is the one you expected.
 5. Click the Add button to make them a supporting organization.
 
- ![Add a supporting organization button](/docs/assets/images/multi_org1.jpg)
+ ![Add a supporting organization button](/source/docs/assets/images/multi_org1.jpg)
 
- ![Confirm supporting organization](/docs/assets/images/multi_org2.jpg)
+ ![Confirm supporting organization](/source/docs/assets/images/multi_org2.jpg)
 
 **Note:** Because supporting organizations have full access to a site, only the site owner can perform this action.
