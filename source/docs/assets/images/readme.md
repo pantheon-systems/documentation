@@ -1,6 +1,6 @@
 # Images
 Images represent a user's single action, in context. Use one image for each step of a procedure so that users can track the differences, especially cause/effect relationships. 
-Save images inside of this directory, no matter the location of the document(s) that contain them. 
+Save images inside of this directory, no matter the location of the document that contains them. 
 
 ## Capturing Screenshots
 
@@ -11,7 +11,7 @@ Capture only as much of the screen as needed to convey the action users will per
 
 ## Annotating images
 
-Do not annotate images. If extra menaing is needed, we will add markup to images in a consistent manner. This section will change once our markup standards and workflow are set. 
+Do **not** annotate images. If extra meaning is needed, we will add markup to images in a consistent manner. This section will change once our markup standards and workflow are set. 
 
 ## Saving Images
 Use the .png file format. Images with skitch annotations will be saved in skitch png.
