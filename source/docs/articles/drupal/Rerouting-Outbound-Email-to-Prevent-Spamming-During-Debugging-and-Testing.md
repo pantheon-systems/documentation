@@ -25,7 +25,7 @@ $ git push origin master
 ```
 Now check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/.png)
+![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/dashboard-commits.png)
 
 ##Configuration
 
@@ -95,11 +95,11 @@ $ drush @pantheon.mysite.dev reroute_email en -y
 ```
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/.png)
+![The Reroute Email Configuration menu shows the email settings](/docs/assets/images/reroute-email-config-settings.png)
 
 If you don’t see what you’re expecting, review your settings.php and ensure the commit is showing on your Dashboard:
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/.png)
+![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/dashboard-commits-2.png)
 
 ##Go Forth and Test
 
@@ -108,10 +108,10 @@ That’s it! Now when Drupal sends out an email from any environment (except Liv
 ##See Reroute Email In Action
 To see exactly what we did, I forked a new [MultiDev](https://www.getpantheon.com/docs/articles/sites/multidev/) CDE called ```demo``` and requested a new account:
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/.png)
+![The Reroute Email module account creation page](/docs/assets/images/reroute-email-account-requested.png)
 
 Requesting a new account fires off two emails: one to the requestor and another to the site owner; both are successfully rerouted to the email address defined in settings.php:
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/.png)
+![Email showing the reroute was successful](/docs/assets/images/reroute-email-confirmation.png)
 
 
