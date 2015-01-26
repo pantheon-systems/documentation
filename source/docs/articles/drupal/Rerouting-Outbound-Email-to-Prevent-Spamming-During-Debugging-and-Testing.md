@@ -20,7 +20,7 @@ $ git add sites/all/modules/contrib/reroute_email
 ```
 I previously created the contrib directory so I can quickly differentiate between contributed and custom modules. Drush knows to download into the contrib directory if it exists.
 ```
-$ git commit -m “Add reroute_email module”
+$ git commit -m "Add reroute_email module"
 $ git push origin master
 ```
 Now check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
