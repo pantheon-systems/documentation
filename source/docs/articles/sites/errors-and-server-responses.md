@@ -16,7 +16,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 There are two variations on the messages; one for sites hosted on \*.gotpantheon.com (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
 
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
 
 
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
@@ -27,7 +27,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 "This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
 
 
-In some circumstances, a 401 can be triggered by Drupal inadvertently if a site environment is locked, a user passes the HTTP auth but Drupal sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
+In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
 
@@ -35,7 +35,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
 
-Pantheon also prevents public access via the webserver to private files, Drupal's .htaccess, and directory listings.
+Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
 ### Pantheon - 404 Unknown Site
 
@@ -55,7 +55,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 ### Pantheon - 503 Target in maintenance
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184852)
 
-"The web site you were looking for is currently undergoing maintenance." This is  **not** Drupal's maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
+"The web site you were looking for is currently undergoing maintenance." This is  **not**  the CMS maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
 ### Pantheon - 503 Target not responding
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184854)
@@ -91,13 +91,13 @@ There are many things which could cause your site to exceed the request timeout 
 
 ## Administrative Pages
 
-It is unfortunately possible for some normal operations in Drupal to outlast the request timeout. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on sites with large numbers of modules and/or a lot of data and activity.
+It is unfortunately possible for some normal administrative operations to outlast the request timeout. Submitting the modules page in Drupal, manually running cron, running update.php, or flushing caches can be extremely slow operations on sites with large numbers of modules and/or a lot of data and activity.
 
 If you are seeing request timeouts for administrative operations, you may be able to address this by optimizing your application, or by using a work-around (see below).
 
 ## Slow Queries / High Query Volume
 
-Pages which leverage a large number of Drupal views can often bog down because of the slow speed of the queries. It can also happen that a sufficiently high query volume (1,000+ queries on one page) can push things over the edge.
+Pages which leverage a large number of views can often bog down because of the slow speed of the queries. It can also happen that a sufficiently high query volume (1,000+ queries on one page) can push things over the edge.
 
 Individually slow queries should be refactored if possible. However, often cacheing can help mitigate slow queries or high query volumes quickly. There will still be slow page loads when the cache needs to be populated, but subsequent page-loads should be speedier.
 
