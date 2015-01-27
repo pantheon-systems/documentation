@@ -63,7 +63,7 @@ A nice feature of the Git GUI is that it can set the PATH variable for you. If y
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/46909)
 
-Choose option: "Checkout Windows-style..." (unless you prefer checking out with Unix line endings). It's really up to you, but most Drupal code has Unix line endings.
+Choose option: "Checkout Windows-style..." (unless you prefer checking out with Unix line endings). It's really up to you, but most site code has Unix line endings.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/46910)
 
