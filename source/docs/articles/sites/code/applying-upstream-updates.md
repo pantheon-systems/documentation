@@ -9,13 +9,13 @@ category:
 
 ## Overview
 
-**Note: Only use the one-click updates on the dashboard to update your Drupal core. Do not update core using Drush; you will overwrite your core.**
+**Note: Only use the one-click updates on the dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.**
 
-**You cannot unpack a tarball from Drupal.org; this will overwrite the Pressflow core's auto-configuration feature and your site will lose its database connection.**
+**You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.**
 
 If you have overwritten core, see [Undo git commits like overwriting Drupal core](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
-Drupal Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we we will add new features to the Pantheon API module, and deploy bug fixes ahead of a Drupal Core release. Typically, if there’s an update available, you're better off merging it. 
+Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. Typically, if there’s an update available, you're better off merging it. 
 
 Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
@@ -45,7 +45,7 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 
 ## Debug Failed Merges
 
-If the automated Drupal core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve. Here are debugging steps to find and correct the conflicts.
+If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve. Here are debugging steps to find and correct the conflicts.
 
 ## Auto-Resolve Conflicts
 
@@ -75,6 +75,13 @@ From within an up-to-date Git clone in your local environment:
     # resolve other conflicts
     git push origin master
 
+## Resolve Conflicts Locally with WordPress
+
+From within an up-to-date Git clone in your local environment:
+
+    git pull git://github.com/pantheon-systems/WordPress.git master
+    # resolve conflicts
+    git push origin master  
 
 For more information on resolving conflicts, see the [Git FAQ page](/docs/articles/local/git-faq#FrequentlyAskedQuestions).
 
@@ -84,7 +91,7 @@ For more information on resolving conflicts, see the [Git FAQ page](/docs/articl
 
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
 
-_"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge." - __<u>Git Manual</u>_
+_"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - <u>Git Manual</u>
 
 ### Delete Merge Conflicts
 
