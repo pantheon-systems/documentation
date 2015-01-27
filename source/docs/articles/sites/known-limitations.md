@@ -81,6 +81,14 @@ Pantheon does not currently support the background process module. The module al
 
 Pantheon does not currently support the [HTTPRL](http://www.drupal.org/project/httprl) module, as it can result in severely impacted performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
-#nginx.conf
+## nginx.conf
 
 Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.
+
+## Oracle Database Drivers
+
+Pantheon does not currently support connecting to Oracle databases.  Primarily, we connect to MySQL/MariaDB databases.  Requests to connect to other external databases, possibly using the [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway), should be raised with the customer success team.
+
+## PHP/Java Bridge
+
+Pantheon does not currently support [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
