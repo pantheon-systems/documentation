@@ -1,3 +1,10 @@
+---
+title: Rerouting Outbound Email 
+description: Prevent your Drupal site's development and testing environments from sending emails to your real users, with the reroute_email module and Pantheon environment variables.
+category:
+  - developing
+  - Drupal
+---
 Because Pantheon has a workflow that allows you to work in three different environments, things can get tricky during testing and debugging. Maybe your Drupal site has a complex workflow for emailing people when action is required, or you’re redesigning email templates for your drip marketing campaign. If your Drupal site is sending mail, chances are you’ll need to do some testing.
 
 One of the nice things about Pantheon is being able to pull the Live database to other environments with the push of a button. However, it’s easy to forget to manually change a setting stored in the database, and you could end up accidentally spamming folks during debugging or quality assurance testing. While there are [other ways to manage email handling for development or testing](https://www.drupal.org/node/201981), the Drupal [Reroute Email](https://www.drupal.org/project/reroute_email) module is a great solution to this problem. You can configure it via code, so even when cloning the database between environments, its settings persist per environment. It also lets you log in to a single email account&mdash;no more logging in to a multiple email accounts just to test your business expectations.
