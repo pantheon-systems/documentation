@@ -11,15 +11,15 @@ category:
 
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
 
-![Choose your start state](/docs/assets/images/choose-your-start-state.png)
+![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you will be provided the option to give a single archive for your entire import.
 
-![Single Archive Import](/docs/assets/images/single-archive-import.png)
+![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 
 Selecting the link to provide separate code, files and database archives will give you the option to import individually.
 
- ![Separate Archives Import](/docs/assets/images/separate-archives-import.png)​
+ ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
 ## Adding a Custom Upstream
 
@@ -148,7 +148,7 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
 
-You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/drupal/configuring-settings-php).
+You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/source/docs/articles/drupal/configuring-settings-php).
 
 ## Export Files
 
@@ -165,7 +165,7 @@ The import screen allows you to toggle between uploading your archive files or s
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
-If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
+If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
 ## Drush Site Archive Format
 
