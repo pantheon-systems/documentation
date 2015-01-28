@@ -13,7 +13,7 @@ category:
 
 **You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.**
 
-If you have overwritten core, see [Undo git commits like overwriting Drupal core](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
 Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. Typically, if there’s an update available, you're better off merging it. 
 
@@ -21,7 +21,7 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 
 ## Preparation
 
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream Updates, see  [Undo git commits like overwriting Drupal core](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream Updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 - If the development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
 - If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
 - Change the development environment connection to Git. (NOTE: Changing the connection mode to Git without committing code will delete those changes.)
