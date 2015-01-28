@@ -8,7 +8,7 @@ Your site is loaded with content and is almost ready to go live. You know what i
 
 ##Performance Hits
 
-While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the dblog and fix any errors.
+While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the dblog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](https://www.getpantheon.com/docs/articles/sites/debugging-sites-with-log-files/).
 
 ##Strategy and Planning
 
