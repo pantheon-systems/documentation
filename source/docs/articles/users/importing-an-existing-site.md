@@ -9,18 +9,79 @@ category:
 
 ## Overview
 
-The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.
+The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/213957)  
+![Choose your start state](/docs/assets/images/choose-your-start-state.png)
 
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/213971)​​
+Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you will be provided the option to give a single archive for your entire import.
 
-## Components of a Drupal Site
+![Single Archive Import](/docs/assets/images/single-archive-import.png)
 
-There are three major components that make up a Drupal site:
+Selecting the link to provide separate code, files and database archives will give you the option to import individually.
 
-1. **Codebase** - all executable code, including Drupal, custom and contrib modules and themes, etc.
+ ![Separate Archives Import](/docs/assets/images/separate-archives-import.png)​
+
+## Adding a Custom Upstream
+
+### Pull Pantheon Core
+If your code requires a custom upstream, create the site with the closest available core such as Drupal 7 or WordPress. Following the steps below, you can pull Pantheon core files into your local repository.
+
+1. Navigate into your code directory within your terminal.
+2. If your existing site code is not version controlled with Git, run ```git init``` first.
+3. Copy the Upstream location from within the Dev environment (Settings>>About Site).
+4. Replace **http** with **git** and append the URL with **.git** so that it resembles the following example for Drupal 7:
+git://github.com/pantheon-systems/drops-7.git
+
+The following Git command will pull in purely the Pantheon specific core:
+
+```
+git pull --no-rebase -Xtheirs --squash [upstream-location] master
+```
+
+**Note**: Be sure and replace [upstream-location] with the Upstream location generated in Step 4 above.
+
+Once executed, that command will pull in the Pantheon core files but not commit them so you
+will be able to do a final review yourself before doing so. The following message will show when
+it's done:
+
+```
+Squash commit -- not updating HEAD
+Automatic merge went well; stopped before committing as requested
+```
+### Push Local Repository to Pantheon
+Now that your site has the Pantheon core merged in, the final step is putting it onto your Pantheon environment. On your Pantheon Dashboard, go to the Dev tab and select Code. Make sure your site is on Git mode, and copy the Git connection information found to the right of
+the Git tab.
+
+In your terminal, within the site directory, use the ```git remote add``` command with an alias to make sure you know when you are moving code to or from Pantheon. Using the Git information from the previous step, create the following command:
+
+```
+git remote add [pantheon-site-git-repo] pantheon-import
+```
+
+**Note**: Replace [pantheon-site-git-repo] with the Git information from the previous step. Also, **remove** the site name from the end of the connection information, otherwise you will get an error and the command will fail.
+
+Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
+```
+git add -A
+git commit -m "Adding Pantheon core files."
+```
+Now git pull from your Pantheon repository master branch:
+```
+git pull pantheon master
+```
+Handle any conflicts as needed and push back to your Pantheon site repository:
+```
+git push pantheon master
+```
+Look in your Dev environment Code tab. You should now see your site's pre-existing code
+commit history, plus the most recent commits adding Pantheon's core files.
+
+
+## Components of a Dynamic Site
+
+There are three major components that make up a dynamic site:
+
+1. **Codebase** - all executable code, including Core, custom and contrib modules, plugins and themes, etc.
 2. **Database** - contains the content of the site and some site configurations.
 3. **Files** - anything under sites/default/files. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
 
