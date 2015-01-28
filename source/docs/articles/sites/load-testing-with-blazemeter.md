@@ -68,7 +68,7 @@ Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add
  Location: Virtual traffic origin, dependent on client provided metrics
  Ramp Up: How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.
  Iterations: This is set to infinity by default and will allow the user behavior to loop and finish out the test.
- Duration: Somewhere between 1530 minutes.
+ Duration: Somewhere between 15 and 30 minutes.
 
 Once you've saved your load test scenario, click on the tests icon to select the test you want to run, and click Start Test (play icon).
 
