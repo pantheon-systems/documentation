@@ -50,7 +50,7 @@ Here is an example of what these settings would look like if we were to test our
 
 ###Integrate New Relic
 
-You can copy and paste your New Relic data sharing API key into the New Relic section within BlazeMeter to analyze your application performance. To accomplish this, grab your API key from within your New Relic account (Account Settings >> Integrations >> Data Sharing >> API Access) and paste it within the Add Test or Edit Test pages. Now, you'll be able to see exactly how your resources are being used during every test from the dashboard. You can even access this data after a test has been completed, allowing you compare results and track usage.
+You can copy and paste your New Relic data sharing API key into the New Relic section within BlazeMeter to analyze your application performance. To accomplish this, grab your API key from within your New Relic account (Account Settings >> Integrations >> Data Sharing >> API Access) and paste it within the Add Test or Edit Test pages. Now, you'll be able to see exactly how your resources are being used during every test from the dashboard. You can even access this data after a test has been completed, allowing you to compare results and track usage.
 
 ##Recording a Test
 
