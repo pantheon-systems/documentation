@@ -40,8 +40,8 @@ First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/bla
 - Concurrency: The number calculated according to client provided metrics
 - Load Origin: Dependent on project and traffic as outlined by client
 - User Agent: Default
-- Filter Pattern: The default filter pattern will be set to include http://*/* and https://*/* You'll want to designate the top level domain.  
-Example: http://livesitename.gotpantheon.io/) and add an asterisk at the end so it looks like http://livesitename.gotpantheon.io/* so that all pages on the top level domain are captured.
+- Filter Pattern: The default filter pattern will be set to include `http://*/*` and `https://*/*` You'll want to designate the top level domain.  
+Example: `http://livesitename.gotpantheon.io/` and add an asterisk at the end so it looks like `http://livesitename.gotpantheon.io/*` so that all pages on the top level domain are captured.
 - Advanced Options: Select **Record only Top Level Requests** and **Disable Browser Cache**
 
 Here is an example of what these settings would look like if we were to test our own site:
