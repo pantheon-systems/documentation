@@ -87,8 +87,9 @@ Pantheon does not currently support modifying the nginx.conf per site, as we run
 
 ## Oracle Database Drivers
 
-Pantheon does not currently support connecting to Oracle databases.  Primarily, we connect to MySQL/MariaDB databases.  Requests to connect to other external databases, possibly using the [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway), should be raised with the customer success team.
+How about Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway) to connect to an external API on top of their Oracle databases.
+
 
 ## PHP/Java Bridge
 
-Pantheon does not currently support [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
+Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
