@@ -75,11 +75,11 @@ $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4bf --name=cl
 
 Just like creating a site from your dashboard, this will take a few minutes. You will see a status bar as terminus spins up your new WordPress installation. Once complete though, you will be notified that you site is ready to go. 
 
-![Screenshot of the results of creating a new site with Pantheon's terminus](/docs/assets/images/command-line-terminus-create-site.png)
+![Screenshot of the results of creating a new site with Pantheon's terminus](/source/docs/assets/images/command-line-terminus-create-site.png)
 
 Your site is now set up on Pantheon but it's not quite finished. If you swap over to your dashboard and refresh it, you should see your new site. 
 
-![Screenshot of the Pantheon Unicorn letting you know that your site is ready to finish setting up](/docs/assets/images/pantheon-unicorn-wordpress-site-is-ready-to-be-setup.png)
+![Screenshot of the Pantheon Unicorn letting you know that your site is ready to finish setting up](/source/docs/assets/images/pantheon-unicorn-wordpress-site-is-ready-to-be-setup.png)
 
 You will notice that instead of a screenshot of a WordPress powered site, you have the Pantheon Magic Unicorn telling you that your site is ready to setup. All is as it should be.
 
@@ -147,7 +147,7 @@ This will both install and activate you new theme in the same command.
 
 Before you swap back to your site, look at your dashboard. You should now see a notice that you have uncommitted changes. 
 
-![Screenshot of the pantheon dashboard showing uncommitted changes](/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
+![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
 You need to clean this up before going on. So let's commit the changes to your site's repo. We do that through terminus but without the help of wp-cli. Before executing the command below, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, things will change in the browser.
 
@@ -157,9 +157,9 @@ $ terminus site code commit --site=cli-6 --env=dev --message="I never have to to
 
 terminus talks to Pantheon's API, which talks in real-time to any dashboard you may have open. The things do you in terminus are immediately represented in your dashboard so that it is always ip to date.
 
-Now that we've committed out changed, swap back to your test site in the browser and refresh it to see what you've created.
+Now that we've committed our changes, swap back to your test site in the browser and refresh it to see what you've created.
 
-![Screenshot of the final website created following the steps in this guide](/docs/assets/images/pantheon-final-command-line-test-site.png)
+![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
 # Conclusion
