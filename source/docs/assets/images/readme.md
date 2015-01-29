@@ -24,13 +24,10 @@ Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title
 
 The Alt attribute should convey the meaning of the image as closely as possible. The Title attribute is optional, and if used, should only elaborate on the Alt attribute (do not repeat the Alt text in the Title). It will be shown to users when their cursor hovers over the image. The example below omits the title attribute. If in doubt, omit the Title attribute.
 
-The code: `![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/docs/assets/images/dev-code-pendingchanges-commit.png)`
+The code: `![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png)`
 
 will yield in the output server (Sculpin):
 ![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png) 
-
-__Note:__ Images will not show on github, because the docroot is different than the production server. This is a known limitation. You must preview on your local sculpin build. (The code generating the image above prepends /source to the code snippet that generates it in production. The same code snippet above, added here without /source yields: 
-![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/docs/assets/images/dev-code-pendingchanges-commit.png)
 
 ## Committing Docs with Images
 Add image files and the docs they are embedded in to a single commit. 
