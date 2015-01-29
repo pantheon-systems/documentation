@@ -22,9 +22,9 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 
 * Write in a visually appealing style.
 
-    * Use numbered lists for chronological steps.
+* Use numbered lists for chronological steps.
 
-    * Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
+* Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
 
 ### General Guidelines for All Content
 
@@ -104,6 +104,7 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 * If it is not a commonly used acronym, spell it out at out at least once per page and abbreviate in parentheses afterward.
 
   **Example**: Content Management System (CMS)
+
 
 ## Capitalization
 
@@ -201,6 +202,11 @@ How do I change my Pantheon password?
 ## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary")
 
 The glossary includes an A-Z usage list of common terms used in Pantheon documentation.
+
+## Filenames
+In general, filenames should be as short as possible. Add a hyphen (-) between each word.   
+**Example:** writing-a-guide.md
+
 
 ## Grammar
 
@@ -355,7 +361,7 @@ All H2 and H3 tags, created with `##` and `###`, will automatically be included 
 
 ## Titles
 
-For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for.
+For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines. 
 
 **Examples**:
 
