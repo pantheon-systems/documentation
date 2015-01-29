@@ -21,60 +21,15 @@ Selecting the link to provide separate code, files and database archives will gi
 
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
-## Adding a Custom Upstream
+## Distributions
 
-### Pull Pantheon Core
-If your code requires a custom upstream, create the site with the closest available core such as Drupal 7 or WordPress. Following the steps below, you can pull Pantheon core files into your local repository.
+If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
-1. Navigate into your code directory within your terminal.
-2. If your existing site code is not version controlled with Git, run ```git init``` first.
-3. Copy the Upstream location from within the Dev environment (Settings>>About Site).
-4. Replace **http** with **git** and append the URL with **.git** so that it resembles the following example for Drupal 7:
-git://github.com/pantheon-systems/drops-7.git
+First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
-The following Git command will pull in purely the Pantheon specific core:
+Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
 
-```
-git pull --no-rebase -Xtheirs --squash [upstream-location] master
-```
-
-**Note**: Be sure and replace [upstream-location] with the Upstream location generated in Step 4 above.
-
-Once executed, that command will pull in the Pantheon core files but not commit them so you
-will be able to do a final review yourself before doing so. The following message will show when
-it's done:
-
-```
-Squash commit -- not updating HEAD
-Automatic merge went well; stopped before committing as requested
-```
-### Push Local Repository to Pantheon
-Now that your site has the Pantheon core merged in, the final step is putting it onto your Pantheon environment. On your Pantheon Dashboard, go to the Dev tab and select Code. Make sure your site is on Git mode, and copy the Git connection information found to the right of
-the Git tab.
-
-In your terminal, within the site directory, use the ```git remote add``` command with an alias to make sure you know when you are moving code to or from Pantheon. Using the Git information from the previous step, create the following command:
-
-```
-git remote add [pantheon-site-git-repo] pantheon-import
-```
-
-**Note**: Replace [pantheon-site-git-repo] with the Git information from the previous step. Also, **remove** the site name from the end of the connection information, otherwise you will get an error and the command will fail.
-
-Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
-```
-git add -A
-git commit -m "Adding Pantheon core files."
-```
-Now git pull from your Pantheon repository master branch:
-```
-git pull pantheon master
-```
-Handle any conflicts as needed and push back to your Pantheon site repository:
-```
-git push pantheon master
-```
-Look in your Dev environment Code tab. You should now see your site's pre-existing code
-commit history, plus the most recent commits adding Pantheon's core files.
+![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 
 ## Components of a Dynamic Site
