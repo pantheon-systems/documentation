@@ -1,11 +1,19 @@
 ---
-title: Rerouting Outbound Email to Prevent Spamming During Debugging and Testing 
-description: Prevent your Drupal site's development and testing environments from sending emails to your real users, with the reroute_email module and Pantheon environment variables.
+title: Rerouting Outbound Email to Prevent Spamming During Debugging and Testing
+description: Setup the Drupal reroute_email module.
 category:
   - developing
   - Drupal
 ---
-Drupal sites that send email using the php sendmail() function or with modules like [SMTP](https://www.drupal.org/project/smtp) have been known to spam real users with emails from local, development, or staging environments. While there are [other ways to manage email handling for development or testing](https://www.drupal.org/node/201981), the Drupal [Reroute Email](https://www.drupal.org/project/reroute_email) module is a great solution to this problem. This guide will walk you through installation, configuration in [settings.php](https://www.getpantheon.com/docs/articles/drupal/configuring-settings-php/) with [environmental variables](https://www.getpantheon.com/docs/articles/sites/code/reading-pantheon-environment-configuration/), and testing.
+If your Drupal site is sending any kind of custom outbound email, you’ll need to make sure everything is up to spec. And if you’ve ever accidentally spammed hundreds or even thousands of your customers, you’ll have wished you had the foresight to look for [ways to manage email handling for development or testing](https://www.drupal.org/node/201981).
+
+Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming folks during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your dev toolkit.
+
+Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.
+
+Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](https://www.getpantheon.com/docs/articles/drupal/configuring-settings-php/) with [environmental variables](https://www.getpantheon.com/docs/articles/sites/code/reading-pantheon-environment-configuration/), and never worry about spamming users during debugging or testing again.
+
+As an added bonus, you’ll be able to log in to a single email account—no more logging in to a bunch of email accounts just to test your business expectations.
 
 ## Installation
 
@@ -15,14 +23,14 @@ I chose [Drupal 7 as a start state](https://www.getpantheon.com/docs/articles/us
 ```
 $ cd sites
 $ git clone [pantheon git clone ssh connection string]
-$ cd reroute-email
+$ cd site-name
 $ mkdir sites/all/modules/contrib
 ```
-I added a /sites/all/modules/contrib directory, so that Drush will download contrib modules to it. This is a common way to keep modules organized. Next, I'll install the module I need.  
+I added a `contrib` directory to help keep modules organized. In the next step, Drush knows to download contrib modules into that directory.
 ```
 $ drush dl reroute_email
 ```
-The following line isn’t necessary, but it’s a good idea to use git status to understand the state of your local Git repository, especially if you’re new to Git. If you’re just starting with Git, I encourage you to do a git status between each of the steps. Verify that the new, untracked files are in /sites/all/modules/contrib/reroute_email.
+The following line isn’t necessary, but it’s a good idea to use `git status` to understand the state of your local Git repository, especially if you’re new to Git. If you’re just starting with Git, I encourage you to do a `git status` between each of the steps.
 ```
 $ git status
 ```
@@ -39,7 +47,7 @@ Now check your Site Dashboard and you’ll see that the module’s code has been
 
 ![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/verify-reroute-email-dashboard-commits1.png)
 
-Visit the development environment and enable the module.
+
 
 ##Configuration
 
@@ -69,16 +77,20 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
+
 A few notes:
-- In order for the snippet to work as intended, the module must be enabled in all environments.
-- The PANTHEON_ENVIRONMENT variable changes the reroute_email settings based on environment. This will override any settings in the Drupal Admin UI.
+
+- In order for the snippet to work as intended, **the module must be enabled in all environments.**
+- The config in settings.php overrides any settings in the Drupal Admin UI.
+- The PANTHEON_ENVIRONMENT variable changes the reroute_email settings based on environment.
+- If you're site isn't on Pantheon look for available [Superglobals](http://php.net/manual/en/language.variables.superglobals.php) to aid in configuration.
 - For the email address, I chose to not create several new email addresses, although you can definitely do that.
-- I used my existing email address, taking advantage of the plus sign so I can have “extra” email addresses that are all delivered to my existing email address. It’s not a new trick, but it’s a handy feature [baked into Gmail](http://gmailblog.blogspot.com/2008/03/2-hidden-ways-to-get-more-from-your.html) and some other mail services. If you’re taking this route, you’ll also want to set up [email filters](https://support.google.com/mail/answer/6579?hl=en) to skip the inbox and label it appropriately based on the To: header.
+- I used my existing email address, taking advantage of the plus sign so I can have “extra” email addresses that are all delivered to my existing email address. It’s not a new trick, but it’s a handy feature [baked into Gmail](http://gmailblog.blogspot.com/2008/03/2-hidden-ways-to-get-more-from-your.html) and some other mail services. If you’re taking this route, you’ll also want to set up [email filters](https://support.google.com/mail/answer/6579?hl=en) to skip the inbox and label it appropriately based on the `To:` header.
 
 For more about Reroute Email’s settings, see the README.txt that ships with the module.
 
 
-##Stage and Commit Settings.php
+###Stage and Commit Settings.php
 ```
 $ git add sites/default/settings.php
 $ git commit
@@ -119,11 +131,13 @@ If you don’t see what you’re expecting, review your settings.php and ensure 
 
 That’s it! Now when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in settings.php. Our settings.php will make sure email is not rerouted on Live, so it’s business as usual. Make sure you’re using a [SMTP gateway](https://www.getpantheon.com/docs/articles/sites/code/email/#outgoing-email) on Live to ensure email deliverability.
 
-##See Reroute Email In Action
+###See Reroute Email In Action
 To see exactly what we did, I forked a new [MultiDev](https://www.getpantheon.com/docs/articles/sites/multidev/) CDE called ```demo``` and requested a new account:
 
-![The Reroute Email module account creation page](/source/docs/assets/images/reroute-email-account-requested.png)
+![Drupal site showing account requested and emails sent](/source/docs/assets/images/reroute-email-account-requested.png)
 
 Requesting a new account fires off two emails: one to the requestor and another to the site owner; both are successfully rerouted to the email address defined in settings.php:
 
 ![Email showing the reroute was successful](/source/docs/assets/images/reroute-email-confirmation.png)
+
+Happy rerouting!
