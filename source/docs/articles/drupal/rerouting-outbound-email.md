@@ -1,19 +1,18 @@
 ---
-title: Rerouting Outbound Email to Prevent Spamming During Debugging and Testing
+title: Rerouting Outbound Email to Prevent Spamming During Debugging and Testing Drupal Sites
 description: Setup the Drupal reroute_email module.
 category:
   - developing
   - Drupal
 ---
-If your Drupal site is sending any kind of custom outbound email, you’ll need to make sure everything is up to spec. And if you’ve ever accidentally spammed hundreds or even thousands of your customers, you’ll have wished you had the foresight to look for [ways to manage email handling for development or testing](https://www.drupal.org/node/201981).
 
-Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming folks during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your dev toolkit.
+If your Drupal site sends outbound email, you don't want to accidentally spam your or users customers from your Dev or Test environments. Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming customers during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your dev toolkit.
 
 Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.
 
 Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](https://www.getpantheon.com/docs/articles/drupal/configuring-settings-php/) with [environmental variables](https://www.getpantheon.com/docs/articles/sites/code/reading-pantheon-environment-configuration/), and never worry about spamming users during debugging or testing again.
 
-As an added bonus, you’ll be able to log in to a single email account—no more logging in to a bunch of email accounts just to test your business expectations.
+As an added bonus, you’ll be able to funnel all dev and testing emails to a single inbox—no more logging in to a bunch of email accounts just to test your business expectations.
 
 ## Installation
 
@@ -140,4 +139,5 @@ Requesting a new account fires off two emails: one to the requestor and another 
 
 ![Email showing the reroute was successful](/source/docs/assets/images/reroute-email-confirmation.png)
 
-Happy rerouting!
+See Also
+[Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)
