@@ -1,5 +1,5 @@
 ---
-title: Load Testing with BlazeMeter
+title: Load Testing Druapl and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your site.
 category:
   - going-live
@@ -14,30 +14,30 @@ While we recommend keeping Drupal’s Watchdog enabled to log important events, 
 
 In order to configure your load test, you’ll need to calculate concurrent users, which are the number of users on the site at the same time. There are a couple of approaches depending on the metrics:
 
-**Convert visits per hour to concurrent users**
+####Convert visits per hour to concurrent users
 
 concurrent_users = (hourly_visits * time_on_site) / 3600
 
 Example: If you have 1,000 visits per hour, and each visitor stays on the average 3 minutes (180 seconds) on your site, that means you would have (1000 * 180) / 3600 = 50 concurrent users.
 
-**Convert visits per month to concurrent users:**
+####Convert visits per month to concurrent users
 
 concurrent_users = (monthly_visits * time_on_site) / (3600 * 24 * 30)
 
 ##Current vs. Estimated Metrics
 
-If the site is live elsewhere and you have current traffic metrics, great! If not you can estimate traffic numbers and patterns once the site goes live. Your best bet is to run the load test with more concurrent users than you expect. For sites with historical traffic spikes, test based on those patterns to make sure your site will handle the load.
+If the site is live elsewhere and you have current traffic metrics, great! If not, you can estimate traffic numbers and patterns once the site goes live. Your best bet is to run the load test with more concurrent users than you expect. If you have historical data, use your previous high water mark for traffic when testing to insure your site can handle peak load.
 
 Aside from concurrent users, you’ll want to map out user behavior and time spent on the site.
 
 
-##Running a Test
+##Your First Load Test
 
-First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/blazemetertheloadtesti/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=en) on your Chrome browser. Next, navigate to the site you'd like to test and click the BlazeMeter icon to open settings and begin recording. You'll have several configuration options:
+First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/blazemetertheloadtesti/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=en) on your Chrome browser and [register for a free account with Blazemeter](http://blazemeter.com). Next, navigate to the site you'd like to test and click the BlazeMeter icon to open settings and begin recording. You'll have several configuration options:
 
 - Record/Follow Me: Select **Record**
-- Name of the test: Name your test configuration in a brief, clientspecific way, such as "Marked Private Authenticated" or "Marked Private Anon"
-- Concurrency: The number calculated according to client provided metrics
+- Name of the test: Name your test configuration in a brief, client-specific way  
+- Concurrency: The number you calculated for concurrent users
 - Load Origin: Dependent on project and traffic as outlined by client
 - User Agent: Default
 - Filter Pattern: The default filter pattern will be set to include `http://*/*` and `https://*/*` You'll want to designate the top level domain.  
@@ -55,7 +55,7 @@ You can copy and paste your New Relic data sharing API key into the New Relic se
 ##Recording a Test
 
 1. Click the red record button in the plugin window.
-2. Navigate through the user scenario. When finished, click the BlazeMeter icon and click **Stop**.
+2. Navigate through the user scenario. When finished, click the **BlazeMeter icon** and click **Stop**.
 3. Select **Edit recording** to review the script.
 4. Next, select **Export to Jmeter**, designated as the file extension .jmx. This will begin an automatic download of the .jmx file which you will need to rename before executing the test.
 
@@ -80,14 +80,14 @@ Now that you’ve run your load test, you can review the results on BlazeMeter a
 
 ![The BlazeMeter settings window](/source/docs/assets/images/blazemeter-review-results.png)
 
-The report is a nice high level overview of site performance, but you’ll want more details for the full picture. New Relic (which you can enable through the Pantheon Site Dashboard) will provide more information on slow transactions and appserver response times for both web and non-web transactions.
+The report is a nice high-level overview of site performance, but you’ll want more details for the full picture. New Relic (which you can enable through the Pantheon Site Dashboard) will provide more information on slow transactions and appserver response times for both web and non-web transactions.
 
 You can also view the load report directly to evaluate the number of users and the concurrent response time, shown here:
 
 ![The BlazeMeter load report](/source/docs/assets/images/blazemeter-load-report.png)
 
 
-Depending on the application you’re running, you can also access error and slow logs. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). Wordpress has plugins like Debug Bar, SQL Monitor, P3, and Debug Queries.
+Depending on the application you’re running, you can also access error and slow logs. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). Wordpress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
 
 
 ##Resolve Errors and Performance Hits
