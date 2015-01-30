@@ -1,6 +1,6 @@
 ---
-title: Use Drupal's Reroute Email Module to Prevent Spamming During Debugging and Testing 
-description: Setup the Drupal reroute_email module.
+title: Prevent Spamming During Drupal Debugging and Testing 
+description: Set up the Drupal reroute_email module.
 category:
   - developing
   - Drupal
