@@ -50,7 +50,7 @@ The output will be a table with two columns per organization, the human readable
 Next, you will need a **product id** This is an internal Pantheon GUID for the different systems that you can install. You can use this command to see the complete list.
 
 ```
-$ terminus products all
+$ terminus products list
 ```
 
 Since these are assigned by Pantheon and used by all customers, they do not change. Therefore, the one you are looking for is ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``.    
