@@ -139,5 +139,5 @@ Requesting a new account fires off two emails: one to the requestor and another 
 
 ![Email showing the reroute was successful](/source/docs/assets/images/reroute-email-confirmation.png)
 
-See Also
+##See Also  
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)
