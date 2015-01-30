@@ -57,7 +57,7 @@ You'll see the human readable name and the ID. If you're a member of more than o
 Next, you need a Product ID. This is an internal Pantheon GUID for the different systems that you can install. Use this command to see the complete list:
 
 ```
-$ terminus products list
+$ terminus products list 
 ```
 
 Since these are assigned by Pantheon and used by all customers, they never change. Therefore, the one to look for is: ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``    
