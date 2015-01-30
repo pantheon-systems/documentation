@@ -63,14 +63,14 @@ You can copy and paste your New Relic data sharing API key into the New Relic se
 
 ##Executing a Test
 
-Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add JMeter Test**, and upload the .jmx file. Set the following options for load scenario properties and save when finished:
+Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add JMeter Test**, and upload the .jmx file. Set the following options for load scenario properties and save when finished:  
 
- Location: Virtual traffic origin, dependent on client provided metrics
- Ramp Up: How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.
- Iterations: This is set to infinity by default and will allow the user behavior to loop and finish out the test.
- Duration: Somewhere between 15 and 30 minutes.
+ Location: Virtual traffic origin, dependent on client provided metrics.  
+ Ramp Up: How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.  
+ Iterations: This is set to infinity by default and will allow the user behavior to loop and finish out the test.  
+ Duration: Between 15 and 30 minutes.  
 
-Once you've saved your load test scenario, click on the tests icon to select the test you want to run, and click Start Test (play icon).
+Once you've saved your load test scenario, click on the tests icon to select the test you want to run, and click Start Test (play icon).  
 
 ##Review and Share the Results
 
