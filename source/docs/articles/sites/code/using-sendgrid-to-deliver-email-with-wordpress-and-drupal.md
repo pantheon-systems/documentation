@@ -89,6 +89,15 @@ $conf['smtp_fromname'] = 'Your Name';
 Using a code block like that will ensure that SendGrid is enabled wherever that settings.php file is used, and allows you to push the configuration from Dev to Test to Live.
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
+For the sake of ease, your first few tests should be to email addresses that you control directly. If the email(s) do not appear in a timely manner to their destinations, you can see why within your SendGrid account dashboard. First, log into [SendGrid](https://sendgrid.com/marketing/login). Once you're done so, there will be a link in the SendGrid site navigation for "Email Activity".
+
+![SendGrid sign up form](/source/docs/assets/images/sendgrid-user-navbar.png)​
+
+Click on "Email Activity". You will be taken to a page with a simple form marked "Search by email". Enter the email address you sent the missing test message to, and click the "Search" button. SendGrid will search through your mail queue for any messages sent to that address. For further options, select the "Search Options" link to the right of the "Search" button.
+
+![SendGrid sign up form](/source/docs/assets/images/sendgrid-search-options.png)​
+
+For further in depth reports on email activity, email client statistics, etc, you can investigate both the "Statistic" and "Email Reports" links as well.
 
 ## Congratulations!
 
