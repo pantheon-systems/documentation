@@ -13,11 +13,11 @@ The easiest way to import an existing site into Pantheon is to create a new site
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
-Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you will be provided the option to give a single archive for your entire import.
+Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
 
 ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 
-Selecting the link to provide separate code, files and database archives will give you the option to import individually.
+Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
 
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
@@ -101,7 +101,7 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 ## Table Prefixes
 
-Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
+Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
 
 You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/source/docs/articles/drupal/configuring-settings-php).
 
