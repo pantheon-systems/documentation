@@ -4,11 +4,6 @@ description: Learn how to create a great guide.
 draft: true
 
 ---
-
-<p><a href="https://github.com/pantheon-systems/documentation/commits/master/source{{ page.url }}.md">
-  <button type="button" class="btn btn-outline">View doc history</button>
-</a></p>
-
 Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blue">**Writer**</span>, <span style="color: brown">**Editor**</span>, <span style="color: green">**Management Team**</span>, <span style="color: purple">**Technical Resource**</span>, <span style="color: magenta">**Tester**</span>, <span style="color: red">**Marketing Content Manager**</span>
 
 1. <span style="color: orange">**Submitter**</span> has an idea. In Sprint.ly Documentation Someday column, they add:  
@@ -43,6 +38,10 @@ It's important that moderators know what follow up actions are required when Pul
   - **Associated Links**: Have a Sprint.ly task? Reference it.
     - ex: completes item:92 draft
   - **Review Needed**: Be clear about what you expect to come from this request. If you would like feedback, tag who should review it and what should happen next.
-  - **Merge Instructions**: Tag who should be merging this request. If you requested review from an editor, request a different editor to merge.
+  - If a request is issued to create a dialogue between contributors, include the prefix **WIP** indicating that the PR is a work in progress. This will help moderators know what's ready and what's not ready to go into production.
 
-If a request is issued to create a dialogue between contributors, include the prefix **WIP** indicating that the PR is a work in progress. This will help moderators know what's ready and what's not ready to go into production.
+### Merge Instructions
+
+When the doc has received a +1 from a founder and editor. Merge and publish it. Delete the branch. Any fixes noticed after the fact will enter a normal update workflow. 
+
+
