@@ -6,9 +6,11 @@ category:
 ---
 Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Enterprise site is load tested before going live, and [BlazeMeter](http://blazemeter.com) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
 
-##Performance Hits
+##The Importance of Identifying Performance Hits
 
-While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the dblog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/).
+The days of simple static html sites are fading and for Drupal and Wordpress any page load can quickly become death by a thousand papercuts. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds onto the end user experience but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and uncover performance killers. 
+
+An important note about Drupal in particular: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the dblog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/).
 
 ##Strategy and Planning
 
@@ -87,7 +89,7 @@ You can also view the load report directly to evaluate the number of users and t
 ![The BlazeMeter load report](/source/docs/assets/images/blazemeter-load-report.png)
 
 
-Depending on the application you’re running, you can also access error and slow logs. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). Wordpress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
+Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). Wordpress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
 
 
 ##Resolve Errors and Performance Hits
