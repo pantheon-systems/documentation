@@ -14,13 +14,13 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 
 ## Enabling New Relic
 
-To enable New Relic on your Pantheon site, click Settings in the upper-right corner of your site dashboard.  
+To enable New Relic on your Pantheon site, click **Settings** in the upper-right corner of your Site Dashboard.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218051)  
 
 
-Within the "Add Ons" tab, click "Add" next to New Relic.
+Within the "Add Ons" tab, click **Add** next to New Relic.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218052)  
 Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
@@ -32,7 +32,7 @@ You can access your New Relic instance by clicking on the newly created New Rel
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/280225)  
 
 
-You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, you can go to the New Relic workspace on your dashboard and click "_Open New Relic_". You will be taken to the New Relic interface.
+You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes, you can go to the New Relic workspace on your dashboard and click **Open New Relic**. You will be taken to the New Relic interface.
 
 The New Relic Interface provides severals views that display information about various aspects of your website's performance.
 
@@ -41,7 +41,7 @@ The New Relic Interface provides severals views that display information about v
 ![End-User Inteface](https://www.getpantheon.com/sites/default/files/docs/desk_images/78125)
 
 1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data. 
-2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. NOTE: the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.
+2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. Note: the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.
 3. **Page Views** provides the number of page views per minute.
 4. The **Apdex & Top States by Load Time** presents a visualization of load times based on region; these can be viewed internally to the United States or globally.
 5. **Recent Events** logs the most recent events.
@@ -107,7 +107,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ### How can I share a link to a particular metric?
 
-In the lower-right hand corner of a New Relic performance page, click the link labeled **Permalink** . This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
+In the lower-right hand corner of a New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218071)
 
 ### How much is New Relic?
@@ -120,13 +120,13 @@ New Relic sites on Pantheon are priced per Application Container, rather than by
 
 ### Will turning on New Relic slow my site down?
 
-Basically, no, New Relic will not make your site slower. There is a very small amount of overhead, but for all intents and purposes it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
+Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
 ### What is the difference between app server response time and browser page load time?
 
 App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), and so forth, and browser page load time measures the additional time of client-side page rendering, DOM processing, how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
-### Can I use my existing New Relic license with my Pantheon Site?
+### Can I use my existing New Relic license with my Pantheon site?
 
 Yes you can! Open a support ticket and provide your account ID and license key.
 
