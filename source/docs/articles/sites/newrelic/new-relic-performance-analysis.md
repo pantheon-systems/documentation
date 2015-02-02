@@ -20,13 +20,13 @@ To enable New Relic on your Pantheon site, click Settings in the upper-right cor
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218051)  
 
 
-Within the "Add Ons" tab, click "Add" next to New Relic.
+Within the "Add Ons" tab, click "Add" next to New Relic.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218052)  
-Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
+Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
 
 
-You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
+You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/280225)  
@@ -58,29 +58,50 @@ The New Relic Interface provides severals views that display information about v
 
 ## Only Logging Authenticated Users
 
-If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using Drupal's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as /admin.  
+If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
 
+#3# Drupal
+For Drupal based sites, if you want to disable New Relic for anonymous traffic, add the following to your `sites/default/settings.php`:
 
-If you want to disable New Relic for anonymous traffic, add the following to your sites/default/settings.php:
-
-    <?php
-    // Disable New Relic for anonymous users.
-    if (function_exists('newrelic_ignore_transaction')) {
-      $skip_new_relic = TRUE;
-      // Capture all transactions for users with a PHP session.
-      foreach (array_keys($_COOKIE) as $cookie) {
-        if (substr($cookie, 0, 4) == 'SESS') {
-          $skip_new_relic = FALSE;
-        }
-      }
-      // Capture all POST requests so we include anonymous form submissions.
-      if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-        $skip_new_relic = FALSE;
-      }
-      if ($skip_new_relic) {
-        newrelic_ignore_transaction();
-      }
+```
+// Disable New Relic for anonymous users.
+if (function_exists('newrelic_ignore_transaction')) {
+  $skip_new_relic = TRUE;
+  // Capture all transactions for users with a PHP session.
+  foreach (array_keys($_COOKIE) as $cookie) {
+    if (substr($cookie, 0, 4) == 'SESS') {
+      $skip_new_relic = FALSE;
     }
+  }
+  // Capture all POST requests so we include anonymous form submissions.
+  if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $skip_new_relic = FALSE;
+  }
+  if ($skip_new_relic) {
+    newrelic_ignore_transaction();
+  }
+}
+```
+
+### WordPress
+For WordPress based sites, if you want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
+
+```
+// Disable New Relic for anonymous users.
+if (function_exists('newrelic_ignore_transaction')) {
+    $skip_new_relic = !is_user_logged_in();
+
+    // Capture all POST requests so we include anonymous form submissions.
+    if (isset($_SERVER['REQUEST_METHOD']) && 
+        $_SERVER['REQUEST_METHOD'] == 'POST') {
+        $skip_new_relic = FALSE;
+    }
+
+    if ($skip_new_relic) {
+        newrelic_ignore_transaction();
+    }
+}
+```
 
 ## Frequently Asked Questions
 
