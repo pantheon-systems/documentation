@@ -5,7 +5,9 @@ draft: true
 
 ---
 
-Last Edited: 1/15/2014
+<p><a href="https://github.com/pantheon-systems/documentation/commits/master/source{{ page.url }}.md">
+  <button type="button" class="btn btn-outline">View doc history</button>
+</a></p>
 
 Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blue">**Writer**</span>, <span style="color: brown">**Editor**</span>, <span style="color: green">**Management Team**</span>, <span style="color: purple">**Technical Resource**</span>, <span style="color: magenta">**Tester**</span>, <span style="color: red">**Marketing Content Manager**</span>
 
@@ -32,3 +34,15 @@ Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blu
 9. After management review at the Weekly Backlog Review meeting, Scott assigns back to <span style="color: brown">**Editor**</span> for publishing.
 10. <span style="color: brown">**Editor**</span> publishes.
 11. Profit.
+
+## Pull Requests
+
+It's important that moderators know what follow up actions are required when Pull Requests are issued. That makes creating a detailed Pull Requests essential to the process. Each PR should include the following:
+
+  - **Purpose Statement**: Start by explaining why it should be merged. All requests should communicate the full scope of edits made. Don't assume familiarity with the history of any task.
+  - **Associated Links**: Have a Sprint.ly task? Reference it.
+    - ex: completes item:92 draft
+  - **Review Needed**: Be clear about what you expect to come from this request. If you would like feedback, tag who should review it and what should happen next.
+  - **Merge Instructions**: Tag who should be merging this request. If you requested review from an editor, request a different editor to merge.
+
+If a request is issued to create a dialogue between contributors, include the prefix **WIP** indicating that the PR is a work in progress. This will help moderators know what's ready and what's not ready to go into production.
