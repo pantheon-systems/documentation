@@ -21,7 +21,7 @@ As a SendGrid partner, we offer Pantheon users a discount on higher-volume plans
 
 ![SendGrid sign up form](/source/docs/assets/images/sendgrid-signup.png)​
 
-After receiving your confirmation via email, sign into your [SendGrid account](https://sendgrid.com/marketing/login). From within the Account Settings page, click on Manage Multiple User Credentials.
+After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/marketing/login). From within the Account Settings page, click on **Manage Multiple User Credentials**.
 
 ![SendGrid Multiple User setup](/source/docs/assets/images/sendgrid-multiple-users.png)
 
@@ -37,11 +37,11 @@ Install and activate the latest release through the WordPress dashboard or place
 ###Add Your SendGrid Account Details
 Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s dashboard. Simply enter your site's SendGrid account credentials and select API as the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
-**Note**: At this time, choosing "SMTP" for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](https://www.getpantheon.com/docs/articles/sites/known-limitations/) for more information on PHP short tags. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
+**Note**: At this time, choosing SMTP for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](https://www.getpantheon.com/docs/articles/sites/known-limitations/) for more information. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
 
 ![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
 
-Your WordPress application is now setup to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, [click here](#deliverability).
+Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, [click here](#deliverability).
 
 ## Drupal
 
@@ -56,16 +56,16 @@ drush @pantheon.your-site.dev en smtp -y
 ```
 ### Add Your SendGrid Account Details
 
-Log into Drupal in your Pantheon Dev environment. Along the menu at the top of the screen, select Modules, and go to SMTP Authentication Support in the Mail section. Click Configure and you’ll see the SMTP settings page.
+Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.
 
 ![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​
 ​
-First, make sure the module is enabled by selecting "On" in the Install Options box.
-Add the following values for the associated fields:
-SMTP server: smtp.sendgrid.net
-SMTP port: 25
-Username: Your site's SendGrid username
-Password: Your site's SendGrid password
+First, make sure the module is enabled by selecting **On** in the Install Options box.
+Add the following values for the associated fields:  
+SMTP server: smtp.sendgrid.net  
+SMTP port: 25  
+Username: Your site's SendGrid username  
+Password: Your site's SendGrid password  
 
 Include a valid From address and name for the sender within the email options section.
 
@@ -73,7 +73,7 @@ After you save the configuration, your Drupal application on Pantheon is now set
 
 ## Deploy Drupal SendGrid Configuration in Code
 
-When making any changes to Pantheon installations, first make the change on your Dev environment. Next, move it to Test, and after testing, migrate your changes to Live.
+When making any changes to Pantheon installations, first make the change in your Dev environment. Next, move it to Test, and after testing, migrate your changes to Live.
 
 If you don't want to re-enter the configuration, and can't push your database to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the $conf array:
 ```
@@ -91,15 +91,15 @@ Using a code block like that will ensure that SendGrid is enabled wherever that 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
-First, log into [SendGrid](https://sendgrid.com/marketing/login) and select Email Activity from within the site navigation.
+First, log into [SendGrid](https://sendgrid.com/marketing/login) and select **Email Activity**.
 
 ![SendGrid logged in user navigation](/source/docs/assets/images/sendgrid-user-navbar.png)​
 
-You will be taken to a page with a simple form marked Search by email. Enter the email address desired for the inquiry, and click the Search button. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the Search Options link to the right of the Search button.
+You will be taken to a page with a simple form marked Search by email. Enter the email address, and click **Search**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the **Search Options** link.
 
 ![SendGrid email search options](/source/docs/assets/images/sendgrid-search-options.png)​
 
-You can explore the Statistics and Email Reports links from within your site's account to gain insight into email activity, statistics on email clients, and much more.
+You can explore the Statistics and Email Reports from within your site's account to gain insight into email activity, statistics on email clients, and much more.
 
 
 ## Congratulations!
