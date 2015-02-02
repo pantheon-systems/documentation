@@ -178,10 +178,10 @@ Walkthrough Titles - Use the associated procedure title
 Step title:
 Step description:
 
-
 Title - Task focused, very concise. **Example**: Add an SSH Key.
 
 Description - Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment. **Example**: Learn how to add and manage SSH keys.
+
 
 ## FAQ’s
 
@@ -203,6 +203,13 @@ How do I change my Pantheon password?
 
 The glossary includes an A-Z usage list of common terms used in Pantheon documentation.
 
+### File Paths
+
+FIle paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
+```
+/source/docs/assets/images/
+```
+
 ## Filenames
 In general, filenames should be as short as possible. Add a hyphen (-) between each word.   
 **Example:** writing-a-guide.md
@@ -214,7 +221,7 @@ See the *Chicago Manual of Style* for all grammar-related questions.
 
 ## Headings and Subheadings
 
-When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing").
+When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown as H2, and Subheadings should be shown as H3.
 
 **Examples**:
 
@@ -361,7 +368,7 @@ All H2 and H3 tags, created with `##` and `###`, will automatically be included 
 
 ## Titles
 
-For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines. 
+For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing") and display it as H1. Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines. 
 
 **Examples**:
 
