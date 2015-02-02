@@ -12,13 +12,13 @@ category:
 
 There are three basic kinds of PHP errors:
 
-- **Notice**  - room for improvement; typically unset variables or missing array keys.
-- **Warning**  - errors will probably occur if not addressed.
-- **Error**  - fatal, execution terminated. Often known as the "white screen of death".
+- **Notice** - room for improvement; typically unset variables or missing array keys.
+- **Warning** - errors will probably occur if not addressed.
+- **Error** - fatal, execution terminated. Often known as the "white screen of death".
 
-For a more in-depth discussion on errors in PHP in general, see the PHP documentation on  [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
+For a more in-depth discussion on errors in PHP in general, see [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. For Drupal based sites, notices and warnings are logged in the database logs if `db_log` is enabled. For WordPress based sites, the PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled in `wp-config.php` save errors to `wp-content/debug.log`. PHP errors are also logged on the application server at `logs/php-error.log`.
+Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. For Drupal sites, notices and warnings are logged in the database logs if `db_log` is enabled. For WordPress sites, the PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled in `wp-config.php` save errors to `wp-content/debug.log`. PHP errors are also logged on the application server at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
 <table>
@@ -32,7 +32,7 @@ Here's a breakdown of what errors are shown and where:
 		</tr>
 	</thead><tbody>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">dev</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
 			<td align="left"><strong>Y</strong></td>
 			<td align="left"><strong>Y</strong></td>
@@ -51,7 +51,7 @@ Here's a breakdown of what errors are shown and where:
 			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">test</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
 			<td align="left">N</td>
 			<td align="left"><strong>Y</strong></td>
@@ -70,7 +70,7 @@ Here's a breakdown of what errors are shown and where:
 			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle;">live</td>
+			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
 			<td align="left">N</td>
 			<td align="left"><strong>Y</strong></td>
@@ -91,7 +91,7 @@ Here's a breakdown of what errors are shown and where:
 	</tbody>
 </table>
 
-To learn more about PHP error logs, see our article on  [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files/).
+To learn more about PHP error logs, see [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files/).
 
 ## PHP Errors Slow Down a Site
 
@@ -106,11 +106,11 @@ If database logging is enabled, your site will be even slower, requiring a datab
 Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (Drupal module or WordPress plugin), roll a patch and submit it to the project's issue queue.
 
 
-See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
+See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP Unhandled Exceptions on Pantheon
 
-​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](http://php.net/manual/en/language.exceptions.php)  
+A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](http://php.net/manual/en/language.exceptions.php)  
 
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
@@ -128,7 +128,7 @@ Why is PHP reporting this?
 
 Variable declaration is not required by PHP, but is a recommended practice that can help to avoid security vulnerabilities or bugs if one forgets to provide a value to a variable that be used later on. PHP issues an `E_NOTICE`, a very low-level error, as a reminder.
 
-No one is going to twist your arm about addressing these notices, but Pantheon believes that surfacing them in the development environment will help developers address potential problems in the future before they can occur by following best practices.
+No one is going to force you to address these notices, but Pantheon believes that surfacing them in the Development environment will help developers address potential problems in the future before they can occur by following best practices.
 
 ## Fatal Error: require_once(): Failed Opening Required
 
