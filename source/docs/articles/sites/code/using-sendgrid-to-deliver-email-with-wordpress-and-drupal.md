@@ -32,12 +32,12 @@ This is where you can create site specific credentials so that sites have their 
 ### Download the WordPress SendGrid Plugin
 
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the wp_mail function with API integration, making it a breeze to configure and get started.
-Install and activate the latest release through the WordPress dashboard or place it in the code/wp-content/plugins directory and activate via the dashboard.
+Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
 ###Add Your SendGrid Account Details
 Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s dashboard. Simply enter your site's SendGrid account credentials and select API as the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
-Note: At this time, choosing "SMTP" for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](https://www.getpantheon.com/docs/articles/sites/known-limitations/) for more information on PHP short tags. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
+**Note**: At this time, choosing "SMTP" for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](https://www.getpantheon.com/docs/articles/sites/known-limitations/) for more information on PHP short tags. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
 
 ![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
 
@@ -89,15 +89,18 @@ $conf['smtp_fromname'] = 'Your Name';
 Using a code block like that will ensure that SendGrid is enabled wherever that settings.php file is used, and allows you to push the configuration from Dev to Test to Live.
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
-For the sake of ease, your first few tests should be to email addresses that you control directly. If the email(s) do not appear in a timely manner to their destinations, you can see why within your SendGrid account dashboard. First, log into [SendGrid](https://sendgrid.com/marketing/login). Once you're done so, there will be a link in the SendGrid site navigation for "Email Activity".
+For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
+
+First, log into [SendGrid](https://sendgrid.com/marketing/login) and select Email Activity from within the site navigation.
 
 ![SendGrid logged in user navigation](/source/docs/assets/images/sendgrid-user-navbar.png)​
 
-Click on "Email Activity". You will be taken to a page with a simple form marked "Search by email". Enter the email address you sent the missing test message to, and click the "Search" button. SendGrid will search through your mail queue for any messages sent to that address. For further options, select the "Search Options" link to the right of the "Search" button.
+You will be taken to a page with a simple form marked Search by email. Enter the email address desired for the inquiry, and click the Search button. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the Search Options link to the right of the Search button.
 
 ![SendGrid email search options](/source/docs/assets/images/sendgrid-search-options.png)​
 
-For further in depth reports on email activity, email client statistics, etc, you can investigate both the "Statistic" and "Email Reports" links as well.
+You can explore the Statistics and Email Reports links from within your site's account to gain insight into email activity, statistics on email clients, and much more.
+
 
 ## Congratulations!
 
