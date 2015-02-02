@@ -1,5 +1,5 @@
 ---
-title: Load Testing Druapl and WordPress with BlazeMeter
+title: Load Testing Drupal and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your site.
 category:
   - going-live
@@ -8,9 +8,9 @@ Your site is loaded with content and is almost ready to go live. You know what i
 
 ##The Importance of Identifying Performance Hits
 
-The days of simple static html sites are fading and for Drupal and Wordpress any page load can quickly become death by a thousand papercuts. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds onto the end user experience but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and uncover performance killers. 
+The days of simple static HTML sites are fading, and for Drupal and Wordpress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers. 
 
-An important note about Drupal in particular: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the dblog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/).
+Important note about Drupal: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the DBlog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/).
 
 ##Strategy and Planning
 
@@ -70,13 +70,13 @@ Log in to your [BlazeMeter account](https://a.blazemeter.com/user), select **Add
  Location: Virtual traffic origin, dependent on client provided metrics.  
  Ramp Up: How quickly the test will activate users, shown in seconds. The preset (300s) is usually fine.  
  Iterations: This is set to infinity by default and will allow the user behavior to loop and finish out the test.  
- Duration: Between 15 and 30 minutes.  
+ Duration: 15 to 30 minutes.  
 
-Once you've saved your load test scenario, click on the tests icon to select the test you want to run, and click Start Test (play icon).  
+Once you've saved your load test scenario, click the **tests icon** to select the test you want to run, and click **Start Test** (play icon).  
 
 ##Review and Share the Results
 
-Results are graphed, along with any error messages, response times, and so forth. All tests are shared in "Sessions". To share public links with the client in the load test report, click the share button, turn sharing on and then copy the link.
+Results are graphed, along with any error messages, response times, and so forth. All tests are shared in "Sessions". To share public links with the client in the load test report, click the **share** button, turn sharing on and then copy the link.
 
 Now that you’ve run your load test, you can review the results on BlazeMeter and see a summary of users, throughput, errors, response times, and bandwidth. You can also access an aggregate report of load times on each page and a list of errors generated, demonstrated below.
 
