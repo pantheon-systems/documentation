@@ -19,7 +19,7 @@ Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blu
     - Steps: One or several tasks, steps, or goals
     - Proof of Completion
     - Next Steps: further reading, links to other guides
-3. <span style="color: blue">**Writer**</span> chooses Guides to write from Backlog (They are tagged as ‘Guide’). They move the cards to in Progress and *add separate cards to the Backlog* for each:
+3. <span style="color: blue">**Writer**</span> chooses Guides to write from Backlog (They are tagged as ‘Guide’). They move the tasks to in Progress and *add separate tasks to the Backlog* for each:
     - Subject - 1st Draft
     - Subject - 1st Edit
     - Subject - Testing
