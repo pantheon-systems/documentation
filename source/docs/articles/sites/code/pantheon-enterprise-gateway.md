@@ -1,6 +1,6 @@
 ---
 title: Pantheon Enterprise Gateway
-descrption: Configuring your site to use the Pantheon Enterprise Gateway as a defense-in-depth solution to access systems behind firewalls.
+description: Configuring your site to use the Pantheon Enterprise Gateway as a defense-in-depth solution to access systems behind firewalls.
 category:
   - developing
 ---
