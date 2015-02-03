@@ -7,7 +7,7 @@ category:
 
 ---
 
-## Database Logging
+##Database Logging
 
 ####Drupal
 Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. These event logs can be accessed in a couple ways:  
@@ -19,17 +19,28 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 2. Using drush:  
 
 
-```drush @pantheon.SITENAME.ENV watchdog-show```
+```
+drush @pantheon.SITENAME.ENV watchdog-show
+```
 
 Drush can be used to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
 
-```drush @pantheon.SITENAME.ENV watchdog-show --tail``
+```
+drush @pantheon.SITENAME.ENV watchdog-show --tail
+```
 
-####WordPress
-WordPress sites can use [codex](http://codex.wordpress.org/Debugging_in_WordPress). Set the wp_debug_log variable to "true" so that all PHP errors, notices, and warnings are displayed.
+#### WordPress
 
-## Raw Webserver Log Files
+Set the WP_DEBUG variable to "true" within your wp-settings.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
+
+```
+define('WP_DEBUG', true);
+```
+
+
+
+##Raw Webserver Log Files
 
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
@@ -49,43 +60,49 @@ Once connected, you'll see several directories:
 
 - **files** - Valhalla file mount; code/sites/default/files is symbolically linked to this directory. Read and write (upload).
 
-## Frequently Asked Questions
+##Frequently Asked Questions
 
-### I have multiple application containers workers in my Live environment. Does Pantheon aggregate logs?
+###I have multiple application containers workers in my Live environment. Does Pantheon aggregate logs?
 
 No, we do not have a mechanism for combining server logs across multiple application containers.
 
-#### Can I access the logs on a specific application container worker?
+####Can I access the logs on a specific application container worker?
 
 Yes, but it'll take a couple steps:
 
-    ```SITE_UUID=(value from dashboard url)
+  ```
+    SITE_UUID=(value from dashboard url)
     # Get IPs of individual appserver processes.
-    dig +short appserver.live.$SITE_UUID.drush.in```
+    dig +short appserver.live.$SITE_UUID.drush.in
+  ```
 
 Then, for each appserver that you want to connect to:
 
-    ```APPSERVER_IP=(value from dig command)
-    sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP```
+  ```
+  APPSERVER_IP=(value from dig command)
+    sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP
+  ```
 
 If you want to download all the access logs from a particular site:
 
-    ```sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*```
+  ```
+   sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
+  ```
 
-#### How can I parse my Nginx access logs?
+####How can I parse my Nginx access logs?
 
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
-   ``` 
+  ``` 
    date_format d/%b/%Y:%T %z
     log_format %^ %^ %^ [%d] “%r” %s %b “%R” “%u” %T "%h,^"
-    ```
+  ```
 
-#### Can I log to the system logger and access syslog?
+####Can I log to the system logger and access syslog?
 
 The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.
 
-#### Can I access Apache Solr logs?
+####Can I access Apache Solr logs?
 
 No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/docs/articles/sites/apache-solr).
 
