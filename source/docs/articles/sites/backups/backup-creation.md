@@ -15,7 +15,7 @@ category:
 
 ## Steps
 
-1. Start your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
+1. Start your backup in the **Backups** tab by pressing the **Create New Backup** button.
 2. Relax as your backup is made. Track it in the progress indicator.
 3. After completion, you can access your backups.
 
@@ -35,8 +35,7 @@ When the backup has finished, the jobs indicator will return to its start state 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 
 
-Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
-
+Click on the **down arrow** next to Code, DB, or Files to access to a specific backup link for the offsite backup.
 Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 **Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
