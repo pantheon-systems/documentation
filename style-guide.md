@@ -73,7 +73,7 @@ Any bits of code should be wrapped in backticks. `` Any standalone code blocks s
 
 ### Links
 
-Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yeild [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
+Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
 
 
 ### Anchor Tags
@@ -193,7 +193,7 @@ Write the questions as if the user were asking them. If there are more than two 
 
 How do I change my Pantheon password?
 
-1. Select **Sites & Accounts **from the user account drop-down menu.
+1. Select **Sites & Accounts** from the user account drop-down menu.
 
 2. Click the **Account** tab.
 
@@ -207,7 +207,7 @@ The glossary includes an A-Z usage list of common terms used in Pantheon documen
 
 ### File Paths
 
-FIle paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
+File paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
 ```
 /source/docs/assets/images/
 ```
@@ -244,8 +244,7 @@ If there are tasks a user needs to have completed before continuing on with the 
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
-##
-Identifying Instances of Concepts
+##Identifying Instances of Concepts
 
 Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink.
 
