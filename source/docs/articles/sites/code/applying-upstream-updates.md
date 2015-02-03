@@ -33,7 +33,7 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 ![A Pantheon site dashboard with upstream updates available.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357403)
 ![Pantheon dashboard showing upstream update in progress.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357428)
 3. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
-4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/articles/local/git-faq#HowdoIrevertorundochanges?) using Git.
+4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/articles/local/git-faq#how-do-i-revert-or-undo-changes?) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
 6. Click “Visit Testing Environment” to test the update against your Live site’s content base.
 ![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357430)
@@ -53,7 +53,7 @@ In the event that the update fails you may see an error indicating a conflict wi
 
 Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository.
 
-**Note: This does not solve all problems that may arise, but it should take care of most situations.**
+**Note**: This does not solve all problems that may arise, but it should take care of most situations.
 
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 
@@ -83,7 +83,7 @@ From within an up-to-date Git clone in your local environment:
     # resolve conflicts
     git push origin master  
 
-For more information on resolving conflicts, see the [Git FAQ page](/docs/articles/local/git-faq#FrequentlyAskedQuestions).
+For more information on resolving conflicts, see the [Git FAQ page](/docs/articles/local/git-faq#frequently-asked-questions).
 
 ## Troubleshooting
 
