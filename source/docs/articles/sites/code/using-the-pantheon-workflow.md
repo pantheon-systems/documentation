@@ -54,7 +54,7 @@ If there are other workflows you would like to see, contact us. We're always loo
 
 ## Handling Configuration Changes
 
-Dealing with changes to your site's configuration can be a challenge in Drupal. Because the only reliable way to synchronize databases is to do so completely, and because Drupal stores its configuration in the database, it is not possible to "push configuration" from dev to test to live without taking some additional steps.
+Dealing with changes to your site's configuration can be a challenge in Drupal. Because the only reliable way to synchronize databases is to do so completely, and because Drupal stores its configuration in the database, it is not possible to "push configuration" from Dev to Test to Live without taking some additional steps.
 
 ### hook\_update\_N()
 
