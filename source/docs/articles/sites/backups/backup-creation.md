@@ -15,7 +15,7 @@ category:
 
 ## Steps
 
-1. Start your backup in the **Backups** tab by pressing the **Create New Backup** button.
+1. Start your backup in the Backups tab by pressing the **Create New Backup** button.
 2. Relax as your backup is made. Track it in the progress indicator.
 3. After completion, you can access your backups.
 
