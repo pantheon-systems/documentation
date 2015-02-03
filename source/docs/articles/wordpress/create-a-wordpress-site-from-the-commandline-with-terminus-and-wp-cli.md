@@ -8,7 +8,7 @@ Many developers feel more at home at the command line than they do using Windows
 
 Until recently, WordPress did not have a good answer to Drupal's drush tool. Thankfully, it does now: **wp-cli**. 
 
-WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's Terminus.
+WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using nothing but WP-CLI and Pantheon's Terminus.
 
 ## Before You Begin
 
@@ -40,7 +40,7 @@ Now we need to tell terminus who you are. You can do that with the auth command:
 $ terminus auth login your@email.tld
 ```
 
-You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument to pass your password in on the command line. However, this means your password will be visible in both your script and in your command line's history. You'll know it's successful when you see the Pantheon logo.
+You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument to pass your password in on the command line. However, this means your password will be visible in both your script and in your command line's history. You;ll know it's successful when you see the Pantheon logo.
 
 ## Create a Site
 
@@ -57,12 +57,14 @@ You'll see the human readable name and the ID. If you're a member of more than o
 Next, you need a Product ID. This is an internal Pantheon GUID for the different systems that you can install. Use this command to see the complete list:
 
 ```
-$ terminus products list 
+$ terminus products list
 ```
 
-Since these are assigned by Pantheon and used by all customers, they never change. The one to look for is: ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``    
+Since these are assigned by Pantheon and used by all customers, they never change. Therefore, the one to look for is: ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``    
 
-Now you need to create a site name. This can be anything you want it to be, but it can only contain letters and dashes, and must be unique. Next, create the label. The label is the human readable version of the name. It can be anything you like, but it's best to keep it simple.
+Now you need to create a site name. This can be anything you want it to be, however it can only contain letters and dashes. Also, since it will be a subdomain on .pantheon.io, must be unique. 
+
+Next, create the label. The label is the human readable version of the name. It can be anything you like, but it's best to keep it simple.
 
 For your test site, use the following:
 - *Site Name* = cli-test
@@ -93,7 +95,7 @@ Notice that instead of a screenshot of a WordPress powered site, you have the Pa
 
 # Set Up Your Site
 
-Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but the command line. There's even a wp-config.php already created and ready to use. 
+Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but use the command line. There's even a wp-config.php already created and ready to use. 
 
 All you need to do now is populate the database and your site will be ready to use. Go to WP-CLI through Terminus, and use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
@@ -104,7 +106,7 @@ $ terminus wp core install --url=the.url.of.your.dev.site --title="Command Line 
  With a little bash magic, you can use Terminus to get the URL of your site:
 
 ```
-$ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}`"
+$ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}'`"
 ```
 
 Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
@@ -112,16 +114,26 @@ Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
 To populate the database of the site you created above, use the following command:
 
 ```
-$ terminus wp core install --url=http://dev-cli-test.pantheon.io --title="Command Line Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=bob@example.com --site=cli-test
+$ terminus wp core install --url=http://dev-cli-test.pantheon.io --title="Command-Line-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=bob@example.com --site=cli-test
 ```
 
-If everything goes as planned, you'll see this message:
+terminus interacts wp-cli on the server over ssh. The first time you connect to any new server via ssh, your local ssh will want confirmation that you are indeed connecting to the correct server. You will see a message that looks something like this.
+
+```
+The authenticity of host '[appserver.dev.YOUR.SITES.PANTHEON.UUID.drush.in]:2222 ([xxx.xxx.xxx.xxx]:2222)' can't be established.
+RSA key fingerprint is xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+Type 'yes' and ssh will add the host to your `known_hosts` file and finish the installation of the WordPress database.
+
+When complete, you will see the message:
 
 ```
 Success: WordPress installed successfully.
 ```
 
-Now go to you Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
+Now go to you Dashboard and click the "Command-Line-Test" site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
 
 # Upload Images and Modify Posts
 Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress install. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any.
