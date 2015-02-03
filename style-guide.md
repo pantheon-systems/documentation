@@ -9,12 +9,11 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 ## Writing Style
 
 ### Voice and Tone
+Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovative". Pantheon is young, but mature for its age. Smart, but not disconnected from culture. Focused, but agile. Fast, but extremely intricate.
 
-##### Common Web Writing Guidelines
+#### Common Web Writing Guidelines
 
 * Be consistent.  Use the same terminology, voice, and tone throughout all documentation.
-
-* Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovative". Pantheon is young, but mature for its age. Smart, but not disconnected from culture. Focused, but agile. Fast, but extremely intricate.
 
 * Write clearly, and use language the audience understands. Avoid jargon whenever possible.
 
@@ -26,7 +25,7 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 
 * Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
 
-### General Guidelines for All Content
+## General Guidelines for All Content
 
 * Avoid gender-specific language. Use the imperative. This form of a verb lets you use the second person (you, your) rather than the third person (him, her, she, his).
 
@@ -108,9 +107,9 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
 ## Capitalization
 
-See below for when to use title or sentence case. Never use all caps; use bold if you need to make content prominent.
+See below for when to use title or sentence case. Never use all caps. If you need to make content prominent, use bold rather than all caps or italics.
 
-**Title Case**
+####Title Case
 
 Use title case for all headers, buttons, tab names, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
 
@@ -119,7 +118,6 @@ Title case means that you capitalize every word except:
 * Articles (a, an, as, the)
 
 * Coordinating conjunctions (and, or)
-
 
 **Examples**:
 
@@ -131,12 +129,12 @@ Click **Clear Caches**.
 
 Select the **Settings** tab.
 
-**Sentence Case**
+####Sentence Case
 
 Use sentence case for body content and short phrases, even when the content is a link. Sentence case means you only capitalize the first letter of the sentence.
 
 **Example:**
-We run our status checks on your site automatically once an hour. If you'd like fresher data, run the checks now.
+We run our status checks on your site automatically once an hour. If you'd like fresher data, [run the checks now](www.pantheon.com).  
 
 **Code Snippets**
 
@@ -156,33 +154,34 @@ In a form or when space is limited, use slashes in the format of month/day/year 
 
 ## Cross-Referencing Documents
 
-When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations). **Example**:
+When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
-For help with SSH keys, see Generating SSH Keys.
+For help with SSH keys, see [Generating SSH Keys](https://www.getpantheon.com/docs/articles/users/generating-ssh-keys/).
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
 
-For detailed instructions, see Article Title.
+For detailed instructions, see [Article Title](www.getpantheon.com).
 
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
 
-For more information, see Article Title.
+For more information, see [Article Title](www.getpantheon.com).
 
 ## Elements of Style
 
-See [The Elements of Style](http://www.bartleby.com/141/index.html)  by William Strunk and E.B. White for principles of composition, word usage, and writing style guidelines.
+See [The Elements of Style](http://www.bartleby.com/141/index.html) by William Strunk and E.B. White for principles of composition, word usage, and writing style guidelines.
 
 ## Embedded Guidance (Walkthroughs)
 Walkthrough Titles - Use the associated procedure title
 Step title:
 Step description:
 
-Title - Task focused, very concise. **Example**: Add an SSH Key.
+Title: Task focused, very concise.  
+**Example**: Add an SSH Key.
 
-Description - Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment. **Example**: Learn how to add and manage SSH keys.
+Description: Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment.   **Example**: Learn how to add and manage SSH keys.
 
 
 ## FAQs
@@ -203,7 +202,7 @@ How do I change my Pantheon password?
 
 ## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary")
 
-The glossary includes an A-Z usage list of common terms used in Pantheon documentation.
+The [glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0) includes an A-Z usage list of common terms used in Pantheon documentation.
 
 ### File Paths
 
@@ -223,7 +222,7 @@ See the *Chicago Manual of Style* for all grammar-related questions.
 
 ## Headings and Subheadings
 
-When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown as H2, and Subheadings should be shown as H3.
+When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown as H2 tags, and Subheadings should be shown as H3 tags.
 
 **Examples**:
 
@@ -252,7 +251,7 @@ In technical documentation or the UI, this can be a rollover glossary definition
 
 ## Procedures
 
-See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
+When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
 
 When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing").
 
@@ -272,7 +271,7 @@ When adding a note to a document, use sentence case and bold only the word, not 
 
 **Note**: You will need to download and install Git before you can begin.
 
-If there is detrimental information a user must read before starting, bold the entire note:
+If there is critical or detrimental information a user must read before starting, bold the entire note:
 
 **Note: Do not attempt to delete files until...**
 
@@ -280,21 +279,9 @@ If there is detrimental information a user must read before starting, bold the e
 
 For all numbers under 10, spell out the number. For 10 and above, use the numeral.
 
-Correct: Joe has nine sites and needs to add 12 more.
+**Correct**: Joe has nine sites and needs to add 12 more.
 
-Incorrect: Joe has 9 sites and needs to add twelve more.
-
-##Referring to Tabs in the Platform
-
-There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
-
-1. Instructing the user to click on a tab as part of a task: 
-In Settings, click the **Add Ons** tab.
-To update the credit card, click the **Billing** tab.
-
-2. Referring to a page/tab name, without providing instructions:
-You can find the options available in the Add Ons tab.
-You can change the credit card in the Billing tab.
+**Incorrect**: Joe has 9 sites and needs to add twelve more.
 
 ## Punctuation
 
@@ -360,12 +347,17 @@ Best Practices:
 
 * Use for uncommon or difficult terms and concepts.
 
-## Table of Contents
+##Referring to Tabs in the Platform
 
+There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
 
-For documents that have a large amount of content (more than two pages), include a TOC listing the topics/sections. This allows the reader to jump to the section they are interested in reading without having to do a large amount of reading, scanning, or scrolling.
+1. Instructing the user to click on a tab as part of a task:   
+In Settings, click the **Add Ons** tab.  
+To update the credit card, click the **Billing** tab.
 
-All H2 and H3 tags, created with `##` and `###`, will automatically be included in a table of contents on the right side of your articles.
+2. Referring to a page/tab name, without providing instructions:  
+You can find the options available in the Add Ons tab.  
+You can change the credit card in the Billing tab.
 
 
 ## Titles
@@ -397,7 +389,6 @@ See below for visual examples of the terms to use when referring to specific pag
 ### Account Tab
 
 ### Site Dashboard
-
 
 Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
