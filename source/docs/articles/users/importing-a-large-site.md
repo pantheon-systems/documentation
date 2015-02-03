@@ -32,7 +32,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 3. From your site's Dashboard, go to the Dev environment.
 4. Click **Settings**, then select **About Site**.
 5. Place your mouse over the upstream value, left click and select **Copy link** to get the site's Pantheon upstream location.  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/343668)  
+ ![](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)  
 6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:  
 **Original:** 'git pull --no-rebase -Xtheirs --squash {paste-value-here} master'  
 **Updated: ** 'git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master'  
@@ -44,7 +44,7 @@ Squash commit -- not updating HEAD
 Automatic merge went well; stopped before committing as requested
 
 7. From your Pantheon Dashboard, go to the Dev tab and select **Code**. Make sure your site is on Git mode, and copy the Git connection information found to the right of the Git tab.
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/335378)
+![](/source/docs/assets/images/pantheon-dashboard-git-connection-info.png)
 8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.
 **From:** git remote add pantheon {pantheon-site-git-repo-information}
 **To:** git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
@@ -56,7 +56,7 @@ Automatic merge went well; stopped before committing as requested
 10. Now Git pull from your Pantheon repository master branch: 'git pull pantheon master'. Handle any conflicts as needed.  
 11. Git push back to your Pantheon site repository: 'git push pantheon master'  
 12. Go to the Code tab of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/343667)
+ ![](/source/docs/assets/images/pantheon-dashboard-git-commit-messages.png)
 **Files**
 Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. For these, it's best to use a utility such as an SFTP client or rsync. The biggest issue with these is having the transfer stopped due to connectivity issues. [To handle that scenario, try this handy bash script](https://www.evernote.com/shard/s404/sh/5bcfedb7-cda1-4647-9390-0112c2f9e703/f8defb098e992e2acd57280c4dcddb63):  
 
@@ -99,7 +99,6 @@ Your command will now look like:
 mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database\_dump.sql
 3. After you run the command, the sql file will be imported into your Pantheon Dev database.  
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard, and you are good to go.
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/343671)  
 
 
 
