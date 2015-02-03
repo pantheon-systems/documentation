@@ -183,9 +183,9 @@ Title - Task focused, very concise. **Example**: Add an SSH Key.
 Description - Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment. **Example**: Learn how to add and manage SSH keys.
 
 
-## FAQ’s
+## FAQs
 
-Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list.
+Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. Always use h4 tags for FAQs. 
 
 **Example**:
 
