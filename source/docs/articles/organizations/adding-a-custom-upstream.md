@@ -36,7 +36,7 @@ Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pa
 ## 2. Add Your Code.
 
 Follow conventions for using the /profiles directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
-Push the repository to your upstreamâ€™s remote location.
+Push the repository to your upstream's remote location.
 
 `git push origin master`
 
