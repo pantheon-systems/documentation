@@ -154,12 +154,6 @@ All references must be to:
 sites/all/modules/contrib
 ```
 
-##Dates
-
-Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
-
-In a form or when space is limited, use slashes in the format of month/day/year without any leading zeros: 1/10/2014
-
 ##Cross-Referencing Documents
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
@@ -176,6 +170,13 @@ For detailed instructions, see [Article Title](www.getpantheon.com).
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
 
 For more information, see [Article Title](www.getpantheon.com).
+
+## Dates
+
+Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
+
+In a form or when space is limited, use slashes in the format of month/day/year without any leading zeros: 1/10/2014
+
 
 ## Elements of Style
 
@@ -259,19 +260,6 @@ You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://dr
 ##Pantheon_Environment 
 TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
-##Procedures
-
-When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
-
-When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing").
-
-**Example**:
-
-Create Your Site.
-
-Choose Your Framework.
-
-Visit the Dev Environment.
 
 ## Notes
 
@@ -292,6 +280,20 @@ For all numbers under 10, spell out the number. For 10 and above, use the numera
 **Correct**: Joe has nine sites and needs to add 12 more.
 
 **Incorrect**: Joe has 9 sites and needs to add twelve more.
+
+##Procedures
+
+When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
+
+When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing").
+
+**Example**:
+
+Create Your Site.
+
+Choose Your Framework.
+
+Visit the Dev Environment.
 
 ## Punctuation
 
