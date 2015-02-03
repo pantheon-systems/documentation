@@ -1,6 +1,6 @@
 **DOCUMENTATION STYLE GUIDE**
 
-# About This Guide
+#About This Guide
 
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
@@ -68,7 +68,7 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 ### Code Snippets
 
-Any bits of code should be wrapped in backticks. `` Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
+Any bits of code should be wrapped in backticks.  Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
 
 ### Links
 
@@ -109,7 +109,7 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
 See below for when to use title or sentence case. Never use all caps. If you need to make content prominent, use bold rather than all caps or italics.
 
-####Title Case
+###Title Case
 
 Use title case for all headers, buttons, tab names, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
 
@@ -129,12 +129,12 @@ Click **Clear Caches**.
 
 Select the **Settings** tab.
 
-####Sentence Case
+###Sentence Case
 
 Use sentence case for body content and short phrases, even when the content is a link. Sentence case means you only capitalize the first letter of the sentence.
 
 **Example:**
-We run our status checks on your site automatically once an hour. If you'd like fresher data, [run the checks now](www.pantheon.com).  
+We run our status checks on your site automatically once an hour. If you'd like fresher data, [run the checks now](www.getpantheon.com).  
 
 **Code Snippets**
 
@@ -146,13 +146,21 @@ I use Git on my local machine.
 
 Run "`git add`".
 
-## Dates
+##Contrib Directory
+
+All Drupal sites used for generating documentation must install contributed modules to sites/all/modules/contrib. 
+All references must be to: 
+```
+sites/all/modules/contrib
+```
+
+##Dates
 
 Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
 
 In a form or when space is limited, use slashes in the format of month/day/year without any leading zeros: 1/10/2014
 
-## Cross-Referencing Documents
+##Cross-Referencing Documents
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
@@ -232,6 +240,11 @@ Choose Your Framework
 
 Visit the Dev Environment
 
+##Identifying Instances of Concepts
+
+Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink.
+
+In technical documentation or the UI, this can be a rollover glossary definition with a link to a helpdesk article, if needed.
 
 ## Listing Prerequisites (Before You Begin)
 
@@ -239,17 +252,14 @@ If there are tasks a user needs to have completed before continuing on with the 
 
 **Example**:
 
-#### Before You Begin
+####Before You Begin
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
-##Identifying Instances of Concepts
+##Pantheon_Environment 
+TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
-Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink.
-
-In technical documentation or the UI, this can be a rollover glossary definition with a link to a helpdesk article, if needed.
-
-## Procedures
+##Procedures
 
 When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
 
