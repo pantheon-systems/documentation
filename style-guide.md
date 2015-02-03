@@ -112,7 +112,7 @@ See below for when to use title or sentence case. Never use all caps; use bold i
 
 **Title Case**
 
-Use title case for all headers, buttons, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
+Use title case for all headers, buttons, tab names, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
 
 Title case means that you capitalize every word except:
 
@@ -125,9 +125,11 @@ Title case means that you capitalize every word except:
 
 Domains For the Development Environment (header)
 
-Clear Caches (button)
+Select **Make Owner**.
 
-Click the **Clear Caches** button.
+Click **Clear Caches**.
+
+Select the **Settings** tab.
 
 **Sentence Case**
 
@@ -231,27 +233,14 @@ Choose Your Framework
 
 Visit the Dev Environment
 
-When using headings or subheadings to group a large amount of text or instructions, number each header and include ending punctuation (typically a period).
-
-**Example**:
-
-**Merge Core Releases.**
-
-Upstream maintainers update Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with:
-
-`git pull git://github.com/pantheon-systems/wordpress.git master`
-
-or
-
-`git pull git://github.com/pantheon-systems/drops-6.git master`
 
 ## Listing Prerequisites (Before You Begin)
 
-If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as a header.
+If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as H2.
 
 **Example**:
 
-## Before You Begin
+#### Before You Begin
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
@@ -265,8 +254,6 @@ In technical documentation or the UI, this can be a rollover glossary definition
 ## Procedures
 
 See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
-
-
 
 When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing").
 
@@ -286,6 +273,10 @@ When adding a note to a document, use sentence case and bold only the word, not 
 
 **Note**: You will need to download and install Git before you can begin.
 
+If there is detrimental information a user must read before starting, bold the entire note:
+
+**Note: Do not attempt to delete files until...**
+
 ## Numbers
 
 For all numbers under 10, spell out the number. For 10 and above, use the numeral.
@@ -293,6 +284,18 @@ For all numbers under 10, spell out the number. For 10 and above, use the numera
 Correct: Joe has nine sites and needs to add 12 more.
 
 Incorrect: Joe has 9 sites and needs to add twelve more.
+
+##Referring to Tabs in the Platform
+
+There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
+
+1. Instructing the user to click on a tab as part of a task: 
+In Settings, click the **Add Ons** tab.
+To update the credit card, click the **Billing** tab.
+
+2. Referring to a page/tab name, without providing instructions:
+You can find the options available in the Add Ons tab.
+You can change the credit card in the Billing tab.
 
 ## Punctuation
 
