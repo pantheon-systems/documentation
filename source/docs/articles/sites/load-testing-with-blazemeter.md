@@ -5,7 +5,7 @@ category:
   - going-live
 ---
 Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Enterprise site is load tested before going live, and [BlazeMeter](http://blazemeter.com) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
-a
+
 ##The Importance of Identifying Performance Hits
 
 The days of simple static HTML sites are fading, and for Drupal and Wordpress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers.
