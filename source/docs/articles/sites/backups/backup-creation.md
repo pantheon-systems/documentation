@@ -15,9 +15,9 @@ category:
 
 ## Steps
 
-1. [Start](/docs/articles/sites/backups/backup-creation#creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
-2. [Relax](/docs/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
-3. After completion, you can [access your backups.](/docs/articles/sites/backups/backup-creation#creating-a-backup#access)
+1. Start your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
+2. Relax as your backup is made. Track it in the progress indicator.
+3. After completion, you can access your backups.
 
 ![Create Backup](https://www.getpantheon.com/sites/default/files/docs/desk_images/305275)
 
@@ -37,7 +37,7 @@ The newest backup will appear at the top of the list, with the name of the envir
 
 Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
 
-Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 **Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
 
@@ -47,9 +47,9 @@ Now that you have created the archive files you can check out how to [Restore an
 
 Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
-### How do I restore from my site from a full environment backup? 
+#### How do I restore from my site from a full environment backup? 
 
-In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 #### How long does a backup take? 
 
