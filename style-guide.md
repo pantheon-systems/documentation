@@ -231,17 +231,22 @@ See the *Chicago Manual of Style* for all grammar-related questions.
 
 ## Headings and Subheadings
 
-When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown as H2 tags, and Subheadings should be shown as H3 tags.
+When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown in H2 tags, and subheadings should be shown in H3 tags.
 
-**Examples**:
+When writing an outline for a guide or article, decide what the main topics are. Those will be your headings (tagged as H2). If there are subtopics that belong under a category, display those as subheaders (tagged as H3).
 
-Create a Pantheon Site
+**Example**:
 
-Choose Your Framework
+## Configuration
+The configuration topic may have a 1-3 paragraphs on its own, as well as several subtopics. 
 
-Visit the Dev Environment
+###Stage and Commit Settings.php
+This is a subtopic of Configuration. Specific information related to settings.php will be shown here.
 
-##Identifying Instances of Concepts
+
+
+
+## Identifying Instances of Concepts
 
 Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink.
 
