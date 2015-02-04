@@ -96,4 +96,5 @@ Depending on the application you’re running, you can also access error and slo
 
 The errors and performance hits you discover will each will have a different solution. We recommend doing a search of the error message and reading solutions posted by others, or post your own issue and see if anyone else has an answer. Additionally, if a specific module or plugin is slow, check the issue queue to see if the problem is known and if a patch is available.
 
-Outside of error messages, the most common performance hit comes from poorly configured (or nonexistent) caching. While you may already know about anonymous page caching, you can also greatly boost performance with backend caching (Redis) and by caching individual components on the site, such as views, panels, and blocks.
+Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](https://www.getpantheon.com/docs/articles/sites/database/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](https://www.getpantheon.com/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well. 
+
