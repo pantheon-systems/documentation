@@ -32,6 +32,13 @@ $ drush dl reroute_email
 The following line isn’t necessary, but it’s a good idea to use `git status` to understand the state of your local Git repository, especially if you’re new to Git. If you’re just starting with Git, I encourage you to do a `git status` between each of the steps.
 ```
 $ git status
+On branch master
+Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        sites/all/modules/contrib/
 ```
 Add the module to git.
 ```
@@ -57,15 +64,15 @@ $ cp sites/default/default.settings.php sites/default/settings.php
 Using your favorite editor or IDE (lately I use [vim](http://www.vim.org) or [atom.io](https://atom.io)), open settings.php, and add the following:
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
-  if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
-	// Do not reroute email on Live
-	$conf['reroute_email_enable'] = 0;
+  if (PANTHEON_ENVIRONMENT == 'live') {
+    // Do not reroute email on Live
+    $conf['reroute_email_enable'] = 0;
   }
   else {
-       // Reroute email on all Pantheon environments but Live
-	$conf['reroute_email_enable'] = 1;
-	$conf['reroute_email_address'] = "youremail+qa-" . PANTHEON_ENVIRONMENT . "@example.com";
-	$conf['reroute_email_enable_message'] = 1;
+    // Reroute email on all Pantheon environments but Live
+    $conf['reroute_email_enable'] = 1;
+    $conf['reroute_email_address'] = "youremail+qa-" . PANTHEON_ENVIRONMENT . "@example.com";
+    $conf['reroute_email_enable_message'] = 1;
   }
 }
 
@@ -108,15 +115,19 @@ Intercept all outgoing emails for all environments but Live and reroute to QA em
 
 Project page: https://www.drupal.org/project/reroute_email
 ```
-
-Finally, push the code to Pantheon and enable the module in all environments.
+Next, push the code to Pantheon and enable the module in all environments.
 ```
 $ git push origin master
-$ drush pauth  # See [Terminus - the Pantheon Command-Line Interface](https://www.getpantheon.com/docs/articles/local/terminus-the-pantheon-command-line-interface/)
 ```
-I am only enabling it in Dev because that’s the only environment that currently exists on this site. When I deploy and create other environments, the database will be cloned and the module will be enabled in those environments as well.
+Push the code to Test and Live and enable the module in all environments.
+You can do this through the Site Dashboard and the Drupal Admin UI (/admin/modules) or by using terminus and drush:
 ```
-$ drush @pantheon.mysite.dev reroute_email en -y
+$ terminus auth login  # See https://github.com/pantheon-systems/cli
+$ terminus --site=<site-name> --env=dev drush en reroute_email -y
+$ terminus site deploy --site=<site-name> --from=dev --env=test --note="Intial deploy. Reroute Email demo"
+$ terminus site deploy --site=<site-name> --from=test --env=live --note="Intial deploy. Reroute Email demo"
+$ terminus --site=<site-name> --env=test drush en reroute_email -y
+$ terminus --site=<site-name> --env=live drush en reroute_email -y
 ```
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 
