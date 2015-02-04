@@ -46,7 +46,9 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
   ```
 
 7. From your Pantheon Dashboard, go to the Dev tab and select **Code**. Make sure your site is on Git mode, and copy the Git connection information found to the right of the Git tab.
+
   ![](/source/docs/assets/images/pantheon-dashboard-git-connection-info.png)
+  
 8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.
   **From:** `git remote add pantheon {pantheon-site-git-repo-information}`
   **To:** `git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import`
