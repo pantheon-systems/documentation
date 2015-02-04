@@ -91,7 +91,7 @@ Your site is now set up on Pantheon! There's just a couple of things we need to 
 Notice that instead of a screenshot of a WordPress powered site, you have the Pantheon Magic Unicorn telling you that your site is ready to set up. 
 
 
-# Lightning Quick Install 
+## Lightning Quick Install 
 
 Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but the command line. There's even a wp-config.php already created and ready to use. 
 
@@ -123,10 +123,10 @@ Success: WordPress installed successfully.
 
 Now go to you Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
 
-# It's Time to Customize
+## It's Time to Customize
 Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress install. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any.
 
-##Add Images
+###Add Images
 Using WP-CLI gives us the ability to upload images and modify posts. In this case, you can do both at once. The following command will add a featured image to the Hello Word post that WordPress installs automatically. 
 
 You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
@@ -145,7 +145,7 @@ Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c
 Now, go to your browser and refresh the site (not your dashboard) to see the new image.    
 
 
-##Activate a Theme
+###Activate a Theme
 
 So far, so good. Many will stop there and start updating the content. There is one more thing we need to do to make this site more appealing, and that is to add a better looking theme. Once again, you can do this all without touching WordPress or your Pantheon Dashboard. 
 
@@ -176,6 +176,6 @@ Now that we've committed our changes, go back to your test site in the browser a
 ![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
-# The Power of Terminus and WP-CLI
+## The Power of Terminus and WP-CLI
 
 If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible. 
