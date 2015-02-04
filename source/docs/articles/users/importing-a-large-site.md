@@ -49,11 +49,12 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 
   ![](/source/docs/assets/images/pantheon-dashboard-git-connection-info.png)
   
-8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.
-  **From:** `git remote add pantheon {pantheon-site-git-repo-information}`
-  **To:** `git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import`
+8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the {pantheon-site-git-repo-information} with the Git information from the previous step.  
+  **From:** `git remote add pantheon {pantheon-site-git-repo-information}`  
+  **To:** `git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import`  
   **Important: ** Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:
   `git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import`
+
 9. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
 `git add -A`
 `git commit -m "Adding Pantheon core files"` 
