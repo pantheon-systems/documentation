@@ -6,7 +6,7 @@ draft: true
 
 Many developers feel more at home at the command line than they do using Windows. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
 
-Until recently, WordPress did not have a good answer to Drupal's drush tool. Thankfully, it does now: **wp-cli**. 
+Until recently, WordPress did not have a good answer to Drupal's drush tool. Thankfully, it does now: wp-cli. 
 
 WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's Terminus.
 
@@ -19,7 +19,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.getpantheon.com/register). Pantheon accounts are always free for development.
 
 ## Install Terminus
-To use WP-CLI to manage your WordPress powered site hosted on Pantheon, you first need to install Pantheon's command line tool, **terminus**. Terminus gives you access to your Pantheon account and sites, and allows you to execute WP-CLI commands on those sites. To install terminus, follow the [basic installation instructions](https://github.com/pantheon-systems/cli/wiki/Installation).
+To use WP-CLI to manage your WordPress powered site hosted on Pantheon, you first need to install Pantheon's command line tool, Terminus. Terminus gives you access to your Pantheon account and sites, and allows you to execute WP-CLI commands on those sites. To install terminus, follow the [basic installation instructions](https://github.com/pantheon-systems/cli/wiki/Installation).
 
 Once installed, test it using the following command:
 
@@ -32,7 +32,7 @@ $ terminus art
 If you see the Pantheon fist bolt, you'll know that terminus is installed properly.    
 
 
-## Log In To Pantheon
+## Log In to Pantheon
 
 Now we need to tell terminus who you are. You can do that with the auth command:
 
@@ -42,7 +42,7 @@ $ terminus auth login your@email.tld
 
 You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument to pass your password in on the command line. However, this means your password will be visible in both your script and in your command line's history. You'll know it's successful when you see the Pantheon logo.
 
-## Create a Site
+## Create Your Site
 
 Open a browser and log in to your Pantheon dashboard so you can see the progress being made on some of the commands.
 
@@ -64,9 +64,9 @@ Since these are assigned by Pantheon and used by all customers, they never chang
 
 Now you need to create a site name. This can be anything you want it to be, but it can only contain letters and dashes, and must be unique. Next, create the label. The label is the human readable version of the name. It can be anything you like, but it's best to keep it simple.
 
-For your test site, use the following:
-- *Site Name* = cli-test
-- *Label* = Command Line Test
+For your test site, use the following:  
+**Site Name** = cli-test  
+**Label** = Command Line Test  
 
 Terminus is broken up into a series of command modules, each with its on set of sub-commands. To create a site, use the ``sites`` command and the ``create`` sub-command in the format shown below:
 
@@ -91,7 +91,7 @@ Your site is now set up on Pantheon! There's just a couple of things we need to 
 Notice that instead of a screenshot of a WordPress powered site, you have the Pantheon Magic Unicorn telling you that your site is ready to set up. 
 
 
-# Set Up Your Site
+# Lightning Quick Install 
 
 Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but the command line. There's even a wp-config.php already created and ready to use. 
 
@@ -123,12 +123,13 @@ Success: WordPress installed successfully.
 
 Now go to you Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
 
-# Upload Images and Modify Posts
+# It's Time to Customize
 Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress install. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any.
 
+##Add Images
 Using WP-CLI gives us the ability to upload images and modify posts. In this case, you can do both at once. The following command will add a featured image to the Hello Word post that WordPress installs automatically. 
 
-You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import``. Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
+You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
 
 
 ```
@@ -144,7 +145,8 @@ Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c
 Now, go to your browser and refresh the site (not your dashboard) to see the new image.    
 
 
-# Add a New Theme
+##Customize With Themes
+
 So far, so good. Many will stop there and start updating the content. There is one more thing we need to do to make this site more appealing, and that is to add a better looking theme. Once again, you can do this all without touching WordPress or your Pantheon Dashboard. 
 
 WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).   
