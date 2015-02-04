@@ -86,4 +86,4 @@ No. Attempting anything of the sort will only cause pain and unhappiness, this w
 [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/)  
 
 
-[Launching a WordPress Site](docs/articles/wordpress/starting-wordpress-site/)
+[Launching a WordPress Site](/docs/articles/wordpress/starting-wordpress-site/)

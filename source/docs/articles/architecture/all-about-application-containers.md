@@ -31,7 +31,6 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common-sense libraries available globally.
 - Your containers can access a whitelisted set of [binary tools](/docs/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
-- Your containers can access a whitelisted set of [binary tools](/docs/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
 
 ## Performance and Scalability
 
