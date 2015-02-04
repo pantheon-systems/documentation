@@ -115,7 +115,7 @@ Intercept all outgoing emails for all environments but Live and reroute to QA em
 
 Project page: https://www.drupal.org/project/reroute_email
 ```
-Next, push the code to Pantheon and enable the module in all environments.
+Next, push the code to Pantheon.
 ```
 $ git push origin master
 ```
