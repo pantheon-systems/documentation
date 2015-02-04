@@ -25,7 +25,7 @@ We include a growing number of "Drupal products" as available start-states on Pa
 
 Drupal products offer a much richer out of the box experience, but are more complex under the hood. You still have access to 100% of the code with a Drupal product, but the increased complexity means it can be more challenging to customize and extend.
 
-**Note: It is not possible to change the upstream of the site. To change the upstream, spin up a site with your desired upstream distribution.**
+**Note**: It is not possible to change the upstream of the site. To change the upstream, spin up a site with your desired upstream distribution.
 
 ## Importing an Existing Site
 
