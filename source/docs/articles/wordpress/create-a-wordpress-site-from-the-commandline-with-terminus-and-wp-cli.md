@@ -4,7 +4,7 @@ description: Learn how to install and use Terminus and WP-CLI to control a WordP
 draft: true
 ---
 
-Many developers feel more at home at the command line than they do using Windows. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
+Many developers feel more at home at the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
 
 Until recently, WordPress did not have a good answer to Drupal's drush tool. Thankfully, it does now: wp-cli. 
 
