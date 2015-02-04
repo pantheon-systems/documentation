@@ -145,7 +145,7 @@ Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c
 Now, go to your browser and refresh the site (not your dashboard) to see the new image.    
 
 
-##Customize With Themes
+##Activate a Theme
 
 So far, so good. Many will stop there and start updating the content. There is one more thing we need to do to make this site more appealing, and that is to add a better looking theme. Once again, you can do this all without touching WordPress or your Pantheon Dashboard. 
 
