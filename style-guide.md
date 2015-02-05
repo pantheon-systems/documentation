@@ -83,6 +83,7 @@ Use headings in a logical manner. The system we use should generate these from t
 
 Use headings in a logical manner. The site will automatically generate anchor links for H2 and H3 tags, and place them in a Table of Contents in the right column. Generated links will be "pretty".
 
+#A-Z Usage  
 
 ## Accessibility
 
@@ -220,6 +221,10 @@ File paths should be shown the same way code snippets are so that they're easier
 /source/docs/assets/images/
 ```
 
+If it's a path within the Dashboard, separate tab/page names with an angle bracket ">".  
+
+**Example**: Settings > Add Ons > Add  
+  
 ## Filenames
 In general, filenames should be as short as possible. Add a hyphen (-) between each word.   
 **Example:** writing-a-guide.md
