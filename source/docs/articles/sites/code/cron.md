@@ -10,7 +10,7 @@ slug: sites/code
 
 ## Overview
 
- **Note**: Cron will always run **unless** all jobs are specifically set to 'Off' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.
+ **Note**: Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
@@ -26,7 +26,7 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 
 There is no way to configure when Pantheon executes Drupal cron.
 
-**Important:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
+**Important**: Setting the value to "Never" will be ignored; cron will always run at least hourly.
 
 ## Managing Cron
 
@@ -88,16 +88,18 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 ### How Can I Find Out When Cron Last Ran?
 
 You can check the log messages through the Drupal Admin interface, as mentioned above.  
-You can also use Drush to see when cron was last run with the following command:
+
+You can also use Drush to see when cron was last run with the following command:
 
     drush wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
-Yes - in Drupal at `admin/system/config/cron`. Select **Never** from the "Run cron every" dropdown menu as shown below, then Save the configuration. 
+Yes - in Drupal at `admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu as shown below, then save the configuration. 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/74128)  
- 
+
+ 
 
 ## Resources
 
