@@ -8,84 +8,134 @@ draft: true
 ## <span style="color: red">Introduction Section</span>
 
 ### <span style="color: red">Create Sites Faster And More Efficiently</span>
-I'm proud of the Pantheon dashboard and all the technologies that feed it, but as a developer I am definitely in the **CLI4LIFE** camp. I can type faster than I can click, and I like being able to repeat, script and automate things. Don't make me use a browser when what I really want is a shell.
+
 
 ### <span style="color: red">Solution</span>
+The latest version of Pantheon's CLI, [Terminus](https://github.com/pantheon-systems/cli), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more! By using Terminus in this manner, a site administrator can massively reduce the time they spend on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, commiting code and cloning from one site environment to another, all through the Terminus CLI.
 
-<span style="color: red">Give a summary of how you plan to solve the problem. Include any known limitations that you can anticipate. If you're presenting a solution for mail, discuss whether the solution will be for incoming, outgoing, or both.</span>
+#### Installing Terminus
 
-That's why we took care to engineer a Drush interface into our [runtime matrix](https://www.getpantheon.com/blog/why-we-built-pantheon-containers-instead-virtual-machines) from the ground up; no small feat. Even though your site could be running from different locations in Pantheon's platform, you can still use Drush to control it. But if you've never used Drush before, here are 5 steps to "feeling the Drush"
+Installing Terminus is a fairly straight forward process. Just follow the [instructions found here](https://github.com/pantheon-systems/cli/wiki/Installation).
 
-### <span style="color: red">Background</span>
-<span style="color: red">Here you can provide any background information as needed. Any additional technical info or context. Optional, but this is highly valuable if done well. Include how the solution plays into the general infrastructure of a website.
-
-<span style="color: red">Things to consider including:
-
-<span style="color: red">Environment: things you'll need in order to follow this guide.
-
-<span style="color: red">Key Concepts: stuff you'll need to understand; may link to external references. This is a great place to include a diagram to help the reader work with a solid "mental model" of the situation.</span>
-
-## <span style="color: red">Action Section</span>
-
-<span style="color: red">Here is where you explain what actions are necessary to complete the task or achieve the goal of the guide. Whenever possible give several examples or use cases. Be as verbose as possible to set the readers expectations for each step taken. </span>
-
-#### Installing Drush
-
-Installing Drush is easier than ever, and there are [instructions for many platforms](https://drupal.org/node/1791676). As a MacOS user, my personal favorite is to to it via [homebrew](https://drupal.org/node/954766):
+Now that you've got Terminus installed you can get a quick status check to be sure it works. Depending on your OS, this output may vary, but here's a sample for reference:
 
 ```
-brew install drush
+$ terminus auth login
+Your email address?: email@domain.com
+Your dashboard password (input will not be shown):
+Logging in as email@domain.com
+Saving session data
+
+        .+.
+        .+?:
+         .+??.
+           ??? .
+           +???.
+      +?????????=.
+      .???????????.
+      .????????????.
+
+     ########### ########
+     ############.#######.
+     ####### ####  .......
+     ######## #### #######                50 41 4E 54 48 45 4F 4E
+     #########.####.######        _____________  __  ________  ____  ______
+     ######  ...                 /_  __/ __/ _ \/  |/  /  _/ |/ / / / / __/
+     #######.??.##########        / / / _// , _/ /|_/ // //    / /_/ /\ \
+     #######~+??.#########       /_/ /___/_/|_/_/  /_/___/_/|_/\____/___/
+     ########.??..
+     #########.??.#######.
+     #########.+?? ######.
+               .+?.
+         .????????????.
+           +??????????,
+            .????++++++.
+              ????.
+              .???,
+               .~??.
+                 .??
+                  .?,.
 ```
 
-But if you're not a brew user, you can do it directly via your terminal:
+Excellent! You've installed Terminus and logged into your Pantheon with it. For a full list of commands, [please refer to this page](https://github.com/pantheon-systems/cli/wiki/Available-Commands).
+
+#### List Your Current Sites, Create A New One
+
+Terminus can work on any Pantheon hosted website you might have, but it can also create new ones! Let's get a list of your current Pantheon based websites.
 
 ```
-wget https://github.com/drush-ops/drush/archive/5.10.0.tar.gz
-tar -xzvf 5.10.0.tar.gz
-ln -s $HOME/drush-5.10.0/drush /usr/local/bin/drush
+$ terminus sites show
++--------------------------+-----------+---------------+--------------------------+
+| Site                     | Framework | Service Level | UUID                     |
++--------------------------+-----------+---------------+--------------------------+
+| terminus-create          | drupal8   | free          | terminus-create          |
+| git-import-example       | drupal    | free          | git-import-example       |
++--------------------------+-----------+---------------+--------------------------+
 ```
-
-See [this documentation](https://drupal.org/node/1674222) or [this video](http://youtu.be/TCg02d4am_Q) for more.
-
-Windows users have the option of [an exe installer](http://drush.ws/drush_windows_installer). On Linux you can install [via PEAR](https://drupal.org/node/2132447), or by using essentially the same instructions as on MacOS.
-
-Now that you've got Drush installed you can get a quick status check to be sure it works. Depending on your OS, this output may vary, but here's mine for reference:
-
-### <span style="color: red">Test your work as you progress</span>
-<span style="color: red">Show a code snipet or screenshot demonstrating that your instructions and/or code works.</span>
-```
-drush status
-PHP executable        :  /usr/local/bin/php
-PHP configuration     :  /usr/local/etc/php/5.4/php.ini
-PHP OS                :  Darwin
-Drush version         :  6.1.0
-Drush configuration   :
-Drush alias files     :
-```
-
-Checkpoint! You've installed Drush, a Drupal developer's best friend. I guarantee that within a week, you won't know how you lived without it.
-
-#### Grab Your Pantheon Alias File
-
-Drush can work on any local installation you might have, but better yet it's ready to work against sites out there on the internet too, including Pantheon. There's a system called "aliases" that lets you direct Drush commands "at" remote sites using the **@sign**
-, and Pantheon gives you pre-baked alias files with everything you need to use them.
-
-This part is pretty easy. you just log into your Pantheon account and click the "Download all Drush Aliases" link from your account screen:
-
-![Get your aliases right here](https://www.getpantheon.com/sites/default/files/aliases.jpg)
-
-
-Then drop it into your home Drush directory like so, and then run the **drush sa** command (short for "site-aliases") to insure you're aliases are at the ready:
+Now we can create a brand new site!
 
 ```
-mv $HOME/Downloads/pantheon.aliases.drushrc.php $HOME/.drush/
-drush sa
-none
-pantheon
-pantheon.your-site.dev
-pantheon.your-site.live
-pantheon.your-site.test
-...
+$ terminus sites create
+Human readable label for the site: Terminus CLI Create
+Machine name of the site; used as part of the default URL [ if left blank will be terminusclicreate]: terminus-cli-create
+
+  1. None
+
+Choose organization: 1
+
+  1. Awesome Codebase
+  2. Backdrop
+  3. Community Media Starter Kit
+  4. CiviCRM Starter Kit
+  5. Commerce Kickstart
+  6. DKAN
+  7. Drupal 6
+  8. Drupal 7
+  9. Drupal 8 Beta
+  10. Introduction to Theming Basics for Drupal 7
+  11. FreakPress
+  12. Mukurtu CMS
+  13. Open Academy
+  14. Open Atrium 2
+  15. Open Outreach
+  16. OpenAid
+  17. OpenIdeaL
+  18. OpenPublic
+  19. OpenPublish
+  20. OpenScholar
+  21. Panopoly
+  22. Plato Típico
+  23. Pushtape
+  24. Restaurant
+  25. University of Texas at Austin Distribution
+  26. WordPress
+
+Select one: 8
+Creating new Drupal 7 installation ...
+Working ............................................
+Success: Pow! You created a new site!
+
+$ terminus sites show
++--------------------------+-----------+---------------+--------------------------+
+| Site                     | Framework | Service Level | UUID                     |
++--------------------------+-----------+---------------+--------------------------+
+| terminus-cli-create      | drupal    | free          | terminus-cli-create      |
+| terminus-create          | drupal8   | free          | terminus-create          |
+| git-import-example       | drupal    | free          | git-import-example       |
++--------------------------+-----------+---------------+--------------------------+
+
+```
+
+With the site created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush", the command in question directly afterwards and the site's Pantheon machine name.
+
+```
+$ terminus drush site-install --site=terminus-cli-create
+Running drush site-install  on terminus-cli-create-dev
+dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+Could not find a Drupal settings.php file at ./sites/default/settings.php.
+You are about to create a sites/dev-terminus-cli-create.pantheon.io/files directory and create a sites/dev-terminus-cli-create.pantheon.io/settings.php file and DROP all tables in your 'pantheon' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a few seconds ...                  [ok]
+Installation complete.  User name: admin  User password: ********         [ok]
 ```
 
 
