@@ -16,7 +16,7 @@ The Drupal system configuration in code is set in:
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php--no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-**Note**: You should _never_ put the database connection information for a _Pantheon_ database within your settings.php. These _will_ change. If you are having connection errors, please ensure you are running Pressflow core. This is a _requirement_ and is not optional.
+**Note**: You should never put the database connection information for a Pantheon database within your settings.php. These will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.
 
 ## Pantheon Articles on Settings.php
 
@@ -62,7 +62,7 @@ Use these configuration snippets to specify a local configuration that will be i
 
 Depending on your use case, there are two possibilities:
 
-For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (dev, test or live).
+For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
     // Pantheon - web only.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -138,9 +138,9 @@ See  [Reading the Pantheon Environment configuration](/docs/articles/sites/code
 
 #### Why does Drupal report that settings.php is not protected? I can't change the permissions on settings.php.
 
-If you do not have a settings.php file in your codebase, the following message on /admin/reports/status is shown:
+If you do not have a settings.php file in your codebase, the following message on `/admin/reports/status` is shown:
 
-Configuration file: Not protected. The file _sites/default/settings.php_ is not protected from modifications and poses a security risk. You must change the file's permissions to be non-writable.
+Configuration file: Not protected. The file `sites/default/settings.php` is not protected from modifications and poses a security risk. You must change the file's permissions to be non-writable.
 
 Technically, it's possible to have a functioning Drupal site without settings.php on Pantheon, but this breaks compatibility with many modules and tools. Therefore, it's strongly recommended to either copy the default.settings.php file to settings.php or create an empty settings.php file.
 
