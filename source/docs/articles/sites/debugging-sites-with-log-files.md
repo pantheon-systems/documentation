@@ -13,9 +13,7 @@ category:
 Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. These event logs can be accessed in a couple ways:  
 
 
-1. From the web, log in as an administrator and visit Home > Administration > Reports > Recent Log Messages.  
-
-
+1. Visit `/admin/reports/dblog` once logged in as administrator.
 2. Using drush:  
 
 
@@ -93,7 +91,7 @@ If you want to download all the access logs from a particular site:
 
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
-  ``` 
+  ```
    date_format d/%b/%Y:%T %z
     log_format %^ %^ %^ [%d] “%r” %s %b “%R” “%u” %T "%h,^"
   ```
@@ -109,5 +107,3 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 #### My Drupal database logs are huge. Should I disable dblog?
 
 Best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
-
-
