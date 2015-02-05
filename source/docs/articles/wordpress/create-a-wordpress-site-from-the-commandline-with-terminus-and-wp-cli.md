@@ -6,9 +6,9 @@ draft: true
 
 Many developers feel more at home at the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
 
-Until recently, WordPress did not have a good answer to Drupal's drush tool. Thankfully, it does now: wp-cli. 
+Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
 
-WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's Terminus.
+WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's own CLI, called Terminus.
 
 ## Before You Begin
 
@@ -40,27 +40,19 @@ Now we need to tell terminus who you are. You can do that with the auth command:
 $ terminus auth login your@email.tld
 ```
 
-You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument to pass your password in on the command line. However, this means your password will be visible in both your script and in your command line's history. You'll know it's successful when you see the Pantheon logo.
+You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument to pass your password in on the command line. You'll know it's successful when you see the Pantheon logo.
 
 ## Create Your Site
 
 Open a browser and log in to your Pantheon dashboard so you can see the progress being made on some of the commands.
 
-Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us. The first thing you need is your Organization ID. This is a long, hexadecimal GUI assigned to your organization. Use this command to list the organizations of which you are part of.
-
-```
-$ terminus organizations list
-```
-
-You'll see the human readable name and the ID. If you're a member of more than one organization, select the ID of the organization you want to use when creating your WordPress site.
-
-Next, you need a Product ID. This is an internal Pantheon GUID for the different systems that you can install. Use this command to see the complete list:
+Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us. The first thing you need is your Product ID. This is an internal Pantheon GUID for the different systems that you can install. Use this command to see the complete list:
 
 ```
 $ terminus products list 
 ```
 
-Since these are assigned by Pantheon and used by all customers, they never change. The one to look for is: ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``    
+Since these are assigned by Pantheon and used by all customers, they never change. The one to look for is similar to this (each is unique): ``e8fe8550-1ab9-4964-8838-2b9abdccf4bf``    
 
 Now you need to create a site name. This can be anything you want it to be, but it can only contain letters and dashes, and must be unique. Next, create the label. The label is the human readable version of the name. It can be anything you like, but it's best to keep it simple.
 
@@ -71,13 +63,20 @@ For your test site, use the following:
 Terminus is broken up into a series of command modules, each with its on set of sub-commands. To create a site, use the ``sites`` command and the ``create`` sub-command in the format shown below:
 
 ```
-$ terminus sites create [--product=<productid>] [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
+$ terminus sites create [--product=<productid>] \  
+                        [--name=<name>] \  
+                        [--label=<label>] \  
+                        [--org=<org>] \  
+                        [--import=<url>]  
 ```
 
 Using the values shown above looks like this:
 
 ```
-$ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4bf --name=cli-test --label="Command Line Test" --org=YOUR-ORG-ID 
+$ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
+                        --name=cli-test \  
+                        --label="Command Line Test" \  
+                        --org=YOUR-ORG-ID \  
 ```
 
 Just like when you create a site from your dashboard, this will only take a few minutes. You will see a status bar as terminus spins up your new WordPress installation. Once complete, you will be notified that you site is ready to go. 
@@ -91,14 +90,17 @@ Your site is now set up on Pantheon! There's just a couple of things we need to 
 Notice that instead of a screenshot of a WordPress powered site, you have the Pantheon Magic Unicorn telling you that your site is ready to set up. 
 
 
-## Lightning Quick Install 
+## The 1-Minute Install
 
 Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but the command line. There's even a wp-config.php already created and ready to use. 
 
 All you need to do now is populate the database and your site will be ready to use. Go to WP-CLI through Terminus, and use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
 ```
-$ terminus wp core install --url=the.url.of.your.dev.site --title="Command Line Test Site" --admin_user=admin --admin_password=something_incredibly_secure --admin_email=your@emailaddress.tld --site=the-name-of-your-site
+$ terminus wp core install --url=the.url.of.your.dev.site \
+                           --title="Command Line Test Site" \ 
+                           --admin_user=admin --admin_password=something_incredibly_secure     --admin_email=your@emailaddress.tld 
+                           --site=the-name-of-your-site \
 ```
 
  With a little bash magic, you can use Terminus to get the URL of your site:
@@ -112,7 +114,11 @@ Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
 To populate the database of the site you created above, use the following command:
 
 ```
-$ terminus wp core install --url=http://dev-cli-test.pantheon.io --title="Command Line Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=bob@example.com --site=cli-test
+$ terminus wp core install --url=http://dev-cli-test.pantheon.io \   
+                           --title="Command Line Test" \    
+                           --admin_user=admin --admin_password=pantheon.rocks \   
+                           --admin_email=bob@example.com \  
+                           --site=cli-test  
 ```
 
 If everything goes as planned, you'll see this message:
@@ -133,7 +139,10 @@ You can see the full documentation for ``media import`` on the [wp-cli media imp
 
 
 ```
-$ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg --post_id=\"1\" --featured_image --site=cli-test
+$ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \ 
+           --post_id=\"1\" \  
+           --featured_image  \  
+           --site=cli-test  
 ```
 
 After a successful upload you'll see this message:
@@ -142,7 +151,7 @@ After a successful upload you'll see this message:
 Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg as attachment ID 3 and attached to post 1 as featured image.
 ```
 
-Now, go to your browser and refresh the site (not your dashboard) to see the new image.    
+Now, go to your browser and refresh your WordPress website's front page to see the new image.    
 
 
 ###Activate a Theme
@@ -156,7 +165,8 @@ Position your Pantheon dashboard window where you can see it while working in th
 
 
 ```
-$ terminus wp theme install --activate --site=cli-test https://downloads.WordPress.org/theme/pinboard.1.1.12.zip
+$ terminus wp theme install --activate \ 
+                            --site=cli-test pinboard 
 ```
 
 Before you go to your site, look at your Dashboard to see that you have uncommitted changes. 
@@ -166,7 +176,7 @@ Before you go to your site, look at your Dashboard to see that you have uncommit
 We can commit the changes to your site's repo through Terminus, without the help of WP-CLI. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, things will update in the browser.
 
 ```
-$ terminus site code commit --site=cli-6 --env=dev --message="I never have to touch the interface again" --yes --branchname=master
+$ terminus site code commit --site=cli-6 --env=dev --message="Install Pinboard theme" --yes --branchname=master
 ```
 
 Terminus connects to Pantheon's API, which makes real-time updates to any dashboard you have open. The things you do in Terminus are immediately represented in your dashboard, so it is always up to date.
