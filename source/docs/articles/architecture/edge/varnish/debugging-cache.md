@@ -9,9 +9,9 @@ category:
 
 There are three ways to clear all Varnish caches. The first two require the **pantheon\_api** module to be enabled in order to allow Drupal send the request to clear the Varnish caches.
 
-1. From Drupal: /admin/config/devel/performance and click **Clear all Caches**
+1. From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
 2. From Drush: drush cc all
-3. From the Pantheon Dashboard: Clear Caches
+3. From the Pantheon Dashboard: Click **Clear Caches**
 
 **Note:** Varnish caches cannot be selectively cleared.
 
