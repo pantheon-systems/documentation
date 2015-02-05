@@ -16,7 +16,7 @@ The Drupal system configuration in code is set in:
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php--no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-**Note: You should _never_ put the database connection information for a _Pantheon_ database within your settings.php. These _will_ change. If you are having connection errors, please ensure you are running Pressflow core. This is a _requirement_ and is not optional.**
+**Note**: You should _never_ put the database connection information for a _Pantheon_ database within your settings.php. These _will_ change. If you are having connection errors, please ensure you are running Pressflow core. This is a _requirement_ and is not optional.
 
 ## Pantheon Articles on Settings.php
 
@@ -160,7 +160,7 @@ Pantheon automatically injects database credentials into the site environment; i
 #### Are table prefixes supported?
 
 
-For information about table prefixes on Pantheon, see [this](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) article.
+For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 
