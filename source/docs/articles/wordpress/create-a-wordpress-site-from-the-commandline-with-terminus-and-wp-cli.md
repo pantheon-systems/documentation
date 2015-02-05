@@ -99,7 +99,8 @@ All you need to do now is populate the database and your site will be ready to u
 ```
 $ terminus wp core install --url=the.url.of.your.dev.site \
                            --title="Command Line Test Site" \ 
-                           --admin_user=admin --admin_password=something_incredibly_secure     --admin_email=your@emailaddress.tld 
+                           --admin_user=admin --admin_password=something_incredibly_secure \  
+                           --admin_email=your@emailaddress.tld 
                            --site=the-name-of-your-site \
 ```
 
@@ -148,7 +149,8 @@ $ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb
 After a successful upload you'll see this message:
 
 ```
-Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg as attachment ID 3 and attached to post 1 as featured image.
+Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg   
+as attachment ID 3 and attached to post 1 as featured image.
 ```
 
 Now, go to your browser and refresh your WordPress website's front page to see the new image.    
@@ -176,7 +178,11 @@ Before you go to your site, look at your Dashboard to see that you have uncommit
 We can commit the changes to your site's repo through Terminus, without the help of WP-CLI. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, things will update in the browser.
 
 ```
-$ terminus site code commit --site=cli-6 --env=dev --message="Install Pinboard theme" --yes --branchname=master
+$ terminus site code commit --site=cli-6 \ 
+                            --env=dev \  
+                            --message="Install Pinboard theme" \    
+                            --yes \  
+                            --branchname=master  
 ```
 
 Terminus connects to Pantheon's API, which makes real-time updates to any dashboard you have open. The things you do in Terminus are immediately represented in your dashboard, so it is always up to date.
