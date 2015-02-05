@@ -138,6 +138,40 @@ Starting Drupal installation. This takes a few seconds ...                  [ok]
 Installation complete.  User name: admin  User password: ********         [ok]
 ```
 
+You should now be able to open a web browser and see your brand new Drupal site! The status of each of the environments within the site can be seen using a "terminus site environments" command.
+
+```
+$ terminus site environments --site=terminus-cli-create
++------+------------+--------------------------------------+---------------+---------+
+| Name | Created    | Domain                               | OnServer Dev? | Locked? |
++------+------------+--------------------------------------+---------------+---------+
+| test | 1423175994 | test-terminus-cli-create.pantheon.io | false         | false   |
+| dev  | 1423175993 | dev-terminus-cli-create.pantheon.io  | true          | false   |
+| live | 1423175995 | live-terminus-cli-create.pantheon.io | false         | false   |
++------+------------+--------------------------------------+---------------+---------+
+```
+
+(insert screenshot of new Drupal site here)
+
+While the site is still in SFTP mode, (dev environment row, OnServer Dev? true), we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
+
+```
+$ terminus drush dl admin_menu --site=terminus-cli-create
+Running drush dl admin_menu  on terminus-cli-create-dev
+dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+Project admin_menu (7.x-3.0-rc5) downloaded to                         [success]
+/srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/modules/admin_menu.
+Project admin_menu contains 3 modules: admin_devel, admin_menu_toolbar, admin_menu.
+tests-MacBook-Pro:~ erikmathy$ terminus drush en admin_menu,admin_menu_toolbar --site=terminus-cli-create
+Running drush en admin_menu,admin_menu_toolbar  on terminus-cli-create-dev
+dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
+The following extensions will be enabled: admin_menu, admin_menu_toolbar
+Do you really want to continue? (y/n): y
+admin_menu was enabled successfully.                                        [ok]
+admin_menu_toolbar was enabled successfully.                                [ok]
+```
+
+
 
 ## <span style="color: red"> Conclusion Section</span>
 
