@@ -6,8 +6,7 @@ category:
   - developing
 
 ---
- 
-## Overview
+
 
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
@@ -15,13 +14,15 @@ Pantheon does not need the settings.php for your site to work, but Drush comman
 
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
 
-You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations. There are a few known issues:
+You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations. 
 
-## Drush 5
+There are a few known issues:
+
+### Drush 5
 
 Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
 
-## Drush 6
+### Drush 6
 
 Many Drush 6 commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
@@ -37,14 +38,14 @@ If you are on Linux/MacOS environment, put the generated pantheon.aliases.drushr
 
 Drush will search for aliases in any of these files using the alias search path. The following locations are examined for alias files:
 
-1. In any path set in $options['alias-path'] in drushrc.php, or (equivalently) any path passed in via --alias-path=... on the command line.
+1. In any path set in `$options['alias-path']` in drushrc.php, or (equivalently) any path passed in via --alias-path=... on the command line.
 2. If 'alias-path' is not set, then in one of the default locations:
   - /etc/drush
   - In the drush installation folder
   - Inside the 'aliases' folder in the drush installation folder
   - $HOME/.drush 
 
-3. Inside the sites folder of any bootstrapped Drupal site, or any local Drupal site indicated by an alias used as a parameter to a command
+3. Inside the sites folder of any bootstrapped Drupal site, or any local Drupal site indicated by an alias used as a parameter to a command.
 
 When the aliases have been installed, clear the drush cache:
 
@@ -78,7 +79,7 @@ For example, to see the status of a site:
 
 ## Adding Modules and Themes with Drush
 
-Drush can be a very quick way to set up a new site by adding modules and themes. To use this worklow, first make sure your dev (or MultiDev) environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command, like so:
+Drush can be a very quick way to set up a new site by adding modules and themes. To use this worklow, first make sure your Dev (or MultiDev) environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command, like so:
 
     # drush @pantheon.drupal-7-sandbox.dev dl views panels ctools media
     Project views (7.x-3.7) downloaded to [success]
@@ -100,10 +101,11 @@ This is the fastest way to install a suite of modules or themes into your Panthe
 
 ## Using Registry Rebuild on Pantheon
 
-Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available drush command on every site - do not attempt to install the module on your site. This command is provided as-is, without warranty, your mileage may vary, make a backup first, and so forth.  
+Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available drush command on every site. Do not attempt to install the module on your site. This command is provided as-is, without warranty, so make a backup first.  
 
 
-To rebuild the registry of a given site, create a backup from your dashboard, then:
+
+To rebuild the registry of a site, create a backup from your Dashboard, then:
 
     drush @pantheon.SITENAME.ENV rr
 
@@ -112,11 +114,12 @@ Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date,
 [Site Audit](https://drupal.org/project/site_audit) is a collection of Drush commands that analyze a site for compliance with Drupal best practices. Originally designed to provide an actionable report prior to load testing and launch, each report can be read using Drush or written as HTML to a file. Site Audit currently only supports Drupal 7 sites.  
 
 
-To see all the Site Audit commands on Pantheon, use:
+
+To see all the site audit commands on Pantheon, use:
 
     drush @pantheon.SITENAME.ENV help --filter=site_audit
 
-To run the Best Practices report on Pantheon:
+To run the best practices report on Pantheon:
 
     drush @pantheon.SITENAME.ENV --detail abp
 
@@ -140,7 +143,7 @@ For instance, you can automatically update your drush aliases:
 
 ## Transferring Files Using rsync and Drush
 
-Pantheon provides [rsync](/docs/articles/local/rsync-and-sftp/) as an option for transferring the contents of sites/default/files to and from Pantheon.
+Pantheon provides [rsync](/docs/articles/local/rsync-and-sftp/) as an option for transferring the contents of `sites/default/files` to and from Pantheon.
 
     # Sync files from local to Pantheon site environment.
     drush -r . rsync @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
@@ -149,7 +152,7 @@ Pantheon provides [rsync](/docs/articles/local/rsync-and-sftp/) as an option for
 
 ## Exporting a Local Database Using Drush
 
-Use the Drush command sql-dump to quickly export your database. Clear your caches first to save space!
+Use the Drush command sql-dump to quickly export your database. Clear your caches first to save space.
 
     drush cc all
     drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
@@ -167,11 +170,12 @@ If you need support for sql-sync-pipe, please visit the [Drush SQL Sync Pipe is
 Long-running drush commands that produce no output will cause the SSH gateway to timeout. Instead, use an option to produce some sort of terminal response.  
 
 
-For example, if a [migrate](https://drupal.org/project/migrate) command such as migrate-rollback is disconnecting, use the feedback option, like
+
+For example, if a [migrate](https://drupal.org/project/migrate) command such as migrate-rollback is disconnecting, use the feedback option to produce output:
 
   --feedback="1000 items"
 
-to produce output. See the [migrate drush documentation](https://drupal.org/node/1561820) for details.
+See the [migrate drush documentation](https://drupal.org/node/1561820) for details.
 
 ## Drush Commands with Known Issues
 
@@ -181,7 +185,7 @@ The following Drush commands are not supported and will not work on Pantheon sit
 `sql-sqlc`  
 `php-eval`
 
-As an alternative to `sql-dump`, you can use sql-sync-pipe or drush sql-dump.
+As an alternative to sql-dump, you can use sql-sync-pipe or drush sql-dump.
 
 ## Drush Commands that Alter Site Code
 
@@ -189,7 +193,7 @@ Commands that alter site code, such as pm-download (dl) will only work on a Dev 
 
 ## Use Drush to Update Modules on Pantheon
 
-First, make sure the dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/). Then:
+First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/). Then:
 
     drush @pantheon.SITENAME.dev up --no-core
 
@@ -199,11 +203,11 @@ Pantheon uses Pressflow and includes some additional functionality; Drush assume
 
 ## Troubleshooting
 
-If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the community forum: [http://drupal.stackexchange.com/questions/tagged/drush](http://drupal.stackexchange.com/questions/tagged/drush)
+If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](http://drupal.stackexchange.com/questions/tagged/drush)
 
 ### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
-Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a known issue with Drush 5: [https://github.com/drush-ops/drush/issues/313](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context would look like the following:
+Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a known issue with Drush 5: [https://github.com/drush-ops/drush/issues/313](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
 
     $ drush @pantheon.SITENAME.ENV status
      PHP configuration : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
@@ -270,7 +274,7 @@ To resolve this error, take the suggestion and _add the option `--strict=0`_.
 
     Could not find a Drupal settings.php file at ./sites/default/settings.php
 
-To resolve, add a default or empty sites/default/settings.php to your site's code.
+To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
 ### Unable to Connect to drush.in Hostnames (DNS)
 
@@ -296,7 +300,7 @@ Some ISPs have issues resolving a drush.in hostname; if you're having trouble co
     ;; WHEN: Thu Aug 30 12:28:25 2012
     ;; MSG SIZE rcvd: 78
 
-As you can see in the output above, the status: REFUSED suggests improper resolution. The next step is to try running `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+As you can see in the output above, the status: REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 
     $ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
     ;; Truncated, retrying in TCP mode.
