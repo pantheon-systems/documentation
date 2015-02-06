@@ -31,7 +31,7 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 
 ## SFTP Connection Information
 
-To get your SFTP login credentials you can click on the **Connection Info** button. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
+To get your SFTP login credentials you can click **Connection Info**. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
 
 ![SFTP Connection Data](https://www.getpantheon.com/sites/default/files/docs/desk_images/278856)
 
