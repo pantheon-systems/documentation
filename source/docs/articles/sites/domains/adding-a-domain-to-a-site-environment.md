@@ -19,7 +19,7 @@ For general information about launching your site, see [Going Live and Launching
 1. From your site dashboard, select the environment (typically Live), and click **Domains**.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198280)  
+ ![](/source/docs/assets/images/desk_images/198280)  
 
 
 
@@ -30,7 +30,7 @@ For general information about launching your site, see [Going Live and Launching
 Both the domain and the www subdomain will be added.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198281)  
+ ![](/source/docs/assets/images/desk_images/198281)  
 
 
 
@@ -42,7 +42,7 @@ Once this is complete and your domain's DNS points to Pantheon, Pantheon will kn
 2. Click **Remove** next to the appropriate domain.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198283)  
+ ![](/source/docs/assets/images/desk_images/198283)  
 
 
 

@@ -17,19 +17,19 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 To enable New Relic on your Pantheon site, click Settings in the upper-right corner of your site dashboard.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218051)  
+ ![](/source/docs/assets/images/desk_images/218051)  
 
 
 Within the "Add Ons" tab, click "Add" next to New Relic.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218052)  
+![](/source/docs/assets/images/desk_images/218052)  
 Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
 
 
 You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/280225)  
+ ![](/source/docs/assets/images/desk_images/280225)  
 
 
 You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, you can go to the New Relic workspace on your dashboard and click "_Open New Relic_". You will be taken to the New Relic interface.
@@ -38,7 +38,7 @@ The New Relic Interface provides severals views that display information about v
 
 ## End-User Overview
 
-![End-User Inteface](https://www.getpantheon.com/sites/default/files/docs/desk_images/78125)
+![End-User Inteface](/source/docs/assets/images/desk_images/78125)
 
 1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data. 
 2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. NOTE: the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.
@@ -48,7 +48,7 @@ The New Relic Interface provides severals views that display information about v
 
 ## Appserver Overview
 
-![Appserver Overview](https://www.getpantheon.com/sites/default/files/docs/desk_images/77851)
+![Appserver Overview](/source/docs/assets/images/desk_images/77851)
 
 1. The **response time** represents the duration that it takes for the request to be received by Nginx, processed by the application server, and returned to the client for processing and rendering. the end-user response time is different than the appserver response time, as the end-user's response time is affected by variables such as connection speed, network latency, and browser.
 2. The **slow transactions** represent points of the process that take longer than a defined amount of time. This feature can be used to test a site against a set of timed-expectations to discover and fix problems.
@@ -87,7 +87,7 @@ If your site consists of mostly authenticated traffic, it can be useful to exclu
 #### How can I share a link to a particular metric?
 
 In the lower-right hand corner of a New Relic performance page, click the link labeled **Permalink** . This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218071)
+ ![](/source/docs/assets/images/desk_images/218071)
 
 #### How much is New Relic?
 

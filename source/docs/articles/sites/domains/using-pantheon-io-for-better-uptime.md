@@ -26,7 +26,7 @@ Using a "www" subdomain allows you to avoid having your site's domain name tied 
 
 The following is an example of the optimal configuration:
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376194)
+![](/source/docs/assets/images/desk_images/376194)
 
 Using “www” is considered an Internet-wide best practice and for best results we recommend you use the "www" prefix for your domain. This isn't really a Pantheon recommendation per-se; it's an internet-wide phenomena. Take a look at [http://www.yes-www.org/why-use-www/](http://www.yes-www.org/why-use-www/) for some good background on why bare domains are hard to use with modern platform providers.
 
@@ -63,7 +63,7 @@ Please understand that we cannot specifically support third-party DNS configurat
 
 If you would like to access a site using a subdomain, then you will need to use one of the methods described above. Pantheon will no longer be providing an I.P. address to point your DNS which is important to keep in mind.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376209)
+![](/source/docs/assets/images/desk_images/376209)
 
 To fix this problem, the DNS will need to be updated with one of the recommended methods above. There is no way to access the subdomain while it is pointed to the Dub Dub Dubber redirection address.
 
@@ -73,7 +73,7 @@ WWW sounds like the way to go. But how can I force traffic to use www?
 
 The simplest and most reliable option is to use a service to redirect requests from your bare domain to the www subdomain. Most DNS services offer this as a feature. These services ensure that the universe of bookmarks and SEO records for your site are built up as www urls and not the bare domain.
 
-​![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376216)​
+​![](/source/docs/assets/images/desk_images/376216)​
 
 To get started, all you need to do is setup the DNS configuration for the www and non-www domain using the settings on the "Domains" tab of the environment where you wish to add a domain
 
@@ -85,7 +85,7 @@ _NOTE: This is not a general-purpose redirection service. If your DNS provider d
 
 If you find that you are getting a domain like www.www.example.com this means that you have set your DNS for the www domain to the Dub Dub Dubber I.P. address (192.237.224.60).
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/376201)
+![](/source/docs/assets/images/desk_images/376201)
 
 In order to correct this you should use the CNAME that is available on the dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
 

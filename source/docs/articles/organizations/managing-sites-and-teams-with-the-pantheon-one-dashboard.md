@@ -45,7 +45,7 @@ While creating a new site, any user in your org will see an "Organization Affili
 4. Check "Non-site related issue"
 5. Subject: Please add the following sites to <our company> organization
 6. Description: List each site as -Site name (UUID)
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/309159)  
+ ![](/source/docs/assets/images/desk_images/309159)  
 Support will verify this request.
 
 ## Manage Site Teams

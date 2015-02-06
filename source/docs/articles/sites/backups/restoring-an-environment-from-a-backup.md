@@ -9,11 +9,11 @@ category:
 Each site environment's backups can be found on the Backups subtab for the environment in the Pantheon Dashboard.  
 
 
- ![Backup Subtab](https://www.getpantheon.com/sites/default/files/docs/desk_images/169631)
+ ![Backup Subtab](/source/docs/assets/images/desk_images/169631)
 
 ## Restoring an Environment From Its Own Backup
 
-Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard by clicking the **Restore** button to the right of a backup. ![Backups and Restore Button](https://www.getpantheon.com/sites/default/files/docs/desk_images/169624)
+Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard by clicking the **Restore** button to the right of a backup. ![Backups and Restore Button](/source/docs/assets/images/desk_images/169624)
 
 This is a  **destructive ** process; this will  **wipe** your database and files, and restore them from the backup.
 
@@ -32,7 +32,7 @@ Regardless of the option you choose, restoring is basically the same process.
 
 In the source environment, find the backup that you wish to retrieve, then for each of the three backup parts  (Code, Database and Files), click the download link:
 
-![Temporary backup link](https://www.getpantheon.com/sites/default/files/docs/desk_images/169628)  
+![Temporary backup link](/source/docs/assets/images/desk_images/169628)  
 
 
 This will provide a temporary private link directly from Amazon S3, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the dashboard and get a new link. If you wish to directly download the backup part (required for Code), click **Direct Download** . Otherwise, copy the provided URL to be pasted in a moment.  
@@ -49,7 +49,7 @@ Once you have the downloaded parts and/or links, navigate to the target environ
 
  
 
-![Workflow Tab](https://www.getpantheon.com/sites/default/files/docs/desk_images/169632)  
+![Workflow Tab](/source/docs/assets/images/desk_images/169632)  
 
 
 If using URLs, paste the URL (if using the direct Amazon S3 URL or another self hosted option), or choose File if you wish to upload an archive.  

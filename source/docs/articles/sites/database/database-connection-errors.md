@@ -9,7 +9,7 @@ category:
 ## Overview
 If your site suddenly reverts to install.php, or you see database connection errors like the following:
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/64774)
+![](/source/docs/assets/images/desk_images/64774)
 
     Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 

@@ -51,7 +51,7 @@ Download the latest recommended release and install it in the _code/sites/all/mo
 
 Login to your Drupal dev site with your Pantheon username and password, which gives you administrator access. Along the menu at the top of the screen, click on Modules, where you'll see _SMTP Authentication Support_ in the Mail section. Click "Configure" and you will see the SMTP settings page.
 
-![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​
+![Settings example](source/docs/assets/images/desk_images/151706)​
 
 First, make sure to activate the module by selecting "On" in the Install Options box.
 

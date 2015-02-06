@@ -45,7 +45,7 @@ If the permissions are not correctly set, PHPMyAdmin will return an error prompt
 
  
 
-![enter your password](https://www.getpantheon.com/sites/default/files/docs/desk_images/224903)
+![enter your password](/source/docs/assets/images/desk_images/224903)
 
 After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
@@ -53,7 +53,7 @@ After the configuration is complete, the new connection will be available on the
 
 At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
 
-![enter your password](https://www.getpantheon.com/sites/default/files/docs/desk_images/224907)
+![enter your password](/source/docs/assets/images/desk_images/224907)
 
 ## Troubleshooting
 
@@ -61,7 +61,7 @@ At this point, you are all set and can begin to administer your database. There 
 
 The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/224915)​
+![](/source/docs/assets/images/desk_images/224915)​
 
 ##### Database Credentials are Invalid
 

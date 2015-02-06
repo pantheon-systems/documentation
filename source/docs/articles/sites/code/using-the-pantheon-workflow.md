@@ -23,7 +23,7 @@ When running updates, you should wait for the job to complete before resuming de
 
 If you are working on a site where the Live environment is active, you will want to make frequent syncs of content/configuration from your Live site into Dev. This ensures your code development continues against an up-to-date set of environmental circumstances. Use this option to synchronize the content (database as well as <tt>sites/default/files</tt>) of your Dev environment with that of Live or Test.
 
-![Site dashboard, workflow section, clone tab](https://www.getpantheon.com/sites/default/files/docs/desk_images/376211)
+![Site dashboard, workflow section, clone tab](/source/docs/assets/images/desk_images/376211)
 
 ## Clone and Update Test Environment
 
@@ -31,7 +31,7 @@ When you are ready to test a new set of changes, the proper procedure is to take
 
 After running this operation, be sure your database updates (or other <tt>hook_update()</tt> actions) succeeded, your exported configuration is in place, and that the site is functioning as expected. If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
-![Site dashboard, test environment, code section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376212)
+![Site dashboard, test environment, code section](/source/docs/assets/images/desk_images/376212)
 
 This my be a good time to run regression or "smoketest" checks (stepping through your main workflows by hand) to be sure that everything is working correctly.
 
@@ -43,10 +43,10 @@ After testing your changes, you can take them live. This will deploy the code th
 
 When deploying a newly-built site for the very first time, it is often necessary to push the Content "forward", which is the opposite of the normal content workflow. In this case, you can use the "Test Content" and "Live Content" areas of the dashboard to pull the database and any uploaded content files (e.g. images) from Dev to Test to Live. You may also continue to use this workflow while a site is in development but not yet launched.
 
-![Site dashboard, live environment, workflow section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376217)
+![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217)
 
 
-![Site Dashboard, live environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/376218)
+![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218)
 
 However, this workflow should almost never be used on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made via the Drupal system in the Live environment.
 

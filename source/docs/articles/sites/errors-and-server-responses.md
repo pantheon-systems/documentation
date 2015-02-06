@@ -23,7 +23,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 
 ### Pantheon 401 Unauthorized
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184676)  
+![](/source/docs/assets/images/desk_images/184676)  
 "This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
 
 
@@ -31,7 +31,7 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 
 ### Pantheon 403 Forbidden
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184677)  
+![](/source/docs/assets/images/desk_images/184677)  
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
 
@@ -39,26 +39,26 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 
 ### Pantheon - 404 Unknown Site
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184679)  
+![](/source/docs/assets/images/desk_images/184679)  
 "The hostname ... is unknown. Please double-check that this is the right url. If so, make sure it matches your dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
 ### Pantheon - 502 Bad Gateway
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184849)
+ ![](/source/docs/assets/images/desk_images/184849)
 
 "There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx, the web server will report this problem.
 
 ### Pantheon - 502 Routing failure
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184850)
+ ![](/source/docs/assets/images/desk_images/184850)
 
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." An internal networking issue has occurred with Styx, Pantheon's routing mesh.
 
 ### Pantheon - 503 Target in maintenance
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184852)
+ ![](/source/docs/assets/images/desk_images/184852)
 
 "The web site you were looking for is currently undergoing maintenance." This is  **not** Drupal's maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
 ### Pantheon - 503 Target not responding
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184854)
+ ![](/source/docs/assets/images/desk_images/184854)
 
 "The web page you were looking for could not be delivered." No Application Containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each Application Container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the Application Container cannot accept any more requests.
 
@@ -67,12 +67,12 @@ We could increase the nginx queue above 100, but it would only mask the problem 
 This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the Application Container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
 
 ### Pantheon - 503 Database not responding
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184855)
+ ![](/source/docs/assets/images/desk_images/184855)
 
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possible from being suspended and not resuming.
 
 ### Error 503 - Service Unavailable
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/231974)
+ ![](/source/docs/assets/images/desk_images/231974)
 
 "The service is temporarily unavailable. Please try again later."
 
@@ -82,7 +82,7 @@ If you get a generic Service Unavailable that is not styled like the above and y
 
 ### Pantheon - 504 Gateway Timeout
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/185064)  
+![](/source/docs/assets/images/desk_images/185064)  
 "Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.

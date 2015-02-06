@@ -27,18 +27,18 @@ However, If you are looking for additional features for more advanced use cases,
 
 Once you have signed-up at indexdepot.com, login and visit the “Search Indexes” section by clicking on the **Search Indexes** button.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272823)
+![](/source/docs/assets/images/desk_images/272823)
 
 Next, create a new index by clicking on the button.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272825)
+![](/source/docs/assets/images/desk_images/272825)
 
 ## Set Up the Index
 
 To create your index, you’ll need to supply some information about it:
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272830)  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272831)
+![](/source/docs/assets/images/desk_images/272830)  
+ ![](/source/docs/assets/images/desk_images/272831)
 
 **Indexname:**  What you would like to call your index.  
 **Description:**  A brief description to be displayed in human language.  
@@ -54,7 +54,7 @@ After the index has been saved, you will be provided with an Index URI and a Hos
 
 **Note:** Copy the URI before moving forward
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272832)
+![](/source/docs/assets/images/desk_images/272832)
 
  
 
@@ -70,7 +70,7 @@ Here we need to provide two items to the ApacheSolr configuration:
 **ServerURL:** Paste the Index URI from IndexDepot here.  
 **Description:** Briefly describe your index here.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272833)
+![](/source/docs/assets/images/desk_images/272833)
 
 When you’ve finished click **Save**.
 
@@ -82,7 +82,7 @@ Now that we’ve created our index and configured our ApacheSolr Drupal module t
 
 Head to **admin/config/search/apachesolr/settings** and click on your index.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272843)
+![](/source/docs/assets/images/desk_images/272843)
 
 To test the connection, simply click Test Connection.
 
@@ -94,11 +94,11 @@ If not, you’ll want to retrace the steps in this document to make sure that yo
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the "Edit Configuration Files" icon on the Search Indexes page. See example below:
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/275362)
+ ![](/source/docs/assets/images/desk_images/275362)
 
 This will present you with a page where you can edit and add files:
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/275363)​
+ ![](/source/docs/assets/images/desk_images/275363)​
 ## Resources
 
 - [ApacheSolr Module](https://drupal.org/project/apachesolr) 

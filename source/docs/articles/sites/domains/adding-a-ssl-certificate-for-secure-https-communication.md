@@ -15,7 +15,7 @@ If you're running a Windows environment, you'll need to have Cygwin installed. F
 ## Generate a Key and CSR
 
 1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.
- ![Generate CSR command](https://www.getpantheon.com/sites/default/files/docs/desk_images/40331)
+ ![Generate CSR command](/source/docs/assets/images/desk_images/40331)
 
 **Note**: Do not add a password to your key. We will not be able to work with it.  
 2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal.
@@ -61,11 +61,11 @@ To validate your own files before submitting them to Pantheon, check out this li
 1. From your Dashboard, click **Domains** on the environment you want to add the SSL cert to.
 2. Select the **SSL tab**.
 **Note**: If you have not added a card to your site, you will get a message in the main workspace letting you know you need to select a plan.
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/259878)
+![](/source/docs/assets/images/desk_images/259878)
 3. Paste in the .key you generated earlier, as well as your SSL certificate that you purchased from your provider.
 4. If your provider issued an intermediary certificate, copy and paste it into the SSL Certificate field also.
 
-![Site dashboard add SSL certificate step 2](https://www.getpantheon.com/sites/default/files/docs/desk_images/259882)​
+![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882)​
 
 After submitting your certificates, your new static IP address should show under the "Domain Setup" section. There may be a delay up to 120 seconds. If you're experiencing problems getting your IP address, contact support.  
 
@@ -77,7 +77,7 @@ You can upload the same wildcard SSL certificate for multiple sites that share a
 
 Before you point your DNS to the custom IP address you received after entering your SSL, you can verify that the certificate is correct by visiting the HTTPS IP address.
 
-![Site dashboard domain setup section](https://www.getpantheon.com/sites/default/files/docs/desk_images/259889)​
+![Site dashboard domain setup section](/source/docs/assets/images/desk_images/259889)​
 
 **Note: Do not attempt to use https://\*.mysite.gotpantheon.com domain as a means to test your SSL, this will not work.**
 
@@ -93,12 +93,12 @@ Before you point your DNS to the custom IP address you received after entering y
 
 **Important:** This allows you to verify that the SSL certificate matches what you uploaded. Do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/66611)  
+![](/source/docs/assets/images/desk_images/66611)  
 
 
 In Chrome, check the certificate by clicking on the padlock in the address bar, then click **Certificate Information**.
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/66609)
+ ![](/source/docs/assets/images/desk_images/66609)
 
 ## Check End-To-End Routing
 
@@ -134,7 +134,7 @@ This will perform a number of checks, such as the validity of the certificate, e
 
 If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/150678)
+![](/source/docs/assets/images/desk_images/150678)
 
 If you notice that the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider.
 

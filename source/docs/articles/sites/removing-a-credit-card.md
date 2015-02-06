@@ -13,13 +13,13 @@ If you would like to remove you credit card because it has expired, or if you wo
 
 Go to your Pantheon "Sites & Account" page. Click the "Credit Cards" tab.
 
-![Click "Delete"](https://www.getpantheon.com/sites/default/files/docs/desk_images/92337)
+![Click "Delete"](/source/docs/assets/images/desk_images/92337)
 
 ### Delete Your Card
 
 Click the "Delete" button next to the card you would like to delete. A modal will appear to confirm the card deletion. 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/92342)
+![](/source/docs/assets/images/desk_images/92342)
 
 ### Additional Resources
 

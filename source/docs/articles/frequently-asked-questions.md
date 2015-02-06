@@ -98,10 +98,10 @@ Live sites on Pantheon v1 will be supported as long as necessary, though we also
 
 Pantheon v1 is accessed via the bare \*getpantheon.com\* domain, and looks like this:
 
-![v1 Example](https://www.getpantheon.com/sites/default/files/docs/desk_images/27145)
+![v1 Example](/source/docs/assets/images/desk_images/27145)
 
 The v2 product is accessible via \*dashboard.getpantheon.com\* and looks like this:
 
-![v2 screenshot](https://www.getpantheon.com/sites/default/files/docs/desk_images/27147)
+![v2 screenshot](/source/docs/assets/images/desk_images/27147)
 
 Accounts between the two products are not linked. If you have sites on both, you will need to log into the dashboards separately.

@@ -58,7 +58,7 @@ drush @pantheon.your-site.dev en smtp -y
 
 Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.
 
-![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​
+![Settings example](source/docs/assets/images/desk_images/151706)​
 ​
 First, make sure the module is enabled by selecting **On** in the Install Options box.
 Add the following values for the associated fields:  

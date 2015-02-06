@@ -65,7 +65,7 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
 
 First, you will need to add the IndexServer to your site. This can be done under 'Settings - Add Ons - Solr' from the dashboard:
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/290603)
+ ![](/source/docs/assets/images/desk_images/290603)
 ## Add Apache Solr Search OR Search API Solr search module
 
 Two contributed modules are supported by Pantheon:
@@ -87,24 +87,24 @@ Choose one or the the other and add it to your code base. Do not enable or confi
 
 The Pantheon Apache Solr module must be enabled in order to use Pantheon's Solr Service.  
 
-​ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192432)  
+​ ![](/source/docs/assets/images/desk_images/192432)  
 
 Once enabled, the service can be configured. Click **Configure** , or navigate to Administration > Configuration > Pantheon Apache Solr.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192434)
+ ![](/source/docs/assets/images/desk_images/192434)
 
 ## Post the schema.xml using the Pantheon Apache Solr Module
 
 The next step is to post the schema.xml, which describes Drupal fields to the Solr search indexer. Additionally, posting the schema will activate the Solr server for the site environment. Click **Post schema.xml** .  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192435)  
+ ![](/source/docs/assets/images/desk_images/192435)  
 
 
 
 Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the vast majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema** .  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192443)  
+ ![](/source/docs/assets/images/desk_images/192443)  
 
 ​  
 **Note**: You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.
@@ -115,11 +115,11 @@ Choose the appropriate schema for the module that you are using (apachesolr or s
 
 Enable both the **Apache Solr framework** and **Apache Solr search** modules.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192444)
+![](/source/docs/assets/images/desk_images/192444)
 
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
 
-![Configure Solr Settings](https://www.getpantheon.com/sites/default/files/docs/desk_images/27787)
+![Configure Solr Settings](/source/docs/assets/images/desk_images/27787)
 
 Note that the default connection parameters are correct and do not need changing. After this point, your configuration and settings will be the same as any generic Apache Solr use-case.
 
@@ -128,7 +128,7 @@ Note that the default connection parameters are correct and do not need changing
 Three modules are required; [entity](https://drupal.org/project/entity),  [search\_api](https://drupal.org/project/search_api) and  [search\_api\_solr](https://drupal.org/project/search_api) need to be installed and enabled.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192457)
+ ![](/source/docs/assets/images/desk_images/192457)
 
 ## Known Limitations of Pantheon's Solr Service
 
@@ -183,21 +183,21 @@ This interface reports what the last schema that was posted to the service and w
 Administration > Configuration > Search and metadata > Pantheon Apache Solr  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192483)
+ ![](/source/docs/assets/images/desk_images/192483)
 
 ### Execute Query
 
 The Pantheon Apache Solr module provides an interface for administrators to send queries directly to the Solr server, independently of any contrib module. This is advanced functionality and is intended for debugging purposes only. Try queries like /admin/ping to see the raw server response.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192486)
+ ![](/source/docs/assets/images/desk_images/192486)
 
 ### Drupal Status Report
 
 The Pantheon Apache Solr ​module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192484)
+ ![](/source/docs/assets/images/desk_images/192484)
 
 ## Troubleshooting
 
