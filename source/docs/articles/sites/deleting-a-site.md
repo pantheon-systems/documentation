@@ -10,11 +10,11 @@ At some point, you may need or want to delete one of your sites on Pantheon. Del
 
 ### Delete Your Site
 
-Click the “_Settings_” link in the upper-right corner of your site's workspace.
+Click the **Settings** link in the upper-right corner of your site's workspace.
 
 ![Site dashboard with settings button callout](https://www.getpantheon.com/sites/default/files/docs/desk_images/259798)
 
-Go to the "Delete" when the modal loads up. Hit the "Delete Site" button to launch the confirmation dialog.
+Go to the Delete tab when the modal loads up. Hit the **Delete Site** button to launch the confirmation dialog.
 
 ![Settings modal with delete site tab callout](https://www.getpantheon.com/sites/default/files/docs/desk_images/259800)
 
