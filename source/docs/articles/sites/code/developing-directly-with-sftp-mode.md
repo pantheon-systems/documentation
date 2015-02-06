@@ -25,7 +25,7 @@ As you work via SFTP, the Pantheon developer dashboard will track your changes. 
 
 ## SFTP mode
 
-Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the **toggle** next to Connection Mode.
+Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the toggle next to Connection Mode.
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase you will see all the pending changes appear.
 
@@ -54,7 +54,9 @@ Your connection data is as follows:
 			<td>2222</td>
 		</tr>
 	</tbody>
-</table> 
+</table>
+ 
+
 
 **Note:** When you setup your SFTP client remember that _SFTP_ will be the protocol and you will need to connect to your environment using port _2222_.
 
@@ -73,7 +75,8 @@ The main directory listing includes Pantheon, logs, environment data and configu
 There are two ways to get access to your Pantheon site via SFTP. One method is by using you Pantheon account's dashboard password.  
 
 
-Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/docs/articles/users/loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/docs/articles/users/generating-ssh-keys) you can get more information on the wiki.
+
+Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/docs/articles/users/loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/docs/articles/users/generating-ssh-keys) you can get more information on the wiki.
 
 ## Committing SFTP Changes
 
