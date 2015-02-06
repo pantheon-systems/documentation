@@ -11,7 +11,7 @@ category:
 
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Pantheon does not need the `settings.php` for your site to work, but Drush commands require a `settings.php` file and it's considered a best practice to have one.
+Pantheon does not need the settings.php for your site to work, but Drush commands require a settings.php file and it's considered a best practice to have one.
 
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
 
@@ -274,7 +274,7 @@ To resolve, add a default or empty sites/default/settings.php to your site's cod
 
 ### Unable to Connect to drush.in Hostnames (DNS)
 
-Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the "dig" command to investigate further.
+Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
 
     $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
     ;; Truncated, retrying in TCP mode.
@@ -296,7 +296,7 @@ Some ISPs have issues resolving a drush.in hostname; if you're having trouble co
     ;; WHEN: Thu Aug 30 12:28:25 2012
     ;; MSG SIZE rcvd: 78
 
-As you can see in the output above, the status: REFUSED suggests improper resolution. The next step is to try running "dig" with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+As you can see in the output above, the status: REFUSED suggests improper resolution. The next step is to try running `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 
     $ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
     ;; Truncated, retrying in TCP mode.
