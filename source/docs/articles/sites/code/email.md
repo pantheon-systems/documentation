@@ -27,7 +27,7 @@ Once you have chosen your SMTP provider, install and configure Drupal's SMTP mod
 
 ## Troubleshooting
 
-### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
+#### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
 
 This is a common error with the SMTP module. It can be fixed in a handful of steps, as follows:
 
@@ -40,11 +40,11 @@ A patch is available [here.](https://drupal.org/node/1369736#comment-5644064)
 
 ## Frequently Asked Questions
 
-### Can Pantheon provide, publish, or support SPF records?
+#### Can Pantheon provide, publish, or support SPF records?
 
 As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, so at this time we’re not in a position to do that due to sustainably.
 
 At this time we do not support email off the platform, and recommend using a third-party solution like those listed above instead.
 
-### Why does my Gmail user name and password not work?
+#### Why does my Gmail user name and password not work?
 Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1)
