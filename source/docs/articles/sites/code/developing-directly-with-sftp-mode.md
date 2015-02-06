@@ -25,36 +25,36 @@ As you work via SFTP, the Pantheon developer dashboard will track your changes. 
 
 ## SFTP mode
 
-Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the toggle.
+Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the **toggle** next to Connection Mode.
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase you will see all the pending changes appear.
 
 ## SFTP Connection Information
 
-To get your SFTP login credentials you can click on the "Connection Info" button. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
+To get your SFTP login credentials you can click on the **Connection Info** button. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
 
 ![SFTP Connection Data](https://www.getpantheon.com/sites/default/files/docs/desk_images/278856)
 
 The connection information is a bit different than what you might be used to though as it based on your unique "Site ID". This is the long random-seeming string at the end of your dashboard URL and in your git connection string, something like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
 
 Your connection data is as follows:
-
+<table>
 <tbody>
 		<tr>
-			<td><b>host</b></td>
+			<td><b>host: </b></td>
 			<td>appserver.dev.<tt>site-id</tt>.drush.in</td>
 		</tr>
 		<tr>
-			<td><b>user</b></td>
+			<td><b>user: </b></td>
 			<td>dev.<tt>site-id</tt>
 </td>
 		</tr>
 		<tr>
-			<td><b>port</b></td>
+			<td><b>port: </b></td>
 			<td>2222</td>
 		</tr>
 	</tbody>
- 
+</table> 
 
 **Note:** When you setup your SFTP client remember that _SFTP_ will be the protocol and you will need to connect to your environment using port _2222_.
 
@@ -66,14 +66,14 @@ There is also a one-click that will allow you to connect with a GUI client. For 
 
 There are links to specific guides for other GUI tools at the end of this doc page.
 
-The main directory listing includes Pantheon, logs, environment data and configuration. You're free to take a look there, but your website is in the "code" directory.
+The main directory listing includes Pantheon, logs, environment data and configuration. You're free to take a look there, but your website is in the `code` directory.
 
 ## Authenticating
 
 There are two ways to get access to your Pantheon site via SFTP. One method is by using you Pantheon account's dashboard password.  
 
 
-Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/docs/articles/users/loading-ssh-keys#loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/docs/articles/users/generating-ssh-keys#generating-ssh-keys) you can get more information on the wiki.
+Alternatively you can connect via SFTP using the public [SSH key you uploaded to your account](/docs/articles/users/loading-ssh-keys). This will allow for password-less authentication. If you would like to [generate a SSH key](/docs/articles/users/generating-ssh-keys) you can get more information on the wiki.
 
 ## Committing SFTP Changes
 
@@ -110,4 +110,5 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.
+This is by design. Please see [Using the Pantheon Workflow
+](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-&-live) to learn why.
