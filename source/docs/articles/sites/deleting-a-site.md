@@ -14,7 +14,7 @@ Click the **Settings** link in the upper-right corner of your site's workspace.
 
 ![Site dashboard with settings button callout](https://www.getpantheon.com/sites/default/files/docs/desk_images/259798)
 
-Go to the Delete tab when the modal loads up. Hit the **Delete Site** button to launch the confirmation dialog.
+Click on the **Delete Site** tab when the modal loads up. Hit the **Delete Site** button to launch the confirmation dialog.
 
 ![Settings modal with delete site tab callout](https://www.getpantheon.com/sites/default/files/docs/desk_images/259800)
 
