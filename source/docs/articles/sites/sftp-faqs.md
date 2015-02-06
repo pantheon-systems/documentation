@@ -18,7 +18,7 @@ The vast majority of SFTP connection problems are DNS related and can be resolve
 If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, we've seen that Cyberduck (or another client) will. [List of SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
 
 ## System Maintenance
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/321456)​
+ ![](/source/docs/assets/images/desk_images/321456)​
 
 _We're performing system maintenance on your development environment right now which prevents us from being able to commit your changes. The system maintenance shouldn't take long and this message will disappear once it's done._
 

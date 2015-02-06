@@ -20,11 +20,11 @@ This can be done by putting a username and password on the environment similar t
 2. Click **Locked**.
 3. Choose a username and password, and click **Lock Environment**.
 
-![Lock environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/305964)
+![Lock environment](/source/docs/assets/images/desk_images/305964)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-![Credentials](https://www.getpantheon.com/sites/default/files/docs/desk_images/305968)
+![Credentials](/source/docs/assets/images/desk_images/305968)
 
 When your page refreshes, you will notice that the environment is now private. You will also be able to see the credentials needed to access that environment.
 
@@ -33,7 +33,7 @@ You can set a different username and password for each environment. This is impo
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/62465)
+ ![](/source/docs/assets/images/desk_images/62465)
 ## Unlock a Site's Environment
 
  

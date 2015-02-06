@@ -14,4 +14,4 @@ category:
 
 **Caution:** Having different environments run different versions of PHP is risky. This should be a very short-lived situation while you sort out any compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/356186)
+ ![](/source/docs/assets/images/desk_images/356186)

@@ -16,11 +16,11 @@ Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will b
 
 Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click **Create Your Free Account**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/179991)
+![](source/docs/assets/images/desk_images/179991)
 
 Next, enter your account information and click **Continue**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214016)
+![](source/docs/assets/images/desk_images/214016)
 
 ## Create a Site
 
@@ -30,17 +30,17 @@ Now you can create your first site. For detailed instructions, see [launching yo
 Start by clicking **Create a site now**.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180010)
+![](source/docs/assets/images/desk_images/180010)
 
 Enter a name for your Pantheon site. You can change the human readable name for the site, but the site development URL is permanent and cannot be changed.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180013)
+![](source/docs/assets/images/desk_images/180013)
 
 ### Start From Scratch
 
 If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180017)
+![](source/docs/assets/images/desk_images/180017)
 
 ### Import Manually
 
@@ -53,12 +53,12 @@ There are two ways to add and update your site's code: Git source code managemen
 #### Git Connection Mode
 
 Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git#starting-with-git).  
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
+![](source/docs/assets/images/desk_images/180025)  
 
 To use Git, you'll need to go to your dashboard and add a public SSH key.  
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180030)  
+![](source/docs/assets/images/desk_images/180030)  
 
 
 For detailed instructions, see [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
@@ -68,7 +68,7 @@ For detailed instructions, see [generating SSH keys](/docs/articles/users/genera
 You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180036)
+![](source/docs/assets/images/desk_images/180036)
 
 ## Credentials on Pantheon
 
@@ -97,7 +97,7 @@ No platform is perfect; familiarize yourself with Pantheon's [known limitations]
 
 When you're ready to launch your site, you'll need to add a credit card to the site. For details, see [Adding a Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site).
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180046)
+![](source/docs/assets/images/desk_images/180046)
 
 ## Frequently Asked Questions
 

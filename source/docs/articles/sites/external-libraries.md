@@ -15,7 +15,7 @@ If there is a specific library that you require, submit a support request throug
 <!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
 
 
-<p><img alt="" class="basic" src="https://www.getpantheon.com/sites/default/files/docs/desk_images/110693" style="width: 473px; height: 107px;" /></p>
+<p><img alt="" class="basic" src="/source/docs/assets/images/desk_images/110693" style="width: 473px; height: 107px;" /></p>
 
 
 <p>In its own words: &quot;If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.&quot;</p>
@@ -34,7 +34,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
 ## [WKHTMLtoPDF](http://code.google.com/p/wkhtmltopdf/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110694)
+![](/source/docs/assets/images/desk_images/110694)
 
 WebKit HTML is a "simple shell utility to convert html to pdf using the webkit rendering engine, and qt." In other words, you can snapshot or capture the content of a web page easily in a PDF.
 
@@ -51,7 +51,7 @@ To install, from your local development environment:
 
 ## [PhantomJS](http://phantomjs.org/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110696)
+![](/source/docs/assets/images/desk_images/110696)
 
 In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
 
@@ -61,7 +61,7 @@ PhantomJS is located @ /srv/bin/phantomjs on your application server.
 
 ## [Apache Tika](http://tika.apache.org/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110698)
+![](/source/docs/assets/images/desk_images/110698)
 
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
@@ -82,7 +82,7 @@ The last step will be to verify that your site is able to extract text from docu
 
 If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as illustrated below.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/137839)
+![](/source/docs/assets/images/desk_images/137839)
 
 ## [ImageMagick](http://www.imagemagick.org)
  ![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)

@@ -13,14 +13,14 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 
 Click the **Team** link in the upper-right corner of your site's workspace.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/297812)
+![](/source/docs/assets/images/desk_images/297812)
 
 ## Add a Team Member
 
 If there is another person (e.g. client, manager, accountant, or developer) who has the payment information, you can add them as a team member and they can add their own card data and associate it with your site. The person paying for a site is considered the "owner" and cannot be removed from the site team.
 
 
- ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87612)
+ ![Add a team member button](/source/docs/assets/images/desk_images/87612)
 
 Click the **Add team member** button in the team management modal and enter the email address of an existing Pantheon user.
 
@@ -33,7 +33,7 @@ Sometimes you need to invite users to a team or project who do not have Pantheon
 
 Once they have successfully signed up for an account, they will be automatically added to the team. As an added bonus if the user signs up, you get an extra free Dev site to spin up!
 
-![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87611)
+![Add a team member button](/source/docs/assets/images/desk_images/87611)
 
 
 ## Remove a Team Member
@@ -41,7 +41,7 @@ Once they have successfully signed up for an account, they will be automatically
 In the event that you need to remove a team member from your site, you can do this from the "Configuration" tab. All users can be removed except the "site owner".
 
 
- ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87604)
+ ![Add a team member button](/source/docs/assets/images/desk_images/87604)
 
 After clicking the Remove button, a window will open and you can review your selection.
 
@@ -59,7 +59,7 @@ The owner of a site can be changed in a few simple steps:
 The new site owner now has the ability to add a credit card or change the site plan.
 
 
- ![Make owner](https://www.getpantheon.com/sites/default/files/docs/desk_images/278835)
+ ![Make owner](/source/docs/assets/images/desk_images/278835)
 
 
 ## Add a Supporting Organization
