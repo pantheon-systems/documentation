@@ -25,7 +25,7 @@ As you work via SFTP, the Pantheon developer dashboard will track your changes. 
 
 ## SFTP mode
 
-Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the toggle next to Connection Mode.
+Every development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. If you need to enable SFTP mode, just click the **SFTP** button next to Connection Mode.
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase you will see all the pending changes appear.
 
