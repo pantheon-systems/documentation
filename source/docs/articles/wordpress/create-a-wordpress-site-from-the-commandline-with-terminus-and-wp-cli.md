@@ -41,36 +41,6 @@ Your dashboard password (input will not be shown):
 Logging in as brian@getpantheon.com
 Saving session data
 
-.+.
-.+?:
-.+??.
-??? .
-+???.
-+?????????=.
-.???????????.
-.????????????.
-
-########### ########
-############.#######.
-####### ####  .......
-######## #### #######                50 41 4E 54 48 45 4F 4E
-#########.####.######        _____________  __  ________  ____  ______
-######  ...                 /_  __/ __/ _ \/  |/  /  _/ |/ / / / / __/
-#######.??.##########        / / / _// , _/ /|_/ // //    / /_/ /\ \
-#######~+??.#########       /_/ /___/_/|_/_/  /_/___/_/|_/\____/___/
-########.??..
-#########.??.#######.
-#########.+?? ######.
-.+?.
-.????????????.
-+??????????,
-.????++++++.
-????.
-.???,
-.~??.
-.??
-.?,.
-$
 ```
 
 You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument. You'll know it's successful when you see the Pantheon logo.
@@ -123,22 +93,13 @@ working .............................
 Success: Pow! You created a new site!
 $
 ```
+To create a site with one command, you need
+- **Product ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus products list`.
+- **site name:** A machine-readable name, that will become a part of your environments' URLs. `--site-name=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
+- **site label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
+- **Organization ID:** The UUID of the organization that will own the site.
 
-The first thing you need is your Product ID. This is an internal Pantheon GUID for the different systems that you can install. Use this command to see the complete list:
-
-```
-$ terminus products list
-```
-
-Since these are assigned by Pantheon and used by all customers, they never change. Wordpress is at the bottom of the list: `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`
-
-Now you need to create a site name. This can be anything you want it to be, but it can only contain letters and dashes, and must be unique. Next, create the label. The label is the human readable version of the name. It can be anything you like, but it's best to keep it simple.
-
-For your test site, use the following:  
-**Site Name** = cli-test  
-**Label** = Command Line Test  
-
-Terminus is broken up into a series of command modules, each with its on set of sub-commands. To create a site, use the ``sites`` command and the ``create`` sub-command in the format shown below:
+The format for creating a site with a single command is:
 
 ```
 $ terminus sites create [--product=<productid>] \  
@@ -148,7 +109,10 @@ $ terminus sites create [--product=<productid>] \
                         [--import=<url>]  
 ```
 
-Using the values shown above looks like this:
+For my test site, I used the following:  
+**Product** = WordPress
+**Site Name** = cli-test  
+**Label** = Command Line Test
 
 ```
 $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
@@ -156,23 +120,17 @@ $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \
                         --label="Command Line Test" \  
                         --org=YOUR-ORG-ID \  
 ```
+**NOTE:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
 Just like when you create a site from your dashboard, this will only take a few minutes. You will see a status bar as terminus spins up your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-![Screenshot of the results of creating a new site with Pantheon's terminus](/source/docs/assets/images/command-line-terminus-create-site.png)
+From terminus, you can get to your **Site Dashboard** with '$ terminus site dashboard --site=<site-name>'
 
-Your site is now set up on Pantheon! There's just a couple of things we need to do before it's done. Go to your Dashboard and refresh it, and you'll see your new site.
+## Install WordPress
 
-![Screenshot of the Pantheon Unicorn letting you know that your site is ready to finish setting up](/source/docs/assets/images/pantheon-unicorn-wordpress-site-is-ready-to-be-setup.png)
+Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish. There's even a wp-config.php already created and ready to use.
 
-Notice that instead of a screenshot of a WordPress powered site, you have the Pantheon Magic Unicorn telling you that your site is ready to set up.
-
-
-## The 1-Minute Install
-
-Now that WordPress is there, it's time for the famous "5-minute install", only it won't take us five minutes and you don't need anything but the command line. There's even a wp-config.php already created and ready to use.
-
-All you need to do now is populate the database and your site will be ready to use. Go to WP-CLI through Terminus, and use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
+All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
 ```
 $ terminus wp core install --url=the.url.of.your.dev.site \
@@ -193,11 +151,15 @@ Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
 To populate the database of the site you created above, use the following command:
 
 ```
-$ terminus wp core install --url=http://dev-cli-test.pantheon.io \
-                           --title="Command Line Test" \
-                           --admin_user=admin --admin_password=pantheon.rocks \
-                           --admin_email=bob@example.com \  
-                           --site=cli-test  
+$ terminus wp core install --url=http://dev-walkme.pantheon.io \
+                           --title="Walkme" \
+                           --admin_user=admin \
+                           --admin_password=pantheon.rocks \
+                           --admin_email="brian@getpantheon.com" \  
+                           --site=walkme \
+```
+```
+terminus wp core install --site=walkme --title=walkme --admin_user=admin --admin_password=foofoo --admin_email=brian@getpantheon.com
 ```
 
 If everything goes as planned, you'll see this message:
