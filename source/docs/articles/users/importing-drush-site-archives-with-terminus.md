@@ -23,7 +23,7 @@ The first thing we'll need is to generate a Drush archive of your existing site.
 
     $shell> drush archive-dump --destination=drush-archive.tar.gz
 
-Executed from the site root will create a file called `drush-archive.tar.gz` that's available via the public internet. If you have the file locally, you can put it on dropbox, S3, or any number of other places.
+Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places.
 
 The important thing is that you have a drush archive that can be downloaded via a URL.
 
@@ -31,7 +31,7 @@ The important thing is that you have a drush archive that can be downloaded via 
 
 If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in [the GitHub Readme file](https://github.com/pantheon-systems/terminus):
 
-    Install composer if needed.
+    $shell> Install composer if needed.
     curl -sS https://getcomposer.org/installer | ph
     mv composer.phar /usr/local/bin/composer  
     Download Terminus for non-development use.
@@ -45,7 +45,6 @@ If you'd like to install Terminus via another method, there are alternatives at 
 
 Importing a Drush site archive as we've prepared it above is easy. First you'll authenticate into Pantheon with Terminus:
 
- master:source/articles/users/importing-drush-site-archives-with-terminus.md
     $shell> drush pantheon-auth
     Pantheon account email address: you@yourdomain.com
     Pantheon dashboard password for you@yourdomain.com: xxxxxx
@@ -68,7 +67,7 @@ At that point the script will poll as the site containers are spun up and the ar
 
 Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
 
-    drush psite-import sitename http://url.to/archive.tar.gz --label="Site Name" --nopoll
+    $shell> drush psite-import sitename http://url.to/archive.tar.gz --label="Site Name" --nopoll
 
 You can script out imports like this to run several concurrently (or in serial).
 
