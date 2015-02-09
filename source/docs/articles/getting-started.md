@@ -14,33 +14,30 @@ Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will b
 
 ## Create Your Free Account
 
-Visit [https://www.getpantheon.com](https://www.getpantheon.com) and click **Create Your Free Account**.
+Visit [https://www.pantheon.io](https://www.pantheon.io) and click **Create Free Account**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/179991)
+![Create Free Account](/source/docs/assets/images/create-account.png)
 
-Next, enter your account information and click **Continue**.
+Next, enter your account information and click **Create Account**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/214016)
+![Create account information](/source/docs/assets/images/create-account-info.png)
 
 ## Create a Site
 
-Now you can create your first site. For detailed instructions, see [launching your first site](/docs/articles/users/creating-sites/).  
+Now you can create your first site. Click **Create your first site** to start.
 
 
-Start by clicking **Create a site now**.
-
-
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180010)
+![Create first site dashboard](/source/docs/assets/images/create-first-site.png)
 
 Enter a name for your Pantheon site. You can change the human readable name for the site, but the site development URL is permanent and cannot be changed.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180013)
+![Name your Pantheon site](/source/docs/assets/images/name-your-site.png)
 
 ### Start From Scratch
 
 If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180017)
+![Core Startup](/source/docs/assets/images/core-startup.png)
 
 ### Import Manually
 
@@ -52,13 +49,13 @@ There are two ways to add and update your site's code: Git source code managemen
 
 #### Git Connection Mode
 
-Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git#starting-with-git).  
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
+Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git).  
+![Connection Mode Dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
 
 To use Git, you'll need to go to your dashboard and add a public SSH key.  
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180030)  
+![Add SSH Key Dashboard](/source/docs/assets/images/add-ssh-key-dashboard.png)  
 
 
 For detailed instructions, see [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
@@ -76,10 +73,10 @@ Your getpantheon.com username and password is only used to access your dashboard
 
 There are a number of credentials available for developers, each of which can be found in the dashboard. For details, see the following articles:
 
-- [rsync and SFTP](/docs/articles/local/rsync-and-sftp#rsync-and-sftp)
+- [rsync and SFTP](/docs/articles/local/rsync-and-sftp)
 - [Starting with Git](/docs/articles/local/starting-with-git/)
 - [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases/)
-- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend#redis)
+- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)
 
 ## Learn About the Pantheon Workflow
 
@@ -87,15 +84,15 @@ Familiarize yourself with the [Pantheon Workflow](/docs/articles/sites/code/usin
 
 ## Learn More About the Pantheon Platform
 
-To gain a better understanding of how the Pantheon system architecture works, see [all about Application Containers](/docs/articles/architecture/all-about-application-containers/).
+To gain a better understanding of how the Pantheon system architecture works, see [All About Application Containers](/docs/articles/architecture/all-about-application-containers/).
 
 ## Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/drupal/known-limitations#known-limitations) now and save yourself the headache later on!
+No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/drupal/known-limitations) now and save yourself the headache later on!
 
 ## Prepare for Launch by Adding a Credit Card
 
-When you're ready to launch your site, you'll need to add a credit card to the site. For details, see [Adding a Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-site).
+When you're ready to launch your site, you'll need to add a credit card to the site. For details, see [Adding a Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site).
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180046)
 
