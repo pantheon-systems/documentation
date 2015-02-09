@@ -151,34 +151,31 @@ Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
 To populate the database of the site you created above, use the following command:
 
 ```
-$ terminus wp core install --url=http://dev-walkme.pantheon.io \
-                           --title="Walkme" \
+$ terminus wp core install --site=cli-test \
+                           --url=http://dev-cli-test.pantheon.io \
+                           --title="WP-CLI Test" \
                            --admin_user=admin \
                            --admin_password=pantheon.rocks \
-                           --admin_email="brian@getpantheon.com" \  
-                           --site=walkme \
+                           --admin_email="cal@getpantheon.com"
 ```
+The same command, as a single line:
 ```
-terminus wp core install --site=walkme --title=walkme --admin_user=admin --admin_password=foofoo --admin_email=brian@getpantheon.com
+terminus wp core install --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@getpantheon.com
 ```
-
 If everything goes as planned, you'll see this message:
-
 ```
 Success: WordPress installed successfully.
 ```
 
-Now go to you Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
+Now go to your Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site. To log into the site, add /wp-admin to the URL.
 
-## It's Time to Customize
-Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress install. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any.
+## Customize Your Site
+Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress site. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any. Let's add some.
 
-###Add Images
+### Add Images
 Using WP-CLI gives us the ability to upload images and modify posts. In this case, you can do both at once. The following command will add a featured image to the Hello Word post that WordPress installs automatically.
 
 You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
-
-
 ```
 $ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
            --post_id=\"1\" \  
@@ -192,18 +189,18 @@ After a successful upload you'll see this message:
 Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg
 as attachment ID 3 and attached to post 1 as featured image.
 ```
+You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site.
 
 Now, go to your browser and refresh your WordPress website's front page to see the new image.
 
-
-###Activate a Theme
+### Install and Add a New Theme
 
 So far, so good. Many will stop there and start updating the content. There is one more thing we need to do to make this site more appealing, and that is to add a better looking theme. Once again, you can do this all without touching WordPress or your Pantheon Dashboard.
 
 WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).
 **Note:** There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
 
-Position your Pantheon dashboard window where you can see it while working in the terminal. To install and activate the new theme to your site, use the following command:
+Position your Pantheon dashboard window where you can see it while working in the terminal. ![Pantheon Dashboard and terminal side-by-side](/source/docs/assets/images/site-dashboard-and-terminal-commits.png) To install and activate the new theme on your site, use the following command:
 
 
 ```
@@ -211,23 +208,44 @@ $ terminus wp theme install --activate \
                             --site=cli-test pinboard
 ```
 
-Before you go to your site, look at your Dashboard to see that you have uncommitted changes.
+Watch your Dashboard. It recognizes your uncommitted changes.
 
 ![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
-We can commit the changes to your site's repo through Terminus, without the help of WP-CLI. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, things will update in the browser.
+We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal (because it is awesome like Magic!) As soon as you issue the command, things will update in the browser.
 
 ```
-$ terminus site code commit --site=cli-6 \
+$ terminus site code commit --site=cli-test \
                             --env=dev \  
                             --message="Install Pinboard theme" \
                             --yes \  
-                            --branchname=master  
+                            --branchname=master
 ```
 
 Terminus connects to Pantheon's API, which makes real-time updates to any dashboard you have open. The things you do in Terminus are immediately represented in your dashboard, so it is always up to date.
 
 Now that we've committed our changes, go back to your test site in the browser and refresh it to see what you've created.
+
+### Theming Best Practices
+
+No WordPress site is ready for development without a child theme. Let's create one,
+
+```
+$ terminus wp scaffold child-theme --site=cli-test \
+                            --parent-theme=pinboard \
+                            --theme-name=cli-test-theme
+```
+and commit it.
+
+```
+$ terminus site code commit --site=cli-test \
+                            --env=dev \  
+                            --message="Create cli-test-theme child of pinboard theme" \
+                            --yes \  
+                            --branchname=master
+```
+
+Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
 
 ![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
