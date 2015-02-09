@@ -95,8 +95,8 @@ $
 ```
 To create a site with one command, you need
 - **Product ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus products list`.
-- **site name:** A machine-readable name, that will become a part of your environments' URLs. `--site-name=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
-- **site label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
+- **Site name:** A machine-readable name, that will become a part of your environments' URLs. `--site-name=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
+- **Site label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
 - **Organization ID:** The UUID of the organization that will own the site.
 
 The format for creating a site with a single command is:
@@ -200,7 +200,10 @@ So far, so good. Many will stop there and start updating the content. There is o
 WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).
 **Note:** There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
 
-Position your Pantheon dashboard window where you can see it while working in the terminal. ![Pantheon Dashboard and terminal side-by-side](/source/docs/assets/images/site-dashboard-and-terminal-commits.png) To install and activate the new theme on your site, use the following command:
+Position your Pantheon dashboard window where you can see it while working in the terminal.   
+![Pantheon Dashboard and terminal side-by-side](/source/docs/assets/images/site-dashboard-and-terminal-commits.png) 
+
+To install and activate the new theme on your site, use the following command:
 
 
 ```
@@ -208,11 +211,11 @@ $ terminus wp theme install --activate \
                             --site=cli-test pinboard
 ```
 
-Watch your Dashboard. It recognizes your uncommitted changes.
+Watch your Dashboard; It recognizes your uncommitted changes.
 
 ![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
-We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal (because it is awesome like Magic!) As soon as you issue the command, things will update in the browser.
+We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything updated in the browser.
 
 ```
 $ terminus site code commit --site=cli-test \
@@ -228,14 +231,14 @@ Now that we've committed our changes, go back to your test site in the browser a
 
 ### Theming Best Practices
 
-No WordPress site is ready for development without a child theme. Let's create one,
+No WordPress site is ready for development without a child theme. Let's create one:
 
 ```
 $ terminus wp scaffold child-theme --site=cli-test \
                             --parent-theme=pinboard \
                             --theme-name=cli-test-theme
 ```
-and commit it.
+Next, commit it:
 
 ```
 $ terminus site code commit --site=cli-test \
@@ -245,11 +248,11 @@ $ terminus site code commit --site=cli-test \
                             --branchname=master
 ```
 
-Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
+Now you're ready to edit the CLI test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
 
 ![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
 ## The Power of Terminus and WP-CLI
 
-If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
+If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
