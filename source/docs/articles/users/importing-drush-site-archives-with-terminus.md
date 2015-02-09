@@ -21,7 +21,7 @@ There are a few things you'll need in order to make this work:
 
 The first thing we'll need is to generate a Drush archive of your existing site. If you have Drush access to the site direct via the shell, this is pretty easy using the archive-dump command:
 
-    $shell> drush archive-dump --destination=drush-archive.tar.gz
+    drush archive-dump --destination=drush-archive.tar.gz
 
 Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places.
 
@@ -31,12 +31,12 @@ The important thing is that you have a drush archive that can be downloaded via 
 
 If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in [the GitHub Readme file](https://github.com/pantheon-systems/terminus):
 
-    $shell> Install composer if needed.
+    # Install composer if needed.
     curl -sS https://getcomposer.org/installer | ph
     mv composer.phar /usr/local/bin/composer  
-    Download Terminus for non-development use.
+    # Download Terminus for non-development use.
     composer create-project pantheon-systems/terminus $HOME/.drush/terminus -s dev --no-dev -n  
-    Clear Drush's cache.
+    # Clear Drush's cache.
     drush cc drush
 
 If you'd like to install Terminus via another method, there are alternatives at the [GitHub project](https://github.com/pantheon-systems/terminus).
@@ -45,7 +45,7 @@ If you'd like to install Terminus via another method, there are alternatives at 
 
 Importing a Drush site archive as we've prepared it above is easy. First you'll authenticate into Pantheon with Terminus:
 
-    $shell> drush pantheon-auth
+    drush pantheon-auth
     Pantheon account email address: you@yourdomain.com
     Pantheon dashboard password for you@yourdomain.com: xxxxxx
     Authenticating as you@yourdomain.com
@@ -55,7 +55,7 @@ You're now ready to perform command-line operations with Pantheon! For instance,
 
 The process to interactively start an import is as follows:
 
-    $shell>: drush psite-import
+    drush psite-import
     Provide a name for the site. This will be part of the default URL: my-drush-import
     URL containing Drush archive: http://mysite.com/drush-archive.tar.gz
     Site is now building.
@@ -67,7 +67,7 @@ At that point the script will poll as the site containers are spun up and the ar
 
 Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
 
-    $shell> drush psite-import sitename http://url.to/archive.tar.gz --label="Site Name" --nopoll
+    drush psite-import sitename http://url.to/archive.tar.gz --label="Site Name" --nopoll
 
 You can script out imports like this to run several concurrently (or in serial).
 
