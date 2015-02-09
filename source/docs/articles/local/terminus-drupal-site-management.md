@@ -1,19 +1,18 @@
 ---
 title: Using Terminus to Create and Update Drupal Sites on Pantheon
-description: Using the Terminus CLI, learn how to create new Drupal sites from scratch and update them entirely CLI.
+description: Using Terminus, learn how to create and update new Drupal sites from the CLI.
 draft: true
 
 ---
 
-## <span style="color: red">Introduction</span>
 
-### <span style="color: red">Create Sites Faster And More Efficiently</span>
-The latest version of Pantheon's CLI, [Terminus](https://github.com/pantheon-systems/cli), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more! By using Terminus in this manner, a site administrator can massively reduce the time they spend on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, commiting code and cloning from one site environment to another, all through the Terminus CLI.
+## Create Sites Faster And More Efficiently
+The latest version of Pantheon's CLI, [Terminus](https://github.com/pantheon-systems/cli), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
-#### Installing Terminus
-Installing Terminus is a fairly straight forward process. Just follow the [instructions found here](https://github.com/pantheon-systems/cli/wiki/Installation).
+## Installing Terminus
+Installing Terminus is a fairly straight forward process. Just follow [these instructions](https://github.com/pantheon-systems/cli/wiki/Installation).
 
-Now that you've got Terminus installed you can get a quick status check to be sure it works. Depending on your OS, this output may vary, but here's a sample for reference:
+After you install Terminus, do a quick status check to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
 ```
 $ terminus auth login
@@ -53,13 +52,13 @@ Saving session data
                   .?,.
 ```
 
-Excellent! You've installed Terminus and logged into your Pantheon with it. For a full list of commands, [please refer to this page](https://github.com/pantheon-systems/cli/wiki/Available-Commands).
+Excellent! You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](https://github.com/pantheon-systems/cli/wiki/Available-Commands).
 
-## <span style="color: red">Using Terminus</span>
+## Using Terminus
 
-### List Your Current Sites, Create A New One, Update Code
+### List Your Current Sites
 
-Terminus can work on any Pantheon hosted website you might have, but it can also create new ones! Let's get a list of your current Pantheon based websites.
+Terminus can be used on any Pantheon hosted website you have, and it can also create new sites! Let's get a list of your current Pantheon sites:
 
 ```
 $ terminus sites show
@@ -70,7 +69,9 @@ $ terminus sites show
 | git-import-example       | drupal    | free          | git-import-example       |
 +--------------------------+-----------+---------------+--------------------------+
 ```
-Now we can create a brand new site!
+### Create a Brand New Site
+
+Now let's create a new site:
 
 ```
 $ terminus sites create
@@ -124,7 +125,9 @@ $ terminus sites show
 
 ```
 
-With the site created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush", the command in question directly afterwards and the site's Pantheon machine name.
+###Update the Code
+
+Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
 ```
 $ terminus drush site-install --site=terminus-cli-create
@@ -136,7 +139,7 @@ Starting Drupal installation. This takes a few seconds ...                  [ok]
 Installation complete.  User name: admin  User password: ********         [ok]
 ```
 
-You should now be able to open a web browser and see your brand new Drupal site! The status of each of the environments within the site can be seen using a "terminus site environments" command.
+Open a web browser and check out your brand new Drupal site! See the status of each of the site's environments by using the "terminus site environments" command.
 
 ```
 $ terminus site environments --site=terminus-cli-create
@@ -151,7 +154,8 @@ $ terminus site environments --site=terminus-cli-create
 
 (insert screenshot of new Drupal site here)
 
-While the site is still in SFTP mode, (dev environment row, OnServer Dev? true), we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
+###Install Contrib Modules
+While the site is still in SFTP mode, (Dev environment row, OnServer Dev? true), we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
 
 ```
 $ terminus drush dl admin_menu --site=terminus-cli-create
@@ -169,16 +173,16 @@ admin_menu was enabled successfully.                                        [ok]
 admin_menu_toolbar was enabled successfully.                                [ok]
 ```
 
-Not bad, eh? All without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
+Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/terminus-cli-code-to-commit-dashboard.png)
+![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/terminus-cli-code-to-commit-dashboard.png)
 
-Let's commit it all into the Git repo. This, too, can be done in Terminus using the "terminus site code commit" command.
+Let's commit it all into the Git repo with the "terminus site code commit" command:
 
 ```
 $ terminus site code commit --site=terminus-cli-create --env=dev
 Commit 1 changes? [y/n] y
-Success: Successfully commited.
+Success: Successfully committed.
 +---------------------+--------+--------+------------------------------------------+------------------+
 | Time                | Author | Labels | Hash                                     | Message          |
 +---------------------+--------+--------+------------------------------------------+------------------+
@@ -186,11 +190,11 @@ Success: Successfully commited.
 +---------------------+--------+--------+------------------------------------------+------------------+
 ```
 
-In the site's Pantheon Dashboard, the new files will now be shown in the Git commit log.
+Open the Pantheon Dashboard, and you'll see the new files are shown in the Git commit log.
 
 ![The dashboard's showing the code was deployed to the Dev environment](/docs/assets/images/terminus-cli-code-committed-dashboard.png)
 
-And, finally, we create the Test environment, moving the code, files and DB from Dev onwards in the Pantheon workflow using "create-env".
+And finally, let's create the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using "create-env".
 
 ```
 $ terminus site create-env --site=terminus-cli-create --env=test
@@ -206,13 +210,13 @@ Cloning files ...
 Working ...
 Cloning database ...
 Working ......
-Success: Succesfully created Environment!
+Success: Successfully created Environment!
 ```
 
-## <span style="color: red">Congratulations!</span>
-Congratulations! You've just created a brand new Drupal site on Pantheon, added modules, committed code AND moved it all from Dev to Test without a single checkbox, radio button or colored Ajax slider of any kind. To top it off, by using Terminus, it all happened in a third the time. There is a whole new world of possibility open to you! Go forth, and CLI!
+## Congratulations!
+You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
-## <span style="color: red"> Next Steps</span>
-- Do you use WordPress? Try [Using WP-CLI on Pantheon]!
+##  Next Steps
+- Do you use WordPress? Try [Using WP-CLI on Pantheon](/docs/articles/wordpress/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli).
 
-- After you've mastered Terminus, take it a step further with [Continuos Integration](continuous-integration-solutions)!
+- After you've mastered Terminus, take it a step further with [Continuos Integration](docs/articles/local/continuous-integration-solutions).
