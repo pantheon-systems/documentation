@@ -69,12 +69,12 @@ To check if a specific key exists, you can pass the exists command. For example:
     (integer) 0
     redis>
 
-## Fatal error: Cannot redeclare class WP_Object_Cache...
+## Troubleshooting
 
 ### Cannot Activate the Redis Plugin
 You do not need to activate the plugin. Once you install it, move the object-cache.php file over the the `/wp-content/` directory and delete object-cache.php from the WP-Redis directory on the server.
 
-### Fatal Error in the WordPress Dashboard
+### Fatal error: Cannot redeclare class WP_Object_Cache...
 
 ![Plugin fatal error redis](/docs/assets/images/redis-plugin-fatal-error.png)
 
