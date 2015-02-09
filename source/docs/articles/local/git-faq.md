@@ -7,7 +7,7 @@ category:
 ---
 
 ## Resolve Conflicts
-#### How do I resolve conflicts when updating Core?
+### How do I resolve conflicts when updating Core?
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):
 
@@ -15,7 +15,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 It's a good idea to double-check the conflicted files before going forward, and make sure no bugs were introduced.
 
-### Drupal 7
+#### Drupal 7
 
 Run the following commands within your local environment:
 
@@ -23,7 +23,7 @@ Run the following commands within your local environment:
      # resolve conflicts here if needed...
      git push origin master
 
-### Drupal 6
+#### Drupal 6
 
 Run the following commands from inside your local Git repository:
 
@@ -31,7 +31,7 @@ Run the following commands from inside your local Git repository:
      # resolve conflicts here if needed...
      git push origin master
 
-### WordPress
+#### WordPress
 
 Run the following commands from inside your local Git repository:
 
@@ -39,7 +39,7 @@ Run the following commands from inside your local Git repository:
      # resolve conflicts here if needed...
      git push origin master
 
-### Upstreams for Drupal Products
+#### Upstreams for Drupal Products
 
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
 
@@ -51,7 +51,7 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 - [Open Public](https://github.com/phase2/openpublic-drops-7.git): https://github.com/phase2/openpublic-drops-7.git
 - [Panopoly](https://github.com/populist/panopoly-drops-7.git): https://github.com/populist/panopoly-drops-7.git
 
-#### How can I manually resolve conflicts?
+### How can I manually resolve conflicts?
 
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
 
@@ -83,14 +83,14 @@ For example, the Git log may contain an entry similar to the following:
 5. Run the Git push command:  
     `git push origin master`
 
-
-#### Does Pantheon support Git submodules?
+## Using Git
+### Does Pantheon support Git submodules?
 
 We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes.
 
 Right now, the best approach is to add and commit the code to Git as normal files.
 
-#### What are the Git tags?
+### What are the Git tags?
 
     $: git tag
     jenkins-ellis_update_drops_7-3
@@ -108,11 +108,11 @@ The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pa
 
 Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
 
-#### How do I revert or undo changes?
+### How do I revert or undo changes?
 
 See [Undo Git commits like overwriting Drupal core](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
-#### How do I apply a patch from Drupal.org on Pantheon?
+### How do I apply a patch from Drupal.org on Pantheon?
 
 If you want to patch core or a module, you should use Git. You will need to switch from “on server development” if it's enabled.
 
@@ -122,7 +122,7 @@ From your local clone, you should be able to run the `git apply` command as per 
 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
-#### Import with Existing History
+### How do I import a site with existing Git history?
 
 If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.
 
@@ -141,7 +141,7 @@ If you're importing a site that has an existing Git history, you may be able to 
 
 6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
-#### Can I use Git with On Server Development?
+### Can I use Git with On Server Development?
 
 Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
 
@@ -149,11 +149,11 @@ When you switch to On Server Development, you will not be able to interact with 
 
 If you have On Server Development disabled, you can interact with your code via Git.
 
-#### What version of Git does Pantheon run?
+### What version of Git does Pantheon run?
 
 We are currently running Git 1.7.
 
-#### Why were pushes denied because of changes in sites/default/files?
+### Why were pushes denied because of changes in sites/default/files?
 
 If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
@@ -164,7 +164,7 @@ From within the Drupal root of your site:
 
 The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. If you're on Drupal 6, you'll need to find your starting point by looking at the Git log. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
-#### Why are pushes denied because the remote upstream URL changed?
+### Why are pushes denied because the remote upstream URL changed?
 
 We are updating our infrastructure so that code repositories do not have a single point of failure. To do this, we are moving to a more distributed code server binding model.
 
@@ -178,12 +178,12 @@ If you have created a local clone of your site, you will need to update the defa
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream to something else you will have to change origin in the command above.
 
-#### Why can't I connect to Git?
+### Why can't I connect to Git?
 
 If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
 
 
-#### Why am I being prompted for my password after adding the public key?
+### Why am I being prompted for my password after adding the public key?
 
 This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/docs/articles/error-permission-denied-publickey/).
 
