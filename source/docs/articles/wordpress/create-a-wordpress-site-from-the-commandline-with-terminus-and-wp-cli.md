@@ -133,7 +133,7 @@ Now that WordPress code is there, it's time for step five of the "[Famous 5-minu
 All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
 ```
-$ terminus wp core install --url=the.url.of.your.dev.site \
+$ terminus wp core install --url=http://the.url.of.your.dev.site \
                            --title="Command Line Test Site" \
                            --admin_user=admin \
                            --admin_password=something_incredibly_secure \  
@@ -209,7 +209,7 @@ To install and activate the new theme on your site, use the following command:
 
 ```
 $ terminus wp theme install --activate \
-                            --site=cli-test pinboard
+                            --site=cli-test https://downloads.wordpress.org/theme/pinboard.1.1.12.zip
 ```
 
 Watch your Dashboard; It recognizes your uncommitted changes.
