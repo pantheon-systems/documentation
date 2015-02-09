@@ -8,7 +8,7 @@ category:
 
 ## Enable Redis
 
-Enable Redis cache server from your Pantheon site dashboard by going to (Settings > Add Ons > Add).
+Enable Redis cache server from your Pantheon site dashboard by going to Settings > Add Ons > Add.
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
@@ -32,7 +32,7 @@ Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugi
 
 1.  Install the WP-Redis plugin through the WordPress dashboard.
   * After you install the plugin, do not activate the plugin.
-2. Go to the WP-Redis plugin directory (wp-content/plugins/wp-redis/) and **move** the file object-cache.php to the directory (wp-content/).
+2. Go to the WP-Redis plugin directory `wp-content/plugins/wp-redis/` and **move** the file object-cache.php to the directory `wp-content/`.
   * Make sure the object-cache.php file is deleted from the WP-Redis directory.
 3. Log in to the WordPress dashboard, go to the Plugins section, and click on **Drop-Ins**.  
 
@@ -72,10 +72,10 @@ To check if a specific key exists, you can pass the exists command. For example:
 ## Troubleshooting
 
 ### Cannot Activate the Redis Plugin
-You do not need to activate the plugin. Once you install it, move the `object-cache.php` file over the the **/wp-content/** directory and delete `object-cache.php` from the WP-Redis directory on the server.
+You do not need to activate the plugin. Once you install it, move the object-cache.php file over the the `/wp-content/` directory and delete object-cache.php from the WP-Redis directory on the server.
 
 ### Fatal Error in the WordPress Dashboard
 
 ![Plugin fatal error redis](/docs/assets/images/redis-plugin-fatal-error.png)
 
-If you are seeing the error message `Fatal error: Cannot redeclare class WP_Object_Cache...` then you have not deleted the `object-cache.php` from the WP-Redis plugin directory.
+If you are seeing a fatal error message within the WordPress dashboard, then you have not deleted the object-cache.php from the WP-Redis plugin directory.
