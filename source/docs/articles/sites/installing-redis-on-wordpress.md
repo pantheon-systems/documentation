@@ -78,4 +78,4 @@ You do not need to activate the plugin. Once you install it, move the object-cac
 
 ![Plugin fatal error redis](/docs/assets/images/redis-plugin-fatal-error.png)
 
-If you are seeing a fatal error message within the WordPress dashboard, then you have not deleted the object-cache.php from the WP-Redis plugin directory.
+If you see a fatal error message within the WordPress dashboard, then you have not deleted the object-cache.php from the WP-Redis plugin directory.
