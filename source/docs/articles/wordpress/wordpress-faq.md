@@ -25,9 +25,9 @@ For detailed instructions, or if you have a need to customize see [Configuring w
 
 ## Debugging
 
-### Why isn't my status tab displaying as detailes a as for my Drupal sites.
+### Why isn't my status tab displaying as many detailes as for my Drupal sites.
 
-We are currently working on extending our Launch Check report to cover WordPress best practices.
+We are currently working on extending our Launch Check report to cover WordPress best practices. Stay tuned!
 
 ### Can is use PHP Sessions?
 
