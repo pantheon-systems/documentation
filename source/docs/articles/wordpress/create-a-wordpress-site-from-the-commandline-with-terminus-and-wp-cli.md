@@ -38,7 +38,7 @@ Now we need to tell terminus who you are. You can do that with the auth command:
 ```
 $ terminus auth login your@email.tld
 Your dashboard password (input will not be shown):
-Logging in as brian@getpantheon.com
+Logging in as your@email.tld
 Saving session data
 
 ```
@@ -118,7 +118,7 @@ For my test site, I used the following:
 $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
                         --name=cli-test \  
                         --label="Command Line Test" \  
-                        --org=YOUR-ORG-ID \  
+                        --org=YOUR-ORG-ID  
 ```
 **NOTE:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
@@ -135,15 +135,16 @@ All you need to do now is populate the database and your site will be ready to u
 ```
 $ terminus wp core install --url=the.url.of.your.dev.site \
                            --title="Command Line Test Site" \
-                           --admin_user=admin --admin_password=something_incredibly_secure \  
+                           --admin_user=admin \
+                           --admin_password=something_incredibly_secure \  
                            --admin_email=your@emailaddress.tld
-                           --site=the-name-of-your-site \
+                           --site=the-name-of-your-site
 ```
 
  With a little bash magic, you can use Terminus to get the URL of your site:
 
 ```
-$ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}`"
+$ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}'`"
 ```
 
 Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
@@ -156,7 +157,7 @@ $ terminus wp core install --site=cli-test \
                            --title="WP-CLI Test" \
                            --admin_user=admin \
                            --admin_password=pantheon.rocks \
-                           --admin_email="cal@getpantheon.com"
+                           --admin_email="your@email.tld"
 ```
 The same command, as a single line:
 ```
@@ -215,7 +216,7 @@ Watch your Dashboard; It recognizes your uncommitted changes.
 
 ![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
-We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything updated in the browser.
+You can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything updated in the browser.
 
 ```
 $ terminus site code commit --site=cli-test \
@@ -227,7 +228,7 @@ $ terminus site code commit --site=cli-test \
 
 Terminus connects to Pantheon's API, which makes real-time updates to any dashboard you have open. The things you do in Terminus are immediately represented in your dashboard, so it is always up to date.
 
-Now that we've committed our changes, go back to your test site in the browser and refresh it to see what you've created.
+Now that you've committed our changes, go back to your test site in the browser and refresh it to see what you've created.
 
 ### Theming Best Practices
 
