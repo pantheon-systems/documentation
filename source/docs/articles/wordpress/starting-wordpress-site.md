@@ -54,7 +54,7 @@ Congratulations! Your Pantheon site environments have been configured. From the 
 <!-- #7 -->
 ## Launch Development Site
 
-You will eventually have three environments (development, test, and live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your dashboard to launch the site.
+You will eventually have three environments (Development, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your dashboard to launch the site.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/248569)
 
@@ -62,15 +62,18 @@ You will eventually have three environments (development, test, and live), each 
 ## Complete Installation
 
 Now you will add site information such as administrator username, password, and email address. Click **Continue** when done, and the installation will complete.
-​Next you will be redirected to your login page, use the username and password you set when configuring the site.
+​
+
+Next you will be redirected to your login page, use the username and password you set when configuring the site.
 
 <!-- #9 -->
 ## View Your Site
 
-You are ready to start development! Click the **Visit Development Site** button to view your dev site at anytime.
+You are ready to start development! Click the **Visit Development Site** button to view your Dev site at anytime.
 
 
 #### Further Reading  
-[Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow)
+
+[Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow)
 
 [Developing with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode)
