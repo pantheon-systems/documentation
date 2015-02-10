@@ -113,3 +113,7 @@ If you're seeking an individual developer, there are a number of resources avail
 Pantheon provides a guided launch concierge to Enterprise customers during both migration and development on Pantheon. We can work directly with your stakeholders and development team to optimize and prepare your site for launch, identifying and eliminating platform issues. 24/7 emergency support is also available post-launch.
 
 Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
+
+## Learn More!
+
+If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, you'll want to check out our curated list of [Required Reading: Essential Pantheon Documentation](docs/articles/required-reading-essential-pantheon-documentation/).
