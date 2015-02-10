@@ -9,7 +9,7 @@ category:
 
 ## LDAP as a Provider  
 
-This not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway).
+This is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
@@ -21,15 +21,13 @@ PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are 
 
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
 
-**Note:** Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
+**Note**: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
 
 ## OpenLDAP Configuration for Client Certificates for LDAPS
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/sites/code/private-files/) in your codebase:
-
-    SITEROOT/private
+If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/sites/code/private-files/) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
 
