@@ -3,7 +3,7 @@ title: Known Limitations
 description: A list of Pantheon's known limitations.
 ---
 
-No platform is perfect, and Pantheon is no exception. This page is used to keep track of the common/known limitations know about. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve pantheon to address these limitations.
+No platform is perfect, and Pantheon is no exception. This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
 
 ## Multisite
 
@@ -11,7 +11,7 @@ We do not support [multisite](http://drupal.org/documentation/install/multi-site
 
 ## Highly Populated Directories
 
-If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files/directory, and performance drops off suddenly at over 100,000 files/directory.
+If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
 
 Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
 
@@ -57,7 +57,7 @@ Pantheon does not and will not support Server Side Includes. We recommend conver
 
 ## PHP Short Tags
 
-PHP short tags (<? ... ?>) are not supported on Pantheon. The [PHP Manual](http://www.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
+PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](http://www.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
 
 ## CORS
 
@@ -67,7 +67,7 @@ Sites that consume services using CORS, such as Amazon S3 CORS, do work on Panth
 
 ## Large (>100GB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable, stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## LESS (css)
 
@@ -87,7 +87,7 @@ Pantheon does not currently support modifying the nginx.conf per site, as we run
 
 ## Oracle Database Drivers
 
-Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://www.getpantheon.com/pantheon-enterprise-gateway) to connect to an external API on top of their Oracle databases.
+Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
 
 
 ## PHP/Java Bridge
