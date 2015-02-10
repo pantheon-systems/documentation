@@ -5,11 +5,8 @@ category:
   - getting-started
 ---
 
-## Overview
 
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever. Use this checklist to get the most out of the platform.
-
-
 
 
 ## Create Your Free Account
@@ -114,6 +111,6 @@ Pantheon provides a guided launch concierge to Enterprise customers during both 
 
 Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
 
-## Learn More!
+## Learn More
 
-If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, you'll want to check out our curated list of [Required Reading: Essential Pantheon Documentation](docs/articles/required-reading-essential-pantheon-documentation/).
+If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](docs/articles/required-reading-essential-pantheon-documentation/).
