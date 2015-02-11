@@ -15,7 +15,7 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 
 ## Using wp-admin to Manage Plugins and Themes
 
-WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main `wordpress.org` repository on your site.
+WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site.
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your dev environment. It works for plugins:
 
