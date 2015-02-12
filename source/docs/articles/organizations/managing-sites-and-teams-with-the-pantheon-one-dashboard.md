@@ -1,14 +1,12 @@
 ---
-title: Managing Sites and Teams with the Pantheon One Dashboard
+title: Managing Sites and Teams with the Pantheon for Agencies Dashboard
 description: Learn to add users and sites to your organization.
 category:
   - managing
 
 ---
 
-NOTE: Only organization admins can see the Pantheon for Agencies dashboard. Regular organization users can create sites and associate them with the organization, from their account dashboard.  
-
-Pantheon for Agencies (P14A) is your organization's dashboard used to rule all of your sites. From the P14A dashboard, project managers and other org admins can quickly and manage see all of your agency's teams and sites.  
+Pantheon for Agencies (P4A) is your organization's dashboard used to rule all of your sites. From the P4A dashboard, project managers and other org admins can quickly and manage see all of your agency's teams and sites.  
 <iframe allowfullscreen="" frameborder="0" height="400" scrolling="no" src="//www.youtube.com/embed/2DTZxsBK9H0" width="600"></iframe>
 
 ## Add Users to Your Organization
@@ -33,15 +31,15 @@ While creating a new site, any user in your org will see an "Organization Affili
 From the site dashboard you wish to add,
 1. Click "Support".
 2. Click "Open Ticket".
-3. Select "Pantheon One" as the "Ticket type".
+3. Select "Pantheon for Agencies" as the "Ticket type".
 4. Subject: Please add this site to <our company> organization.  
   Description: 
   Support will verify this request either originates from the owner of the site, who is also a member of the organization, or will contact the owner of the site to approve this request.
 ### Multiple Existing Sites
-From the P14A dashboard,
+From the P4A dashboard,
 1. Click "Support"
 2. Click "Open Ticket"
-3. Select "Pantheon One" as the "Ticket type"
+3. Select "Pantheon for Agencies" as the "Ticket type"
 4. Check "Non-site related issue"
 5. Subject: Please add the following sites to <our company> organization
 6. Description: List each site as -Site name (UUID)

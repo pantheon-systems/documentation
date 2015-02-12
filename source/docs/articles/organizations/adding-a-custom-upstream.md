@@ -97,6 +97,6 @@ After you have a distribution that works on Pantheon, open a ticket from the tes
 
 \*\* Cannot change after product creation
 
-Public and organizational distributions must also provide a promotional screenshot for the public spinup page.
+Public and organizational distributions must also provide a promotional screenshot for the public site creation page.
 
 As part of a unified workflow, new Pantheon users will create an account, name their site, and be directed to the install page of the distribution.

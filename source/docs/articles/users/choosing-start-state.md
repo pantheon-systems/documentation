@@ -35,7 +35,7 @@ For details, see our dedicated article [Importing an existing site into Pantheon
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your site. When complete, just click the button to visit your Pantheon Dashboard.
 
-![Site spinup progress bar](https://www.getpantheon.com/sites/default/files/docs/desk_images/214006)
+![Site creation progress bar](https://www.getpantheon.com/sites/default/files/docs/desk_images/214006)
 
 ## Enjoy your Pantheon Site!
 

@@ -33,7 +33,7 @@ Select "WordPress" and click "Continue".
 <!-- #4 -->
 ## **4. Site is Built**
 
-![Site spinup in progress](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
+![Site creation in progress](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your WordPress site.
 
