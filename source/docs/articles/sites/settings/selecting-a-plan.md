@@ -7,17 +7,17 @@ category:
 ---
 
 ## Overview
-Pantheon offers multiple service levels, called ["Plans"](https://www.getpantheon.com/pricing). You can select the plan that works best for you and your needs. As you grow you can start on the Basic Plan. The once you start to grow and have more specific requirements, you can take a look at the Pro Plan, which can be part of the recipe to get your site or application scale and perform better.
+Pantheon offers multiple service levels, called [Plans](https://www.getpantheon.com/pricing). You can select the plan that works best for you and your needs. As you grow you can start on the Basic Plan. The once you start to grow and have more specific requirements, you can take a look at the Pro Plan, which can be part of the recipe to get your site or application scale and perform better.
 
 ## Select a Site
 
-To get started, pick a plan by select the site that you would like to associate with a plan.
+To get started, pick a plan by selecting the site you would like to associate with a plan.
 
 ![select site](https://www.getpantheon.com/sites/default/files/docs/desk_images/336531)
 
 ## Select the Site Settings
 
-After you get to your site's dashboard, you can click the “_Settings_” link in the upper-right corner of your site's workspace.
+After you get to your site's dashboard, you can click the **Settings** link in the upper-right corner of your site's workspace.
 
 ![settings button](https://www.getpantheon.com/sites/default/files/docs/desk_images/336532)
 
@@ -31,7 +31,7 @@ If you have already added a Card to your account you can select the card you wou
 
 ## Pick a Plan
 
-Finally, choose the plan that you would like for the selected site and click "_Submit_".  Once this is done the email address associated with the account of the user who is associated with the credit card will receive the billing statements.
+Finally, choose the plan that you would like for the selected site and click **Submit**.  Once this is done the email address associated with the account of the user who is associated with the credit card will receive the billing statements.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/336534)  
  
