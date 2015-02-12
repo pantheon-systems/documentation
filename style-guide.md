@@ -196,11 +196,18 @@ Description: Give an overview of the WalkMe demonstration. This is the purpose o
 
 ## FAQs
 
-Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. Always use h4 tags for FAQs. 
+Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. 
+When it's an FAQ only doc, include categories as h2s and display the questions as h3s. If FAQs are included as part of a larger document, display them as h4s. 
 
-**Example**:
+**Example of a simple FAQ**:
 
-How do I change my Pantheon password?
+**Does Pantheon Support WordPress?**
+
+Yes. We have complete and total support for WordPress sites and developers.
+
+**Example of an instructional FAQ**:
+
+**How do I change my Pantheon password?**
 
 1. Select **Sites & Accounts** from the user account drop-down menu.
 

@@ -12,7 +12,7 @@ We highly recommend load testing a site both prior and post launch to ensure you
 
 You should:
 
-- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to monitor internal execution performance without needing any additional modules or tools.
+- [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.
 - Have access to a command-line environment, preferably with administrative privileges.
 
 **Please Note: Load testing should only be performed on the Live environment**. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
@@ -28,9 +28,9 @@ High-performance is the ability to deliver a page in under a second; scalability
 
 ## Verify Varnish is Working
 
-To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the curl command can be run with the -I flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
-    $ curl -I http://live-yoursite.gotpantheon.com
+    curl -I http://live-yoursite.gotpantheon.com
     HTTP/1.1 200 OK
     Server: nginx/1.0.10
     Date: Fri, 17 Aug 2012 23:47:36 GMT
@@ -52,13 +52,13 @@ The "Age" field should be greater than 0. If the max age is not greater than 0, 
 
 ## Timing an Uncached Page Request
 
-Passing the curl command with "time" before it, as well as sending a NO\_CACHE cookie, which prevents Varnish from caching the response, will test the actual response of the Application Containers backend:
+Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the Application Containers backend:
 
     time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.gotpantheon.com
 
 The command returns the following results. Note the appended timestamp at the bottom. The "real" time is the one to pay attention to:
 
-    $ time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.gotpantheon.com
+    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.gotpantheon.com
     HTTP/1.1 200 OK
     Server: nginx/1.0.10
     Date: Fri, 17 Aug 2012 23:57:39 GMT
@@ -99,9 +99,9 @@ Run the following command:
 
 Varnish should now be properly configured, and what you've tested should generate good response times and a high requests per second.
 
-As with "curl", you can run "ab" with the following parameters: -C NO\_CACHE=1 parameter to stop Varnish from caching the response. 'ab' returns the following output:
+As with `curl`, you can run `ab` with the following parameters: `-C NO_CACHE=1` parameter to stop Varnish from caching the response. `ab` returns the following output:
 
-    $ ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.gotpantheon.com/
+    ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.gotpantheon.com/
     This is ApacheBench, Version 2.3 <$Revision: 655654 $>
     Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
     Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -153,7 +153,7 @@ The output provides insight into the requests per second, the most critical elem
 
 Response times vary from site to site depending on the size of your modules stack, database queries, etc. Generally, anything under 1 second is considered excellent, but this is up to you.
 
-Emulating a logged in user's experience with "ab" is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional Application Containers.
+Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional Application Containers.
 
 ## Testing Tools
 
@@ -184,7 +184,7 @@ There are a number of other tools to consider when you are planning your load te
 		<tr>
 			<td>Blitz.io</td>
 			<td><a href="http://blitz.io/docs/">Documentation</a></td>
-			<td><a href="https://secure.blitz.io/pricing">Pricing</a></td>
+			<td><a href="https://www.blitz.io/pricing#/subscriptions">Pricing</a></td>
 		</tr>
 	</tbody>
 </table>

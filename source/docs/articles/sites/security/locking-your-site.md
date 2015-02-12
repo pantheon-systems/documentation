@@ -7,7 +7,7 @@ category:
 ---
 
 ## Overview
- **Note: When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the "Your Sites" page.**
+ **Note**: When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.
 
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to Go Live or make updates.
 
@@ -16,15 +16,15 @@ This can be done by putting a username and password on the environment similar t
 ## Password Protect Your Site's Environments
 
 
-1. Select the environment (e.g. Test), and choose select **Security**.
+1. Select the environment (e.g. Dev), and click **Security**.
 2. Click **Locked**.
 3. Choose a username and password, and click **Lock Environment**.
 
-![Lock environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/305964)
+![Lock environment](/source/docs/assets/images/lock-environment.png)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-![Credentials](https://www.getpantheon.com/sites/default/files/docs/desk_images/305968)
+![Credentials](/source/docs/assets/images/environment-access.png)
 
 When your page refreshes, you will notice that the environment is now private. You will also be able to see the credentials needed to access that environment.
 
@@ -35,8 +35,5 @@ To verify that everything is working correctly, visit the URL of the environment
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/62465)
 ## Unlock a Site's Environment
-
- 
-
 
 When you are ready to make your environment public again, click **Public** on the Security page. This will clear the credentials you entered and make web accessible resources available without a basic authentication prompt.
