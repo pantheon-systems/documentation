@@ -10,7 +10,7 @@ One of the key ways to find issues on your website is to check your PHP logs. Pa
 
 ## Before You Begin
 
-Make sure that you have: 
+Make sure that you have:
 
 - An SFTP command line interface (CLI).
 - A working knowledge of PHP.
@@ -20,8 +20,8 @@ Make sure that you have:
 1. Add yourself to the site's team membership.
 2. Get the SFTP connection information for the environment (Test, Dev, Live, or a Multidev) from the site's Dashboard.
 3. Open a command line prompt and paste the SFTP connection information there.
-4. Navigate to the Logs directory, and use a "get" command to download the PHP Slow Log to your local machine for analysis.
-
+4. Navigate to the Logs directory, and use a `get` command to download the PHP Slow Log to your local machine for analysis.
+```
     > $ sftp -o Port=2222 live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in
     > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
     > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
@@ -51,7 +51,7 @@ Make sure that you have:
     > /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log                                                                              100%  717KB 238.9KB/s   00:03  
     > sftp> exit  
     > $
-
+```
 
 ## Analyze the PHP Slow Log
 
@@ -116,7 +116,7 @@ The next thing to search for are contributed modules or plug-ins that could be u
     > [0x00000000027b1220] drupal_deliver_page() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/menu.inc:532  
     > [0x00000000027b1040] menu_execute_active_handler() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/index.php:21  
 
-To get a count of how many times any given file is called in a PHP Slow Log, use a grep command. Examples:
+To get a count of how many times any given file is called in a PHP Slow Log, use a `grep` command. Examples:
 
     > $ grep -o 'stream_wrappers.inc' php-slow.log | wc -l  
     56  
