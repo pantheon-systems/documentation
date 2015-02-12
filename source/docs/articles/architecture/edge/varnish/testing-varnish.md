@@ -46,8 +46,8 @@ Varnish uses when determining if and for how long to cache content.
 ### Test Varnish with curl
 
 1. Open a terminal.
-2. Enter the following command with your full Pantheon domain URL. Using the  **-I ** (uppercase i) flag displays only the HTTP headers for the URL you specify.
-
+2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag displays only the HTTP headers for the URL you specify.
+```
     $ curl -I http://dev.pantheon.gotpantheon.com/
     HTTP/1.1 200 OK
     server: nginx/1.0.12
@@ -66,12 +66,12 @@ Varnish uses when determining if and for how long to cache content.
     Via: 1.1 varnish
     Connection: keep-alive
     X-Pantheon-Edge-Server: 50.57.148.219
-
+```
 ### Test Varnish with Chrome
 
 Right-click anywhere on the page, and select the **Inspect Element** option.
 
 ### Test Varnish with Internet Explorer
 
-1. Use the developer tools by pressing **F12 ** or by clicking **Settings**, then `"Developer Tools"`.
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then `"Developer Tools"`.
 2. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
