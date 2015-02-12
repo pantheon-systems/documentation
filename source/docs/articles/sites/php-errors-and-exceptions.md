@@ -1,6 +1,6 @@
 ---
 title: PHP Errors and Exceptions
-Description: Detailed information about basic PHP errors.  
+description: Detailed information about basic PHP errors.  
 category:
   - debugging
   - drupal
@@ -17,16 +17,16 @@ There are three basic kinds of PHP errors:
 
 For more in-depth information, see [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in Drupal's database logs if db\_log is enabled, and PHP errors are logged on the application server at logs/php-error.log.
+Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in Drupal's database logs if `db_log` is enabled, and PHP errors are logged on the application server at logs/php-error.log.
 
 Here's a breakdown of what errors are shown and where:
 <table>
 <thead>
 		<tr>
-			<th>Environment</th>
-			<th>Severity</th>
-			<th>Browser</th>
-			<th>Watchdog</th>
+			<th>Environment&nbsp;&nbsp;&nbsp;</th>
+			<th>Severity&nbsp;&nbsp;&nbsp;</th>
+			<th>Browser&nbsp;&nbsp;&nbsp;</th>
+			<th>Watchdog&nbsp;&nbsp;&nbsp;</th>
 			<th>logs/php-error.log</th>
 		</tr>
 	</thead><tbody>
