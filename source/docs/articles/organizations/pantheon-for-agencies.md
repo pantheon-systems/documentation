@@ -1,7 +1,7 @@
 ---
 title: Pantheon for Agencies
 description: Scale your agency, rule the world. Sign up for P4A and get started.
-categories:
+category:
  - managing
 
 ---
@@ -50,6 +50,7 @@ Every ticket, from every site in your org is surfaced here. You can open new tic
 
  - [Create a Site](/docs/articles/sites/create)
  - [Import an Existing Site](/docs/articles/sites/import-an-existing-site)
+ - Read the [New Ally FAQ](/docs/articles/organizations/pantheon-for-agencies/ally-faq)
  - Learn about Pantheon for Agencies features:
- - [Change Management](/docs/articles/sites/change-management)
- - [Multidev](/docs/articles/sites/multidev)
+   - [Change Management](/docs/articles/sites/change-management)
+   - [Multidev](/docs/articles/sites/multidev)

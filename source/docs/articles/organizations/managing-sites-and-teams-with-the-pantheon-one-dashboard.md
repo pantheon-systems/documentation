@@ -6,9 +6,9 @@ category:
 
 ---
 
-NOTE: Only organization admins can see the Pantheon One for Agencies dashboard. Regular organization users can create sites and associate them with the organization, from their account dashboard.  
+NOTE: Only organization admins can see the Pantheon for Agencies dashboard. Regular organization users can create sites and associate them with the organization, from their account dashboard.  
 
-Pantheon One for Agencies (P14A) is your organization's dashboard used to rule all of your sites. From the P14A dashboard, project managers and other org admins can quickly and manage see all of your agency's teams and sites.  
+Pantheon for Agencies (P14A) is your organization's dashboard used to rule all of your sites. From the P14A dashboard, project managers and other org admins can quickly and manage see all of your agency's teams and sites.  
 <iframe allowfullscreen="" frameborder="0" height="400" scrolling="no" src="//www.youtube.com/embed/2DTZxsBK9H0" width="600"></iframe>
 
 ## Add Users to Your Organization

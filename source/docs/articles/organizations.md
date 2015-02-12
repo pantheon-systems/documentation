@@ -24,7 +24,7 @@ Upstreams are git forks of Pantheon's versions of Drupal and WordPress, owned an
 
 ## Multidev
 
-All organizations have multidev available on every site. Please submit a ticket from a site dashboard to activate multidev. Once active, sites receive five Cloud Development Environments (CDE's) and unlimited git branches, from which CDE's can be created on-demand. Learn how to [use Multidev]().
+All organizations have multidev available on every site. Please submit a ticket from a site dashboard to activate multidev. Once active, sites receive five Cloud Development Environments (CDE's) and unlimited git branches, from which CDE's can be created on-demand. Learn how to [use Multidev](/source/docs/articles/sites/multidev).
 
-## Access the Pantheon One Dashboard
-Access organization dashboards from the User Dashbaord in the Organizations tab, between the site name and service level in an org-associated site dashboard, or in the sites list by using the keyboard shortcut, "s".
+## Access the Pantheon for Agencies Dashboard
+Access organization dashboards from the User Dashbaord in the Organizations tab, between the site name and service level in an org-associated site dashboard, or in the **My Sites & Account** list by using the keyboard shortcut, "s".
