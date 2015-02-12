@@ -317,6 +317,8 @@ $ terminus site code commit --site=cli-test \
 
 Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
 
+![wp-admin/themes.php showing active child theme and installed parent theme](/source/docs/assets/images/child-theme-and-pinboard-wp-admin.png)
+
 
 ## The Power of Terminus and WP-CLI
 
