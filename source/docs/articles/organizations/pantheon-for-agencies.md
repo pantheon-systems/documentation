@@ -26,13 +26,11 @@ Your Organization Dashboard has five tabs.
 ### Sites
 
 The Sites list will now show all of the sites your agency owns or has access to as a supporting organization. All sites created with your organization selected in the dropdown will be owned by your organization, and will show here. You can quickly tag, sort and filter your sites.
-
 [Learn more](/docs/articles/organizations/managing-sites-and-teams-with-the-pantheon-one-dashboard/#add-sites-to-your-organization)
 
 ### People
 
 The People tab is where you can see all of your awesome collaborators, filter them by role, manage their roles, and add new users to your organization.
-
 [Learn more](/docs/articles/organizations/managing-sites-and-teams-with-the-pantheon-one-dashboard/#add-users-to-your-organization)
 
 ### Products
@@ -50,8 +48,8 @@ Every ticket, from every site in your org is surfaced here. You can open new tic
 
 ## Next Steps
 
-- [Create a Site](/docs/articles/sites/create)
-- [Import an Existing Site](/docs/articles/sites/import-an-existing-site)
-- Learn about Pantheon for Agencies features:
-- [Change Management](/docs/articles/sites/change-management)
-- [Multidev](/docs/articles/sites/multidev)
+ - [Create a Site](/docs/articles/sites/create)
+ - [Import an Existing Site](/docs/articles/sites/import-an-existing-site)
+ - Learn about Pantheon for Agencies features:
+ - [Change Management](/docs/articles/sites/change-management)
+ - [Multidev](/docs/articles/sites/multidev)
