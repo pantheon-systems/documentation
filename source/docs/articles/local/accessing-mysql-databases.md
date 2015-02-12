@@ -10,7 +10,7 @@ category:
 
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your Drupal configuration.
 
-**Note: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the dashboard periodically or when you can’t connect.**
+**Note**: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the dashboard periodically or when you can’t connect.
 
 ## Database Connection Information
 
@@ -48,11 +48,11 @@ This indicates that there's an issue connecting to the Pantheon database. There 
 
 Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your dashboard will also report this as an error.  
 
-If you've overwritten core, see [Core Updates](/docs/articles/sites/code/applying-upstream-updates#core-updates) for instructions on how to get back to Pressflow.
+If you've overwritten core, see [Core Updates](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update) for instructions on how to get back to Pressflow.
 
 #### 2. Non-Standard Bootstraps
 
-If you need to access the MySQL database credentials outside of Drupal, or need to implement the Domain Access module, see [Read Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration#read-pantheon-environment-configuration).
+If you need to access the MySQL database credentials outside of Drupal, or need to implement the Domain Access module, see [Read Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration#domain-access).
 
 ## Frequently Asked Questions
 

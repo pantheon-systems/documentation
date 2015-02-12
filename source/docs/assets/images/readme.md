@@ -29,6 +29,13 @@ The code: `![The code tool in a site dashboard's development environment, with o
 will yield in the output server (Sculpin):
 ![The code tool in a site dashboard's development environment, with one file with changes ready to commit](/source/docs/assets/images/dev-code-pendingchanges-commit.png) 
 
+This is possible through the addition of a symlink at the root of the output site. For the images to display locally, you need to add the symlink to your output. From the root of the documentation repository:
+
+```
+$ cd output_dev
+$ ln -s ./ source
+```
+
 ## Committing Docs with Images
 Add image files and the docs they are embedded in to a single commit. 
 

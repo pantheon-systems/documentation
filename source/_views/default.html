@@ -13,6 +13,18 @@
 <html class="no-js">
   <!--<![endif]-->
 <head>
+  <!-- Quickie redirection to https and pantheon.io -->
+  <script type="text/javascript">
+if (window.location.hostname == 'www.getpantheon.com' ||
+    window.location.hostname == 'getpantheon.com' ||
+    window.location.hostname == 'www.pantheon.io' ||
+    window.location.protocol == 'http'
+   ) {
+  redirect = 'https://pantheon.io' + window.location.pathname
+  // bounce bounce
+  window.location = redirect
+}
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{% block title %}{{ page.title|title }} | {{ site.title }}{% endblock %}</title>

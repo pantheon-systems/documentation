@@ -9,14 +9,14 @@ category:
 
 All Pantheon sites consist of three parts:
 
-* Code: The code that makes up your site. This is contained within your Pantheon Git repository.
-* Files: Images, user uploads, and other files that are not stored in version control, located in /sites/default/files (Drupal) or /wherever/wp-uploads/go (WordPress).
-* Database: The MySQL database utilized by your code to store content, settings, etc.
+* **Code**: The code that makes up your site. This is contained within your Pantheon Git repository.
+* **Files**: Images, user uploads, and other files that are not stored in version control, located in /sites/default/files (Drupal) or /wherever/wp-uploads/go (WordPress).
+* **Database**: The MySQL database utilized by your code to store content, settings, etc.
 
 ## Copy Your Code/Files/Database
 
 1. From your site Dashboard, go to the live environment and click **Backups**.
-2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the download icon.
+2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the **download** icon.
 
 ## Import Your Code/Files/Database
 
