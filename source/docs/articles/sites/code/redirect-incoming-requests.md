@@ -15,7 +15,7 @@ Often, it's useful to redirect requests to a different domain or path. While it'
 
 #### Why redirect with settings.php or wp-config.php and not .htaccess?
 
-Pantheon uses NGINX webservers for optimal performance. While completely compatible with Drupal or WordPress, NGINX does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
+Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
 
 
 Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
