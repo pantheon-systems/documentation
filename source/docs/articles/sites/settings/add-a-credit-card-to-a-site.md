@@ -6,14 +6,20 @@ category:
 ---
 ## Add a Card and Select a Plan
 1. From your user dashboard, choose the site you want to add a card to.
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305317)
 2. Select **Settings**, then **Billing**.
-![Settings >> Billling >> Add Credit Card](https://www.getpantheon.com/sites/default/files/docs/desk_images/305319)
 3. Enter the credit card information, and click **Add Card**.
-![Click Plan, Fill out Card Info](https://www.getpantheon.com/sites/default/files/docs/desk_images/87048)
-Once you have successfully entered in the payment information, you will be redirected to the Plan tab to select a plan for your site. Learn more about [pricing and features](https://www.getpantheon.com/pricing).
-4. Select a plan.
-After you've selected a plan, you'll get access to additional features like adding a custom domain name to your site, or for Pro accounts and higher, adding SSL and more.
+
+  ![Dashboard Billing ](/source/docs/assets/images/add-card-dashboard.png)
+
+  Once you have successfully entered in the payment information, you will be provided a confirmation message.
+
+  ![Dashboard billing confirmation](/source/docs/assets/images/confirmation-add-card-dashboard.png)
+
+4. Select a plan by clicking on the **Plan** tab within the Settings page.
+
+  ![Dashboard billing choose plan](/source/docs/assets/images/choose-your-plan-dashboard.png)
+
+  After you've selected a plan, you'll get access to additional features like adding a custom domain name to your site, or for Pro accounts and higher, adding SSL and more. For more details on plans and features, see [Pricing](https://pantheon.io/pricing).
 
 ## Accessing Premium Features
 
