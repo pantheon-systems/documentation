@@ -47,7 +47,7 @@ You'll need to enter your password. If you are scripting a process, you can use 
 
 ## Create Your Site
 
-Open a browser and log in to your Pantheon dashboard so you can see the progress being made on some of the commands.
+The 2-minute Install. The WordPress codex touts the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)," which is amazing, but our robots have it down to around 2. Pantheon completes steps 1-4 with one command, and you don't need anything but the command line to finish the process. There's even a wp-config.php already created and ready to use.
 
 Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us. 'terminus sites create' will start the process, in which you'll answer a few questions for our robots before they do the  work.
 
@@ -130,9 +130,9 @@ $ terminus site dashboard --site=<site-name>
 ```
 You should see the initial commit in the code log. The **Dev Environment** should also be in SFTP mode.
 
-## One-Minute WordPress Install
+## Install WordPress
 
-Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish the process. There's even a wp-config.php already created and ready to use.
+Now that you have a server running WordPress code, another running the database, and your filesystem created, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". 
 
 All you need to do now is populate the database and your site will be ready to use. Using Terminus, you'll invoke WP-CLI running on the server. Take a few moments to become familiar with the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
