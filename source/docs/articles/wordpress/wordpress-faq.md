@@ -15,13 +15,13 @@ Yes. We have complete and total support for WordPress sites and developers.
 
 ### Can I import an existing site?
 
-Yes. Please see [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site#importing-a-wordpress-site) for step-by-step instructions.
+Yes. Please see [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site) for step-by-step instructions.
 
 ### How do I configure wp-config?
 
-`wp-config.php` comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications.
+wp-config.php comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications.
 
-For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/articles/wordpress/configuring-wp-config-php#configuring-wp-config-php-).
+For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/articles/wordpress/configuring-wp-config-php).
 
 ## Debugging
 
@@ -39,7 +39,7 @@ If you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-You'll need the plugin. [More info on sessions](articles/wordpress/wordpress-and-php-sessions/).
+You'll need the plugin. [More info on sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
 
 ## Developing WordPress Sites
 
@@ -87,7 +87,7 @@ You don't need to! Pantheon provides a web-scale infrastructure, which includes 
 
 ### Do you support cache backends?
 
-Yes, we support Redis. Please see [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend#redis-as-a-caching-backend).
+Yes, we support Redis. Please see [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend).
 
 ### Which caches do you clear?
 
