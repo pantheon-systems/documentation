@@ -11,16 +11,16 @@ There are occasions while you are work on your Drupal site that  you would like
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
 
-## Password protect your site's environments
+## Password Protect Your Site's Environments
 
 
 You have the ability to password protect any of the available environments.
 
-- Select the environment (e.g. Dev)
-- Select **Security**
-- Select **Locked**
-- Choose a username and password
-- Click **Lock Environment**
+- Select the environment (e.g. Dev).
+- Select **Security**.
+- Select **Locked**.
+- Choose a username and password.
+- Click **Lock Environment**.
 
 ![Lock environment](/source/docs/assets/images/lock-environment.png)
 
@@ -32,11 +32,14 @@ Now when your page refreshes you will notice that the environment is now "Privat
 
 In the event you want to set a different username and password for each environment you do so. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
-To verify that everything is working correctly try and visit the URL of the environment that you have made private. You should see a authentication form where you can enter the username and password for that environment to start your session.  
+
+To verify that everything is working correctly try and visit the URL of the environment that you have made private. You should see a authentication form where you can enter the username and password for that environment to start your session.  
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/62465)
-## Unlock a site's environment
-
+## Unlock a Site's Environment
+
+
+
 
 When you are ready to make your environment public again you can do so. This will clear the credentials you entered and make and web accessible resources available without a basic authentication prompt.
 
-##  
+
