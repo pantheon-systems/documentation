@@ -9,7 +9,7 @@ category:
 
 ## Overview
 
- **Note: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.**  
+ **Note**: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.
 
 
 If you have more than 500 MB of content to be transferred to `sites/default/files`, you won't be able to use the Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
@@ -18,7 +18,7 @@ This method allows for transfer of unlimited data "server-to-server", which is m
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-**Note: You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.**
+**Note**: You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.
 
 ## SFTP
 
@@ -75,8 +75,8 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
 
 Before we get started let us make sure we have everything you need:
 
-**Site URL:** https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83    
-**Environment (ENV):** Dev  
+**Site URL:** https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83<br />
+**Environment (ENV):** Dev<br />
 **Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83  
 
 ## Download a Directory from Pantheon
@@ -90,7 +90,7 @@ Next we will download the contents of the `sites/default/files` directory into a
 
 ## Download a File from Pantheon
 
-Download the `sites/default/settings.php` file into a Drupal installation called _Foo_ on our local environment in a folder called `sites/default/files`
+Download the sites/default/settings.php file into a Drupal installation called _Foo_ on our local environment in a folder called `sites/default/files`
 
     $: export ENV=dev  
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
@@ -108,7 +108,7 @@ If you need to upload the files directory from a local Drupal installation calle
 
 ## Upload a File to Pantheon
 
-Some cases will require you to update a single file on your Pantheon site. Here we will upload the `logo.png` file into a Pantheon site's theme folder.
+Some cases will require you to update a single file on your Pantheon site. Here we will upload the logo.png file into a Pantheon site's theme folder.
 
     $: export ENV=dev  
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
