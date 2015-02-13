@@ -12,7 +12,8 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.  
 
 
-The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
+
+The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
 
 - Smart full-text search
 - Faceting
@@ -25,11 +26,11 @@ However, If you are looking for additional features for more advanced use cases,
 
 ## Create a New Index
 
-Once you have signed-up at indexdepot.com, login and visit the “Search Indexes” section by clicking on the **Search Indexes** button.
+Once you have signed-up at indexdepot.com, login and click **Search Indexes**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272823)
 
-Next, create a new index by clicking on the button.
+Next, click **Create new index**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272825)
 
@@ -64,7 +65,9 @@ To get your index working with our Drupal site, we need to set some configuratio
 
 You can quickly reach the ApacheSolr settings page by appending the following to your site’s URL:
 
-**admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/search/apachesolr/settings/solr**
+```
+admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/search/apachesolr/settings/solr
+```
 
 Here we need to provide two items to the ApacheSolr configuration:  
 **ServerURL:** Paste the Index URI from IndexDepot here.  
@@ -72,27 +75,27 @@ Here we need to provide two items to the ApacheSolr configuration:
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272833)
 
-When you’ve finished click **Save**.
+When you’ve finished, click **Save**.
 
-**Note: A schema must be pushed in each environment (Dev/Test/Live).**
+**Note**: A schema must be pushed in each environment (Dev/Test/Live).
 
 ## Test Your New Solr Connection
 
 Now that we’ve created our index and configured our ApacheSolr Drupal module to point to our new index, we’ll want to test the connection and make sure ApacheSolr can communicate with the IndexDepot Solr index.
 
-Head to **admin/config/search/apachesolr/settings** and click on your index.
+Head to `admin/config/search/apachesolr/settings` and click on your index.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272843)
 
-To test the connection, simply click Test Connection.
+To test the connection, simply click **Test Connection**.
 
-If Drupal returns a success message like _ **“Your site has contacted the Apache Solr server.”** _, you have successfully setup your Index.
+If Drupal returns a success message like **“Your site has contacted the Apache Solr server”**, you have successfully setup your Index.
 
 If not, you’ll want to retrace the steps in this document to make sure that you’ve done each and every one.
 
 ## Customize Your Configuration
 
-If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the "Edit Configuration Files" icon on the Search Indexes page. See example below:
+If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See example below:
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/275362)
 
@@ -103,4 +106,5 @@ This will present you with a page where you can edit and add files:
 
 - [ApacheSolr Module](https://drupal.org/project/apachesolr) 
 - [IndexDepot](https://www.indexdepot.com/en)
-- [IndexDepot Support](https://www.indexdepot.com/en/faq)Docs FAQ
+- [IndexDepot Support](https://www.indexdepot.com/en/faq)
+- [FAQ](/docs/articles/frequently-asked-questions)
