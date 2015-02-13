@@ -11,13 +11,13 @@
             </script> -->
 
             </header>
-              {% if page.category %}
+              <!--{% if page.category %}
                   <p class="category">Categories:
                   {% for category in page.category %}
                   <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}
                   </p>
-              {% endif %}
+              {% endif %} -->
                 <div>
                     {{ page.blocks.content|raw }}
                 </div>
