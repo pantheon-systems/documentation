@@ -7,50 +7,13 @@ category:
 
 ---
 
-Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox. No permission or action is required from Pantheon to use Solr.  
+Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox. 
 
-
-
-One of the modules already included in every Pantheon Drupal site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (dev, test, and live, and each multi-dev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
-
-## Which Plans Can Use Solr?
+## Availability
 
 Currently, all plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-
-<tbody>
-		<tr>
-			<th>Plan</th>
-			<th>Is Solr Available?</th>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>Sandbox</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Personal</td>
-			<td>No</td>
-		</tr>
-		<tr>
-			<td>Professional</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Business</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Enterprise</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Pantheon One</td>
-			<td>Yes</td>
-		</tr>
-	</tbody>
-
+Pantheon's SOLR service can be enabled on WordPress sites, but **will not work**. We are aware of the limitation and are actively developing a plugin to integrate our SOLR service with WordPress sites running on the platform.
 
 ## Enabling Solr for a Pantheon Site
 
@@ -75,17 +38,13 @@ Two contributed modules are supported by Pantheon:
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
-
-
 If you rely on highly customized data structures and the apachesolr module is not enough for your needs, search\_api\_solr provides an alternative with a more powerful interface, but is much more complex.  
-
-
 
 Choose one or the the other and add it to your code base. Do not enable or configure it yet.
 
 ## Enable the Pantheon Apache Solr Module
 
-The Pantheon Apache Solr module must be enabled in order to use Pantheon's Solr Service.  
+The Pantheon Apache Solr module must be enabled in order to use Pantheon's Solr Service.  The [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) is included in every Pantheon Drupal site is. This module **must** be enabled and configured in each environment (dev, test, and live, and each multi-dev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
 
 ​ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192432)  
 
@@ -98,15 +57,11 @@ Once enabled, the service can be configured. Click **Configure** , or navigate t
 
 The next step is to post the schema.xml, which describes Drupal fields to the Solr search indexer. Additionally, posting the schema will activate the Solr server for the site environment. Click **Post schema.xml** .  
 
-
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192435)  
-
-
 
 Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the vast majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema** .  
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192443)  
 
-​  
 **Note**: You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.
 
 ### Enable and Configure Your Solr Module
@@ -139,8 +94,6 @@ Three modules are required; [entity](https://drupal.org/project/entity),  [sear
 ## Alternatives to Pantheon's Solr Service
 
 While Pantheon provides a stable, reliable and basic Solr service, your individual site needs may require something more robust and customizable. In those cases, a dedicated hosted Solr service may be a better solution for your needs. Given that Solr can tolerate higher latency (one query per request vs hundreds of database queries), Solr servers do not need to be in the same data center to provide fast and responsive results.  
-
-​  
 
 Some customers have reported success using external Solr service providers such as [http://websolr.com/](http://websolr.com/) for their Solr indexing.
 
@@ -237,7 +190,5 @@ Are you only indexing only 50 items at a time and wondering why 100s of new cont
 ### Apache Spatial Search on Pantheon
 
 Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.  
-
-
 
 As an alternative, there are several external Solr service providers that do support Spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
