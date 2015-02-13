@@ -11,8 +11,8 @@ category:
 
 Pantheon provides three environments for your site. This allows you to develop and test your site without impacting the live site that's available to the world.
 
-- The **Dev** environment is connected directly to Git, and anything "pushed" via Git ends up there immediately.  
-- The **Live** environment is the public/production instance for your site.   
+- The **Dev** environment is connected directly to Git, and anything `pushed` via Git ends up there immediately.  
+- The **Live** environment is the public/production instance for your site.
 - The **Test** environment allows you to synchronize the latest code-changes from Dev with the latest content from Live so you can effectively simulate a deployment. This lets you preview and evaluate functionality before launching.
 
 Pantheon provides pre-set actions for commons workflows, such as synchronizing your Test environment. We also allow you to perform uncommon workflows (e.g. overwriting the Live database with Test or Dev data) when needed.
@@ -21,7 +21,7 @@ When running updates, you should wait for the job to complete before resuming de
 
 ## Update Dev Content
 
-If you are working on a site where the Live environment is active, you will want to make frequent syncs of content/configuration from your Live site into Dev. This ensures your code development continues against an up-to-date set of environmental circumstances. Use this option to synchronize the content (database as well as <tt>sites/default/files</tt>) of your Dev environment with that of Live or Test.
+If you are working on a site where the Live environment is active, you will want to make frequent syncs of content/configuration from your Live site into Dev. This ensures your code development continues against an up-to-date set of environmental circumstances. Use this option to synchronize the content (database as well as `sites/default/files`) of your Dev environment with that of Live or Test.
 
 ![Site dashboard, workflow section, clone tab](https://www.getpantheon.com/sites/default/files/docs/desk_images/376211)
 
@@ -35,13 +35,13 @@ After running this operation, be sure your database updates (or other <tt>hook_u
 
 This my be a good time to run regression or "smoketest" checks (stepping through your main workflows by hand) to be sure that everything is working correctly.
 
-You can also use the clone tool in the "Code" deployment area to just pull the code without making any changes to the DB or files.
+You can also use the clone tool in the Code deployment area to just pull the code without making any changes to the DB or files.
 
 ## Deploy Code To Live
 
-After testing your changes, you can take them live. This will deploy the code that is currently in the **Test** environment and immediately update your live website.
+After testing your changes, you can take them live. This will deploy the code that is currently in the Test environment and immediately update your live website.
 
-When deploying a newly-built site for the very first time, it is often necessary to push the Content "forward", which is the opposite of the normal content workflow. In this case, you can use the "Test Content" and "Live Content" areas of the dashboard to pull the database and any uploaded content files (e.g. images) from Dev to Test to Live. You may also continue to use this workflow while a site is in development but not yet launched.
+When deploying a newly-built site for the very first time, it is often necessary to push the Content "forward", which is the opposite of the normal content workflow. In this case, you can use the **Test Content** and **Live Content** areas of the dashboard to pull the database and any uploaded content files (e.g. images) from Dev to Test to Live. You may also continue to use this workflow while a site is in development but not yet launched.
 
 ![Site dashboard, live environment, workflow section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376217)
 
@@ -76,14 +76,15 @@ Preventing write permissions to the code in the Live environment via SFTP is not
 
 If we allowed SFTP changes to be applied it would break a lot of functionality on the platform. Experience has shown that this can destroy your codebase and cause long term issues if we allowed changes to be pushed to Live via SFTP.
 
-**Note: There are only two ways to achieve the goal of updating code files in Test or Live on Pantheon.**
+**Note**: There are only two ways to achieve the goal of updating code files in Test or Live on Pantheon.
 
 1. **Using the Workflow Tools**  
 
-You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk. /documentation/howto/using-the-pantheon-workflow/
+  You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk.
+
 2. **A hotfix using Git**  
 
-If you need to make the changes directly to Live this is against development best practices which are the core of the platform, but we make this accessible via Git: Read more about [hotfixes](/docs/articles/sites/code/hot-fixes). Pushing a hotfix via Git is the only option to push changes directly to Live without having to go through Dev and Test, and there are no alternatives.
+  If you need to make the changes directly to Live this is against development best practices which are the core of the platform, but we make this accessible via Git: Read more about [hotfixes](/docs/articles/sites/code/hot-fixes). Pushing a hotfix via Git is the only option to push changes directly to Live without having to go through Dev and Test, and there are no alternatives.
 
 ## Other Workflow Operations: Import, Export, & Wipe
 
@@ -91,6 +92,6 @@ You may also import, export, and wipe the database and files per environment. Wi
 
 ## Troubleshooting
 
-#### **Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'**
+#### Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'
 
 This may occur during a database clone or import. A standard mysql import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G and the result is the semaphore does not exist error.
