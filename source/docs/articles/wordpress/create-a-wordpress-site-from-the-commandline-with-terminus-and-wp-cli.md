@@ -33,7 +33,7 @@ If you see the Pantheon lightning fist, you'll know that terminus is installed p
 
 ## Log In to Pantheon
 
-Now we need to tell terminus who you are. You can do that with the auth command:
+Now we need to tell terminus who you are. You can do that with the `auth` command:
 
 ```
 $ terminus auth login your@email.tld
@@ -49,7 +49,7 @@ You'll need to enter your password. If you are scripting a process, you can use 
 
 Open a browser and log in to your Pantheon dashboard so you can see the progress being made on some of the commands.
 
-Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us. 'terminus sites create' will start the process, in which you'll answer a few questions for our robots before they do the dirty work.
+Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us. 'terminus sites create' will start the process, in which you'll answer a few questions for our robots before they do the  work.
 
 ```
 $ terminus sites create
@@ -128,9 +128,9 @@ From terminus, you can get to your **Site Dashboard.**
 ```
 $ terminus site dashboard --site=<site-name>
 ```
-You should see the "initial commit" in the code log. The **Dev Environment** should also be in SFTP mode.
+You should see the initial commit in the code log. The **Dev Environment** should also be in SFTP mode.
 
-## Install WordPress
+## One-Minute WordPress Install
 
 Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish the process. There's even a wp-config.php already created and ready to use.
 
@@ -167,7 +167,7 @@ If everything goes as planned, you'll see this message:
 Success: WordPress installed successfully.
 ```
 
-Now go to your Dev environment
+Now go to your Dev environment:
 ```
 $ open http://dev-cli-test.pantheon.io/wp-admin
 ```
@@ -175,15 +175,13 @@ Log in using the username and password you set in the `wp core install` command.
 
 There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
 
-Return to the terminal, we don't need no stinking mouse.
-
 ## Prepare for Development
 
 I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**.
 ```
 $ terminus wp plugin install --activate --site=cli-test --env=dev
 ```
-Results in
+Results in:
 ```
 Running wp plugin install wp-cfm --activate=1  on cli-test-dev
 Installing WP-CFM (1.3.1)
@@ -281,7 +279,7 @@ Watch your Dashboard. It recognizes your uncommitted changes.
 
 ![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
-We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal (because it is awesome like Magic!) As soon as you issue the command, things will update in the browser.
+We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, everything will be updated in the browser.
 
 ```
 $ terminus site code commit --site=cli-test \
@@ -305,7 +303,7 @@ $ terminus wp scaffold child-theme --site=cli-test cli-test\
                             --author=name \
                             --activate
 ```
-and commit it.
+and commit it:
 
 ```
 $ terminus site code commit --site=cli-test \
