@@ -52,9 +52,10 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   </p>
   <![endif]-->
     {% include("navbar.html") %}
-
-        <div class="row main">
-        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+    <!-- container -->
+        <div class="container">
+          <div class="row main">
+          {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
     <!-- /container -->
   {% include("footer_content.html") %}
