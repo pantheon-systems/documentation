@@ -1,0 +1,40 @@
+{% extends "default" %}
+  {% block content_wrapper %}
+    <article>
+        <div class="article container">
+          <div class="col-md-9">
+            <header>
+              <h1 class="pio-docs-title">{{ page.title }}</h1>
+              <!-- <script type="text/javascript">
+            #  breadcrumbs()
+
+            </script> -->
+
+            </header>
+              {% if page.category %}
+                  <p class="category">Categories:
+                  {% for category in page.category %}
+                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
+                  {% endfor %}
+                  </p>
+              {% endif %}
+                <div>
+                    {{ page.blocks.content|raw }}
+                </div>
+
+          </div>
+            <div class="col-md-3">
+              <div class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                <div id="toc"><h3>Contents</h3>
+                </div>
+
+                <p>
+                </p>
+                <!--<p><a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md">
+                  <button type="button" class="btn btn-outline">Improve This Doc</button>
+                </a></p>-->
+              </div>
+            </div>
+    </div>
+  </article>
+    {% endblock %}

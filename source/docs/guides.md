@@ -1,5 +1,5 @@
 ---
-use: [articles]
+use: [guides]
 layout: default
 title: Articles
 ---
@@ -7,11 +7,11 @@ title: Articles
 
 <div class="container article">
   <div class="col-md-9">
-  <h1>All Articles</h1>
-    {% for article in data.articles %}
+  <h1>All Guides</h1>
+    {% for guide in data.guides %}
         <article>
-          <a href="{{ article.url }}">{{ article.title }}</a>
-          <p> {{ article.description }} </p>  
+          <a href="{{ guide.url }}">{{ guide.title }}</a>
+          <p> {{ guide.description }} </p>  
           </article>
     {% endfor %}
 </div>
