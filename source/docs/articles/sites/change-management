@@ -11,9 +11,9 @@ Change Management is a feature of Organizations that enables role-based permissi
 Partners receive Change Management for free. Enterprise customers can enable it by purchasing the add-on.
 
 ##Features
-* Organizations with Change Management can set default roles/permissions for their users in the People tab.
-* A Site owned by an Organization with Change Management will have permissions in the Team window to add one-off team members, such as subcontractors.
-* A Site owned by an Organization with Change Management can add another Organization with a reduced role.
+* The Organization with Change Management can add, remove, and assign roles to members of the Organization. Limited time members, like subcontractors, can be added with fewer privileges.
+* When the Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are maintained when working on the site.
+A Site owned by an Organization with Change Management will have permissions in the Team window to add one-off team members, such as subcontractors.
 * Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not&mdash;they can only add full team members.
 * All users in an Organization can see other users and their roles.
 
@@ -32,7 +32,7 @@ Each user in the Organization is assigned a role when they are invited to join, 
 2. Click **Add User**.
 3. Enter the email address of the new user, select a role, and click **Add user**.
 
-An email confirmation is sent to the user. After they click the confirmation link in the email to create their account, they will be added to the Org or Site.
+An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
 
 
 ###Edit an Existing User
@@ -42,8 +42,7 @@ An email confirmation is sent to the user. After they click the confirmation lin
 
 ##Change Management - Enabled
 
-By default, Change Management is enabled for Partners, Allies, and Enterprise customers.
-
+By default, Change Management is enabled for Organizations in the Pantheon for Agencies organizations.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -59,7 +58,7 @@ By default, Change Management is enabled for Partners, Allies, and Enterprise cu
 </tr>
 <tr>
 <td class="tg-031e">Owner</td>
-<td class="tg-031e">Functionally the same as an Organization Admin. This is the person/org who pays for the Site).</td>
+<td class="tg-031e">Functionally the same as an Organization Admin. This is the person/org who pays for the Site.</td>
 <td class="tg-031e">Same as Organization Administrator.</td>
 </tr>
 <tr>
