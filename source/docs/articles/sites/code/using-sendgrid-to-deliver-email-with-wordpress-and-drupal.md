@@ -56,9 +56,9 @@ drush @pantheon.your-site.dev en smtp -y
 ```
 ### Add Your SendGrid Account Details
 
-Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.
+Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.  
 
-![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​
+![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​  
 ​
 First, make sure the module is enabled by selecting **On** in the Install Options box.
 Add the following values for the associated fields:  
@@ -76,6 +76,7 @@ After you save the configuration, your Drupal application on Pantheon is now set
 When making any changes to Pantheon installations, first make the change in your Dev environment. Next, move it to Test, and after testing, migrate your changes to Live.
 
 If you don't want to re-enter the configuration, and can't push your database to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the $conf array:
+
 ```
 $conf['smtp_on'] = TRUE;
 $conf['smtp_host'] = 'smtp.sendgrid.net';
