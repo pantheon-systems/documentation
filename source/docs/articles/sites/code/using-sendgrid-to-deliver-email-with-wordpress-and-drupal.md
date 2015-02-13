@@ -34,12 +34,12 @@ This is where you can create site specific credentials so that sites have their 
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the wp_mail function with API integration, making it a breeze to configure and get started.
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
-###Add Your SendGrid Account Details
+### Add Your SendGrid Account Details
 Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s dashboard. Simply enter your site's SendGrid account credentials and select API as the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 **Note**: At this time, choosing SMTP for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](https://www.getpantheon.com/docs/articles/sites/known-limitations/) for more information. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
 
-![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
+![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
 
 Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, [click here](#deliverability).
 
