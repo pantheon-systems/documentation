@@ -12,7 +12,8 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.  
 
 
-The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
+
+The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
 
 - Smart full-text search
 - Faceting
@@ -25,11 +26,11 @@ However, If you are looking for additional features for more advanced use cases,
 
 ## Create a New Index
 
-Once you have signed-up at indexdepot.com, login and click the **Search Indexes** button.
+Once you have signed-up at indexdepot.com, login and click **Search Indexes**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272823)
 
-Next, click on **Create new index**.
+Next, click **Create new index**.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272825)
 
@@ -74,7 +75,7 @@ Here we need to provide two items to the ApacheSolr configuration:
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272833)
 
-When you’ve finished click **Save**.
+When you’ve finished, click **Save**.
 
 **Note**: A schema must be pushed in each environment (Dev/Test/Live).
 
