@@ -33,7 +33,7 @@ Once you have installed and activated the plugin, simply enter your SendGrid acc
 
 **Note**: At this time, the SendGrid SMTP configuration is not compatible with Pantheon due to the requirement of short tags. See [Known Limitations](/docs/articles/drupal/known-limitations#php-short-tags) for more information on PHP short tags.
 
-![WP Settings example](https://www.getpantheon.com/sites/default/files/docs/wordpress/sendgrid_wpconfig)​
+![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
 
 Your WordPress application is now setup to send email through SendGrid. For examples on how to incorporate this service into your application, please see [Code Examples](https://sendgrid.com/docs/Code_Examples/php.html).
 
