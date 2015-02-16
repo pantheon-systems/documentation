@@ -18,7 +18,7 @@ When you're done following the quickstart instructions above and have completed 
 - Add a symlink to your repository from `/simplesaml` to `/private/simplesaml-1.11.x/www` like so:
 ```
 ln -s ./private/simplesaml-1.11.x/www ./simplesaml
-git add simplesame
+git add simplesaml
 git commit -am "Adding SimpleSAML symlink"
 ```
 - [Generate or install certs](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to Git in `/private/simplesaml-1.11.x/cert`
