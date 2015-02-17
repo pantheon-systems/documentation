@@ -32,7 +32,7 @@ Here's an example of using a command-line SFTP client to connect to a site envir
     ENV=dev
     # Usually dev, test, or live
     export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
-    # Site UUID from dashboard URL: https://dashboard.getpantheon.com/sites/<UUID>
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
 
     sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
@@ -50,7 +50,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     export ENV=dev
     # Usually dev, test, or live
     export SITE=[YOUR SITE UUID]
-    # Site UUID from dashboard URL: https://dashboard.getpantheon.com/sites/<UUID>
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
     # To Upload/Import
     rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
@@ -75,15 +75,15 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
 
 Before we get started let us make sure we have everything you need:
 
-**Site URL:** https://dashboard.getpantheon.com/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83<br />
+**Site URL:** https://dashboard.pantheon.io/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83<br />
 **Environment (ENV):** Dev<br />
-**Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83  
+**Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
 ## Download a Directory from Pantheon
 
 Next we will download the contents of the `sites/default/files` directory into a folder on our local environment in our home folder called `files`
 
-    $: export ENV=dev  
+    $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
@@ -92,7 +92,7 @@ Next we will download the contents of the `sites/default/files` directory into a
 
 Download the sites/default/settings.php file into a Drupal installation called _Foo_ on our local environment in a folder called `sites/default/files`
 
-    $: export ENV=dev  
+    $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
@@ -101,7 +101,7 @@ Download the sites/default/settings.php file into a Drupal installation called _
 
 If you need to upload the files directory from a local Drupal installation called Foo in our home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
-    $: export ENV=test  
+    $: export ENV=test
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
@@ -110,7 +110,7 @@ If you need to upload the files directory from a local Drupal installation calle
 
 Some cases will require you to update a single file on your Pantheon site. Here we will upload the logo.png file into a Pantheon site's theme folder.
 
-    $: export ENV=dev  
+    $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
        ~/Foo/sites/all/themes/foo/logo.png \

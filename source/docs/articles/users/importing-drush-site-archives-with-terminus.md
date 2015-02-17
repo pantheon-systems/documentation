@@ -6,16 +6,16 @@ category:
 ---
 
 ## Overview
+
 One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](http://drush.ws/#archive-dump) using our [Terminus command-line interface](/docs/articles/local/terminus-the-pantheon-command-line-interface). This automates the packaging of the existing installation, improving the changes of success.
 
 ## Before You Begin
 
 There are a few things you'll need in order to make this work:
 
-1. A Pantheon account with at least one free Dev site slot open. [Pantheon is free](https://dashboard.getpantheon.com/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
+1. A Pantheon account with at least one free Dev site slot open. [Pantheon is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
 2. A working local Drush installation that is up to date with 5.x or 6.x stable.
 3. Drush access to your existing Drupal site.
-
 
 ## Generate a Drush Archive
 
@@ -33,9 +33,9 @@ If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, u
 
     # Install composer if needed.
     curl -sS https://getcomposer.org/installer | ph
-    mv composer.phar /usr/local/bin/composer  
+    mv composer.phar /usr/local/bin/composer
     # Download Terminus for non-development use.
-    composer create-project pantheon-systems/terminus $HOME/.drush/terminus -s dev --no-dev -n  
+    composer create-project pantheon-systems/terminus $HOME/.drush/terminus -s dev --no-dev -n
     # Clear Drush's cache.
     drush cc drush
 

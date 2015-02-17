@@ -20,13 +20,13 @@ All Pantheon sites consist of three parts:
 
 ## Import Your Code/Files/Database
 
-1. Go to the Account page on [https://dashboard.getpantheon.com/](https://dashboard.getpantheon.com/)
+1. Go to the Account page on [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/)
 2. Click **Create A New Site**.
 3. Name your new site.
 4. Select **Import site** from the "Choose your Start State" options.
 5. Choose the **Click here to provide separate code, files, and database archives** link.
 6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
-7. Click **Import Site**.  
+7. Click **Import Site**.
 8. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
 
 

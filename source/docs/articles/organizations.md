@@ -4,7 +4,7 @@ description: Pantheon organization types and the features available to them.
 category:
   - managing
 tool_image:
-tool_url: https://dashboard.getpantheon.com/users/#organizations/list
+tool_url: https://dashboard.pantheon.io/users/#organizations/list
 draft: true
 ---
 
