@@ -118,11 +118,11 @@ By default, Change Management is not enabled for resellers and OEM Partners. If 
 <tr>
 <td class="tg-031e">Developer</td>
 <td class="tg-031e">Developers can:<br>* Tag Sites<br>* Spin up Sites in Dev only</td>
-<td class="tg-031e">*Cannot deploy to Live/Production</td>
+<td class="tg-031e">* Cannot deploy to Live/Production</td>
 </tr>
 <tr>
 <td class="tg-031e">Unprivileged</td>
 <td class="tg-031e">Unprivileged users can:<br>* Spin up Sites within the Organization (User Dashboard)<br>* Cannot view the Organization Dashboard<br>* Cannot view the Organization Sites unless they are on the team of the Site</td>
-<td class="tg-031e">*Cannot deploy to Live/Production</td>
+<td class="tg-031e">* Cannot deploy to Live/Production</td>
 </tr>
 </table>
