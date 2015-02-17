@@ -1,36 +1,44 @@
-Automatic Quality Assurance for WordPress sites
+---
+title: Automatic Quality Assurance for WordPress sites
+description: Understand how to use Behat to write automated tests for your WordPress sites. 
+category:
+  - developing
 
-If you're desiging WordPress sites, no doubt you've gotten one thing working, only to have it break later. It's tedious to test the same features again and again, especially when it requires clicking, filling out forms, and verifying everything looks okay. Fortunately, with Behat it's easy to write automated tests in plain English and start adding them to your WordPress projects.
+---
 
-### Before you start:
-* Knowledge of the command line
-* [Composer](https://getcomposer.org/)
+If you're desiging WordPress sites, there's no doubt you got something working only to have it break later. It's tedious to test the same features again and again, especially when it requires clicking, filling out forms, and verifying everything looks the way it should. Fortunately with Behat, it's easy to write automated tests in plain English and add them to your WordPress projects.
+
+## Before You Begin
+Make sure that you have:
+* knowledge of the command line
+* Installed [Composer](https://getcomposer.org/)
 * A WordPress site (free to create on Pantheon)
 
-### Defining terms
-* **Behat:** testing framework built in PHP.
-* **Mink:** works with Behat and lets you script the browser with various drivers.
-e.g.
-    - Goutte: fast driver, but doesn't support testing functionality that requires Javascript
-    - Selenium: slower, but supports JS.
-* Feature: a test, may have several scenarios
-* Gherkin: Language that uses structured, but plain English to
+## Key Terms
+* **Behat**: Testing framework built in PHP.
+* **Mink**: Works with Behat and lets you script the browser with various drivers.
+For example:
+    - Goutte: Fast driver, but doesn't support testing functionality that requires JavaScript
+    - Selenium: slower, but supports JavaScript.
+* Feature: A test - may have several scenarios
+* Gherkin: Language that uses structured, plain English 
 
 
- we're treating the site as a black box and we won't be interacting with the WordPress API or your site's database at all. So you can actually use Behat to test *any* website, not just a WordPress site.
-
-### Sample test
+## Sample Test
 
 
+We're treating the site as a black box and we won't be interacting with the WordPress API or your site's database at all. You can actually use Behat to test *any* website, not just a WordPress site.
+ 
+ 
 Feature: As a visitor I should be able to load the home page
-Scenario: Home page loads
+Scenario: Homepage loads  
 Given I am on the homepage
 Then I should see "Test With Robots"
 
-Install Behat and Mink
+##Install Behat and Mink
 
 Create a composer.json file in a new directory. This is a plain text file that describes a list of software packages
-we'll install. Composer will resolve any dependencies, downloading those as well.
+we'll install. Composer will resolve any dependencies, and download those as well.
 
 
 ```
@@ -39,31 +47,29 @@ cd withrobots/wp-content
 mkdir -p tests/behat
 cd tests
 atom composer.json
-```
-{
-    "require": {
-        "behat/behat": "2.4.*@stable",
-        "behat/mink": "1.4.*@stable",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "behat/mink-selenium2-driver": "*"
-    },
-    "minimum-stability": "dev",
-    "config": {
-        "bin-dir": "bin/"
-    }
-}
-```
 
+{
+    "require": {  
+        "behat/behat": "2.4.*@stable",  
+        "behat/mink": "1.4.*@stable",  
+        "behat/mink-extension": "*",  
+        "behat/mink-goutte-driver": "*",  
+        "behat/mink-selenium2-driver": "*"  
+    },  
+    "minimum-stability": "dev",  
+    "config": {  
+        "bin-dir": "bin/"  
+    }  
+}  
+```
 Install Behat, Mink, and the specificied Mink drivers using composer:
 
 `composer install`
 
 Look in the directory after running composer install to see what's changed.
 
-```
-git status
-```
+
+`git status`
 
 
 Now from the command line run:
@@ -74,11 +80,13 @@ Now from the command line run:
 
 Behat will look for the automated tests in the `features` directory.
 
-Let's create our first feature:
+## Create a New Feature
+
+Now let's create our first feature:
 
 ```
 vim behat.yml
-```
+
 
 # behat.yml
 default:
@@ -93,7 +101,7 @@ default:
 ```
 Feature: Blog
 
-Scenario: As a visitor I do not see "My Awesome Blog Post"
+Scenario: As a visitor, I do not see "My Awesome Blog Post"
 Given I am on the homepage
 Then I should not see "My Awesome Blog Post"
 
@@ -115,6 +123,7 @@ Then I should see "Post published"
 Scenario: As a visitor I can see recent blog post
 Given I am on the homepage
 Then I should see "My Awesome Blog Post"
+
 ```
 
 
