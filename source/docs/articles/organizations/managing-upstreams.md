@@ -56,10 +56,10 @@ We encourage you to use a continuous integration server, like Jenkins, Travis-CI
 4. Push the updates branch to Pantheon.
 5. Create a cloud development environment for the branch.
 6. Wipe the database and files from the update branch.
-7. Run acceptance tests for a new-site spinup use case.
+7. Run acceptance tests for a new site creation use case.
 8. Merge the code into dev.
 9. Wipe the dev environment’s database and files.
-10. Test the code update installation process, and existing spinup code update case.
+10. Test the code update installation process, and existing site code update case.
 11. Copy content from live and deploy code to Test.
 12. Test the code against test content for the existing site update case.
 13. Deploy the code to Live.
