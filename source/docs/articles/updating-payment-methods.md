@@ -1,5 +1,5 @@
 ---
-title: Changing a Credit Card
+title: Updating Payment Methods
 description: Learn how to update a credit card as a payment method for your site.
 category:
   - managing
