@@ -69,7 +69,6 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. For these, it's best to use a utility such as an SFTP client or rsync. The biggest issue with these is having the transfer stopped due to connectivity issues. [To handle that scenario, try this handy bash script](https://www.evernote.com/shard/s404/sh/5bcfedb7-cda1-4647-9390-0112c2f9e703/f8defb098e992e2acd57280c4dcddb63):  
 
 ```
----------------------------  
 ENV='ENV'
 SITE='SITEID'
  
@@ -90,8 +89,6 @@ echo "Rsync failure. Backing off and retrying..."
 sleep 180
 fi
 done 
-
----------------------------  
 ```
 This will connect to your Pantheon site's Dev environment, and start uploading your files. If an error occurs  during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
 If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
