@@ -11,17 +11,23 @@ Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all
 Log into your Pantheon Account and navigate to https://dashboard.pantheon.io/organizations (Need an account? [Sign up for Pantheon](https://dashboard.pantheon.io/register)). Fill out the form. We ask for evidence that you have developed a few websites, and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
 ![Pantheon Agency Registration Page at https://dashboard.getpantheon.com/register](/source/docs/assets/images/pantheon-for-agencies-registration.png)
 
-## Add Colllaborators
+## Invite Collaborators
 
 Enter the email addresses of the other members of your agency, and assign them roles. Don’t worry, starting to add a third collaborator will reveal a fourth field, and so on.
+
+![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
 
 ## Add Sites
 
 You’re now prompted to add existing Pantheon sites that you own to your organization. Your agency will be added to the site teams as a “Supporting Organization”
 
+![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
+
 ## Tour the Dashboard
 
 Your Organization Dashboard has five tabs.
+
+![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
 
 ### Sites
 
@@ -44,13 +50,13 @@ Every ticket, from every site in your org is surfaced here. You can open new tic
 
 ### Settings
 
-[@TODO: Not sure what the fields in this tab other than the logo upload, actually do.]
+Upload your agency's logo! (85 x 85 px)
 
 ## Next Steps
 
  - [Create a Site](/docs/articles/sites/create)
- - [Import an Existing Site](/docs/articles/sites/import-an-existing-site)
- - Read the [New Ally FAQ](/docs/articles/organizations/pantheon-for-agencies/ally-faq)
+ - [Migrate an Existing Site](/docs/articles/sites/create/migrating-sites)
+ - Read the [FAQ](/docs/articles/organizations/pantheon-for-agencies/faq)
  - Learn about Pantheon for Agencies features:
-   - [Change Management](/docs/articles/sites/change-management)
+   - [Change Management](/docs/articles/organizations/change-management)
    - [Multidev](/docs/articles/sites/multidev)
