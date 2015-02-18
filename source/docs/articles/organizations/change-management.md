@@ -6,7 +6,7 @@ category:
   - developing
 ---
 
-Change Management is a feature of Organizations that enables role-based permissions for users on the organization. Sites which list the organization as a supporting organization are accessible to privileged members of the organization. The roles exist to restrict who can deploy, and manage other users in the Organization or Sites it works on.
+Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the organization as a supporting Organization are accessible to privileged members of the organization. The roles exist to restrict who can deploy and manage other users in the Organization or Sites it works on.
 
 ## Features
 * Organizations with Change Management can add people as Administrators, Team Members, and Developers to the Organization. Admins have all privileges, Team Members are a trusted role that can make changes that affect the Test and Live environments, and Developers can only work on Development Environments.
@@ -16,7 +16,7 @@ Change Management is a feature of Organizations that enables role-based permissi
 
 
 ## Managing People
-Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). The procedures below can be performed at the **Organization Dashboard's People Tab** by **Administrators** of the organization.
+Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). The procedures below can be performed at the **Organization Dashboard's People Tab** by Administrators of the Organization.
 
 
 ### Add a New User
@@ -76,12 +76,12 @@ Change Management is enabled for all Pantheon for Agencies partners, and for som
 <td class="tg-031e">- Create new Sites<br>- Cannot deploy to Test/Live</td>
 </tr>
 </table>
-*Users cannot be granted this role in organizations with Change Management. Only users who are added via email domain matching at user registration are given this role. P4A partners should not use this role.
+*Users cannot be granted this role in Organizations with Change Management. Only users who are added via email domain matching at user registration are given this role. P4A partners should not use this role.
 
 
 ### Change Management - Disabled
 
-By default, Change Management is not enabled for some types of organizations. If Change Management is disabled, roles cannot be selected at the Organization or Site levels. At the Organization level, a checkbox appears to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
+By default, Change Management is not enabled for some types of Organizations. If Change Management is disabled, roles cannot be selected at the Organization or Site levels. At the Organization level, a checkbox appears to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
