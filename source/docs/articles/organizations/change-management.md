@@ -6,43 +6,38 @@ category:
   - developing
 ---
 
-Change Management is a feature of Organizations that enables role-based permissions for users in the Organization and team members of Sites owned by the Organization in order to restrict who can develop, deploy, and manage other users in the Organization or Site.
+Change Management is a feature of Organizations that enables role-based permissions for users on the organization. Sites which list the organization as a supporting organization are accessible to privileged members of the organization. The roles exist to restrict who can deploy, and manage other users in the Organization or Sites it works on.
 
-Partners receive Change Management for free. Enterprise customers can enable it by purchasing the add-on.
-
-##Features
+## Features
 * The Organization with Change Management can add, remove, and assign roles to members of the Organization. Limited time members, like subcontractors, can be added with fewer privileges.
-* When the Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are maintained when working on the site.
+* When the Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are maintained for working on the site.
 A Site owned by an Organization with Change Management will have permissions in the Team window to add one-off team members, such as subcontractors.
 * Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not&mdash;they can only add full team members.
 * All users in an Organization can see other users and their roles.
 
-####Scenarios
-An Enterprise Organization hires an Agency to develop its site, but wants to restrict the ability of the Agency to deploy the site to production. The enterprise can reserve deployment privileges for its internal IT team, preventing unintended deployments not initiated by the Enterprise.
 
-An Enterprise customer that has a site and simply wants to have role-based permissions to control who can deploy to production on its own development team.
-
-
-##Roles and Permissions
-Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization).
+## Managing People
+Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). The procedures below can be performed at the **Organization Dashboard's People Tab** by **Administrators** of the organization.
 
 
-###Add a New User
-1. Click the **People** tab.
-2. Click **Add User**.
-3. Enter the email address of the new user, select a role, and click **Add user**.
+### Add a New User
+
+1. Click **Add User**.
+2. Enter the email address of the new user, select a role, and click **Add user**.
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
 
 
-###Edit an Existing User
-1. Click the **People** tab.
-2. Select the user's name, click **Operations**, and choose **Change Role**.
-3. Select the role from the drop-down, and click **Set User Role**.
+### Edit an Existing User
 
-##Change Management - Enabled
+1. Select the user's name, click **Operations**, and choose **Change Role**.
+2. Select the new role from the drop-down, and click **Set User Role**.
 
-By default, Change Management is enabled for Organizations in the Pantheon for Agencies organizations.
+## Permissions
+
+### Change Management Enabled
+
+Change Management is enabled for all Pantheon for Agencies partners, and for some Pantheon for Enterprises customers. With it enabled, permissions for each role are as follows. Actions that can be carried out in both contexts; e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets, are listed under the **Site Dashboard**, but are enforced equally in the **Organization Dashboard**. Each role has all of the permissions of the roles listed below it. Permissions listed in each row are exclusive to that role and those above it.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -59,34 +54,35 @@ By default, Change Management is enabled for Organizations in the Pantheon for A
 <tr>
 <td class="tg-031e">Owner</td>
 <td class="tg-031e">Functionally the same as an Organization Admin. This is the person/org who pays for the Site.</td>
-<td class="tg-031e">Same as Organization Administrator.</td>
+<td class="tg-031e">Same as Organization Administrator. In P4A, sites are owned by the person who created them until a payment instrument is associated. All roles can "Own" sites in this way.</td>
 </tr>
 <tr>
 <td class="tg-031e">Organization Administrator</td>
-<td class="tg-031e">An Organization Administrator can:<br>* Manage Settings<br>* Manage Members (add/remove/edit) in the People tab<br>* Tag Sites</td>
-<td class="tg-031e">If the Site is owned by the Organization, the Organization Administrator functions as an Owner and can:<br>* Manage Sites Service Level<br>* Manage Settings<br>* Deploy to Live/Production<br>* Manage Members (add/remove/edit) in the Team window  <br><br>If the Site is not owned by the Organization, the Organization Administrator functions as a Team Member.</td>
+<td class="tg-031e">- Manage Settings<br>- Remove Members<br>- Edit member roles<br>- Delete Sites<br>- Remove Sites from the Organization</td>
+<td class="tg-031e">- If the Site is owned by the Organization, the Organization Administrator functions as an Owner.<br>- If the Site is not owned by the Organization, the Organization Administrator functions as a Team Member.</td>
 </tr>
 <tr>
 <td class="tg-031e">Team Member</td>
-<td class="tg-031e">Team Members can:<br>* Add Org members (but cannot remove/edit them)<br>* Tag Sites</td>
-<td class="tg-031e">A Team Member can:<br>* Manage Settings<br>* Manage Members (add/remove)<br>* Deploy to Live/Production</td>
+<td class="tg-031e">- Add Org Team members and developers (but cannot remove/edit roles)</td>
+<td class="tg-031e">- Manage Settings<br>- Manage Team (add/remove)<br>- Deploy Code to Test/Live</td>
 </tr>
 <tr>
 <td class="tg-031e">Developer</td>
-<td class="tg-031e">Developers can:<br>* Tag Sites<br>* Spin up Sites in Dev only</td>
-<td class="tg-031e">* Spin up new Sites in Dev only <br>* Cannot deploy to Live/Production</td>
+<td class="tg-031e">- Tag Sites<br>- Access Sites<br>- Create Sites</td>
+<td class="tg-031e">- Commit code to CDE's and Dev<br>- Cannot deploy code or clone content to Test/Live, unless invited to the site or were the creator of the site, in which case they are on the site team as member or owner.</td>
 </tr>
 <tr>
-<td class="tg-031e">Unprivileged</td>
-<td class="tg-031e">Unprivileged users can:<br>* Spin up Sites within the Organization (User Dashboard)<br>* Cannot view the Organization Dashboard<br>* Cannot view the Organization Sites unless they are on the team of the Site</td>
-<td class="tg-031e">* Spin up new Sites in Dev only <br>* Cannot deploy to Live/Production</td>
+<td class="tg-031e">Unprivileged*</td>
+<td class="tg-031e">- Cannot view the Organization Dashboard
+<td class="tg-031e">- Create new Sites<br>- Cannot deploy to Test/Live</td>
 </tr>
 </table>
+*Users cannot be granted this role in organizations with Change Management. Only users who are added via email domain matching at user registration are given this role. P4A partners should not use this role.
 
 
+### Change Management - Disabled
 
-##Change Management - Disabled
-By default, Change Management is not enabled for resellers and OEM Partners. If Change Management is disabled, roles cannot be selected at the Organization or Site levels. At the Organization level, a checkbox appears to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
+By default, Change Management is not enabled for some types of organizations. If Change Management is disabled, roles cannot be selected at the Organization or Site levels. At the Organization level, a checkbox appears to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -102,27 +98,22 @@ By default, Change Management is not enabled for resellers and OEM Partners. If 
 </tr>
 <tr>
 <td class="tg-031e">Owner</td>
-<td class="tg-031e">Functionally the same as an Organization Admin. This is the person/org who pays for the Site).</td>
+<td class="tg-031e">Functionally the same as an Organization Admin, distinguished only by the user/organization's association with a payment instrument.  </td>
 <td class="tg-031e">Same as Organization Administrator.</td>
 </tr>
 <tr>
 <td class="tg-031e">Organization Administrator</td>
-<td class="tg-031e">An Organization Administrator can:<br>* Manage Settings<br>* Manage Members (add/remove/edit) in the People tab<br>* Tag Sites</td>
-<td class="tg-031e">If the Site is owned by the Organization, the Organization Administrator functions as an Owner and can:<br>* Manage Sites Service Level<br>* Manage Settings<br>* Deploy to Live/Production<br>* Manage Members (add/remove/edit) in the Team window  <br><br>If the Site is not owned by the Organization, the Organization Administrator functions as a Team Member.</td>
+<td class="tg-031e">Only role that can access this dashboard. All permissions are granted.</td>
+<td class="tg-031e">In Pantheon for Enterprise Organizations, the Site is owned by the Organization, and the Organization Administrator functions as site Owner and can:<br>- Manage Sites Service Level<br>- Delete Sites<br>- Manage Settings<br>If the Site is not owned by the Organization (P4A) the Organization Administrator functions as a Team Member.</td>
 </tr>
 <tr>
 <td class="tg-031e">Team Member</td>
-<td class="tg-031e">Team Members can:<br>* Add Org members (but cannot remove/edit them)<br>* Tag Sites</td>
-<td class="tg-031e">A Team Member can:<br>* Manage Settings<br>* Manage Members (add/remove)<br>* Deploy to Live/Production</td>
+<td class="tg-031e">Role does not exist in organizations without Change Management</td>
+<td class="tg-031e">- Manage Settings<br>- Manage Team<br>- Manage Settings<br>- Deploy to Test/Live</td>
 </tr>
 <tr>
-<td class="tg-031e">Developer</td>
-<td class="tg-031e">Developers can:<br>* Tag Sites<br>* Spin up Sites in Dev only</td>
-<td class="tg-031e">* Cannot deploy to Live/Production</td>
-</tr>
-<tr>
-<td class="tg-031e">Unprivileged</td>
-<td class="tg-031e">Unprivileged users can:<br>* Spin up Sites within the Organization (User Dashboard)<br>* Cannot view the Organization Dashboard<br>* Cannot view the Organization Sites unless they are on the team of the Site</td>
-<td class="tg-031e">* Cannot deploy to Live/Production</td>
+<td class="tg-031e">Unprivileged*</td>
+<td class="tg-031e">- Create Sites within the Organization from the User Dashboard<br>- Cannot view the Organization Dashboard<br>- Only access the Organization Sites they created or are invited to as team members</td>
+<td class="tg-031e">- Become Team Members for sites they create<br>- Can only access sites through invitation, are considered team members.</td>
 </tr>
 </table>
