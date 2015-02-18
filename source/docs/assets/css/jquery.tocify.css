@@ -29,7 +29,6 @@
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
 .tocify-subheader {
-    text-indent: 10px;
     display: none;
 }
 
@@ -40,7 +39,6 @@
 
 /* Further indents second level subheader elements. */
 .tocify-subheader .tocify-subheader {
-    text-indent: 30px;
 }
 
 /* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
