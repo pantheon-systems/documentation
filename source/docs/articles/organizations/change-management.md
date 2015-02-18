@@ -9,10 +9,9 @@ category:
 Change Management is a feature of Organizations that enables role-based permissions for users on the organization. Sites which list the organization as a supporting organization are accessible to privileged members of the organization. The roles exist to restrict who can deploy, and manage other users in the Organization or Sites it works on.
 
 ## Features
-* The Organization with Change Management can add, remove, and assign roles to members of the Organization. Limited time members, like subcontractors, can be added with fewer privileges.
-* When the Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are maintained for working on the site.
-A Site owned by an Organization with Change Management will have permissions in the Team window to add one-off team members, such as subcontractors.
-* Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not&mdash;they can only add full team members.
+* Organizations with Change Management can add people as Administrators, Team Members, and Developers to the Organization. Admins have all privileges, Team Members are a trusted role that can make changes that affect the Test and Live environments, and Developers can only work on Development Environments.
+* When an Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site. All organization members can access all sites associated with the organization.
+* Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not—they can only add full team members.
 * All users in an Organization can see other users and their roles.
 
 
@@ -73,7 +72,7 @@ Change Management is enabled for all Pantheon for Agencies partners, and for som
 </tr>
 <tr>
 <td class="tg-031e">Unprivileged*</td>
-<td class="tg-031e">- Cannot view the Organization Dashboard
+<td class="tg-031e">Disabled
 <td class="tg-031e">- Create new Sites<br>- Cannot deploy to Test/Live</td>
 </tr>
 </table>
@@ -113,7 +112,7 @@ By default, Change Management is not enabled for some types of organizations. If
 </tr>
 <tr>
 <td class="tg-031e">Unprivileged*</td>
-<td class="tg-031e">- Create Sites within the Organization from the User Dashboard<br>- Cannot view the Organization Dashboard<br>- Only access the Organization Sites they created or are invited to as team members</td>
+<td class="tg-031e">- No Access</td>
 <td class="tg-031e">- Become Team Members for sites they create<br>- Can only access sites through invitation, are considered team members.</td>
 </tr>
 </table>
