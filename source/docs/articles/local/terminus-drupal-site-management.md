@@ -7,7 +7,7 @@ test: yes
 ---
 
 
-## Create Sites Faster And More Efficiently
+## Create Sites Faster and More Efficiently
 The latest version of Pantheon's CLI, [Terminus](https://github.com/pantheon-systems/cli), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 ## Installing Terminus
