@@ -112,7 +112,7 @@ By default, Change Management is not enabled for some types of Organizations. If
 </tr>
 <tr>
 <td class="tg-031e">Unprivileged*</td>
-<td class="tg-031e">- No Access</td>
+<td class="tg-031e"> No Access</td>
 <td class="tg-031e">- Become Team Members for sites they create<br>- Can only access sites through invitation, are considered team members.</td>
 </tr>
 </table>
