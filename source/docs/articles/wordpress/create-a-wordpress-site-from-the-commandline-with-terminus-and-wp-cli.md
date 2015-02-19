@@ -158,8 +158,6 @@ Now, armed with this knoweldge, you can see that with a little bash magic, you c
 $ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}`"
 ```
 
-Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
-
 Now, with the url for your site, you can execute the ``wp core install`` command above and complete the example above.
 
 To populate the database of the site you created above, use the following command:
