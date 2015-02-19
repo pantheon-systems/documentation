@@ -32,11 +32,15 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 1. Select the user's name, click **Operations**, and choose **Change Role**.
 2. Select the new role from the drop-down, and click **Set User Role**.
 
+### Change Site Owner
+The owner of the site is the person or Organization who pays for the site. To change the owner, you'll need to update the billing information. 
+
+
 ## Permissions
 
 ### Change Management Enabled
 
-Change Management is enabled for all Pantheon for Agencies partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it. 
+Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
