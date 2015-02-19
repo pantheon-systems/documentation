@@ -15,7 +15,7 @@ Given the low-level nature of these errors, these messages cannot be customized 
 
 
 
-There are two variations on the messages; one for sites hosted on \*.gotpantheon.com (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
+There are two variations on the messages; one for sites hosted on \*.pantheon.io (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
 
 
 

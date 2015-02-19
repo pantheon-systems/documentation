@@ -16,7 +16,7 @@ Be sure that you:
 
 - Are familiar with your operating system's command line.
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
-- Have created a [Pantheon account](https://dashboard.getpantheon.com/register). Pantheon accounts are always free for development.
+- Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install Terminus
 To use WP-CLI to manage your WordPress powered site hosted on Pantheon, you first need to install Pantheon's command line tool, Terminus. Terminus gives you access to your Pantheon account and sites, and allows you to execute WP-CLI commands on those sites. To install terminus, follow the [basic installation instructions](https://github.com/pantheon-systems/cli/wiki/Installation).

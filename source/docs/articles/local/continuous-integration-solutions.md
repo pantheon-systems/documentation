@@ -29,9 +29,9 @@ After enabling the SimpleTest module, you can use Drush to remotely execute Simp
 
     SITE_NAME=yoursitename
     ENV=dev
-    drush @pantheon.$SITE_NAME.$ENV test-run -l http://$ENV-$SITE_NAME.gotpantheon.com/ UserSaveTestCase --xml='sites/default/files'
+    drush @pantheon.$SITE_NAME.$ENV test-run -l http://$ENV-$SITE_NAME.pantheon.io/ UserSaveTestCase --xml='sites/default/files'
 
-The end results would be written to http://dev-yoursitename.gotpantheon.com/sites/default/files/UserSaveTestCase.xml
+The end results would be written to http://dev-yoursitename.pantheon.io/sites/default/files/UserSaveTestCase.xml
 
 ## Known Limitations
 

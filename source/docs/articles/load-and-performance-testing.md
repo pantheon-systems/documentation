@@ -30,7 +30,7 @@ High-performance is the ability to deliver a page in under a second; scalability
 
 To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
-    curl -I http://live-yoursite.gotpantheon.com
+    curl -I http://live-yoursite.pantheon.io
     HTTP/1.1 200 OK
     Server: nginx/1.0.10
     Date: Fri, 17 Aug 2012 23:47:36 GMT
@@ -54,11 +54,11 @@ The "Age" field should be greater than 0. If the max age is not greater than 0, 
 
 Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the Application Containers backend:
 
-    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.gotpantheon.com
+    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
 
 The command returns the following results. Note the appended timestamp at the bottom. The "real" time is the one to pay attention to:
 
-    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.gotpantheon.com
+    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
     HTTP/1.1 200 OK
     Server: nginx/1.0.10
     Date: Fri, 17 Aug 2012 23:57:39 GMT
@@ -83,7 +83,7 @@ As an added bonus, you can test specific-pages of a site by passing a specific U
 
 To get the PHP-Session ID, log in to your site and check the browsers cookie setting and value. The Session ID can be passed in the following way:
 
-    time curl -I -H "Cookie: SESSe6c673379860780ffbc45bdd6d9c1ab4=dKanNfIMe_0CnOMF7v1Qb5SpDN7UDvyQE8um-1Rpkcg;;" http://live-yoursite.gotpantheon.com
+    time curl -I -H "Cookie: SESSe6c673379860780ffbc45bdd6d9c1ab4=dKanNfIMe_0CnOMF7v1Qb5SpDN7UDvyQE8um-1Rpkcg;;" http://live-yoursite.pantheon.io
 
 If you're not satisfied with the response time, focus should be shifted to optimizing the performance of the site.
 
@@ -95,21 +95,21 @@ In order to test scale and throughput, we use AB, a simple tool made available b
 
 Run the following command:
 
-    ab -n 100 -c 5 http://live-yoursite.gotpantheon.com/
+    ab -n 100 -c 5 http://live-yoursite.pantheon.io/
 
 Varnish should now be properly configured, and what you've tested should generate good response times and a high requests per second.
 
 As with `curl`, you can run `ab` with the following parameters: `-C NO_CACHE=1` parameter to stop Varnish from caching the response. `ab` returns the following output:
 
-    ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.gotpantheon.com/
+    ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.pantheon.io/
     This is ApacheBench, Version 2.3 <$Revision: 655654 $>
     Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
     Licensed to The Apache Software Foundation, http://www.apache.org/
 
-    Benchmarking http://live-yoursite.gotpantheon.com (be patient).....done
+    Benchmarking http://live-yoursite.pantheon.io (be patient).....done
 
     Server Software: 10.176.69.43
-    Server Hostname: http://live-yoursite.gotpantheon.com
+    Server Hostname: http://live-yoursite.pantheon.io
     Server Port: 80
 
     Document Path: /

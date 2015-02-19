@@ -9,7 +9,7 @@ Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all
 
 ## Create Your Agency Profile
 Log into your Pantheon Account and navigate to https://dashboard.pantheon.io/organizations (Need an account? [Sign up for Pantheon](https://dashboard.pantheon.io/register)). Fill out the form. We ask for evidence that you have developed a few websites, and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
-![Pantheon Agency Registration Page at https://dashboard.getpantheon.com/register](/source/docs/assets/images/pantheon-for-agencies-registration.png)
+![Pantheon Agency Registration Page at https://dashboard.pantheon.io/register](/source/docs/assets/images/pantheon-for-agencies-registration.png)
 
 ## Invite Collaborators
 

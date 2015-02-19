@@ -6,7 +6,7 @@ category:
 ---
 ## Create a New Site
 
-On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.getpantheon.com/sites/create)**
+On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**
 
 ### Name Your Site
 

@@ -48,7 +48,7 @@ Varnish uses when determining if and for how long to cache content.
 1. Open a terminal.
 2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag displays only the HTTP headers for the URL you specify.
 ```
-    $ curl -I http://dev.pantheon.gotpantheon.com/
+    $ curl -I http://dev.pantheon.pantheon.io/
     HTTP/1.1 200 OK
     server: nginx/1.0.12
     content-type: text/html; charset=utf-8

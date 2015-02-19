@@ -36,7 +36,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
-          $_SERVER['HTTP_HOST'] == 'live-yoursite.gotpantheon.com') {
+          $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
@@ -47,7 +47,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' ||
-          $_SERVER['HTTP_HOST'] == 'live-yoursite.gotpantheon.com') {
+          $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: http://yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
