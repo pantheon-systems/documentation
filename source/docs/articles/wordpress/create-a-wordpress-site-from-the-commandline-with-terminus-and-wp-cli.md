@@ -33,7 +33,7 @@ If you see the Pantheon lightning fist, you'll know that terminus is installed p
 
 ## Log In to Pantheon
 
-Now we need to tell terminus who you are. You can do that with the auth command:
+Now we need to tell terminus who you are. You can do that with the `auth` command:
 
 ```
 $ terminus auth login your@email.tld
@@ -43,7 +43,7 @@ Saving session data
 
 ```
 
-You'll need to enter your password. If you are scripting a process, you can use the ``--password`` argument. You'll know it's successful when you see the Pantheon logo.
+You'll need to enter your password. If you are scripting a process, use the ``--password`` argument. You'll know it's successful when you see the Pantheon logo.
 
 ## Create Your Site
 
@@ -120,11 +120,11 @@ $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \
                         --label="Command Line Test" \  
                         --org=YOUR-ORG-ID \  
 ```
-**NOTE:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
+**Note:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
 Just like when you create a site from your dashboard, this will only take a few minutes. You will see a status bar as terminus spins up your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-From terminus, you can get to your **Site Dashboard** with '$ terminus site dashboard --site=<site-name>'
+From terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
 
 ## Install WordPress
 
@@ -140,27 +140,27 @@ $ terminus wp core install --url=the.url.of.your.dev.site \
                            --site=the-name-of-your-site \
 ```
 
-Before this command will work though, you need one critical piece of information, the url for your new site. Lucky for us, that is not difficult to find, if you understand a little about Terminus. 
+Before this command will work though, you need one critical piece of information: the URL for your new site. Lucky for us, that is not difficult to find if you understand a little about Terminus. 
 
-Terminus has many great commands that allow you to manage all aspects of the sites built on Pantheon; one of those commands is the ``site`` command. 
+Terminus has many great commands that allow you to manage all aspects of the sites built on Pantheon, and one of those commands is the `site` command. 
 
 ```
 $ terminus site
 ```
 
-If you execute the ``site`` command by itself it will list all of the sub-commands you canissue to control a specific site. One of those subcommands is ``hostname``. ``hostname`` does exactly what you would exiect it to do, it list the host name for a given site and envrironment. To specify the site you want a hostname for, you use the ``--site`` option. Throughout Terminus, when a command needs to be executed on a single site, you specify that site with ``--site`` and then the name of your site. This is the same name that you created using ``sites create`` two steps above.
+If you execute the `site` command by itself it will list all of the sub-commands you can issue to control a specific site. One of those subcommands is `hostname`, which lists the hostname for a given site and environment. To specify the site you want a hostname for, use the `--site` option. Throughout Terminus, when a command needs to be executed on a single site, you specify that site with `--site` and then the name of your site. This is the same name that you created using `sites create` two steps above.
 
-As you know, every website built on Pantheon has a minimum of 3 environment, **dev**, **test**, and **live**. Most sub commands of ``site`` require that you let Terminus know which environemnt you want the command run in. If you fail to specify, Terminus will ask you to select one befire it executes. You can specify which environment you want to work on with the ``--env`` option. 
+As you know, every website built on Pantheon has a minimum of three environment, Dev, Test, and Live. Most sub-commands of `site` require that you let Terminus know which environment you want the command run in. If you fail to specify it, Terminus will ask you to select one before it executes. You can specify which environment you want to work on with the `--env` option. 
 
-Now, armed with this knoweldge, you can see that with a little bash magic, you can use Terminus to get the URL of your site:
+Now armed with this knowledge, you can see that with a little bash magic you can use Terminus to get the URL of your site:
 
 ```
 $ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}`"
 ```
 
-Now, with the url for your site, you can execute the ``wp core install`` command above and complete the example above.
+With the URL for your site, you can execute the `wp core install` command and complete the example above.
 
-To populate the database of the site you created above, use the following command:
+To populate the database of the site you created, use the following command:
 
 ```
 $ terminus wp core install --site=cli-test \
@@ -170,11 +170,11 @@ $ terminus wp core install --site=cli-test \
                            --admin_password=pantheon.rocks \
                            --admin_email="cal@getpantheon.com"
 ```
-The same command, as a single line:
+The same command shown on a single line:
 ```
 terminus wp core install --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@getpantheon.com
 ```
-If everything goes as planned, you'll see this message:
+If everything goes as planned you'll see this message:
 ```
 Success: WordPress installed successfully.
 ```
@@ -187,7 +187,7 @@ Now that you have a stock WordPress install, let's make it look a little better.
 ### Add Images
 Using WP-CLI gives us the ability to upload images and modify posts. In this case, you can do both at once. The following command will add a featured image to the Hello Word post that WordPress installs automatically.
 
-You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
+You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import.` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
 ```
 $ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
            --post_id=\"1\" \  
@@ -201,9 +201,9 @@ After a successful upload you'll see this message:
 Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg
 as attachment ID 3 and attached to post 1 as featured image.
 ```
-You can see the full documentation for ``media import`` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the ``--featured_image`` flag, you also need to pass the ``post_id``. You can pass in either the URL of an image or a local filename to ``media import.`` Understand that in this case, "local" means it's already uploaded to your site.
+You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import`. In this case, "local" means it's already uploaded to your site.
 
-Now, go to your browser and refresh your WordPress website's front page to see the new image.
+Go to your browser and refresh your WordPress website's front page to see the new image.
 
 ### Install and Add a New Theme
 
@@ -224,7 +224,7 @@ Watch your Dashboard. It recognizes your uncommitted changes.
 
 ![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
-We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal (because it is awesome like Magic!) As soon as you issue the command, things will update in the browser.
+We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything update in the browser.
 
 ```
 $ terminus site code commit --site=cli-test \
@@ -234,20 +234,20 @@ $ terminus site code commit --site=cli-test \
                             --branchname=master
 ```
 
-Terminus connects to Pantheon's API, which makes real-time updates to any dashboard you have open. The things you do in Terminus are immediately represented in your dashboard, so it is always up to date.
+Terminus connects to Pantheon's API, which makes real-time updates to any Dashboard you have open. What you do in Terminus is immediately represented in your Dashboard, so it is always up to date.
 
 Now that we've committed our changes, go back to your test site in the browser and refresh it to see what you've created.
 
 ### Theming Best Practices
 
-No WordPress site is ready for development without a child theme. Let's create one,
+No WordPress site is ready for development without a child theme. Let's create one:
 
 ```
 $ terminus wp scaffold child-theme --site=cli-test \
                             --parent-theme=pinboard \
                             --theme-name=cli-test-theme
 ```
-and commit it.
+Next, we'll commit it.
 
 ```
 $ terminus site code commit --site=cli-test \
