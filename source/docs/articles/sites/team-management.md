@@ -10,15 +10,14 @@ category:
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy and simple.
 
 ## Team Management
-You can add and delete users in the Team modal. Simply click Team located in the upper-right of your Dashboard.
+You can add and delete users in the Team modal. Simply click **Team** located in the upper-right of your Dashboard.
 
-![Team Management Window](source/docs/assets/images/team modal.png)
+![Team Management Window](/source/docs/assets/images/team modal.png)
 
 
 ## Add a Team Member
 
-1. Click **Team** in the upper-right of the site dashboard.
-2. Enter the email address of the user, and click **Add team member**.
+In the Team modal, enter the email address of the user, and click **Add team member**.
 
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
@@ -34,7 +33,7 @@ Once they have successfully signed up for an account, they will be automatically
 
 **Note**: All users can be removed except the site owner.
 
-Remove a user by clicking **Team**, and then click the X next to the user you want to delete.
+In the Team modal, click the X next to the user you want to delete.
 
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
@@ -43,10 +42,8 @@ If there is another person (e.g. client, manager, accountant, or developer) who 
 
 ### Change the Site Owner
 
-The owner of a site can be changed in a few simple steps:
 
-1. Click **Team** in the upper-right of the site dashboard.
-2. Select **Make Owner** next to the team member that should receive ownership of the site.
+In the Team modal, select **Make Owner** next to the team member that should receive ownership of the site.
 
 The new site owner now has the ability to add a credit card or change the site plan.
 
