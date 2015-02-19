@@ -140,13 +140,27 @@ $ terminus wp core install --url=the.url.of.your.dev.site \
                            --site=the-name-of-your-site \
 ```
 
- With a little bash magic, you can use Terminus to get the URL of your site:
+Before this command will work though, you need one critical piece of information, the url for your new site. Lucky for us, that is not difficult to find, if you understand a little about Terminus. 
+
+Terminus has many great commands that allow you to manage all aspects of the sites built on Pantheon; one of those commands is the ``site`` command. 
+
+```
+$ terminus site
+```
+
+If you execute the ``site`` command by itself it will list all of the sub-commands you canissue to control a specific site. One of those subcommands is ``hostname``. ``hostname`` does exactly what you would exiect it to do, it list the host name for a given site and envrironment. To specify the site you want a hostname for, you use the ``--site`` option. Throughout Terminus, when a command needs to be executed on a single site, you specify that site with ``--site`` and then the name of your site. This is the same name that you created using ``sites create`` two steps above.
+
+As you know, every website built on Pantheon has a minimum of 3 environment, **dev**, **test**, and **live**. Most sub commands of ``site`` require that you let Terminus know which environemnt you want the command run in. If you fail to specify, Terminus will ask you to select one befire it executes. You can specify which environment you want to work on with the ``--env`` option. 
+
+Now, armed with this knoweldge, you can see that with a little bash magic, you can use Terminus to get the URL of your site:
 
 ```
 $ echo "http://`terminus site hostnames list --site=cli-test --env=dev --bash | awk '{print $1}`"
 ```
 
 Or you can simply use the format ``http://dev-SITE_NAME.pantheon.io``.
+
+Now, with the url for your site, you can execute the ``wp core install`` command above and complete the example above.
 
 To populate the database of the site you created above, use the following command:
 
