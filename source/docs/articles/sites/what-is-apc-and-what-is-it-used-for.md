@@ -33,7 +33,7 @@ The PHP function [phpinfo()](http://php.net/manual/en/function.phpinfo.php "phpi
 
     <?php php_info();
 
-Navigate to http://dev.<yoursite>.gotpantheon.com/delete_me_security_hole.php and search for <tt>shm_size</tt>.</yoursite>
+Navigate to http://dev.<yoursite>.pantheon.io/delete_me_security_hole.php and search for <tt>shm_size</tt>.</yoursite>
 
 #### Can the shm\_size be configured manually?
 
@@ -68,7 +68,7 @@ To do this manually, write a tiny script named <tt>apc_cache_clear.php</tt> in y
     <?php
     apc_clear_cache();
 
-Then browse to http://dev.<NAMEOFSITE><yoursite>.gotpantheon.com/apc_cache_clear.php to clear the opcode cache.</yoursite>
+Then browse to http://dev.<NAMEOFSITE><yoursite>.pantheon.io/apc_cache_clear.php to clear the opcode cache.</yoursite>
 
 ##### **Dashboard**
 

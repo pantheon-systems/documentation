@@ -22,7 +22,7 @@ Using “www” is considered an Internet-wide best practice and for best result
 
 ## DNS settings for non-www or a subdomain
 
-**Note**: Legacy users with gotpantheon.com are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected.
+**Note**: Legacy users with pantheon.io are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected.
 
 Some DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are general options for the alternative implementations if you wish to use a non-www domain.
 

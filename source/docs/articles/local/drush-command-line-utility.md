@@ -67,7 +67,7 @@ For example, to see the status of a site:
 
     # drush @pantheon.drupal-7-sandbox.dev status
     Drupal version : 7.10
-    Site URI : dev.drupal-7-sandbox.gotpantheon.com
+    Site URI : dev.drupal-7-sandbox.pantheon.io
     Database driver : mysql
     Database hostname : 50.57.231.252
     Database username : pantheon
@@ -233,7 +233,7 @@ To make your Drush 5 commands work on Pantheon aliases, change your directory to
 
     $ drush @pantheon.SITENAME.ENV status
      Drupal version : 7.26
-     Site URI : ENV-SITENAME.gotpantheon.com
+     Site URI : ENV-SITENAME.pantheon.io
      Database driver : mysql
      Database hostname : 10.178.14.16
      Database username : pantheon
@@ -268,7 +268,7 @@ To resolve this error, take the suggestion and _add the option `--strict=0`_.
 
     $ drush @pantheon.SITENAME.ENV cc all --strict=0
     'all' cache was cleared in [success]
-    /srv/bindings/BINDINGID/code#ENV-SITENAME.gotpantheon.com
+    /srv/bindings/BINDINGID/code#ENV-SITENAME.pantheon.io
 
 ### Drush Error: "Could not find a Drupal settings.php file" or missing system information from status
 
