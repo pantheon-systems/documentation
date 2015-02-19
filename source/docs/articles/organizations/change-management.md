@@ -21,7 +21,7 @@ Each user in the Organization is assigned a role when they are invited to join, 
 
 ### Add a New User
 
-1. Click **Add User**.
+1. In the People tab, click **Add User**.
 2. Enter the email address of the new user, select a role, and click **Add user**.
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
@@ -29,7 +29,7 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 
 ### Edit an Existing User
 
-1. Select the user's name, click **Operations**, and choose **Change Role**.
+1. In the People tab, select the user's name, click **Operations**, and choose **Change Role**.
 2. Select the new role from the drop-down, and click **Set User Role**.
 
 ### Change Site Owner
