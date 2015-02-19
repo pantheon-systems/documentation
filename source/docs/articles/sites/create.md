@@ -1,14 +1,12 @@
 ---
-title: Spinup
-description: Learn how to create a new spinup with Pantheon.
-filename: /source/_common-tasks/spinup.md
+title: Creating Sites
+description:  How to create a new site on the platform.
 category:
   - managing
-next_post:
 ---
 ## Create a New Site
 
-On your user dashboard, click  **Create your first site** or **Create a new site**.
+On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.getpantheon.com/sites/create)**
 
 ### Name Your Site
 

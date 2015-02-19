@@ -80,7 +80,7 @@ When testing is complete, merge your pull requests into or git push to the branc
 
 ## 5. Submit Product Information.
 
-After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon One support tab, titled "Product submission for [organization]"" and include the following information about the distribution:
+After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon for Agencies support tab, titled "Product submission for [organization]"" and include the following information about the distribution:
 
 - Name
 - Upstream URL (https)\*\*
@@ -97,6 +97,6 @@ After you have a distribution that works on Pantheon, open a ticket from the tes
 
 \*\* Cannot change after product creation
 
-Public and organizational distributions must also provide a promotional screenshot for the public spinup page.
+Public and organizational distributions must also provide a promotional screenshot for the public site creation page.
 
 As part of a unified workflow, new Pantheon users will create an account, name their site, and be directed to the install page of the distribution.
