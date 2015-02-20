@@ -45,7 +45,7 @@ If you are using a common CMS framework the code you need to load this configura
 
 ## Drupal 7 and Drupal 8
 
-**Note:** Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/docs/articles/drupal/configuring-settings-php#configuring-settings-php) for details.
+**Note:** Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/docs/articles/drupal/configuring-settings-php) for details.
 
 Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this would be done in settings.php.
 
@@ -73,7 +73,7 @@ Domain Access requires [customization of settings.php](http://drupal.org/node/10
     // All $conf variables and Redis configuration should be set between these statements
     require_once DRUPAL_ROOT . '/path/to/modules/domain/settings.inc';
 
-​ **Important!** If you are using the `PRESSFLOW_SETTINGS` or the `$conf` variable within settings.php, put this snippet at the end to avoid conflicts. If you are using Redis you will need to insert your configuration between the extract and require\_once statements.  
+​**Important!** If you are using the `PRESSFLOW_SETTINGS` or the `$conf` variable within settings.php, put this snippet at the end to avoid conflicts. If you are using Redis you will need to insert your configuration between the extract and require\_once statements.  
  
 
 ## WordPress

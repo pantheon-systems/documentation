@@ -25,7 +25,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 3. Select **Import Archive**.
 4. Enter the full URL of the live site you are cloning, as well as the path of the archive.
 
-  **Example**: https://your-live-site.gotpantheon.com/sites/default/site\_export.tar.gz
+  **Example**: https://your-live-site.pantheon.io/sites/default/site\_export.tar.gz
 5. Click **Import Site**.
 
 The import process will create and deploy a new site based on the file uploaded. If there are issues, see [Importing an Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site), or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.

@@ -40,7 +40,7 @@ Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (suc
 
 ## Robots.txt: Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a robots.txt associated with the bare ".gotpantheon.com" domain that contains the following:
+It is important to note that each of your site environments have a robots.txt associated with the bare ".pantheon.io" domain that contains the following:
 
     User-agent: * Disallow: /
 
@@ -52,7 +52,7 @@ The following code snippet will redirect any bots trying index using the sitemap
 
     // Redirect to force indexing with custom domain sitemap
     $subject = $_SERVER['HTTP_HOST'];
-    $pattern = '/gotpantheon.com/sitemap.xml$/';
+    $pattern = '/pantheon.io/sitemap.xml$/';
     preg_match($pattern, $subject, $matches);
     $counted = count($matches);
     if ($counted > 0 ) {

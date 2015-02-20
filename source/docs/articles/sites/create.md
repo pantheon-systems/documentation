@@ -1,24 +1,22 @@
 ---
-title: Spinup
-description: Learn how to create a new spinup with Pantheon.
-filename: /source/_common-tasks/spinup.md
+title: Creating Sites
+description:  How to create a new site on the platform.
 category:
-  - managing
-next_post:
+- managing
 ---
-## 1. Create a New Site
+## Create a New Site
 
-On your user dashboard, click  **Create your first site** or **Create a new site**.
+On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**
 
-## 2. Name Your Site
+### Name Your Site
 
 Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheon.io domain.
 
-## 3. Choose Your Framework
+### Choose Your Framework
 
 Click **Install WordPress**  or **Install Drupal**  or any of the distributions available on the Platform.
 
-## 4. Visit the Dev Installation
+### Visit the Dev Installation
 
 On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or Wordpress installation forms.  
 

@@ -13,11 +13,18 @@ Capture only as much of the screen as needed to convey the action users will per
 
 Do **not** annotate images. If extra meaning is needed, we will add markup to images in a consistent manner. This section will change once our markup standards and workflow are set. 
 
-## Saving Images
+## Naming Images
 Use the .png file format. Images with skitch annotations will be saved in skitch png.
 
 Name images descriptively so that we, and search engines, can differentiate between them. Use hyphens between words in the filename.  
 Ex: sites-dev-code-pending-changes-ready-commit.png
+
+## Compressing
+
+Take your newly named and locally saved images and compress them at [Tiny PNG](https://tinypng.com/) prior to adding to the repository. 
+
+## Adding to the Repository
+Move your newly compressed files to `/source/docs/assets/images/`. 
 
 ## Embedding Images
 Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title")` You can also use html <img> tags, but this should be unnecessary, as images are set to a max-width of 100% by css in our theme, and are provided with a 1px black border.

@@ -6,19 +6,9 @@ category:
 
 ---
 
-**NOTE:** Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.
-
-#### Table of contents
-
-*   [About pantheon.io](#about)
-*   [DNS settings for non-www or a subdomain](#dns-for-non-www)*   [Alias Record](#alias-records)
-*   [Flattened CNAME](#flattened-cname)
-*   [SSL](#ssl)
-*   [Troubleshooting](#troubleshooting-non-www-dns)
-*   [DNS settings for a www domain](#dns-settings-for-www)*   [Troubleshooting](#troubleshooting-www-dns)
-*   [Best Practices](#best-practices)
-
 ## About pantheon.io
+
+**Note**: Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.
 
 The new pantheon.io system provides higher-uptime alternatives to our legacy method of providing shared IP addresses; after all, Shared IPs mean shared problems.
 
@@ -32,7 +22,7 @@ Using “www” is considered an Internet-wide best practice and for best result
 
 ## DNS settings for non-www or a subdomain
 
-_NOTE: Legacy users with gotpantheon.com are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected. _
+**Note**: Legacy users with pantheon.io are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected.
 
 Some DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are general options for the alternative implementations if you wish to use a non-www domain.
 
@@ -41,7 +31,7 @@ Some DNS providers have developed options to allow customers to use bare domains
 [ALIAS or ANAME](http://help.dnsmadeeasy.com/spry_menu/aname-records/) records can be used as the root record for a domain as the resulting records created are A records which bypasses the limitation of allowing the alias at the root domain.
 
 *   [Route 53](http://aws.amazon.com/route53/faqs/#Supported_DNS_record_types)
-*   [DNSimple](https://dnsimple.com/plans)
+*   [DNSimple](http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
 *   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
 
@@ -69,7 +59,7 @@ To fix this problem, the DNS will need to be updated with one of the recommended
 
 ## DNS settings for a www domain
 
-WWW sounds like the way to go. But how can I force traffic to use www?
+#### WWW sounds like the way to go. But how can I force traffic to use www?
 
 The simplest and most reliable option is to use a service to redirect requests from your bare domain to the www subdomain. Most DNS services offer this as a feature. These services ensure that the universe of bookmarks and SEO records for your site are built up as www urls and not the bare domain.
 

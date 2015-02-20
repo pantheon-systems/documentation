@@ -2,6 +2,6 @@
 title: Code Tool
 description: Learn about the Code tool
 category:
-- developing
+  - developing
 draft: true
 ---

@@ -35,10 +35,10 @@ Here is an example of a code snippet you could use to set the `$base\_path` per 
     if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
       switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
         case 'dev':
-          $base_url = 'http://dev-example.gotpantheon.com'; // NO trailing slash!
+          $base_url = 'http://dev-example.pantheon.io'; // NO trailing slash!
           break;
         case 'test':
-          $base_url = 'http://test-example.gotpantheon.com'; // NO trailing slash!
+          $base_url = 'http://test-example.pantheon.io'; // NO trailing slash!
           break;
         case 'live':
           $base_url = 'http://www.example.tld'; // NO trailing slash!

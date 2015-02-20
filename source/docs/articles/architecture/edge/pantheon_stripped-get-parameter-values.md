@@ -7,16 +7,16 @@ category:
 
 ## Overview
 
-Pantheon's edge cache uses the request URL as the cache key. To allow requests for the same site content but distinct Google Analytics parameters to be served from cache, Pantheon replaces a specific subset of GET parameter values with PANTHEON\_STRIPPED to normalize the cache location.
+Pantheon's edge cache uses the request URL as the cache key. To allow requests for the same site content but distinct Google Analytics parameters to be served from cache, Pantheon replaces a specific subset of GET parameter values with `PANTHEON_STRIPPED` to normalize the cache location.
 
-The PANTHEON\_STRIPPED behavior is completely compatible with JavaScript-based tracking code, such as Google Analytics. Our recommendation is to have Google Analytics track across both domains with the same code and cookie, which will let you track users as they move from one site to the other.
+The `PANTHEON_STRIPPED` behavior is completely compatible with JavaScript-based tracking code, such as Google Analytics. Our recommendation is to have Google Analytics track across both domains with the same code and cookie, which will let you track users as they move from one site to the other.
 
 #### What GET parameters are affected?
 
 Any GET parameter that starts with the following will have its value replaced:
 
-- utm\_
-- \_\_ (two underscores)
+- `utm_`
+- `__` (two underscores)
 
 This will prevent PHP from reading the values of the affected parameters, but JavaScript will still be able to read the value from the URL.
 
@@ -43,4 +43,4 @@ Most use cases where values need to be read from GET parameters that are affecte
 
 ## PHP Redirects
 
-If you redirect a request in PHP that contains the replaced values, the URL will contain PANTHEON\_STRIPPED values. Therefore, if you want to direct traffic to your Pantheon site with using a campaign containing utm or similar GET parameters, avoid sending them to a page that redirects in PHP.
+If you redirect a request in PHP that contains the replaced values, the URL will contain `PANTHEON_STRIPPED` values. Therefore, if you want to direct traffic to your Pantheon site with using a campaign containing `utm` or similar GET parameters, avoid sending them to a page that redirects in PHP.

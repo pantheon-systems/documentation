@@ -15,10 +15,13 @@
 <head>
   <!-- Quickie redirection to https and pantheon.io -->
   <script type="text/javascript">
+if (window.location.hostname == 'localhost')
+  redirect = null
+else
 if (window.location.hostname == 'www.getpantheon.com' ||
     window.location.hostname == 'getpantheon.com' ||
     window.location.hostname == 'www.pantheon.io' ||
-    window.location.protocol == 'http'
+    window.location.protocol == 'http:'
    ) {
   redirect = 'https://pantheon.io' + window.location.pathname
   // bounce bounce
@@ -30,11 +33,11 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   <title>{% block title %}{{ page.title|title }} | {{ site.title }}{% endblock %}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
@@ -52,9 +55,10 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   </p>
   <![endif]-->
     {% include("navbar.html") %}
-
-        <div class="row main">
-        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+    <!-- container -->
+        <div class="container">
+          <div class="row main">
+          {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
     <!-- /container -->
   {% include("footer_content.html") %}

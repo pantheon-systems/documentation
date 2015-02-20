@@ -79,7 +79,7 @@ Before you point your DNS to the custom IP address you received after entering y
 
 ![Site dashboard domain setup section](https://www.getpantheon.com/sites/default/files/docs/desk_images/259889)​
 
-**Note: Do not attempt to use https://\*.mysite.gotpantheon.com domain as a means to test your SSL, this will not work.**
+**Note: Do not attempt to use https://\*.mysite.pantheon.io domain as a means to test your SSL, this will not work.**
 
 #### IPv4 and IPv6 Support for SSL
 
