@@ -26,9 +26,9 @@ You should configure the DNS for both your non-www (bare domain) and www domain,
 See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
 
 
-## Pantheon's Legacy DNS Configuration for gotpantheon.com Sites
+## Pantheon's Legacy DNS Configuration for pantheon.io Sites
 
-These DNS records are for Pantheon-hosted sites _already using a gotpantheon.com development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's dashboard for the specific DNS records that will successfully route traffic to your site.
+These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's dashboard for the specific DNS records that will successfully route traffic to your site.
 
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
@@ -94,7 +94,7 @@ If you need to direct traffic from a non-www domain (e.g. example.com), you can 
 
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
-Yes; many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.gotpantheon.com domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
+Yes; many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.pantheon.io domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
 
 ### Can I test my domain name without making DNS changes?
 
