@@ -11,7 +11,7 @@ category:
 ### What is the difference between Pantheon for Agencies and Pantheon for Enterprise?
 
 ### Why does my agency organization have Change Management and Multidev, but not other organizations I administor?
-Any organizations that are Partners or Allies will have Change Management and Multidev. If your organization is an Enterprise, then by default these features are not enabled. To request the activation of Pantheon for Enterprise on your organization, please [contact sales](https://pantheon.io/contact-us).
+Any organizations that are Partners or Allies will have Change Management and Multidev. If your organization is an Enterprise, then by default these features are not enabled. To request the activation of Multidev and Change Management for Enterprise organizations, please [contact sales](https://pantheon.io/contact-us).
 
 ### Why can't my Agency organization own a site?
 Depending on your service level, your organization may or may not be able to own a site directly. Pantheon for Enterprise level organizations will be able to own sites, however Pantheon for Agencies (Partners) organizations will not. This is because an agency's role is to develop, service, and maintain a site on behalf of it's owner. See our [Change Management](/docs/articles/organizations/change-management/#managing-people) doc for more details.
