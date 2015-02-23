@@ -33,14 +33,19 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 2. Select the new role from the drop-down, and click **Set User Role**.
 
 ### Change Site Owner
-The owner of the site is the person or Organization who pays for the site. To change the owner, you'll need to update the billing information. 
+
+To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the site dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+
+Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
+
+For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. 
 
 
 ## Permissions
 
 ### Change Management Enabled
 
-Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it. 
+Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
