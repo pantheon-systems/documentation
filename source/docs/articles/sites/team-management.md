@@ -38,14 +38,25 @@ In the Team modal, click the X next to the user you want to delete.
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
 ## Site Owner
-If there is another person (e.g. client, manager, accountant, or developer) who has the payment information, you can add them as a team member and they can add their own card data and associate it with your site. The person paying for a site is considered the "owner" and cannot be removed from the site team.
+Site ownership is assigned to the person who creates the site or pays for the site. The site owner and cannot be removed from the site team.
 
 ### Change the Site Owner
 
+#### Sandbox Sites
+Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
 
-In the Team modal, select **Make Owner** next to the team member that should receive ownership of the site.
+**Note**: Only the current site owner has the ability to assign a new owner; team members will not see this option.
 
-The new site owner now has the ability to add a credit card or change the site plan.
+![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
+
+
+#### Paid Sites
+To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the site dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+
+![Invite a business owner to pay for this site](/source/docs/assets/images/payment-invite.png)
+
+Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
+
 
 ### Pantheon Partners
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
