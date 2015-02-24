@@ -31,14 +31,14 @@ Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title
 
 Add a single space before the image syntax to embed images within a list (ordered or unordered).
 
-The code (when used within a list): ` ![Pantheon Fistbump](/source/docs/assets/images/pantheon-fistbump.png)`
+The code (when used within a list): ` ![Create your first site](/source/docs/assets/images/pantheon-fistbump.png)`
 
 Will yield:
 
 1. Ordered list item
 2. Ordered list item
 3. Ordered list item
- ![Pantheon Fistbump](/source/docs/assets/images/pantheon-fistbump.png)
+ ![Pantheon Fistbump](/source/docs/assets/images/create-site-dashboard.png)
 4. Ordered list item
 5. Ordered list item
 
