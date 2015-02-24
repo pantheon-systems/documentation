@@ -31,7 +31,7 @@ Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title
 
 Add a single space before the image syntax to embed images within a list (ordered or unordered).
 
-The code (when used within a list): ` ![Create your first site](/source/docs/assets/images/pantheon-fistbump.png)`
+The code (when used within a list): ` ![Create your first site](/source/docs/assets/images/create-site-dashboard.png)`
 
 Will yield:
 
