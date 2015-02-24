@@ -38,7 +38,7 @@ Will yield:
 1. Ordered list item
 2. Ordered list item
 3. Ordered list item
- ![Pantheon Fistbump](/source/docs/assets/images/create-site-dashboard.png)
+ ![Create your first site](/source/docs/assets/images/create-site-dashboard.png)
 4. Ordered list item
 5. Ordered list item
 
