@@ -93,3 +93,7 @@ Pantheon does not currently support directly connecting to Oracle databases. Cus
 ## PHP/Java Bridge
 
 Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
+
+## Database Connection Information is Not Static
+
+The nature of our platform requires us to migrate your database container from one physical endpoint to another without warning. Do not rely on the Database connection information's port or password to remain the same for any period of time. If you hard-code this information into any application's codebase, it will break when the container is migrated. Situations when you might want to do this include [ Add list of situations] For these situations, please [Add recommended workarounds]
