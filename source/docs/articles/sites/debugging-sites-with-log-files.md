@@ -2,8 +2,7 @@
 title: Debugging Sites with Log Files
 description: Learn to debug sites using log files with Drupal.
 category:
-- developing
-
+  - developing
 
 ---
 
@@ -86,7 +85,7 @@ You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to 
 
 ```
 date_format d/%b/%Y:%T %z
-log_format %^ %^ %^ [%d] "%r" %s %b "%R" "%u" %T %h,^"
+log_format %^ %^ %^ [%d] "%r" %s %b "%R" "%u" %T "%h,^"
 ```
 
 ### Can I log to the system logger and access syslog?
