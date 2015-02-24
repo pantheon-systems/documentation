@@ -162,6 +162,10 @@ We recommend choosing a single protocol and redirecting traffic to either HTTPS 
 
 ## Frequently Asked Questions
 
+#### How do I test my certificate chain?
+
+Try [https://whatsmychaincert.com/](https://whatsmychaincert.com/), which tests if your server is serving the correct certificate chain, tells you what chain you should be serving.
+
 #### What should I do with a GoDaddy gd\_bundle.crt?
 
 Use it as the Intermediary Certificate.
