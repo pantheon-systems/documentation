@@ -15,7 +15,7 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 
 ## Using wp-admin to Manage Plugins and Themes
 
-WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main `wordpress.org` repository on your site.
+WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site.
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your dev environment. It works for plugins:
 
@@ -27,7 +27,7 @@ And for themes:
 
 Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
-**ProTip**: You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.
+**Note**: You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.
 
 ## Installing Modules and Themes with Drupal's Update Manager
 
@@ -43,7 +43,7 @@ And then paste it into Drupal's update manager UI. You can also upload a tarball
 
 Note that you still need to turn these changes into _commits_ in your Pantheon site dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
-**ProTip** : you should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!
+**Note**: You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!
 
 ## Installing Code with Terminus: the Pantheon CLI
 
@@ -116,4 +116,4 @@ WordPress has a similar capability:
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#using-the-pantheon-workflow#perms-test-live) of our Pantheon Workflow article to understand why.
+This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-&-live) of our Pantheon Workflow article to understand why.

@@ -43,43 +43,25 @@ For example, you could set a cookie named `STYXKEY-country` to `ca` or `de`
 
 **Examples of `STYXKEY` cookie names:**
 
--
+&#8211; `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
 
-`STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
+&#8211; `STYXKEY_european_user`: Presents different privacy options to E.U. users
 
--
+&#8211; `STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
 
-`STYXKEY_european_user`: Presents different privacy options to E.U. users
-
--
-
-`STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
-
--
-
-`STYXKEY-school`: Your site changes content depending on the user's school affiliation
+&#8211; `STYXKEY-school`: Your site changes content depending on the user's school affiliation
 
 **Invalid names that won't work:**
 
--
+&#8211; `STYXKEY`: Needs something after the `STYXKEY` text
 
-`STYXKEY`: Needs something after the `STYXKEY` text
+&#8211; `styxkey-android`: The text `STYXKEY` must be uppercase
 
--
+&#8211; `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
 
-`styxkey-android`: The text `STYXKEY` must be uppercase
+&#8211; `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
--
-
-`STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
-
--
-
-`STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
-
--
-
-`tablet-STYXKEY`: The cookie name must start with `STYXKEY`
+&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
 
 ## Varnish Servers
 

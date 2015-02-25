@@ -37,7 +37,7 @@ Views has a very granular caching system, down to the individual View display. T
 
 1. Go to /admin/structure/views/
 2. Edit the View in question.
-3. Select the block display and click Advanced.
+3. Select the block display and click **Advanced**.
 4. Click the option next to Block Caching.
 5. Block Caching Type: Choose an option for Drupal's built-in block caching method.
 

@@ -12,7 +12,7 @@ category:
 
 ## Getting Started
 
-The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode/#SFTPConnectionInformation) for your site.
+The first thing that you need to do is have you SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. There is some documentation on [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) for your site.
 
 ## Download FileZilla
 
@@ -31,7 +31,7 @@ Select to accept the server's host key for the current session so it is stored i
 
  ![Create a saved connection](https://www.getpantheon.com/sites/default/files/docs/desk_images/222984)
 
-**NOTE:** Under the Advanced Tab, the Remote Directory should be left blank as shown below.   
+**Note**: Under the Advanced Tab, the Remote Directory should be left blank as shown below.   
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272341)  

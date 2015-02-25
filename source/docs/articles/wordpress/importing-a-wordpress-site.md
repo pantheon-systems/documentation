@@ -29,7 +29,7 @@ Of course you can make an import archive by hand. You simply dump your existing 
 After you have created an account, you can log in and will be directed to your dashboard.
 
 
-![Your sites & account dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/247520)
+![Your sites & account dashboard](/source/docs/assets/images/create-site-dashboard.png)
 
 
 Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click continue.
@@ -81,14 +81,14 @@ When complete, just click the button to visit your Pantheon Dashboard.
 
 
 
-7. View Your Site Dashboard
+#### View Your Site Dashboard
 
 
 Congratulations! Your site has been imported and your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
 
 
-8. Launch Site
+#### Launch Site
 
 
 
@@ -98,7 +98,7 @@ You will eventually have three environments (development, test, and live), each 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247528)
 
 
-9. View Your Site
+#### View Your Site
 
 You are ready to start development, or if your site is ready to go, to create your test and live environments!
 
@@ -117,4 +117,3 @@ It sets a default cache lifetime of 10 minutes, and will automatically clear pos
 
 
 [Going Live](/docs/articles/going-live)
-
