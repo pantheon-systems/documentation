@@ -14,10 +14,10 @@ If you're running a Windows environment, you'll need to have Cygwin installed. F
 
 ## Generate a Key and CSR
 
-1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.
- ![Generate CSR command](https://www.getpantheon.com/sites/default/files/docs/desk_images/40331)
-
+1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.    
 **Note**: Do not add a password to your key. We will not be able to work with it.  
+ ![Generate CSR command](https://www.getpantheon.com/sites/default/files/docs/desk_images/40331)  
+  
 2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal.
     It is important to keep your .key file that you generate and make sure it's secure; you will need it later when you set up SSL with Pantheon.  
 
@@ -87,28 +87,45 @@ There are two options for configuring your DNS when you are using SSL. The platf
 
 Select the IPv4 address unless you are familiar with and understand IPv6.
 
-## Check SSL with Chrome
+## Testing SSL
 
-Before you point your DNS to the custom IP address you received after entering your SSL, you can verify that the certificate is correct by visiting the HTTPS IP address.
+Before you point your DNS to the custom IP address you received after enabling SSL, you can verify that the certificate is correct.
 
-**Important:** This allows you to verify that the SSL certificate matches what you uploaded. Do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
+**Important:** You'll see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/66611)  
+### Chrome
+
+This method is similar for other browsers as well.
+
+1. Point Chrome to the custom IP address you received after enabling SSL: https://x.x.x.x
+2. Click the padlock in the address bar.
+3. Click **Certificate Information**.
+
+ ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
+
+4. Verify certificate details match the domain(s) you'll point to the site.
+
+ ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
 
-In Chrome, check the certificate by clicking on the padlock in the address bar, then click **Certificate Information**.
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/66609)
+### Curl
 
-## Check End-To-End Routing
+```
+$ curl -Ikv https://x.x.x.x --header "Host: mywebsite.com"
+```
 
-Visiting your SSL IP directly will display a 404 Site Not Found error. Pantheon's routing uses the hostname to route traffic to particular backends; without a hostname, the router cannot determine which site was requested.  
+The -k option tells curl to ignore untrusted certificates, but if you pay close attention to the output you'll
+see that your certificate is being served:
 
-To test the end-to-end routing of a new SSL site, you need to specify a hostname. One way to do this is to add a host entry to your local computer's /etc/hosts file, which (for your computer only) maps the specified domain name to the specified IP address. Don't forget to remove the entry after testing.  
+```
+...
+* Connected to live-sitename.pantheon.io (x.x.x.x) port 443 (#0)
+* TLS 1.2 connection using TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+* Server certificate: www.yourdomain.com
+...
+```
 
-You can also test with curl on the command line. It's not very visual but you'll see your site's content, just substitute your SSL IP and hostname:
-
-    $: curl -I -v https://192.168.0.1 --header "Host: mywebsite.com"
 
 ## SSL Providers
 
@@ -145,6 +162,10 @@ We recommend choosing a single protocol and redirecting traffic to either HTTPS 
 
 ## Frequently Asked Questions
 
+#### How do I test my certificate chain?
+
+Try [https://whatsmychaincert.com/](https://whatsmychaincert.com/), which tests if your server is serving the correct certificate chain, tells you what chain you should be serving.
+
 #### What should I do with a GoDaddy gd\_bundle.crt?
 
 Use it as the Intermediary Certificate.
@@ -161,4 +182,4 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 
 #### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
 
-This indicates that some part of the chain is out of order. Check that you have the main & intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.
+This indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.
