@@ -191,7 +191,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 ## Prepare for Development
 
-I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**.
+I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/wordpress-configuragtion-management-wp-cfm).
 ```
 $ terminus wp plugin install --activate --site=cli-test --env=dev
 ```
@@ -282,7 +282,7 @@ So far, so good. Many will stop there and start updating the content. There is o
 WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).
 **Note:** There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
 
-Position your Pantheon dashboard window where you can see it while working in the terminal. ![Pantheon Dashboard and terminal side-by-side](/source/docs/assets/images/site-dashboard-and-terminal-commits.png) To install and activate the new theme on your site, use the following command:
+Position your Pantheon dashboard window where you can see it while working in the terminal. To install and activate the new theme on your site, use the following command:
 
 
 ```
