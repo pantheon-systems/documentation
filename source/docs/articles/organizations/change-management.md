@@ -6,17 +6,17 @@ category:
   - developing
 ---
 
-Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the organization as a supporting Organization are accessible to privileged members of the organization. The roles exist to restrict who can deploy and manage other users in the Organization or Sites it works on.
+Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the Organization as a supporting Organization are accessible to privileged members of the Organization. The roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
 
 ## Features
-* Organizations with Change Management can add people as Administrators, Team Members, and Developers to the Organization. Admins have all privileges; Team Members are a trusted role that can make changes that affect the Test and Live environments; and Developers can only work on Development Environments.
-* When an Organization is added to a Site as a supporting organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site. All organization members can access all sites associated with the organization.
+* Organizations with Change Management can add people as Administrators, Team Members, and Developers to the Organization. Admins have all privileges; Team Members are a trusted role that can make changes that affect the Test and Live environments; and Developers can only work on Development environments.
+* When an Organization is added to a site as a supporting Organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site. All Organization members can access all sites associated with the organization.
 * Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not—they can only add full team members.
 * All users in an Organization can see other users and their roles.
 
 
 ## Managing People
-Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). The procedures are performed at the **Organization Dashboard's People Tab** by Administrators of the Organization.
+Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which dashboard you are in (Site or Organization). The procedures are performed at the **Organization Dashboard's People tab** by Administrators of the Organization.
 
 
 ### Add a New User
@@ -33,14 +33,19 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 2. Select the new role from the drop-down, and click **Set User Role**.
 
 ### Change Site Owner
-The owner of the site is the person or Organization who pays for the site. To change the owner, you'll need to update the billing information. 
+
+To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+
+Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
+
+For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. 
 
 
 ## Permissions
 
 ### Change Management Enabled
 
-Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it. 
+Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
