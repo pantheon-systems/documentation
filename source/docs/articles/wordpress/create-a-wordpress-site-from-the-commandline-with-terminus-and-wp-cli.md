@@ -132,7 +132,7 @@ You should see the initial commit in the code log. The **Dev Environment** shoul
 
 ## Install WordPress
 
-Now that you have a server running WordPress code, another running the database, and your filesystem created, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". 
+Now that you have a server running WordPress code, another running the database, and your filesystem created, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)".
 
 All you need to do now is populate the database and your site will be ready to use. Using Terminus, you'll invoke WP-CLI running on the server. Take a few moments to become familiar with the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
