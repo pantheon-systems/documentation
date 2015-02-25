@@ -1,8 +1,7 @@
 ---
 title: Using Terminus to Create and Update Drupal Sites on Pantheon
 description: Using Terminus, learn how to create and update new Drupal sites from the command line.
-draft: true
-test: yes
+
 
 ---
 
