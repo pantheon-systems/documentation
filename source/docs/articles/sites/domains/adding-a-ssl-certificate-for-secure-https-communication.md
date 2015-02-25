@@ -14,10 +14,10 @@ If you're running a Windows environment, you'll need to have Cygwin installed. F
 
 ## Generate a Key and CSR
 
-1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.
- ![Generate CSR command](https://www.getpantheon.com/sites/default/files/docs/desk_images/40331)
-
+1.  Generate an RSA Key (.key) and CSR, and set up the information for your certificate. The most important part of this is the "Common Name", which is the domain.    
 **Note**: Do not add a password to your key. We will not be able to work with it.  
+ ![Generate CSR command](https://www.getpantheon.com/sites/default/files/docs/desk_images/40331)  
+  
 2. Copy the command from the OpenSSL CSR wizard and paste it into a terminal.
     It is important to keep your .key file that you generate and make sure it's secure; you will need it later when you set up SSL with Pantheon.  
 
@@ -98,12 +98,12 @@ Before you point your DNS to the custom IP address you received after enabling S
 This method is similar for other browsers as well.
 
 1. Point Chrome to the custom IP address you received after enabling SSL: https://x.x.x.x
-2. Click padlock in the address bar
-3. Click **Certificate Information**
+2. Click the padlock in the address bar.
+3. Click **Certificate Information**.
 
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
 
-4. Verify certificate details match the domain(s) you'll point to the site
+4. Verify certificate details match the domain(s) you'll point to the site.
 
  ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
@@ -182,4 +182,4 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 
 #### I received this error: "400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch". What do I do?
 
-This indicates that some part of the chain is out of order. Check that you have the main & intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.
+This indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order.
