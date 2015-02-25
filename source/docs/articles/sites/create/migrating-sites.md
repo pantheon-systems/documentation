@@ -17,7 +17,7 @@ Note: We're revising our migration documentation. Our existing import documents 
  - [Importing and Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site)
  - [Importing a Large Site](/docs/articles/users/importing-a-large-site)
  - [Importing Drush Archives with Terminus](/docs/articles/users/importing-drush-site-archives-with-terminus)
- - [Importing WordPress Sites](/docs/articles/users/importing-a-wordpress-site)
+ - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
  - [Clone a Drupal Site using Drush](/docs/articles/users/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 

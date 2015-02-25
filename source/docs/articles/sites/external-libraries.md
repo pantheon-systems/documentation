@@ -92,7 +92,7 @@ ImageMagick<u> </u>is a software suite to create, edit, compose, or convert bit
 
 
 
-Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.7.8-9 2013-03-10 Q16.
+Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 
 ## I Need a Library Not Listed Here
 

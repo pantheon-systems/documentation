@@ -15,6 +15,9 @@
 <head>
   <!-- Quickie redirection to https and pantheon.io -->
   <script type="text/javascript">
+if (window.location.hostname == 'localhost')
+  redirect = null
+else
 if (window.location.hostname == 'www.getpantheon.com' ||
     window.location.hostname == 'getpantheon.com' ||
     window.location.hostname == 'www.pantheon.io' ||
