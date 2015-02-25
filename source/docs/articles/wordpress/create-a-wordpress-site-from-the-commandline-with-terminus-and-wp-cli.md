@@ -179,7 +179,77 @@ If everything goes as planned you'll see this message:
 Success: WordPress installed successfully.
 ```
 
-Now go to your Dashboard and click the **Command Line Test** site. There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site. To log into the site, add /wp-admin to the URL.
+Now go to your Dev environment
+```
+$ open http://dev-cli-test.pantheon.io/wp-admin
+```
+Log in using the username and password you set in the `wp core install` command. You've got a speedy WordPress admin ready to start developing!
+
+There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
+
+Return to the terminal, we don't need no stinking mouse.
+
+## Prepare for Development
+
+I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**.
+```
+$ terminus wp plugin install --activate --site=cli-test --env=dev
+```
+Results in
+```
+Running wp plugin install wp-cfm --activate=1  on cli-test-dev
+Installing WP-CFM (1.3.1)
+Downloading install package from https://downloads.wordpress.org/plugin/wp-cfm.zip...
+Using cached file '/srv/bindings/17e08f1b8e1e465faae9927bb3e20730/.wp-cli/cache/plugin/wp-cfm-1.3.1.zip'...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Activating 'wp-cfm'...
+Success: Plugin 'wp-cfm' activated.
+```
+
+Now I can [use WP-CFM](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/) to create a bundle that will track my configurations and export them to code.
+
+If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus site code diffstat` and `$ terminus site code commit`
+
+```
+$ terminus site code diffstat --site=cli-test --env=dev
++---------------------------------------------------------------------------------+-----------+--------+-----------+
+| File                                                                            | Deletions | Status | Additions |
++---------------------------------------------------------------------------------+-----------+--------+-----------+
+| wp-content/plugins/wp-cfm/languages/wpcfm.po                                    | 0         | A      | 79        |
+| wp-content/plugins/wp-cfm/includes/class-wp-cli.php                             | 0         | A      | 79        |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
+| wp-content/plugins/wp-cfm/README.md                                             | 0         | A      | 70        |
+| wp-content/plugins/wp-cfm/assets/css/admin.css                                  | 0         | A      | 186       |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
+| wp-content/plugins/wp-cfm/includes/class-readwrite.php                          | 0         | A      | 294       |
+| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
+| wp-content/plugins/wp-cfm/includes/class-helper.php                             | 0         | A      | 133       |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
+| wp-content/plugins/wp-cfm/readme.txt                                            | 0         | A      | 132       |
+| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
+| wp-content/plugins/wp-cfm/assets/js/admin.js                                    | 0         | A      | 189       |
+| wp-content/plugins/wp-cfm/templates/page-settings.php                           | 0         | A      | 122       |
+| wp-content/plugins/wp-cfm/includes/integrations/custom-field-suite.php          | 0         | A      | 170       |
+| wp-content/plugins/wp-cfm/wp-cfm.php                                            | 0         | A      | 182       |
+| wp-content/plugins/wp-cfm/includes/class-options.php                            | 0         | A      | 42        |
+| wp-content/plugins/wp-cfm/includes/class-ajax.php                               | 0         | A      | 86        |
+| wp-content/plugins/wp-cfm/includes/class-registry.php                           | 0         | A      | 111       |
++---------------------------------------------------------------------------------+-----------+--------+-----------+
+```
+Only the expected changes are reported. Let's commit.
+```
+$ terminus site code commit --site=cli-test --env=dev \
+                            --message="Install wp-cfm plugin"
+                            Commit 1 changes? [y/n] y
+                            Success: Successfully commited.
+                            +---------------------+-----------------+-----------+------------------------------------------+---------------------------------------------------+
+                            | Time                | Author          | Labels    | Hash                                     | Message                                           |
+                            +---------------------+-----------------+-----------+------------------------------------------+---------------------------------------------------+
+                            | 2015-02-12T22:22:45 | Brian MacKinney | dev       | a6ea17f55d6022bb4d9ad4c9deacc79c1b4e29c7 | Install wp-cfm plugin
+```
+
 
 ## Customize Your Site
 Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress site. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any. Let's add some.
