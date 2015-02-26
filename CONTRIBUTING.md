@@ -5,7 +5,8 @@ Help us create relevant and useful content for developers like yourself. See som
 ## Get Started
 
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
-* Fork the pantheon-systems/documentation repository on GitHub.
+* Clone the pantheon-systems/documentation repository on GitHub.
+* Use `git checkout -b <new-branch-name>` to switch to a new branch.
 
 ## Edit Docs
 
@@ -33,7 +34,7 @@ Some things to follow to help increase the chance that your pull request will be
 
 ## Use of Images
 
-See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md). 
+See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md).
 
 # Additional Resources
 
