@@ -2,7 +2,6 @@
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors.
 category:
-  - drupal
   - debugging
 ---
 
@@ -101,6 +100,6 @@ Sorry, no; these settings apply to every site on Pantheon. One of the factors th
 
 Nope, but you can in your settings.php file using the PHP functions linked in the table.
 
-#### How can I change the Solr timeout?
+#### How can I change the Solr timeout on Drupal?
 
 Edit the pantheon\_apachesolr module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
