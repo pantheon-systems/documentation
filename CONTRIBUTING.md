@@ -4,15 +4,17 @@ Help us create relevant and useful content for developers like yourself. See som
 
 ## Get Started
 
+### External Contributors
+
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
 * Fork the pantheon-systems/documentation repository on GitHub.
 
 ### Pantheon Employees
 * Clone the pantheon-systems/documentation repository on GitHub.
-* Use `git checkout -b <new-branch-name>` to switch to a new branch.
 
 ## Edit Docs
 
+* Use `git checkout -b <new-branch-name>` to switch to a new branch.
 * Edit existing docs using GitHub's inline markdown editor or clone your fork, edit locally, commit changes, and push to your fork. You'll need to do this for every individual doc you edit.
 
 ## Add a New Doc
