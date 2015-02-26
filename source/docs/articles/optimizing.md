@@ -22,7 +22,6 @@ However, there are tradeoffs to the cloud. On a single server, where the databas
 
 There are a number of solutions for optimizing your site for the cloud. A site should be built with a clear idea of what an acceptable performance profile is for anonymous and logged in users. Establishing this first can drive the site architecture and caching strategy. Here are other important steps:
 
-<<<<<<< HEAD
 - **Varnish Caching:** Pantheon integrates a Varnish reverse-proxy caching layer, which is a standard tool for reducing the load on a site’s database and speeding anonymous responses. [Using Varnish](/docs/articles/architecture/edge/varnish) may mean reconfiguring how your site uses cookies, and making minor changes to cache configuration; no modules are required.
 - **Redis Caching:** By offsetting database requests [using redis](/docs/articles/sites/redis-as-a-caching-backend#understanding-redis-cache) as the caching backend, you can greatly reduce the number of round trips required to build a page. If you’ve written custom queries, use Drupal’s cache\_set and cache\_get to store and retrieve caches.
 - **Code/Query Optimization:** This may require analysis and refactoring of unwieldy queries or code optimization. In these circumstances, tools such as New Relic (included with every site), [Devel](https://drupal.org/project/devel), and the site’s slow query log (in the /logs directory) are valuable in determining the root of degraded or inefficient performance.
