@@ -13,7 +13,7 @@ Start by getting the MySQL connection for the environment that you want to acces
 
 ## Create a New MySQL Connection
 
-Now that you have the credentials for the database handy, you can start MySQL workbench and start setting up your connection. Once the application has started, click the "+" icon on the top left of the screen to create a MySQL connection.  
+Now that you have the credentials for the database handy, you can start MySQL workbench and start setting up your connection. Once the application has started, click the **+** icon on the top left of the screen to create a MySQL connection.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/224665)​
@@ -26,19 +26,15 @@ Next, enter the information to connect to the database. Each of the following ar
 **Port** - MySQL database port (tip: Remember this value)  
 **Password** - The password on the dashboard's connection info
 
- 
-
 ![Create a saved connection](https://www.getpantheon.com/sites/default/files/docs/desk_images/224652)
 
-Click the "Store in Keychain..." button and enter your MySQL password for the environment.
+Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
-![enter your password](http://helpdesk.getpantheon.comhttps://www.getpantheon.com/sites/default/files/docs/desk_images/224674)
-
-**Note:** Ensure you have the correct database username and password for your environment.
+**Note**: Ensure you have the correct database username and password for your environment.
 
 ## Test the Database Connection
 
-After entering all the information, click "Test Connection" to initiate a connection with the remote database. If it succeeds, you'll receive a confirmation message.
+After entering all the information, click **Test Connection** to initiate a connection with the remote database. If it succeeds, you'll receive a confirmation message.
 
 ![Test a saved connection](https://www.getpantheon.com/sites/default/files/docs/desk_images/224669)
 

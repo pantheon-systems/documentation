@@ -10,7 +10,7 @@ slug: sites/code
 
 ## Overview
 
- **Note**: Cron will always run _UNLESS_ all jobs are specifically set to 'OFF' via Elysia or Ultimate cron  modules. Cron will also not run via Drush if a cron key is set with Elysia.
+ **Note**: Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
@@ -26,17 +26,17 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 
 There is no way to configure when Pantheon executes Drupal cron.
 
-**Important:** Setting the value to "Never" will be ignored, cron will always run at least hourly.
+**Important**: Setting the value to "Never" will be ignored; cron will always run at least hourly.
 
 ## Managing Cron
 
-Cron can be managed via Drupal's admin interface at _admin/system/config/cron_.
+Cron can be managed via Drupal's admin interface at `admin/system/config/cron`.
 
 There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/73173)
 
-Clicking "Run cron" will run all scheduled tasks.
+Clicking **Run cron** will run all scheduled tasks.
 
 ![Click Run Cron](https://www.getpantheon.com/sites/default/files/docs/desk_images/73176)
 
@@ -68,7 +68,7 @@ This combination is not officially supported by Pantheon, but has worked for som
 
 As an alternative solution - if you have anything that is executing a cron on your own server, you can execute drush commands remotely - including drush cron - to trigger scheduled operations.
 
-Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging, either through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at _/admin/config/system/cron_
+Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging, either through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
 ## Troubleshooting Cron
 
@@ -77,9 +77,9 @@ Another very effective solution is to leverage a service such as [EasyCron](http
 The most common causes are:
 
 - Missing sites/default/settings.php
-- [PHP fatal errors](/docs/articles/errors/php-errors-and-exceptions/)
+- [PHP fatal errors](/docs/articles/sites/php-errors-and-exceptions/)
 - [Invalid redirection logic in settings.php](/docs/articles/sites/code/redirect-incoming-requests/)
-- Setting a cron key in Elysia Cron's settings: admin/config/system/cron/settings
+- Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### What is the Maximum Execution Time of Cron?
 
@@ -88,16 +88,18 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 ### How Can I Find Out When Cron Last Ran?
 
 You can check the log messages through the Drupal Admin interface, as mentioned above.  
-You can also use Drush to see when cron was last run with the following command:
+
+You can also use Drush to see when cron was last run with the following command:
 
     drush wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
-Yes - in Drupal at _admin/system/config/cron_. Select "Never" from the "Run cron every" dropdown menu as shown below, then Save the configuration. 
+Yes - in Drupal at `admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu as shown below, then save the configuration. 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/74128)  
- 
+
+ 
 
 ## Resources
 

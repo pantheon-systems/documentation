@@ -13,22 +13,32 @@
 <html class="no-js">
   <!--<![endif]-->
 <head>
+  <!-- Quickie redirection to https and pantheon.io -->
+  <script type="text/javascript">
+if (window.location.hostname == 'localhost')
+  redirect = null
+else
+if (window.location.hostname == 'www.getpantheon.com' ||
+    window.location.hostname == 'getpantheon.com' ||
+    window.location.hostname == 'www.pantheon.io' ||
+    window.location.protocol == 'http:'
+   ) {
+  redirect = 'https://pantheon.io' + window.location.pathname
+  // bounce bounce
+  window.location = redirect
+}
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{% block title %}{{ page.title|title }} | {{ site.title }}{% endblock %}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="{{ site.url }}/assets/js/src/autoBreadcrumbs.js"></script>
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
-
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-<!-- Optional theme -->
+  <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
   <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.tocify.css">
@@ -45,9 +55,10 @@
   </p>
   <![endif]-->
     {% include("navbar.html") %}
-
-        <div class="row main">
-        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+    <!-- container -->
+        <div class="container">
+          <div class="row main">
+          {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
     <!-- /container -->
   {% include("footer_content.html") %}

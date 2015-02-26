@@ -9,15 +9,17 @@ category:
 
 
 ## Overview
-Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-**Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
+Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a database backup, a files backup, and a code backup.
+
+
+**Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes **will be lost**, and there will be no way to recover them. The backups are based on the code currently in the Git log.
 
 ## Steps
 
-1. [Start](/docs/articles/sites/backups/backup-creation#creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
-2. [Relax](/docs/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
-3. After completion, you can [access your backups.](/docs/articles/sites/backups/backup-creation#creating-a-backup#access)
+1. Start your backup in the Backups tab by clicking **Create New Backup**.
+2. Relax as your backup is made. Track it in the progress indicator.
+3. After completion, you can access your backups.
 
 ![Create Backup](https://www.getpantheon.com/sites/default/files/docs/desk_images/305275)
 
@@ -28,16 +30,15 @@ You will notice the job indicator will turn green and provide the number of acti
 **Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
 
 ## Accessing Backups  
-When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files). 
+When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database, and Files). 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305286)
 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 
 
-Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
-
-Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+Click the arrow next to Code, DB, or Files to access to a specific backup link for the offsite backup.
+Now that you have created the archive files, you can check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 **Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
 
@@ -47,9 +48,9 @@ Now that you have created the archive files you can check out how to [Restore an
 
 Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
-### How do I restore from my site from a full environment backup? 
+#### How do I restore from my site from a full environment backup? 
 
-In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 #### How long does a backup take? 
 
@@ -61,7 +62,7 @@ Daily backups are run at a random time during the day. You can select the day to
 
 #### What timezone is the backup time marked in?
 
-Backups are shown in your timezone!
+Backups are shown in your timezone.
 
 #### Why do my automated backups not run when I scheduled them to run sometimes?
 

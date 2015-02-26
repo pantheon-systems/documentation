@@ -21,20 +21,19 @@ We have lots of helpful docs [here](http://helpdesk.getpantheon.com/), but an ef
 - The [Pantheon Getting Started](/docs/articles/getting-started) guide exists.
 - The [technology](/docs/articles/architecture/all-about-application-containers/) behind Pantheon.
 - The Pantheon [Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
-- Using [SFTP](/docs/articles/local/rsync-and-sftp#rsync-and-sftp) (and rsync!).
+- Using [SFTP](/docs/articles/local/rsync-and-sftp) (and rsync!).
 - [Importing](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) a site onto Pantheon.
 - How to enable [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis).
 - [Optimizing](/docs/articles/optimizing) for the cloud.
-- How to work with [Settings.php](/docs/articles/drupal/configuring-settings-php#working-with-settings-php)
-- Backups: [Set them up](/docs/articles/sites/backups/backup-creation#creating-a-backup), make them on-demand before you push that bug change, check them from time to time, sleep easy.
+- How to work with [Settings.php](/docs/articles/drupal/configuring-settings-php)
+- Backups: [Set them up](/docs/articles/sites/backups/backup-creation), make them on-demand before you push that bug change, check them from time to time, sleep easy.
 - Need to debug? Read [this](/docs/articles/sites/php-errors-and-exceptions/) and [this](/docs/articles/sites/errors-and-server-responses/), FTP onto site and look in /logs, use drush to tail your watchdog, and use New Relic.
-- Using [Drush](/docs/articles/local/drush-command-line-utility#using-drush-on-pantheon) on Pantheon.
+- Using [Drush](/docs/articles/local/drush-command-line-utility) on Pantheon.
 - [Cron](/docs/articles/sites/code/cron/) and Pantheon.
 - How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!).
-- Caching, both with [Varnish](/docs/articles/architecture/edge/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend#understanding-redis-cache
-) and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
+- Caching, both with [Varnish](/docs/articles/architecture/edge/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend) and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/)s can make your site faster, and protect you from DDOS attacks.
-- How [SSL & HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#getting-an-ssl-cert) are implemented on Pantheon.
+- How [SSL & HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) are implemented on Pantheon.
 - How to properly point your [DNS](/docs/articles/going-live/) when going live.
 - SSO, LDAP, Shibboleth and other [authentication](/docs/articles/sites/code/sso-and-identity-federation/) methods.
 - Pantheon servers spin down after ~2 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
