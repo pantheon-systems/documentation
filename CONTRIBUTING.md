@@ -5,6 +5,9 @@ Help us create relevant and useful content for developers like yourself. See som
 ## Get Started
 
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
+* Fork the pantheon-systems/documentation repository on GitHub.
+
+### Pantheon Employees
 * Clone the pantheon-systems/documentation repository on GitHub.
 * Use `git checkout -b <new-branch-name>` to switch to a new branch.
 
