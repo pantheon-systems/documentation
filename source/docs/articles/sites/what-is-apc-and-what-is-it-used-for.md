@@ -15,7 +15,7 @@ Pantheon provides APC by default across all plans, but the size of the APC memor
 
 #### Can APC be used as a cache backend on Pantheon?
 
-Yes, APC, can be used as a cache backedn or a "key-value store", however this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides  [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/ "Redis as a caching backend"), which has better performance.
+Yes, APC can be used as a cache backend or a "key-value store"; however, this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides  [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/ "Redis as a caching backend"), which has better performance.
 
 
 #### What happens if the APC memory cache is too small?
