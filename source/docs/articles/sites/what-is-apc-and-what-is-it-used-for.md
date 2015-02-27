@@ -7,7 +7,7 @@ category:
 ---
 
 ## Overview
-APC stands for the [Alternative PHP Cache](http://php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a high-level language that is compiled on-demand into bytecode at execution time. To improve performance, APC optimizes compiled PHP and stores the result in shared memory (SHM).
+APC stands for the [Alternative PHP Cache](http://php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a dynamic language that is compiled on-demand into bytecode at execution time. To improve performance, APC stores this bytecode so that it can be reused instead of having to be recompiled each time.
 
 Pantheon provides APC by default across all plans, but the size of the APC memory cache ([apc.shm\_size](http://www.php.net/manual/en/apc.configuration.php#ini.apc.shm-size "apc.shm\_size reference")) varies depending on the service level.
 
@@ -15,8 +15,8 @@ Pantheon provides APC by default across all plans, but the size of the APC memor
 
 #### Can APC be used as a cache backend on Pantheon?
 
-While APC can be used as an explicit cache backend for Drupal using the [APC module](http://drupal.org/project/apc "APC project page on drupal.org"), it's not recommended as a Drupal cache backend due to its inability to span multiple server environments and less than optimal performance. Instead, Pantheon provides  [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/ "Redis as a caching backend
-"), which has better performance.
+Yes, APC, can be used as a cache backedn or a "key-value store", however this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides  [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/ "Redis as a caching backend"), which has better performance.
+
 
 #### What happens if the APC memory cache is too small?
 
@@ -35,7 +35,8 @@ The PHP function [phpinfo()](http://php.net/manual/en/function.phpinfo.php "phpi
 
 Navigate to http://dev.<yoursite>.pantheon.io/delete_me_security_hole.php and search for <tt>shm_size</tt>.</yoursite>
 
-#### Can the shm\_size be configured manually?
+
+## Can the shm_size be configured manually?
 
 No; as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.getpantheon.com/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
 
@@ -72,7 +73,7 @@ Then browse to http://dev.<NAMEOFSITE><yoursite>.pantheon.io/apc_cache_clear.php
 
 ##### **Dashboard**
 
-Clearing the cache via the dashboard will also clear the APC cache along with Drupal, Varnish and Redis.
+Clearing the cache via the dashboard will also clear the APC cache along with Varnish and Redis.
 
 #### APC related errors are happening on Dev, but not in Test or Live. Why?
 
