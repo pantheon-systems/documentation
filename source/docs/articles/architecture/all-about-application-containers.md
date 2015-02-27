@@ -25,7 +25,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
   - Maximum PHP execution time is 90 seconds
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB
-  - WordPress migrations via `wp-cli` will require [updating the`WP_MAX_MEMORY_LIMIT`](http://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP) constant to 512MB.
+  - WordPress migrations via `wp-cli` may require [changing the`WP_MAX_MEMORY_LIMIT` constant](http://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
   - Each PHP process can either 256MB or 512MB of memory ( [depends on the plan](https://www.getpantheon.com/pricing))
 
 - For a comprehensive list of MySQL settings [access your database](/docs/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
