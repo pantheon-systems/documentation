@@ -7,11 +7,7 @@ category:
 ---
 SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions a SSL loadbalancer with a dedicated IP address, allowing secure communication over HTTPS.
 
-
-**Note:**
-
-* Make sure to enable SSL before updating DNS
-* SSL for custom domains is available for Professional Plans and above
+**Note**: Enable SSL before updating DNS. SSL for custom domains is available for Professional Plans and above.
 
 Enabling SSL requires you to do the following:
 
@@ -24,7 +20,7 @@ Enabling SSL requires you to do the following:
 
 ## Generate Key and CSR
 
-1. Run `openssl` from the command line to generate a RSA Private Key (.key file) and Certificate Signing Request (.csr file):
+Run `openssl` from the command line to generate a RSA Private Key (.key file) and Certificate Signing Request (.csr file):
 
 ```
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr
@@ -40,13 +36,9 @@ The output of `openssl` should be two files:
 `www_example_com.csr`  
 `www_example_com.key`
 
-**Note**:
+**Note**: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.
 
-* Do not add a password to your key.
-* It is important to keep your .key file private and secure
-* You'll use the .key file later when loading your cert into a Pantheon environment.
-
-**Windows:** You'll need Cygwin to run `openssl` on Windows. See [Installing Cygwin on Windows](/docs/articles/local/installing-cygwin-on-windows/).
+**Windows**: You'll need Cygwin to run `openssl` on Windows. See [Installing Cygwin on Windows](/docs/articles/local/installing-cygwin-on-windows/).
 
 ## Get SSL Certificate
 
