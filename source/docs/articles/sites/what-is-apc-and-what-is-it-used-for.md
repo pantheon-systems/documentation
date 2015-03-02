@@ -29,11 +29,9 @@ In these circumstances, either increasing the SHM size by [upgrading your accoun
 
 #### How can I determine what my current APC settings are?
 
-The PHP function [phpinfo()](http://php.net/manual/en/function.phpinfo.php "phpinfo() manual on php.net") will display the current environment's configuration, including APC settings. A word of caution; there are a number of environmental variables that are also disclosed using this technique, so only do this in a temporary file on a secured development server. Create a file named "delete\_me\_security\_hole.php" in your web root with the following contents:
+Search for `shm_size` in phpinfo.
 
-    <?php php_info();
-
-Navigate to http://dev.<yoursite>.pantheon.io/delete_me_security_hole.php and search for <tt>shm_size</tt>.</yoursite>
+See [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo)
 
 
 ## Can the shm_size be configured manually?
