@@ -12,7 +12,7 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 ## Team Management
 You can add and delete users in the Team modal. Simply click **Team** located in the upper-right of your Dashboard.
 
-![Team Management Window](/source/docs/assets/images/team modal.png)
+![Team Management Window](/source/docs/assets/images/team-modal.png)
 
 
 ## Add a Team Member
