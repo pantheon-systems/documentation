@@ -29,9 +29,16 @@ For further information about using Drush with Pantheon, see our article on the 
 
 
 ## WordPress User Login
-If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form. From the main login form, click the **Lost Your Password?** link beneath the log in form.  This will take you to a form where you can enter either your username or your email address. Entering either of those and then clicking **Get New Password** will trigger an email to be sent to you. The email will contain a link that you can use one time to reset your password. When you click the link, the form WordPress presents you with asks you to enter your new password twice. It will also show you the strength of your new password, however, it will not prevent you from using a weak password.
+If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](https://github.com/pantheon-systems/cli).
 
-If you have access to the site view Terminus, yoyu can also reset yours, or anyone's password from the command line.
+From the main login form,
+
+- Click **Lost Your Password?** beneath the log in form.  
+- Enter your username or password and click **Get New Password**.
+
+This will send an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password, however, it will not prevent you from using a weak password.
+
+If you have access to the site view Terminus, you can also reset any user's password from the command line.
 
 ```
 $ terminus wp user update \
