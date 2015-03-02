@@ -19,13 +19,13 @@ Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blu
     - Steps: One or several tasks, steps, or goals
     - Proof of Completion
     - Next Steps: further reading, links to other guides
-3. <span style="color: blue">**Writer**</span> chooses Guides to write from Backlog (They are tagged as ‘Guide’). They move the tasks to in Progress and *add separate tasks to the Backlog* for each:
-    - Subject - 1st Draft
-    - Subject - 1st Edit
-    - Subject - Testing
-    - Subject - Final Review
-    - Subject - Founder Review
-    - Subject - Author Signoff (optional)
+3. <span style="color: blue">**Writer**</span> chooses Guides to write from Backlog (They are tagged as ‘Guide’). They move the tasks to in Progress and *add separate tasks to the Backlog* for each task (titles of tasks are shown below):
+    - 1st Draft
+    - 1st Edit
+    - Testing
+    - Final Review
+    - Founder Review
+    - Author Signoff (optional)
 4. <span style="color: blue">**Writer**</span> consults with <span style="color: purple">**Technical Resource**</span> or <span style="color: green">**Management Team**</span> to clarify objectives or ask questions.
 5. <span style="color: blue">**Writer**</span> writes first draft, submits to <span style="color: brown">**Editor**</span> for review. Completes “1st Draft” task.
 6. After edits, <span style="color: brown">**Editor**</span> sends to <span style="color: magenta">**Tester**</span>.
