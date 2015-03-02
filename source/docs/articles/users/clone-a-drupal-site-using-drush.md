@@ -16,7 +16,10 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 1. From the command line, run [the drush ard](http://www.drushcommands.com/drush-6x/archive/archive-dump) command against the live environment.
 2. Set the destination parameter to include a file name.  
 
-**Example**: `drush @pantheon.your-site.live ard --strict=0 --destination=sites/default/files/site\_export.tar.gz`
+**Example**:
+```
+drush @pantheon.your-site.live ard --strict=0 --destination=sites/default/files/site\_export.tar.gz
+```
 
 ##  Import Your Archive
 
