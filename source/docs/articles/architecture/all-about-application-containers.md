@@ -19,7 +19,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 ## What's In an Application Container?
 
 - All containers are created equally; free accounts are not underpowered.
-- All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo)
+- All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo).
   - **Packages**: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - **Extensions**: APC, New Relic, OAuth, Redis
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
