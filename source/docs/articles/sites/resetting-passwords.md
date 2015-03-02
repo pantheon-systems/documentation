@@ -21,6 +21,26 @@ Please keep in mind that your site password is stored in a database, so whatever
 
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using Drush and your Pantheon site aliases. Here is a Drush command for generating one-time login links:
 
-    drush @pantheon.SITENAME.ENV user-login
+```
+$ drush @pantheon.SITENAME.ENV user-login
+```
 
 For further information about using Drush with Pantheon, see our article on the [Drush command-line utility](/docs/articles/local/drush-command-line-utility/).
+
+
+## WordPress User Login
+If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form. From the main login form, click the "Lost Your Password?" link beneath the log in form.  This will take you to a form where you can enter either your username or your email address. Entering either of those and then clicking "Get New Password" will trigger an email to be sent to you. The email will contain a link that you can use one time to reset your password. When you click the link, the form WordPress presents you with asks you to enter your new password twice. It will also show you the strength of your new password, however, it will not prevent you from using a weak password.
+
+If you have access to the site view Terminus, yoyu can also reset yours, or anyone's password from the command line. 
+
+```
+$ terminus wp user update \
+           --user_pass=NEWPASSWORD \
+           --site=YOUR-PANTHEON-SITE-NAME 
+           --env=dev|test|live
+```
+
+As with most terminus commands, you have to give the site's name and the environment you want to make the change in.
+
+As a side note, `terminus wp user update` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the firleds that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.
+
