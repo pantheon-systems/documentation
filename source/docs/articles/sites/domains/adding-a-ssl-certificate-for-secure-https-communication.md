@@ -5,11 +5,11 @@ category:
   - developing
   - launch
 ---
-SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions a SSL loadbalancer with a dedicated IP address, allowing secure communication over HTTPS.
+SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS.
 
-**Note**: Enable SSL before updating DNS. SSL for custom domains is available for Professional Plans and above.
+**Note**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
 
-Enabling SSL requires you to do the following:
+## Steps to Enable SSL 
 
 1. Generate Key and CSR
 2. Get SSL certificate
@@ -38,7 +38,7 @@ The output of `openssl` should be two files:
 
 **Note**: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.
 
-**Windows**: You'll need Cygwin to run `openssl` on Windows. See [Installing Cygwin on Windows](/docs/articles/local/installing-cygwin-on-windows/).
+**Windows Users**: You'll need Cygwin to run `openssl` on Windows. See [Installing Cygwin on Windows](/docs/articles/local/installing-cygwin-on-windows/).
 
 ## Get SSL Certificate
 
@@ -46,7 +46,7 @@ Give the CSR to your SSL provider and they will supply you with one or more cert
 
 If the SSL provider asks you to select a web host server type, look for an option that supports OpenSSL, such as Apache with mod\_SSL support.
 
-### SSL Certificate Types
+## SSL Certificate Types
 
 ### Multiple Domains with Subject Alternative Names (SANs)
 
@@ -60,7 +60,7 @@ You can upload the same wildcard SSL certificate for multiple sites that share a
 
 Your SSL provider may give you an intermediary certificate, which is used establish a chain of trust. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/), which tests if the correct certificate chain is being served, and tells you which chain you should be serving.
 
-### SSL Providers
+## SSL Providers
 
 We don't specifically recommend one, but here are a few of many SSL providers:
 
@@ -74,12 +74,12 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 - [TrustWave](https://ssl.trustwave.com/support/install-certificate-cpanel.php "TrustWave")
 
 
-## Load certificate into Pantheon
+## Load Certificate into Pantheon
 
-1. From your site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**)
-2. Select **Domains**
-2. Select **SSL**
-3. Paste in the requested information and press **Add Cert**
+1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
+2. Select **Domains**.
+2. Select **SSL**.
+3. Paste in the requested information and press **Add Cert**.
 
 ![Site dashboard add SSL certificate step 2](https://www.getpantheon.com/sites/default/files/docs/desk_images/259882)​
 
@@ -87,9 +87,9 @@ After submitting your certificates, you'll see:
 
 "HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
 
-**Note:** It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL loadbalancer provisioning with your new IP address, please contact support.
+**Note:** It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.
 
-#### DNS
+## DNS
 
 There are two options for configuring your DNS when you are using SSL. The platform has support for IPv4 (A records) and IPv6 (AAAA record).
 
@@ -135,12 +135,9 @@ see that your certificate is being served:
 ...
 ```
 
-## Require SSL for all pages
+## Require SSL for All Pages
 
-It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. Please see Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
-
-
-
+It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
 
 
 ## Frequently Asked Questions
@@ -162,15 +159,15 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 ### How do I fix a chain file signing key mismatch?
 
 If you see `400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`
-it indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order. Also see [https://whatsmychaincert.com/](https://whatsmychaincert.com/)
+it indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order. Also see [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 
 ### What if I receive SSL chain errors on a mobile device?
 
-If you receive SSL chain errors, on a mobile device, for example, make sure that the certificate has a certificate authority that supports your use case.
+If you receive SSL chain errors, on a mobile device for example, make sure that the certificate has a certificate authority that supports your use case.
 
 Using an SSL checker(http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
-If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/)
+If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 
 ### What about mixed mode? (HTTP and HTTPS for different pages)
 
