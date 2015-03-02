@@ -2,7 +2,7 @@
 title: Creating Sites
 description:  How to create a new site on the platform.
 category:
-- managing
+  - managing
 ---
 ## Create a New Site
 

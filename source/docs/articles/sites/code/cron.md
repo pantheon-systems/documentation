@@ -2,10 +2,7 @@
 title: Cron
 description: Understand Pantheon cron execution and management.
 category:
-    - developing
-
-slug: sites/code
-
+  - developing
 ---
 
 ## Overview
