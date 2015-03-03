@@ -1,5 +1,5 @@
 ---
-title: Pantheon for Agencies Frequently Asked Questions
+title: Pantheon for Agencies FAQ
 description: A collection of anticipated and commonly asked questions and answers about Partner Organizations on the Platform.
 category:
 - managing
@@ -19,6 +19,7 @@ Multidev allows you to more seamlessly collaborate on your website development p
 ### How does Multidev work?
 
 Forking a CDE creates an application server, a database server, and connects them to backing services. It creates a Git branch of your codebase off of master, and checks it out in the CDE's application server. It clones the database from the Development environment into the new database server, and clones the filesystem similarly. The new CDE has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads.
+
 
 ## Change Management
 
@@ -40,6 +41,9 @@ When you or the administrators, team members, or developers in your agency [crea
 
 ### Why does my Agency Organization have Change Management and Multidev, but not other Organizations I administor?
 All Organizations that are Partners or Allies will have Change Management and Multidev. If your Organization is an Enterprise, then by default these features are not enabled. To request the activation of Multidev and Change Management for Enterprise organizations, please [contact sales](https://pantheon.io/contact-us).
+
+### Why can't I access Multidev on my site when the Supporting Organization has the feature enabled?
+Only team members and administrators of an Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by [contacting sales](https://pantheon.io/contact-us).
 
 ### Why can't my Agency Organization own a site?
 Depending on your service level, your Organization may or may not be able to own a site directly. Pantheon for Enterprise level Organizations will be able to own sites, however Pantheon for Agencies (Partners) Organizations will not. This is because an agency's role is to develop, service, and maintain a site on behalf of it's owner. See our [Change Management](/docs/articles/organizations/change-management/#managing-people) doc for more details.
