@@ -1,5 +1,5 @@
 ---
-title: Errors and server responses
+title: Errors and Server Responses
 description: Understand server responses and error messages.
 category:
   - debugging
@@ -7,7 +7,7 @@ category:
 ---
 ## Pantheon Error Messages
 
-Sometimes, there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
+Sometimes there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
 
 
 
