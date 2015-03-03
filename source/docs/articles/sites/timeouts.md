@@ -2,7 +2,6 @@
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors.
 category:
-  - drupal
   - debugging
 ---
 
@@ -91,7 +90,7 @@ Rules are for the good of the group, and timeouts are no exception. At Pantheon,
 
 #### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes; just use <tt>drush @pantheon.SITENAME.env cron</tt> to execute cron. With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an efficient process, determine why it's slow and fix the root cause.
+Yes; just use `drush @pantheon.SITENAME.env cron` to execute cron using Drush or `terminus drush cron --site=sitename --env=live` using [Terminus](https://github.com/pantheon-systems/cli). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an efficient process, determine why it's slow and fix the root cause.
 
 #### Can Pantheon change the non-configurable timeouts for my site?
 
@@ -101,6 +100,6 @@ Sorry, no; these settings apply to every site on Pantheon. One of the factors th
 
 Nope, but you can in your settings.php file using the PHP functions linked in the table.
 
-#### How can I change the Solr timeout?
+#### How can I change the Solr timeout on Drupal?
 
 Edit the pantheon\_apachesolr module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
