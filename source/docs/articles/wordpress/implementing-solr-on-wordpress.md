@@ -27,7 +27,7 @@ Congratulations&mdash;you have now activated Apache Solr for your account. Solr 
 ## Install the Solr For Wordpress Pantheon Plugin
 We maintain a plugin specifically for using Apache Solr on Pantheon. It is a fork of [palepurple/solr-for-wordpress](https://github.com/palepurple/solr-for-wordpress "PalePurple's Solr for WordPress repo").  
 
-To install Solr for WordPress on Pantheon, download the zip file from the [pantheon-systems/solr-for-wordpress-on-pantheon]() repo and log into your WordPress site.
+To install Solr for WordPress on Pantheon, download the zip file from the [pantheon-systems/solr-for-wordpress-on-pantheon](https://github.com/calevans/solr-for-wordpress-on-pantheon) repo and log into your WordPress site.
 
 1. Go to the Plugins page and click **Add New**.
 2. Click **Upload Plugin** and click **Browse** to select the zip file from your computer. 
