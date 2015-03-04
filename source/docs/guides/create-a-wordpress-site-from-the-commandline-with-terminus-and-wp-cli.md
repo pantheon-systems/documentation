@@ -207,7 +207,7 @@ Activating 'wp-cfm'...
 Success: Plugin 'wp-cfm' activated.
 ```
 
-Now I can [use WP-CFM](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/) to create a bundle that will track my configurations and export them to code.
+Now I can [use WP-CFM](/docs/articles/wordpress/wordpress-configuragtion-management-wp-cfm) to create a bundle that will track my configurations and export them to code.
 
 If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus site code diffstat` and `$ terminus site code commit`
 
