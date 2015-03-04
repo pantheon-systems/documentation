@@ -6,7 +6,7 @@ category:
 
 ---
 
-While going through mysql and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use New Relic. It comes integrated with the majority of our service plans. This presentation will show you how, in conjunction with more traditional system logs, to use New Relic Pro. For the sake of this article, I will be walking through a real life scenario to help illustrate the techniques.
+While going through mysql and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use New Relic. It comes integrated with the majority of our service plans. This presentation will show you how, in conjunction with more traditional system logs, to use New Relic Pro. For the sake of this article, I will be walking through a real life scenario on a Drupal installation to help illustrate the techniques. The methods here can be used with WordPress, as they transcend any given application.
 
 **Let’s Begin!**
 
@@ -42,7 +42,7 @@ Click on "Transactions". The default sort is "Most Time Consuming" but this can 
 
 Now we're getting somewhere!
 
-### Drupal Note
+### Drupal Sites
 At times systems like Drupal's Watchdog will appear at the top. Generally speaking, that's an indication of a MySQL database under duress. Look for complex entities, such as Panels and Views, or custom functionality that's specific to the site in question. 
 
 
