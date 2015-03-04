@@ -36,4 +36,4 @@ Clicking the message will take you to the Settings page to either select a plan 
 <!--<p><strong>NOTE: In order to change the actively billed card for a specific site, you will need already have <a href="http://helpdesk.getpantheon.com/customer/portal/docs/articles/688411-adding-a-credit-card-to-your-account">a card associated with your user account.</a> If you do not have a credit card on your account you will not have a payment method available in the dropdown.</strong></p>-->
 ## Additional Resources
 
-- [Removing a Credit Card](/docs/articles/sites/removing-a-credit-card)
+- [Updating Payment Methods](/docs/articles/updating-payment-methods/)
