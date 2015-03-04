@@ -37,7 +37,7 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
 ### WordPress Sites
-WordPress itself does not use PHP session cookies, however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
+WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
 
