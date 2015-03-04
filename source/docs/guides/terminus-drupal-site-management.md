@@ -254,6 +254,6 @@ Success: Successfully created Environment!
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
 ##  Next Steps
-- Do you use WordPress? Try [Using WP-CLI on Pantheon](/docs/articles/wordpress/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli).
+- Do you use WordPress? Try [Using WP-CLI on Pantheon](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli).
 
-- After you've mastered Terminus, take it a step further with [Continuos Integration](docs/articles/local/continuous-integration-solutions).
+- After you've mastered Terminus, take it a step further with [Continuos Integration](/docs/articles/local/continuous-integration-solutions).
