@@ -190,7 +190,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 ## Prepare for Development
 
-I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/wordpress-configuragtion-management-wp-cfm).
+I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm).
 ```
 $ terminus wp plugin install --activate --site=cli-test --env=dev
 ```
