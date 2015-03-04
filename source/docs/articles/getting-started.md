@@ -85,7 +85,7 @@ To gain a better understanding of how the Pantheon system architecture works, se
 
 ## Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/drupal/known-limitations) now and save yourself the headache later on!
+No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/sites/known-limitations) now and save yourself the headache later on!
 
 ## Prepare for Launch by Adding a Credit Card
 
@@ -113,4 +113,4 @@ Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise
 
 ## Learn More
 
-If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](docs/articles/required-reading-essential-pantheon-documentation/).
+If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).

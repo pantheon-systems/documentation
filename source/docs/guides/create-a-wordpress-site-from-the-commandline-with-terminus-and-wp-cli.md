@@ -190,7 +190,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 ## Prepare for Development
 
-I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/wordpress-configuragtion-management-wp-cfm).
+I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm).
 ```
 $ terminus wp plugin install --activate --site=cli-test --env=dev
 ```
@@ -207,7 +207,7 @@ Activating 'wp-cfm'...
 Success: Plugin 'wp-cfm' activated.
 ```
 
-Now I can [use WP-CFM](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/) to create a bundle that will track my configurations and export them to code.
+Now I can [use WP-CFM](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm) to create a bundle that will track my configurations and export them to code.
 
 If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus site code diffstat` and `$ terminus site code commit`
 
