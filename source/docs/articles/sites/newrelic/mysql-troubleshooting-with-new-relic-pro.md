@@ -10,7 +10,7 @@ While going through mysql and PHP slow logs is a great way to find issues, moder
 
 ## Open New Relic
 
-From within Pantheon, go to the Dashboard for whatever website you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Then click the **New Relic** tab on the left, and again on the **Open New Relic** link.
+From within Pantheon, go to the Dashboard for whatever website you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Click the **New Relic** tab, and again on the **Open New Relic** link.
  
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333260)  
@@ -28,11 +28,11 @@ Using the graph, locate the time period the issue occurred in. This is usually v
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333263)  
 
 
-Select the spike in activity you wish to investigate. This is done by left clicking at starting point of the activity, and dragging your mouse to the end of the activity, highlighting it. New Relic will reload the page with the time frame you've selected.  
+Highlight the spike in activity you wish to investigate. New Relic will reload the page with the time frame you've selected.  
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333265)  
 
-Click on **Transactions**. The default sort is "Most Time Consuming" but this can be a false positive, as it measures a sum of time loading specific transactions, not the time per individual transaction. If a particular item is called 10x more than another, but loads quickly, it's **sum** will send it to the top of the list even if it's behaving well. Choose "Slowest average result time" instead. This will resort the order, bringing the biggest speed (or lack thereof) offenders to the fore.
+Click **Transactions**. The default sort is "Most Time Consuming" but this can be a false positive, as it measures a sum of time loading specific transactions, not the time per individual transaction. If a particular item is called 10x more than another, but loads quickly, it's **sum** will send it to the top of the list even if it's behaving well. Choose "Slowest average result time" instead. This will resort the order, bringing the biggest speed (or lack thereof) offenders to the fore.
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333266)  
 
@@ -41,7 +41,7 @@ Click on **Transactions**. The default sort is "Most Time Consuming" but this ca
 At times systems like Drupal's Watchdog will appear at the top. Generally speaking, that's an indication of a MySQL database under duress. Look for complex entities, such as Panels and Views, or custom functionality that's specific to the site in question. 
 
 ## Review Log Entries
-Click on the most likely subject. New Relic will refresh and load a detail of that transaction. Scroll downwards, note the Transaction traces.  
+Click on the most likely subject. New Relic will refresh and load a detail of that transaction. Scroll downw, and note the Transaction traces.  
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333267)  
 
@@ -51,7 +51,7 @@ Click on the worst transaction trace, and New Relic will load a complete stack t
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333268)  
 
 
-Click on **SQL statements** to get a more detailed breakdown. Scroll down until you find something suspicious.
+Get a more detailed breakdown by clicking on **SQL statements**. Scroll down until you find something suspicious.
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333269)  
@@ -63,13 +63,13 @@ Just to confirm where and how this is happening, on the very bottom of the page 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333271)  
 
 
-The New Relic Pro trace does not, however, give the full query. It only shows the query with placeholders, which cannot be executed against MySQL as is. To do that, we now need to go hunting in the MySQL Slow log. Go back to the site's panel on the dashboard and get the SFTP connection information. Modify it per [this article](/docs/articles/local/accessing-mysql-databases#accessing-mysql#slow-logs) to connect to MySQL via SFTP via your terminal or a FTP program that supports the SFTP protocol.  
+The New Relic Pro trace does not give the full query; It only shows the query with placeholders, which cannot be executed against MySQL as is. To do that, we need to go hunting in the MySQL Slow log. Go back to the site's panel on the Dashboard and get the SFTP connection information. Modify it per [this article](/docs/articles/local/accessing-mysql-databases#accessing-mysql#slow-logs) to connect to MySQL via SFTP via your terminal or an FTP program that supports the SFTP protocol.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333273)  
 
 
-The slow log will be titled something along the lines of "endpointf123f456-slow.log" within the /data directory. Download that file to search locally so we can search for the query within the log. If not it isn’t, we can download and unzip the applicable archived slow logs (ex. endpointf123f456-slow.log-20140812.gz) and search there, if they are available. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.  
+The slow log will be titled something like "endpointf123f456-slow.log" within the /data directory. Download that file to search locally so we can search for the query within the log. If it isn't there, we can download and unzip the applicable archived slow logs (ex. endpointf123f456-slow.log-20140812.gz) and search there if they are available. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333275)  
@@ -87,34 +87,32 @@ Now it's time to see what's going on. Close out the SFTP session and get the MyS
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333278)  
 
 
-If the result bears out your suspicions, as this one does, you can delve in deeper to find out just why the query is behaving so badly. Type " [EXPLAIN](http://dev.mysql.com/doc/refman/5.0/en/explain.html) " and then re-paste the query. MySQL will print out an extended information on how it’s [executing the query](http://dev.mysql.com/doc/refman/5.0/en/using-explain.html). Look for really odd things. For example, in this one, it really doesn't look that bad at all. Except the users table is referenced twice via alias and there isn't a single key index being used to search them.
+If the result bears out your suspicions, as this one does, you can delve in deeper to find out just why the query is behaving so badly. Type " [EXPLAIN](http://dev.mysql.com/doc/refman/5.0/en/explain.html) " and then re-paste the query. MySQL will print out an extended information on how it’s [executing the query](http://dev.mysql.com/doc/refman/5.0/en/using-explain.html). Look for really odd things. For example, this one really doesn't look that bad at all, except the users table is referenced twice via alias and there isn't a single key index being used to search them.
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333283)  
 
 
-Let's take a look at that table with a MySQL describe command. The results are telling. There is no Primary key set on the UID field.  
+Let's take a look at that table with a MySQL describe command. The results are telling: There is no primary key set on the UID field.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333280)  
 
 
-Now that the problem has been found, it can be addressed. In this case, simply adding in the Primary key and re-running the query gets a much improved query performance of 0.10 seconds.  
+Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/333281)  
 
 
-
-
 **To recap:**
 
-1. Use New Relic Pro to narrow identify periods of time that have high load and/or slow response times.
+1. Use New Relic Pro to narrow and identify periods of time that have high load and/or slow response times.
 2. In New Relic, narrow down the scope to one of those time periods, and find the worst performing transactions.
 3. Within those transactions, go into the SQL trace to discover long running queries.
-4. Using SFTP, download the appropriate MySQL Slow Log to retrieve the query in it's entirety.
+4. Using SFTP, download the appropriate MySQL Slow Log to retrieve the query in its entirety.
 5. Connect to a safe MySQL server via CLI. Run the query to test the performance.
 6. If the query result is poor, use the `EXPLAIN` and `EXPLAIN EXTENDED` MySQL command to get additional information. You can also examine the MySQL tables for structural issues using `DESCRIBE` and `ANALYZE` commands.
-7. Once identified, fix the issue as appropriate. This can be within the MySQL server itself if that's where the problem is, or it can be within the application by redoing code or configurations that are creating the errant query.
+7. Once identified, fix the issue. This can be within the MySQL server itself if that's where the problem is, or it can be within the application by redoing code or configurations that are creating the errant query.
  
 This article should give you some of the tools and techniques required to use New Relic's Pro level account to properly dig deep down into your CMS for poor performing MySQL queries. Good luck, and have fun!  
