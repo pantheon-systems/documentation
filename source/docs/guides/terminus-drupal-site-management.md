@@ -256,4 +256,4 @@ You just created a brand new Drupal site on Pantheon! You added modules, committ
 ##  Next Steps
 - Do you use WordPress? Try [Using WP-CLI on Pantheon](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli).
 
-- After you've mastered Terminus, take it a step further with [Continuos Integration](/docs/articles/local/continuous-integration-solutions).
+- After you've mastered Terminus, take it a step further with [Continuous Integration](/docs/articles/local/continuous-integration-solutions).
