@@ -29,14 +29,14 @@ If your site or application requires Facebook authentication, we have added exce
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, Varnish will not try to respond to the request from its cache or store the response.
 
-### Drupal Note
+### Drupal Sites
 Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to name yours differently if you choose to use one. Generally, SESS followed by a few words will work.
 
 **Correct:** SESSmysessioncookie, SESShello123, SESSletsgo
 
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
-### WordPress Note
+### WordPress Sites
 WordPress itself does not use PHP session cookies, however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
@@ -101,12 +101,12 @@ When a Pantheon environment is configured with SSL, a dedicated IP address to a 
 
 ## 404s & Varnish
 
-Pantheon’s default is to not cache 404s, but if your application sets Cache-Control:max-age headers, Varnish will respect them. Depending on your use case, that may be the desired result. 
+Pantheon’s default is to not cache 404s, but if your application sets Cache-Control:max-age headers, Varnish will respect them. Depending on your use case, that may be the desired result.
 
-### Drupal Note
+### Drupal Sites
 Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
-### WordPress Note
+### WordPress Sites
 WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than defauly, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
 
