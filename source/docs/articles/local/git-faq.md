@@ -6,7 +6,8 @@ category:
   - developing
 ---
 
-## Conflicts When Updating Core
+## Resolving Conflicts
+### How do I resolve conflicts when updating Core?
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):
 
@@ -14,44 +15,75 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 It's a good idea to double-check the conflicted files before going forward, and make sure no bugs were introduced.
 
-## Drupal 7
+#### Drupal 7
 
 Run the following commands within your local environment:
 
-    git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-    # resolve conflicts here if needed...
-    git push origin master
+     git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+     # resolve conflicts here if needed...
+     git push origin master
 
-## Drupal 6
-
-Run the following commands from inside your local Git repository:
-
-    git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-    # resolve conflicts here if needed...
-    git push origin master
-
-## WordPress
+#### Drupal 6
 
 Run the following commands from inside your local Git repository:
 
-    git pull -Xtheirs  git://github.com/pantheon-systems/WordPress.git master
-    # resolve conflicts here if needed...
-    git push origin master
+     git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+     # resolve conflicts here if needed...
+     git push origin master
 
-## Upstreams for Drupal Products
+#### WordPress
+
+Run the following commands from inside your local Git repository:
+
+     git pull -Xtheirs  git://github.com/pantheon-systems/WordPress.git master
+     # resolve conflicts here if needed...
+     git push origin master
+
+#### Upstreams for Drupal Products
 
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
 
-- **Open Academy: ** https://github.com/systemseed/openacademy-drops-7
-- **Open Atrium: ** https://github.com/phase2/openatrium-drops-6.git
-- **Open Enterprise: ** https://github.com/levelten/openenterprise-drops-7.git
-- **Open Outreach: ** https://github.com/nedjo/openoutreach-drops-7
-- **Open Publish: ** https://github.com/phase2/openpublish-drops-7.git
-- **Open Public: ** https://github.com/phase2/openpublic-drops-7.git
-- **Panopoly: ** https://github.com/populist/panopoly-drops-7.git
+- [Open Academy](https://github.com/systemseed/openacademy-drops-7): https://github.com/systemseed/openacademy-drops-7
+- [Open Atrium](https://github.com/phase2/openatrium-drops-6.git): https://github.com/phase2/openatrium-drops-6.git
+- [Open Enterprise](https://github.com/levelten/openenterprise-drops-7.git): https://github.com/levelten/openenterprise-drops-7.git
+- [Open Outreach](https://github.com/nedjo/openoutreach-drops-7): https://github.com/nedjo/openoutreach-drops-7
+- [Open Publish](https://github.com/phase2/openpublish-drops-7.git): https://github.com/phase2/openpublish-drops-7.git
+- [Open Public](https://github.com/phase2/openpublic-drops-7.git): https://github.com/phase2/openpublic-drops-7.git
+- [Panopoly](https://github.com/populist/panopoly-drops-7.git): https://github.com/populist/panopoly-drops-7.git
 
-## Frequently Asked Questions
+### How can I manually resolve conflicts?
 
+Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
+
+_"When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge." - [Git Manual](http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge)_
+
+To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
+For example, the Git log may contain an entry similar to the following:  
+
+    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+
+1. From your local repository, run the following Git command to get a copy of the file in conflict: `git checkout <commit ID> -- <file>`<br />
+**Note**: When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
+
+2. Run `git status` and verify that there is a new file to add to the repository:  
+
+
+          git status
+          On branch master
+          Changes to be committed:
+          (use "git reset HEAD ..." to unstage)
+          new file: README.txt
+
+
+3. Run the Git add command:  
+ `git add .`
+4. After performing the add, commit the file with an accompanying commit message.  
+  `git commit -am "verifying missing README.txt"`<br />
+  You will receive confirmation from Git that the file has been committed.  
+5. Run the Git push command:  
+    `git push origin master`
+
+## Using Git
 ### Does Pantheon support Git submodules?
 
 We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes.
@@ -90,7 +122,7 @@ From your local clone, you should be able to run the `git apply` command as per 
 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
-## Import with Existing History
+### How do I import a site with existing Git history?
 
 If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.
 
@@ -98,16 +130,16 @@ If you're importing a site that has an existing Git history, you may be able to 
 2. Clone your vanilla Pantheon repository using the copy/paste string from the dashboard.
 3. From within that clone, run something like:
 
-    'git pull -Xours [your existing repo] [existing site branch]'
+      `git pull -Xours [your existing repo] [existing site branch]`
 
-4. If there are any conflicts, you'll need to resolve them.
+4. If there are any conflicts, you'll need to resolve them.<br />
   **Note**: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.
 
 5. Once this is done, push back to Patheon:
 
-    'git push origin master'
+    `git push origin master`
 
-6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run _git log_ from within your repository to view your full history.
+6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
 ### Can I use Git with On Server Development?
 
@@ -127,8 +159,8 @@ If you find that you're running into issues with commits that reference sites/de
 
 From within the Drupal root of your site:
 
-    'git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch \
-    sites/default/files' --prune-empty -- f4160148..HEAD'
+    git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch \
+    sites/default/files' --prune-empty -- f4160148..HEAD
 
 The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. If you're on Drupal 6, you'll need to find your starting point by looking at the Git log. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
@@ -142,7 +174,7 @@ As a result, the Git connection string format will change. This will start as a 
 
 If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL. To do so run:
 
-    'git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git'
+    git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream to something else you will have to change origin in the command above.
 
@@ -157,7 +189,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 
-    'ssh -vT git@code.getpantheon.com'
+    ssh -vT git@code.getpantheon.com
 
 The output should be similar to this:
 
@@ -169,71 +201,42 @@ The output should be similar to this:
 
 You should now be able to configure Git with the matching SSH key and clone your repository.
 
-## Manually Resolving Conflicts
-
-Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
-
-_"When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge." - [Git Manual](http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge)_
-
-To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
-For example, the Git log may contain an entry similar to the following:  
-CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
-2. From your local repository, run the following Git command to get a copy of the file in conflict:
-   'git checkout <commit ID> -- <file>'
-When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
-3. Run git status and verify that there is a new file to add to the repository:  
-    'git status
-    On branch master
-    Changes to be committed:
-    (use "git reset HEAD ..." to unstage)
-
-   new file: README.txt
-    '  
-4. Run the Git add command:  
- 'git add .'  
-5. After performing the add, commit the file with an accompanying commit message.  
-  'git commit -am "verifying missing README.txt"'
-  You will receive confirmation from Git that the file has been committed.  
-6. Run the Git push command:  
-  'git push origin master'
-
-### How do I fix fast forward errors?
+#### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 
-    '$: git push
+    $: git push
     To git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
      ! [rejected] master -> master (non-fast-forward)
     error: failed to push some refs to 'git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9'
     To prevent you from losing history, non-fast-forward updates were rejected
     Merge the remote changes (e.g. 'git pull') before pushing again. See the
-    'Note about fast-forwards' section of 'git push --help' for details.'
+    'Note about fast-forwards' section of 'git push --help' for details.
 
-### I have a Git conflict; can you fix it for me?
+#### I have a Git conflict; can you fix it for me?
 
 No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/docs/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/docs/articles/local/git-faq#HowdoIrevertorundochanges?).
->>>>>>> d4a94817a227c88f206cbd16a4fc54839607a5f1
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
-### How do I delete a remote branch?
+#### How do I delete a remote branch?
 
-    'git push origin :branchname'
+    git push origin :branchname
 
-### Why isn't every commit shown in the Pantheon dashboard?
+#### Why isn't every commit shown in the Pantheon dashboard?
 
 Pantheon uses the following command to display commits in the dashboard:
 
-    'git log --first-parent'
+    git log --first-parent
 
 _"This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge._" Git Manual
 
 Pantheon does this so upstream updates or merges from multi-dev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
 
-    'git log --graph'
+    git log --graph
 
-## .gitignore on Pantheon
+#### Can I use .gitignore on Pantheon?
 
-Pantheon provides a default .gitignore file in the base of each site's code repository and in sites/default/files. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon dashboard.
+Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon dashboard.

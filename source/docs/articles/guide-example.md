@@ -8,7 +8,7 @@ draft: true
 ## <span style="color: red">Introduction Section</span>
 
 ### <span style="color: red">Problem Scenario</span>
-<span style="color: red">Give a 3-5 sentence intro, with a summary of what you plan to accomplish or problem you want to solve in this guide. The introduction section should not be Pantheon specific, but rather a statement to introduce the problem and solution.</span>
+<span style="color: red">Give a 3-5 sentence intro, with a summary of what you plan to accomplish or problem you want to solve in this guide. The introduction section should not be Pantheon specific, but rather a statement to introduce the problem and solution. Do not reference Pantheon in the intro--focus solely on the problem and goal.</span>
 
 I'm proud of the Pantheon dashboard and all the technologies that feed it, but as a developer I am definitely in the **CLI4LIFE** camp. I can type faster than I can click, and I like being able to repeat, script and automate things. Don't make me use a browser when what I really want is a shell.
 

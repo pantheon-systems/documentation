@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Articles
-generator: [documents_category_index]
-use: [documents_category]
+generator: [articles_category_index]
+use: [articles_category]
 ---
 {% block title %}{{ page.category|title }} {{ page.title }}{% endblock %}
 {% block content %}
@@ -15,10 +15,10 @@ use: [documents_category]
       breadcrumbs()
       //
       </script>-->
-      <div class="document-list">{% for document in page.category_documents %}
+      <div class="article-list">{% for article in page.category_articles %}
         <article>
-          <a href="{{ document.url }}">{{ document.title }}</a>
-          <p>{{ document.description }}</p>
+          <a href="{{ article.url }}">{{ article.title }}</a>
+          <p>{{ article.description }}</p>
         </article>
         {% endfor %}
       </div>

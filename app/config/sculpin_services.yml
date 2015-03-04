@@ -1,9 +1,13 @@
 services:
-    sculpin_content_types.types.documents.collection.sorter:
+    sculpin_content_types.types.articles.collection.sorter:
         class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
         arguments:
              - title
     sculpin_taxonomies.taxonomies.categories.collection.sorter:
+        class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
+        arguments:
+             - title
+    sculpin_content_types.types.guides.collection.sorter:
         class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
         arguments:
              - title

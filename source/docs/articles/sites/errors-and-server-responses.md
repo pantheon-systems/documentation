@@ -1,5 +1,5 @@
 ---
-title: Errors and server responses
+title: Errors and Server Responses
 description: Understand server responses and error messages.
 category:
   - debugging
@@ -7,27 +7,33 @@ category:
 ---
 ## Pantheon Error Messages
 
-Sometimes, there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
+Sometimes there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
 
 
-Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
+
+Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
 
 
-There are two variations on the messages; one for sites hosted on \*.gotpantheon.com (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
+
+There are two variations on the messages; one for sites hosted on \*.pantheon.io (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
 
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
+
+There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
 
 
-If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
+
+If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
 ### Pantheon 401 Unauthorized
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184676)  
-"This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
+
+"This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
 
 
-In some circumstances, a 401 can be triggered by Drupal inadvertently if a site environment is locked, a user passes the HTTP auth but Drupal sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
+
+In some circumstances, a 401 can be triggered by Drupal inadvertently if a site environment is locked, a user passes the HTTP auth but Drupal sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
 
@@ -35,12 +41,14 @@ Sometimes, there are problems in the cloud and one of Pantheon's services is una
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
 
-Pantheon also prevents public access via the webserver to private files, Drupal's .htaccess, and directory listings.
+
+Pantheon also prevents public access via the webserver to private files, Drupal's .htaccess, and directory listings.
 
 ### Pantheon - 404 Unknown Site
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184679)  
-"The hostname ... is unknown. Please double-check that this is the right url. If so, make sure it matches your dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
+
+"The hostname ... is unknown. Please double-check that this is the right url. If so, make sure it matches your dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
 ### Pantheon - 502 Bad Gateway
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184849)
@@ -83,7 +91,8 @@ If you get a generic Service Unavailable that is not styled like the above and y
 ### Pantheon - 504 Gateway Timeout
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/185064)  
-"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
+
+"Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
@@ -114,19 +123,18 @@ If you are seeing frequent problems with external web services, it's a good idea
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
 <script src="https://gist.github.com/timani/412437aa8c1e5e6b5abe.js"></script>
-##### 1. Fix errors
+### Fix Errors
 
 If your site is throwing a lot of warning and notices, there is a performance penalty are resources are used to log errors to disk and slow down your site by performing additional database write operations. In this case the solution is not to disable watchdog bug fix the errors.
 
 Even with the watchdog off these errors will still be written to the PHP error logs so they should be addressed as soon as possible.
 
-##### 2. Optimize the site
+### Optimize the Site
 
-=======
 Long running processes like batch jobs, background tasks and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#End-UserOverview) to identify performance bottlenecks, fix errors and make changes to enhance performance.
 
 
-##### 3. Upgrade your plan
+### Upgrade Your Plan
 
 If the all the errors have been resolved and the views, batches and tasks have been optimized, the next step is to look into [upgrading your plan](https://www.getpantheon.com/pricing) for more resources. The recommendation here is to select the most appropriate plan for the resource usage of your site.
 

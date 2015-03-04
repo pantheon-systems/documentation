@@ -1,6 +1,6 @@
 ---
 title: PHP Errors and Exceptions
-Description: Detailed information about basic PHP errors.  
+description: Detailed information about basic PHP errors.  
 category:
   - debugging
   - drupal
@@ -11,22 +11,22 @@ category:
 
 There are three basic kinds of PHP errors:
 
-- **Notice**  - room for improvement; typically unset variables or missing array keys.
-- **Warning**  - errors will probably occur if not addressed.
-- **Error**  - fatal, execution terminated. Often known as the "white screen of death" in Drupal.
+- **Notice**: room for improvement; typically unset variables or missing array keys.
+- **Warning**: errors will probably occur if not addressed.
+- **Error**: fatal, execution terminated. Often known as the "white screen of death" in Drupal.
 
-For a more in-depth discussion on errors in PHP in general, see the PHP documentation on  [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
+For more in-depth information, see [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in Drupal's database logs if db\_log is enabled, and PHP errors are logged on the application server at logs/php-error.log.
+Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in Drupal's database logs if `db_log` is enabled, and PHP errors are logged on the application server at logs/php-error.log.
 
 Here's a breakdown of what errors are shown and where:
-
+<table>
 <thead>
 		<tr>
-			<th>Environment</th>
-			<th>Severity</th>
-			<th>Browser</th>
-			<th>Watchdog</th>
+			<th>Environment&nbsp;&nbsp;&nbsp;</th>
+			<th>Severity&nbsp;&nbsp;&nbsp;</th>
+			<th>Browser&nbsp;&nbsp;&nbsp;</th>
+			<th>Watchdog&nbsp;&nbsp;&nbsp;</th>
 			<th>logs/php-error.log</th>
 		</tr>
 	</thead><tbody>
@@ -88,8 +88,9 @@ Here's a breakdown of what errors are shown and where:
 			<td align="center"><strong>Y</strong></td>
 		</tr>
 	</tbody>
+	</table>
 
-To learn more about PHP error logs, see our article on  [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files/).
+To learn more about PHP error logs, see [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files/).
 
 ## PHP Errors Slow Down a Site
 
@@ -104,14 +105,11 @@ If database logging is enabled, your site will be even slower, requiring a datab
 Best practice is to fix every notice, warning, and error as you discover them. If they're in a contrib module, roll a patch and submit it to the project's issue queue.  
 
 
-
 See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP Unhandled Exceptions on Pantheon
 
-​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the  [PHP documentation on Exceptions.  
-
-​](http://php.net/manual/en/language.exceptions.php)  
+​A PHP exception is a mechanism for defining error conditions and how to handle them. For more information, see [PHP documentation on exceptions.](http://php.net/manual/en/language.exceptions.php)  
 
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will  [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
