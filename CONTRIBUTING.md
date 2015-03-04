@@ -8,9 +8,10 @@ Help us create relevant and useful content for developers like yourself. See som
 
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
 * Fork the pantheon-systems/documentation repository on GitHub.
+* Clone your fork locally.
 
 ### Pantheon Employees
-* Clone the pantheon-systems/documentation repository on GitHub.
+* Clone the pantheon-systems/documentation repository to your local machine.
 
 ## Edit Docs
 
