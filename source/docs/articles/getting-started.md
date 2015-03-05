@@ -26,7 +26,7 @@ Now you can create your first site. Click **Create your first site** to start.
 
 ![Create first site dashboard](/source/docs/assets/images/create-first-site.png)
 
-Enter a name for your Pantheon site. This and the site development URL these are permanent and cannot be changed.
+Enter a name for your Pantheon site. This and the site development URL are permanent and cannot be changed.
 
 ![Name your Pantheon site](/source/docs/assets/images/name-your-site.png)
 
