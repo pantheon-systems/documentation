@@ -34,7 +34,10 @@ If you don't already have it, you can install it quickly:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 curl -sS https://getcomposer.org/installer | php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+If you need to install it globally, 
+```
+mv composer.phar /usr/local/bin/composer
+```
 #### 2. Install dependencies:
 
 From within the `documentation` repo, run composer install
