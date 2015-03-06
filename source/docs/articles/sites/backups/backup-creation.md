@@ -7,11 +7,7 @@ category:
 ## Overview
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-<<<<<<< HEAD
 **Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
-=======
-**Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
->>>>>>> Link to drops-7 gitignore
 
 ## Steps
 
@@ -65,7 +61,7 @@ Backups are shown in your timezone!
 
 #### Why do my automated backups not run when I scheduled them to run sometimes?
 
-If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label. 
+If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label.
 
 #### What's included in a backup?
 
