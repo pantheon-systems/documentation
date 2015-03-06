@@ -16,7 +16,7 @@ category:
 If a visitor is using IPv6 accesses your site, $\_SERVER['REMOTE\_ADDR'] will return IPv6 addresses (eight groups of four hexadecimal digits separated by colons). IPv4 addresses will still be returned in IPv4 format.  
 
 
-If you are using SSL and an IPv6 request is received, $\_SERVER['REMOTE\_ADDR'] will return the IP address of the load balancer, not of the IPv6 request. This is a [known issue](/docs/articles/drupal/getting-the-client-ip-address) that affects IPv4 traffic as well.
+If you are using SSL and an IPv6 request is received, $\_SERVER['REMOTE\_ADDR'] will return the IP address of the load balancer, not of the IPv6 request. This is a [known limitation](/docs/articles/drupal/getting-the-client-ip-address/#known-limitations) that also affects IPv4 traffic.
 
 ## Frequently Asked Questions
 
