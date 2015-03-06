@@ -65,7 +65,7 @@ Backups are shown in your timezone!
 
 #### Why do my automated backups not run when I scheduled them to run sometimes?
 
-If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label.
+If Pantheon's resources are occupied by other backups, your backup will be placed in backup queue to await its turn. The time that the backup is actually run will be shown in the backups label. 
 
 #### What's included in a backup?
 
