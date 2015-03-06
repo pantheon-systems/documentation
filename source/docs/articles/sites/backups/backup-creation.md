@@ -3,14 +3,9 @@ title: Backup Creation
 description: Learn how to create a backup of an environment.
 category:
   - managing
-
-
 ---
-
-
 ## Overview
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
-
 
 **Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
 
@@ -82,7 +77,7 @@ In the `sites/default/files` directory, the following items are not backed up: 
 - `/private/backup_migrate`
 - `/imagecache`
 
-Within the code, Pantheon uses a .gitignore file, the contents of which [can be seen here](https://www.evernote.com/shard/s404/sh/69b56b77-34b2-4f77-aea2-bb05d6d99614/2f07255a0da933f59b6480d16d807290) (as of 8/28/14). 
+Within the code, Pantheon uses a [.gitignore file](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore). It contains a list of directories that are ignored while backing up code.
 
 ### WordPress Note
 In the `wp-content` directory, the following items are not backed up:
@@ -92,7 +87,7 @@ In the `wp-content` directory, the following items are not backed up:
 - `/upgrade`
 - `/backup-db`
 
-Within the code, Pantheon uses a .gitignore file, the contents of which [can be seen here](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore) (as of 8/06/14). It contains a list of directories that are ignored while backing up code.
+Within the code, Pantheon uses a [.gitignore file](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore). It contains a list of directories that are ignored while backing up code.
 
 #### Drupal Note: Why is Backup & Migrate not recommended on Pantheon?
 
