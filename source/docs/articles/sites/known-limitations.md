@@ -7,7 +7,13 @@ No platform is perfect, and Pantheon is no exception. This page is used to keep 
 
 ## Multisite
 
-We do not support [multisite](http://drupal.org/documentation/install/multi-site). For a more in-depth explanation, see our blog post [Much Ado About Drupal Multisite](https://www.getpantheon.com/blog/much-ado-about-drupal-multisite).
+We do not support [Drupal Multisite](http://drupal.org/documentation/install/multi-site). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
+
+For WordPress see [Can I use WordPress Multisite?](https://pantheon.io/docs/articles/wordpress/wordpress-faq/#can-i-use-wordpress-multisite?)
+
+## One Application per Site
+
+Each site supports a single Drupal or WordPress application.
 
 ## Highly Populated Directories
 
