@@ -104,9 +104,7 @@ It should finish with the following output:
 Generating autoload files
 ```
 
-
-
-Now that we've installed Behat you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control because they are listed in the `.gitignore` bundled with the starter kit to keep the repo lighter weight.
+Now that we've installed Behat you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control because they are listed in the `.gitignore` bundled with the starter kit to keep the repo lighter weight, and to make sure passwords in `behat.local.yml` stay out of version control.
 
 To verify Behat is installed, list the available step definitions:
 
