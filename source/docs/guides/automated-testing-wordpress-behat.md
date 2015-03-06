@@ -72,7 +72,14 @@ You'll see the following output:
 behat.local.yml.sample	behat.yml		composer.json		composer.lock		features
 ```
 
-Copy `behat.local.yml.sample` to `behat.local.yml`:
+Add to the Git repo for our site:
+
+```
+git add .
+git commit -m "Add WordPress Behat Quickstart"
+```
+
+Next, copy `behat.local.yml.sample` to `behat.local.yml`:
 
 ```
 cp behat.local.yml.sample behat.local.yml
