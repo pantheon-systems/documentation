@@ -60,8 +60,6 @@ unzip WordPress-Behat-Quickstart.zip
 mv WordPress-Behat-Quickstart-master behat
 ```
 
-**Note:** Make sure to [Download ZIP](https://codeload.github.com/ari-gold/WordPress-Behat-Quickstart/zip/master). If you clone the Quickstart repo you'll need to remove the `.git` directory in order to push to Pantheon.  
-
 Now take a look at what you've downloaded:
 
 ```
