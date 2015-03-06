@@ -13,7 +13,7 @@ For WordPress see [Can I use WordPress Multisite?](https://pantheon.io/docs/arti
 
 ## One Application per Site
 
-Each site supports a single Drupal or WordPress application.
+Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported. 
 
 ## Highly Populated Directories
 
