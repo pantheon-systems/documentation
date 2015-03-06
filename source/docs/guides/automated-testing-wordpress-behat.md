@@ -69,7 +69,7 @@ ls
 You'll see the following output:
 
 ```
-behat.local.yml.example	behat.yml		composer.json		composer.lock		features
+behat.local.yml.sample	behat.yml		composer.json		composer.lock		features
 ```
 
 Copy `behat.local.yml.sample` to `behat.local.yml`:
