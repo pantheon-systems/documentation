@@ -13,10 +13,10 @@ category:
 
 ## After the IPv6 Upgrade
 
-If a visitor is using IPv6 accesses your site, `$\_SERVER['REMOTE\_ADDR']` will return IPv6 addresses (eight groups of four hexadecimal digits separated by colons). IPv4 addresses will still be returned in IPv4 format.  
+If a visitor is using IPv6 accesses your site, `$_SERVER['REMOTE_ADDR']` will return IPv6 addresses (eight groups of four hexadecimal digits separated by colons). IPv4 addresses will still be returned in IPv4 format.  
 
 
-If you are using SSL and an IPv6 request is received, `$\_SERVER['REMOTE\_ADDR']` will return the IP address of the load balancer, not of the IPv6 request. This is a [known issue](/docs/articles/drupal/getting-the-client-ip-address) that affects IPv4 traffic as well.
+If you are using SSL and an IPv6 request is received, `$_SERVER['REMOTE_ADDR']` will return the IP address of the load balancer, not of the IPv6 request. This is a [known limitation](/docs/articles/drupal/getting-the-client-ip-address/#known-limitations) that also affects IPv4 traffic.
 
 ## Frequently Asked Questions
 
@@ -24,6 +24,6 @@ If a visitor is using IPv6 accesses your site, `$\_SERVER['REMOTE\_ADDR']` will 
 
 [Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
 
-#### My Drupal site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
+#### My site site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
 
 Use a A DNS record instead of a CNAME DNS record pointing to one of the load-balanced IPv4 IP addresses listed in [going live](/docs/articles/going-live).
