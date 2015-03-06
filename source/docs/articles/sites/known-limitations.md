@@ -5,9 +5,11 @@ description: A list of Pantheon's known limitations.
 
 No platform is perfect, and Pantheon is no exception. This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
 
-## Multisite
+## One Application per Site
 
-We do not support [multisite](http://drupal.org/documentation/install/multi-site). For a more in-depth explanation, see our blog post [Much Ado About Drupal Multisite](https://www.getpantheon.com/blog/much-ado-about-drupal-multisite).
+Each site supports a single Drupal or WordPress application. We do not support [Drupal multisite](http://drupal.org/documentation/install/multi-site). See blog posts: [Why Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite). Also see [WordPress FAQ: Can I use WordPress Multisite?](https://pantheon.io/docs/articles/wordpress/wordpress-faq/#can-i-use-wordpress-multisite?)
+
+If you have sites which share common elements, but also have some customization to their theme and modules or plugins, [Pantheon for Agencies](https://pantheon.io/partners/pantheon-agencies) may be just what you need. It provides a sane way to manage this kind of hybrid environment without driving your developers or customers crazy.
 
 ## Highly Populated Directories
 
