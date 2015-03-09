@@ -56,8 +56,6 @@ unzip WordPress-Behat-Quickstart.zip
 mv WordPress-Behat-Quickstart-master behat
 ```
 
-**Note**: Make sure to [Download ZIP](https://codeload.github.com/ari-gold/WordPress-Behat-Quickstart/zip/master). If you clone the Quickstart repo you'll need to remove the `.git` directory in order to push to Pantheon.  
-
 Let's take a look at what was downloaded:
 
 ```
@@ -67,10 +65,15 @@ ls
 You'll see the following output:
 
 ```
-behat.local.yml.example	behat.yml	composer.json	composer.lock	features
+behat.local.yml.sample	behat.yml	composer.json	composer.lock	features
+```
+Add to the Git repo for our site:
+```
+git add .
+git commit -m "Add WordPress Behat Quickstart"
 ```
 
-Copy `behat.local.yml.sample` to `behat.local.yml`:
+Next, copy `behat.local.yml.sample` to `behat.local.yml`:
 
 ```
 cp behat.local.yml.sample behat.local.yml
@@ -95,9 +98,7 @@ It should finish with the following output:
 Generating autoload files
 ```
 
-
-
-Now that we've installed Behat you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control because they are listed in the `.gitignore` bundled with the starter kit to keep the repo light weight.
+Now that we've installed Behat you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control. This is because they are listed in the `.gitignore` file bundled with the starter kit to keep the repo light weight and ensure passwords in `behat.local.yml` stay out of version control.
 
 To verify Behat is installed, list the available step definitions:
 
