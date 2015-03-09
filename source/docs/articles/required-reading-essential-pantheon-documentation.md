@@ -36,7 +36,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - Using [SFTP](/docs/articles/local/rsync-and-sftp) (and rsync!)  
 
-- How to work with [settings.php](/docs/articles/drupal/configuring-settings-php)  
+- How to work with [settings.php](/docs/articles/drupal/configuring-settings-php) and [wp-config.php](/docs/articles/wordpress/configuring-wp-config-php)
 
 - Using [Drush](/docs/articles/local/drush-command-line-utility) on Pantheon  
 
