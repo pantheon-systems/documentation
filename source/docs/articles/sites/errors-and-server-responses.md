@@ -84,7 +84,7 @@ This can be caused by sustained spikes in traffic (often caused by search engine
 
 "The service is temporarily unavailable. Please try again later."
 
-This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/docs/articles/drupal/timeouts) is available in our helpdesk.
+This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/docs/articles/sites/timeouts/) is available in our helpdesk.
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP basic auth (the Security username/password), then that's a misleading message - best workaround is to disable the security option for the environment for testing.
 
