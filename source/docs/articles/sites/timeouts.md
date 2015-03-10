@@ -26,7 +26,7 @@ Rules are for the good of the group, and timeouts are no exception. At Pantheon,
 			<td><a href="http://php.net/manual/en/info.configuration.php#ini.max-execution-time">PHP max_execution_time</a></td>
 			<td>120 seconds</td>
 			<td>Sets the maximum time in seconds a script is allowed to run before it is terminated by the parser.</td>
-			<td>Yes</td>
+			<td>No</td>
 		</tr>
 		<tr>
 			<td><a href="http://www.php.net/manual/en/function.set-time-limit.php">PHP set_time_limit</a></td>
