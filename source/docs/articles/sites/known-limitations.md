@@ -3,7 +3,7 @@ title: Known Limitations
 description: A list of Pantheon's known limitations.
 ---
 
-No platform is perfect, and Pantheon is no exception. This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
+This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
 
 ## Multisite
 
