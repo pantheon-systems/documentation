@@ -82,6 +82,7 @@ Run the following Drush command to sync your site's files:
 drush @pantheon.SITENAME.ENV cc all
 drush -r . rsync @pantheon.SITENAME.ENV:%files @self:sites/default/
 ```
+
 #### WordPress or Drupal: Via SFTP
 
 SFTP is slower, but easier to use. If you don't have a GUI client like FileZilla, you can use the command line.
@@ -123,12 +124,11 @@ If you are using WordPress or you do not have Drush and rsync, you can use your 
 
 - Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
-- Navigate to the proper directory.
-    - **Drupal**: sites/default
+- Navigate to the proper directory on your local file system.
+    - **Drupal**: sites/default/files
     - **WordPress**: wp-content/uploads
 - Paste the SFTP connection command copied from your Pantheon dashboard into your terminal window and press ENTER.
-    - **Drupal**: Enter `cd files/sites/default` and press ENTER
-    - **WordPress**: enter `cd files/wp-content/uploads` and press ENTER
+- Enter `cd files` and press ENTER
 - Enter `put -r ./*` and press ENTER to transfer the files up.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
 
