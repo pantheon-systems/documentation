@@ -4,7 +4,7 @@ description:
 category:
   - developing
 draft: true
-tool_url: https://dashboard.getpantheon.com/sites/$PUUID
+tool_url: https://dashboard.pantheon.io/sites/$PUUID
 tool_image:
 ---
 

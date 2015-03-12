@@ -11,7 +11,7 @@ category:
 
 ## Getting Started
 
-Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, take a look at the documentation on [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode#sftp-connection-information) for your site.
+Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, take a look at the documentation on [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) for your site.
 
 ## Download WinSCP
 
@@ -25,7 +25,7 @@ Start the WinSCP application and enter the connection information. Be sure to ta
 
 ## Add the rsa2 Key Fingerprint
 
-Select to accept the server's host key for the current session so it is stored in cache. This will allow you to connect to the server and manage your files for the current session.
+Click **Yes** to accept the server's host key for the current session so it is stored in cache. This will allow you to connect to the server and manage your files for the current session.
 
 ![RSA fingerprint](https://www.getpantheon.com/sites/default/files/docs/desk_images/50345)
 

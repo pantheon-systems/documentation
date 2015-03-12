@@ -38,7 +38,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 
 WebKit HTML is a "simple shell utility to convert html to pdf using the webkit rendering engine, and qt." In other words, you can snapshot or capture the content of a web page easily in a PDF.
 
-WKHTMLtoPDF can be found on your application server at <tt>/srv/bin/wkhtmltopdf</tt>
+WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
 To install, from your local development environment:
 
@@ -57,7 +57,7 @@ In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fa
 
 PhantomJS has the potential for a plethora of applications. For more information, see the PhantomJS website.
 
-PhantomJS is located @ /srv/bin/phantomjs on your application server.
+PhantomJS is located at `/srv/bin/phantomjs` on your application server.
 
 ## [Apache Tika](http://tika.apache.org/)
 
@@ -66,7 +66,8 @@ PhantomJS is located @ /srv/bin/phantomjs on your application server.
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
 
-Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats and PDFs and more.
+
+Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats and PDFs and more.
 
 ### Tika Configuration
 
@@ -75,10 +76,10 @@ Once you have downloaded and installed the Apache Tika module, the next step wil
 Navigate to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the fields as follows:
 
 **Extract Using:** Tika (local java application)  
-**Tika Directory Path:** /srv/bin  
+**Tika Directory Path:** `/srv/bin`  
 **Tika jar file:** tika-app-1.1.jar
 
-The last step will be to verify that your site is able to extract text from documents, click the _"Test your Tika Attachments"_ under the _"Actions"_ section.
+The last step will be to verify that your site is able to extract text from documents, click **Test your Tika Attachments** under the Actions section.
 
 If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as illustrated below.
 
@@ -90,7 +91,8 @@ If everything is working correctly, you should see the success message, _"Text c
 ImageMagick<u> </u>is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
 
 
-Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.7.8-9 2013-03-10 Q16.
+
+Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 
 ## I Need a Library Not Listed Here
 
@@ -100,21 +102,24 @@ All library's will evaluated by Pantheon's Operations Team on a case-by-case bas
 
 ## Troubleshooting and FAQs
 
-### Will you setup and configure the module for me?
+#### Will you setup and configure the module for me?
 
 No. It is important to be aware of how a module is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/docs/articles/getting-started).
 
 If there is some additional information that may help in the setup we can add it to the documentation.
 
-### How long does the process take?
+#### How long does the process take?
 
 This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.  
 
 
-If it is approved, we will let you know as well as give a timeline when the library may be included.  
+
+If it is approved, we will let you know as well as give a timeline when the library may be included.  
 
 
-It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
-### What version of XYZ library is installed?
-As these libraries are installed system-wide, we use the latest packaged version of the libraries available.  New versions may be installed without notice as security updates or other upstream changes are made available.
+It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
+
+#### What version of XYZ library is installed?
+
+As these libraries are installed system-wide, we use the latest packaged version of the libraries available.  New versions may be installed without notice as security updates or other upstream changes are made available.
