@@ -40,6 +40,7 @@ WebKit HTML is a "simple shell utility to convert html to pdf using the webkit r
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
+### Druapl
 To install, from your local development environment:
 
     drush dl print
@@ -48,6 +49,10 @@ To install, from your local development environment:
     git add .
     git commit -m "Added WKHTMLtoPDF library"
     git push
+
+
+### WordPress
+Currently there are no plugins that implement WKHTMLtoPDF. You can however, use the converter in your own code in a plugin or in your them's `functions.php`.
 
 ## [PhantomJS](http://phantomjs.org/)
 
@@ -69,7 +74,7 @@ The Apache Tika™ toolkit detects and extracts metadata and structured text con
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats and PDFs and more.
 
-### Tika Configuration
+### Drupal Tika Configuration
 
 Once you have downloaded and installed the Apache Tika module, the next step will be configuring the module's settings.
 
@@ -85,11 +90,13 @@ If everything is working correctly, you should see the success message, _"Text c
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/137839)
 
+### WordPress Tika Configuration
+There are no plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that purports to allow you to use it, however, we are still testing it to make sure it works.
+
 ## [ImageMagick](http://www.imagemagick.org)
  ![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)
 
 ImageMagick<u> </u>is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
-
 
 
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
@@ -102,9 +109,9 @@ All library's will evaluated by Pantheon's Operations Team on a case-by-case bas
 
 ## Troubleshooting and FAQs
 
-#### Will you setup and configure the module for me?
+#### Will you setup and configure the module/plugin for me?
 
-No. It is important to be aware of how a module is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/docs/articles/getting-started).
+No. It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/docs/articles/getting-started).
 
 If there is some additional information that may help in the setup we can add it to the documentation.
 
