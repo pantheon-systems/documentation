@@ -27,7 +27,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests#redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (dev, test or live).
+For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (dev, test or live).
 
 <script src="https://gist.github.com/timani/6bd845402c7f8d0939a4.js"></script>
 
@@ -44,7 +44,7 @@ See  [Reading the Pantheon Environment configuration](/docs/articles/sites/code
 
 #### How do I perform redirection?
 
-See  [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests#redirect-incoming-requests).
+See  [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests).
 
 #### Where do I specify database credentials?
 

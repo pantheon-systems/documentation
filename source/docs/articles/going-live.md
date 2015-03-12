@@ -13,11 +13,11 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Best Practices to Prepare for Launch
 
-Making sure that your site code is current reduces the potential for later issues and makes your site easier to maintain. For Drupal, make sure  you've updated any contrib modules and Drupal core to the latest recommended release to ensure stability and security.
+Making sure that your site code is current reduces the potential for later issues and makes your site easier to maintain. Update the Drupal or WordPress core, extensions (Drupal modules or WordPress plugins), and themes to the latest recommended release to ensure stability and security.
 
 While it's good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). To do this, just update your settings.php configuration to redirect site traffic to your preferred domain. If you don't, there will be an SEO penalty due to duplicate content, among other problems.
 
-<table class=table> 
+<table class=table>
 <tbody>
 		<tr>
 			<th class="complete">Complete</th>
@@ -37,7 +37,7 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update settings to redirect to a common domain</td>
-			<td class="help"><a href="/docs/articles/sites/code/redirect-incoming-requests/#redirect_common">Redirect incoming requests</a></td>
+			<td class="help"><a href="/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain">Redirect incoming requests</a></td>
 		</tr>
 	</tbody>
 	</table>
@@ -141,7 +141,7 @@ Ensure that your Live environment content is protected by scheduling daily and w
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Schedule backups</td>
-			<td class="help"><a href="/docs/articles/sites/backups/backup-creation/#can-i-get-automatic-daily-backups">Creating a backup</a></td>
+			<td class="help"><a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a></td>
 		</tr>
 	</tbody>
 	</table>
@@ -207,7 +207,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 
 ## Frequently Asked Questions
 
-### What are the differences between the environments?
+#### What are the differences between the environments?
 
 - Dev has lower TTL on Varnish caching and shows errors to site users.
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
@@ -215,11 +215,10 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 
 To learn more, see [using the Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
 
-### Why is robots.txt is disallowing crawlers to my Live environment?
+#### Why is robots.txt is disallowing crawlers to my Live environment?
 
-Pantheon serves a default robots.txt that disallows crawlers for any \*.gotpantheon.com domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
+Pantheon serves a default robots.txt that disallows crawlers for any \*.pantheon.io domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
 
-If you attempt to access your live environment with a gotpantheon.com domain, even if you have a domain associated with the environment, the default robots.txt will be served.
+If you attempt to access your live environment with a pantheon.io domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
 Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
-

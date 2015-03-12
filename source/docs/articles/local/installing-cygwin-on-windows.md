@@ -34,7 +34,7 @@ Once you have chosen the default directory to install Cygwin, you will also need
  ![Cygwin Local package directory](https://www.getpantheon.com/sites/default/files/docs/desk_images/40752)
 
 ## Choose Your Internet Connection
-To download the necessary packages, the recommended settings for this is the _Direct Connection_
+To download the necessary packages, the recommended settings for this is the "Direct Connection".
 
 
  ![Cygwin Connection Type](https://www.getpantheon.com/sites/default/files/docs/desk_images/40753)  
@@ -63,4 +63,4 @@ Finally, you can navigate to the home directory within Cygwin's root and get a c
 
 
 ## Complete the Installation
-You can now navigate to the  [Getting an SSL Cert](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#GetanSSLCertificate) documentation where you can complete the rest of the installation process on Pantheon.
+You can now navigate to the  [Getting an SSL Cert](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) documentation where you can complete the rest of the installation process on Pantheon.

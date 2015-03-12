@@ -11,25 +11,32 @@ Once you have a distribution running on Pantheon, keep it and its downstream sit
 
 ## Merging Core Releases
 
-Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with
+Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so, `cd` to your local, current copy of the remote upstream repo and `checkout` an update branch. Then, `pull` down the latest changes from our core upstream repository with the following command for the applicable core:
 
-`git pull git://github.com/pantheon-systems/wordpress.git master`
+#### WordPress
+```
+git pull git://github.com/pantheon-systems/wordpress.git master
+```
 
-or
+#### Drupal 6
 
-`git pull git://github.com/pantheon-systems/drops-6.git master`
+```
+git pull git://github.com/pantheon-systems/drops-6.git master
+```
 
-or
+#### Drupal 7
 
-`git pull git://github.com/pantheon-systems/drops-7.git master`
+```
+git pull git://github.com/pantheon-systems/drops-7.git master
+```
 
 Push those changes to the upstream remote
 
-`cd upstreams/my_drupal_upstream`
-
-`git pull git://github.com/pantheon-systems/drops-7.git master`
-
-`git commit -m “Update to Drupal 7.33. http://link-to-release-notes” git push origin update`
+```
+cd upstreams/my_drupal_upstream
+git pull git://github.com/pantheon-systems/drops-7.git master
+git commit -m “Update to Drupal 7.33. http://link-to-release-notes” git push origin update
+```
 
 ## Adding or Updating Custom Code
 
@@ -41,7 +48,7 @@ Using the testing site created when you submitted your site, test your updates f
 
 ## Update Release Branching Strategy
 
-We encourage you to use a continuous integration server, like Jenkins, Travis-CI, or Circle-CI, to automate this process
+We encourage you to use a continuous integration server, like Jenkins, Travis-CI, or Circle-CI, to automate this process.
 
 1. Merge upstream updates into an update branch.
 2. Pull the remote repository into the local clone of your testing site.
@@ -63,4 +70,4 @@ We encourage you to use a continuous integration server, like Jenkins, Travis-CI
 1. Prepare release notes.
 2. merge your pull request into the branch, providing a descriptive commit message. The message can follow the pattern: “Upstream release version, release notes http://link-to-release-notes”.
 
-After you have merged an update, all sites that use the distribution will be given the option to apply updates on their site dashboard at #dev/code. It typically takes up to an hour for the update to be detected. Use your browser’s hard refresh if the updates do not appear after the first hour (cmd+shift+R on OSX, shift+f5 on Windows).
+After you have merged an update, all sites that use the distribution will be given the option to apply updates on their site dashboard at  Dev > Code. It typically takes up to an hour for the update to be detected. Use your browser’s hard refresh if the updates do not appear after the first hour (`cmd+shift+R` on OSX, `shift+f5` on Windows).

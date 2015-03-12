@@ -15,20 +15,22 @@ Sometimes it's necessary to push a quick fix without pushing everything that's b
 
 ## Get Into the Right Tag
 
-1. From within your Git clone, get a quick list of the existing Git tags:
+1. From within your Git clone, get a quick list of the existing Git tags:<br />
 
-    > git tag
-    pantheon.initialize
-    pantheon_live_1
-    pantheon_test_1
-    pantheon_test_2
-    pantheon_test_3
-    pantheon_test_4
+      <pre code>git tag
+      pantheon.initialize
+      pantheon_live_1
+      pantheon_test_1
+      pantheon_test_2
+      pantheon_test_3
+      pantheon_test_4</pre code>
+
 
 2. Select the highest `live` tag and check it out:
 
-    > git checkout pantheon_live_1
+      <pre code>git checkout pantheon_live_1
     Note: checking out 'pantheon_live_1'.
+
 
 
     You are in 'detached HEAD' state. You can make experimental
@@ -42,7 +44,7 @@ Sometimes it's necessary to push a quick fix without pushing everything that's b
       git checkout -b new_branch_name
 
 
-    HEAD is now at ....
+    HEAD is now at ....</pre code>
 
 You are now ready to start work based on the state of the live site.
 
@@ -50,14 +52,14 @@ You are now ready to start work based on the state of the live site.
 
 Make your hotfixes and commit them locally. Then tag and push them to test by creating a _new_ test tag with a higher number value:
 
-    #> git tag -a pantheon_test_5 -m "Preparing a hotfix"
-    #> git push origin pantheon_test_5
+    git tag -a pantheon_test_5 -m "Preparing a hotfix"
+    git push origin pantheon_test_5
 
 **Note**: Your tag numbers will vary. We are showing 5 since in the list of tags above the highest number was 4. Be sure you have the right number before pushing.
 
 ## Test and Deploy
 
-**Note:** Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
+**Note**: Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
 
 If your tests are good, you can use the "Pull Code" option on the dashboard to deploy your hotfix. This will automatically create a new live tag for you and deploy it.
 
@@ -71,10 +73,10 @@ The alert message on the Live environment is only indicating that orphan commits
 
 If you do want to preserve the orphan commits, follow these Git commands to make a clean merge:
 
-    #> git checkout master
-    #> git checkout -b hotfix
-    #> git cherry-pick 0f230b0ef9fdce5d794cb1a4b6cf26a8052ba92a
-    #> git checkout master
-    #> git merge hotfix
+    git checkout master
+    git checkout -b hotfix
+    git cherry-pick 0f230b0ef9fdce5d794cb1a4b6cf26a8052ba92a
+    git checkout master
+    git merge hotfix
 
 Make sure to cherry-pick the commits in chronological order to avoid issues with your integration and replace the hash code in the example above with the actual hash of the commit you are trying to preserve.

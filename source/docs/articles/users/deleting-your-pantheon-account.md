@@ -11,9 +11,9 @@ Completely deleting your Pantheon account requires three major steps:
 
 The first thing to do is to backup and export your sites. Yes, you are leaving the platform, but you should always have a backup of your work just in case.
 
-If you need to make a backup of an existing environment, check out the related article [in the wiki](/docs/articles/sites/backups/backup-creation#creating-a-backup).
+If you need to make a backup of an existing environment, see [Backup Creations](/docs/articles/sites/backups/backup-creation#steps).
 
-For more information about exporting a backup of an environment, see the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup) document.
+For more information about exporting a backup of an environment, see the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup) document.
 
 ## 2. Delete Each of Your Sites
 
@@ -31,4 +31,4 @@ In order to completely delete your account from our system, please open a suppor
 
 ###Can I come back to the platform?
 
-Of course. That's why the first step in this process is to backup & export your site. To restore your site from the backups, follow the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup) document.
+Of course. That's why the first step in this process is to backup & export your site. To restore your site from the backups, follow the [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup) document.

@@ -106,7 +106,7 @@ body.row.main {
 
 .landing-search {
   height: 60px;
-  margin: 15px auto 25px auto;
+  margin: 65px auto 25px auto;
 }
 .landing-search input{
   font-size: 30px;
@@ -257,7 +257,7 @@ img.noborder {border:none;}
 
 .pio-docs-nav {
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: #222;
   border-bottom: 0;
 }
 .pio-home-nav .pio-nav-b {

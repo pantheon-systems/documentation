@@ -19,18 +19,18 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 ## What's In an Application Container?
 
 - All containers are created equally; free accounts are not underpowered.
-- All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [phpinfo()](http://php.net/manual/en/function.phpinfo.php)
+- All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo).
   - **Packages**: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - **Extensions**: APC, New Relic, OAuth, Redis
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
   - Maximum PHP execution time is 90 seconds
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB
+  - WordPress migrations via `wp-cli` may require [changing the`WP_MAX_MEMORY_LIMIT` constant](http://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
   - Each PHP process can either 256MB or 512MB of memory ( [depends on the plan](https://www.getpantheon.com/pricing))
 
 - For a comprehensive list of MySQL settings [access your database](/docs/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common-sense libraries available globally.
-- Your containers can access a whitelisted set of [binary tools](/docs/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
 - Your containers can access a whitelisted set of [binary tools](/docs/articles/sites/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
 
 ## Performance and Scalability

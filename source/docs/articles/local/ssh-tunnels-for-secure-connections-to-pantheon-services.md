@@ -52,7 +52,7 @@ These instructions require the use of the SSH command-line client.
 
 ## Manually Create an SSH tunnel to a Redis Cache Server
 
-These instructions require using the redis command-line client; see the [main redis article](/docs/articles/sites/redis-as-a-caching-backend/#redis-cli) for details.  
+These instructions require using the redis command-line client; see the [main redis article](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client) for details.  
 
 From the site environment, get the one-line connection string. It will be in the following format:
 
