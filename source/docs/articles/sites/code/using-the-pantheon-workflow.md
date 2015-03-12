@@ -28,8 +28,7 @@ When you're ready to test a new set of changes, take your code from **Dev**, you
 
 ![Site dashboard, test environment, code section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376212)
 
-After running this operation, be sure your database updates succeed, your exported configuration is in place, and that the site is functioning as expected. If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
-
+After running this operation, be sure your database updates succeed, your exported configuration is in place, and that the site is functioning as expected. It's also a good idea to review the **Status* tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
 This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use **Test** to make sure that everything is working correctly before deploying to Live.
 
@@ -76,11 +75,11 @@ Ultimately, the right answer for managing configuration updates to your site dep
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev.
 
-There are two ways to updating code in Test or Live:
+There are two ways to update code in Test or Live:
 
 1. **Use the Workflow**  
 
-  Deploy code from Dev to Test to Live via the Site Dashboard.
+  Deploy code from Dev to Test to Live via the Site Dashboard as outlined above.
 
 2. **Hotfixes**  
 
