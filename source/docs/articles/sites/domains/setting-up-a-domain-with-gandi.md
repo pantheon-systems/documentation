@@ -43,4 +43,4 @@ When you have entered your configuration (and double-checked that it is correct 
 
 ## Add Your Domain to Pantheon
 
-In order for your domain to resolve to your Pantheon site, it will need to be added to your sites Pantheon dashboard. See [Going Live](docs/articles/going-live) for more details.
+In order for your domain to resolve to your Pantheon site, it will need to be added to your sites Pantheon dashboard. See [Going Live](/docs/articles/going-live) for more details.
