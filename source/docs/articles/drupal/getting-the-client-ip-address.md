@@ -28,9 +28,6 @@ Pantheon sites using SSL for HTTPS traffic will not be able to reliably determin
 
 The "real" client IP is lost at the primary load balancer because it’s operating in layer4/tcp-only mode. It passes the encrypted connection opaquely to the back-end SSL server binding (nginx), which performs SSL termination. Unfortunately at that point, the client IP represents the loadbalancer.  
 
-
-IP-based security schemes are not recommended. However, services such as geolocation are highly valuable, so as a workaround, [JavaScript can be used to determine both the client's location and IP](/docs/articles/sites/code/geolocation-and-ip-detection-with-ssl-using-javascript), even over SSL.
-
 ## Troubleshooting
 
 #### Spam and Failed Logins
