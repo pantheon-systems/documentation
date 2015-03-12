@@ -9,60 +9,62 @@ category:
 
 ## Overview
 
-Pantheon provides three environments for your site. This allows you to develop and test your site without impacting the live site that's available to the world.
+Every Pantheon site comes with three environments. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/). Separate **Dev**, **Test**, and **Live** environments allow you to develop and test your site without impacting the live site that's available to the world.
 
-- The **Dev** environment is connected directly to Git, and anything `pushed` via Git ends up there immediately.  
-- The **Live** environment is the public/production instance for your site.
-- The **Test** environment allows you to synchronize the latest code-changes from Dev with the latest content from Live so you can effectively simulate a deployment. This lets you preview and evaluate functionality before launching.
 
-Pantheon provides pre-set actions for commons workflows, such as synchronizing your Test environment. We also allow you to perform uncommon workflows (e.g. overwriting the Live database with Test or Dev data) when needed.
+## Code moves up, content moves down
 
-When running updates, you should wait for the job to complete before resuming development.
+The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
-## Update Dev Content
+- **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
+- **Content** includes files not under Git version control, like images and pdfs, and the database.
 
-If you are working on a site where the Live environment is active, you will want to make frequent syncs of content/configuration from your Live site into Dev. This ensures your code development continues against an up-to-date set of environmental circumstances. Use this option to synchronize the content (database as well as `sites/default/files`) of your Dev environment with that of Live or Test.
+### 1. Commit code in Dev
 
-![Site dashboard, workflow section, clone tab](https://www.getpantheon.com/sites/default/files/docs/desk_images/376211)
+Update code in the **Dev** environment via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) or [Git](/docs/articles/local/starting-with-git/).
+### 2. Combine fresh code from Dev and fresh content from Live in Test
 
-## Clone and Update Test Environment
-
-When you are ready to test a new set of changes, the proper procedure is to take your code from **Dev**, your content from **Live**, and freshly combine them to be absolutely certain that your deployment to Live will go as planned.
-
-After running this operation, be sure your database updates (or other <tt>hook_update()</tt> actions) succeeded, your exported configuration is in place, and that the site is functioning as expected. If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
+When you're ready to test a new set of changes, take your code from **Dev**, your content from **Live**, and freshly combine them in **Test** to be absolutely certain that your deployment to Live will go as planned.
 
 ![Site dashboard, test environment, code section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376212)
 
-This my be a good time to run regression or "smoketest" checks (stepping through your main workflows by hand) to be sure that everything is working correctly.
+After running this operation, be sure your database updates succeed, your exported configuration is in place, and that the site is functioning as expected. If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
-You can also use the clone tool in the Code deployment area to just pull the code without making any changes to the DB or files.
 
-## Deploy Code To Live
+This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use **Test** to make sure that everything is working correctly before deploying to Live.
 
-After testing your changes, you can take them live. This will deploy the code that is currently in the Test environment and immediately update your live website.
 
-When deploying a newly-built site for the very first time, it is often necessary to push the Content "forward", which is the opposite of the normal content workflow. In this case, you can use the **Test Content** and **Live Content** areas of the dashboard to pull the database and any uploaded content files (e.g. images) from Dev to Test to Live. You may also continue to use this workflow while a site is in development but not yet launched.
+### 3. Deploy Code To Live
+
+After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website.
 
 ![Site dashboard, live environment, workflow section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376217)
 
 
 ![Site Dashboard, live environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/376218)
 
-However, this workflow should almost never be used on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made via the Drupal system in the Live environment.
+
+## Uncommon Workflows
+
+Typically, you'll create content in the **Live** environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** >> **Clone** areas of the dashboard.
+
+Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made. Also note that overwriting the database of a live site may cause downtime.
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
 ## Handling Configuration Changes
 
-Dealing with changes to your site's configuration can be a challenge in Drupal. Because the only reliable way to synchronize databases is to do so completely, and because Drupal stores its configuration in the database, it is not possible to "push configuration" from Dev to Test to Live without taking some additional steps.
+Dealing with changes to your site's configuration can be a challenge. Because the only reliable way to synchronize databases is to do so completely, and because configuration is stored in the database, it is not possible to "push configuration" from Dev to Test to Live without taking additional steps.
 
 ### hook\_update\_N()
 
-Drupal core manages database/configuration changes via the use of [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7), and you can too. If you have a custom module, you can add update functions to your .install file which encapsulate your config changes, deploy them along with your code, and run update.php to make the changes in Test and Live.
+Drupal core manages database and config changes via the use of [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7). You may add update functions to your `.install` file in a custom module to encapsulate your config changes. Doing so allows you to deploy the config changes in code. Run `update.php` to apply the changes listed in your `hook_update_N` function.
 
 ## Exporting Configuration
 
-A growing array of common configurations are "exportable". In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). [ForumOne created](http://forumone.com/insights/configuration-management-finally-comes-to-wordpress/) the  [WP-CFM plugin](https://github.com/forumone/wp-cfm), which exports bundles of WordPress configuration to .json files in wp-content/config. In Drupal,  [views are easily exported to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code). The  [features module](http://drupal.org/project/features) allows you to export sets of configuration like content types and their associated fields, to code as modules. It is a best practice to take advantage of this. Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system while in SFTP mode.
+A growing array of common configurations are "exportable". In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). [ForumOne created](http://forumone.com/insights/configuration-management-finally-comes-to-wordpress/) the  [WP-CFM plugin](https://github.com/forumone/wp-cfm), which exports bundles of WordPress configuration to `.json` files in `wp-content/config`. In Drupal,  [views are easily exported to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code). The  [features module](http://drupal.org/project/features) allows you to export sets of configuration like content types and their associated fields, to code as modules. It is a best practice to manage configuration in code.
+
+Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system while in SFTP mode.
 
 ### Manual Changes
 
@@ -72,26 +74,30 @@ Ultimately, the right answer for managing configuration updates to your site dep
 
 ## Understanding Write Permissions in Test & Live
 
-Preventing write permissions to the code in the Live environment via SFTP is not a bug but rather a feature and the desired functionality on the platform. We will not allow for changes to code to be made in Live via SFTP because these paths are managed by version control. Uploading the changes to Live directly would result in unstaged changes and this would be problematic, as we use version control for code backups and when you pull code between environments.
+By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev.
 
-If we allowed SFTP changes to be applied it would break a lot of functionality on the platform. Experience has shown that this can destroy your codebase and cause long term issues if we allowed changes to be pushed to Live via SFTP.
+There are two ways to updating code in Test or Live:
 
-**Note**: There are only two ways to achieve the goal of updating code files in Test or Live on Pantheon.
+1. **Use the Workflow**  
 
-1. **Using the Workflow Tools**  
+  Deploy code from Dev to Test to Live via the Site Dashboard.
 
-  You can move your code through the workflow using the tools on the dashboard from Dev → Test → Live. This is outlined in the workflow documentation on the helpdesk.
+2. **Hotfixes**  
 
-2. **A hotfix using Git**  
+  We do not recommend hotfixing. Hotfixes should be the exception, not the norm.  Pushing a [hotfix via Git](/docs/articles/sites/code/hot-fixes) is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
 
-  If you need to make the changes directly to Live this is against development best practices which are the core of the platform, but we make this accessible via Git: Read more about [hotfixes](/docs/articles/sites/code/hot-fixes). Pushing a hotfix via Git is the only option to push changes directly to Live without having to go through Dev and Test, and there are no alternatives.
+## Other Workflow Tools: Import, Export, & Wipe
 
-## Other Workflow Operations: Import, Export, & Wipe
-
-You may also import, export, and wipe the database and files per environment. Wiping completely resets the database and files. This means you will lose all data and will need to either re-import, or re-run install.php to get your site back online.
+You may also import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
 ## Troubleshooting
 
-#### Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'
+#### Uncaught exception: Table 'pantheon.semaphore' doesn't exist
 
-This may occur during a database clone or import. A standard mysql import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G and the result is the semaphore does not exist error.
+If you access the site before a database import is complete, you may see the following error:
+
+```
+Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'
+```
+
+MySQL imports tables sequentially, in alphabetical order, from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
