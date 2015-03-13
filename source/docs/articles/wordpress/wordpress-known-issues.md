@@ -24,10 +24,7 @@ It means you have some code (plugin or theme) that's using PHP Sessions, which r
 
 Pantheon does not have specific documentation for setting up and running a "Network" of sites on one direct installation. We do have customers making use of this architecture successfully, but we do not at this time have instructions for how to get it working.
 
-The known success cases all use subdomains to identify different sites. Subdirectory-based sites are not known to work at this time. For more on why we are reluctant to promote the "Multisite" architecture see these blog posts:
-
-- [Why Multisite is not Enterprise Grade](https://www.getpantheon.com/blog/drupal-multisite-not-enterprise-grade)
-- [Much Ado about Multisite](https://www.getpantheon.com/blog/much-ado-about-drupal-multisite)
+The known success cases all use subdomains to identify different sites. Subdirectory-based sites are not known to work at this time. 
 
 While WordPress can use table-prefixing for multisite installations, making it possible to run on Pantheon, all the same risks for security, scalability, and debuggability still apply.
 
@@ -37,5 +34,6 @@ It's especially ill-advised to use Multisite to set up many distinct/separate si
 
 - WP Super Cache
 - W3 Total Cache
+- batcache
 
 More to come on this list. Let us know what other plugin issues you see.

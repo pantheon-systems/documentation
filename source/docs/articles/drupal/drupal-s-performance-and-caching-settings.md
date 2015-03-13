@@ -10,7 +10,7 @@ To maximize your site's performance on Pantheon and to take advantage of our Var
 
 ## Drupal 7 Performance Configuration
 
-Drupal's performance settings can be found at Administration > Configuration > Development > Performance.
+Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ## Caching
 
@@ -25,14 +25,14 @@ Minimum caching lifetime forces cached content to continue to exist before it c
 ### Expiration of Cached Pages
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180074)
 
-**This is a key setting**. Determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
+**This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 mins, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ## Bandwidth Optimization
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180075)
 
-On Pantheon, the _"Compress cached pages"_ setting should not checked, as pages are already compressed with gzip.  
+On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180077)

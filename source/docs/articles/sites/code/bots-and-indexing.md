@@ -28,7 +28,7 @@ In the log snippet below, there are multiple requests coming in for the same pat
 
 ## Bots Converging on Erroring Pages
 
-Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (such as BingBot or AdsBotGoogle) will identify themselves. Since search-indexing is desirable for most sites, tread carefully in order to avoid wreaking havoc on a site's SEO. That said, there may be instances in which crawlers/spiders converge on a page that is erroring out ( [502s](/docs/articles/sites/errors-and-server-responses#errors-and-server-responses) in the example below). These repetitive requests can exasperate the pageload issues by putting more load on the server. These errors should be investigated immediately. When the error has been fixed, the bots/crawlers should crawl on their merry way and will no longer be hung-up on the give path.
+Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (such as BingBot or AdsBotGoogle) will identify themselves. Since search-indexing is desirable for most sites, tread carefully in order to avoid wreaking havoc on a site's SEO. That said, there may be instances in which crawlers/spiders converge on a page that is erroring out ( [502s](/docs/articles/sites/errors-and-server-responses) in the example below). These repetitive requests can exasperate the pageload issues by putting more load on the server. These errors should be investigated immediately. When the error has been fixed, the bots/crawlers should crawl on their merry way and will no longer be hung-up on the give path.
 
     127.0.0.1 - - [26/Jul/2013:15:27:38 +0000] "GET /index.php?q=shop/kits/shebang-kit HTTP/1.0" 502 166 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" 14.188 "157.56.93.49, 10.183.252.21, 127.0.0.1,127.0.0.1"
     unix: - - [26/Jul/2013:15:27:38 +0000] "GET /index.php?q=shop/kits/shebang-kit HTTP/1.0" 502 166 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" 14.476 "157.56.93.49, 10.183.252.21, 127.0.0.1,127.0.0.1"
@@ -40,7 +40,7 @@ Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (suc
 
 ## Robots.txt: Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a robots.txt associated with the bare ".gotpantheon.com" domain that contains the following:
+It is important to note that each of your site environments have a robots.txt associated with the bare ".pantheon.io" domain that contains the following:
 
     User-agent: * Disallow: /
 
@@ -48,11 +48,11 @@ The gotpantheon domains are ONLY intended for development use and cannot be used
 
 You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Goolge XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
-The following code snippet will redirect any bots trying index using the sitemap of a gotpantheon domain and redirect it to your custom domain. Please replace the URL's to reflect your domain. You can place this in Settings.php.
+The following code snippet will redirect any bots trying index using the sitemap of a gotpantheon domain and redirect it to your custom domain. Please replace the URL's to reflect your domain. You can place this in settings.php.
 
     // Redirect to force indexing with custom domain sitemap
     $subject = $_SERVER['HTTP_HOST'];
-    $pattern = '/gotpantheon.com/sitemap.xml$/';
+    $pattern = '/pantheon.io/sitemap.xml$/';
     preg_match($pattern, $subject, $matches);
     $counted = count($matches);
     if ($counted > 0 ) {
