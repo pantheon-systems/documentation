@@ -20,7 +20,7 @@ CloudFront is a pull-only content distribution network. All requests for assets 
 
 The first step in setting-up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/WorkingWithDownloadDistributions.html#DownloadDistValuesDomainName).
 
-**Note:** A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+**Note**: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
 
 1. In the CloudFront console, click **Create Distribution**.
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
@@ -34,7 +34,7 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 
 ## Configure the CDN Module In Drupal
 
-1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/docs/articles/local/drush-command-line-utility#drush-command-line-utility) to learn how to work with modules using Drush.
+1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/docs/articles/local/drush-command-line-utility) to learn how to work with modules using Drush.
 2. Go to admin/config/development/cdn to get to the General Configuration tab.
 3. Select **Enabled** and click **Save Configuration**.
 4. Go to the Details tab. There are a couple of items to address:
@@ -48,7 +48,7 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 
 ## Verify Assets Are Coming From the CloudFront Distribution
 
-**Note:** Execute the following steps as an anonymous user (logged out).
+**Note**: Execute the following steps as an anonymous user (logged out).
 
 1. Create an article on your site and upload an image to it.
 2. View the article in your browser.

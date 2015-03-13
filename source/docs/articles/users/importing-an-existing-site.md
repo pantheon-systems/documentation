@@ -9,18 +9,34 @@ category:
 
 ## Overview
 
-The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.
+The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/213957)  
+![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/213971)​​
+Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
 
-## Components of a Drupal Site
+![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 
-There are three major components that make up a Drupal site:
+Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
 
-1. **Codebase** - all executable code, including Drupal, custom and contrib modules and themes, etc.
+ ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
+
+## Distributions
+
+If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
+
+First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
+
+Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
+
+![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
+
+
+## Components of a Dynamic Site
+
+There are three major components that make up a dynamic site:
+
+1. **Codebase** - all executable code, including Core, custom and contrib modules, plugins and themes, etc.
 2. **Database** - contains the content of the site and some site configurations.
 3. **Files** - anything under sites/default/files. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
 
@@ -70,7 +86,7 @@ Create an archive that is stored outside of your Drupal site root that contains 
     # Change directory to the source folder.
     cd $SOURCE
     # Create an archive that excludes sites/default/files.
-    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files*.
+    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
 
 ## Export the Database
 
@@ -85,9 +101,9 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 ## Table Prefixes
 
-Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
+Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
 
-You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/drupal/configuring-settings-php).
+You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/source/docs/articles/drupal/configuring-settings-php).
 
 ## Export Files
 
@@ -104,7 +120,7 @@ The import screen allows you to toggle between uploading your archive files or s
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
-If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
+If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
 ## Drush Site Archive Format
 

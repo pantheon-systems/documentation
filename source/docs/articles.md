@@ -1,5 +1,5 @@
 ---
-use: [documents]
+use: [articles]
 layout: default
 title: Articles
 ---
@@ -8,10 +8,10 @@ title: Articles
 <div class="container article">
   <div class="col-md-9">
   <h1>All Articles</h1>
-    {% for document in data.documents %}
+    {% for article in data.articles %}
         <article>
-          <a href="{{ document.url }}">{{ document.title }}</a>
-          <p> {{ document.description }} </p>  
+          <a href="{{ article.url }}">{{ article.title }}</a>
+          <p> {{ article.description }} </p>  
           </article>
     {% endfor %}
 </div>

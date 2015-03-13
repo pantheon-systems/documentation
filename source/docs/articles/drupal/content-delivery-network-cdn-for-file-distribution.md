@@ -53,7 +53,7 @@ Then, enable the module.
 
 To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/196366)
+ ![Enable CDN Module](/source/docs/assets/images/enable-cdn-module.png)
 ## Best Practices
 
 As files are not shared between environments, you need to have a separate CDN for Dev, Test and Live.

@@ -27,13 +27,17 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Using Your Own Session-Style Cookies
 
-Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the Drupal application. When at least one of these cookies is present, Varnish will not try to respond to the request from its cache or store the response.
+Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, Varnish will not try to respond to the request from its cache or store the response.
 
+### Drupal Sites
 Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to name yours differently if you choose to use one. Generally, SESS followed by a few words will work.
 
 **Correct:** SESSmysessioncookie, SESShello123, SESSletsgo
 
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
+
+### WordPress Sites
+WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
 
@@ -43,43 +47,25 @@ For example, you could set a cookie named `STYXKEY-country` to `ca` or `de`
 
 **Examples of `STYXKEY` cookie names:**
 
--
+&#8211; `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
 
-`STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
+&#8211; `STYXKEY_european_user`: Presents different privacy options to E.U. users
 
--
+&#8211; `STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
 
-`STYXKEY_european_user`: Presents different privacy options to E.U. users
-
--
-
-`STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
-
--
-
-`STYXKEY-school`: Your site changes content depending on the user's school affiliation
+&#8211; `STYXKEY-school`: Your site changes content depending on the user's school affiliation
 
 **Invalid names that won't work:**
 
--
+&#8211; `STYXKEY`: Needs something after the `STYXKEY` text
 
-`STYXKEY`: Needs something after the `STYXKEY` text
+&#8211; `styxkey-android`: The text `STYXKEY` must be uppercase
 
--
+&#8211; `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
 
-`styxkey-android`: The text `STYXKEY` must be uppercase
+&#8211; `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
--
-
-`STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
-
--
-
-`STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
-
--
-
-`tablet-STYXKEY`: The cookie name must start with `STYXKEY`
+&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
 
 ## Varnish Servers
 
@@ -97,7 +83,14 @@ When a Pantheon environment is configured with SSL, a dedicated IP address to a 
 
 ## 404s & Varnish
 
-Pantheon’s default is to not cache 404s, but if your application sets Cache-Control:max-age headers, Varnish will respect them. Depending on your use case, that may be the desired result. Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
+Pantheon’s default is to not cache 404s, but if your application sets Cache-Control:max-age headers, Varnish will respect them. Depending on your use case, that may be the desired result.
+
+### Drupal Sites
+Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
+
+### WordPress Sites
+WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than defauly, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+
 
 ## Basic Authentication & Varnish
 

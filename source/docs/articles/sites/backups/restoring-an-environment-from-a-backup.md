@@ -15,7 +15,7 @@ Each site environment's backups can be found on the Backups subtab for the envir
 
 Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard by clicking the **Restore** button to the right of a backup. ![Backups and Restore Button](https://www.getpantheon.com/sites/default/files/docs/desk_images/169624)
 
-This is a  **destructive ** process; this will  **wipe** your database and files, and restore them from the backup.
+This is a  **destructive** process; this will  **wipe** your database and files, and restore them from the backup.
 
 When a restore starts, the operation is placed in a machine queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, submit a support ticket and ask.
 
@@ -44,10 +44,8 @@ In the source environment, find the backup that you wish to retrieve, then for e
 
 ## Importing Existing Content
 
-Once you have the downloaded parts and/or links, navigate to the target environment and click on the Workflow subtab.  
+Once you have the downloaded parts and/or links, navigate to the target environment and click on the **Workflow** subtab.  
 If you have an existing database or file archive that you would like to import from an external source you can also upload the content here.
-
- 
 
 ![Workflow Tab](https://www.getpantheon.com/sites/default/files/docs/desk_images/169632)  
 
@@ -55,10 +53,10 @@ Once you have the downloaded parts and/or links, navigate to the target environ
 If using URLs, paste the URL (if using the direct Amazon S3 URL or another self hosted option), or choose File if you wish to upload an archive.  
 
 
-Once the URL or File is specified, click Import for each backup part to start the process.  
+Once the URL or File is specified, click **Import** for each backup part to start the process.  
 
 
-Once the content has been uploaded, you will have to import the Code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-to-revert-or-undo-changes).  
+Once the content has been uploaded, you will have to import the Code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes?).  
 
 
-If the code belongs to a different site, then you will need to determine your best strategy. You can take the Code archive, remove the .git directory and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you could attempt to merge the old git repository history with the new; see the [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#importing-existing-git-history).
+If the code belongs to a different site, then you will need to determine your best strategy. You can take the Code archive, remove the .git directory and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you could attempt to merge the old git repository history with the new; see the [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history?).

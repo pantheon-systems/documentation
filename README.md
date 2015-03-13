@@ -22,7 +22,8 @@ documentation, which is:
 Usage
 -----
 
-Fork this repository. Issue pull-requests one document at a time.
+#### 0. Get the code.
+Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Running Locally
 
@@ -33,7 +34,10 @@ If you don't already have it, you can install it quickly:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 curl -sS https://getcomposer.org/installer | php
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+If you need to install it globally, 
+```
+mv composer.phar /usr/local/bin/composer
+```
 #### 2. Install dependencies:
 
 From within the `documentation` repo, run composer install

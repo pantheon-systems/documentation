@@ -14,7 +14,7 @@ When your site is fast, everybody wins. When it’s slow, nobody's happy... so h
 
 ## Every PHP Error Slows Execution
 
-An often ignored cause of bad performance is [PHP errors within site code](/docs/articles/errors/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
+An often ignored cause of bad performance is [PHP errors within site code](/docs/articles/sites/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
 
 Here's a graphic example of how PHP errors can slow down a site. This benchmark was performed with [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of watchdog before each test to avoid tainting results from the aggregate.  
@@ -22,7 +22,7 @@ An often ignored cause of bad performance is [PHP errors within site code](/docs
 
 ​ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200873)  
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
-
+<table>
 <colgroup>
 		<col width="120">
 		<col width="120">
@@ -70,7 +70,7 @@ An often ignored cause of bad performance is [PHP errors within site code](/docs
 			<td>134.68s</td>
 		</tr>
 	</tbody>
- 
+</table> 
 
 Turning off error reporting suppresses the symptom, not the problem, and PHP execution will still be slow if there are errors.  
 
@@ -99,7 +99,9 @@ The next performance killer is an excessive number of database queries per reque
 
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200890)Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
+![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200890)
+
+Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
 
 
 Therefore, with an average of 110 queries taking 1.19 seconds means on average, each request will spend .132 seconds in the database. A second example with the same query duration, but with 239 queries per request, that’s .28 seconds in the database. A final example with 421 queries per request averaging 2.66 milliseconds equals **1.1** seconds per request in the database. Monstrously slow.  
