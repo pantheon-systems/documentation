@@ -14,7 +14,10 @@ If you are importing a site and the database has custom prefixes for your DB tab
 
 ## Automatic Updates
 
-WordPress automatic updating functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates plugin](https://github.com/pantheon-systems/WordPress/blob/master/wp-content/mu-plugins/pantheon/pantheon-updates.php “The pantheon-updates.php file in the Pantheon-Systems/WordPress repository, hosted on Github”) in the mu-plugins directory in our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon Environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. 
+WordPress automatic updating functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates plugin](https://github.com/pantheon-systems/WordPress/blob/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) in the mu-plugins directory in our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon Environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. For more information, see
+
+- [Applying Upstream Updates](/docs/articles/sites/code/applying-upstream-updates/ "How to apply core updates to sites on Pantheon")
+- [Updating WordPress Plugins](/blog/updating-wordpress-plugins-pantheon "Blog post explaining how to update plugins")
 
 ## PHP Sessions
 
