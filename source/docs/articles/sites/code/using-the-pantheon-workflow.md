@@ -9,28 +9,28 @@ category:
 
 ## Overview
 
-Every Pantheon site comes with three environments. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/). Separate **Dev**, **Test**, and **Live** environments allow you to develop and test your site without impacting the live site that's available to the world.
+Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site that's available to the world. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/).
 
 
-## Code moves up, content moves down
+## Code Moves Up, Content Moves Down
 
 The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
 - **Content** includes files not under Git version control, like images and pdfs, and the database.
 
-### 1. Commit code in Dev
+### 1. Commit Code in Dev
 
-Update code in the **Dev** environment via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) or [Git](/docs/articles/local/starting-with-git/).
+Update code in the Dev environment via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) or [Git](/docs/articles/local/starting-with-git/).
 ### 2. Combine fresh code from Dev and fresh content from Live in Test
 
-When you're ready to test a new set of changes, take your code from **Dev**, your content from **Live**, and freshly combine them in **Test** to be absolutely certain that your deployment to Live will go as planned.
+When you're ready to test a new set of changes, take your code from Dev, your content from Live, and freshly combine them in Test to be absolutely certain that your deployment to Live will go as planned.
 
 ![Site dashboard, test environment, code section](https://www.getpantheon.com/sites/default/files/docs/desk_images/376212)
 
-After running this operation, be sure your database updates succeed, your exported configuration is in place, and that the site is functioning as expected. It's also a good idea to review the **Status* tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
+After running this operation, be sure your database updates succeed, your exported configuration is in place, and the site is functioning as expected. It's also a good idea to review the **Status* tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
-This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use **Test** to make sure that everything is working correctly before deploying to Live.
+This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use Test to make sure that everything is working correctly before deploying to Live.
 
 
 ### 3. Deploy Code To Live
