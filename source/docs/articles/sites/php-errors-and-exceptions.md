@@ -17,7 +17,7 @@ There are three basic kinds of PHP errors:
 
 For more in-depth information, see [Error Handling and Logging](http://www.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On dev, they are shown directly to the user in the browser. On test and live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if db\_log is enabled for Drupal. The PHP constants WP_DEBUG and WP_DEBUG_LOG can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application server at logs/php-error.log.
+Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db\_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application server at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
 <table>
@@ -31,7 +31,7 @@ Here's a breakdown of what errors are shown and where:
 		</tr>
 	</thead><tbody>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">dev</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
 			<td align="left"><strong>Y</strong></td>
 			<td align="left"><strong>Y</strong></td>
@@ -50,7 +50,7 @@ Here's a breakdown of what errors are shown and where:
 			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">test</td>
+			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
 			<td align="left">N</td>
 			<td align="left"><strong>Y</strong></td>
@@ -69,7 +69,7 @@ Here's a breakdown of what errors are shown and where:
 			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
 		</tr>
 		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle;">live</td>
+			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
 			<td align="left">N</td>
 			<td align="left"><strong>Y</strong></td>
@@ -103,7 +103,7 @@ If database logging is enabled, your site will be even slower, requiring a datab
 
 
 
-Best practice is to fix every notice, warning, and error as you discover them. If they're in an exntension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.  
+Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.  
 
 
 See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
@@ -116,7 +116,7 @@ PHP Exceptions are errors, and depending on the severity and whether they are ha
 
 ## Handling Undefined Index Notices for PHP Variables
 
-When you import your site or enable some new modules, PHP notices may be reported on your dev site that have never been reported before. These notices are now being made apparent because of the dev environment's strict error reporting level.
+When you import your site or enable some new modules, PHP notices may be reported on your Dev site that have never been reported before. These notices are now being made apparent because of the Dev environment's strict error reporting level.
 
 An example notice might look like this:
 
@@ -126,7 +126,7 @@ Why is PHP reporting this?
 
 Variable declaration is not required by PHP, but is a recommended practice that can help to avoid security vulnerabilities or bugs if one forgets to provide a value to a variable that be used later on. PHP issues an E\_NOTICE, a very low-level error, as a reminder.
 
-No one is going to twist your arm about addressing these notices, but Pantheon believes that surfacing them in the development environment will help developers address potential problems in the future before they can occur by following best practices.
+No one is going to twist your arm about addressing these notices, but Pantheon believes that surfacing them in the Development environment will help developers address potential problems in the future before they can occur by following best practices.
 
 ## Fatal Error: require\_once(): Failed Opening Required
 
