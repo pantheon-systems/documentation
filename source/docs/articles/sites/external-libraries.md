@@ -32,7 +32,7 @@ To install, first put your development site in SFTP mode. Then, execute the foll
 drush @pantheon.SITENAME.ENV dl pdftk token libraries
 drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
-## [WKHTMLtoPDF](http://code.google.com/p/wkhtmltopdf/)
+## [WKHTMLtoPDF](http://wkhtmltopdf.org/)
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110694)
 
@@ -52,7 +52,7 @@ To install, from your local development environment:
 
 
 ### WordPress
-Currently there are no plugins that implement WKHTMLtoPDF. You can however, use the converter in your own code in a plugin or in your them's `functions.php`.
+Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
 
 ## [PhantomJS](http://phantomjs.org/)
 
@@ -91,7 +91,7 @@ If everything is working correctly, you should see the success message, _"Text c
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/137839)
 
 ### WordPress Tika Configuration
-There are no plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that purports to allow you to use it, however, we are still testing it to make sure it works.
+There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that purports to allow you to use it, however, we are still testing it to make sure it works.
 
 ## [ImageMagick](http://www.imagemagick.org)
  ![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)
