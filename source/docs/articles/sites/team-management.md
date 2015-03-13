@@ -9,71 +9,70 @@ category:
 
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy and simple.
 
-## Select the Team Tool
+## Team Management
+You can add and delete users in the Team modal. Simply click **Team** located in the upper-right of your Dashboard.
 
-Click the **Team** link in the upper-right corner of your site's workspace.
+![Team Management Window](/source/docs/assets/images/team-modal.png)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/297812)
 
 ## Add a Team Member
 
-If there is another person (e.g. client, manager, accountant, or developer) who has the payment information, you can add them as a team member and they can add their own card data and associate it with your site. The person paying for a site is considered the "owner" and cannot be removed from the site team.
-
-
- ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87612)
-
-Click the **Add team member** button in the team management modal and enter the email address of an existing Pantheon user.
+In the Team modal, enter the email address of the user, and click **Add team member**.
 
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
 
 ## Invite a Team Member
 
-Sometimes you need to invite users to a team or project who do not have Pantheon accounts. You can still add them to the project and they will be sent with an invite to become a team member on the site.
+Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent with an invite to become a team member on the site.
 
 Once they have successfully signed up for an account, they will be automatically added to the team. As an added bonus if the user signs up, you get an extra free Dev site to spin up!
-
-![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87611)
 
 
 ## Remove a Team Member
 
-In the event that you need to remove a team member from your site, you can do this from the "Configuration" tab. All users can be removed except the "site owner".
+**Note**: All users can be removed except the site owner.
+
+In the Team modal, click the X next to the user you want to delete.
+
+When you delete a user from a site, they lose the ability to perform any operations on that site.
+
+## Site Owner
+Site ownership is assigned to the person who creates the site or pays for the site. The site owner and cannot be removed from the site team.
+
+### Change the Site Owner
+
+#### Sandbox Sites
+Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
+
+**Note**: Only the current site owner has the ability to assign a new owner; team members will not see this option.
+
+![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
 
 
- ![Add a team member button](https://www.getpantheon.com/sites/default/files/docs/desk_images/87604)
+#### Paid Sites
+To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the site dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-After clicking the Remove button, a window will open and you can review your selection.
+![Invite a business owner to pay for this site](/source/docs/assets/images/payment-invite.png)
 
-
-
-If you delete a user from a site, they will lose the ability to perform any operations on that site. Enter the email address of an existing Pantheon user.
-
-## Change the Site Owner
-
-The owner of a site can be changed in a few simple steps:
-
-1. Click **Team** in the upper-right of the site dashboard.
-2. Click **Make Owner** next to the team member that should receive ownership of the site.
-
-The new site owner now has the ability to add a credit card or change the site plan.
+Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
 
 
- ![Make owner](https://www.getpantheon.com/sites/default/files/docs/desk_images/278835)
-
+### Pantheon Partners
+The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
 
 ## Add a Supporting Organization
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon partner or ally agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
 
 1. Click **Team** in the upper-right of the site dashboard.
-2. Click **Add Supporting Organization** at the bottom of the team management modal.
+2. Click **Add Supporting Organization** at the bottom of the team management window.
 3. Enter the complete name of the agency. An exact match is required.
 4. Check that the agency is the one you expected.
-5. Click the Add button to make them a supporting organization.
-
- ![Add a supporting organization button](/docs/assets/images/multi_org1.jpg)
-
- ![Confirm supporting organization](/docs/assets/images/multi_org2.jpg)
+5. Click the **Add Agency** button to make them a supporting organization.
 
 **Note:** Because supporting organizations have full access to a site, only the site owner can perform this action.
+
+ ![Add a supporting organization button](/source/docs/assets/images/multi_org1.jpg)
+
+ ![Confirm supporting organization](/source/docs/assets/images/multi_org2.jpg)

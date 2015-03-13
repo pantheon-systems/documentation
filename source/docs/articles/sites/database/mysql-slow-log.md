@@ -10,13 +10,13 @@ Analyzing the MySQL Slow Log is an important part of troubleshooting client issu
 
 ## Requirements
 
-- SFTP command line interface (CLI).
-- MySQL command line interface (CLI).
-- A working knowledge of SQL queries and MySQL.
+- SFTP command line interface (CLI)
+- MySQL command line interface (CLI)
+- A working knowledge of SQL queries and MySQL
 
-## Download the MySQL Slow Log via SFTP.
+## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL Slow Log, use the <a href="http://helpdesk.getpantheon.com/customer/portal/articles/373319-accessing-mysql#slow-logs">method outlined here</a>.
+To download the environment's MySQL Slow Log, use the [method outlined here](/docs/articles/local/accessing-mysql-databases/#frequently-asked-questions).
 
     $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
     live.91fd3bea-d11b-401a-85e0-0@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in's password:
@@ -59,7 +59,7 @@ To download the environment's MySQL Slow Log, use the <a href="http://helpdesk.g
     $  
 
 
-Please note: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
+**Note**: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
 
 ## Analyze The Mysql Slow Log
 
@@ -105,4 +105,4 @@ Another method is to look at slow queries by the hour, which can be usefull to s
 
 This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
-These are just a few ways your can troubleshoot MySQL performance using the MySQL Slow Log on your Pantheon website. For a more in depth look at finding serious MySQL performance issues using New Relic Pro and MySQL Slow Logs, please refer to <a href="http://helpdesk.getpantheon.com/customer/portal/articles/1666948-mysql-troubleshooting-with-new-relic-pro">this article</a>.
+These are just a few ways your can troubleshoot MySQL performance using the MySQL Slow Log on your Pantheon website. For a more in depth look at finding serious MySQL performance issues using New Relic Pro and MySQL Slow Logs, please refer to [MySQL Troubleshooting with New Relic Pro](/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/).

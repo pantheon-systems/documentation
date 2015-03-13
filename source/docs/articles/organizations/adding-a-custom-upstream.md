@@ -17,28 +17,40 @@ Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pa
 
 **Drupal 6**
 
-`git pull git://github.com/pantheon-systems/drops-6.git master`
+```
+git pull git://github.com/pantheon-systems/drops-6.git master
+```
 
 **Drupal 7**
 
-`git pull git://github.com/pantheon-systems/drops-7.git master`
+```
+git pull git://github.com/pantheon-systems/drops-7.git master
+```
 
 **WordPress**
 
-`git pull git://github.com/pantheon-systems/WordPress.git master`
+```
+git pull git://github.com/pantheon-systems/WordPress.git master
+```
 
 **Public Drupal Distribution Examples**
 
-`git pull git://github.com/phase2/openatrium-drops-7.git master`
+```
+git pull git://github.com/phase2/openatrium-drops-7.git master
+```
 
-`git pull git://github.com/populist/panopoly-drops-7.git master`
+```
+git pull git://github.com/populist/panopoly-drops-7.git master
+```
 
 ## 2. Add Your Code.
 
 Follow conventions for using the /profiles directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
-Push the repository to your upstreamâ€™s remote location.
+Push the repository to your upstream's remote location.
 
-`git push origin master`
+```
+git push origin master
+```
 
 ## 3. Test Your Upstream.
 
@@ -46,23 +58,29 @@ Follow conventions for using the /profiles directory in Drupal. With WordPress, 
 
 Create a (core) Drupal or WordPress site on Pantheon that will be used for testing the upstream.
 
-`drush psite-create upstream-test`
+```
+drush psite-create upstream-test
+```
 
 Upgrade the site plan to Business to enable Multidev and multiple app-servers on Live for testing.
 
 Clone down the Pantheon repository.
 
-`git clone
- ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git
- machine-name`
+```
+git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git machine-name
+```
 
 Add code from your remote upstream repository.
 
-`git pull git://github.com/organization/upstream.git master`
+```
+git pull git://github.com/organization/upstream.git master
+```
 
 Push back to Pantheon
 
-`git push origin master`
+```
+git push origin master
+```
 
 ### Run Tests
 

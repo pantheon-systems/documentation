@@ -2,5 +2,5 @@
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
 title: Pantheon Docs
-subtitle: Information for building, launching, and running dynamic sites on the Professional Website Platform
+subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs

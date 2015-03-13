@@ -10,7 +10,7 @@ Pantheon provides static site analysis as a service for Drupal 7 sites to make b
 
 ## Overview
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis - ** performance & behavior gathering to see how a site works.  
+Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis** by gathering performance & behavior patterns to see how a site works.  
 This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
 In short, you get a fast, repeatable report that can help detect common problems and provide introspection into your site.
 
@@ -66,7 +66,7 @@ Use the [Site Audit issue queue](https://drupal.org/project/issues/site_audit) t
 
 ## Troubleshooting
 
-#### Site Audit isn't Running on My Site.
+#### Site Audit isn't running on my site.
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the Drush command to execute Site Audit directly on your Pantheon Drush aliases:
 

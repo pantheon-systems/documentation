@@ -13,10 +13,9 @@ Help us create relevant and useful content for developers like yourself. See som
 
 ## Add a New Doc
 
-* Copy the guide_template.md at the root of this repo into source/_guides/guide-section/guide-name.md
+* Copy the guide_template.md at the root of this repo into the appropriate directory beneath source/docs/articles/../guide-name.md
 
 ## Submit a Pull Request
-
 
 When you're done making changes, [submit a pull request].[pr]
 [pr]: https://github.com/pantheon-systems/documentation/compare/
@@ -34,7 +33,7 @@ Some things to follow to help increase the chance that your pull request will be
 
 ## Use of Images
 
-(TODO)
+See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md). 
 
 # Additional Resources
 
@@ -45,5 +44,3 @@ Some things to follow to help increase the chance that your pull request will be
 
 ####TODO
 - [ ] Identify contribution types
-- [ ] Create contribution examples
-- [ ] Create image contribution rules/mechanism
