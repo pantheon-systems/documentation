@@ -11,7 +11,7 @@ The base development domain should be a subdomain of your marketing site, such a
 
 ## Request the Base Domain
 
-From your Organization Dashboard, go to Support and open a ticket. Select **Pantheon One** as the ticket type, check **non site-related issue**, and use "Custom Base Domain for <Agency Name>" as the subject. The body of the ticket should
+From your Organization Dashboard, go to Support and open a ticket. Select **Pantheon One** as the ticket type, check **non site-related issue**, and use "Custom Base Domain for <Agency Name>" as the subject. The body of the ticket must state the base domain required on the site, like sites.example.com.
 
 ## Create a Wildcard CNAME Record
 
