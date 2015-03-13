@@ -58,7 +58,7 @@ No. While WordPress Mulitsites have been successfully installed on the Pantheon 
 
 ## Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/news/drush-aliases-available) to use in your local environment.
+Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/news/drush-aliases-available) to use in your local environment.
 
 ## Does Pantheon support WP-CLI?
 
@@ -83,7 +83,7 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ## Can I run non Drupal applications on Pantheon?
 
-This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
+This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
 
 ## Do you support ffmpeg transcoding?
 
@@ -99,4 +99,4 @@ Because PCI certifications have yet to catch up to modern cloud infrastructures,
 
 ## How do I increase the maximum execution time limit for a PHP script?
 
-The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
+The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
