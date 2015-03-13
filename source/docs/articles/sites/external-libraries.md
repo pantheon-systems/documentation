@@ -40,8 +40,8 @@ WebKit HTML is a "simple shell utility to convert html to pdf using the webkit r
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
-### Druapl
-To install, from your local development environment:
+### Drupal
+To install from your local Development environment:
 
     drush dl print
     mkdir -p sites/all/libraries/wkhtmltopdf
@@ -58,11 +58,12 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110696)
 
-In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
-
-PhantomJS has the potential for a plethora of applications. For more information, see the PhantomJS website.
+In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG".
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
+
+PhantomJS has the potential for a plethora of applications. For more information, see the [PhantomJS website](http://phantomjs.org).
+
 
 ## [Apache Tika](http://tika.apache.org/)
 
@@ -71,8 +72,7 @@ PhantomJS is located at `/srv/bin/phantomjs` on your application server.
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
 
-
-Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats and PDFs and more.
+Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
 ### Drupal Tika Configuration
 
@@ -86,12 +86,12 @@ Navigate to the Tika settings page at: `/admin/config/search/apachesolr/attachme
 
 The last step will be to verify that your site is able to extract text from documents, click **Test your Tika Attachments** under the Actions section.
 
-If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as illustrated below.
+If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as shown below.
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/137839)
 
 ### WordPress Tika Configuration
-There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that purports to allow you to use it, however, we are still testing it to make sure it works.
+There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
 
 ## [ImageMagick](http://www.imagemagick.org)
  ![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)
@@ -101,13 +101,15 @@ ImageMagick<u> </u>is a software suite to create, edit, compose, or convert bit
 
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 
-## I Need a Library Not Listed Here
 
-If you need a library not listed on this page, please submit a support ticket including a description of your use-case and a link to the library's webpage.
-
-All library's will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
 ## Troubleshooting and FAQs
+
+#### What if I need a library not listed here? 
+
+If you need a library not listed on this page, please submit a support ticket including a description of your use case and a link to the library's webpage.
+
+All library's will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
 #### Will you setup and configure the module/plugin for me?
 
@@ -120,9 +122,7 @@ If there is some additional information that may help in the setup we can add it
 This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.  
 
 
-
 If it is approved, we will let you know as well as give a timeline when the library may be included.  
-
 
 
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
