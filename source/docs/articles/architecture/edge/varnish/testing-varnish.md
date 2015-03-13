@@ -12,7 +12,7 @@ Varnish uses when determining if and for how long to cache content.
 - **Cache-Control: public, max-age=900**
   - Set from Drupal's performance settings.
   - max-age is the number of seconds that content can remain in cache; if set to 0, content will not be cached.
-  - If "no-cache, must-revalidate, post-check=0, pre-check=0", this is Drupal's default header and typically indicates that there is a conflict.
+  - If "no-cache, must-revalidate, post-check=0, pre-check=0"; this is Drupal's default header and typically indicates that there is a conflict.
   - **All static assets** (images, etc) are set with a max-age of 24 hours; a CDN is recommended if you need more granular control.
 
 - **X-Pantheon-Styx-Hostname**
