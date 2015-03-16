@@ -7,7 +7,7 @@ category:
 ---
 If you're developing WordPress sites, there's no doubt you've had something working only to later find it broken. Dev, Test, and Live environments help reduce the risk of breaking something in production, but it's tedious to manually test every time you make a change. Fortunately, tools like [Behat](http://docs.behat.org) let you automate quality assurance. Describe a feature once, in [plain English](http://docs.behat.org/en/latest/guides/1.gherkin.html), and every time you run Behat it will script the browser to do things like click, fill out forms, and verify text.
 
-In this guide we'll show you how to setup Behat on your local machine and run automated tests against a remote WordPress site. Before installing, review the following test, which is called a feature:
+In this guide you'll learn how to setup Behat on your local machine and run automated tests against a remote WordPress site. Before installing, review the following test, which is called a feature:
 
 ```
 # features/blog.feature
@@ -32,9 +32,9 @@ The test is easy to understand so designers, project managers, and even non-tech
 
 ## Install
 
-If you don't already have a WordPress site, you can [create one for free](/docs/articles/wordpress/starting-wordpress-site/) on Pantheon. For the purposes of this guide I'm using [Git](/docs/articles/local/starting-with-git/), but you can adjust the following steps for [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) if you prefer.
+If you don't already have a WordPress site, you can [create one for free](/docs/articles/wordpress/starting-wordpress-site/) on Pantheon. In this guide, I'm using [Git](/docs/articles/local/starting-with-git/), but you can adjust the following steps for [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) if you prefer.
 
-First, I download my WordPress site's codebase by doing a [`git clone`](/docs/articles/local/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
+First, I'll download my WordPress site's codebase by doing a [`git clone`](/docs/articles/local/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
 
 ```
 git clone <string from Pantheon Site Dashboard>
@@ -84,7 +84,7 @@ If you look at the `composer.json` file, you'll see a list of software packages 
 ```
 composer install
 ```
-or to download and run [Composer](http://getcomposer.org) in the current directory run:
+Or to download and run [Composer](http://getcomposer.org) in the current directory:
 
 ```
 curl -s http://getcomposer.org/composer.phar > composer.phar
@@ -98,7 +98,7 @@ It should finish with the following output:
 Generating autoload files
 ```
 
-Now that we've installed Behat you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control. This is because they are listed in the `.gitignore` file bundled with the starter kit to keep the repo light weight and ensure passwords in `behat.local.yml` stay out of version control.
+Now that we've installed Behat, you might think it's a good time to make a commit to save our work, but everything we've installed would be ignored by Git and not added to version control. This is because they are listed in the `.gitignore` file bundled with the starter kit to keep the repo lightweight and ensure passwords in `behat.local.yml` stay out of version control.
 
 To verify Behat is installed, list the available step definitions:
 
@@ -113,7 +113,7 @@ You'll see a longer list of available step definitions like the following:
     When /^(?:|I )fill in the following:$//
     Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)"$/
 ```
-Each definition has regex placeholders. The first, for example, allows you to include steps like `When I follow "Contact Us"` in your features that would look for the "Contact Us" link and click on it.
+Each definition has regex placeholders. For example, the first allows you to include steps like `When I follow "Contact Us"` in your features that would look for the "Contact Us" link and click on it.
 
 Now that we've installed Behat locally, we can configure it for your WordPress site.
 
@@ -121,7 +121,7 @@ Now that we've installed Behat locally, we can configure it for your WordPress s
 
 The starter kit comes with a `behat.yml` file that configured Behat to use Mink (browser drivers) and a placeholder `base_url` for the site we want to run tests on.
 
-Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](https://www.vim.org) or [Atom](http://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheon.io` to the URL of the site you want to test, and save.
+Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](https://www.vim.org) or [Atom](http://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheon.io` to the URL of the site you want to test, and then save.
 
 Verify your changes look good with `git diff` and then commit your changes:
 
@@ -142,7 +142,7 @@ git push origin master
 
 ## Write & Run Tests
 
-### Feature: Home page works
+### Feature: Home Page Works
 
 Running Behat without any arguments will execute every feature in the features directory. Here, we'll run the test using a tag:
 
@@ -177,7 +177,7 @@ terminus wp core install --url=http://test-withrobots.pantheon.io \
                            --admin_email=test@example.com
                            --site=withrobots \
 ```
-I see the following output:
+I get the following output:
 
 ```
 Success: WordPress installed successfully.
@@ -216,7 +216,7 @@ java -jar selenium-server-standalone-2.45.0.jar
 
 If you've upgraded your browser and Selenium tests stop working, try downloading a newer version of Selenium Server. Drivers like Goutte are faster than Selenium, so don't tag your test with @javascript unless it's necessary. More drivers are out there, so feel free to experiment!
 
-**Note**: You'll have two terminal windows open, one to run Selenium server, and one to run Behat.
+**Note**: You'll have two terminal windows open, one to run Selenium server and one to run Behat.
 
 ```
 @javascript
@@ -228,9 +228,9 @@ Then I should see "My Awesome Blog Post"
 Now when you run a test tagged with `@javascript`, you'll see a browser window open and the test running. The first time you do it, it definitely feels like magic!
 
 
-### Authenticating users with a custom step defintion
+### Authenticating Users With a Custom Step Defintion
 
-While we could hard-code passwords into each and every feature that requires logging in to the WordPress site, there's a better way! The starter kit extends Behat to define new step definitions in `features/bootstrap/FeaturesContext.php`. One of our new step definitions will look up passwords in the `behat.local.yml` file for a corresponding user. We're adapting this approach from the [Drupal.org BDD](https://www.drupal.org/project/doobie) project.
+While we could hard-code passwords into each and every feature that requires logging in to the WordPress site, there's a better way. The starter kit extends Behat to define new step definitions in `features/bootstrap/FeaturesContext.php`. One of our new step definitions will look up passwords in the `behat.local.yml` file for a corresponding user. We're adapting this approach from the [Drupal.org BDD](https://www.drupal.org/project/doobie) project.
 
 Now is a good time to create a few users with various roles for testing. For the test included in the starter kit, create a user named "editor-qa", with the role of "editor" and add the password in `behat.local.yml`. Then, run the test with the following tag:
 
@@ -254,7 +254,7 @@ And I press "Publish"
 Then I should see "Post published"
 ```
 
-You'll also see the browser fire up and run through the test:
+You'll also see the browser open and run through the test:
 
 [![Feature: Editor can post to blog. Behat, Selenium Server running, automating browser](/source/docs/assets/images/automated-testing-wordpress-behat.gif)](http://recordit.co/vEFYVJq4tM.gif)
 
@@ -268,17 +268,17 @@ In this guide, we ran "black box" tests from our local machine against a remote 
 
 You can use existing step definitions to write more features. Going forward, you can expand your testing with the following:
 
-* Add Behat tests to continuous integration / continuous deployment pipeline
-* Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly
+* Add Behat tests to continuous integration/continuous deployment pipeline.
+* Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly.
 * The Behat [DrupalExtension](https://github.com/jhedstrom/drupalextension) is actively maintained and could serve as inspiration for a WordPress Behat Extension.
 
-Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
+Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature, you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
 
 Start small, one test at a time. Progress, not perfection.
 
 **Happy automated testing!**
 
-## Related resources
+## See Also
 
 * [Behat](http://behat.org)
 * [Mink](http://mink.behat.org/)
