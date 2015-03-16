@@ -1,5 +1,5 @@
 ---
-title: Cron
+title: Cron for Drupal
 description: Understand Pantheon cron execution and management.
 category:
   - developing
