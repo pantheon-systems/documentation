@@ -39,7 +39,7 @@ When you or the administrators, team members, or developers in your agency [crea
 
 ## Support
 
-### Why does my Agency Organization have Change Management and Multidev, but not other Organizations I administor?
+### Why does my Agency Organization have Change Management and Multidev, but not other Organizations I administer?
 All Organizations that are Partners or Allies will have Change Management and Multidev. If your Organization is an Enterprise, then by default these features are not enabled. To request the activation of Multidev and Change Management for Enterprise organizations, please [contact sales](https://pantheon.io/contact-us).
 
 ### Why can't I access Multidev on my site when the Supporting Organization has the feature enabled?
