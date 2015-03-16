@@ -10,10 +10,8 @@ WP-Cron, one of the lesser known features of WordPress, executes specific tasks 
 
 WP-Cron is similar in nature to `cron`, but differs in a couple of very important ways. This feature is designed solely to handle WordPress routine tasks:
 
- - Check for new version of the WordPress core
- - Check for new versions of themes
- - Check for new version of plugins
- - Clean up spam
+ - Check for new version of the WordPress core, themes, and plugins.
+ - Clean up spam.
 
 Plugins and themes can add tasks to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.  WP-Cron opens up a whole new world of things that a WordPress powered site can do.
 
