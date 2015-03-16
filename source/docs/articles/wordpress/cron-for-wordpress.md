@@ -33,7 +33,7 @@ WP-Cron comes pre-configured and ready to run, so you don't need to do anything 
 
 During the initial installation of WordPress, several tasks are automatically configured. You can use a few simple commands from the command line, or one of several plugins, to find the exact jobs being run by WP-Cron.
 
-### WP-Cron from the CLI
+### WP-Cron From the CLI
 If you have [Terminus](https://github.com/pantheon-systems/cli) installed, you can easily see all the details of what is going on with WP-Cron. Terminus, through WP-CLI, can show you details like:
 
  - What's scheduled to run
