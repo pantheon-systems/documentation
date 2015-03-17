@@ -22,47 +22,50 @@ First, if you do not already have one, [create a WordPress site](/docs/articles/
 1. Name your project
 1. Verify the file path for the new project
 1. Select "WordPress Plugin" as the project type
+1. Click **OK**
 1. Provide the root directory for your local WordPress site
+1. Click **OK**
 
 ![PHPStorm WordPress root directory prompt](/docs/assets/images/phpstorm-root-dir.png)
 
 There will not be any files open within your project once you complete these steps. You will find a PHP file in the project's root, which contains the standard plugin header for WordPress.
 
 ## Configure wp-cli (Optional)
-Many WordPress plugin developers use the command line tool [wp-cli](http://wp-cli.org/). This is useful if you have a local development environment and want to use wp-cli to manage it. If you use wp-cli, you can configure PHPStorm to recognize it and be able to use it form within your project. To configure PHPStorm to use wp-cli, follow these steps.
+Many WordPress plugin developers use the command line tool [wp-cli](http://wp-cli.org/). This is useful if you have a local development environment and want to use wp-cli to manage it. You can configure PHPStorm to recognize wp-cli from within your project by following these steps:
 
-1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **Plus**.
-1. Select WP-CLI. Click **OK**
-1. If you have installed the wp-cli executable, select the "Executable Available" option and enter the path to `wp`.
-1. Once it has completed the setup, it will return to the Preferences window. Click **OK** to commit the changes.
+**Note**: You must successfully create a project before adding wp-cli as a Command Line Tool.
+
+1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **+**.
+1. Choose tool "WP-CLI" and click **OK**
+1. Select "Executable Available" and enter the file path to your local `wp` directory and click **OK**
+
+ ![Configuring wp-cli path for PHPStorm](/source/docs/assets/images/path-to-wp-phpstorm.png)
+1. Click **OK** to save the changes
+
 
 ## Configure your Pantheon Development Environment
-1. Put your [Dev environment into SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/), and click **Connection Info** to see the connection settings.
-2. Within PhpStorm, go to Tools > Deployment > Configuration.
-3. Click **plus** for the [add server dialog](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html).
-4. Enter the Pantheon site name followed by a dash, and the environment.<br />
-**Example**: Yoursite-dev.
-5. Type SFTP and click **OK**.
+1. Put your [Dev environment into SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-mode), and click **Connection Info** to see the connection settings.
+2. Within your PHPStorm project, go to Tools > Deployment > Configuration.
+3. Click **+** to [add a web server](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html).
+4. Enter your Pantheon site name followed by a dash and the environment.
+5. Select "SFTP" for type and click **OK**.
+
+ ![Add web server PHPStorm](/source/docs/assets/images/add-web-server-phpstorm.png)
 
 ### Connection Tab
-[Configure the server](http://www.jetbrains.com/phpstorm/webhelp/deployment-connection-tab.html) connection tab in the following order:
 
-* SFTP Host: (SFTP Host from Connection Info)
-* Port: 2222
-* Username: (Username from Connection Info)
-* Auth Type: Key Pair
-* Private Key File: (navigate to the location of your id\_rsa file. Example: /Users/jon/.ssh/id\_rsa)
-* Click Test SFTP Connection...
-* Root Path: Click Auto-detect, and navigate to the end of the detected path and add /code to the end
+Using your site's [SFTP connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information), configure the deployment connection and click **Test SFTP Connection**:
+
+![Configure deployment web server PHPStorm](/source/docs/assets/images/test-sftp-phpstorm.png)
 
 ### Mappings Tab
+Correspondence between project folders is made possible by providing the file paths within the Mappings tab. For each field, enter the following:
 
-1. Deployment path on server: /code/wp-content/plugins
-2. Web path on server: (URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheon.io)
-3. Click **OK**.
-4. Go to Tools > Deployment > Automatic Upload > and select the server you created.
+1. Local Path: This field is automatically populated, requiring no edits.
+2. Deployment path on server: `/code/wp-content/plugins`
+3. Web path on server: (URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheon.io)
+4. Click **OK**.
 
-Now any files you change and save locally will be automatically uploaded to Pantheon.
+Now, go to Tools > Deployment > Automatic Upload > and select the server you created. Any files you change and save locally will be automatically uploaded to Pantheon.
 
-## Conclusion
 You are now ready to begin editing your plugin. Any file you create in this project, or any file you edit and save will automatically be pushed up to your development environment. Once your code is complete, you can migrate your work into test from your Pantheon dashboard, and eventually into production once everyone has approved the work.
