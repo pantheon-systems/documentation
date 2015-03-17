@@ -159,9 +159,9 @@ Use the Drush command sql-dump to quickly export your database. Clear your cache
 
 ## Transferring Database Contents Using Drush on Pantheon
 
-You cannot use drush sql-sync on Pantheon. Instead, Pantheon has enabled  [sql-sync-pipe](https://drupal.org/project/drush_sql_sync_pipe), a functionally equivalent command. You will need to install Drush SQL Sync Pipe locally in order to use it.
+You cannot use drush sql-sync on Pantheon and we recommend using `mysql` and `gunzip` for the best results.
 
-    drush sql-sync-pipe @pantheon.SITENAME.ENV @self --progress
+    gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
 If you need support for sql-sync-pipe, please visit the [Drush SQL Sync Pipe issue queue](https://drupal.org/project/issues/drush_sql_sync_pipe?categories=All) and create a new issue if necessary. Currently, sql-sync-pipe cannot be used to transfer a database from a local instance to Pantheon.
 
