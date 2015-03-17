@@ -159,7 +159,7 @@ Use the Drush command sql-dump to quickly export your database. Clear your cache
 
 ## Transferring Database Contents Using Drush on Pantheon
 
-You cannot use drush sql-sync on Pantheon and we recommend using `mysql` and `gunzip` for the best results.
+You cannot use drush sql-sync on Pantheon and we recommend downloading a copy of the database from a backup then use `mysql` and `gunzip` for the best results.
 
     gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
