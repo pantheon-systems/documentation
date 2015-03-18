@@ -37,7 +37,6 @@ Each will need to be transferred from Pantheon to your local environment.
 
 ### Get the Database
 
-
 There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site dashboard:
 
 - On-demand: Workflow > Export > Export Database
