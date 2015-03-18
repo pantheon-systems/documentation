@@ -23,9 +23,9 @@ Once you have backed-up your data and are ready to delete your sites, see the [D
 
 The next step is to delete the associated credit cards. For more information, see the [Removing a Credit Card](/docs/articles/sites/removing-a-credit-card#delete-your-card) document.
 
-## 4. Submit a Final Support Request
+## 4. Delete Your Account
 
-In order to completely delete your account from our system, please open a support request using the email address you wish deleted. The process currently requires manual action and will be completed within 30 days.
+After you have completed the steps above go to your account dashboard, Account, Delete Account. Click the red **Delete Account** button, enter the verification text and confirm.
 
 ## Frequently Asked Questions
 
