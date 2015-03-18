@@ -14,15 +14,15 @@ Pantheon does not need the settings.php for your site to work, but Drush comman
 
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
 
-You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations. 
+You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations.
 
 There are a few known issues:
 
-### Drush 5
+## Drush 5
 
 Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
 
-### Drush 6
+## Drush 6
 
 Many Drush 6 commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
@@ -157,13 +157,11 @@ Use the Drush command sql-dump to quickly export your database. Clear your cache
     drush cc all
     drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
 
-## Transferring Database Contents Using Drush on Pantheon
+## Transferring Database Content Using Drush on Pantheon
 
-You cannot use drush sql-sync on Pantheon and we recommend downloading a copy of the database from a backup then use `mysql` and `gunzip` for the best results.
+You cannot use `drush sql-sync` on Pantheon. Instead, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
 
     gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-
-If you need support for sql-sync-pipe, please visit the [Drush SQL Sync Pipe issue queue](https://drupal.org/project/issues/drush_sql_sync_pipe?categories=All) and create a new issue if necessary. Currently, sql-sync-pipe cannot be used to transfer a database from a local instance to Pantheon.
 
 ## Timeouts When Using Long-Running Migrate or Other Drush Commands
 
@@ -185,7 +183,7 @@ The following Drush commands are not supported and will not work on Pantheon sit
 `sql-sqlc`  
 `php-eval`
 
-As an alternative to sql-dump, you can use sql-sync-pipe or drush sql-dump.
+As an alternative to `drush sql-sync` you can use `drush sql-dump` instead.
 
 ## Drush Commands that Alter Site Code
 
