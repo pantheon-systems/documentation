@@ -42,8 +42,6 @@ There are several ways to get a copy of your Pantheon database.
   - Scheduled or on-demand backup: Backups > Backup Log > Database download link
 - Import the database into your local environment using a MySQL client.
 `gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME`
-- Alternatively, you can directly sync the content of your remote database to your local environment using [Drush](http://drush.org) and [sql-sync-pipe](https://drupal.org/project/drush_sql_sync_pipe).<br />
-`drush sql-sync-pipe @pantheon.SITENAME.ENV @self`
 
 ### Get the Files
 
