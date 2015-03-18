@@ -12,7 +12,7 @@ category:
  **Note**: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.
 
 
-If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress) you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
+If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
 
 This method allows for transfer of unlimited data "server-to-server", which is much faster than transferring from your workstation. Additionally, files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
@@ -66,7 +66,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
 
-**Note:** regardless of which platform you are using, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress.
+**Note:** Regardless of which platform you are using, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress.
 
 ## Examples
 
@@ -77,14 +77,14 @@ Before we get started let us make sure we have everything you need:
 **Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
 ### Download a Drupal Directory from Pantheon
-Next we will download the contents of the `sites/default/files` directory into a folder on our local environment in our home folder called `files`
+Next we will download the contents of the `sites/default/files` directory into a folder on our local environment in our `files` home folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
 
 ### Download a WordPress Directory from Pantheon
-Download the contents of the `wp-content/uploads` directory into a folder on our local environment in our home folder called `files`
+Download the contents of the `wp-content/uploads` directory into a folder on our local environment in the `files` home folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
@@ -92,14 +92,14 @@ Download the contents of the `wp-content/uploads` directory into a folder on our
 
 
 ### Download a Drupal File from Pantheon
-Download the `sites/default/settings.php` file into a Drupal installation called _Foo_ on our local environment in a folder called `sites/default/files`
+Download the `sites/default/settings.php` file into a Drupal installation called _Foo_ on our local environment in a  `sites/default/files` folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
     $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
 
 ### Download a WordPress File from Pantheon
-Download the `index.php` file into a WordPress installation called _Foo_ on our local environment it a folder called `wp-content/uploads`.
+Download the `index.php` file into a WordPress installation called _Foo_ on our local environment in a `wp-content/uploads` folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
