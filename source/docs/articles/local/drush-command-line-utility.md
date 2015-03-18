@@ -18,11 +18,11 @@ You can run either Drush 5.x or 6.x on your local installation to interact with 
 
 There are a few known issues:
 
-### Drush 5
+## Drush 5
 
 Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
 
-### Drush 6
+## Drush 6
 
 Many Drush 6 commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
@@ -157,9 +157,9 @@ Use the Drush command sql-dump to quickly export your database. Clear your cache
     drush cc all
     drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
 
-## Transferring Database Contents Using Drush on Pantheon
+## Transferring Database Content Using Drush on Pantheon
 
-You cannot use `drush sql-sync` on Pantheon. Instead, you can first download a copy of the database from a backup and save to local disk, then use `gunzip` and `mysql` to decompress and import the dump.
+You cannot use `drush sql-sync` on Pantheon. Instead, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
 
     gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
