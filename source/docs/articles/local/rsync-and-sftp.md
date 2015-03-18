@@ -12,7 +12,7 @@ category:
  **Note**: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.
 
 
-If you have more than 500 MB of content to be transferred to `sites/default/files`, you won't be able to use the Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
+If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
 
 This method allows for transfer of unlimited data "server-to-server", which is much faster than transferring from your workstation. Additionally, files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
@@ -22,9 +22,9 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as FileZilla, WinSCP, and Cyberduck. Make sure that your SFTP client is set to limit the number of simultaneous connections, and make sure the limit is one connection at a time.
+There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). Make sure that your SFTP client is set to limit the number of simultaneous connections, and make sure the limit is one connection at a time.
 
-Connection information for SFTP is available in each site environment. From your Dashboard, click the **Connection Info** for credentials.
+[Connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and site UUID to connect; copy/pasting this example exactly will not work.
 
@@ -53,12 +53,10 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
     # To Upload/Import
-    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-       ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
     # To Download
-    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-      $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
     # -r: Recurse into subdirectories
@@ -68,10 +66,9 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
 
+**Note:** Regardless of which platform you are using, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress.
 
 ## Examples
-
-**Note**: Long commands that don't fit on one line will be separated by a `\` ( Backslash), which you can delete before you try the command so it fits on one line in your console or terminal.
 
 Before we get started let us make sure we have everything you need:
 
@@ -79,42 +76,49 @@ Before we get started let us make sure we have everything you need:
 **Environment (ENV):** Dev<br />
 **Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
-## Download a Directory from Pantheon
-
-Next we will download the contents of the `sites/default/files` directory into a folder on our local environment in our home folder called `files`
-
-    $: export ENV=dev
-    $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-       $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
-
-## Download a File from Pantheon
-
-Download the sites/default/settings.php file into a Drupal installation called _Foo_ on our local environment in a folder called `sites/default/files`
+### Download a Drupal Directory from Pantheon
+Next we will download the contents of the `sites/default/files` directory into a folder on our local environment in our `files` home folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-       $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
 
-## Upload a Directory to Pantheon
+### Download a WordPress Directory from Pantheon
+Download the contents of the `wp-content/uploads` directory into a folder on our local environment in the `files` home folder.
 
-If you need to upload the files directory from a local Drupal installation called Foo in our home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
+    $: export ENV=dev
+    $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads ~/files
+
+
+### Download a Drupal File from Pantheon
+Download the `sites/default/settings.php` file into a Drupal installation called _Foo_ on our local environment in a  `sites/default/files` folder.
+
+    $: export ENV=dev
+    $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
+
+### Download a WordPress File from Pantheon
+Download the `index.php` file into a WordPress installation called _Foo_ on our local environment in a `wp-content/uploads` folder.
+
+    $: export ENV=dev
+    $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads/index.php ~/Foo/sites/wp-content/uploads
+
+
+### Upload a Directory to Pantheon
+If you need to upload the files directory from a local installation called Foo in our home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
     $: export ENV=test
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-       ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
-## Upload a File to Pantheon
-
+### Upload a File to Pantheon
 Some cases will require you to update a single file on your Pantheon site. Here we will upload the logo.png file into a Pantheon site's theme folder.
 
     $: export ENV=dev
     $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' \
-       ~/Foo/sites/all/themes/foo/logo.png \
-       $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
+    $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 
 ## Known Issues
 
