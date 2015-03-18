@@ -80,6 +80,10 @@ Yes. Local development is a great best practice, and Pantheon supports a wide ar
 
 The plafrorm will use drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and drush aliases.
 
+### How does cron work with WordPress on Pantheon?
+
+WP-Cron, a function of WordPress, runs core specific tasks as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
+
 ### Do you support ffmpeg transcoding?
 
 We don't currently have support for transcoding. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
