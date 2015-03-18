@@ -39,8 +39,8 @@ It's especially ill-advised to use Multisite to set up many distinct/separate si
 
 ## Unsupported Plugins
 
-- WP Super Cache
-- W3 Total Cache
-- batcache
+- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
+- [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/)
+- [batcache](https://wordpress.org/plugins/batcache/)
 
 More to come on this list. Let us know what other plugin issues you see.
