@@ -1,6 +1,6 @@
 ---
-title: Fix broken links that reference IP:PORT instead of domain name
-description: Learn how to update broken links so that the URL references the correct file path and domain name.
+title: Replace Links Referencing IP:PORT in Drupal
+description: Learn how to update links so that the URL references the correct file path and domain name.
 category:
   - debugging
   - drupal

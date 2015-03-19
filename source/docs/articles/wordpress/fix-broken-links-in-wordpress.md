@@ -7,22 +7,30 @@ category:
 
 ---
 
-## Overview
-Whether by accident or by virtue of "web rot", links in your content may eventually stop working. SOmetimes this happens when you or plugins that you use insert links into your code that use an IP address instead of your actual domain name. Since your site will occasionally change IP addresses, this can leave you with brken links that you might not even be aware of. This document helps you address this problem. 
+## Update Links Referencing IP:Port
+Whether by accident or by virtue of "web rot", links in your content may eventually stop working. This happens when links are placed into your site's code that use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
-## There's a plugin for that
-As with most problems that Wordpress site owners face, there is a plugin to help. Actually, there are many. If you go to WordPress.org and search for [Broken Link](https://wordpress.org/plugins/search.php?q=broken+link) you will find more than 700 plugins come up. Of those, [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) is the most popular with over 400,000 WordPress sites currently running it. 
+### There's a Plugin for that
+As with most common problems WordPress site owners face, there's a plugin to help. Actually, there are many. If you go to WordPress.org and search for [Broken Link](https://wordpress.org/plugins/search.php?q=broken+link), you'll find over 700 plugins to evaluate. The [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin is the most popular and is active on more than 400,000 WordPress sites.
 
-## Installation
-Like most WordPress plugins, installation is simple.
+#### Installation
+You can install the plugin from your [WordPress dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/#using-wp-admin-to-manage-plugins-and-themes) by following these steps:
 
-- Click Plugins->Add New
+**Note**: Your site's Connection Mode must be [set to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview) in order to install plugins using the WordPress dashboard.
+
+- Click **Plugins**, then select **Add New**
 - Search for "Broken Link Checker"
-- Click Install Now
-- CLick the link to Activate the plugin
+- Click **Install Now**
+- CLick **Activate**
 
-## Using the plugin
-Once you have the plugin installed, you now have a new option in your "Tools" menu. When you first intall it, you won't see any broken links. Don't get too excited, you won't see any until WordPress runs it's next cron job. In the background, WordPress will run the code to quietly check all your posts, comments, pages, etc. and look for URLS. It will then check each of these. It doesn't do them all at once, it spaces them out. CHeck back in a few minutes, an hour, tomorrow. If you have a lot of content, it will take a while to run. 
+#### Using the plugin
+Once you have the plugin installed and active, you will see a new option within the Tools section of your WordPress dashboard. Notice that there are no reported broken links. Don't get too excited - you won't see any until WordPress runs it's next cron job. In the background, WordPress will quietly check all your posts, comments, pages, etc. and look for broken URLs. Each URL is queued to be checked so that performance is not negatively affected. Check back in a few minutes, an hour, or tomorrow. If you have a lot of content, it will take a while to run.
 
-## Conclusion
-Broken Link Checker won't keep you from putting bad links into your content. You can still do things that are a bad idea, like using the IP address for your site instead of it's domain name. It will however, help you clean things up. The best solution for linking to your own content is still not to use a domain name at all. use `/my-cool-blog-post` instead of `http://example.com/my-cool-blog-post` and you never have to worry about portability. For everything else though, there is Broken Link Checker.
+Broken Link Checker won't keep you from creating bad links, it is simply a reporting tool. You can still do things that are a bad idea, like using the IP address for your site instead of it's domain name. This resource helps you clean things up. The best solution for linking to your own content is to use relative paths. Use `/my-cool-blog-post` instead of `http://example.com/my-cool-blog-post` and you never have to worry about portability. For everything else, there is Broken Link Checker.
+
+## Update Environment URLs on Pantheon
+WordPress stores URLs in various places in the database, considering Pantheon's multi-environment workflow this can cause unexpected behavior. However we've integrated the WP-CLI's search & replace functionality into the workflow to assist in updating these URLs.
+
+![Dashboard DB URL converter](/source/docs/assets/images/convert-urls.png)​
+
+[Pantheon's workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) for WordPress includes an additional feature to update environment URLs automatically! Note that the defaults that are selected when performing a clone operation aren't overridable, as we update the URL to match whatever environment you're cloning to. We do offer the option to convert http to https & vice versa; in the case you have https in one environment and not another.
