@@ -13,7 +13,7 @@ For WordPress see [Can I use WordPress Multisite?](https://pantheon.io/docs/arti
 
 ## One Application per Site
 
-Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported. 
+Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
 
 ## Highly Populated Directories
 
@@ -49,7 +49,7 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 
 All enterprise customers and customers with SSL will have a dedicated incoming IP to route public traffic. The actual IP address location where code executes can change on Pantheon, as application containers are migrated throughout the infrastructure.
 
-As a result, it is not possible to support access to external web services via an ip-address based restriction, for example FirstData. There's no way to predict what IP address your code will be executing "from". Moreover, IP-based security is highly vulnerable to spoofing and other attacks, and should be avoided if possible.
+Typically, it is not possible to support access to external web services via an IP address based restriction, for example LDAP or FirstData. There's no way to predict what IP address your code will be executing "from". We offer the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) for Enterprise customers, as a solution to this problem.
 
 ## Maintenance Mode
 
