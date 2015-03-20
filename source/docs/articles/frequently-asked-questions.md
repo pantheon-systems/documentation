@@ -82,7 +82,7 @@ The plafrorm will use drush to run cron on an hourly basis automatically. More f
 
 ### How does cron work with WordPress on Pantheon?
 
-WP-Cron, a function of WordPress, runs core specific tasks as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
+WordPress runs it's own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
 
 ### Do you support ffmpeg transcoding?
 
