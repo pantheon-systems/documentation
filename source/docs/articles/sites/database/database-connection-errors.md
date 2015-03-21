@@ -27,11 +27,11 @@ To see if this is the case, examine your `includes/bootstrap.inc` file, and be s
 If you don't see that, you'll want to look into recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
-Pantheon currently uses the stock WordPress core. The additional functionality that we require to operate on the platform is achieved by several pre-installed "Must Use" plugins. You can safely overwrite the WordPress core if you like, however it is unnecessary. When new versions are released, we push them into your dev environment, ready for you to commit and test.
+Pantheon currently uses the stock WordPress core. The additional functionality that we require to operate on the platform is achieved by several pre-installed "must use" plugins. You can safely overwrite the WordPress core if you like, however it is unnecessary. When new versions are released, we push them into your Dev environment, ready for you to commit and test.
 
 
 ## Drupal Non-Standard Bootstraps
-Some modules — for instance the **domain.module** — change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
+Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
 
 However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippet in your `settings.php` _before_ the module's include call. An example for using domain's include would be as follows:
 
