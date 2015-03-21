@@ -15,6 +15,10 @@ Yes. Hundreds of live production sites run on Pantheon.
 
 Pantheon supports Drupal 6 and 7, as well as development sandboxes for Drupal 8.
 
+## What versions of WordPress does Pantheon support?
+
+Pantheon supports the most recent release of WordPress via [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured wp-config.php.
+
 ### How much does Pantheon cost?
 
 Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://getpantheon.com/pricing).
@@ -25,7 +29,7 @@ All Pantheon servers are currently located in the United States. We have plans t
 
 ### Can I run non Drupal applications on Pantheon?
 
-This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
+This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
 
 ### Does Pantheon have FTP or shell access?
 
@@ -42,7 +46,7 @@ In order for your site to begin "listening" for your domain, you must first beco
 
 ## Developing Sites
 
-### Can Pantheon run Drupal on highly available server clusters?
+### Can Pantheon run sites on highly available server clusters?
 
 Yes. Pantheon sites run on a highly available clustered infrastructure. The primary upstream provider is Rackspace.
 
@@ -56,17 +60,29 @@ No. Pantheon's architecture is designed to provide high performance and a rich f
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
+## Does Pantheon support WordPress Multisite?
+
+No. While WordPress Mulitsites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
+
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/blog/drush-aliases-available) to use in your local environment.
+Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/blog/drush-aliases-available) to use in your local environment.
+
+## Does Pantheon support WP-CLI?
+
+Yes. [Terminus](https://github.com/pantheon-systems/cli) incorporates WP-CLI commands so that users can perform operations on the Pantheon platform.
 
 ### Does Pantheon support local development?
 
 Yes. Local development is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
-### How does cron work on Pantheon?
+### How does cron work with Drupal on Pantheon?
 
 The plafrorm will use drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and drush aliases.
+
+### How does cron work with WordPress on Pantheon?
+
+WordPress runs it's own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
 
 ### Do you support ffmpeg transcoding?
 
@@ -74,7 +90,7 @@ We don't currently have support for transcoding. We do not have plans to add thi
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
+The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
 
 ## Caching and Performance
 
