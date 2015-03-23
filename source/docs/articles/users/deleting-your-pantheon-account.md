@@ -17,7 +17,7 @@ For more information about exporting a backup of an environment, see [Restoring 
 
 ## 2. Delete Each of Your Sites
 
-Once you have backed-up your data and are ready to delete your sites, see [Deleting a Site](/docs/articles/sites/deleting-a-site). It is a simple one-click operation, but it is **_permanent_** . Don't worry; You will be prompted to confirm before the deletion occurs.
+Once you have backed-up your data and are ready to delete your sites, see [Deleting a Site](/docs/articles/sites/deleting-a-site). It is a simple one-click operation, but it is **_permanent_**. Don't worry; You will be prompted to confirm before the deletion occurs.
 
 ## 3. Delete Your Credit Cards
 
