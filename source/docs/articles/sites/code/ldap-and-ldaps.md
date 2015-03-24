@@ -15,15 +15,20 @@ This is not available on Pantheon. For sites at the Enterprise plan level that n
 
 Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details will be up to the user as not all _instances_ can be supported.
 
-[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many Drupal sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
+[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
 
-PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon Drupal site.  
-
-Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
+PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
 
 **Note**: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
 
-## OpenLDAP Configuration for Client Certificates for LDAPS
+### Drupal
+Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
+
+### WordPress
+WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It will provide you with  all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway/) users.
+
+
+##OpenLDAP Configuration for Client Certificates for LDAPS
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
@@ -66,7 +71,7 @@ For more information about working with settings.php, see [configuring settings.
 
 Users do not have access to make modifications to ldap.conf. Instead, use putenv within settings.php as described above.
 
-#### Is ldap\_sso supported?
+#### Is ldap_sso supported?
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP will need to be PHP-based and not webserver-based.  
 
@@ -80,74 +85,76 @@ The following script has been used to troubleshoot a variety of configuration pr
 
 The entire script:
 
-    <?php
-    $settings = array(
-      'NAME' => array(
-        'hostname' => 'ldaps://HOSTNAME:PORT/',
-        'port' => 'PORT',
-        'bind_rdn' => 'uid=...',
-        'bind_password' => '...',
-        'base_dn' => 'ou=...',
-        'filter' => '(uid=...)',
-        'attributes' => array('cn'),
-      ),
-    );
+````
+&lt;?php
+$settings = array(
+  'NAME' => array(
+    'hostname' => 'ldaps://HOSTNAME:PORT/',
+    'port' => 'PORT',
+    'bind_rdn' => 'uid=...',
+    'bind_password' => '...',
+    'base_dn' => 'ou=...',
+    'filter' => '(uid=...)',
+    'attributes' => array('cn'),
+  ),
+);
 
 
-    echo 'LDAPTLS_CERT=' . getenv('LDAPTLS_CERT') . PHP_EOL;
-    if (getenv('LDAPTLS_CERT')) {
-      echo ' hash: ' . exec('openssl x509 -noout -hash -in ' . getenv('LDAPTLS_CERT')) . PHP_EOL;
-    }
-    echo 'LDAPTLS_CACERT=' . getenv('LDAPTLS_CACERT') . PHP_EOL;
-    if (getenv('LDAPTLS_CACERT')) {
-      echo ' hash: ' . exec('openssl x509 -noout -hash -in ' . getenv('LDAPTLS_CACERT')) . PHP_EOL;
-    }
-    echo 'LDAPTLS_CACERTDIR=' . getenv('LDAPTLS_CACERTDIR') . PHP_EOL;
-    echo 'LDAPTLS_REQCERT=' . getenv('LDAPTLS_REQCERT') . PHP_EOL;
+echo 'LDAPTLS_CERT=' . getenv('LDAPTLS_CERT') . PHP_EOL;
+if (getenv('LDAPTLS_CERT')) {
+  echo ' hash: ' . exec('openssl x509 -noout -hash -in ' . getenv('LDAPTLS_CERT')) . PHP_EOL;
+}
+echo 'LDAPTLS_CACERT=' . getenv('LDAPTLS_CACERT') . PHP_EOL;
+if (getenv('LDAPTLS_CACERT')) {
+  echo ' hash: ' . exec('openssl x509 -noout -hash -in ' . getenv('LDAPTLS_CACERT')) . PHP_EOL;
+}
+echo 'LDAPTLS_CACERTDIR=' . getenv('LDAPTLS_CACERTDIR') . PHP_EOL;
+echo 'LDAPTLS_REQCERT=' . getenv('LDAPTLS_REQCERT') . PHP_EOL;
 
 
-    foreach ($settings as $host => $setting) {
-      echo PHP_EOL;
-      echo "Attempting to connect to {$setting['hostname']} on port {$setting['port']}." . PHP_EOL;
+foreach ($settings as $host => $setting) {
+  echo PHP_EOL;
+  echo "Attempting to connect to {$setting['hostname']} on port {$setting['port']}." . PHP_EOL;
 
 
-      $link_identifier = ldap_connect($setting['hostname'], $setting['port']);
-      if (!$link_identifier) {
-        echo 'Unable to connect - ' . ldap_error($link_identifier) . PHP_EOL;
-        continue;
-      }
+  $link_identifier = ldap_connect($setting['hostname'], $setting['port']);
+  if (!$link_identifier) {
+    echo 'Unable to connect - ' . ldap_error($link_identifier) . PHP_EOL;
+    continue;
+  }
 
 
-      echo 'Connected.' . PHP_EOL;
+  echo 'Connected.' . PHP_EOL;
 
 
-      ldap_set_option($link_identifier, LDAP_OPT_PROTOCOL_VERSION, 3);
-      ldap_set_option($link_identifier, LDAP_OPT_REFERRALS, 0);
+  ldap_set_option($link_identifier, LDAP_OPT_PROTOCOL_VERSION, 3);
+  ldap_set_option($link_identifier, LDAP_OPT_REFERRALS, 0);
 
 
-      echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['bind_password']}." . PHP_EOL;
-      if (!ldap_bind($link_identifier, $setting['bind_rdn'], $setting['bind_password'])) {
-        echo 'Unable to bind - ' . ldap_error($link_identifier) . PHP_EOL;
-        ldap_unbind($link_identifier);
-        continue;
-      }
+  echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['bind_password']}." . PHP_EOL;
+  if (!ldap_bind($link_identifier, $setting['bind_rdn'], $setting['bind_password'])) {
+    echo 'Unable to bind - ' . ldap_error($link_identifier) . PHP_EOL;
+    ldap_unbind($link_identifier);
+    continue;
+  }
 
 
-      echo 'Bind succeeded.' . PHP_EOL;
+  echo 'Bind succeeded.' . PHP_EOL;
 
 
-      echo "Attempting to search with base_dn {$setting['base_dn']}, filter {$setting['filter']} and attributes " . var_export($setting['attributes'], TRUE) . PHP_EOL;
-      $search_result_identifier = ldap_search($link_identifier, $setting['base_dn'], $setting['filter'], $setting['attributes']);
-      if (!$search_result_identifier) {
-        echo 'Unable to search - ' . ldap_error($link_identifier) . PHP_EOL;
-        ldap_unbind($link_identifier);
-        continue;
-      }
+  echo "Attempting to search with base_dn {$setting['base_dn']}, filter {$setting['filter']} and attributes " . var_export($setting['attributes'], TRUE) . PHP_EOL;
+  $search_result_identifier = ldap_search($link_identifier, $setting['base_dn'], $setting['filter'], $setting['attributes']);
+  if (!$search_result_identifier) {
+    echo 'Unable to search - ' . ldap_error($link_identifier) . PHP_EOL;
+    ldap_unbind($link_identifier);
+    continue;
+  }
 
 
-      echo 'Search succeeded.' . PHP_EOL;
+  echo 'Search succeeded.' . PHP_EOL;
 
 
-      $entries = ldap_get_entries($link_identifier, $search_result_identifier);
-      var_dump($entries);
-    }
+  $entries = ldap_get_entries($link_identifier, $search_result_identifier);
+  var_dump($entries);
+}
+````
