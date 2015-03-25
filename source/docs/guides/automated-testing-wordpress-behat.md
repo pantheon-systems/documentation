@@ -142,7 +142,7 @@ git push origin master
 
 ## Write & Run Tests
 
-### Feature: Home Page Works
+### Feature: Home Page Test
 
 Running Behat without any arguments will execute every feature in the features directory. Here, we'll run the test using a tag:
 
