@@ -1,25 +1,25 @@
-While Pantheon provides git repositories for all sites on the platform some teams might need to use an external repository, hosted at a provider like Github or BitBucket as the canonical version of the site's codebase. This guide will show you how to get up and running, using a Github account as an example. The steps should be similar for any provider. 
+While Pantheon provides Git repositories for all sites on the platform, some teams might need to use an external repository hosted at a provider like Github or BitBucket as the canonical version of the site's codebase. This guide will show you how to get up and running using a Github account as the example. The steps should be similar for any provider. 
 
 ## Git Repositories on Pantheon
 
-The codebase for your site is stored in a git repository. This includes our versions Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to make your site go. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
+The codebase for your site is stored in a Git repository. This includes our versions Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to make your site go. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
-This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at Github") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at Github"),
-or one of their forks that our users manage as [custom upstreams](/docs/articles/organizations/running-a-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a git remote. To see which repo your site is tracking, go to your site dashboard’s settings>about site menu. The name of the upstream will be linked to the repository's hosted location. 
+This repository will be a clone of one of the upstreams running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at Github") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at Github"),
+or one of their forks that our users manage as [custom upstreams](/docs/articles/organizations/running-a-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your site Dashboard, click **Settings** and then **About site**. The name of the upstream will be linked to the repository's hosted location. 
 
-These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using github to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with github.
+These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using Github to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with Github.
 
-Whether your site:
+This guide will show you the basics for collaborating with others if your site:
 
-* is only on Pantheon and you’re moving development to Github,
-* exists on Github and you want to deploy to Pantheon,
-* isn’t using Git,
-* doesn’t yet exist,
+* is only on Pantheon and you’re moving development to Github
+* exists on Github and you want to deploy to Pantheon
+* isn’t using Git
+* doesn’t yet exist
 
-this guide will show you the basics for collaborating with others.
+
 
 ## Synchronizing Existing Pantheon Sites to Github
-At your site dashboard’s development environment, copy the git SSH clone URL and clone it to your local machine. Your local copy will now track the Pantheon repository as origin.
+From your Site Dashboard’s Development environment, copy the Git SSH clone URL and clone it to your local machine. Your local copy will now track the Pantheon repository as origin.
 
 ```
 $ git clone <ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git d7-ci>
