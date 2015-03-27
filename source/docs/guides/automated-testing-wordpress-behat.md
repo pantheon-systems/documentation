@@ -5,7 +5,7 @@ category:
 - developing
 - WordPress
 ---
-If you're developing WordPress sites, there's no doubt you've had something working only to later find it broken. Dev, Test, and Live environments help reduce the risk of breaking something in production, but it's tedious to manually test every time you make a change. Fortunately, tools like [Behat](http://docs.behat.org) let you automate quality assurance. Describe a feature once, in [plain English](http://docs.behat.org/en/latest/guides/1.gherkin.html), and every time you run Behat it will script the browser to do things like click, fill out forms, and verify text.
+If you're developing WordPress sites, there's no doubt you've had something working only to later find it broken. Fortunately, [Behat](http://docs.behat.org) lets you automate quality assurance. Describe a feature once, in [plain English](http://docs.behat.org/en/latest/guides/1.gherkin.html), and every time you run Behat it will script the browser to do things like click, fill out forms, and verify text.
 
 In this guide you'll learn how to setup Behat on your local machine and run automated tests against a remote WordPress site. Before installing, review the following test, which is called a feature:
 
@@ -201,7 +201,7 @@ Feature: As a visitor I should be able to load the home page
 0m1.482s
 ```
 
-The process of writing a test before the feature has been implemented and then incorporating the feature so the test will pass is the core of **Behavior Driven Development (BDD).**
+The process of writing a test before the feature has been implemented and then incorporating the feature so the test will pass is the core of [Behavior Driven Development (BDD)](http://docs.behat.org/en/v2.5/#more-about-behavior-driven-development).
 
 
 ### Add @javascript
@@ -271,6 +271,7 @@ You can use existing step definitions to write more features. Going forward, you
 * Add Behat tests to continuous integration/continuous deployment pipeline.
 * Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly.
 * The Behat [DrupalExtension](https://github.com/jhedstrom/drupalextension) is actively maintained and could serve as inspiration for a WordPress Behat Extension.
+* Add a SaaS service (e.g. BrowserStack, SauceLabs) to run Selenium in the cloud to test browsers you don't run natively.
 
 Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature, you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
 
