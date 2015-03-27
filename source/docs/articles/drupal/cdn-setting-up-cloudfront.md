@@ -1,5 +1,5 @@
 ---
-title: CDN Setting up CloudFront on Pantheon
+title: CDN Setting up CloudFront with Drupal
 description: Get started using the Amazon CloudFront CDN.
 category:
     - drupal
