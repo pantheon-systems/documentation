@@ -5,7 +5,7 @@ While Pantheon provides Git repositories for all sites on the platform, some tea
 The codebase for your site is stored in a Git repository. This includes our versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
 This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at Github") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at Github"),
-or one of their forks that our users manage as [custom upstreams](/docs/articles/organizations/running-a-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your site dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location. 
+or one of their forks that our users manage as [custom upstreams](/docs/articles/organizations/running-a-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location. 
 
 These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using Github to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with Github.
 
@@ -218,7 +218,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 
 The Github repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
-Before I continue having to remember which remote, Github or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon, and verify.
+Before I continue having to remember which remote, Github or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon and verify.
 ```
 $ git remote rename origin pantheon
 $ git remote -v 
@@ -304,7 +304,7 @@ $ git push pantheom master
 
 ## Optional Tools to Optimize Workflows
 
-Once we have the basic setup, there are other options to further optimize workflows.
+Once we have the basic setup, there are other options to further optimize workflows:
 
 * A Continuous Integration Server like Jenkins, TravisCI, Bamboo, or CircleCI
 * A suite of automated acceptance tests using Behat or PHPUnit
@@ -314,6 +314,6 @@ These tools will allow your team to fully implement continuous delivery with aut
 
 ## Additional Resources
 
-(Starting with Git)[https://pantheon.io/docs/articles/local/starting-with-git/]
+[Starting with Git](https://pantheon.io/docs/articles/local/starting-with-git/)
 
-(Git FAQs)[https://pantheon.io/docs/articles/local/git-faq/]
+[Git FAQs](https://pantheon.io/docs/articles/local/git-faq/)
