@@ -271,7 +271,7 @@ You can use existing step definitions to write more features. Going forward, you
 * Add Behat tests to continuous integration/continuous deployment pipeline.
 * Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly.
 * The Behat [DrupalExtension](https://github.com/jhedstrom/drupalextension) is actively maintained and could serve as inspiration for a WordPress Behat Extension.
-* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/automate/php) and [Sauce Labs](http://sauceio.com/index.php/2012/01/adding-sauce-to-behat/) to test with browsers you don't run natively. 
+* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/automate/php) and [Sauce Labs](http://sauceio.com/index.php/2012/01/adding-sauce-to-behat/) to test browsers you don't run natively. 
 
 Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature, you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
 
