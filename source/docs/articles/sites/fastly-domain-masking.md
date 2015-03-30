@@ -50,7 +50,7 @@ Click the "+ New" button and add the Pantheon sub-domain for the secondary site'
 Select the gear icon next to the primary content host, and select "Conditions" and then "+ New". In the resulting pop-up form, enter the following:
 
 * Name: Main Content
-* Apply If...: req.url !~ "^/blog/"
+* Apply If...: req.url !~ "^/blog"
 * Priority: 2
 
 This tells Fastly that any URL that does not include "/blog/" is sent to the main content server.
@@ -58,10 +58,10 @@ This tells Fastly that any URL that does not include "/blog/" is sent to the mai
 Select the gear icon next to the secondary content host, and select "Conditions" and then "+ New". In the resulting pop-up form, enter the following:
 
 * Name: Blog Content
-* Apply If...: req.url ~ "^/blog/"
+* Apply If...: req.url ~ "^/blog"
 * Priority: 2
 
-This tells Fastly that any URL that does include "/blog/" is sent to the main content server.
+This tells Fastly that any URL that does include "/blog" is sent to the main content server.
 
 5. The final step is to create custom headers for Fastly's redirected requests.
 
