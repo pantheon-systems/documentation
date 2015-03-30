@@ -216,7 +216,7 @@ java -jar selenium-server-standalone-2.45.0.jar
 
 If you've upgraded your browser and Selenium tests stop working, try downloading a newer version of Selenium Server. Drivers like Goutte are faster than Selenium, so don't tag your test with @javascript unless it's necessary. More drivers are out there, so feel free to experiment!
 
-**Note**: You'll have two terminal windows open, one to run Selenium server and one to run Behat.
+**Note**: You'll have two terminal windows open: one to run Selenium server and one to run Behat.
 
 ```
 @javascript
@@ -277,7 +277,7 @@ Adding automated testing into your development workflow will help you deliver hi
 
 Start small, one test at a time. Progress, not perfection.
 
-**Happy automated testing!**
+Happy automated testing!
 
 ## See Also
 
