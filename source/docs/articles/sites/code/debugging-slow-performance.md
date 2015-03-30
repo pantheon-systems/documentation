@@ -10,13 +10,13 @@ category:
 
 ## Overview
 
-When your site is fast, everybody wins. When it’s slow, nobody's happy... so how can you fix it? In this article, we’ll discuss the most common causes for performance problems, demonstrate how to diagnose bottlenecks, and provide actionable solutions for developers.
+When your site is fast, everybody wins. When it’s slow, nobody's happy...so how can you fix it? In this article, we’ll discuss the most common causes for performance problems, demonstrate how to diagnose bottlenecks, and provide actionable solutions for developers.
 
 ## Every PHP Error Slows Execution
 
 An often ignored cause of bad performance is [PHP errors within site code](/docs/articles/sites/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
-Here's a graphic example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress, or any PHP based project.
+Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP based project.
 
 ​ ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200873)  
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
@@ -78,7 +78,7 @@ Turning off error reporting suppresses the symptom, not the problem, and **PHP e
 PHP errors are not always obvious at first glance, so don’t ignore error messages in your development environment. Do what it takes to fix them, including the notices.  
 
 ## Drupal Note Regarding Watchdog
-Compounding the issue, writing those errors to watchdog takes time and is a blocking operation - other queries can’t happen until the write is done. The bigger the table, the longer the write will take, so if you have a lot of errors, well, you get the picture.  
+Compounding the issue, writing those errors to watchdog takes time and is a blocking operation - other queries can’t happen until the write is done. The bigger the table, the longer the write will take.  
 
 Don’t shoot the messenger - disabling db\_log will not fix bad code, and ignoring the problem is not going to make it go away.  
 
@@ -108,10 +108,10 @@ The moral? Query count matters, so keep it low through caching and avoiding quer
 
 ## Not Caching
 
-Non-optimized caching also is a huge problem. If you’re not caching anonymous pages, well, anonymous performance will be bad - especially as our Varnish caching respects your headers - which won’t be set if anonymous page caching is turned off.  
+Non-optimized caching also is a huge problem. If you’re not caching anonymous pages, anonymous performance will be bad, especially as our Varnish caching respects your headers, which won’t be set if anonymous page caching is turned off.  
 
 
-If your cache lifetime is set to something that doesn’t make sense for your traffic, like if only get one hit per hour yet only have a 5 minute cache? That’s not enough to help.  
+If your cache lifetime is set to something that doesn’t make sense for your traffic, like if it only gets one hit per hour yet it's set to have a 5 minute cache. That’s not enough to help.  
 
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings/) for more details.  
@@ -126,7 +126,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/200898)  
 
 
-Also note the impact of watchdog INSERTs - this is why you should fix your PHP errors.  
+Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.  
 
 
 One of the services Pantheon offers is [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
@@ -150,7 +150,7 @@ There are a large number of caches involved in every single request, including:
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 
-## Too much traffic
+## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.  
 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.  
