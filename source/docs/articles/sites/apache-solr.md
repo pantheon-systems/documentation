@@ -17,40 +17,40 @@ One of the modules already included in every Pantheon Drupal site is [pantheon\_
 
 Currently, all plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-
-<tbody>
-		<tr>
-			<th>Plan</th>
-			<th>Is Solr Available?</th>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>Sandbox</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Personal</td>
-			<td>No</td>
-		</tr>
-		<tr>
-			<td>Professional</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Business</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Enterprise</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Pantheon One</td>
-			<td>Yes</td>
-		</tr>
+<table>
+	<tbody>
+			<tr>
+				<th>Plan</th>
+				<th>Is Solr Available?</th>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>Sandbox</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Personal</td>
+				<td>No</td>
+			</tr>
+			<tr>
+				<td>Professional</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Business</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Enterprise</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Pantheon One</td>
+				<td>Yes</td>
+			</tr>
 	</tbody>
-
+</table>
 
 ## Enabling Solr for a Pantheon Site
 
