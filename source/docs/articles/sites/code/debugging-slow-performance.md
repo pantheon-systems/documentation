@@ -132,7 +132,7 @@ Also note the impact of watchdog INSERTs - this is why you should fix your PHP e
 One of the services Pantheon offers is [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
 
 ### WordPress Caching Note
-There is no built-in caching in WordPress. Pantheon puts Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up your site and may well slow it down.
+There is no built-in caching in WordPress. Pantheon puts Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps our edge cache communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up your site and may well slow it down.
 
 
 
@@ -155,4 +155,4 @@ Of course, too much site traffic can be a problem if you just don't have enough 
 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.  
 
-If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/docs/articles/sites/settings/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Enterprise](https://www.getpantheon.com/enterprise) is an option - and the sky’s the limit.
+If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/docs/articles/sites/settings/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Enterprise](https://pantheon.io/pricing#enterprise) is an option - and the sky’s the limit.
