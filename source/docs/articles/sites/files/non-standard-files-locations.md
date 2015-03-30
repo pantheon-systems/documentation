@@ -19,7 +19,7 @@ If you are importing a site which has files in another location (e.g. "/files") 
 ```
 **WordPress Sites**
 ```
-    $> ln -s ./sites/default/uploads ./files
+    $> ln -s ./wp-content/uploads ./files
     $> git add files
     $> git commit files -m "adding legacy files location symlink"
     $> git push origin master
