@@ -11,7 +11,7 @@ Sometimes there are problems in the cloud and one of Pantheon's services is unab
 
 Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as `services`.  
 
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
@@ -135,7 +135,7 @@ If you are seeing timeouts in unexpected places, debugging with New Relic or loo
 
 In the best of all possible worlds, there are no slow queries, all external calls are fast, and the application is a finely-tuned highly-optimized cheetah of the web. In reality, sometimes we just need to get around a pesky timeout in order to get the job done.
 
-Drush is a great workaround for most administrative bottlenecks. Because it runs via the PHP command-line, there are no time limits. Enabling/disabling modules, running update.php, clearing caches; these are all supported by Drush.
+Terminus is a great workaround for many administrative bottlenecks. Because it runs via the PHP command-line, there are no time limits. Enabling/disabling modules, running update.php for Drupal, clearing caches, are all actions supported by Terminus. 
 
 ## Handle More Traffic
 
