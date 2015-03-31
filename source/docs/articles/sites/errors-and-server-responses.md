@@ -13,8 +13,6 @@ Given the low-level nature of these errors, these messages cannot be customized 
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by code on a a Drupal powered site without an actual server error. Be aware if you are implementing a site using a module such as services.  
-
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
 ### Pantheon 401 Unauthorized
@@ -52,7 +50,7 @@ Pantheon also prevents public access via the webserver to private files, .htacce
 ### Pantheon - 503 Target in maintenance
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184852)
 
-"The web site you were looking for is currently undergoing maintenance." This is  **not**  the CMS maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
+"The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
 ### Pantheon - 503 Target not responding
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184854)
@@ -87,9 +85,9 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 
 There are many things which could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
-## Administrative Pages
+## Administrative Pages in Drupal
 
-It is unfortunately possible for some normal administrative operations to outlast the request timeout. In Drupal, submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
+It is unfortunately possible for some normal administrative operations to outlast the request timeout in Drupal. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
 
 If you are seeing request timeouts for administrative operations, you may be able to address this by optimizing your application, or by using a work-around (see below).
 
@@ -101,9 +99,9 @@ Individually slow queries should be refactored if possible. However, often cache
 
 ## External Web Service Calls
 
-It is not uncommon for API or web-service integration modules to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
 
-Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why modules/plugins, and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
+Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
