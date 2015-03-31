@@ -116,7 +116,9 @@ This is optional, but recommended. Export a tar.gz or .zip file of your files di
 
 ## Upload Files to Pantheon
 
-The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.  
+The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
+
+**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
