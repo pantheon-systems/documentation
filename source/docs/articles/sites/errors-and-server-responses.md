@@ -13,7 +13,7 @@ Given the low-level nature of these errors, these messages cannot be customized 
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by code on a a Drupal powered site without an actual server error. Be aware if you are implementing a site using a module such as services.  
 
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
@@ -89,7 +89,7 @@ There are many things which could cause your site to exceed the request timeout 
 
 ## Administrative Pages
 
-It is unfortunately possible for some normal administrative operations to outlast the request timeout. Submitting the modules page in Drupal, manually running cron, running update.php, or flushing caches can be extremely slow operations on sites with large numbers of modules and/or a lot of data and activity.
+It is unfortunately possible for some normal administrative operations to outlast the request timeout. In Drupal, submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
 
 If you are seeing request timeouts for administrative operations, you may be able to address this by optimizing your application, or by using a work-around (see below).
 
@@ -101,9 +101,9 @@ Individually slow queries should be refactored if possible. However, often cache
 
 ## External Web Service Calls
 
-It is not uncommon for API or web-service integration modules to make `curl()` or `drupal_http_request()` calls, which will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
+It is not uncommon for API or web-service integration modules to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
 
-Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why modules and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
+Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why modules/plugins, and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
@@ -129,7 +129,7 @@ If the all the errors have been resolved and the views, batches and tasks have b
 
 ### Unexpected Timeouts
 
-There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page-load, to the advanced\_help spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
+There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page-load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
 If you are seeing timeouts in unexpected places, debugging with New Relic or looking at your php slow logs can be informative.
 
