@@ -20,34 +20,34 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
 <table>
 	<tbody>
 			<tr>
-				<th>Plan</th>
-				<th>Is Solr Available?</th>
+        <th align="left" style="width: 130px">Plan</th>
+        <th align="left" style="width: 130px">Is Solr Available?</th>
 			</tr>
 			<tr>
 			</tr>
 			<tr>
-				<td>Sandbox</td>
-				<td>Yes</td>
+        <td align="left">Sandbox</td>
+        <td align="left">Yes</td>
 			</tr>
 			<tr>
-				<td>Personal</td>
-				<td>No</td>
+        <td align="left">Personal</td>
+        <td align="left">No</td>
 			</tr>
 			<tr>
-				<td>Professional</td>
-				<td>Yes</td>
+        <td align="left">Professional</td>
+        <td align="left">Yes</td>
 			</tr>
 			<tr>
-				<td>Business</td>
-				<td>Yes</td>
+        <td align="left">Business</td>
+        <td align="left">Yes</td>
 			</tr>
 			<tr>
-				<td>Enterprise</td>
-				<td>Yes</td>
+        <td align="left">Enterprise</td>
+        <td align="left">Yes</td>
 			</tr>
 			<tr>
-				<td>Pantheon One</td>
-				<td>Yes</td>
+        <td align="left">Pantheon One</td>
+        <td align="left">Yes</td>
 			</tr>
 	</tbody>
 </table>
