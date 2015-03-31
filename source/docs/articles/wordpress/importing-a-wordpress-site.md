@@ -22,6 +22,9 @@ There are two ways to import. Direct uploads from your desktop can be 100MB max;
 
 Popular plugins like [Duplicator](http://wordpress.org/plugins/duplicator/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) will also do this for you. You should be able to simply upload the archive file they produce and Pantheon will do the rest. For large imports, pasting in a web-readable url (e.g. dropbox secret link) will be much faster than manually uploading. Make sure a link goes directly to the file, not a landing page.
 
+**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
+
+
 Of course you can make an import archive by hand. You simply dump your existing database into a file ending with “.sql”, and make an archive file (zip or tar.gz) that contains that dump along with all your WordPress code.
 
 ## Add and Name a Site
