@@ -9,7 +9,7 @@ category:
 ## Overview
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 
-**Note: For detailed help generating SSH keys, see [the HOWTO on key generation](/docs/articles/users/generating-ssh-keys#generate-ssh-keys).**
+**Note**: For detailed help generating SSH keys, see [Generate SSH Keys](/docs/articles/users/generating-ssh-keys).
 
 
 ### Copy your public key
@@ -20,27 +20,21 @@ You should load the public portion of your key. Typically this is the file endin
 In the above example the key type is "ssh-rsa", though you may also generate ssh-dsa or ssh-dss keys depending on your local settings. The long random string is the key, and the `user@machine` at the end is the comment, which is helpful in identifying where a key came from and who it is for.
 
 ### Add your key
-To add your key, navigate to **Your Sites and Account** and use the "Add Key" button.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87730)
+Sign on to Pantheon and visit the Account page. Click on **SSH Keys** and paste the copied key into the box. Click **Add Key** to save.
 
-You need to copy the key text completely, and paste it into the form in the modal window. See below. 
+![Adding SSH Keys](/source/docs/assets/images/add-ssh-key-dashboard.png)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87731)
 
 Once the key has been successfully added it will appear under the list of available keys on your Pantheon Account page.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87835)
+![Show SSH Keys](/source/docs/assets/images/remove-ssh-key.png)
 
 With that, you're set to make a git clone of your site codebase!
 
 ### Delete a key
-To delete a your key, navigate to **Your Sites and Account** and click the "Delete Key" link. Don't worry a modal will appear to asking you if you are sure you want to delete that key.
+To delete a your key, navigate to the Account page and click on **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87732)
-
-If you are sure that you want to delete a key, then you can go ahead and click on the button in the modal in order to remove it from your account.
-
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/87733)
+![Delete SSH Key](/source/docs/assets/images/remove-ssh-key.png)
 
 If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP using your account password to authenticate. However, there will be no git access as you need a valid key uploaded to your account.

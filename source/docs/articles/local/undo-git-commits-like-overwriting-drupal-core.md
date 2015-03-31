@@ -1,20 +1,22 @@
 ---
-title: Undo Git Commits 
+title: Undo Git Commits
 description: Instructions on how to undo a Git commit.
 category:
   - drupal
 ---
 
 ## Overview
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon.   **NOTE:** DO NOT UPDATE CORE VIA 'DRUSH UP.'  But presumably you are here because that has already happened.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon.
+
+**Note**: DO NOT UPDATE CORE VIA `drush up`.  But presumably you are here because that has already happened.
 
 To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform. If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
 
 ## Getting Started
 
-Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite core re-write the Git log the changes are permanent.
+Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
 
-In order to get back to a version of Pressflow, you can run a Git log on a core file. In this case we choose the `/includes/bootstrap.inc`. file as this has some references to "PRESSFLOW" when everything is working correctly
+In order to get back to a version of Pressflow, you can run a Git log on a core file. In this case we choose the `/includes/bootstrap.inc`. file as this has some references to Pressflow when everything is working correctly.
 
     $ git log bootstrap.inc
     commit 9a11sd8f67af9679a6fsafasdf802834207489328

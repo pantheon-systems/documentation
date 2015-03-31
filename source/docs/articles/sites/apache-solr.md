@@ -17,45 +17,45 @@ One of the modules already included in every Pantheon Drupal site is [pantheon\_
 
 Currently, all plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-
-<tbody>
-		<tr>
-			<th>Plan</th>
-			<th>Is Solr Available?</th>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>Sandbox</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Personal</td>
-			<td>No</td>
-		</tr>
-		<tr>
-			<td>Professional</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Business</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Enterprise</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Pantheon One</td>
-			<td>Yes</td>
-		</tr>
+<table>
+	<tbody>
+			<tr>
+        <th align="left" style="width: 130px">Plan</th>
+        <th align="left" style="width: 130px">Is Solr Available?</th>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+        <td align="left">Sandbox</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Personal</td>
+        <td align="left">No</td>
+			</tr>
+			<tr>
+        <td align="left">Professional</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Business</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Enterprise</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Pantheon One</td>
+        <td align="left">Yes</td>
+			</tr>
 	</tbody>
-
+</table>
 
 ## Enabling Solr for a Pantheon Site
 
 1. Add the IndexServer from the Dashboard (Settings -> Add-Ons -> Solr)
-2. Make sure you have the [latest version of Drupal](/docs/articles/sites/code/applying-upstream-updates#core-updates)
+2. Make sure you have the [latest version of Drupal](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update)
 3. Add either the Apache Solr Search OR Search API Solr search module to your code base
 4. Enable the Pantheon Apache Solr module
 5. Post the schema.xml using the Pantheon Apache Solr module
@@ -107,7 +107,7 @@ Choose the appropriate schema for the module that you are using (apachesolr or s
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/192443)  
 
 ​  
-**You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.**
+**Note**: You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.
 
 ### Enable and Configure Your Solr Module
 
@@ -228,7 +228,7 @@ It needs to be done for dev, test and live individually. You can do this at `adm
 
 #### Re-index Content
 
-You can do this at _admin/config/search/apachesolr_. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
+You can do this at `admin/config/search/apachesolr`. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
 
 #### Check Index and Batch Sizes
 

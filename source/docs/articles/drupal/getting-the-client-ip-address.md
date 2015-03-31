@@ -22,15 +22,6 @@ Alternatively, if you want to restrict content from displaying in certain geogra
 
 We offer various methods for you to interact with your Pantheon site, so it is important to understand which traffic entry methods will return a valid client IP address, as it is passed to the Pantheon hosted site.
 
-## Known Limitations
-
-Pantheon sites using SSL for HTTPS traffic will not be able to reliably determine in PHP the client's IP address using `$_SYSTEM["REMOTE_ADDR"]` or call Drupal's `ip_address` function.
-
-The "real" client IP is lost at the primary load balancer because it’s operating in layer4/tcp-only mode. It passes the encrypted connection opaquely to the back-end SSL server binding (nginx), which performs SSL termination. Unfortunately at that point, the client IP represents the loadbalancer.  
-
-
-IP-based security schemes are not recommended. However, services such as geolocation are highly valuable, so as a workaround, [JavaScript can be used to determine both the client's location and IP](/docs/articles/sites/code/geolocation-and-ip-detection-with-ssl-using-javascript), even over SSL.
-
 ## Troubleshooting
 
 #### Spam and Failed Logins

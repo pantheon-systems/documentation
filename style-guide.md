@@ -1,6 +1,6 @@
 **DOCUMENTATION STYLE GUIDE**
 
-# About This Guide
+#About This Guide
 
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
@@ -9,12 +9,11 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 ## Writing Style
 
 ### Voice and Tone
+Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovative". Pantheon is young, but mature for its age. Smart, but not disconnected from culture. Focused, but agile. Fast, but extremely intricate.
 
-##### Common Web Writing Guidelines
+#### Common Web Writing Guidelines
 
 * Be consistent.  Use the same terminology, voice, and tone throughout all documentation.
-
-* Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovative". Pantheon is young, but mature for its age. Smart, but not disconnected from culture. Focused, but agile. Fast, but extremely intricate.
 
 * Write clearly, and use language the audience understands. Avoid jargon whenever possible.
 
@@ -22,11 +21,11 @@ For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.co
 
 * Write in a visually appealing style.
 
-    * Use numbered lists for chronological steps.
+* Use numbered lists for chronological steps.
 
-    * Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
+* Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
 
-### General Guidelines for All Content
+## General Guidelines for All Content
 
 * Avoid gender-specific language. Use the imperative. This form of a verb lets you use the second person (you, your) rather than the third person (him, her, she, his).
 
@@ -69,11 +68,11 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 ### Code Snippets
 
-Any bits of code should be wrapped in backticks. `` Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
+Any bits of code should be wrapped in backticks.  Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
 
 ### Links
 
-Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yeild [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
+Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
 
 
 ### Anchor Tags
@@ -84,6 +83,7 @@ Use headings in a logical manner. The system we use should generate these from t
 
 Use headings in a logical manner. The site will automatically generate anchor links for H2 and H3 tags, and place them in a Table of Contents in the right column. Generated links will be "pretty".
 
+#A-Z Usage  
 
 ## Accessibility
 
@@ -105,13 +105,14 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
   **Example**: Content Management System (CMS)
 
+
 ## Capitalization
 
-See below for when to use title or sentence case. Never use all caps; use bold if you need to make content prominent.
+See below for when to use title or sentence case. Never use all caps. If you need to make content prominent, use bold rather than all caps or italics.
 
-**Title Case**
+###Title Case
 
-Use title case for all headers, buttons, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
+Use title case for all headers, buttons, tab names, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
 
 Title case means that you capitalize every word except:
 
@@ -119,21 +120,22 @@ Title case means that you capitalize every word except:
 
 * Coordinating conjunctions (and, or)
 
-
 **Examples**:
 
 Domains For the Development Environment (header)
 
-Clear Caches (button)
+Select **Make Owner**.
 
-Click the **Clear Caches** button.
+Click **Clear Caches**.
 
-**Sentence Case**
+Select the **Settings** tab.
+
+###Sentence Case
 
 Use sentence case for body content and short phrases, even when the content is a link. Sentence case means you only capitalize the first letter of the sentence.
 
 **Example:**
-We run our status checks on your site automatically once an hour. If you'd like fresher data, run the checks now.
+We run our status checks on your site automatically once an hour. If you'd like fresher data, [run the checks now](www.getpantheon.com).  
 
 **Code Snippets**
 
@@ -145,52 +147,69 @@ I use Git on my local machine.
 
 Run "`git add`".
 
-## Dates
+##Contrib Directory
 
-Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
+All Drupal sites used for generating documentation must install contributed modules to sites/all/modules/contrib. 
+All references must be to: 
+```
+sites/all/modules/contrib
+```
 
-In a form or when space is limited, use slashes in the format of month/day/year without any leading zeros: 1/10/2014
+##Cross-Referencing Documents
 
-## Cross-Referencing Documents
+When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
-When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations). **Example**:
-
-For help with SSH keys, see Generating SSH Keys.
+For help with SSH keys, see [Generating SSH Keys](https://www.getpantheon.com/docs/articles/users/generating-ssh-keys/).
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
 
-For detailed instructions, see Article Title.
+For detailed instructions, see [Article Title](www.getpantheon.com).
 
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
 
-For more information, see Article Title.
+For more information, see [Article Title](www.getpantheon.com).
+
+## Dates
+
+Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
+
+In a form or when space is limited, use slashes in the format of month/day/year without any leading zeros: 1/10/2014
+
 
 ## Elements of Style
 
-See [The Elements of Style](http://www.bartleby.com/141/index.html)  by William Strunk and E.B. White for principles of composition, word usage, and writing style guidelines.
+See [The Elements of Style](http://www.bartleby.com/141/index.html) by William Strunk and E.B. White for principles of composition, word usage, and writing style guidelines.
 
 ## Embedded Guidance (Walkthroughs)
 Walkthrough Titles - Use the associated procedure title
 Step title:
 Step description:
 
+Title: Task focused, very concise.  
+**Example**: Add an SSH Key.
 
-Title - Task focused, very concise. **Example**: Add an SSH Key.
+Description: Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment.   **Example**: Learn how to add and manage SSH keys.
 
-Description - Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment. **Example**: Learn how to add and manage SSH keys.
 
-## FAQ’s
+## FAQs
 
-Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list.
+Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. 
+When it's an FAQ only doc, include categories as h2s and display the questions as h3s. If FAQs are included as part of a larger document, display them as h4s. 
 
-**Example**:
+**Example of a simple FAQ**:
 
-How do I change my Pantheon password?
+**Does Pantheon Support WordPress?**
 
-1. Select **Sites & Accounts **from the user account drop-down menu.
+Yes. We have complete and total support for WordPress sites and developers.
+
+**Example of an instructional FAQ**:
+
+**How do I change my Pantheon password?**
+
+1. Select **Sites & Accounts** from the user account drop-down menu.
 
 2. Click the **Account** tab.
 
@@ -200,7 +219,23 @@ How do I change my Pantheon password?
 
 ## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary")
 
-The glossary includes an A-Z usage list of common terms used in Pantheon documentation.
+The [glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0) includes an A-Z usage list of common terms used in Pantheon documentation.
+
+### File Paths
+
+File paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
+```
+/source/docs/assets/images/
+```
+
+If it's a path within the Dashboard, separate tab/page names with an angle bracket ">".  
+
+**Example**: Settings > Add Ons > Add  
+  
+## Filenames
+In general, filenames should be as short as possible. Add a hyphen (-) between each word.   
+**Example:** writing-a-guide.md
+
 
 ## Grammar
 
@@ -208,52 +243,64 @@ See the *Chicago Manual of Style* for all grammar-related questions.
 
 ## Headings and Subheadings
 
-When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing").
+When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown in H2 tags, and subheadings should be shown in H3 tags.
 
-**Examples**:
-
-Create a Pantheon Site
-
-Choose Your Framework
-
-Visit the Dev Environment
-
-When using headings or subheadings to group a large amount of text or instructions, number each header and include ending punctuation (typically a period).
+When writing an outline for a guide or article, decide what the main topics are. Those will be your headings (tagged as H2). If there are subtopics that belong under a category, display those as subheaders (tagged as H3).
 
 **Example**:
 
-**Merge Core Releases.**
+## Configuration
+The configuration topic may have a 1-3 paragraphs on its own, as well as several subtopics. 
 
-Upstream maintainers update Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so: cd to your local, current copy of the remote upstream repo, checkout an update branch, and pull down the latest changes from our core upstream repository with:
+###Stage and Commit Settings.php
+This is a subtopic of Configuration. Specific information related to settings.php will be shown here.
 
-`git pull git://github.com/pantheon-systems/wordpress.git master`
 
-or
 
-`git pull git://github.com/pantheon-systems/drops-6.git master`
 
-## Listing Prerequisites (Before You Begin)
-
-If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as a header.
-
-**Example**:
-
-## Before You Begin
-
-You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
-
-##
-Identifying Instances of Concepts
+## Identifying Instances of Concepts
 
 Within videos and tutorials, it may be helpful to call out a concept to provide some contextual information. Do this by inserting a hyperlink.
 
 In technical documentation or the UI, this can be a rollover glossary definition with a link to a helpdesk article, if needed.
 
-## Procedures
+## Listing Prerequisites (Before You Begin)
 
-See below for a template about writing procedures. This area can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
+If there are tasks a user needs to have completed before continuing on with the current task, i.e. installing a module, downloading a Drupal update, add a "Before You Begin" section at the top of the document, following the overview/intro section or table of contents. Use the title “Before You Begin” and format as H2.
+
+**Example**:
+
+####Before You Begin
+
+You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
+
+##Pantheon_Environment 
+TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
 
+## Notes
+
+Notes are helpful to call out information that the user needs to be aware of while completing a task.  
+
+When adding a note to a document, use sentence case and bold only the word, not the colon. See the example below:
+
+**Note**: You will need to download and install Git before you can begin.
+
+If there is critical or detrimental information a user must read before starting, bold the entire note:
+
+**Note: Do not attempt to delete files until...**
+
+## Numbers
+
+For all numbers under 10, spell out the number. For 10 and above, use the numeral.
+
+**Correct**: Joe has nine sites and needs to add 12 more.
+
+**Incorrect**: Joe has 9 sites and needs to add twelve more.
+
+##Procedures
+
+When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
 
 When writing procedures, steps should be written in parallel style, as sentences with imperative verbs and not gerunds (ending in "ing").
 
@@ -264,22 +311,6 @@ Create Your Site.
 Choose Your Framework.
 
 Visit the Dev Environment.
-
-## Notes
-
-Notes are helpful to call out information that the user needs to be aware of while completing a task.  
-
-When adding a note to a document, use sentence case and bold only the word, not the colon. See the example below:
-
-**Note**: You will need to download and install Git before you can begin.
-
-## Numbers
-
-For all numbers under 10, spell out the number. For 10 and above, use the numeral.
-
-Correct: Joe has nine sites and needs to add 12 more.
-
-Incorrect: Joe has 9 sites and needs to add twelve more.
 
 ## Punctuation
 
@@ -345,17 +376,22 @@ Best Practices:
 
 * Use for uncommon or difficult terms and concepts.
 
-## Table of Contents
+##Referring to Tabs in the Platform
 
+There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
 
-For documents that have a large amount of content (more than two pages), include a TOC listing the topics/sections. This allows the reader to jump to the section they are interested in reading without having to do a large amount of reading, scanning, or scrolling.
+1. Instructing the user to click on a tab as part of a task:   
+In Settings, click the **Add Ons** tab.  
+To update the credit card, click the **Billing** tab.
 
-All H2 and H3 tags, created with `##` and `###`, will automatically be included in a table of contents on the right side of your articles.
+2. Referring to a page/tab name, without providing instructions:  
+You can find the options available in the Add Ons tab.  
+You can change the credit card in the Billing tab.
 
 
 ## Titles
 
-For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing"). Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for.
+For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing") and display it as H1. Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines. 
 
 **Examples**:
 
@@ -382,7 +418,6 @@ See below for visual examples of the terms to use when referring to specific pag
 ### Account Tab
 
 ### Site Dashboard
-
 
 Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
