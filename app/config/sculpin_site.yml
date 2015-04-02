@@ -4,3 +4,36 @@
 title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
+
+
+#######################################################################################################
+# The authors. Include your info here, under the "authors" key, using the following template:
+#
+#  handle:
+#      name: Your Name
+#      url: http://yourURL.com
+#      avatar: http://url.to.a.valid/avatar.jpeg
+#      twitter: http://twitter.com/BrianMacKinney
+#      googleplus: https://plus.google.com/104712339592008834987
+#      bio: this is a short bio, it should not be so long, just a quick info that defines you.
+#
+# Please provide at least "name" and "bio" . The googleplus url is useful to show your author info
+# on Google search results.
+#######################################################################################################
+
+authors:
+  bmackinney:
+      name: Brian MacKinney
+      url: http://brianmackinney.com
+      avatar: http://www.gravatar.com/avatar/d942a7d4b38d10e4f4ebab9cb148d9f9.png
+      twitter: http://twitter.com/BrianMacKinney
+      github: https://github.com/bmackinney
+      bio: Instructional Designer, user of Drupal, WordPress, and Pantheon. Baseball, Surfing, and camping with family on weekend.
+
+  calevans:
+      name: Cal Evans
+      url: http://calevans.com
+      avatar: http://2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
+      twitter: http://twitter.com/calevans
+      gthub: https://github.com/calevans
+      bio: For the past 13 years Cal has worked with PHP and MySQL on Linux, OSX, and Windows. He has built a variety of projects ranging in size from simple web pages to multi-million dollar web applications. When not banging his head on his monitor, attempting a blood sacrifice to get a particular piece of code working, he enjoys building and managing development teams using his widely imitated but never patented management style of “management by wandering around”.These days, when not working with PHP, Cal can be found working on a variety of projects like CoderFaire. He speaks at conferences around the world on topics ranging from technical talks to motivational talks for developers. If you happen to meet him at a conference, don’t be afraid to buy him a shot of Bourbon.Cal is based in Nashville TN where he is happily married to wife 1.31, the lovely and talented Kathy. Together they have 2 wonderful kids. From blog.calevans.com/epk

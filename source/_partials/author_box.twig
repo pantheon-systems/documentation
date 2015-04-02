@@ -1,0 +1,22 @@
+
+<div class="author well">
+    <div class="media">
+        {% if author.avatar %}
+            <div class="pull-left">
+                <a href="{{ site.url }}/authors/{{ authorhandle }}">
+                    <img class="avatar img-thumbnail" src="{{ author.avatar }}" width="90" height="90" alt="">
+                </a>
+            </div>
+        {% endif %}
+        <div class="media-body">
+            <div class="media-heading">
+                <h4><a href="{{ site.url }}/authors/{{ authorhandle }}">{{ author.name }}</a>
+                    {% if author.twitter %}<a href="{{ author.twitter }}" target="_blank"> <i class="icon icon-twitter"></i></a>{% endif %}
+                    {% if author.url %}<a href="{{ author.url }}" target="_blank"><i class="icon icon-globe"></i></a>{% endif %}
+                    {% if author.github %}<a href="{{ author.github }}" target="_blank"><i class="icon icon-github"></i></a>{% endif %}
+                </h4>
+            </div>
+            <p>{{ author.bio }}</p>
+        </div>
+    </div>
+</div><!--/.author-->

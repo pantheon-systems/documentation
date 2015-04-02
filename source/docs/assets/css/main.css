@@ -1688,3 +1688,7 @@ cursor: pointer;
   -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
   box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
+
+  .entry-meta{
+    padding-bottom: 10px;
+  }

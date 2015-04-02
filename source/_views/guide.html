@@ -5,7 +5,17 @@
           <div class="col-md-9">
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
-              <!-- <script type="text/javascript">
+              <div class="entry-meta">
+            {% if page.authors %}
+                {% set author_list = page.authors %}
+                {% include 'author_list.twig' %}
+            {% endif %}
+            {% for category in page.categories %}
+            <span><i class="icon-folder-close"></i> <a href="{{ site.url }}/entries/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}</span>
+            <span><i class="icon-calendar"></i> {{ page.date|date('F d, Y') }}</span>
+        </div>
+<!-- <script type="text/javascript">
             #  breadcrumbs()
 
             </script> -->
