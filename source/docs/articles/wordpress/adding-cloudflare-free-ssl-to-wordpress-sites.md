@@ -28,7 +28,7 @@ This will be under Settings > CloudFlare in the WordPress dashboard.
  - Copy your CloudFlare API key which can be found under your account settings
  - Set `HTTPS Protocol Rewriting` to **On**
 
-![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.jpg)
+![CloudFlare Settings](/docs/assets/images/cloudflare-settings.jpg)
 
 ### **SSL Settings**
 
@@ -36,7 +36,7 @@ WordPress settings are complete, go back to CloudFlare account.
 
 - Set your SSL mode to Flexible, this is located under the Crypto menu
 
-![enter image description here](/source/docs/assets/images/cloudflare-flexible-ssl.png)
+![CloudFlare Flex SSL](/docs/assets/images/cloudflare-flexible-ssl.png)
 
 ### **Page Rule Settings**
 
@@ -44,7 +44,7 @@ WordPress settings are complete, go back to CloudFlare account.
 	- For the URL, put in the following: `http://yourdomain.com/*`
 	- Save the page rule
 
-![enter image description here](/source/docs/assets/images/cloudflare-page-rules.png)
+![CloudFlare Rules](/docs/assets/images/cloudflare-page-rules.png)
 
 - Go to your DNS settings in your CloudFlare account and add an `A Record` and `CNAME` and point them to the DNS records provided by Pantheon in your site dashboard. [Here are the instructions on how to get your records for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon-dns-records-for-http-sites).
 - Add your domain names to the domain names in your Pantheon account under `Domains/SSL`
@@ -55,4 +55,4 @@ Once you are finished with the steps, deploy your code to the Test environment, 
 
 The SSL certificate will take up to 24 hours to take affect to your Live site, please be patient. Once it's complete you should see a green lock next to your domain name to verify that it's working.
 
-![enter image description here](/source/docs/assets/images/cloudflare-green-bar.png)
+[Green lock](/docs/assets/images/cloudflare-green-bar.png)
