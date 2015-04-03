@@ -28,21 +28,21 @@ Be sure that you have:
 - A Fastly [account](https://www.fastly.com/signup/).
 
 ## Pantheon Setup
-1. In the Dashboard of the Pantheon site you want to use to serve the base domain, ex. http://www.example-site.com/, go to its Live environment and select the **Domain/SSL** tab. 
+1. In the Dashboard of the Pantheon site you want to use to serve the base domain, ex. http://www.example-site.com/, go to its Live environment and select the **Domain/SSL** tab.
 2. Enter the main domain as well as its "www" prefix.
 3. In the Pantheon site you want to act as the secondary content source, ensure that you have a Live environment setup.
 
 ## Fastly Setup
 
 1. Sign up for a [Fastly account](https://www.fastly.com/signup/).
-2. Create a new service. In the "Origin service address", use the Pantheon sub-domain specific to your main site's Live environment. You will find that on it's Domains/SSL tab, and will look like live-{site-name}.pantheon.io. 
+2. Create a new service. In the "Origin service address", use the Pantheon sub-domain specific to your main site's Live environment. You will find that on it's Domains/SSL tab, and will look like live-{site-name}.pantheon.io.
 3. In the domain entry, put the www.site-example.com domain you want to serve as the root level. Fastly does not serve A names, such as site-example.com, so the www is required.
 
-![](https://www.getpantheon.com/docs/assets/images/fastly_new_service.png)​
+ ![Fastly New Service From](/source/docs/assets/images/fastly_new_service.png)​
 
 4. Once Fastly has finished setting up the service, click **Configure**, and then on the **Hosts** tab.
 
-![](https://www.getpantheon.com/docs/assets/images/fastly_new_backend.png)​
+ ![Fastly Hosts Tab](/source/docs/assets/images/fastly_new_backend.png)​
 
 5. Click the **+ New** button and add the Pantheon sub-domain for the secondary site's Live environment.
 
@@ -50,7 +50,7 @@ Be sure that you have:
 
 Now you must create a Fastly "Condition" for each host to tell Fastly what traffic needs to be sent to what server.
 
-![](https://www.getpantheon.com/docs/assets/images/fastly_new_condition.png)​
+![Fastly Conditions](/source/docs/assets/images/fastly_new_condition.png)​
 
 Select the gear icon next to the primary content host, select **Conditions**, and then **+ New**. In the pop-up form, enter the following:
 
@@ -72,7 +72,7 @@ This tells Fastly that any URL that does include "/blog" is sent to the main con
 
 The final step is to create custom headers for Fastly's redirected requests.
 
-![](https://www.getpantheon.com/docs/assets/images/fastly_new_header.png)​
+![Fastly New Header](/source/docs/assets/images/fastly_new_header.png)​
 
 Click on **Content**, and click **New**. In the pop-up form, enter the following:
 
