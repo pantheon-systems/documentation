@@ -5,7 +5,8 @@ category:
   - developing
   - drupal
   - wordpress
-
+authors: 
+  - bmackinney
 ---
 
 While Pantheon provides Git repositories for all sites on the platform, some teams might need to use an external repository hosted at a provider, like Github or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a Github account as the example. The steps should be similar for any provider. 
@@ -70,6 +71,11 @@ github	git@github.com:pantheon-learning/d7-ci.git (push)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (push)
 ```
+Note: Another option is to add another push URL for origin:
+git remote set-url --add origin git@github.com:pantheon-learning/d7-ci.git
+
+What's nice about this is then every time you do a git push origin <branch> code will be pushed to Github and Pantheon simultaneously. 
+
 ### Push the Pantheon Site's Codebase to Github
 
 ```
