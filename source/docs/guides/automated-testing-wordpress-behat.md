@@ -2,8 +2,11 @@
 title: Automated Testing for WordPress with Behat
 description: Understand how to use Behat to write automated tests for your WordPress sites.
 category:
-- developing
-- WordPress
+  - developing
+  - WordPress
+authors:
+  - ari
+date: 3/31/2015
 ---
 If you're developing WordPress sites, there's no doubt you've had something working only to later find it broken. Dev, Test, and Live environments reduce the risk of breaking something in production, but it's tedious to manually test every time you make a change. [Behat](http://docs.behat.org) is the answer to this problem for PHP developers. Describe a feature once, in [plain English](http://docs.behat.org/en/latest/guides/1.gherkin.html), and every time you run Behat it will script the browser to do things like click, fill out forms, and verify text.
 
@@ -271,7 +274,7 @@ You can use existing step definitions to write more features. Going forward, you
 * Add Behat tests to continuous integration/continuous deployment pipeline.
 * Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly.
 * The Behat [DrupalExtension](https://github.com/jhedstrom/drupalextension) is actively maintained and could serve as inspiration for a WordPress Behat Extension.
-* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/automate/php) and [Sauce Labs](http://sauceio.com/index.php/2012/01/adding-sauce-to-behat/) to test browsers you don't run natively. 
+* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/automate/php) and [Sauce Labs](http://sauceio.com/index.php/2012/01/adding-sauce-to-behat/) to test browsers you don't run natively.
 
 Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature, you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
 
