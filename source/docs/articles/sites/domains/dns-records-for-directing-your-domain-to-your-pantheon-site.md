@@ -46,8 +46,7 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 
 Your site dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
 
-
-![recommended DNS records](/source/docs/assets/images/pantheon-dns-records-for-http-sites.png)
+![Recommended DNS records](/source/docs/assets/images/pantheon-dns-records-for-http-sites.png)
 
 ## DNS Records for HTTPS Sites (SSL/TLS)
 
