@@ -19,4 +19,5 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - category
+            - authors
         permalink: pretty

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Author Archive
+nav: authors
+generator: guides_author_index
+use:
+    - guides_categories
+    - guides_tags
+---
+{% block title %}{{ page.title }}: {{ page.author }}{% endblock %}
+
+{% block content %}
+
+{% set authorhandle = page.author %}
+
+<div class="blog-item">
+    <div class="blog-content">
+        {% if site.authors[authorhandle] %}
+            {% set author = site.authors[authorhandle] %}
+            {% include 'author_box.twig' %}
+        {% endif %}
+
+        <h2>Posts by {{ page.author }}</h2>
+
+        <ul>
+        {% for post in page.author_posts %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><br>
+                <em>{{ post.date|date('M d, Y') }}</em>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
