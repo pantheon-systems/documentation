@@ -57,5 +57,8 @@ This check lists all your enabled plugins and alerts you when they need to be up
 ###PHP Sessions
 Displays the files that references sessions. If any are found, you'll be prompted to install the native PHP sessions plugin.
 
-##See Also
-If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/source/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
+## Support
+If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it! Pull requests are always welcome!
+
+## See Also
+If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
