@@ -1,6 +1,6 @@
 ---
 title: Drush Command-Line Utility
-description: Administer and maintain your site from a using your local installation of Drush.
+description: Administer and maintain your site from your local Drush installation.
 category:
   - getting-started
   - developing
@@ -12,22 +12,22 @@ category:
 Pantheon does not need the settings.php for your site to work, and your Drupal sites do not contain one out of the box. Drush commands require a settings.php file and it's considered a best practice to have one. Simply duplicate the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on a new site.
 
 ## Terminus Drush and Local Drush
-Drush-savvy developers should also install and utilize [Terminus](https://github.com/pantheon-systems/cli), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the dashboard, you can script with Terminus. It can also make remote drush calls on your environments without needing drush to be installed locally.
+Drush-savvy developers should also install and utilize [Terminus](https://github.com/pantheon-systems/cli), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote drush calls on your environments without having drush installed locally.
 
-Using terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from terminus, instead of using using Drush aliases. For more information, please see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
-### Drush Versions
+## Drush Versions
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
 
 You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations.
 
 There are a few known issues:
 
-## Drush 5
+### Drush 5
 
 Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
 
-## Drush 6
+### Drush 6
 
 If your local Drush installation is version 6, most commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
@@ -43,11 +43,11 @@ Once authenticated to Pantheon with `$ terminus auth login`, update your local a
 ```
 ### Manually Download and Move the File
 
-To get started, go to your Pantheon dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
+To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
 
 ![Link to Pantheon Drush Aliases](https://www.getpantheon.com/sites/default/files/docs/desk_images/169655)
 
-Installing the Pantheon Drush Aliases
+###Installing the Pantheon Drush Aliases
 
 If you are on Linux/MacOS environment, put the generated pantheon.aliases.drushrc.php in either the `.drush` directory in your home, or the `aliases` directory of your local Drush installation.
 
