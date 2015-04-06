@@ -1,0 +1,61 @@
+---
+title: New Site Owner FAQs
+description: Learn how to do common billing tasks performed by a site owner.
+category:
+    - developing
+
+---
+When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
+
+
+## Frequently Asked Questions
+
+####How do I change site service levels?
+From your Site Dashboard, click  **Settings**. Select a new plan from the drop-down menu, and click **Update Plan**.
+
+
+####How do I add billing add-ons?
+From your Site Dashboard, click **Settings**, then click **Add ons**. You will now see all the available add ons.
+
+only sssl - only enable in live. 30 month
+
+####Can I update the payment method?
+Yes, see our article [Updating Payment Methods](source/docs/articles/updating-payment-methods/).
+
+####Can I delete a pyament method?
+
+####How do I add and remove team members?
+
+**Add a Team Member**
+
+In the Team modal, enter the email address of the user, and click **Add team member**.
+
+Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
+
+**Remove a Team Member**
+
+**Note**: All users can be removed except the site owner.
+
+In the Team modal, click the X next to the user you want to delete.
+
+When you delete a user from a site, they lose the ability to perform any operations on that site.
+
+####Can I transfer ownership of a site to someone else?
+
+The site owner is the person who pays for the site. You'll need to update the payment method in order to change the owner.
+
+1. Click **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard.
+2. Enter the email address for the new site owner and select the applicable plan for the site.
+  Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
+
+Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
+
+For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
+
+
+downgrade
+solr and redis can break if you go down to personal plan level
+
+
+##See Also
+[Team Management](/source/docs/articles/sites/team-management/)
