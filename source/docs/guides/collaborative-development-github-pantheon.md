@@ -1,5 +1,5 @@
 ---
-title: Collaborative Development using Github and Pantheon
+title: Collaborative Development Using Github and Pantheon
 description: Learn how to collaborate with your Pantheon team members using Github.
 category:
   - developing
@@ -11,7 +11,7 @@ authors:
 date: 4/3/2015
 ---
 
-While Pantheon provides Git repositories for all sites on the platform, some teams might need to use an external repository hosted at a provider, like Github or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a Github account as the example. The steps should be similar for any provider.
+While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like Github or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a Github account as the example, although the steps should be similar for any provider.
 
 ## Git Repositories on Pantheon
 
@@ -93,7 +93,7 @@ The repository on Github now has all of the same code as my site.
 
 ![GitHub repo same as site](/source/docs/assets/images/github-repo-origin-sameas-remote.png)
 
-## Synchronizing Existing Site Repositories to Pantheon
+## Synchronizing Existing Site Repositories on Github With Pantheon
 This process will follow the same general procedures as moving your repo from Pantheon to Github, in reverse.
 
 ### Create the Site
