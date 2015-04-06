@@ -17,11 +17,11 @@ This mechanism does not actually perform requests on your site, and in doing so 
 In short, you get a fast, repeatable report that can help detect common problems and provide introspection into your site.
 
 ##How Does it Work?
-WP Launch Check is an extension for WP-CLI designed for Pantheon.io customers. While designed initially for the Pantheon dashboard it is intended to be fully usuable outside of Pantheon.
+WP Launch Check is an extension for WP-CLI designed for Pantheon.io customers. While designed initially for the Pantheon dashboard it is intended to be fully usable outside of Pantheon.
 
 To use WP Launch Check from the command line, run ```wp launchcheck <subcommand>``` command.
 
-For more information about WP-CLI, visit their [github page](https://github.com/wp-cli/wp-cli).
+For more information about WP-CLI, visit their [github page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [Github repo](https://github.com/pantheon-systems/wp_launch_check/).
 
 
 ##What Does Launch Check Evaluate?
@@ -56,3 +56,6 @@ This check lists all your enabled plugins and alerts you when they need to be up
 
 ###PHP Sessions
 Displays the files that references sessions. If any are found, you'll be prompted to install the native PHP sessions plugin.
+
+##See Also
+If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/source/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
