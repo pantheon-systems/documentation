@@ -11,8 +11,10 @@ Pantheon provides static site analysis as a service for Drupal 7 sites to make b
 ## Overview
 
 Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis** by gathering performance & behavior patterns to see how a site works.  
-This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
-In short, you get a fast, repeatable report that can help detect common problems and provide insights into your site.
+
+This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
+
+In short, you get a fast, repeatable report that can help detect common problems and provide insights into your site.
 
 ## What Does Launch Check Evaluate?
 
@@ -75,4 +77,4 @@ If your site's Launch Check is showing recent update information about Database 
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 
 ## See Also
-If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/dource/docs/articles/wordpress/launch-check-worpdress-performance-and-configuration-analysis).
+If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis).
