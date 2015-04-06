@@ -58,4 +58,4 @@ This check lists all your enabled plugins and alerts you when they need to be up
 Displays the files that references sessions. If any are found, you'll be prompted to install the native PHP sessions plugin.
 
 ##See Also
-If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
+If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/source/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
