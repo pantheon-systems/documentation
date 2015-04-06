@@ -1,6 +1,6 @@
 ---
 title: New Site Owner FAQs
-description: Learn how to do common billing tasks performed by a site owner.
+description: Learn how to do common billing and administrative tasks performed by a site owner.
 category:
     - developing
 
@@ -10,19 +10,39 @@ When you become a site owner, you receive administrator permissions to manage th
 
 ## Frequently Asked Questions
 
+### Billing Tasks
+
+
 ####How do I change site service levels?
-From your Site Dashboard, click  **Settings**. Select a new plan from the drop-down menu, and click **Update Plan**.
+From your Site Dashboard, click  **Billing**. Select **Change Plan**, choose the new plan and payment information, and click **Purchase Plan**.
+
+####Can I update or change the payment method?
+You can update the payment method in the **Billing** page. For detailed instructions, see [Updating Payment Methods](source/docs/articles/updating-payment-methods/).
 
 
-####How do I add billing add-ons?
-From your Site Dashboard, click **Settings**, then click **Add ons**. You will now see all the available add ons.
+####Can I transfer ownership of a site to someone else?
 
-only sssl - only enable in live. 30 month
+The site owner is the person who pays for the site. You'll need to update the payment method in order to change the owner.
 
-####Can I update the payment method?
-Yes, see our article [Updating Payment Methods](source/docs/articles/updating-payment-methods/).
+1. From the **Billing** page, click **Invite to pay for the site**.
+2. Enter the email address for the new site owner, and click **Send Invite**.
+  Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-####Can I delete a pyament method?
+Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
+
+For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
+
+
+
+### Administrative Tasks
+
+
+####How do I enable add-ons?
+From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add ons available for your site.
+
+**Note**: Only enable SSL for your Live environment. It is not needed in Dev or Test.
+
+
 
 ####How do I add and remove team members?
 
@@ -40,22 +60,12 @@ In the Team modal, click the X next to the user you want to delete.
 
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
-####Can I transfer ownership of a site to someone else?
 
-The site owner is the person who pays for the site. You'll need to update the payment method in order to change the owner.
-
-1. Click **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard.
-2. Enter the email address for the new site owner and select the applicable plan for the site.
-  Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
-
-Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
-
-For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
-
-
-downgrade
-solr and redis can break if you go down to personal plan level
+####Can I downgrade my site to a personal plan?
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level.
 
 
 ##See Also
-[Team Management](/source/docs/articles/sites/team-management/)
+[Team Management](/docs/articles/sites/team-management/)
+- [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
+- [Updating Payment Methods](/docs/articles/updating-payment-methods/)
