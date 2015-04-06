@@ -8,7 +8,7 @@ Help us create relevant and useful content for developers like yourself. See som
 
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
 * Fork the pantheon-systems/documentation repository on GitHub. Trying to edit or create a file in this repository will create your fork automatically.
-* (Optional) Clone your fork locally.
+* Optional: Clone your fork locally.
 
 ### Pantheon Employees
 * Clone the pantheon-systems/documentation repository to your local machine.
@@ -23,11 +23,11 @@ Help us create relevant and useful content for developers like yourself. See som
 
 All of our articles and guides are generated from markdown files in the repository, located at [`source/docs/articles/`](/source/docs/articles/) and [`source/docs/guides/`](source/docs/guides/), respectively. These markdown files must have frontmatter that matches the patterns within the document. 
 
-If creating your first guide, you must also create an Author profile in the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Include it in the pull request that creates your guide.
+If you're creating your first guide, you must also create an Author profile in the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Include it in the pull request with your guide.
 
 ## Submit a Pull Request
 
-When you're done making changes, [submit a pull request](https://github.com/pantheon-systems/documentation/compare/)
+When you're done making changes, [submit a pull request](https://github.com/pantheon-systems/documentation/compare/).
 
 We will review and comment on pull requests within three business days. We may suggest some changes, improvements, or alternatives.
 
