@@ -29,17 +29,7 @@ The important thing is that you have a drush archive that can be downloaded via 
 
 ## Set Up Terminus
 
-If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in [the GitHub Readme file](https://github.com/pantheon-systems/terminus):
-
-    # Install composer if needed.
-    curl -sS https://getcomposer.org/installer | ph
-    mv composer.phar /usr/local/bin/composer
-    # Download Terminus for non-development use.
-    composer create-project pantheon-systems/terminus $HOME/.drush/terminus -s dev --no-dev -n
-    # Clear Drush's cache.
-    drush cc drush
-
-If you'd like to install Terminus via another method, there are alternatives at the [GitHub project](https://github.com/pantheon-systems/terminus).
+If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in the [installation instructions on Github](https://github.com/pantheon-systems/cli/wiki/installation).
 
 ## Import Your Archive
 
@@ -54,21 +44,21 @@ Importing a Drush site archive as we've prepared it above is easy. First you'll 
 You're now ready to perform command-line operations with Pantheon! For instance, you can run `drush pantheon-sites` to get a list of your existing sites.
 
 The process to interactively start an import is as follows:
-
-    drush psite-import
-    Provide a name for the site. This will be part of the default URL: my-drush-import
-    URL containing Drush archive: http://mysite.com/drush-archive.tar.gz
-    Site is now building.
-    The new site's UUID is xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-
+```
+terminus sites create-from-import
+Provide a name for the site. This will be part of the default URL: my-drush-import
+URL containing Drush archive: http://mysite.com/drush-archive.tar.gz
+Site is now building.
+The new site's UUID is xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
 At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your dashboard.
 
 ## Automate Imports
 
 Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
-
-    drush psite-import sitename http://url.to/archive.tar.gz --label="Site Name" --nopoll
-
+```
+terminus sites-create-from-import --name=<sitename> --import=<archive/url.tar.gz>
+```
 You can script out imports like this to run several concurrently (or in serial).
 
 Terminus is a rapidly evolving project, so stay tuned. Let us know what you would like to see, and forks and pull requests are always welcome!
