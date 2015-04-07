@@ -17,7 +17,7 @@ When you become a site owner, you receive administrator permissions to manage th
 From your Site Dashboard, click  **Billing**. Select **Change Plan**, choose the new plan and payment information, and click **Purchase Plan**.
 
 ####Can I update or change the payment method?
-You can update the payment method in the **Billing** page. For detailed instructions, see [Updating Payment Methods](source/docs/articles/updating-payment-methods/).
+You can update the payment method in the **Billing** page. For detailed instructions, see [Updating Payment Methods](/docs/articles/updating-payment-methods/).
 
 
 ####Can I transfer ownership of a site to someone else?
@@ -66,6 +66,6 @@ Yes. However, if you have Solr and/or Redis add ons enabled, they will break whe
 
 
 ##See Also
-[Team Management](/docs/articles/sites/team-management/)
+- [Team Management](/docs/articles/sites/team-management/)
 - [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
 - [Updating Payment Methods](/docs/articles/updating-payment-methods/)
