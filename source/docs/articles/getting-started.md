@@ -38,7 +38,7 @@ If you want to develop directly on Pantheon, you can start with one of the many 
 
 ### Import Manually
 
-If you have an existing Drupal or WordPress site that you want to import, choose "Import manually". For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](docs/articles/wordpress/importing-a-wordpress-site/).
+If you have an existing Drupal or WordPress site that you want to import, choose "Import manually". For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
 
 ## Interact With Your Code
 
