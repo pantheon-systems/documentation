@@ -34,14 +34,14 @@ If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, u
 ## Import Your Archive
 
 Importing a Drush site archive as we've prepared it above is easy. First you'll authenticate into Pantheon with Terminus:
-
-    drush pantheon-auth
-    Pantheon account email address: you@yourdomain.com
-    Pantheon dashboard password for you@yourdomain.com: xxxxxx
-    Authenticating as you@yourdomain.com
-    Success!
-
-You're now ready to perform command-line operations with Pantheon! For instance, you can run `drush pantheon-sites` to get a list of your existing sites.
+```
+terminus auth login
+Pantheon account email address: you@yourdomain.com
+Pantheon dashboard password for you@yourdomain.com: xxxxxx
+Authenticating as you@yourdomain.com
+Success!
+```
+You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus sites show` to get a list of your existing sites.
 
 The process to interactively start an import is as follows:
 ```
