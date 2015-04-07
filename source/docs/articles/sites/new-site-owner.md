@@ -26,12 +26,13 @@ The site owner is the person who pays for the site. You'll need to update the pa
 
 1. From the **Billing** page, click **Invite to pay for the site**.
 2. Enter the email address for the new site owner, and click **Send Invite**.
-  Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
+Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
 For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
 
+Resellers should contact Pantheon Support directly if you need to transfer ownership.
 
 
 ### Administrative Tasks
