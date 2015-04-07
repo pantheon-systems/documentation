@@ -42,12 +42,14 @@ This check will display a list of exploited patterns in code, the file name that
 ###Object Cache
 This tells you if Object Caching and Redis are enabled.
 
+<!--
 ###Plugins
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.
 
 **Green:** All of your plugins are up-to-date  
 **Yellow:** Highlighted plugins need to be updated  
 **Red:** Displays all vulnerabilities and unsupported plugins
+-->
 
 ####Unsupported Plugins
 - [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
