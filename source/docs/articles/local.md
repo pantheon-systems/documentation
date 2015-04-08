@@ -21,7 +21,7 @@ To begin, you'll need:
 
 **Note**: Drupal users are advised to have [Drush](/docs/articles/local/drush-command-line-utility/) installed, although it is not required.
 
-To save time, clear the target site environment's cache from the Pantheon dashboard or from the application itself.
+To save time, clear the target site environment's cache from the Pantheon Dashboard or from the application itself.
 
 There are three parts to any dynamic website:
 
@@ -37,7 +37,7 @@ Each will need to be transferred from Pantheon to your local environment.
 
 ### Get the Database
 
-There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site dashboard:
+There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site Dashboard:
 
 - On-demand: Workflow > Export > Export Database
 - Scheduled or on-demand backup: Backups > Backup Log > Database download link
@@ -87,12 +87,12 @@ drush -r . rsync @pantheon.SITENAME.ENV:%files @self:sites/default/
 
 SFTP is slower, but easier to use. If you don't have a GUI client like FileZilla, you can use the command line.
 
-- Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
+- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
 - Navigate to the proper directory.
     - **Drupal**: sites/default
     - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon dashboard into your terminal window and press ENTER.
+- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window, and press ENTER.
 - Enter `get -r *` and press ENTER to transfer the files down to your local environment.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
 
@@ -122,12 +122,12 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 #### WordPress or Drupal: Via SFTP
 If you are using WordPress or you do not have Drush and rsync, you can use your SFTP client to upload the files.
 
-- Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
+- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
 - Navigate to the proper directory on your local file system.
     - **Drupal**: sites/default/files
     - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon dashboard into your terminal window and press ENTER.
+- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window and press ENTER.
 - Enter `cd files` and press ENTER
 - Enter `put -r ./*` and press ENTER to transfer the files up.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
