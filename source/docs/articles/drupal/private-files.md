@@ -1,5 +1,5 @@
 ---
-title: Private Files
+title: Private Files with Drupal
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 category:
     - development
