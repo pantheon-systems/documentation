@@ -49,14 +49,15 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 
 #### Drupal Sites
-If you have [Drush](http://drush.org) installed, you can directly sync the content of your remote database to your local environment using [sql-sync-pipe](https://drupal.org/project/drush_sql_sync_pipe).
+If you have [Drush](http://drush.org) installed, you can export the database from your Drupal site with the following commands:
 
 ````
-$ drush sql-sync-pipe @pantheon.SITENAME.ENV @self
+$ drush cc all
+$ drush sql-dump --result-file=$HOME/Desktop/database.sql
 ````
 
 #### WordPress Sites
-If you have [Terminus](https://github.com/pantheon-systems/cli) installed, you can export the database database from your WordPress powered site with the following command:
+If you have [Terminus](https://github.com/pantheon-systems/cli) installed, you can export the database from your WordPress site with the following command:
 
 ````
 $ terminus wp db export - --site=SITE_NAME --env=dev|test|live > database.sql
