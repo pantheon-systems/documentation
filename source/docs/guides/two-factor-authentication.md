@@ -79,10 +79,6 @@ For an organization wide solution, there are many different [Drupal modules for 
 
 ### Drupal Instructions
 
-1. Install and enable the [Libraries API module](https://www.drupal.org/project/libraries) on your Drupal site.
-2. Install and enable the 2.x version of the [OneLogin module](https://www.drupal.org/project/onelogin) on your Drupal site. 
-3. Download an [external PHP SAML library](https://github.com/onelogin/php-saml/releases) to the sites/default/libraries/onelogin folder on your Drupal site
-4. Configure the OneLogin module (admin/config/onelogin_saml) to provide the appropriate values which are available in the “SSO” and "Parameters" section of the OneLogin configuration page.
-![TFA OneLogin Attributes](../assets/images/tfa-drupal-onelogin-attribute.png)
-![TFA OneLogin Mappings](../assets/images/tfa-drupal-onelogin-mapping.png)
-![TFA OneLogin Advanced](../assets/images/tfa-drupal-onelogin-advanced.png)
+1. Install and enable the GitHub version of the [OneLogin module](https://github.com/onelogin/drupal-saml) on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
+2. Configure the OneLogin module (admin/config/onelogin_saml) to provide the appropriate values which are available in the “SSO” and "Parameters" section of the OneLogin configuration page. 
+![TFA OneLogin Options](../assets/images/tfa-drupal-onelogin-options.png)
