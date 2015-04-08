@@ -9,17 +9,16 @@ category:
 If you would like to add a new credit card or edit the existing card a site uses, it's quick and easy to do.
 
 
+## Update an Existing Card
+
+1. Within the **Billing** tab, select the card you want to edit, and click **Update Payment Method**.
+2. Enter the new information, and click **Update Billing**.
+
 ## Add a New Credit Card
 
 1. From your Site Dashboard, click  **Billing**.
 2. Select **Add Credit Card**, and enter the new payment information.
 3. When you're finished, click **Update Billing**.
-
-
-## Update an Existing Card
-
-1. Within the **Billing** tab, select the card you want to edit, and click **Update Payment Method**.
-2. Enter the information, and click **Update Billing**.
 
 
 ### Additional Resources
