@@ -299,7 +299,7 @@ $ terminus site create-env --site=d7-ci --env=configs --from-env=dev
 ![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Cloud Development Environment named configs, created with Terminus")
 The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the CDE on my Github pull request.
 
-![New environment configuration admin url](/source/docs/assets/images/configuration-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
+![New environment configuration admin url](/source/docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
 
 ### Create Pull Request
 
