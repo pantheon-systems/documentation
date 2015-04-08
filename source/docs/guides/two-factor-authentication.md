@@ -1,10 +1,10 @@
 ## What is Two Factor Authentication?
 
-Two Factor Authentication is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication in order to log in. The two most common methods involve authentication through an SMS message or a generated application code on an user’s mobile phone, although more advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, read [this article about Multi Factor Authentication](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication).
+Two Factor Authentication is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication in order to log in. The two most common methods involve authentication through an SMS message or a generated application one time code on an user’s mobile phone, although more advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, read [this article about Multi Factor Authentication](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication).
 
 ## Why do you need Two Factor Authentication?
 
-Two Factor Authentication is a helpful security practice because it prevents attackers from compromising accounts by requiring an extra authentication method beyond the password to login. This is important because standard password access can be very easy to bypass if the user is using an easily guessable password, is observed typing in their password, or has used their password on another site that becomes compromised. By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would be attackers not only have to compromise a user’s passwords but also their mobile phone or physical USB key (which makes the attack much more difficult). 
+Two Factor Authentication is a helpful security practice because it prevents attackers from compromising accounts by requiring an extra authentication method beyond the password to login. This is important because standard password access can be very easy to bypass if the user is using an easily guessable password, is observed typing in their password, or has used their password on another site that becomes compromised. By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would be attackers not only have to compromise a user’s passwords but also their mobile phone or physical USB key which makes the attack much more difficult. 
 
 ## Setting Up Two Factor Authentication with WordPress (Single Site)
 
@@ -31,7 +31,7 @@ For an organization wide solution, there are many different [WordPress plugins f
 ![TFA OneLogin Config](../assets/images/tfa-wp-onelogin-config.png)
 4. Configure the “Authentication Factors” found under settings and add an appropriate TFA solution that will work for your users.
 ![TFA OneLogin Methods](../assets/images/tfa-onelogin-tfa-methods.png)
-5. Create user accounts by using the “Users” administration area in OneLogin and clicking “New User”. Make sure that the “Username” field in OneLogin matches their WordPress usernames.
+5. Create user accounts by using the “Users” administration area in OneLogin and clicking “New User”. Make sure that the “Username” and "Email" field in OneLogin matches their WordPress usernames and email.
 ![TFA OneLogin New User](../assets/images/tfa-onelogin-new-user.png)
 
 ### WordPress Instructions
@@ -47,7 +47,7 @@ For an organization wide solution, there are many different [WordPress plugins f
 
 ## Setting Up Two Factor Authentication with Drupal (Single Site)
 
-For a single site, there is a [Two Factor Authentication module](https://www.drupal.org/project/tfa) which provides the foundation necessary to use Two Factor Authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or One Time Password are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic) or there are developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev). To get it working you need to:
+For a single site, there is a [Two Factor Authentication module](https://www.drupal.org/project/tfa) which provides the foundation necessary to use Two Factor Authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-based One Time Password are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic) or there are developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev). To get it working you need to:
 
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) on your Drupal site.
 2. Install and enable the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
@@ -74,7 +74,7 @@ For an organization wide solution, there are many different [Drupal modules for 
 ![TFA OneLogin Config](../assets/images/tfa-drupal-onelogin-config.png)
 4. Configure the “Authentication Factors” found under settings and add an appropriate TFA solution that will work for your users.
 ![TFA OneLogin Methods](../assets/images/tfa-onelogin-tfa-methods.png)
-5. Create user accounts by using the “Users” administration area in OneLogin and clicking “New User”. Make sure that the “Username” field in OneLogin matches their Drupal usernames.
+5. Create user accounts by using the “Users” administration area in OneLogin and clicking “New User”. Make sure that the “Username” and "Email" fields in OneLogin matches their Drupal usernames and emails.
 ![TFA OneLogin New User](../assets/images/tfa-onelogin-new-user.png)
 
 ### Drupal Instructions
@@ -82,3 +82,4 @@ For an organization wide solution, there are many different [Drupal modules for 
 1. Install and enable the GitHub version of the [OneLogin module](https://github.com/onelogin/drupal-saml) on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
 2. Configure the OneLogin module (admin/config/onelogin_saml) to provide the appropriate values which are available in the “SSO” and "Parameters" section of the OneLogin configuration page. 
 ![TFA OneLogin Options](../assets/images/tfa-drupal-onelogin-options.png)
+3. Use the OneLogin dashboard to login to your Drupal site! 
