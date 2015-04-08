@@ -51,7 +51,7 @@ For a single site, there is a [Two Factor Authentication module](https://www.dru
 
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) on your Drupal site.
 2. Install and enable the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
-3. Download and setup an TOTP app such as [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en) for either iOS or Android.
+3. Download and setup an TOTP app such as [Authy](https://www.authy.com/users) for either iOS or Android.
 3. Configure the TFA module (admin/config/people/tfa) to "Enable TFA", set "TOTP" as the default validation plugin, add "Recovery Codes" as a fallback plugin, and allow "Trusted Browsers" for your domain.
 ![TFA Module Settings](../assets/images/tfa-drupal-module-settings.png)
 4. Go to the "Security" settings on each user profile you want to use TFA, click "Enable TFA", type in your current password, and view the "TFA setup - Application" page.
