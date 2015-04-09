@@ -42,13 +42,15 @@ The dashboard integration is intended to provide developers with the most action
 
 #### How Can I Manually Run Site Audit on My Site?
 
-You can get a list of all available site audit reports using drush:
+You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
 
-    drush @pantheon.SITENAME.ENV help --filter=site_audit
+    terminus drush --site=<site> --env=<env> --filter=site_audit
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 You can also execute a full report in HTML format.
 
-    drush @pantheon.SITENAME.ENV aa --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+    terminus drush --site=<site> --env=<env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 
 #### Are There Plans for Supporting Drupal 6 Sites?
 
@@ -68,8 +70,8 @@ Use the [Site Audit issue queue](https://drupal.org/project/issues/site_audit) t
 
 #### Site Audit isn't running on my site.
 
-If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the Drush command to execute Site Audit directly on your Pantheon Drush aliases:
+If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](https://github.com/pantheon-systems/cli) command to execute Site Audit directly on your Pantheon site:
 
-    drush -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
+    terminus drush --site=<site> --env=<env> -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
 
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.

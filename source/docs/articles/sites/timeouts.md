@@ -90,7 +90,7 @@ Rules are for the good of the group, and timeouts are no exception. At Pantheon,
 
 #### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes; just use `drush @pantheon.SITENAME.env cron` to execute cron using Drush or `terminus drush cron --site=sitename --env=live` using [Terminus](https://github.com/pantheon-systems/cli). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an efficient process, determine why it's slow and fix the root cause.
+Yes; just use `terminus drush cron --site=sitename --env=live` using [Terminus](https://github.com/pantheon-systems/cli). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an efficient process, determine why it's slow and fix the root cause.
 
 #### Can Pantheon change the non-configurable timeouts for my site?
 

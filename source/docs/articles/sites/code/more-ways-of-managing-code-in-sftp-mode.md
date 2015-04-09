@@ -49,7 +49,7 @@ Note that you still need to turn these changes into _commits_ in your Pantheon s
 
 Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](https://github.com/pantheon-systems/cli). This section is for developers who are CLI savvy only.
 
-Assuming you've already set up and authenticated with [terminus](https://github.com/pantheon-systems/cli), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
+Assuming you've already set up and authenticated with [Terminus](https://github.com/pantheon-systems/cli), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
 
     joshk@steppinrazor ~$ terminus sites show --nocache
     Fetching site list from Pantheon

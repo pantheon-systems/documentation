@@ -61,7 +61,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 ### Debug
 
-- Need to debug? Read [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/) and [Errors and Server Responses](/docs/articles/sites/errors-and-server-responses/). FTP onto your site and look in /logs, use drush to tail your watchdog, and use New Relic.
+- Need to debug? Read [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/) and [Errors and Server Responses](/docs/articles/sites/errors-and-server-responses/). FTP onto your site and look in /logs, use [Terminus](https://github.com/pantheon-systems/cli) to tail your watchdog, and use New Relic.
 
 
 
