@@ -18,10 +18,15 @@ To begin, you'll need:
 - Git client for tracking code changes.
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync.
 - [Terminus](https://github.com/pantheon-systems/cli)
+- [Drush](/docs/articles/local/drush-command-line-utility/) (optional)
 
-**Note**: Drupal users are advised to have [Drush](/docs/articles/local/drush-command-line-utility/) installed, although it is not required.
+To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 
-To save time, clear the target site environment's cache from the Pantheon dashboard or from the application itself.
+```
+terminus site clear-caches [--site=<site>] [--env=<env>]
+```
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 There are three parts to any dynamic website:
 
@@ -37,6 +42,8 @@ Each will need to be transferred from Pantheon to your local environment.
 
 ### Get the Database
 
+#### Via the Pantheon Dashboard
+
 There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site dashboard:
 
 - On-demand: Workflow > Export > Export Database
@@ -47,45 +54,40 @@ Next, import the database into your local environment using a MySQL client.
 ````
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
+**Note**: Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
 
-#### Drupal Sites
-If you have [Drush](http://drush.org) installed, you can export the database from your Drupal site with the following commands:
+#### Via Terminus
 
-````
-$ drush cc all
-$ drush sql-dump --result-file=$HOME/Desktop/database.sql
-````
+You can also export the database running the following Terminus commands:
 
-#### WordPress Sites
-If you have [Terminus](https://github.com/pantheon-systems/cli) installed, you can export the database from your WordPress site with the following command:
+```
+terminus site backup create --element=database [--site=<site>] [--env=<env>]
+terminus site backup get --element=database [--site=<site>] [--env=<env>] --to-directory=$HOME/Desktop/ --latest
+```
 
-````
-$ terminus wp db export - --site=SITE_NAME --env=dev|test|live > database.sql
-````
-
-**Note**: The single `-` after the export command is important as it will force the output to be sent to your terminal to be captured in a file named `database.sql`.
-
-Once you have exported it to a local file, you can import it into your local MySQL database.
+This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
 
 ````
-mysql -uUSER -pPASSWORD DATABASENAME < database.sql
+$ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
+**Note**: Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
 
 ### Get the Files
 
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/docs/articles/local/rsync-and-sftp/).
 
-#### Drupal: Via Drush
-Run the following Drush command to sync your site's files:
+#### Via Terminus
 
+Run the following Terminus commands:
 ```
-drush @pantheon.SITENAME.ENV cc all
-drush -r . rsync @pantheon.SITENAME.ENV:%files @self:sites/default/
+terminus site backup create --element=files [--site=<site>] [--env=<env>]
+terminus site backup get --element=files [--site=<site>] [--env=<env>] --to-directory=$HOME/Desktop/ --latest
 ```
+This will create and download a backup of the site's files to your Desktop.
 
-#### WordPress or Drupal: Via SFTP
+#### Via SFTP
 
-SFTP is slower, but easier to use. If you don't have a GUI client like FileZilla, you can use the command line.
+SFTP is slower, but easier to use for some. If you don't have a GUI client like FileZilla, you can use the command line.
 
 - Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
@@ -108,7 +110,7 @@ Perform a local database dump using the MySQL utility mysqldump:
 ```
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
 ```
-Then import the file into Pantheon from Workflow > Import.
+Then import the file from the Pantheon Dashboard by accessing Workflow > Import. Upload the database archive and click **Import**.
 
 ### Send the Files
 
