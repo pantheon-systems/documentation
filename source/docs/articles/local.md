@@ -89,12 +89,12 @@ This will create and download a backup of the site's files to your Desktop.
 
 SFTP is slower, but easier to use for some. If you don't have a GUI client like FileZilla, you can use the command line.
 
-- Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
+- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
 - Navigate to the proper directory.
     - **Drupal**: sites/default
     - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon dashboard into your terminal window and press ENTER.
+- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window, and press ENTER.
 - Enter `get -r *` and press ENTER to transfer the files down to your local environment.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
 
@@ -124,12 +124,12 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 #### WordPress or Drupal: Via SFTP
 If you are using WordPress or you do not have Drush and rsync, you can use your SFTP client to upload the files.
 
-- Go to your Pantheon dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
+- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
 - Open a terminal window.
 - Navigate to the proper directory on your local file system.
     - **Drupal**: sites/default/files
     - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon dashboard into your terminal window and press ENTER.
+- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window and press ENTER.
 - Enter `cd files` and press ENTER
 - Enter `put -r ./*` and press ENTER to transfer the files up.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
