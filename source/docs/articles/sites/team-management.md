@@ -73,6 +73,6 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 **Note:** Because supporting organizations have full access to a site, only the site owner can perform this action.
 
- ![Add a supporting organization button](/source/docs/assets/images/multi_org1.jpg)
+ ![Add a supporting organization button](/source/docs/assets/images/multi_org1.png)
 
- ![Confirm supporting organization](/source/docs/assets/images/multi_org2.jpg)
+ ![Confirm supporting organization](/source/docs/assets/images/multi_org2.png)
