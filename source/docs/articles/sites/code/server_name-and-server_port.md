@@ -7,9 +7,9 @@ category:
 ---
 There's code out there that relies on `$_SERVER['SERVER_NAME']` and sometimes `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
 
-In general, you don't want your code to rely on this but some extensions (themes, modules, plugins) give you no choice. In that case, you will need to do modify the `$_SERVER` variable in your `settings.php` (Drupal) or `wp-config.php` (WordPress) file to ensure the right values are present.
+In general, you don't want your code to rely on this, but some extensions (themes, modules, plugins) give you no choice. In that case, you will need to modify the `$_SERVER` variable in your `settings.php` (Drupal) or `wp-config.php` (WordPress) file to ensure the right values are present.
 
-## Use HTTP_HOST instead of SERVER_NAME
+## Use HTTP_HOST Instead of SERVER_NAME
 `HTTP_HOST` is generated dynamically based on the current request, while `SERVER_NAME` is static. If the `$_SERVER`variable is set to `'SERVER_NAME'`, the URL generated for a request will be something similar to http://endpoint05ccd237.chios.panth.io instead of the intended http://yourdomain.com.
 
 Adding the following code will pass the correct value when `'SERVER_NAME'` is used:
@@ -32,6 +32,6 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-## Known Plugins/Modules using SERVER_NAME
+## Known Plugins/Modules Using SERVER_NAME
 - [Simple Share Buttons](https://simplesharebuttons.com/plus/)
 - [WP Super Cache](https://wordpress.org/support/plugin/wp-super-cache)
