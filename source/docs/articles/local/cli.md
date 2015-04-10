@@ -3,7 +3,7 @@ title: Terminus, the Pantheon CLI
 description: Get up and running using Pantheon and developing your sites from the command line.
 category:
   - developing
-  - getting started
+  - getting-started
 ---
 The Terminus project's second version is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github").
 ## Installation
