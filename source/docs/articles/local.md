@@ -23,7 +23,7 @@ To begin, you'll need:
 To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 
 ```
-terminus site clear-caches [--site=<site>] [--env=<env>]
+terminus site clear-caches --site=<site> --env=<env>
 ```
 
 **Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
@@ -61,8 +61,8 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 You can also export the database running the following Terminus commands:
 
 ```
-terminus site backup create --element=database [--site=<site>] [--env=<env>]
-terminus site backup get --element=database [--site=<site>] [--env=<env>] --to-directory=$HOME/Desktop/ --latest
+terminus site backup create --element=database --site=<site> --env=<env>
+terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 
 This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
@@ -80,8 +80,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 
 Run the following Terminus commands:
 ```
-terminus site backup create --element=files [--site=<site>] [--env=<env>]
-terminus site backup get --element=files [--site=<site>] [--env=<env>] --to-directory=$HOME/Desktop/ --latest
+terminus site backup create --element=files --site=<site> --env=<env>
+terminus site backup get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 This will create and download a backup of the site's files to your Desktop.
 

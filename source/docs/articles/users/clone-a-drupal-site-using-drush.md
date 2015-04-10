@@ -18,7 +18,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 
 **Example**:
 ```
-terminus drush --site=SITENAME --env=live ard --destination=sites/default/files/site\_export.tar.gz
+terminus drush --site=<site> --env=live ard --destination=sites/default/files/site\_export.tar.gz
 ```
 
 ##  Import Your Archive

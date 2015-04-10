@@ -21,10 +21,11 @@ The first two require the **pantheon\_api** module to be enabled in order to all
 
 ### WordPress
 1. From the WordPress Admin Menu Select Settings->Pantheon Cache. Then Click the "Clear Cache" button to clear all the caches
-1. From the command line you can use Terminus.
-```
-$ terminus site clear-caches --site=<sitename> --env=<env>
-```
+1. From the command line you can use Terminus:
+
+ ```
+ $ terminus site clear-caches --site=<site> --env=<env>
+ ```
 1. From the Pantheon Dashboard: Clear Caches
 
 
