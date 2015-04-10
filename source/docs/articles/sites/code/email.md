@@ -34,7 +34,7 @@ This is a common error with the SMTP module. It can be fixed in a handful of ste
 1. Copy the file from .../files/mailsystem/filename.inc
 2. Place in a custom module's includes dir and .info file using files[] = includes/filename.inc
 3. Remove original file from {registry} table DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
-4. drush cc all
+4. [`terminus drush --site=<site> --env=<env> cc all`](https://github.com/pantheon-systems/cli)
 
 A patch is available [here.](https://drupal.org/node/1369736#comment-5644064)
 

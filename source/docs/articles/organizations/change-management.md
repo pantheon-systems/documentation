@@ -2,7 +2,7 @@
 title: Change Management
 description: Learn about the features and benefits of role-based permissions.
 category:
-  - getting started
+  - getting-started
   - developing
 ---
 

@@ -59,7 +59,7 @@ git push origin master
 Create a (core) Drupal or WordPress site on Pantheon that will be used for testing the upstream.
 
 ```
-drush psite-create upstream-test
+terminus sites create upstream-test
 ```
 
 Upgrade the site plan to Business to enable Multidev and multiple app-servers on Live for testing.
@@ -86,7 +86,7 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. Terminus command: `drush psite-ewipe $UUID dev`
+Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. <!--Terminus command: `drush psite-ewipe $UUID dev`-->
 
 #### Acceptance Tests
 

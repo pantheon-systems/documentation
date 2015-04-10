@@ -9,19 +9,9 @@ category:
 
 Sometimes there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
 
-
-
 Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
 
-
-
-There are two variations on the messages; one for sites hosted on \*.pantheon.io (unlaunched sites) and one for launched sites. Launched sites produce clean, serious error messages, while unlaunched sites produce purple messages that are slightly tounge-in-cheek.  
-
-
-
-There are some extreme circumstances where these error messages can be inadvertently triggered by your Drupal site code without an actual server error. Be aware if you are implementing a site using a module such as services.  
-
-
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as `services`.  
 
 If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
 
@@ -31,9 +21,7 @@ If you feel that you reached one of these messages in error, please submit a sup
 
 "This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
 
-
-
-In some circumstances, a 401 can be triggered by Drupal inadvertently if a site environment is locked, a user passes the HTTP auth but Drupal sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
+In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
 
@@ -41,8 +29,7 @@ In some circumstances, a 401 can be triggered by Drupal inadvertently if a site 
 "Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
 
-
-Pantheon also prevents public access via the webserver to private files, Drupal's .htaccess, and directory listings.
+Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
 ### Pantheon - 404 Unknown Site
 
@@ -63,7 +50,7 @@ Pantheon also prevents public access via the webserver to private files, Drupal'
 ### Pantheon - 503 Target in maintenance
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184852)
 
-"The web site you were looking for is currently undergoing maintenance." This is  **not** Drupal's maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
+"The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
 ### Pantheon - 503 Target not responding
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/184854)
@@ -98,23 +85,23 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 
 There are many things which could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
-## Administrative Pages
+## Administrative Pages in Drupal
 
-It is unfortunately possible for some normal operations in Drupal to outlast the request timeout. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on sites with large numbers of modules and/or a lot of data and activity.
+It is unfortunately possible for some normal administrative operations to outlast the request timeout in Drupal. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
 
 If you are seeing request timeouts for administrative operations, you may be able to address this by optimizing your application, or by using a work-around (see below).
 
 ## Slow Queries / High Query Volume
 
-Pages which leverage a large number of Drupal views can often bog down because of the slow speed of the queries. It can also happen that a sufficiently high query volume (1,000+ queries on one page) can push things over the edge.
+Pages which leverage a large number of views can often bog down because of the slow speed of the queries. It can also happen that a sufficiently high query volume (1,000+ queries on one page) can push things over the edge.
 
 Individually slow queries should be refactored if possible. However, often cacheing can help mitigate slow queries or high query volumes quickly. There will still be slow page loads when the cache needs to be populated, but subsequent page-loads should be speedier.
 
 ## External Web Service Calls
 
-It is not uncommon for API or web-service integration modules to make `curl()` or `drupal_http_request()` calls, which will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a timeout on Pantheon.
 
-Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why modules and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
+Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
 
 If you are seeing frequent problems with external web services, it's a good idea to evaluate the code making the call, if not the service provider themselves.
 
@@ -140,7 +127,7 @@ If the all the errors have been resolved and the views, batches and tasks have b
 
 ### Unexpected Timeouts
 
-There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page-load, to the advanced\_help spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
+There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page-load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
 If you are seeing timeouts in unexpected places, debugging with New Relic or looking at your php slow logs can be informative.
 
@@ -148,7 +135,7 @@ If you are seeing timeouts in unexpected places, debugging with New Relic or loo
 
 In the best of all possible worlds, there are no slow queries, all external calls are fast, and the application is a finely-tuned highly-optimized cheetah of the web. In reality, sometimes we just need to get around a pesky timeout in order to get the job done.
 
-Drush is a great workaround for most administrative bottlenecks. Because it runs via the PHP command-line, there are no time limits. Enabling/disabling modules, running update.php, clearing caches; these are all supported by Drush.
+[Terminus](https://github.com/pantheon-systems/cli) is a great workaround for many administrative bottlenecks. There are no time limits because it runs via the PHP command-line. Enabling/disabling modules or plugins, running update.php for Drupal, clearing caches, are all actions supported by Terminus for both WordPress and Drupal.
 
 ## Handle More Traffic
 

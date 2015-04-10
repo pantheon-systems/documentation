@@ -48,7 +48,8 @@ When preparing a site for export, there are a few best practices to follow:
 * If you’ve been using the database for things other than Drupal or WordPress, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
 ### Create Single-file Archives
-Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation.
+If your site can be packaged with a total archived size less than 500MB, then you can import that single file to create your site.
+Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation. 
 <!--@TODO: Test archives created with [Backup and Migrate](https://www.drupal.org/project/backup_migrate).-->
 
 WordPress archives created with [Duplicator](https://wordpress.org/plugins/duplicator/) are known to work when imported during site creation.

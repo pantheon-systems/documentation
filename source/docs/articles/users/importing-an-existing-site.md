@@ -116,12 +116,19 @@ This is optional, but recommended. Export a tar.gz or .zip file of your files di
 
 ## Upload Files to Pantheon
 
-The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.  
+The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
+
+**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
 If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
-## Drush Site Archive Format
+## Import Single-File Archives
 
-Drush site archive format is supported when performing site imports using [terminus](https://github.com/pantheon-systems/terminus), the Pantheon command-line tool.
+If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
+
+In order to import a drush archive, use:
+```
+terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
+```

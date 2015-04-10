@@ -1,5 +1,5 @@
 ---
-title: Private Files
+title: Private Files with Drupal
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 category:
     - development
@@ -49,12 +49,12 @@ This depends on the workflow and that you are planning to implement. If you set 
 
 In the event you do not sync the databases you may get some errors as there is a system check in Drupal to verify that directory is writable before that variable is set which can cause errors. However, because you have already pushed that up in code, setting that variable in Test or Live will do the trick.
 
-This can be done via Drush:
+This can be done via [Terminus](https://github.com/pantheon-systems/cli):
 
     # Set this to Test/Live
-    $: drush @pantheon.example.test vset uc_credit_encryption_path 'private'
+    $: terminus drush --site=<site> --env=<env> vset uc_credit_encryption_path 'private'
     # verify the path is set on Test/Live
-    $: drush @pantheon.example.test vget uc_credit_encryption_path
+    $: terminus drush --site=<site> --env=<env> vget uc_credit_encryption_path
     uc_credit_encryption_path: "private"
 
 **Note**: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.

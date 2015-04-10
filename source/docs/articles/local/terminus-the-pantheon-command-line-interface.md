@@ -1,33 +1,22 @@
 ---
-title: Terminus - the Pantheon Command-Line Interface
-description: Learn the most common Terminus commands.
+title: The Terminus Drush Extension (Deprecated)
+description: The original Terminus project
 category:
   - developing
 
 ---
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style type="text/css">pre {
-  font-size: 70%;
-}
-</style>
-</head>
-## What is Terminus?
-<iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/xMd6sKLAE00" width="420"></iframe>
+## NOTE: Archive Reference
+The Original Terminus project was a drush extension and is now Deprecated. It has been replaced with a stand-alone command-line utility, which you can read about at our new [Terminus article](/docs/articles/local/cli/ "Pantheon documentation article on the CLI project") and its [github repository](https://github.com/pantheon-systems/cli "Pantheon's CLI Repository on github")
 
-Terminus is a Drush-based command-line interface (CLI) in the Pantheon core API. Terminus is open-source and MIT licensed.
+## Terminus 1 Project
 
-## Get Terminus
-
-Visit [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus) and follow the installation instructions.
+You can still see the original, unmaintained Drush extension at [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus).
 
 ## Support for Terminus
 
-Please use the [Terminus issue tracker](https://github.com/pantheon-systems/terminus/issues) if you find any bugs or wish to contribute.
+This software is now deprecated and unsupported.
 
-## All About Terminus
-
-### Commands
+## Terminus Commands
 
 <table>
 		<tr>

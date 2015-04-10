@@ -17,40 +17,40 @@ One of the modules already included in every Pantheon Drupal site is [pantheon\_
 
 Currently, all plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-
-<tbody>
-		<tr>
-			<th>Plan</th>
-			<th>Is Solr Available?</th>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>Sandbox</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Personal</td>
-			<td>No</td>
-		</tr>
-		<tr>
-			<td>Professional</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Business</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Enterprise</td>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<td>Pantheon One</td>
-			<td>Yes</td>
-		</tr>
+<table>
+	<tbody>
+			<tr>
+        <th align="left" style="width: 130px">Plan</th>
+        <th align="left" style="width: 130px">Is Solr Available?</th>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+        <td align="left">Sandbox</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Personal</td>
+        <td align="left">No</td>
+			</tr>
+			<tr>
+        <td align="left">Professional</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Business</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Enterprise</td>
+        <td align="left">Yes</td>
+			</tr>
+			<tr>
+        <td align="left">Pantheon One</td>
+        <td align="left">Yes</td>
+			</tr>
 	</tbody>
-
+</table>
 
 ## Enabling Solr for a Pantheon Site
 
@@ -203,14 +203,19 @@ The Pantheon Apache Solr ​module also adds an item to the Administration > Re
 
 The following are Pantheon-specific variables that you can check for, depending on the module you are using:
 
-<dl>
-	<dt>apachesolr.module</dt>
-	<dd>If you're using the Apache Solr module, you can check for the existence of this variable: <code>drush vget apachesolr_service_class</code>
-</dd>
-	<dt>search_api_solr.module</dt>
-	<dd>If you are using search_api_solr.module you can check it with this drush command: <code>drush vget search_api_solr_connection_class</code>
-</dd>
-</dl>
+####apachesolr.module
+If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
+
+    terminus drush --site=<site> --env=<env> vget apachesolr_service_class
+
+####search_api_solr.module
+If you are using search_api_solr.module you can check it with the command:
+
+    terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
+
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+
 **Keep in Mind:** Newly indexed items have a 2-minute delay, until cron has been run or manually indexed before they become available in Solr search.
 
 ### Error During Search API Solr Installation

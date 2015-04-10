@@ -8,7 +8,7 @@ category:
 
 ## Overview
 
-Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your Drupal configuration.
+Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
 **Note**: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the dashboard periodically or when you can’t connect.
 
@@ -26,7 +26,7 @@ The following required fields are provided:
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
 
-As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a Drupal site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your dashboard for the current credentials.
+As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your dashboard for the current credentials.
 
 There's a wide array of MySQL clients that can be used, including [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/), [Sequel Pro](http://www.sequelpro.com/download), [Navicat](http://www.navicat.com/download), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
 
@@ -68,6 +68,6 @@ Table prefixes are not supported or recommended by Pantheon. While the server wi
 
 No, only one database per site is provided and create privileges are not granted.
 
-#### Can I put non-Drupal tables in the Pantheon database?
+#### Can I put unique tables in the Pantheon database?
 
 Pantheon places no restrictions on the contents of the database.

@@ -3,6 +3,9 @@ title: Load Testing Drupal and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your site.
 category:
   - going-live
+authors:
+  - jessifischer
+date: 2/25/2015
 ---
 Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Enterprise site is load tested before going live, and [BlazeMeter](http://blazemeter.com) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
 
@@ -96,5 +99,4 @@ Depending on the application you’re running, you can also access error and slo
 
 The errors and performance hits you discover will each will have a different solution. We recommend doing a search of the error message and reading solutions posted by others, or post your own issue and see if anyone else has an answer. Additionally, if a specific module or plugin is slow, check the issue queue to see if the problem is known and if a patch is available.
 
-Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](https://pantheon.io/docs/articles/sites/database/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](https://pantheon.io/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well. 
-
+Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](https://pantheon.io/docs/articles/sites/database/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](https://pantheon.io/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well.
