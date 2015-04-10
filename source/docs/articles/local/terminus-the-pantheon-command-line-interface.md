@@ -1,12 +1,12 @@
 ---
-title: Terminus 1 - the Original Pantheon Command-Line Interface (Deprecated)
+title: The Terminus Drush Extension (Deprecated)
 description: The original Terminus project
 category:
   - developing
 
 ---
 ## NOTE: Archive Reference
-The software this article shows how to use is now Deprecated. For the maintained version, please visit our [Terminus 2 article](/docs/articles/local/cli/ "Pantheon documentation article on the CLI project")
+The Original Terminus project was a drush extension and is now Deprecated. It has been replaced with a stand-alone command-line utility, which you can read about at our new [Terminus article](/docs/articles/local/cli/ "Pantheon documentation article on the CLI project") and its [github repository](https://github.com/pantheon-systems/cli "Pantheon's CLI Repository on github")
 
 ## Terminus 1 Project
 
