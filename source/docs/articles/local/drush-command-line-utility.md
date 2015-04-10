@@ -1,38 +1,53 @@
 ---
 title: Drush Command-Line Utility
-description: Administer and maintain your site using Drush.
+description: Administer and maintain your site from your local Drush installation.
 category:
   - getting-started
   - developing
 
 ---
 
-
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Pantheon does not need the settings.php for your site to work, but Drush commands require a settings.php file and it's considered a best practice to have one.
+Pantheon does not need the settings.php for your site to work, and your Drupal sites do not contain one out of the box. Drush commands require a settings.php file and it's considered a best practice to have one. Simply duplicate the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on a new site.
 
+## Terminus Drush and Local Drush
+Drush-savvy developers should also install and utilize [Terminus](https://github.com/pantheon-systems/cli), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote drush calls on your environments without having drush installed locally.
+
+Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+
+## Drush Versions
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
 
 You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations.
 
 There are a few known issues:
 
-## Drush 5
+### Drush 5
 
 Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
 
-## Drush 6
+### Drush 6
 
-Many Drush 6 commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
+If your local Drush installation is version 6, most commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
-## Downloading Pantheon Site Aliases for Drush
+## Installing Drush Aliases Locally
+Adding Pantheon Aliases to your local drush aliases file will allow you to run drush calls against your Pantheon site environments. There are two methods for obtaining the aliases.
 
-To get started, go to your Pantheon dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
+### Download with Terminus, the Pantheon CLI
+Once authenticated to Pantheon with `$ terminus auth login`, update your local aliases file.
+```
+    $ terminus sites aliases
+    Pantheon aliases updated. [ok]
+    'drush' cache was cleared [success]
+```
+### Manually Download and Move the File
+
+To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
 
 ![Link to Pantheon Drush Aliases](https://www.getpantheon.com/sites/default/files/docs/desk_images/169655)
 
-## Installing the Pantheon Drush Aliases
+###Installing the Pantheon Drush Aliases
 
 If you are on Linux/MacOS environment, put the generated pantheon.aliases.drushrc.php in either the `.drush` directory in your home, or the `aliases` directory of your local Drush installation.
 
@@ -49,13 +64,17 @@ Drush will search for aliases in any of these files using the alias search path.
 
 When the aliases have been installed, clear the drush cache:
 
-    drush cc drush
+    ```
+    $ drush cc drush
+    ```
 
 ## Listing Available Site Aliases
 
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 
-    drush sa
+    ```
+    $drush sa
+    ```
 
 ## Executing a Drush Command on a Pantheon Site Environment
 
@@ -101,7 +120,7 @@ This is the fastest way to install a suite of modules or themes into your Panthe
 
 ## Using Registry Rebuild on Pantheon
 
-Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available drush command on every site. Do not attempt to install the module on your site. This command is provided as-is, without warranty, so make a backup first.  
+Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
 
 
@@ -126,20 +145,6 @@ To run the best practices report on Pantheon:
 To check caching settings on Pantheon (recommendation is to disable page compression):
 
     drush @pantheon.SITENAME.ENV --vendor=pantheon --detail ac
-
-## Terminus, the Pantheon CLI
-
-Drush-savvy developers should also install and utilize [terminus](https://github.com/pantheon-systems/terminus), which is a Drush extension that allows you to control your Pantheon account and site from the command-line. Virtually anything you can do in the dashboard, you can script with Terminus.
-
-For instance, you can automatically update your drush aliases:
-
-    # drush pantheon-auth
-    Pantheon dashboard password for you@yourdomain.com: xxxxxxx
-    Authenticating as you@yourdomain.com [ok]
-    Success! [ok]
-    # drush pantheon-aliases
-    Pantheon aliases updated. [ok]
-    'drush' cache was cleared [success]
 
 ## Transferring Files Using rsync and Drush
 

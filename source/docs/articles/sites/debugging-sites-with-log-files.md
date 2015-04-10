@@ -13,15 +13,15 @@ category:
 Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. These event logs can be accessed in a couple ways:  
 
 1. Visit `/admin/reports/dblog` once logged in as administrator.
-2. Using drush:  
+2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
 ```
-drush @pantheon.SITENAME.ENV watchdog-show
+terminus drush --site=<site> --env=<env> watchdog-show
 ```
-Drush can be used to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
+Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
 ```
-drush @pantheon.SITENAME.ENV watchdog-show --tail
+terminus drush --site=<site> --env=<env> watchdog-show --tail
 ```
 
 ### WordPress

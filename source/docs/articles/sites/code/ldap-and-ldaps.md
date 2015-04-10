@@ -79,9 +79,11 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
 
-The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using drush to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
-    drush @pantheon.SITENAME.ENV scr ldap-test.php
+    terminus drush --site=<site> --env=<env> scr ldap-test.php
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 The entire script:
 

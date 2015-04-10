@@ -124,6 +124,11 @@ The max file upload import size is 100MB total. URL imports are limited to 500MB
 
 If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
-## Drush Site Archive Format
+## Import Single-File Archives
 
-Drush site archive format is supported when performing site imports using [terminus](https://github.com/pantheon-systems/terminus), the Pantheon command-line tool.
+If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
+
+In order to import a drush archive, use:
+```
+terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
+```

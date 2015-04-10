@@ -15,9 +15,7 @@ Both Drupal core and many contributed modules have tasks that need to be perfor
 
 ## Pantheon Cron Execution
 
-For every site environment, Pantheon executes cron at the top of each hour to allow Drupal to perform any scheduled tasks. To do that, Pantheon internally invokes the drush command:
-
-    drush cron
+For every site environment, Pantheon executes cron at the top of each hour to allow Drupal to perform any scheduled tasks. To do that, Pantheon internally invokes `drush cron`.
 
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
@@ -37,9 +35,11 @@ Clicking **Run cron** will run all scheduled tasks.
 
 ![Click Run Cron](https://www.getpantheon.com/sites/default/files/docs/desk_images/73176)
 
-Alternatively, all scheduled cron tasks can be run from Drush with the following command:
+Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
 
-    drush cron
+    terminus drush --site=<site> --env=<env> cron
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
 
@@ -51,7 +51,7 @@ If cron has been recently run, entries will appear in the log. The two entries f
 
 ### How Can I Schedule Cron to Run More Often?
 
-While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute drush cron once an hour, usually within 5 to 10 minutes of the top of the hour.
+While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush cron` once an hour, usually within 5 to 10 minutes of the top of the hour.
 
 If the site has not been accessed through the web by a visitor for at least two hours, the platform suspends the associated services until it's accessed again and cron will not run.
 
@@ -63,7 +63,7 @@ By having pingdom visit the site once a minute like a vistor, the site stays act
 
 This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
 
-As an alternative solution - if you have anything that is executing a cron on your own server, you can execute drush commands remotely - including drush cron - to trigger scheduled operations.
+As an alternative solution - if you have anything that is executing a cron on your own server, you can invoke drush commands remotely using [Terminus](https://github.com/pantheon-systems/cli)- including drush cron - to trigger scheduled operations.
 
 Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging, either through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
@@ -86,9 +86,9 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 
 You can check the log messages through the Drupal Admin interface, as mentioned above.  
 
-You can also use Drush to see when cron was last run with the following command:
+You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
 
-    drush wd-show --type='cron'
+    terminus drush --site=<site> --env=<env> wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
