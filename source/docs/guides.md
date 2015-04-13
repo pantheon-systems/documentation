@@ -1,7 +1,7 @@
 ---
 use: [guides]
 layout: default
-title: Articles
+title: Guides
 ---
 <div class="container article">
   <div class="col-md-9">
