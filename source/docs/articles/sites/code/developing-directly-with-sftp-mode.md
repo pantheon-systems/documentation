@@ -17,7 +17,7 @@ This is why we offer **SFTP mode** . This allows you to develop <me>directly on 
 
 ![Enable SFTP mode](https://www.getpantheon.com/sites/default/files/docs/desk_images/278855)
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> SFTP changes to code that have not been committed _will not be saved in backups_ as they are not part of your code repository yet, and they _will not persist over time_ as your development server migrates through the cloud. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning:</strong> SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet, and they <em>will not persist over time</em> as your development server migrates through the cloud. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
 
 As you work via SFTP, the Pantheon developer dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever mess around with Git directly.
 
