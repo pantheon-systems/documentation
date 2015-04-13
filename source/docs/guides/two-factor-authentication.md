@@ -1,4 +1,14 @@
-
+---
+title: Two-Factor Authentication
+description: Set up two-factor authentication on your site as an added security measure.
+category:
+  - developing
+  - managing
+  - drupal
+  - wordpress
+author:
+  - matt
+date: 4/13/2015
 
 Two-factor authentication (2FA) is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see ["Multi Factor Authentication" in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and ["Two Step Authentication" on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
 
