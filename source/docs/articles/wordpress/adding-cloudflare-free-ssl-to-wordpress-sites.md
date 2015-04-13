@@ -28,7 +28,7 @@ This will be under Settings > CloudFlare in the WordPress dashboard.
  - Copy your CloudFlare API key which can be found under your account settings
  - Set `HTTPS Protocol Rewriting` to **On**
 
-![CloudFlare Settings](/docs/assets/images/cloudflare-settings.jpg)
+![CloudFlare Settings](/docs/assets/images/cloudflare-settings.png)
 
 ### **SSL Settings**
 
