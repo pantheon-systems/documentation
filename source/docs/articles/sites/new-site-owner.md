@@ -63,17 +63,17 @@ Yes. However, if you have Solr and/or Redis add ons enabled, they will break whe
 
 
 ####How do I change site service levels?
-From your Site Dashboard, click  **Billing**. Select **Change Plan**, choose the new plan and payment information, and click **Purchase Plan**.
+From your Site Dashboard, click **Settings** and then **Billing**. Select **Change Plan**, choose the new plan and payment information, and click **Purchase Plan**.
 
 ####Can I update or change the payment method?
-You can update the payment method in the **Billing** page. For detailed instructions, see [Updating Payment Methods](/docs/articles/updating-payment-methods/).
+You can update the payment method in the **Settings > Billing** page. For detailed instructions, see [Updating Payment Methods](/docs/articles/updating-payment-methods/).
 
 
 ####Can I transfer ownership of a site to someone else?
 
 The site owner is the person who pays for the site. You'll need to update the payment method in order to change the owner.
 
-1. From the **Billing** page, click **Invite to pay for the site**.
+1. From the **Settings > Billing** page, click **Invite to pay for the site**.
 2. Enter the email address for the new site owner, and click **Send Invite**.
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
