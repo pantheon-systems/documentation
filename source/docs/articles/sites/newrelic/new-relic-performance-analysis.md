@@ -16,11 +16,12 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 
 To enable New Relic on your Pantheon site, click **Settings** in the upper-right corner of your site dashboard. Within the Add Ons tab, click **Add** next to New Relic.
 
+
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218052)  
-Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
+Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
 
 
-You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
+You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/280225)  
@@ -35,7 +36,7 @@ The New Relic Interface provides severals views that display information about v
 ![End-User Inteface](https://www.getpantheon.com/sites/default/files/docs/desk_images/78125)
 
 1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data. 
-2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. NOTE: the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.
+2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. Note: the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.
 3. **Page Views** provides the number of page views per minute.
 4. The **Apdex & Top States by Load Time** presents a visualization of load times based on region; these can be viewed internally to the United States or globally.
 5. **Recent Events** logs the most recent events.
@@ -52,54 +53,75 @@ The New Relic Interface provides severals views that display information about v
 
 ## Only Logging Authenticated Users
 
-If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using Drupal's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as /admin.  
+If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
 
+### Drupal
+For Drupal based sites, if you want to disable New Relic for anonymous traffic, add the following to your `sites/default/settings.php`:
 
-If you want to disable New Relic for anonymous traffic, add the following to your sites/default/settings.php:
-
-    <?php
-    // Disable New Relic for anonymous users.
-    if (function_exists('newrelic_ignore_transaction')) {
-      $skip_new_relic = TRUE;
-      // Capture all transactions for users with a PHP session.
-      foreach (array_keys($_COOKIE) as $cookie) {
-        if (substr($cookie, 0, 4) == 'SESS') {
-          $skip_new_relic = FALSE;
-        }
-      }
-      // Capture all POST requests so we include anonymous form submissions.
-      if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-        $skip_new_relic = FALSE;
-      }
-      if ($skip_new_relic) {
-        newrelic_ignore_transaction();
-      }
+```
+// Disable New Relic for anonymous users.
+if (function_exists('newrelic_ignore_transaction')) {
+  $skip_new_relic = TRUE;
+  // Capture all transactions for users with a PHP session.
+  foreach (array_keys($_COOKIE) as $cookie) {
+    if (substr($cookie, 0, 4) == 'SESS') {
+      $skip_new_relic = FALSE;
     }
+  }
+  // Capture all POST requests so we include anonymous form submissions.
+  if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $skip_new_relic = FALSE;
+  }
+  if ($skip_new_relic) {
+    newrelic_ignore_transaction();
+  }
+}
+```
+
+### WordPress
+For WordPress based sites, if you want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
+
+```
+// Disable New Relic for anonymous users.
+if (function_exists('newrelic_ignore_transaction')) {
+    $skip_new_relic = !is_user_logged_in();
+
+    // Capture all POST requests so we include anonymous form submissions.
+    if (isset($_SERVER['REQUEST_METHOD']) &&
+        $_SERVER['REQUEST_METHOD'] == 'POST') {
+        $skip_new_relic = FALSE;
+    }
+
+    if ($skip_new_relic) {
+        newrelic_ignore_transaction();
+    }
+}
+```
 
 ## Frequently Asked Questions
 
-#### How can I share a link to a particular metric?
+### How can I share a link to a particular metric?
 
-In the lower-right hand corner of a New Relic performance page, click the link labeled **Permalink** . This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
+In the lower-right hand corner of a New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218071)
 
-#### How much is New Relic?
+### How much is New Relic?
 
 Pantheon provides New Relic Standard at no cost. You can upgrade your site monitoring to Professional or above by contacting New Relic through your New Relic interface, and they can provide a quote. Pantheon cannot provide a New Relic quote. Make sure they know you're a Pantheon customer for a discount!
 
-#### How does New Relic price Pantheon sites for the Professional service?
+### How does New Relic price Pantheon sites for the Professional service?
 
 New Relic sites on Pantheon are priced per Application Container, rather than by core. For example, a site with three environments with two Application Containers in the live environment will be priced as 4 total Application Containers.
 
-#### Will turning on New Relic slow my site down?
+### Will turning on New Relic slow my site down?
 
-Basically, no, New Relic will not make your site slower. There is a very small amount of overhead, but for all intents and purposes it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
+Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
-#### What is the difference between app server response time and browser page load time?
+### What is the difference between app server response time and browser page load time?
 
 App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), and so forth, and browser page load time measures the additional time of client-side page rendering, DOM processing, how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
-#### Can I use my existing New Relic license with my Pantheon Site?
+### Can I use my existing New Relic license with my Pantheon site?
 
 Yes you can! Open a support ticket and provide your account ID and license key.
 
