@@ -1,8 +1,8 @@
 
 
-Two-factor authentication (2FA) is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see [Multi Factor Authentication](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication).
+Two-factor authentication (2FA) is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see ["Multi Factor Authentication" in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and ["Two Step Authentication" on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
 
-## Benefits
+## Benefits of Two-Factor Authentication
 
 Two-factor authentication is a helpful security practice because it prevents attackers from compromising accounts by requiring an extra authentication method beyond only using a password to log in. This is important because standard password access can be very easy to bypass if the user has a simple password that's easy to guess, is observed typing in their password, or has used their password on another site that becomes compromised. By requiring a second form of authentication (especially one tied to a physical device like a mobile phone or a USB key), would-be attackers not only have to compromise a user’s password, but also their mobile phone or physical USB key, which makes the attack much more difficult. 
 
@@ -47,7 +47,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 ## Setting Up Two-Factor Authentication With Drupal (Single Site)
 
-For a single site, there is a [Two-Factor Authentication module](https://www.drupal.org/project/tfa) that provides the foundation necessary to use two-factor authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-based One Time Password, are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic). There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev). 
+For a single site, there is a few [different Drupal modules](https://groups.drupal.org/node/235938) including the [Two-Factor Authentication module](https://www.drupal.org/project/tfa) that provides the foundation necessary to use two-factor authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-based One Time Password, are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic). There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev). 
 
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) and the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
 2. Download and set up a TOTP app such as [Authy](https://www.authy.com/users) for either iOS or Android.
@@ -83,9 +83,3 @@ For an organization-wide solution, there are many different [Drupal modules for 
 2. Configure the OneLogin module `admin/config/onelogin_saml` to provide the appropriate values, which are available in the “SSO” and "Parameters" section of the OneLogin Configuration page. 
 ![TFA OneLogin Options](../assets/images/tfa-drupal-onelogin-options.png)
 3. Now use the OneLogin dashboard to log in to your Drupal site! 
-
-
-##See Also
-- [Security on Pantheon](https://pantheon.io/security)
-- [WordPress Two Step Authentication](http://codex.wordpress.org/Two_Step_Authentication)
-- [Drupal Modules For Two-Factor Authentication](https://groups.drupal.org/node/235938)
