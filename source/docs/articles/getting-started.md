@@ -91,8 +91,6 @@ No platform is perfect; familiarize yourself with Pantheon's [known limitations]
 
 When you're ready to launch your site, you'll need to add a credit card to the site. For details, see [Adding a Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site).
 
-![Select a plan and payment method from dashboard](/source/docs/assets/images/select-a-plan-and-billing.png)
-
 ## Frequently Asked Questions
 
 #### Does Pantheon offer professional services?
