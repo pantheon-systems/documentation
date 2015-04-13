@@ -43,7 +43,7 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
+Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. This link is only visible when the Sandbox site _does not_ have a credit card associated with the site. To disassociate a credit card, visit the site's Billing tab within the Settings modal.
 
 **Note**: Only the current site owner has the ability to assign a new owner; team members will not see this option.
 
