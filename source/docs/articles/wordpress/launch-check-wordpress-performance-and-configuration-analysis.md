@@ -35,12 +35,18 @@ This check verifies that Cron is enabled and what jobs are scheduled. It is enab
 
 This displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
 
+####What issues will I experience if I don't use InnoDB?  
+InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
+To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](https://pantheon.io/blog/moving-mysql-tables-myisam-innodb).
 
 ###Probable Exploits
 This check will display a list of exploited patterns in code, the file name that has the exploit, line number, and match.
 
 ###Object Cache
 This tells you if Object Caching and Redis are enabled.
+
+If you receive an error similar to:`Cannot redeclare class WP_Object_Cache in
+/srv/bindings/0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress/).
 
 <!--
 ###Plugins
