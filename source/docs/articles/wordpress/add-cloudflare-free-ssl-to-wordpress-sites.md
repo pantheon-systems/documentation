@@ -25,12 +25,12 @@ CloudFlare settings can be found within the Settings > CloudFlare tab in the Wor
 1. Copy your CloudFlare API key within Account Settings
 1. Set HTTPS Protocol Rewriting to **On**
 
-![CloudFlare Settings](/docs/assets/images/cloudflare-settings.png)
+![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.png)
 
 ## SSL Settings
 
 Within your Cloudflare account, set the SSL Mode to **Flexible** within the Crypto menu.
-![CloudFlare Flex SSL](/docs/assets/images/cloudflare-flexible-ssl.png)
+![CloudFlare Flex SSL](/source/docs/assets/images/cloudflare-flexible-ssl.png)
 
 ### Page Rule Settings and DNS
 Navigate to the Page Rules section of your CloudFlare account.
@@ -39,7 +39,7 @@ Navigate to the Page Rules section of your CloudFlare account.
  - Example:`http://yourdomain.com/*`
 1. Set Always use https to **On**
 1. Click **Add Rule**
- ![CloudFlare Rules](/docs/assets/images/cloudflare-page-rules.png)
+ ![CloudFlare Rules](/source/docs/assets/images/cloudflare-page-rules.png)
 1. Locate your DNS Settings within your CloudFlare account.
 1. Create an `A Record` and a `CNAME Record` which [point to your Pantheon site](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon-dns-records-for-http-sites).
 1. From within your site's Pantheon Dashboard, add your domain name within the [Domains/SSL tab](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon-dns-records-for-http-sites).
@@ -50,4 +50,4 @@ The final step is to deploy your code to the Live environment, for more details 
 
 The SSL certificate can take up to 24 hours to take affect to your Live site, please be patient. Once it's complete you should see a green lock next to your domain name:
 
-![Green lock](/docs/assets/images/cloudflare-green-bar.png)
+![Green lock](/source/docs/assets/images/cloudflare-green-bar.png)
