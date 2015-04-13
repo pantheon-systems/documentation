@@ -6,22 +6,22 @@ category:
 
 ---
 
-## Select Your Site
-If you would like to change or edit the credit card your site uses, it is quick and easy to do. First, select the site you would like to update the payment method for, click the **Settings** link, and select the **Billing** tab.
-
-## Add New Card Information
-
-Enter the information for the new credit card, and click **Add Card**.
-
-![Add new card section](/source/docs/assets/images/add-new-credit-card.png)
+If you would like to add a new credit card or edit the existing card a site uses, it's quick and easy to do.
 
 
-## Select Your Card
+## Update an Existing Card
 
-Within the same tab, select the card you want to use from the drop-down menu, and click **Update Payment Method**.
-![Update card overview](/source/docs/assets/images/update-card-dashboard.png)
+1. Within the **Billing** tab, select the card you want to edit, and click **Update Payment Method**.
+2. Enter the new information, and click **Update Billing**.
+
+## Add a New Credit Card
+
+1. From your Site Dashboard, click  **Billing**.
+2. Select **Add Credit Card**, and enter the new payment information.
+3. When you're finished, click **Update Billing**.
 
 
 ### Additional Resources
 
-- [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
+- [Adding a Credit Card to a Specific Site](/source/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
+- [New Site Owner FAQs](/source/docs/articles/sites/new-site-owner)
