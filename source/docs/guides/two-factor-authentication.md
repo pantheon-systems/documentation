@@ -12,7 +12,7 @@ date: 4/13/2015
 
 ---
 
-Two-factor authentication (2FA) is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see ["Multi Factor Authentication" in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and ["Two Step Authentication" on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
+Two-factor authentication (TFA) is a security practice which requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see ["Multi Factor Authentication" in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and ["Two Step Authentication" on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
 
 ## Benefits of Two-Factor Authentication
 
@@ -95,3 +95,8 @@ For an organization-wide solution, there are many different [Drupal modules for 
 2. Configure the OneLogin module `admin/config/onelogin_saml` to provide the appropriate values, which are available in the “SSO” and "Parameters" section of the OneLogin Configuration page. 
 ![TFA OneLogin Options](../assets/images/tfa-drupal-onelogin-options.png)
 3. Now use the OneLogin dashboard to log in to your Drupal site! 
+
+##See Also
++- [Security on Pantheon](https://pantheon.io/security)
++- [WordPress Two Step Authentication](http://codex.wordpress.org/Two_Step_Authentication)
++- [Drupal Modules For Two-Factor Authentication](https://groups.drupal.org/node/235938)
