@@ -49,6 +49,6 @@ Go to the Page Rules section of your CloudFlare account.
 
 The final step is to deploy your code to the Live environment. For details, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
 
-It can take up to 24 hours before the SSL certificate takes affect on your Live site; please be patient. Once it's complete, you will see a green lock next to your domain name:
+It can take up to 24 hours before the SSL certificate takes effect on your Live site; please be patient. Once it's complete, you will see a green lock next to your domain name:
 
 ![Green lock](/source/docs/assets/images/cloudflare-green-bar.png)
