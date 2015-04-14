@@ -25,6 +25,7 @@ CloudFlare settings can be found in the Settings > CloudFlare tab in the WordPre
 1. Set your domain name to reflect how it appears in your CloudFlare account. Example: `domain.com`
 1. In Account Settings, copy your CloudFlare API key.
 1. Set HTTPS Protocol Rewriting to **On**.
+1. Set Development Mode to **Off**.
 
 ![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.png)
 
