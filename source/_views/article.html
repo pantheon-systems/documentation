@@ -3,24 +3,27 @@
     <article>
         <div class="article container">
           <div class="col-md-9">
+            <div class="page-header">
             <header>
-              <h1 class="pio-docs-title">{{ page.title }}</h1>
-              <!-- <script type="text/javascript">
+              <h1 class="pio-docs-title">{{ page.title }}<br /><small>{{ page.description }}</small></h1>
+              <!-- <script type="text /javascript">
             #  breadcrumbs()
 
             </script> -->
-
+            {% if page.category %}
+                <p class="category">Categories:
+                {% for category in page.category %}
+                <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                </p>
+              </div>
             </header>
-              {% if page.category %}
-                  <p class="category">Categories:
-                  {% for category in page.category %}
-                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
-                  {% endfor %}
-                  </p>
-              {% endif %}
-                <div>
-                    {{ page.blocks.content|raw }}
-                </div>
+            {% endif %}
+              <div>
+                  {{ page.blocks.content|raw }}
+              </div>
+
+
 
           </div>
             <div class="col-md-3">
