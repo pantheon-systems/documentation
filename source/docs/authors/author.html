@@ -20,7 +20,7 @@ use:
             {% include 'author_box.twig' %}
         {% endif %}
 
-        <h2>Guides by {{ page.author }}</h2>
+        <h2>Guides by {{ author.name }}</h2>
 
         <ul>
         {% for guide in page.author_guides %}
