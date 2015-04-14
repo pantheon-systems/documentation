@@ -86,7 +86,7 @@ In order to correct this you should use the CNAME that is available on the dashb
 *   Do **not** point subdomains to the Dub Dub Dubber, this will not work
 *   Use the recommended DNS config on dashboard for pantheon.io sites
 *   Do **not** point non-www domains to the Dub Dub Dubber unless to immediately redirect to www
-*   Set AAA record where possible for non-www domains
+*   Set AAAA record where possible for non-www domains
 
 ## Measure Twice, Cut Once
 
