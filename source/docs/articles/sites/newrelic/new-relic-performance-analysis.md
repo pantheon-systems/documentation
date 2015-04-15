@@ -14,22 +14,22 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 
 ## Enabling New Relic
 
-To enable New Relic on your Pantheon site, click **Settings** in the upper-right corner of your site dashboard. Within the Add Ons tab, click **Add** next to New Relic.
+To enable New Relic on your Pantheon site, click **Settings** in the upper-right corner of your Site Dashboard. Within the Add Ons tab, click **Add** next to New Relic.
 
 
 ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218052)  
 Pantheon will automatically configure New Relic on your behalf, including all configurations on the server. No further action is required!  
 
 
-You can access your New Relic instance by clicking on the newly created New Relic button on the left side of the site dashboard.  
+You can access New Relic by clicking on the newly created New Relic button on the left side of the Site Dashboard.  
 
 
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/280225)  
 
 
-You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, you can go to the New Relic workspace on your dashboard and click **Open New Relic**. You will be taken to the New Relic interface.
+You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, you can go to the New Relic workspace on your Dashboard, and click **Open New Relic**. You will be taken to the New Relic interface.
 
-The New Relic Interface provides severals views that display information about various aspects of your website's performance.
+The New Relic interface provides severals views that display information about various aspects of your website's performance.
 
 ## End-User Overview
 
@@ -56,7 +56,7 @@ The New Relic Interface provides severals views that display information about v
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
 
 ### Drupal
-For Drupal based sites, if you want to disable New Relic for anonymous traffic, add the following to your `sites/default/settings.php`:
+For Drupal-based sites that want to disable New Relic for anonymous traffic, add the following to your `sites/default/settings.php`:
 
 ```
 // Disable New Relic for anonymous users.
@@ -79,7 +79,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 ```
 
 ### WordPress
-For WordPress based sites, if you want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
+For WordPressbased sites that want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
 
 ```
 // Disable New Relic for anonymous users.
@@ -100,36 +100,36 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ## Frequently Asked Questions
 
-### How can I share a link to a particular metric?
+#### How can I share a link to a particular metric?
 
-In the lower-right hand corner of a New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
+In the New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
  ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/218071)
 
-### How much is New Relic?
+#### How much is New Relic?
 
 Pantheon provides New Relic Standard at no cost. You can upgrade your site monitoring to Professional or above by contacting New Relic through your New Relic interface, and they can provide a quote. Pantheon cannot provide a New Relic quote. Make sure they know you're a Pantheon customer for a discount!
 
-### How does New Relic price Pantheon sites for the Professional service?
+#### How does New Relic price Pantheon sites for the Professional service?
 
-New Relic sites on Pantheon are priced per Application Container, rather than by core. For example, a site with three environments with two Application Containers in the live environment will be priced as 4 total Application Containers.
+New Relic sites on Pantheon are priced per Application Container, rather than by core. For example, a site with three environments with two Application Containers in the live environment will be priced as four total Application Containers.
 
-### Will turning on New Relic slow my site down?
+#### Will turning on New Relic slow my site down?
 
 Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
-### What is the difference between app server response time and browser page load time?
+#### What is the difference between app server response time and browser page load time?
 
-App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), and so forth, and browser page load time measures the additional time of client-side page rendering, DOM processing, how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
+App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
-### Can I use my existing New Relic license with my Pantheon site?
+#### Can I use my existing New Relic license with my Pantheon site?
 
-Yes you can! Open a support ticket and provide your account ID and license key.
+Yes you can. Open a support ticket and provide your account ID and license key.
 
 ## Resources
 
-- [General New Relic documentation](https://newrelic.com/docs/)
-- [Official New Relic videos and tutorials](http://newrelic.com/resources/videos)
+- [General New Relic Documentation](https://newrelic.com/docs/)
+- [Official New Relic Videos and Tutorials](http://newrelic.com/resources/videos)
 - [Case studies](http://newrelic.com/resources/case-studies)
-- [What is Real user monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
-- [Finding help from the New Relic UI](https://newrelic.com/docs/site/finding-help)
-- [Interface overview](https://newrelic.com/docs/site/the-new-relic-ui)
+- [What is Real User Monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
+- [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
+- [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
