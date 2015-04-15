@@ -85,6 +85,11 @@ body.row.main {
   margin-bottom: 40px;
 }
 
+.main-content{
+  margin: 20px 0 0;
+  border: 1px solid #ccc;
+}
+
 .article {
   background-color: white;
   padding-bottom: 40px;
@@ -101,7 +106,7 @@ body.row.main {
 .search-form {
   margin-top: 8px;
   margin-right: 4px;
-  width: 200px;
+  width: 210px;
 }
 
 .landing-search {
@@ -166,7 +171,18 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 
 .form-group {
   margin-bottom: 0px;
+
 }
+
+input.form-control{
+  opacity: 0.6;
+  transition: all 0.2s ease-in;
+  color: #000;
+}
+
+  input.form-control:focus{
+    opacity: 1;
+  }
 
 .search-landing {
   margin-left: 16.6666667%;
@@ -267,12 +283,13 @@ img.noborder {border:none;}
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 700;
   color: white;
+  transition: all 0.2s ease-in;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
 .pio-docs-nav .navbar-nav > .active > a:hover {
-  color: #222;
-  background-color: #f9f9f9;
+  color: #fff;
+  background-color: #444;
 }
 .pio-docs-nav .navbar-toggle .icon-bar {
   background-color: #563d7c;
@@ -293,13 +310,27 @@ img.noborder {border:none;}
 * Separated section of content at the bottom of all pages, save the homepage.
 */
 
+.cta-docs-footer{
+  border: 1px solid #ccc;
+  border-top: 0px;
+  padding: 20px;
+  background: #EFF2F2;
+  margin: 0px -15px;
+  text-align: center;
+  display: block;
+}
+  .cta-docs-footer p{
+    margin: 0px;
+    display: block;
+  }
+
 .pio-docs-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
   color: #777;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+
 }
 .pio-docs-footer-links {
   padding-left: 0;
@@ -1128,6 +1159,23 @@ h1[id] {
   background-color: #FE4A45;
   border-color: #FE4A45;
 }
+
+.btn-primary{
+  background: #EFD01B;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #222;
+  transition: all 0.5s ease;
+  margin: 5px 10px;
+  display: inline-block;
+}
+
+  .btn-primary:hover{
+    color: #222;
+    text-decoration: none;
+    background: #F5E36B;
+  }
+
 
 /* Forms */
 .pio-example-control-sizing select,
