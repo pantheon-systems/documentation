@@ -317,13 +317,10 @@ img.noborder {border:none;}
   background: #EFF2F2;
   margin: 0px -15px;
   text-align: center;
-  height: 80px;
   display: block;
 }
   .cta-docs-footer p{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0px;
     display: block;
   }
 
