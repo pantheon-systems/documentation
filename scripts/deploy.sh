@@ -6,7 +6,9 @@ rm -rf docs/
 cd ../documentation
 rm -rf output_prod/docs
 sculpin generate --env=prod
-mv output_prod/docs ~/sites/panther/
+mv output_prod/docs ../panther/
 cd ../panther
 git add --all
 git commit
+git push origin docs
+open https://docs-panther.pantheon.io/docs
