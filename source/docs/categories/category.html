@@ -17,7 +17,7 @@ use: [articles_category]
       </script>-->
       <div class="article-list">{% for article in page.category_articles %}
         <article>
-          <a href="{{ article.url }}">{{ article.title }}</a>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
           <p>{{ article.description }}</p>
         </article>
         {% endfor %}
