@@ -123,7 +123,11 @@ App server response time measures how the page was built on Pantheon, including 
 
 #### Can I use my existing New Relic license with my Pantheon site?
 
-Yes you can. Open a support ticket and provide your account ID and license key.
+New Relic is automatically provisioned for your site. Unfortunately, you cannot use your existing license.
+
+#### Why are servers listed in New Relic with no data?
+
+Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
 
 ## Resources
 
