@@ -8,10 +8,6 @@ category:
 
 ## Multidev
 
-### Is Multidev automatic?
-
-Yes. All sites developed with your agency on the team are equipped with up to 10 Multidev Cloud Development Environments (CDEs). Site owners who are not members of your agency do not have access to work on these environments. They can load the URL's for sign-off on the features you develop, but Multidev is a feature for Agencies.
-
 ### What is the benefit of Multidev?
 
 Multidev allows you to more seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
