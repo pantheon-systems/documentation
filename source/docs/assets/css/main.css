@@ -133,7 +133,7 @@ body.row.main {
 
 .landing-search {
   height: 60px;
-  margin: 65px auto 25px auto;
+  margin: 15px auto 25px auto;
 }
 .landing-search input{
   font-size: 30px;
@@ -1762,3 +1762,8 @@ cursor: pointer;
   .entry-meta{
     padding-bottom: 10px;
   }
+
+.thumbnail{
+  border: none;
+  box-shadow: none;
+}

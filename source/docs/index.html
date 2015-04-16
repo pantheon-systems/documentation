@@ -19,35 +19,51 @@ meta:
         type: page
 use: [documents_category]
 ---
-      <div>
-          <div class="landing-search">{% include("search_box.html") %}</div>
-                </div>
+<div class="landing-search">
+<form role="form" method="get" action="https://www.google.com/search">
+  <div class="form-group has-feedback" style=" padding-bottom: 15px;">
+    <input type="text" name="q" class="form-control" placeholder="Search Pantheon Docs" />
+    <input type="hidden" name="as_sitesearch" value="pantheon.io/docs">
+    <i class="form-control-feedback glyphicon glyphicon-search"style="margin-top: 11px; font-size: 160%;"></i>
+  </div>
+</form>
+</div>
 
 
-    <div class="container article pio-docs-container" style="padding-bottom: 40px; margin-bottom: 40px;">
-        <div class="portal-section">
-            <div class="row portal-row" style="text-align: center;">
-              <div class="col-md-6">
-                <h1><a href="/docs/articles/getting-started"><span class="glyphicon glyphicon-off jumbotron" aria-hidden="true"></span></h1>
-                <h3>Getting Started</h3></a>
-              </div>
-              <div class="col-md-6">
-                <h1><a href="/docs/articles/required-reading-essential-pantheon-documentation"><span class="glyphicon glyphicon-star jumbotron" aria-hidden="true"></span></h1>
-                <h3>Required Reading</h3></a>
-              </div>
-              <div class="col-md-6">
-                <h1><a href="/docs/articles"><span class="glyphicon glyphicon-book jumbotron" aria-hidden="true"></span></h1>
-                <h3>Articles</h3></a>
-              </div>
-              <div class="col-md-6">
-                <h1><a href="/docs/guides"><span class="glyphicon glyphicon-map-marker jumbotron" aria-hidden="true"></span></h1>
-                  <h3>Guides</h3></a>
-                </div>
-            </div>
-          </div>
-        </div>
-        
+<div class="article container" style="padding-bottom: 0px;">
+<!--Getting Started Thumbnail-->
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
+    <a href="/docs/articles/getting-started">
+      <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/launch-websites-faster.png" alt="Launch">
+      <h2 align="middle">Getting Started</h2></a>
+      <p align ="middle">Learn how to create a site on Pantheon</p>
+</div>
 
-    </div>
 
-    <!-- Example row of columns -->
+<!--Required Reading Thumbnail-->
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
+    <a href="/docs/articles/required-reading-essential-pantheon-documentation">
+      <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/dashboard-large.png" alt="Required">
+        <h2 align="middle">Required Reading</h2></a>
+        <p align ="middle">Essential Pantheon documentation</p>
+</div>
+
+<!--Articles Thumbnail-->
+<div class="col-md-6 thumbnail" style="padding-top: 22px; margin: 15px auto 15px auto">
+    <a href="/docs/articles">
+      <img class="noborder" style="padding-top: 10px; padding-left: 25px" src="/source/docs/assets/images/build-better-websites.png" alt="Launch">
+        <h2 align="middle">All Articles</h2></a>
+        <p align ="middle">Browse through the entire list of articles</p>
+</div>
+
+<!--Guides Thumbnail-->
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
+    <a href="/docs/guides">
+      <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/devops-robot.png" alt="Guides">
+        <h2 align="middle">Guides</h2></a>
+        <p align ="middle">Best practices for dynamic sites</p>
+  </div>
+
+</div>
+</div>
+</div>
