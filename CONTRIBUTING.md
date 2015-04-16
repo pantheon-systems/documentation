@@ -43,7 +43,7 @@ your_handle:
    linkedin: https://www.linkedin.com/in/
    drupal: https://www.drupal.org/u/
    wordpress: https://profiles.wordpress.org/
-bio: this is a short bio, it should not be long, just a quick info that defines you.
+bio: This shouldn't be long, just a short intro.
 ```
 Please provide at least "name" and "bio". The "gplus" url is useful to show your author info on Google search results.
 
@@ -69,8 +69,8 @@ See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/m
 
 # Additional Resources
 
-* [General GitHub documentation](http://help.github.com/)
-* [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
+* [General GitHub Documentation](http://help.github.com/)
+* [GitHub Pull Request Documentation](http://help.github.com/send-pull-requests/)
 * #pantheon IRC channel on freenode.org
 
 
