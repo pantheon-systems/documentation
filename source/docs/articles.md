@@ -10,7 +10,7 @@ title: Articles
   <h1>All Articles</h1>
     {% for article in data.articles %}
         <article>
-          <a href="{{ article.url }}">{{ article.title }}</a>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
           <p> {{ article.description }} </p>  
           </article>
     {% endfor %}

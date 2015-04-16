@@ -11,7 +11,7 @@ title: Guides
     <h2>All Guides</h2>
   {% for guide in data.guides %}
         <article>
-          <a href="{{ guide.url }}">{{ guide.title }}</a>
+          <h3><a href="{{ guide.url }}">{{ guide.title }}</a></h3>
           <p> {{ guide.description }} </p>  
           </article>
     {% endfor %}

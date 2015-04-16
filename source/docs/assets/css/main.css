@@ -27,8 +27,30 @@
   url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
-
 }
+
+h1{
+  font-size: 36px;
+  font-weight: 800;
+  }
+
+h2 {
+  font-size:24px;
+  font-weight: 800;
+  margin: 40px 0 10px 0;
+  }
+
+h3 {
+  font-size:18px;
+  font-weight: 600;
+  margin: 30px 0 5px 0;
+  }
+
+h4 {
+  font-size:16px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  }
 
 .docs{
   /* Navbar Site Title */
