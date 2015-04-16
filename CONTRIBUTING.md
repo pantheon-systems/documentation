@@ -2,28 +2,51 @@
 
 Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests! We won't just thank you for your work, we will compensate you as well.
 
-## Get Started
-
-### External Contributors
+## Before You Start
 
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
-* Fork the pantheon-systems/documentation repository on GitHub. Trying to edit or create a file in this repository will create your fork automatically.
-* Optional: Clone your fork locally.
+* Fork the pantheon-systems/documentation repository on GitHub.
+  Trying to edit or create a file in this repository will create your fork automatically.
+* [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
 
-### Pantheon Employees
-* Clone the pantheon-systems/documentation repository to your local machine.
+## Edit Existing Docs
 
-## Edit Docs
-
-1. Search existing issues; if you can't find anything related to what you want to work on, open a new issue so that you can get some initial feedback.
+1. Search [open issues](https://github.com/pantheon-systems/documentation/issues); if you can't find anything related to what you want to work on, open a new issue so that you can get some initial feedback.
 2. Locally, cd to the `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
-3. Edit existing docs using GitHub's inline markdown editor or clone your fork, edit locally, commit changes, and push to your fork. You'll need to do this for every individual doc you edit.
+3. Edit locally, commit changes, and push to your fork.
+
 
 ## Add a New Doc
+### Front Matter
+All of our documentation is generated from markdown files, found at [`source/docs/articles/`](/source/docs/articles/) and [`source/docs/guides/`](source/docs/guides/). These markdown files must have front matter that allow the page to render successfully. This is required if you plan to create a new doc. Here's an example:
+```
+---
+title: Starting With Git
+description: Use Git version control with your Pantheon site.
+category:
+  - getting-started
+  - developing
 
-All of our articles and guides are generated from markdown files in the repository, located at [`source/docs/articles/`](/source/docs/articles/) and [`source/docs/guides/`](source/docs/guides/), respectively. These markdown files must have frontmatter that matches the patterns within the document. 
+---
+```
 
-If you're creating your first guide, you must also create an Author profile in the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Include it in the pull request with your guide.
+### Attribution
+If you're creating your **first** guide, you must also create an Author profile. Fill out the information below and add it to the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Commit this change alongside your new guide.
+```
+your_handle:
+   name: Your Name
+   url: http://yourURL.com
+   avatar: http://url.to.a.valid/avatar.jpeg
+   twitter: http://twitter.com/
+   gplus: https://plus.google.com/
+   github: https://github.com/
+   linkedin: https://www.linkedin.com/in/
+   drupal: https://www.drupal.org/u/
+   wordpress: https://profiles.wordpress.org/
+bio: this is a short bio, it should not be long, just a quick info that defines you.
+```
+Please provide at least "name" and "bio". The "gplus" url is useful to show your author info on Google search results.
+
 
 ## Submit a Pull Request
 
