@@ -1,6 +1,6 @@
 # Contributing
 
-Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests! We won't just thank you for your work, we will compensate you as well.
+Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
 ## Before You Start
 
