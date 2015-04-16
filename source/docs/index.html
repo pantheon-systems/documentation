@@ -19,14 +19,20 @@ meta:
         type: page
 use: [documents_category]
 ---
-<div>
-  <div class="landing-search">
-    {% include("search_box.html") %}
+<div class="landing-search">
+<form role="form" method="get" action="https://www.google.com/search">
+  <div class="form-group has-feedback" style=" padding-bottom: 15px;">
+    <input type="text" name="q" class="form-control" placeholder="Search Pantheon Docs" />
+    <input type="hidden" name="as_sitesearch" value="pantheon.io/docs">
+    <i class="form-control-feedback glyphicon glyphicon-search"style="margin-top: 11px; font-size: 160%;"></i>
   </div>
+</form>
 </div>
 
+
+<div class="article container" style="padding-bottom: 0px;">
 <!--Getting Started Thumbnail-->
-<div class="col-md-5 thumbnail" style="padding-top: 5px; margin: 15px">
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
     <a href="/docs/articles/getting-started">
       <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/launch-websites-faster.png" alt="Launch">
       <h2 align="middle">Getting Started</h2></a>
@@ -35,25 +41,29 @@ use: [documents_category]
 
 
 <!--Required Reading Thumbnail-->
-<div class="col-md-5 thumbnail" style="padding-top: 5px; margin: 15px">
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
     <a href="/docs/articles/required-reading-essential-pantheon-documentation">
       <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/dashboard-large.png" alt="Required">
         <h2 align="middle">Required Reading</h2></a>
-        <p align ="middle">Recommended documentation to learn about Pantheon's technologies.</p>
+        <p align ="middle">Essential Pantheon documentation.</p>
 </div>
 
 <!--Articles Thumbnail-->
-<div class="col-md-5 thumbnail" style="padding-top: 22px; margin: 15px">
+<div class="col-md-6 thumbnail" style="padding-top: 22px; margin: 15px auto 15px auto">
     <a href="/docs/articles">
-      <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/build-better-websites.png" alt="Launch">
+      <img class="noborder" style="padding-top: 10px; padding-left: 25px" src="/source/docs/assets/images/build-better-websites.png" alt="Launch">
         <h2 align="middle">All Articles</h2></a>
         <p align ="middle">Browse through the entire list of articles.</p>
 </div>
 
 <!--Guides Thumbnail-->
-<div class="col-md-5 thumbnail" style="padding-top: 5px; margin: 15px">
+<div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
     <a href="/docs/guides">
       <img class="noborder" style="padding-top: 10px" src="/source/docs/assets/images/devops-robot.png" alt="Guides">
         <h2 align="middle">Guides</h2></a>
-        <p align ="middle">Best practices for building, launching, and running dynamic sites.</p>
+        <p align ="middle">Best practices for dynamic sites.</p>
   </div>
+
+</div>
+</div>
+</div>
