@@ -4,7 +4,7 @@ description: SendGrid is the world's largest Email Infrastructure as a Service p
 category:
   - developing
 authors:
-  - ari
+  - erikmathy
 date: 2/25/2015
 
 ---
