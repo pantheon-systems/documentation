@@ -18,51 +18,23 @@
 *
 * Update the basics of our documents to prep for docs content.
 */
-@font-face {
-  font-family: 'open_sansregular';
-  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
-  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'open_sansregular';
-  src: url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.eot);
-  src: url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),
-  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.woff) format('woff'),
-  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.svg#open_sansbold) format('svg'),
-  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.ttf) format('truetype');
-  font-weight: 800;
-}
 
-@font-face {
-  font-family: 'open_sansregular';
-  src: url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot);
-  src: url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),
-  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.woff) format('woff'),
-  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.svg#open_sanssemibold) format('svg'),
-  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.ttf) format('truetype');
-  font-weight: 600;
-}
 
 p, h1, h2, h3, h4, h5, h6, a, span {
-  font-family: "open_sansregular", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 
 
 h1{
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
   }
 
 h2 {
   font-size:24px;
-  font-weight: 800;
+  font-weight: 700;
   margin: 40px 0 10px 0;
   }
 
@@ -116,7 +88,7 @@ h4 {
 body {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: "open_sansregular", sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.7em;
   -webkit-font-smoothing: antialiased;
@@ -124,6 +96,7 @@ body {
   font-smoothing: antialiased;
   padding-top: 50px;
   background-color: #F4F4F4;
+  color: #333;
 }
 body.row.main {
   position: relative;
