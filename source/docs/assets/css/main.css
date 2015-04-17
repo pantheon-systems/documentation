@@ -18,36 +18,38 @@
 *
 * Update the basics of our documents to prep for docs content.
 */
-@font-face {
-  font-family: 'open_sansregular';
-  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot);
-  src: url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.woff) format('woff'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.svg#open_sansregular) format('svg'),
-  url(../fonts/open-sans-fontfacekit/opensans_regular_macroman/opensans-regular-webfont.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
+
+
+p, h1, h2, h3, h4, h5, h6, a, span {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+p{
+  margin: 0 0 20px;
 }
 
 h1{
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
+  line-height: 1.3em;
   }
 
 h2 {
   font-size:24px;
-  font-weight: 800;
+  line-height: 1.3em;
+  font-weight: 700;
   margin: 40px 0 10px 0;
   }
 
 h3 {
-  font-size:18px;
+  font-size:20px;
   font-weight: 600;
   margin: 30px 0 5px 0;
   }
 
 h4 {
-  font-size:16px;
+  font-size:20px;
   font-weight: 600;
   margin: 20px 0 10px 0;
   }
@@ -57,7 +59,7 @@ h4 {
   color:#fff;
   font-weight: 700;
   font-size: 1.3em;
-  margin-top: 7px;
+  margin: 7px 0 0;
 }
 
 .featured > li > a {
@@ -90,12 +92,15 @@ h4 {
 body {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: "open_sansregular", sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65em;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
   padding-top: 50px;
   background-color: #F4F4F4;
+  color: #333;
 }
 body.row.main {
   position: relative;
@@ -127,7 +132,7 @@ body.row.main {
 
 .search-form {
   margin-top: 8px;
-  margin-right: 4px;
+  margin-right: 50px;
   width: 210px;
 }
 
@@ -213,7 +218,7 @@ input.form-control{
 
 img {
   max-width: 100%;
-  border:1px solid grey;
+  border:1px solid #ccc;
 }
 
 img.noborder {border:none;}
@@ -303,7 +308,7 @@ img.noborder {border:none;}
 }
 .pio-docs-nav .navbar-brand,
 .pio-docs-nav .navbar-nav > li > a {
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   transition: all 0.2s ease-in;
 }
@@ -712,14 +717,16 @@ img.noborder {border:none;}
   font-weight: 500;
   color: #999;
 }
+
 .pio-docs-sidebar .nav > li > a:hover,
 .pio-docs-sidebar .nav > li > a:focus {
-  padding-left: 19px;
-  color: #000;
+  padding-left: 18px;
+  color: #444;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #000;
+  border-left: 2px solid #ccc;
 }
+
 .pio-docs-sidebar .nav > .active > a,
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
