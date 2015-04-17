@@ -47,7 +47,7 @@ There are two ways to add and update your site's code: Git source code managemen
 #### Git Connection Mode
 
 Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git).  
-![Connection Mode Dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
+![Connection Mode Dashboard](/source/docs/assets/images/desk_images/180025.png)  
 
 To use Git, you'll need to go to your dashboard and add a public SSH key.  
 
@@ -62,7 +62,7 @@ For detailed instructions, see [generating SSH keys](/docs/articles/users/genera
 You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180036)
+![](/source/docs/assets/images/desk_images/180036.png)
 
 ## Credentials on Pantheon
 

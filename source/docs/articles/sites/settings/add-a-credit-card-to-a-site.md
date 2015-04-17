@@ -4,7 +4,7 @@ description: Learn how to add a credit card as a payment method for your site.
 category:
   - going-live
 ---
-## Select a Plan and Add a Credit Card 
+## Select a Plan and Add a Credit Card
 1. From your User Dashboard, choose the site you want to add a card to.
 2. Select **Settings**.
 3. Choose a plan.  
@@ -20,7 +20,7 @@ Developing your site and enjoying the advanced features like Workflow, Team Mana
 For example, when adding SSL you will be prompted to update your site's plan:  
 
 
- ![To enable SSL - choose at least a Pro plan](https://www.getpantheon.com/sites/default/files/docs/desk_images/309237)
+ ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/desk_images/309237.png)
 
 
 Clicking the message will take you to the Billing page to either select a plan or to enter your payment information.

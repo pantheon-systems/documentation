@@ -15,7 +15,7 @@ This is why we offer **SFTP mode** . This allows you to develop <me>directly on 
 
 **ProTip:**  If you want to use your website framework's built-in update systems (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first!
 
-![Enable SFTP mode](https://www.getpantheon.com/sites/default/files/docs/desk_images/278855)
+![Enable SFTP mode](/source/docs/assets/images/desk_images/278855.png)
 
 <div class="alert alert-danger" role="alert"><strong>Warning:</strong> SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet. If you have pending changes and the site is migrated (which we may do at any time for various reasons), then your changes will be lost without warning. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
 
@@ -33,7 +33,7 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 
 To get your SFTP login credentials you can click **Connection Info**. This will show your connection credentials as well as a link that may allow you to connect directly with your preferred client.
 
-![SFTP Connection Data](https://www.getpantheon.com/sites/default/files/docs/desk_images/278856)
+![SFTP Connection Data](/source/docs/assets/images/desk_images/278856.png)
 
 The connection information is a bit different than what you might be used to though as it based on your unique "Site ID". This is the long random-seeming string at the end of your dashboard URL and in your git connection string, something like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
 
@@ -64,7 +64,7 @@ It is possible to connect to an environment via SFTP by using the terminal. The 
 
 There is also a one-click that will allow you to connect with a GUI client. For instance, in MacOS Cyberduck:
 
-![Cyberduck Example](https://www.getpantheon.com/sites/default/files/docs/desk_images/278857)
+![Cyberduck Example](/source/docs/assets/images/desk_images/278857.png)
 
 There are links to specific guides for other GUI tools at the end of this doc page.
 
@@ -84,17 +84,17 @@ Even though you are unable to use git to push remotely with SFTP mode enabled, y
 
 After you have made a change to your code you will notice that a message appears bellow the comment box letting you know you have some changes that are not in your repository.
 
-![Viewing changes made via SFTP](https://www.getpantheon.com/sites/default/files/docs/desk_images/278859)
+![Viewing changes made via SFTP](/source/docs/assets/images/desk_images/278859.png)
 
 Clicking on the yellow notification message will then expand the listing of pending changes you have made.
 
 You should try to write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
 
-![Writing a commit message](https://www.getpantheon.com/sites/default/files/docs/desk_images/278861)
+![Writing a commit message](/source/docs/assets/images/desk_images/278861.png)
 
 Once your message is ready, clicking on commit will trigger the commit job and a push notification will block the UI as the code is being committed.
 
-![Committing Blocking UI](https://www.getpantheon.com/sites/default/files/docs/desk_images/278852)
+![Committing Blocking UI](/source/docs/assets/images/desk_images/278852.png)
 
 The blocking UI will appear for all users on the team who are looking at that environment. This is to maintain the integrity of the changes and so each team member is aware of the current state of the code.
 
