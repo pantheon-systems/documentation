@@ -64,17 +64,17 @@ Drush will search for aliases in any of these files using the alias search path.
 
 When the aliases have been installed, clear the drush cache:
 
-    ```
-    $ drush cc drush
-    ```
+```
+$ drush cc drush
+```
 
 ## Listing Available Site Aliases
 
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 
-    ```
-    $drush sa
-    ```
+```
+$ drush sa
+```
 
 ## Executing a Drush Command on a Pantheon Site Environment
 
