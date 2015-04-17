@@ -25,7 +25,9 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-
+p{
+  margin: 0 0 20px;
+}
 
 h1{
   font-size: 36px;
@@ -57,7 +59,7 @@ h4 {
   color:#fff;
   font-weight: 700;
   font-size: 1.3em;
-  margin-top: 7px;
+  margin: 7px 0 0;
 }
 
 .featured > li > a {
@@ -92,7 +94,7 @@ body {
   margin-left: 10px;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.7em;
+  line-height: 1.65em;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
