@@ -124,7 +124,9 @@ Automatic merge went well; stopped before committing as requested
 ### Add the Pantheon Site as a Git Remote
 
 1. From your terminal within the site directory, use the Git `remote add` command with an alias to make sure you know when you are moving code to or from Pantheon.
-  `git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import`
+  ```
+  git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
+  ```
 
 2. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
 `git add -A`
