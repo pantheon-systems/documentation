@@ -17,7 +17,7 @@ Multidev is cloud development environments for teams and allows a developer to f
 
 &nbsp;
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/170383)​
+![](/source/docs/assets/images/desk_images/170383.png)​
 
 ## Branching and Multidev Terminology
 
@@ -30,7 +30,7 @@ There are a number of terms used throughout the Multidev workflow:
 *   **branch**: movable pointer to a set of commits, allowing independent development and history.
 *   **environment**: independent infrastructure for a site, including code, database, and files.
 *   **fork**: to divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
-*   **merge**: combine contents of a&nbsp;branch into another, like a bug fix branch into master. 
+*   **merge**: combine contents of a&nbsp;branch into another, like a bug fix branch into master.
 *   **master**: name of default branch; deployed to Pantheon Dev, Test and Live environments.
 
 ## Getting Started

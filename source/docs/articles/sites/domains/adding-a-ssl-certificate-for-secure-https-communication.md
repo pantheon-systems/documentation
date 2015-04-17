@@ -9,7 +9,7 @@ SSL is a standard for establishing an encrypted link between your Pantheon site 
 
 **Note**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
 
-## Steps to Enable SSL 
+## Steps to Enable SSL
 
 1. Generate Key and CSR
 2. Get SSL certificate
@@ -81,7 +81,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 2. Select **SSL**.
 3. Paste in the requested information and press **Add Cert**.
 
-![Site dashboard add SSL certificate step 2](https://www.getpantheon.com/sites/default/files/docs/desk_images/259882)​
+![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
 
 After submitting your certificates, you'll see:
 

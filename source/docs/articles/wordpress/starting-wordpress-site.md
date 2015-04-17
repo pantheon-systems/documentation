@@ -36,7 +36,7 @@ Select **Install WordPress**.
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your WordPress site.
 
-![Site spinup in progress](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
+![Site spinup in progress](/source/docs/assets/images/desk_images/247524.png)
 
 
 <!-- #5 -->
@@ -56,7 +56,7 @@ Congratulations! Your Pantheon site environments have been configured. From the 
 
 You will eventually have three environments (Development, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your dashboard to launch the site.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/248569)
+![](/source/docs/assets/images/desk_images/248569.png)
 
 <!-- #8 -->
 ## Complete Installation

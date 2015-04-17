@@ -34,12 +34,10 @@ In the event you want to set a different username and password for each environm
 
 
 To verify that everything is working correctly try and visit the URL of the environment that you have made private. You should see a authentication form where you can enter the username and password for that environment to start your session.  
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/62465)
+![](/source/docs/assets/images/desk_images/62465.png)
 ## Unlock a Site's Environment
 
 
 
 
 When you are ready to make your environment public again you can do so. This will clear the credentials you entered and make and web accessible resources available without a basic authentication prompt.
-
-

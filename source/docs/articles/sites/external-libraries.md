@@ -15,7 +15,7 @@ If there is a specific library that you require, submit a support request throug
 <!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
 
 
-<p><img alt="" class="basic" src="https://www.getpantheon.com/sites/default/files/docs/desk_images/110693" style="width: 473px; height: 107px;" /></p>
+<p><img alt="" class="basic" src="/source/docs/assets/images/desk_images/110693.png" style="width: 473px; height: 107px;" /></p>
 
 
 <p>In its own words: &quot;If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.&quot;</p>
@@ -34,7 +34,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
 ## [WKHTMLtoPDF](http://wkhtmltopdf.org/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110694)
+![](/source/docs/assets/images/desk_images/110694.png)
 
 WebKit HTML is a "simple shell utility to convert html to pdf using the webkit rendering engine, and qt." In other words, you can snapshot or capture the content of a web page easily in a PDF.
 
@@ -56,7 +56,7 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 ## [PhantomJS](http://phantomjs.org/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110696)
+![](/source/docs/assets/images/desk_images/110696.png)
 
 In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG".
 
@@ -67,7 +67,7 @@ PhantomJS has the potential for a plethora of applications. For more information
 
 ## [Apache Tika](http://tika.apache.org/)
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/110698)
+![](/source/docs/assets/images/desk_images/110698.png)
 
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
@@ -88,7 +88,7 @@ The last step will be to verify that your site is able to extract text from docu
 
 If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as shown below.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/137839)
+![](/source/docs/assets/images/desk_images/137839.png)
 
 ### WordPress Tika Configuration
 There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
@@ -105,7 +105,7 @@ Pantheon runs the latest stable packaged version in Fedora, which is currently I
 
 ## Troubleshooting and FAQs
 
-#### What if I need a library not listed here? 
+#### What if I need a library not listed here?
 
 If you need a library not listed on this page, please submit a support ticket including a description of your use case and a link to the library's webpage.
 

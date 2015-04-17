@@ -19,7 +19,7 @@ We base our repository on the canonical source from drupal.org, and then extend 
 
 ## Start with a Drupal Distribution
 
-![Core distribution startup options.](https://www.getpantheon.com/sites/default/files/docs/desk_images/214003)
+![Core distribution startup options.](/source/docs/assets/images/desk_images/214003.png)
 
 We include a growing number of "Drupal products" as available start-states on Pantheon. These are also known as "installation profiles" or "distributions" and contain much more functionality than a Drupal core installation. Starting with a product will base your code off a maintained upstream maintained jointly by Pantheon and the product owner.
 
@@ -35,10 +35,10 @@ For details, see our dedicated article [Importing an existing site into Pantheon
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your site. When complete, just click the button to visit your Pantheon Dashboard.
 
-![Site spinup progress bar](https://www.getpantheon.com/sites/default/files/docs/desk_images/214006)
+![Site spinup progress bar](/source/docs/assets/images/desk_images/214006.png)
 
 ## Enjoy your Pantheon Site!
 
 Congratulations! Your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
-![Pantheon dashboard after spin up](https://www.getpantheon.com/sites/default/files/docs/desk_images/214008)
+![Pantheon dashboard after spin up](/source/docs/assets/images/desk_images/214008.png)

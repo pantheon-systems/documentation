@@ -20,7 +20,7 @@ Drupal 8 is currently in a feature freeze and will be available again on Pantheo
 <p><strong>Please note: Drupal 8 is a moving target. Using it on Pantheon requires you to be familiar with the state of core development and ready to make additional changes to get the installation working.</strong></p>
 
 
-<p><img alt="" src="https://www.getpantheon.com/sites/default/files/docs/desk_images/36400" style="width: 611px; height: 126px; " /></p>
+<p><img alt="" src="/source/docs/assets/images/desk_images/36400.png" style="width: 611px; height: 126px; " /></p>
 
 
 <h2 id="get-the-latest-code">Get the latest code!</h2>
