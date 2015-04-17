@@ -18,9 +18,9 @@
 .tocify ul, .tocify li {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0px 0 0px;
     border: none;
-    line-height: 30px;
+    line-height: 20px;
 }
 
 /* Top level header elements */

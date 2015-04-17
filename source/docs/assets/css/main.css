@@ -707,7 +707,7 @@ img.noborder {border:none;}
 /* All levels of nav */
 .pio-docs-sidebar .nav > li > a {
   display: block;
-  padding: 4px 20px;
+  padding: 8px 20px 8px;
   font-size: 13px;
   font-weight: 500;
   color: #999;
@@ -724,7 +724,6 @@ img.noborder {border:none;}
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
-  font-weight: bold;
   color: #000;
   background-color: transparent;
   border-left: 2px solid #000;
