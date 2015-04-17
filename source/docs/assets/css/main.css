@@ -29,6 +29,32 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'open_sansregular';
+  src: url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.eot);
+  src: url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.woff) format('woff'),
+  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.svg#open_sansbold) format('svg'),
+  url(../fonts/open-sans-fontfacekit/opensans_bold_macroman/OpenSans-Bold-webfont.ttf) format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot);
+  src: url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.woff) format('woff'),
+  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.svg#open_sanssemibold) format('svg'),
+  url(../fonts/open-sans-fontfacekit/opensans_semibold_macroman/OpenSans-Semibold-webfont.ttf) format('truetype');
+  font-weight: 600;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span {
+  font-family: "open_sansregular", Helvetica, sans-serif;
+}
+
+
+
 h1{
   font-size: 36px;
   font-weight: 800;
@@ -41,13 +67,13 @@ h2 {
   }
 
 h3 {
-  font-size:18px;
+  font-size:20px;
   font-weight: 600;
   margin: 30px 0 5px 0;
   }
 
 h4 {
-  font-size:16px;
+  font-size:20px;
   font-weight: 600;
   margin: 20px 0 10px 0;
   }
@@ -91,6 +117,8 @@ body {
   margin-top: 10px;
   margin-left: 10px;
   font-family: "open_sansregular", sans-serif;
+  font-size: 16px;
+  line-height: 1.7em;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
@@ -213,7 +241,7 @@ input.form-control{
 
 img {
   max-width: 100%;
-  border:1px solid grey;
+  border:1px solid #ccc;
 }
 
 img.noborder {border:none;}
@@ -712,14 +740,16 @@ img.noborder {border:none;}
   font-weight: 500;
   color: #999;
 }
+
 .pio-docs-sidebar .nav > li > a:hover,
 .pio-docs-sidebar .nav > li > a:focus {
-  padding-left: 19px;
-  color: #000;
+  padding-left: 18px;
+  color: #444;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #000;
+  border-left: 2px solid #ccc;
 }
+
 .pio-docs-sidebar .nav > .active > a,
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
