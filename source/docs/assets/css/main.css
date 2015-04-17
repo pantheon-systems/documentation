@@ -1049,8 +1049,8 @@ h1[id] {
 }
 
 /* Tweak display of the code snippets when following an example */
-.pio-example + .highlight,
-.pio-example + .zero-clipboard + .highlight {
+.pio-example + .hljs,
+.pio-example + .zero-clipboard + .hljs {
   margin: -15px -15px 15px;
   border-width: 0 0 1px;
   border-radius: 0;
@@ -1068,8 +1068,8 @@ h1[id] {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  .pio-example + .highlight,
-  .pio-example + .zero-clipboard + .highlight {
+  .pio-example + .hljs,
+  .pio-example + .zero-clipboard + .hljs {
     margin-top: -16px;
     margin-right: 0;
     margin-left: 0;
@@ -1359,15 +1359,27 @@ h1[id] {
 *
 * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
 */
-
-.highlight {
-  padding: 9px 14px;
+pre {
+  display: block;
+  padding: 0px;
+  margin: 0 0 0px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   margin-bottom: 14px;
+}
+.hljs {
+  padding: 9px 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
 }
-.highlight pre {
+.hljs pre {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -1376,11 +1388,11 @@ h1[id] {
   background-color: transparent;
   border: 0;
 }
-.highlight pre code {
+.hljs pre code {
   font-size: inherit;
   color: #333; /* Effectively the base text color */
 }
-.highlight pre code:first-child {
+.hljs pre code:first-child {
   display: inline-block;
   padding-right: 45px;
 }
@@ -1393,7 +1405,7 @@ h1[id] {
 */
 
 /* Responsive (scrollable) doc tables */
-.table-responsive .highlight pre {
+.table-responsive .hljs pre {
   white-space: normal;
 }
 
