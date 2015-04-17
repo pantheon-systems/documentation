@@ -735,8 +735,8 @@ img.noborder {border:none;}
   padding-bottom: 10px;
 }
 .pio-docs-sidebar .nav .nav > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 30px;
   font-size: 12px;
   font-weight: normal;
