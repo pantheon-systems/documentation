@@ -11,4 +11,4 @@ cd ../panther
 git add --all
 git commit
 git push origin docs
-open https://docs-panther.pantheon.io/docs
+open https://dashboard.pantheon.io/sites/72e163bd-0054-4332-8bf8-219c50b78581#docs
