@@ -19,7 +19,7 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Minimum Cache Lifetime
 
-![](/source/docs/assets/images/desk_images/180073)  
+![](/source/docs/assets/images/desk_images/180073.png)  
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages

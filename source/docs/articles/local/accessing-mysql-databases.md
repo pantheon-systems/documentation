@@ -16,7 +16,7 @@ Pantheon provides direct access for your MySQL databases, both for debugging an
 
 MySQL credentials for each site environment can be found in the dashboard:
 
-![MySQL Credentials](/source/docs/assets/images/desk_images/168060)
+![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)
 
 The following required fields are provided:
 
