@@ -84,7 +84,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 2. Install the Drupal SAML 2.0 app connector as part of the OneLogin dashboard. This will need to be done for each Drupal site that is being managed by OneLogin.
 3. Edit the OneLogin Drupal app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly. 
 ![TFA OneLogin Config](../assets/images/tfa-drupal-onelogin-config.png)
-4. Configure the **Authentication Factors** found under Settings, and add an appropriate TFA solution that will work for your users.
+4. **(Optional Step)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
 ![TFA OneLogin Methods](../assets/images/tfa-onelogin-tfa-methods.png)
 5. Create user accounts in the Users Administration area in OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their Drupal username and email.
 ![TFA OneLogin New User](../assets/images/tfa-onelogin-new-user.png)
