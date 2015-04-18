@@ -41,7 +41,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard. This needs to be done for each WordPress site that is being managed by OneLogin.
 3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly. 
 ![TFA OneLogin Config](../assets/images/tfa-wp-onelogin-config.png)
-4. Configure the **Authentication Factors** found under Settings, and add a TFA solution that will work for your users.
+4. **(Optional Step)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users. 
 ![TFA OneLogin Methods](../assets/images/tfa-onelogin-tfa-methods.png)
 5. Create user accounts in the Users Administration area of OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their WordPress username and email.
 ![TFA OneLogin New User](../assets/images/tfa-onelogin-new-user.png)
@@ -51,7 +51,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 1. Install and activate the [OneLogin plugin](https://wordpress.org/plugins/onelogin-saml-sso/) on your WordPress site.
 2. Configure the **Identity Provider Settings** in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
 ![TFA OneLogin Ident](../assets/images/tfa-wp-onelogin-ident.png)
-3. Configure the **Attribute** in the SSO/SAML Settings in the WordPress Admin to provide the appropriate values, which are available in the Parameters section of the OneLogin Configuration page.
+3. Configure the **Attribute** in the SSO/SAML Settings in the WordPress Admin. Please note to match what is in the screenshot and the values are case-sensitive."
 ![TFA OneLogin Attributes](../assets/images/tfa-wp-onelogin-attribute.png)
 4. Configure the **Customize Actions and Links** in the SSO/SAML Settings within the WordPress Admin to **Prevent local login**. This requires OneLogin as the authentication solution.
 ![TFA OneLogin Custom Actions](../assets/images/tfa-onelogin-custom-actions.png)
@@ -92,7 +92,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 ### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin module](https://github.com/onelogin/drupal-saml) on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
-2. Configure the OneLogin module `admin/config/onelogin_saml` to provide the appropriate values, which are available in the SSO and Parameters section of the OneLogin Configuration page. 
+2. Configure the OneLogin module `admin/config/onelogin_saml` to provide the appropriate values. Please note to match what is in the screenshot and the values are case-sensitive. 
 ![TFA OneLogin Options](../assets/images/tfa-drupal-onelogin-options.png)
 3. Now use the OneLogin dashboard to log in to your Drupal site! 
 
