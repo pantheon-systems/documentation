@@ -15,11 +15,13 @@ This allows users to immediately see comments or changes they've made, even if t
 
 ## Ignoring GET Parameters
 
-For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server. The double-underscore prefix for params and cookies which can be safely ignored by the backend is considered to be a standard convention.
+For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server. The double-underscore prefix for parameter keys and cookie names is a standard convention used by front-end code to indicate a value that can be safely ignored on the back-end.
 
 For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> are considered distinct pages.
 
-The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON\_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response. For more information, see [PANTHEON\_STRIPPED parameters](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
+The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
 
 ## External Authentication (e.g. Facebook login)
 
