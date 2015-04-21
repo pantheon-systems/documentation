@@ -52,27 +52,25 @@ Please provide at least "name" and "bio". The "gplus" url is useful to show your
 
 When you're done making changes, [submit a pull request](https://github.com/pantheon-systems/documentation/compare/).
 
-We will review and comment on pull requests within three business days. We may suggest some changes, improvements, or alternatives.
-
 Some things to follow to help increase the chance that your pull request will be accepted:
 
 * Follow our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
 * Write a [good commit message][commit].
 * Build and test locally to make sure everything looks good. Refer to [README](https://github.com/pantheon-systems/documentation/blob/master/README.md) for instructions.
 
-[style]: https://docs.getpantheon.com/style-guide.html
+[style]: https://github.com/pantheon-systems/documentation/blob/master/style-guide.md
 [commit]: http://chris.beams.io/posts/git-commit/
 
 ## Use of Images
 
 See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md).
 
-# Additional Resources
+## Moderator Expectations
+
+Moderators will review and comment on pull requests within three business days. We may suggest changes, improvements, or alternatives in which case the original author will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
+
+## Additional Resources
 
 * [General GitHub Documentation](http://help.github.com/)
 * [GitHub Pull Request Documentation](http://help.github.com/send-pull-requests/)
-* #pantheon IRC channel on freenode.org
-
-
-####TODO
-- [ ] Identify contribution types
+* [#pantheon IRC channel on freenode.net](http://irc.netsplit.de/channels/details.php?room=%23pantheon&net=freenode)
