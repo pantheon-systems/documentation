@@ -1,5 +1,5 @@
 ---
-title: Two-Factor Authentication
+title: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your site as an added security measure.
 category:
   - developing
