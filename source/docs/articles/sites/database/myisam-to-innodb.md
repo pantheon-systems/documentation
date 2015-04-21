@@ -12,7 +12,7 @@ However, many sites are still using the MyISAM engine. Some are hosted on shared
 
 Fixing this problem is simple to any developer who understands SQL, but for non-developers it can be a daunting task. To make it easier, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
-**Note**: This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.  
+<div class="alert alert-danger" role="alert"><strong>Warning:</strong> This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</div>
 
 ##The Easy Way
 
