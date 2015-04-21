@@ -37,7 +37,7 @@ This displays database stats such as the number of rows in the options table, op
 
 ####What issues will I experience if I don't use InnoDB?  
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/docs/articles/sites/database/moving-mysql-tables-myisam-innodb).
+To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/docs/articles/sites/database/myisam-to-innodb).
 
 ###Probable Exploits
 This check will display a list of exploited patterns in code, the file name that has the exploit, line number, and match.
