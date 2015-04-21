@@ -45,16 +45,18 @@ Here is the command line script:
 <script src="https://gist.github.com/calevans/9943627.js"></script>
 
 Here are the parameters you will need to configure before running the script:
-
-- host = This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.
-
-- port = This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
-
-- user = This is the user name you use to connect to MySQL with.
-
-- password = This is your MySQL password for the user you specified in the line above.
-
-- database = This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
+<dl>
+	<dt>host</dt>
+	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd>
+  <dt>port</dt>
+  <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd>
+  <dt>user </dt>
+  <dd>This is the user name you use to connect to MySQL with.</dd>
+  <dt>password</dt>
+  <dd>This is your MySQL password for the user you specified in the line above.</dd>
+  <dt>database</dt>
+  <dd>This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.</dd>
+</dl>
 
 Now, save the file. Then from a command window execute the program.
 
