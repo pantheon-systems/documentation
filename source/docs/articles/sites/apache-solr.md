@@ -211,7 +211,8 @@ If you're using the Apache Solr module, you can check for the existence of this 
 ####search_api_solr.module
 If you are using search_api_solr.module you can check it with the command:
 
-    terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
+    terminus drush --site=<site> --env=<env> vget
+    apachesolr_service_class
 
 
 **Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
