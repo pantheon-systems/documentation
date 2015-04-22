@@ -76,7 +76,10 @@ regenerate anything changed.
 If you use --watch and see it constantly running, regenerating, drop --watch
 until you identify and resolve the problem.
 
- 
+~~~~~~
+$ cd output_dev
+$ ln -s ./ source
+~~~~~ 
 
 ### Style Guide
 
