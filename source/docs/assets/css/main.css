@@ -1777,8 +1777,9 @@ cursor: pointer;
 
 .outline-alert{
   padding: 15px;
-  margin-bottom: 20px;
   border: 1px solid;
   border-radius: 4px;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

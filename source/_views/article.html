@@ -17,7 +17,7 @@
                   <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}</a><br />
               {% endif %}
-              <div class="outline-alert" style="margin-top:10px"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank">edit this doc</a>.</strong></div>
+              <div class="outline-alert"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank">edit this doc</a>.</strong></div>
 
                 <div>
                     {{ page.blocks.content|raw }}
