@@ -441,6 +441,7 @@ img.noborder {border:none;}
 
 .category {
   margin-bottom: 35px;
+  display: inline-block;
 }
 
 .document-list {
