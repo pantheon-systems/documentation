@@ -5,7 +5,7 @@ category:
     - developing
 
 ---
-When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
+When you become a **Site Owner**, you receive administrator permissions to manage the billing information, team members, and site settings.
 
 
 ## Frequently Asked Questions
