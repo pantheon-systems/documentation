@@ -56,7 +56,7 @@ You can now visit your docs site at <http://localhost:8000/docs>
 
  
 
-You can combine the two actions - generate the docs and start the server - with:
+You can combine the two actions: generate the docs and start the server:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./vendor/bin/sculpin generate --server
@@ -65,7 +65,7 @@ You can combine the two actions - generate the docs and start the server - with:
  
 
 Finally, you can tell sculpin to watch the docs directory and automatically
-regenerate anything changed.
+regenerate anything changed:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./vendor/bin/sculpin generate --server --watch
@@ -76,7 +76,7 @@ regenerate anything changed.
 If you use --watch and see it constantly running, regenerating, drop --watch
 until you identify and resolve the problem.
 
-Images won't show up locally unless you apply this commands
+Images won't show up locally unless you apply these commands:
 ```
 $ cd output_dev
 $ ln -s ./ source
