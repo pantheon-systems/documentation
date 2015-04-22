@@ -26,9 +26,9 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
 If you don't already have it, you can install it quickly:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 curl -sS https://getcomposer.org/installer | php
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 If you need to install it globally, 
 ```
 mv composer.phar /usr/local/bin/composer
@@ -37,9 +37,9 @@ mv composer.phar /usr/local/bin/composer
 
 From within the `documentation` repo, run composer install
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 composer install
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 That will download all your dependencies and set up sculpin.
 
@@ -47,28 +47,19 @@ That will download all your dependencies and set up sculpin.
 
 Build sculpin and run a local instance:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./vendor/bin/sculpin generate --server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+```
+./vendor/bin/sculpin generate --server
+```
 You can now visit your docs site at <http://localhost:8000/docs>
 
- 
-
-You can combine the two actions: generate the docs and start the server:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./vendor/bin/sculpin generate --server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 Finally, you can tell sculpin to watch the docs directory and automatically
 regenerate anything changed:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 ./vendor/bin/sculpin generate --server --watch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
  
 
