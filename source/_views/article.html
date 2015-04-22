@@ -12,42 +12,25 @@
 
             </header>
               {% if page.category %}
-                  <p class="category">Categories:
+                  <a class="category">Categories:
                   {% for category in page.category %}
                   <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
-                  {% endfor %}
-                  </p>
+                  {% endfor %}</a><br />
               {% endif %}
+              <div class="outline-alert" style="margin-top:10px"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank">edit this doc</a>.</strong></div>
+
                 <div>
                     {{ page.blocks.content|raw }}
                 </div>
-
           </div>
-            <div class="col-md-3">
 
+            <div class="col-md-3">
               <div class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
                 <div id="toc"><h3>Contents</h3>
                 </div>
-
-            <!--Improve this doc button-->
-            <div class="btn-group">
-              <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank" class="btn btn-outline btn-sm">Improve this Doc</button></a>
-              <button type="button" class="btn btn-outline btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="https://github.com/pantheon-systems/documentation/commits/master/source{{ page.url }}.md" target="blank"><strong>View Doc History</strong></a></li>
-                <li><a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank"><strong>Contributor Guidelines</strong></a></li>
-                <li><a href="https://github.com/pantheon-systems/documentation/issues" target="blank"><strong>Issues Queue<strong></a></li>
-
-              </ul>
-            </div>
-
-
-
               </div>
             </div>
+          </div>
 
-    </div>
   </article>
     {% endblock %}
