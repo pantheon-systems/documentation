@@ -48,8 +48,7 @@ That will download all your dependencies and set up sculpin.
 Build sculpin and run a local instance:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./vendor/bin/sculpin generate
-./vendor/bin/sculpin server 
+./vendor/bin/sculpin generate --server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can now visit your docs site at <http://localhost:8000/docs>
