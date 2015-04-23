@@ -7,6 +7,8 @@ Help us create relevant and useful content for developers like yourself. See som
 * If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
 * Fork the pantheon-systems/documentation repository on GitHub.
   Trying to edit or create a file in this repository will create your fork automatically.
+  <div class="flash">
+<strong>NOTE</strong>: All contributions will be licensed under  [CC-BY-SA](https://github.com/pantheon-systems/documentation/blob/master/LICENSE) to Pantheon.</div>
 * [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
 
 ## Issues - Searching and Creating
