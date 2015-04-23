@@ -9,6 +9,8 @@ Help us create relevant and useful content for developers like yourself. See som
   Trying to edit or create a file in this repository will create your fork automatically.
 * [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
 
+**NOTE**: All contributions will be licensed under  [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) to Pantheon.
+
 ## Issues - Searching and Creating
 
 Before you edit a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on, or if you aren't ready to submit a pull request and want to get some initial feedback.
