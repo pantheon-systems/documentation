@@ -41,18 +41,18 @@ From within the `documentation` repo, run the following command to install all n
 ```
 composer install
 ```
-#### 4. Install sculpin and start your local server:
+#### 4. Start your local server:
 If you do not want to install sculpin globally, you can use the following commands to start your local server:
 ```
 ./vendor/bin/sculpin generate --server
 ```
+You can now visit your docs site at <http://localhost:8000/docs>
 
 In order to globally execute sculpin, run the following commands:
 ```
 curl -O https://download.sculpin.io/sculpin.phar
 sudo chmod +x sculpin.phar
-mv sculpin.phar sculpin
-mv sculpin /usr/local/bin
+mv sculpin.phar /usr/local/bin/sculpin
 ```
 
 Build sculpin and run a local instance:
