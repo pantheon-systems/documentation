@@ -26,12 +26,9 @@ documentation.
 
 Usage
 -----
-
 #### 1. Get the code:
 Fork and clone this repository. Issue pull-requests one document at a time.
-
 ### Running Locally
-
 #### 2. Get composer:
 If you do not wish to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
