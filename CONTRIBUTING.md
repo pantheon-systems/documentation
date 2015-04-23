@@ -15,7 +15,8 @@ Before you edit a doc, search [open issues](https://github.com/pantheon-systems/
 
 ###Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
-**Example**  
+
+**Example**:  
 Title: Apache Solr doc - Terminus command is not working  
 Description: The document currently suggests using XYZ commands, but I get the following error (insert error message). The fix is to use XYZ commands.
 
@@ -60,7 +61,7 @@ your_handle:
    wordpress: https://profiles.wordpress.org/
 bio: This shouldn't be long, just a short intro.
 ```
-Please provide at least "name" and "bio". The "gplus" url is useful to show your author info on Google search results.
+Please provide at least "name" and "bio". The "gplus" URL is useful to show your author info on Google search results.
 
 
 ## Submit a Pull Request
