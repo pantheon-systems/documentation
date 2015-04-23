@@ -14,15 +14,25 @@ Visit https://pantheon.io/docs/ for the latest release of Pantheon documentation
 
     [1]: <https://sculpin.io/>
 
+### Contributing
+
+Read [CONTRIBUTING.md](<CONTRIBUTING.md>) for more details on contributing
+documentation improvements.
+
+### Style Guide
+
+Read [style-guide.md](<style-guide.md>) for our guidelines on how to write
+documentation.
+
 Usage
 -----
 
-#### 0. Get the code.
+#### 1. Get the code.
 Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Running Locally
 
-#### 1. Get composer.
+#### 2. Get composer.
 
 If you don't already have it, you can install it quickly:
 
@@ -33,7 +43,7 @@ If you need to install it globally,
 ```
 mv composer.phar /usr/local/bin/composer
 ```
-#### 2. Install dependencies:
+#### 3. Install dependencies:
 
 From within the `documentation` repo, run composer install
 
@@ -43,7 +53,7 @@ composer install
 
 That will download all your dependencies and set up sculpin.
 
-#### 3. Start local server:
+#### 4. Start local server:
 
 Build sculpin and run a local instance:
 
@@ -72,12 +82,4 @@ $ cd output_dev
 $ ln -s ./ source
 ```
 
-### Style Guide
 
-Read [style-guide.md](<style-guide.md>) for our guidelines on how to write
-documentation.
-
-### Contributing
-
-Read [CONTRIBUTING.md](<CONTRIBUTING.md>) for more details on contributing
-documentation improvements.
