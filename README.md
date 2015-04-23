@@ -27,12 +27,12 @@ documentation.
 Usage
 -----
 
-#### 1. Get the code.
+#### 1. Get the code:
 Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Running Locally
 
-#### 2. Get composer.
+#### 2. [Get composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx):
 
 Run the following command to install composer globally:
 
