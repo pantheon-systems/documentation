@@ -441,6 +441,7 @@ img.noborder {border:none;}
 
 .category {
   margin-bottom: 35px;
+  display: inline-block;
 }
 
 .document-list {
@@ -1773,4 +1774,13 @@ cursor: pointer;
 .thumbnail{
   border: none;
   box-shadow: none;
+}
+
+.outline-alert{
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
