@@ -34,18 +34,16 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
 #### 2. Get composer.
 
-If you don't already have it, you can install it quickly:
+Run the following command to install composer globally:
 
 ```
 curl -sS https://getcomposer.org/installer | php
-```
-If you need to install it globally, 
-```
 mv composer.phar /usr/local/bin/composer
 ```
+**Note**: Run the `mv` command with sudo if it fails.
 #### 3. Install dependencies:
 
-From within the `documentation` repo, run composer install
+From within the `documentation` repo, run:
 
 ```
 composer install
@@ -57,9 +55,8 @@ That will download all your dependencies and set up sculpin.
 
 Build sculpin and run a local instance:
 
-
 ```
-./vendor/bin/sculpin generate --server
+sculpin generate --server
 ```
 You can now visit your docs site at <http://localhost:8000/docs>
 
@@ -68,7 +65,7 @@ Finally, you can tell sculpin to watch the docs directory and automatically
 regenerate anything changed:
 
 ```
-./vendor/bin/sculpin generate --server --watch
+sculpin generate --server --watch
 ```
 
  
@@ -81,5 +78,3 @@ Images won't show up locally unless you apply these commands:
 $ cd output_dev
 $ ln -s ./ source
 ```
-
-
