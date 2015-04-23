@@ -1,5 +1,5 @@
 ---
-title: Two-Factor Authentication
+title: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your site as an added security measure.
 category:
   - developing
@@ -62,7 +62,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 For a single site, there are a few [different Drupal modules](https://groups.drupal.org/node/235938) including the [Two-Factor Authentication module](https://www.drupal.org/project/tfa) that provide the foundation necessary to use two-factor authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-Based One Time Password are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic). There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev).
 
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) and the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
-2. Download and set up a TOTP app such as [Authy](https://www.authy.com/users) for either iOS or Android.
+2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/users) for either iOS or Android.
 3. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
 ![TFA Module Settings](/source/docs/assets/images/tfa-drupal-module-settings.png)
 4. Go to the Security settings on each user profile you want to use TFA, and click **Enable TFA**.
@@ -100,3 +100,4 @@ For an organization-wide solution, there are many different [Drupal modules for 
 - [Security on Pantheon](https://pantheon.io/security)
 - [WordPress Two Step Authentication](http://codex.wordpress.org/Two_Step_Authentication)
 - [Drupal Modules For Two-Factor Authentication](https://groups.drupal.org/node/235938)
+- [Configuring SAML for Pantheon's Dashboard with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
