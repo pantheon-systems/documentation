@@ -8,7 +8,7 @@ Pantheon's unique architecture provides a workflow fit for the pros. Explore our
 Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive into [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.
 ### Additional Development Resources
 - Deploy [hot fixes](/docs/articles/sites/code/hot-fixes/) in cases where the development environment isn't ready to go live.
-- Learn more about the ["pantheon_api.module"](docs/articles/sites/code/what-is-the-pantheon_api-module).
+- Learn more about the ["pantheon_api.module"](/docs/articles/sites/code/what-is-the-pantheon_api-module).
 - Quickly apply [upstream updates](/docs/articles/sites/code/applying-upstream-updates/) with the click of a button.
 - Explore [email on Pantheon](/docs/articles/sites/code/email/).
 - Learn how to [redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/) using configuration files.
