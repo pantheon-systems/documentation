@@ -16,7 +16,7 @@ Before you edit a doc, search [open issues](https://github.com/pantheon-systems/
 ###Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.   
 **Example**  
-TItle: Apache Solr doc - Terminus command is not working  
+Title: Apache Solr doc - Terminus command is not working  
 Description: The document currently suggests using XYZ commands, but I get the following error (insert error message). The fix is to use XYZ commands.
 
 ###Labels
