@@ -4,10 +4,7 @@ description: Learn how to spin up a site on Pantheon.
 category:
   - getting-started
 ---
-
-
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever. Use this checklist to get the most out of the platform.
-
 
 ## Create Your Free Account
 

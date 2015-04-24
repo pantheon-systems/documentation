@@ -1,11 +1,9 @@
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git.
-
 category:
   - developing
 ---
-
 ## Resolving Conflicts
 ### How do I resolve conflicts when updating Core?
 

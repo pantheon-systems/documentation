@@ -4,9 +4,7 @@ description: Use Git version control with your Pantheon site.
 category:
   - getting-started
   - developing
-
 ---
-
 ## Overview
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use local development, it's likely the best way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon development environment.
 

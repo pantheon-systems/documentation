@@ -5,7 +5,6 @@ category:
   - getting-started
   - drupal
 ---
-
 ## Overview
  **Note**: When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.
 

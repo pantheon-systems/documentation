@@ -4,7 +4,6 @@ description: Best practices and recommendations for building a WordPress site us
 category:
   - developing
   - WordPress
-
 ---
 ## Overview
 
@@ -28,7 +27,7 @@ If you do not already have one, [create a WordPress site](/docs/articles/wordpre
 There will not be any files open within your project once you complete these steps. You will find a PHP file in the project's root, which contains the standard plugin header for WordPress.
 
 ## Configure WP-CLI (Optional)
-Many WordPress plugin developers use the command line tool [WP-CLI](http://wp-cli.org/). This is useful if you have a local development environment and want to use WP-CLI to manage it. 
+Many WordPress plugin developers use the command line tool [WP-CLI](http://wp-cli.org/). This is useful if you have a local development environment and want to use WP-CLI to manage it.
 
 **Note**: You must successfully create a project before adding WP-CLI as a Command Line Tool.
 

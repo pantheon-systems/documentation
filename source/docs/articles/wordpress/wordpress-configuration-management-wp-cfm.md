@@ -3,11 +3,8 @@ title: WordPress Configuration Management (wp-cfm) on Pantheon
 description: Learn how to install and use the WordPress Configuration Management plugin.
 category:
   - managing
-
 ---
-
 Use steps 1-3 to track and deploy configuration changes from Dev to Test and Live. 
-
 ## Install wp-cfm
 
 Keeping your dev environment in SFTP Mode, install the [wp-cfm plugin](https://wordpress.org/plugins/wp-cfm/) on your development site, and create a new directory: `wp-content/config`. Return to the site dashboard (`#dev/code`), type “Install wp-cfm for configuration management and create the `wp-content/config` directory for it to function”, and click **Commit** .   

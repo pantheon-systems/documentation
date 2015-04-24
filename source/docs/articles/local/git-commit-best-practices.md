@@ -6,7 +6,6 @@ category:
 
 draft: true
 ---
-
 ## Commit often
 Commit your code every time you:
 - Install a module or theme and its dependencies,

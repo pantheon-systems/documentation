@@ -5,7 +5,6 @@ category:
   - getting-started
   - developing
 ---
-
 ## Overview
 This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 

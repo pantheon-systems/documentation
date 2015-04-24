@@ -3,9 +3,7 @@ title: Moving MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your database by moving to InnoDB.
 category:
   - debugging
-
 ---
-
 One of the best things to ever happen to MySQL was the [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html) engine. Before InnoDB, indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way. These days, most serious DBAs using MySQL build exclusively on the InnoDB engine.
 
 However, many sites are still using the MyISAM engine. Some are hosted on shared hosting servers and some just don't have a proper DBA to look after their databases. These sites are missing out on the performance and stability gains that the rest of us take for granted. At Pantheon, we know there are a lot of these sites out there because we see them when they migrate their sites onto our platform. As part of our Launch Check, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it.

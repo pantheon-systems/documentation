@@ -4,7 +4,6 @@ description: Pantheon organization types and the features available to them.
 category:
 - managing
 ---
-
 Organizations on Pantheon bring together users, sites, custom upstreams, unified support, and Multidev to provide administrators with the tools needed to effectively manage a large number of websites. Several service levels are as types of organizations on our platform. Please see your organization dashboard or contact your sales representative to determine which type you are. Partners who signed up for "Pantheon for Agencies" via our self-service form are "Ally Partners." Ally Partners do not qualify for custom upstreams or free sites. Take a moment to read about all of the awesome we have available for your organization.
 
 ## The Organization Dashboard

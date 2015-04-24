@@ -5,9 +5,7 @@ category:
   - going-live
   - developing
   - WordPress
-
 ---
-
 ## Before You Begin
 
 Be sure that you:
@@ -111,7 +109,7 @@ From within your WordPress dashboard:
 
   ![AWS Plugin Settings User Added](/source/docs/assets/images/aws-plugin-add-user.png)
 1. Click on **AWS** and then **S3 and CloudFront** from within your WordPress Dashboard.
-1. Create a new bucket by entering a unique name, and then click **Create**. 
+1. Create a new bucket by entering a unique name, and then click **Create**.
 1. Ensure that "Copy Files to S3" and "Rewrite File URLs" are both set to "ON".
 
 There are several other options available within this plugin for you to experiment with. Take a tour of the settings to find the best configuration for your particular use case.
@@ -136,7 +134,7 @@ Now for the final step: turning on Amazon's CloudFront. These combined services 
 1. Click inside the **Origin Name** field and select your recently created S3 bucket.
 
   **Note**: This action will automatically populate the **Origin ID** field.
-  
+
 1. All other options are set to a default value. You can use the provided configuration or tweak them as you see fit.  
 1. Click on **Create Distribution**.
 

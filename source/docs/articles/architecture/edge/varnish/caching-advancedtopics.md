@@ -3,7 +3,6 @@ title: Caching - Advanced Topics
 description: Learn advanced details about cached and authentication.
 category:
   - developing
-
 ---
 ## Allow a User to Bypass the Cache
 

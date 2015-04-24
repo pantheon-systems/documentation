@@ -3,9 +3,7 @@ title: Pantheon for Agencies FAQ
 description: A collection of anticipated and commonly asked questions and answers about Partner Organizations on the Platform.
 category:
 - managing
-
 ---
-
 ## Multidev
 
 ### What is the benefit of Multidev?

@@ -3,9 +3,7 @@ title: Setting up a domain with GoDaddy
 description: Learn how to point a new GoDaddy domain name to your Pantheon site.
 category:
   - going-live
-
 ---
-
 ## Choose your domain name
 When you have searched for your domain name you can go ahead and add it to your cart. It is important to note that if you purchase more than one domain that you will be required to configure the A records or CNAME for each one.  
 
