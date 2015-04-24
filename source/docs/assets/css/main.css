@@ -1776,33 +1776,33 @@ cursor: pointer;
 }
 /* Google Custom Search input box */
 table.gsc-search-box td.gsc-input {
-  margin-left: 0 !important;
-  margin-top: 4px !important;
+  margin-left: 5px !important;
+  padding-right: 0px !important;
+  padding-bottom: 3px !important;
 
 }
 .cse input.gsc-input, input.gsc-input {
 background-image: none !important;
 background-repeat:no-repeat !important;
-font-size:16px !important;
-padding: 1px 6px !important;
+padding: 0 !important;
 
 }
 .cse input.gsc-input:focus, input.gsc-input:focus {
 background-image:none !important;
-font-size:16px !important;
-padding: 1px 6px !important;
+
 }
 
 /* Google Custom Search Engine button */
 input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
-  border: none !important;
+  border: 1px !important;
   background-color: #EFD01B !important;
   background-image: url('https://www.google.com/uds/css/v2/search_box_icon.png') !important;
   filter: none !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   width: 85% !important;
-  height: 85% !important;
-  margin-left: 0 !important;
-  margin-top: 5px !important;
+  height: 39% !important;
+  margin-top: 15px !important;
+  margin-bottom: 10px !important;
+  padding: 6px 25px !important;
 }
