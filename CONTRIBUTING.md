@@ -9,7 +9,7 @@ Help us create relevant and useful content for developers like yourself. See som
   Trying to edit or create a file in this repository will create your fork automatically.
 * [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
 
-**NOTE**: All contributions will be licensed under  [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) to Pantheon.
+**NOTE**: All contributions will be licensed under  [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) and code snippet contributions will additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT) to Pantheon.
 
 ## Issues - Searching and Creating
 
