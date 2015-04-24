@@ -90,8 +90,6 @@ h4 {
 }
 
 body {
-  margin-top: 10px;
-  margin-left: 10px;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.65em;
@@ -319,7 +317,7 @@ img.noborder {border:none;}
   background-color: #444;
 }
 .pio-docs-nav .navbar-toggle .icon-bar {
-  background-color: #563d7c;
+  background-color: #FFFFFF;
 }
 .pio-docs-nav .navbar-header .navbar-toggle {
   border-color: #fff;
