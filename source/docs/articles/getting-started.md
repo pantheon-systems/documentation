@@ -11,7 +11,7 @@ Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will b
 
 ## Create Your Free Account
 
-Visit [https://www.pantheon.io](https://www.pantheon.io) and click **Create Free Account**.
+Visit [https://www.pantheon.io](https://www.pantheon.io) and click **Create Free Account**.
 
 ![Create Free Account](/source/docs/assets/images/create-account.png)
 
@@ -85,7 +85,7 @@ To gain a better understanding of how the Pantheon system architecture works, se
 
 ## Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/sites/known-limitations) now and save yourself the headache later on!
+Familiarize yourself with Pantheon's [known limitations](/docs/articles/sites/known-limitations) now and save yourself the headache later on!
 
 ## Prepare for Launch by Adding a Credit Card
 
@@ -95,7 +95,7 @@ When you're ready to launch your site, you'll need to add a credit card to the s
 
 #### Does Pantheon offer professional services?
 
-Pantheon does not provide development, module, or site building as a service, so we cannot write code or develop the sites for you. There are a number of development firms and skilled contractors who are available if you do not have a developer available. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development development shops world-wide. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and Wordpress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has some comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
