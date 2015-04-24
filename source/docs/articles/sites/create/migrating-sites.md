@@ -8,9 +8,9 @@ category:
 
 ## Overview
 
-Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
+Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites.
 
-Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.
+Your site migration has four phases. You'll package your site, import it, test it out, and then change DNS and go live.
 
 Note: We're revising our migration documentation. Our existing import documents include:
 
@@ -23,7 +23,7 @@ Note: We're revising our migration documentation. Our existing import documents 
 
 ## Pack Up
 
-In this phase, you will create an archive of your site. Archives can be stored in single files or as three separate files. You’ll need to package up your:
+In this phase, you will create an archive of your site. Archives can be stored in single files or as three separate files. You'll need to package up your:
 
 - **Codebase** - all executable code, including Core, custom and contrib modules, plugins and themes, etc.
 
@@ -42,10 +42,10 @@ In this phase, you will create an archive of your site. Archives can be stored i
 
 When preparing a site for export, there are a few best practices to follow:
 
-* **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance. This will prevent the contents of your database from getting out of sync while you’re exporting.
+* **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance. This will prevent the contents of your database from getting out of sync while you're exporting.
 * **Clear all caches**. This will remove unnecessary and out-of-date files from both the database and your filesystem, which will save a lot of time and valuable space.
-* Take a look at your codebase and **remove any non-core code from your site** that you aren’t planning on running on Pantheon.
-* If you’ve been using the database for things other than Drupal or WordPress, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
+* Take a look at your codebase and **remove any non-core code from your site** that you aren't planning on running on Pantheon.
+* If you've been using the database for things other than Drupal or WordPress, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn't need.
 
 ### Create Single-file Archives
 If your site can be packaged with a total archived size less than 500MB, then you can import that single file to create your site.
@@ -64,9 +64,9 @@ If your site cannot be packaged as a single archive less than 500MB, or you need
 
 The codebase of your application consists of  its **Core** plus any custom or community-contributed extensions (modules, plugins, and themes), libraries, and other static files you need in version control, such as static landing pages.
 
-Do not include the "files" directory (Drupal’s sites/default/files or WordPress’s wp-content/uploads) or any other static assets that should not be tracked in version control. You will archive and upload these files separately.
+Do not include the "files" directory (Drupal's sites/default/files or WordPress's wp-content/uploads) or any other static assets that should not be tracked in version control. You will archive and upload these files separately.
 
-Retrieve your code as you see fit. Log into your estranged host’s system and download via an SFTP client, through CPanel, or with the SSH from the command line.
+Retrieve your code as you see fit. Log into your estranged host's system and download via an SFTP client, through CPanel, or with the SSH from the command line.
 
 
 #### Create a Code Archive
