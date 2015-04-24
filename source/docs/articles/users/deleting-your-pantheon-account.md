@@ -4,10 +4,9 @@ description: Learn how to completely remove your Pantheon account.
 category:
   - managing
 ---
-
 Follow the steps below to completely delete your site(s). 
 
-## 1. Backup and Export 
+## 1. Backup and Export
 
 The first thing to do is to backup and export your site(s). Yes, you are leaving the platform, but you should always have a backup of your work just in case you need it in the future.
 

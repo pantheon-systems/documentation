@@ -4,7 +4,6 @@ description: Learn how Pantheon's edge cache uses the request URL as the cache k
 category:
   - developing
 ---
-
 ## Overview
 
 Pantheon's edge cache uses the request URL as the cache key. To allow requests for the same site content but distinct Google Analytics parameters to be served from cache, Pantheon replaces a specific subset of GET parameter values with `PANTHEON_STRIPPED` to normalize the cache location.

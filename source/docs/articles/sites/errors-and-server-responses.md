@@ -3,7 +3,6 @@ title: Errors and Server Responses
 description: Understand server responses and error messages.
 category:
   - debugging
-
 ---
 ## Pantheon Error Messages
 

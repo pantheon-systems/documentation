@@ -4,7 +4,6 @@ description: Instructions on updating to Drupal 7.32.
 category:
   - drupal
 ---
-
 If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be able to apply a one-click update in your dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.
 
 1. Download [Drupal 7.32 Security Update](https://github.com/drupal/drupal/commit/26a7752c34321fd9cb889308f507ca6bdb777f08.patch)

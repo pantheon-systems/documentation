@@ -6,7 +6,6 @@ category:
   - drupal
   - developing
 ---
-
 There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. This article will walk you through the basic method of doing so.
 
 ## Archive Your Live Code/Files/Database

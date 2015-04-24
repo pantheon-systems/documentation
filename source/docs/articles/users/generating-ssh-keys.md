@@ -3,9 +3,7 @@ title: Generating SSH Keys
 description: Understand how to generate SSH keys to configure Drush or SFTP.
 category:
   - getting-started
-
 ---
-
 SSH as a protocol is not supported on Pantheon. <!--You can not connect via SSH using Putty.--> These directions are to allow you have passwordless access if you configure Drush or SFTP to use the keys setup by putty.
 
 **Note**: SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the troubleshooting section at the end of the document.

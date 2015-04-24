@@ -5,7 +5,6 @@ category:
   - going-live
   - managing
 ---
-
 ## Overview
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
 

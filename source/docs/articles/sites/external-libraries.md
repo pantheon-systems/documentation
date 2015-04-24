@@ -3,9 +3,7 @@ title: External Libraries on Pantheon
 description: Learn to incorporate external libraries for Drupal modules on the Pantheon platform.
 category:
     - developing
-
 ---
-
 ## Overview
 
 While Drupal's contributed modules offer a plethora of extended functionality, there are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available throughout the platform.
