@@ -5,9 +5,6 @@ category:
   - developing
 
 ---
-
-
- 
 ## Overview
 
 The Drupal system configuration in code is set in:
