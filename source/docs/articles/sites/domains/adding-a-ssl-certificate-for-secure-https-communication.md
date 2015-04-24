@@ -5,11 +5,9 @@ category:
   - developing
   - launch
 ---
-SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS.
+SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
 **Important**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
-
-**Note**: All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
 ## Steps to Enable SSL
 
