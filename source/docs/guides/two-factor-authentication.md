@@ -9,6 +9,8 @@ category:
 authors:
   - populist
 date: 4/13/2015
+image: https.pantheon.io/docs/assets/images/pantheon-fistbump.png
+keywords: Drupal, WordPress, security, two-factor auth, 2fa, onelogin, Pantheon
 
 ---
 
