@@ -3,8 +3,6 @@ title: All About Application Containers
 description: Learn more about Pantheon's grid-model infrastructure.
 category:
   - getting-started
-
-
 ---
 ## Overview
 
