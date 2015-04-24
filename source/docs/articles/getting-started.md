@@ -95,7 +95,7 @@ When you're ready to launch your site, you'll need to add a credit card to the s
 
 #### Does Pantheon offer professional services?
 
-Pantheon provides an infrastructure for professional web developers at agencies and development development shops world-wide. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and Wordpress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and Wordpress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has some comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
