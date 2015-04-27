@@ -29,7 +29,7 @@ Drupal products offer a much richer out of the box experience, but are more comp
 
 ## Importing an Existing Site
 
-For details, see our dedicated article [Importing an existing site into Pantheon](/docs/articles/users/importing-an-existing-site).
+For details, see our dedicated article [Importing an existing site into Pantheon](/docs/articles/sites/create/importing-an-existing-site).
 
 ## Sit Back and Relax
 

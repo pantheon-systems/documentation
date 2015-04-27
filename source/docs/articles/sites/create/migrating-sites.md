@@ -14,11 +14,11 @@ Your site migration has four phases. You’ll package your site, import it, test
 
 Note: We're revising our migration documentation. Our existing import documents include:
 
- - [Importing and Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site)
- - [Importing a Large Site](/docs/articles/users/importing-a-large-site)
- - [Importing Drush Archives with Terminus](/docs/articles/users/importing-drush-site-archives-with-terminus)
+ - [Importing and Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+ - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
+ - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
- - [Clone a Drupal Site using Drush](/docs/articles/users/clone-a-drupal-site-using-drush)
+ - [Clone a Drupal Site using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up
