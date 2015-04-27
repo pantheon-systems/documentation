@@ -4,11 +4,9 @@ description: Learn how to point your domain's DNS to Pantheon using Gandi.
 category:
   - going-live
   - managing
-
-
 ---
+**Note**: This guide assumes you have already registered your domain through Gandi.net.
 
- **Note**: This guide assumes you have already registered your domain through Gandi.net.
 ## Your Domains
 
 Gandi provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.

@@ -3,9 +3,7 @@ title: Email on Pantheon
 description: Understand email hosting on Pantheon.
 category:
     - drupal
-
 ---
-
 ## Incoming Email
 
 Pantheon does not host inboxes for you. We recommend making use of an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.

@@ -5,7 +5,6 @@ category:
   - WordPress
   - Going Live
 ---
-
 CloudFlare offers free shared SSL services, providing the opportunity to improve your site's security and SEO rankings. The following instructions will walk you through how to setup the SSL certificate and secure your entire site with the HTTPS protocol.
 
 ##Get Started
@@ -48,7 +47,7 @@ Go to the Page Rules section of your CloudFlare account.
 
 ### Pushing the Changes Live
 
-The final step is to deploy your code and plugin settings to the Live environment. For details, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/). Plugin configuration is stored in the database, so you will need to configure the plugin again on the live environment. Using the [wp-cfm plugin](https://github.com/forumone/wp-cfm) can make this a simpler task. See [our article](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/) for more information. 
+The final step is to deploy your code and plugin settings to the Live environment. For details, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/). Plugin configuration is stored in the database, so you will need to configure the plugin again on the live environment. Using the [wp-cfm plugin](https://github.com/forumone/wp-cfm) can make this a simpler task. See [our article](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/) for more information.
 
 It can take up to 24 hours before the SSL certificate takes effect on your Live site; please be patient. Once it's complete, you will see a green lock next to your domain name:
 

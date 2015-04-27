@@ -5,9 +5,7 @@ category:
   - developing
   - drupal
   - wordpress
-
 ---
-
 ## Overview
 
 There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using Drupal as a front end for marketing efforts or custom applications while using WordPress for blog content. This typically looks something like:

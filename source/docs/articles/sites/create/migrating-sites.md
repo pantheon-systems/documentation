@@ -3,9 +3,7 @@ title: Migrating Sites from Other Hosts
 description: General instructions for preparing and importing sites to Pantheon.
 category:
 - getting-started
-
 ---
-
 ## Overview
 
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
@@ -49,7 +47,7 @@ When preparing a site for export, there are a few best practices to follow:
 
 ### Create Single-file Archives
 If your site can be packaged with a total archived size less than 500MB, then you can import that single file to create your site.
-Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation. 
+Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation.
 <!--@TODO: Test archives created with [Backup and Migrate](https://www.drupal.org/project/backup_migrate).-->
 
 WordPress archives created with [Duplicator](https://wordpress.org/plugins/duplicator/) are known to work when imported during site creation.

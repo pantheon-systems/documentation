@@ -3,10 +3,7 @@ title: Running Drupal 8 on Pantheon
 description: Important information about running Drupal 8.
 category:
     - drupal
-
-
 ---
-
 # Coming Soon
 
 Drupal 8 is currently in a feature freeze and will be available again on Pantheon once it is slightly more stable.

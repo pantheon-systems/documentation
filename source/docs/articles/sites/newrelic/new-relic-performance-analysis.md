@@ -4,9 +4,7 @@ description: Learn how to utilize New Relic performance metrics and reports.
 category:
   - going-live
   - managing
-
 ---
-
 ## Overview
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 

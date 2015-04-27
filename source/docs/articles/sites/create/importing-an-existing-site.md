@@ -5,8 +5,6 @@ category:
   - drupal
   - getting-started
 ---
-
-
 ## Overview
 
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.

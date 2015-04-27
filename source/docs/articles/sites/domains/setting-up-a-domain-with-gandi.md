@@ -3,9 +3,7 @@ title: Setting Up a Domain with Gandi
 description: Learn how to edit a domain's Zone Record in Gandi so that it resolves to your Pantheon site.
 category:
   - going-live
-
 ---
-
 This article assumes that you have already purchased a domain from Gandi.
 
 ## Setting Up the Zone Record

@@ -4,7 +4,6 @@ description: Best practices for preparing your site launch.
 category:
   - going-live
 ---
-
 ## Preparing for Your Site Launch
 
 Congratulations, you're almost ready to launch your site on Pantheon! There are a couple things to do to get ready, but we'll help you with every step.

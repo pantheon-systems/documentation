@@ -3,9 +3,7 @@ title: Local Development Setup and Operation
 description: Suggestions and solutions for working locally.
 category:
 - getting-started
-
 ---
-
 While Pantheon provides a number of options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. While Pantheon cannot troubleshoot or support local development solutions, we can provide some suggestions and known working solutions.  
 
 If you're looking for a self-contained local development solution on Mac, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.

@@ -4,7 +4,6 @@ description: Learn how to create a great guide.
 draft: true
 
 ---
-
 ## <span style="color: red">Introduction Section</span>
 
 ### <span style="color: red">Problem Scenario</span>

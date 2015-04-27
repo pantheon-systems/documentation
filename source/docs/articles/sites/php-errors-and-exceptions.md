@@ -4,9 +4,7 @@ description: Detailed information about basic PHP errors.
 category:
   - debugging
   - drupal
-
 ---
-
 ## Overview
 
 There are three basic kinds of PHP errors:

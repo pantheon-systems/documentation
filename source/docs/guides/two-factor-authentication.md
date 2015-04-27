@@ -1,5 +1,5 @@
 ---
-title: Two-Factor Authentication
+title: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your site as an added security measure.
 category:
   - developing
@@ -9,9 +9,9 @@ category:
 authors:
   - populist
 date: 4/13/2015
-
+image: https.pantheon.io/docs/assets/images/pantheon-fistbump.png
+keywords: Drupal, WordPress, security, two-factor auth, 2fa, onelogin, Pantheon
 ---
-
 Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see [Multi Factor Authentication in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and [Two Step Authentication on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
 
 ## Benefits of Two-Factor Authentication
@@ -62,7 +62,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 For a single site, there are a few [different Drupal modules](https://groups.drupal.org/node/235938) including the [Two-Factor Authentication module](https://www.drupal.org/project/tfa) that provide the foundation necessary to use two-factor authentication on a Drupal site. In addition to the foundation module, you also will need to use a specific TFA module plugin to implement your preferred TFA method. Several of the common TFA methods such as SMS or Time-Based One Time Password are available in the [TFA Base plugins module](https://www.drupal.org/project/tfa_basic). There are also developer instructions to [write your own TFA plugin](https://www.drupal.org/node/1663240#dev).
 
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) and the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
-2. Download and set up a TOTP app such as [Authy](https://www.authy.com/users) for either iOS or Android.
+2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/users) for either iOS or Android.
 3. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
 ![TFA Module Settings](/source/docs/assets/images/tfa-drupal-module-settings.png)
 4. Go to the Security settings on each user profile you want to use TFA, and click **Enable TFA**.

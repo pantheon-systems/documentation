@@ -3,9 +3,7 @@ title: Database Connection Errors
 description: Understand the causes and solutions for database connection errors.
 category:
   - debugging
-
 ---
-
 ## Overview
 If your site suddenly reverts to `install.php`, or you see database connection errors like the following:
 

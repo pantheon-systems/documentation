@@ -3,11 +3,7 @@ title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
 category:
   - developing
-
 ---
-
-
- 
 ## Overview
 
 The Drupal system configuration in code is set in:

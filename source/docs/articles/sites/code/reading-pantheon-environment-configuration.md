@@ -3,9 +3,7 @@ title: Reading Pantheon Environment Configuration
 description: Understand the separation of configuration and code within the Pantheon framework.
 category:
   - going-live
-
 ---
-
 ## Overview
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.
 
@@ -64,17 +62,25 @@ Pantheon uses Pressflow to automatically read the environmental configuration. I
 
 ## Domain Access
 
-Domain Access requires [customization of settings.php](http://drupal.org/node/1096962) to go at the END of the settings.php. If you do not place the domain access configuration at the end of the file, your site will not function correctly.  
+Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **end** of settings.php. For example, for Drupal 7:
 
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
 
-In order for this to work, you need to add the appropriate config-loading line _above_ the `settings.inc` include in your settings.php file. For example, in Drupal 7:
+      // Extract Pantheon environmental configuration for Domain Access
+      extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
+      // All $conf variables and Redis configuration go after extract()
 
-    extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
-    // All $conf variables and Redis configuration should be set between these statements
-    require_once DRUPAL_ROOT . '/path/to/modules/domain/settings.inc';
+      // If using Redis add appropriate settings per https://pantheon.io/docs/articles/sites/redis-as-a-caching-backend/#using-redis-with-drupal
 
-​**Important!** If you are using the `PRESSFLOW_SETTINGS` or the `$conf` variable within settings.php, put this snippet at the end to avoid conflicts. If you are using Redis you will need to insert your configuration between the extract and require\_once statements.  
- 
+      // Add other $conf variables, for example for Fast 404 pages
+
+      /**
+       * Add the domain module setup routine to the end of settings.php
+       */
+      include DRUPAL_ROOT . 'sites/all/modules/domain/settings.inc';
+    }
+
 
 ## WordPress
 

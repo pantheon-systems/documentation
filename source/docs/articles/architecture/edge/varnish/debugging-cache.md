@@ -3,7 +3,6 @@ title: Debugging Cache
 description: Learn how to resolve caching errors.
 category:
   - debugging
-
 ---
 ## Clear Varnish Caches
 
