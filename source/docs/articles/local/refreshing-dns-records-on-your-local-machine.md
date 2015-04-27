@@ -3,9 +3,7 @@ title: Refreshing DNS Records on Your Local Machine
 description: Flush your DNS cache to clear and update the data.
 category:
   - developing
-
 ---
-
 ## Overview
 DNS is the main naming system for the internet, allowing computers to exchange data over TCP/IP. It takes any domain name, such as "pantheon.io" and "ties" it to an IP address like 50.57.202.75. The numbers identify computers to each other, and the names are easier for humanoids to remember.  
 

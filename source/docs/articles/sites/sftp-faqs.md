@@ -4,7 +4,6 @@ description: Understand common SFTP connection problems.
 category:
   - developing
 ---
-
 ## SFTP Connection Issues
 
     Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...

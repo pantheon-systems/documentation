@@ -10,7 +10,8 @@
 <![endif]-->
 <!--[if gt IE 8]>
 <!-->
-<html class="no-js">
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Article" class="no-js">
   <!--<![endif]-->
 <head>
   <!-- Quickie redirection to https and pantheon.io -->
@@ -31,18 +32,67 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   window.location = redirect
 }
   </script>
+<!-- Name the site for mobile search -->
+  <script type="application/ld+json">
+   {  "@context" : "http://schema.org",
+      "@type" : "WebSite",
+      "name" : "Pantheon",
+      "alternateName" : "Pantheon Website Management Platform",
+      "url" : "https://pantheon.io"
+   }
+   </script>
+
+  <!--Meta Tags -->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{% block title %}{{ page.title|title }} | {{ site.title }}{% endblock %}</title>
-  <meta name="description" content="">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{{ page.title}}">
+  <meta itemprop="description" content="{{ page.description }}">
+  <meta itemprop="image" content="{{ page.image }}">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@getpantheon">
+  <meta name="twitter:title" content="{{ page.title}}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% if page.authors %}
+      {% set author_list = page.authors %}
+      {% if author_list %}
+          {% for authorhandle in author_list %}
+              {% if site.authors[authorhandle] %}
+                  {% set author = site.authors[authorhandle] %}
+  <meta name="twitter:creator" content="@{{ author.twitter }}">
+              {% endif %}
+            {% if not loop.last %},
+            {% endif %}
+          {% endfor %}
+      {% endif %}
+  {% endif %}
+  <!-- Twitter summary card with large image must be at least 280x150px -->
+  <meta name="twitter:image:src" content="{{ page.image }}">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ page.title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ site.site_url}}{{ site.url}}{{ page.url }}" />
+  <meta property="og:image" content="{{ page.image }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:site_name" content="Pantheon Documentation" />
+  <meta property="article:published_time" content="{{ page.date|date('F d, Y') }}" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:section" content="{{ page.category }}" />
+  <meta property="article:tag" content="{{ page.category }}" />
+  <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
+
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
   <link href="{{ site.url }}/assets/fonts/pan-docs-icons/css/pan-docs.css" rel="stylesheet">
   <link href="{{ site.url }}/assets/css/prettyPhoto.css" rel="stylesheet">

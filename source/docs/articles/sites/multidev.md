@@ -4,7 +4,6 @@ description: Learn how to create branches and cloud development environments, to
 category:
 - developing
 ---
-
 Multidev is cloud development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 
 ## Benefits of Multidev

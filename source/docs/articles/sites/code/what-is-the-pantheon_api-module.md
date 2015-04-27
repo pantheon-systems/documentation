@@ -4,11 +4,7 @@ description: Learn how to incorporate Pantheon's internal API modules.
 category:
   - getting-started
   - developing
-
-
-
 ---
-
 Pantheon supplies a few modules with all sites to provide better integration with the platform. There is a module dedicated to serving the ApacheSolr use-case, and there is the general `pantheon_api.module`.
 
 This module is extremely light-weight and efficient. It provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches from our reverse-proxy/edge cache, as well as provisioning new Solr cores and other features.

@@ -3,7 +3,6 @@ title: Frequently Asked Questions
 description: Answers to common questions about using Pantheon.
 category:
   - getting-started
-
 ---
 ## Getting Started
 

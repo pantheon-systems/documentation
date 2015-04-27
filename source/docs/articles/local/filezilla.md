@@ -4,10 +4,7 @@ description: Detailed information about using the FileZilla FTP client.
 category:
     - getting-started
     - developing
-
-
 ---
-
 [FileZilla](http://winscp.net/eng/index.php) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
 ## Getting Started

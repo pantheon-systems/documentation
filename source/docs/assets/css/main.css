@@ -90,8 +90,6 @@ h4 {
 }
 
 body {
-  margin-top: 10px;
-  margin-left: 10px;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.65em;
@@ -302,6 +300,7 @@ img.noborder {border:none;}
   margin-bottom: 0;
   background-color: #222;
   border-bottom: 0;
+
 }
 .pio-home-nav .pio-nav-b {
   display: none;
@@ -319,7 +318,7 @@ img.noborder {border:none;}
   background-color: #444;
 }
 .pio-docs-nav .navbar-toggle .icon-bar {
-  background-color: #563d7c;
+  background-color: #FFFFFF;
 }
 .pio-docs-nav .navbar-header .navbar-toggle {
   border-color: #fff;
@@ -441,6 +440,7 @@ img.noborder {border:none;}
 
 .category {
   margin-bottom: 35px;
+  display: inline-block;
 }
 
 .document-list {
@@ -1774,6 +1774,7 @@ cursor: pointer;
   border: none;
   box-shadow: none;
 }
+
 /* Google Custom Search input box */
 table.gsc-search-box td.gsc-input {
   margin-left: 5px !important;
@@ -1802,7 +1803,15 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   background-position: center !important;
   width: 85% !important;
   height: 39% !important;
-  margin-top: 15px !important;
-  margin-bottom: 10px !important;
-  padding: 6px 25px !important;
+  margin-top: 4.5px !important;
+  margin-bottom: 0px !important;
+  padding: 10px 26px !important;
+
+.outline-alert{
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

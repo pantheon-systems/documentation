@@ -5,7 +5,6 @@ category:
   - getting-started
 
 ---
-
 ## Overview
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 

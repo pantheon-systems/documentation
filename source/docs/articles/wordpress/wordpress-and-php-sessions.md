@@ -4,9 +4,7 @@ description: Understand the behaviors of WordPress and PHP sessions.
 category:
   - developing
   - WordPress
-
 ---
-
 WordPress Core [does not use sessions](http://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables?replies=7). All "user state" is managed via cookies. This is a Core design decision.
 
 However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain.

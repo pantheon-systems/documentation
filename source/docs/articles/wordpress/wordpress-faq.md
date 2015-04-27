@@ -4,9 +4,7 @@ description: Questions to Frequently Asked Questions concerning WordPress on the
 category:
   - getting-started
   - WordPress
-
 ---
-
 ## Getting Started
 
 ### Does Pantheon Support WordPress?

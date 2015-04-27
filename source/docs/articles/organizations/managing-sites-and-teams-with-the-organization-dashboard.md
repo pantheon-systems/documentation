@@ -3,9 +3,7 @@ title: Managing Sites and Teams with the Pantheon for Agencies Dashboard
 description: Learn to add users and sites to your organization.
 category:
 - managing
-
 ---
-
 The organization dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove team members, and manage new or existing sites.
 
 ## Add Users to Your Organization
@@ -32,7 +30,7 @@ From the site dashboard you wish to add,
 
 
 1. Click **Team**
-2. Click **Add Supporting Organization** 
+2. Click **Add Supporting Organization**
 3. Search for your organization
 4. Click **Add**
 

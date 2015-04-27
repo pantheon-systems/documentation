@@ -3,10 +3,7 @@ title: Managing Upstreams
 description: Merge updates to core, extensions, and themes.
 category:
   - managing
-
-
 ---
-
 Once you have a distribution running on Pantheon, keep it and its downstream sites up-to-date by merging in updates to core, extensions, and themes.
 
 ## Merging Core Releases
