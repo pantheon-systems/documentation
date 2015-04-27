@@ -22,7 +22,7 @@ Click **Install WordPress**  or **Install Drupal**  or any of the distribution
 
 ### Visit the Dev Installation
 
-On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or Wordpress installation forms.  
+On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ![Visit development site button](/source/docs/assets/images/visit-development-site.png)
 
