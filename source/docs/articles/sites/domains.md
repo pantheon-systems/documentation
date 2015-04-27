@@ -6,20 +6,19 @@ category:
   - managing
   - going-live
 ---
-
 ## Overview
 
-Pantheon provides distinct base domains for the consistent access of the development, testing, and live production environments for each site on the platform, from the moment they are launched.
+Pantheon provides distinct base domains for the consistent access of the Development, Testing, and Live production environments for each site on the platform from the moment they are launched.
 
 All sites on Pantheon can be divided into three base domain URL patterns.
 
-**Note:** In the example base domain patterns, `env` stands for one of either `dev`, `test`, or `live`, and `sitename` is the chosen name for the site:
+**Note:** In the example base domain patterns, `env` stands for either `dev`, `test`, or `live`; and `sitename` is the chosen name for the site:
 
 * [Pantheon.io base domains](https://pantheon.io/docs/articles/sites/domains/using-pantheon-io-for-better-uptime/): `env-sitename.pantheon.io`
 * Legacy GotPantheon.com base domains: `env.sitename.gotpantheon.com` or `env-sitename.gotpantheon.com`
 * [Custom organizational base domains](https://pantheon.io/docs/articles/organizations/base-domains/): `env-sitename.custom.domain.tld`
 
-Once sites are launched at a paid service level, custom domains can be added to each environment. Securing visitor traffic with HTTPS communication requires uploading a custom certificate, and setting the DNS `A` record to a dedicated IP. For all sites in all configurations, the recommended DNS records will be provided on the Domains and SSL tool.
+Once sites are launched at a paid service level, custom domains can be added to each environment. Securing visitor traffic with HTTPS communication requires uploading a custom certificate and setting the DNS `A` record to a dedicated IP. For all sites in all configurations, the recommended DNS records will be provided on the Domains and SSL tab.
 
 * [Adding a Domain to a Site Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)
 * [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
@@ -28,9 +27,9 @@ Once sites are launched at a paid service level, custom domains can be added to 
 
 ## Recommended DNS Records
 
-Each site’s base domain URL pattern determines which DNS records must be set in order for visitor traffic directed at the domain to resolve as expected. For every type of base domain, the Domains and SSL Tool on each environment of a Pantheon site will show the recommended DNS records. These are the only records that should be set for a domain; any other value will result in a routing error.
+Each site’s base domain URL pattern determines which DNS records must be set in order for visitor traffic directed at the domain to resolve as expected. For every type of base domain, the Domains and SSL tool on each environment of a Pantheon site will show the recommended DNS records. These are the only records that should be set for a domain; any other value will result in a routing error.
 
-As Pantheon does not provide name servers, or have the ability to setup any domain records for sites, it is up to the site owner or technical contact to configure the domain, and verify that all records correspond to the recommendations shown in the Domains and SSL tool.
+As Pantheon does not provide name servers, or have the ability to set up any domain records for sites, it is up to the site owner or technical contact to configure the domain, and verify that all records correspond to the recommendations shown in the Domains and SSL tool.
 
 Root domains, often known as bare or naked domains, are most often in the format of `example.com`, and usually require DNS `A` records. Subdomains frequently match `www.example.com` and are set to DNS `CNAME` entries. The Domains and SSL tool will present the appropriate recommendation for a DNS record depending on whether the custom domain is a root or subdomain.
 
@@ -95,7 +94,9 @@ _Subdomains_
 
 Redirecting to standardize on either root domains or subdomains using PHP is supported at all paid site service levels with the Legacy and Custom base domains, as well as HTTPS Enabled Environments for sites with any base domain.
 
-For sites launched with Pantheon.io base domains, redirecting root domains using our www-redirector to standardize on the www subdomain is supported. Redirecting correctly-configured subdomains using PHP to other subdomains is also supported. However, redirecting to root domains is not supported in the default configuration. To standardize on a root domain with a Pantheon.io base domain site, utilize a DNS provider with `CNAME` flattening for root domains, rather than setting any records to our www-redirector. In this case you would set the flattened `CNAME` record for the root domain to `env-sitename.pantheon.io`. Alternatively, you may obtain a load-balanced `A` record by setting the site to at least a Pro service level, enabling HTTPS service with a custom certificate, and configuring the DNS for HTTPS Enabled Environments.
+For sites launched with Pantheon.io base domains, redirecting root domains using our www-redirector to standardize on the www subdomain is supported. Redirecting correctly configured subdomains using PHP to other subdomains is also supported. However, redirecting to root domains is not supported in the default configuration. To standardize on a root domain with a Pantheon.io base domain site, use a DNS provider with `CNAME` flattening for root domains, rather than setting any records to our www-redirector. In this case you would set the flattened `CNAME` record for the root domain to `env-sitename.pantheon.io`. Alternatively, you may obtain a load-balanced `A` record by setting the site to at least a Pro service level, enabling HTTPS service with a custom certificate, and configuring the DNS for HTTPS enabled environments.
+
+##See Also
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
