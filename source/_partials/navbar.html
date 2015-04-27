@@ -13,12 +13,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://pantheon.io/register" target="_blank">Sign Up</a></li>
-            <li><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
-            <li><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank" style="margin-right=10px">Support</a></li>
-          {% if page.home is not defined %}
-            <li class="search-form"> {% include("search_box.html") %}</li>
-          {% endif %}
+            {% if page.home is not defined %}
+          <li class="search-form"> {% include("search_box.html") %}</li>
+            {% endif %}
+        <li style="margin-right:5px;"><a href="https://pantheon.io/register" target="_blank">Sign Up</a></li>
+        <li><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
+        <li><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank" style="margin-right=10px">Support</a></li>
 
           </ul>
         </div>

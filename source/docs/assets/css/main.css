@@ -1777,6 +1777,7 @@ cursor: pointer;
 
 /* Google Custom Search input box */
 table.gsc-search-box td.gsc-input {
+  margin-top: 10px !important;
   margin-left: 5px !important;
   padding-right: 0px !important;
   padding-bottom: 3px !important;
@@ -1803,8 +1804,8 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   background-position: center !important;
   width: 85% !important;
   height: 39% !important;
-  margin-top: 4.5px !important;
-  margin-bottom: 0px !important;
+  margin-top: 3.5px !important;
+  margin-bottom: 1px !important;
   padding: 10px 26px !important;
 
 .outline-alert{
