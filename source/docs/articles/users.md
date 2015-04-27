@@ -18,6 +18,8 @@ Pantheon offers different user types to enable role-based permissions. The most 
 ##Team Management
 It's easy to add, manage, and delete your site's users. For complete details, see [Team Management](https://pantheon.io/docs/articles/sites/team-management/).
 
+![Team Management Window](/source/docs/assets/images/team-modal.png)
+
 ##Pantheon for Agencies
 
 With Pantheon for Agencies, you can build, launch, and run all your clients’ Drupal and WordPress sites through one dashboard.
