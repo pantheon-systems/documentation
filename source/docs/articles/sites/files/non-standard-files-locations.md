@@ -8,16 +8,28 @@ Pantheon provides one location for files that are part of your sites content, th
 
 If you are importing a site which has files in another location (e.g. "/files") you will need to move the files into the standard location, and add, commit and push a symlink from that location to the new location via Git:  
 
+You can read how to clone your site to your local machine at [Getting Started with GIT](/docs/articles/local/starting-with-git/).
+
+Once you have your site cloned, you will want to open a terminal window and `cd` into your local repo and run the command to create your symlink. 
+
+Here is an example:
+
+```
+git clone <string from Pantheon Site Dashboard>
+cd site-name
+ln <copy from commands below>
+```
+
 **Drupal Sites**
 ```
-    $> ln -s ./sites/default/files ./files
+    $> ln -s ../../../sites/default/files ./files/newfolder
     $> git add files
     $> git commit files -m "adding legacy files location symlink"
     $> git push origin master
 ```
 **WordPress Sites**
 ```
-    $> ln -s ./wp-content/uploads ./files
+    $> ln -s ../wp-content/uploads ./files/newfolder
     $> git add files
     $> git commit files -m "adding legacy files location symlink"
     $> git push origin master
