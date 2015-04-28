@@ -1756,6 +1756,15 @@ cursor: pointer;
 * Odds and ends for optimum docs display.
 */
 
+/*No fill alert tag*/
+.outline-alert{
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 /* Pseudo :focus state for showing how it looks in the docs */
 #focusedInput {
   border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
@@ -1775,9 +1784,9 @@ cursor: pointer;
   box-shadow: none;
 }
 
-/* Google Custom Search input box */
 
 
+/* Google Custom Search input boxes */
 
 .gsc-input{
   background-image: none !important;
@@ -1815,21 +1824,26 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   padding-top: 5px !important;
 }
 .gs-result .gs-title, .gs-result .gs-title * {
-margin-bottom: 5px !important;
+  font-size: 18px !important;
 }
-#results .gsc-result:hover {
+.gsc-result:hover {
   border: 1px solid #888 !important;
   border-left: 10px solid #888 !important;
 
 }
-.gsc-selected-option-container, gsc-inline-block {
-width: auto !important;
+/* Google Custom Search results sort by */
+
+.gsc-selected-option-container{
+  min-width: 80px !important;
 }
-#results .gsc-results {
+
+.gsc-results {
   /* Sets font for titles, snippets, and URLs. */
-  font-family: arial, helvetica, sans-serif !important;
+  font-family: helvetica, helvetica, sans-serif !important;
+
 }
-#results .gsc-result {
+
+.gsc-result {
   position: relative !important;
   border: 1px solid #eee !important;
   border-left: 10px solid #eee !important;
@@ -1837,12 +1851,4 @@ width: auto !important;
   border-radius: 8px !important;
   -webkit-border-radius: 8px !important;
   -moz-border-radius: 8px !important;
-}
-.outline-alert{
-  padding: 15px;
-  border: 1px solid;
-  border-radius: 4px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
