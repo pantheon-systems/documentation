@@ -112,11 +112,6 @@ body.row.main {
   margin-bottom: 40px;
 }
 
-.main-content{
-  margin: 20px 0 0;
-  border: 1px solid #ccc;
-}
-
 .article {
   background-color: white;
   padding-bottom: 40px;
@@ -338,10 +333,8 @@ img.noborder {border:none;}
 */
 
 .cta-docs-footer{
-  border: 1px solid #ccc;
-  border-top: 0px;
   padding: 20px;
-  background: #EFF2F2;
+  background: #DDE5E7;
   margin: 0px -15px;
   text-align: center;
   display: block;
