@@ -1783,16 +1783,16 @@ cursor: pointer;
   background-image: none !important;
   background-position: left !important;
   background-repeat:no-repeat !important;
-  font-size: 24px !important;
+  font-size: 16px !important;
   padding: none !important;
-  border: 1px solid #D9D9D9;
+  border: 0px !important;
   width: 99%;
-  height: 28px !important;
+  height: 25px !important;
   padding-right: 5px !important;
   padding-right: 0px !important;
 }
 .gsc-input-box {
-
+  border-color:  none !important;
   height: 35px !important;
 }
 .cse input.gsc-input:focus, input.gsc-input:focus {
@@ -1810,12 +1810,35 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   width: 85% !important;
   height: 100% !important;
   margin-top: 8px !important;
-  border-color:  #ccc !important;
-  padding-top: 4px !important;
+  border-color:  none !important;
+  border: 0px !important;
+  padding-top: 5px !important;
+}
+.gs-result .gs-title, .gs-result .gs-title * {
+margin-bottom: 5px !important;  
+}
+#results .gsc-result:hover {
+  border: 1px solid #888 !important;
+  border-left: 10px solid #888 !important;
+
+}
+.gsc-selected-option-container {
+width: auto !important;
+}
+#results .gsc-results {
+  /* Sets font for titles, snippets, and URLs. */
+  font-family: arial, helvetica, sans-serif !important;
 }
 
-
-
+#results .gsc-result {
+  position: relative !important;
+  border: 1px solid #eee !important;
+  border-left: 10px solid #eee !important;
+  padding: 8px 8px 8px 20px !important;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+}
 .outline-alert{
   padding: 15px;
   border: 1px solid;
