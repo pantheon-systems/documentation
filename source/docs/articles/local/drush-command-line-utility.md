@@ -4,9 +4,7 @@ description: Administer and maintain your site from your local Drush installatio
 category:
   - getting-started
   - developing
-
 ---
-
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
 Pantheon does not need the settings.php for your site to work, and your Drupal sites do not contain one out of the box. Drush commands require a settings.php file and it's considered a best practice to have one. Simply duplicate the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on a new site.

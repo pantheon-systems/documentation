@@ -7,9 +7,7 @@ category:
 authors:
   - ari
 date: 2/25/2015
-
 ---
-
 If your Drupal site sends outbound email, you don't want to accidentally spam your users or customers from your Dev or Test environments. Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming customers during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your dev toolkit.
 
 Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.

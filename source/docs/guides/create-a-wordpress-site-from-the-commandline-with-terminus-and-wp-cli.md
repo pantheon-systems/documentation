@@ -6,7 +6,6 @@ authors:
   - calevans
 date: 2/25/2015
 ---
-
 Many developers feel more at home at the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
 
 Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.

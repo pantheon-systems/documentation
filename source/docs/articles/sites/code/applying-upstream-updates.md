@@ -5,8 +5,6 @@ category:
   - developing
   - drupal
 ---
-
-
 ## Overview
 
 **Note: Only use the one-click updates on the dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.**

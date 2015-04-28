@@ -1,11 +1,9 @@
 ---
 title: MySQL Slow Log
 description: Learn how to use a site's MySQL Slow Log to identify serious performance issues.
-
 category:
 - debugging
 ---
-
 Analyzing the MySQL Slow Log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
 
 ## Requirements

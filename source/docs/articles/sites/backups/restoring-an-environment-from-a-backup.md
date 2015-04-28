@@ -5,7 +5,6 @@ category:
   - managing
 
 ---
-
 Each site environment's backups can be found on the Backups subtab for the environment in the Pantheon Dashboard.  
 
 

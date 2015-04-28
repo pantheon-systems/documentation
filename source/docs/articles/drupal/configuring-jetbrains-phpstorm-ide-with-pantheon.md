@@ -3,9 +3,7 @@ title: Configuring JetBrains PhpStorm IDE with Drupal on Pantheon
 description: Best practices and recommendations for building a site using PhpStorm.
 category:
   - developing
-
 ---
-
 ## Overview
 
 [JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with Drupal sites.

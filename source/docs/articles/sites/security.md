@@ -4,8 +4,7 @@ description: Learn how to keep your work hidden from the public for development 
 category:
   - developing
 ---
-
-**Note**: When a dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
+**Note**: When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
 
 There are occasions while you are work on your Drupal site that  you would like to keep your progress hidden from the world as you prepare to Go Live or possibly make updates.
 

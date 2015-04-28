@@ -2,7 +2,6 @@
 title: Guide Publishing Workflow
 description: Learn how to create a great guide.
 draft: true
-
 ---
 Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blue">**Writer**</span>, <span style="color: brown">**Editor**</span>, <span style="color: green">**Management Team**</span>, <span style="color: purple">**Technical Resource**</span>, <span style="color: magenta">**Tester**</span>, <span style="color: red">**Marketing Content Manager**</span>
 
@@ -44,6 +43,4 @@ It's important that moderators know what follow up actions are required when Pul
 
 ### Merge Instructions
 
-When the doc has received a +1 from a founder and editor. Merge and publish it. Delete the branch. Any fixes noticed after the fact will enter a normal update workflow. 
-
-
+When the doc has received a +1 from a founder and editor. Merge and publish it. Delete the branch. Any fixes noticed after the fact will enter a normal update workflow.

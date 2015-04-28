@@ -4,9 +4,7 @@ description: Learn how to update Drupal modules.
 category:
   - developing
   - drupal
-
 ---
-
 ## Updating Modules Through Drupal
 Drupal has a very good, built-in system for updating contributed modules through the administrative interface.
 1. Log in to Pantheon, and choose the site you want to update.

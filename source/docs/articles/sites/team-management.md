@@ -6,7 +6,6 @@ category:
   - managing
 
 ---
-
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy and simple.
 
 ## Team Management

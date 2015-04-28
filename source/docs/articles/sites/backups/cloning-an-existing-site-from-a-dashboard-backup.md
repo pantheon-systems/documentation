@@ -4,7 +4,6 @@ description: Make a copy of your existing code, files, and database.
 category:
   - developing
 ---
-
 ## Clone an Existing Site from a Dashboard Backup
 
 All Pantheon sites consist of three parts:

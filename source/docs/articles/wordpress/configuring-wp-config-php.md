@@ -3,9 +3,7 @@ title: Configuring wp-config.php
 description: Understand how to adjust and customize the Wordpress configuration file for your Pantheon site.
 category:
   - developing
-
 ---
-
 ## Overview
 
 Wordpress configuration is set in wp-config.php, located within your Wordpress site root. When you spin up a Wordpress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.

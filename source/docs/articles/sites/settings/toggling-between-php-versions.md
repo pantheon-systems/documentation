@@ -4,7 +4,6 @@ description: Learn how to change between various PHP versions.
 category:
   - developing
 ---
-
 ## Upgrade Your PHP Version
 
 1. In your Site Dashboard, click the **Settings** menu and select the **PHP version** tab.

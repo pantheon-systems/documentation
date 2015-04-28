@@ -4,9 +4,7 @@ description: Learn the Pantheon environments and overall workflow.
 category:
   - going-live
   - developing
-
 ---
-
 ## Overview
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site that's available to the world. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/).

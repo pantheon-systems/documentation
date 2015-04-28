@@ -4,11 +4,8 @@ description: Learn how to update links so that the URL references the correct fi
 category:
   - debugging
   - drupal
-
 ---
-
 ## Overview
-
 
 ### Scenario:
 When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as http://192.237.142.203:5555/files/cernettes.gif instead of the proper http://www.example.com/files/cernettes.gif

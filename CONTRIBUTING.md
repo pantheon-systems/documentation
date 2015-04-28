@@ -9,6 +9,8 @@ Help us create relevant and useful content for developers like yourself. See som
   Trying to edit or create a file in this repository will create your fork automatically.
 * [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
 
+**NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
+
 ## Issues - Searching and Creating
 
 Before you edit a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on, or if you aren't ready to submit a pull request and want to get some initial feedback.

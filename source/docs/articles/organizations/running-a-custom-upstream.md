@@ -6,7 +6,6 @@ category:
   - managing
 
 ---
-
 An **upstream** is a specific package of your base web application. Drupal has several publicly maintained packages that can be used as an upstream for any project. WordPress does not have publicly maintained uptreams, however, privately maintained ones can be created. An example of this would be a package containing the WordPress Core, plus your company's collection of default plugins and themes.
 
 Pantheon provides support for running three types of custom distribution on the platform:

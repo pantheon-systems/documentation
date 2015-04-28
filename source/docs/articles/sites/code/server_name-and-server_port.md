@@ -3,7 +3,6 @@ title: SERVER_NAME and SERVER_PORT on Pantheon
 description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your environment configuration.
 category:
   - developing
-
 ---
 There's code out there that relies on `$_SERVER['SERVER_NAME']` and sometimes `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
 

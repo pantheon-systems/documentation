@@ -5,7 +5,6 @@ category:
   - going-live
   - WordPress
 ---
-
 ## Create and Name Your Site
 
 After you have created an account, log into your Dashboard and click **Create your first site**.

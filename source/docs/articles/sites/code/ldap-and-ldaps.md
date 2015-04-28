@@ -4,9 +4,7 @@ description: Configure LDAP on your Pantheon site.
 category:
   - going-live
   - developing
-
 ---
-
 ## LDAP as a Provider  
 
 This is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
