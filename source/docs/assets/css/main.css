@@ -1825,6 +1825,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 }
 .gs-result .gs-title, .gs-result .gs-title * {
   font-size: 18px !important;
+  text-decoration: none !important;
 }
 
 /* Google Custom Search results sort by */
@@ -1835,8 +1836,11 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 .gsc-results {
   /* Sets font for titles, snippets, and URLs. */
-  font-family: helvetica, helvetica, sans-serif !important;
-
+  line-height: 1.25em !important;
+  color: #1a0dab !important;
+}
+.gs-visibleUrl {
+color: #274E13 !important;
 }
 .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top
 {
