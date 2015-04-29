@@ -3,6 +3,7 @@ title: Frequently Asked Questions
 description: Answers to common questions about using Pantheon.
 category:
   - getting-started
+keywords: getting started, faqs, sites, pantheon, plans, developing, security
 ---
 ## Getting Started
 
