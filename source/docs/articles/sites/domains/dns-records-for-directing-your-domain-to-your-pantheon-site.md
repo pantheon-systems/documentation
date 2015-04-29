@@ -1,11 +1,10 @@
 ---
 title: DNS Records for Directing Your Domain to Your Pantheon Site
-description: Learn how to adjust DNS settings for your domain in order to redirect traffic to your Pantheon site.
+description: Recommended DNS configurations for pointing a domain to a Pantheon site.
 category:
   - developing
+keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, dns records for https, dns records for http, dns records for http sites, dns records for https sites
 ---
-## Overview
-
 The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/docs/articles/going-live/).
 
 ### Pantheon Does Not Manage Your Domain Name or DNS For Your Site

@@ -1,11 +1,10 @@
 ---
-title: Migrating Sites from Other Hosts
-description: General instructions for preparing and importing sites to Pantheon.
+title: Migrate Sites from Other Hosts
+description: General instructions for preparing and migrating remotely hosted sites to Pantheon.
 category:
 - getting-started
+keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
-## Overview
-
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.

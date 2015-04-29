@@ -3,6 +3,7 @@ title: SFTP FAQs
 description: Understand common SFTP connection problems.
 category:
   - developing
+keywords: sftp, sftp connection, sftp connection error, sftp connection problems, sftp and dns, sftp dns, google public dns, system maintenance
 ---
 ## SFTP Connection Issues
 

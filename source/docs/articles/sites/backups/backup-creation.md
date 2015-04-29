@@ -1,10 +1,10 @@
 ---
 title: Backup Creation
-description: Learn how to create a backup of an environment.
+description: Learn how to create a backup of any environment.
 category:
   - managing
+keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
 ---
-## Overview
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
 <div class="alert alert-danger" role="alert"><strong>Warning:</strong> Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>

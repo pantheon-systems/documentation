@@ -1,9 +1,9 @@
 ---
 title: Restoring an Environment from a Backup
-description: Learn how to restore a backup to an environment.
+description: Learn how to restore a backup to any environment.
 category:
   - managing
-
+keywords: restore backup, restore environment, restore, how to restore backup, how to restore, restore from another environment, restore any environment backup, restore environment backup, restores, backups
 ---
 Each site environment's backups can be found on the Backups subtab for the environment in the Pantheon Dashboard.  
 

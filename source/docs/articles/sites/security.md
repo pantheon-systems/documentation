@@ -3,10 +3,12 @@ title: The Security Tool
 description: Learn how to keep your work hidden from the public for development or updates.
 category:
   - developing
+keywords: security, lock environment, lock site, password protect, password protection, unlock site
 ---
+There are occasions while you are work on your Drupal site that  you would like to keep your progress hidden from the world as you prepare to Go Live or possibly make updates.
+
 **Note**: When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
 
-There are occasions while you are work on your Drupal site that  you would like to keep your progress hidden from the world as you prepare to Go Live or possibly make updates.
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
 
