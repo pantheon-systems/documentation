@@ -23,7 +23,7 @@ You will then have a short wait while Pantheon creates and allocates the resourc
 <!-- #3 -->
 ## Choose Start State
 
-You now have several options. You can start with Drupal or Wordpress core, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
+You now have several options. You can start with Drupal or WordPress core, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
 
 Select **Install WordPress**.
 

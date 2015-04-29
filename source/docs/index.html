@@ -19,18 +19,25 @@ meta:
         type: page
 use: [documents_category]
 ---
-<div class="landing-search">
-<form role="form" method="get" action="https://www.google.com/search">
-  <div class="form-group has-feedback" style=" padding-bottom: 15px;">
-    <input type="text" name="q" class="form-control" placeholder="Search Pantheon Docs" />
-    <input type="hidden" name="as_sitesearch" value="pantheon.io/docs">
-    <i class="form-control-feedback glyphicon glyphicon-search"style="margin-top: 11px; font-size: 160%;"></i>
-  </div>
-</form>
+<div style="margin-top:15px;margin-bottom:15px;">
+<script>
+  (function() {
+    var cx = '017416971424255486898:moj1j4obfwm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
 </div>
 
 
-<div class="article container" style="padding-bottom: 0px;">
+<div class="article container" style="padding-bottom: 0px;
+">
 <!--Getting Started Thumbnail-->
 <div class="col-md-6 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
     <a href="/docs/articles/getting-started">

@@ -1,6 +1,6 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing Wordpress site.
+description: Learn how to import an existing WordPress site.
 category:
   - wordpress
   - getting-started

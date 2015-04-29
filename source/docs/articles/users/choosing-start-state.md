@@ -4,7 +4,7 @@ description: Available options for starting new sites and site import considerat
 category:
   - getting-started
 ---
-When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal or Wordpress version, a Pantheon optimized distribution, or import an existing site.
+When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal or WordPress version, a Pantheon optimized distribution, or import an existing site.
 
 ## Start with Core
 
