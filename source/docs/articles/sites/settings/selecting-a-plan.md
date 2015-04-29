@@ -17,7 +17,7 @@ To get started, select the site you would like to associate with a plan.
 <!--![Select a plan from dashboard](/source/docs/assets/images/select-a-plan-and-billing.png)-->  
 
 ## Go Live
-Now that you have selected a plan, you can continue on with process of going live by [setting up a domain on your site.](/docs/articles/going-live).
+Now that you have selected a plan, you can continue on with process of going live by [setting up a domain on your site](/docs/articles/going-live).
 
 ## View Your Site's Plan
 
