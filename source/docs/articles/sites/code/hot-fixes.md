@@ -59,7 +59,10 @@ Make your hotfixes and commit them locally. Then tag and push them to test by cr
 
 **Note**: Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.
 
-If your tests are good, you can use the "Pull Code" option on the dashboard to deploy your hotfix. This will automatically create a new live tag for you and deploy it.
+If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently the deploys interface does not enable hotfix tags on test to be deployed directly to live.
+
+    git tag -a pantheon_live_2 -m "Deploying my hotfix"
+    git push origin pantheon_live_2
 
 ## Orphan Commits
 
