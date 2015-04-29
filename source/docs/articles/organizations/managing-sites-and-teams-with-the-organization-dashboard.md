@@ -3,6 +3,7 @@ title: Managing Sites and Teams with the Pantheon for Agencies Dashboard
 description: Learn to add users and sites to your organization.
 category:
 - managing
+keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
 ---
 The organization dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove team members, and manage new or existing sites.
 

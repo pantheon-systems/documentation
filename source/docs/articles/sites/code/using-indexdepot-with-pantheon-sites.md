@@ -1,8 +1,9 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-description: Create and configure IndexDepot and Solr.
+description: Learn how to create and configure IndexDepot with Solr for advanced indexing features.
 category:
   - developing
+keywords: indexdepot, index, index depot, solr, indexing, site content, full-text search, full text search, similarity search, highlight index, highlighting indexing, geo-search, geo search, additional indexing, additional index features, custom index
 ---
 ## Overview
 

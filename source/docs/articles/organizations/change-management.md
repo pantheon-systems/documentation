@@ -4,6 +4,7 @@ description: Learn about the features and benefits of role-based permissions.
 category:
   - getting-started
   - developing
+keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
 Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the Organization as a supporting Organization are accessible to privileged members of the Organization. The roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
 

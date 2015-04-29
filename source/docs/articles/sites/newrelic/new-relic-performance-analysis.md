@@ -4,8 +4,8 @@ description: Learn how to utilize New Relic performance metrics and reports.
 category:
   - going-live
   - managing
+keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance
 ---
-## Overview
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 Enabling New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping out support team visualize corresponding performance and symptoms.

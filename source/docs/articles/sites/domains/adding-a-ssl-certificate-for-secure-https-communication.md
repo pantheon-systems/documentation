@@ -1,9 +1,10 @@
 ---
 title: Enable SSL for Secure HTTPS Communication
-description: Learn how to implement an SSL Certificate and utilize a static IP address.
+description: Learn how to implement an HTTPS communication and utilize a static IP address.
 category:
   - developing
   - launch
+keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl certificate, add ssl cert, add ssl, add https, add encryption, how to add an ssl, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types, ssl types, ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
 ---
 SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
