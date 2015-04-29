@@ -5,7 +5,6 @@ description: Configure and troubleshoot database connections.
 category:
   - developing
 ---
-
 ## Overview
 
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
@@ -58,7 +57,7 @@ If you need to access the MySQL database credentials outside of Drupal, or need 
 
 #### How can I access my MySQL slow query logs?
 
-Pantheon logs underperforming database queries using the [MySQL Slow Query Log](http://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the data subdirectory.
+Pantheon logs underperforming database queries using the [MySQL Slow Query Log](http://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
 
 #### Are table prefixes supported?
 

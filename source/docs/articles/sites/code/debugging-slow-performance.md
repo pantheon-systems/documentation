@@ -6,8 +6,6 @@ category:
   - going-live
 
 ---
-
-
 ## Overview
 
 When your site is fast, everybody wins. When it’s slow, nobody's happy...so how can you fix it? In this article, we’ll discuss the most common causes for performance problems, demonstrate how to diagnose bottlenecks, and provide actionable solutions for developers.

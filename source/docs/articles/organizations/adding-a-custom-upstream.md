@@ -4,9 +4,7 @@ description: Add and test a custom version of WordPress or Drupal.
 category:
   - managing
   - going-live
-
 ---
-
 By following this guide, you'll go from creating a custom version of WordPress or Drupal, to having it ready for us to add to the platform for members of your organization to spin up.
 
 ## 1. Create a Remote Repository.

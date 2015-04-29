@@ -4,7 +4,6 @@ description: Understand Pantheon cron execution and management.
 category:
   - developing
 ---
-
 ## Overview
 
  **Note**: Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.

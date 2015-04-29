@@ -4,9 +4,7 @@ description: Questions to Frequently Asked Questions concerning WordPress on the
 category:
   - getting-started
   - WordPress
-
 ---
-
 ## Getting Started
 
 ### Does Pantheon Support WordPress?
@@ -77,7 +75,7 @@ All changes to the codebase go through the Dev environment, and are tracked in v
 
 ### What about Core security updates?
 
-Pantheon makes it easy to apply updates to Wordpress via our dashboard, and you can take advantage of our deployment workflow to test the update before it goes live. (Just like Drupal.)
+Pantheon makes it easy to apply updates to WordPress via our dashboard, and you can take advantage of our deployment workflow to test the update before it goes live. (Just like Drupal.)
 
 ## Caching and Performance
 

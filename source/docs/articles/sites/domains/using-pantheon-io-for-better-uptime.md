@@ -3,9 +3,7 @@ title: Using Pantheon.io For Better Uptime
 description: Understand the new pantheon.io system and how it improves uptime.
 category:
   - developing
-
 ---
-
 ## About pantheon.io
 
 **Note**: Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.

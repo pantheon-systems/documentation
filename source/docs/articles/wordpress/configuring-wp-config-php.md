@@ -1,18 +1,16 @@
 ---
 title: Configuring wp-config.php
-description: Understand how to adjust and customize the Wordpress configuration file for your Pantheon site.
+description: Understand how to adjust and customize the WordPress configuration file for your Pantheon site.
 category:
   - developing
-
 ---
-
 ## Overview
 
-Wordpress configuration is set in wp-config.php, located within your Wordpress site root. When you spin up a Wordpress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
+WordPress configuration is set in wp-config.php, located within your WordPress site root. When you spin up a WordPress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes and caching.
 
-**Note:** You should _NEVER_ put the database connection information for a _Pantheon_ database within your wp-config.php. These credentials _will_ change. If you are having connection errors, please ensure you are running the latest version of Wordpress core and have the correct wp-config.php file for Pantheon.
+**Note:** You should _NEVER_ put the database connection information for a _Pantheon_ database within your wp-config.php. These credentials _will_ change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.
 
 ## Local database configuration for development
 
@@ -35,7 +33,7 @@ For actions that should take place on both web requests _and_ wp-cli commands (e
 
 <script src="https://gist.github.com/timani/f5600ecff83399da5069.js"></script>
 
-As an example, here's how you can hard-code your Wordpress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](http://codex.wordpress.org/Editing_wp-config.php).
+As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](http://codex.wordpress.org/Editing_wp-config.php).
 
 <script src="https://gist.github.com/timani/3e7f882c5ca49709b4e4.js"></script>
 #### How can I read the Pantheon environmental configuration, like database credentials?
@@ -52,8 +50,8 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 #### Where can I get a copy of a default wp-config.php for Pantheon?
 
-- Pantheon Wordpress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
-- Wordpress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
+- Pantheon WordPress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
+- WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 #### Are table prefixes supported?
 

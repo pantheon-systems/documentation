@@ -4,7 +4,6 @@ description: Securely connect to your database and caching service using SSH tun
 category:
   - developing
 ---
-
 ## Overview
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 

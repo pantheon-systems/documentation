@@ -3,7 +3,6 @@ title: Pantheon Architecture
 description: Detailed information about our infrastructure.
 draft: true
 ---
-
 ## Cloud Infrastructure Provider
 Pantheon proudly runs on RackSpace and Amazon S3. We utilize the most advanced hardware our infrastructure providers can provide, and we do so very efficiently.
 

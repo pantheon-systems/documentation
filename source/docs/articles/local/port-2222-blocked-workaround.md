@@ -4,9 +4,6 @@ description: Instructions for accessing Port 2222.
 category:
   - developing
 ---
-
-​
-
 In order to push and pull code to your Pantheon site you'll need access to port 2222. If for some reason this port isn't open to you, either because of a corporate firewall or router configuration, you'll get an error resembling the following:
 
     SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host

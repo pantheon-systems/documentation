@@ -4,7 +4,6 @@ description: Use MySQL Workbench for creating, executing, and optimizing SQL que
 category:
   - developing
 ---
-
 [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/) provides DBAs and developers an integrated tools environment for: Database Design & Modeling, SQL Development, database administration, and support for Windows, Mac OS X and Linux.
 
 ## Get Started

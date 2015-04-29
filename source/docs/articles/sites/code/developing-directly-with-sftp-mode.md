@@ -5,7 +5,6 @@ category:
   - developing
 
 ---
-
 ## Overview
 In some cases working via `git push` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 

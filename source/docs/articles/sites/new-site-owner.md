@@ -3,10 +3,8 @@ title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a site owner.
 category:
     - developing
-
 ---
 When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
-
 
 ## Frequently Asked Questions
 

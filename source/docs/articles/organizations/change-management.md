@@ -5,7 +5,6 @@ category:
   - getting-started
   - developing
 ---
-
 Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the Organization as a supporting Organization are accessible to privileged members of the Organization. The roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
 
 ## Features
@@ -38,7 +37,7 @@ To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need t
 
 Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
 
-For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. 
+For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
 
 
 ## Permissions

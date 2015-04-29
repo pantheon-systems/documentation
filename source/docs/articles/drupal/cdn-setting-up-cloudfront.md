@@ -5,7 +5,6 @@ category:
     - drupal
     - developing
 ---
-
 ## Before You Begin
 
 Make sure that you have:  
