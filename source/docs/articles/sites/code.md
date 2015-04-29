@@ -2,10 +2,15 @@
 title: Manage Code
 description: Learn how to work with code on Pantheon.
 ---
-Pantheon's unique architecture provides a workflow fit for the pros. Explore our documentation on managing code to get the most out of your development experience.
-
+## Pantheon Dashboard Code Tool
+Pantheon's unique architecture provides a workflow fit for the pros. Within the Code page of any environment, you can
+![Code Workflow](https://lh6.googleusercontent.com/40TmxtbwYI-bpvmgqktetHD554SoTheY9lkM7V-4BhEBpoMNQ6ciX0bmRKSQM4caRW1heg=w1634-h684)
+Explore our documentation on managing code to get the most out of your development experience.
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive into [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.
+### `.gitignore`
+Pantheon provides a default `.gitignore` file in the base of each site's code repository and in `sites/default/files`. You can use this file to exclude directories from version control and backups.
+
 ### Additional Development Resources
 - Deploy [hot fixes](/docs/articles/sites/code/hot-fixes/) in cases where the development environment isn't ready to go live.
 - Learn more about the ["pantheon_api.module"](/docs/articles/sites/code/what-is-the-pantheon_api-module).
