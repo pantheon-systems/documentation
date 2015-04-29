@@ -20,7 +20,7 @@ You should configure the DNS for both your non-www (bare domain) and www domain,
 2. DNS A Record for non-www domain
 3. [Redirect non-www to www in settings.php or wp-config.php](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 
-See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
+See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) and [Domains and SSL Tool](/docs/articles/sites/domains) for more information.
 
 
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites

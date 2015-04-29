@@ -159,7 +159,8 @@ Now that the site is on a paid plan, you can associate your domain with the Live
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Add domain(s) to Live environment</td>
-			<td class="help"><a href="/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a></td>
+			<td class="help"><a href="/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a><p>
+      <a href="/docs/articles/sites/domains/">Domains and SSL Tool</a></td>
 		</tr>
 	</tbody>
 	</table>
