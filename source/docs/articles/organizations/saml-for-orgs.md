@@ -1,11 +1,11 @@
 ---
-title: SAML for Orgs
-description: Learn about single-sign on.
+title: Single Sign-On for Pantheon Organizations
+description: See what's needed to enable single-sign on for your company.
 category:
   - developing
 ---
 
-Single-sign on allows your users to authenticate against your IdP when using the Pantheon product.
+Single-sign on (SSO) allows your users to authenticate against your IdP when using the Pantheon product.
 
 If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML.
 
