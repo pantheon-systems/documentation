@@ -1,8 +1,9 @@
 ---
 title: Developing with SSL
-description: Learn how to develop sites using SSL and HTTPS.
+description: Learn how to develop sites using SSL and HTTPS on Pantheon environments.
 category:
   - developing
+keywords: https, ssl, develop with ssl, develop with https, encryption, security, enable ssl, enable ssl on dev, add ssl to dev, add https to dev, add https to environment, add ssl to environment
 ---
 Every free Pantheon development site comes ready to roll with SSL for development. Simply switch your connection method to HTTPS and your `dev-yoursite.pantheon.io` domain will work.
 
