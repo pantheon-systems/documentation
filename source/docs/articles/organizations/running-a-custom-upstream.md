@@ -4,6 +4,7 @@ description: Detailed information about running custom distributions.
 category:
   - getting-started
   - managing
+keywords: p4a, pantheon for agencies, p4e, pantheon for enterprise, enterprise, organization, agency, products, custom upstream, custom upstreams, add product, add custom upstream, distribution, public distribution, private distribution, custom repo, custom repository, custom repos, custom repositories, organization distribution, organization upstream
 
 ---
 An **upstream** is a specific package of your base web application. Drupal has several publicly maintained packages that can be used as an upstream for any project. WordPress does not have publicly maintained uptreams, however, privately maintained ones can be created. An example of this would be a package containing the WordPress Core, plus your company's collection of default plugins and themes.
