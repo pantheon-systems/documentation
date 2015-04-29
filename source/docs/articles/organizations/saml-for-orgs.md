@@ -5,9 +5,9 @@ category:
   - developing
 ---
 
-Single-sign on (SSO) allows your users to authenticate against your IdP when using the Pantheon product.
+Single-sign on (SSO) is only available for Enterprise Pantheon Organizations who have purchased it as an add-on to their Enterprise plan. To upgrade to an Enterprise plan, or to add it to an existing Enterprise plan, contact Sales.
 
-If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML.
+SSO allows your users to authenticate against your IdP when using the Pantheon product. If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML. 
 
 ##Enabling SAML
 You will need to provide Customer Support with the following information:
