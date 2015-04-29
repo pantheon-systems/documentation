@@ -1,20 +1,26 @@
 ---
-use: ["posts"]
-permalink: sitemap.xml
+use: [articles,guides]
+permalink: docs/sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}</loc>
-    <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-  {% for post in data.posts %}
+  {% for article in data.articles %}
   <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date|date('c') }}</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>{{ article.url }}</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for guide in data.guides %}
+  <url>
+    <loc>{{ guide.url }}</loc>
+    <lastmod>{{ guide.date|date('c') }}</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   {% endfor %}
