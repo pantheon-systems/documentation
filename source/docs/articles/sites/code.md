@@ -22,7 +22,7 @@ The Dev environment also provides [one-click updates](/docs/articles/sites/code/
 **Note**: The Test and Live environments do not have write access to code outside of the deployment process.
 
 ## Development
-Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive into [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.
+Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive in to [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.
 ### `.gitignore`
 Pantheon provides a default `.gitignore` file in the base of each site's code repository and in `sites/default/files`. You can use this file to exclude directories from version control and backups.
 
@@ -34,7 +34,7 @@ Pantheon provides a default `.gitignore` file in the base of each site's code re
 - Work with [SERVER_NAME and SERVER_PORT on Pantheon](/docs/articles/sites/code/server_name-and-server_port/).
 
 ##Performance
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [Debugging slow performance](/docs/articles/sites/code/debugging-slow-performance/) and utilizing the [PHP Slow Log](/docs/articles/sites/code/php-slow-log/).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/docs/articles/sites/code/debugging-slow-performance/) and utilizing the [PHP slow log](/docs/articles/sites/code/php-slow-log/).
 
 Learn how to use [bots and indexing](/docs/articles/sites/code/bots-and-indexing/) in a way that does not negatively impact performance. You can also incorporate external Solr services with [IndexDepot](/docs/articles/sites/code/using-indexdepot-with-pantheon-sites/).
 
