@@ -1,18 +1,16 @@
 ---
 title: Replace Links Referencing IP:PORT in Drupal
-description: Learn how to update links so that the URL references the correct file path and domain name.
+description: Learn how to update links so the URL references the correct file path and domain name.
 category:
   - debugging
   - drupal
+keywords: drupal, IP, settings.php, IP:PORT, fixing links
 ---
-## Overview
-
-### Scenario:
 When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as http://192.237.142.203:5555/files/cernettes.gif instead of the proper http://www.example.com/files/cernettes.gif
 
 The link may work at first, but will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
-### Solution:
+**Solution**:
 
 Set the `$base_url` per environment in settings.php and clear caches.
 

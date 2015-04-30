@@ -3,8 +3,8 @@ title: Using PHPMyAdmin to Locally Administer a Database
 description: Configure and troubleshoot MySQL connections.
 category:
   - developing
+keywords: phpmyadmin, database, mysql, mysql connection, 
 ---
-## Overview
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it is possible to install this on Windows, Mac OS X, and Linux.
 
 ## Download PHPMyAdmin

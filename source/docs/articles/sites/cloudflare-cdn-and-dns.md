@@ -4,9 +4,8 @@ description: Learn how to setup and test CloudFlare CDN.
 category:
   - developing
   - drupal
+keywords: cloudflare cdn, cloudfare, cdn, dns, cdn dns, cloudflare dns, domains with cdns, configure cloudflare, configure cdn, dns host, security, performance
 ---
-## Overview
-
 [CloudFlare](https://www.cloudflare.com) is awesome and we highly recommend them. Here's a list of benefits:
 
 - A hybrid [Content Delivery System](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) (CDN) & DNS host, providing your website to visitors around the world faster from multiple locations.

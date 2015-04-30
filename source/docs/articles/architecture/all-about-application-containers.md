@@ -3,9 +3,8 @@ title: All About Application Containers
 description: Learn more about Pantheon's grid-model infrastructure.
 category:
   - getting-started
+keywords: application containers, containers, infrastructure, edge, performance, scalability, scaling
 ---
-## Overview
-
 Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the Runtime Matrix, which is our way of provisioning and scaling application containers.
 
 ## Application Containers

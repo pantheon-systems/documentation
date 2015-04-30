@@ -3,10 +3,9 @@ title: Cron for Drupal
 description: Understand Pantheon cron execution and management.
 category:
   - developing
+keywords: drupal, cron, cron execution, run cron,
 ---
-## Overview
-
- **Note**: Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
+Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 

@@ -1,10 +1,11 @@
 ---
 title: Debugging Sites with Log Files
-description: Learn to debug sites using log files with Drupal.
+description: Learn to debug sites using database log files.
 category:
   - developing
+keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs
 ---
-## Database Logging
+One of the key ways to find issues on your website is to check your database logs to isolate current or potential problems.
 
 ### Drupal
 

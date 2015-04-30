@@ -1,8 +1,9 @@
 ---
 title: Customizing Your Base Domain
-description: Organizations above the ally service level have the option to add a custom base domain to their Pantheon environments, to replace ".pantheon.io"
+description: Replace "pantheon.io" within Pantheon environments by adding a custom development domain.
 category:
   - managing
+keywords: development domain, base domain, change dev url, change development domain, change base domain, dev url, wildcard, cname, edge, dns
 ---
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace pantheon.io as the base domain for each environment on every site they run or are developing on the platform.
 

@@ -3,9 +3,8 @@ title: Going Live
 description: Best practices for preparing your site launch.
 category:
   - going-live
+keywords: site launch, launch, pantheon, new site, best practices, going live
 ---
-## Preparing for Your Site Launch
-
 Congratulations, you're almost ready to launch your site on Pantheon! There are a couple things to do to get ready, but we'll help you with every step.
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.

@@ -4,12 +4,10 @@ description: Configure a single-sign on system for your Drupal site.
 category:
   - drupal
   - developing
+keywords: drupal, simplesamlphp, shibboleth sso, sso, saml, single-sign on,
 ---
-## Overview
-
-**Note**: This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the [simplesaml\_php auth module](http://drupal.org/project/simplesamlphp_auth) from drupal.org.
-
 These instructions assume you are able to follow SimpleSAMLphp's [service provider quickstart instructions](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
+**Note**: This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the [simplesaml\_php auth module](http://drupal.org/project/simplesamlphp_auth) from drupal.org.
 
 When you're done following the quickstart instructions above and have completed all the directions below, you'll have something like http://dev-simplesaml.pantheon.io. Note the "Federated Log In" link. See the [pantheon-simplesaml-example](https://github.com/ari-gold/pantheon-simplesaml-example) repo to see how it was implemented. If you click each commit message of the most recent commits, you'll see what was added in each commit.
 
