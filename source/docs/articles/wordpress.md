@@ -1,10 +1,11 @@
 ---
 title: WordPress
-description: WordPress powers more websites than any CMS. Learn how to bring WordPress sites onto the platform, and considerations for developing and running them.
+description: Learn how to bring WordPress sites onto the platform, and considerations for developing and running them.
+keywords: wordpress, sites, pantheon
 ---
-What began as a blogging platform, WordPress has now evolved into the most used Content Management Systems today. This open source software thrives through it's expanding community and highly customizable core, making it a perfect fit for projects of any scope. Learn how to use this powerhouse CMS on the Pantheon platform with confidence by exploring our WordPress documentation.
+WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope. Learn how to use this powerhouse CMS on the Pantheon platform with confidence by exploring our WordPress documentation.
 ## Get Started
-[Import an existing WordPress site](/docs/articles/wordpress/importing-a-wordpress-site) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
+[Import an existing WordPress site](/docs/articles/wordpress/importing-a-wordpress-site) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
 ## WordPress Dashboard
 Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#using-wp-admin-to-manage-plugins-and-themes) and SFTP mode.
 ## wp-config.php
