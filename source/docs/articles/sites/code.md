@@ -3,23 +3,23 @@ title: Pantheon Dashboard Code Tool
 description: Learn how to work with your site's code on Pantheon.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
-The Code Tool within the Pantheon Dashboard on any environment allows you to interact with  your site's code and review the commit log.
+The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 ## Navigate the Code Tool
-You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code Tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
+You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/interface-dev-code-sftp-commit.png)
 
-The Dev environment also provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's codebase upstream. Updates will appear in the Code Tool when they are committed to the upstream repository.
+The Dev environment also provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's codebase upstream. Updates will appear in the Code tool when they are committed to the upstream repository.
 <div class="alert alert-info">
   <dl>
     <dt>Upstream</dt>
-      <dd>A code repository which serves as a common package for your web application.</dd>
+      <dd>A code repository that serves as a common package for your web application.</dd>
     <dt>Repository</dt>
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
 </div>
 
-By design, the Test and Live environments do not have write access to code outside of the deployment process.
+**Note**: The Test and Live environments do not have write access to code outside of the deployment process.
 
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive into [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.
