@@ -31,4 +31,4 @@ terminus drush --site=<site> --env=live ard --destination=sites/default/files/si
   **Example**: https://your-live-site.pantheon.io/sites/default/site\_export.tar.gz
 5. Click **Import Site**.
 
-The import process will create and deploy a new site based on the file uploaded. If there are issues, see [Importing an Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site), or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+The import process will create and deploy a new site based on the file uploaded. If there are issues, see [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site), or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.

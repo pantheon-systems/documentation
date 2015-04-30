@@ -30,7 +30,7 @@ Enter a name for your Pantheon site. This and the site development URL are perma
 
 ### Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/sites/create/choosing-start-state).
 
 ![Core Startup](/source/docs/assets/images/core-startup.png)
 
