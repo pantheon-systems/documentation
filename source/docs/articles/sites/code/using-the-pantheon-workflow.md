@@ -1,12 +1,11 @@
 ---
 title: Using the Pantheon Workflow
-description: Learn the Pantheon environments and overall workflow.
+description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Workflow.
 category:
   - going-live
   - developing
+keywords: pantheon workflow, workflow, dev, test, live, environment, pantheon environments, multidev, how to deploy, deploy, what is a commit, commit, write permission, write to live, why cant i write to live, write access, commits, separate environment, environment, environments
 ---
-## Overview
-
 Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site that's available to the world. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/).
 
 

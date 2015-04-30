@@ -1,8 +1,9 @@
 ---
 title: Testing Varnish
-description: Test whether Varnish is working or not.
+description: Learn how to see if Varnish is working on your site.
 category:
   - developing
+keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testing varnish
 ---
 ## Test If Varnish Is Working by Reading HTTP Headers
 
@@ -38,7 +39,7 @@ Varnish uses when determining if and for how long to cache content.
 - **Via: 1.1 varnish**
   - Via is used by proxies to indicate the intermediate protocol and recipient; the request went through Varnish. This header will always be shown, regardless of whether Varnish served cached content.
 
-Two of the headers listed above are Drupal specific. By default, WordPress does not send any additional HTTP headers. However, it is possible for plugins and themes to send them. 
+Two of the headers listed above are Drupal specific. By default, WordPress does not send any additional HTTP headers. However, it is possible for plugins and themes to send them.
 
 
 ### Test Varnish with Firefox

@@ -3,6 +3,7 @@ title: Manually Apply Drupal 7.32 Security Update
 description: Instructions on updating to Drupal 7.32.
 category:
   - drupal
+keywords: drupal, update, updating, security,
 ---
 If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be able to apply a one-click update in your dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.
 
@@ -18,7 +19,7 @@ If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be ab
 3. That's it! Just make sure to pull your code from Dev, to Test, to Live.
  
 
-For example, from local machine:
+For example, from your local machine:
 
     $ cd panopoly-site/includes/database/
 

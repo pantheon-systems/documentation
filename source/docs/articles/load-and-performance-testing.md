@@ -3,6 +3,7 @@ title: Load and Performance Testing
 description: Learn how to monitor internal execution performance.
 category:
   - going-live
+keywords: going live, testing, performance, new relic, varnish
 ---
 We highly recommend load testing a site both prior and post launch to ensure your site is optimally configured.
 

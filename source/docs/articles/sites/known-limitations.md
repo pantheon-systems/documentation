@@ -1,6 +1,7 @@
 ---
 title: Known Limitations
 description: A list of Pantheon's known limitations.
+keywords: known limitations, multisite, applications, can i use more than one application on a site, use more than one application, large directories, inodes, streaming media, stream media, large file, large files, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
 ---
 This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
 

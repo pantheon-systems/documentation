@@ -3,6 +3,7 @@ title: Get Started
 description: Learn how to spin up a site on Pantheon.
 category:
   - getting-started
+keywords: going live, getting started, create account, create site, import, faqs
 ---
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever. Use this checklist to get the most out of the platform.
 
@@ -29,7 +30,7 @@ Enter a name for your Pantheon site. This and the site development URL are perma
 
 ### Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/sites/create/choosing-start-state).
 
 ![Core Startup](/source/docs/assets/images/core-startup.png)
 

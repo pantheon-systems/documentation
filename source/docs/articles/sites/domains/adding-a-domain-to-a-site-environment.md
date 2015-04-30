@@ -4,11 +4,11 @@ description: Learn how to associate a domain to an environment from within the P
 category:
   - going-live
   - managing
+keywords: domain, dns, domains, add a domain, add a domain to a site, add a domain to an environment, add a domainn to a site environment, change domain name, change domains, update domain, update domain name, update domain on a site, update domain on a sites environment
 ---
-## Overview
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
 
-This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/).
+This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/), or learn about our [Domains and SSL Tool](/docs/articles/sites/domains).
 
 For general information about launching your site, see [Going Live and Launching Your Site](/docs/articles/going-live/).
 

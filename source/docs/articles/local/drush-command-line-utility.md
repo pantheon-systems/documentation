@@ -4,6 +4,7 @@ description: Administer and maintain your site from your local Drush installatio
 category:
   - getting-started
   - developing
+keywords: drush, command line, drupal, terminus drush, cli
 ---
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 

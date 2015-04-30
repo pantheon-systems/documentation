@@ -1,10 +1,10 @@
 ---
 title: Reading Pantheon Environment Configuration
-description: Understand the separation of configuration and code within the Pantheon framework.
+description: Learn about the separation of configuration and code within the Pantheon runtime container environment.
 category:
   - going-live
+keywords: environment config, env config, environment configuration, database credentials, db credentials, container, containers, $_ENV, wp-config.php, database error, db errors, superglobal, redis auth, redis authentication, runtime, runtime container, runtime container environment, runtime matrix
 ---
-## Overview
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.
 
 Database credentials, Redis authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.

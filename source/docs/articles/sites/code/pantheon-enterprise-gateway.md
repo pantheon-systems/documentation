@@ -3,8 +3,8 @@ title: Pantheon Enterprise Gateway
 description: Configuring your site to use the Pantheon Enterprise Gateway as a defense-in-depth solution to access systems behind firewalls.
 category:
   - developing
+keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewall, secure tunnel, tunnel, create firewall, firewalls, gateways, gateway
 ---
-
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website.
 
 This is available for Enterprise customers. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.
