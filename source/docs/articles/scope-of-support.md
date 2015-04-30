@@ -3,6 +3,7 @@ title: Scope of Support
 description: Understand how Pantheon's support team can help you.
 category:
   - getting-started
+keywords: support, scope, customer support, getting started
 ---
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope.
 

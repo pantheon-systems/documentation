@@ -3,9 +3,8 @@ title: Debugging Cache
 description: Learn how to resolve caching errors.
 category:
   - debugging
+keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 ---
-## Clear Varnish Caches
-
 There are three ways to clear all Varnish caches if you are using Drupal and three ways if you are using WordPress.
 
 ### Drupal

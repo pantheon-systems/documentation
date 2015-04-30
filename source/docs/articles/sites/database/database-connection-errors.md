@@ -3,8 +3,8 @@ title: Database Connection Errors
 description: Understand the causes and solutions for database connection errors.
 category:
   - debugging
+keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php
 ---
-## Overview
 If your site suddenly reverts to `install.php`, or you see database connection errors like the following:
 
 ![](/source/docs/assets/images/desk_images/64774.png)
@@ -55,4 +55,4 @@ However, because the Pantheon environment data is not loaded at this time, any b
 
 You can also use the above to develop Drupal 8 on Pantheon!
 
-**Note**: If you use any other advanced `settings.php` tricks (e.g. enabling redis), you will need to do this _before_ the snippit in D7, or _after_ in D6 to insure you have a consistent `$conf` array.
+**Note**: If you use any other advanced `settings.php` tricks (e.g. enabling redis), you will need to do this _before_ the snippet in D7, or _after_ in D6 to insure you have a consistent `$conf` array.

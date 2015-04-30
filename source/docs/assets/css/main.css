@@ -110,11 +110,6 @@ body.row.main {
   margin-bottom: 40px;
 }
 
-.main-content{
-  margin: 20px 0 0;
-  border: 1px solid #ccc;
-}
-
 .article {
   background-color: white;
   padding-bottom: 40px;
@@ -300,6 +295,7 @@ img.noborder {border:none;}
   margin-bottom: 0;
   background-color: #222;
   border-bottom: 0;
+
 }
 .pio-home-nav .pio-nav-b {
   display: none;
@@ -336,10 +332,8 @@ img.noborder {border:none;}
 */
 
 .cta-docs-footer{
-  border: 1px solid #ccc;
-  border-top: 0px;
   padding: 20px;
-  background: #EFF2F2;
+  background: #DDE5E7;
   margin: 0px -15px;
   text-align: center;
   display: block;
@@ -1755,6 +1749,15 @@ cursor: pointer;
 * Odds and ends for optimum docs display.
 */
 
+/*No fill alert tag*/
+.outline-alert{
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 /* Pseudo :focus state for showing how it looks in the docs */
 #focusedInput {
   border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
@@ -1774,11 +1777,69 @@ cursor: pointer;
   box-shadow: none;
 }
 
-.outline-alert{
-  padding: 15px;
-  border: 1px solid;
-  border-radius: 4px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+
+/* Google Custom Search input boxes */
+
+.gsc-input{
+  background-image: none !important;
+  background-position: left !important;
+  background-repeat:no-repeat !important;
+  font-size: 16px !important;
+  padding: none !important;
+  border: 0px !important;
+  width: 99%;
+  height: 25px !important;
+  padding-right: 5px !important;
+  padding-right: 0px !important;
+}
+.gsc-input-box {
+  border-color:  none !important;
+  height: 35px !important;
+}
+.cse input.gsc-input:focus, input.gsc-input:focus {
+background-image:none !important;
+background-repeat:no-repeat !important;
+
+}
+
+/* Google Custom Search Engine button */
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
+  background-color: #EFD01B !important;
+  background-image: url('https://www.google.com/uds/css/v2/search_box_icon.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 85% !important;
+  height: 100% !important;
+  margin-top: 8px !important;
+  border-color:  none !important;
+  border: 0px !important;
+  padding-top: 5px !important;
+}
+.gs-result .gs-title, .gs-result .gs-title * {
+  font-size: 18px !important;
+  text-decoration: none !important;
+}
+
+/* Google Custom Search results sort by */
+
+.gsc-selected-option-container{
+  min-width: 80px !important;
+}
+
+.gsc-results {
+  /* Sets font for titles, snippets, and URLs. */
+  line-height: 1.25em !important;
+  color: #1a0dab !important;
+}
+.gs-visibleUrl {
+color: #274E13 !important;
+}
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top
+{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.gsc-above-wrapper-area{
+  border-bottom: none !important;
 }

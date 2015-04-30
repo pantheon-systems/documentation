@@ -1,11 +1,10 @@
 ---
 title: DNS Records for Directing Your Domain to Your Pantheon Site
-description: Learn how to adjust DNS settings for your domain in order to redirect traffic to your Pantheon site.
+description: Recommended DNS configurations for pointing a domain to a Pantheon site.
 category:
   - developing
+keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, dns records for https, dns records for http, dns records for http sites, dns records for https sites
 ---
-## Overview
-
 The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/docs/articles/going-live/).
 
 ### Pantheon Does Not Manage Your Domain Name or DNS For Your Site
@@ -20,7 +19,7 @@ You should configure the DNS for both your non-www (bare domain) and www domain,
 2. DNS A Record for non-www domain
 3. [Redirect non-www to www in settings.php or wp-config.php](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 
-See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
+See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) and [Domains and SSL Tool](/docs/articles/sites/domains) for more information.
 
 
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites

@@ -3,9 +3,8 @@ title: Cloning an Existing Site from a Dashboard Backup
 description: Make a copy of your existing code, files, and database.
 category:
   - developing
+keywords: clone, restore backup, clone existing pantheon site, clone from pantheon backup, clone pantheon site, copy pantheon site
 ---
-## Clone an Existing Site from a Dashboard Backup
-
 All Pantheon sites consist of three parts:
 
 * **Code**: The code that makes up your site. This is contained within your Pantheon Git repository.

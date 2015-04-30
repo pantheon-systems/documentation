@@ -1,9 +1,13 @@
-<!-- Search Google -->
-
-<form role="form" method="get" action="https://www.google.com/search">
-  <div class="form-group has-feedback">
-    <input type="text" name="q" class="form-control" placeholder="Search Pantheon Docs" />
-    <input type="hidden" name="as_sitesearch" value="pantheon.io/docs">
-    <i class="form-control-feedback glyphicon glyphicon-search"></i>
-  </div>
-</form>
+<script>
+  (function() {
+    var cx = '017416971424255486898:moj1j4obfwm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div style="height:20%;"><gcse:searchbox-only></gcse:searchbox-only></div>

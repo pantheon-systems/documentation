@@ -4,7 +4,8 @@ description: Learn how to copy an existing Drupal site using Drush on Pantheon.
 category:
   - getting-started
   - drupal
-  - developing
+  - developin
+keywords: drupal, drush, clone, import, copy site
 ---
 There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. This article will walk you through the basic method of doing so.
 

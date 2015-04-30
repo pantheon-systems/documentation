@@ -4,9 +4,8 @@ description: Learn how to upgrade to the next major revision of Drupal.
 category:
   - drupal
   - managing
+keywords: drupal, upgrade, upgrading, revision upgrade, update, updating
 ---
-## Overview
-
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
 Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the dashboard.

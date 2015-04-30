@@ -3,8 +3,10 @@ title: Adding a Credit Card to a Site
 description: Learn how to add a credit card as a payment method for your site.
 category:
   - going-live
+keywords: add payment method, add card, add credit card, access more features, access new relic, access workflow, add payment method, select a plan, how to update payment method, how to add a card
 ---
-## Select a Plan and Add a Credit Card
+Select a Plan and Add a Credit Card:
+
 1. From your User Dashboard, choose the site you want to add a card to.
 2. Select **Settings**.
 3. Choose a plan.  
