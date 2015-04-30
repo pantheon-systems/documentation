@@ -25,7 +25,7 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and site UUID to connect; copy/pasting this example exactly will not work.
 
 ```
-    ENV=dev
+    export ENV=dev
     # Usually dev, test, or live
     export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
     # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
