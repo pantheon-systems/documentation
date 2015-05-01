@@ -13,8 +13,6 @@ The Pantheon architecture is comprised of highly available [application containe
 Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal within the `/files` directory. Any [non-standard file locations](/docs/articles/sites/files/non-standard-files-locations/) should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
-While in SFTP mode, you can use framework admin tools (e.g. WordPress dashboard or Drupal's update manager) as well as command line tools for managing files.
-
 You can connect directly to the filesystem by copying your [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/articles/local/filezilla/) and navigating to the `/files` directory.
 ## Troubleshooting
 
