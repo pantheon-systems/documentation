@@ -6,7 +6,7 @@ keywords: drupal, sites, pantheon, upstream
 ---
 [Drupal](https://www.drupal.org) is an open source content management platform powering millions of websites and applications. It’s built, used, and supported by an active and diverse community of people around the world.
 
-Pantheon is the only hosting platform hyper-optimized for both Drupal and WordPress. Because we optimize our entire infrastructure for websites we deliver the best [performance available](http://getlevelten.com/blog/kyle-taylor/best-bang-no-bucks-comparison-free-drupal-hosting-platforms).
+Drupal sites on Pantheon run an optimized version of [Drupal](https://github.com/pantheon-systems/drops-7), based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API module](/docs/articles/sites/code/what-is-the-pantheon_api-module/). When new Drupal 7 sites are created, the platform clones the drops-7 repository as a part of its process and sets it as a remote to track, so that you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click. When existing Drupal sites are imported, our system replaces core with drops-7.
 
 ##Get Started
 [Import an existing Drupal site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) or [launch a new one](docs/articles/getting-started/) using the Pantheon Dashboard tools.
