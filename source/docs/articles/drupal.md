@@ -30,7 +30,6 @@ Drupal has a very good, built-in system for updating contributed modules through
 
 For most sites, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.
 
-
 ##Launch Check
 
 Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. Go live with confidence using [Launch Check for Drupal](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
