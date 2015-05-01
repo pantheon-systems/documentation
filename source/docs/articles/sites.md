@@ -49,22 +49,37 @@ The core of the Pantheon Workflow is to move code up from Dev to Test to Live an
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
 - **Content** includes files not under Git version control, like images and pdfs, and the database.  
 
+The [Code tool](/docs/articles/sites/code) on Dev/CDEs includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment. 
+
 Learn how to use the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) to manage your site's code.
 
 ## Merge
-Visit this tab when you have commits you need to merge into another environment.
+Visit this tab in the Dev environment when you have commits from CDEs that you need to merge into Test or Live. 
 
 ## Status
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
 [Drupal sites](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/) or [WordPress sites](docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/).
 
 ## Workflow
-Use this tab to clone database and files from an environment. Learn more about the [Pantheon Workflow](https://pantheon.io/docs/articles/sites/code/using-the-pantheon-workflow/).
+###Clone
+Use this tab to clone database and files from an environment. 
+
+###Import
+You can import an archive of site fils or a MySQL database via URL or file upload.
+
+###Export
+With the Export tool, you can export the database or files from an environment to use in local development or a migration process.
+
+###Wipe
+Use this tool if you need to completely wipe database and files for an environment. Wiping completely resets the database and files and you will lose all data. To get your site back online, you will need to either re-import, or re-run install.php.
+
+Learn more about the [Pantheon Workflow](https://pantheon.io/docs/articles/sites/code/using-the-pantheon-workflow/).
+
 ## Errors
 All PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](https://pantheon.io/docs/articles/sites/php-errors-and-exceptions/).
 
 ## Domain/SSL
-Use this tab to [add the custom domain(s)](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For instructions on how to generate and handle the files needed for SSL, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
+Use the [Domain/SSL tool](/docs/articles/sites/domains) to [add the custom domain(s)](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For instructions on how to generate and handle the files needed for SSL, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ## Backups
 On this tab you can create backups, restore from an existing backup, or view the backup log to see a list of your prior backups. For detailed information, see [Backups](/docs/articles/sites/backups).
