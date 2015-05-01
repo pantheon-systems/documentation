@@ -37,8 +37,8 @@ The site default PHP version is applied to every environment unless a PHP versio
 ## Support
 If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can contact Support by opening a ticket from your Dashboard. Learn more about our [scope of support](/docs/articles/scope-of-support/).
 
-##Public
-You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Locking Your Site](/docs/articles/sites/security/locking-your-site/).
+##Security Indicator
+This indicates if your site is public or locked. You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Locking Your Site](/docs/articles/sites/security/locking-your-site/).
 
 ## Connection Information
 Here you can find the [SSH clone URL](docs/articles/local/starting-with-git/), [Database Connection Information](/docs/articles/local/accessing-mysql-databases/), and [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) connection information.
