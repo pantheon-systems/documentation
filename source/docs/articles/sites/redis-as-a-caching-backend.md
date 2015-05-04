@@ -15,7 +15,7 @@ Redis provides an alternative caching backend, taking that work off the database
 
 ## Enable Redis
 
-Enable Redis cache server from your Pantheon site dashboard by going to Settings > Add Ons > Add.
+Enable Redis cache server from your Pantheon site dashboard by going to **Settings** > **Add Ons** > **Add**.
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
@@ -200,3 +200,54 @@ If you see the following message:
 You skipped a step; settings.php must include the cache\_backport files. Add the following to settings.php before the redis configuration:
 
     $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
+
+##Frequently Asked Questions
+
+####What happens when Redis reaches maxmemory?
+
+The behavior is the same as a standard redis instance. The overall process is described best in the top four answers of [this thread](http://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+
+####Is Redis setup as an LRU cache?
+
+We are using [allkeys-lru](http://redis.io/topics/lru-cache). Here is the redis configuration file for your Live environment:
+
+```
+cat redis.conf
+port 11455
+timeout 300
+loglevel notice
+logfile /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/logs/redis.log
+databases 16
+save 900 1
+save 300 10
+save 60 10000
+rdbcompression yes
+dbfilename dump.rdb
+dir /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/data/
+requirepass 278801a71e2c4264b7d7b155def62bea
+maxclients 1024
+maxmemory 964689920
+maxmemory-policy allkeys-lru
+appendonly no
+appendfsync everysec
+no-appendfsync-on-rewrite no
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+set-max-intset-entries 512
+activerehashing yes
+```
+
+####If redis hits the upper limit of memory usage, is this logged on Pantheon?
+
+Yes. There is a `redis.log` file that is available on the redis container for each environment. You can see where the log files and configuration reside:
+
+```
+$ sftp -o Port=2222 live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf@cacheserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in Connected to cacheserver.live.91fd3bea-d11b-401a-85e0-07ca0f4ce7bf.drush.in.
+sftp> ls -la
+-rw-r--r-- 1 11455 11455 18 Oct 06 05:16 .bash_logout -rw-r--r-- 1 11455 11455 193 Oct 06 05:16 .bash_profile -rw-r--r-- 1 11455 11455 231 Oct 06 05:16 .bashrc -rw-r--r-- 1 0 0 0 Mar 10 19:46 .pantheonssh_login drwxr-x--- 2 0 11455 4096 Nov 10 07:55 certs
+-rw-r--r-- 1 0 0 42 Mar 10 09:46 chef.stamp drwx------ 2 11455 11455 4096 Mar 10 19:46 data
+drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
+-rw------- 1 0 0 2677 Mar 10 09:46 metadata.json -rw-r----- 1 0 11455 531 Nov 10 07:55 redis.conf drwxrwx--- 2 0 11455 4096 Mar 10 09:46 tmp
+sftp> ls -la logs/
+-rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log sftp>
+```
