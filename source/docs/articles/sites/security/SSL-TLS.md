@@ -3,9 +3,10 @@ title: Pantheon SSL/TLS support
 description: Pantheon's recommendation regarding SSL/TLS in light of PCI DSS v3.1.
 category:
   - security
-  - SSL
-  - TLS
-—
+  - developing
+  - managing
+
+---
 Pantheon recommends organizations working to achieve PCI compliance while using Pantheon services engage a third-party service provider like CloudFlare to terminate their SSL/TLS connections.  Terminating SSL/TLS connections with a service provider that specializes in providing SSl/TLS gives customers greater control over their configuration and ensures their service will track closely with changes to PCI DSS.
 
 
