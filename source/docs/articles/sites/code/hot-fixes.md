@@ -6,7 +6,7 @@ category:
 ---
 For Experts only. You should not need to attempt this if you use [Multidev](/docs/articles/sites/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
-Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.
+We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
 
 ## Requirements
 
