@@ -1,9 +1,9 @@
 ---
-title: MySQL Database Workflow Tool
+title: Database Workflow Tool
 description: Learn about the Database that runs in your site
 keywords: mysql, sql, database, db, databases
 ---
-The Pantheon platform provides each site environment a dedicated MySQL container, which can be maintained remotely or locally depending on your workflow. For a comprehensive list of MySQL settings [access your database](/docs/articles/local/accessing-mysql-databases/#database-connection-information) and use the [SHOW VARIABLES](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) statement.
+The Pantheon platform provides each site environment a dedicated MySQL container running [MariaDB](http://en.wikipedia.org/wiki/MariaDB), which can be maintained remotely or locally depending on your workflow. For a comprehensive list of MySQL settings [access your database](/docs/articles/local/accessing-mysql-databases/#database-connection-information) and use the [SHOW VARIABLES](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) statement.
 
 Using the Workflow tool, you can overwrite the databases on your site's Dev or Test environment with the database on your Live environment, allowing you to pull content from Live into other environments.
 ![Workflow Tool](/source/docs/assets/images/interface-workflow-tool.png)
