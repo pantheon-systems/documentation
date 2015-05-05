@@ -8,4 +8,4 @@
 /.sculpin/
 composer.phar
 /vendor
-#/source/docs/googled*
+/source/docs/googled*
