@@ -7,7 +7,7 @@ category:
   - managing
 
 ---
-Pantheon recommends organizations working to achieve PCI compliance while using Pantheon services engage a third-party service provider like CloudFlare to terminate their SSL/TLS connections.  Terminating SSL/TLS connections with a service provider that specializes in providing SSl/TLS gives customers greater control over their configuration and ensures their service will track closely with changes to PCI DSS.
+Pantheon recommends organizations working to achieve PCI compliance while using Pantheon services engage a third-party service provider like CloudFlare to terminate their SSL/TLS connections.  Terminating SSL/TLS connections with a service provider that specializes in providing SSL/TLS gives customers greater control over their configuration and ensures their service will track closely with changes to PCI DSS.
 
 
 When will your migration from SSL/TLS 1.0 be completed? Pantheon has already ended support for all versions of SSL.  Pantheon plans to end support for TLS 1.0 no later than June 30, 2016.  Our plans around this are open to review as disabling TLS 1.0 is likely to have a negative impact on many older browsers and mobile devices.
