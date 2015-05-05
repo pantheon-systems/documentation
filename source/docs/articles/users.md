@@ -3,7 +3,6 @@ title: User Dashboard and Account
 description: The Pantheon user entity and its relationship to sites, teams, and organizations.
 category:
   - Platform
-draft: true
 ---
 Your User Dashboard is where you can easily access all of your sites and manage your account information.
 
