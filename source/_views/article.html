@@ -5,10 +5,7 @@
           <div class="col-md-9">
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
-              <!-- <script type="text/javascript">
-            #  breadcrumbs()
 
-            </script> -->
 
             </header>
               {% if page.category %}
@@ -17,8 +14,12 @@
                   <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}</p>
               {% endif %}
-
-              <div class="breadcrumbs">
+              <a class="pull-right" href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="_blank">
+                <span class="icon-github">
+                </span>
+                Edit on GitHub
+              </a>
+              <div class="breadcrumb">
                 {% set crumbs = page.url|split('/') %}
                 {% for crumb in crumbs %}
                   {% if loop.first %}
@@ -30,17 +31,13 @@
                     {% for i in 1..loop.index-1 %}
                       {% set url = url ~ crumbs[i] ~ '/' %}
                     {% endfor %}
-                    <a href="/{{ url }}">{{ crumb|capitalize }}</a> >
+                    <a href="/{{ url }}">{{ crumb|capitalize }}</a> /
                   {% endif %}
                 {% endfor %}
               </div>
 
               <!--div class="outline-alert"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and -->
-                <a class="pull-right" href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="_blank">
-                  <span class="icon-github">
-                  </span>
-                  Edit on GitHub
-                </a>
+
 
                 <div>
                     {{ page.blocks.content|raw }}
