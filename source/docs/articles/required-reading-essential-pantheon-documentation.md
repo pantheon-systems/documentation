@@ -22,7 +22,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - The Pantheon [workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 
-- The [technology](/docs/articles/architecture/all-about-application-containers/) behind Pantheon  
+- The [technology](/docs/articles/sites/all-about-application-containers/) behind Pantheon  
 
 - [Known platform considerations](/docs/articles/sites/known-limitations/) on Pantheon  
 
@@ -50,7 +50,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!)
 
-- Caching, both with [Varnish](/docs/articles/architecture/edge/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
+- Caching, both with [Varnish](/docs/articles/sites/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDNs](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) can make your site faster and protect against DDOS attacks
 
 - SSO, LDAP, Shibboleth, and other [authentication](/docs/articles/sites/code/sso-and-identity-federation/) methods

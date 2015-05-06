@@ -19,7 +19,7 @@ For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234<
 
 The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
 
-For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values).
 
 ## External Authentication (e.g. Facebook login)
 
