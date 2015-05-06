@@ -12,7 +12,7 @@ Drupal 8 is currently in the "beta phase" of development in the [Drupal Core Rel
 
 Pantheon currently provides the latest Drupal 8 beta as a one click install through our [Drupal 8 Spinup Page](https://dashboard.pantheon.io/products/drupal8/spinup):
 
-![Drupal 8 Spinup Page](../../assets/images/drupal8-spinup.png)
+![Drupal 8 Spinup Page](/source/docs/assets/images/drupal8-spinup.png)
 
 After following that spinup page, Pantheon developers will have a Drupal 8 site on Pantheon that will show up in their personal dashboards and can be used with the [Pantheon development workflow](https://pantheon.io/docs/articles/sites/code/using-the-pantheon-workflow/).
 
@@ -20,7 +20,7 @@ After following that spinup page, Pantheon developers will have a Drupal 8 site 
 
 Pantheon provides core updates to Drupal 8 using our [dashboard upstream update process](https://pantheon.io/docs/articles/sites/code/applying-upstream-updates/). Please do not attempt to update Drupal 8 yourself, but instead wait for our dashboard to give you the option to update Drupal 8 core with a single click:
 
-![Drupal 8 Spinup Page](../../assets/images/drupal8-updates.png)
+![Drupal 8 Spinup Page](/source/docs/assets/images/drupal8-updates.png)
 
 If you have done no modification to Drupal 8 core, this process will work automatically. However, if you have made modifications (including applying patches from Drupal.org) you may run into conflicts. A good best practice is to remove any patches you have applied to Drupal 8 prior to updating and then reapply them after updating if they are still needed.
 
