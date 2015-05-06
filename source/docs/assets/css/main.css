@@ -432,7 +432,7 @@ img.noborder {border:none;}
 }
 
 .category {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   display: inline-block;
 }
 
@@ -1842,4 +1842,20 @@ color: #274E13 !important;
 }
 .gsc-above-wrapper-area{
   border-bottom: none !important;
+}
+
+.breadcrumb {
+  padding: 8px 15px;
+  margin-top:30px;
+  margin-bottom: 0px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
