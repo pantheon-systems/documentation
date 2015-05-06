@@ -155,7 +155,7 @@ We advocate using a behavioral testing framework to automate user acceptance tes
  - Using the Launch Check tool in the site dashboard
  - Enabling our free New Relic Add on
  - Automated user acceptance testing with Behat, Selenium, or Casper.js
- - Load testing using tools like [Blazemeter](/docs/articles/sites/load-testing-with-blazemeter)
+ - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Logging in and clicking around your site.
 
 

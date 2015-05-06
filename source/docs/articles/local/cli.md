@@ -36,5 +36,5 @@ We've included CLI instructions in many of our articles and guides.
 - [Apache Solr on Pantheon](/docs/articles/sites/apache-solr)
 - [Email on Pantheon](/docs/articles/sites/code/email)
 - [LDAP and LDAPS](/docs/articles/sites/code/ldap-and-ldaps)
-- [Private Files with Drupal](/docs/articles/sites/code/private-files)
+- [Private Files with Drupal](/docs/articles/drupal/private-files)
 - [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files)

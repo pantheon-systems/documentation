@@ -102,7 +102,7 @@ The blocking UI will appear for all users on the team who are looking at that en
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- [PHPStorm](/docs/articles/local/configuring-jetbrains-phpstorm-ide-with-pantheon/)
+- PHPStorm with [WordPress](/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress) and [Drupal](/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon)
 - [FileZilla](/docs/articles/local/filezilla/)
 - [WinSCP](/docs/articles/local/using-winscp/)
 

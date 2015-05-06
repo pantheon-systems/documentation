@@ -3,7 +3,7 @@ title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon's technologies.
 category:
   - getting-started
-keywords: getting started, get started, pantheon, best practices, 
+keywords: getting started, get started, pantheon, best practices,
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
@@ -38,7 +38,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - Using [Drush](/docs/articles/local/drush-command-line-utility) on Pantheon  
 
-- [Cron](/docs/articles/sites/code/cron/) and Pantheon  
+- Cron with [WordPress](/docs/articles/wordpress/cron-for-wordpress) and [Drupal](/docs/articles/drupal/cron) on Pantheon  
 
 ### Launch
 - How to point your [DNS](/docs/articles/going-live/) when going live
