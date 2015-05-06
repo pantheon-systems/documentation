@@ -27,7 +27,7 @@ High-performance is the ability to deliver a page in under a second; scalability
 
 ## Verify Varnish is Working
 
-To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+To verify that the [Varnish](/docs/articles/sites/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
     curl -I http://live-yoursite.pantheon.io
     HTTP/1.1 200 OK
@@ -45,7 +45,7 @@ To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is 
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/architecture/edge/varnish) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 **Until Varnish has been correctly configured, don't worry about further testing.**
 
