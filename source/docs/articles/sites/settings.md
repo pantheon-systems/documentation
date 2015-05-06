@@ -2,6 +2,9 @@
 title: Pantheon Settings Tool
 description: Learn how to change your site's settings on Pantheon.
 keywords: settings, add credit card, add a card, credit card, select a plan, plan, plan levels, php version, how to change php version, toggle php, php
+category:
+  - developing
+  - managing
 ---
 The Settings tool allows you to view and manage your site's configurations. This includes the site's service level, billing, add ons, and PHP version.
 ## About Site
