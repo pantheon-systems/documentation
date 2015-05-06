@@ -5,87 +5,45 @@ category:
     - drupal
 keywords: drupal, drupal 8
 ---
-# Coming Soon
+# State of Drupal 8
 
-Drupal 8 is currently in a feature freeze and will be available again on Pantheon once it is slightly more stable.
+Drupal 8 is currently in the "beta phase" of development in the [Drupal Core Release Cycle]("https://www.drupal.org/core/release-cycle"). During this phase, Drupal core developers work to improve the codebase with a specific eye on resolving all of the "critical" issues and tasks in the [Drupal issue queue]("https://www.drupal.org/project/issues/drupal"). Once all of the "critical" issues are completed, then the first release candidate of Drupal 8 will be available followed by a full release if no new "critical" issues are found. Follow the progress on the [Drupal 8 Release Countdown]("https://drupalreleasedate.com/") which estimates when the release will happen.
 
-<!--
+# Installing Drupal 8 on Pantheon
 
+Pantheon currently provides the latest Drupal 8 beta as a one click installation through our [Drupal 8 Spinup Page]("https://dashboard.pantheon.io/products/drupal8/spinup"): 
 
-<p>There&#39;s a lot of excitement about Drupal 8 right now, with a number of key development initiatives underway. Pantheon helps more coders get involved by making it a breeze to set up Drupal 8 sandboxes.</p>
+![Drupal 8 Spinup Page](../../assets/images/drupal8-spinup.png)
 
+After following that spinup page, Pantheon developers will have a Drupal 8 site on Pantheon that will show up in their personal dashboards and can be used with the [Pantheon development workflow]("https://pantheon.io/docs/articles/sites/code/using-the-pantheon-workflow/").
 
-<p><strong>Please note: Drupal 8 is a moving target. Using it on Pantheon requires you to be familiar with the state of core development and ready to make additional changes to get the installation working.</strong></p>
+# Updating Drupal 8 on Pantheon
 
+Pantheon provides core updates to Drupal 8 using our [dashboard upstream update process]("https://pantheon.io/docs/articles/sites/code/applying-upstream-updates/"). Please do not attempt to update Drupal 8 yourself, but instead wait for our dashboard to give you the option to update Drupal 8 core with a single click:
 
-<p><img alt="" src="/source/docs/assets/images/desk_images/36400.png" style="width: 611px; height: 126px; " /></p>
+![Drupal 8 Spinup Page](../../assets/images/drupal8-updates.png)
 
-
-<h2 id="get-the-latest-code">Get the latest code!</h2>
-&nbsp;
-
-
-<p>First of all you&#39;ll need to start with the <strong>Drupal 8 Developer Sandbox</strong> start state for your site. Once that spins up, you&#39;ll want to execute a few handy git commands to make sure you&#39;re fully up to date:</p>
+If you have done no modification to Drupal 8, this process will work automatically. However, if you have made modifications (including applying patches from Drupal.org) you may run into conflicts. A good best practice is to remove any patches you have applied to Drupal 8 prior to updating and then reapply them after updating if they are still needed.
 
 
-<pre class="terminal">
-# Clone the repository from Pantheon
-git clone [the git url from the dashboard] drupal-8-sandbox
-# Go into your git directory
-cd drupal-8-sandbox
-# Add drupal.org as a remote upstream
-git remote add drupal http://git.drupal.org/project/drupal.git
-# Insure you&#39;re up to date with the very latest commits!
-git fetch --all
-git pull drupal 8.x
-# Put it on Pantheon
-git push origin master
-</pre>
+# Troubleshooing Problems with Drupal 8 on Pantheon
 
+Since Drupal 8 is currently in a "beta" state, there are a number of known issues spread across the different functional parts of Drupal which may pose problems for developers creating Drupal 8 sites. If you run into a problem with your Drupal 8 site, please follow these steps:
 
-<p><br />
-At this point, you&#39;re running on the latest Drupal 8 head. If you were to want to work on a sandbox, you&#39;d then add the info from the Drupal sandbox page. For this example, I&#39;ll use the info from <a href="http://drupal.org/sandbox/johnalbin/1488942">http://drupal.org/sandbox/johnalbin/1488942</a>.</p>
+1. Search the existing [Drupal issue queue]("https://www.drupal.org/project/issues/drupal") for existing issues related to your problem. Pay special attention to the beta version to which issue corresponds as well as its current status to help narrow down your problem.
+2. Search the existing [Pantheon Drupal 8 issue queue]("https://github.com/pantheon-systems/drops-8/issues") for known issues runing Drupal 8 on Pantheon. These are issues that only happen on Pantheon, but work in other contexts (local development, simplytest.me, other hosting providers).
+3. Attempt to debug the issue yourself using your own developer smarts and information you learned by searching the issue queues and other information sources (Google, Stack Overflow, etc). 
+4. Report your issue to the appropriate queue (Drupal or Pantheon) depending on if the problem is related to Drupal 8 generally ([Drupal issue queue]("https://www.drupal.org/project/issues/drupal")) or is specific to Pantheon ([Pantheon issue queue]("https://github.com/pantheon-systems/drops-8/issues")). 
+5. Monitor the issue you filed and watch for the next beta release. Each week many issues are fixed and new beta releases contain lots of fixes that may help your problem!
 
+# Using Drush with Drupal 8 on Pantheon
 
-<pre class="terminal">
-# Add the sandbox
-git remote add mobile_sandbox http://git.drupal.org/sandbox/johnalbin/1488942.git
-git fetch --all
-# Pull the changes from one of the branches there that I want to test on Pantheon
-git pull mobile_sandbox 1468582-mobile-meta-tags
-# Put it on Pantheon
-git push origin master
-</pre>
+Pantheon currently supports using Drush with Drupal 8 on Pantheon. In order to use Drush, you need to be using Drush 7.x which can be [installed with Composer by following these instructions]("http://docs.drush.org/en/master/install/"). Afterwards, developers can connect to their sites using the standard process of [using Drush on Pantheon]("https://pantheon.io/docs/articles/local/drush-command-line-utility/"). Take note that many Drush commands have changed in Drupal 8 and developers should consult the [latest Drush 7 documentation]("http://drushcommands.com/drush-7x") for more information.
 
+# Using Drupal 8 Configuration Management on Pantheon
 
-<p>The git instructions on drupal for creating and applying patches should work as per normal. Just keep in mind that if you&#39;re working off a Pantheon sandbox, the git remote <code>origin</code> is Pantheon and <code>drupal</code> is drupal.org. Happy patching!</p>
+Pantheon supports the [Drupal 8 Configuration Management system]("https://www.drupal.org/documentation/administer/config") and defaults configuration into the sites/default/config directory for each Pantheon Drupal 8 site. Developers can export their configuration into that directory directly using Drush's config-export command or indirectly using Drupal's UI to download the configuration and then using SFTP/Git to place the configuration in sites/default/config. For more information on how this all works, check out Matt Cheney and David Strauss' presentation on [Drupal 8 CMI on Managed Workflow at Drupalcon Amsterdam]("https://amsterdam2014.drupal.org/session/drupal-8-cmi-managed-workflow").
 
+# Going Live with Drupal 8
 
-<h2 id="installing-drupal-8">Installing</h2>
-&nbsp;
-
-
-<p>Currently you will need to add a &quot;config&quot; directory for the new D8 configuration system. We&#39;re working on making this easier and set up to support git-managed configuration. For now, this command will work form your local installation:</p>
-
-
-<pre class="terminal">
-sftp -oPort=2222 dev.[site-uuid]@appserver.dev.[site-uuid].drush.in
-sftp&gt; cd files
-sftp&gt; mkdir config
-</pre>
-
-
-<p>Where <code>site uuid</code> is the long unique string that identifies your site&#39;s dashboard after the /sites part (e.g. <code>sites/<strong>34983d44-e913-4279-bdba-ca14de457b61</strong></code>). Your install should then proceed.</p>
-
-
-<p>Hit <core>/core/install.php to run the installer.</core></p>
-
-
-<h2 id="troubleshooting">Troubleshooting</h2>
-
-
-<p>It&#39;s quite possible that at this point the installation isn&#39;t working. We are working on collecting known issues, but since core is constantly evolving we can&#39;t guarantee a specific path to making the installation work. Stay tuned for updates on this as core stabilizes.</p>
-
-
-<p>At this point you should feel free to dive in and start hacking!</p>
--->
+Pantheon currently does not recommend running customer sites in production with Drupal 8. However, if you are doing a community or educational project with Drupal 8 that you would like to be live please [contact us for a free Drupal 8 site]("https://pantheon.io/free-website-management-platform-beyond-hosting").
