@@ -1856,5 +1856,6 @@ color: #274E13 !important;
 .page-header {
     padding-bottom: 9px;
     margin: auto;
+    margin-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
