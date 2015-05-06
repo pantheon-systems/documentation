@@ -1846,8 +1846,15 @@ color: #274E13 !important;
 
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
   margin-top:30px;
+  margin-bottom: 0px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: auto;
+    border-bottom: 1px solid #eee;
+}
