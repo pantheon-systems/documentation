@@ -5,7 +5,6 @@ category:
   - going-live
   - WordPress
 ---
-
 ## Create and Name Your Site
 
 After you have created an account, log into your Dashboard and click **Create your first site**.
@@ -24,7 +23,7 @@ You will then have a short wait while Pantheon creates and allocates the resourc
 <!-- #3 -->
 ## Choose Start State
 
-You now have several options. You can start with Drupal or Wordpress core, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
+You now have several options. You can start with Drupal or WordPress core, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
 
 Select **Install WordPress**.
 
@@ -36,7 +35,7 @@ Select **Install WordPress**.
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your WordPress site.
 
-![Site spinup in progress](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
+![Site spinup in progress](/source/docs/assets/images/desk_images/247524.png)
 
 
 <!-- #5 -->
@@ -56,7 +55,7 @@ Congratulations! Your Pantheon site environments have been configured. From the 
 
 You will eventually have three environments (Development, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your dashboard to launch the site.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/248569)
+![](/source/docs/assets/images/desk_images/248569.png)
 
 <!-- #8 -->
 ## Complete Installation

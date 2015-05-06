@@ -4,12 +4,11 @@ description: Learn how to associate a domain to an environment from within the P
 category:
   - going-live
   - managing
+keywords: domain, dns, domains, add a domain, add a domain to a site, add a domain to an environment, add a domainn to a site environment, change domain name, change domains, update domain, update domain name, update domain on a site, update domain on a sites environment
 ---
-
-## Overview
 In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
 
-This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/).
+This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/), or learn about our [Domains and SSL Tool](/docs/articles/sites/domains).
 
 For general information about launching your site, see [Going Live and Launching Your Site](/docs/articles/going-live/).
 
@@ -19,7 +18,7 @@ For general information about launching your site, see [Going Live and Launching
 1. From your site dashboard, select the environment (typically Live), and click **Domains**.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198280)  
+ ![](/source/docs/assets/images/desk_images/198280.png)  
 
 
 
@@ -30,7 +29,7 @@ For general information about launching your site, see [Going Live and Launching
 Both the domain and the www subdomain will be added.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198281)  
+ ![](/source/docs/assets/images/desk_images/198281.png)  
 
 
 
@@ -42,7 +41,7 @@ Once this is complete and your domain's DNS points to Pantheon, Pantheon will kn
 2. Click **Remove** next to the appropriate domain.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/198283)  
+ ![](/source/docs/assets/images/desk_images/198283.png)  
 
 
 

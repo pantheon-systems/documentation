@@ -4,12 +4,9 @@ description: Configure LDAP on your Pantheon site.
 category:
   - going-live
   - developing
-
+keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-
-## LDAP as a Provider  
-
-This is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+LDAP as a Provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 

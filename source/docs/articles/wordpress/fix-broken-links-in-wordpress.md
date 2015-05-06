@@ -4,9 +4,7 @@ description: Learn how to update broken links so that the URL references the cor
 category:
   - debugging
   - drupal
-
 ---
-
 ## Update Links Referencing IP:Port
 Whether by accident or by virtue of "web rot", links in your content may eventually stop working. This happens when links are placed into your site's code that use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 

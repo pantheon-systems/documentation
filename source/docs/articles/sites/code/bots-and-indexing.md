@@ -1,13 +1,10 @@
 ---
 title: Bots and Indexing on Pantheon
-description: Manage bots and indexing within the Pantheon workflow.
+description: Learn to manage bots and indexing while avoiding performance degradation.
 category:
   - developing
-
+keywords: bot, bots, index, indexing, indexes, bots and indexing, bots and indexes, duplicate request, rapid fire, rapid fire requests, bot error, bots converging on error pages, bots on erroring pages
 ---
-
-## Overview
-
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site. As a web developer or admin, knowing how to handle bots comes with the territory.
 
 ## Bots in My Logs: Real World Scenarios and Identifiers

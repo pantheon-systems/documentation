@@ -4,9 +4,8 @@ description: Detailed information about the WinSCP SFTP client.
 category:
   - getting-started
   - developing
-
+keywords: winscp, sftp, winscp client
 ---
-
 [WinSCP](http://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
 
 ## Getting Started
@@ -21,13 +20,13 @@ If you do not have WinSCP installed, [download and install the latest version](h
 
 Start the WinSCP application and enter the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP.
 
-![Put in your Pantheon SFTP information](https://www.getpantheon.com/sites/default/files/docs/desk_images/50344)
+![Put in your Pantheon SFTP information](/source/docs/assets/images/desk_images/50344.png)
 
 ## Add the rsa2 Key Fingerprint
 
 Click **Yes** to accept the server's host key for the current session so it is stored in cache. This will allow you to connect to the server and manage your files for the current session.
 
-![RSA fingerprint](https://www.getpantheon.com/sites/default/files/docs/desk_images/50345)
+![RSA fingerprint](/source/docs/assets/images/desk_images/50345.png)
 
 ## Manage Files
 
@@ -35,4 +34,4 @@ Once you are logged in, you are directed to the root directory of your appserver
 
 
 
- ![Connect to your Pantheon site](https://www.getpantheon.com/sites/default/files/docs/desk_images/50346)
+ ![Connect to your Pantheon site](/source/docs/assets/images/desk_images/50346.png)

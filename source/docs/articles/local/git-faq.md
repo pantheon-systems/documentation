@@ -1,11 +1,10 @@
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git.
-
 category:
   - developing
+keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
 ---
-
 ## Resolving Conflicts
 ### How do I resolve conflicts when updating Core?
 

@@ -3,10 +3,9 @@ title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a site owner.
 category:
     - developing
-
+keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
 ---
 When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
-
 
 ## Frequently Asked Questions
 
@@ -42,13 +41,13 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 5. Click **Add Agency** to make them a supporting organization.
 
 ####What add-ons are available for my site?
-[Apache Solr](docs/articles/sites/apache-solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
+[Apache Solr](/docs/articles/sites/apache-solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
 
-[New Relic](docs/articles/sites/newrelic/new-relic-performance-analysis/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+[New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
-[Redis](docs/articles/sites/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+[Redis](/docs/articles/sites/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-[SSL](docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
+[SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
 **Note**: Only enable SSL for your Live environment. It is not needed in Dev or Test.
 
 ####How do I enable add-ons?

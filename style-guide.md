@@ -4,7 +4,7 @@
 
 This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
-For any questions or comments, email [docs@pantheon.com](mailto:docs@pantheon.com).
+For any questions or comments, [create an issue](https://github.com/pantheon-systems/documentation/issues).
 
 ## Writing Style
 

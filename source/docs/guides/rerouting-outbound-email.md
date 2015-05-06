@@ -7,9 +7,7 @@ category:
 authors:
   - ari
 date: 2/25/2015
-
 ---
-
 If your Drupal site sends outbound email, you don't want to accidentally spam your users or customers from your Dev or Test environments. Maybe your site has a complex editorial workflow that alerts people when action is required, or maybe you’re redesigning email templates for your drip marketing campaign. Whatever your use case, you’ll want to make sure that you’re not accidentally spamming customers during debugging or quality assurance testing, and you’ll want to add the [Reroute Email](https://www.drupal.org/project/reroute_email) module to your dev toolkit.
 
 Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.
@@ -22,7 +20,7 @@ As an added bonus, you’ll be able to funnel all dev and testing emails to a si
 
 Download and install as usual. You can use [SFTP](https://pantheon.io/docs/articles/sites/code/developing-directly-with-sftp-mode/) on Pantheon or the [Drupal UI](https://pantheon.io/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/#installing-modules-and-themes-with-drupal%27s-update-manager) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
-I chose [Drupal 7 as a start state](https://pantheon.io/docs/articles/users/choosing-start-state/#importing-existing-sites) and performed a [git clone](https://pantheon.io/docs/articles/local/starting-with-git/) of my Pantheon site.
+I chose [Drupal 7 as a start state](https://pantheon.io/docs/articles/sites/create/choosing-start-state/#importing-existing-sites) and performed a [git clone](https://pantheon.io/docs/articles/local/starting-with-git/) of my Pantheon site.
 ```
 $ cd sites
 $ git clone [pantheon git clone ssh connection string]

@@ -1,13 +1,13 @@
 ---
 title: Backup Creation
-description: Learn how to create a backup of an environment.
+description: Learn how to create a backup of any environment.
 category:
   - managing
+keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
 ---
-## Overview
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-**Note**: Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.
+<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>
 
 ## Steps
 
@@ -15,18 +15,18 @@ Pantheon makes backups of an environment a simple and easy one-click operation. 
 2. [Relax](/docs/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
 3. After completion, you can [access your backups.](/docs/articles/sites/backups/backup-creation#creating-a-backup#access)
 
-![Create Backup](https://www.getpantheon.com/sites/default/files/docs/desk_images/305275)
+![Create Backup](/source/docs/assets/images/desk_images/305275.png)
 
 You will notice the job indicator will turn green and provide the number of active jobs.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305276)
+![](/source/docs/assets/images/desk_images/305276.png)
 
 **Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files).
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/305286)
+![](/source/docs/assets/images/desk_images/305286.png)
 
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 

@@ -1,10 +1,10 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-description: Create and configure IndexDepot and Solr.
+description: Learn how to create and configure IndexDepot with Solr for advanced indexing features.
 category:
   - developing
+keywords: indexdepot, index, index depot, solr, indexing, site content, full-text search, full text search, similarity search, highlight index, highlighting indexing, geo-search, geo search, additional indexing, additional index features, custom index
 ---
-
 ## Overview
 
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
@@ -28,18 +28,18 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 
 Once you have signed-up at indexdepot.com, login and click **Search Indexes**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272823)
+![](/source/docs/assets/images/desk_images/272823.png)
 
 Next, click **Create new index**.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272825)
+![](/source/docs/assets/images/desk_images/272825.png)
 
 ## Set Up the Index
 
 To create your index, you’ll need to supply some information about it:
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272830)  
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272831)
+![](/source/docs/assets/images/desk_images/272830.png)  
+ ![](/source/docs/assets/images/desk_images/272831.png)
 
 **Indexname:**  What you would like to call your index.  
 **Description:**  A brief description to be displayed in human language.  
@@ -55,7 +55,7 @@ After the index has been saved, you will be provided with an Index URI and a Hos
 
 **Note:** Copy the URI before moving forward
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272832)
+![](/source/docs/assets/images/desk_images/272832.png)
 
  
 
@@ -73,7 +73,7 @@ Here we need to provide two items to the ApacheSolr configuration:
 **ServerURL:** Paste the Index URI from IndexDepot here.  
 **Description:** Briefly describe your index here.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272833)
+![](/source/docs/assets/images/desk_images/272833.png)
 
 When you’ve finished, click **Save**.
 
@@ -85,7 +85,7 @@ Now that we’ve created our index and configured our ApacheSolr Drupal module t
 
 Head to `admin/config/search/apachesolr/settings` and click on your index.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/272843)
+![](/source/docs/assets/images/desk_images/272843.png)
 
 To test the connection, simply click **Test Connection**.
 
@@ -97,11 +97,11 @@ If not, you’ll want to retrace the steps in this document to make sure that yo
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See example below:
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/275362)
+ ![](/source/docs/assets/images/desk_images/275362.png)
 
 This will present you with a page where you can edit and add files:
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/275363)​
+ ![](/source/docs/assets/images/desk_images/275363.png)​
 ## Resources
 
 - [ApacheSolr Module](https://drupal.org/project/apachesolr) 

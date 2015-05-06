@@ -6,9 +6,7 @@ category:
 authors:
   - erikmathy
 date: 2/25/2015
-
 ---
-
 Email is a necessity when running a website, whether it’s used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
 
 One of the most common reasons that email gets blocked is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
@@ -62,7 +60,7 @@ drush @pantheon.your-site.dev en smtp -y
 
 Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.  
 
-![Settings example](https://www.getpantheon.com/sites/default/files/docs/desk_images/151706)​  
+![Settings example](/source/docs/assets/images/desk_images/151706.png)​  
 ​
 First, make sure the module is enabled by selecting **On** in the Install Options box.
 Add the following values for the associated fields:  

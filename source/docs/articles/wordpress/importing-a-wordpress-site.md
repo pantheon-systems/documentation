@@ -1,11 +1,10 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing Wordpress site.
+description: Learn how to import an existing WordPress site.
 category:
   - wordpress
   - getting-started
 ---
-
 ## Overview  
  **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 
@@ -38,13 +37,13 @@ After you have created an account, you can log in and will be directed to your d
 Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click continue.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247523)
+![](/source/docs/assets/images/desk_images/247523.png)
 
 ## Wait While It's Configured
 
 You will then have a short wait while Pantheon creates and allocates the resources for your site's environments. This takes only a few minutes under normal circumstances.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
+![](/source/docs/assets/images/desk_images/247524.png)
 
 ## Choose a Start State
 
@@ -53,25 +52,25 @@ You now have several options. Rather than start with one of our preconfigured st
 
 Select “**mport manually**.
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247521)  
+ ![](/source/docs/assets/images/desk_images/247521.png)  
 
 
 Once selected, you can upload a single URL or file archive of the site.  
 
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/259156)  
+ ![](/source/docs/assets/images/desk_images/259156.png)  
 
 
 Alternatively, you can enter the URL to your site code (required), user files (optional) and database (optional).
 
- ![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247522)
+ ![](/source/docs/assets/images/desk_images/247522.png)
 
 ## Relax While We Configure Your Codebase
 
 
 Click **Import site** and wait while we import and configure your site.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247524)
+![](/source/docs/assets/images/desk_images/247524.png)
 
 
 ## Completed Spinup
@@ -80,7 +79,7 @@ Click **Import site** and wait while we import and configure your site.
 When complete, just click the button to visit your Pantheon Dashboard.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247525)
+![](/source/docs/assets/images/desk_images/247525.png)
 
 
 
@@ -98,7 +97,7 @@ Congratulations! Your site has been imported and your Pantheon site environments
 You will eventually have three environments (development, test, and live), each with a separate version of your website. Click the link at the top left of your dashboard to launch the your development site.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/247528)
+![](/source/docs/assets/images/desk_images/247528.png)
 
 
 #### View Your Site

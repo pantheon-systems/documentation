@@ -11,7 +11,7 @@ Your site is loaded with content and is almost ready to go live. You know what i
 
 ##The Importance of Identifying Performance Hits
 
-The days of simple static HTML sites are fading, and for Drupal and Wordpress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers.
+The days of simple static HTML sites are fading, and for Drupal and WordPress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers.
 
 Important note about Drupal: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the DBlog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/).
 
@@ -92,7 +92,7 @@ You can also view the load report directly to evaluate the number of users and t
 ![The BlazeMeter load report](/source/docs/assets/images/blazemeter-load-report.png)
 
 
-Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). Wordpress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
+Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). WordPress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
 
 
 ##Resolve Errors and Performance Hits

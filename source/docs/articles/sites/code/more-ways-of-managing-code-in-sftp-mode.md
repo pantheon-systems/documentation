@@ -1,12 +1,10 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
-description: Understand alternative code management options when using SFTP Mode.
+description: Understand alternative code management options when using SFTP Mode, such as command line tools.
 category:
   - managing
-
+keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin, wp-cli, drush, terminus, command line tools, cli, clis, comand line tool
 ---
-
-## Overview
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.
 
 - Use the wp-admin web interface to manage your WordPress code.
@@ -19,11 +17,11 @@ WordPress's admin interface has built in tools to manage plugins and themes, all
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your dev environment. It works for plugins:
 
-![Installing WP Plugins](https://www.getpantheon.com/sites/default/files/docs/desk_images/278882)
+![Installing WP Plugins](/source/docs/assets/images/desk_images/278882.png)
 
 And for themes:
 
-![Installing WP Themes](https://www.getpantheon.com/sites/default/files/docs/desk_images/278883)
+![Installing WP Themes](/source/docs/assets/images/desk_images/278883.png)
 
 Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
@@ -35,11 +33,11 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 You'll need to grab the url to the code you want installed from Drupal.org:
 
-![Drupal.org views module](https://www.getpantheon.com/sites/default/files/docs/desk_images/278879)
+![Drupal.org views module](/source/docs/assets/images/desk_images/278879.png)
 
 And then paste it into Drupal's update manager UI. You can also upload a tarball or zip file from your desktop:
 
-![Installing via update manager](https://www.getpantheon.com/sites/default/files/docs/desk_images/278880)
+![Installing via update manager](/source/docs/assets/images/desk_images/278880.png)
 
 Note that you still need to turn these changes into _commits_ in your Pantheon site dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 

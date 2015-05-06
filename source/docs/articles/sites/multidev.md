@@ -3,8 +3,8 @@ title: Multidev
 description: Learn how to create branches and cloud development environments, to merge code into the development environment, and to manage data between environments.
 category:
 - developing
+keywords: multidev, organization, cloud development environment, cloud development environments, cde, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a cde, clone to development environment, delete cde, remove cde, delete multidev branch
 ---
-
 Multidev is cloud development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 
 ## Benefits of Multidev
@@ -17,7 +17,7 @@ Multidev is cloud development environments for teams and allows a developer to f
 
 &nbsp;
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/170383)​
+![](/source/docs/assets/images/desk_images/170383.png)​
 
 ## Branching and Multidev Terminology
 
@@ -30,7 +30,7 @@ There are a number of terms used throughout the Multidev workflow:
 *   **branch**: movable pointer to a set of commits, allowing independent development and history.
 *   **environment**: independent infrastructure for a site, including code, database, and files.
 *   **fork**: to divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
-*   **merge**: combine contents of a&nbsp;branch into another, like a bug fix branch into master. 
+*   **merge**: combine contents of a&nbsp;branch into another, like a bug fix branch into master.
 *   **master**: name of default branch; deployed to Pantheon Dev, Test and Live environments.
 
 ## Getting Started

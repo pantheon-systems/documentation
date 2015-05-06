@@ -3,12 +3,8 @@ title: Redis as a Caching Backend
 description: Understand how to use Redis as a caching mechanism.
 category:
     - developing
-
+keywords: redis, caching, what is redis, how to enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
 ---
-
-
-## About Redis
-
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Redis
@@ -103,11 +99,11 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 
 8. Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
 
-![Redis connect string](https://www.getpantheon.com/sites/default/files/docs/desk_images/301638)
+![Redis connect string](/source/docs/assets/images/desk_images/301638.png)
 
   - For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/71423)
+![](/source/docs/assets/images/desk_images/71423.png)
 
   - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 

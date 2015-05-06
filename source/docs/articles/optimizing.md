@@ -3,9 +3,8 @@ title: Optimization for Pantheon and the Cloud
 description: Learn how to optimize your site to efficiently function on Pantheon's cloud.  
 category:
   - developing
-
+keywords: optimize, optimize on pantheon, cloud, solutions
 ---
-
 Pantheon as a platform attempts to balance the tradeoff between high performance and high availability. It is important to reduce single points of failure and insure scalability, but this effort can introduce complexity and latency vs. a “one box” architecture.  
 
 A traditional single server has a high risk of being impacted by any unexpected event because it is a single point of failure. If a single service becomes unavailable due to a webserver problem, database failure, network degradation, or even because of high traffic, the entire site goes down.  

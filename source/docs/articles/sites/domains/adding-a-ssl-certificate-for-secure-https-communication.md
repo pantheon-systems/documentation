@@ -1,15 +1,16 @@
 ---
 title: Enable SSL for Secure HTTPS Communication
-description: Learn how to implement an SSL Certificate and utilize a static IP address.
+description: Learn how to implement an HTTPS communication and utilize a static IP address.
 category:
   - developing
   - launch
+keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl certificate, add ssl cert, add ssl, add https, add encryption, how to add an ssl, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types, ssl types, ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
 ---
-SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS.
+SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
-**Note**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
+**Important**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
 
-## Steps to Enable SSL 
+## Steps to Enable SSL
 
 1. Generate Key and CSR
 2. Get SSL certificate
@@ -81,7 +82,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 2. Select **SSL**.
 3. Paste in the requested information and press **Add Cert**.
 
-![Site dashboard add SSL certificate step 2](https://www.getpantheon.com/sites/default/files/docs/desk_images/259882)​
+![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
 
 After submitting your certificates, you'll see:
 

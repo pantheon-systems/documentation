@@ -4,7 +4,7 @@
 title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
-
+site_url: https://pantheon.io
 
 #######################################################################################################
 # The authors. Include your info here, under the "authors" key, using the following template:
@@ -13,7 +13,7 @@ url: /docs
 #      name: Your Name
 #      url: http://yourURL.com
 #      avatar: http://url.to.a.valid/avatar.jpeg
-#      twitter: http://twitter.com/
+#      twitter: handle
 #      gplus: https://plus.google.com/
 #      github: https://github.com/
 #      linkedin: https://www.linkedin.com/in/
@@ -30,7 +30,7 @@ authors:
       name: Brian MacKinney
       url: http://brianmackinney.com
       avatar: http://www.gravatar.com/avatar/d942a7d4b38d10e4f4ebab9cb148d9f9.png
-      twitter: http://twitter.com/BrianMacKinney
+      twitter: BrianMacKinney
       github: https://github.com/bmackinney
       drupal: https://www.drupal.org/u/brian-mackinney
       wordpress: https://profiles.wordpress.org/brian-mackinney
@@ -41,7 +41,7 @@ authors:
       name: Cal Evans
       url: http://calevans.com
       avatar: http://2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
-      twitter: http://twitter.com/calevans
+      twitter: calevans
       github: https://github.com/calevans
       bio: For the past 13 years Cal has worked with PHP and MySQL on Linux, OSX, and Windows. He has built a variety of projects ranging in size from simple web pages to multi-million dollar web applications. When not banging his head on his monitor, attempting a blood sacrifice to get a particular piece of code working, he enjoys building and managing development teams using his widely imitated but never patented management style of “management by wandering around”.These days, when not working with PHP, Cal can be found working on a variety of projects like CoderFaire. He speaks at conferences around the world on topics ranging from technical talks to motivational talks for developers. If you happen to meet him at a conference, don’t be afraid to buy him a shot of Bourbon.Cal is based in Nashville TN where he is happily married to wife 1.31, the lovely and talented Kathy. Together they have 2 wonderful kids. From blog.calevans.com/epk
 
@@ -58,12 +58,17 @@ authors:
       avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/JessiNew.jpg?itok=4NBut98U
       github: https://github.com/JessiFischer
       drupal: https://www.drupal.org/u/jayelebun
-      linkedin: www.linkedin.com/in/jessifischer
+      linkedin: https://www.linkedin.com/in/jessifischer
       bio: Enterprise Onboarding Manager.
 
   erikmathy:
       name: Erik Mathy
       avatar: http://www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
-      twitter: http://twitter.com/1gearnobrains
+      twitter: 1gearnobrains
       linkedin: http://www.linkedin.com/pub/erik-mathy/28/b51/627/en
       bio: Enterprise Onboarding Manager.
+  populist:
+      name: Matt Cheney
+      avatar: https://avatars1.githubusercontent.com/u/520521
+      twitter: populist
+      bio: Website developer extraordinaire

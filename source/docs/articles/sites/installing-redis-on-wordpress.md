@@ -3,11 +3,8 @@ title: Installing Redis on WordPress
 description: A walkthrough of how to enable WP-Redis on Pantheon
 category:
     - developing
-
+keywords: enable redis, add redis, redis on wordpress, redis for wordpress, using redis on wordpress, configure redis on wordpress, configure redis
 ---
-
-## Enable Redis
-
 Enable Redis cache server from your Pantheon site dashboard by going to Settings > Add Ons > Add.
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.

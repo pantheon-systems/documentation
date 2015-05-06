@@ -1,21 +1,18 @@
 ---
 title: Email on Pantheon
-description: Understand email hosting on Pantheon.
+description: Learn about outgoing mail and email hosting on Pantheon.
 category:
     - drupal
-
+keywords: email, email host, host email, outgoing mail, outgoing email, email solution, sendgrid, smtp, external, external smtp server, external smtp, spf record, spf records, spf, dns records, dns, exim
 ---
-
-## Incoming Email
-
-Pantheon does not host inboxes for you. We recommend making use of an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
+Pantheon does not host inboxes for incoming mail. We recommend making use of an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
 
 ## Outgoing Email
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
 
 
-Pantheon has a partner relationship with SendGrid, a high-deliverability email service, which offers up to 400 emails a day for free, and can scale to millions if needed. Find more information, see the [SendGrid HOWTO](/docs/articles/sites/code/using-sendgrid-for-outbound-email/).
+Pantheon has a partner relationship with SendGrid, a high-deliverability email service, which offers up to 400 emails a day for free, and can scale to millions if needed. Find more information, see the [SendGrid HOWTO](/docs/articles/sites/code/using-sendgrid-for-outbound-email/).
 
 We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails - account registration, forgot password, etc - you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.
 

@@ -4,10 +4,8 @@ description: Configure Drupal's performance and caching settings to make signifi
 category:
   - developing
   - drupal
-
+description: drupal, performance, cache, caching, views, redis, views caching,
 ---
-
-## Overview
 While configuring [Drupal's performance and caching settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings) and using [redis as a Drupal caching backend](/docs/articles/sites/redis-as-a-caching-backend) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views

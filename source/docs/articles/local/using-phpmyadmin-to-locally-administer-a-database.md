@@ -3,9 +3,8 @@ title: Using PHPMyAdmin to Locally Administer a Database
 description: Configure and troubleshoot MySQL connections.
 category:
   - developing
+keywords: phpmyadmin, database, mysql, mysql connection, 
 ---
-
-## Overview
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it is possible to install this on Windows, Mac OS X, and Linux.
 
 ## Download PHPMyAdmin
@@ -45,7 +44,7 @@ If the permissions are not correctly set, PHPMyAdmin will return an error prompt
 
  
 
-![enter your password](https://www.getpantheon.com/sites/default/files/docs/desk_images/224903)
+![enter your password](/source/docs/assets/images/desk_images/224903.png)
 
 After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
@@ -53,7 +52,7 @@ After the configuration is complete, the new connection will be available on the
 
 At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
 
-![enter your password](https://www.getpantheon.com/sites/default/files/docs/desk_images/224907)
+![enter your password](/source/docs/assets/images/desk_images/224907.png)
 
 ## Troubleshooting
 
@@ -61,7 +60,7 @@ At this point, you are all set and can begin to administer your database. There 
 
 The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/224915)​
+![](/source/docs/assets/images/desk_images/224915.png)​
 
 #### Database Credentials are Invalid
 

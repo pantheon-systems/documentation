@@ -1,12 +1,11 @@
 ---
-title: Adding a Custom Upstream
-description: Add and test a custom version of WordPress or Drupal.
+title: Create a Custom Upstream
+description: Add and test a custom distribution of WordPress or Drupal.
 category:
   - managing
   - going-live
-
+keywords: custom upstream, distribution, remote repository, upstream
 ---
-
 By following this guide, you'll go from creating a custom version of WordPress or Drupal, to having it ready for us to add to the platform for members of your organization to spin up.
 
 ## 1. Create a Remote Repository.

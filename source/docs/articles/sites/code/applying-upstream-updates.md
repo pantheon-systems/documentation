@@ -1,23 +1,21 @@
 ---
 title: Applying Upstream Updates
-description: Apply and debug upstream updates, like Drupal and WordPress releases.
+description: Apply and debug upstream updates, such as Drupal and WordPress releases.
 category:
   - developing
   - drupal
+keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---
+Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. Typically, if there’s an update available, you're better off merging it. 
 
+Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
-## Overview
+<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Only use the one-click updates on the dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
 
-**Note: Only use the one-click updates on the dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.**
-
-**You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.**
+You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.</div>
 
 If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
-Core updates will appear on your dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace above beneath the Connection Mode bar when they are available. Sometimes we we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. Typically, if there’s an update available, you're better off merging it. 
-
-Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
 ## Preparation
 
@@ -30,18 +28,18 @@ Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.)
 
 1. Check the options you want to run after pulling the update.
 2. Click “Apply Updates”.
-![A Pantheon site dashboard with upstream updates available.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357403)
-![Pantheon dashboard showing upstream update in progress.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357428)
+![A Pantheon site dashboard with upstream updates available.](/source/docs/assets/images/desk_images/357403.png)
+![Pantheon dashboard showing upstream update in progress.](/source/docs/assets/images/desk_images/357428.png)
 3. Test the update. Click “Visit Development Site” in the Development Environment to test it, or run your automatic user acceptance tests.
 4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/articles/local/git-faq#how-do-i-revert-or-undo-changes?) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking “Pull (Content from Live and) Code from Development” in the Code Workspace in the Test Environment.
 6. Click “Visit Testing Environment” to test the update against your Live site’s content base.
-![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357430)
+![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](/source/docs/assets/images/desk_images/357430.png)
 7. Deploy the upstream updates to your Live Environment by clicking “Pull Code from Testing” in the Code Workspace in the Live environment.
-![The Code tab in a Pantheon site's dashboard's Live environment](https://www.getpantheon.com/sites/default/files/docs/desk_images/357432)
+![The Code tab in a Pantheon site's dashboard's Live environment](/source/docs/assets/images/desk_images/357432.png)
 8. Click “Visit Live Environment” to verify the update is live.
 
-![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](https://www.getpantheon.com/sites/default/files/docs/desk_images/357435)
+![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
 
 ## Debug Failed Merges
 

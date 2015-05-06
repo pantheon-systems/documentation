@@ -3,15 +3,13 @@ title: Get Started
 description: Learn how to spin up a site on Pantheon.
 category:
   - getting-started
+keywords: going live, getting started, create account, create site, import, faqs
 ---
-
-
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever. Use this checklist to get the most out of the platform.
-
 
 ## Create Your Free Account
 
-Visit [https://www.pantheon.io](https://www.pantheon.io) and click **Create Free Account**.
+Visit [https://www.pantheon.io](https://www.pantheon.io) and click **Create Free Account**.
 
 ![Create Free Account](/source/docs/assets/images/create-account.png)
 
@@ -32,7 +30,7 @@ Enter a name for your Pantheon site. This and the site development URL are perma
 
 ### Start From Scratch
 
-If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/users/choosing-start-state).
+If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/sites/create/choosing-start-state).
 
 ![Core Startup](/source/docs/assets/images/core-startup.png)
 
@@ -47,7 +45,7 @@ There are two ways to add and update your site's code: Git source code managemen
 #### Git Connection Mode
 
 Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git).  
-![Connection Mode Dashboard](https://www.getpantheon.com/sites/default/files/docs/desk_images/180025)  
+![Connection Mode Dashboard](/source/docs/assets/images/desk_images/180025.png)  
 
 To use Git, you'll need to go to your dashboard and add a public SSH key.  
 
@@ -62,7 +60,7 @@ For detailed instructions, see [generating SSH keys](/docs/articles/users/genera
 You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 
 
-![](https://www.getpantheon.com/sites/default/files/docs/desk_images/180036)
+![](/source/docs/assets/images/desk_images/180036.png)
 
 ## Credentials on Pantheon
 
@@ -85,7 +83,7 @@ To gain a better understanding of how the Pantheon system architecture works, se
 
 ## Known Limitations
 
-No platform is perfect; familiarize yourself with Pantheon's [known limitations](/docs/articles/sites/known-limitations) now and save yourself the headache later on!
+Familiarize yourself with Pantheon's [known limitations](/docs/articles/sites/known-limitations) now and save yourself the headache later on!
 
 ## Prepare for Launch by Adding a Credit Card
 
@@ -95,7 +93,7 @@ When you're ready to launch your site, you'll need to add a credit card to the s
 
 #### Does Pantheon offer professional services?
 
-Pantheon does not provide development, module, or site building as a service, so we cannot write code or develop the sites for you. There are a number of development firms and skilled contractors who are available if you do not have a developer available. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has some comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
