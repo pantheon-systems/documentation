@@ -3,9 +3,8 @@ title: Deleting a Site on Pantheon
 description: Learn how to remove a site from Pantheon.
 category:
   - managing
-
+keywords: delete site, deleting a site, how to delete a pantheon site, how to remove a pantheon site, delete pantheon site, delete my site, delete sites
 ---
-
 At some point, you may need or want to delete one of your sites on Pantheon. Deleting a site requires just a few simple steps.
 
 ### Delete Your Site

@@ -1,9 +1,10 @@
 ---
 title: Terminus, the Pantheon CLI
-description: Get up and running using Pantheon and developing your sites from the command line.
+description: Learn how to use Pantheon's CLI to develop your sites from the command line.
 category:
   - developing
   - getting-started
+keywords: pantheon, terminus, command line, cli
 ---
 The Terminus project's second version is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github").
 ## Installation
@@ -30,10 +31,10 @@ We've included CLI instructions in many of our articles and guides.
 - [Migrating Sites from Other Hosts](/docs/articles/sites/create/migrating-sites/)
 - [Timeouts](/docs/articles/sites/timeouts/)
 - [Resetting Passwords](/docs/articles/sites/resetting-passwords/)
-- [Debugging Cache](/docs/articles/architecture/edge/varnish/debugging-cache/)
+- [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)
 - [Launch Check - Drupal Performance and Configuration Analysis](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)
 - [Apache Solr on Pantheon](/docs/articles/sites/apache-solr)
 - [Email on Pantheon](/docs/articles/sites/code/email)
 - [LDAP and LDAPS](/docs/articles/sites/code/ldap-and-ldaps)
-- [Private Files with Drupal](/docs/articles/sites/code/private-files)
+- [Private Files with Drupal](/docs/articles/drupal/private-files)
 - [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files)

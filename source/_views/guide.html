@@ -2,6 +2,24 @@
   {% block content_wrapper %}
     <article>
         <div class="article container">
+          <div class="col-md-12">
+            <div class="breadcrumb">
+              {% set crumbs = page.url|split('/') %}
+              {% for crumb in crumbs %}
+                {% if loop.first %}
+                  <a href="/{{ crumb }}">{{ crumb|capitalize }}</a>
+                {% elseif loop.last %}
+                  {{ page.title }}
+                {% else %}
+                  {% set url = '' %}
+                  {% for i in 1..loop.index-1 %}
+                    {% set url = url ~ crumbs[i] ~ '/' %}
+                  {% endfor %}
+                  <a href="/{{ url }}">{{ crumb|capitalize }}</a> &rsaquo;
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
           <div class="col-md-9">
             <div class="page-header">
             <header>
@@ -14,13 +32,13 @@
             {% for category in page.categories %}
             <br>in <a href="{{ site.url }}/entries/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
+            <a href="https://twitter.com/share" class="twitter-share-button pull-right" data-via="getpantheon" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<span class="pull-right">
+<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share"></script></span>
             <br>
             {{ page.date|date('F d, Y') }}
         </div>
-<!-- <script type="text/javascript">
-            #  breadcrumbs()
-
-            </script> -->
             </header>
           </div>
               <!--{% if page.category %}

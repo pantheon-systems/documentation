@@ -1,11 +1,10 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing Wordpress site.
+description: Learn how to import an existing WordPress site.
 category:
   - wordpress
   - getting-started
 ---
-
 ## Overview  
  **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
 

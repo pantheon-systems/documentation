@@ -4,11 +4,8 @@ description: Detailed information on how to prepare and import your site to Pant
 category:
   - drupal
   - getting-started
+keywords: import, importing site, pantheon, new site, drupal 
 ---
-
-
-## Overview
-
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)

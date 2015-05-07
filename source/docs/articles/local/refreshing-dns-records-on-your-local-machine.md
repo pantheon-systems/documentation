@@ -3,13 +3,9 @@ title: Refreshing DNS Records on Your Local Machine
 description: Flush your DNS cache to clear and update the data.
 category:
   - developing
-
+keywords: dns, dns records, cache, clush dns cache
 ---
-
-## Overview
 DNS is the main naming system for the internet, allowing computers to exchange data over TCP/IP. It takes any domain name, such as "pantheon.io" and "ties" it to an IP address like 50.57.202.75. The numbers identify computers to each other, and the names are easier for humanoids to remember.  
-
-
 These numbers may change for many reasons (maybe because you are moving your site to Pantheon). As a result, your local laptop or PC may contain stale data. To fix this, you flush your DNS cache, which will clear and begin to update the data.
 
 ### Flush DNS in Windows:

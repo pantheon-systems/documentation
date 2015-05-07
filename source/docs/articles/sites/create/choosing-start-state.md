@@ -1,11 +1,11 @@
 ---
 title: Choosing Your Start State
-description: Available options for starting new sites and site import considerations
+description: See available options for starting new sites and site import considerations.
 category:
   - getting-started
+keyword: start state, new site, site, pantheon, wordpress, drupal, distribution
 ---
-
-When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal or Wordpress version, a Pantheon optimized distribution, or import an existing site.
+When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal or WordPress version, a Pantheon optimized distribution, or import an existing site.
 
 ## Start with Core
 
@@ -29,7 +29,7 @@ Drupal products offer a much richer out of the box experience, but are more comp
 
 ## Importing an Existing Site
 
-For details, see our dedicated article [Importing an existing site into Pantheon](/docs/articles/users/importing-an-existing-site).
+For details, see our dedicated article [Importing an existing site into Pantheon](/docs/articles/sites/create/importing-an-existing-site).
 
 ## Sit Back and Relax
 

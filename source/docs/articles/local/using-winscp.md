@@ -4,9 +4,8 @@ description: Detailed information about the WinSCP SFTP client.
 category:
   - getting-started
   - developing
-
+keywords: winscp, sftp, winscp client
 ---
-
 [WinSCP](http://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
 
 ## Getting Started

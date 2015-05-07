@@ -3,10 +3,8 @@ title: Cloning an Existing Site from a Dashboard Backup
 description: Make a copy of your existing code, files, and database.
 category:
   - developing
+keywords: clone, restore backup, clone existing pantheon site, clone from pantheon backup, clone pantheon site, copy pantheon site
 ---
-
-## Clone an Existing Site from a Dashboard Backup
-
 All Pantheon sites consist of three parts:
 
 * **Code**: The code that makes up your site. This is contained within your Pantheon Git repository.
@@ -32,4 +30,4 @@ All Pantheon sites consist of three parts:
 
 ## Additional Considerations
 Retaining Git history, importing large file structures or databases:
-The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see[Importing a Large Site](/docs/articles/users/importing-a-large-site).
+The methods in this article will work well for small to medium sized sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, please see [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site).

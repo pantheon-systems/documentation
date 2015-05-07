@@ -12,13 +12,13 @@
   <p class="docs"><a class="docs" href="/docs"><img src="/docs/assets/images/pantheon-doc-logo.png" alt="Home"class="noborder"></a></p>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-          {% if page.home is not defined %}
-            <li class="search-form"> {% include("search_box.html") %}</li>
-          {% endif %}
-            <li><a href="https://pantheon.io/register" target="_blank">Sign Up</a></li>
-            <li><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
-            <li><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank">Support</a></li>
+          <ul class="nav navbar-nav" style="float:none;">
+        <li class="pull-right" style="float: right;"><a href="https://pantheon.io/register" target="_blank">Sign Up</a></li>
+        <li class="pull-right" style="float: right;"><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
+        <li class="pull-right" style="float: right;"><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank" style="margin-right=10px">Support</a></li>
+        {% if page.home is not defined %}
+      <li class="search-form" style="float: right;margin-right:0px;width:30%;"> {% include("search_box.html") %}</li>
+        {% endif %}
           </ul>
         </div>
       </div>

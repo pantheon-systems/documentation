@@ -3,11 +3,8 @@ title: Installing Cygwin on Windows
 description: Learn how to install and configure Cygwin.
 category:
   - getting-started
-
+keywords: cygwin, install, linux tool, windows
 ---
-
-## Overview
-
 [Cygwin](http://cygwin.com/install.html) is a collection of tools which provide a Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment you can use Cygwin to generate the .key and .csr file that are needed to get a SSL certificate from a provider.
 
 ## Getting Started

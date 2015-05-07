@@ -3,8 +3,8 @@ title: SFTP FAQs
 description: Understand common SFTP connection problems.
 category:
   - developing
+keywords: sftp, sftp connection, sftp connection error, sftp connection problems, sftp and dns, sftp dns, google public dns, system maintenance
 ---
-
 ## SFTP Connection Issues
 
     Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...

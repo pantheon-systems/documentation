@@ -4,9 +4,8 @@ description: Working with the Pantheon deployment tools in a team driven environ
 category:
   - getting-started
   - managing
-
+keywords: team management, roles, permissions, team members, developer, privileges, change site owner, ownership, site owner, organization, supporting organization, agency, supporting agency
 ---
-
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy and simple.
 
 ## Team Management

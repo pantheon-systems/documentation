@@ -3,12 +3,10 @@ title: Using Pantheon.io For Better Uptime
 description: Understand the new pantheon.io system and how it improves uptime.
 category:
   - developing
-
+keywords: uptime, better uptime, using pantheon.io, pantheon.io, dns, subdomain, dns for pantheon.io, alias dns record, alias record, flattened cname, flattened redirect, non-www, troubleshoot dns, troubleshoot non-www
 ---
-
+Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.
 ## About pantheon.io
-
-**Note**: Pantheon is no longer offering shared static IP addresses for customer sites. Existing sites are not affected and can continue to use the legacy configuration. This information applies only to sites created after Oct 22nd, 2014.
 
 The new pantheon.io system provides higher-uptime alternatives to our legacy method of providing shared IP addresses; after all, Shared IPs mean shared problems.
 

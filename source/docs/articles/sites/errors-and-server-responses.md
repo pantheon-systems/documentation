@@ -3,7 +3,6 @@ title: Errors and Server Responses
 description: Understand server responses and error messages.
 category:
   - debugging
-
 ---
 ## Pantheon Error Messages
 
@@ -139,4 +138,4 @@ In the best of all possible worlds, there are no slow queries, all external call
 
 ## Handle More Traffic
 
-See our article on [debugging performance bottlenecks](/docs/articles/sites/newrelic/debugging-slow-performance/) for details on how to streamline your site to handle additional traffic.
+See our article on [debugging performance bottlenecks](/docs/articles/sites/code/debugging-slow-performance) for details on how to streamline your site to handle additional traffic.

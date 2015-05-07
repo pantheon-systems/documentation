@@ -1,12 +1,11 @@
 ---
 title: Importing a Large Site
-description: Lear how to import a large site into Pantheon outside of the Dashboard API.
+description: Learn how to import a large site into Pantheon outside of the Dashboard.
 category:
   - getting-started
   - developing
+keywords: import, importing site, pantheon, new site, large site
 ---
-
-## Overview
 This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).

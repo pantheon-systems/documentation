@@ -3,11 +3,8 @@ title: IPv6 Addresses on Pantheon
 description: Detailed information about IPv6.
 category:
   - getting-started
-
-
+keywords: ipv6, drupal, ipv4 traffic
 ---
-
-## IPv6 Overview
 
 [Internet Protocol version 6](http://en.wikipedia.org/wiki/IPv6) (IPv6) is the latest revision of the Internet Protocol (IP), intended to replace IPv4. IPv6 traffic is expected to reach 2% by the end of 2013 ([source](http://www.circleid.com/posts/20121128_ipv6_a_2012_report_card/)). Pantheon, in an effort to future proof our platform, is in the process of providing IPv6 support. IPv4 will still be supported.
 

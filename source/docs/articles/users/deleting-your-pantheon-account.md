@@ -3,11 +3,11 @@ title: Deleting Your Pantheon Account
 description: Learn how to completely remove your Pantheon account.
 category:
   - managing
+keywords: delete, delete site, delete card, remove, pantheon account
 ---
+Follow the steps below to completely delete your site(s).
 
-Follow the steps below to completely delete your site(s). 
-
-## 1. Backup and Export 
+## 1. Backup and Export
 
 The first thing to do is to backup and export your site(s). Yes, you are leaving the platform, but you should always have a backup of your work just in case you need it in the future.
 
@@ -21,7 +21,7 @@ Once you have backed-up your data and are ready to delete your sites, see [Delet
 
 ## 3. Delete Your Credit Cards
 
-The next step is to delete the associated credit cards. For more information, see [Removing a Credit Card](/docs/articles/sites/removing-a-credit-card#delete-your-card).
+The next step is to delete the associated credit cards. For more information, see [Updating Payment Methods](/docs/articles/updating-payment-methods).
 
 ## 4. Delete Your Account
 

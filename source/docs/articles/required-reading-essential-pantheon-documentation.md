@@ -3,10 +3,8 @@ title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon's technologies.
 category:
   - getting-started
+keywords: getting started, get started, pantheon, best practices,
 ---
-
-## Overview
-
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
 Though it incorporates many familiar open-source technologies, it may seem different and new. Fear not!
@@ -24,7 +22,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - The Pantheon [workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 
-- The [technology](/docs/articles/architecture/all-about-application-containers/) behind Pantheon  
+- The [technology](/docs/articles/sites/all-about-application-containers/) behind Pantheon  
 
 - [Known platform considerations](/docs/articles/sites/known-limitations/) on Pantheon  
 
@@ -40,7 +38,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - Using [Drush](/docs/articles/local/drush-command-line-utility) on Pantheon  
 
-- [Cron](/docs/articles/sites/code/cron/) and Pantheon  
+- Cron with [WordPress](/docs/articles/wordpress/cron-for-wordpress) and [Drupal](/docs/articles/drupal/cron) on Pantheon  
 
 ### Launch
 - How to point your [DNS](/docs/articles/going-live/) when going live
@@ -52,7 +50,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!)
 
-- Caching, both with [Varnish](/docs/articles/architecture/edge/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
+- Caching, both with [Varnish](/docs/articles/sites/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
 - [CDNs](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) can make your site faster and protect against DDOS attacks
 
 - SSO, LDAP, Shibboleth, and other [authentication](/docs/articles/sites/code/sso-and-identity-federation/) methods

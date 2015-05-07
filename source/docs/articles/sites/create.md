@@ -3,9 +3,8 @@ title: Creating Sites
 description:  How to create a new site on the platform.
 category:
   - managing
+keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
 ---
-## Create a New Site
-
 On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**
 
 ### Name Your Site
@@ -22,7 +21,7 @@ Click **Install WordPress**  or **Install Drupal**  or any of the distribution
 
 ### Visit the Dev Installation
 
-On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or Wordpress installation forms.  
+On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ![Visit development site button](/source/docs/assets/images/visit-development-site.png)
 

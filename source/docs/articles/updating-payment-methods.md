@@ -3,9 +3,8 @@ title: Updating Payment Methods
 description: Learn how to update a credit card as a payment method for your site.
 category:
   - managing
-
+keywords: payment, payment method, credit card, add card, update card
 ---
-
 If you would like to add a new credit card or edit the existing card a site uses, it's quick and easy to do.
 
 

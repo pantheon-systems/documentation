@@ -5,11 +5,8 @@ category:
   - developing
   - drupal
   - wordpress
-
+keywords: domain mask, domain masking, masking your domain, mask domain with fastly, fastly, masking domain with fastly on pantheon, fastly condition
 ---
-
-## Overview
-
 There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using Drupal as a front end for marketing efforts or custom applications while using WordPress for blog content. This typically looks something like:
 
 * http://www.example-site.com/ <-- Drupal

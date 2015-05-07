@@ -3,8 +3,8 @@ title: Timeouts on Pantheon
 description: Detailed information about timeout errors.
 category:
   - debugging
+keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr timeout, user-configurable timeouts
 ---
-
 Rules are for the good of the group, and timeouts are no exception. At Pantheon, we've configured our timeouts to fit normal program execution. Sometimes, these limits can be reached when working with a particularly inefficient bit of code. In order to set expectations, the following chart describes the various user-facing timeouts on Pantheon.
 
 <table class=table>

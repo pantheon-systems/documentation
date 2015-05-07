@@ -1,12 +1,11 @@
 ---
 title: The Terminus Drush Extension (Deprecated)
-description: The original Terminus project
+description: Information about the original Terminus project.
 category:
   - developing
-
+keywords: terminus, drush, drush extension, terminus commands
 ---
-## NOTE: Archive Reference
-The Original Terminus project was a drush extension and is now Deprecated. It has been replaced with a stand-alone command-line utility, which you can read about at our new [Terminus article](/docs/articles/local/cli/ "Pantheon documentation article on the CLI project") and its [github repository](https://github.com/pantheon-systems/cli "Pantheon's CLI Repository on github")
+The Original Terminus project was a drush extension and is now **deprecated**. It has been replaced with a stand-alone command-line utility, which you can read about at our new [Terminus article](/docs/articles/local/cli/ "Pantheon documentation article on the CLI project") and its [github repository](https://github.com/pantheon-systems/cli "Pantheon's CLI Repository on github")
 
 ## Terminus 1 Project
 

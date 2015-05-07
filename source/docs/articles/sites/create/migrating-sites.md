@@ -1,24 +1,21 @@
 ---
-title: Migrating Sites from Other Hosts
-description: General instructions for preparing and importing sites to Pantheon.
+title: Migrate Sites from Other Hosts
+description: General instructions for preparing and migrating remotely hosted sites to Pantheon.
 category:
 - getting-started
-
+keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
-
-## Overview
-
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.
 
 Note: We're revising our migration documentation. Our existing import documents include:
 
- - [Importing and Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site)
- - [Importing a Large Site](/docs/articles/users/importing-a-large-site)
- - [Importing Drush Archives with Terminus](/docs/articles/users/importing-drush-site-archives-with-terminus)
+ - [Importing and Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+ - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
+ - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
- - [Clone a Drupal Site using Drush](/docs/articles/users/clone-a-drupal-site-using-drush)
+ - [Clone a Drupal Site using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up
@@ -49,7 +46,7 @@ When preparing a site for export, there are a few best practices to follow:
 
 ### Create Single-file Archives
 If your site can be packaged with a total archived size less than 500MB, then you can import that single file to create your site.
-Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation. 
+Drupal archives created with [drush archive dump](http://drushcommands.com/drush-6x/archive/archive-dump) are known to work when imported during site creation.
 <!--@TODO: Test archives created with [Backup and Migrate](https://www.drupal.org/project/backup_migrate).-->
 
 WordPress archives created with [Duplicator](https://wordpress.org/plugins/duplicator/) are known to work when imported during site creation.
@@ -158,7 +155,7 @@ We advocate using a behavioral testing framework to automate user acceptance tes
  - Using the Launch Check tool in the site dashboard
  - Enabling our free New Relic Add on
  - Automated user acceptance testing with Behat, Selenium, or Casper.js
- - Load testing using tools like [Blazemeter](/docs/articles/sites/load-testing-with-blazemeter)
+ - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Logging in and clicking around your site.
 
 

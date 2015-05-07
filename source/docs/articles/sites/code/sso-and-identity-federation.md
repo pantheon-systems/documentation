@@ -3,10 +3,8 @@ title: SSO and Identity Federation on Pantheon
 description: Centrally manage user identities and provide seamless integration across multiple applications.
 category:
   - developing
-
+keywords: sso, identity federation, single sign-on, single sign on, security, ldap, ldaps, ssl, shibboleth, simplesamlphp, oauth, ip based, ip-based, ip based security, ip-based security, security recommendations
 ---
-
-## Overview
 Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of Single Sign-On (SSO) solutions.  
 
 Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.  
