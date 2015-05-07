@@ -1,7 +1,7 @@
 ---
 title: Known Limitations
 description: A list of Pantheon's known limitations.
-keywords: known limitations, multisite, applications, can i use more than one application on a site, use more than one application, large directories, inodes, streaming media, stream media, large file, large files, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
+keywords: known limitations, multisite, applications, use more than one application, large directories, inodes, streaming media, large file, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
 ---
 This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
 
@@ -89,7 +89,7 @@ Pantheon does not currently support the [HTTPRL](http://www.drupal.org/project/h
 
 ## nginx.conf
 
-Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.
+Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.  All of the containers run a standard profile, and we have opted to keep this configuration to keep the nginx.conf lean.
 
 ## Oracle Database Drivers
 
