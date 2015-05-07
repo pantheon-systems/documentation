@@ -81,8 +81,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 2. Select **Domains**.
 2. Select **SSL**.
 3. Paste in the requested information and press **Add Cert**.
-
-![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
+ ![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
 
 After submitting your certificates, you'll see:
 
@@ -108,15 +107,10 @@ Testing SSL is Chrome is similar for other browsers as well.
 
 1. Point Chrome to the custom IP address you received after enabling SSL: https://x.x.x.x
 2. Click the padlock in the address bar.
-3. Click **Certificate Information**.
-
+3. Click **Certificate Information**.<br />
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-
 4. Verify certificate details match the domain(s) you'll point to the site
-
  ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
-
-
 ### cURL
 
 Test SSL with `cURL` by issuing the following command:

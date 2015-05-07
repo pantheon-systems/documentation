@@ -212,9 +212,12 @@ input.form-control{
 img {
   max-width: 100%;
   border:1px solid #ccc;
-}
+  margin: 15px 0px;}
 
-img.noborder {border:none;}
+img.noborder {
+  border:none;
+  margin:auto;
+}
 
 /* Keep code small in tables on account of limited space */
 .table code {

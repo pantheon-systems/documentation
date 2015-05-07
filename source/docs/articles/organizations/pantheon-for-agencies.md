@@ -14,20 +14,17 @@ Log in to your Pantheon Account and navigate to https://dashboard.pantheon.io/or
 ## Invite Collaborators
 
 Enter the email addresses of the other members of your agency and assign them roles. Don’t worry, starting to add a third collaborator will reveal a fourth field, and so on.
-
-![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
+ ![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
 
 ## Add Sites
 
 You’re now prompted to add existing Pantheon sites that you own to your organization. Your agency will be added to the site teams as a “Supporting Organization”.
-
-![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
+ ![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
 
 ## Tour the Dashboard
 
 Your Organization Dashboard has five tabs.
-
-![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
+ ![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
 
 ### Sites
 

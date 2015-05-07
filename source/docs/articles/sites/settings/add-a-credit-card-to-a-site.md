@@ -16,17 +16,12 @@ Depending on the plan you choose, you'll get access to additional features like 
 
 Developing your site and enjoying the advanced features like Workflow, Team Management, and New Relic can all be accessed for free; however, there are also premium features that require you to have a payment method associated with your site.
 
-For example, when adding SSL you will be prompted to update your site's plan:  
-
-
+For example, when adding SSL you will be prompted to update your site's plan:
  ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/desk_images/309237.png)
-
-
 Clicking the message will take you to the Billing page to either select a plan or to enter your payment information.
 
 
 ## Additional Resources
 
 - [Updating Payment Methods](/docs/articles/updating-payment-methods/)
-
 - [New Site Owner FAQs](/docs/articles/sites/new-site-owner)

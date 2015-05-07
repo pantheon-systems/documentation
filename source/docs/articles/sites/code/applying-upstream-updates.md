@@ -38,7 +38,6 @@ If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-g
 7. Deploy the upstream updates to your Live Environment by clicking “Pull Code from Testing” in the Code Workspace in the Live environment.
 ![The Code tab in a Pantheon site's dashboard's Live environment](/source/docs/assets/images/desk_images/357432.png)
 8. Click “Visit Live Environment” to verify the update is live.
-
 ![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
 
 ## Debug Failed Merges

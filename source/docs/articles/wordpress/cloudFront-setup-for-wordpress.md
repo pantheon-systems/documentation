@@ -30,9 +30,7 @@ If you already have an account with [Amazon Web Services (AWS)](http://aws.amazo
 1. Click **Users** and then **Create New Users**.
 1. Enter a descriptive user name in the first box and click **Create**.
 1. View the new user security credentials by clicking on **Show User Security Credentials**.
-
  ![AWS New User Security Credentials](/source/docs/assets/images/aws-user-show-credentials.png)
-
   **Note**: You can only view or download a user's "Secret Access Key" immediately after the user has been created. This information cannot be accessed at a later point in time.
 
 1. Click the **Download Credentials** button.
@@ -45,9 +43,7 @@ We need to give our new user permission to manage S3 (Amazon Simple Storage Serv
 1. From the [Users page](https://console.aws.amazon.com/iam/home#users), select your new user.
 1. In the Permissions section, click **Attach Policy**.
 1. Select **AmazonS3FullAccess** and click **Attach Policy**.
-
  ![AWS User Permissions S3 Access](/source/docs/assets/images/aws-add-s3fullaccess.png)
-
 We now have a user with full S3 access and are ready to configure WordPress.
 
 ## Configure CloudFront on WordPress

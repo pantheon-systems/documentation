@@ -25,14 +25,10 @@ CloudFlare settings can be found in the Settings > CloudFlare tab in the WordPre
 1. In Account Settings, copy your CloudFlare API key.
 1. Set HTTPS Protocol Rewriting to **On**.
 1. Set Development Mode to **Off**.
-
 ![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.png)
-
 ## SSL Settings
-
 In Cloudflare, go to the Crypto menu and set the SSL Mode to **Flexible**.
 ![CloudFlare Flex SSL](/source/docs/assets/images/cloudflare-flexible-ssl.png)
-
 ### Page Rule Settings and DNS
 Go to the Page Rules section of your CloudFlare account.
 

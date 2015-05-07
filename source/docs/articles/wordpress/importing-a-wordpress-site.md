@@ -29,93 +29,43 @@ Of course you can make an import archive by hand. You simply dump your existing 
 ## Add and Name a Site
 
 After you have created an account, you can log in and will be directed to your dashboard.
-
-
 ![Your sites & account dashboard](/source/docs/assets/images/create-site-dashboard.png)
-
-
 Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click continue.
-
-
 ![](/source/docs/assets/images/desk_images/247523.png)
-
 ## Wait While It's Configured
 
 You will then have a short wait while Pantheon creates and allocates the resources for your site's environments. This takes only a few minutes under normal circumstances.
-
 ![](/source/docs/assets/images/desk_images/247524.png)
-
 ## Choose a Start State
-
 You now have several options. Rather than start with one of our preconfigured start states, we will import our code, database, and files.
 
-
-Select “**mport manually**.
-
- ![](/source/docs/assets/images/desk_images/247521.png)  
-
-
+Select “**mport manually**.<br />
+![](/source/docs/assets/images/desk_images/247521.png)  
 Once selected, you can upload a single URL or file archive of the site.  
-
-
- ![](/source/docs/assets/images/desk_images/259156.png)  
-
-
+![](/source/docs/assets/images/desk_images/259156.png)  
 Alternatively, you can enter the URL to your site code (required), user files (optional) and database (optional).
-
- ![](/source/docs/assets/images/desk_images/247522.png)
+![](/source/docs/assets/images/desk_images/247522.png)
 
 ## Relax While We Configure Your Codebase
-
-
 Click **Import site** and wait while we import and configure your site.
-
 ![](/source/docs/assets/images/desk_images/247524.png)
-
-
 ## Completed Spinup
-
-
 When complete, just click the button to visit your Pantheon Dashboard.
-
-
 ![](/source/docs/assets/images/desk_images/247525.png)
-
-
-
 #### View Your Site Dashboard
-
-
 Congratulations! Your site has been imported and your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
-
-
-
 #### Launch Site
-
-
-
 You will eventually have three environments (development, test, and live), each with a separate version of your website. Click the link at the top left of your dashboard to launch the your development site.
-
-
 ![](/source/docs/assets/images/desk_images/247528.png)
-
-
 #### View Your Site
-
 You are ready to start development, or if your site is ready to go, to create your test and live environments!
 
 Currently, we are shipping with one included/recommended plugin, which is designed to make WordPress play well with our high-performance Edge cache layer.
 
 It sets a default cache lifetime of 10 minutes, and will automatically clear post pages (and taxonomy lists) when new content is created or updated. You can also manually flush the whole cache for a site.
 
-
 **Further Reading:**
 
-
-[Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
-
-
-[Developing with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode)
-
-
-[Going Live](/docs/articles/going-live)
+- [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
+- [Developing with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode)
+- [Going Live](/docs/articles/going-live)

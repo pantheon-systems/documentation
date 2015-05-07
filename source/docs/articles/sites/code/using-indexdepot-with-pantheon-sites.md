@@ -27,20 +27,15 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 ## Create a New Index
 
 Once you have signed-up at indexdepot.com, login and click **Search Indexes**.
-
-![](/source/docs/assets/images/desk_images/272823.png)
-
+ ![](/source/docs/assets/images/desk_images/272823.png)
 Next, click **Create new index**.
-
-![](/source/docs/assets/images/desk_images/272825.png)
+ ![](/source/docs/assets/images/desk_images/272825.png)
 
 ## Set Up the Index
 
 To create your index, you’ll need to supply some information about it:
-
 ![](/source/docs/assets/images/desk_images/272830.png)  
  ![](/source/docs/assets/images/desk_images/272831.png)
-
 **Indexname:**  What you would like to call your index.  
 **Description:**  A brief description to be displayed in human language.  
 **Website:**  The URL of the website you will be indexing.  
@@ -54,8 +49,7 @@ After filling out the appropriate fields, click **Save** to create your index.
 After the index has been saved, you will be provided with an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI.
 
 **Note:** Copy the URI before moving forward
-
-![](/source/docs/assets/images/desk_images/272832.png)
+ ![](/source/docs/assets/images/desk_images/272832.png)
 
  
 
@@ -72,9 +66,7 @@ admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/searc
 Here we need to provide two items to the ApacheSolr configuration:  
 **ServerURL:** Paste the Index URI from IndexDepot here.  
 **Description:** Briefly describe your index here.
-
-![](/source/docs/assets/images/desk_images/272833.png)
-
+ ![](/source/docs/assets/images/desk_images/272833.png)
 When you’ve finished, click **Save**.
 
 **Note**: A schema must be pushed in each environment (Dev/Test/Live).
@@ -84,9 +76,7 @@ When you’ve finished, click **Save**.
 Now that we’ve created our index and configured our ApacheSolr Drupal module to point to our new index, we’ll want to test the connection and make sure ApacheSolr can communicate with the IndexDepot Solr index.
 
 Head to `admin/config/search/apachesolr/settings` and click on your index.
-
-![](/source/docs/assets/images/desk_images/272843.png)
-
+ ![](/source/docs/assets/images/desk_images/272843.png)
 To test the connection, simply click **Test Connection**.
 
 If Drupal returns a success message like **“Your site has contacted the Apache Solr server”**, you have successfully setup your Index.
@@ -96,11 +86,8 @@ If not, you’ll want to retrace the steps in this document to make sure that yo
 ## Customize Your Configuration
 
 If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See example below:
-
  ![](/source/docs/assets/images/desk_images/275362.png)
-
 This will present you with a page where you can edit and add files:
-
  ![](/source/docs/assets/images/desk_images/275363.png)​
 ## Resources
 

@@ -11,10 +11,8 @@ Pantheon provides direct access for your MySQL databases, both for debugging an
 
 ## Database Connection Information
 
-MySQL credentials for each site environment can be found in the Dashboard:
-
-![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)
-
+MySQL credentials for each site environment can be found in the Dashboard:<br />
+![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)<br />
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
@@ -33,8 +31,7 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 
 ## Troubleshooting MySQL Connections
 
-If your site suddenly reverts to install.php, or you see database connection errors like the following:
-
+If your site suddenly reverts to install.php, or you see database connection errors like the following:<br />
 ![](/source/docs/assets/images/desk_images/64774.png)
 
     Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).

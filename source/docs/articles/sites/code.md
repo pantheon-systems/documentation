@@ -6,9 +6,7 @@ keywords: code, commit, sftp, development, how to connect, connection informatio
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
-
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/interface-dev-code-sftp-commit.png)
-
 The Dev environment also provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's codebase upstream. Updates will appear in the Code tool when they are committed to the upstream repository.
 <div class="alert alert-info">
   <dl>

@@ -8,7 +8,6 @@ keyword: start state, new site, site, pantheon, wordpress, drupal, distribution
 When you create a new site with Pantheon, you're asked to choose a start state. You can choose a base Drupal or WordPress version, a Pantheon optimized distribution, or import an existing site.
 
 ## Start with Core
-
 ![Core Startup Options](/docs/assets/images/core-startup.png)
 
 Starting with core gives you a blank site with the code pulled from the [Pantheon repository on github](https://github.com/pantheon-systems). It's up to you to build from there.
@@ -34,7 +33,6 @@ For details, see our dedicated article [Importing an existing site into Pantheon
 ## Sit Back and Relax
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your site. When complete, just click the button to visit your Pantheon Dashboard.
-
 ![Site spinup progress bar](/source/docs/assets/images/desk_images/214006.png)
 
 ## Enjoy your Pantheon Site!

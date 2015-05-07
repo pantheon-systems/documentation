@@ -6,11 +6,9 @@ category:
 - getting-started
 keywords: drupal, import, importing, export, code, database, files, pantheon
 ---
-The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.
-
+The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.<br />
 ![](/source/docs/assets/images/desk_images/213957.png)  
-
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  
+Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  <br />
  ![](/source/docs/assets/images/desk_images/213971.png)​​
 
 ## Components of a Drupal Site
