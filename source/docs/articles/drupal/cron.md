@@ -25,14 +25,10 @@ There is no way to configure when Pantheon executes Drupal cron.
 
 Cron can be managed via Drupal's admin interface at `admin/system/config/cron`.
 
-There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.
-
+There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.<br />
 ![](/source/docs/assets/images/desk_images/73173.png)
-
 Clicking **Run cron** will run all scheduled tasks.
-
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
-
 Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
 
     terminus drush --site=<site> --env=<env> cron
@@ -40,11 +36,8 @@ Alternatively, all scheduled cron tasks can be run with the following [Terminus]
 **Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
-
 ![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
-
 If cron has been recently run, entries will appear in the log. The two entries featured in the screenshot below are evidence that cron has run and a cron task called "cron\_example" has run.
-
 ![](/source/docs/assets/images/desk_images/74077.png)
 
 ### How Can I Schedule Cron to Run More Often?
@@ -91,11 +84,7 @@ You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when
 ### Can I Prevent Drupal Cron From Running?
 
 Yes - in Drupal at `admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu as shown below, then save the configuration. 
-
 ![](/source/docs/assets/images/desk_images/74128.png)  
-
- 
-
 ## Resources
 
 - [Drupal.org Community Documentation - Set up cron](http://drupal.org/cron)

@@ -22,9 +22,7 @@ Update code in the Dev environment via [SFTP](/docs/articles/sites/code/developi
 ### 2. Combine fresh code from Dev and fresh content from Live in Test
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and freshly combine them in Test to be absolutely certain that your deployment to Live will go as planned.
-
 ![Site dashboard, test environment, code section](/source/docs/assets/images/desk_images/376212.png)
-
 After running this operation, be sure your database updates succeed, your exported configuration is in place, and the site is functioning as expected. It's also a good idea to review the **Status** tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
 This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use Test to make sure that everything is working correctly before deploying to Live.
@@ -33,10 +31,7 @@ This may be a good time to run regression or "smoke" tests by stepping through y
 ### 3. Deploy Code To Live
 
 After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website.
-
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
-
-
 ![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218.png)
 
 

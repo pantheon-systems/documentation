@@ -4,7 +4,7 @@ description: Use Git version control with your Pantheon site.
 category:
   - getting-started
   - developing
-keywords: git, git commands, clone, commit, push 
+keywords: git, git commands, clone, commit, push
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use local development, it's likely the best way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon development environment.
 
@@ -18,10 +18,8 @@ Log into Pantheon and load the dashboard page for the site you want to work on.
 
 ### Step 2: Copy the Git Clone Command
 
-At the top of the development panel you will see the `git clone` command. It will look something like this:
-
-![Copy Past Git Clone](/docs/assets/images/git_string.png)
-
+At the top of the development panel you will see the `git clone` command. It will look something like this:<br />
+![Copy Past Git Clone](/docs/assets/images/git_string.png)<br />
 Copy and paste that in your terminal to get started.
 
 ### Step 3: Run `git clone`
@@ -30,10 +28,8 @@ On your local environment, go to where you want the code to reside. Git will cre
 
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
 
-If everything worked you should see Git fetching the data:
-
-![Git Clone During](/docs/assets/images/git_clone.png)
-
+If everything worked you should see Git fetching the data:<br />
+![Git Clone During](/docs/assets/images/git_clone.png)<br />
 If you run into permission problems, check your [SSH key](/docs/articles/users/loading-ssh-keys/) setup. If the clone starts but can't complete, check your network and be sure your version of Git is current.
 
 ## Make a Change
@@ -52,10 +48,8 @@ To find out if you have any files in your local clone that Git isn't yet trackin
 
     git status
 
-Any pending changes and files to be added will be listed like this:
-
-![Git Status](/docs/assets/images/git_status.png)
-
+Any pending changes and files to be added will be listed like this:<br />
+![Git Status](/docs/assets/images/git_status.png)<br />
 You can then cut and paste the paths to these files when using _git add_.
 
 ## Push Changes to Pantheon
@@ -68,10 +62,8 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 
     git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 
-If you don't specify a message on the command-line, git will open your default text-editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:
-
-![Git Commit](/docs/assets/images/git_commit.png)
-
+If you don't specify a message on the command-line, git will open your default text-editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
+![Git Commit](/docs/assets/images/git_commit.png)<br />
 There is a handy list of Git commands (along with a lot of other documentation) over [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf)
 
 ### Step 2: Send the Changes to Pantheon
@@ -82,8 +74,7 @@ You have committed the file locally, but you still need to send the changes to P
 
 This executes a "push" to the "origin" location, which is Pantheon since that's where you cloned the code from, on the branch "master", which is what your Dev environment tracks.
 
-If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:
-
+If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:<br />
 ![Git Push](/docs/assets/images/gitpush.png)
 
 ### Step 3: View the Changes on Pantheon

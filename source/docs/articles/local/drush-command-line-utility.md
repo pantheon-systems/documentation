@@ -42,8 +42,7 @@ Once authenticated to Pantheon with `$ terminus auth login`, update your local a
 ```
 ### Manually Download and Move the File
 
-To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
-
+To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.<br />
 ![Link to Pantheon Drush Aliases](/source/docs/assets/images/desk_images/169655.png)
 
 ###Installing the Pantheon Drush Aliases

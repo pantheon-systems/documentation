@@ -3,7 +3,7 @@ title: Using PHPMyAdmin to Locally Administer a Database
 description: Configure and troubleshoot MySQL connections.
 category:
   - developing
-keywords: phpmyadmin, database, mysql, mysql connection, 
+keywords: phpmyadmin, database, mysql, mysql connection,
 ---
 [PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it is possible to install this on Windows, Mac OS X, and Linux.
 
@@ -40,26 +40,20 @@ Once this is done, the permissions on the config.php should be set to at least 7
 
     chmod 755 config.inc.php
 
-If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so that it's not writeable.
-
- 
-
-![enter your password](/source/docs/assets/images/desk_images/224903.png)
-
+If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so that it's not writeable.<br />
+![enter your password](/source/docs/assets/images/desk_images/224903.png)<br />
 After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
 ## Connecting to the Database
 
-At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.
-
+At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.<br />
 ![enter your password](/source/docs/assets/images/desk_images/224907.png)
 
 ## Troubleshooting
 
 #### Unable to Connect to Remote Database
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
-
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.<br />
 ![](/source/docs/assets/images/desk_images/224915.png)​
 
 #### Database Credentials are Invalid
