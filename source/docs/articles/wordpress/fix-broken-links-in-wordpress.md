@@ -28,7 +28,5 @@ Broken Link Checker won't keep you from creating bad links, it is simply a repor
 
 ## Update Environment URLs on Pantheon
 WordPress stores URLs in various places in the database; considering Pantheon's multi-environment workflow, this can cause unexpected behavior. However, we've integrated the WP-CLI's search & replace functionality into the workflow to assist in updating these URLs.
-
 ![Dashboard DB URL converter](/source/docs/assets/images/convert-urls.png)​
-
 [Pantheon's workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) for WordPress includes an additional feature to update environment URLs automatically. Note that the defaults that are selected when performing a clone operation aren't overridable, as we update the URL to match whatever environment you're cloning to. We do offer the option to convert http to https & vice versa; in the case you have https in one environment and not another.

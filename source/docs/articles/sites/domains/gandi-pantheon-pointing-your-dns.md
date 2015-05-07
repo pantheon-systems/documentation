@@ -13,9 +13,8 @@ Gandi provides you with a nice, clean list of your domains. Click on the domain 
 
 The domain portal contains all relevant registration information for your domain. For pointing DNS, we are concerned with the DNS configuration section on the right.
 
-In traditional webhosting, you could often times just point your domain name to your hosts nameservers and, after propagation, all would resolve as desired. Proper resolution for your Pantheon site depends on CNAMEs and A records. To configure these entries, you'll have to edit the DNS Zone Record. Click **Edit the Zone** to proceed to the configuration page.
-
-![Gandi DNS Zones](/source/docs/assets/images/desk_images/198816.png)​
+In traditional webhosting, you could often times just point your domain name to your hosts nameservers and, after propagation, all would resolve as desired. Proper resolution for your Pantheon site depends on CNAMEs and A records. To configure these entries, you'll have to edit the DNS Zone Record. Click **Edit the Zone** to proceed to the configuration page.<br />
+ ![Gandi DNS Zones](/source/docs/assets/images/desk_images/198816.png)​
 ## Configuring Zone Records on Gandi
 
 Gandi requires you to make a copy of your default Zone Record to ensure that you don't botch your default configuration. Click **Make New Version** to create a new version to edit.

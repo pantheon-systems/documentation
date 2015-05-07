@@ -16,35 +16,19 @@ For general information about launching your site, see [Going Live and Launching
 ## Add a Domain to a Site Environment
 
 1. From your site dashboard, select the environment (typically Live), and click **Domains**.  
-
-
  ![](/source/docs/assets/images/desk_images/198280.png)  
-
-
-
 2. On the Domain Setup tab, enter the domain you want associated with that environment, and click **Add New Domain to the ... Environment**.  
 
-
-
 Both the domain and the www subdomain will be added.  
-
-
  ![](/source/docs/assets/images/desk_images/198281.png)  
-
-
-
 Once this is complete and your domain's DNS points to Pantheon, Pantheon will know where to route that request.
 
 ## Remove a Domain From a Site Environment
 
 1. From your site dashboard, select the environment (typically Live), and click **Domains**.
 2. Click **Remove** next to the appropriate domain.  
-
-
  ![](/source/docs/assets/images/desk_images/198283.png)  
-
-
-
+ 
 This will not change your DNS configuration. However, if your domain's DNS is still pointing to Pantheon and you do not have that domain associated with a Pantheon site, the request will fail.
 
 ## Limitations

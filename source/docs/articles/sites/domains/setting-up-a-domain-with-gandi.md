@@ -11,9 +11,7 @@ This article assumes that you have already purchased a domain from Gandi.
 In order to get your domain resolving to your Pantheon site, you will need to edit and associate a Zone Record with the domain in the Gandi domain administration panel.
 
 First, navigate to the DNS Zones panel and click the **DNS ZONES** button above the domains list.
-
-![](/source/docs/assets/images/desk_images/197253.png)
-
+![](/source/docs/assets/images/desk_images/197253.png)<br />
 From the Zones panel, select the file that you will use for your domain. If one does not yet exist, create a new Zone file.
 
 Click the **Zone file** in the list to start editing.
@@ -21,9 +19,7 @@ Click the **Zone file** in the list to start editing.
 Change the editing mode to "Expert" in the dropdown menu on the right.
 
 **Note**: If you are editing a pre-existing Zone file, you will receive a notice (see image below, the notice is highlighted) that tells you that the zone file is currently being used and you will need to create a new version.
-
-![Configure the A records](/source/docs/assets/images/desk_images/197261.png)
-
+![Configure the A records](/source/docs/assets/images/desk_images/197261.png)<br />
 The zone configuration in the above example is as folllows:
 
     pantheonsupport.com 10800 IN A 192.237.142.203

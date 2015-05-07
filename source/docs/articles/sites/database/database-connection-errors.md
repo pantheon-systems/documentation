@@ -6,8 +6,7 @@ category:
 keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php
 ---
 If your site suddenly reverts to `install.php`, or you see database connection errors like the following:
-
-![](/source/docs/assets/images/desk_images/64774.png)
+ ![](/source/docs/assets/images/desk_images/64774.png)
 
     Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 
