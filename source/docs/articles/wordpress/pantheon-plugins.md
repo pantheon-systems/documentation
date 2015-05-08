@@ -5,6 +5,7 @@ category:
   - getting-started
   - developing
   - WordPress
+keywords: plugins, wordpress, pantheon
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. The [Pantheon plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon) encourages updating plugins and themes in the Development environment and using Pantheon's git-based upstream core updates.
 

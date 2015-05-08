@@ -4,9 +4,10 @@ description: Learn how to import an existing WordPress site.
 category:
   - wordpress
   - getting-started
+keywords: wordpress, importing, import site
 ---
 ## Overview  
- **Note:** Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).</div>
 
 ##Prepare for Import  
 You will need a zip or tar.gz archive of your site in three separate files:
@@ -21,7 +22,7 @@ There are two ways to import. Direct uploads from your desktop can be 100MB max;
 
 Popular plugins like [Duplicator](http://wordpress.org/plugins/duplicator/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) will also do this for you. You should be able to simply upload the archive file they produce and Pantheon will do the rest. For large imports, pasting in a web-readable url (e.g. dropbox secret link) will be much faster than manually uploading. Make sure a link goes directly to the file, not a landing page.
 
-**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</div>  
 
 
 Of course you can make an import archive by hand. You simply dump your existing database into a file ending with “.sql”, and make an archive file (zip or tar.gz) that contains that dump along with all your WordPress code.

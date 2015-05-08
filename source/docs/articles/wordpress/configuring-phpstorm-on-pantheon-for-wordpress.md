@@ -4,6 +4,7 @@ description: Best practices and recommendations for building a WordPress site us
 category:
   - developing
   - WordPress
+keywords: wordpress, jetbrains, phpstorm
 ---
 ## Overview
 

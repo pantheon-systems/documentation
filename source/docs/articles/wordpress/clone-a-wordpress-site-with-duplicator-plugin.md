@@ -5,6 +5,7 @@ category:
   - WordPress
   - getting-started
   - developing
+keywords: wordpress, pantheon, duplicator, clone, new site
 ---
 ## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your Existing WordPress Site
 

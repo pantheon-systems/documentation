@@ -5,6 +5,7 @@ category:
   - going-live
   - developing
   - WordPress
+keywords: wordpress, cloudfront, cloudfront cdn, cdn
 ---
 ## Before You Begin
 

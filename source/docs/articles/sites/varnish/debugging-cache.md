@@ -14,7 +14,7 @@ The first two require the **pantheon\_api** module to be enabled in order to all
 2. Via [Terminus](https://github.com/pantheon-systems/cli): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
 
-**Note:** Varnish caches cannot be selectively cleared.
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Varnish caches cannot be selectively cleared.</div>
 
 
 ### WordPress

@@ -4,6 +4,7 @@ description: Learn to set up free SSL services with CloudFlare on WordPress site
 category:
   - WordPress
   - Going Live
+keywords: wordpress, cloudflare, free ssl, ssl
 ---
 CloudFlare offers free shared SSL services, providing the opportunity to improve your site's security and SEO rankings. The following instructions will walk you through how to setup the SSL certificate and secure your entire site with the HTTPS protocol.
 
