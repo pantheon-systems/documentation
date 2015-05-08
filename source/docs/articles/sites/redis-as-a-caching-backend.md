@@ -41,7 +41,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/articles/sit
 
 The common community module for Drupal to use Redis is simply called [redis](http://drupal.org/project/redis). Enabling it on Pantheon takes only a few steps:
 
-1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
+1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org. Only the 7.x-2.x branch of the Redis module is currently supported for Drupal 7.x sites on Pantheon.
 
 2. Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
 
