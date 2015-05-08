@@ -15,8 +15,9 @@ The recommended way to get a copy of PHPMyAdmin is to download it via Github. Yo
 
 Alternatively, you can download a zip archive of the latest code from the Github repository.
 
-**Note**: A repository for PHPMyAdmin exists on SourceForge, but we recommend the Github version as you get direct access to the code.
-
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: A repository for PHPMyAdmin exists on SourceForge, but we recommend the Github version as you get direct access to the code.
+</div>
 ## Configure a New MySQL Connection
 
 Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection, create a copy of config.sample.inc.php and rename this to config.php.
