@@ -23,18 +23,19 @@ CloudFlare settings can be found in the Settings > CloudFlare tab in the WordPre
 
 1. Set your domain name to reflect how it appears in your CloudFlare account. Example: `domain.com`
 1. In Account Settings, copy your CloudFlare API key.
-1. Set HTTPS Protocol Rewriting to **On**.
-1. Set Development Mode to **Off**.
+1. Set **HTTPS Protocol Rewriting** to **On**.
+1. Set **Development Mode** to **Off**.
 ![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.png)
 ## SSL Settings
-In Cloudflare, go to the Crypto menu and set the SSL Mode to **Flexible**.
+In Cloudflare, go to the Crypto menu and set the **SSL Mode** to **Flexible**.
 ![CloudFlare Flex SSL](/source/docs/assets/images/cloudflare-flexible-ssl.png)
+
 ### Page Rule Settings and DNS
 Go to the Page Rules section of your CloudFlare account.
 
 1. Add the following to the end of the URL: `/*`
  - Example:`http://yourdomain.com/*`
-1. Set Always Use HTTPS to **On**.
+1. Set **Always Use HTTPS** to **On**.
 1. Click **Add rule**.
  ![CloudFlare Rules](/source/docs/assets/images/cloudflare-page-rules.png)
 1. Locate your DNS Settings in your CloudFlare account.
