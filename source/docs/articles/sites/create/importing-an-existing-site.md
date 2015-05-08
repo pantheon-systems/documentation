@@ -63,7 +63,8 @@ The code archive should include the following directories:
            └── settings.php
     └── themes
 
-**Note: The "files" directory has been omitted. Remember not to include it in your codebase.**
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 
@@ -108,7 +109,8 @@ This is optional, but recommended. Export a tar.gz or .zip file of your files di
 
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
 
-**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 

@@ -5,6 +5,7 @@ category:
   - WordPress
   - getting-started
   - developing
+keywords: wordpress, pantheon, duplicator, clone, new site
 ---
 ## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your Existing WordPress Site
 
@@ -14,7 +15,7 @@ Within your WordPress site, go to the Duplicator plugin page and create a new pa
 
 ## 3. Create A New Pantheon Site/Import Your Archive
 
-1. On your dashboard, click **Create A New Site**.
+1. On your Dashboard, click **Create A New Site**.
 2. Name your new site, and select **Import site** from the "Choose your Start State" options.
 3. Select **Import Archive**.
 4. Select the **File** option, and upload the .zip file.

@@ -25,8 +25,9 @@ Next, enter the information to connect to the database. Each of the following ar
 ![Create a saved connection](/source/docs/assets/images/desk_images/224652.png)
 Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
-**Note**: Ensure you have the correct database username and password for your environment.
-
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Ensure you have the correct database username and password for your environment.
+</div>
 ## Test the Database Connection
 
 After entering all the information, click **Test Connection** to initiate a connection with the remote database. If it succeeds, you'll receive a confirmation message.<br />

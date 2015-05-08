@@ -9,6 +9,7 @@ Every free Pantheon development site comes ready to roll with SSL for developmen
 
 Older sites with domain names like `dev.mysite.gotpantheon.com` (a dot rather than a dash in the prefix) can benefit from being reset to use the new style. This will prevent SSL warnings. Contact support if you have an older-style domain name and would like it to be reformatted.
 
-**Note**: All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.</div>
 
 For more information on managing redirection to HTTPS, see [redirecting incoming requests](/docs/articles/sites/code/redirect-incoming-requests/).

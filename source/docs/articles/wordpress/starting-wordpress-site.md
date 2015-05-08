@@ -4,6 +4,7 @@ description: Learn to launch a new WordPress site.
 category:
   - going-live
   - WordPress
+keywords: going live, wordpress, launching, launch site
 ---
 ## Create and Name Your Site
 

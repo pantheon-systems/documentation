@@ -25,7 +25,7 @@ See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pan
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites
 
 These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's dashboard for the specific DNS records that will successfully route traffic to your site.
-
+<div class="alert alert-info" role="alert">
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
 	<dd>edge.live.getpantheon.com</dd>
@@ -37,7 +37,7 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 	<dd>2001:4801:7901:0000:c5ce:526c:0000:000f</dd>
 	<dt>Nameservers:</dt>
 	<dd>We do not have nameservers at Pantheon because we do not manage any DNS services. Use the nameservers given to you by your DNS provider.</dd>
-</dl>
+</dl></div>
 ## Pantheon DNS records for HTTP sites
 
 Your site dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
@@ -47,6 +47,7 @@ Your site dashboard recommends the specific DNS settings you should use. These c
 If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
 
 ## DNS Vocabulary Terms
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt><a href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS</a></dt>
 	<dd>The Domain Name System (DNS) translates human readable domain names to numerical IP addresses</dd>
@@ -66,7 +67,7 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 	<dd>Core routing Internet protocol intended to replace IPv4, supports more addresses</dd>
 	<dt><a href="http://en.wikipedia.org/wiki/Time_to_live#DNS_records">TTL</a></dt>
 	<dd>Length of time for requests to a DNS server to be cached; measured in seconds</dd>
-</dl>
+</dl></div>
 
 ## Frequently Asked Questions
 

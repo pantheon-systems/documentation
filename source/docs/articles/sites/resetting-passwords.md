@@ -21,10 +21,11 @@ Please keep in mind that your site password is stored in a database, so whatever
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](https://github.com/pantheon-systems/cli) command for generating one-time login links:
 
 ```
-$ terminus drush --site=<site> --env=<env> user-login
+$ terminus drush --site=#site --env=#env user-login
 ```
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 ## WordPress User Login
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](https://github.com/pantheon-systems/cli).

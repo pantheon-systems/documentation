@@ -9,9 +9,9 @@ There are two ways to get the client IP address if you are running Drupal on Pan
 
 1. Use the system environment variable `$_SYSTEM["REMOTE_ADDR"]`. One benefit is that on Pantheon this takes into account if the `X-Forwarded-For` header is sent in cases when a request is filtered by a proxy.
 2. Use Drupal’s `ip_address()` function. The function leverages the `$_SYSTEM["REMOTE_ADDR"]` variable to get the client IP, as well as parse other meta information like the remote proxy IP (if available), trim the forwarded IPs if they contain any additional commas or spaces, and filter out any untrusted IPs.
-
-**Note**: This is not foolproof, as clients may visit your site or application through a proxy that does not specify the correct headers. Therefore, be aware that this is not 100% reliable.
-
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: This is not foolproof, as clients may visit your site or application through a proxy that does not specify the correct headers. Therefore, be aware that this is not 100% reliable.
+</div>
 ## When to Use the Remote Address
 
 This is useful if you need geolocation capabilities on your application. For example, if you want to display the weather to a user for their region, you can use the client IP address to determine their location and show the weather for their city or region.

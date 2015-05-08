@@ -28,7 +28,7 @@ Once this is complete and your domain's DNS points to Pantheon, Pantheon will kn
 1. From your site dashboard, select the environment (typically Live), and click **Domains**.
 2. Click **Remove** next to the appropriate domain.  
  ![](/source/docs/assets/images/desk_images/198283.png)  
- 
+
 This will not change your DNS configuration. However, if your domain's DNS is still pointing to Pantheon and you do not have that domain associated with a Pantheon site, the request will fail.
 
 ## Limitations
@@ -54,4 +54,5 @@ Example:
 
     192.237.142.203 puppies.cuddlyfanclub.com
 
-**Note**: Remember to remove this change when you're done.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Remember to remove this change when you're done.</div>

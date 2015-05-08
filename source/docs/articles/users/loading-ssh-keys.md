@@ -7,7 +7,7 @@ keywords: ssh keys, load ssh keys, add ssh key, delete ssh key
 ---
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 
-**Note**: For detailed help generating SSH keys, see [Generate SSH Keys](/docs/articles/users/generating-ssh-keys).
+<div class="alert alert-info" role="alert"> <strong> Note:</strong> For detailed help generating SSH keys, see [Generate SSH Keys](/docs/articles/users/generating-ssh-keys).</div>
 
 
 ### Copy Your Public Key

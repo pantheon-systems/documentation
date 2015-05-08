@@ -18,7 +18,8 @@ Using “www” is considered an Internet-wide best practice and for best result
 
 ## DNS settings for non-www or a subdomain
 
-**Note**: Legacy users with getpantheon.com are not affected by these changes. These sites should use these [DNS Records](http://helpdesk.getpantheon.com/customer/portal/articles/1319336). Only sites created after October 22, 2014 with pantheon.io domains are affected.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Legacy users with getpantheon.com are not affected by these changes. These sites should use these <a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS Records</a>. Only sites created after October 22, 2014 with pantheon.io domains are affected.</div>
 
 Some DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are general options for the alternative implementations if you wish to use a non-www domain.
 
@@ -59,7 +60,8 @@ The simplest and most reliable option is to use a service to redirect requests f
 ​ ![](/source/docs/assets/images/desk_images/376216.png)​
 To get started, all you need to do is setup the DNS configuration for the www and non-www domain using the settings on the "Domains" tab of the environment where you wish to add a domain
 
-_NOTE: This is not a general-purpose redirection service. If your DNS provider does not offer such a service, Pantheon operates a ["dub-dub-dubber" service](http://helpdesk.getpantheon.com/customer/portal/articles/1319336#pantheon_www_redirection). It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain. All other redirects must be done via PHP logic. You can read more here._
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: This is not a general-purpose redirection service. If your DNS provider does not offer such a service, Pantheon operates a <a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#how-do-i-use-pantheon's-www-redirection-service?">"dub-dub-dubber" service</a>. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain. All other redirects must be done via PHP logic. You can read more here.</div>
 
 ### Troubleshooting www DNS
 

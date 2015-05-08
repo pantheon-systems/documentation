@@ -4,6 +4,7 @@ description: Best practices and recommendations for building a WordPress site us
 category:
   - developing
   - WordPress
+keywords: wordpress, jetbrains, phpstorm
 ---
 ## Overview
 
@@ -28,7 +29,7 @@ There will not be any files open within your project once you complete these ste
 ## Configure WP-CLI (Optional)
 Many WordPress plugin developers use the command line tool [WP-CLI](http://wp-cli.org/). This is useful if you have a local development environment and want to use WP-CLI to manage it.
 
-**Note**: You must successfully create a project before adding WP-CLI as a Command Line Tool.
+<div class="alert alert-info" role="alert"> <strong>Note: </strong> You must successfully create a project before adding WP-CLI as a Command Line Tool.</div>
 
 You can configure PHPStorm to recognize WP-CLI from within your project by following these steps:
 

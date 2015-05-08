@@ -13,7 +13,8 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 
 ##Simple Script
 
-**Note:** You must be a Pantheon customer to use this script.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>:You must be a Pantheon customer to use this script.</div>
 
 1. Save the code in a file with the extension .php and SFTP it up to your site.
 2. Place it in the code directory of your website.
@@ -42,6 +43,7 @@ Here is the command line script:
 <script src="https://gist.github.com/calevans/9943627.js"></script>
 
 Here are the parameters you will need to configure before running the script:
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt>host</dt>
 	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd>
@@ -53,7 +55,7 @@ Here are the parameters you will need to configure before running the script:
   <dd>This is your MySQL password for the user you specified in the line above.</dd>
   <dt>database</dt>
   <dd>This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.</dd>
-</dl>
+</dl></div>
 
 Now, save the file. Then from a command window execute the program.
 

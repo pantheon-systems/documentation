@@ -22,7 +22,8 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 - Geo-search
 - REST-like API
 
-**Note:** This article assumes that you have already enabled the ApacheSolr module.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: This article assumes that you have already enabled the ApacheSolr module.</div>
 
 ## Create a New Index
 
@@ -69,7 +70,8 @@ Here we need to provide two items to the ApacheSolr configuration:
  ![](/source/docs/assets/images/desk_images/272833.png)
 When you’ve finished, click **Save**.
 
-**Note**: A schema must be pushed in each environment (Dev/Test/Live).
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: A schema must be pushed in each environment (Dev/Test/Live).</div>
 
 ## Test Your New Solr Connection
 

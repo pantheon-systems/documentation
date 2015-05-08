@@ -62,7 +62,8 @@ For example, the Git log may contain an entry similar to the following:
     CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
 
 1. From your local repository, run the following Git command to get a copy of the file in conflict: `git checkout <commit ID> -- <file>`<br />
-**Note**: When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:  
 
@@ -132,7 +133,8 @@ If you're importing a site that has an existing Git history, you may be able to 
       `git pull -Xours [your existing repo] [existing site branch]`
 
 4. If there are any conflicts, you'll need to resolve them.<br />
-  **Note**: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
 
 5. Once this is done, push back to Patheon:
 
@@ -229,8 +231,10 @@ As a result of the varying techniques and to prevent code from being accidentall
 Pantheon uses the following command to display commits in the dashboard:
 
     git log --first-parent
+<br />
+<blockquote>This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge.<br />
+- Git Manual</blockquote>
 
-_"This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge._" Git Manual
 
 Pantheon does this so upstream updates or merges from multi-dev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
 

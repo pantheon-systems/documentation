@@ -8,7 +8,7 @@ keywords: lock, password protect, lock site, password protect site, locked, lock
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to Go Live or make updates.
 
-**Note**: When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.</div>
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is private, the requesting client will have to supply the authentication credentials you set in order to access the site.
 

@@ -33,31 +33,32 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 4. Click **Settings**, then select **About Site**.
 5. Place your mouse over the upstream value, left click and select **Copy link** to get the site's Pantheon upstream location.  
  ![](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)  
-6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:  
-  **Original:**
+6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:
 
- ```
- git pull --no-rebase -Xtheirs --squash {paste-value-here} master
- ```
-  **Updated:**
+**Original:**
 
-  ```
-  git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master
-  ```
+```
+git pull --no-rebase -Xtheirs --squash {paste-value-here} master
+```
+**Updated:**
 
-  **Note**: Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: `http://github.com/pantheon-systems/drops-7` to `git://github.com/pantheon-systems/drops-7.git`.  
+```
+git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master
+```
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: <code>http://github.com/pantheon-systems/drops-7</code> to <code>git://github.com/pantheon-systems/drops-7.git</code>.</div>
 
+**Final Command:**
 
-  **Final Command:**
-  ```
-  git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
-  ```  
+```
+git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
+```  
 
-  Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:  
-  ```
-  Squash commit -- not updating HEAD  
-  Automatic merge went well; stopped before committing as requested
-  ```
+Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:  
+```
+Squash commit -- not updating HEAD  
+Automatic merge went well; stopped before committing as requested
+```
 
 7. From your Pantheon Dashboard, go to the Dev tab and select **Code**. Make sure your site is on Git mode, and copy the Git connection information found to the right of the Git tab.
 
@@ -74,11 +75,12 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
   git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
   ```
 
-  **Note**: Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:
+  <div class="alert alert-warning" role="alert">
+  <strong>Note</strong>: Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:</div>
 
-  ```
-  git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
-  ```
+```
+git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
+```
 
 9. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
  ```

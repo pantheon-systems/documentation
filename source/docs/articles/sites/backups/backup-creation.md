@@ -17,7 +17,8 @@ Pantheon makes backups of an environment a simple and easy one-click operation. 
  ![Create Backup](/source/docs/assets/images/desk_images/305275.png)
 You will notice the job indicator will turn green and provide the number of active jobs.
  ![](/source/docs/assets/images/desk_images/305276.png)
-**Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files).
@@ -29,7 +30,8 @@ Clicking on the down arrow next to the Code, DB or Files for a particular backup
 
 Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-**Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">Check this documentation for more information about signed URLS</a>.</div>
 
 ## Frequently Asked Questions
 

@@ -26,7 +26,8 @@ Once they have successfully signed up for an account, they will be automatically
 
 ## Remove a Team Member
 
-**Note**: All users can be removed except the site owner.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: All users can be removed except the site owner.</div>
 
 In the Team modal, click the X next to the user you want to delete.
 
@@ -40,7 +41,8 @@ Site ownership is assigned to the person who creates the site or pays for the si
 #### Sandbox Sites
 Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. This link is only visible when the Sandbox site _does not_ have a credit card associated with the site. To disassociate a credit card, visit the site's Billing tab within the Settings modal.
 
-**Note**: Only the current site owner has the ability to assign a new owner; team members will not see this option.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Only the current site owner has the ability to assign a new owner; team members will not see this option.</div>
 ![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
 #### Paid Sites
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the site dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
@@ -61,6 +63,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 4. Check that the agency is the one you expected.
 5. Click the **Add Agency** button to make them a supporting organization.
 
-**Note:** Because supporting organizations have full access to a site, only the site owner can perform this action.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Because supporting organizations have full access to a site, only the site owner can perform this action.</div>
  ![Add a supporting organization button](/source/docs/assets/images/multi_org1.png)
  ![Confirm supporting organization](/source/docs/assets/images/multi_org2.png)

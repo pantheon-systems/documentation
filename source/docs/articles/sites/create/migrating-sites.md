@@ -9,7 +9,7 @@ Migrating a website from another environment is a complex task. Whether it is ru
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.
 
-Note: We're revising our migration documentation. Our existing import documents include:
+We're revising our migration documentation. Our existing import documents include:
 
  - [Importing and Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
  - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)

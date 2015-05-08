@@ -54,4 +54,5 @@ However, because the Pantheon environment data is not loaded at this time, any b
 
 You can also use the above to develop Drupal 8 on Pantheon!
 
-**Note**: If you use any other advanced `settings.php` tricks (e.g. enabling redis), you will need to do this _before_ the snippet in D7, or _after_ in D6 to insure you have a consistent `$conf` array.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: If you use any other advanced <code>settings.php</code> tricks (e.g. enabling redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
