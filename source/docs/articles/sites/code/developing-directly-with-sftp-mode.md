@@ -9,15 +9,18 @@ In some cases working via `git push` is not the best option. You may not like lo
 
 This is why we offer **SFTP mode** . This allows you to develop <me>directly on Pantheon, and can be a major time-saver.</me>
 
-**Note:** Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.
+<div class="alert alert-danger" role="alert">
+<strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</div>
 
-**ProTip:**  If you want to use your website framework's built-in update systems (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first!
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: If you want to use your website framework's built-in update systems (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first!</div>
  ![Enable SFTP mode](/source/docs/assets/images/desk_images/278855.png)
 <div class="alert alert-danger" role="alert"><strong>Warning:</strong> SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet. If you have pending changes and the site is migrated (which we may do at any time for various reasons), then your changes will be lost without warning. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
 
 As you work via SFTP, the Pantheon developer dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever mess around with Git directly.
 
-**Note:**  This does mean you won't be able to save anything that's being excluded from version control via `.gitignore`.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: This does mean you won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</div>
 
 ## SFTP mode
 
@@ -52,7 +55,8 @@ Your connection data is as follows:
  
 
 
-**Note:** When you setup your SFTP client remember that _SFTP_ will be the protocol and you will need to connect to your environment using port _2222_.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: When you setup your SFTP client remember that <em>SFTP</em> will be the protocol and you will need to connect to your environment using port <em>2222</em>.</div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection information widget for the environment you are on.
 
@@ -84,7 +88,8 @@ Once your message is ready, clicking on commit will trigger the commit job and a
  ![Committing Blocking UI](/source/docs/assets/images/desk_images/278852.png)<br />
 The blocking UI will appear for all users on the team who are looking at that environment. This is to maintain the integrity of the changes and so each team member is aware of the current state of the code.
 
-**ProTip** : Your dashboard will track all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Your dashboard will track all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
 
 ## GUI Tool Guides
 

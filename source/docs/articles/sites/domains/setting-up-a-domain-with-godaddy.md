@@ -35,7 +35,8 @@ Next you will see the Zone summary screen that will give you the information ass
  ![DNS dashboard](/source/docs/assets/images/desk_images/49520.png)
 #### Setting Up the Zone Record
 The last step on GoDaddy is to make sure you have correctly setup your A record or CNAME for your domain. Make sure you have put in the I.P. address or the CNAME to point your domain to Pantheon. You can get more information about this on our [Going Live](/docs/articles/going-live/) documentation page. 
-**Note: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.**  
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: If you have SSL enabled on your site, you have been given a unique I.P. address. This is the I.P. that you should point the A record to.</div>  
  ![Configure the A records](/source/docs/assets/images/desk_images/49503.png)  
 ### Add Your Domain to Pantheon
 

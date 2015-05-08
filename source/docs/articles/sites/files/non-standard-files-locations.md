@@ -28,4 +28,5 @@ Your legacy file paths should now work, and your files will be stored in our clo
 
 As long as the path you've chosen for your symlink does not conflict with a future core update to your application, this link will persist indefinitely.
 
-**Note:** Adding a symlink for a legacy directory path will _not_ work with private files. If you have a private files use case, you will need to migrate the file paths and drop references to the legacy location.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Adding a symlink for a legacy directory path will <em>not</em> work with private files. If you have a private files use case, you will need to migrate the file paths and drop references to the legacy location.</div>

@@ -58,7 +58,8 @@ To download the environment's MySQL Slow Log, use the [method outlined here](/do
     $  
 
 
-**Note**: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</div>
 
 ## Analyze The Mysql Slow Log
 

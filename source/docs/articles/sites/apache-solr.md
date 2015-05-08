@@ -91,7 +91,8 @@ The next step is to post the schema.xml, which describes Drupal fields to the So
  ![](/source/docs/assets/images/desk_images/192435.png)  
 Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the vast majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema** .  
  ![](/source/docs/assets/images/desk_images/192443.png)  
-**Note**: You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: You must post the schema.xml in each environment (dev, test, and live) that you want to use Pantheon's Solr Service in.</div>
 
 ### Enable and Configure Your Solr Module
 
@@ -123,13 +124,12 @@ Some customers have reported success using external Solr service providers such 
 
 ## Apache Solr Vocabulary
 
-Here are a number of key terms that are useful for understanding Apache Solr.
-
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt>bias</dt>
 	<dd>Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.</dd>
 	<dt>core</dt>
-	<dd>A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see<a href="http://wiki.apache.org/solr/CoreAdmin">http://wiki.apache.org/solr/CoreAdmin</a>
+	<dd>A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see <a href="http://wiki.apache.org/solr/CoreAdmin">http://wiki.apache.org/solr/CoreAdmin</a>
 </dd>
 	<dt>document</dt>
 	<dd>A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title</dd>
@@ -142,7 +142,7 @@ Here are a number of key terms that are useful for understanding Apache Solr.
 	<dt>schema.xml</dt>
 	<dd>Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see <a href="http://wiki.apache.org/solr/SchemaXml">http://wiki.apache.org/solr/SchemaXml</a>
 </dd>
-</dl>
+</dl></div>
 ## Additional Help
 
 The Pantheon Solr module provides a comprehensive help section that describes a number of key Solr concepts and terms. Visit Administration > Help > Pantheon Apache Solr to access.
@@ -175,17 +175,19 @@ The following are Pantheon-specific variables that you can check for, depending 
 ####apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
 
-    terminus drush --site=<site> --env=<env> vget apachesolr_service_class
+    terminus drush --site=#site --env=#env vget apachesolr_service_class
 
 ####search_api_solr.module
 If you are using search_api_solr.module you can check it with the command:
 
-    terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
+    terminus drush --site=#site --env=#env vget search_api_solr_connection_class
 
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
-**Keep in Mind:** Newly indexed items have a 2-minute delay, until cron has been run or manually indexed before they become available in Solr search.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Newly indexed items have a 2-minute delay, until cron has been run or manually indexed before they become available in Solr search.</div>
 
 ### Error During Search API Solr Installation
 
