@@ -3,7 +3,7 @@ title: Redis as a Caching Backend
 description: Understand how to use Redis as a caching mechanism.
 category:
     - developing
-keywords: redis, caching, what is redis, how to enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
+keywords: redis, caching, what is redis, enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -203,13 +203,13 @@ You skipped a step; settings.php must include the cache\_backport files. Add the
 
 ##Frequently Asked Questions
 
-####What happens when Redis reaches maxmemory?
+#### What happens when Redis reaches maxmemory?
 
-The behavior is the same as a standard redis instance. The overall process is described best in the top four answers of [this thread](http://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](http://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
-####Is Redis setup as an LRU cache?
+#### Is Redis set up as an LRU cache?
 
-We are using [allkeys-lru](http://redis.io/topics/lru-cache). Here is the redis configuration file for your Live environment:
+We are using [allkeys-lru](http://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
 
 ```
 cat redis.conf
@@ -237,7 +237,7 @@ set-max-intset-entries 512
 activerehashing yes
 ```
 
-####If redis hits the upper limit of memory usage, is this logged on Pantheon?
+#### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 
 Yes. There is a `redis.log` file that is available on the redis container for each environment. You can see where the log files and configuration reside:
 
