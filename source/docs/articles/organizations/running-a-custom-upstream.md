@@ -16,7 +16,8 @@ Pantheon provides support for running three types of custom distribution on the 
 
 3. **Partner Upstreams** - These are company specific Upstreams built and supported by our [Pantheon Partners](https://www.getpantheon.com/partners/program) for their internal development. Partner upstreams are private to the members of each partner organization. For more information, check out [our blog post about how this can work](https://www.getpantheon.com/blog/building-sites-common-codebases-pantheon-one-agencies).
 
-**Note** You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</div>
 
 Organizational and Partner upstreams are available under contractual terms. Please [create your agency profile](/docs/articles/organizations/pantheon-for-agencies/#create-your-agency-profile) to start the process.
 

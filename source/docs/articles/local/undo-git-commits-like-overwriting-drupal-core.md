@@ -7,7 +7,8 @@ keywords: git, git commits, undo git commit, revert
 ---
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. This example is Drupal specific but the following steps can be applied to undo a commit on any framework, including WordPress.
 
-**Note**: DO NOT UPDATE CORE VIA `drush up`.  But presumably you are here because that has already happened.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: DO NOT UPDATE CORE VIA <code>drush up</code>.  But presumably you are here because that has already happened.</div>
 
 To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform. If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
 
