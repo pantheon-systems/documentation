@@ -21,7 +21,7 @@ If you have streaming content, large amounts of multi-national traffic or need t
 
 If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Enterprise clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
 
-## Vocabulary
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt>
 <a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
@@ -31,7 +31,7 @@ If you don't meet those specific criteria, strongly consider just using Pantheon
 	<dt>Push</dt>
 	<dd>Content must be explicitly added to CDN by your site; if not, then it won't be available. Good for very large or multimedia (video / audio) content, but more difficult to configure.</dd>
 </dl>
-
+</div>
 A more in-depth description of CDN properties can be found in Wim Leer's [Key Properties of a CDN](http://wimleers.com/article/key-properties-of-a-cdn) article.
 
 ## Requirements for Using a CDN

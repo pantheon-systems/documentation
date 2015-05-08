@@ -51,8 +51,8 @@ The code archive should include the following directories:
         └── default
            └── settings.php
     └── themes
-
-**Note: The "files" directory has been omitted. Remember not to include it in your codebase.**
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 

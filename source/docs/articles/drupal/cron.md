@@ -18,9 +18,9 @@ For every site environment, Pantheon executes cron at the top of each hour to al
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
 There is no way to configure when Pantheon executes Drupal cron.
-
-**Important**: Setting the value to "Never" will be ignored; cron will always run at least hourly.
-
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Setting the value to "Never" will be ignored; cron will always run at least hourly.
+</div>
 ## Managing Cron
 
 Cron can be managed via Drupal's admin interface at `admin/system/config/cron`.
@@ -31,10 +31,10 @@ Clicking **Run cron** will run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
 Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
 
-    terminus drush --site=<site> --env=<env> cron
+    terminus drush --site=#site --env=#env cron
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
-
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
 ![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
 If cron has been recently run, entries will appear in the log. The two entries featured in the screenshot below are evidence that cron has run and a cron task called "cron\_example" has run.
@@ -79,7 +79,7 @@ You can check the log messages through the Drupal Admin interface, as mentioned 
 
 You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
 
-    terminus drush --site=<site> --env=<env> wd-show --type='cron'
+    terminus drush --site=#site --env=#env wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
