@@ -68,7 +68,7 @@ If your tests are good, you can use the "Pull Code" option on the dashboard to d
 
 On Pantheon an orphan commit is any commit that exists on the Test or Live environment but not in the master branch.
 
-We alert you of these commits because they are vulnerable to being overwritten with the default code workflow. Even when making hotfixs your workflow should push those changes into the master branch. Since we have no way of knowing which future commit will contain those changes we want you to be aware of potential code loss.
+We alert you of these commits because they are vulnerable to being overwritten with the default code workflow. Even when making hotfixes your workflow should push those changes into the master branch. Since we have no way of knowing which future commit will contain those changes we want you to be aware of potential code loss.
 
 The alert message on the Live environment is only indicating that orphan commits exist. The tags/labels on the right side of the commit message lets you know which environments the commits exist in.
 
