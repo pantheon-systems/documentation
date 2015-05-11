@@ -12,7 +12,7 @@ Given the low-level nature of these errors, these messages cannot be customized 
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as `services`.  
 
-If you feel that you reached one of these messages in error, please submit a support ticket through your dashboard describing the full URL and circumstances which led to the error.
+If you feel that you reached one of these messages in error, please submit a support ticket through your Dashboard describing the full URL and circumstances which led to the error.
 
 ### Pantheon 401 Unauthorized
 ![](/source/docs/assets/images/desk_images/184676.png)  
@@ -22,8 +22,8 @@ In some circumstances, a 401 can be triggered inadvertently if a site environmen
 
 ### Pantheon 403 Forbidden
 ![](/source/docs/assets/images/desk_images/184677.png)  
-"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
+"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
 
 Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
@@ -37,14 +37,17 @@ Pantheon also prevents public access via the webserver to private files, .htacce
 
 ### Pantheon - 502 Routing failure
 ![](/source/docs/assets/images/desk_images/184850.png)<br />
+
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." An internal networking issue has occurred with Styx, Pantheon's routing mesh.
 
 ### Pantheon - 503 Target in maintenance
 ![](/source/docs/assets/images/desk_images/184852.png)<br />
+
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
 ### Pantheon - 503 Target not responding
 ![](/source/docs/assets/images/desk_images/184854.png)<br />
+
 "The web page you were looking for could not be delivered." No Application Containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each Application Container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the Application Container cannot accept any more requests.
 
 We could increase the nginx queue above 100, but it would only mask the problem for longer. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
@@ -53,21 +56,21 @@ This can be caused by sustained spikes in traffic (often caused by search engine
 
 ### Pantheon - 503 Database not responding
 ![](/source/docs/assets/images/desk_images/184855.png)<br />
+
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possible from being suspended and not resuming.
 
 ### Error 503 - Service Unavailable
 ![](/source/docs/assets/images/desk_images/231974.png)<br />
-"The service is temporarily unavailable. Please try again later."
 
 This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end-user pages take longer than this threshold, there is a performance issue with the site. More information about [Timeouts on Pantheon](/docs/articles/sites/timeouts/) is available in our helpdesk.
 
-If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP basic auth (the Security username/password), then that's a misleading message - best workaround is to disable the security option for the environment for testing.
+If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP basic auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon - 504 Gateway Timeout
 ![](/source/docs/assets/images/desk_images/185064.png)<br />
 "Your request has timed out while waiting for PHP to execute." There's two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other is that there was a server problem, typically php-fpm or MySQL timing out. More information about [Timeouts on Pantheon](/docs/articles/sites /timeouts/) is available in our helpdesk.
 
-Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
+Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local Development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
 There are many things which could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 

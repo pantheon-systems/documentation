@@ -7,7 +7,7 @@ keywords: external libraries, external library, library, libraries, webkit html,
 ---
 While Drupal's contributed modules offer a plethora of extended functionality, there are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available throughout the platform.
 
-If there is a specific library that you require, submit a support request through your dashboard. This process will take time, as any change to our platform must be evaluated by both Operations and Engineering for compatibility.
+If there is a specific library that you require, submit a support request through your Dashboard. This process will take time, as any change to our platform must be evaluated by both Operations and Engineering for compatibility.
 
 <!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
 
@@ -51,7 +51,7 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 ## [PhantomJS](http://phantomjs.org/)
 ![](/source/docs/assets/images/desk_images/110696.png)<br />
-In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG".
+In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
 

@@ -15,7 +15,7 @@ Redis provides an alternative caching backend, taking that work off the database
 
 ## Enable Redis
 
-Enable Redis cache server from your Pantheon site dashboard by going to Settings > Add Ons > Add.
+Enable Redis cache server from your Pantheon Site Dashboard by going to Settings > Add Ons > Add.
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
@@ -52,7 +52,8 @@ The common community module for Drupal to use Redis is simply called [redis](htt
     - `redis_client_password`
 
 4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required configurations for Redis for every site.  
-**Note:** **_Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path._**
+<div class="alert alert-info">
+<strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
   ```
       // All Pantheon Environments.
@@ -85,7 +86,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 6. _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
 
 
-  This technique avoids evictions due to redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
+  This technique avoids evictions due to Redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
 
   ```
       // Optional Pantheon redis settings.
@@ -99,15 +100,16 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 
 8. Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
 ![Redis connect string](/source/docs/assets/images/desk_images/301638.png)
- - For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information."
+ - For Drupal 7 visit `/admin/config/development/performance/redis` and open **Connection Information**.
 
  ![](/source/docs/assets/images/desk_images/71423.png)
  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
-## Using the Redis command-line client
+
+## Using the Redis Command-Line Client
 
 You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon hosted Redis server for debugging, you'll need to install Redis locally. If you don't already have Redis installed, it can be downloaded from [http://redis.io/download](http://redis.io/download).
 
-To verify that Redis is working, use the Redis Connection Info from the dashboard. Once you've logged in, execute the following command:
+To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
 
     redis> keys *
 
@@ -161,7 +163,7 @@ To check the # of keys in the cache, you can use the `DBSIZE` command. The follo
 
 ## Troubleshooting
 
-### Cache directory is not found
+### Cache Directory is Not Found
 
 If you push your updates via git you may get the error that the "Cache" directory is not found, Class not found or the `Cache.php` file was not found, this is because of a `.gitignore` issue which did not allow commiting of the Redis cache files. Here is an error that you may see.
 
@@ -170,9 +172,9 @@ If you push your updates via git you may get the error that the "Cache" director
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your . To resolve this please make sure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration dashboard. Take a look at the [wiki page](/docs/articles/sites/code/applying-upstream-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration Dashboard. Take a look at the [wiki page](/docs/articles/sites/code/applying-upstream-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
 
-### Fatal error: require\_once()
+### Fatal Error: require\_once()
 
 Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the example code snippet to match your path to the Redis module. The error would like something like this:
 

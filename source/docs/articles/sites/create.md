@@ -5,7 +5,7 @@ category:
   - managing
 keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
 ---
-On your user dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**
+On your User Dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**.
 ### Name Your Site
 Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheon.io domain.
 ![Name your site](/source/docs/assets/images/name-your-site.png)
@@ -14,6 +14,7 @@ Click **Install WordPress**  or **Install Drupal**  or any of the distribution
 ![Choose your start state](/source/docs/assets/images/core-startup.png)
 ### Visit the Dev Installation
 On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
+
 ![Visit development site button](/source/docs/assets/images/visit-development-site.png)
 To start adding code or themes, start  with the SFTP connection, or toggle to Git mode to start cloning and pushing.
 ## Free Sites
