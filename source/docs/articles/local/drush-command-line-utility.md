@@ -31,7 +31,7 @@ Some Drush 5 commands need to be executed from outside the context of a local wo
 If your local Drush installation is version 6, most commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
 
 ## Installing Drush Aliases Locally
-Adding Pantheon Aliases to your local drush aliases file will allow you to run drush calls against your Pantheon site environments. There are two methods for obtaining the aliases.
+Adding Pantheon Aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. There are two methods for obtaining the aliases.
 
 ### Download with Terminus, the Pantheon CLI
 Once authenticated to Pantheon with `$ terminus auth login`, update your local aliases file.
@@ -60,7 +60,7 @@ Drush will search for aliases in any of these files using the alias search path.
 
 3. Inside the sites folder of any bootstrapped Drupal site, or any local Drupal site indicated by an alias used as a parameter to a command.
 
-When the aliases have been installed, clear the drush cache:
+When the aliases have been installed, clear the Drush cache:
 
 ```
 $ drush cc drush
@@ -118,7 +118,7 @@ This is the fastest way to install a suite of modules or themes into your Panthe
 
 ## Using Registry Rebuild on Pantheon
 
-Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
+Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
 
 
@@ -168,7 +168,7 @@ You cannot use `drush sql-sync` on Pantheon. Instead, download a copy of the dat
 
 ## Timeouts When Using Long-Running Migrate or Other Drush Commands
 
-Long-running drush commands that produce no output will cause the SSH gateway to timeout. Instead, use an option to produce some sort of terminal response.  
+Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Instead, use an option to produce some sort of terminal response.  
 
 
 
@@ -265,7 +265,7 @@ To make your Drush 5 commands work on Pantheon aliases, change your directory to
     Unknown option: --db-url. See `drush help cache-clear` for available [error]
     options. To suppress this error, add the option --strict=0.
 
-To resolve this error, take the suggestion and _add the option `--strict=0`_.
+To resolve this error, take the suggestion and add the option `--strict=0`.
 
     $ drush @pantheon.SITENAME.ENV cc all --strict=0
     'all' cache was cleared in [success]

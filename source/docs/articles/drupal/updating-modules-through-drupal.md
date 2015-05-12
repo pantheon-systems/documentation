@@ -19,6 +19,6 @@ Drupal has a very good, built-in system for updating contributed modules through
 7. Once the updates are downloaded successfully, choose “Perform updates…” and click **Continue**.  
  ![](/source/docs/assets/images/desk_images/360098.png)
 8. The updates will run, and if there are any database updates required, you will have the option to do so. If not, and there were no issues and Drupal will finish and your module(s) will reflect their new versions in the Modules page.
-9. Go back to your site’s Pantheon dashboard. The updated files will now show in the Dev environment’s code tab, ready to commit. Add a commit message, and then click the **Commit** button to add them to your Git repository.  
+9. Go back to your site’s Pantheon Dashboard. The updated files will now show in the Dev environment’s code tab, ready to commit. Add a commit message, and then click the **Commit** button to add them to your Git repository.  
  ![](/source/docs/assets/images/desk_images/360246.png)
 10. The updated modules are now committed to your Drupal site’s repository, and you can continue using it as normal.

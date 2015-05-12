@@ -14,7 +14,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 ### Step 1: Go to Your Site Dashboard
 
-Log into Pantheon and load the dashboard page for the site you want to work on.
+Log into Pantheon and load the Dashboard page for the site you want to work on.
 
 ### Step 2: Copy the Git Clone Command
 
@@ -97,4 +97,4 @@ For further learning, we recommend checking out the following resources:
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [SourceTree - Git GUI client](http://www.sourcetreeapp.com/)
 
-For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/docs/articles/local/git-faq/)
+For Pantheon-specific Git questions, you may find answers in the [Git FAQ](/docs/articles/local/git-faq/) article.
