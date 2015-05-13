@@ -113,7 +113,7 @@ Testing SSL is Chrome is similar for other browsers as well.
 2. Click the padlock in the address bar.
 3. Click **Certificate Information**.<br />
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-4. Verify certificate details match the domain(s) you'll point to the site
+4. Verify certificate details match the domain(s) you'll point to the site.
  ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 ### cURL
 
@@ -136,7 +136,7 @@ see that your certificate is being served:
 
 ## Require SSL for All Pages
 
-It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
+It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https).
 
 
 ## Frequently Asked Questions
@@ -164,7 +164,7 @@ it indicates that some part of the chain is out of order. Check that you have th
 
 If you receive SSL chain errors, on a mobile device for example, make sure that the certificate has a certificate authority that supports your use case.
 
-Using an SSL checker(http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
+Using an SSL checker (http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
 If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 

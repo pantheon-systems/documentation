@@ -5,7 +5,7 @@ category:
 - getting-started
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
-Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
+Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same: move to Pantheon and enjoy the freedom to build awesome sites.
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.
 
@@ -31,7 +31,7 @@ In this phase, you will create an archive of your site. Archives can be stored i
 ### Evaluate Your Site
 
 1. Review your codebase. Are you running another application in addition to WordPress or Drupal?
-2. Measure your database size
+2. Measure your database size.
 3. Locate your non-version-controlled static assets.
 4. Review your logs.
 
@@ -111,14 +111,13 @@ cd $SOURCE/sites/default/files
 tar -czf $TARGET/files.tar.gz .
 ```
 
-
 ## Move In
 
 Importing your site to the platform ranges from a simple, single file upload during creation to a more-complicated process for sites with large codebases, databases, and file systems. Either way, you can do it all from the command line.
 
 ### Import Archives
 
-In the dashboard, if your site archive is smaller than 100MB, you can upload it during site creation. If it is less than 500MB, you can post it at a publicly-accessible URL and provide that at the same step in the process.
+In the Dashboard, if your site archive is smaller than 100MB, you can upload it during site creation. If it is less than 500MB, you can post it at a publicly-accessible URL and provide that at the same step in the process.
 
 Using Terminus, you can import archives with:
 ```
@@ -129,7 +128,7 @@ terminus sites create [--product=<productid>] \
 [--import=<url>]
 ```
 
-In the dashboard, you create a new site and select **Import a site** when asked to choose a Start State.
+In the Dashboard, you create a new site and select **Import a site** when asked to choose a Start State.
  ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
@@ -139,9 +138,9 @@ Selecting the link to provide separate code, files, and database archives will g
 
 If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
-First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
+First, choose your distribution and visit your site's Dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
-Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
+Finally, use the import tools within your Pantheon site's Dashboard to import your database and site files into the Dev environment (Workflow > Import).
  ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 ## Test Your Site
@@ -155,4 +154,4 @@ We advocate using a behavioral testing framework to automate user acceptance tes
 
 
 ## Go Live
-Read our [Going Live Documentation](/docs/articles/going-live)
+Read our [Going Live Documentation](/docs/articles/going-live).

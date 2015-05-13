@@ -26,7 +26,7 @@ Get started by learning more about the [Pantheon workflow](/docs/articles/sites/
 Pantheon provides a default `.gitignore` file in the base of each site's code repository and in `sites/default/files`. You can use this file to exclude directories from version control and backups.
 
 ### Additional Development Resources
-- Deploy [hot fixes](/docs/articles/sites/code/hot-fixes/) in cases where the development environment isn't ready to go live.
+- Deploy [hot fixes](/docs/articles/sites/code/hot-fixes/) in cases where the Development environment isn't ready to go live.
 - Learn more about the ["pantheon_api.module"](/docs/articles/sites/code/what-is-the-pantheon_api-module).
 - Explore [email on Pantheon](/docs/articles/sites/code/email/).
 - Learn how to [redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/) using configuration files.

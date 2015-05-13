@@ -13,7 +13,7 @@ Choose a name for your site. You cannot change the name of a site after creating
 Click **Install WordPress**  or **Install Drupal**  or any of the distributions available on the Platform.
 ![Choose your start state](/source/docs/assets/images/core-startup.png)
 ### Visit the Dev Installation
-On the Site Dashboard, click **Visit Development Site** to open the development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
+On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ![Visit development site button](/source/docs/assets/images/visit-development-site.png)
 To start adding code or themes, start  with the SFTP connection, or toggle to Git mode to start cloning and pushing.

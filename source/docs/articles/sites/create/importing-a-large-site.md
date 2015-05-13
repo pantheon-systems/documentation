@@ -21,7 +21,7 @@ This article will cover the techniques required to import a large site into Pant
 
 ## Create A New Pantheon Site  
 
-From your pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
+From your Pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
 
 ## Import the Code
 

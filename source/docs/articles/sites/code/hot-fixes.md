@@ -5,7 +5,7 @@ category:
   - developing
 keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix, deploy hot fix, quick fix, orphan commit, orphan commits, test hot fix, deploy hot fix, test hotfix, deploy hotfix
 ---
-Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.
+Sometimes it's necessary to push a quick fix without pushing everything that's been going on in Dev. This is called a "hotfix", and this article will help you do it on Pantheon.
 
 ## Requirements
 
