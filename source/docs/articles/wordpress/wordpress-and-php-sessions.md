@@ -30,6 +30,6 @@ Command line users can use this quick snippit to test:
 
 `curl -Is https://www.getpantheon.com|grep PHPSESS|wc -l`
 
-Obviously you should substitute your site url in there, but the desired output is "0" (zero).
+Obviously you should substitute your site URL in there, but the desired output is "0" (zero).
 
 If your site is overly agressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on wordpress.org to alert the author to the problem and share your solution.

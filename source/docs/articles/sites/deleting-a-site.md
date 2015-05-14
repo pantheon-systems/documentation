@@ -21,6 +21,6 @@ You will notice that the confirmation dialog requires you to enter the site titl
 
 ![Delete site confirmation dialog with site title entry callout](/source/docs/assets/images/desk_images/259805.png)
 
-After deleting a site, you will be returned to your Sites & Account dashboard. Note you'll have an extra Dev site slot since you just deleted a site.
+After deleting a site, you will be returned to your Sites & Account Dashboard. Note you'll have an extra Dev site slot since you just deleted a site.
 
 ![Sites & account dashboard](/source/docs/assets/images/desk_images/259808.png)

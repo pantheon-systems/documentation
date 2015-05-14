@@ -10,7 +10,7 @@ keywords: wordpress, jetbrains, phpstorm
 
 [JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins.
 
-For more detailed information, see [WordPress Development using PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/WordPress+Development+using+PhpStorm). This document focuses on integrating and showcasing the PhpStorm workflow.
+For detailed information, see [WordPress Development using PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/WordPress+Development+using+PhpStorm). This document focuses on integrating and showcasing the PhpStorm workflow.
 
 ## Clone the Code Repository
 If you do not already have one, [create a WordPress site](/docs/articles/wordpress/starting-wordpress-site/). Next, copy the code to your local workstation using [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) or [Git](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
@@ -21,7 +21,7 @@ If you do not already have one, [create a WordPress site](/docs/articles/wordpre
 1. Click **Create New Project** and name your project.
 1. Verify the file path for the new project.
 1. Select **WordPress Plugin** as the project type, and click **OK**.
-1. Provide the root directory for your local WordPress site, and click **OK**.
+1. Provide the root directory for your local WordPress site, and click **OK**.  
 ![PHPStorm WordPress root directory prompt](/docs/assets/images/phpstorm-root-dir.png)
 
 There will not be any files open within your project once you complete these steps. You will find a PHP file in the project's root, which contains the standard plugin header for WordPress.
@@ -34,8 +34,8 @@ Many WordPress plugin developers use the command line tool [WP-CLI](http://wp-cl
 You can configure PHPStorm to recognize WP-CLI from within your project by following these steps:
 
 1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **+**.
-1. Choose the tool **WP-CLI**, and click **OK**
-1. Select **Executable Available** and enter the file path to your local `wp` directory and click **OK**.
+1. Choose the tool **WP-CLI**, and click **OK**.
+1. Select **Executable Available** and enter the file path to your local `wp` directory and click **OK**.  
  ![Configuring wp-cli path for PHPStorm](/source/docs/assets/images/path-to-wp-phpstorm.png)
 1. Click **OK** to save the changes.
 

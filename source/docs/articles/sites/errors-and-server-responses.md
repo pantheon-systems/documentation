@@ -16,7 +16,7 @@ If you feel that you reached one of these messages in error, please submit a sup
 
 ### Pantheon 401 Unauthorized
 ![](/source/docs/assets/images/desk_images/184676.png)  
-"This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their dashboard security.  
+"This site is locked. Please contact the administrator for access." This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as users can set environment access from their Dashboard security.  
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
@@ -29,7 +29,7 @@ Pantheon also prevents public access via the webserver to private files, .htacce
 
 ### Pantheon - 404 Unknown Site
 ![](/source/docs/assets/images/desk_images/184679.png)  
-"The hostname ... is unknown. Please double-check that this is the right url. If so, make sure it matches your dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
+"The hostname ... is unknown. Please double-check that this is the right url. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
 ### Pantheon - 502 Bad Gateway
 ![](/source/docs/assets/images/desk_images/184849.png)<br />
@@ -52,7 +52,7 @@ Pantheon also prevents public access via the webserver to private files, .htacce
 
 We could increase the nginx queue above 100, but it would only mask the problem for longer. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
-This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the Application Container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
+This can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/articles/sites/settings/selecting-a-plan/).
 
 ### Pantheon - 503 Database not responding
 ![](/source/docs/assets/images/desk_images/184855.png)<br />
@@ -128,4 +128,4 @@ In the best of all possible worlds, there are no slow queries, all external call
 
 ## Handle More Traffic
 
-See our article on [debugging performance bottlenecks](/docs/articles/sites/code/debugging-slow-performance) for details on how to streamline your site to handle additional traffic.
+See [debugging performance bottlenecks](/docs/articles/sites/code/debugging-slow-performance) for details on how to streamline your site to handle additional traffic.
