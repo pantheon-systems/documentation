@@ -43,13 +43,13 @@ The dashboard integration is intended to provide developers with the most action
 
 You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
 
-    terminus drush --site=#site --env=#env --filter=site_audit
+    terminus drush help --site=#site --env=#env --filter=site_audit
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 You can also execute a full report in HTML format.
 
-    terminus drush --site=#site --env=#env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+    terminus drush aa --site=#site --env=#env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 
 #### Are there plans for supporting Drupal 6 sites?
 
