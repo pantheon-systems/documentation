@@ -5,7 +5,9 @@ category:
   - developing
 keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix, deploy hot fix, quick fix, orphan commit, orphan commits, test hot fix, deploy hot fix, test hotfix, deploy hotfix
 ---
-Sometimes it's necessary to push a quick fix without pushing everything that's been going on in dev. This is called a "hotfix", and this article will help you do it on Pantheon.
+For Experts only. You should not need to attempt this if you use [Multidev](/docs/articles/sites/multidev) and keep commits from reaching Dev that you do not intend on deploying.
+
+We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
 
 ## Requirements
 
@@ -62,7 +64,10 @@ Make your hotfixes and commit them locally. Then tag and push them to test by cr
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.</div>
 
-If your tests are good, you can use the "Pull Code" option on the dashboard to deploy your hotfix. This will automatically create a new live tag for you and deploy it.
+If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently the deploys interface does not enable hotfix tags on test to be deployed directly to live.
+
+    git tag -a pantheon_live_2 -m "Deploying my hotfix"
+    git push origin pantheon_live_2
 
 ## Orphan Commits
 
