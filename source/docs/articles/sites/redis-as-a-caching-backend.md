@@ -3,9 +3,8 @@ title: Redis as a Caching Backend
 description: Understand how to use Redis as a caching mechanism.
 category:
     - developing
+keywords: redis, caching, what is redis, how to enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
 ---
-## About Redis
-
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Redis
@@ -42,7 +41,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/articles/sit
 
 The common community module for Drupal to use Redis is simply called [redis](http://drupal.org/project/redis). Enabling it on Pantheon takes only a few steps:
 
-1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
+1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org. Only the 7.x-2.x branch of the Redis module is currently supported for Drupal 7.x sites on Pantheon.
 
 2. Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
 
@@ -99,15 +98,11 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 7. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
 
 8. Check that Redis is working. If the Redis Cache Connection string is being generated, Redis is enabled. Connect to test that its working:
-
 ![Redis connect string](/source/docs/assets/images/desk_images/301638.png)
+ - For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information."
 
-  - For Drupal 7 visit `/admin/config/development/performance/redis` and open "Connection Information." 
-
-![](/source/docs/assets/images/desk_images/71423.png)
-
-  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
-
+ ![](/source/docs/assets/images/desk_images/71423.png)
+ - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 ## Using the Redis command-line client
 
 You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon hosted Redis server for debugging, you'll need to install Redis locally. If you don't already have Redis installed, it can be downloaded from [http://redis.io/download](http://redis.io/download).

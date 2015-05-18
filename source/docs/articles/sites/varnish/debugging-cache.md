@@ -3,9 +3,8 @@ title: Debugging Cache
 description: Learn how to resolve caching errors.
 category:
   - debugging
+keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 ---
-## Clear Varnish Caches
-
 There are three ways to clear all Varnish caches if you are using Drupal and three ways if you are using WordPress.
 
 ### Drupal
@@ -15,7 +14,7 @@ The first two require the **pantheon\_api** module to be enabled in order to all
 2. Via [Terminus](https://github.com/pantheon-systems/cli): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
 
-**Note:** Varnish caches cannot be selectively cleared.
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Varnish caches cannot be selectively cleared.</div>
 
 
 ### WordPress

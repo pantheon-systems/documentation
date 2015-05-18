@@ -3,8 +3,8 @@ title: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your database by moving to InnoDB.
 category:
   - debugging
+keywords: innodb, mysql, convert mysql tables, myisam, convert myisam to innodb, how to convert mysql tables, sql tables, innodb tables, mysql performance, sql performance
 ---
-## Overview
 Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.
 
 Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
@@ -13,7 +13,8 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 
 ##Simple Script
 
-**Note:** You must be a Pantheon customer to use this script.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>:You must be a Pantheon customer to use this script.</div>
 
 1. Save the code in a file with the extension .php and SFTP it up to your site.
 2. Place it in the code directory of your website.
@@ -28,7 +29,7 @@ Here's the browser version of the script:
 
 ##Advanced Method
 
-If you're not a Pantheon customer, or you want to run the script from the command line, use this script.
+If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
 ###Before You Begin
 
@@ -42,6 +43,7 @@ Here is the command line script:
 <script src="https://gist.github.com/calevans/9943627.js"></script>
 
 Here are the parameters you will need to configure before running the script:
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt>host</dt>
 	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd>
@@ -53,7 +55,7 @@ Here are the parameters you will need to configure before running the script:
   <dd>This is your MySQL password for the user you specified in the line above.</dd>
   <dt>database</dt>
   <dd>This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.</dd>
-</dl>
+</dl></div>
 
 Now, save the file. Then from a command window execute the program.
 

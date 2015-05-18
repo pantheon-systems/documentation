@@ -4,11 +4,11 @@ description: Learn how to incorporate non-web-accessible data on Pantheon's plat
 category:
     - development
     - drupal
+keywords: drupal, private files, files, private keys, private
 ---
-## Overview
 Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
-
-**Note**: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.</div>
 
 ## Private Files and Uploads In Drupal
 
@@ -54,4 +54,7 @@ This can be done via [Terminus](https://github.com/pantheon-systems/cli):
     $: terminus drush --site=<site> --env=<env> vget uc_credit_encryption_path
     uc_credit_encryption_path: "private"
 
-**Note**: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
+
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
+</div>

@@ -4,10 +4,8 @@ description: Learn how to identify common problems with performance speeds and d
 category:
   - debugging
   - going-live
-
+keywords: performance, slow, slow performance, poor performance, debug, troubleshoot slow site, slow sites, troubleshoot performance, php error, php errors, watchdog, database query, database queries, php slow, php execution, execute php, caching, cache, drupal performance, wordpress performance
 ---
-## Overview
-
 When your site is fast, everybody wins. When it’s slow, nobody's happy...so how can you fix it? In this article, we’ll discuss the most common causes for performance problems, demonstrate how to diagnose bottlenecks, and provide actionable solutions for developers.
 
 ## Every PHP Error Slows Execution
@@ -15,7 +13,6 @@ When your site is fast, everybody wins. When it’s slow, nobody's happy...so ho
 An often ignored cause of bad performance is [PHP errors within site code](/docs/articles/sites/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
 Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP based project.
-
 ​ ![](/source/docs/assets/images/desk_images/200873.png)  
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
 <table>
@@ -81,21 +78,13 @@ Compounding the issue, writing those errors to watchdog takes time and is a bloc
 Don’t shoot the messenger - disabling db\_log will not fix bad code, and ignoring the problem is not going to make it go away.  
 
 As a graphic example, if your slowest database operation is an INSERT to watchdog, then you really should address the problem and fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking literally 70.6% of the execution time.  
-
-
-![](/source/docs/assets/images/desk_images/200891.png)  
-
-
+ ![](/source/docs/assets/images/desk_images/200891.png)  
 Learn more about [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files).
 
 
 ## Too Many Database Queries
 The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/docs/articles/sites/newrelic/new-relic-performance-analysis) by going to the Map tab, which will show you how the various low-level components in your application are performing together.  
-
-
-
-![](/source/docs/assets/images/desk_images/200890.png)
-
+ ![](/source/docs/assets/images/desk_images/200890.png)<br />
 Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high in my opinion. In the upper-right, the average query duration is shown. That’s actually very respectable.  
 
 
@@ -119,11 +108,7 @@ Other caching systems that aren’t on by default that should be enabled include
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.  
-
-
-![](/source/docs/assets/images/desk_images/200898.png)  
-
-
+ ![](/source/docs/assets/images/desk_images/200898.png)<br />
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.  
 
 
@@ -142,7 +127,7 @@ Cache misses are by nature slow - whatever needs to be cached is performed and t
 
 There are a large number of caches involved in every single request, including:
 
-- [Varnish](/docs/articles/architecture/edge/varnish) - spread out across multiple servers, and the cache is not shared between servers.
+- [Varnish](/docs/articles/sites/varnish) - spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/articles/sites/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
 - [Drupal](https://drupal.org/node/326504) and [Redis](/docs/articles/sites/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.

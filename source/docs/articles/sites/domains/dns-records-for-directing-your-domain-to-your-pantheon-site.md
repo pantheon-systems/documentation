@@ -1,11 +1,10 @@
 ---
 title: DNS Records for Directing Your Domain to Your Pantheon Site
-description: Learn how to adjust DNS settings for your domain in order to redirect traffic to your Pantheon site.
+description: Recommended DNS configurations for pointing a domain to a Pantheon site.
 category:
   - developing
+keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, dns records for https, dns records for http, dns records for http sites, dns records for https sites
 ---
-## Overview
-
 The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/docs/articles/going-live/).
 
 ### Pantheon Does Not Manage Your Domain Name or DNS For Your Site
@@ -20,13 +19,13 @@ You should configure the DNS for both your non-www (bare domain) and www domain,
 2. DNS A Record for non-www domain
 3. [Redirect non-www to www in settings.php or wp-config.php](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 
-See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
+See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) and [Domains and SSL Tool](/docs/articles/sites/domains) for more information.
 
 
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites
 
 These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's dashboard for the specific DNS records that will successfully route traffic to your site.
-
+<div class="alert alert-info" role="alert">
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
 	<dd>edge.live.getpantheon.com</dd>
@@ -38,18 +37,17 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 	<dd>2001:4801:7901:0000:c5ce:526c:0000:000f</dd>
 	<dt>Nameservers:</dt>
 	<dd>We do not have nameservers at Pantheon because we do not manage any DNS services. Use the nameservers given to you by your DNS provider.</dd>
-</dl>
+</dl></div>
 ## Pantheon DNS records for HTTP sites
 
 Your site dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
-
 ![Recommended DNS records](/source/docs/assets/images/pantheon-dns-records-for-http-sites.png "Pantheon Live environment dashboard showing the domains tool with links to recommended dns-records highlighted")
-
 ## DNS Records for HTTPS Sites (SSL/TLS)
 
 If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
 
 ## DNS Vocabulary Terms
+<div class="alert alert-info" role="alert">
 <dl>
 	<dt><a href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS</a></dt>
 	<dd>The Domain Name System (DNS) translates human readable domain names to numerical IP addresses</dd>
@@ -69,7 +67,7 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 	<dd>Core routing Internet protocol intended to replace IPv4, supports more addresses</dd>
 	<dt><a href="http://en.wikipedia.org/wiki/Time_to_live#DNS_records">TTL</a></dt>
 	<dd>Length of time for requests to a DNS server to be cached; measured in seconds</dd>
-</dl>
+</dl></div>
 
 ## Frequently Asked Questions
 

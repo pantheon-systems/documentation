@@ -3,6 +3,7 @@ title: Local Development Setup and Operation
 description: Suggestions and solutions for working locally.
 category:
 - getting-started
+keywords: local development, pantheon, develop locally, developing
 ---
 While Pantheon provides a number of options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. While Pantheon cannot troubleshoot or support local development solutions, we can provide some suggestions and known working solutions.  
 
@@ -12,7 +13,7 @@ If you're looking for a self-contained local development solution on Mac, check 
 
 To begin, you'll need:
 
-- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/architecture/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
+- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
 - Git client for tracking code changes.
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync.
 - [Terminus](https://github.com/pantheon-systems/cli)
@@ -21,10 +22,11 @@ To begin, you'll need:
 To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 
 ```
-terminus site clear-caches --site=<site> --env=<env>
+terminus site clear-caches --site=#site --env=#env
 ```
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 There are three parts to any dynamic website:
 
@@ -52,15 +54,16 @@ Next, import the database into your local environment using a MySQL client.
 ````
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
-**Note**: Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
 
 #### Via Terminus
 
 You can also export the database running the following Terminus commands:
 
 ```
-terminus site backup create --element=database --site=<site> --env=<env>
-terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
+terminus site backup create --element=database --site=#site --env=#env
+terminus site backup get --element=database --site=#site --env=#env --to-directory=$HOME/Desktop/ --latest
 ```
 
 This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
@@ -68,8 +71,6 @@ This will create and download the database to your Desktop. Once you have export
 ````
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
-**Note**: Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
-
 ### Get the Files
 
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/docs/articles/local/rsync-and-sftp/).
@@ -78,8 +79,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 
 Run the following Terminus commands:
 ```
-terminus site backup create --element=files --site=<site> --env=<env>
-terminus site backup get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
+terminus site backup create --element=files --site=#site --env=#env
+terminus site backup get --element=files --site=#site --env=#env --to-directory=$HOME/Desktop/ --latest
 ```
 This will create and download a backup of the site's files to your Desktop.
 

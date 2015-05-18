@@ -3,6 +3,7 @@ title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a site owner.
 category:
     - developing
+keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
 ---
 When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
 
@@ -21,7 +22,8 @@ Once the user has been added to the project, they will receive a welcome email n
 
 **Remove a Team Member**
 
-**Note**: All users can be removed except the site owner.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: All users can be removed except the site owner.</div>
 
 In the Team modal, click the X next to the user you want to delete.
 
@@ -47,7 +49,8 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 [Redis](/docs/articles/sites/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 [SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
-**Note**: Only enable SSL for your Live environment. It is not needed in Dev or Test.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>:  Only enable SSL for your Live environment. It is not needed in Dev or Test.</div>
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.

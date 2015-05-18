@@ -4,10 +4,9 @@ description: Configure LDAP on your Pantheon site.
 category:
   - going-live
   - developing
+keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-## LDAP as a Provider  
-
-This is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+LDAP as a Provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
@@ -17,7 +16,8 @@ Using LDAP as a consumer of services is supported on the platform and will work 
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
 
-**Note**: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
 
 ### Drupal
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
@@ -30,7 +30,7 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/sites/code/private-files/) in your codebase: `SITEROOT/private`.
+If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/drupal/private-files) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
 
@@ -79,9 +79,10 @@ The majority of problems with LDAP on Pantheon come from misconfigurations. Pant
 
 The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
-    terminus drush --site=<site> --env=<env> scr ldap-test.php
+    terminus drush --site=#site --env=#env scr ldap-test.php
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 The entire script:
 

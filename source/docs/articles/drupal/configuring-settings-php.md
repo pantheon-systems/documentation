@@ -3,17 +3,15 @@ title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
 category:
   - developing
+keywords: drupal, settings.php, database configuration, configuration
 ---
-## Overview
-
 The Drupal system configuration in code is set in:
 
     sites/default/settings.php
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php--no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-**Note**: You should never put the database connection information for a Pantheon database within your settings.php. These will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.
-
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should <em>NEVER</em> put the database connection information for a <em>Pantheon</em> database within your settings.php. These credentials <em>will</em> change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
 ## Pantheon Articles on Settings.php
 
 The following articles include techniques and configurations for settings.php on Pantheon:

@@ -4,21 +4,18 @@ description: Learn how to point your domain's DNS to Pantheon using Gandi.
 category:
   - going-live
   - managing
+keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, gandi, point gandi domain to pantheon, redirect gandi domain to pantheon, gandi domain dns
 ---
-**Note**: This guide assumes you have already registered your domain through Gandi.net.
-
-## Your Domains
-
 Gandi provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.
 
-
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: This guide assumes you have already registered your domain through Gandi.net.</div>
 ## Domain Configuration Page
 
 The domain portal contains all relevant registration information for your domain. For pointing DNS, we are concerned with the DNS configuration section on the right.
 
-In traditional webhosting, you could often times just point your domain name to your hosts nameservers and, after propagation, all would resolve as desired. Proper resolution for your Pantheon site depends on CNAMEs and A records. To configure these entries, you'll have to edit the DNS Zone Record. Click **Edit the Zone** to proceed to the configuration page.
-
-![Gandi DNS Zones](/source/docs/assets/images/desk_images/198816.png)​
+In traditional webhosting, you could often times just point your domain name to your hosts nameservers and, after propagation, all would resolve as desired. Proper resolution for your Pantheon site depends on CNAMEs and A records. To configure these entries, you'll have to edit the DNS Zone Record. Click **Edit the Zone** to proceed to the configuration page.<br />
+ ![Gandi DNS Zones](/source/docs/assets/images/desk_images/198816.png)​
 ## Configuring Zone Records on Gandi
 
 Gandi requires you to make a copy of your default Zone Record to ensure that you don't botch your default configuration. Click **Make New Version** to create a new version to edit.
@@ -39,7 +36,7 @@ We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS docum
     @ 300 IN A 50.56.49.247
 
 Change the www CNAME to match the following:
-**Note**: Be sure to include the trailing "."
-
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Be sure to include the trailing "."</div>
 
     www 300 IN CNAME edge.live.getpantheon.com.

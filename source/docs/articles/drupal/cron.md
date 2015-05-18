@@ -3,10 +3,9 @@ title: Cron for Drupal
 description: Understand Pantheon cron execution and management.
 category:
   - developing
+keywords: drupal, cron, cron execution, run cron,
 ---
-## Overview
-
- **Note**: Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
+Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
@@ -19,33 +18,26 @@ For every site environment, Pantheon executes cron at the top of each hour to al
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
 There is no way to configure when Pantheon executes Drupal cron.
-
-**Important**: Setting the value to "Never" will be ignored; cron will always run at least hourly.
-
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Setting the value to "Never" will be ignored; cron will always run at least hourly.
+</div>
 ## Managing Cron
 
 Cron can be managed via Drupal's admin interface at `admin/system/config/cron`.
 
-There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.
-
+There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.<br />
 ![](/source/docs/assets/images/desk_images/73173.png)
-
 Clicking **Run cron** will run all scheduled tasks.
-
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
-
 Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
 
-    terminus drush --site=<site> --env=<env> cron
+    terminus drush --site=#site --env=#env cron
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
-
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
-
 ![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
-
 If cron has been recently run, entries will appear in the log. The two entries featured in the screenshot below are evidence that cron has run and a cron task called "cron\_example" has run.
-
 ![](/source/docs/assets/images/desk_images/74077.png)
 
 ### How Can I Schedule Cron to Run More Often?
@@ -58,7 +50,7 @@ There is a two part workaround; first, keeping the site awake, then using a diff
 
 To keep the site active, some users have used [https://www.pingdom.com/](https://www.pingdom.com/) to access their site as often as once a minute. In conjunction, the use of the Drupal module [http://drupal.org/project/elysia\_cron](http://drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both an user interface and API.
 
-By having pingdom visit the site once a minute like a vistor, the site stays active and elysia\_cron has an opportunity to act every minute (if it needs to).
+By having pingdom visit the site once a minute like a visitor, the site stays active and elysia\_cron has an opportunity to act every minute (if it needs to).
 
 This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
 
@@ -87,16 +79,12 @@ You can check the log messages through the Drupal Admin interface, as mentioned 
 
 You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
 
-    terminus drush --site=<site> --env=<env> wd-show --type='cron'
+    terminus drush --site=#site --env=#env wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
 Yes - in Drupal at `admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu as shown below, then save the configuration. 
-
 ![](/source/docs/assets/images/desk_images/74128.png)  
-
- 
-
 ## Resources
 
 - [Drupal.org Community Documentation - Set up cron](http://drupal.org/cron)

@@ -3,10 +3,10 @@ title: rsync and SFTP
 description: Transfer large files using an SFTP client or rsync.
 category:
   - getting-started
+keywords: rsync, sftp, files, transfer, file transfer, drupal, wordpress
 ---
-## Overview
-
- **Note**: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.</div>
 
 
 If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
@@ -15,7 +15,8 @@ This method allows for transfer of unlimited data "server-to-server", which is m
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-**Note**: You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.</div>
 
 ## SFTP
 
@@ -26,7 +27,7 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and site UUID to connect; copy/pasting this example exactly will not work.
 
 ```
-    ENV=dev
+    export ENV=dev
     # Usually dev, test, or live
     export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
     # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
@@ -63,7 +64,8 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
 
-**Note:** Regardless of which platform you are using, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
 
 ## Examples
 

@@ -4,6 +4,7 @@ description: Administer and maintain your site from your local Drush installatio
 category:
   - getting-started
   - developing
+keywords: drush, command line, drupal, terminus drush, cli
 ---
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
@@ -12,7 +13,7 @@ Pantheon does not need the settings.php for your site to work, and your Drupal 
 ## Terminus Drush and Local Drush
 Drush-savvy developers should also install and utilize [Terminus](https://github.com/pantheon-systems/cli), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote drush calls on your environments without having drush installed locally.
 
-Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
 ## Drush Versions
 Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
@@ -41,8 +42,7 @@ Once authenticated to Pantheon with `$ terminus auth login`, update your local a
 ```
 ### Manually Download and Move the File
 
-To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.
-
+To get started, go to your Pantheon Dashboard and click  **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.<br />
 ![Link to Pantheon Drush Aliases](/source/docs/assets/images/desk_images/169655.png)
 
 ###Installing the Pantheon Drush Aliases

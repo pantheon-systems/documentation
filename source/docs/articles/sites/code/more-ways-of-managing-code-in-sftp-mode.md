@@ -1,10 +1,10 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
-description: Understand alternative code management options when using SFTP Mode.
+description: Understand alternative code management options when using SFTP Mode, such as command line tools.
 category:
   - managing
+keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin, wp-cli, drush, terminus, command line tools, cli, clis, comand line tool
 ---
-## Overview
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.
 
 - Use the wp-admin web interface to manage your WordPress code.
@@ -16,32 +16,26 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site.
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your dev environment. It works for plugins:
-
-![Installing WP Plugins](/source/docs/assets/images/desk_images/278882.png)
-
-And for themes:
-
-![Installing WP Themes](/source/docs/assets/images/desk_images/278883.png)
-
+ ![Installing WP Plugins](/source/docs/assets/images/desk_images/278882.png)<br />
+And for themes:<br />
+ ![Installing WP Themes](/source/docs/assets/images/desk_images/278883.png)<br />
 Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
-**Note**: You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
 
 ## Installing Modules and Themes with Drupal's Update Manager
 
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface). When in SFTP mode this will work seamlessly on Pantheon.
 
 You'll need to grab the url to the code you want installed from Drupal.org:
-
-![Drupal.org views module](/source/docs/assets/images/desk_images/278879.png)
-
+ ![Drupal.org views module](/source/docs/assets/images/desk_images/278879.png)<br />
 And then paste it into Drupal's update manager UI. You can also upload a tarball or zip file from your desktop:
-
-![Installing via update manager](/source/docs/assets/images/desk_images/278880.png)
-
+ ![Installing via update manager](/source/docs/assets/images/desk_images/278880.png)<br />
 Note that you still need to turn these changes into _commits_ in your Pantheon site dashboard. Committing code will keep it saved, and allow you to deploy it out to the test and live environments.
 
-**Note**: You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!
+<div class="alert alert-danger" role="alert">
+<strong>Note</strong>: You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!</div>
 
 ## Installing Code with Terminus: the Pantheon CLI
 

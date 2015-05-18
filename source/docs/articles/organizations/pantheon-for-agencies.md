@@ -3,7 +3,7 @@ title: Pantheon for Agencies
 description: Scale your agency, rule the world. Sign up for P4A and get started.
 category:
 - managing
-
+keywords: p4a, pantheon for agencies, agency profile, agency, team, add member, add members, add site, add sites, organization site, organization sites, p4a dashboard, agency dashboard, pantheon for agencies dashboard, products, custom upstream, custom upstreams, add product, add custom upstream
 ---
 Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all of your sites, people, and support tickets in one place. Land a support contract? Teaming up with another agency on a site? We’ve got you covered. Follow these instructions to get started.
 
@@ -14,20 +14,17 @@ Log in to your Pantheon Account and navigate to https://dashboard.pantheon.io/or
 ## Invite Collaborators
 
 Enter the email addresses of the other members of your agency and assign them roles. Don’t worry, starting to add a third collaborator will reveal a fourth field, and so on.
-
-![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
+ ![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
 
 ## Add Sites
 
 You’re now prompted to add existing Pantheon sites that you own to your organization. Your agency will be added to the site teams as a “Supporting Organization”.
-
-![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
+ ![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
 
 ## Tour the Dashboard
 
 Your Organization Dashboard has five tabs.
-
-![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
+ ![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
 
 ### Sites
 

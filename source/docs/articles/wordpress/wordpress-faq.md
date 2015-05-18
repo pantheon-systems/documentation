@@ -4,6 +4,7 @@ description: Questions to Frequently Asked Questions concerning WordPress on the
 category:
   - getting-started
   - WordPress
+keywords: wordpress, faqs, import, configure
 ---
 ## Getting Started
 

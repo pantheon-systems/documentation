@@ -1,8 +1,9 @@
 ---
 title: Caching - Advanced Topics
-description: Learn advanced details about cached and authentication.
+description: Learn advanced details about cache and authentication.
 category:
   - developing
+keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
 ---
 ## Allow a User to Bypass the Cache
 
@@ -10,15 +11,15 @@ Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cac
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
-
-
 ## Ignoring GET Parameters
 
-For the purposes of caching, Varnish ignores any GET parameter that is prefixed with two underscores to be compatible with services such as AdWords. The double-underscore prefix for params and cookies which can be ignored by the backend is an emerging standard.
+For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server. The double-underscore prefix for parameter keys and cookie names is a standard convention used by front-end code to indicate a value that can be safely ignored on the back-end.
 
-For example, <tt>?__dynamic_id=1234</tt> would be ignored, but <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> would be considered distinct pages.
+For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> are considered distinct pages.
 
-Query keys will still be passed to the application server, but the values will be changed to PANTHEON\_STRIPPED to indicate that the URL is being altered. For more information, see [PANTHEON\_STRIPPED parameters](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
+The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values).
 
 ## External Authentication (e.g. Facebook login)
 

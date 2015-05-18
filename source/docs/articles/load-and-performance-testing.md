@@ -3,6 +3,7 @@ title: Load and Performance Testing
 description: Learn how to monitor internal execution performance.
 category:
   - going-live
+keywords: going live, testing, performance, new relic, varnish
 ---
 We highly recommend load testing a site both prior and post launch to ensure your site is optimally configured.
 
@@ -13,7 +14,8 @@ You should:
 - [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.
 - Have access to a command-line environment, preferably with administrative privileges.
 
-**Please Note: Load testing should only be performed on the Live environment**. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: <strong>Load testing should only be performed on the Live environment</strong>. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</div>
 
 ## Performance vs. Scalability
 
@@ -26,7 +28,7 @@ High-performance is the ability to deliver a page in under a second; scalability
 
 ## Verify Varnish is Working
 
-To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+To verify that the [Varnish](/docs/articles/sites/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
 
     curl -I http://live-yoursite.pantheon.io
     HTTP/1.1 200 OK
@@ -44,9 +46,10 @@ To verify that the [Varnish](/docs/articles/architecture/edge/varnish) cache is 
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/architecture/edge/varnish) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
-**Until Varnish has been correctly configured, don't worry about further testing.**
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Until Varnish has been correctly configured, don't worry about further testing.</div>
 
 ## Timing an Uncached Page Request
 
@@ -89,7 +92,8 @@ If you're not satisfied with the response time, focus should be shifted to optim
 
 In order to test scale and throughput, we use AB, a simple tool made available by the Apache Project.
 
-**Note: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.**
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
 
 Run the following command:
 
@@ -145,7 +149,8 @@ As with `curl`, you can run `ab` with the following parameters: `-C NO_CACHE=1` 
 
 The output provides insight into the requests per second, the most critical element in regards to the scalability of a site. Pay attention to the 90/95% response time as well, as this gives an idea of how the site is actually performing. Check that the number of failed requests is 0; if it's not, this should be investigated.
 
-**Note:** Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.</div>
 
 ## Performance Goals
 

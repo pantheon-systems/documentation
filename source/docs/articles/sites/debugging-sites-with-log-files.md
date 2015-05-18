@@ -1,10 +1,11 @@
 ---
 title: Debugging Sites with Log Files
-description: Learn to debug sites using log files with Drupal.
+description: Learn to debug sites using database log files.
 category:
   - developing
+keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs
 ---
-## Database Logging
+One of the key ways to find issues on your website is to check your database logs to isolate current or potential problems.
 
 ### Drupal
 
@@ -14,12 +15,15 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
 ```
-terminus drush --site=<site> --env=<env> watchdog-show
+terminus drush --site=#site --env=#env watchdog-show
 ```
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+
 Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
 ```
-terminus drush --site=<site> --env=<env> watchdog-show --tail
+terminus drush --site=#site --env=#env watchdog-show --tail
 ```
 
 ### WordPress

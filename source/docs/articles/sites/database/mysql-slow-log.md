@@ -3,6 +3,7 @@ title: MySQL Slow Log
 description: Learn how to use a site's MySQL Slow Log to identify serious performance issues.
 category:
 - debugging
+keywords: mysql slow log, logs, sql slow logs, sql log, mysql slow logs, mysql log, mysql performance, mysql troubleshooting, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
 ---
 Analyzing the MySQL Slow Log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
 
@@ -57,7 +58,8 @@ To download the environment's MySQL Slow Log, use the [method outlined here](/do
     $  
 
 
-**Note**: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</div>
 
 ## Analyze The Mysql Slow Log
 

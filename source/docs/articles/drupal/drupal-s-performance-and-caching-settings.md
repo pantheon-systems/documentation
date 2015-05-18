@@ -3,38 +3,32 @@ title: Drupal's Performance and Caching Settings
 description: Use Varnish caching to maximize your site's performance.  
 category:
   - drupal
+keywords: drupal, performance, cache, caching, varnish, varnish caching
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/docs/articles/architecture/edge/varnish).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/docs/articles/sites/varnish).
 
 ## Drupal 7 Performance Configuration
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ## Caching
-
 ![](/source/docs/assets/images/desk_images/180072.png)  
-Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
+Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
-
 ![](/source/docs/assets/images/desk_images/180073.png)  
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
- ![](/source/docs/assets/images/desk_images/180074.png)
-
+ ![](/source/docs/assets/images/desk_images/180074.png)<br />
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 mins, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ## Bandwidth Optimization
- ![](/source/docs/assets/images/desk_images/180075.png)
-
-On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  
-
-
- ![](/source/docs/assets/images/desk_images/180077.png)
-
+ ![](/source/docs/assets/images/desk_images/180075.png)<br />
+On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
+ ![](/source/docs/assets/images/desk_images/180077.png)<br />
 On the live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both checked. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ## Drupal 6
@@ -69,7 +63,6 @@ As above, can help with logged-in performance by preventing re-generation of blo
 ### Optimize CSS and JavaScript Files
 
 This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser-render times significantly. You might want to turn it off in dev if you are building a theme (or developing JS), but this should always be Enabled in production.
-
 ![Drupal 6 Performance cache settings](/source/docs/assets/images/desk_images/31793.png)
 
 ### Contributed Modules

@@ -1,22 +1,21 @@
 ---
-title: Migrating Sites from Other Hosts
-description: General instructions for preparing and importing sites to Pantheon.
+title: Migrate Sites from Other Hosts
+description: General instructions for preparing and migrating remotely hosted sites to Pantheon.
 category:
 - getting-started
+keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
-## Overview
-
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, The goal is the same. Move to Pantheon and enjoy the freedom to build awesome sites..
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live.
 
-Note: We're revising our migration documentation. Our existing import documents include:
+We're revising our migration documentation. Our existing import documents include:
 
- - [Importing and Existing Site to Pantheon](/docs/articles/users/importing-an-existing-site)
- - [Importing a Large Site](/docs/articles/users/importing-a-large-site)
- - [Importing Drush Archives with Terminus](/docs/articles/users/importing-drush-site-archives-with-terminus)
+ - [Importing and Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+ - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
+ - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
- - [Clone a Drupal Site using Drush](/docs/articles/users/clone-a-drupal-site-using-drush)
+ - [Clone a Drupal Site using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up
@@ -131,13 +130,9 @@ terminus sites create [--product=<productid>] \
 ```
 
 In the dashboard, you create a new site and select **Import a site** when asked to choose a Start State.
-
-![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
-
+ ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
-
-![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
-
+ ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 Selecting the link to provide separate code, files, and database archives will give you the option to import each individually via an upload or URL field.
 
 ### Distributions
@@ -147,8 +142,7 @@ If your site uses a distribution powered by an alternate upstream, such as Comme
 First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
 Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
-
-![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
+ ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 ## Test Your Site
 
@@ -156,7 +150,7 @@ We advocate using a behavioral testing framework to automate user acceptance tes
  - Using the Launch Check tool in the site dashboard
  - Enabling our free New Relic Add on
  - Automated user acceptance testing with Behat, Selenium, or Casper.js
- - Load testing using tools like [Blazemeter](/docs/articles/sites/load-testing-with-blazemeter)
+ - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Logging in and clicking around your site.
 
 

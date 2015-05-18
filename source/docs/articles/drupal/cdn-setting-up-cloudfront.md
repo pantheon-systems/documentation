@@ -1,9 +1,10 @@
 ---
-title: CDN Setting up CloudFront with Drupal
+title: Setting Up CloudFront CDN with Drupal
 description: Get started using the Amazon CloudFront CDN.
 category:
     - drupal
     - developing
+keywords: drupal, CDN, content delivery network, cloudfront distribution, cloudfront
 ---
 ## Before You Begin
 
@@ -18,9 +19,9 @@ CloudFront is a pull-only content distribution network. All requests for assets 
 ## Set Up A Drupal CloudFront Distribution
 
 The first step in setting-up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/WorkingWithDownloadDistributions.html#DownloadDistValuesDomainName).
-
-**Note**: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
-
+<div class="alert alert-info">
+<strong>Note</strong>: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+</div>
 1. In the CloudFront console, click **Create Distribution**.
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
 3. Complete the fields to get the basic download distribution up and running.
@@ -46,9 +47,9 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 5. Click **Save Configuration**. Your assets should now be coming from your CloudFront distribution.
 
 ## Verify Assets Are Coming From the CloudFront Distribution
-
-**Note**: Execute the following steps as an anonymous user (logged out).
-
+<div class="alert alert-warning">
+<strong>Note</strong>: Execute the following steps as an anonymous user (logged out).
+</div>
 1. Create an article on your site and upload an image to it.
 2. View the article in your browser.
 3. Right-click the image and copy its location.
