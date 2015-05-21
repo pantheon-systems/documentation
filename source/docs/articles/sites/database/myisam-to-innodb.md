@@ -29,7 +29,7 @@ Here's the browser version of the script:
 
 ##Advanced Method
 
-If you're not a Pantheon customer, or you want to run the script from the command line, use this script.
+If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
 ###Before You Begin
 
