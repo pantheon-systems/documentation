@@ -7,6 +7,10 @@ category:
   - managing
 
 ---
+- **HTTPS**: (HTTP over SSL or HTTP Secure) is the use of Secure Socket Layer (SSL) or Transport Layer Security (TLS) as a sublayer under regular HTTP application layering. HTTPS encrypts and decrypts user page requests as well as the pages that are returned by the Web server.
+- **SSL**: (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral.
+- **TLS**: Transport Layer Security (TLS) is a protocol that ensures privacy between communicating applications and their users on the Internet. When a server and client communicate, TLS ensures that no third party eavesdrops or tampers with any message. TLS is the successor to the Secure Sockets Layer (SSL).
+
 We recommend organizations that are working to achieve PCI compliance while using Pantheon services engage a third-party service provider like CloudFlare to terminate SSL/TLS connections.  Terminating SSL/TLS connections with a service provider that specializes in providing SSL/TLS gives you greater control over your configuration and ensures your service will track closely with changes to PCI DSS.
 
 #### When will your migration from SSL/TLS 1.0 be completed? 
