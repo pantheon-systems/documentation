@@ -6,8 +6,6 @@ category:
   - managing
   - going-live
 ---
-## Overview
-
 Pantheon provides distinct base domains for the consistent access of the Development, Testing, and Live production environments for each site on the platform from the moment they are launched.
 
 All sites on Pantheon can be divided into three base domain URL patterns.
