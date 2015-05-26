@@ -6,7 +6,7 @@ category:
   - going-live
 keywords: custom upstream, distribution, remote repository, upstream
 ---
-Create a custom version of WordPress or Drupal, and submit information for us to add to the platform. 
+Create a custom distribution of WordPress or Drupal and add it to the Pantheon platform. This will enable users of the affiliated organization to create sites using a specialized codebase as a starting point.
 
 ## 1. Create a Remote Repository.
 
@@ -84,7 +84,7 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. 
+Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
 ```
 terminus site wipe [--site=<site>] [--env=<env>]
 ```
@@ -99,7 +99,7 @@ When testing is complete, merge your pull requests into or git push to the branc
 
 ## 5. Submit Product Information.
 
-After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon One support tab, titled "Product submission for [organization]"" and include the following information about the distribution:
+After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
 - Upstream URL (https)\*\*
