@@ -56,13 +56,11 @@ git push origin master
 
 ### Create the Testing Site
 
-Create a (core) Drupal or WordPress site on Pantheon that will be used for testing the upstream.
+Create a (core) Drupal or WordPress site associated with your partner organization that will be used for testing the upstream.
 
 ```
 terminus sites create upstream-test
 ```
-
-Upgrade the site plan to Business to enable Multidev and multiple app-servers on Live for testing.
 
 Clone down the Pantheon repository.
 
