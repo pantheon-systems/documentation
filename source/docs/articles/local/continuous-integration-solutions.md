@@ -4,13 +4,13 @@ description: Run automated unit and integration tests.
 category:
   - going-live
   - developing
-keywords: continuous integration, tests, testing, terminus, drupal, 
+keywords: continuous integration, tests, testing, terminus, drupal,
 ---
 Continuous Integration is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by opening a support ticket.
 
 ## Terminus Command-Line Interface
 
-[Terminus](/docs/articles/local/terminus-the-pantheon-command-line-interface/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon dashboard can be performed with Terminus, including:
+[Terminus](/docs/articles/local/terminus-the-pantheon-command-line-interface/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
 
 - Site creation
 - [Multidev environment](/docs/articles/sites/multidev) creation and removal

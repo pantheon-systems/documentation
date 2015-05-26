@@ -6,7 +6,7 @@ category:
   - developing
 keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-LDAP as a Provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+LDAP as a provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
@@ -59,9 +59,6 @@ Additional configurations, such as whether to perform server certificate checks,
     // LDAP - Never perform server certificate check in a TLS session.
     putenv('LDAPTLS_REQCERT=never');
 
-For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
-
-For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Frequently Asked Questions
 
@@ -159,3 +156,8 @@ foreach ($settings as $host => $setting) {
   var_dump($entries);
 }
 ````
+
+##See Also
+For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
+
+For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).

@@ -10,6 +10,7 @@ Gandi provides you with a nice, clean list of your domains. Click on the domain 
 
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: This guide assumes you have already registered your domain through Gandi.net.</div>
+
 ## Domain Configuration Page
 
 The domain portal contains all relevant registration information for your domain. For pointing DNS, we are concerned with the DNS configuration section on the right.

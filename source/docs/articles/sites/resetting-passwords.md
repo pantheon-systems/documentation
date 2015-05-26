@@ -5,7 +5,7 @@ category:
   - managing
 keywords: reset password, reset drupal password, reset wordpress password, password, reset
 ---
-If you need to reset your Pantheon dashboard user password, [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
+If you need to reset your Pantheon Dashboard user password, [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
 
 ## Drupal Site User Login
@@ -14,9 +14,9 @@ If you need to reset your Drupal site user login, append `/user/password` to you
 
     http://dev-mysite.pantheon.io/user/password
 
-In the password reset form, enter either the username or email address you used to sign up for the administrative account, and you will receive an email with a link. When you click the link in your email, you will be logged in to your site and brought to your user profile edit page, where you can reset your password. You need to enter your new password at this point. Don’t surf away from the page without setting a new password, or else you will have to go through this whole process again the next time you want to login to your Drupal site.
+In the password reset form, enter either the username or email address you used to sign up for the administrative account, and you will receive an email with a link. When you click the link in your email, you will be logged in to your site and brought to your user profile edit page, where you can reset your password. You need to enter your new password at this point. Don’t leave the page without setting a new password, or else you will have to go through this  process again the next time you want to login to your Drupal site.
 
-Please keep in mind that your site password is stored in a database, so whatever you set in the Development environment may be different than Test or live, unless you keep the database content synced between the environments using the Pantheon dashboard workflow tools or during deployment.
+Please keep in mind that your site password is stored in a database, so whatever you set in the Development environment may be different than Test or live, unless you keep the database content synced between the environments using the Pantheon Dashboard workflow tools or during deployment.
 
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](https://github.com/pantheon-systems/cli) command for generating one-time login links:
 
@@ -30,10 +30,10 @@ $ terminus drush --site=#site --env=#env user-login
 ## WordPress User Login
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](https://github.com/pantheon-systems/cli).
 
-1. From the main login form, click **Lost Your Password?** beneath the log in form.  
-2. Enter your username or password and click **Get New Password**.
+1. From the main login form, click **Lost Your Password?**.  
+2. Enter your username or password, and click **Get New Password**.
 
-This will send an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
+You will receive an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
 
 If you have access to the site view Terminus, you can also reset any user's password from the command line.
 

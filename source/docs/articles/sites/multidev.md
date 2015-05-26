@@ -9,7 +9,7 @@ Multidev is cloud development environments for teams and allows a developer to f
 
 ## Benefits of Multidev
 
-**Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their dashboard.
+**Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
 
 **No more surprises.** Each developer on your team gets their own cloud development environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
@@ -41,7 +41,7 @@ There are a number of terms used throughout the Multidev workflow:
 
 ## Getting Started
 
-1. From your site's Dashboard, click the **Multidev** tab.
+1. From your Site Dashboard, click the **Multidev** tab.
 2. Click **Fork New Cloud Environment**. This will create a new fork of the Dev environment, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
 4. Click **Fork**.  
@@ -55,7 +55,7 @@ If you create an environment for an existing Git branch, content can be cloned f
 
 ## Access a Branch Environment
 
-From the dashboard, click **Multidev**, then select the name of the environment.
+From the Dashboard, click **Multidev**, then select the name of the environment.
 
 Git instructions are shown in the Connection Mode of the code page. Each environment will have its own independent Connection Info and URL.
 
@@ -136,4 +136,4 @@ Not at this time, but it is on the development roadmap.
 
 #### Can you backup and restore a branch environment?
 
-Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.ß
+Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.

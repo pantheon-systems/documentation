@@ -53,7 +53,7 @@ The "Age" field should be greater than 0. If the max age is not greater than 0, 
 
 ## Timing an Uncached Page Request
 
-Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the Application Containers backend:
+Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the application containers backend:
 
     time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
 
@@ -156,7 +156,7 @@ The output provides insight into the requests per second, the most critical elem
 
 Response times vary from site to site depending on the size of your modules stack, database queries, etc. Generally, anything under 1 second is considered excellent, but this is up to you.
 
-Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional Application Containers.
+Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional application containers.
 
 ## Testing Tools
 

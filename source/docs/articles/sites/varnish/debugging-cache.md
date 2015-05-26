@@ -18,13 +18,13 @@ The first two require the **pantheon\_api** module to be enabled in order to all
 
 
 ### WordPress
-1. From the WordPress Admin Menu Select Settings->Pantheon Cache. Then Click the "Clear Cache" button to clear all the caches
+1. From the WordPress Admin Menu Select Settings->Pantheon Cache. Then Click the "Clear Cache" button to clear all the caches.
 1. From the command line you can use Terminus:
 
  ```
  $ terminus site clear-caches --site=<site> --env=<env>
  ```
-1. From the Pantheon Dashboard: Clear Caches
+1. From the Pantheon Dashboard: Clear Caches.
 
 
 ## No HTTP Cache Headers in Drupal
@@ -36,7 +36,7 @@ If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 a
 
 
 ## Theme Images Not Refreshing
-If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon dashboard and clicking the **Clear Caches** button.
+If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 ### Drupal
 To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, you can also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.

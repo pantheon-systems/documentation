@@ -11,8 +11,6 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.  
 
-
-
 The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
 
 - Smart full-text search
@@ -49,7 +47,7 @@ After filling out the appropriate fields, click **Save** to create your index.
 
 After the index has been saved, you will be provided with an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI.
 
-**Note:** Copy the URI before moving forward
+**Note:** Copy the URI before moving forward.
  ![](/source/docs/assets/images/desk_images/272832.png)
 
  
@@ -87,7 +85,7 @@ If not, you’ll want to retrace the steps in this document to make sure that yo
 
 ## Customize Your Configuration
 
-If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See example below:
+If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See the example below:
  ![](/source/docs/assets/images/desk_images/275362.png)
 This will present you with a page where you can edit and add files:
  ![](/source/docs/assets/images/desk_images/275363.png)​

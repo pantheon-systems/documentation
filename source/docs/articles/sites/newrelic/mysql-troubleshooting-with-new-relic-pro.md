@@ -25,7 +25,7 @@ Click **Transactions**. The default sort is "Most Time Consuming" but this can b
 At times systems like Drupal's Watchdog will appear at the top. Generally speaking, that's an indication of a MySQL database under duress. Look for complex entities, such as Panels and Views, or custom functionality that's specific to the site in question. 
 
 ## Review Log Entries
-Click on the most likely subject. New Relic will refresh and load a detail of that transaction. Scroll downw, and note the Transaction traces.  
+Click on the most likely subject. New Relic will refresh and load a detail of that transaction. Scroll down, and note the Transaction traces.  
  ![](/source/docs/assets/images/desk_images/333267.png)  
 Click on the worst transaction trace, and New Relic will load a complete stack trace of that particular transaction. In this specific example, 1,790,000ms is definitely something to be looked at.  
  ![](/source/docs/assets/images/desk_images/333268.png)  
@@ -39,7 +39,7 @@ The slow log will be titled something like "endpointf123f456-slow.log" within th
  ![](/source/docs/assets/images/desk_images/333275.png)  
 Using the information gleaned from the New Relic trace, let's find the full query in the slow log. First, choose a distinctive part of the query. In this case I used "grep -c users\_comment.uis AS users\_comment\_uid" to get a count of the number of times that field has been included in the slow log. If the log is small enough (or if you have enough RAM), you can load it into your favorite textpad or IDE to do this instead.  
  ![](/source/docs/assets/images/desk_images/333284.png)​  
-Now it's time to see what's going on. Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (NOT RECOMMENDED!) or clone your Live database to your Dev or Test environment via your Pantheon dashboard. Once this is done, connect to the MySQL server of your choice and run the query.  
+Now it's time to see what's going on. Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (NOT RECOMMENDED!) or clone your Live database to your Dev or Test environment via your Pantheon Dashboard. Once this is done, connect to the MySQL server of your choice and run the query.  
  ![](/source/docs/assets/images/desk_images/333278.png)  
 If the result bears out your suspicions, as this one does, you can delve in deeper to find out just why the query is behaving so badly. Type " [EXPLAIN](http://dev.mysql.com/doc/refman/5.0/en/explain.html) " and then re-paste the query. MySQL will print out an extended information on how it’s [executing the query](http://dev.mysql.com/doc/refman/5.0/en/using-explain.html). Look for really odd things. For example, this one really doesn't look that bad at all, except the users table is referenced twice via alias and there isn't a single key index being used to search them.
  ![](/source/docs/assets/images/desk_images/333283.png)  

@@ -3,13 +3,13 @@ title: Known Limitations
 description: A list of Pantheon's known limitations.
 keywords: known limitations, multisite, applications, use more than one application, large directories, inodes, streaming media, large file, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
 ---
-This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back, as we are keeping it up to date as we improve Pantheon to address these limitations.
+This page is used to keep track of common/known limitations. Most of Pantheon's limitations stem from its distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 
 ## Multisite
 
 We do not support [Drupal Multisite](http://drupal.org/documentation/install/multi-site). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
-For WordPress see [Can I use WordPress Multisite?](https://pantheon.io/docs/articles/wordpress/wordpress-faq/#can-i-use-wordpress-multisite?)
+For WordPress, see [Can I use WordPress Multisite?](https://pantheon.io/docs/articles/wordpress/wordpress-faq/#can-i-use-wordpress-multisite?)
 
 ## One Application per Site
 
@@ -25,7 +25,7 @@ Drupal itself is capable of managing uploaded content into different directories
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See [the email documentation](/docs/articles/sites/code/email), for more details and suggestions.
+See [the email documentation](/docs/articles/sites/code/email) for more details and suggestions.
 
 ## Streaming Media
 
@@ -49,7 +49,7 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 
 All enterprise customers and customers with SSL will have a dedicated incoming IP to route public traffic. The actual IP address location where code executes can change on Pantheon, as application containers are migrated throughout the infrastructure.
 
-Typically, it is not possible to support access to external web services via an IP address based restriction, for example LDAP or FirstData. There's no way to predict what IP address your code will be executing "from". We offer the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) for Enterprise customers, as a solution to this problem.
+Typically, it is not possible to support access to external web services via an IP address based restriction, for example, LDAP or FirstData. There's no way to predict what IP address your code will be executing "from". We offer the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) for Enterprise customers, as a solution to this problem.
 
 ## Maintenance Mode
 

@@ -37,9 +37,9 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Frequently Asked Questions
 
-#### Why does site audit have more reports than what's shown in the dashboard?
+#### Why does site audit have more reports than what's shown in the Dashboard?
 
-The dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
+The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
 #### How can I manually run site audit on my site?
 
@@ -47,7 +47,7 @@ You can get a list of all available site audit reports using [Terminus](https://
 
     terminus drush help --site=#site --env=#env --filter=site_audit
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 You can also execute a full report in HTML format.
 

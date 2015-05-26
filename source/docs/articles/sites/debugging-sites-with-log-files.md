@@ -38,7 +38,7 @@ define('WP_DEBUG', true);
 
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
-From your dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
+From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
 
 Once connected, you'll see several directories:
 
@@ -48,7 +48,7 @@ Once connected, you'll see several directories:
  - **`newrelic.log`** - New Relic log; check if an environment is not logging.
  - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt.
  - **`nginx-error.log`** - Webserver error log.
- - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the dashboard.
+ - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 

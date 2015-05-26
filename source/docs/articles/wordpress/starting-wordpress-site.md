@@ -41,12 +41,12 @@ When complete, just click the button to visit your Pantheon Dashboard.
 <!-- #6 -->
 ## Visit New Site Dashboard
 
-Congratulations! Your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
+Congratulations! Your Pantheon site environments have been configured. From the Dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
 <!-- #7 -->
 ## Launch Development Site
 
-You will eventually have three environments (Development, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your dashboard to launch the site.
+You will eventually have three environments (Dev, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your Dashboard to launch the site.
 ![](/source/docs/assets/images/desk_images/248569.png)
 
 <!-- #8 -->

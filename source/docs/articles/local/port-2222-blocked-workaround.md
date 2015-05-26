@@ -24,7 +24,7 @@ Following is an example with some Pantheon credentials plugged in (site UUID omi
 
     ssh -L3333:codeserver.dev.<site UUID>.drush.in:2222 user@other-server.com
 
-You should now be logged in to the other server, but simultaneously you've just set up your local port 3333 as a tunnel to your Pantheon git repo.
+You should now be logged in to the other server, but simultaneously you've just set up your local port 3333 as a tunnel to your Pantheon Git repo.
 
 ## Clone the Repo
 
@@ -40,15 +40,15 @@ Now you should have a fully cloned repo that you can push and pull from.
 
 ### Optional: Add a Remote
 
-If you use GitHub or Bitbucket in parallel you can run something like the following (as with any remote git operations, the tunnel must be open already):
+If you use GitHub or Bitbucket in parallel you can run something like the following (as with any remote Git operations, the tunnel must be open already):
 
     git remote add pantheon ssh://codeserver.dev.<site UUID>@localhost:3333/~/repository.git
 
 ## Footnotes
 
-If any remote git commands stop working, check back in the original terminal window to see if the tunnel has collapsed, reopen if necessary.
+If any remote Git commands stop working, check back in the original terminal window to see if the tunnel has collapsed, reopen if necessary.
 
-For more info and troubleshooting, check out the following post:  
+For more information, check out the following post:  
  [http://randyfay.com/content/git-over-ssh-tunnel-through-firewall-or-vpn](http://randyfay.com/content/git-over-ssh-tunnel-through-firewall-or-vpn)
 
 Props to Thomas MacLean for contributing to this documentation!

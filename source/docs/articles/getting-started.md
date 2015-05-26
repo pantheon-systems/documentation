@@ -24,23 +24,23 @@ Enter a name for your Pantheon site. This and the site development URL are perma
 If you want to develop directly on Pantheon, you can start with one of the many distributions available on the platform. For more details, see [choosing your start state](/docs/articles/sites/create/choosing-start-state).
 ![Core Startup](/source/docs/assets/images/core-startup.png)
 ### Import Manually
-If you have an existing Drupal or WordPress site that you want to import, choose "Import manually". For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
+If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
 
 ## Interact With Your Code
 There are two ways to add and update your site's code: Git source code management and SFTP.
 #### Git Connection Mode
-Git is a well-known, industry standard revision control system for managing site code. For more information, see [starting with git](/docs/articles/local/starting-with-git).  
+Git is a well-known, industry standard revision control system for managing site code. For more information, see [Starting with Git](/docs/articles/local/starting-with-git).  
 ![Connection Mode Dashboard](/source/docs/assets/images/desk_images/180025.png)  
-To use Git, you'll need to go to your dashboard and add a public SSH key.  
+To use Git, you'll need to go to your Dashboard and add a public SSH key.  
 ![Add SSH Key Dashboard](/source/docs/assets/images/add-ssh-key-dashboard.png)  
 For detailed instructions, see [generating SSH keys](/docs/articles/users/generating-ssh-keys/).
 #### SFTP Connection Mode
 You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 ![](/source/docs/assets/images/desk_images/180036.png)
 ## Credentials on Pantheon
-Your getpantheon.com username and password is only used to access your dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
+Your getpantheon.com username and password is only used to access your Dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
 
-There are a number of credentials available for developers, each of which can be found in the dashboard. For details, see the following articles:
+There are a number of credentials available for developers, each of which can be found in the Dashboard. For details, see the following articles:
 
 - [rsync and SFTP](/docs/articles/local/rsync-and-sftp)
 - [Starting with Git](/docs/articles/local/starting-with-git/)

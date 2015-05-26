@@ -8,7 +8,7 @@ keywords: p4a, pantheon for agencies, agency profile, agency, team, add member, 
 Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all of your sites, people, and support tickets in one place. Land a support contract? Teaming up with another agency on a site? We’ve got you covered. Follow these instructions to get started.
 
 ## Create Your Agency Profile
-Log in to your Pantheon Account and navigate to https://dashboard.pantheon.io/organizations (Need an account? [Sign up for Pantheon](https://dashboard.pantheon.io/register)). Fill out the form. We ask for evidence that you have developed a few websites and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
+Log in to your Pantheon Account and navigate to https://dashboard.pantheon.io/organizations. Need an account? [Sign up for Pantheon](https://dashboard.pantheon.io/register). Fill out the form. We ask for evidence that you have developed a few websites and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
 ![Pantheon Agency Registration Page at https://dashboard.pantheon.io/register](/source/docs/assets/images/pantheon-for-agencies-registration.png)
 
 ## Invite Collaborators

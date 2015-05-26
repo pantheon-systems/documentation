@@ -20,7 +20,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 2. Target site UUID (found in the dashboard URL)
 3. Target environment name (Dev, Test, or Live)
 4. The service you want to connect to (dbserver or cacheserver)
-5. Target port for the service ("Connection Info" tab in the site environment dashboard)
+5. Target port for the service ("Connection Info" tab in the site environment Dashboard)
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
@@ -51,7 +51,7 @@ These instructions require the use of the SSH command-line client.
 
 ## Manually Create an SSH tunnel to a Redis Cache Server
 
-These instructions require using the redis command-line client; see the [main redis article](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client) for details.  
+These instructions require using the Redis command-line client; see [Using the Redis Command Line](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client).  
 
 From the site environment, get the one-line connection string. It will be in the following format:
 

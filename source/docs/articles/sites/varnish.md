@@ -24,7 +24,7 @@ See [Drupal's Performance Settings](/docs/articles/drupal/drupal-s-performance-a
 
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the web utility at [http://varnishcheck.getpantheon.com/](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by sending in a support ticket.
+Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by sending in a support ticket.
 
 ##See Also
 [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)

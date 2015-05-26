@@ -8,6 +8,7 @@ keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix
 For Experts only. You should not need to attempt this if you use [Multidev](/docs/articles/sites/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
 We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
+>>>>>>> master
 
 ## Requirements
 
