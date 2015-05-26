@@ -75,7 +75,7 @@ Sites that consume services using CORS, such as Amazon S3 CORS, do work on Panth
 
 Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
-## LESS (css)
+## CSS Preprocessors
 
 Pantheon does not currently support LESS or Sass/Compass CSS preprocessor languages. LESS and Sass will need to be pre-compiled to make traditional CSS stylesheets before being pushed to the platform.
 
