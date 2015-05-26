@@ -77,7 +77,7 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 ## LESS (css)
 
-Pantheon does not currently support Less. Less will need to be compiled to make traditional CSS stylesheets before being pushed to the platform.
+Pantheon does not currently support LESS or Sass/Compass CSS preprocessor languages. LESS and Sass will need to be pre-compiled to make traditional CSS stylesheets before being pushed to the platform.
 
 ## Background Process
 
