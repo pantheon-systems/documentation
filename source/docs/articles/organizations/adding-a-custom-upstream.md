@@ -6,7 +6,7 @@ category:
   - going-live
 keywords: custom upstream, distribution, remote repository, upstream
 ---
-By following this guide, you'll go from creating a custom version of WordPress or Drupal, to having it ready for us to add to the platform for members of your organization to spin up.
+Create a custom version of WordPress or Drupal, and submit information for us to add to the platform. 
 
 ## 1. Create a Remote Repository.
 
@@ -44,8 +44,9 @@ git pull git://github.com/populist/panopoly-drops-7.git master
 
 ## 2. Add Your Code.
 
-Follow conventions for using the /profiles directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
-Push the repository to your upstream's remote location.
+Follow conventions for using the `/profiles` directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
+
+Push the repository to your upstream's remote location.
 
 ```
 git push origin master
@@ -85,7 +86,10 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. <!--Terminus command: `drush psite-ewipe $UUID dev`-->
+Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. 
+```
+terminus site wipe [--site=<site>] [--env=<env>]
+```
 
 #### Acceptance Tests
 
