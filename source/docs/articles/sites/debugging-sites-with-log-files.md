@@ -101,3 +101,20 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 #### My Drupal database logs are huge. Should I disable dblog?
 
 The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
+
+### Accessing logs in environements with multiple containers
+
+The Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each server the following shell script can be used.
+
+```
+SITE_UUID=35e28158-6ec7-987s-91a9-cfe91f5a97a0
+for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
+do
+mkdir $app_server
+sftp -o Port=2222 live.$SITE_UUID@$app_server << !
+  cd logs
+  lcd $app_server
+  mget *.log
+!
+done 
+```
