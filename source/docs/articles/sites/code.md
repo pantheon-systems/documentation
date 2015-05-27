@@ -8,14 +8,12 @@ The Code tool within the Pantheon Dashboard on any environment allows you to int
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/interface-dev-code-sftp-commit.png)
 The Dev environment also provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's codebase upstream. Updates will appear in the Code tool when they are committed to the upstream repository.
-<div class="alert alert-info">
   <dl>
     <dt>Upstream</dt>
       <dd>A code repository that serves as a common package for your web application.</dd>
     <dt>Repository</dt>
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
-</div>
 
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: The Test and Live environments do not have write access to code outside of the deployment process.</div>

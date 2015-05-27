@@ -47,7 +47,6 @@ Your Site Dashboard recommends the specific DNS settings you should use. These c
 If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
 
 ## DNS Vocabulary Terms
-<div class="alert alert-info" role="alert">
 <dl>
 	<dt><a href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS</a></dt>
 	<dd>The Domain Name System (DNS) translates human readable domain names to numerical IP addresses</dd>
@@ -67,7 +66,7 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 	<dd>Core routing Internet protocol intended to replace IPv4, supports more addresses</dd>
 	<dt><a href="http://en.wikipedia.org/wiki/Time_to_live#DNS_records">TTL</a></dt>
 	<dd>Length of time for requests to a DNS server to be cached; measured in seconds</dd>
-</dl></div>
+</dl>
 
 ## Frequently Asked Questions
 
