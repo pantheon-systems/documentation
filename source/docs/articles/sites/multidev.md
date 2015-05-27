@@ -22,7 +22,6 @@ Branching is a standard mechanism for duplicating source code under revision con
 
 There are a number of terms used throughout the Multidev workflow:
 
-<div class="alert alert-info" role="alert">
 <dl>
 <dt>commit</dt>
 <dd>Record snapshot to history.</dd>
@@ -37,7 +36,7 @@ There are a number of terms used throughout the Multidev workflow:
 <dt>merge</dt>
 <dd>Combine contents of a&nbsp;branch into another, like a bug fix branch into master.</dd>
 <dt>master</dt>
-<dd>Name of default branch; deployed to Pantheon Dev, Test and Live environments.</dd></dl></div>
+<dd>Name of default branch; deployed to Pantheon Dev, Test and Live environments.</dd></dl>
 
 ## Getting Started
 

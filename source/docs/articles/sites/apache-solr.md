@@ -123,7 +123,6 @@ Some customers have reported success using external Solr service providers such 
 
 ## Apache Solr Vocabulary
 
-<div class="alert alert-info" role="alert">
 <dl>
 	<dt>bias</dt>
 	<dd>Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.</dd>
@@ -141,7 +140,7 @@ Some customers have reported success using external Solr service providers such 
 	<dt>schema.xml</dt>
 	<dd>Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see <a href="http://wiki.apache.org/solr/SchemaXml">http://wiki.apache.org/solr/SchemaXml</a>.
 </dd>
-</dl></div>
+</dl>
 
 ## Additional Help
 
