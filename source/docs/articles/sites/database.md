@@ -2,6 +2,8 @@
 title: Database Workflow Tool
 description: Learn about the database that runs in your site.
 keywords: mysql, sql, database, db, databases
+category:
+  - developing
 ---
 The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](http://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally depending on your workflow. For a comprehensive list of MySQL settings, [access your database](/docs/articles/local/accessing-mysql-databases/#database-connection-information) and use the [SHOW VARIABLES](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) statement.
 

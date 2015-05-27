@@ -2,6 +2,8 @@
 title: Pantheon Dashboard Code Tool
 description: Learn how to work with your site's code on Pantheon.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
+category:
+  - developing
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 ## Navigate the Code Tool
