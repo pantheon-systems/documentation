@@ -12,7 +12,11 @@ Next, you'll need to determine if your imports will be via one archive, or multi
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
+
 ## Distributions
+
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>We upgrade to the latest version of core. If you use a distribution that requires an older version, you may experience 403 errors for images.</strong>
+</div>
 
 If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
