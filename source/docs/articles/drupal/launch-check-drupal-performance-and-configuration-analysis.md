@@ -5,7 +5,7 @@ category:
   - developing
 keywords: launch check, drupal, analysis, database, status, report
 ---
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports can be found in the site dashboard under the **Status** tab and are accessible by site team members.
+Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports can be found in the site dashboard under the **Status**git tab and are accessible by site team members.
 
 ![status tab on live environment](/source/docs/assets/images/status-tab.png)
 
@@ -45,13 +45,13 @@ The dashboard integration is intended to provide developers with the most action
 
 You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
 
-    terminus drush help --site=#site --env=#env --filter=site_audit
-<div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+    terminus drush --site=<site> --env=<env> --filter=site_audit
+
+**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
 
 You can also execute a full report in HTML format.
 
-    terminus drush aa --site=#site --env=#env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+    terminus drush --site=<site> --env=<env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 
 #### Are there plans for supporting Drupal 6 sites?
 
@@ -73,7 +73,7 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](https://github.com/pantheon-systems/cli) command to execute Site Audit directly on your Pantheon site:
 
-    terminus drush --site=#site --env=#env -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
+    terminus drush --site=<site> --env=<env> -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
 
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 
