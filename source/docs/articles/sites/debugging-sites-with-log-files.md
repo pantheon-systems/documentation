@@ -107,7 +107,8 @@ The best recommended practice is to find and resolve the problems. PHP notices, 
 Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each application container, use the following shell script:
 
 ```
-SITE_UUID=(value from dashboard url)
+# Site UUID from Dashboard URL
+SITE_UUID=UUID
 for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
 do
 mkdir $app_server
@@ -116,5 +117,5 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
   lcd $app_server
   mget *.log
 !
-done 
+done
 ```
