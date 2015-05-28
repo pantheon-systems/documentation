@@ -69,9 +69,9 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 
 ## Edit Code
 
-1. Clone your content locally via [Git](/docs/articles/local/starting-with-git/) or make edits in [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
-2. On your Dashboard, click **Code**.
-3. Type in a commit message if you made edits via SFTP and click the **Commit** button.
+1. Edit your content locally via [Git](/docs/articles/local/starting-with-git/) or utilize on-server development via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
+2. Within the Pantheon Dashboard, click **Code**.
+3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git will be shown in the Commit Log.
 
 ## Merge Code
 
