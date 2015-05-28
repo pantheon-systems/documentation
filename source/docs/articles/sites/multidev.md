@@ -66,6 +66,12 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 4. Select Database, Files, or both.
 5. Choose whether to execute update.php after cloning, and click **Clone**.
 
+## Edit Code
+
+1. Edit your content locally via [Git](/docs/articles/local/starting-with-git/) or utilize on-server development via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
+2. Within the Pantheon Dashboard, click **Code**.
+3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git will be shown in the Commit Log.
+
 ## Merge Code
 
 1. Select the environment that you want to merge into. For example, if you want to merge your work into master on Dev, click the Dev tab. Otherwise, select the branch environment.
