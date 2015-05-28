@@ -67,7 +67,7 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 4. Select Database, Files, or both.
 5. Choose whether to execute update.php after cloning, and click **Clone**.
 
-# Edit Code
+## Edit Code
 
 1. Clone your content locally via [Git](/docs/articles/local/starting-with-git/) or make edits in [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
 2. On your Dashboard, click **Code**.
