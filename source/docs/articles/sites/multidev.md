@@ -67,6 +67,12 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 4. Select Database, Files, or both.
 5. Choose whether to execute update.php after cloning, and click **Clone**.
 
+# Edit Code
+
+1. Clone your content locally via [Git](/docs/articles/local/starting-with-git/) or make edits in [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
+2. On your Dashboard, click **Code**.
+3. Type in a commit message if you made edits via SFTP and click the **Commit** button.
+
 ## Merge Code
 
 1. Select the environment that you want to merge into. For example, if you want to merge your work into master on Dev, click the Dev tab. Otherwise, select the branch environment.
