@@ -1,5 +1,5 @@
 ---
-title: Pantheon Dashboard Code Tool
+title: Code in the Pantheon Dashboard
 description: Learn how to work with your site's code on Pantheon.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
