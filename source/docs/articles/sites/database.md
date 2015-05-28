@@ -1,5 +1,5 @@
 ---
-title: Database Workflow Tool
+title: Database Workflow on Pantheon
 description: Learn about the database that runs in your site.
 keywords: mysql, sql, database, db, databases
 ---
