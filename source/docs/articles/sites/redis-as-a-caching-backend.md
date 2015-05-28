@@ -3,7 +3,7 @@ title: Redis as a Caching Backend
 description: Understand how to use Redis as a caching mechanism.
 category:
     - developing
-keywords: redis, caching, what is redis, how to enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
+keywords: redis, caching, what is redis, enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -55,7 +55,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 <div class="alert alert-info">
 <strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
-  ```
+```
       // All Pantheon Environments.
       if (defined('PANTHEON_ENVIRONMENT')) {
         // Use Redis for caching.
@@ -68,7 +68,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
         // Use Redis for Drupal locks (semaphore).
         $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
       }
-  ```
+```
 
 5. _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
 
@@ -198,3 +198,54 @@ If you see the following message:
 You skipped a step; settings.php must include the cache\_backport files. Add the following to settings.php before the redis configuration:
 
     $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
+
+##Frequently Asked Questions
+
+#### What happens when Redis reaches maxmemory?
+
+The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](http://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+
+#### Is Redis set up as an LRU cache?
+
+We are using [allkeys-lru](http://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
+
+```
+cat redis.conf
+port 11455
+timeout 300
+loglevel notice
+logfile /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/logs/redis.log
+databases 16
+save 900 1
+save 300 10
+save 60 10000
+rdbcompression yes
+dbfilename dump.rdb
+dir /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/data/
+requirepass 278801a71e2c4264b7d7b155def62bea
+maxclients 1024
+maxmemory 964689920
+maxmemory-policy allkeys-lru
+appendonly no
+appendfsync everysec
+no-appendfsync-on-rewrite no
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+set-max-intset-entries 512
+activerehashing yes
+```
+
+#### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
+
+Yes. There is a `redis.log` file that is available on the redis container for each environment. You can see where the log files and configuration reside:
+
+```
+$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+sftp> ls -la
+-rw-r--r-- 1 11455 11455 18 Oct 06 05:16 .bash_logout -rw-r--r-- 1 11455 11455 193 Oct 06 05:16 .bash_profile -rw-r--r-- 1 11455 11455 231 Oct 06 05:16 .bashrc -rw-r--r-- 1 0 0 0 Mar 10 19:46 .pantheonssh_login drwxr-x--- 2 0 11455 4096 Nov 10 07:55 certs
+-rw-r--r-- 1 0 0 42 Mar 10 09:46 chef.stamp drwx------ 2 11455 11455 4096 Mar 10 19:46 data
+drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
+-rw------- 1 0 0 2677 Mar 10 09:46 metadata.json -rw-r----- 1 0 11455 531 Nov 10 07:55 redis.conf drwxrwx--- 2 0 11455 4096 Mar 10 09:46 tmp
+sftp> ls -la logs/
+-rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log sftp>
+```
