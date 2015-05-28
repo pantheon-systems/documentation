@@ -7,7 +7,7 @@ category:
 keywords: wordpress, importing, import site
 ---
 ## Overview  
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read [more here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).</div>
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read <a href="/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions">more here</a>.</div>
 
 ##Prepare for Import  
 You will need a zip or tar.gz archive of your site in three separate files:
