@@ -7,16 +7,18 @@ category:
 keywords: import, importing site, pantheon, new site, drupal
 ---
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
- ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
+
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href=“https://codex.wordpress.org/Updating_WordPress#Troubleshooting”>WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+
+![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
+
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
+
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
 ## Distributions
-
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>We upgrade to the latest version of core. If you use a distribution that requires an older version, you may experience 403 errors for images.</strong>
-</div>
 
 If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
