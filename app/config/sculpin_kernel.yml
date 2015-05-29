@@ -3,6 +3,9 @@ sculpin_theme:
     theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
 
+    posts:
+        enabled: false
+
     articles:
         type: path
         path: docs/articles
