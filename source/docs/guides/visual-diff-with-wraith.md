@@ -1,5 +1,5 @@
 ---
-title: Visual Regression Testing with Wraith
+title: Using Wraith for Visual Regression Testing
 description: Learn how to use Wraith for visual regression testing with composite images.
 category:
   - testing
@@ -46,7 +46,7 @@ npm install -g casperjs
 ```
 <hr>
 
-Wraith runs on the command-line and installs as a Ruby gem. If you're running Wraith on Linux you may need to install Ruby first. To install Wraith, run the following command:
+Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
 ```
 gem install wraith
@@ -105,13 +105,13 @@ phantom.exit();
 ```
 Next, the `configs/config.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
-Open `configs/config.yaml`, go to the domains label, and change the default values to two websites you want to visually compare.
+Open `configs/config.yaml`, go to the Domains label, and change the default values to two websites you want to visually compare.
 ```
 domains:
 dev: "http://dev-panopoly-dreams.pantheon.io"
 test: "http://test-panopoly-dreams.pantheon.io"
 ```
-You will also need to add navigation paths in `configs/config.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `uk_index: /uk` item and added some additional pages for Wraith to compare.
+You also need to add navigation paths in `configs/config.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `uk_index: /uk` item and added some additional pages for Wraith to compare.
 ```
 paths:
 home: /
@@ -193,7 +193,7 @@ The command `wraith history` will populate the history_dir with a baseline set o
 
 ## Wraith Artifacts
 
-Wraith's output can be hooked into your continuous integration setup and/or build notification tools. When Wraith performs comparisons it creates a folder for each of the path keys in your configuration file. These folders contain the comparison images along with a text file specifying the amount of numeric change between them. If any of these numbers are greater than zero then a change has been detected and your scripts can react accordingly.
+Wraith's output can be hooked into your continuous integration setup and/or build notification tools. When Wraith performs comparisons, it creates a folder for each of the path keys in your configuration file. These folders contain the comparison images along with a text file specifying the amount of numeric change between them. If any of these numbers are greater than zero, a change has been detected and your scripts can react accordingly.
 
 ## Additional Options
 
