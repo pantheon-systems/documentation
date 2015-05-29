@@ -108,22 +108,27 @@ Next, the `configs/config.yaml` file will need to be modified to crawl and captu
 Open `configs/config.yaml`, go to the domains label, and change the default values to two websites you want to visually compare.
 ```
 domains:
-dev: "http://dev-panopoly-dreams.pantheon.io"
-test: "http://test-panopoly-dreams.pantheon.io"
+  dev: "http://dev-panopoly-dreams.pantheon.io"
+  test: "http://test-panopoly-dreams.pantheon.io"
 ```
 You will also need to add navigation paths in `configs/config.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `uk_index: /uk` item and added some additional pages for Wraith to compare.
 ```
 paths:
-home: /
-login: /user/login
-great-vegetables: /content/great-vegetables
-lovely-vegetables: /content/lovely-vegetables
+  home: /
+  login: /user/login
+  great-vegetables: /content/great-vegetables
+  lovely-vegetables: /content/lovely-vegetables
 ```
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
 Finally, run wraith:
 ```
 wraith capture config
 ```
-Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/snaps/gallery.html` in a web browser to view the results.
+Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
+```
+open shots/gallery.html
+```
 ![Full Screen Diff Example](/source/docs/assets/images/fullscreen-diff.png)
 
 ## Capture with Selectors
