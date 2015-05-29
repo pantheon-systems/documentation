@@ -23,7 +23,7 @@ In the following example, the accidental removal of the date field on the lower 
 
 To begin, you will need to install a scriptable browser without a viewport which allows Wraith to crawl websites and take screenshots. Wraith fully supports PhantomJS for versions between 1.82 and 2.0.0.
 
-Wraith needs the ImageMagick library to do image comparisons. Additionally, Wraith is can use CasperJS to isolate and compare portions of a website with CSS selectors. This is super useful for comparing sites with dynamic content. When installing CasperJS, it's important to use the latest version.
+Wraith needs the ImageMagick library to do image comparisons. Additionally, Wraith can use CasperJS to isolate and compare portions of a website with CSS selectors. This is super useful for comparing sites with dynamic content. When installing CasperJS, it's important to use the latest version.
 
 ### OS X
 
