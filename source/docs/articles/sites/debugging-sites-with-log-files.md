@@ -86,8 +86,9 @@ sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
 ```
-date_format d/%b/%Y:%T %z
-log_format %^ %^ %^ [%d] "%r" %s %b "%R" "%u" %T "%h,^"
+time_format %H:%M:%S %z
+date_format %d/%b/%Y
+log_format %^ %^ %^ [%d:%t]  "%r" %s %b "%R" "%u" %T "%h"
 ```
 
 #### Can I log to the system logger and access syslog?
