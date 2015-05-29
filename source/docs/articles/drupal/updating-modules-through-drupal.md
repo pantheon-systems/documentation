@@ -1,6 +1,6 @@
 ---
 title: Updating Modules Through Drupal
-description: Learn how to update Drupal modules.
+description: Learn how to update contributed Drupal modules through the administrative interface.
 category:
   - developing
   - drupal

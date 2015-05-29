@@ -1,6 +1,6 @@
 ---
 title: Running Drupal 8 on Pantheon
-description: Important information about running Drupal 8.
+description: Important information about installing and running Drupal 8 on your Pantheon site.
 category:
     - drupal
 keywords: drupal, drupal 8

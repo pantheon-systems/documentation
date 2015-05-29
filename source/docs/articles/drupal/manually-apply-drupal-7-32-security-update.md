@@ -1,6 +1,6 @@
 ---
 title: Manually Apply Drupal 7.32 Security Update
-description: Instructions on updating to Drupal 7.32.
+description: Detailed instructions for updating your Pantheon Drupal 7 site to Drupal 7.32.
 category:
   - drupal
 keywords: drupal, update, updating, security,
