@@ -105,7 +105,7 @@ phantom.exit();
 ```
 Next, the `configs/config.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
-Open `configs/config.yaml`, go to the Domains label, and change the default values to two websites you want to visually compare.
+Open `configs/config.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
 ```
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
@@ -121,7 +121,7 @@ paths:
 ```
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
-Finally, run wraith:
+Finally, execute Wraith:
 ```
 wraith capture config
 ```
@@ -134,22 +134,23 @@ open shots/gallery.html
 ## Capture with Selectors
 
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
-1. Install CasperJS. To use selectors you will need to install the latest development version of CasperJS as described in the install section of this guide.
-2. Generate a CasperJS configuration file and navigation script.
-   ```
-   <pre><code>wraith setup_casper</code></pre>
-   ```
-   This should produce the following output:
-   ```
-   create  configs/component.yaml
-   create  javascript/casper.js
-   ```
-3. Edit the new configuration file, configs/component.yaml, to re-add the domains and paths.  Note the path format has changed to support URL components with selectors.
-  ```
+Generate a CasperJS configuration file and navigation script.
+```
+wraith setup_casper
+```
+This should produce the following output:
+```
+create  configs/component.yaml
+create  javascript/casper.js
+```
+Edit the new configuration file, `configs/component.yaml`, to re-add the domains and paths.  Note the path format has changed to support URL components with selectors.
+```
 domains:
-dev: "http://dev-panopoly-dreams.pantheon.io"
-test: "http://test-panopoly-dreams.pantheon.io"
+  dev: "http://dev-panopoly-dreams.pantheon.io"
+  test: "http://test-panopoly-dreams.pantheon.io"
 
 ...
 
@@ -157,9 +158,9 @@ paths:
   header:
     path: /
     selector: "#header"
-  ```
-4. Tweak the capture time in javascript/casper.js to increase the reliability of the screenshot captures. Change this.wait's timeout from 2000 to 10000.
-  ```
+```
+To increase the reliability of the screenshot captures, tweak the capture time in `javascript/casper.js`. Change the `this.wait` timeout from 2000 to 10000.
+```
 casper.start(url, function() {
   this.viewport(view_port_width, 1500).then(function(){
     this.wait(10000, function() {
@@ -173,17 +174,17 @@ casper.start(url, function() {
     });
   });
 });
-   ```
-5. Run Wraith to produce a new gallery from the selectors. Note the generated configuration filename changed to component.yaml. The Wraith command is now:
-   ```
-   wraith capture component
-   ```
-   ![Headers Diff Example](/source/docs/assets/images/headers-diff.png)
+```
+Run Wraith to produce a new gallery from the selectors. Note the generated configuration filename changed to `component.yaml`. To execute this Wraith test, run the following command:
+```
+wraith capture component
+```
+![Headers Diff Example](/source/docs/assets/images/headers-diff.png)
 
 
 ## History Mode
 
-Wraith supports capturing and comparing a single website against previous revisions of itself with a history mode. To set it up, edit the YAML configuration file to remove one of the domains and add a history_dir folder.
+Wraith supports capturing and comparing a single website against previous revisions of itself with a history mode. To set it up, edit the YAML configuration file to remove one of the domains and add a `history_dir` folder.
 
 ```
 domains:
@@ -194,7 +195,7 @@ directory: "shots"​
 history_dir: "shots_history"​
 ```
 
-The command `wraith history` will populate the history_dir with a baseline set of images and the command `wraith latest` will compare them against the current website.<
+The command `wraith history` will populate `history_dir` with a baseline set of images and the command `wraith latest` will compare them against the current website.
 
 ## Wraith Artifacts
 
@@ -202,6 +203,6 @@ Wraith's output can be hooked into your continuous integration setup and/or buil
 
 ## Additional Options
 
-Additonal browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under <a href="https://github.com/BBC-News/wraith/tree/master/configs">configs</a> and <a href="https://github.com/BBC-News/wraith/tree/master/lib/wraith/javascript">javascript</a>.
+More browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under [configs](https://github.com/BBC-News/wraith/tree/master/configs) and [javascript](https://github.com/BBC-News/wraith/tree/master/lib/wraith/javascript).
 
-Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the <a href="https://github.com/BBC-News/wraith">Wraith GitHub repository</a>.
+Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the [Wraith GitHub repository](https://github.com/BBC-News/wraith).
