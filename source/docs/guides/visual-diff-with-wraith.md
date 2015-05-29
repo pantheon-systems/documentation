@@ -1,6 +1,6 @@
 ---
-title: Visual regression testing and perceptual diffing with Wraith
-description: Set up the Drupal reroute_email module.
+title: Visual Regression Testing with Wraith
+description: Learn how to use Wraith for visual regression testing with composite images.
 category:
   - testing
   - Drupal
@@ -10,26 +10,24 @@ authors:
 date: 5/29/2015
 ---
 
-Theme changes, particuarly CSS changes, can have unexpected consequences and visual mistakes can be hard to spot. Visual regression testing uses screenshot comparisons to automatically detect visual changes and report them back to you. This guide will show you how to use <a href="https://github.com/BBC-News/wraith/">Wraith</a>, a visual regression tool, to check for css, layout, graphical and other visual mistakes on your Pantheon websites.
+Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/BBC-News/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.
 
-Wraith works by crawling two websites, taking screenshots of both, and then comparing them pixel by pixel with an image comparison tool. This process produces sets of composite images, also called a visual diffs, that will show you if anything's changed.
+Wraith works by crawling two websites, taking screenshots of both, and then comparing them pixel by pixel with an image comparison tool. This process produces sets of composite images, also known as visual diffs, that illustrate changes.
 
-This is what a visual diff image looks like. In the following screenshot, the accidental removal of the date field on the lower right caused spacing and other changes. These changes were automatically detected and highlighted in red.
+In the following example, the accidental removal of the date field on the lower right caused spacing and other changes. These changes were automatically detected and highlighted in red.
 
 ![Visual Regression Date Change](/source/docs/assets/images/visual-date-diff.png)
 
 
 ## Install
 
-Wraith uses a scriptable browser without a viewport, also known as a headless browser, to crawl websites and take screenshots. Wraith fully supports PhantomJS, a headless webkit/chrome browser, for versions between 1.82 and 2.0.0. Wraith also needs the ImageMagick library to do image comparisons.
+To begin, you will need to install a scriptable browser without a viewport which allows Wraith to crawl websites and take screenshots. Wraith fully supports PhantomJS for versions between 1.82 and 2.0.0.
 
-Wraith can also use CasperJS to isolate and compare portions of a website with CSS selectors. This is super useful for comparing sites with dynamic content. When installing CasperJS, it's important to use the latest version, presently this is 1.1-beta3.
+Wraith needs the ImageMagick library to do image comparisons. Additionally, Wraith is can use CasperJS to isolate and compare portions of a website with CSS selectors. This is super useful for comparing sites with dynamic content. When installing CasperJS, it's important to use the latest version.
 
-Here's how to install PhantomJS, ImageMagick, CasparJS and Wraith on OS X or Linux.
+### OS X
 
-#### OS X
-
-Install via homebrew
+Install via [Homebrew](http://brew.sh/):
 
 ```
 brew install phantomjs198
@@ -37,17 +35,18 @@ brew install imagemagick
 brew install casperjs --devel
 ```
 
-#### Linux:
+### Linux:
 
-On ubuntu:
+On Ubuntu:
 
 ```
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
 ```
+<hr>
 
-Finally, it's time to install Wraith. Wraith runs on the command-line and installs as a Ruby gem. If you're running Wraith on Linux you may need to install Ruby first.
+Wraith runs on the command-line and installs as a Ruby gem. If you're running Wraith on Linux you may need to install Ruby first. To install Wraith, run the following command:
 
 ```
 gem install wraith
@@ -75,54 +74,57 @@ $ wraith
     wraith setup_folders [config_name]        # create folders for images
 ```
 
-## Configure
+## Configure and Run Wraith
 
-Wraith stores its configuration in a YAML file that it can generate for you.  Here's how to set this up.
+Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
+```
+mkdir wraith
+cd wraith
+```
+Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
+```
+wraith setup
+```
+You should see the following output:
+```
+create  configs/config.yaml
+create  javascript/snap.js
+```
+Notice that Wraith also created the JavaScript file `javascript/snap.js`, which is a browser navigation script for PhantomJS. This script can be modified to increase the reliability of your screenshot captures by changing the browser timeout from five seconds to ten.
 
-1. Create a directory to store your wraith configuration files.
-   ```
-   mkdir wraith
-   cd wraith
-   ```
-2. Use the wraith setup command to generate a Wraith YAML configuration file and browser navigation script.
-   ```
-   wraith setup
-   ```
-   You should see the following output:
-   ```
-   create  configs/config.yaml
-   create  javascript/snap.js
-   ```
-   Notice that Wraith also created the JavaScript file javascript/snap.js, which is a browser navigation script for PhantomJS. This script can be modified to increase the reliability of your screenshot captures by changing the browser timeout from five seconds to ten. Open the javascript/snap.js file in an editor, scroll to the end, and replace the number 5000 with 10000.
-   ```
-   // Sometimes, straggling requests never make it back, in which
-   // case, timeout after 5 seconds and render the page anyway
-   final_timeout = setTimeout(function() {
-     console.log('Snapping ' + url + ' at width ' + view_port_width);
-     page.render(image_name);
-     phantom.exit();
-   }, 10000);
-  ```
-3. Next, the configs/config.yaml file will need to be edited to crawl and capture your websites. For this guide I'm comparing a default install of Panopoly on my Pantheon dev and test environments. Open configs/config.yaml, go to the domains label, and change the default values to two websites you want to visually compare.
-  ```
-  domains:
-  dev: "http://dev-panopoly-dreams.pantheon.io"
-  test: "http://test-panopoly-dreams.pantheon.io"
-  ```
-4. You will also need to add navigation paths in configs/config.yaml for Wraith to crawl. In the following example, I've edited the 'paths:' to remove the default 'uk_index: /uk' item and added some additional pages for Wraith to compare.
-  ```
-  paths:
-  home: /
-  login: /user/login
-  great-vegetables: /content/great-vegetables
-  lovely-vegetables: /content/lovely-vegetables
-  ```
-4. Finally, run wraith.
-   ```
-   wraith capture config
-   ```
-   Wraith will navigate your two websites and generate an image comparison gallery. Open wraith/snaps/gallery.html in a web browser to view the results.
-   ![Full Screen Diff Example](/source/docs/assets/images/fullscreen-diff.png)
+Open the `javascript/snap.js` file in an editor, scroll to the end, and replace the number 5000 with 10000.
+
+```
+// Sometimes, straggling requests never make it back, in which
+// case, timeout after 5 seconds and render the page anyway
+final_timeout = setTimeout(function() {
+console.log('Snapping ' + url + ' at width ' + view_port_width);
+page.render(image_name);
+phantom.exit();
+}, 10000);
+```
+Next, the `configs/config.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
+
+Open `configs/config.yaml`, go to the domains label, and change the default values to two websites you want to visually compare.
+```
+domains:
+dev: "http://dev-panopoly-dreams.pantheon.io"
+test: "http://test-panopoly-dreams.pantheon.io"
+```
+You will also need to add navigation paths in `configs/config.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `uk_index: /uk` item and added some additional pages for Wraith to compare.
+```
+paths:
+home: /
+login: /user/login
+great-vegetables: /content/great-vegetables
+lovely-vegetables: /content/lovely-vegetables
+```
+Finally, run wraith:
+```
+wraith capture config
+```
+Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/snaps/gallery.html` in a web browser to view the results.
+![Full Screen Diff Example](/source/docs/assets/images/fullscreen-diff.png)
 
 ## Capture with Selectors
 
@@ -198,11 +200,3 @@ Wraith's output can be hooked into your continuous integration setup and/or buil
 Additonal browser options and tweaks can be made by modifying the navigation scripts and configuration files. Possibilities include specifying custom viewport heights, loading pages without JavaScript, or even the page capture timeout modifications described previously in this guide. Examples are located in the Wraith GitHub repository under <a href="https://github.com/BBC-News/wraith/tree/master/configs">configs</a> and <a href="https://github.com/BBC-News/wraith/tree/master/lib/wraith/javascript">javascript</a>.
 
 Wraith also supports captures with Firefox through SlimerJS as well as additional YAML configuration options not described here. More information is available in the <a href="https://github.com/BBC-News/wraith">Wraith GitHub repository</a>.
-
-
-
-
-
-
-
-
