@@ -111,4 +111,4 @@ No, these settings apply to every site on Pantheon. One of the ways Pantheon sca
 
 #### How do I change the Solr timeout on Drupal?
 
-Edit the `pantheon\_apachesolr` module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
+Edit the `pantheon_apachesolr` module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
