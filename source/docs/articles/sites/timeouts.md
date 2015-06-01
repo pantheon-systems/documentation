@@ -8,7 +8,7 @@ keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr tim
 Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code, or when attempting to run a long-running job that would be better suited for [Terminus](https://pantheon.io/docs/articles/local/cli/).
 
 
-## User-configurable timeouts
+## User-Configurable Timeouts
 
 
 <table class=table>
@@ -33,7 +33,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
   </tr>
 </table>
 
-## Timeouts that are not configurable
+## Timeouts That Aren't Configurable
 
 <table class=table>
 <thead>
