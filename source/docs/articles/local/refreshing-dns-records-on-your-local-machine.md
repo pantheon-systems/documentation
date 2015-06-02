@@ -1,6 +1,6 @@
 ---
 title: Refreshing DNS Records on Your Local Machine
-description: Flush your DNS cache to clear and update the data.
+description: Flush your DNS cache to clear and update the data on your Pantheon site.
 category:
   - developing
 keywords: dns, dns records, cache, clush dns cache

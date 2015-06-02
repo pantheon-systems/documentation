@@ -1,6 +1,6 @@
 ---
 title: SSH Tunnels for Secure Connections to Pantheon Services
-description: Securely connect to your database and caching service using SSH tunnels.
+description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
 category:
   - developing
 keywords: ssh, ssh tunnel, security, database, encryption, mysql database, redis cache server

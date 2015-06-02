@@ -1,13 +1,13 @@
 ---
 title: Single Sign-On for Pantheon Organizations
-description: See what's needed to enable single-sign on for your company.
+description: Detailed information on what's needed to enable single-sign on for your company.
 category:
   - developing
 ---
 
 Single-sign on (SSO) is only available for Enterprise Pantheon Organizations who have purchased it as an add-on to their Enterprise plan. To upgrade to an Enterprise plan, or to add it to an existing Enterprise plan, contact Sales.
 
-SSO allows your users to authenticate against your IdP when using the Pantheon product. If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML. 
+SSO allows your users to authenticate against your IdP when using the Pantheon product. If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML.
 
 ##Enabling SAML
 You will need to provide Customer Support with the following information:
@@ -27,6 +27,6 @@ The experience is similar to any other single sign-on solution:
 1. Users enter their email and any password.  
 2. After the user submits the form, they are redirected to the configured IdP.  
 3. After the IdP authenticates the user, they are redirected to their Pantheon Dashboard homepage.
-  
+
 ##See Also
 [Configuring SAML for Pantheon](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)

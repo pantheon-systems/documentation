@@ -1,6 +1,6 @@
 ---
 title: Using Pantheon.io For Better Uptime
-description: Understand the new pantheon.io system and how it improves uptime.
+description: Understand the new pantheon.io system and how it improves uptime for all your Pantheon Drupal or WordPress sites.
 category:
   - developing
 keywords: uptime, better uptime, using pantheon.io, pantheon.io, dns, subdomain, dns for pantheon.io, alias dns record, alias record, flattened cname, flattened redirect, non-www, troubleshoot dns, troubleshoot non-www

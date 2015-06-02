@@ -1,6 +1,6 @@
 ---
 title: Gandi & Pantheon: Pointing your DNS
-description: Learn how to point your domain's DNS to Pantheon using Gandi.
+description: Learn how to point your domain's DNS to your Pantheon Drupal or WordPress site using Gandi.
 category:
   - going-live
   - managing

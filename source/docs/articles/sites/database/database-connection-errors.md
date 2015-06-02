@@ -1,6 +1,6 @@
 ---
 title: Database Connection Errors
-description: Understand the causes and solutions for database connection errors.
+description: Drupal Pressflow core, WordPress core, and the causes and solutions for database connection errors.
 category:
   - debugging
 keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php

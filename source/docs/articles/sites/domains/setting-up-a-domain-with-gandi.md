@@ -1,6 +1,6 @@
 ---
 title: Setting Up a Domain with Gandi
-description: Learn how to edit a domain's Zone Record in Gandi so that it resolves to your Pantheon site.
+description: Learn how to edit a domain's Zone Record in Gandi so that it resolves to your Pantheon Drupal or WordPress site.
 category:
   - going-live
 keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, gandi, point gandi domain to pantheon, redirect gandi domain to pantheon, gandi domain dns, zone, zone record, gandi zone record, dns zones

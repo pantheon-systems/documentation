@@ -1,6 +1,6 @@
 ---
 title: Debugging Slow Performance
-description: Learn how to identify common problems with performance speeds and deploy solutions.
+description: Detailed information on how to identify common problems with performance speeds and deploy solutions.
 category:
   - debugging
   - going-live

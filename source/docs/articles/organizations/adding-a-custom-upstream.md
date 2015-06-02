@@ -1,6 +1,6 @@
 ---
 title: Create a Custom Upstream
-description: Add and test a custom distribution of WordPress or Drupal.
+description: Add and test a custom distribution of WordPress or Drupal on the Pantheon website management platform.
 category:
   - managing
   - going-live

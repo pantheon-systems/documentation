@@ -1,6 +1,6 @@
 ---
 title: Using MySQL Workbench to Access a Database
-description: Use MySQL Workbench for creating, executing, and optimizing SQL queries.
+description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
 category:
   - developing
 keywords: mysql workbench, database, mysql connection

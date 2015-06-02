@@ -1,6 +1,6 @@
 ---
 title: Applying Upstream Updates
-description: Apply and debug upstream updates, such as Drupal and WordPress releases.
+description: Detailed information on how to apply and debug upstream updates, such as Drupal and WordPress releases.
 category:
   - developing
   - drupal

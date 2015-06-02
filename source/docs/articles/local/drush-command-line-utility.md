@@ -1,6 +1,6 @@
 ---
 title: Drush Command-Line Utility
-description: Administer and maintain your site from your local Drush installation.
+description: Administer and maintain your Pantheon site from your local Drush installation.
 category:
   - getting-started
   - developing

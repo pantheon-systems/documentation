@@ -1,6 +1,6 @@
 ---
 title: DNS Records for Directing Your Domain to Your Pantheon Site
-description: Recommended DNS configurations for pointing a domain to a Pantheon site.
+description: Recommended DNS configurations for pointing a domain to a Pantheon Drupal or WordPress site.
 category:
   - developing
 keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, dns records for https, dns records for http, dns records for http sites, dns records for https sites

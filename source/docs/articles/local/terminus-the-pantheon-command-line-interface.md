@@ -1,6 +1,6 @@
 ---
 title: The Terminus Drush Extension (Deprecated)
-description: Information about the original Terminus project.
+description: Detailed information on the Terminus drush extension for Pantheon.
 category:
   - developing
 keywords: terminus, drush, drush extension, terminus commands

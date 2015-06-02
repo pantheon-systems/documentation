@@ -1,6 +1,6 @@
 ---
 title: Email on Pantheon
-description: Learn about outgoing mail and email hosting on Pantheon.
+description: Detailed information on outgoing mail and email hosting for your Pantheon site.
 category:
     - drupal
 keywords: email, email host, host email, outgoing mail, outgoing email, email solution, sendgrid, smtp, external, external smtp server, external smtp, spf record, spf records, spf, dns records, dns, exim

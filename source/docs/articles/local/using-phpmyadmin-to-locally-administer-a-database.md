@@ -1,6 +1,6 @@
 ---
 title: Using PHPMyAdmin to Locally Administer a Database
-description: Configure and troubleshoot MySQL connections.
+description: Configure and troubleshoot MySQL connections and PHPMyAdmin for Pantheon sites.
 category:
   - developing
 keywords: phpmyadmin, database, mysql, mysql connection,

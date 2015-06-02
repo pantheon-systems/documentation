@@ -1,6 +1,6 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
-description: Learn to use SFTP Mode to directly develop on Pantheon site environments.
+description: Detailed information on how to use SFTP Mode to directly develop on Pantheon site environments.
 category:
   - developing
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin

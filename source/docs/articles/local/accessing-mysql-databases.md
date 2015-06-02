@@ -1,6 +1,6 @@
 ---
 title: Accessing MySQL Databases
-description: Configure and troubleshoot database connections.
+description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 category:
   - developing
 keywords: mysql, database, mysql databases, database connection

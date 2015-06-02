@@ -1,6 +1,6 @@
 ---
 title: Installing Cygwin on Windows
-description: Learn how to install and configure Cygwin.
+description: Learn how to install and configure Cygwin for Windows computers for Pantheon sites.
 category:
   - getting-started
 keywords: cygwin, install, linux tool, windows

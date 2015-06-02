@@ -1,6 +1,6 @@
 ---
 title: Starting With Git
-description: Use Git version control with your Pantheon site.
+description: Use Git version control to deploy code into your Pantheon development environment.
 category:
   - getting-started
   - developing

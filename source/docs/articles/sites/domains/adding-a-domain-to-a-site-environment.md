@@ -1,6 +1,6 @@
 ---
 title: Adding a Domain to a Site Environment
-description: Learn how to associate a domain to an environment from within the Pantheon dashboard.
+description: Learn how to associate a domain to Drupal or WordPress environment from within the Pantheon dashboard.
 category:
   - going-live
   - managing
