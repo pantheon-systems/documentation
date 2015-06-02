@@ -41,16 +41,15 @@ There are a number of terms used throughout the Multidev workflow:
 ## Getting Started
 
 1. From your Site Dashboard, click the **Multidev** tab.
-2. Click **Fork New Cloud Environment**. This will create a new fork of the Dev environment, including code, database and files.
+2. Click **Create Cloud Development Environment**. This will create a new fork of the environment that you choose in the select box on the pop-up modal, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
-4. Click **Fork**.  
+4. Click **Create Environment**.  
 
 It will take a few minutes to create the environment and clone the content from the source environment. You can continue working on the Dashboard while it's being created.
 
+You can create cloned cloud environments from Dev, Test or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
-You can only fork from the Dev environment; forks from Test and Live are not supported. Existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
-
-If you create an environment for an existing Git branch, content can be cloned from any existing environment during the environment creation.
+You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
 ## Access a Branch Environment
 
