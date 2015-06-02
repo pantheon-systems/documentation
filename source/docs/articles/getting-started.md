@@ -8,11 +8,9 @@ keywords: going live, getting started, create account, create site, import, faqs
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever.
 
 ## Create Your Free Account
-
-If you haven't already done so, create your free [Pantheon.io account](https://dashboard.pantheon.io/register).
-
+If you haven't already done so, create your [free Pantheon account](https://dashboard.pantheon.io/register).
 ## Create a Site
-Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When you're ready to upgrade, check out our [plans and pricing](https://pantheon.io/pricing).
+Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When one of your sites converts to a [paid plan](https://pantheon.io/pricing), you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.
 
 Visit your Dashboard to [create a site](https://dashboard.pantheon.io/sites/create).
 
