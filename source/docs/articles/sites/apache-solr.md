@@ -177,16 +177,16 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 ####apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
 
-    terminus drush --site=#site --env=#env vget apachesolr_service_class
+    terminus drush --site=<site> --env=<env> vget apachesolr_service_class
 
 ####search_api_solr.module
 If you are using search_api_solr.module you can check it with the command:
 
-    terminus drush --site=#site --env=#env vget search_api_solr_connection_class
+    terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
 
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 ### Error During Search API Solr Installation
 
