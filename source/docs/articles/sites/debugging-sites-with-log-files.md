@@ -15,15 +15,15 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
 ```
-terminus drush --site=#site --env=#env watchdog-show
+terminus drush --site=<site> --env=<env> watchdog-show
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
 ```
-terminus drush --site=#site --env=#env watchdog-show --tail
+terminus drush --site=<site> --env=<env> watchdog-show --tail
 ```
 
 ### WordPress

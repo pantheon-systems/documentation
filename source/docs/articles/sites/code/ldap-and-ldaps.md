@@ -76,11 +76,10 @@ The majority of problems with LDAP on Pantheon come from misconfigurations. Pant
 
 The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
-    terminus drush --site=#site --env=#env scr ldap-test.php
+    terminus drush --site=<site> --env=<env> scr ldap-test.php
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
-
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
 ````

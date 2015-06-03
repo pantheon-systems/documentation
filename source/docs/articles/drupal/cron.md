@@ -31,10 +31,11 @@ Clicking **Run cron** will run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
 Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
 
-    terminus drush --site=#site --env=#env cron
+    terminus drush --site=<site> --env=<env> cron
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
 ![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
 If Cron has been recently run, entries will appear in the log. The two entries featured in the screenshot below are evidence that Cron has run and a Cron task called "cron\_example" has run.
@@ -79,7 +80,7 @@ You can check the log messages through the Drupal Admin interface, as mentioned 
 
 You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
 
-    terminus drush --site=#site --env=#env wd-show --type='cron'
+    terminus drush --site=<site> --env=<env> wd-show --type='cron'
 
 ### Can I Prevent Drupal Cron From Running?
 
