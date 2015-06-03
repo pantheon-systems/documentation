@@ -150,7 +150,7 @@ If you have On Server Development disabled, you can interact with your code via 
 
 ### What version of Git does Pantheon run?
 
-We are currently running Git 1.7.
+We are currently running Git 1.9.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
 
