@@ -33,8 +33,6 @@ In this example we used the `@` symbol to set up the "root" CNAME and are using 
 
 You can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/).
 
-Using the Domain
-
 ## CloudFlare Security Settings
 
 The next step is to go to the "Crypto" page and enable the "SSL with SPDY" option and set it to **Full** protection mode:
