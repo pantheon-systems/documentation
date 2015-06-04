@@ -1,6 +1,6 @@
 ---
 title: Migrate Sites from Other Hosts
-description: General instructions for preparing and migrating remotely hosted sites to Pantheon.
+description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 category:
 - getting-started
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
@@ -11,7 +11,7 @@ Your site migration has four phases. You’ll package your site, import it, test
 
 We're revising our migration documentation. Our existing import documents include:
 
- - [Importing and Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+ - [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
  - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
  - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)

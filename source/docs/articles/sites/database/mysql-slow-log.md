@@ -1,6 +1,6 @@
 ---
 title: MySQL Slow Log
-description: Learn how to use a site's MySQL Slow Log to identify serious performance issues.
+description: Learn how to use a site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
 category:
 - debugging
 keywords: mysql slow log, logs, sql slow logs, sql log, mysql slow logs, mysql log, mysql performance, mysql troubleshooting, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
@@ -91,7 +91,7 @@ This particular query is, at it's worst, examining 132,363 records to return 5 w
 
 ## Look at the slow queries by hour
 
-Another method is to look at slow queries by the hour, which can be usefull to see if there are spikes in slow queries that correspond to site traffic patterns.
+Another method is to look at slow queries by the hour, which can be useful to see if there are spikes in slow queries that correspond to site traffic patterns.
 
     grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c  
 

@@ -1,6 +1,6 @@
 ---
 title: Create a Custom Upstream
-description: Add and test a custom distribution of WordPress or Drupal.
+description: Add and test a custom distribution of WordPress or Drupal on the Pantheon website management platform.
 category:
   - managing
   - going-live
@@ -86,17 +86,19 @@ git push origin master
 
 Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
 ```
-terminus site wipe --site=#site --env=#env
+terminus site wipe --site=<site> --env=<env>
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 #### Acceptance Tests
 
 Run your automated acceptance tests, using behat, casper.js, or by manually executing user stories.
 
 ## 4. Update and Provide Pantheon with Read Access.
 
-When testing is complete, merge your pull requests into or git push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it. For private repos, grant read-access to the gf-pantheon user on GitHub or to the pantheon\_distributions user on Bitbucket.
+When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> For private repositories, grant read-access to the <code>gf-pantheon</code> user on GitHub or to the <code>pantheon_distributions</code> user on Bitbucket.</div>
 
 ## 5. Submit Product Information.
 

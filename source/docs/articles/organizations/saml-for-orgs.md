@@ -1,6 +1,6 @@
 ---
 title: Single Sign-On for Pantheon Organizations
-description: See what's needed to enable single-sign on for your company.
+description: Detailed information on what's needed to enable single-sign on for your company.
 category:
   - developing
 ---
@@ -26,7 +26,8 @@ Customer Support will provide the following fields to you:
 The experience is similar to any other single sign-on solution:  
 1. Users enter their email and any password.  
 2. After the user submits the form, they are redirected to the configured IdP.  
-3. After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
+3. After the IdP authenticates the user, they are redirected to their Dashboard.
+
 
 ##See Also
 [Configuring SAML for Pantheon](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
