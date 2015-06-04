@@ -31,7 +31,7 @@ We recommend you take advantage of this feature as it frees you up from being ti
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target.
 
-You can set additional CNAME records for your Dev and Test environments as well, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/).
+You can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/).
 
 Using the Domain
 
@@ -55,7 +55,8 @@ At this point you're ready to try loading your site under HTTPS. It's a good ide
 
 To start testing, open your website normally, and manually change the "Location" in your browser to start with `https` instead of plain `http`. You should try browsing a number of pages, logging in, etc.
 
-**Note**: If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for CloudFlare's free certificate provisioning.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for CloudFlare's free certificate provisioning.</div>
 
 Another common issue is to have the site load incorrectly due to the presence of insecure content on the page. Most modern browsers won't load CSS or JS files that are included via HTTP on a page that was requested over HTTPS. Getting fully switched to HTTPS usually requires some changes to your CMS settings in order to complete the transition.
 
