@@ -23,7 +23,7 @@ When you first register, CloudFlare will direct you immediately towards migratin
 
 ## DNS Configuration
 
-In addition to gratis HTTPS service, content distribution, and some nifty security features, CloudFlare also offers the ability to use a CNAME for the "root" domain for your site through something they call [CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
+In addition to gratis HTTPS service, content distribution, and many nifty security features, CloudFlare also offers the ability to use a CNAME for the "root" domain for your site through something they call [CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
 
 We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. Here are some example DNS settings:
 
@@ -31,7 +31,7 @@ We recommend you take advantage of this feature as it frees you up from being ti
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target.
 
-You can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/).
+As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/). That is optional, but you will see references to these additional domains later on in the CMS configuration. 
 
 ## CloudFlare Security Settings
 
@@ -41,11 +41,13 @@ The next step is to go to the "Crypto" page and enable the "SSL with SPDY" optio
 
 It takes a few minutes to go into effect as CloudFlare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
 
-It's important to use *Full* protection mode. Because Pantheon provides HTTPS service out of the box you can encrypt end-to-end, but because the certificate provided by Pantheon is for the sandbox domain you cannot use the "strict" mode:
+It's important to use __Full__ protection mode. Because Pantheon provides HTTPS service out of the box you can encrypt end-to-end, but because the certificate provided by Pantheon is for the sandbox domain you cannot use the "strict" mode:
 
 ![SSL Details](/source/docs/assets/images/cloudflare-ssl-types.png)
 
-However, this free option still provides solid security for your website—the traffic is fully encrypted end-to-end.
+While "full" more is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
+
+Customers wanting to use CloudFlare in "strict" mode can do so by purchasing their own certificate and setting that up on their Pantheon site.
 
 ## Testing Under HTTPS
 
@@ -60,13 +62,13 @@ Another common issue is to have the site load incorrectly due to the presence of
 
 ## CMS Settings
 
-There are a few CMS-specific settings and techniques you'll want to be aware of when transitioning a site to run securely under HTTPS.
+There are a few CMS-specific settings and techniques you'll want to be aware of when transitioning a site to run securely under HTTPS. As a best-practice, we recommend that you standardize on your production domain in addition to HTTPS to prevent confusion.
 
 ### Drupal
 
 If you're going to run under HTTPS for Drupal, you must set the `$base_url` parameter in `settings.php`. This is generally a best practice (many things can get wonky without a `$base_url`) but it becomes a necessity to prevent issues with CSS and JS failing to load.
 
-The best way to do this on Pantheon is to make use of our environment variables. Here's an example of what you can put in `settings.php`:
+The best way to do this on Pantheon is to make use of our environment variables. Here's an example of what you can put in `settings.php`, again assuming you have custom domains for Dev and Test:
 
     # Set the $base_url parameter if we are running on Pantheon:
 
@@ -80,8 +82,14 @@ The best way to do this on Pantheon is to make use of our environment variables.
       if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
         $domain = 'www.mysite.com';
       }
+      else {
+        # Fallback value for multidev or other environments.
+        # This covers environment-sitename.pantheon.io domains
+        # that are generated per environment.
+        $domain = $_SERVER['HTTP_HOST'];
+      }
 
-      # This is a global variable
+      # This global variable determines the base for all URLs in Drupal.
       $base_url = 'https://'. $domain;
     }
 
@@ -89,7 +97,7 @@ Pantheon already handles the necessary environment settings to ensure that Drupa
 
 ### WordPress
 
-On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`:
+On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`. Note that you will need to _replace_ the existing code that sets these constants, since contants can only be defined once:
 
     if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
@@ -101,10 +109,17 @@ On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants 
       if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
         $domain = 'www.mysite.com';
       }
+      else {
+        # Fallback value for multidev or other environments.
+        # This covers environment-sitename.pantheon.io domains
+        # that are generated per environment.
+        $domain = $_SERVER['HTTP_HOST'];
+      }
 
-      # Define constants
+      # Define constants for WordPress on Pantheon.
       define('WP_HOME', 'https://' . $domain);
       define('WP_SITEURL', 'https://' . $domain);
+
     }
 
 Also, you may have a number of stored references to `http` links stored in your WordPress database. These can be updated using the search/replace function available in WP-CLI, which is bundled on the platform and [accessible via the command line](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/):
@@ -123,7 +138,7 @@ In order to go all-in, you will need to configure your site to redirect any requ
 
 ![CloudFlare Page Rules](/source/docs/assets/images/cloudflare-always-https.png)
 
-By setting up a blanket page rule to match all URLs and apply the "Always HTTPS" parameter, CloudFlare will handle redirecting users.
+By setting up a blanket page rule to match all URLs and apply the "Always HTTPS" parameter, CloudFlare redirect browsers making HTTP requests to HTTPS.
 
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
@@ -131,18 +146,19 @@ You can also achieve this by writing your own redirection code into your `settin
          ($_SERVER['HTTP_X_FORWARDED_PROTO'] != 'https' ||
          $_SERVER['HTTP_HOST'] != $domain)) {
       header('HTTP/1.0 301 Moved Permanently');
-      header('Location: ' . $base_url . $_SERVER['REQUEST_URI']);
+      header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
       header('Cache-Control: public, max-age=3600');
       exit();
     }
 
 There are a few things worth noting in the above example:
 
-1. Checking `isset($_SERVER['PANTHEON_ENVIRONMENT'])` is important because this will only be `TRUE` if the request is running as a result of a web request through Pantheon's PHP container matrix. This prevents redirects from interrupting command-line operations.
-2. `$_SERVER['HTTP_X_FORWARDED_PROTO']` is PHP's way of exposing the `X-Forwarded-Proto` HTTP header, an internet standard for communicating when another "upstream" service has terminated HTTPS.
-3. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and CloudFlare, further upstream) to cache the redirect, which is always nice.
+1. This technique has the added benefit of insuring that any visitor who somehow gets a link to the `env-sitename.pantheon.io` domain will be immediately bounced to your proper production hostname.
+2. Checking `isset($_SERVER['PANTHEON_ENVIRONMENT'])` is important because this will only be `TRUE` if the request is running as a result of a web request through Pantheon's PHP container matrix. This prevents redirects from interrupting command-line operations.
+3. `$_SERVER['HTTP_X_FORWARDED_PROTO']` is PHP's way of exposing the `X-Forwarded-Proto` HTTP header, an internet standard for communicating when another "upstream" service has terminated HTTPS.
+4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and CloudFlare, further upstream) to cache the redirect, which is always nice.
 
-Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
+Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheon.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
 
 ## Alternative Methods For HTTPS
 
