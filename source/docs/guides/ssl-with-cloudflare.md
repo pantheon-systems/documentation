@@ -151,3 +151,6 @@ Because of the structure of our network, we won't be able to offer reduced-cost 
 This basic technique — terminating your HTTPS elsewhere and then "backending" to Pantheon's provided certificate — can be used with other services, including your own infrastructure. Here's an example of [an nginx config that does essentially the same thing](https://gist.github.com/caktux/00a2161b5d849335e644).
 
 As the movement for **encryption everywhere** (e.g. [Let's Encrypt](https://letsencrypt.org/)) picks up steam, we look forward to being able to support many fine avenues for running sites under HTTPS at a low cost.
+
+## See Also  
+[Add Cloudflare Free SSL to WordPress Sites](/docs/articles/wordpress/add-cloudflare-free-ssl-to-wordpress-sites/)
