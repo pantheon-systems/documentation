@@ -1,6 +1,6 @@
 ---
 title: Pantheon Plugins
-description: Learn the specific Plugins developed and maintained for the Pantheon workflow.
+description: Learn the specific Plugins developed and maintained for the Pantheon Website Management Platform workflow.
 category:
   - getting-started
   - developing

@@ -1,6 +1,6 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
-description: Understand alternative code management options when using SFTP Mode, such as WP-cli, Drush, and other command line tools.
+description: Understand alternative code management options when using SFTP Mode, such as WP-cli, Drupal Drush, and other command line tools.
 category:
   - managing
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin, wp-cli, drush, terminus, command line tools, cli, clis, comand line tool

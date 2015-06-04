@@ -1,6 +1,6 @@
 ---
 title: The Security Tool
-description: Learn how to keep your work hidden from the public for development or updates.
+description: Learn how use Pantheon's security tool to keep your work hidden from the public for development or updates.
 category:
   - developing
 keywords: security, lock environment, lock site, password protect, password protection, unlock site

@@ -1,6 +1,6 @@
 ---
 title: Locking Your Site
-description: Learn how to keep your work hidden from the public for development or updates.
+description: Learn how to keep your Drupal or WordPress site hidden from the public for development or updates.
 category:
   - getting-started
   - drupal

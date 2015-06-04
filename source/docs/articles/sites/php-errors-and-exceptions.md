@@ -1,6 +1,6 @@
 ---
 title: PHP Errors and Exceptions
-description: Detailed information about basic PHP errors.  
+description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.  
 category:
   - debugging
   - drupal

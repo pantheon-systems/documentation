@@ -1,6 +1,6 @@
 ---
 title: Timeouts on Pantheon
-description: Detailed information about timeout errors.
+description: Detailed information and frequently asked questions about timeout errors.
 category:
   - debugging
 keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr timeout, user-configurable timeouts

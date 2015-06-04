@@ -1,6 +1,6 @@
 ---
 title: IPv6 Addresses on Pantheon
-description: Detailed information about IPv6.
+description: Detailed information about using IPv6 addresses on Pantheon's Website Management Platform.
 category:
   - getting-started
 keywords: ipv6, drupal, ipv4 traffic

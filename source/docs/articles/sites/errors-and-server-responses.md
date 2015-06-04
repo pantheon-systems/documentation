@@ -1,6 +1,6 @@
 ---
 title: Errors and Server Responses
-description: Understand server responses and error messages.
+description: Detailed information on your Pantheon site's server responses and error messages.
 category:
   - debugging
 ---

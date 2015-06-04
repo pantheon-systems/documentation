@@ -1,6 +1,6 @@
 ---
 title: WordPress FAQs
-description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon platform.
+description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon Website Management Platform.
 category:
   - getting-started
   - WordPress

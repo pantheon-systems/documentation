@@ -1,6 +1,6 @@
 ---
 title: Debugging Cache
-description: Learn how to resolve caching errors.
+description: Detailed information on debugging your Pantheon Drupal or WordPress Cache. 
 category:
   - debugging
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies

@@ -1,6 +1,6 @@
 ---
 title: Domains and SSL Tool
-description: Learn about the Domains tool
+description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
 category:
   - developing
   - managing
@@ -100,4 +100,3 @@ For sites launched with Pantheon.io base domains, redirecting root domains using
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
-

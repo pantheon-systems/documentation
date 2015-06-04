@@ -1,6 +1,6 @@
 ---
 title: Fix Broken Links in WordPress
-description: Learn how to update broken links so that the URL references the correct file path and domain name.
+description: Learn how to update broken links on your Pantheon WordPress site so that the URL references the correct file path and domain name.
 category:
   - debugging
   - drupal

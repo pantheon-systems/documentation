@@ -1,6 +1,6 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing WordPress site.
+description: Learn how to import an existing WordPress site into the Pantheon Website Management Platform.
 category:
   - wordpress
   - getting-started

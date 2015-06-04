@@ -1,6 +1,6 @@
 ---
 title: WordPress Known Issues
-description: Learn the recommended solutions for known issues on the Pantheon platform for WordPress.
+description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress.
 category:
   - WordPress
 keywords: wordpress, issues, table prefixes, updates, php, site, plugins
@@ -28,7 +28,7 @@ It means you have some code (plugin or theme) that's using PHP Sessions, which r
 
 ## Site Networks / Multisite
 
-No, Pantheon does not support setting up and running a "Network" of sites on one direct installation. 
+No, Pantheon does not support setting up and running a "Network" of sites on one direct installation.
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 

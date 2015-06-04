@@ -1,6 +1,6 @@
 ---
 title: Loading SSH Keys
-description: Learn how to load your public SSH key into your Pantheon account.
+description: Learn how to load your public SSH key into your Pantheon Website Management Platform account.
 category:
   - getting-started
 keywords: ssh keys, load ssh keys, add ssh key, delete ssh key

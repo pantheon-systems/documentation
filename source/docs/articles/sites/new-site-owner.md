@@ -1,6 +1,6 @@
 ---
 title: New Site Owner FAQs
-description: Learn about common billing and administrative tasks performed by a site owner.
+description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
 category:
     - developing
 keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency

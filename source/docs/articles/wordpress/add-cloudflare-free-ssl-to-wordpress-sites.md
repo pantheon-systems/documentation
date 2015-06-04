@@ -1,6 +1,6 @@
 ---
 title: Add Cloudflare Free SSL to WordPress Sites
-description: Learn to set up free SSL services with CloudFlare on WordPress sites.
+description: Learn to set up free SSL services with CloudFlare on Pantheon WordPress sites.
 category:
   - WordPress
   - Going Live

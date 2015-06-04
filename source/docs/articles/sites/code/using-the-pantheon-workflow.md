@@ -1,6 +1,6 @@
 ---
 title: Using the Pantheon Workflow
-description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Workflow.
+description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Website Management Platform Workflow.
 category:
   - going-live
   - developing

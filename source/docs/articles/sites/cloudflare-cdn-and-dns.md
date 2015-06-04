@@ -1,6 +1,6 @@
 ---
 title: CloudFlare CDN and DNS on Pantheon
-description: Learn how to setup and test CloudFlare CDN.
+description: Learn how to setup and test CloudFlare CDN on your Pantheon Drupal or WordPress site.
 category:
   - developing
   - drupal

@@ -1,6 +1,6 @@
 ---
 title: Cron for WordPress
-description: Understand how the WordPress cron system works and how you can control it on your Pantheon hosted site.
+description: Configuring and optimizing the WP-Cron feature on your Pantheon Wordpress Site.
 category:
     - WordPress
 keywords: wordpress, cron, wp-cron
