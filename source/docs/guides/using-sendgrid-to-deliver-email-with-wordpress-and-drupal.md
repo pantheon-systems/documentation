@@ -37,7 +37,7 @@ The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-deli
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
 ### Add Your SendGrid Account Details
-Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s dashboard. You will be able to select between sending mail via the SendGrid Web API or via SMTP. Either will work on Pantheon, but using SMTP requires the installation of [Swift Mailer](https://wordpress.org/plugins/swift-mailer/).
+Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s Dashboard. You will be able to select between sending mail via the SendGrid Web API or SMTP. Either will work on Pantheon, but using SMTP requires the installation of [Swift Mailer](https://wordpress.org/plugins/swift-mailer/).
 
 Simply enter your site's SendGrid account credentials and select the desired the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
