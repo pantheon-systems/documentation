@@ -21,7 +21,7 @@ Pantheon supports the most recent release of WordPress via [upstream](https://gi
 
 ### How much does Pantheon cost?
 
-Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://getpantheon.com/pricing).
+Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://pantheon.io/pricing).
 
 ### Where are the Pantheon servers located?
 
@@ -39,7 +39,7 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider. Also see [Domains and SSL Tool](/docs/articles/sites/domains) for more information. 
+Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider. Also see [Domains and SSL Tool](/docs/articles/sites/domains) for more information.
 
 In order for your site to begin "listening" for your domain, you must first become a paying customer. We consider placing a real domain on on a site to be the point at which the site starts to go live.
 
@@ -66,7 +66,7 @@ No. While WordPress Mulitsites have been successfully installed on the Pantheon 
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://getpantheon.com/blog/drush-aliases-available) to use in your local environment.
+Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://pantheon.io/blog/drush-aliases-available) to use in your local environment.
 
 ## Does Pantheon support WP-CLI?
 
@@ -103,9 +103,9 @@ We're currently testing out integration strategies for Solr with our next-genera
 
 ### What support is available for Pantheon?
 
-We provide support through this helpdesk, as well as public community support on [our Get Satisfaction site](http://help.getpantheon.com). For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
+We provide support through this helpdesk, as well as public community support on [our Get Satisfaction site](http://help.pantheon.io). For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
 
-You can read more about our support offerings on [our pricing page](https://getpantheon.com/pricing).
+You can read more about our support offerings on [our pricing page](https://pantheon.io/pricing).
 
 ## Security
 

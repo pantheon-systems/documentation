@@ -38,7 +38,7 @@ For detailed instructions, see [generating SSH keys](/docs/articles/users/genera
 You can develop directly on the server using SFTP mode. See [enabling SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) for details.
 ![](/source/docs/assets/images/desk_images/180036.png)
 ## Credentials on Pantheon
-Your getpantheon.com username and password is only used to access your dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between getpantheon.com and your Drupal or WordPress site, and Pantheon does not manage your users.  
+Your pantheon.io username and password is only used to access your dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between pantheon.io and your Drupal or WordPress site, and Pantheon does not manage your users.  
 
 There are a number of credentials available for developers, each of which can be found in the dashboard. For details, see the following articles:
 
@@ -62,7 +62,7 @@ When you're ready to launch your site, you'll need to add a credit card to the s
 ## Frequently Asked Questions
 
 #### Does Pantheon offer professional services?
-Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has some comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
@@ -73,7 +73,7 @@ If you're seeking an individual developer, there are a number of resources avail
 #### Does Pantheon offer enterprise support?
 Pantheon provides a guided launch concierge to Enterprise customers during both migration and development on Pantheon. We can work directly with your stakeholders and development team to optimize and prepare your site for launch, identifying and eliminating platform issues. 24/7 emergency support is also available post-launch.
 
-Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
+Learn more about [Enterprise on Pantheon](https://www.pantheon.io/enterprise).
 
 ## Learn More
 If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).

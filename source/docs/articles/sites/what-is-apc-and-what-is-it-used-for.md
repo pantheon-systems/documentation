@@ -22,7 +22,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 
     Warning: require_once(): Unable to allocate memory for pool.
 
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.getpantheon.com/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to log and visualize performance.
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to log and visualize performance.
 
 
 #### How can I determine what my current APC settings are?
@@ -34,7 +34,7 @@ See [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo)
 
 ## Can the shm_size be configured manually?
 
-No; as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.getpantheon.com/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
+No; as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
 
 ## Troubleshooting
 
