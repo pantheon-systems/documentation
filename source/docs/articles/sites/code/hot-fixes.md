@@ -1,6 +1,6 @@
 ---
 title: Hot Fixes
-description: Learn how to deploy hot fixes on Pantheon and preserve orphan commits.
+description: Learn how to deploy and test hot fixes on Pantheon and preserve orphan commits.
 category:
   - developing
 keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix, deploy hot fix, quick fix, orphan commit, orphan commits, test hot fix, deploy hot fix, test hotfix, deploy hotfix

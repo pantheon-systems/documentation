@@ -1,6 +1,6 @@
 ---
 title: Setting up a domain with GoDaddy
-description: Learn how to point a new GoDaddy domain name to your Pantheon site.
+description: Learn how to point a new GoDaddy domain name to your Pantheon Drupal or WordPress site.
 category:
   - going-live
 keywords: godaddy dns, dns records, point your domain, point godaddy domain to pantheon, pointing your godaddy domain to your pantheon site, godaddy dns host, godaddy dns configuration, add domain to a site, godaddy, point godaddy domain to pantheon, redirect godaddy domain to pantheon, godaddy domain dns

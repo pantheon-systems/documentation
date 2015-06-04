@@ -1,6 +1,6 @@
 ---
 title: Enable SSL for Secure HTTPS Communication
-description: Learn how to implement an HTTPS communication and utilize a static IP address.
+description: Learn how to implement SSL secure HTTPS communication and utilize a static IP address.
 category:
   - developing
   - launch

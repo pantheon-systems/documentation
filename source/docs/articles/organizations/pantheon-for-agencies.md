@@ -1,6 +1,6 @@
 ---
 title: Pantheon for Agencies
-description: Scale your agency, rule the world. Sign up for P4A and get started.
+description: Detailed information on how to scale your agency, rule the world. Sign up for Pantheon for Agencies and get started with Pantheon.
 category:
 - managing
 keywords: p4a, pantheon for agencies, agency profile, agency, team, add member, add members, add site, add sites, organization site, organization sites, p4a dashboard, agency dashboard, pantheon for agencies dashboard, products, custom upstream, custom upstreams, add product, add custom upstream

@@ -1,6 +1,6 @@
 ---
 title: Port 2222 Blocked Workaround
-description: Instructions for accessing Port 2222.
+description: Instructions for accessing Port 2222 using and SSH tunnel on your Pantheon site.
 category:
   - developing
 keywords: port 2222, ssh tunnel, port, port numbers

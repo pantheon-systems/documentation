@@ -1,6 +1,6 @@
 ---
 title: Launch Check - Drupal Performance and Configuration Analysis
-description: Get site analysis and recommendations.
+description: Detailed information on Launch Check, Drupal Performance and Configuration Analysis.
 category:
   - developing
 keywords: launch check, drupal, analysis, database, status, report
