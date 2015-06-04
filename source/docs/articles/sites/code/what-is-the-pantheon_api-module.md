@@ -1,6 +1,6 @@
 ---
 title: What is the "pantheon_api.module"
-description: Learn how to incorporate Pantheon's internal API modules.
+description: Learn how to incorporate pantheon_api.module, Pantheon's internal API modules.
 category:
   - getting-started
   - developing

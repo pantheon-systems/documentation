@@ -1,6 +1,6 @@
 ---
 title: Getting the Client IP Address
-description: Set up geolocation capabilities on your site.
+description: Getting the Client IP Address to set up geolocation capabilities on your site.
 category:
   - developing
 keywords: drupal, IP, client IP address, geolocation

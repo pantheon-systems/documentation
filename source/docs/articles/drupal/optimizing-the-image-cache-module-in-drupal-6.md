@@ -1,6 +1,6 @@
 ---
 title: Optimizing the ImageCache Module in Drupal 6
-description: Important details about the ImageCache Module.
+description: Instructions on how to update ImageCache, a widely used Drupal 6 contributed module.
 category:
   - drupal
 keywords: imagecache, drupal, images
