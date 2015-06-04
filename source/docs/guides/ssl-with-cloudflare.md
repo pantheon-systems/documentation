@@ -31,7 +31,7 @@ We recommend you take advantage of this feature as it frees you up from being ti
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target.
 
-You can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/).
+You can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tool](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) (optional).
 
 ## CloudFlare Security Settings
 
@@ -105,7 +105,12 @@ On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants 
       # Define constants
       define('WP_HOME', 'https://' . $domain);
       define('WP_SITEURL', 'https://' . $domain);
-    }
+
+      # CloudFlare Connecting IP
+      if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+        $_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
+      }
+    else:
 
 Also, you may have a number of stored references to `http` links stored in your WordPress database. These can be updated using the search/replace function available in WP-CLI, which is bundled on the platform and [accessible via the command line](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/):
 
