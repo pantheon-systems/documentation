@@ -104,3 +104,6 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 This is by design. Please see [Using the Pantheon Workflow
 ](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-&-live) to learn why.
+
+###I am receiving errors connecting to my server with an SFTP client.
+This is caused by using the application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
