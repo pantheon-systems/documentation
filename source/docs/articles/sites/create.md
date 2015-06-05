@@ -1,26 +1,41 @@
 ---
 title: Creating Sites
-description:  How to create a new site on the platform.
+description:  How to create sites on the Pantheon platform.
 category:
   - managing
-keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
+keywords: create a site, how to create a site, creating sites, how to create a site on pantheon, import a site
 ---
-On your User Dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**.
-### Name Your Site
-Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheon.io domain.
-![Name your site](/source/docs/assets/images/name-your-site.png)
-### Choose Your Framework
-Click **Install WordPress**  or **Install Drupal**  or any of the distributions available on the Platform.
-![Choose your start state](/source/docs/assets/images/core-startup.png)
-### Visit the Dev Installation
-On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
+There are three ways that you can create a site:  
 
-![Visit development site button](/source/docs/assets/images/visit-development-site.png)
-To start adding code or themes, start  with the SFTP connection, or toggle to Git mode to start cloning and pushing.
-## Free Sites
-Free sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two free sandbox sites for all user accounts. When one of your sites converts to a paid plan, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.
-## Your Pantheon Account
-Your account is your own individual account, and every account can manage multiple projects (or sites) at a time. Pantheon doesn't recommend sharing your account with other people. If you're collaborating on a project or handing over ownership to a client, use our  team management and ownership transfer tools.  
-## Next Steps
+* Start from scratch by selecting a distribution.  
+* Import an existing site.  
+* Create a custom upstream.  
+
+###Start from Scratch
+
+You can choose a base Drupal or WordPress version to quickly create a site on Pantheon. See [Getting Started](/docs/articles/getting-started) for detailed instructions on creating a new site.
+
+###Import a Site to Pantheon
+Manually import an existing Drupal or WordPress site archive via a file upload or by providing a web-accessible URL. See [Importing an Existing Site](https://pantheon.io/docs/articles/sites/create/importing-an-existing-site/) for detailed instructions.
+
+###Create a Custom Upstream
+Pantheon provides support for running three types of custom distribution on the platform:
+
+1. **Public Distributions** - These are high quality distributions like [Commerce Kickstart](http://drupal.org/project/commerce_kickstart) or [Open Atrium](http://drupal.org/project/openatrium) which are released on [drupal.org](https://drupal.org/) and are supported by their distribution authors for everyone to use. Public distributions are options available to all users of Pantheon as part of their site creation page. WordPress does not have any known publicly maintained upstream packages.
+
+2. **Organizational Upstreams** - These are organizational specific distributions like [OpenBerkeley](http://vcaf.berkeley.edu/initiatives/vcio-projects/open-berkeley) developed and supported for our Pantheon One customers. Organizational distributions are private to the members of each organizations.
+
+3. **Partner Upstreams** - These are company specific Upstreams built and supported by our [Pantheon Partners](https://www.getpantheon.com/partners/program) for their internal development. Partner upstreams are private to the members of each partner organization. For more information, check out [our blog post about how this can work](https://www.getpantheon.com/blog/building-sites-common-codebases-pantheon-one-agencies).
+
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</div>
+
+Organizational and Partner upstreams are available under contractual terms. Please [create your agency profile](/docs/articles/organizations/pantheon-for-agencies/#create-your-agency-profile) to start the process.
+
+When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/docs/articles/organizations/adding-a-custom-upstream).  
+
+## See Also
+ - [Choosing your Start State](docs/articles/sites/create/choosing-start-state/)
  - [Developing Directly with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/)
+ - [Going Live](/docs/articles/going-live/)
  - [Starting with Git](/docs/articles/local/starting-with-git/)
