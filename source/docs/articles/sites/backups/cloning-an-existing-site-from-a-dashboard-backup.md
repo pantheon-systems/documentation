@@ -13,8 +13,10 @@ All Pantheon sites consist of three parts:
 
 ## Copy Your Code/Files/Database
 
-1. From your Site Dashboard, go to the live environment and click **Backups**.
+1. From your Site Dashboard, go to the Live environment and click **Backups**.
 2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the **download** icon.
+
+When a code archive is downloaded for an environment, it contains the full Git repository checked out at master. If this code archive is combined with the database and files archive from that point in time, the code might not match the snapshot deployed on that environment. If you want to make a clone of Live or Test and it is a few commits behind Dev,  use Git to checkout the appropriate tag for the state of code you want. This will leave the repository in a detached head state so you can create and then merge a branch back into master prior to uploading it.
 
 ## Import Your Code/Files/Database
 
@@ -25,7 +27,8 @@ All Pantheon sites consist of three parts:
 5. Choose the **Click here to provide separate code, files, and database archives** link.
 6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
 7. Click **Import Site**.
-8. The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+
+The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
 
 
 ## Additional Considerations
