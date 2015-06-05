@@ -18,7 +18,7 @@ To manage your temporary files securely and reliably across DROPs when multiple 
 <div class="alert alert-danger" role="alert">
 <strong>Note</strong>: Avoid using the <code>temporary://</code> scheme. Temporary files written during a batch process will not be available for processing by other application servers, and the process will fail.</div>
 
-The filesystem settings are set at bootstrap when a request is processed by Drupal. The `public://`, `private://`, and `temporary://` are set dynamically depending on the application server that receives the ``$_PRESSFLOW` settings variable.
+The filesystem settings are set at bootstrap when a request is processed by Drupal. The `public://`, `private://`, and `temporary://` are set dynamically depending on the application server that receives the `$_PRESSFLOW` settings variable.
 
 For sites with multiple DROPs, this value will change. Refresh the page and this value should change on the Live environment.
 
