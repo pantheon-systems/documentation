@@ -52,49 +52,49 @@ The common community module for Drupal to use Redis is simply called [redis](htt
     - `redis_client_password`
 
 4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required configurations for Redis for every site.  
-<div class="alert alert-info">
-<strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
-```
-      // All Pantheon Environments.
-      if (defined('PANTHEON_ENVIRONMENT')) {
-        // Use Redis for caching.
-        $conf['redis_client_interface'] = 'PhpRedis';
-        $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
-        $conf['cache_default_class'] = 'Redis_Cache';
-        $conf['cache_prefix'] = array('default' => 'pantheon-redis');
-        // Do not use Redis for cache_form (no performance difference).
-        $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-        // Use Redis for Drupal locks (semaphore).
-        $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-      }
-```
+  ```
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Use Redis for caching.
+      $conf['redis_client_interface'] = 'PhpRedis';
+      $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+      $conf['cache_default_class'] = 'Redis_Cache';
+      $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+      // Do not use Redis for cache_form (no performance difference).
+      $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+      // Use Redis for Drupal locks (semaphore).
+      $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+    }
+  ```<div class="alert alert-info">
+  <strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
+
 
 5. _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
 
   ```
-      // Optional Pantheon redis settings.
-      // Higher performance for smaller page counts.
-      if (defined('PANTHEON_ENVIRONMENT')) {
-        // High performance - no hook_boot(), no hook_exit(), ignores Drupal IP blacklists.
-        $conf['page_cache_without_database'] = TRUE;
-        $conf['page_cache_invoke_hooks'] = FALSE;
-        // Explicitly set page_cache_maximum_age as database won't be available.
-        $conf['page_cache_maximum_age'] = 900;
-      }
-    ```
+  // Optional Pantheon redis settings.
+  // Higher performance for smaller page counts.
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    // High performance - no hook_boot(), no hook_exit(), ignores Drupal IP blacklists.
+    $conf['page_cache_without_database'] = TRUE;
+    $conf['page_cache_invoke_hooks'] = FALSE;
+    // Explicitly set page_cache_maximum_age as database won't be available.
+    $conf['page_cache_maximum_age'] = 900;
+  }
+  ```
 6. _Optional_ `sites/default/settings.php` configuration B - Higher hit rate for larger page counts.
 
 
   This technique avoids evictions due to Redis space limitations when your site has a large quantity of pages to cache. Will conflict with Option A which skips the database entirely; do not use both at the same time.
 
   ```
-      // Optional Pantheon redis settings.
-      // Higher performance for larger page counts.
-      if (defined('PANTHEON_ENVIRONMENT')) {
-        // Use the database for cached HTML.
-        $conf['cache_class_cache_page'] = 'DrupalDatabaseCache';
-      }
+  // Optional Pantheon redis settings.
+  // Higher performance for larger page counts.
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    // Use the database for cached HTML.
+    $conf['cache_class_cache_page'] = 'DrupalDatabaseCache';
+  }
   ```
 7. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
 
