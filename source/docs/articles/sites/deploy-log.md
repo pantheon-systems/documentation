@@ -12,9 +12,7 @@ Whether you're working on a new feature, or fixing up bugs, the Deploy Log helps
 - Update contrib modules to 2.x experimental branches
 - Verified passes user acceptance tests
 ## Deploy to Test
-Each site on Pantheon comes with three environments: Dev, Test, and Live. The Deploy Log found on the Test environment allows you to push code up from Dev, and pull content down from Live.
-![Deploy Log Test Environment](/source/docs/assets/images/deploy-log-test-env.png)
-You can also convert the URL protocol from HTTPS to HTTP for encrypted sites.
+Each site on Pantheon comes with three environments: Dev, Test, and Live. The Deploy Log found on the Test environment allows you to push code up from Dev, and pull content down from Live. You can also convert the URL protocol from HTTPS to HTTP for encrypted sites.
 ## Deploy to Live
 The Deploy Log within the Live environment pushes your staging area from the Test environment and immediately updates your live website. This means no more surprises when it comes to deploying new features and updates.
 ![Deploy Log Live Environment](/source/docs/assets/images/deploy-log-live-env.png)
