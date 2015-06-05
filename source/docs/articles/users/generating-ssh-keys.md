@@ -1,6 +1,6 @@
 ---
 title: Generating SSH Keys
-description: Understand how to generate SSH keys to configure Drush or SFTP.
+description: Understand how to generate SSH keys to configure Drupal Drush or SFTP.
 category:
   - getting-started
 keywords: ssh keys, ssh, generate keys  

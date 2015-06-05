@@ -1,6 +1,6 @@
 ---
 title: Redirect Incoming Requests
-description: Learn to redirect requests to an alternate domain name or path via PHP.
+description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
 category:
   - going-live
   - managing

@@ -1,6 +1,6 @@
 ---
 title: Launching a WordPress Site
-description: Learn to launch a new WordPress site.  
+description: Going live: detailed information on launching a new Pantheon WordPress site.  
 category:
   - going-live
   - WordPress

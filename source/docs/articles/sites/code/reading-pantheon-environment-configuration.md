@@ -1,6 +1,6 @@
 ---
 title: Reading Pantheon Environment Configuration
-description: Learn about the separation of configuration and code within the Pantheon runtime container environment.
+description: Learn about the separation of configuration and code within the Pantheon Website Management Platform's runtime container environment.
 category:
   - going-live
 keywords: environment config, env config, environment configuration, database credentials, db credentials, container, containers, $_ENV, wp-config.php, database error, db errors, superglobal, redis auth, redis authentication, runtime, runtime container, runtime container environment, runtime matrix

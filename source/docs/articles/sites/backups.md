@@ -1,6 +1,6 @@
 ---
-title: Backups on Pantheon
-description: Learn to create and manage your site's backups.
+title: Backups Tool
+description: Learn about the Backups tool available on the Pantheon Website Management Platform.
 category:
   - developing
 keywords: backups, backing up, archive, archives, create backup

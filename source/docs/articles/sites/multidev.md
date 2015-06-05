@@ -1,6 +1,6 @@
 ---
 title: Multidev
-description: Learn how to create branches and cloud development environments, to merge code into the development environment, and to manage data between environments.
+description: Detailed information on Pantheon's cloud development environment, Multidev.
 category:
 - developing
 keywords: multidev, organization, cloud development environment, cloud development environments, cde, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a cde, clone to development environment, delete cde, remove cde, delete multidev branch
