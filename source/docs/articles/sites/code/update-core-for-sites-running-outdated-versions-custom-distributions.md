@@ -5,7 +5,7 @@ keywords: upstream, core, core update, core updates, upstream updates, manually 
 ---
 If your site reports a new version update is available and you don't see a [one-click update](/docs/articles/sites/code/applying-upstream-updates/#apply-a-core-update) in your site's dashboard, take a look at the upstream URL (**Settings** >> **About Site**). If the recent commits are less than an hour or two old, wait and try accessing your Pantheon Site Dashboard again to see if one-click upstream update is available. If it's been more than an hour or two and you DO see a recent commit in the upstream, open a support ticket. Otherwise, you should pull the updates into your site manually.
 
-### Prerequisites
+## Prerequisites
 Core updates for [distributions](https://www.drupal.org/documentation/build/distributions) (Open Atrium, Commerce Kickstart, etc.) are serviced by the maintainer, but for the times in which those updates have not been pushed you can pull them into your site manually. To start, you'll need a local copy of your site's codebase:
 
 1. Access the site's Dashboard and change the [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
