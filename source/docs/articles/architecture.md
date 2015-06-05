@@ -1,6 +1,6 @@
 ---
 title: Pantheon Architecture
-description: Detailed information about our infrastructure.
+description: Detailed information about the Pantheon Website Management Platform infrastructure.
 draft: true
 ---
 ## Cloud Infrastructure Provider

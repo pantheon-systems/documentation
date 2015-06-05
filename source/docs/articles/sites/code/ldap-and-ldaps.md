@@ -1,6 +1,6 @@
 ---
 title: LDAP and LDAPS
-description: Detailed information on how to configure LDAP and LDAPS on your Pantheon website.
+description: Detailed information on how to configure LDAP and LDAPS on your Pantheon Drupal or WordPress website.
 category:
   - going-live
   - developing

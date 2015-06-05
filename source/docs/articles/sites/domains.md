@@ -1,6 +1,6 @@
 ---
-title: Domains and SSL on Pantheon
-description: Learn about the Domains tool
+title: Domains and SSL Tool
+description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
 category:
   - developing
   - managing

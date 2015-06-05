@@ -1,6 +1,6 @@
 ---
 title: Deleting a Site on Pantheon
-description: Learn how to remove a site from Pantheon.
+description: Detailed information on how to remove a Drupal or WordPress site from Pantheon.
 category:
   - managing
 keywords: delete site, deleting a site, how to delete a pantheon site, how to remove a pantheon site, delete pantheon site, delete my site, delete sites

@@ -1,6 +1,6 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-description: Learn how to create and configure IndexDepot with Solr for advanced indexing features.
+description: Learn how to create and configure IndexDepot with Solr for advanced indexing features for your Drupal or WordPress sites.
 category:
   - developing
 keywords: indexdepot, index, index depot, solr, indexing, site content, full-text search, full text search, similarity search, highlight index, highlighting indexing, geo-search, geo search, additional indexing, additional index features, custom index

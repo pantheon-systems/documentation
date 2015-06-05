@@ -1,6 +1,6 @@
 ---
 title: Toggling Between PHP Versions
-description: Learn how to change between various PHP versions.
+description: Learn how to toggle between various PHP versions to resolve PHP version compatibility issues.
 category:
   - developing
 keywords: php, php version, php versions, how to change php version, toggle php version, change php version, update php version, downgrade php version, switch php version

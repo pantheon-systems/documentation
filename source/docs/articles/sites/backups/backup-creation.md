@@ -1,6 +1,6 @@
 ---
 title: Backup Creation
-description: Detailed information on how to create a backup of any environment.
+description: Detailed information on how to create a backup of any Drupal or WordPress site environment.
 category:
   - managing
 keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
