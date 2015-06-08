@@ -6,6 +6,7 @@ category:
   - security
 authors:
   - joshkoenig
+  - iameap
 date: 6/1/2015
 ---
 
@@ -159,6 +160,21 @@ There are a few things worth noting in the above example:
 4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and CloudFlare, further upstream) to cache the redirect, which is always nice.
 
 Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheon.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
+
+## Compatibility and Limitiations
+
+CloudFlare's free HTTPS service is compatible with browsers and clients that support server name indication (SNI), an extension of the TLS protocol. Whereas traditionally, a single IP address is bound to a single certificate, SNI allows a server to present multiple certificates across multiple domains from the same IP address.
+
+Although SNI allows services like CloudFlare to economically offer HTTPS for free at scale, its support is not universal. Below are some notable incompatibilities:
+
+* Any version of Internet Explorer or Safari on Windows XP
+* Versions of Chrome prior to 6
+* Versions of Firefox prior to 2.0
+* Versions of iOS 3 and older
+* Versions of Android 2.x and older
+* New Relic's [availability monitoring service](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits)
+
+Or check this [more complete compatibility list](http://en.wikipedia.org/wiki/Server_Name_Indication#Implementation).
 
 ## Alternative Methods For HTTPS
 
