@@ -16,7 +16,10 @@ All Pantheon sites consist of three parts:
 1. From your Site Dashboard, go to the Live environment and click **Backups**.
 2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the **download** icon.
 
-When a code archive is downloaded for an environment, it contains the full Git repository checked out at master. If this code archive is combined with the database and files archive from that point in time, the code might not match the snapshot deployed on that environment. If you want to make a clone of Live or Test and it is a few commits behind Dev,  use Git to checkout the appropriate tag for the state of code you want. This will leave the repository in a detached head state so you can create and then merge a branch back into master prior to uploading it.
+When a code archive is downloaded for an environment, it contains the full Git repository checked out at master. If this code archive is combined with the database and files archive from that point in time, the code might not match the snapshot deployed on that environment. If you want to make a clone of Live or Test and it is a few commits behind Dev,  use Git to checkout the appropriate tag for the state of code you want. This will leave the repository in a detached head state so you can create and then merge a branch back into master prior to uploading it.  
+**Example**  
+`git tag`  
+`git checkout master <tag>` i.e. git checkout master pantheon_live_5 for backups from live where live_5 represents the highest pantheon_live_n tag, and there are commits more recent than the last deploy to Live.
 
 ## Import Your Code/Files/Database
 
