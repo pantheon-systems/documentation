@@ -5,6 +5,8 @@ category:
   - managing
 keywords: create a site, how to create a site, creating sites, how to create a site on pantheon, import a site
 ---
+On your User Dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**.
+
 There are three ways that you can create a site:  
 
 * Start from scratch by selecting a distribution.  
@@ -18,7 +20,7 @@ You can choose a base Drupal or WordPress version to quickly create a site on Pa
 ###Import a Site to Pantheon
 Manually import an existing Drupal or WordPress site archive via a file upload or by providing a web-accessible URL. See [Importing an Existing Site](https://pantheon.io/docs/articles/sites/create/importing-an-existing-site/) for detailed instructions.
 
-###Create a Custom Upstream
+###Start with a Custom Upstream
 Pantheon provides support for running three types of custom distribution on the platform:
 
 1. **Public Distributions** - These are high quality distributions like [Commerce Kickstart](http://drupal.org/project/commerce_kickstart) or [Open Atrium](http://drupal.org/project/openatrium) which are released on [drupal.org](https://drupal.org/) and are supported by their distribution authors for everyone to use. Public distributions are options available to all users of Pantheon as part of their site creation page. WordPress does not have any known publicly maintained upstream packages.
@@ -35,7 +37,6 @@ Organizational and Partner upstreams are available under contractual terms. Plea
 When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/docs/articles/organizations/adding-a-custom-upstream).  
 
 ## See Also
- - [Choosing your Start State](docs/articles/sites/create/choosing-start-state/)
  - [Developing Directly with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/)
  - [Going Live](/docs/articles/going-live/)
  - [Starting with Git](/docs/articles/local/starting-with-git/)
