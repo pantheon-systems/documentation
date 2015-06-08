@@ -1,6 +1,6 @@
 ---
 title: Local Development Setup and Operation
-description: Suggestions and solutions for working locally.
+description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 category:
 - getting-started
 keywords: local development, pantheon, develop locally, developing

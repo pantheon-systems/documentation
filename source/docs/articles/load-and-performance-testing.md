@@ -1,6 +1,6 @@
 ---
 title: Load and Performance Testing
-description: Learn how to monitor internal execution performance.
+description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
 category:
   - going-live
 keywords: going live, testing, performance, new relic, varnish

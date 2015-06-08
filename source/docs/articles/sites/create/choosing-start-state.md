@@ -1,6 +1,6 @@
 ---
 title: Choosing Your Start State
-description: See available options for starting new sites and site import considerations.
+description: See available options for starting new Drupal or WordPress sites and site import considerations.
 category:
   - getting-started
 keyword: start state, new site, site, pantheon, wordpress, drupal, distribution

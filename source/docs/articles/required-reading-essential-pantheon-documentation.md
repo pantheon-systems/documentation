@@ -1,6 +1,6 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
-description: Recommended documentation to learn about Pantheon's technologies.
+description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
 category:
   - getting-started
 keywords: getting started, get started, pantheon, best practices,

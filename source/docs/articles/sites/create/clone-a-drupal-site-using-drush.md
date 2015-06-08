@@ -1,6 +1,6 @@
 ---
 title: Clone a Drupal Site on Pantheon Using Drush
-description: Learn how to copy an existing Drupal site using Drupal Drush on Pantheon.
+description: Learn how to clone an existing Drupal site using Drupal Drush on Pantheon.
 category:
   - getting-started
   - drupal

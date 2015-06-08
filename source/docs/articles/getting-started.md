@@ -1,6 +1,6 @@
 ---
 title: Get Started
-description: Learn how to spin up a site on Pantheon.
+description: Learn how to spin up a site on Drupal or WordPress site Pantheon.
 category:
   - getting-started
 keywords: going live, getting started, create account, create site, import, faqs
