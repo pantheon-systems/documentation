@@ -14,8 +14,9 @@ Open terminal and run the following commands to create and access a new local di
 mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
-Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and paste the following:
+Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and save the following:
 ```
+# Replace SITE_UUID with value from Dashboard URL
 SITE_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
 do
@@ -27,8 +28,6 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 !
 done
 ```
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Replace <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> with your Site UUID (found in the Dashboard URL).</div>
 ## Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
 ```
