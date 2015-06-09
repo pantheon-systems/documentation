@@ -7,7 +7,8 @@ keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, 
 Error logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
 
 ## Prerequisites
-The script provided requires passwordless access to your codebase. This is accomplished by adding an SSH Key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
+The script requires passwordless access to your codebase, and you can do this by adding an SSH key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
+
 ## Create Script
 Open terminal and run the following commands to create and access a new local directory:
 ```
@@ -34,5 +35,6 @@ Download logs by executing the script from within the `site-logs` directory:
 sh collect-logs.sh
 ```
 You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
+
 ## See Also
 - [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/)
