@@ -1,12 +1,12 @@
 ---
 title: LDAP and LDAPS
-description: Configure LDAP on your Pantheon site.
+description: Detailed information on how to configure LDAP and LDAPS on your Pantheon Drupal or WordPress website.
 category:
   - going-live
   - developing
 keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-LDAP as a Provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+LDAP as a provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
@@ -16,7 +16,8 @@ Using LDAP as a consumer of services is supported on the platform and will work 
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
 
-**Note**: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
 
 ### Drupal
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
@@ -29,7 +30,7 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/sites/code/private-files/) in your codebase: `SITEROOT/private`.
+If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/drupal/private-files) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
 
@@ -58,9 +59,6 @@ Additional configurations, such as whether to perform server certificate checks,
     // LDAP - Never perform server certificate check in a TLS session.
     putenv('LDAPTLS_REQCERT=never');
 
-For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
-
-For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Frequently Asked Questions
 
@@ -80,8 +78,8 @@ The following script has been used to troubleshoot a variety of configuration pr
 
     terminus drush --site=<site> --env=<env> scr ldap-test.php
 
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
-
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
 ````
@@ -157,3 +155,8 @@ foreach ($settings as $host => $setting) {
   var_dump($entries);
 }
 ````
+
+##See Also
+For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
+
+For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).

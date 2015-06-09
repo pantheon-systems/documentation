@@ -1,6 +1,6 @@
 ---
 title: Debugging Sites with Log Files
-description: Learn to debug sites using database log files.
+description: Learn to debug your Pantheon Drupal or WordPress sites using database log files.
 category:
   - developing
 keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs
@@ -17,6 +17,9 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 ```
 terminus drush --site=<site> --env=<env> watchdog-show
 ```
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+
 Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
 ```
@@ -35,7 +38,7 @@ define('WP_DEBUG', true);
 
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
-From your dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
+From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
 
 Once connected, you'll see several directories:
 
@@ -45,7 +48,7 @@ Once connected, you'll see several directories:
  - **`newrelic.log`** - New Relic log; check if an environment is not logging.
  - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt.
  - **`nginx-error.log`** - Webserver error log.
- - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the dashboard.
+ - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
@@ -83,8 +86,9 @@ sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
 ```
-date_format d/%b/%Y:%T %z
-log_format %^ %^ %^ [%d] "%r" %s %b "%R" "%u" %T "%h,^"
+time_format %H:%M:%S %z
+date_format %d/%b/%Y
+log_format %^ %^ %^ [%d:%t]  "%r" %s %b "%R" "%u" %T "%h"
 ```
 
 #### Can I log to the system logger and access syslog?
@@ -98,3 +102,21 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 #### My Drupal database logs are huge. Should I disable dblog?
 
 The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
+
+### How do I access logs in environments with multiple containers?
+
+Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each application container, use the following shell script:
+
+```
+# Site UUID from Dashboard URL
+SITE_UUID=UUID
+for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
+do
+mkdir $app_server
+sftp -o Port=2222 live.$SITE_UUID@$app_server << !
+  cd logs
+  lcd $app_server
+  mget *.log
+!
+done
+```

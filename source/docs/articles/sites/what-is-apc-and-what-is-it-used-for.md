@@ -1,6 +1,6 @@
 ---
 title: What is APC and what is it used for?
-description: Understand Alternative PHP Cache and its uses within the Pantheon workflow.
+description: Understand Alternative PHP Cache and its uses within the Pantheon Website Management Platform workflow.
 category:
   - getting-started
 keywords: apc, what is apc, alternative php cache
@@ -29,12 +29,12 @@ In these circumstances, either increasing the SHM size by [upgrading your accoun
 
 Search for `shm_size` in phpinfo.
 
-See [Securely working with phpinfo](/docs/articles/sites/secure-phpinfo)
+See [Securely Working with phpinfo](/docs/articles/sites/secure-phpinfo).
 
 
 ## Can the shm_size be configured manually?
 
-No; as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.getpantheon.com/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
+No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.getpantheon.com/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
 
 ## Troubleshooting
 
@@ -48,28 +48,27 @@ If this happens often, a workaround would be to place the following at the top o
 
     if (!class_exists('NAMEOFCLASSBEINGREDECLARED')) {
 
-then closing the condition with the corresponding
+then closing the condition with the corresponding bracket at the bottom:
 
-    }
+}
 
-at the bottom.
 
 #### How do I clear the APC opcode cache?
 
 Sometimes, due to (very rare) corruption, the APC opcode cache will need to be cleared.
 
-##### **Manual**
+##### Manual
 
-To do this manually, write a tiny script named <tt>apc_cache_clear.php</tt> in your root directory with the following contents:
+To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in your root directory with the following contents:
 
     <?php
     apc_clear_cache();
 
-Then browse to http://dev.<NAMEOFSITE><yoursite>.pantheon.io/apc_cache_clear.php to clear the opcode cache.</yoursite>
+Then browse to http://dev.YOURSITE.pantheon.io/apc_cache_clear.php to clear the opcode cache.</yoursite>
 
-##### **Dashboard**
+##### Dashboard
 
-Clearing the cache via the dashboard will also clear the APC cache along with Varnish and Redis.
+Clearing the cache via the Dashboard will also clear the APC cache along with Varnish and Redis.
 
 #### APC related errors are happening on Dev, but not in Test or Live. Why?
 
@@ -77,4 +76,4 @@ APC shared memory is separate and distinct for each environment. A corruption in
 
 #### The site has been online a while, what would trigger the error now?
 
-When the cache is cleared from the dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.
+When the cache is cleared from the Dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.

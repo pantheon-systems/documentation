@@ -1,11 +1,13 @@
 ---
 title: Launch Check - Drupal Performance and Configuration Analysis
-description: Get site analysis and recommendations.
+description: Detailed information on Launch Check, Drupal Performance and Configuration Analysis.
 category:
   - developing
 keywords: launch check, drupal, analysis, database, status, report
 ---
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports can be found in the site dashboard under the status tab and are accessible by site team members.
+Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports can be found in the site dashboard under the **Status** tab and are accessible by site team members.
+
+![status tab on live environment](/source/docs/assets/images/status-tab.png)
 
 Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis** by gathering performance & behavior patterns to see how a site works.  
 
@@ -35,21 +37,21 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Frequently Asked Questions
 
-#### Why does site audit have more reports than what's shown in the dashboard?
+#### Why does site audit have more reports than what's shown in the Dashboard?
 
-The dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
+The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
 #### How can I manually run site audit on my site?
 
 You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
 
-    terminus drush --site=<site> --env=<env> --filter=site_audit
-
-**Note**: Replace `<site>` with your site name, and `<env>` with the environment (dev, test, or live). You can see a list of all your sites by running `terminus sites list`
+    terminus drush help --site=<site> --env=<env> --filter=site_audit
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 You can also execute a full report in HTML format.
 
-    terminus drush --site=<site> --env=<env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+    terminus drush aa --site=<site> --env=<env> --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 
 #### Are there plans for supporting Drupal 6 sites?
 

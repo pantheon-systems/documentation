@@ -1,13 +1,14 @@
 ---
 title: WordPress FAQs
-description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon platform.
+description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon Website Management Platform.
 category:
   - getting-started
   - WordPress
+keywords: wordpress, faqs, import, configure
 ---
 ## Getting Started
 
-### Does Pantheon Support WordPress?
+### Does Pantheon support WordPress?
 
 Yes. We have complete and total support for WordPress sites and developers.
 
@@ -59,7 +60,7 @@ If you have sites which share common elements, but also have some customization 
 
 ### Can I install WordPress in my Drupal site (or vice versa)?
 
-No. Attempting anything of the sort will only cause pain and unhappiness, this will also void your warranty.
+No. Attempting anything of the sort will only cause pain and unhappiness; this will also void your warranty.
 
 ### Can I use other WordPress services like the JetPack CDN?
 
@@ -89,7 +90,7 @@ Yes, we support Redis. Please see [Redis as a caching backend](/docs/articles/si
 
 ### Which caches do you clear?
 
-You can clear the caches from your site's Pantheon dashboard. This will take care of clearing Varnish and Redis caches, if applicable. At this time, WordPress database caches are not cleared nor is selective Varnish cache clearing supported.
+You can clear the caches from your site's Pantheon Dashboard. This will take care of clearing Varnish and Redis caches, if applicable. At this time, WordPress database caches are not cleared nor is selective Varnish cache clearing supported.
 
 
 ## Further Reading

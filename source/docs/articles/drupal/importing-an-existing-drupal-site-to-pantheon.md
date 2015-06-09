@@ -6,11 +6,9 @@ category:
 - getting-started
 keywords: drupal, import, importing, export, code, database, files, pantheon
 ---
-The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.
-
+The easiest way to import an existing Drupal site into Pantheon is to create a new site, and select **Import manually** when asked to choose a Start State.<br />
 ![](/source/docs/assets/images/desk_images/213957.png)  
-
-Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  
+Next, you'll need to upload your site code (required), user files (optional), and database (optional). For each component, you can choose between directly uploading (100 MB max) or providing a remote URL (500 MB max) to import an archive.  <br />
  ![](/source/docs/assets/images/desk_images/213971.png)​​
 
 ## Components of a Drupal Site
@@ -53,8 +51,8 @@ The code archive should include the following directories:
         └── default
            └── settings.php
     └── themes
-
-**Note: The "files" directory has been omitted. Remember not to include it in your codebase.**
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 
@@ -82,7 +80,7 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 
 ## Table Prefixes
 
-Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (dev/test/live).
+Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
 
 You can technically use DB prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your DB configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/drupal/configuring-settings-php#LocalDatabaseConfigurationforDevelopment).
 

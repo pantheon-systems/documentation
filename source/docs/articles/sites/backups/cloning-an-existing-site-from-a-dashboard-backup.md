@@ -1,6 +1,6 @@
 ---
 title: Cloning an Existing Site from a Dashboard Backup
-description: Make a copy of your existing code, files, and database.
+description: Detailed information on how to make a copy of your existing Drupal or WordPress site code, files, and database.
 category:
   - developing
 keywords: clone, restore backup, clone existing pantheon site, clone from pantheon backup, clone pantheon site, copy pantheon site
@@ -13,12 +13,12 @@ All Pantheon sites consist of three parts:
 
 ## Copy Your Code/Files/Database
 
-1. From your site Dashboard, go to the live environment and click **Backups**.
+1. From your Site Dashboard, go to the live environment and click **Backups**.
 2. Select the backup you want to clone from, and download each of the backup files (Code, Database, Files) by clicking the **download** icon.
 
 ## Import Your Code/Files/Database
 
-1. Go to the Account page on [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/)
+1. Go to the Account page on [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/).
 2. Click **Create A New Site**.
 3. Name your new site.
 4. Select **Import site** from the "Choose your Start State" options.

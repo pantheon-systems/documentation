@@ -1,11 +1,11 @@
 ---
 title: Importing Drush Site Archives with Terminus
-description: Import a Drush archive using the Terminus command-line interface.
+description: Import a Drush site archive using the Terminus, the Pantheon CLI tool.
 category:
   - getting-started
-keywords: drush, terminus, pantheon, move site, import site, 
+keywords: drush, terminus, pantheon, move site, import site,
 ---
-One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](http://drush.ws/#archive-dump) using our [Terminus command-line interface](/docs/articles/local/terminus-the-pantheon-command-line-interface). This automates the packaging of the existing installation, improving the changes of success.
+One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](http://drush.ws/#archive-dump) using our [Terminus command-line interface](/docs/articles/local/cli/). This automates the packaging of the existing installation, improving the changes of success.
 
 ## Before You Begin
 
@@ -23,11 +23,11 @@ The first thing we'll need is to generate a Drush archive of your existing site.
 
 Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places.
 
-The important thing is that you have a drush archive that can be downloaded via a URL.
+The important thing is that you have a Drush archive that can be downloaded via a URL.
 
 ## Set Up Terminus
 
-If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in the [installation instructions on Github](https://github.com/pantheon-systems/cli/wiki/installation).
+If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in the [installation instructions on GitHub](https://github.com/pantheon-systems/cli/wiki/installation).
 
 ## Import Your Archive
 
@@ -49,7 +49,7 @@ URL containing Drush archive: http://mysite.com/drush-archive.tar.gz
 Site is now building.
 The new site's UUID is xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
-At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your dashboard.
+At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 
 ## Automate Imports
 

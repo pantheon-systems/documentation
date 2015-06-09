@@ -1,6 +1,6 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
-description: Get started using the Amazon CloudFront CDN.
+description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
 category:
     - drupal
     - developing
@@ -9,19 +9,19 @@ keywords: drupal, CDN, content delivery network, cloudfront distribution, cloudf
 ## Before You Begin
 
 Make sure that you have:  
-- A site w/ CDN module or plug-in installed  
-- Signed-up for Amazon Web Services and are familiar with the interface
+- A site with a CDN module or plug-in installed  
+- Signed up for Amazon Web Services and are familiar with the interface
 
 ## About Amazon CloudFront
 
-CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
+CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 
 ## Set Up A Drupal CloudFront Distribution
 
 The first step in setting-up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/WorkingWithDownloadDistributions.html#DownloadDistValuesDomainName).
-
-**Note**: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
-
+<div class="alert alert-info">
+<strong>Note</strong>: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+</div>
 1. In the CloudFront console, click **Create Distribution**.
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
 3. Complete the fields to get the basic download distribution up and running.
@@ -40,16 +40,16 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 4. Go to the Details tab. There are a couple of items to address:
   - **Mode:** Origin Pull. For the CloudFront configuration, use Origin Pull mode. File Conveyor mode allows integration with [File Conveyor](http://fileconveyor.org) for more complicated configurations. Pantheon does not support File Conveyor.  
 
-      Return to the CloudFront distributions table and copy the domain name for your new distribution.  
-  - **CDN Mapping:** http://my.cloudfrontcdndomain.net. Be sure to add the protocol in front of the domain name. For example, "http://my.cloudfrontcdndomain.net" will work but "my.cloudfrontcdndomain.net" may cause problems. If you are using SSL, be sure to use https.
+    Return to the CloudFront distributions table and copy the domain name for your new distribution.  
+  - **CDN Mapping:** http://my.cloudfrontcdndomain.net. Be sure to add the protocol in front of the domain name. For example, "http://my.cloudfrontcdndomain.net" will work but "my.cloudfrontcdndomain.net" may cause problems. If you are using SSL, be sure to use HTTPS.
 
       Return to the Drupal CDN module configuration and paste the Domain Name we just copied from CloudFront.
 5. Click **Save Configuration**. Your assets should now be coming from your CloudFront distribution.
 
 ## Verify Assets Are Coming From the CloudFront Distribution
-
-**Note**: Execute the following steps as an anonymous user (logged out).
-
+<div class="alert alert-warning">
+<strong>Note</strong>: Execute the following steps as an anonymous user (logged out).
+</div>
 1. Create an article on your site and upload an image to it.
 2. View the article in your browser.
 3. Right-click the image and copy its location.

@@ -96,7 +96,7 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Ensure Varnish caching works</td>
-			<td class="help"><a href="/docs/articles/architecture/edge/varnish/">Varnish caching for high performance</a></td>
+			<td class="help"><a href="/docs/articles/sites/varnish/">Varnish caching for high performance</a></td>
 		</tr>
 					<tr>
 			<td class="complete">[ ]</td>

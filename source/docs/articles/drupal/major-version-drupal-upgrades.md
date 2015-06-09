@@ -1,6 +1,6 @@
 ---
 title: Major Version Drupal Upgrades
-description: Learn how to upgrade to the next major revision of Drupal.
+description: Detailed instructions on how to upgrade your site to the next major version of Drupal.
 category:
   - drupal
   - managing
@@ -11,8 +11,8 @@ The best practice for doing a major Drupal revision upgrade (e.g. version 6 to v
 Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the dashboard.
 
 ## Set Up the Code and Migrate the Data
-
-**Warning: Do not attempt the upgrades on the platform. This is not supported.**
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Do not attempt the upgrades on the platform. This is not supported.</div>
 
 The best way to think about upgrading to the next major revision of Drupal on Pantheon is the same as when you get a new laptop or smartphone: first you set up both devices side-by-side, then you migrate the data from the old to the new.
 

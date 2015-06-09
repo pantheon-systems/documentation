@@ -1,6 +1,6 @@
 ---
 title: Content Delivery Network (CDN) for file distribution
-description: Learn about the benefits of using a Content Delivery Network (CDN).
+description: Learn about the benefits of using a Content Delivery Network (CDN) on your Drupal site.
 category:
     - drupal
 keywords: CDN, file distribution, drupal, content delivery network, amazon S3 CORS,
@@ -21,7 +21,6 @@ If you have streaming content, large amounts of multi-national traffic or need t
 
 If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Enterprise clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
 
-## Vocabulary
 <dl>
 	<dt>
 <a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
@@ -48,8 +47,7 @@ Then, enable the module.
 
     drush -y en cdn
 
-To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.
-
+To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.<br />
  ![Enable CDN Module](/source/docs/assets/images/enable-cdn-module.png)
 ## Best Practices
 

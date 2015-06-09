@@ -1,20 +1,19 @@
 ---
 title: Accessing MySQL Databases
-description: Configure and troubleshoot database connections.
+description: Configure and troubleshoot your Pantheon website's MySQL database connections.
 category:
   - developing
 keywords: mysql, database, mysql databases, database connection
 ---
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
-**Note**: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the dashboard periodically or when you can’t connect.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
 
 ## Database Connection Information
 
-MySQL credentials for each site environment can be found in the Dashboard:
-
-![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)
-
+MySQL credentials for each site environment can be found in the Dashboard:<br />
+![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)<br />
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.
@@ -23,7 +22,7 @@ The following required fields are provided:
 - **Password**: The password to use when connecting to the server.
 - **Database**: The database to use; the value will always be pantheon and cannot be altered.
 
-As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your dashboard for the current credentials.
+As each database server is in the cloud, the credentials will occasionally be updated and may change without notice. Normally, this is transparent to a site as the credentials are automatically included by the server. However, if you've saved the credentials in a local client and a month later you can't connect, check your Dashboard for the current credentials.
 
 There's a wide array of MySQL clients that can be used, including [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/), [Sequel Pro](http://www.sequelpro.com/download), [Navicat](http://www.navicat.com/download), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
 
@@ -33,8 +32,7 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 
 ## Troubleshooting MySQL Connections
 
-If your site suddenly reverts to install.php, or you see database connection errors like the following:
-
+If your site suddenly reverts to install.php, or you see database connection errors like the following:<br />
 ![](/source/docs/assets/images/desk_images/64774.png)
 
     Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
@@ -43,7 +41,7 @@ This indicates that there's an issue connecting to the Pantheon database. There 
 
 #### 1. Overwritten Pressflow Core
 
-Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your dashboard will also report this as an error.  
+Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your Dashboard will also report this as an error.  
 
 If you've overwritten core, see [Core Updates](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update) for instructions on how to get back to Pressflow.
 

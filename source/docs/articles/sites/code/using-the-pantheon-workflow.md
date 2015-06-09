@@ -1,6 +1,6 @@
 ---
 title: Using the Pantheon Workflow
-description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Workflow.
+description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Website Management Platform Workflow.
 category:
   - going-live
   - developing
@@ -22,9 +22,7 @@ Update code in the Dev environment via [SFTP](/docs/articles/sites/code/developi
 ### 2. Combine fresh code from Dev and fresh content from Live in Test
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and freshly combine them in Test to be absolutely certain that your deployment to Live will go as planned.
-
 ![Site dashboard, test environment, code section](/source/docs/assets/images/desk_images/376212.png)
-
 After running this operation, be sure your database updates succeed, your exported configuration is in place, and the site is functioning as expected. It's also a good idea to review the **Status** tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
 This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use Test to make sure that everything is working correctly before deploying to Live.
@@ -33,16 +31,13 @@ This may be a good time to run regression or "smoke" tests by stepping through y
 ### 3. Deploy Code To Live
 
 After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website.
-
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
-
-
 ![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218.png)
 
 
 ## Uncommon Workflows
 
-Typically, you'll create content in the **Live** environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** >> **Clone** areas of the dashboard.
+Typically, you'll create content in the **Live** environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** > **Clone** areas of the Dashboard.
 
 Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made. Also note that overwriting the database of a live site may cause downtime.
 

@@ -1,6 +1,6 @@
 ---
 title: New Site Owner FAQs
-description: Learn about common billing and administrative tasks performed by a site owner.
+description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
 category:
     - developing
 keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
@@ -22,7 +22,8 @@ Once the user has been added to the project, they will receive a welcome email n
 
 **Remove a Team Member**
 
-**Note**: All users can be removed except the site owner.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: All users can be removed except the site owner.</div>
 
 In the Team modal, click the X next to the user you want to delete.
 
@@ -34,7 +35,7 @@ For more information on managing teams, see the [Team Management article](/docs/
 #### How do I add a supporting agency?
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
 
-1. Click **Team** in the upper-right of the site dashboard.
+1. Click **Team** in the upper-right of the Site Dashboard.
 2. Select **Add Supporting Organization** at the bottom of the Team Management window.
 3. Enter the complete name of the agency. An exact match is required.
 4. Check that the agency is the one you expected.
@@ -48,7 +49,8 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 [Redis](/docs/articles/sites/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 [SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
-**Note**: Only enable SSL for your Live environment. It is not needed in Dev or Test.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>:  Only enable SSL for your Live environment. It is not needed in Dev or Test.</div>
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.

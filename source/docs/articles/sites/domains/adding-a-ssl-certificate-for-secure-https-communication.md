@@ -1,6 +1,6 @@
 ---
 title: Enable SSL for Secure HTTPS Communication
-description: Learn how to implement an HTTPS communication and utilize a static IP address.
+description: Learn how to implement SSL secure HTTPS communication and utilize a static IP address.
 category:
   - developing
   - launch
@@ -8,7 +8,8 @@ keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl
 ---
 SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
-**Important**: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
 
 ## Steps to Enable SSL
 
@@ -37,9 +38,10 @@ The output of `openssl` should be two files:
 `www_example_com.csr`  
 `www_example_com.key`
 
-**Note**: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.
-
-**Windows Users**: You'll need Cygwin to run `openssl` on Windows. See [Installing Cygwin on Windows](/docs/articles/local/installing-cygwin-on-windows/).
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
+<div class="alert alert-info" role="alert">
+<strong>Windows Users</strong>: You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/articles/local/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
 
 ## Get SSL Certificate
 
@@ -81,14 +83,14 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 2. Select **Domains**.
 2. Select **SSL**.
 3. Paste in the requested information and press **Add Cert**.
-
-![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
+ ![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
 
 After submitting your certificates, you'll see:
 
 "HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
 
-**Note:** It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
 
 ## DNS
 
@@ -100,7 +102,8 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 
 Before you point your DNS to the custom IP address you received after enabling SSL, you may verify that the certificate is correct.
 
-**Important:** You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
 
 ### Chrome
 
@@ -108,15 +111,10 @@ Testing SSL is Chrome is similar for other browsers as well.
 
 1. Point Chrome to the custom IP address you received after enabling SSL: https://x.x.x.x
 2. Click the padlock in the address bar.
-3. Click **Certificate Information**.
-
+3. Click **Certificate Information**.<br />
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-
-4. Verify certificate details match the domain(s) you'll point to the site
-
+4. Verify certificate details match the domain(s) you'll point to the site.
  ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
-
-
 ### cURL
 
 Test SSL with `cURL` by issuing the following command:
@@ -138,7 +136,7 @@ see that your certificate is being served:
 
 ## Require SSL for All Pages
 
-It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
+It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https).
 
 
 ## Frequently Asked Questions
@@ -166,7 +164,7 @@ it indicates that some part of the chain is out of order. Check that you have th
 
 If you receive SSL chain errors, on a mobile device for example, make sure that the certificate has a certificate authority that supports your use case.
 
-Using an SSL checker(http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
+Using an SSL checker (http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
 If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 

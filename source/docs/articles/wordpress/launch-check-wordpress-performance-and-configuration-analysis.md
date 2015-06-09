@@ -1,10 +1,13 @@
 ---
 title: Launch Check - WordPress Performance and Configuration Analysis
-description: Learn more about the checks we automatically run on your site.
+description: Learn more about the checks we automatically run on your Pantheon WordPress site.
 category:
   - WordPress
+keywords: wordpress, launch check, analysis, configuration
 ---
-Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports can be found in the Site Dashboard under the **Status tab**, and are accessible by site team members.
+Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports can be found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
+
+![status tab on live environment](/source/docs/assets/images/status-tab.png)
 
 ## Overview
 
@@ -15,11 +18,11 @@ This mechanism does not actually perform requests on your site, and in doing so 
 In short, you get a fast, repeatable report that can help detect common problems and provide introspection into your site.
 
 ##How Does it Work?
-WP Launch Check is an extension for WP-CLI designed for Pantheon.io customers. While designed initially for the Pantheon dashboard it is intended to be fully usable outside of Pantheon.
+WP Launch Check is an extension for WP-CLI designed for Pantheon.io customers. While designed initially for the Pantheon Dashboard it is intended to be fully usable outside of Pantheon.
 
 To use WP Launch Check from the command line, run ```wp launchcheck <subcommand>``` command.
 
-For more information about WP-CLI, visit their [github page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [Github repo](https://github.com/pantheon-systems/wp_launch_check/).
+For more information about WP-CLI, visit their [GitHub page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [GitHub repo](https://github.com/pantheon-systems/wp_launch_check/).
 
 
 ##What Does Launch Check Evaluate?
@@ -27,7 +30,6 @@ For more information about WP-CLI, visit their [github page](https://github.com/
 ###Cron
 
 This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following  message: "Cron appears to be disabled. Make sure disableo-wp-cron is not defined in your wp-config.php."
-
 
 ###Database
 

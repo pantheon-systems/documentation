@@ -1,13 +1,11 @@
 ---
 title: Domains and SSL Tool
-description: Learn about the Domains tool
+description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
 category:
   - developing
   - managing
   - going-live
 ---
-## Overview
-
 Pantheon provides distinct base domains for the consistent access of the Development, Testing, and Live production environments for each site on the platform from the moment they are launched.
 
 All sites on Pantheon can be divided into three base domain URL patterns.
@@ -100,4 +98,3 @@ For sites launched with Pantheon.io base domains, redirecting root domains using
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
-

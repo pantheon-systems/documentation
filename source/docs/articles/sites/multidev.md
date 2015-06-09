@@ -1,6 +1,6 @@
 ---
 title: Multidev
-description: Learn how to create branches and cloud development environments, to merge code into the development environment, and to manage data between environments.
+description: Detailed information on Pantheon's cloud development environment, Multidev.
 category:
 - developing
 keywords: multidev, organization, cloud development environment, cloud development environments, cde, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a cde, clone to development environment, delete cde, remove cde, delete multidev branch
@@ -9,14 +9,11 @@ Multidev is cloud development environments for teams and allows a developer to f
 
 ## Benefits of Multidev
 
-**Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their dashboard.
+**Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
 
 **No more surprises.** Each developer on your team gets their own cloud development environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
 **A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
-
-&nbsp;
-
 ![](/source/docs/assets/images/desk_images/170383.png)​
 
 ## Branching and Multidev Terminology
@@ -25,31 +22,38 @@ Branching is a standard mechanism for duplicating source code under revision con
 
 There are a number of terms used throughout the Multidev workflow:
 
-*   **commit**:  record snapshot to history.
-*   **push**: send changes to a remote repository.
-*   **branch**: movable pointer to a set of commits, allowing independent development and history.
-*   **environment**: independent infrastructure for a site, including code, database, and files.
-*   **fork**: to divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
-*   **merge**: combine contents of a&nbsp;branch into another, like a bug fix branch into master.
-*   **master**: name of default branch; deployed to Pantheon Dev, Test and Live environments.
+<dl>
+<dt>commit</dt>
+<dd>Record snapshot to history.</dd>
+<dt>push</dt>
+<dd>Send changes to a remote repository.</dd>
+<dt>branch</dt>
+<dd>Movable pointer to a set of commits, allowing independent development and history.</dd>
+<dt>environment</dt>
+<dd>Independent infrastructure for a site, including code, database, and files.</dd>
+<dt>fork</dt>
+<dd>To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.</dd>
+<dt>merge</dt>
+<dd>Combine contents of a&nbsp;branch into another, like a bug fix branch into master.</dd>
+<dt>master</dt>
+<dd>Name of default branch; deployed to Pantheon Dev, Test and Live environments.</dd></dl>
 
 ## Getting Started
 
-1. From your site's Dashboard, click the **Multidev** tab.
-2. Click **Fork New Cloud Environment**. This will create a new fork of the Dev environment, including code, database and files.
+1. From your Site Dashboard, click the **Multidev** tab.
+2. Click **Create Cloud Development Environment**. This will create a new fork of the environment that you choose in the select box on the pop-up modal, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
-4. Click **Fork**.  
+4. Click **Create Environment**.  
 
 It will take a few minutes to create the environment and clone the content from the source environment. You can continue working on the Dashboard while it's being created.
 
+You can create cloned cloud environments from Dev, Test or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
-You can only fork from the Dev environment; forks from Test and Live are not supported. Existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
-
-If you create an environment for an existing Git branch, content can be cloned from any existing environment during the environment creation.
+You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
 ## Access a Branch Environment
 
-From the dashboard, click **Multidev**, then select the name of the environment.
+From the Dashboard, click **Multidev**, then select the name of the environment.
 
 Git instructions are shown in the Connection Mode of the code page. Each environment will have its own independent Connection Info and URL.
 
@@ -60,6 +64,12 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 3. Select the source environment from the  **Clone from the <name> Environment** drop-down.
 4. Select Database, Files, or both.
 5. Choose whether to execute update.php after cloning, and click **Clone**.
+
+## Edit Code
+
+1. Edit your content locally via [Git](/docs/articles/local/starting-with-git/) or utilize on-server development via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
+2. Within the Pantheon Dashboard, click **Code**.
+3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git will be shown in the Commit Log.
 
 ## Merge Code
 
@@ -130,4 +140,4 @@ Not at this time, but it is on the development roadmap.
 
 #### Can you backup and restore a branch environment?
 
-Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.ß
+Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.

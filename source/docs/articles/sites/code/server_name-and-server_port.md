@@ -1,6 +1,6 @@
 ---
 title: SERVER_NAME and SERVER_PORT on Pantheon
-description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your environment configuration.
+description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your Pantheon Website Management Platform environment configuration.
 category:
   - developing
 keywords: server_name, server_port, SERVER_NAME, SERVER_PORT, environment config, environment configuration, HTTP_HOST, $_SERVER, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], settings.php, wp-config.php, assign port value, port value, server name
@@ -18,7 +18,8 @@ $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 ```
 While this fix does correct symptoms such as undesirable URLs, it is recommended that all instances of `'SERVER_NAME'` be replaced with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L69-L71) for WordPress).
 
-**Note:** `$_ENV` will also be around for command-line uses. `$_SERVER` is only set up when handling a web initiated request.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: <code>$_ENV</code> will also be around for command-line uses. <code>$_SERVER</code> is only set up when handling a web initiated request.</div>
 ## Set SERVER_PORT Correctly
 The following is as an example of how to successfully assign a port value for nginx:
 ```

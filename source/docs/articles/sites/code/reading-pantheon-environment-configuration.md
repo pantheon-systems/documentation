@@ -1,11 +1,11 @@
 ---
 title: Reading Pantheon Environment Configuration
-description: Learn about the separation of configuration and code within the Pantheon runtime container environment.
+description: Learn about the separation of configuration and code within the Pantheon Website Management Platform's runtime container environment.
 category:
   - going-live
 keywords: environment config, env config, environment configuration, database credentials, db credentials, container, containers, $_ENV, wp-config.php, database error, db errors, superglobal, redis auth, redis authentication, runtime, runtime container, runtime container environment, runtime matrix
 ---
-Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.
+Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your sites code.
 
 Database credentials, Redis authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
@@ -43,7 +43,8 @@ If you are using a common CMS framework the code you need to load this configura
 
 ## Drupal 7 and Drupal 8
 
-**Note:** Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/docs/articles/drupal/configuring-settings-php) for details.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a> for details.</div>
 
 Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this would be done in settings.php.
 
@@ -86,4 +87,4 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information see [configuring wp-config.php](/docs/articles/wordpress/configuring-wp-config-php).
+For more information, see [configuring wp-config.php](/docs/articles/wordpress/configuring-wp-config-php).

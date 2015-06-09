@@ -1,12 +1,12 @@
 ---
 title: Adding a Domain to a Site Environment
-description: Learn how to associate a domain to an environment from within the Pantheon dashboard.
+description: Learn how to associate a domain to Drupal or WordPress environment from within the Pantheon dashboard.
 category:
   - going-live
   - managing
 keywords: domain, dns, domains, add a domain, add a domain to a site, add a domain to an environment, add a domainn to a site environment, change domain name, change domains, update domain, update domain name, update domain on a site, update domain on a sites environment
 ---
-In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon dashboard.
+In order for Pantheon to know where to send your site traffic, you need to associate your domain to the target site environment through the Pantheon Dashboard.
 
 This is independent of your DNS configuration, which is required to send traffic from your domain to Pantheon. For detailed instructions, see [Configuring Your DNS for Pantheon](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/), or learn about our [Domains and SSL Tool](/docs/articles/sites/domains).
 
@@ -15,35 +15,19 @@ For general information about launching your site, see [Going Live and Launching
 
 ## Add a Domain to a Site Environment
 
-1. From your site dashboard, select the environment (typically Live), and click **Domains**.  
-
-
+1. From your Site Dashboard, select the environment (typically Live), and click **Domains**.  
  ![](/source/docs/assets/images/desk_images/198280.png)  
-
-
-
 2. On the Domain Setup tab, enter the domain you want associated with that environment, and click **Add New Domain to the ... Environment**.  
 
-
-
 Both the domain and the www subdomain will be added.  
-
-
  ![](/source/docs/assets/images/desk_images/198281.png)  
-
-
-
 Once this is complete and your domain's DNS points to Pantheon, Pantheon will know where to route that request.
 
 ## Remove a Domain From a Site Environment
 
-1. From your site dashboard, select the environment (typically Live), and click **Domains**.
+1. From your Site Dashboard, select the environment (typically Live), and click **Domains**.
 2. Click **Remove** next to the appropriate domain.  
-
-
  ![](/source/docs/assets/images/desk_images/198283.png)  
-
-
 
 This will not change your DNS configuration. However, if your domain's DNS is still pointing to Pantheon and you do not have that domain associated with a Pantheon site, the request will fail.
 
@@ -64,10 +48,11 @@ This will not change your DNS configuration. However, if your domain's DNS is st
 Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. There is a workaround that will allow your local workstation to access your Pantheon site by domain without changing DNS.
 
 1. From the Pantheon Dashboard, add the domain to the target site environment.
-2. Edit your local [hosts file](http://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system) to include a Pantheon IP address (a record from going live for HTTP, custom load-balanced IP from your dashboard for HTTPS) and the domain.
+2. Edit your local [hosts file](http://en.wikipedia.org/wiki/Hosts_(file) #Location_in_the_file_system to include a Pantheon IP address (a record from going live for HTTP, custom load-balanced IP from your Dashboard for HTTPS) and the domain.
 
 Example:
 
     192.237.142.203 puppies.cuddlyfanclub.com
 
-**Note**: Remember to remove this change when you're done.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Remember to remove this change when you're done.</div>

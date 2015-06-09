@@ -1,32 +1,31 @@
 ---
 title: Importing an Existing Site to Pantheon
-description: Detailed information on how to prepare and import your site to Pantheon.
+description: Detailed information on how to prepare and import your existing Drupal or WordPress site to Pantheon.
 category:
   - drupal
   - getting-started
-keywords: import, importing site, pantheon, new site, drupal 
+keywords: import, importing site, pantheon, new site, drupal
 ---
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
+
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href=“https://codex.wordpress.org/Updating_WordPress#Troubleshooting”>WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
 
-![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
-
+ ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
-
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
 ## Distributions
 
 If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
-First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
+First, choose your distribution and visit your site's Dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
-Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
-
-![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
+Finally, use the import tools within your Pantheon site's Dashboard to import your database and site files into the Dev environment (Workflow>>Import).
+ ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 
 ## Components of a Dynamic Site
@@ -70,7 +69,8 @@ The code archive should include the following directories:
            └── settings.php
     └── themes
 
-**Note: The "files" directory has been omitted. Remember not to include it in your codebase.**
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 
@@ -115,7 +115,8 @@ This is optional, but recommended. Export a tar.gz or .zip file of your files di
 
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
 
-**Note**: Dropbox URL's need to be modified so they end in `dl=1` instead of the default `dl=0`. This forces a download of your archive and avoids the Dropbox landing page.  
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
@@ -125,7 +126,7 @@ If you have a large database or a lot of files, you'll need to use the URL optio
 
 If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
 
-In order to import a drush archive, use:
+In order to import a Drush archive, use:
 ```
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
 ```

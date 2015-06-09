@@ -1,41 +1,37 @@
 ---
 title: Backup Creation
-description: Learn how to create a backup of any environment.
+description: Detailed information on how to create a backup of any Drupal or WordPress site environment.
 category:
   - managing
 keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
 ---
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Backups need to be run separately for each environment (dev, test and live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Backups need to be run separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>
 
 ## Steps
 
-1. [Start](/docs/articles/sites/backups/backup-creation#creating-a-backup#start-backup) your backup in the 'Backups' tab by pressing the 'Create New Backup' button.
+1. [Start](/docs/articles/sites/backups/backup-creation#creating-a-backup#start-backup) your backup in the Backups tab by pressing the **Create New Backup** button.
 2. [Relax](/docs/articles/sites/backups/backup-creation#creating-a-backup#relax) as your backup is made. Track it in the progress indicator.
 3. After completion, you can [access your backups.](/docs/articles/sites/backups/backup-creation#creating-a-backup#access)
-
-![Create Backup](/source/docs/assets/images/desk_images/305275.png)
-
+ ![Create Backup](/source/docs/assets/images/desk_images/305275.png)
 You will notice the job indicator will turn green and provide the number of active jobs.
-
-![](/source/docs/assets/images/desk_images/305276.png)
-
-**Note**: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.
+ ![](/source/docs/assets/images/desk_images/305276.png)
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files).
-
-![](/source/docs/assets/images/desk_images/305286.png)
-
+ ![](/source/docs/assets/images/desk_images/305286.png)
 The newest backup will appear at the top of the list, with the name of the environment as well as the time since that backup was created. When the retention period expires for a particular backup, it will no longer be in the list of available archives.  
 
 
-Clicking on the down arrow next to the Code, DB or Files for a particular backup will give you access to links for the offsite backup.
+Clicking on the down arrow next to the Code, DB, or Files for a particular backup will give you access to links for the offsite backup.
 
-Now that you have created the archive files you can check out how to [Restore an environment from a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+Now that you have created the archive files you can check out how to [Restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-**Note**: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.  [Check this documentation for more information about signed URLS](http://stackoverflow.com/a/4649553).
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">Check this documentation for more information about signed URLS</a>.</div>
 
 ## Frequently Asked Questions
 
@@ -49,7 +45,7 @@ In the event that you need to get your site to a certain point you can use a [fu
 
 #### How long does a backup take?
 
-This depends on how much content you have. When you are doing a full environment backup this can take some time depending on the size of your code, database and files.
+This depends on how much content you have. When you are doing a full environment backup this can take some time depending on the size of your code, database, and files.
 
 #### How can I specify the time for my backups to run?
 
@@ -57,7 +53,7 @@ Daily backups are run at a random time during the day. You can select the day to
 
 #### What timezone is the backup time marked in?
 
-Backups are shown in your timezone!
+Backups are shown in your timezone.
 
 #### Why do my automated backups not run when I scheduled them to run sometimes?
 
@@ -97,14 +93,14 @@ As a product in general, Backup & Migrate is perfectly fine and fulfills many si
 - Monopolizes an appserver process and MySQL process while running
 - Backups are written to Valhalla, our Network File System that is not optimized for large files (and explicitly does not work for files above 256MB)
 - Does not use mysqldump by default (it is available as an experimental destination)
-- Can cause excessively long Drupal cron runs, which if it times out blocks other operations
+- Can cause excessively long Drupal Cron runs, which if it times out blocks other operations
 - Creates monolithic archives by default
 
 Additionally, security vulnerabilities can be introduced by ignoring interface warnings and configuring backups to be placed in web accessible locations.
 
 In comparison, Pantheon’s backup mechanism:
 
-- Does not require a full - or any - Drupal bootstrap
+- Does not require a full, or any, Drupal bootstrap
 - Does not utilize an appserver process
 - Does not write to Valhalla, so no file size limitation; instead, stores backups in Amazon S3 for black-swan redundancy
 - Uses mysqldump for minimal database impact

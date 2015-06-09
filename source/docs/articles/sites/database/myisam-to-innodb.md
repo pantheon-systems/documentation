@@ -13,7 +13,8 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 
 ##Simple Script
 
-**Note:** You must be a Pantheon customer to use this script.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: You must be a Pantheon customer to use this script.</div>
 
 1. Save the code in a file with the extension .php and SFTP it up to your site.
 2. Place it in the code directory of your website.
@@ -28,7 +29,7 @@ Here's the browser version of the script:
 
 ##Advanced Method
 
-If you're not a Pantheon customer, or you want to run the script from the command line, use this script.
+If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
 ###Before You Begin
 

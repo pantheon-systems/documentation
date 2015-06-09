@@ -1,6 +1,6 @@
 ---
 title: Caching - Advanced Topics
-description: Learn advanced details about cache and authentication.
+description: Detailed information on Caching optimization for your Drupal or WordPress site.
 category:
   - developing
 keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
@@ -19,7 +19,7 @@ For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234<
 
 The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
 
-For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/architecture/edge/pantheon_stripped-get-parameter-values).
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values).
 
 ## External Authentication (e.g. Facebook login)
 
@@ -44,6 +44,8 @@ WordPress does not use PHP session cookies; however, some themes and plugins do.
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon supports this by allowing sites to set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content. 
+
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
 **Examples of `STYXKEY` cookie names:**
 

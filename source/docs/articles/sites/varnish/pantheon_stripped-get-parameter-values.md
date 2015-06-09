@@ -1,6 +1,6 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
-description: Learn how Pantheon optimizes your site's cache performance.
+description: Detailed information on how Pantheon optimizes your site's cache performance.
 category:
   - developing
 keywords: google analytics, analytics, pantheon_stripped, utm, query parameters, cache
@@ -11,7 +11,7 @@ Behind Pantheon's edge caching layer, your application server will see some spec
 
 Since this URL modification happens entirely on the back-end, your client-side Javascript, and your Google Analytics tracking code, still see and use the original query parameters unaltered and will continue to function normally.
 
-For more information, see [Caching - Advanced Topics](/docs/articles/architecture/edge/varnish/caching-advancedtopics).
+For more information, see [Caching - Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics).
 
 
 #### Which query parameters are optimized?

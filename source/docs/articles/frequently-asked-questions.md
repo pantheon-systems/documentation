@@ -39,7 +39,7 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider. Also see [Domains and SSL Tool](/docs/articles/sites/domains) for more information. 
+Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider. Also see [Domains and SSL Tool](/docs/articles/sites/domains) for more information.
 
 In order for your site to begin "listening" for your domain, you must first become a paying customer. We consider placing a real domain on on a site to be the point at which the site starts to go live.
 
@@ -80,9 +80,9 @@ Yes. Local development is a great best practice, and Pantheon supports a wide ar
 
 The plafrorm will use drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and drush aliases.
 
-### How does cron work with WordPress on Pantheon?
+### How does Cron work with WordPress on Pantheon?
 
-WordPress runs it's own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
+WordPress runs it's own internal Cron-like system as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
 
 ### Do you support ffmpeg transcoding?
 
@@ -103,7 +103,7 @@ We're currently testing out integration strategies for Solr with our next-genera
 
 ### What support is available for Pantheon?
 
-We provide support through this helpdesk, as well as public community support on [our Get Satisfaction site](http://help.getpantheon.com). For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
+We provide support through our helpdesk, as well as public community support on [our Get Satisfaction site](http://help.getpantheon.com). For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
 
 You can read more about our support offerings on [our pricing page](https://getpantheon.com/pricing).
 

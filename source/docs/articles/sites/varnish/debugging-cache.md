@@ -1,6 +1,6 @@
 ---
 title: Debugging Cache
-description: Learn how to resolve caching errors.
+description: Detailed information on debugging your Pantheon Drupal or WordPress Cache. 
 category:
   - debugging
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
@@ -14,17 +14,17 @@ The first two require the **pantheon\_api** module to be enabled in order to all
 2. Via [Terminus](https://github.com/pantheon-systems/cli): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
 
-**Note:** Varnish caches cannot be selectively cleared.
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Varnish caches cannot be selectively cleared.</div>
 
 
 ### WordPress
-1. From the WordPress Admin Menu Select Settings->Pantheon Cache. Then Click the "Clear Cache" button to clear all the caches
+1. From the WordPress Admin Menu Select Settings->Pantheon Cache. Then Click the "Clear Cache" button to clear all the caches.
 1. From the command line you can use Terminus:
 
  ```
  $ terminus site clear-caches --site=<site> --env=<env>
  ```
-1. From the Pantheon Dashboard: Clear Caches
+1. From the Pantheon Dashboard: Clear Caches.
 
 
 ## No HTTP Cache Headers in Drupal
@@ -36,7 +36,7 @@ If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 a
 
 
 ## Theme Images Not Refreshing
-If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon dashboard and clicking the **Clear Caches** button.
+If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 ### Drupal
 To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, you can also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.

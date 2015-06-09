@@ -1,12 +1,12 @@
 ---
 title: Create a Custom Upstream
-description: Add and test a custom distribution of WordPress or Drupal.
+description: Add and test a custom distribution of WordPress or Drupal on the Pantheon website management platform.
 category:
   - managing
   - going-live
 keywords: custom upstream, distribution, remote repository, upstream
 ---
-By following this guide, you'll go from creating a custom version of WordPress or Drupal, to having it ready for us to add to the platform for members of your organization to spin up.
+Create a custom distribution of WordPress or Drupal and add it to the Pantheon platform. This will enable users of the affiliated organization to create sites using a specialized codebase as a starting point.
 
 ## 1. Create a Remote Repository.
 
@@ -44,8 +44,9 @@ git pull git://github.com/populist/panopoly-drops-7.git master
 
 ## 2. Add Your Code.
 
-Follow conventions for using the /profiles directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
-Push the repository to your upstream's remote location.
+Follow conventions for using the `/profiles` directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
+
+Push the repository to your upstream's remote location.
 
 ```
 git push origin master
@@ -55,15 +56,13 @@ git push origin master
 
 ### Create the Testing Site
 
-Create a (core) Drupal or WordPress site on Pantheon that will be used for testing the upstream.
+Create a (core) Drupal or WordPress site associated with your partner organization that will be used for testing the upstream using [Terminus](https://github.com/pantheon-systems/cli).
 
 ```
 terminus sites create upstream-test
 ```
 
-Upgrade the site plan to Business to enable Multidev and multiple app-servers on Live for testing.
-
-Clone down the Pantheon repository.
+[Clone the Pantheon repository](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
 
 ```
 git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git machine-name
@@ -85,19 +84,25 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times. <!--Terminus command: `drush psite-ewipe $UUID dev`-->
-
+Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
+```
+terminus site wipe --site=<site> --env=<env>
+```
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 #### Acceptance Tests
 
 Run your automated acceptance tests, using behat, casper.js, or by manually executing user stories.
 
 ## 4. Update and Provide Pantheon with Read Access.
 
-When testing is complete, merge your pull requests into or git push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it. For private repos, grant read-access to the gf-pantheon user on GitHub or to the pantheon\_distributions user on Bitbucket.
+When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> For private repositories, grant read-access to the <code>gf-pantheon</code> user on GitHub or to the <code>pantheon_distributions</code> user on Bitbucket.</div>
 
 ## 5. Submit Product Information.
 
-After you have a distribution that works on Pantheon, open a ticket from the testing site or Pantheon One support tab, titled "Product submission for [organization]"" and include the following information about the distribution:
+After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
 - Upstream URL (https)\*\*

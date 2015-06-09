@@ -1,6 +1,6 @@
 ---
 title: Git FAQs
-description: Answers to commonly asked questions about Git.
+description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
 category:
   - developing
 keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
@@ -62,7 +62,8 @@ For example, the Git log may contain an entry similar to the following:
     CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
 
 1. From your local repository, run the following Git command to get a copy of the file in conflict: `git checkout <commit ID> -- <file>`<br />
-**Note**: When looking for a commit ID, you can find the last instance where the missing file was in the repository.  
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:  
 
@@ -85,9 +86,7 @@ For example, the Git log may contain an entry similar to the following:
 ## Using Git
 ### Does Pantheon support Git submodules?
 
-We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes.
-
-Right now, the best approach is to add and commit the code to Git as normal files.
+We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes. The best approach is to add and commit the code to Git as normal files.
 
 ### What are the Git tags?
 
@@ -126,19 +125,20 @@ Drupal.org also has instructions if you're looking to give back by [creating pat
 If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.
 
 1. Start a new Pantheon site with a vanilla version of Drupal. Choose the version that's appropriate for your project.
-2. Clone your vanilla Pantheon repository using the copy/paste string from the dashboard.
+2. Clone your vanilla Pantheon repository using the copy/paste string from the Dashboard.
 3. From within that clone, run something like:
 
       `git pull -Xours [your existing repo] [existing site branch]`
 
 4. If there are any conflicts, you'll need to resolve them.<br />
-  **Note**: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
 
 5. Once this is done, push back to Patheon:
 
     `git push origin master`
 
-6. On the Pantheon dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
+6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
 ### Can I use Git with On Server Development?
 
@@ -150,11 +150,11 @@ If you have On Server Development disabled, you can interact with your code via 
 
 ### What version of Git does Pantheon run?
 
-We are currently running Git 1.7.
+We are currently running Git 1.9.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
 
-If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at Github have [documented this technique](http://help.github.com/remove-sensitive-data/).
+If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
 From within the Drupal root of your site:
 
@@ -169,7 +169,7 @@ We are updating our infrastructure so that code repositories do not have a singl
 
 **How and why we are making this change:**
 
-As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt-in to evaluate the settings.
+As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
 If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL. To do so run:
 
@@ -179,7 +179,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your user dashboard. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
+If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your User Dashboard. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
 
 
 ### Why am I being prompted for my password after adding the public key?
@@ -224,13 +224,15 @@ As a result of the varying techniques and to prevent code from being accidentall
 
     git push origin :branchname
 
-#### Why isn't every commit shown in the Pantheon dashboard?
+#### Why isn't every commit shown in the Pantheon Dashboard?
 
-Pantheon uses the following command to display commits in the dashboard:
+Pantheon uses the following command to display commits in the Dashboard:
 
     git log --first-parent
+<br />
+<blockquote>This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge.<br />
+- Git Manual</blockquote>
 
-_"This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge._" Git Manual
 
 Pantheon does this so upstream updates or merges from multi-dev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
 
@@ -238,4 +240,4 @@ Pantheon does this so upstream updates or merges from multi-dev environments sho
 
 #### Can I use .gitignore on Pantheon?
 
-Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon dashboard.
+Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.

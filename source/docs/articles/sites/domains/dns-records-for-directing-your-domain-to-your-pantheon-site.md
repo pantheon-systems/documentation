@@ -1,6 +1,6 @@
 ---
 title: DNS Records for Directing Your Domain to Your Pantheon Site
-description: Recommended DNS configurations for pointing a domain to a Pantheon site.
+description: Recommended DNS configurations for pointing a domain to a Pantheon Drupal or WordPress site.
 category:
   - developing
 keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, dns records for https, dns records for http, dns records for http sites, dns records for https sites
@@ -24,8 +24,8 @@ See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pan
 
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites
 
-These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's dashboard for the specific DNS records that will successfully route traffic to your site.
-
+These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's Dashboard for the specific DNS records that will successfully route traffic to your site.
+<div class="alert alert-info" role="alert">
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
 	<dd>edge.live.getpantheon.com</dd>
@@ -37,13 +37,11 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 	<dd>2001:4801:7901:0000:c5ce:526c:0000:000f</dd>
 	<dt>Nameservers:</dt>
 	<dd>We do not have nameservers at Pantheon because we do not manage any DNS services. Use the nameservers given to you by your DNS provider.</dd>
-</dl>
-## Pantheon DNS records for HTTP sites
+</dl></div>
 
-Your site dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
-
+## Pantheon DNS Records for HTTP Sites  
+Your Site Dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
 ![Recommended DNS records](/source/docs/assets/images/pantheon-dns-records-for-http-sites.png "Pantheon Live environment dashboard showing the domains tool with links to recommended dns-records highlighted")
-
 ## DNS Records for HTTPS Sites (SSL/TLS)
 
 If you are using HTTPS for security and using an identity certificate, you **must** use your custom load-balanced IP address as an A record. See [adding a SSL certificate for secure HTTPS communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) for details.
@@ -78,7 +76,7 @@ It depends on several factors, including the TTL of your DNS records. As a rule 
 
 ### Can I use a CNAME for my bare/naked/root domain?
 
-It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon's-recommended-dns-configuration-for-pantheon.io-sites)
+It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon's-recommended-dns-configuration-for-pantheon.io-sites).
 
 
 See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
