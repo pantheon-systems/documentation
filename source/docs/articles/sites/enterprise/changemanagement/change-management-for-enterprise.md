@@ -20,10 +20,21 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 4. Check that the agency is the one you expected.
 5. Click the **Add Agency** button to make them a supporting organization.
 
-## Roles and Permissions
+## Site Roles and Permissions
+From your Org Dashboard, click **Sites**, select a site, then click **Team**. You will see the site owner, team members and their role, and any supporting organizations. 
 
 ### Team Member
 Team Members are a trusted role that can make changes to the Test and Live environments, add and edit other team members, and add supporting Organizations.
 
 ### Developer
 Developers can only work on the Development environment, and cannot deploy to Test or Live.
+
+## Organization Roles and Permissions
+From your Org Dashboard, click **People** to view and manage the members of the organization.
+
+### Administrator
+An administrator can manage settings; add, remove, and edit members, and tag sites. 
+
+### Unprivileged
+Unprivileged members can create sites within the Organization (User Dashboard). They cannot view the organization Dashboard or the sites in the organization unless they are on the team of the site.
+
