@@ -14,7 +14,7 @@ Starting from the Okta admin dashboard, do the following:
 3. Name your app **Pantheon** and click **Next**.
 4. Enter the following settings:
   * **Single sign on URL**: `https://dashboard.pantheon.io/saml/example.com/consume`  
-  <div class="alert alert-warning" role="alert"> <strong>Note:</strong>  Replace <code>example.com</code> with the domain you control.</div>
+   <div class="alert alert-warning" role="alert"> <strong>Note:</strong>  Replace <code>example.com</code> with the domain you control.</div>
   * **Audience URI (SP Entity ID)**: `https://dashboard.pantheon.io`
   * **Name ID format**: `EmailAddress`
   * **Application username**: `Email`
