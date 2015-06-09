@@ -14,7 +14,7 @@ Depending on the plan you choose, you'll get access to additional features like 
 4. Invite someone to pay for the site or enter the credit card information, and click **Update Billing**.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: If you are creating a site on behalf of client, we do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+<strong>Note</strong>: We do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
 
  ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
 
