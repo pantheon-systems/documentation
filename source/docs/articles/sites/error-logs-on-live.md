@@ -3,8 +3,13 @@ title: Automate Downloading Logs from the Live Environment
 description: Learn how to automate downloading logs from the Live environment of your site for debugging.
 keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs, live logs, download logs, download log, access logs, get logs
 ---
+
+Error logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
+
 ## Prerequisites
-Add an SSH Key
+The script provided requires passwordless access to your codebase. This is accomplished by adding an SSH Key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
+## Create Script
+Open terminal and run the following commands to create and access a new local directory:
 ```
 mkdir $HOME/site-logs
 cd $HOME/site-logs
@@ -24,8 +29,11 @@ done
 ```
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Replace <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> with your Site UUID (found in the Dashboard URL).</div>
-Next, execute the script:
+## Collect Logs
+Download logs by executing the script from within the `site-logs` directory:
 ```
 sh collect-logs.sh
 ```
-Run `ls` to view access logs downloaded by the script and open using your editor of choice. More than one directory could have been generated if your site uses multiple application containers.
+You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
+## See Also
+- [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/)
