@@ -46,7 +46,7 @@ To verify that the [Varnish](/docs/articles/sites/varnish) cache is working, the
     X-Pantheon-Edge-Server: 108.166.96.132
     Vary: Accept-Encoding, Cookie
 
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings#drupal-7-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: Until Varnish has been correctly configured, don't worry about further testing.</div>

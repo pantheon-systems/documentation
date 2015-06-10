@@ -38,5 +38,5 @@ Pantheon provides static site analysis as a service for Drupal 7 sites to make b
 - [Caching in Drupal Modules](/docs/articles/drupal/caching-in-drupal-modules/)
 - [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/)
 - [Cron for Drupal](/docs/articles/drupal/cron/)  
-- [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings/)
+- [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/)
 - [Setting up CloudFront CDN with Drupal](/docs/articles/drupal/cdn-setting-up-cloudfront/)

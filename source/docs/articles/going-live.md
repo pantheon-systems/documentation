@@ -91,7 +91,7 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Optimize Performance Settings</td>
-			<td class="help"><a href="/docs/articles/drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
+			<td class="help"><a href="/docs/articles/drupal/drupal-7-performance-and-caching-settings/">Performance and caching settings</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>

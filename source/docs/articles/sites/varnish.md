@@ -20,15 +20,15 @@ No module or plugin installation is required; do <strong>not</strong> install th
 
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as requested. If your site sends headers that forbid caching, Varnish won't cache your content.  
 
-See [Drupal's Performance Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
+See [Drupal's Performance Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
 
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the web utility at [http://varnishcheck.getpantheon.com/](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by sending in a support ticket.
 
+Use the web utility at [http://varnishcheck.getpantheon.com/](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by sending in a support ticket.
 ##See Also
 [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)
 
 [Testing Varnish](/docs/articles/sites/varnish/testing-varnish/)
 
-[Caching: Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics/)
+[Caching: Advanced Topics](/docs/articles/sites/varnish/drupal-caching-advancedtopics/)

@@ -101,9 +101,9 @@ Non-optimized caching also is a huge problem. If you’re not caching anonymous 
 If your cache lifetime is set to something that doesn’t make sense for your traffic, like if it only gets one hit per hour yet it's set to have a 5 minute cache. That’s not enough to help.  
 
 ### Drupal Note
-See our [guidelines on Drupal's performance settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings/) for more details.  
+See our [guidelines on Drupal's performance settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/) for more details.  
 
-Other caching systems that aren’t on by default that should be enabled include [block caching](/docs/articles/drupal/drupal-s-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren’t on by default that should be enabled include [block caching](/docs/articles/drupal/drupal-7-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 
 ### Using the Database to Cache in Drupal
@@ -127,7 +127,7 @@ Cache misses are by nature slow - whatever needs to be cached is performed and t
 
 There are a large number of caches involved in every single request, including:
 
-- [Varnish](/docs/articles/sites/varnish) - spread out across multiple servers, and the cache is not shared between servers.
+- [Varnish](/docs/articles/sites/drupal-varnish) - spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/articles/sites/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
 - [Drupal](https://drupal.org/node/326504) and [Redis](/docs/articles/sites/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.

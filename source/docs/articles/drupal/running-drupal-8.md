@@ -33,7 +33,7 @@ Since Drupal 8 is currently in a "beta" state, there are a number of known issue
 
 ## Using Drush with Drupal 8 on Pantheon
 
-Pantheon currently supports using Drush with Drupal 8 on Pantheon. In order to use Drush, you need to be using Drush 7.x which can be [installed with Composer by following these instructions](http://docs.drush.org/en/master/install/). Afterwards, developers can connect to their sites using the standard process of [using Drush on Pantheon](https://pantheon.io/docs/articles/local/drush-command-line-utility/). Take note that many Drush commands have changed in Drupal 8 and developers should consult the [latest Drush 7 documentation](http://drushcommands.com/drush-7x) for more information.
+Pantheon currently supports using Drush with Drupal 8 on Pantheon. In order to use Drush, you need to be using Drush 7.x which can be [installed with Composer by following these instructions](http://docs.drush.org/en/master/install/). Afterwards, developers can connect to their sites using the standard process of [using Drush on Pantheon](https://pantheon.io/docs/articles/local/drupal-drush-command-line-utility/). Take note that many Drush commands have changed in Drupal 8 and developers should consult the [latest Drush 7 documentation](http://drushcommands.com/drush-7x) for more information.
 
 ## Using Drupal 8 Configuration Management on Pantheon
 
