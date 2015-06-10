@@ -99,3 +99,7 @@ Pantheon does not currently support directly connecting to Oracle databases. Cus
 ## PHP/Java Bridge
 
 Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
+
+## General PHP framework support
+
+Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or Wordpress and no others. Although PHP will run, we can not assist or debuggetting to get these non-approved frameworks running in any way.
