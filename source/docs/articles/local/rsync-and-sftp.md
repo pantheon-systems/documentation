@@ -1,9 +1,9 @@
 ---
 title: rsync and SFTP
-description: Transfer large files using an SFTP client or rsync.
+description: Detailed information on transferring large files using rsync and SFTP.
 category:
   - getting-started
-keywords: rsync, sftp, files, transfer, file transfer, drupal, wordpress
+keywords: rsync and sftp, files, transfer, file transfer, drupal, wordpress
 ---
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the dashboard periodically or when you find that you can’t connect.</div>
