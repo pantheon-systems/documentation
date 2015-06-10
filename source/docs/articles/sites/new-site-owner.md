@@ -78,6 +78,12 @@ The site owner is the person who pays for the site. You'll need to update the pa
 2. Enter the email address for the new site owner, and click **Send Invite**.
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
+<div class="alert alert-warning" role="alert">
+**Note**: We do not recommend entering credit card information on behalf of a new owner. Instead, go to **Settings**, select **Plan**, and choose **Invite a business owner to pay for this site**. Enter the business owner's email address, select the correct plan level, and click **Send invitation**. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+
+ ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
+
+
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
 For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
