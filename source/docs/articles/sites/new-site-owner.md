@@ -79,7 +79,7 @@ The site owner is the person who pays for the site. You'll need to update the pa
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 <div class="alert alert-warning" role="alert">
-**Note**: We do not recommend entering credit card information on behalf of a new owner. Instead, go to **Settings**, select **Plan**, and choose **Invite a business owner to pay for this site**. Enter the business owner's email address, select the correct plan level, and click **Send invitation**. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+<strong>Note</strong>: We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
 
  ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
 
