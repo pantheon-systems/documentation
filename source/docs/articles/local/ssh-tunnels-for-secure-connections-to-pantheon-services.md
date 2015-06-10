@@ -17,7 +17,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 ## Requirements to Create an SSH Tunnel
 
 1. An SSH client, such as OpenSSH (ssh command already installed on Mac and Linux) or PuTTY (Windows)
-2. Target site UUID (found in the dashboard URL)
+2. Target [site UUID](/docs/articles/sites/code/using-the-pantheon-workflow/#universally-unique-identifier-(uuid)) (found in the dashboard URL)
 3. Target environment name (Dev, Test, or Live)
 4. The service you want to connect to (dbserver or cacheserver)
 5. Target port for the service ("Connection Info" tab in the site environment Dashboard)
