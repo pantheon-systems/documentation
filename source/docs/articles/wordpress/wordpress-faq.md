@@ -52,11 +52,7 @@ Yes. Pantheon puts the power back in your hands by giving you a best-practice de
 
 ### Can I use WordPress Multisite?
 
-Enterprise plans can run a number of domains on one WordPress application, which does allow you to run a network of blogs. We recommend caution if you intend to run more than 25 on a single application.
-
-If you have a very large number of sites, we recommend spreading the installation out so you can more easily manage deployments and scale your network.
-
-If you have sites which share common elements, but also have some customization to their theme or plugins, Pantheon for Agencies may be just what you need. It provides a sane way to manage this kind of hybrid environment without driving your developers or customers crazy.
+No, please see [WordPress Known Limitations: Site Networks / Multisite](/docs/articles/wordpress/wordpress-known-issues/#site-networks-/-multisite)
 
 ### Can I install WordPress in my Drupal site (or vice versa)?
 
