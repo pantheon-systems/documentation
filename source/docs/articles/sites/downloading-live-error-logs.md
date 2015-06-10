@@ -4,7 +4,7 @@ description: Learn how to automate downloading logs from the Live environment of
 keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs, live logs, download logs, download log, access logs, get logs
 ---
 
-Error logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
+Logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
 
 ## Prerequisites
 The script requires passwordless access to your codebase, and you can do this by adding an SSH key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
