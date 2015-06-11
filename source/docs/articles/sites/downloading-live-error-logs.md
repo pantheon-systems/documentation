@@ -6,8 +6,8 @@ keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, 
 
 Logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
 
-## Prerequisites
-The script requires passwordless access to your codebase, and you can do this by adding an SSH key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
+## Password/SSH Key
+The script requires access to your codebase, which means you will be interactively prompted for your password. To avoid this, you can add an SSH key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
 
 ## Create Script
 Open terminal and run the following commands to create and access a new local directory:
