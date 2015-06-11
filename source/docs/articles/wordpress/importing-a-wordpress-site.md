@@ -50,7 +50,7 @@ Alternatively, you can enter the URL to your site code (required), user files (o
 ## Relax While We Configure Your Codebase
 Click **Import Site** and wait while we import and configure your site.
 ![](/source/docs/assets/images/desk_images/247524.png)
-## Completed Spinup
+## Completed Installation
 When complete, just click the button to visit your Pantheon Dashboard.
 ![](/source/docs/assets/images/desk_images/247525.png)
 #### View Your Site Dashboard

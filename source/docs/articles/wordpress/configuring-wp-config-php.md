@@ -7,7 +7,7 @@ keywords: wordpress, wp config, database
 ---
 ## Overview
 
-WordPress configuration is set in wp-config.php, located within your WordPress site root. When you spinup a WordPress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
+WordPress configuration is set in wp-config.php, located within your WordPress site root. When you install a WordPress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes and caching.
 

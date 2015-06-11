@@ -732,7 +732,7 @@ Options:
  --nocache Force a refresh of cached authentication session.
 
 
- --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of spin-ups.
+ --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of installations.
 
 
  --onebox Use onebox (Pantheon dev only).
@@ -1047,7 +1047,7 @@ Options:
  --nocache Force a refresh of cached authentication session.
 
 
- --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of spin-ups.
+ --nopoll Do not hang around and wait for the site to be ready. Useful for scripting a lot of installations.
 
 
  --onebox Use onebox (Pantheon dev only).
