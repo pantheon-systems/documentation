@@ -1,5 +1,5 @@
 ---
-title: Add Cloudflare Free SSL to WordPress Sites
+title: Add CloudFlare Free SSL to WordPress Sites
 description: Learn to set up free SSL services with CloudFlare on Pantheon WordPress sites.
 category:
   - WordPress
@@ -28,7 +28,7 @@ CloudFlare settings can be found in the Settings > CloudFlare tab in the WordPre
 1. Set **Development Mode** to **Off**.
 ![CloudFlare Settings](/source/docs/assets/images/cloudflare-settings.png)
 ## SSL Settings
-In Cloudflare, go to the Crypto menu and set the **SSL Mode** to **Flexible**.
+In CloudFlare, go to the Crypto menu and set the **SSL Mode** to **Flexible**.
 ![CloudFlare Flex SSL](/source/docs/assets/images/cloudflare-flexible-ssl.png)
 
 ### Page Rule Settings and DNS
