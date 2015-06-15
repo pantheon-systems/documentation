@@ -52,6 +52,9 @@ Once connected, you'll see several directories:
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
+### See Also
+- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs)
+
 ## Frequently Asked Questions
 
 #### I have multiple application containers workers in my Live environment. Does Pantheon aggregate logs?

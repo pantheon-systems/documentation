@@ -35,6 +35,3 @@ Download logs by executing the script from within the `site-logs` directory:
 sh collect-logs.sh
 ```
 You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
-
-## See Also
-- [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/)
