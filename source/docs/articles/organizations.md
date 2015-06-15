@@ -22,10 +22,15 @@ Organizational roles propagate to sites within. All organization members can cre
 
 Upstreams are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. They are available for all members of the organization to select when starting a new site. Reseller partners customers deliver SAAS products built with Drupal or WordPress, automatically creating a new site for each of their clients. Learn all about [custom upstreams](/docs/articles/organizations/running-a-custom-upstream).
 
-### Product UUID
-There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all product UUID's available to you, run the following [Terminus](https://github.com/pantheon-systems/cli) command:
+### Organization UUID
+Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The organization UUID is found within the URL for the organization Dashboard and resembles the following:
 ```
-$ terminus products list
+de305d54-75b4-431b-adb2-eb6b9e546014
+```
+You can also use [Terminus](https://github.com/pantheon-systems/cli) to find the UUID of your organizations:
+
+```
+$ terminus organizations list
 ```
 
 
