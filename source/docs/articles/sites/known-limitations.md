@@ -79,14 +79,6 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 Pantheon does not currently support LESS or Sass/Compass CSS preprocessor languages. LESS and Sass will need to be pre-compiled to make traditional CSS stylesheets before being pushed to the platform.
 
-## Background Process
-
-Pantheon does not currently support the background process module. The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform.
-
-## HTTPRL
-
-Pantheon does not currently support the [HTTPRL](http://www.drupal.org/project/httprl) module, as it can result in severely impacted performance. This may be the result of module code or its configuration on the platform that results in the spikes.
-
 ## nginx.conf
 
 Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.  All of the containers run a standard profile, and we have opted to keep this configuration to keep the nginx.conf lean.

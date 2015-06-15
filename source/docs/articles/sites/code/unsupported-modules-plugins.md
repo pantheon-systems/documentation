@@ -11,11 +11,17 @@ This article lists modules and plugins that do not work with or are currently un
 
 - Adaptive Image Styles
 
+- Background Process  
+**Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform.
+
 - Backup & Migrate
 
 - Boost
 
 - Cache Expiration
+
+- HTTPRL  
+**Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 - IMCE
 
