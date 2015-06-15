@@ -53,3 +53,9 @@ This is built into the Pantheon platform.
  **Solution**: Avoid using the `tmp/` directory on the default server that the batch API uses, and create a `tmp/` directory within `sites/default/files/`. That is a network file mount and common to all of the application servers. It should allow you to get more consistency when requests come in, but the default `tmp/` path for that functionality will need to be changed.
 
 ##WordPress Plugins
+
+- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
+
+- [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/)
+
+- [batcache](https://wordpress.org/plugins/batcache/)

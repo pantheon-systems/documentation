@@ -33,9 +33,4 @@ No, Pantheon does not support setting up and running a "Network" of sites on one
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
 ## Unsupported Plugins
-
-- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
-- [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/)
-- [batcache](https://wordpress.org/plugins/batcache/)
-
-More to come on this list. Let us know what other plugin issues you see.
+See [Unsupported Modules and Plugins](/docs/articles/sites/code/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
