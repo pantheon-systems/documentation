@@ -80,26 +80,6 @@ There are two ways to update code in Test or Live:
 ## Universally Unique Identifier (UUID)
 Every user, organization, product and site is assigned a UUID which is internal to Pantheon.
 
-### Site UUID
-Found within the URL for the site Dashboard and resembles the following:
-```
-de305d54-75b4-431b-adb2-eb6b9e546014
-```
-Use [Terminus](https://github.com/pantheon-systems/cli) to find the UUID of any site on your user Dashboard:
-```
-terminus sites list
-```
-For example uses, see the following:
-
-- [Port 2222 Blocked Workaround](/docs/articles/local/port-2222-blocked-workaround#set-up-the-tunnel)
-- [rsync and sftp](/docs/articles/local/rsync-and-sftp/#sftp)
-- [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/#requirements-to-create-an-ssh-tunnel)
-
-### Product UUID
-There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all product UUID's available to you, run:
-```
-$ terminus products list
-```
 ## Other Workflow Tools: Import, Export, & Wipe
 
 You may also import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
