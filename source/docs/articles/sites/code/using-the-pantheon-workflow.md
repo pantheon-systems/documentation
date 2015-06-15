@@ -77,9 +77,6 @@ There are two ways to update code in Test or Live:
 
   We do not recommend hotfixing. Hotfixes should be the exception, not the norm.  Pushing a [hotfix via Git](/docs/articles/sites/code/hot-fixes) is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
 
-## Universally Unique Identifier (UUID)
-Every user, organization, product and site is assigned a UUID which is internal to Pantheon.
-
 ## Other Workflow Tools: Import, Export, & Wipe
 
 You may also import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.

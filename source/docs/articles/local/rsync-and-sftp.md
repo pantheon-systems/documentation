@@ -24,7 +24,7 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 
 [Connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
-Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/articles/sites/code/using-the-pantheon-workflow/#universally-unique-identifier-(uuid)) to connect; copy/pasting this example exactly will not work.
+Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/articles/sites#site-uuid) to connect; copy/pasting this example exactly will not work.
 
 ```
     export ENV=dev
