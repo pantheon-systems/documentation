@@ -104,6 +104,10 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 
 There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
+### Required Key Not Found
+When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](https://pantheon.io/docs/articles/users/loading-ssh-keys/) for instructions.
+
+
 ## Administrative Pages in Drupal
 It is unfortunately possible for some normal administrative operations to outlast the request timeout in Drupal. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
 
