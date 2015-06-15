@@ -58,11 +58,9 @@ You can also use the above to develop Drupal 8 on Pantheon!
 <strong>Note</strong>: If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
 
 ## Base Table or View Not Found
-This error may occur during a database clone, restore or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete Drupal will try and bootstrap and the MySQL import may only be at the table letter G and the result is the semaphore does not exist error.
+This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the semaphore does not exist error.
 
-Once the process is complete Drupal will be able to bootstrap correctly and this is why the error does not appear.
-
-In other words: no need for worry! Just wait for the process to complete and the error will disappear. If the site is locked down from web visitors, there may still be backend process such as our healthcheck process pinging the database, and trying to obtain a lock via the semaphore table.
+Once the process is complete, Drupal will be able to bootstrap correctly. In other words: no need to worry! Just wait for the process to complete and the error will disappear. If the site is locked down from web visitors, there may still be a backend process such as our healthcheck process pinging the database trying to obtain a lock via the semaphore table.
 
 This error shouldn’t cause any issues for your site:
 
