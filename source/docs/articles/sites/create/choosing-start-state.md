@@ -39,10 +39,10 @@ For detailed information, see [Importing an existing site into Pantheon](/docs/a
 ## Sit Back and Relax
 
 Once you've selected your start state, Pantheon will build your site environments and prepare your site. When complete, just click the button to visit your Pantheon Dashboard.
-![Site spinup progress bar](/source/docs/assets/images/desk_images/214006.png)
+![Site installation progress bar](/source/docs/assets/images/desk_images/214006.png)
 
 ## Enjoy your Pantheon Site!
 
 Congratulations! Your Pantheon site environments have been configured. From the Dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 
-![Pantheon dashboard after spin up](/source/docs/assets/images/desk_images/214008.png)
+![Pantheon dashboard after installation](/source/docs/assets/images/desk_images/214008.png)

@@ -59,7 +59,7 @@ git push origin master
 Create a (core) Drupal or WordPress site associated with your partner organization that will be used for testing the upstream using [Terminus](https://github.com/pantheon-systems/cli).
 
 ```
-terminus sites create upstream-test
+terminus sites create --name=<name-of-your-custom-upstream-test>
 ```
 
 [Clone the Pantheon repository](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
@@ -84,7 +84,7 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
+Use the standard install process to make sure your distribution installs cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
 ```
 terminus site wipe --site=<site> --env=<env>
 ```
@@ -119,6 +119,6 @@ After you have a distribution that works on Pantheon, open a ticket titled "Prod
 
 \*\* Cannot change after product creation
 
-Public and organizational distributions must also provide a promotional screenshot for the public spinup page.
+Public and organizational distributions must also provide a promotional screenshot for the public installation page.
 
 As part of a unified workflow, new Pantheon users will create an account, name their site, and be directed to the install page of the distribution.
