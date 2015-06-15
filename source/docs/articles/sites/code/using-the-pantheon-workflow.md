@@ -43,7 +43,7 @@ Moving content up to Live should almost never be done on a launched site. The on
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
-## Handling Configuration Changes
+## Configuration Management
 
 Dealing with changes to your site's configuration can be a challenge. Because the only reliable way to synchronize databases is to do so completely, and because configuration is stored in the database, it is not possible to "push configuration" from Dev to Test to Live without taking additional steps.
 
@@ -62,6 +62,9 @@ Changes to exportable configurations should always take place in the Development
 Of course, manually making configuration changes as part of your deployment is always an option. There are a number of modules designed to help you track configuration changes.
 
 Ultimately, the right answer for managing configuration updates to your site depends on your use case and comfort level with these techniques. It's an ongoing debate in the Drupal and WordPress universe, with new solutions being developed all the time.
+
+### See also
+* [Configuration Workflow for Drupal 8 Sites](https://pantheon.io/blog/configuration-workflow-drupal-8-sites) (Blog post)
 
 ## Understanding Write Permissions in Test & Live
 
