@@ -52,34 +52,10 @@ Once connected, you'll see several directories:
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
+### See Also
+- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs)
+
 ## Frequently Asked Questions
-
-#### I have multiple application containers workers in my Live environment. Does Pantheon aggregate logs?
-
-No, we do not have a mechanism for combining server logs across multiple application containers.
-
-#### Can I access the logs on a specific application container worker?
-
-Yes, just follow these steps:
-
-```
-SITE_UUID=(value from dashboard url)
-# Get IPs of individual appserver processes.
-dig +short appserver.live.$SITE_UUID.drush.in
-```
-
-Then for each appserver that you want to connect to:
-
-```
-APPSERVER_IP=(value from dig command)
-sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP
-```
-
-If you want to download all the access logs from a particular site:
-
-```
-sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
-```
 
 #### How can I parse my Nginx access logs?
 
