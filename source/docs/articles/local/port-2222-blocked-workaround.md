@@ -17,10 +17,13 @@ You can use an SSH tunnel to get around this barrier. In order to set this up yo
 ## Set Up the Tunnel
 
 Open a terminal window where you'll initiate the SSH tunnel. The form of the command is:
+
 ```nohighlight
 ssh -L<local port #>:<pantheon server>:<pantheon port> user@other-server.com
 ```
-Following is an example with some Pantheon credentials plugged in (site UUID omitted), note you can use the port numbers from this example, at a minimum, you'll need to leave port 2222 in place.
+
+Following is an example with some Pantheon credentials plugged in ([site UUID](/docs/articles/sites#site-uuid) omitted), note you can use the port numbers from this example, at a minimum, you'll need to leave port 2222 in place.
+
 ```nohighlight
 ssh -L3333:codeserver.dev.<site UUID>.drush.in:2222 user@other-server.com
 ```
