@@ -49,7 +49,7 @@ You'll need to enter your password. If you are scripting a process, use the ``--
 
 ## Create Your Site
 
-Open a browser and log in to your Pantheon dashboard so you can see the progress being made on some of the commands.
+Open a browser and log in to your Pantheon Dashboard so you can see the progress being made on some of the commands.
 
 Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us.
 
@@ -124,7 +124,7 @@ $ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \
 ```
 **Note:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
-Just like when you create a site from your dashboard, this will only take a few minutes. You will see a status bar as terminus spins up your new WordPress installation. Once complete, you will be notified that you site is ready to go.
+Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
 From terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
 
@@ -284,7 +284,7 @@ So far, so good. Many will stop there and start updating the content. There is o
 WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).
 **Note:** There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
 
-Position your Pantheon dashboard window where you can see it while working in the terminal. To install and activate the new theme on your site, use the following command:
+Position your Pantheon Dashboard window where you can see it while working in the terminal. To install and activate the new theme on your site, use the following command:
 
 
 ```

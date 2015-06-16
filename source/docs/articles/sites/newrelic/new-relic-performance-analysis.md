@@ -1,5 +1,5 @@
 ---
-title: New Relic performance analysis on Pantheon
+title: New Relic Performance Analysis on Pantheon
 description: Learn how to utilize New Relic performance metrics and reports for your Pantheon site.
 category:
   - going-live
