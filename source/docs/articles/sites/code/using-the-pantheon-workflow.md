@@ -43,7 +43,7 @@ Moving content up to Live should almost never be done on a launched site. The on
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
-## Handling Configuration Changes
+## Configuration Management
 
 Dealing with changes to your site's configuration can be a challenge. Because the only reliable way to synchronize databases is to do so completely, and because configuration is stored in the database, it is not possible to "push configuration" from Dev to Test to Live without taking additional steps.
 
@@ -56,6 +56,8 @@ Drupal core manages database and config changes via the use of [hook\_update\_N(
 A growing array of common configurations are "exportable". In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). [ForumOne created](http://forumone.com/insights/configuration-management-finally-comes-to-wordpress/) the  [WP-CFM plugin](https://github.com/forumone/wp-cfm), which exports bundles of WordPress configuration to `.json` files in `wp-content/config`. In Drupal,  [views are easily exported to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code). The  [features module](http://drupal.org/project/features) allows you to export sets of configuration like content types and their associated fields, to code as modules. It is a best practice to manage configuration in code.
 
 Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system while in SFTP mode.
+
+For more information, see [Configuration Workflow for Drupal 8 Sites](https://pantheon.io/blog/configuration-workflow-drupal-8-sites) (Blog post).
 
 ### Manual Changes
 
