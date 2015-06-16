@@ -3,7 +3,8 @@ title: Unsupported Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
 keywords: modules, plugins, unsupported, drupal, wordpress
 ---
-This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform.
+This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform. 
+We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support. 
 
 ##Drupal Modules
 
@@ -60,8 +61,8 @@ This is built into the Pantheon platform.
 
 ##WordPress Plugins
 
-- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
+- WP Super Cache
 
-- [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/)
+- W3 Total Cache
 
-- [batcache](https://wordpress.org/plugins/batcache/)
+- batcache
