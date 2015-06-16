@@ -1873,3 +1873,11 @@ color: #274E13 !important;
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
+.nohighlight {
+padding: 9px 14px;
+background-color: #f7f7f9;
+border: 1px solid #e1e1e8;
+border-radius: 4px;
+display: block;
+overflow-x: auto;
+}

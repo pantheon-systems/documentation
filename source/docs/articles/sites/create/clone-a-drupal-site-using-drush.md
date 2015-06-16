@@ -17,7 +17,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
  2. Set the destination parameter to include a file name.  
 
 **Example**:
-```
+```bash
 terminus drush --site=<site> --env=live ard --destination=sites/default/files/site\_export.tar.gz
 ```
 
