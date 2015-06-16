@@ -66,7 +66,9 @@ The common community module for Drupal to use Redis is simply called [redis](htt
       // Use Redis for Drupal locks (semaphore).
       $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
     }
-  ```<div class="alert alert-info">
+  ```
+  
+  <div class="alert alert-info">
   <strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
 
@@ -167,6 +169,7 @@ To check the # of keys in the cache, you can use the `DBSIZE` command. The follo
 
 When the Dashboard Status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results. Here is an example of a block that will result in an incorrectly configured cache backend:
 
+
 ```
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -183,6 +186,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 }
   
 ```
+
 The preceding conditional will only evaluate as true if the application in the live environment is being invoked through a web visitor, but not via command-line PHP. Therefore, Redis keys will only be populated through visits, but they will not be cleared or populated via Drush calls, which will result in caching issues for the site. In addition, the cache configuration will only apply for the live site, making it difficult to confirm its operation in the development or staging environment prior to deployment.
 
 To resolve this inconsistency, all Redis cache configuration should be enclosed in a conditional like this:
