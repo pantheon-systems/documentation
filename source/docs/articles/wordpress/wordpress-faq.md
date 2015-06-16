@@ -34,7 +34,7 @@ If you need to use PHP's native session handling, please install the [WordPress 
 
 If you are seeing errors like this:
 
-```
+```php
 Warning: session_start(): user session functions not defined
 ```
 

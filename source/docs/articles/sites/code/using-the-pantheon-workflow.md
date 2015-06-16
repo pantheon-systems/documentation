@@ -87,7 +87,7 @@ You may also import, export, and wipe the database and files per environment. Wi
 
 If you access the site before a database import is complete, you may see the following error:
 
-```
+```sql
 Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'
 ```
 
