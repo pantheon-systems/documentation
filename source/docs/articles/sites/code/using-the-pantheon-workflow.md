@@ -57,14 +57,13 @@ A growing array of common configurations are "exportable". In WordPress, [advanc
 
 Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system while in SFTP mode.
 
+For more information, see [Configuration Workflow for Drupal 8 Sites](https://pantheon.io/blog/configuration-workflow-drupal-8-sites) (Blog post).
+
 ### Manual Changes
 
 Of course, manually making configuration changes as part of your deployment is always an option. There are a number of modules designed to help you track configuration changes.
 
 Ultimately, the right answer for managing configuration updates to your site depends on your use case and comfort level with these techniques. It's an ongoing debate in the Drupal and WordPress universe, with new solutions being developed all the time.
-
-### See also
-* [Configuration Workflow for Drupal 8 Sites](https://pantheon.io/blog/configuration-workflow-drupal-8-sites) (Blog post)
 
 ## Understanding Write Permissions in Test & Live
 
