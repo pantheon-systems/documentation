@@ -163,6 +163,42 @@ To check the # of keys in the cache, you can use the `DBSIZE` command. The follo
 
 ## Troubleshooting
 
+### Redis is enabled but doesn't have any data
+
+When the Dashboard Status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results. Here is an example of a block that will result in an incorrectly configured cache backend:
+
+```
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+    // Use Redis for caching.
+    $conf['redis_client_interface'] = 'PhpRedis';
+    $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+    $conf['cache_default_class'] = 'Redis_Cache';
+    $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+    // Do not use Redis for cache_form (no performance difference).
+    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+    // Use Redis for Drupal locks (semaphore).
+    $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+  }
+}
+  
+```
+The preceding conditional will only evaluate as true if the application in the live environment is being invoked through a web visitor, but not via command-line PHP. Therefore, Redis keys will only be populated through visits, but they will not be cleared or populated via Drush calls, which will result in caching issues for the site. In addition, the cache configuration will only apply for the live site, making it difficult to confirm its operation in the development or staging environment prior to deployment.
+
+To resolve this inconsistency, all Redis cache configuration should be enclosed in a conditional like this:
+
+```
+if (defined('PANTHEON_ENVIRONMENT')) {
+  // Use Redis for caching.
+}
+```
+
+This conditional will be true for both web visits and drush calls. All Redis cache backend settings, plus any other application configuration that should be true no matter the context, should always be enclosed in these types of conditional blocks on Pantheon.
+
+However, all redirection logic should remain nested in `isset($SERVER[’PANTHEONENVIRONMENT’])` conditionals, as you would only want redirections to occur on web visits, not any drush invokations.
+
+In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will both fix these problems, and be easier for yourself and others to read and maintain.
+
 ### Cache Directory is Not Found
 
 If you push your updates via git you may get the error that the "Cache" directory is not found, Class not found or the `Cache.php` file was not found, this is because of a `.gitignore` issue which did not allow commiting of the Redis cache files. Here is an error that you may see.
@@ -186,8 +222,6 @@ Distributions may vary in their directory structure. You will need to check the 
 If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6.
 
 See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt) documentation for more details on how to configure Cache Backport.
-
-
 
 If you see the following message:
 
