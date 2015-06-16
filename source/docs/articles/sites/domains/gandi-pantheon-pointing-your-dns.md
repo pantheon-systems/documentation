@@ -24,20 +24,21 @@ Gandi requires you to make a copy of your default Zone Record to ensure that you
 Gandi has two edit modes: "Normal" and "Expert". For this tutorial, we'll be using "Expert" editing mode, which simply allows us to edit the Zone Record like a text file instead of inputting values into the Gandi fields and letting them do the formatting.
 
 We are concerned with two lines here. The A record, which reads something to the tune of:
-
-    @ 10800 IN A 217.70.184.38
-
+```nohighlight
+@ 10800 IN A 217.70.184.38
+```
 And the www CNAME:
-
-    www 10800 IN CNAME webredir.vip.gandi.net.
-
+```nohighlight
+www 10800 IN CNAME webredir.vip.gandi.net.
+```
 
 We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS document](/docs/articles/going-live#get-dns-record-and-update-your-dns). You will need to change the A record line in the zone file to the following:
-
-    @ 300 IN A 50.56.49.247
-
+```nohighlight
+@ 300 IN A 50.56.49.247
+```
 Change the www CNAME to match the following:
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Be sure to include the trailing "."</div>
-
-    www 300 IN CNAME edge.live.getpantheon.com.
+```nohighlight
+www 300 IN CNAME edge.live.getpantheon.com.
+```
