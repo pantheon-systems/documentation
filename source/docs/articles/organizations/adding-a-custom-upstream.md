@@ -16,29 +16,29 @@ Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pa
 
 **Drupal 6**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-6.git master
 ```
 
 **Drupal 7**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-7.git master
 ```
 
 **WordPress**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/WordPress.git master
 ```
 
 **Public Drupal Distribution Examples**
 
-```
+```bash
 git pull git://github.com/phase2/openatrium-drops-7.git master
 ```
 
-```
+```bash
 git pull git://github.com/populist/panopoly-drops-7.git master
 ```
 
@@ -48,7 +48,7 @@ Follow conventions for using the `/profiles` directory in Drupal. With WordPress
 
 Push the repository to your upstream's remote location.
 
-```
+```bash
 git push origin master
 ```
 
@@ -58,25 +58,25 @@ git push origin master
 
 Create a (core) Drupal or WordPress site associated with your partner organization that will be used for testing the upstream using [Terminus](https://github.com/pantheon-systems/cli).
 
-```
+```bash
 terminus sites create upstream-test
 ```
 
 [Clone the Pantheon repository](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
 
-```
+```bash
 git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git machine-name
 ```
 
 Add code from your remote upstream repository.
 
-```
+```bash
 git pull git://github.com/organization/upstream.git master
 ```
 
 Push back to Pantheon
 
-```
+```bash
 git push origin master
 ```
 
@@ -85,7 +85,7 @@ git push origin master
 #### Standard Site Installer
 
 Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
-```
+```bash
 terminus site wipe --site=<site> --env=<env>
 ```
 <div class="alert alert-info" role="alert">
