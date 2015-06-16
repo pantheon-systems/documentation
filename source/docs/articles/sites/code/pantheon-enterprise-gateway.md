@@ -24,13 +24,13 @@ Once setup is complete on our end, we'll provide you with the information you ne
 Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose LDAP_STAFF and LDAP_STUDENTS as names to identify the connections.
 
 Direct connection, no Pantheon Enterprise Gateway:
-```
+```nohighlight
 123.45.6.22:443
 223.23.4.33:443
 ```
 
 Secure integration with Pantheon Enterprise Gateway:
-```
+```nohighlight
 127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
 127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
 ```
