@@ -10,7 +10,7 @@ Sometimes there are problems in the cloud and one of Pantheon's services is unab
 
 Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as "services".  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as [services](https://www.drupal.org/project/services).  
 
 If you feel that you reached one of these messages in error, please submit a support ticket through your Dashboard describing the full URL and circumstances which led to the error.
 
