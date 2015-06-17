@@ -1875,10 +1875,9 @@ color: #274E13 !important;
     border-bottom: 1px solid #eee;
 }
 .nohighlight {
-padding: 9px 14px;
-background-color: #f7f7f9;
-border: 1px solid #e1e1e8;
-border-radius: 4px;
+background: #2d2d2d;
+color: #cccccc;
+padding: 0.5em;
+white-space: pre-wrap;
 display: block;
-overflow-x: auto;
 }
