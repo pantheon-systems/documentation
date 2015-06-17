@@ -1051,13 +1051,13 @@ h1[id] {
   content: "Example";
 }
 
-/* Tweak display of the code snippets when following an example */
+/* Tweak display of the code snippets when following an example
 .pio-example + .hljs,
 .pio-example + .zero-clipboard + .hljs {
   margin: -15px -15px 15px;
   border-width: 0 0 1px;
   border-radius: 0;
-}
+}*/
 
 /* Make the examples and snippets not full-width */
 @media (min-width: 768px) {
@@ -1071,6 +1071,7 @@ h1[id] {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
+  /**
   .pio-example + .hljs,
   .pio-example + .zero-clipboard + .hljs {
     margin-top: -16px;
@@ -1079,7 +1080,7 @@ h1[id] {
     border-width: 1px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-  }
+  }*/
   .pio-example-standalone {
     border-radius: 4px;
   }
@@ -1376,7 +1377,7 @@ pre {
   border-radius: 4px;
   margin-bottom: 14px;
 }
-.hljs {
+/**.hljs {
   padding: 9px 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
@@ -1394,7 +1395,7 @@ pre {
 .hljs pre code {
   font-size: inherit;
   color: #333; /* Effectively the base text color */
-}
+/**}
 .hljs pre code:first-child {
   display: inline-block;
   padding-right: 45px;
@@ -1408,9 +1409,9 @@ pre {
 */
 
 /* Responsive (scrollable) doc tables */
-.table-responsive .hljs pre {
+/**.table-responsive .hljs pre {
   white-space: normal;
-}
+}*/
 
 /* Utility classes table  */
 .pio-table th small,
