@@ -51,9 +51,9 @@ You can create cloned cloud environments from Dev, Test or Live; existing branch
 
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
-## Create a Branch Locally
+## Create a New Multidev Environment
 
-If you create a branch locally and push it to Pantheon, it will be available to  associate with an environment.
+First, create a branch locally and push it to Pantheon. Then create a Multidev environment for the branch:
 
 1. From your Site Dashboard, select **Multidev**.  
 2. Click **Git Branches**, and select **Create Environment** next to the branch name.
