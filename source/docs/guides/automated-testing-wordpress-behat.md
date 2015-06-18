@@ -39,13 +39,13 @@ If you don't already have a WordPress site, you can [create one for free](/docs/
 
 First, I'll download my WordPress site's codebase by doing a [`git clone`](/docs/articles/local/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
 
-```bash
+```nohighlight
 git clone <string from Pantheon Site Dashboard>
 ```
 
 Next, create a new directory for Behat testing:
 
-```bash
+```nohighlight
 cd site-name/wp-content
 mkdir tests
 cd tests
@@ -61,7 +61,7 @@ mv WordPress-Behat-Quickstart-master behat
 
 Let's take a look at what was downloaded:
 
-```bash
+```nohighlight
 cd behat
 ls
 ```
@@ -97,7 +97,7 @@ Downloading everything may take a while, with a lot of output. We used Composer 
 
 It should finish with the following output:
 
-```bash
+```nohighlight
 Generating autoload files
 ```
 
@@ -111,7 +111,7 @@ bin/behat -dl
 
 You'll see a longer list of available step definitions like the following:
 
-```bash
+```nohighlight
     When /^(?:|I )follow "(?P<link>(?:[^"]|\\")*)"$/
     When /^(?:|I )fill in the following:$//
     Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)"$/
@@ -173,7 +173,7 @@ Although not shown above, the output will be color-coded so you can quickly see 
 
 After seeing that the test failed, I visited the home page and realized it was because WordPress isn't installed yet. Even though I created the Dev environment I never actually installed WordPress. I could visit the home page to do the famous 5-minute install, but I decided to use [terminus and wp cli](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/) to install from the command line:
 
-```bash
+```nohighlight
 terminus wp core install --url=http://test-withrobots.pantheon.io \
                            --title="Test With Robots" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
@@ -212,7 +212,7 @@ When you add `@javascript` to the beginning of a feature or scenario, a browser 
 
 1. Download [Selenium Server](http://www.seleniumhq.org/download/)
 2. Execute Selenium Server from the command line:
-```bash
+```nohighlight
 cd ~/Downloads/
 java -jar selenium-server-standalone-2.45.0.jar
 ```

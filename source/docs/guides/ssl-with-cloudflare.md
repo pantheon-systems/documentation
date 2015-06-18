@@ -126,8 +126,9 @@ On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants 
 Also, you may have a number of stored references to `http` links stored in your WordPress database. These can be updated using the search/replace function available in WP-CLI, which is bundled on the platform and [accessible via the command line](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/):
 
 
-    terminus wp search-replace http://www.mysite.com https://www.mysite.com --site=mysite --env=live
-
+```bash
+terminus wp search-replace http://www.mysite.com https://www.mysite.com --site=mysite --env=live
+```
 
 You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp-cli.org/).
 
