@@ -37,12 +37,12 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 
 **Original:**
 
-```
+```bash
 git pull --no-rebase -Xtheirs --squash {paste-value-here} master
 ```
 **Updated:**
 
-```
+```bash
 git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master
 ```
 <div class="alert alert-warning" role="alert">
@@ -50,12 +50,12 @@ git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-
 
 **Final Command:**
 
-```
+```bash
 git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
 ```  
 
 Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:  
-```
+```bash
 Squash commit -- not updating HEAD  
 Automatic merge went well; stopped before committing as requested
 ```
@@ -66,19 +66,19 @@ Automatic merge went well; stopped before committing as requested
 
 8. From your terminal within the site directory, use the Git remote add command with an alias to make sure you know when you are moving code to or from Pantheon. Replace the pantheon-site-git-repo-information with the Git information from the previous step.  
   **From:**
- ```
+ ```bash
  git remote add pantheon pantheon-site-git-repo-information
  ```
 
   **To:**
-  ```
+  ```bash
   git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
   ```
 
   <div class="alert alert-warning" role="alert">
   <strong>Note</strong>: Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:</div>
 
-```
+```bash
 git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
 ```
 
@@ -99,7 +99,7 @@ git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}
 
 Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. For these, it's best to use a utility such as an SFTP client or rsync. The biggest issue with these is having the transfer stopped due to connectivity issues. [To handle that scenario, try this handy bash script](https://www.evernote.com/shard/s404/sh/5bcfedb7-cda1-4647-9390-0112c2f9e703/f8defb098e992e2acd57280c4dcddb63):  
 
-```
+```bash
 ENV='ENV'
 SITE='SITEID'
 

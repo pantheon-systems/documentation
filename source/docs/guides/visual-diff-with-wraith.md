@@ -29,7 +29,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 Install via [Homebrew](http://brew.sh/):
 
-```
+```bash
 brew install phantomjs198
 brew install imagemagick
 brew install casperjs --devel
@@ -39,7 +39,7 @@ brew install casperjs --devel
 
 On Ubuntu:
 
-```
+```bash
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
@@ -48,13 +48,13 @@ npm install -g casperjs
 
 Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
-```
+```bash
 gem install wraith
 ```
 
 Wraith should now be accessible from the command line.
 
-```
+```bash
 $ wraith
 
   Commands:
@@ -77,16 +77,16 @@ $ wraith
 ## Configure and Run Wraith
 
 Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
-```
+```nohighlight
 mkdir wraith
 cd wraith
 ```
 Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
-```
+```bash
 wraith setup
 ```
 You should see the following output:
-```
+```bash
 create  configs/config.yaml
 create  javascript/snap.js
 ```
@@ -94,7 +94,7 @@ Notice that Wraith also created the JavaScript file `javascript/snap.js`, which 
 
 Open the `javascript/snap.js` file in an editor, scroll to the end, and replace the number 5000 with 10000.
 
-```
+```javascript
 // Sometimes, straggling requests never make it back, in which
 // case, timeout after 5 seconds and render the page anyway
 final_timeout = setTimeout(function() {
@@ -106,13 +106,13 @@ phantom.exit();
 Next, the `configs/config.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
 Open `configs/config.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
-```
+```javascript
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
 ```
 You also need to add navigation paths in `configs/config.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `uk_index: /uk` item and added some additional pages for Wraith to compare.
-```
+```nohighlight
 paths:
   home: /
   login: /user/login
@@ -122,11 +122,11 @@ paths:
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
 Finally, execute Wraith:
-```
+```bash
 wraith capture config
 ```
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
-```
+```bash
 open shots/gallery.html
 ```
 ![Full Screen Diff Example](/source/docs/assets/images/fullscreen-diff.png)
@@ -138,16 +138,16 @@ Wraith can capture portions of a website with CSS selectors and display them in 
 <strong>Note</strong>: The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
 Generate a CasperJS configuration file and navigation script.
-```
+```bash
 wraith setup_casper
 ```
 This should produce the following output:
-```
+```bash
 create  configs/component.yaml
 create  javascript/casper.js
 ```
 Edit the new configuration file, `configs/component.yaml`, to re-add the domains and paths.  Note the path format has changed to support URL components with selectors.
-```
+```javascript
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
@@ -160,7 +160,7 @@ paths:
     selector: "#header"
 ```
 To increase the reliability of the screenshot captures, tweak the capture time in `javascript/casper.js`. Change the `this.wait` timeout from 2000 to 10000.
-```
+```javascript
 casper.start(url, function() {
   this.viewport(view_port_width, 1500).then(function(){
     this.wait(10000, function() {
@@ -176,7 +176,7 @@ casper.start(url, function() {
 });
 ```
 Run Wraith to produce a new gallery from the selectors. Note the generated configuration filename changed to `component.yaml`. To execute this Wraith test, run the following command:
-```
+```bash
 wraith capture component
 ```
 ![Headers Diff Example](/source/docs/assets/images/headers-diff.png)
@@ -186,7 +186,7 @@ wraith capture component
 
 Wraith supports capturing and comparing a single website against previous revisions of itself with a history mode. To set it up, edit the YAML configuration file to remove one of the domains and add a `history_dir` folder.
 
-```
+```javascript
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
 

@@ -21,7 +21,7 @@ To begin, you'll need:
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 
-```
+```bash
 terminus site clear-caches --site=<site> --env=<env>
 ```
 
@@ -51,7 +51,7 @@ There are several ways to get a copy of your Pantheon database. One way is to do
 
 Next, import the database into your local environment using a MySQL client.
 
-````
+````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
@@ -61,14 +61,14 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
 You can also export the database running the following Terminus commands:
 
-```
+```nohighlight
 terminus site backup create --element=database --site=<site> --env=<env>
 terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 
 This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
 
-````
+````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 ### Get the Files
@@ -78,7 +78,7 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 #### Via Terminus
 
 Run the following Terminus commands:
-```
+```nohighlight
 terminus site backup create --element=files --site=<site> --env=<env>
 terminus site backup get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
@@ -106,7 +106,7 @@ Test your changes, then [Git commit locally and push to Pantheon](/docs/articles
 ### Send the Database
 
 Perform a local database dump using the MySQL utility mysqldump:
-```
+```sql
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
 ```
 Then import the file from the Pantheon Dashboard by accessing Workflow > Import. Upload the database archive and click **Import**.
@@ -116,7 +116,7 @@ Then import the file from the Pantheon Dashboard by accessing Workflow > Import.
 #### Drupal: Via Drush
 If you have Drush and rsync, this is by far the easiest way to transfer your files up to your Pantheon site:
 
-````
+````nohighlight
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
 ````
 

@@ -22,8 +22,9 @@ WordPress's automatic update functionality will not work on Pantheon site enviro
 
 If you see this error:
 
-    Warning: session_start(): user session functions not defined
-
+```php
+Warning: session_start(): user session functions not defined
+```
 It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. [Read more on WordPress and PHP Sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
 
 ## Site Networks / Multisite

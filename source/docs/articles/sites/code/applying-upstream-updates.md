@@ -58,29 +58,29 @@ In the event the "Auto-Resolve Conflicts" option fails, the next step is to manu
 ## Resolve Conflicts Locally With Drupal 7
 
 From within an up-to date Git clone on your local machine:
-
-    git pull git://github.com/pantheon-systems/drops-7.git master
-    # resolve conflicts
-    git push origin master
-
+```bash
+git pull git://github.com/pantheon-systems/drops-7.git master
+# resolve conflicts
+git push origin master
+```
 You can add the `-Xtheirs` flag if you want to accept all changes.
 
 ## Resolve Conflicts Locally With Drupal 6
 
 From within an up-to-date Git clone in your local environment:
-
-    git pull git://github.com/pantheon-systems/drops-6.git master
-    # resolve other conflicts
-    git push origin master
-
+```bash
+git pull git://github.com/pantheon-systems/drops-6.git master
+# resolve other conflicts
+git push origin master
+```
 ## Resolve Conflicts Locally with WordPress
 
 From within an up-to-date Git clone in your local environment:
-
-    git pull git://github.com/pantheon-systems/WordPress.git master
-    # resolve conflicts
-    git push origin master  
-
+```bash
+git pull git://github.com/pantheon-systems/WordPress.git master
+# resolve conflicts
+git push origin master  
+```
 For more information on resolving conflicts, see the [Git FAQ page](/docs/articles/local/git-faq#frequently-asked-questions).
 
 ## Troubleshooting
@@ -95,41 +95,44 @@ _"When a merge isn’t resolved automatically, git leaves the index and the work
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence:
 
-1. Identify the file that is generating a delete error.
-2. For example, the Git log may contain an entry similar to the following:
+1. Identify the file that is generating a delete error. For example, the Git log may contain an entry similar to the following:
 
-    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+ ```nohighlight
+ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+ ```
+2. From your local repository, run the following Git command to get a copy of the file in conflict:
 
-- From your local repository, run the following Git command to get a copy of the file in conflict:
-
-    git checkout <commitid> -- <file>
-
+ ```bash
+ git checkout <commitid> -- <file>
+ ```
 For example:
+ ```nohighlight
+ git checkout 72faeeff1c9356221694d1351cdb2000ab3c5d1c -- run-tests.sh
+ ```
+3. When looking for a commit ID, you can find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
 
-    git checkout 72faeeff1c9356221694d1351cdb2000ab3c5d1c -- run-tests.sh
+ ```bash
+ git status
+ On branch master
+ Changes to be committed:
+ (use "git reset HEAD ..." to unstage)
+ new file: README.txt
+ ```
 
-- When looking for a commit ID, you can find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
+4. Next, you will need to run:
+ ```bash
+ git add .
+ ```
+5. After performing the add, commit the file with a commit message.
 
-    git status
-    On branch master
-    Changes to be committed:
-    (use "git reset HEAD ..." to unstage)
-    new file: README.txt
+ ```bash
+ git commit -am "verifying missing README.txt"
+ ```
+6. You will receive confirmation from Git that the file has been committed. Lastly, you will need to run:
 
-
-- Next, you will need to run:
-
-    git add.
-
-- After performing the add, commit the file with a commit message.
-
-    git commit -am "verifying missing README.txt"
-
-- You will receive confirmation from Git that the file has been committed.
-- Lastly, you will need to run:
-
-    git push origin master
-
+ ```bash
+ git push origin master
+ ```
 ### 503 Errors When Running Update.php & Installing Modules
 
 There are multiple reasons that 503s might occur when updating:

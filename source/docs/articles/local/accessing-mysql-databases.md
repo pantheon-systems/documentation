@@ -34,9 +34,9 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 
 If your site suddenly reverts to install.php, or you see database connection errors like the following:<br />
 ![](/source/docs/assets/images/desk_images/64774.png)
-
-    Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
-
+```sql
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+```
 This indicates that there's an issue connecting to the Pantheon database. There are two common causes:
 
 #### 1. Overwritten Pressflow Core

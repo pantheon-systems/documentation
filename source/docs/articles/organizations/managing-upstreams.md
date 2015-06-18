@@ -12,25 +12,25 @@ Once you have a distribution running on Pantheon, keep it and its downstream sit
 Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so, `cd` to your local, current copy of the remote upstream repo and `checkout` an update branch. Then, `pull` down the latest changes from our core upstream repository with the following command for the applicable core:
 
 #### WordPress
-```
+```bash
 git pull git://github.com/pantheon-systems/wordpress.git master
 ```
 
 #### Drupal 6
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-6.git master
 ```
 
 #### Drupal 7
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-7.git master
 ```
 
 Push those changes to the upstream remote
 
-```
+```nohighlight
 cd upstreams/my_drupal_upstream
 git pull git://github.com/pantheon-systems/drops-7.git master
 git commit -m “Update to Drupal 7.33. http://link-to-release-notes” git push origin update

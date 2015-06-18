@@ -176,14 +176,14 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 
 ####apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
-
-    terminus drush --site=<site> --env=<env> vget apachesolr_service_class
-
+```bash
+terminus drush --site=<site> --env=<env> vget apachesolr_service_class
+```
 ####search_api_solr.module
 If you are using search_api_solr.module you can check it with the command:
-
-    terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
-
+```bash
+terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
+```
 
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
@@ -191,9 +191,9 @@ If you are using search_api_solr.module you can check it with the command:
 ### Error During Search API Solr Installation
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
-
-    Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
-
+```php
+Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
+```
 ### Common Techniques
 
 

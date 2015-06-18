@@ -48,12 +48,13 @@ In the event you do not sync the databases you may get some errors as there is a
 
 This can be done via [Terminus](https://github.com/pantheon-systems/cli):
 
-    # Set this to Test/Live
-    $: terminus drush --site=<site> --env=<env> vset uc_credit_encryption_path 'private'
-    # verify the path is set on Test/Live
-    $: terminus drush --site=<site> --env=<env> vget uc_credit_encryption_path
-    uc_credit_encryption_path: "private"
-
+```nohighlight
+# Set this to Test/Live
+$: terminus drush --site=<site> --env=<env> vset uc_credit_encryption_path 'private'
+# verify the path is set on Test/Live
+$: terminus drush --site=<site> --env=<env> vget uc_credit_encryption_path
+uc_credit_encryption_path: "private"
+```
 
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
