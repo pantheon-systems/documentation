@@ -28,6 +28,8 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - How [SSL & HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) are implemented on Pantheon
 
+- Pantheon containers spin down after ~1 hour of idle time. LIVE environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
+
 ### Build
 
 - [Importing](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) a site onto Pantheon  
