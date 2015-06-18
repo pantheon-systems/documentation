@@ -1,17 +1,20 @@
 ---
-title: Using Temporary Files
+title: Temporary File Management with Multiple Application Containers
 description: Instructions for using temporary files in distributed environments.
 category:
 - getting-started
 keywords: tmp, temp files, tmp files, temporary files, mulitiple application containers, distributed environments
 ---
+Live sites on Professional plans and above have multiple [Application Containers](/docs/articles/sites/all-about-application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `/tmp` directory on one instance is not able to access the `/tmp` resources on another application server. The solution is to create a common, or shared, directory within the file mount which is accessible by all environments.
 
-##Temporary File Management Across Multiple Application Containers
+## Create a Common Directory
 
-If you’re using multiple servers to process requests, you’ll need to set up a temporary directory that is shared between all environments. Create the new directory, and then share it between all environments:
+Create a `tmp/` directory within the network file mount, which is common across all application containers:
 
 **Drupal**: `sites/default/files/tmp`  
-**WordPress**: `wp-content/uploads`     
+**WordPress**: `wp-content/uploads`
+
+This will allow for consistent execution of requests to temporary files for sites with more than one application container.
 
 ## Multiple Application Container Hosts  
 To manage your temporary files securely and reliably across DROPs when multiple server calls are required to process the files, add this to your code: `private://tmp`
@@ -26,7 +29,7 @@ For sites with multiple application container hosts, this value will change. Ref
 ##Create a Directory for Web Servers
 When the `tmp/` path points to the server `/tmp` directory, it is not accessible by the web server on an application server. You'll need to set the path within files to something like:
 
-`/srv/bindings/2976a45d0d6644caaead02e2cde9a55e/tmp` 
+`/srv/bindings/2976a45d0d6644caaead02e2cde9a55e/tmp`
 
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Remember to change the path depending on the value assigned by your server. However, that path is not accessible from other application servers. If you need a shared location that every server can access, we recommend using a temp directory within the files directory for plup, such as <code>private://tmp</code> or <code>public://tmp</code>.</div>
