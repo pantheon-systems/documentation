@@ -3,6 +3,7 @@ title: Getting Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
 keywords: support, scope, customer support, help
 ---
+This article walks you through submitting a support ticket from within your Site Dashboard, as well as how to contact support if you're unable to sign in to your Dashboard. You can also find information on ticket response times and  phone support.
 
 ##File a Support Ticket Through the Dashboard
 
@@ -27,7 +28,6 @@ If you cannot sign in to your Pantheon Dashboard, you can:
   * Use the [Password Reset](https://dashboard.pantheon.io/reset-password) form for Pantheon Dashboard access. For instructions, see our [Resetting Passwords](https://pantheon.io/docs/articles/sites/resetting-passwords/) article.  
   * If all else fails, email us at cse-support@pantheon.io and we can file a ticket on your behalf.
 
-
 ## Service Level Agreement (SLA) for Downtime
 Support tickets filed by Enterprise plans have a first acknowledgement of receipt guarantee:  
 
@@ -35,7 +35,6 @@ Support tickets filed by Enterprise plans have a first acknowledgement of receip
 * Standard support ticket: 2 hours
 
 For more information, see our [Service Level Agreement](https://pantheon.io/sla) page.
-
 
 ## Phone Support
 
