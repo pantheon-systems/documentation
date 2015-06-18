@@ -9,15 +9,15 @@ Live sites on Professional plans and above have multiple [Application Containers
 
 ## Create a Common Directory
 
-Create a `tmp/` directory within the network file mount, which is common across all application containers:
+Create a `tmp/` directory within the network file mount, which is common across all application containers. Use the following code when applicable to write temporary resources to shared directories:
 
-**Drupal**: `sites/default/files/tmp`  
-**WordPress**: `wp-content/uploads`
+**Drupal**: `public://sites/default/files/tmp`  
+**WordPress**: `public://wp-content/uploads`
 
 This will allow for consistent execution of requests to temporary files for sites with more than one application container.
 
-## Multiple Application Container Hosts  
-To manage your temporary files securely and reliably across DROPs when multiple server calls are required to process the files, add this to your code: `private://tmp`
+## Private Temporary Files
+To manage your temporary files privately and reliably for when multiple application containers are required to process the request, add this to your code: `private://tmp`
 
 <div class="alert alert-danger" role="alert">
 <strong>Note</strong>: Avoid using the <code>temporary://</code> scheme. Temporary files written during a batch process will not be available for processing by other application servers, and the process will fail.</div>
