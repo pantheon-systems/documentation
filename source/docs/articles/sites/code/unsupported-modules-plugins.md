@@ -3,8 +3,8 @@ title: Unsupported Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
 keywords: modules, plugins, unsupported, drupal, wordpress
 ---
-This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform. 
-We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support. 
+This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform.
+We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support.
 
 ##Drupal Modules
 
@@ -26,18 +26,12 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - IMCE
 
-- Media: Browser Plus - tmp
-
-- Media: Filesystem /tmp
-
 - Mollom  
  **Issue**: Cookies break Varnish.
 
 - Pathologic  
  **Issue**: The path of the base URL is changed and cached by the module itself.  
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
-
-- Plupload - tmp directory
 
 - Registry Rebuild  
 This is built into the Pantheon platform.
@@ -49,15 +43,28 @@ This is built into the Pantheon platform.
    $conf[‘schema_suppress_type_warnings’] = TRUE;
    ```
 
-- Taxonomy CSV - tmp directory  
-  **Issue**: The problem is that with multiple application servers as exists on your Live environment, Drupal assumes the `tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.  
-  **Solution**: You can try using the `sites/default/files/tmp` directory, as this will be shared between all the environments and can essentially serve the same purpose as the `/tmp` directory. If you need a shared location that doesn’t provide any public access to the files, we recommend using a tmp directory within the private files directors: `sites/default/files/private/tmp`.
-
 - Varnish
 
+
+### Using the `/tmp` Directory
+**Issue**:
+The following modules are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, please see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
+
+**Solution**:
+You can try using the `sites/default/filestmp` directory, as this will be shared between all environments and can essentially serve the same purpose as the `/tmp` directory. If you need a shared location that doesn't provide any public access to the files, we recommend using a tmp directory within the private files directory: `sites/default/files/private/tmp`.
+
+
+- Media: Browser Plus
+
+- Media: Filesystem
+
+- Plupload
+
+- Taxonomy CSV  
+
 - Views Exports  
- **Issue**: The distributed system means that requests are spread between all of the available application servers which is part of how we help sites scale. However, the `tmp/` directory on one instance is not able to access the `tmp/` resources on another application server. Rather than file disappearing, the subsequent request is handled by a different application server.  
- **Solution**: Avoid using the `tmp/` directory on the default server that the batch API uses, and create a `tmp/` directory within `sites/default/files/`. That is a network file mount and common to all of the application servers. It should allow you to get more consistency when requests come in, but the default `tmp/` path for that functionality will need to be changed.
+
+
 
 ##WordPress Plugins
 
