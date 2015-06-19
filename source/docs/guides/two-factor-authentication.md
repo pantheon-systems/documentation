@@ -92,7 +92,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 ### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin module](https://github.com/onelogin/drupal-saml) on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
-2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions]("https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/"). This change is necessary to have SAML use the appropriate ports.   
+2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/articles/sites/code/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.   
 3. Configure the OneLogin module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
 ![TFA OneLogin Options](/source/docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
