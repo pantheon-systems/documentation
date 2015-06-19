@@ -48,7 +48,7 @@ It's important to use __Full__ protection mode. Because Pantheon provides HTTPS 
 
 While "full" more is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
 
-Customers wanting to use CloudFlare in "strict" mode can do so by purchasing their own certificate and setting that up on their Pantheon site.
+Customers wanting to use CloudFlare in "strict" mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
 
 ## Testing Under HTTPS
 
