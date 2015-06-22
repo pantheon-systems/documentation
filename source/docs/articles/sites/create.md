@@ -7,18 +7,9 @@ keywords: create a site, how to create a site, creating sites, how to create a s
 ---
 On your User Dashboard, click  **Create your first site** or **Create a new site** to access **[sites/create](https://dashboard.pantheon.io/sites/create)**.
 
-There are three ways that you can create a site:  
-
-* Start from scratch by selecting a distribution.  
-* Import an existing site.  
-* Start with a custom upstream.  
-
 ###Start from Scratch
 
-You can choose a base Drupal or WordPress version to quickly create a site on Pantheon. See [Getting Started](/docs/articles/getting-started) for detailed instructions on creating a new site.
-
-###Import a Site to Pantheon
-Manually import an existing Drupal or WordPress site archive via a file upload or by providing a web-accessible URL. See [Importing an Existing Site](https://pantheon.io/docs/articles/sites/create/importing-an-existing-site/) for detailed instructions.
+You can choose a base Drupal or WordPress version to quickly create a site on Pantheon. See [Choosing Your Start State](/docs/articles/sites/create/choosing-start-state/) for detailed information.
 
 ###Start with a Custom Upstream
 Pantheon provides support for running three types of custom distribution on the platform:
@@ -35,6 +26,9 @@ Pantheon provides support for running three types of custom distribution on the 
 Organizational and Partner upstreams are available under contractual terms. Please [create your agency profile](/docs/articles/organizations/pantheon-for-agencies/#create-your-agency-profile) to start the process.
 
 When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/docs/articles/organizations/adding-a-custom-upstream).  
+
+##Import Site Archives
+Manually import an existing Drupal or WordPress site archive via a file upload or by providing a web-accessible URL. See [Importing an Existing Site](https://pantheon.io/docs/articles/sites/create/importing-an-existing-site/) for detailed instructions.
 
 ## See Also
  - [Developing Directly with SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/)
