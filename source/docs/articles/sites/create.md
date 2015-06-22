@@ -11,7 +11,7 @@ There are three ways that you can create a site:
 
 * Start from scratch by selecting a distribution.  
 * Import an existing site.  
-* Create a custom upstream.  
+* Start with a custom upstream.  
 
 ###Start from Scratch
 
