@@ -12,7 +12,7 @@ Error:  Could not connect to server''
 Debugging connectivity issues
 ```
 
-This message indicates that there was a networking error and you can not connect to a service i.e., problems connecting via SFTP.
+This message indicates that there was a networking error and you cannot connect to a service i.e., problems connecting via SFTP.
 
 Services such as MySQL and SFTP are running; however, the local client is unable to connect as you may have DNS issues.
 
