@@ -8,7 +8,7 @@ keywords: import, importing site, pantheon, new site, drupal
 ---
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href=“https://codex.wordpress.org/Updating_WordPress#Troubleshooting”>WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
@@ -75,27 +75,27 @@ The code archive should include the following directories:
 ## Create a Code Archive
 
 Create an archive that is stored outside of your Drupal site root that contains only the executable code associated with your site and skips the contents of sites/default/files.
-
-    # Specify the destination folder.
-    TARGET=~/Desktop
-    # Specify the source folder.
-    SOURCE=~/Projects/mysite
-    # Change directory to the source folder.
-    cd $SOURCE
-    # Create an archive that excludes sites/default/files.
-    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
-
+```php
+# Specify the destination folder.
+TARGET=~/Desktop
+# Specify the source folder.
+SOURCE=~/Projects/mysite
+# Change directory to the source folder.
+cd $SOURCE
+# Create an archive that excludes sites/default/files.
+tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
+```
 ## Export the Database
 
 This is optional, but recommended. The easiest method is to use the [mysqldump](http://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
-
-    # Specify the destination folder.
-    TARGET=~/Desktop
-    # Create the database backup.
-    mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
-    # Compress the backup.
-    gzip $TARGET/db.sql
-
+```php
+# Specify the destination folder.
+TARGET=~/Desktop
+# Create the database backup.
+mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
+# Compress the backup.
+gzip $TARGET/db.sql
+```
 ## Table Prefixes
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
@@ -105,12 +105,12 @@ You can technically use DB prefixes, but Pantheon will not support database pref
 ## Export Files
 
 This is optional, but recommended. Export a tar.gz or .zip file of your files directory, which was intentionally omitted from the codebase import. These files are not tracked in Git; instead, they will be stored in Valhalla, our network file system.
-
-    TARGET=~/Desktop
-    SOURCE=~/Projects/mysite
-    cd $SOURCE/sites/default/files
-    tar -czf $TARGET/files.tar.gz .
-
+```php
+TARGET=~/Desktop
+SOURCE=~/Projects/mysite
+cd $SOURCE/sites/default/files
+tar -czf $TARGET/files.tar.gz .
+```
 ## Upload Files to Pantheon
 
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
@@ -127,6 +127,6 @@ If you have a large database or a lot of files, you'll need to use the URL optio
 If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
 
 In order to import a Drush archive, use:
-```
+```bash
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
 ```

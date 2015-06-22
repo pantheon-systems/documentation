@@ -23,18 +23,18 @@ Change the editing mode to "Expert" in the dropdown menu on the right.
 <strong>Note</strong>: If you are editing a pre-existing Zone file, you will receive a notice (see image below, the notice is highlighted) that tells you that the zone file is currently being used and you will need to create a new version.</div>
 ![Configure the A records](/source/docs/assets/images/desk_images/197261.png)<br />
 The zone configuration in the above example is as folllows:
-
-    pantheonsupport.com 10800 IN A 192.237.142.203
-    www 10800 IN CNAME pantheonsupport.com
-
+```nohighlight
+pantheonsupport.com 10800 IN A 192.237.142.203
+www 10800 IN CNAME pantheonsupport.com
+```
 In line 1, we have an A Record in place for our bare domain (ie "pantheonsupport.com"):
-
-    pantheonsupport.com 10800 IN A 192.237.142.203
-
+```nohighlight
+pantheonsupport.com 10800 IN A 192.237.142.203
+```
 In line 2, we have a CNAME in place to accomodate 'www':
-
-    www 10800 IN CNAME pantheonsupport.com
-
+```nohighlight
+www 10800 IN CNAME pantheonsupport.com
+```
 When you have entered your configuration (and double-checked that it is correct twice!), click the **Use Version** button. If you've followed the steps in this article, your DNS configuration for your new domain is now complete on the Gandi end.
 
 ## Add Your Domain to Pantheon

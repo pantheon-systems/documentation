@@ -48,7 +48,7 @@ It's important to use __Full__ protection mode. Because Pantheon provides HTTPS 
 
 While "full" more is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
 
-Customers wanting to use CloudFlare in "strict" mode can do so by purchasing their own certificate and setting that up on their Pantheon site.
+Customers wanting to use CloudFlare in "strict" mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
 
 ## Testing Under HTTPS
 
@@ -126,8 +126,9 @@ On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants 
 Also, you may have a number of stored references to `http` links stored in your WordPress database. These can be updated using the search/replace function available in WP-CLI, which is bundled on the platform and [accessible via the command line](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/):
 
 
-    terminus wp search-replace http://www.mysite.com https://www.mysite.com --site=mysite --env=live
-
+```bash
+terminus wp search-replace http://www.mysite.com https://www.mysite.com --site=mysite --env=live
+```
 
 You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp-cli.org/).
 

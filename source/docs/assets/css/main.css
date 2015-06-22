@@ -708,7 +708,7 @@ img.noborder {
 /* All levels of nav */
 .pio-docs-sidebar .nav > li > a {
   display: block;
-  padding: 4px 20px;
+  padding: 8px 20px 8px;
   font-size: 13px;
   font-weight: 500;
   color: #999;
@@ -727,7 +727,6 @@ img.noborder {
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
-  font-weight: bold;
   color: #000;
   background-color: transparent;
   border-left: 2px solid #000;
@@ -739,8 +738,8 @@ img.noborder {
   padding-bottom: 10px;
 }
 .pio-docs-sidebar .nav .nav > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 30px;
   font-size: 12px;
   font-weight: normal;
@@ -1052,13 +1051,13 @@ h1[id] {
   content: "Example";
 }
 
-/* Tweak display of the code snippets when following an example */
-.pio-example + .highlight,
-.pio-example + .zero-clipboard + .highlight {
+/* Tweak display of the code snippets when following an example
+.pio-example + .hljs,
+.pio-example + .zero-clipboard + .hljs {
   margin: -15px -15px 15px;
   border-width: 0 0 1px;
   border-radius: 0;
-}
+}*/
 
 /* Make the examples and snippets not full-width */
 @media (min-width: 768px) {
@@ -1072,15 +1071,16 @@ h1[id] {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  .pio-example + .highlight,
-  .pio-example + .zero-clipboard + .highlight {
+  /**
+  .pio-example + .hljs,
+  .pio-example + .zero-clipboard + .hljs {
     margin-top: -16px;
     margin-right: 0;
     margin-left: 0;
     border-width: 1px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-  }
+  }*/
   .pio-example-standalone {
     border-radius: 4px;
   }
@@ -1363,15 +1363,27 @@ h1[id] {
 *
 * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
 */
-
-.highlight {
-  padding: 9px 14px;
+pre {
+  display: block;
+  padding: 0px;
+  margin: 0 0 0px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   margin-bottom: 14px;
+}
+/**.hljs {
+  padding: 9px 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
 }
-.highlight pre {
+.hljs pre {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -1380,11 +1392,11 @@ h1[id] {
   background-color: transparent;
   border: 0;
 }
-.highlight pre code {
+.hljs pre code {
   font-size: inherit;
   color: #333; /* Effectively the base text color */
-}
-.highlight pre code:first-child {
+/**}
+.hljs pre code:first-child {
   display: inline-block;
   padding-right: 45px;
 }
@@ -1397,9 +1409,9 @@ h1[id] {
 */
 
 /* Responsive (scrollable) doc tables */
-.table-responsive .highlight pre {
+/**.table-responsive .hljs pre {
   white-space: normal;
-}
+}*/
 
 /* Utility classes table  */
 .pio-table th small,
@@ -1861,4 +1873,11 @@ color: #274E13 !important;
     margin: auto;
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
+}
+.nohighlight {
+background: #2d2d2d;
+color: #cccccc;
+padding: 0.5em;
+white-space: pre-wrap;
+display: block;
 }

@@ -30,9 +30,9 @@ There are a couple of ways to interact with cron on Pantheon. One way is to exec
 Clicking **Run cron** will run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
 Alternatively, all scheduled cron tasks can be run with the following [Terminus](https://github.com/pantheon-systems/cli) command:
-
-    terminus drush --site=<site> --env=<env> cron
-
+```bash
+terminus drush --site=<site> --env=<env> cron
+```
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
@@ -79,9 +79,9 @@ The maximum execution time of Cron is 180 seconds (3 minutes).
 You can check the log messages through the Drupal Admin interface, as mentioned above.  
 
 You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
-
-    terminus drush --site=<site> --env=<env> wd-show --type='cron'
-
+```bash
+terminus drush --site=<site> --env=<env> wd-show --type='cron'
+```
 ### Can I Prevent Drupal Cron From Running?
 
 Yes, from within Drupal at `admin/system/config/cron`, select **Never** from the "Run cron every" drop-down menu as shown below, then save the configuration. 

@@ -14,7 +14,7 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 1. Visit `/admin/reports/dblog` once logged in as administrator.
 2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
-```
+```bash
 terminus drush --site=<site> --env=<env> watchdog-show
 ```
 <div class="alert alert-info" role="alert">
@@ -22,7 +22,7 @@ terminus drush --site=<site> --env=<env> watchdog-show
 
 Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
-```
+```bash
 terminus drush --site=<site> --env=<env> watchdog-show --tail
 ```
 
@@ -30,7 +30,7 @@ terminus drush --site=<site> --env=<env> watchdog-show --tail
 
 Set the WP_DEBUG variable to "true" within your wp-settings.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
 
-```
+```php
 define('WP_DEBUG', true);
 ```
 
@@ -61,7 +61,7 @@ Once connected, you'll see several directories:
 
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
-```
+```nginx
 time_format %H:%M:%S %z
 date_format %d/%b/%Y
 log_format %^ %^ %^ [%d:%t]  "%r" %s %b "%R" "%u" %T "%h"
@@ -83,7 +83,7 @@ The best recommended practice is to find and resolve the problems. PHP notices, 
 
 Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each application container, use the following shell script:
 
-```
+```bash
 # Site UUID from Dashboard URL
 SITE_UUID=UUID
 for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;

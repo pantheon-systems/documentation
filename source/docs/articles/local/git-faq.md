@@ -9,35 +9,35 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
 ### How do I resolve conflicts when updating Core?
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):
-
-    git pull -Xtheirs [upstream url] master
-
+```bash
+git pull -Xtheirs [upstream url] master
+```
 It's a good idea to double-check the conflicted files before going forward, and make sure no bugs were introduced.
 
 #### Drupal 7
 
 Run the following commands within your local environment:
-
-     git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-     # resolve conflicts here if needed...
-     git push origin master
-
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+# resolve conflicts here if needed...
+git push origin master
+```
 #### Drupal 6
 
 Run the following commands from inside your local Git repository:
-
-     git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-     # resolve conflicts here if needed...
-     git push origin master
-
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+# resolve conflicts here if needed...
+git push origin master
+```
 #### WordPress
 
 Run the following commands from inside your local Git repository:
-
-     git pull -Xtheirs  git://github.com/pantheon-systems/WordPress.git master
-     # resolve conflicts here if needed...
-     git push origin master
-
+```bash
+git pull -Xtheirs  git://github.com/pantheon-systems/WordPress.git master
+# resolve conflicts here if needed...
+git push origin master
+```
 #### Upstreams for Drupal Products
 
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
@@ -58,30 +58,43 @@ _"When a merge isn’t resolved automatically, Git leaves the index and the work
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:  
+```bash
+CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
+```
+1. From your local repository, run the following Git command to get a copy of the file in conflict:
 
-    CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
-
-1. From your local repository, run the following Git command to get a copy of the file in conflict: `git checkout <commit ID> -- <file>`<br />
-<div class="alert alert-info" role="alert">
-<strong>Note</strong>: When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
+ ```bash
+ git checkout <commit ID> -- <file>`<br />
+ ```
+  <div class="alert alert-info" role="alert">
+  <strong>Note</strong>: When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:  
 
-
-          git status
-          On branch master
-          Changes to be committed:
-          (use "git reset HEAD ..." to unstage)
-          new file: README.txt
-
+ ```bash
+  git status
+  On branch master
+  Changes to be committed:
+  (use "git reset HEAD ..." to unstage)
+  new file: README.txt
+  ```
 
 3. Run the Git add command:  
- `git add .`
-4. After performing the add, commit the file with an accompanying commit message.  
-  `git commit -am "verifying missing README.txt"`<br />
+
+ ```bash
+ git add .
+ ```
+4. After performing the add, commit the file with an accompanying commit message.
+
+  ```bash
+  git commit -am "verifying missing README.txt"
+  ```
   You will receive confirmation from Git that the file has been committed.  
 5. Run the Git push command:  
-    `git push origin master`
+
+    ```bash
+    git push origin master
+    ```
 
 ## Using Git
 ### Does Pantheon support Git submodules?
@@ -89,17 +102,17 @@ For example, the Git log may contain an entry similar to the following:
 We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes. The best approach is to add and commit the code to Git as normal files.
 
 ### What are the Git tags?
-
-    $: git tag
-    jenkins-ellis_update_drops_7-3
-    jenkins-ellis_update_drops_7-4
-    jenkins-ellis_update_drops_7-5
-    pantheon.import
-    pantheon_live_1
-    pantheon_live_2
-    pantheon_test_1
-    pantheon_test_2
-
+```nohighlight
+$: git tag
+jenkins-ellis_update_drops_7-3
+jenkins-ellis_update_drops_7-4
+jenkins-ellis_update_drops_7-5
+pantheon.import
+pantheon_live_1
+pantheon_live_2
+pantheon_test_1
+pantheon_test_2
+```
 The "update\_drops" tags are from our upstream updates in the past (we don't tag them anymore, but used to).
 
 The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
@@ -128,7 +141,9 @@ If you're importing a site that has an existing Git history, you may be able to 
 2. Clone your vanilla Pantheon repository using the copy/paste string from the Dashboard.
 3. From within that clone, run something like:
 
-      `git pull -Xours [your existing repo] [existing site branch]`
+    ```bash
+    git pull -Xours [your existing repo] [existing site branch]
+    ```
 
 4. If there are any conflicts, you'll need to resolve them.<br />
 <div class="alert alert-info" role="alert">
@@ -136,7 +151,10 @@ If you're importing a site that has an existing Git history, you may be able to 
 
 5. Once this is done, push back to Patheon:
 
-    `git push origin master`
+
+    ```bash
+    git push origin master
+    ```
 
 6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
@@ -172,9 +190,9 @@ We are updating our infrastructure so that code repositories do not have a singl
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
 If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL. To do so run:
-
-    git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
-
+```nohighlight
+git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
+```
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream to something else you will have to change origin in the command above.
 
 ### Why can't I connect to Git?
@@ -187,9 +205,9 @@ If you're having problems cloning your Git repository, verify that you have enab
 This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/docs/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
-
-    ssh -vT git@code.getpantheon.com
-
+```bash
+ssh -vT git@code.getpantheon.com
+```
 The output should be similar to this:
 
     debug1: Reading configuration data /etc/ssh/ssh_config
@@ -203,15 +221,15 @@ You should now be able to configure Git with the matching SSH key and clone your
 #### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
-
-    $: git push
-    To git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
-     ! [rejected] master -> master (non-fast-forward)
-    error: failed to push some refs to 'git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9'
-    To prevent you from losing history, non-fast-forward updates were rejected
-    Merge the remote changes (e.g. 'git pull') before pushing again. See the
-    'Note about fast-forwards' section of 'git push --help' for details.
-
+```bash
+$: git push
+To git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
+ ! [rejected] master -> master (non-fast-forward)
+error: failed to push some refs to 'git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again. See the
+'Note about fast-forwards' section of 'git push --help' for details.
+```
 #### I have a Git conflict; can you fix it for me?
 
 No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/docs/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/docs/articles/local/git-faq#HowdoIrevertorundochanges?).
@@ -221,23 +239,23 @@ There are a number of patterns and strategies of Git code management for single 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
 #### How do I delete a remote branch?
-
-    git push origin :branchname
-
+```bash
+git push origin :branchname
+```
 #### Why isn't every commit shown in the Pantheon Dashboard?
 
 Pantheon uses the following command to display commits in the Dashboard:
-
-    git log --first-parent
-<br />
+```nohighlight
+git log --first-parent
+```
 <blockquote>This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge.<br />
 - Git Manual</blockquote>
 
 
 Pantheon does this so upstream updates or merges from multi-dev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
-
-    git log --graph
-
+```nohighlight
+git log --graph
+```
 #### Can I use .gitignore on Pantheon?
 
 Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.

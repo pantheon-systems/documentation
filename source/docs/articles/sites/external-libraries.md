@@ -37,14 +37,14 @@ WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
 ### Drupal
 To install from your local Development environment:
-
-    drush dl print
-    mkdir -p sites/all/libraries/wkhtmltopdf
-    ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
-    git add .
-    git commit -m "Added WKHTMLtoPDF library"
-    git push
-
+```bash
+drush dl print
+mkdir -p sites/all/libraries/wkhtmltopdf
+ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
+git add .
+git commit -m "Added WKHTMLtoPDF library"
+git push
+```
 
 ### WordPress
 Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.

@@ -95,7 +95,7 @@ Every user, organization, product and site is assigned a UUID which is internal 
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 You can also use Terminus to find the UUID of any site on your user Dashboard:
-```
+```bash
 terminus sites list
 ```
 For example uses, see the following:

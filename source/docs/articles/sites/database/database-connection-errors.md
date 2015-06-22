@@ -8,8 +8,9 @@ keywords: db error, db connection, database, database connection error, can't co
 If your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![](/source/docs/assets/images/desk_images/64774.png)
 
-    Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
-
+```sql
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+```
 This indicates that there's an issue connecting to the Pantheon database. There are two common causes.
 
 ## Overwriting Core
@@ -33,19 +34,20 @@ Some modules, like the **domain.module**, change Drupal's standard bootstrap pro
 However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippet in your `settings.php` _before_ the module's include call. An example for using domain's include would be as follows:
 
 ### Drupal 6 Style
-    $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-      $info = $settings['databases']['default']['default'];
-      $db_url = sprintf("%s://%s:%s@%s:%s/%s",
-                        $info['driver'],
-                        $info['username'],
-                        $info['password'],
-                        $info['host'],
-                        $info['port'],
-                        $info['database']);
-      $conf = $settings['conf'];
-      # Include any other settings.php magic here.
-      include './sites/all/modules/domain/settings.inc';
-
+```php
+$settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
+  $info = $settings['databases']['default']['default'];
+  $db_url = sprintf("%s://%s:%s@%s:%s/%s",
+                    $info['driver'],
+                    $info['username'],
+                    $info['password'],
+                    $info['host'],
+                    $info['port'],
+                    $info['database']);
+  $conf = $settings['conf'];
+  # Include any other settings.php magic here.
+  include './sites/all/modules/domain/settings.inc';
+```
 ### Drupal 7 Style
 
     # Include any other settings.php magic here.
