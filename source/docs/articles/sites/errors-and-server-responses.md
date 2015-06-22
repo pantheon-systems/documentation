@@ -32,48 +32,10 @@ Pantheon also prevents public access via the webserver to private files, .htacce
 "Upstream sent too big header while reading response header from upstream."
 This error will occur when the payload or size of the request being sent is greater than the `fastcgi_buffer_size`. Removing additional images reduces the size of the payload being sent to the buffer for nginx to process, and will allow you to post the request. If this happens again, check to see if you are making heavy requests with a number of assets or data being passed.
 
-### 502 - Timeout/Segfault
+### 502 - Timeout/Segfault Error
 This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't always send the authentication if it is performing an AJAX request.
 
-The PHP slow log has this error repeated:
-```
-[24-Mar-2015 18:59:11]  [pool www] pid 36919
-script_filename = /srv/bindings/<container>/code//index.php
-[0x00000000069f20e8] compile() /srv/bindings/<container>/code/includes/database/query.inc:1804
-[0x00000000069f1c60] compile() /srv/bindings/<container>/code/includes/database/select.inc:1074
-[0x00000000069f1a28] compile() /srv/bindings/<container>/code/includes/database/select.inc:1204
-[0x00000000069f1788] getArguments() /srv/bindings/<container>/code/includes/database/select.inc:1264
-[0x00000000069f0870] execute() /srv/bindings/<container>/code/modules/field/modules/field_sql_storage/field_sql_storage.module:392
-[0x00007fff0aea36a0] field_sql_storage_field_storage_load() unknown:0
-[0x00000000069f0620] call_user_func_array() /srv/bindings/<container>/code/includes/module.inc:866
-[0x00000000069eee08] module_invoke() /srv/bindings/<container>/code/modules/field/field.attach.inc:710
-[0x00000000069ee880] field_attach_load() /srv/bindings/<container>/code/includes/entity.inc:316
-[0x00000000069ee308] attachLoad() /srv/bindings/<container>/code/modules/node/node.module:4170
-[0x00000000069ed8a0] attachLoad() /srv/bindings/<container>/code/includes/entity.inc:199
-[0x00000000069ed6c0] load() /srv/bindings/<container>/code/includes/common.inc:7888
-[0x00000000069ed5a8] entity_load() /srv/bindings/<container>/code/modules/node/node.module:946
-[0x00000000069ed260] node_load_multiple() /srv/bindings/<container>/code/modules/node/node.module:965
-[0x00000000069eceb8] node_load() /srv/bindings/<container>/code/sites/all/modules/custom/tnr_wysiwyg/tnr_wysiwyg.module:210
-[0x00007fff0aea4360] _tnr_wysiwyg_node_make_replacements() unknown:0
-[0x00000000069ecd68] preg_replace_callback() /srv/bindings/<container>/code/sites/all/modules/custom/tnr_wysiwyg/tnr_wysiwyg.module:184
-[0x00000000069ec138] _tnr_wysiwyg_filter_node_embed_process() /srv/bindings/<container>/code/modules/filter/filter.module:799
-[0x00000000069ebe60] check_markup() /srv/bindings/<container>/code/modules/field/modules/text/text.module:319
-[0x00000000069eb7b0] _text_sanitize() /srv/bindings/<container>/code/modules/field/modules/text/text.module:159
-```
-When we checked the nginx error log, it appears there are some references to wysiwyg files resulting in server side errors:
-```
-2015/03/23 20:05:01 [error] 118334#0: *30 no user/password was provided for basic authentication, client: 10.223.177.45, server: , request: "GET /sites/default/files/js/wysiwyg/wysiwyg_tinymce_V.js HTTP/1.1", host: "test.gotpantheon.com"
-```
-Unfortunately, the end result of some of these slow transactions is a segmentation fault for those errors that end up in the PHP slow log above:
-```
-[24-Mar-2015 19:00:04] WARNING: [pool www] child 36919 exited on signal 11 (SIGSEGV) after 227.722144 seconds from start
-[24-Mar-2015 19:00:04] NOTICE: [pool www] child 42605 started
-[24-Mar-2015 19:00:39] NOTICE: Terminating ...
-[24-Mar-2015 19:00:39] NOTICE: exiting, bye-bye!
-```
-In this instance, you can see child process ID 36919 too 227 seconds and resulted in a segfault. As you can see in the initial PHP slow log entry we sent over that is for this 36919 PID.
-
-We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for those JS files, that is the best solution.
+We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
 ### Pantheon - 502 Bad Gateway
 "There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx, the web server will report this problem.
