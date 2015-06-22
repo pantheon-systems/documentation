@@ -100,19 +100,19 @@ Branches can be deleted locally and the commit can be pushed to Pantheon, but th
 ## Rename a Branch
 There is an 11-character limit for branch names. If you push a branch to Pantheon that exceeds the character limit, it cannot become a cloud development environment (CDE). The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
 
-1. Rename the branch. Example: `git branch -m old-branch-name new-name`
-2. Change the remote branch. Because you can't directly rename the remote branch, you'll need to delete the remote branch with the old name and re-create it with a new name. Start by getting the remote name:  
-`git remote -v`  
-You should see something like this:  
-origin https://github.com/username/remote-name (fetch)  
-origin https://github.com/username/remote-name (push)  
-3. Delete the remote branch with the old name:
-`git push origin :old-branch-name`
-4. Re-create the remote branch with the new name:
-`git push origin new-name`
+From the command line, rename the branch:
 
-If you try to push/pull changes to or from remote and you get the error "Your configuration specifies to merge with the ref old-branch-name from the remote, but no such ref was fetched", you'll need to set up remote tracking or upstream tracking on the branch you just renamed.
-`git branch -u origin/new-name`
+```bash
+git branch -m old-branch-name new-name
+```
+
+Next, push the renamed branch:
+
+```bash
+git push origin new-name
+```
+
+This will create a new branch with the commit history intact. From the Multidev overview, click on Git Branches and delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
 
 
 ## Frequently Asked Questions (FAQs)
