@@ -43,11 +43,11 @@ You can destroy the tunnel by substituting your computer's username and running 
 ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
 ```
 
-## Use Sequel Pro to SSH tunnel to a MySQL Database
+## Use Sequel Pro to SSH Tunnel to a MySQL Database
 
 [Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
 
-## Manually Create an SSH tunnel to a Redis Cache Server
+## Manually Create an SSH Tunnel to a Redis Cache Server
 
 From the site environment, get the one-line connection string. It will be in the following format:
 ```bash
