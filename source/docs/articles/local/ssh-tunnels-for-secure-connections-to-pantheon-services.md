@@ -16,23 +16,23 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 
 ## Prerequisites
 
-- Local installation of a MySQL client.
+- Local installation of a MySQL client
 - [Redis command-line client](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client)
-- Add an [SSH Key](/docs/articles/users/generating-ssh-keys) to your Pantheon user Dashboard.
+- Add an [SSH Key](/docs/articles/users/generating-ssh-keys) to your Pantheon User Dashboard
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
-From the site Dashboard, access the environment you wish to connect with and click on the **Connection Info** button.
+From the Site Dashboard, access the environment you want to connect with, and click the **Connection Info** button.
 
 
 ![Connection info](/source/docs/assets/images/desk_images/168060.png)
 
 
-Take the port found within the Database section and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (dev, test, or live) for `$ENV`:
+Take the port found within the Database section, and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (Dev, Test, or Live) for `$ENV`:
 ```
 ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@dbserver.$ENV.$SITE.drush.in
 ```
-Run the following command using the same port number found above and substitute your database password found in **Connection Info**:
+Run the following command using the same port number found above, and substitute your database password found in **Connection Info**:
 ```bash
 mysql -u pantheon -h 127.0.0.1 -p -P $PORT pantheon -p$PASSWORD
 ```
@@ -53,7 +53,7 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Take the port found within the one-line connection string and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (dev, test, or live) for `$ENV`:
+Take the port found within the one-line connection string, and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (Dev, Test, or Live) for `$ENV`:
 ```bash
 ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@cacheserver.$ENV.$SITE.drush.in
 ```
