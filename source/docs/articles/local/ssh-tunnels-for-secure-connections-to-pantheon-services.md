@@ -38,7 +38,7 @@ mysql -u pantheon -h 127.0.0.1 -p -P $PORT pantheon -p$PASSWORD
 ```
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
-You can destroy the tunnel by substituting your computer's username and running the following command:
+You can destroy the tunnel by substituting your computer's username and the dbserver port within the following command:
 ```bash
 ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
 ```
@@ -62,7 +62,7 @@ Substitute the password and port found in the one-line connection string and run
 redis-cli -h 127.0.0.1 -p $PORT -a $PASS
 ```
 
-You can destroy the tunnel by substituting your computer's username and running the following command:
+You can destroy the tunnel by substituting your computer's username and the cacheserver port within the following command:
 ```bash
 ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
 ```
