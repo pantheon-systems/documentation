@@ -3,9 +3,25 @@ title: Service Levels and Environment Resources
 description: Understand the service levels available for Pantheon sites and compare the resources provided for each plan and it's environments.
 keywords: resources, environment resources, service level, plan, plan level, site level, site service level, site plan, site resources
 ---
+Talk about what is included within each environment regardless of service level - is code writeable in that environment? blah blah blah.
 
+Have more than one paragraph - talk about separate URLs and how each site comes with 3 environments.
+## Free Sandbox Sites
+Each user is allocated two free sandbox sites for development purposes. When one of your sites converts to a paid plan, you can start another sandbox site.
 
+What can you do on a sandbox (newrelic?) and what can't you do (add a domain name).
 
+## Personal
+
+Let's get personal, personal.
+## Business
+
+Cloud development environments ya'll.
+## Enterprise
+More CDE's 
+ on-call site monitoring and dedicated team for onboarding.
+
+## Resource Comparison Across Service Levels
   <table class="table">
   <tbody>
 		<tr>
@@ -225,7 +241,7 @@ keywords: resources, environment resources, service level, plan, plan level, sit
         <td style="background-color: #F4F4F4;">Included</td>
       </tr>
       <tr>
-        <th>24x7 On-call<br><span style="font-weight: normal;"><small></small>The Enterprise cstomer bat-phone-- emergency support anytime, anywhere for your website.</span></th>
+        <th>24x7 On-call<br><span style="font-weight: normal;"><small>The Enterprise customer bat-phone -- emergency support anytime, anywhere for your website.</small></span></th>
         <td style="background-color: #F4F4F4;">Not available</td>
         <td>Not available</td>
         <td style="background-color: #F4F4F4;">Not available</td>
@@ -242,5 +258,3 @@ keywords: resources, environment resources, service level, plan, plan level, sit
       </tr>
   	</tbody>
   </table>
-  </table>
-</div>
