@@ -3,24 +3,27 @@ title: Service Levels and Environment Resources
 description: Understand the service levels available for Pantheon sites and compare the resources provided for each plan and it's environments.
 keywords: resources, environment resources, service level, plan, plan level, site level, site service level, site plan, site resources
 ---
-Talk about what is included within each environment regardless of service level - is code writeable in that environment? blah blah blah.
+Every site on Pantheon comes with a minimum of three dedicated environments: Dev, Test & Live. All environments are connected by version control using Git. They also have their own database, connections to our highly available file system (Valhalla), and unique URL.
 
-Have more than one paragraph - talk about separate URLs and how each site comes with 3 environments.
+The service level of your site determines available features and resources for your environments. For more details, see [Resource Comparison Across Service Levels](#resource-comparison-across-service-levels) below.
 ## Free Sandbox Sites
 Each user is allocated two free sandbox sites for development purposes. When one of your sites converts to a paid plan, you can start another sandbox site.
 
-What can you do on a sandbox (newrelic?) and what can't you do (add a domain name).
+You must have a paying plan in order to add a domain to a site environment.
 
 ## Personal
+The Personal plan provides up to 10,000 monthly pageviews, 5GB storage, email support, and pne-click core updates. Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
-Let's get personal, personal.
+
 ## Business
 
-Cloud development environments ya'll.
-## Enterprise
-More CDE's 
- on-call site monitoring and dedicated team for onboarding.
+Business site's have [Multidev](/docs/articles/sites/multidev/) enabled with the ability to create 5 CDEs.
 
+This plan also comes with the ability to utilize multiple application containers.
+## Enterprise
+Enterprise site's have [Multidev](/docs/articles/sites/multidev/) enabled with the ability to create 10 CDEs.
+
+This plan also comes with the ability to utilize multiple application containers, SLA-guaranteed uptime, and 24/7 emergency support.
 ## Resource Comparison Across Service Levels
   <table class="table">
   <tbody>
