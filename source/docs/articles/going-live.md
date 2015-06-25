@@ -23,17 +23,17 @@ While it's good for visitors and DNS to resolve both www and the domain itself, 
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Update core</td>
 			<td class="help"><a href="/docs/articles/sites/code/applying-upstream-updates/">Core updates</a></td>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Update contrib modules</td>
 			<td>Latest stable release (avoid dev and alpha)</td>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Update settings to redirect to a common domain</td>
 			<td class="help"><a href="/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain">Redirect incoming requests</a></td>
 		</tr>
@@ -52,7 +52,7 @@ When all code changes are complete, pull the code changes into the Live environm
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Pull code to Live</td>
 			<td class="help"><a href="/docs/articles/sites/code/using-the-pantheon-workflow/">Using the Pantheon Workflow</a></td>
 		</tr>
@@ -79,27 +79,27 @@ Finally, you should load test your Live environment to make sure everything is o
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Disable development modules &amp; plugins</td>
 			<td>Ex: devel, examples, generate_errors, views_ui</td>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Enable New Relic</td>
 			<td class="help"><a href="/docs/articles/sites/newrelic/new-relic-performance-analysis/">Using New Relic on Pantheon</a></td>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Optimize Performance Settings</td>
 			<td class="help"><a href="/docs/articles/drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Ensure Varnish caching works</td>
 			<td class="help"><a href="/docs/articles/sites/varnish/">Varnish caching for high performance</a></td>
 		</tr>
 					<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Load test Live environment</td>
 			<td class="help"><a href="/docs/articles/load-and-performance-testing/">Load and performance testing</a></td>
 		</tr>
@@ -118,31 +118,31 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Select a paid plan</td>
 			<td class="help"><a href="/docs/articles/sites/settings/selecting-a-plan/">Selecting a plan</a></td>
 		</tr>
 	</tbody>
 	</table>
 
-## Schedule Backups
+  ## Schedule Backups
 
-Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content.
+  Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content.
 
-<table class=table>
-<tbody>
-		<tr>
-			<th class="complete">Complete</th>
-			<th class="action">Action</th>
-			<th class="help">Help</th>
-		</tr>
-		<tr>
-			<td class="complete">[ ]</td>
-			<td class="action">Schedule backups</td>
-			<td class="help"><a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a></td>
-		</tr>
-	</tbody>
-	</table>
+  <table class=table>
+  <tbody>
+  		<tr>
+  			<th class="complete">Complete</th>
+  			<th class="action">Action</th>
+  			<th class="help">Help</th>
+  		</tr>
+  		<tr>
+  			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
+  			<td class="action">Schedule backups</td>
+  			<td class="help"><a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a></td>
+  		</tr>
+  	</tbody>
+  	</table>
 
 ## Add Domain to the Live Environment
 
@@ -156,7 +156,7 @@ Now that the site is on a paid plan, you can associate your domain with the Live
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Add domain(s) to Live environment</td>
 			<td class="help"><a href="/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a><p>
       <a href="/docs/articles/sites/domains/">Domains and SSL Tool</a></td>
@@ -180,7 +180,7 @@ If you are an **enterprise** customer **or** using **HTTPS** to identify your si
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Update DNS with custom load-balanced IP for SSL</td>
 			<td class="help"><a href="/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">Adding a SSL certificate for secure HTTPS communication</a></td>
 		</tr>
@@ -197,7 +197,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 			<th class="help">Help</th>
 		</tr>
 		<tr>
-			<td class="complete">[ ]</td>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
 			<td class="action">Update DNS with Pantheon DNS record</td>
 			<td><a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS records for directing your domain to your Pantheon site</a></td>
 		</tr>
