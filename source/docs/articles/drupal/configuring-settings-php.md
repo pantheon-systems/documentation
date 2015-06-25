@@ -15,8 +15,8 @@ Pantheon uses a variant of Pressflow Drupal to allow the server to automatically
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
-- [Reading Pantheon Environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
-- [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend)
+- [Reading Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
+- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)
 - [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
 - [SSO and Identity Federation](/docs/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
 
@@ -127,7 +127,7 @@ As an example, here's how you can hard-code your Drupal 7 caching configuration 
 
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
-See  [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration).
+See [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration).
 
 #### Why does Drupal report that settings.php is not protected? I can't change the permissions on settings.php.
 
