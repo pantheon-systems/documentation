@@ -9,6 +9,24 @@ Congratulations, you're almost ready to launch your site on Pantheon! There are 
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
+## Schedule Backups
+
+Ensure that your content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live).
+<table class=table>
+<tbody>
+		<tr>
+			<th class="complete">Complete</th>
+			<th class="action">Action</th>
+			<th class="help">Help</th>
+		</tr>
+		<tr>
+			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
+			<td class="action">Schedule backups</td>
+			<td class="help"><a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a></td>
+		</tr>
+	</tbody>
+	</table>
+
 ## Best Practices to Prepare for Launch
 
 Making sure that your site code is current reduces the potential for later issues and makes your site easier to maintain. Update the Drupal or WordPress core, extensions (Drupal modules or WordPress plugins), and themes to the latest recommended release to ensure stability and security.
@@ -124,25 +142,6 @@ Once you're satisfied with your site configuration, you'll need to select a paid
 		</tr>
 	</tbody>
 	</table>
-
-  ## Schedule Backups
-
-  Ensure that your Live environment content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content.
-
-  <table class=table>
-  <tbody>
-  		<tr>
-  			<th class="complete">Complete</th>
-  			<th class="action">Action</th>
-  			<th class="help">Help</th>
-  		</tr>
-  		<tr>
-  			<td class="complete"><span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span></td>
-  			<td class="action">Schedule backups</td>
-  			<td class="help"><a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a></td>
-  		</tr>
-  	</tbody>
-  	</table>
 
 ## Add Domain to the Live Environment
 
