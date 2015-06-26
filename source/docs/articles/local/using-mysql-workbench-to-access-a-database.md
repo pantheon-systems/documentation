@@ -1,6 +1,6 @@
 ---
 title: Using MySQL Workbench to Access a Database
-description: Use MySQL Workbench for creating, executing, and optimizing SQL queries.
+description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
 category:
   - developing
 keywords: mysql workbench, database, mysql connection
@@ -9,7 +9,7 @@ keywords: mysql workbench, database, mysql connection
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment that you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's dashboard. For more detailed information, review [Accessing MySQL database](/docs/articles/local/accessing-mysql-databases/) for your site.
+Start by getting the MySQL connection for the environment that you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For more detailed information, review [Accessing MySQL database](/docs/articles/local/accessing-mysql-databases/) for your site.
 
 ## Create a New MySQL Connection
 
@@ -43,7 +43,7 @@ At this point, you are all set and can administer your database. There will be a
 
 ### Database Credentials are Invalid
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, copy the new information from the site's dashboard.<br />
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, copy the new information from the site's Dashboard.<br />
 ![](/source/docs/assets/images/desk_images/224670.png)​
 
 ### Database is Reaped

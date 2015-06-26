@@ -1,6 +1,6 @@
 ---
 title: All About Application Containers
-description: Learn more about Pantheon's grid-model infrastructure.
+description: Detailed information on Pantheon's container-based, grid-model infrastructure.
 category:
   - getting-started
 keywords: application containers, containers, infrastructure, edge, performance, scalability, scaling

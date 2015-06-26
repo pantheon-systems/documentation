@@ -1,6 +1,6 @@
 ---
 title: Caching - Advanced Topics
-description: Learn advanced details about cache and authentication.
+description: Detailed information on Caching optimization for your Drupal or WordPress site.
 category:
   - developing
 keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
@@ -44,6 +44,8 @@ WordPress does not use PHP session cookies; however, some themes and plugins do.
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon supports this by allowing sites to set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content. 
+
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
 **Examples of `STYXKEY` cookie names:**
 
@@ -99,18 +101,19 @@ If you're using the Environment Access: Locked security setting on a site envir
 ## Pantheon's .vcl File
 
 The following is the contents of Pantheon's Varnish configuration (.vcl) file for reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what Pantheon Varnish does or does not cache.
-
-    ​   NO_CACHE
-    S+ESS[a-z0-9]+
-    fbs[a-z0-9_]+
-    SimpleSAML[A-Za-z]+
-    SimpleSAML[A-Za-z]+
-    PHPSESSID
-    wordpress[A-Za-z0-9_]*
-    wp-[A-Za-z0-9_]+
-    comment_author_[a-z0-9_]+
-    duo_wordpress_auth_cookie
-    duo_secure_wordpress_auth_cookie
-    STYXKEY[a-zA-Z0-9-_]+
-    has_js
-    Drupal[a-zA-Z0-9-_\.]+
+```nohighlight
+​   NO_CACHE
+S+ESS[a-z0-9]+
+fbs[a-z0-9_]+
+SimpleSAML[A-Za-z]+
+SimpleSAML[A-Za-z]+
+PHPSESSID
+wordpress[A-Za-z0-9_]*
+wp-[A-Za-z0-9_]+
+comment_author_[a-z0-9_]+
+duo_wordpress_auth_cookie
+duo_secure_wordpress_auth_cookie
+STYXKEY[a-zA-Z0-9-_]+
+has_js
+Drupal[a-zA-Z0-9-_\.]+
+```

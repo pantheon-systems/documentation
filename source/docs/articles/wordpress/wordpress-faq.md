@@ -1,6 +1,6 @@
 ---
 title: WordPress FAQs
-description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon platform.
+description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon Website Management Platform.
 category:
   - getting-started
   - WordPress
@@ -8,7 +8,7 @@ keywords: wordpress, faqs, import, configure
 ---
 ## Getting Started
 
-### Does Pantheon Support WordPress?
+### Does Pantheon support WordPress?
 
 Yes. We have complete and total support for WordPress sites and developers.
 
@@ -34,7 +34,7 @@ If you need to use PHP's native session handling, please install the [WordPress 
 
 If you are seeing errors like this:
 
-```
+```php
 Warning: session_start(): user session functions not defined
 ```
 
@@ -52,15 +52,11 @@ Yes. Pantheon puts the power back in your hands by giving you a best-practice de
 
 ### Can I use WordPress Multisite?
 
-Enterprise plans can run a number of domains on one WordPress application, which does allow you to run a network of blogs. We recommend caution if you intend to run more than 25 on a single application.
-
-If you have a very large number of sites, we recommend spreading the installation out so you can more easily manage deployments and scale your network.
-
-If you have sites which share common elements, but also have some customization to their theme or plugins, Pantheon for Agencies may be just what you need. It provides a sane way to manage this kind of hybrid environment without driving your developers or customers crazy.
+No, please see [WordPress Known Limitations: Site Networks / Multisite](/docs/articles/wordpress/wordpress-known-issues/#site-networks-/-multisite)
 
 ### Can I install WordPress in my Drupal site (or vice versa)?
 
-No. Attempting anything of the sort will only cause pain and unhappiness, this will also void your warranty.
+No. Attempting anything of the sort will only cause pain and unhappiness; this will also void your warranty.
 
 ### Can I use other WordPress services like the JetPack CDN?
 
@@ -90,7 +86,7 @@ Yes, we support Redis. Please see [Redis as a caching backend](/docs/articles/si
 
 ### Which caches do you clear?
 
-You can clear the caches from your site's Pantheon dashboard. This will take care of clearing Varnish and Redis caches, if applicable. At this time, WordPress database caches are not cleared nor is selective Varnish cache clearing supported.
+You can clear the caches from your site's Pantheon Dashboard. This will take care of clearing Varnish and Redis caches, if applicable. At this time, WordPress database caches are not cleared nor is selective Varnish cache clearing supported.
 
 
 ## Further Reading

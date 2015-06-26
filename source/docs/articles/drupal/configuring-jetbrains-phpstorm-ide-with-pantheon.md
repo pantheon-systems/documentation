@@ -1,6 +1,6 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Drupal on Pantheon
-description: Best practices and recommendations for building a site using PhpStorm.
+description: Best practices and recommendations for building a site using JetBrains PhpStorm.
 category:
   - developing
 keywords: drupal, jetbrains, phpstorm, pantheon, drush
@@ -35,7 +35,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 6. Configure the correct version of PHP by going to Preferences > [PHP](http://www.jetbrains.com/phpstorm/webhelp/php.html), and choose PHP Language Level 5.3.
 
 #### Drush Support
-  We recommend [enabling Drush support](http://www.jetbrains.com/phpstorm/webhelp/drush.html).
+  We recommend [enabling Drush support](https://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm#DrupalDevelopmentusingPhpStorm-DrupalCommandLineToolDrushIntegration).
 
 1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **Plus**.  
 2. Choose Tool > Drush, and specify the path.

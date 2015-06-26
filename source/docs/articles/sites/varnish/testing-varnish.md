@@ -1,14 +1,15 @@
 ---
 title: Testing Varnish
-description: Learn how to see if Varnish is working on your site.
-category:
-  - developing
+description: Detailed information on how to determine if Drupal Varnish is working on your site.
 keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testing varnish
 ---
+## Verify Varnish is Working on Your Pantheon Site
+
+Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by submitting a support ticket.
+
 ## Test If Varnish Is Working by Reading HTTP Headers
 
-Every HTTP response served by Pantheon is accompanied by a number of headers. These are the same headers that
-Varnish uses when determining if and for how long to cache content.
+Every HTTP response served by Pantheon is accompanied by a number of headers. These are the same headers that Varnish uses when determining if and for how long to cache content.
 
 - **Cache-Control: public, max-age=900**
   - Set from Drupal's performance settings.
@@ -79,5 +80,5 @@ Right-click anywhere on the page, and select the **Inspect Element** option.
 
 ### Test Varnish with Internet Explorer
 
-1. Use the developer tools by pressing **F12** or by clicking **Settings**, then `"Developer Tools"`.
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
 2. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.

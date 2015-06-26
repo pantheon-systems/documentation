@@ -1,6 +1,6 @@
 ---
 title: Using SimpleSAMLphp with Shibboleth SSO
-description: Configure a single-sign on system for your Drupal site.
+description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal site.
 category:
   - drupal
   - developing
@@ -64,7 +64,7 @@ You should now be able to visit your site/simplesaml and complete your metadata 
 
 You will need to add the following lines to your settings.php so that the Drupal module can locate SimpleSAMLphp:
 
-```
+```php
 # Decode Pantheon Settings
 $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 # Provide universal absolute path to the installation.

@@ -1,9 +1,9 @@
 ---
 title: Backups Tool
-description: Learn about the Backups tool.
+description: Learn about the Backups tool available on the Pantheon Website Management Platform.
 category:
   - developing
-keywords: backups, backing up,
+keywords: backups, backing up, archive, archives, create backup
 ---
 The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service.
 

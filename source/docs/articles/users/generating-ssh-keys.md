@@ -1,6 +1,6 @@
 ---
 title: Generating SSH Keys
-description: Understand how to generate SSH keys to configure Drush or SFTP.
+description: Understand how to generate SSH keys to configure Drupal Drush or SFTP.
 category:
   - getting-started
 keywords: ssh keys, ssh, generate keys  
@@ -31,9 +31,9 @@ Open your favorite terminal utility and generate a key:
 Unless you're an advanced user, just press ENTER for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 
 Still from the Terminal, output your SSH key to a file you can use:
-
-    cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
-
+```nohighlight
+cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
+```
 Open the key_for_pantheon.txt on your desktop, select all and copy. You're now ready to paste this into the "Add Key" form on your account page.
 
 ## Windows / OpenSSH
@@ -207,27 +207,27 @@ If you have added a password to your key earlier then you will be prompted to en
 #### Control Path Error
 
 You may receive the following error:
-
-    ControlPath too long fatal: Could not read from remote repository.
-
+```nohighlight
+ControlPath too long fatal: Could not read from remote repository.
+```
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh\_config`) for a declaration like this:
-
-    Host *
-    ControlMaster auto
-    ControlPath ~/.ssh/control-%l.%r@%h:%p
-
+```bash
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/control-%l.%r@%h:%p
+```
 
 There are two steps that you can try to fix this error:
-
-    Host *
-    ControlMaster auto
-    ControlPath ~/.ssh/control-%r
-
+```bash
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/control-%r
+```
 If this does not fix the problem, you can go a step further and add individual hosts entries, remove ControlMaster auto, and simplify the switches:
-
-    Host myapp-myname.blahblah.com
-    ControlPath ~/.ssh/control-%r
-
+```bash
+Host myapp-myname.blahblah.com
+ControlPath ~/.ssh/control-%r
+```
 #### Server Refused to Allocate pty
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/articles/users/generating-ssh-keys).

@@ -1,6 +1,6 @@
 ---
 title: New Relic
-description: Learn about the New Relic tool in your dashboard
+description: Learn about the New Relic tool in your Pantheon Website Management Platform dashboard
 category:
 - developing
 keywords: new relic,
