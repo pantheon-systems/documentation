@@ -1,6 +1,6 @@
 ---
 title: Create a Custom Upstream
-description: Add and test a custom distribution of WordPress or Drupal.
+description: Add and test a custom distribution of WordPress or Drupal on the Pantheon website management platform.
 category:
   - managing
   - going-live
@@ -16,29 +16,29 @@ Clone the repository locally, and then pull in Pantheon's Core Upstream, or a Pa
 
 **Drupal 6**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-6.git master
 ```
 
 **Drupal 7**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-7.git master
 ```
 
 **WordPress**
 
-```
+```bash
 git pull git://github.com/pantheon-systems/WordPress.git master
 ```
 
 **Public Drupal Distribution Examples**
 
-```
+```bash
 git pull git://github.com/phase2/openatrium-drops-7.git master
 ```
 
-```
+```bash
 git pull git://github.com/populist/panopoly-drops-7.git master
 ```
 
@@ -48,7 +48,7 @@ Follow conventions for using the `/profiles` directory in Drupal. With WordPress
 
 Push the repository to your upstream's remote location.
 
-```
+```bash
 git push origin master
 ```
 
@@ -58,25 +58,25 @@ git push origin master
 
 Create a (core) Drupal or WordPress site associated with your partner organization that will be used for testing the upstream using [Terminus](https://github.com/pantheon-systems/cli).
 
-```
-terminus sites create upstream-test
+```bash
+terminus sites create --name=<name-of-your-custom-upstream-test>
 ```
 
 [Clone the Pantheon repository](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
 
-```
+```bash
 git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git machine-name
 ```
 
 Add code from your remote upstream repository.
 
-```
+```bash
 git pull git://github.com/organization/upstream.git master
 ```
 
 Push back to Pantheon
 
-```
+```bash
 git push origin master
 ```
 
@@ -84,19 +84,21 @@ git push origin master
 
 #### Standard Site Installer
 
-Use the standard install process to make sure your distribution spins up cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
-```
-terminus site wipe --site=#site --env=#env
+Use the standard install process to make sure your distribution installs cleanly on Pantheon. Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times.
+```bash
+terminus site wipe --site=<site> --env=<env>
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 #### Acceptance Tests
 
 Run your automated acceptance tests, using behat, casper.js, or by manually executing user stories.
 
 ## 4. Update and Provide Pantheon with Read Access.
 
-When testing is complete, merge your pull requests into or git push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it. For private repos, grant read-access to the gf-pantheon user on GitHub or to the pantheon\_distributions user on Bitbucket.
+When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> For private repositories, grant read-access to the <code>gf-pantheon</code> user on GitHub or to the <code>pantheon_distributions</code> user on Bitbucket.</div>
 
 ## 5. Submit Product Information.
 
@@ -117,6 +119,6 @@ After you have a distribution that works on Pantheon, open a ticket titled "Prod
 
 \*\* Cannot change after product creation
 
-Public and organizational distributions must also provide a promotional screenshot for the public spinup page.
+Public and organizational distributions must also provide a promotional screenshot for the public installation page.
 
 As part of a unified workflow, new Pantheon users will create an account, name their site, and be directed to the install page of the distribution.

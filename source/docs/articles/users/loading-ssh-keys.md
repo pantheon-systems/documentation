@@ -1,13 +1,13 @@
 ---
 title: Loading SSH Keys
-description: Learn how to load your public SSH key into your Pantheon account.
+description: Learn how to load your public SSH key into your Pantheon Website Management Platform account.
 category:
   - getting-started
 keywords: ssh keys, load ssh keys, add ssh key, delete ssh key
 ---
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 
-<div class="alert alert-info" role="alert"> <strong> Note:</strong> For detailed help generating SSH keys, see [Generate SSH Keys](/docs/articles/users/generating-ssh-keys).</div>
+<div class="alert alert-info" role="alert"> <strong> Note:</strong> For detailed help generating SSH keys, see <a href="/docs/articles/users/generating-ssh-keys">Generate SSH Keys</a></div>
 
 
 ### Copy Your Public Key
@@ -23,9 +23,9 @@ Sign on to Pantheon and visit the Account page. Click on **SSH Keys** and paste 
 ![Adding SSH Keys](/source/docs/assets/images/add-ssh-key-dashboard.png)
 Once the key has been successfully added it will appear under the list of available keys on your Pantheon Account page.
 ![Show SSH Keys](/source/docs/assets/images/remove-ssh-key.png)
-With that, you're set to make a git clone of your site codebase!
+With that, you're set to make a Git clone of your site codebase!
 
 ### Delete a Key
 To delete a your key, go to the Account page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
 ![Delete SSH Key](/source/docs/assets/images/remove-ssh-key.png)
-If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP using your account password to authenticate. However, there will be no git access as you need a valid key uploaded to your account.
+If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP using your account password to authenticate. However, there will be no Git access as you need a valid key uploaded to your account.

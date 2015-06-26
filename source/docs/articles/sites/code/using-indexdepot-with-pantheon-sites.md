@@ -1,6 +1,6 @@
 ---
 title: Using IndexDepot With Pantheon Sites
-description: Learn how to create and configure IndexDepot with Solr for advanced indexing features.
+description: Learn how to create and configure IndexDepot with Solr for advanced indexing features for your Drupal or WordPress sites.
 category:
   - developing
 keywords: indexdepot, index, index depot, solr, indexing, site content, full-text search, full text search, similarity search, highlight index, highlighting indexing, geo-search, geo search, additional indexing, additional index features, custom index
@@ -10,8 +10,6 @@ keywords: indexdepot, index, index depot, solr, indexing, site content, full-tex
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
 
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.  
-
-
 
 The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
 
@@ -49,7 +47,7 @@ After filling out the appropriate fields, click **Save** to create your index.
 
 After the index has been saved, you will be provided with an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI.
 
-**Note:** Copy the URI before moving forward
+**Note:** Copy the URI before moving forward.
  ![](/source/docs/assets/images/desk_images/272832.png)
 
  
@@ -87,7 +85,7 @@ If not, you’ll want to retrace the steps in this document to make sure that yo
 
 ## Customize Your Configuration
 
-If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See example below:
+If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you may do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page. See the example below:
  ![](/source/docs/assets/images/desk_images/275362.png)
 This will present you with a page where you can edit and add files:
  ![](/source/docs/assets/images/desk_images/275363.png)​

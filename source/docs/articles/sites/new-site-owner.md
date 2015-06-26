@@ -1,6 +1,6 @@
 ---
 title: New Site Owner FAQs
-description: Learn about common billing and administrative tasks performed by a site owner.
+description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
 category:
     - developing
 keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
@@ -35,7 +35,7 @@ For more information on managing teams, see the [Team Management article](/docs/
 #### How do I add a supporting agency?
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
 
-1. Click **Team** in the upper-right of the site dashboard.
+1. Click **Team** in the upper-right of the Site Dashboard.
 2. Select **Add Supporting Organization** at the bottom of the Team Management window.
 3. Enter the complete name of the agency. An exact match is required.
 4. Check that the agency is the one you expected.
@@ -77,6 +77,12 @@ The site owner is the person who pays for the site. You'll need to update the pa
 1. From the **Settings** page, click **Invite to pay for the site**.
 2. Enter the email address for the new site owner, and click **Send Invite**.
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
+
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+
+ ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
+
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 

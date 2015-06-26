@@ -8,6 +8,7 @@ Help us create relevant and useful content for developers like yourself. See som
 * Fork the pantheon-systems/documentation repository on GitHub.
   Trying to edit or create a file in this repository will create your fork automatically.
 * [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
+* Add our repo as a remote. `git remote add upstream git@github.com:pantheon-systems/documentation.git`.
 
 **NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
 
@@ -32,6 +33,12 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
 2. Locally, cd to the `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
 3. Edit locally, commit changes, and push to your fork.
 
+## Keep your Local Updated with Master
+
+From your local repo, run the following commands in order:  
+1. `git checkout master`  
+2. `git pull upstream master`  
+3. `git push origin master` 
 
 ## Add a New Doc
 

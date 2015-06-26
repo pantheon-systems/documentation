@@ -1,32 +1,42 @@
 ---
 title: Single Sign-On for Pantheon Organizations
-description: See what's needed to enable single-sign on for your company.
+description: Detailed information to enable SAML single sign-on for your organization.
 category:
   - developing
 ---
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-Single-sign on (SSO) is only available for Enterprise Pantheon Organizations who have purchased it as an add-on to their Enterprise plan. To upgrade to an Enterprise plan, or to add it to an existing Enterprise plan, contact Sales.
+SSO is available as an add-on for Enterprise Pantheon Organizations.
+To upgrade to an Enterprise plan, or to add SAML SSO to an existing Enterprise plan, contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
-SSO allows your users to authenticate against your IdP when using the Pantheon product. If you're interested in single-sign on for your company, please contact Customer Support. Our support team will assist you in configuring SAML. 
+##User Experience
+* User submits the Pantheon login form with email and any password, or the [SSO login form](https://dashboard.pantheon.io/sso) with just their email address.
+* User is redirected to the configured IdP.  
+* After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
-##Enabling SAML
-You will need to provide Customer Support with the following information:
+## Configuring your IdP
 
-**SAML Domain**: The email domain the organization controls. Only users with email addresses in this domain will use the Organizations IdP
+Refer to your IdP for general SAML 2.0 setup instructions, or to any Pantheon-specific documentation:
 
-**IdP Target URL**: The URL that we will redirect to for authentication
+* [Configuring SAML for Pantheon with Okta](/docs/articles/organizations/saml-for-orgs-with-okta)
+* [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
 
-**Certificate Signature**: This is a x509 signature, used to validate incoming SAML requests e.g. EB:10:B4:F0:1F:4C:88:7E:08:61:AE:8D:EF:6E:66:B1:27:A9:53:99
+You will need to enter the following:
 
-Customer Support will provide the following fields to you:
-**Assertion Consumer URL**: The URL the IdP should redirect back to after authentication
-**SAML Issuer**: The URL where the Dashboard lives
++ **Single sign-on URL**: `https://dashboard.pantheon.io/saml/example.com/consume`
 
-##SAML User Experience
-The experience is similar to any other single sign-on solution:  
-1. Users enter their email and any password.  
-2. After the user submits the form, they are redirected to the configured IdP.  
-3. After the IdP authenticates the user, they are redirected to their Pantheon Dashboard homepage.
-  
-##See Also
-[Configuring SAML for Pantheon](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
+  <div class="alert alert-warning" role="alert"> <strong>Note:</strong>  Replace <code>example.com</code> with the domain you control</div>
+
++ **Audience URI (SP Entity ID)**: `https://dashboard.pantheon.io` or `https://dashboard.pantheon.io/`
+
+## Enabling SAML on Pantheon
+
+Open a support ticket with Pantheon with the following information:
+
+1. **SAML Domain**: The email domain your organization controls. Only users with email addresses in this domain will use the Organization's IdP
+
+2. **IdP Target URL**: The URL that we will redirect to for authentication
+
+3. **Certificate**: The X.509 certificate used to validate incoming SAML requests.
+
+4. **Date/time to enable**: A time you'd like Pantheon to enable SSO, when you can test and ensure everything works.

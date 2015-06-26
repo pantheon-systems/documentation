@@ -29,23 +29,23 @@ High-performance is the ability to deliver a page in under a second; scalability
 ## Verify Varnish is Working
 
 To verify that the [Varnish](/docs/articles/sites/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
-
-    curl -I http://live-yoursite.pantheon.io
-    HTTP/1.1 200 OK
-    Server: nginx/1.0.10
-    Date: Fri, 17 Aug 2012 23:47:36 GMT
-    Content-Type: text/html; charset=utf-8
-    Connection: keep-alive
-    cache-control: public, max-age=300
-    last-modified: Fri, 17 Aug 2012 23:44:40 +0000
-    expires: Sun, 11 Mar 1984 12:00:00 GMT
-    etag: "1345247080"
-    X-Varnish: 1082592805 1082586928
-    Age: 176
-    Via: 1.1 varnish
-    X-Pantheon-Edge-Server: 108.166.96.132
-    Vary: Accept-Encoding, Cookie
-
+```nohighlight
+curl -I http://live-yoursite.pantheon.io
+HTTP/1.1 200 OK
+Server: nginx/1.0.10
+Date: Fri, 17 Aug 2012 23:47:36 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+cache-control: public, max-age=300
+last-modified: Fri, 17 Aug 2012 23:44:40 +0000
+expires: Sun, 11 Mar 1984 12:00:00 GMT
+etag: "1345247080"
+X-Varnish: 1082592805 1082586928
+Age: 176
+Via: 1.1 varnish
+X-Pantheon-Edge-Server: 108.166.96.132
+Vary: Accept-Encoding, Cookie
+```
 The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
@@ -53,33 +53,33 @@ The "Age" field should be greater than 0. If the max age is not greater than 0, 
 
 ## Timing an Uncached Page Request
 
-Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the Application Containers backend:
+Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the application containers backend:
 
     time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
 
 The command returns the following results. Note the appended timestamp at the bottom. The "real" time is the one to pay attention to:
+```nohighlight
+time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
+HTTP/1.1 200 OK
+Server: nginx/1.0.10
+Date: Fri, 17 Aug 2012 23:57:39 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+cache-control: public, max-age=300
+last-modified: Fri, 17 Aug 2012 23:57:38 +0000
+expires: Sun, 11 Mar 1984 12:00:00 GMT
+etag: "1345247858"
+Accept-Ranges: bytes
+X-Varnish: 1082615375
+Age: 0
+Via: 1.1 varnish
+X-Pantheon-Edge-Server: 108.166.96.132
+Vary: Accept-Encoding, Cookie
 
-    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheon.io
-    HTTP/1.1 200 OK
-    Server: nginx/1.0.10
-    Date: Fri, 17 Aug 2012 23:57:39 GMT
-    Content-Type: text/html; charset=utf-8
-    Connection: keep-alive
-    cache-control: public, max-age=300
-    last-modified: Fri, 17 Aug 2012 23:57:38 +0000
-    expires: Sun, 11 Mar 1984 12:00:00 GMT
-    etag: "1345247858"
-    Accept-Ranges: bytes
-    X-Varnish: 1082615375
-    Age: 0
-    Via: 1.1 varnish
-    X-Pantheon-Edge-Server: 108.166.96.132
-    Vary: Accept-Encoding, Cookie
-
-    real 0m0.874s
-    user 0m0.036s
-    sys 0m0.004s
-
+real 0m0.874s
+user 0m0.036s
+sys 0m0.004s
+```
 As an added bonus, you can test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID.
 
 To get the PHP-Session ID, log in to your site and check the browsers cookie setting and value. The Session ID can be passed in the following way:
@@ -96,57 +96,57 @@ In order to test scale and throughput, we use AB, a simple tool made available b
 <strong>Warning</strong>: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
 
 Run the following command:
-
-    ab -n 100 -c 5 http://live-yoursite.pantheon.io/
-
+```nohighlight
+ab -n 100 -c 5 http://live-yoursite.pantheon.io/
+```
 Varnish should now be properly configured, and what you've tested should generate good response times and a high requests per second.
 
 As with `curl`, you can run `ab` with the following parameters: `-C NO_CACHE=1` parameter to stop Varnish from caching the response. `ab` returns the following output:
+```nohighlight
+ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.pantheon.io/
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
 
-    ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.pantheon.io/
-    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-    Licensed to The Apache Software Foundation, http://www.apache.org/
+Benchmarking http://live-yoursite.pantheon.io (be patient).....done
 
-    Benchmarking http://live-yoursite.pantheon.io (be patient).....done
+Server Software: 10.176.69.43
+Server Hostname: http://live-yoursite.pantheon.io
+Server Port: 80
 
-    Server Software: 10.176.69.43
-    Server Hostname: http://live-yoursite.pantheon.io
-    Server Port: 80
+Document Path: /
+Document Length: 30649 bytes
 
-    Document Path: /
-    Document Length: 30649 bytes
+Concurrency Level: 5
+Time taken for tests: 12.854 seconds
+Complete requests: 100
+Failed requests: 0
+Write errors: 0
+Total transferred: 3118447 bytes
+HTML transferred: 3064900 bytes
+Requests per second: 7.78 [#/sec] (mean)
+Time per request: 642.705 [ms] (mean)
+Time per request: 128.541 [ms] (mean, across all concurrent requests)
+Transfer rate: 236.92 [Kbytes/sec] received
 
-    Concurrency Level: 5
-    Time taken for tests: 12.854 seconds
-    Complete requests: 100
-    Failed requests: 0
-    Write errors: 0
-    Total transferred: 3118447 bytes
-    HTML transferred: 3064900 bytes
-    Requests per second: 7.78 [#/sec] (mean)
-    Time per request: 642.705 [ms] (mean)
-    Time per request: 128.541 [ms] (mean, across all concurrent requests)
-    Transfer rate: 236.92 [Kbytes/sec] received
+Connection Times (ms)
+              min mean[+#sd] median max
+Connect: 60 81 32.5 73 258
+Processing: 411 554 150.2 496 1213
+Waiting: 82 131 100.5 109 794
+Total: 471 635 162.9 574 1280
 
-    Connection Times (ms)
-                  min mean[+#sd] median max
-    Connect: 60 81 32.5 73 258
-    Processing: 411 554 150.2 496 1213
-    Waiting: 82 131 100.5 109 794
-    Total: 471 635 162.9 574 1280
-
-    Percentage of the requests served within a certain time (ms)
-      50% 574
-      66% 614
-      75% 646
-      80% 696
-      90% 899
-      95% 1010
-      98% 1170
-      99% 1280
-     100% 1280 (longest request)
-
+Percentage of the requests served within a certain time (ms)
+  50% 574
+  66% 614
+  75% 646
+  80% 696
+  90% 899
+  95% 1010
+  98% 1170
+  99% 1280
+ 100% 1280 (longest request)
+```
 The output provides insight into the requests per second, the most critical element in regards to the scalability of a site. Pay attention to the 90/95% response time as well, as this gives an idea of how the site is actually performing. Check that the number of failed requests is 0; if it's not, this should be investigated.
 
 <div class="alert alert-warning" role="alert">
@@ -156,7 +156,7 @@ The output provides insight into the requests per second, the most critical elem
 
 Response times vary from site to site depending on the size of your modules stack, database queries, etc. Generally, anything under 1 second is considered excellent, but this is up to you.
 
-Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional Application Containers.
+Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional application containers.
 
 ## Testing Tools
 

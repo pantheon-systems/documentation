@@ -1,13 +1,13 @@
 ---
 title: Pantheon Plugins
-description: Learn the specific Plugins developed and maintained for the Pantheon workflow.
+description: Learn the specific Plugins developed and maintained for the Pantheon Website Management Platform workflow.
 category:
   - getting-started
   - developing
   - WordPress
 keywords: plugins, wordpress, pantheon
 ---
-Pantheon maintains multiple plugins to facilitate its workflow within WordPress. The [Pantheon plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon) encourages updating plugins and themes in the Development environment and using Pantheon's git-based upstream core updates.
+Pantheon maintains multiple plugins to facilitate its workflow within WordPress. The [Pantheon plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon) encourages updating plugins and themes in the Development environment and using Pantheon's Git-based upstream core updates.
 
 It should always be enabled for all sites on Pantheon, and should be fine to leave enabled if you export the site locally or to another environment.
 

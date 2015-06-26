@@ -1,13 +1,13 @@
 ---
 title: Importing a WordPress Site
-description: Learn how to import an existing WordPress site.
+description: Learn how to import an existing WordPress site into the Pantheon Website Management Platform.
 category:
   - wordpress
   - getting-started
 keywords: wordpress, importing, import site
 ---
 ## Overview  
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read more [here](/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions).</div>
+<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read <a href="/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions">more here</a>.</div>
 
 ##Prepare for Import  
 You will need a zip or tar.gz archive of your site in three separate files:
@@ -16,7 +16,7 @@ You will need a zip or tar.gz archive of your site in three separate files:
 
 * Database - contains the content of the site and some site configurations.
 
-* Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, and so forth.
+* Files - anything under wp-content/uploads. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
 
 There are two ways to import. Direct uploads from your desktop can be 100MB max; using a remote URL can be up to 500MB.
 
@@ -29,9 +29,9 @@ Of course you can make an import archive by hand. You simply dump your existing 
 
 ## Add and Name a Site
 
-After you have created an account, you can log in and will be directed to your dashboard.
+After you have created an account, you can log in and will be directed to your Dashboard.
 ![Your sites & account dashboard](/source/docs/assets/images/create-site-dashboard.png)
-Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click continue.
+Click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click **Continue**.
 ![](/source/docs/assets/images/desk_images/247523.png)
 ## Wait While It's Configured
 
@@ -40,7 +40,7 @@ You will then have a short wait while Pantheon creates and allocates the resourc
 ## Choose a Start State
 You now have several options. Rather than start with one of our preconfigured start states, we will import our code, database, and files.
 
-Select “**mport manually**.<br />
+Select **Import manually**.<br />
 ![](/source/docs/assets/images/desk_images/247521.png)  
 Once selected, you can upload a single URL or file archive of the site.  
 ![](/source/docs/assets/images/desk_images/259156.png)  
@@ -48,15 +48,15 @@ Alternatively, you can enter the URL to your site code (required), user files (o
 ![](/source/docs/assets/images/desk_images/247522.png)
 
 ## Relax While We Configure Your Codebase
-Click **Import site** and wait while we import and configure your site.
+Click **Import Site** and wait while we import and configure your site.
 ![](/source/docs/assets/images/desk_images/247524.png)
-## Completed Spinup
+## Completed Installation
 When complete, just click the button to visit your Pantheon Dashboard.
 ![](/source/docs/assets/images/desk_images/247525.png)
 #### View Your Site Dashboard
-Congratulations! Your site has been imported and your Pantheon site environments have been configured. From the dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
+Congratulations! Your site has been imported and your Pantheon site environments have been configured. From the Dashboard, you can control your site's settings, manage team members, perform workflow operations, and a lot more.
 #### Launch Site
-You will eventually have three environments (development, test, and live), each with a separate version of your website. Click the link at the top left of your dashboard to launch the your development site.
+You will eventually have three environments (Dev, Test, and Live), each with a separate version of your website. Click the link at the top left of your Dashboard to launch the your development site.
 ![](/source/docs/assets/images/desk_images/247528.png)
 #### View Your Site
 You are ready to start development, or if your site is ready to go, to create your test and live environments!

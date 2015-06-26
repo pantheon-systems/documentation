@@ -10,14 +10,14 @@ Pantheon provides one location for files that are part of your sites content, th
 If you are importing a site which has files in another location (e.g. "/files") you will need to move the files into the standard location, and add, commit and push a symlink from that location to the new location via Git:  
 
 **Drupal Sites**
-```
+```bash
     $> ln -s ./sites/default/files ./files
     $> git add files
     $> git commit files -m "adding legacy files location symlink"
     $> git push origin master
 ```
 **WordPress Sites**
-```
+```bash
     $> ln -s ./wp-content/uploads ./files
     $> git add files
     $> git commit files -m "adding legacy files location symlink"

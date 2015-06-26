@@ -1,6 +1,6 @@
 ---
 title: CloudFlare CDN and DNS on Pantheon
-description: Learn how to setup and test CloudFlare CDN.
+description: Learn how to setup and test CloudFlare CDN on your Pantheon Drupal or WordPress site.
 category:
   - developing
   - drupal
@@ -46,8 +46,8 @@ In Drupal, no modules are required to use CloudFlare, but there is an optional [
 
 ## Known Limitations
 
-Drupal: CloudFlare's JavaScript Aggregation can cause problems when using Drupal's JavaScript Aggregation. Choose one or the other, but not both.
+**Drupal**: CloudFlare's JavaScript Aggregation can cause problems when using Drupal's JavaScript Aggregation. Choose one or the other, but not both.
 
-Caching: Pantheon's Varnish cache is not synchronized with CloudFlare's cache, and CloudFlare's cache expiration settings are independent of your site's cache expirations. If you need to clear all caches, you'll need to clear both the cache from your site dashboard, then clear CloudFlare's cache.
+**Caching**: Pantheon's Varnish cache is not synchronized with CloudFlare's cache, and CloudFlare's cache expiration settings are independent of your site's cache expirations. If you need to clear all caches, you'll need to clear both the cache from your Site Dashboard, then clear CloudFlare's cache.
 
-Railgun: At this time, CloudFlare Railgun is not available on Pantheon.
+**Railgun**: At this time, CloudFlare Railgun is not available on Pantheon.

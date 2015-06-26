@@ -1,6 +1,6 @@
 ---
 title: Redirect Incoming Requests
-description: Learn to redirect requests to an alternate domain name or path via PHP.
+description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
 category:
   - going-live
   - managing
@@ -108,7 +108,7 @@ If you want to use SSL everywhere and standardize on your domain, you can combin
 
 ### Require SSL Everywhere Except Specific Pages
 
-If you want to use SSL for everything except some specific pages, such as a RSS feed:
+If you want to use SSL for everything except some specific pages, such as an RSS feed:
 
     // SSL logic.
     $redirect_domain = 'www.yoursite.com';
@@ -150,7 +150,7 @@ This will redirect requests like http://subdomain.yoursite.com/some/path to htt
 
 The same technique works for single subdomain redirects. Just specify the path in `$newurl` without bothering with `$_SERVER['REQUEST_URI']`
 
-## Redirect from one path to another
+## Redirect From One Path to Another
 
     // 301 Redirect from /old to /new.
     if ($_SERVER['REQUEST_URI'] == '/old') {
@@ -159,7 +159,7 @@ The same technique works for single subdomain redirects. Just specify the path i
       exit();
     }
 
-## Redirecting multiple subdomains to a single domain
+## Redirecting Multiple Subdomains to a Single Domain
 
     // Redirect multiple subdomains to a single domain.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&

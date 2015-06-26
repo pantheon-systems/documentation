@@ -1,6 +1,6 @@
 ---
 title: Debugging Slow Performance
-description: Learn how to identify common problems with performance speeds and deploy solutions.
+description: Detailed information on how to identify common problems with Drupal or WordPress performance speeds and deploy solutions.
 category:
   - debugging
   - going-live
@@ -12,7 +12,7 @@ When your site is fast, everybody wins. When it’s slow, nobody's happy...so ho
 
 An often ignored cause of bad performance is [PHP errors within site code](/docs/articles/sites/php-errors-and-exceptions/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.  
 
-Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP based project.
+Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 ​ ![](/source/docs/assets/images/desk_images/200873.png)  
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
 <table>

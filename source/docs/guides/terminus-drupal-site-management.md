@@ -13,7 +13,7 @@ Installing Terminus is a fairly straight forward process. Just follow [these ins
 
 After you install Terminus, do a quick status check to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
-```
+```nohighlight
 $ terminus auth login
 Your email address?: email@domain.com
 Your dashboard password (input will not be shown):
@@ -59,7 +59,7 @@ Excellent! You've installed Terminus and logged into your Pantheon account. For 
 
 Terminus can be used on any Pantheon hosted website you have, and it can also create new sites! Let's get a list of your current Pantheon sites:
 
-```
+```nohighlight
 $ terminus sites show
 +--------------------------+-----------+---------------+--------------------------+
 | Site                     | Framework | Service Level | UUID                     |
@@ -72,7 +72,7 @@ $ terminus sites show
 
 Now let's create a new site:
 
-```
+```nohighlight
 $ terminus sites create
 Human readable label for the site: Terminus CLI Create
 Machine name of the site; used as part of the default URL [ if left blank will be terminusclicreate]: terminus-cli-create
@@ -128,7 +128,7 @@ $ terminus sites show
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
-```
+```nohighlight
 $ terminus drush site-install --site=terminus-cli-create
 Running drush site-install  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
@@ -140,7 +140,7 @@ Installation complete.  User name: admin  User password: ********         [ok]
 
 You should now be able to open a web browser and see your brand new Drupal site! For fun, you can at any time use an "open" command to see an environment in your default browser.
 
-```
+```bash
 open http://dev-terminus-cli-create.pantheon.io
 ```
 
@@ -148,7 +148,7 @@ open http://dev-terminus-cli-create.pantheon.io
 
 There is also the `terminus site dashboard` command if, at any point in time, you want to open the site's Pantheon Dashboard.
 
-```
+```nohighlight
 $ terminus site dashboard --site=terminus-cli-create
 Do you want to open your dashboard link in a web browser? [y/n] y
 ```
@@ -157,7 +157,7 @@ Do you want to open your dashboard link in a web browser? [y/n] y
 
 Also, the status of each of the environments within the site can be seen using a `terminus site environments` command.
 
-```
+```nohighlight
 $ terminus site environments --site=terminus-cli-create
 +------+------------+--------------------------------------+---------------+---------+
 | Name | Created    | Domain                               | OnServer Dev? | Locked? |
@@ -171,7 +171,7 @@ $ terminus site environments --site=terminus-cli-create
 ###Install Contrib Modules and Themes
 While the site's Dev environment is still in SFTP mode, we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
 
-```
+```nohighlight
 $ terminus drush dl admin_menu --site=terminus-cli-create
 Running drush dl admin_menu  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
@@ -193,7 +193,7 @@ Not bad, eh? All this without a single GUI or web browser click! If you look at 
 
 Let's commit it all into the Git repo with the `terminus site code commit` command:
 
-```
+```nohighlight
 $ terminus site code commit --site=terminus-cli-create --env=dev
 Commit 1 changes? [y/n] y
 Success: Successfully committed.
@@ -210,7 +210,7 @@ Open the Pantheon Dashboard, and you'll see the new files are shown in the Git c
 
 To see what a commit message looks like, let's download Bootstrap and then commit it as well.
 
-```
+```nohighlight
 $ terminus drush dl bootstrap --site=terminus-cli-create --env=dev
 Running drush dl bootstrap  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
@@ -232,7 +232,7 @@ Success: Successfully commited.
 
 And finally, let's create the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using `create-env`.
 
-```
+```nohighlight
 $ terminus site create-env --site=terminus-cli-create --env=test
 
   1. dev

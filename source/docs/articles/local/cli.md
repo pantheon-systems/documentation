@@ -1,6 +1,6 @@
 ---
 title: Terminus, the Pantheon CLI
-description: Learn how to use Pantheon's CLI to develop your sites from the command line.
+description: Learn how to use Pantheon's CLI, Terminus, to develop your sites from the command line.
 category:
   - developing
   - getting-started

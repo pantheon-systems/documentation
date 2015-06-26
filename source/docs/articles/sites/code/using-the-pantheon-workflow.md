@@ -1,6 +1,6 @@
 ---
 title: Using the Pantheon Workflow
-description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Workflow.
+description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Website Management Platform Workflow.
 category:
   - going-live
   - developing
@@ -34,34 +34,36 @@ After testing your changes, you can take them live. Deploying code from Test to 
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
 ![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218.png)
 
+## Configuration Management
+
+Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it would overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
+
+### WordPress
+
+* [WP-CFM plugin](https://github.com/forumone/wp-cfm): exports bundles of configuration to `.json` files in `wp-content/config`.
+
+* [Advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
+
+
+
+### Drupal
+
+* [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7) - Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+
+* [Views: Export to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code)
+
+* [Features module](http://drupal.org/project/features): Export sets of configuration like content types and fields to code as modules. 
+
+* Drupal 8 is tackling configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](https://pantheon.io/blog/configuration-workflow-drupal-8-sites).
 
 ## Uncommon Workflows
 
-Typically, you'll create content in the **Live** environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** >> **Clone** areas of the dashboard.
+Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** > **Clone** areas of the Dashboard.
 
 Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made. Also note that overwriting the database of a live site may cause downtime.
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
-## Handling Configuration Changes
-
-Dealing with changes to your site's configuration can be a challenge. Because the only reliable way to synchronize databases is to do so completely, and because configuration is stored in the database, it is not possible to "push configuration" from Dev to Test to Live without taking additional steps.
-
-### hook\_update\_N()
-
-Drupal core manages database and config changes via the use of [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7). You may add update functions to your `.install` file in a custom module to encapsulate your config changes. Doing so allows you to deploy the config changes in code. Run `update.php` to apply the changes listed in your `hook_update_N` function.
-
-## Exporting Configuration
-
-A growing array of common configurations are "exportable". In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/). [ForumOne created](http://forumone.com/insights/configuration-management-finally-comes-to-wordpress/) the  [WP-CFM plugin](https://github.com/forumone/wp-cfm), which exports bundles of WordPress configuration to `.json` files in `wp-content/config`. In Drupal,  [views are easily exported to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code). The  [features module](http://drupal.org/project/features) allows you to export sets of configuration like content types and their associated fields, to code as modules. It is a best practice to manage configuration in code.
-
-Changes to exportable configurations should always take place in the Development environment, because only that environment can write to the file system while in SFTP mode.
-
-### Manual Changes
-
-Of course, manually making configuration changes as part of your deployment is always an option. There are a number of modules designed to help you track configuration changes.
-
-Ultimately, the right answer for managing configuration updates to your site depends on your use case and comfort level with these techniques. It's an ongoing debate in the Drupal and WordPress universe, with new solutions being developed all the time.
 
 ## Understanding Write Permissions in Test & Live
 
@@ -87,7 +89,7 @@ You may also import, export, and wipe the database and files per environment. Wi
 
 If you access the site before a database import is complete, you may see the following error:
 
-```
+```sql
 Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist'
 ```
 
