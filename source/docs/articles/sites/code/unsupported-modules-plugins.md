@@ -48,10 +48,10 @@ This is built into the Pantheon platform.
 
 ### Using the `/tmp` Directory
 **Issue**:
-The following modules are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
+The modules listed below are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Using sites/default/files/tmp as a work around for these issues will produce unpredictable side-effects and is not supported.</div>
+<strong>Warning</strong>: Using sites/default/files/tmp as a work around for these issues will produce unpredictable side effects and is not supported.</div>
 
 
 - Media: Browser Plus
