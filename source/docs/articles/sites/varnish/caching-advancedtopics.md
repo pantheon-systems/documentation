@@ -9,6 +9,9 @@ keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal,
 
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
 
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted but we offer absolutely no gurantees change requests will be implemented</div>
+
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
 ## Ignoring GET Parameters
