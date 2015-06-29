@@ -5,7 +5,7 @@ category:
   - drupal
 keywords: import, importing site, pantheon, new site, drupal
 ---
-The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a start state.
+The easiest way to import an existing site into Pantheon is to create a new site and select **Import Archives** when asked to choose a start state.
 
 <div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
