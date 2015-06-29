@@ -6,7 +6,7 @@ category:
   - developing
 keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-LDAP as a Provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+LDAP as a provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
@@ -59,9 +59,6 @@ Additional configurations, such as whether to perform server certificate checks,
     // LDAP - Never perform server certificate check in a TLS session.
     putenv('LDAPTLS_REQCERT=never');
 
-For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032)
-
-For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Frequently Asked Questions
 
@@ -78,16 +75,15 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
 
 The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
-
-    terminus drush --site=#site --env=#env scr ldap-test.php
-
+```bash
+terminus drush --site=<site> --env=<env> scr ldap-test.php
+```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
-
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
-````
-&lt;?php
+````php
+<?php
 $settings = array(
   'NAME' => array(
     'hostname' => 'ldaps://HOSTNAME:PORT/',
@@ -159,3 +155,8 @@ foreach ($settings as $host => $setting) {
   var_dump($entries);
 }
 ````
+
+##See Also
+For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
+
+For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).

@@ -14,7 +14,7 @@ The first thing that you need to do is have you SFTP credentials on hand, you wi
 
 ## Download FileZilla
 
-If you do not have FileZilla installed then go ahead and [download the latest version](https://FileZilla-project.org/) and get it running on your computer. The installation process is straightforward so we won't go over that here.
+If you do not have FileZilla installed then  [download the latest version](https://FileZilla-project.org/) and get it running on your computer..
 
 ## Start FileZilla
 

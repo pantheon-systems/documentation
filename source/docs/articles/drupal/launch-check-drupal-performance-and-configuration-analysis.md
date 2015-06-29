@@ -37,22 +37,23 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Frequently Asked Questions
 
-#### Why does site audit have more reports than what's shown in the dashboard?
+#### Why does site audit have more reports than what's shown in the Dashboard?
 
-The dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
+The Dashboard integration is intended to provide developers with the most actionable items; some reports are purely informational and have been omitted. Additionally, some reports are more system intensive, so it makes more sense to allow them to be run on-demand, rather than automatically.
 
 #### How can I manually run site audit on my site?
 
 You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
-
-    terminus drush help --site=#site --env=#env --filter=site_audit
+```nohighlight
+terminus drush help --site=<site> --env=<env> --filter=site_audit
+```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 You can also execute a full report in HTML format.
-
-    terminus drush aa --site=#site --env=#env --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
-
+```bash
+terminus drush aa --site=<site> --env=<env> --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+```
 #### Are there plans for supporting Drupal 6 sites?
 
 At this time, there are no plans to support Drupal 6 with this tool.
@@ -60,9 +61,9 @@ At this time, there are no plans to support Drupal 6 with this tool.
 #### Can I opt-out of a specific recommendation?
 
 If you want to permanently opt-out of a check, you can use the [$conf array in settings.php](https://drupal.org/node/1525472). Individual check names can be specified with a combination of the report name and check name. For example, to permanently opt-out of the PageCompression check in the Cache report:
-
-    $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
-
+```php
+$conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
+```
 #### I want to contribute/I found a mistake. How should I proceed?
 
 Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) to add and request features, or to report inaccuracies.
@@ -72,9 +73,9 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 #### Site Audit isn't running on my site.
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](https://github.com/pantheon-systems/cli) command to execute Site Audit directly on your Pantheon site:
-
-    terminus drush --site=#site --env=#env -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
-
+```bash
+terminus drush --site=<site> --env=<env> -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
+```
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 
 ## See Also

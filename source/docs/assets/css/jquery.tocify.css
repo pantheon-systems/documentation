@@ -18,9 +18,8 @@
 .tocify ul, .tocify li {
     list-style: none;
     margin: 0;
-    padding: 0;
     border: none;
-    line-height: 30px;
+    line-height: 18px;
 }
 
 /* Top level header elements */
@@ -35,7 +34,9 @@
 /* Makes the font smaller for all subheader elements. */
 .tocify-subheader li {
     font-size: 12px;
+
 }
+
 
 /* Further indents second level subheader elements. */
 .tocify-subheader .tocify-subheader {

@@ -7,18 +7,24 @@ category:
 keywords: import, importing site, pantheon, new site, drupal
 ---
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
- ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
+
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+
+![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
+
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
+
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
+
 ## Distributions
 
 If your site uses a distribution powered by an alternate upstream, such as Commerce Kickstart, you'll want to create a new site instead of using the import an existing site tool. This will allow you to get the upstream's updates on your site as they become available.
 
-First, choose your distribution and visit your site's dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
+First, choose your distribution and visit your site's Dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
-Finally, use the import tools within your Pantheon site's dashboard to import your database and site files into the Dev environment (Workflow>>Import).
+Finally, use the import tools within your Pantheon site's Dashboard to import your database and site files into the Dev environment (Workflow>>Import).
  ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 
@@ -69,27 +75,27 @@ The code archive should include the following directories:
 ## Create a Code Archive
 
 Create an archive that is stored outside of your Drupal site root that contains only the executable code associated with your site and skips the contents of sites/default/files.
-
-    # Specify the destination folder.
-    TARGET=~/Desktop
-    # Specify the source folder.
-    SOURCE=~/Projects/mysite
-    # Change directory to the source folder.
-    cd $SOURCE
-    # Create an archive that excludes sites/default/files.
-    tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
-
+```php
+# Specify the destination folder.
+TARGET=~/Desktop
+# Specify the source folder.
+SOURCE=~/Projects/mysite
+# Change directory to the source folder.
+cd $SOURCE
+# Create an archive that excludes sites/default/files.
+tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
+```
 ## Export the Database
 
 This is optional, but recommended. The easiest method is to use the [mysqldump](http://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
-
-    # Specify the destination folder.
-    TARGET=~/Desktop
-    # Create the database backup.
-    mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
-    # Compress the backup.
-    gzip $TARGET/db.sql
-
+```php
+# Specify the destination folder.
+TARGET=~/Desktop
+# Create the database backup.
+mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
+# Compress the backup.
+gzip $TARGET/db.sql
+```
 ## Table Prefixes
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
@@ -99,12 +105,12 @@ You can technically use DB prefixes, but Pantheon will not support database pref
 ## Export Files
 
 This is optional, but recommended. Export a tar.gz or .zip file of your files directory, which was intentionally omitted from the codebase import. These files are not tracked in Git; instead, they will be stored in Valhalla, our network file system.
-
-    TARGET=~/Desktop
-    SOURCE=~/Projects/mysite
-    cd $SOURCE/sites/default/files
-    tar -czf $TARGET/files.tar.gz .
-
+```php
+TARGET=~/Desktop
+SOURCE=~/Projects/mysite
+cd $SOURCE/sites/default/files
+tar -czf $TARGET/files.tar.gz .
+```
 ## Upload Files to Pantheon
 
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
@@ -120,7 +126,7 @@ If you have a large database or a lot of files, you'll need to use the URL optio
 
 If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
 
-In order to import a drush archive, use:
-```
+In order to import a Drush archive, use:
+```bash
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
 ```

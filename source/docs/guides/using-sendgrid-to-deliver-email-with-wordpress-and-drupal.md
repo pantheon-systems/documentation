@@ -37,9 +37,10 @@ The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-deli
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
 ### Add Your SendGrid Account Details
-Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s dashboard. Simply enter your site's SendGrid account credentials and select API as the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
+Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s Dashboard. You will be able to select between sending mail via the SendGrid Web API or SMTP. Either will work on Pantheon, but using SMTP requires the installation of [Swift Mailer](https://wordpress.org/plugins/swift-mailer/).
 
-**Note**: At this time, choosing SMTP for the "Send mail with" option will not work on Pantheon, because the code uses PHP short tags. See [Known Limitations](/docs/articles/sites/known-limitations/#php-short-tags) for more information. Currently, the API protocol is the only one that will work with SendGrid on Pantheon.
+Simply enter your site's SendGrid account credentials and select the desired the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
+
 
 ![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
 
@@ -52,7 +53,7 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 Pantheon recommends using the actively maintained [SMTP module](https://www.drupal.org/project/smtp) to send email with Drupal, regardless of your email gateway. Luckily, SendGrid plugs right in.
 
 Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://www.getpantheon.com/blog/five-steps-feeling-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
-```
+```nohighlight
 drush @pantheon.your-site.dev dl smtp
 drush @pantheon.your-site.dev en smtp -y
 ```

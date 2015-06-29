@@ -7,9 +7,9 @@ category:
   - developing
 keywords: wordpress, pantheon, duplicator, clone, new site
 ---
-## 1. Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your Existing WordPress Site
+### Install [Duplicator](https://wordpress.org/plugins/duplicator/) on your Existing WordPress Site
 
-## 2. Archive Your Site's Code/Files/Database
+### Archive Your Site's Code/Files/Database
 
 Within your WordPress site, go to the Duplicator plugin page and create a new package. Using the default settings, click **Next** and then **Build**. When complete, click **Archive** to download the .zip file.
 
@@ -20,4 +20,4 @@ Within your WordPress site, go to the Duplicator plugin page and create a new pa
 3. Select **Import Archive**.
 4. Select the **File** option, and upload the .zip file.
 5. Click **Import Site**.
-6. The import process will create and deploy a new site based on the file you uploaded. If there are issues, please refer to our [importing](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) document for possible solutions or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+6. The import process will create and deploy a new site based on the file you uploaded. If there are issues, please refer to our [importing](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) document for possible solutions or open a support ticket from your Dashboard. Be sure to include any error messages or relevant information.

@@ -8,8 +8,9 @@ keywords: db error, db connection, database, database connection error, can't co
 If your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![](/source/docs/assets/images/desk_images/64774.png)
 
-    Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
-
+```sql
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+```
 This indicates that there's an issue connecting to the Pantheon database. There are two common causes.
 
 ## Overwriting Core
@@ -17,14 +18,14 @@ This indicates that there's an issue connecting to the Pantheon database. There 
 ### Drupal Pressflow Core
 Pantheon provides Pressflow core as the underlying basis for all Drupal sites. This is important for performance reasons, but also to take advantage of the ability to load configuration out of the server environment. You can literally run Drupal on Pantheon with no `settings.php` file, though there are still plenty of great uses for this file.
 
-However, if you overwrite the Pressflow core — most commonly by unpacking a tarball from drupal.org "over" your git checkout and then pushing the change, or updating core via drush — your site loses the ability to read the environmental configuration.
+However, if you overwrite the Pressflow core — most commonly by unpacking a tarball from drupal.org "over" your Git checkout and then pushing the change, or updating core via Drush — your site loses the ability to read the environmental configuration.
 
 To see if this is the case, examine your `includes/bootstrap.inc` file, and be sure that you see code in the `drupal_settings_initialize()` function which loads data from `$_SERVER['PRESSFLOW_SETTINGS']`.
 
 If you don't see that, you'll want to look into recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
-Pantheon currently uses the stock WordPress core. The additional functionality that we require to operate on the platform is achieved by several pre-installed "must use" plugins. You can safely overwrite the WordPress core if you like, however it is unnecessary. When new versions are released, we push them into your Dev environment, ready for you to commit and test.
+Pantheon currently uses the stock WordPress core. The additional functionality that we require to operate on the platform is achieved by several pre-installed "must use" plugins. You can safely overwrite the WordPress core if you like; however, it is unnecessary. When new versions are released, we push them into your Dev environment, ready for you to commit and test.
 
 
 ## Drupal Non-Standard Bootstraps
@@ -33,19 +34,20 @@ Some modules, like the **domain.module**, change Drupal's standard bootstrap pro
 However, because the Pantheon environment data is not loaded at this time, any bootstrap to the DB level will fail since there is no valid connection information. In this case, you will need to include a snippet in your `settings.php` _before_ the module's include call. An example for using domain's include would be as follows:
 
 ### Drupal 6 Style
-    $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
-      $info = $settings['databases']['default']['default'];
-      $db_url = sprintf("%s://%s:%s@%s:%s/%s",
-                        $info['driver'],
-                        $info['username'],
-                        $info['password'],
-                        $info['host'],
-                        $info['port'],
-                        $info['database']);
-      $conf = $settings['conf'];
-      # Include any other settings.php magic here.
-      include './sites/all/modules/domain/settings.inc';
-
+```php
+$settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
+  $info = $settings['databases']['default']['default'];
+  $db_url = sprintf("%s://%s:%s@%s:%s/%s",
+                    $info['driver'],
+                    $info['username'],
+                    $info['password'],
+                    $info['host'],
+                    $info['port'],
+                    $info['database']);
+  $conf = $settings['conf'];
+  # Include any other settings.php magic here.
+  include './sites/all/modules/domain/settings.inc';
+```
 ### Drupal 7 Style
 
     # Include any other settings.php magic here.
@@ -55,4 +57,16 @@ However, because the Pantheon environment data is not loaded at this time, any b
 You can also use the above to develop Drupal 8 on Pantheon!
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: If you use any other advanced <code>settings.php</code> tricks (e.g. enabling redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
+<strong>Note</strong>: If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
+
+## Base Table or View Not Found
+This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the semaphore does not exist error.
+
+Once the process is complete, Drupal will be able to bootstrap correctly. In other words: no need to worry! Just wait for the process to complete and the error will disappear. If the site is locked down from web visitors, there may still be a backend process such as our healthcheck process pinging the database trying to obtain a lock via the semaphore table.
+
+This error shouldn’t cause any issues for your site:
+
+
+```
+Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist' in /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc:2171 Stack trace: #0 /srv/bindings/7xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2171): PDOStatement->execute(Array) #1 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(683): DatabaseStatementBase->execute(Array, Array) #2 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2350): DatabaseConnection->query('SELECT expire, ...', Array, Array) #3 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(167): db_query('SELECT expire, ...', Array) #4 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(146): lock_may_be_available('schema:runtime:...') #5 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc(433): ...
+```

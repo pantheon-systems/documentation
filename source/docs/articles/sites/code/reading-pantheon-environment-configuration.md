@@ -5,7 +5,7 @@ category:
   - going-live
 keywords: environment config, env config, environment configuration, database credentials, db credentials, container, containers, $_ENV, wp-config.php, database error, db errors, superglobal, redis auth, redis authentication, runtime, runtime container, runtime container environment, runtime matrix
 ---
-Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your dashboard into any of your sites code.
+Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your sites code.
 
 Database credentials, Redis authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
@@ -87,4 +87,4 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-For more information see [configuring wp-config.php](/docs/articles/wordpress/configuring-wp-config-php).
+For more information, see [configuring wp-config.php](/docs/articles/wordpress/configuring-wp-config-php).

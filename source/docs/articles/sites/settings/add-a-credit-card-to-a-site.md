@@ -12,6 +12,12 @@ Select a Plan and Add a Credit Card:
 3. Choose a plan.  
 Depending on the plan you choose, you'll get access to additional features like adding a custom domain name to your site, or for Pro accounts and higher, adding SSL and more. For more information on plans and features, see [Pricing](https://pantheon.io/pricing).
 4. Invite someone to pay for the site or enter the credit card information, and click **Update Billing**.
+
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: We do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+
+ ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
+
 ## Accessing Premium Features
 
 Developing your site and enjoying the advanced features like Workflow, Team Management, and New Relic can all be accessed for free; however, there are also premium features that require you to have a payment method associated with your site.

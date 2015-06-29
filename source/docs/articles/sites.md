@@ -7,7 +7,9 @@ keywords: sites, dashboard, pantheon, get started, settings, new site
 ---
 
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
+
 ![Site Dashboard](/source/docs/assets/images/site-dashboard-image.png)
+
 At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/).
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
@@ -85,3 +87,19 @@ On this tab you can create backups, restore from an existing backup, or view the
 
 ## Security
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to Go Live or make updates. Here you can set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. Learn more about [Locking Your Site](/docs/articles/sites/security/locking-your-site/).
+
+## Site UUID
+Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The site UUID is found within the URL for the site Dashboard and resembles the following:
+
+```
+de305d54-75b4-431b-adb2-eb6b9e546014
+```
+You can also use Terminus to find the UUID of any site on your user Dashboard:
+```bash
+terminus sites list
+```
+For example uses, see the following:
+
+- [Port 2222 Blocked Workaround](/docs/articles/local/port-2222-blocked-workaround#set-up-the-tunnel)
+- [rsync and sftp](/docs/articles/local/rsync-and-sftp/#sftp)
+- [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/#requirements-to-create-an-ssh-tunnel)

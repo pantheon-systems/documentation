@@ -19,7 +19,6 @@
 if (window.location.hostname == 'localhost' ||
     window.location.hostname == 'docs-panther.pantheon.io' ||
     window.location.hostname == 'dev-panther.chapterthree.com' ||
-    window.location.hostname == 'gsce-panther.pantheon.io' ||
     window.location.hostname == 'test-panther.chapterthree.com')
   redirect = null
 else
@@ -51,6 +50,7 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   <meta name="description" content="{{ page.description }}">
   <meta name="keywords" content="{{ page.keywords }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night-eighties.min.css">
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="{{ page.title}}">
   <meta itemprop="description" content="{{ page.description }}">
@@ -83,12 +83,9 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   <meta property="og:image" content="{{ page.image }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:site_name" content="Pantheon Documentation" />
-  <meta property="article:published_time" content="{{ page.date|date('F d, Y') }}" />
-  <meta property="article:modified_time" content="" />
   <meta property="article:section" content="{{ page.category }}" />
   <meta property="article:tag" content="{{ page.category }}" />
   <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
-
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <!-- Optional theme -->
@@ -96,7 +93,6 @@ if (window.location.hostname == 'www.getpantheon.com' ||
   <!-- Latest compiled and minified JavaScript -->
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
   <link href="{{ site.url }}/assets/fonts/pan-docs-icons/css/pan-docs.css" rel="stylesheet">
-  <link href="{{ site.url }}/assets/css/prettyPhoto.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.tocify.css">
   <script src="//www.google-analytics.com/analytics.js"></script>
   <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>

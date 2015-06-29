@@ -15,8 +15,8 @@ DNS is the main naming system for the internet, allowing computers to exchange d
 ### Linux, restart the nscd daemon:
 1. Type `/etc/rc.d/init.d/nscd restart` in your terminal
 ### Mac OS X Leopard:
-1. type `lookupd -flushcache` in your terminal to flush the DNS resolver cache.
-2. ex: `bash-2.05a$ lookupd -flushcache`
+1. Type `lookupd -flushcache` in your terminal to flush the DNS resolver cache.
+   Example: `bash-2.05a$ lookupd -flushcache`
 ### Mac OS X:
-1. Type `dscacheutil -flushcache` in your terminal to flush the DNS resolver cache.
-2. ex: `bash-2.05a$ dscacheutil -flushcache`
+1. Type `dscacheutil -flushcache` in your terminal to flush the DNS resolver cache.  
+Example: `bash-2.05a$ dscacheutil -flushcache`

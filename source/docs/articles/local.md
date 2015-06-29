@@ -21,12 +21,12 @@ To begin, you'll need:
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 
-```
-terminus site clear-caches --site=#site --env=#env
+```bash
+terminus site clear-caches --site=<site> --env=<env>
 ```
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>#site</code> with your site name, and <code>#env</code> with the environment (dev, test, or live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 There are three parts to any dynamic website:
 
@@ -44,14 +44,14 @@ Each will need to be transferred from Pantheon to your local environment.
 
 #### Via the Pantheon Dashboard
 
-There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site dashboard:
+There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site Dashboard:
 
 - On-demand: Workflow > Export > Export Database
 - Scheduled or on-demand backup: Backups > Backup Log > Database download link
 
 Next, import the database into your local environment using a MySQL client.
 
-````
+````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
@@ -61,14 +61,14 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
 You can also export the database running the following Terminus commands:
 
-```
-terminus site backup create --element=database --site=#site --env=#env
-terminus site backup get --element=database --site=#site --env=#env --to-directory=$HOME/Desktop/ --latest
+```nohighlight
+terminus site backup create --element=database --site=<site> --env=<env>
+terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 
 This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
 
-````
+````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 ### Get the Files
@@ -78,9 +78,9 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 #### Via Terminus
 
 Run the following Terminus commands:
-```
-terminus site backup create --element=files --site=#site --env=#env
-terminus site backup get --element=files --site=#site --env=#env --to-directory=$HOME/Desktop/ --latest
+```nohighlight
+terminus site backup create --element=files --site=<site> --env=<env>
+terminus site backup get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 This will create and download a backup of the site's files to your Desktop.
 
@@ -106,7 +106,7 @@ Test your changes, then [Git commit locally and push to Pantheon](/docs/articles
 ### Send the Database
 
 Perform a local database dump using the MySQL utility mysqldump:
-```
+```sql
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
 ```
 Then import the file from the Pantheon Dashboard by accessing Workflow > Import. Upload the database archive and click **Import**.
@@ -116,7 +116,7 @@ Then import the file from the Pantheon Dashboard by accessing Workflow > Import.
 #### Drupal: Via Drush
 If you have Drush and rsync, this is by far the easiest way to transfer your files up to your Pantheon site:
 
-````
+````nohighlight
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
 ````
 

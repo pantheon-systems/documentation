@@ -12,7 +12,7 @@ If you're developing WordPress sites, there's no doubt you've had something work
 
 In this guide you'll learn how to setup Behat on your local machine and run automated tests against a remote WordPress site. Before installing, review the following test, which is called a feature:
 
-```
+```php
 # features/blog.feature
 Feature: Blog
   In order for our website to be awesome
@@ -39,13 +39,13 @@ If you don't already have a WordPress site, you can [create one for free](/docs/
 
 First, I'll download my WordPress site's codebase by doing a [`git clone`](/docs/articles/local/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
 
-```
+```nohighlight
 git clone <string from Pantheon Site Dashboard>
 ```
 
 Next, create a new directory for Behat testing:
 
-```
+```nohighlight
 cd site-name/wp-content
 mkdir tests
 cd tests
@@ -53,7 +53,7 @@ cd tests
 
 Download WordPress Behat Quickstart:
 
-```
+```bash
 curl https://codeload.github.com/ari-gold/WordPress-Behat-Quickstart/zip/master > WordPress-Behat-Quickstart.zip
 unzip WordPress-Behat-Quickstart.zip
 mv WordPress-Behat-Quickstart-master behat
@@ -61,35 +61,35 @@ mv WordPress-Behat-Quickstart-master behat
 
 Let's take a look at what was downloaded:
 
-```
+```nohighlight
 cd behat
 ls
 ```
 You'll see the following output:
 
-```
+```bash
 behat.local.yml.sample	behat.yml	composer.json	composer.lock	features
 ```
 Add to the Git repo for our site:
-```
+```bash
 git add .
 git commit -m "Add WordPress Behat Quickstart"
 ```
 
 Next, copy `behat.local.yml.sample` to `behat.local.yml`:
 
-```
+```bash
 cp behat.local.yml.sample behat.local.yml
 ```
 We'll return to `behat.local.yml` in a bit, where we'll add passwords to be able to log in as various WordPress users.
 
 If you look at the `composer.json` file, you'll see a list of software packages to install with Composer. If you have [Composer](http://getcomposer.org) installed globally run:
-```
+```bash
 composer install
 ```
 Or to download and run [Composer](http://getcomposer.org) in the current directory:
 
-```
+```bash
 curl -s http://getcomposer.org/composer.phar > composer.phar
 php composer.phar install
 ```
@@ -97,7 +97,7 @@ Downloading everything may take a while, with a lot of output. We used Composer 
 
 It should finish with the following output:
 
-```
+```nohighlight
 Generating autoload files
 ```
 
@@ -105,13 +105,13 @@ Now that we've installed Behat, you might think it's a good time to make a commi
 
 To verify Behat is installed, list the available step definitions:
 
-```
+```bash
 bin/behat -dl
 ```
 
 You'll see a longer list of available step definitions like the following:
 
-```
+```nohighlight
     When /^(?:|I )follow "(?P<link>(?:[^"]|\\")*)"$/
     When /^(?:|I )fill in the following:$//
     Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)"$/
@@ -128,7 +128,7 @@ Open `behat.yml` with your text editor or IDE of choice (lately I've been using 
 
 Verify your changes look good with `git diff` and then commit your changes:
 
-```
+```bash
 git add behat.yml
 git commit -m "Update base_url so Behat will test against https://example.com"
 ```
@@ -137,8 +137,8 @@ Open `features/homepage-works.feature` and replace "Test with Robots" with a phr
 
 Save, commit, and push your changes. Your team members will be able to skip this **Configure** section, since you've already done it for them:
 
-```
-git add features/homepage-works.feature`
+```bash
+git add features/homepage-works.feature
 git commit -m "Customize homepage feature for My Awesome Website"
 git push origin master
 ```
@@ -149,13 +149,13 @@ git push origin master
 
 Running Behat without any arguments will execute every feature in the features directory. Here, we'll run the test using a tag:
 
-```
+```bash
 bin/behat --tags=smoke
 ```
 
 In my case, I see the test fails:
 
-```
+```bash
 @smoke
 Feature: As a visitor I should be able to load the home page
 
@@ -173,7 +173,7 @@ Although not shown above, the output will be color-coded so you can quickly see 
 
 After seeing that the test failed, I visited the home page and realized it was because WordPress isn't installed yet. Even though I created the Dev environment I never actually installed WordPress. I could visit the home page to do the famous 5-minute install, but I decided to use [terminus and wp cli](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/) to install from the command line:
 
-```
+```nohighlight
 terminus wp core install --url=http://test-withrobots.pantheon.io \
                            --title="Test With Robots" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
@@ -182,17 +182,17 @@ terminus wp core install --url=http://test-withrobots.pantheon.io \
 ```
 I get the following output:
 
-```
+```bash
 Success: WordPress installed successfully.
 ```
 
 Now that WordPress is installed, run Behat again (this time instead of designating a tag we're using the feature filename):
-```
+```bash
 bin/behat features/homepage-works.feature
 ```
 After installing WordPress and giving the site the title "Test with Robots" the test now passes!
 
-```
+```php
 Feature: As a visitor I should be able to load the home page
 
   Scenario: Home page loads              # features/homepage_works.feature:3
@@ -212,7 +212,7 @@ When you add `@javascript` to the beginning of a feature or scenario, a browser 
 
 1. Download [Selenium Server](http://www.seleniumhq.org/download/)
 2. Execute Selenium Server from the command line:
-```
+```nohighlight
 cd ~/Downloads/
 java -jar selenium-server-standalone-2.45.0.jar
 ```
@@ -221,7 +221,7 @@ If you've upgraded your browser and Selenium tests stop working, try downloading
 
 **Note**: You'll have two terminal windows open: one to run Selenium server and one to run Behat.
 
-```
+```bash
 @javascript
 Scenario: As a visitor I can see a recent blog post
 Given I am on the homepage
@@ -237,13 +237,13 @@ While we could hard-code passwords into each and every feature that requires log
 
 Now is a good time to create a few users with various roles for testing. For the test included in the starter kit, create a user named "editor-qa", with the role of "editor" and add the password in `behat.local.yml`. Then, run the test with the following tag:
 
-```
+```bash
 bin/behat --tags=@wip
 ```
 
 You'll see the following output:
 
-```
+```php
 @javascript @wip
 Scenario: As a user with the editor role I can post to the blog
 Given I am logged in as "editor-qa"

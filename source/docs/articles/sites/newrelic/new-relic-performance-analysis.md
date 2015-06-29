@@ -1,5 +1,5 @@
 ---
-title: New Relic performance analysis on Pantheon
+title: New Relic Performance Analysis on Pantheon
 description: Learn how to utilize New Relic performance metrics and reports for your Pantheon site.
 category:
   - going-live
@@ -78,7 +78,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 ```
 
 ### WordPress
-For WordPressbased sites that want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
+For WordPress sites that want to disable New Relic for anonymous traffic, add the following to your `templates/<your_template>/functions.php`:
 
 ```
 // Disable New Relic for anonymous users.
@@ -110,7 +110,7 @@ Pantheon provides New Relic Standard at no cost. You can upgrade your site monit
 
 #### How does New Relic price Pantheon sites for the Professional service?
 
-New Relic sites on Pantheon are priced per Application Container, rather than by core. For example, a site with three environments with two Application Containers in the live environment will be priced as four total Application Containers.
+New Relic sites on Pantheon are priced per Application Container, rather than by core. For example, a site with three environments with two application containers in the Live environment will be priced as four total Application Containers.
 
 #### Will turning on New Relic slow my site down?
 
@@ -118,7 +118,7 @@ Basically no, New Relic will not make your site slower. There is a very small am
 
 #### What is the difference between app server response time and browser page load time?
 
-App server response time measures how the page was built on Pantheon, including PHP execution, database, redis (if used), browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
+App server response time measures how the page was built on Pantheon, including PHP execution, database, Redis (if used), browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
 #### Can I use my existing New Relic license with my Pantheon site?
 
@@ -132,7 +132,7 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 - [General New Relic Documentation](https://newrelic.com/docs/)
 - [Official New Relic Videos and Tutorials](http://newrelic.com/resources/videos)
-- [Case studies](http://newrelic.com/resources/case-studies)
+- [Case Studies](http://newrelic.com/resources/case-studies)
 - [What is Real User Monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
