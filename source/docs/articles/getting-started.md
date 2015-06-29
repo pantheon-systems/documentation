@@ -70,7 +70,7 @@ If you're ready to move beyond the basics, check out our curated list of [Requir
 ## Frequently Asked Questions
 
 #### Does Pantheon offer professional services?
-Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
@@ -81,4 +81,11 @@ If you're seeking an individual developer, there are a number of resources avail
 #### Does Pantheon offer enterprise support?
 Pantheon provides a guided launch concierge to Enterprise customers during both migration and development on Pantheon. We can work directly with your stakeholders and development team to optimize and prepare your site for launch, identifying and eliminating platform issues. 24/7 emergency support is also available post-launch.
 
+<<<<<<< HEAD
+Learn more about [Enterprise on Pantheon](https://www.pantheon.io/enterprise).
+
+## Learn More
+If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).
+=======
 Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
+>>>>>>> 74b8ded292b5866fab2185631c7430eb0911a54e
