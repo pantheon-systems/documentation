@@ -1,5 +1,5 @@
 ---
-title: Pantheon SSL/TLS support 
+title: Pantheon SSL/TLS Support 
 description: Pantheon's recommendation regarding SSL/TLS in light of PCI DSS v3.1.
 category:
   - security
