@@ -39,7 +39,7 @@ This is not officially supported, but the PHP runtime is complete. Some users ha
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files. Rsync is currently unstable on Pantheon. The engineering team is at work to improve its functionality on the platform.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files. 
 
 ### How does Pantheon work with DNS?
 
@@ -64,7 +64,7 @@ No. Pantheon's architecture is designed to provide high performance and a rich f
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
-## Does Pantheon support WordPress Multisite?
+### Does Pantheon support WordPress Multisite?
 
 No. While WordPress multisites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
 
