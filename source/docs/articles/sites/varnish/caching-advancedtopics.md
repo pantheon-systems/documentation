@@ -10,7 +10,7 @@ keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal,
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted but we offer absolutely no gurantees change requests will be implemented</div>
+<strong>Warning</strong>: Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
@@ -26,7 +26,7 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/article
 
 ## External Authentication (e.g. Facebook login)
 
-If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and login. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
+If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
 ## Using Your Own Session-Style Cookies
 
@@ -94,7 +94,7 @@ Pantheon’s default is to not cache 404s, but if your application sets Cache-Co
 Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
 ### WordPress Sites
-WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than defauly, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
 
 ## Basic Authentication & Varnish
