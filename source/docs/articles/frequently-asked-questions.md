@@ -27,7 +27,9 @@ Pantheon is free for developers. Our live site plans currently start as low as $
 
 All Pantheon servers are currently located in the United States. We have plans to expand to Europe, but we don't have an ETA for when they will be available for end-users.
 
-You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) for rapidly serving files from multiple locations, and Pantheon is faster than the time savings from having a local server.
+You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) for rapidly serving files from multiple locations. In most cases, sites running on Pantheon in the U.S. perform faster than sites running on local hosting, even if the user is halfway around the world. 
+
+Transatlantic hops in are usually 200-300ms, while Pantheon can usually speed up site page load times by seconds.
 
 ### Can I run non-Drupal applications on Pantheon?
 
