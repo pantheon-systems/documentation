@@ -1,10 +1,10 @@
 ---
-title: Drupal Varnish Caching for High Performance
-description: Configure and verify Drupal Varnish is working on your site.
+title: Varnish Caching for High Performance with Drupal and WordPress
+description: Configure and verify Varnish is working on your WordPress or Drupal sites.
 category:
   - getting-started
   - developing
-keywords: drupal varnish, cache, caching, pantheon, performance
+keywords: wordpress varnish, drupal varnish, cache, caching, pantheon, performance
 ---
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees application container workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second, much faster than a site's framework alone.  
 
@@ -13,7 +13,7 @@ Every site on Pantheon already uses Varnish; each HTTP request first goes to the
 Varnish can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by Varnish and end-users won't realize anything is wrong.
 
 
-## Configure Your Site for Drupal Varnish
+## Configure Your Drupal or WordPress Site for Varnish
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>:
 No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish module.  </div>

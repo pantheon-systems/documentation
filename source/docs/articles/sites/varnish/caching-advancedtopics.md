@@ -1,5 +1,5 @@
 ---
-title: Drupal Varnish Caching - Advanced Topics
+title: Varnish Caching - Drupal and WordPress Advanced Topics
 description: Learn advanced details about cache and authentication.
 category:
   - developing
