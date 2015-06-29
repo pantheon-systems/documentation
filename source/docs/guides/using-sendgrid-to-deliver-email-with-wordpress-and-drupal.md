@@ -1,6 +1,6 @@
 ---
 title: Using SendGrid To Deliver Email with WordPress and Drupal
-description: SendGrid is the world's largest Email Infrastructure as a Service provider. Learn to send email from your website reliably.
+description: Detailed information on using SendGrid to deliver email through your WordPress and Drupal site.
 category:
   - developing
 authors:

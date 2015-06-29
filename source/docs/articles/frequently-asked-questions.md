@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-description: Answers to common questions about using Pantheon.
+description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
 category:
   - getting-started
 keywords: getting started, faqs, sites, pantheon, plans, developing, security

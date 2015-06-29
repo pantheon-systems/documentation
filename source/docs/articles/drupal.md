@@ -1,6 +1,6 @@
 ---
 title: Drupal
-description: All about Drupal on Pantheon.
+description: Drupal is an open source content management platform powering millions of websites and applications.
 category: drupal
 keywords: drupal, sites, pantheon, upstream
 ---

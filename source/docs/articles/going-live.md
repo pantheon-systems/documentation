@@ -1,6 +1,6 @@
 ---
 title: Going Live
-description: Best practices for preparing your site launch.
+description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
 category:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live

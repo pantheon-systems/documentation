@@ -1,6 +1,6 @@
 ---
 title: Guide Example
-description: Learn how to create a great guide.
+description: Learn how to create a great guide for your Pantheon Drupal or WordPress site.
 draft: true
 
 ---
