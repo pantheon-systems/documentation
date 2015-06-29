@@ -1,5 +1,5 @@
 ---
-title: Unsupported Modules and Plugins
+title: Unsupported/Problematic Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
 keywords: modules, plugins, unsupported, drupal, wordpress
 ---
