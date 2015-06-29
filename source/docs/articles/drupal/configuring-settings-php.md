@@ -10,7 +10,8 @@ The Drupal system configuration in code is set in:
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php—no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a <em>Pantheon</em> database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+
 ## Pantheon Articles on Settings.php
 
 The following articles include techniques and configurations for settings.php on Pantheon:
@@ -150,8 +151,10 @@ Pantheon automatically injects database credentials into the site environment; i
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
-#### Are table prefixes supported?
+####Where can I find examples of Pantheon settings.php?
+You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
+#### Are table prefixes supported?
 
 For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
 
