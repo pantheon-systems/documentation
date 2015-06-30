@@ -44,17 +44,47 @@ WordPress does not use PHP session cookies; however, some themes and plugins do.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
-A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript.
+A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
 
+### Using Modernizr
 [Modernizr](http://modernizr.com) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a  [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](http://wordpress.stackexchange.com/a/62362).
 
-###Device Detection
+#### Device Detection
 A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com), where a comparison can be done for a variety of clients:
 
  - [Desktop browsers](https://html5test.com/results/desktop.html)
  - [Tablet browser](https://html5test.com/results/desktop.html)
  - [Mobile browsers](https://html5test.com/results/desktop.html)
  - [Other browsers](https://html5test.com/results/other.html)
+
+### Using STYXKEY
+You can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+
+For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
+
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
+
+**Examples of `STYXKEY` cookie names:**
+
+&#8211; `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
+
+&#8211; `STYXKEY_european_user`: Presents different privacy options to E.U. users
+
+&#8211; `STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
+
+&#8211; `STYXKEY-school`: Your site changes content depending on the user's school affiliation
+
+**Invalid names that won't work:**
+
+&#8211; `STYXKEY`: Needs something after the `STYXKEY` text
+
+&#8211; `styxkey-android`: The text `STYXKEY` must be uppercase
+
+&#8211; `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
+
+&#8211; `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
+
+&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY
 
 
 ## Varnish Servers
