@@ -11,7 +11,7 @@ Behind Pantheon's edge caching layer, your application server will see some spec
 
 Since this URL modification happens entirely on the back-end, your client-side Javascript, and your Google Analytics tracking code, still see and use the original query parameters unaltered and will continue to function normally.
 
-For more information, see [Caching - Advanced Topics](/docs/articles/sites/varnish/drupal-caching-advancedtopics).
+For more information, see [Caching - Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics).
 
 
 #### Which query parameters are optimized?
