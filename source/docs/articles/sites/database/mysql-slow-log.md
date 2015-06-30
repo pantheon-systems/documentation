@@ -73,8 +73,8 @@ There are several different tools that can be used to analyze a MySQL Slow Log:
 These tools will allow you to see various summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL Slow Log on your own. Please refer to the documentation for the particulars of each of these programs. Here is an example usage of Mysql Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
 ```php
-$ php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates endpointas90kkud28a236-slow.log > daily_meal_slow_1s_noDupes.txt  
-$ vi daily_meal_slow_1s_noDupes.txt
+$ php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates endpointas90kkud28a236-slow.log > site_name_slow_1s_noDupes.txt  
+$ vi site_name_slow_1s_noDupes.txt
 # Execution count: 11 times on 1970-01-01 01:00:00.  
 # Column       :     avg |     max |       sum  
 # Query time   :       1 |       1 |        11  
