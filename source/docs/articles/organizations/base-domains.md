@@ -18,7 +18,7 @@ From your Organization Dashboard, go to Support and open a ticket. Select **Pant
 
 The only action required on your end is creating a Wildcard CNAME DNS entry for the development domain you choose, at your DNS hosting service, pointing to our edge. If you go with sites.example.com, the record would need to be created as follows:
 
-*.sites.example.com CNAME edge.live.getpantheon.com
+*.sites.example.com CNAME edge.live.pantheon.io
 
 ## Effects and Considerations
 
