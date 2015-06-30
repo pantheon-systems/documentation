@@ -1,6 +1,6 @@
 ---
 title: Going Live
-description: Best practices for preparing your site launch.
+description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
 category:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live
@@ -30,7 +30,6 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 **Update and Test DNS Records:**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Adjust TTL Value to 120s](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)<br>
-
 
 ## Schedule Backups
 

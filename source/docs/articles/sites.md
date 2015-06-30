@@ -1,6 +1,6 @@
 ---
 title: The Site Dashboard
-description: Learn how to use the Site Dashboard to build and manage your sites.
+description: Learn how to use the Pantheon Site Dashboard to build and manage your sites.
 category:
   - developing
 keywords: sites, dashboard, pantheon, get started, settings, new site

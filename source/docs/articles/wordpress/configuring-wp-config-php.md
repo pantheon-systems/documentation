@@ -11,7 +11,7 @@ WordPress configuration is set in wp-config.php, located within your WordPress s
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes and caching.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should <em>NEVER</em> put the database connection information for a Pantheon database within your wp-config.php. These credentials <em>will</em> change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a Pantheon database within your wp-config.php. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
 
 ## Local Database Configuration for Development
 
@@ -28,11 +28,11 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (Dev, Test or Live).
+For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
 <script src="https://gist.github.com/timani/6bd845402c7f8d0939a4.js"></script>
 
-For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test or Live.
+For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
 
 <script src="https://gist.github.com/timani/f5600ecff83399da5069.js"></script>
 
@@ -41,11 +41,11 @@ As an example, here's how you can hard-code your WordPress debug configuration b
 <script src="https://gist.github.com/timani/3e7f882c5ca49709b4e4.js"></script>
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
-See  [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/).
+See [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/).
 
 #### How do I perform redirection?
 
-See  [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests).
+See [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests).
 
 #### Where do I specify database credentials?
 
@@ -56,6 +56,9 @@ You don't have to! Pantheon automatically injects database credentials into the
 - Pantheon WordPress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
 - WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
+####Where can I find examples of Pantheon wp.config.php?
+You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
+
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [this](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon#importing-an-existing-site#table-prefixes) article.
+For information about table prefixes on Pantheon, see [this](/docs/articles/sites/create/importing-an-existing-site/#importing-an-existing-site#table-prefixes) article.

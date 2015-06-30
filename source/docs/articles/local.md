@@ -1,6 +1,6 @@
 ---
 title: Local Development Setup and Operation
-description: Suggestions and solutions for working locally.
+description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 category:
 - getting-started
 keywords: local development, pantheon, develop locally, developing
@@ -17,7 +17,7 @@ To begin, you'll need:
 - Git client for tracking code changes.
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync.
 - [Terminus](https://github.com/pantheon-systems/cli)
-- [Drush](/docs/articles/local/drush-command-line-utility/) (optional)
+- [Drush](/docs/articles/local/drupal-drush-command-line-utility/) (optional)
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
 

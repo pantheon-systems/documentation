@@ -101,9 +101,9 @@ Non-optimized caching also is a huge problem. If you’re not caching anonymous 
 If your cache lifetime is set to something that doesn’t make sense for your traffic, like if it only gets one hit per hour yet it's set to have a 5 minute cache. That’s not enough to help.  
 
 ### Drupal Note
-See our [guidelines on Drupal's performance settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings/) for more details.  
+See our [guidelines on Drupal's performance settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/) for more details.  
 
-Other caching systems that aren’t on by default that should be enabled include [block caching](/docs/articles/drupal/drupal-s-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren’t on by default that should be enabled include [block caching](/docs/articles/drupal/drupal-7-performance-and-caching-settings/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 
 ### Using the Database to Cache in Drupal
@@ -112,7 +112,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.  
 
 
-One of the services Pantheon offers is [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.getpantheon.com/blog/why-we-recommend-redis-caching-backend).​
+One of the services Pantheon offers is [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend/), which a key-value store and is optimized for this type of work. For a real-world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon puts Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps our edge cache communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up your site and may well slow it down.
