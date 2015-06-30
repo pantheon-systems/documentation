@@ -27,4 +27,4 @@ See [Drupal's Performance Settings](/docs/articles/drupal/drupal-7-performance-a
 
 [Testing Varnish](/docs/articles/sites/varnish/testing-varnish/)
 
-[Caching: Advanced Topics](/docs/articles/sites/varnish/drupal-caching-advancedtopics/)
+[Caching: Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics/)

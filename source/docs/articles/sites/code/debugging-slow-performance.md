@@ -127,7 +127,7 @@ Cache misses are by nature slow - whatever needs to be cached is performed and t
 
 There are a large number of caches involved in every single request, including:
 
-- [Varnish](/docs/articles/sites/drupal-varnish) - spread out across multiple servers, and the cache is not shared between servers.
+- [Varnish](/docs/articles/sites/varnish) - spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/articles/sites/what-is-apc-and-what-is-it-used-for/) - PHP has it’s own opcode cache, which is not shared between application servers.
 - [Drupal](https://drupal.org/node/326504) and [Redis](/docs/articles/sites/redis-as-a-caching-backend/) - Shared between your servers, but caches do have expirations, and if it’s old and stale, it’ll need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
