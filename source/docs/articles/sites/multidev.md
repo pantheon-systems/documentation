@@ -51,6 +51,13 @@ You can create cloned cloud environments from Dev, Test or Live; existing branch
 
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
+## Create a New Multidev Environment
+
+First, create a branch locally and push it to Pantheon. Then create a Multidev environment for the branch:
+
+1. From your Site Dashboard, select **Multidev**.  
+2. Click **Git Branches**, and select **Create Environment** next to the branch name.
+
 ## Access a Branch Environment
 
 From the Dashboard, click **Multidev**, then select the name of the environment.
@@ -90,15 +97,29 @@ A branch with no environment associated with it can be deleted by going to Multi
 
 Branches can be deleted locally and the commit can be pushed to Pantheon, but this may have unintended consequences if an environment is associated with it; use the interface instead.​
 
+## Rename a Branch
+There is an 11-character limit for branch names. If you push a branch to Pantheon that exceeds the character limit, it cannot become a cloud development environment (CDE). The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
+
+From the command line, rename the branch:
+
+```bash
+git branch -m old-branch-name new-name
+```
+
+Next, push the renamed branch:
+
+```bash
+git push origin new-name
+```
+
+This will create a new branch with the commit history intact. From the Multidev overview, click on Git Branches and delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
+
+
 ## Frequently Asked Questions (FAQs)
 
 #### How can I get Multidev and how much is does it cost?
 
 If you have a Business or Enterprise plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form from the Multidev tab in your Dashboard.
-
-#### Can I create a branch locally?
-
-Yes; if you create a branch locally and push it to Pantheon, it will be available  to be associated with an environment. Environment creation is a manual process; go to Multidev > Git Branches and click **Create Environment** next to the branch name.
 
 #### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
@@ -120,7 +141,7 @@ Yes, you can; your Git repository is not restricted. If you do not use Multidev,
 
 There is no limit on the number of branches you can have in your Git repository.
 
-The limit on forked environments is 5 for Business, 10 for Enterprise.
+The limit on forked environments is 5 for Business and 10 for Enterprise.
 
 #### Can I associate a domain with a branch environment?
 
@@ -128,7 +149,7 @@ At this time, custom domains cannot be associated with branch environments.
 
 #### What Git clients are supported?
 
-Any Git client can be used with Multidev. Use of the command-line Git client is recommended for compatibility with dashboard instructions.
+Any Git client can be used with Multidev. Use of the command-line Git client is recommended for compatibility with Dashboard instructions.
 
 #### Does Multidev support remote repositories, such as Github?
 
@@ -138,6 +159,6 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 
 Not at this time, but it is on the development roadmap.
 
-#### Can you backup and restore a branch environment?
+#### Can I backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.

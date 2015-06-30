@@ -139,7 +139,8 @@ Long running processes like batch jobs, background tasks, and heavy operations 
 
 ### Upgrade Your Plan
 
-If all the errors have been resolved and the views, batches, and tasks have been optimized, the next step is to look into [upgrading your plan](https://www.getpantheon.com/pricing) for more resources. The recommendation here is to select the most appropriate plan for the resource usage of your site.
+If the all the errors have been resolved and the views, batches and tasks have been optimized, the next step is to look into [upgrading your plan](https://www.pantheon.io/pricing) for more resources. The recommendation here is to select the most appropriate plan for the resource usage of your site.
+
 
 ### Unexpected Timeouts
 

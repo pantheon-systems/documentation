@@ -39,8 +39,9 @@ Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (suc
 
 It is important to note that each of your site environments have a robots.txt associated with the bare ".pantheon.io" domain that contains the following:
 
-    User-agent: * Disallow: /
-
+```bash
+User-agent: * Disallow: /
+```
 The pantheon.io domains are ONLY intended for development use and cannot be used for production. If you're testing links or SEO prior to launch, a workaround may be to assign a test or beta domain to an environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you could possibly utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
 
  You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Goolge XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
@@ -49,7 +50,7 @@ The pantheon.io domains are ONLY intended for development use and cannot be used
 
     // Redirect to force indexing with custom domain sitemap
     $subject = $_SERVER['HTTP_HOST'];
-    $pattern = '/pantheon.io/sitemap.xml$/';
+    $pattern = '#/pantheon.io/sitemap.xml$/#';
     preg_match($pattern, $subject, $matches);
     $counted = count($matches);
     if ($counted > 0 ) {

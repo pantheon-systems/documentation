@@ -101,18 +101,19 @@ If you're using the Environment Access: Locked security setting on a site envir
 ## Pantheon's .vcl File
 
 The following is the contents of Pantheon's Varnish configuration (.vcl) file for reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what Pantheon Varnish does or does not cache.
-
-    ​   NO_CACHE
-    S+ESS[a-z0-9]+
-    fbs[a-z0-9_]+
-    SimpleSAML[A-Za-z]+
-    SimpleSAML[A-Za-z]+
-    PHPSESSID
-    wordpress[A-Za-z0-9_]*
-    wp-[A-Za-z0-9_]+
-    comment_author_[a-z0-9_]+
-    duo_wordpress_auth_cookie
-    duo_secure_wordpress_auth_cookie
-    STYXKEY[a-zA-Z0-9-_]+
-    has_js
-    Drupal[a-zA-Z0-9-_\.]+
+```nohighlight
+​   NO_CACHE
+S+ESS[a-z0-9]+
+fbs[a-z0-9_]+
+SimpleSAML[A-Za-z]+
+SimpleSAML[A-Za-z]+
+PHPSESSID
+wordpress[A-Za-z0-9_]*
+wp-[A-Za-z0-9_]+
+comment_author_[a-z0-9_]+
+duo_wordpress_auth_cookie
+duo_secure_wordpress_auth_cookie
+STYXKEY[a-zA-Z0-9-_]+
+has_js
+Drupal[a-zA-Z0-9-_\.]+
+```

@@ -1,5 +1,5 @@
 ---
-title: Content Delivery Network (CDN) for file distribution
+title: Content Delivery Network (CDN) for File Distribution
 description: Learn about the benefits of using a Content Delivery Network (CDN) on your Drupal site.
 category:
     - drupal
@@ -40,13 +40,13 @@ You do not need permission, action, or configuration from Pantheon to use a CDN.
 Most sites use the [CDN module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
 
 First, download the module. If you use drush:
-
-    drush dl cdn
-
+```bash
+drush dl cdn
+```
 Then, enable the module.
-
-    drush -y en cdn
-
+```bash
+drush -y en cdn
+```
 To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.<br />
  ![Enable CDN Module](/source/docs/assets/images/enable-cdn-module.png)
 ## Best Practices
@@ -76,11 +76,13 @@ The [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module can be con
 
 This is not the only way to install this, but these directions are known good and assume that you have an AWS S3 bucket set up.
 
-    drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
-    drush @pantheon.SITENAME.dev make sites/all/modules/awssdk/awssdk.make --no-core
-    drush @pantheon.SITENAME.dev en devel amazons3 amazons3_cors media jquery_update libraries awssdk views file_entity awssdk_ui
-    drush @pantheon.SITENAME.dev cc all
+```bash
+drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
+drush @pantheon.SITENAME.dev make sites/all/modules/awssdk/awssdk.make --no-core
+drush @pantheon.SITENAME.dev en devel amazons3 amazons3_cors media jquery_update libraries awssdk views file_entity awssdk_ui
+drush @pantheon.SITENAME.dev cc all
 
+```
 - /admin/reports/status - Make sure AWSSDK reports a version number
 - /admin/reports/awssdk - Verify it's correct.
 - /admin/config/media/awssdk - Specified Amazon Web Services Key, Amazon Web Services Secret Key

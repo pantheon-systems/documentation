@@ -20,21 +20,21 @@ Core updates for [distributions](https://www.drupal.org/documentation/build/dist
 Navigate to the directory of your site's code repository on your local machine, then run the following commands to pull core version updates for the CMS version in use:
 
 ### Drupal 7
-```
+```bash
 git pull git://github.com/pantheon-systems/drops-7.git master
 git add .
 git commit -m “Update to Drupal 7.33. http://link-to-release-notes”
 git push origin master
 ```
 ### Drupal 6
-```
+```bash
 git pull git pull git://github.com/pantheon-systems/drops-6.git master
 git add .
 git commit -m “Update to Drupal 6 http://link-to-release-notes”
 git push origin master
 ```
 ### WordPress
-```
+```bash
 git pull git://github.com/pantheon-systems/wordpress.git master
 git add .
 git commit -m “Update WordPress Core http://link-to-release-notes”

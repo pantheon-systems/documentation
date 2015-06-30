@@ -15,7 +15,6 @@ We're revising our migration documentation. Our existing import documents includ
  - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
  - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
- - [Clone a Drupal Site using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up
@@ -69,7 +68,7 @@ Retrieve your code as you see fit. Log into your estranged host’s system and d
 #### Create a Code Archive
 
 Create an archive that is stored outside of your Drupal site root that contains only the executable code associated with your site and skips the contents of sites/default/files. You may need to modify the lines below to match the directories on your system.
-```
+```php
 1. Specify the destination folder.
 TARGET=~/Desktop
 2. Specify the source folder.
@@ -83,7 +82,7 @@ tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
 
 This is optional, but recommended. The easiest method is to use the [mysqldump](http://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
 
-```  
+```php
 1. Specify the destination folder.
 TARGET=~/Desktop
 2. Create the database backup.
@@ -104,7 +103,7 @@ For this reason, we do not support the use of database table prefixes. As a best
 
 This is optional, but recommended. Export a tar.gz or .zip file of your files directory, which was intentionally omitted from the codebase import. These files are not tracked in Git; instead, they will be stored in Valhalla, our network file system.
 
-```
+```php
 TARGET=~/Desktop
 SOURCE=~/Projects/mysite
 cd $SOURCE/sites/default/files
@@ -120,7 +119,7 @@ Importing your site to the platform ranges from a simple, single file upload dur
 In the Dashboard, if your site archive is smaller than 100MB, you can upload it during site creation. If it is less than 500MB, you can post it at a publicly-accessible URL and provide that at the same step in the process.
 
 Using Terminus, you can import archives with:
-```
+```nohighlight
 terminus sites create [--product=<productid>] \
 [--name=<name>] \
 [--label=<label>] \

@@ -14,7 +14,7 @@ Drupal, by default, logs events using the Database Logging module (dblog). Somet
 1. Visit `/admin/reports/dblog` once logged in as administrator.
 2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
-```
+```bash
 terminus drush --site=<site> --env=<env> watchdog-show
 ```
 <div class="alert alert-info" role="alert">
@@ -22,7 +22,7 @@ terminus drush --site=<site> --env=<env> watchdog-show
 
 Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
 
-```
+```bash
 terminus drush --site=<site> --env=<env> watchdog-show --tail
 ```
 
@@ -30,7 +30,7 @@ terminus drush --site=<site> --env=<env> watchdog-show --tail
 
 Set the WP_DEBUG variable to "true" within your wp-settings.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
 
-```
+```php
 define('WP_DEBUG', true);
 ```
 
@@ -52,40 +52,16 @@ Once connected, you'll see several directories:
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
+### See Also
+- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs)
+
 ## Frequently Asked Questions
-
-#### I have multiple application containers workers in my Live environment. Does Pantheon aggregate logs?
-
-No, we do not have a mechanism for combining server logs across multiple application containers.
-
-#### Can I access the logs on a specific application container worker?
-
-Yes, just follow these steps:
-
-```
-SITE_UUID=(value from dashboard url)
-# Get IPs of individual appserver processes.
-dig +short appserver.live.$SITE_UUID.drush.in
-```
-
-Then for each appserver that you want to connect to:
-
-```
-APPSERVER_IP=(value from dig command)
-sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP
-```
-
-If you want to download all the access logs from a particular site:
-
-```
-sftp -o Port=2222 live.$SITE_UUID@$APPSERVER_IP:logs/nginx-access.log*
-```
 
 #### How can I parse my Nginx access logs?
 
 You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
-```
+```nginx
 time_format %H:%M:%S %z
 date_format %d/%b/%Y
 log_format %^ %^ %^ [%d:%t]  "%r" %s %b "%R" "%u" %T "%h"
@@ -107,7 +83,7 @@ The best recommended practice is to find and resolve the problems. PHP notices, 
 
 Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each application container, use the following shell script:
 
-```
+```bash
 # Site UUID from Dashboard URL
 SITE_UUID=UUID
 for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;

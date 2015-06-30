@@ -32,7 +32,7 @@ This guide will show you the basics for collaborating with others if your site:
 ## Synchronizing Existing Pantheon Sites to Github
 From your Site Dashboard's Development environment, copy the Git SSH clone URL and clone it to your local machine. Your local copy will now track the Pantheon repository as origin.
 
-```
+```nohighlight
 $ git clone <ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git d7-ci>
 Cloning into 'd7-ci'...
 remote: Counting objects: 298630, done.
@@ -45,7 +45,7 @@ Checking connectivity... done.
 
 Change directory into the site repository, and verify your connection to the Pantheon server.
 
-```
+```nohighlight
 $ cd d7-ci
 $ git remote -v
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)
@@ -64,7 +64,7 @@ As long as you keep “Initialize this repository with a README” unchecked, yo
 ![Push an existing repo to GitHub](/source/docs/assets/images/push-existing-repo.png)
 
 I chose to name this remote "github".
-```
+```nohighlight
 $ git remote add github git@github.com:pantheon-learning/d7-ci.git
 $ git remote -v
 github	git@github.com:pantheon-learning/d7-ci.git (fetch)
@@ -79,7 +79,7 @@ What's nice about this is then every time you do a git push origin <branch> code
 
 ### Push the Pantheon Site's Codebase to Github
 
-```
+```nohighlight
 $ git push -u github master
 Writing objects: 100% (120046/120046), 31.88 MiB | 3.26 MiB/s, done.
 Total 120046 (delta 89679), reused 120039 (delta 89679)
@@ -113,7 +113,7 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
 
 Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:
 
-```
+```nohighlight
 Squash commit -- not updating HEAD
 Automatic merge went well; stopped before committing as requested
 ```
@@ -123,7 +123,7 @@ Automatic merge went well; stopped before committing as requested
 ### Add the Pantheon Site as a Git Remote
 
 1. From your terminal within the site directory, use the Git `remote add` command with an alias to make sure you know when you are moving code to or from Pantheon.
-  ```
+  ```nohighlight
   git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
   ```
 
@@ -142,14 +142,14 @@ Automatic merge went well; stopped before committing as requested
 
 For this example, we’ll create the settings.php file.
 
-```
+```nohighlight
 $ cd sites/default
 $ touch settings.php
 ```
 
 Add the file to version control and Push to both remotes:
 
-```
+```nohighlight
 $ git status
 On branch master
 Your branch is up-to-date with 'github/master'.
@@ -176,7 +176,7 @@ master b802550] Create settings.php
 
 You’re ready to push the change to Github and Pantheon.
 
-```
+```nohighlight
  $ git push github master
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
@@ -188,7 +188,7 @@ To git@github.com:pantheon-learning/d7-ci.git
 
 ```
 
-```
+```nohighlight
 $ git push origin master
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
@@ -214,7 +214,7 @@ This push to Pantheon failed, because the Development environment was in SFTP mo
 
 Switch the connection mode to Git by clicking on the toggle, or via the command line:
 
-```
+```nohighlight
 $ terminus site connection-mode --site=d7-ci --env=dev --set=git
 ```
 
@@ -222,7 +222,7 @@ $ terminus site connection-mode --site=d7-ci --env=dev --set=git
 
 Push to Pantheon:
 
-```
+```nohighlight
 $ git push origin master
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
@@ -238,7 +238,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 The Github repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
 Before I continue having to remember which remote, Github or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon and verify.
-```
+```nohighlight
 $ git remote rename origin pantheon
 $ git remote -v
 github	git@github.com:pantheon-learning/d7-ci.git (fetch)
@@ -252,7 +252,7 @@ pantheon	ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.de
 Working with teams on Github requires a branching strategy. We are fans of Github flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on Github](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/docs/articles/sites/team-management).
 Locally, our codebase is in sync with both repositories. In order to start working on a new feature, we’ll checkout a branch. Since my site is associated with a supporting organization that has Multidev, I can test out any feature in a cloud development environment. These environments have an 11-character limit for branch names, so I'm choosing to use short branch names for my feature branches.  
 
-```
+```nohighlight
 $ git checkout -b configs
 Switched to a new branch 'configs']
 ```
@@ -260,9 +260,11 @@ Switched to a new branch 'configs']
 
 I’m responsible for adding the configuration management module as a feature of this site and tracking initial configurations with it.
 In my local environment, I'm going to download the module and its dependencies:
-```$ drush dl configuration-7.x-2.x-dev xautoload```
-After I enable the module, I test and verify that the module is working. Next I'll add, commit, and push to branches on Pantheon and Github.
+```nohighlight
+$ drush dl configuration-7.x-2.x-dev xautoload
 ```
+After I enable the module, I test and verify that the module is working. Next I'll add, commit, and push to branches on Pantheon and Github.
+```nohighlight
 $ git status
 On branch configs
 Untracked files:
@@ -277,7 +279,7 @@ Brians-Pantheon-Mac-2:d7-ci brian$ git commit -m "install configuration and xaut
 [configs 0f85fbd] install configuration and xautoload
  284 files changed, 25781 insertions(+)
 ```
-```
+```nohighlight
 $ git push pantheon configs
 Counting objects: 365, done.
 Delta compression using up to 4 threads.
@@ -294,7 +296,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 ```
 The platform is telling me that no cloud development environments (CDEs) were found associated with the Git branch. I can stay on the command-line and quickly create one with Terminus.
 
-```
+```nohighlight
 $ terminus site create-env --site=d7-ci --env=configs --from-env=dev
 ```
 ![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Cloud Development Environment named configs, created with Terminus")
@@ -314,7 +316,7 @@ Timani completed the tasks, we discussed a bit in person, and he merged the PR.
 
 ## Deploy to Pantheon
 Locally, I now checkout the master branch, pull from github master, and push to pantheon master.
-```
+```nohighlight
 $ git checkout master
 $ git pull github master
 $ git push pantheom master

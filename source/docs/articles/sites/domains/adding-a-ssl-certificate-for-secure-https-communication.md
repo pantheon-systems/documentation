@@ -24,7 +24,7 @@ SSL is a standard for establishing an encrypted link between your Pantheon site 
 
 Run `openssl` from the command line to generate a RSA Private Key (.key file) and Certificate Signing Request (.csr file):
 
-```
+```bash
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr
 -keyout www_example_com.key
 ```

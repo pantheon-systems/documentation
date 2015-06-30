@@ -20,9 +20,10 @@ Yes, APC can be used as a cache backend or a "key-value store"; however, this is
 
 If the size of the scripts loaded exceed the size of the APC cache, the cache will be flushed and rebuilt, resulting in slow execution time. Symptoms of this will include the following message in dev environments and in watchdog logs:
 
-    Warning: require_once(): Unable to allocate memory for pool.
-
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.getpantheon.com/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to log and visualize performance.
+```php
+Warning: require_once(): Unable to allocate memory for pool.
+```
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to log and visualize performance.
 
 
 #### How can I determine what my current APC settings are?
@@ -34,7 +35,7 @@ See [Securely Working with phpinfo](/docs/articles/sites/secure-phpinfo).
 
 ## Can the shm_size be configured manually?
 
-No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.getpantheon.com/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
+No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be changed. If a greater <tt>shm_size</tt> is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/pricing "Pantheon Pricing") for a larger <tt>shm_size</tt> allocation.
 
 ## Troubleshooting
 
@@ -42,15 +43,19 @@ No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be chan
 
 In some rare cases, there is a [known issue with APC](http://drupal.org/node/838744 "Opcode (APC) and drupal autoloader") where it attempts to load a file that has already been cached. For example:
 
-    Fatal error: Cannot redeclare class InsertQuery_mysql in ... on line 87
-
+```php
+Fatal error: Cannot redeclare class InsertQuery_mysql in ... on line 87
+```
 If this happens often, a workaround would be to place the following at the top of the file in question:
 
-    if (!class_exists('NAMEOFCLASSBEINGREDECLARED')) {
-
+```php
+if (!class_exists('NAMEOFCLASSBEINGREDECLARED')) {
+```
 then closing the condition with the corresponding bracket at the bottom:
 
+```
 }
+```
 
 
 #### How do I clear the APC opcode cache?
@@ -61,9 +66,10 @@ Sometimes, due to (very rare) corruption, the APC opcode cache will need to be c
 
 To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in your root directory with the following contents:
 
-    <?php
-    apc_clear_cache();
-
+```php
+<?php
+apc_clear_cache();
+```
 Then browse to http://dev.YOURSITE.pantheon.io/apc_cache_clear.php to clear the opcode cache.</yoursite>
 
 ##### Dashboard
