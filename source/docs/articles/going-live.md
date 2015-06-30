@@ -9,17 +9,19 @@ Congratulations, you're almost ready to launch your site on Pantheon! For Enterp
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
-## Going Live Checklist
+## Best Practices Checklist
 
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a service level for your site](/docs/articles/sites/settings/selecting-a-plan/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a Plan for Your Site](/docs/articles/sites/settings/selecting-a-plan/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Configure Site Monitoring Services](#monitoring-services)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Configure Cache<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Redis<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Varnish<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Review Status Tab in Live LaunchCheck<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Configure Site Monitoring Services:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Maximize Performance by Configuring Cache:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Varnish Caching for High Performance](/docs/articles/sites/varnish/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Resolve all errors and/or notices found within the Status Tab in the Live Environment:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Enable SSL (Optional but highly recommended)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Load Test<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> Add a domain<br>
@@ -37,7 +39,7 @@ Ensure that your content is protected by scheduling daily and weekly backups. Th
 
 Consider enabling [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis/) monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
 
-[Pingodm](https://www.pingdom.com/) can also be used as an additional monitoring services to create site alerts for non-cached pages.
+[Pingodm](https://www.pingdom.com/) can also be used as an additional monitoring service to create site alerts for non-cached pages.
 
 
 
