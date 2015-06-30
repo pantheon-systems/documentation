@@ -12,7 +12,7 @@ Drupal sites on Pantheon run an optimized version of [Drupal](https://github.com
 [Import an existing Drupal site](/docs/articles/sites/create/importing-an-existing-site//) or [launch a new one](/docs/articles/getting-started/) using the Pantheon Dashboard tools.
 
 ##Clone a Drupal Site
-There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. For more information, see [Clone a Drupal Site Using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush/).
+There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. For more information, see [Clone a Drupal Site Using Drush](/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup/).
 
 ##Major Version Upgrades
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
