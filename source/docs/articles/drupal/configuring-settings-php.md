@@ -156,7 +156,7 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
+For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site/).
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 

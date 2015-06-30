@@ -19,7 +19,7 @@ Using “www” is considered an Internet-wide best practice and for best result
 ## DNS settings for non-www or a subdomain
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Legacy users with getpantheon.com are not affected by these changes. These sites should use these <a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS Records</a>. Only sites created after October 22, 2014 with pantheon.io domains are affected.</div>
+<strong>Note</strong>: Legacy users with pantheon.io are not affected by these changes. These sites should use these <a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS Records</a>. Only sites created after October 22, 2014 with pantheon.io domains are affected.</div>
 
 Some DNS providers have developed options to allow customers to use bare domains without requiring a static IP address. There are general options for the alternative implementations if you wish to use a non-www domain.
 
@@ -73,7 +73,7 @@ In order to correct this you should use the CNAME that is available on the Dashb
 
 ## Best Practices
 
-*   Do **not** point to [legacy I.P. address](http://helpdesk.getpantheon.com/customer/portal/articles/1319336) if you are on a pantheon.io site
+*   Do **not** point to [legacy I.P. address](http://helpdesk.pantheon.io/customer/portal/articles/1319336) if you are on a pantheon.io site
 *   Use www as the primary domain where possible
 *   Do **not** point subdomains to the Dub Dub Dubber, this will not work
 *   Use the recommended DNS config on dashboard for pantheon.io sites

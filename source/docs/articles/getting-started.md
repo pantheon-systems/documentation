@@ -24,7 +24,7 @@ If you want to develop directly on Pantheon, start with one of the many distribu
 On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ### Import an Existing Site
-If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
+If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/sites/create/importing-an-existing-site/) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
 
 ## Interact With Your Code
 There are two ways to add and update your site's code: Git source code management and SFTP.
@@ -81,11 +81,7 @@ If you're seeking an individual developer, there are a number of resources avail
 #### Does Pantheon offer enterprise support?
 Pantheon provides a guided launch concierge to Enterprise customers during both migration and development on Pantheon. We can work directly with your stakeholders and development team to optimize and prepare your site for launch, identifying and eliminating platform issues. 24/7 emergency support is also available post-launch.
 
-<<<<<<< HEAD
-Learn more about [Enterprise on Pantheon](https://www.pantheon.io/enterprise).
+For more information, see [Enterprise on Pantheon](https://www.pantheon.io/enterprise).
 
 ## Learn More
 If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).
-=======
-Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
->>>>>>> 74b8ded292b5866fab2185631c7430eb0911a54e

@@ -34,7 +34,7 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 
 ## Configure the CDN Module In Drupal
 
-1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/docs/articles/local/drush-command-line-utility) to learn how to work with modules using Drush.
+1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/docs/articles/local/drupal-drush-command-line-utility) to learn how to work with modules using Drush.
 2. Go to admin/config/development/cdn to get to the General Configuration tab.
 3. Select **Enabled** and click **Save Configuration**.
 4. Go to the Details tab. There are a couple of items to address:

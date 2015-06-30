@@ -32,13 +32,13 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 ### Build
 
-- [Importing](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon/) a site onto Pantheon  
+- [Importing](/docs/articles/sites/create/importing-an-existing-site//) a site onto Pantheon  
 
 - Using [SFTP](/docs/articles/local/rsync-and-sftp) (and rsync!)  
 
 - How to work with [settings.php](/docs/articles/drupal/configuring-settings-php) and [wp-config.php](/docs/articles/wordpress/configuring-wp-config-php)
 
-- Using [Drush](/docs/articles/local/drush-command-line-utility) on Pantheon  
+- Using [Drush](/docs/articles/local/drupal-drush-command-line-utility) on Pantheon  
 
 - Cron with [WordPress](/docs/articles/wordpress/cron-for-wordpress) and [Drupal](/docs/articles/drupal/cron) on Pantheon  
 
@@ -52,7 +52,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 - How core [updates](/docs/articles/sites/code/applying-upstream-updates) work (TL;DR: don't use 'drush up' for core!)
 
-- Caching, both with [Varnish](/docs/articles/sites/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-s-performance-and-caching-settings)
+- Caching, both with [Varnish](/docs/articles/sites/varnish) and [Redis](/docs/articles/sites/redis-as-a-caching-backend), and how to configure [Drupal Performance Settings.](/docs/articles/drupal/drupal-7-performance-and-caching-settings)
 - [CDNs](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) can make your site faster and protect against DDOS attacks
 
 - SSO, LDAP, Shibboleth, and other [authentication](/docs/articles/sites/code/sso-and-identity-federation/) methods

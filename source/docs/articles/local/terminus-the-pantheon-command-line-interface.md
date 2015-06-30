@@ -233,7 +233,7 @@ else.
 
 
 Examples:
- drush pauth josh@getpantheon.com Get authentication token.
+ drush pauth josh@pantheon.io Get authentication token.
 
 
  --password=mypassword
@@ -578,7 +578,7 @@ Examples:
  drush psite-set-owner mysite Make josh the site owner.
 
 
- josh@getpantheon.com
+ josh@pantheon.io
 
 
 Arguments:
@@ -1271,7 +1271,7 @@ Examples:
  drush psite-team-add mysite Add josh to your site team.
 
 
- josh@getpantheon.com
+ josh@pantheon.io
 
 Arguments:
  site uuid of the site
@@ -1302,7 +1302,7 @@ Examples:
  drush psite-team-remove mysite Remove josh to your site team.
 
 
- josh@getpantheon.com
+ josh@pantheon.io
 
 Arguments:
  site uuid of the site

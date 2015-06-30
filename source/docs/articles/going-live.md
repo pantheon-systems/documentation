@@ -67,7 +67,7 @@ Consider enabling New Relic monitoring to non-intrusively track the performance 
 
 Take a look at your performance settings, including enabling anonymous page caching, enabling aggregated stylesheets, and so forth. This will make a drastic difference in how fast your site can deliver content.
 
-Check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.getpantheon.com](http://varnishcheck.getpantheon.com/).
+Check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.pantheon.io](http://varnishcheck.pantheon.io/).
 
 Finally, you should load test your Live environment to make sure everything is optimally configured.
 
@@ -91,7 +91,7 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Optimize Performance Settings</td>
-			<td class="help"><a href="/docs/articles/drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
+			<td class="help"><a href="/docs/articles/drupal/drupal-7-performance-and-caching-settings/">Performance and caching settings</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>

@@ -6,12 +6,12 @@
     "authors": [
         {
             "name": "Pantheon Training and Technical Content",
-            "email": "docs@getpantheon.com",
-            "homepage": "https://www.getpantheon.com"
+            "email": "docs@pantheon.io",
+            "homepage": "https://www.pantheon.io"
         },
         {
             "name": "Brian MacKinney",
-            "email": "brian@getpantheon.com"
+            "email": "brian@pantheon.io"
         }
     ],
     "require": {

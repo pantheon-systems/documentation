@@ -61,4 +61,4 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [this](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon#importing-an-existing-site#table-prefixes) article.
+For information about table prefixes on Pantheon, see [this](/docs/articles/sites/create/importing-an-existing-site/#importing-an-existing-site#table-prefixes) article.
