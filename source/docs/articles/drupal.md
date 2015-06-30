@@ -1,6 +1,6 @@
 ---
 title: Drupal
-description: All about Drupal on Pantheon.
+description: Drupal is an open source content management platform powering millions of websites and applications.
 category: drupal
 keywords: drupal, sites, pantheon, upstream
 ---
@@ -17,7 +17,7 @@ There may be times when you need to copy an existing Drupal site to an entirely 
 ##Major Version Upgrades
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
-Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
+Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
 
 ## Updating Modules
 Drupal has a very good, built-in system for updating contributed modules through the administrative interface. Learn how to [update modules through Drupal on Pantheon](/docs/articles/drupal/updating-modules-through-drupal/).

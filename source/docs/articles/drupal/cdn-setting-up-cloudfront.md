@@ -1,6 +1,6 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
-description: Get started using the Amazon CloudFront CDN.
+description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
 category:
     - drupal
     - developing
@@ -9,12 +9,12 @@ keywords: drupal, CDN, content delivery network, cloudfront distribution, cloudf
 ## Before You Begin
 
 Make sure that you have:  
-- A site w/ CDN module or plug-in installed  
-- Signed-up for Amazon Web Services and are familiar with the interface
+- A site with a CDN module or plug-in installed  
+- Signed up for Amazon Web Services and are familiar with the interface
 
 ## About Amazon CloudFront
 
-CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
+CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 
 ## Set Up A Drupal CloudFront Distribution
 
@@ -40,8 +40,8 @@ The first step in setting-up CloudFront on your Drupal site is to create a new C
 4. Go to the Details tab. There are a couple of items to address:
   - **Mode:** Origin Pull. For the CloudFront configuration, use Origin Pull mode. File Conveyor mode allows integration with [File Conveyor](http://fileconveyor.org) for more complicated configurations. Pantheon does not support File Conveyor.  
 
-      Return to the CloudFront distributions table and copy the domain name for your new distribution.  
-  - **CDN Mapping:** http://my.cloudfrontcdndomain.net. Be sure to add the protocol in front of the domain name. For example, "http://my.cloudfrontcdndomain.net" will work but "my.cloudfrontcdndomain.net" may cause problems. If you are using SSL, be sure to use https.
+    Return to the CloudFront distributions table and copy the domain name for your new distribution.  
+  - **CDN Mapping:** http://my.cloudfrontcdndomain.net. Be sure to add the protocol in front of the domain name. For example, "http://my.cloudfrontcdndomain.net" will work but "my.cloudfrontcdndomain.net" may cause problems. If you are using SSL, be sure to use HTTPS.
 
       Return to the Drupal CDN module configuration and paste the Domain Name we just copied from CloudFront.
 5. Click **Save Configuration**. Your assets should now be coming from your CloudFront distribution.

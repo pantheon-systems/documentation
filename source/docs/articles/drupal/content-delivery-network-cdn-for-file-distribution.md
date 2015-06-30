@@ -1,6 +1,6 @@
 ---
-title: Content Delivery Network (CDN) for file distribution
-description: Learn about the benefits of using a Content Delivery Network (CDN).
+title: Content Delivery Network (CDN) for File Distribution
+description: Learn about the benefits of using a Content Delivery Network (CDN) on your Drupal site.
 category:
     - drupal
 keywords: CDN, file distribution, drupal, content delivery network, amazon S3 CORS,
@@ -21,7 +21,6 @@ If you have streaming content, large amounts of multi-national traffic or need t
 
 If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Enterprise clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
 
-<div class="alert alert-info" role="alert">
 <dl>
 	<dt>
 <a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
@@ -31,7 +30,7 @@ If you don't meet those specific criteria, strongly consider just using Pantheon
 	<dt>Push</dt>
 	<dd>Content must be explicitly added to CDN by your site; if not, then it won't be available. Good for very large or multimedia (video / audio) content, but more difficult to configure.</dd>
 </dl>
-</div>
+
 A more in-depth description of CDN properties can be found in Wim Leer's [Key Properties of a CDN](http://wimleers.com/article/key-properties-of-a-cdn) article.
 
 ## Requirements for Using a CDN
@@ -41,13 +40,13 @@ You do not need permission, action, or configuration from Pantheon to use a CDN.
 Most sites use the [CDN module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
 
 First, download the module. If you use drush:
-
-    drush dl cdn
-
+```bash
+drush dl cdn
+```
 Then, enable the module.
-
-    drush -y en cdn
-
+```bash
+drush -y en cdn
+```
 To configure, regardless of which CDN you will be using, set the CDN Status to enabled. If you only need the CDN for limited testing purposes, you can set the status to Testing Mode until you are ready to make the switch to the CDN to serve files to all visitors. When set to Testing Mode, users with the "access files on CDN when in testing mode" permission will receive files from the CDN; all other traffic will continue to receive the files from the default files location.<br />
  ![Enable CDN Module](/source/docs/assets/images/enable-cdn-module.png)
 ## Best Practices
@@ -77,11 +76,13 @@ The [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module can be con
 
 This is not the only way to install this, but these directions are known good and assume that you have an AWS S3 bucket set up.
 
-    drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
-    drush @pantheon.SITENAME.dev make sites/all/modules/awssdk/awssdk.make --no-core
-    drush @pantheon.SITENAME.dev en devel amazons3 amazons3_cors media jquery_update libraries awssdk views file_entity awssdk_ui
-    drush @pantheon.SITENAME.dev cc all
+```bash
+drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
+drush @pantheon.SITENAME.dev make sites/all/modules/awssdk/awssdk.make --no-core
+drush @pantheon.SITENAME.dev en devel amazons3 amazons3_cors media jquery_update libraries awssdk views file_entity awssdk_ui
+drush @pantheon.SITENAME.dev cc all
 
+```
 - /admin/reports/status - Make sure AWSSDK reports a version number
 - /admin/reports/awssdk - Verify it's correct.
 - /admin/config/media/awssdk - Specified Amazon Web Services Key, Amazon Web Services Secret Key

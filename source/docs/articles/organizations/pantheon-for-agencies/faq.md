@@ -1,6 +1,6 @@
 ---
 title: Pantheon for Agencies FAQ
-description: Commonly asked questions and answers about Agency Partner Organizations on the Platform.
+description: Commonly asked questions and answers about Agency Partner Organizations using the Pantheon Platform.
 category:
 - managing
 keywords: agency, p4a, multidev, change management, site owner, ownership, supporting organization, organizations, team, roles, privileges, support, partner support, ticket
@@ -56,7 +56,7 @@ Yes. Roles designated on the Team page at the site level will override any roles
 Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](https://status.getpantheon.com).
 
 ### How do I submit a ticket when the dashboard is down?
-If you need to submit a ticket and can’t access the dashboard, send an email to helpdesk@getpantheon.com.
+If you need to submit a ticket and can’t access the Dashboard, send an email to helpdesk@getpantheon.com.
 
 ### As a Partner, do I get enhanced support?
 

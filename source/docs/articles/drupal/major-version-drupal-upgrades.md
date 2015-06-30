@@ -1,6 +1,6 @@
 ---
 title: Major Version Drupal Upgrades
-description: Learn how to upgrade to the next major revision of Drupal.
+description: Detailed instructions on how to upgrade your site to the next major version of Drupal.
 category:
   - drupal
   - managing

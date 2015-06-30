@@ -1,6 +1,6 @@
 ---
 title: Selecting a Plan
-description: Learn the various plans offered and understand which plan meets your unique needs.
+description: Learn the various Pantheon plans offered and understand which plan meets your unique needs.
 category:
   - getting-started
 keywords: plan, how to select a plan, how to select a paid plan, what plans are available, how to view site plan, how to see plan, how to change plan, changing plans, change plan, select plan, selecting a plan

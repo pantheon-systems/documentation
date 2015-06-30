@@ -1,6 +1,6 @@
 ---
 title: Prevent Spamming During Drupal Debugging and Testing
-description: Set up the Drupal reroute_email module.
+description: Set up the Drupal reroute_email module on your Pantheon Drupal site.
 category:
   - developing
   - Drupal
@@ -21,14 +21,14 @@ As an added bonus, you’ll be able to funnel all dev and testing emails to a si
 Download and install as usual. You can use [SFTP](https://pantheon.io/docs/articles/sites/code/developing-directly-with-sftp-mode/) on Pantheon or the [Drupal UI](https://pantheon.io/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/#installing-modules-and-themes-with-drupal%27s-update-manager) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
 I chose [Drupal 7 as a start state](https://pantheon.io/docs/articles/sites/create/choosing-start-state/#importing-existing-sites) and performed a [git clone](https://pantheon.io/docs/articles/local/starting-with-git/) of my Pantheon site.
-```
+```nohighlight
 $ cd sites
 $ git clone [pantheon git clone ssh connection string]
 $ cd site-name
 $ mkdir sites/all/modules/contrib
 ```
 I added a `contrib` directory to help keep modules organized. In the next step, Drush knows to download contrib modules into that directory.
-```
+```nohighlight
 $ drush dl reroute_email
 ```
 The following line isn’t necessary, but it’s a good idea to use `git status` to understand the state of your local Git repository, especially if you’re new to Git. If you’re just starting with Git, I encourage you to do a `git status` between each of the steps.
@@ -43,7 +43,7 @@ Untracked files:
         sites/all/modules/contrib/
 ```
 Add the module to git.
-```
+```nohighlight
 $ git add sites/all/modules/contrib/reroute_email
 ```
 Commit and push the module to Pantheon.
@@ -104,7 +104,7 @@ $ git add sites/default/settings.php
 $ git commit
 ```
 I’ve chosen not to use the -m flag with the commit so I can use my text editor to write a longer, more informative commit message that communicates exactly what my intent is:
-```
+```nohighlight
 Configure reroute_email via settings.php
 
 Intercept all outgoing emails for all environments but Live and reroute to QA email addresses so I never spam customers during testing again!
@@ -118,7 +118,7 @@ Intercept all outgoing emails for all environments but Live and reroute to QA em
 Project page: https://www.drupal.org/project/reroute_email
 ```
 Next, push the code to Pantheon.
-```
+```nohighlight
 $ git push origin master
 ```
 Push the code to Test and Live and enable the module in all environments.

@@ -1,5 +1,5 @@
 ---
-title: Caching - Advanced Topics
+title: Varnish Caching - Drupal and WordPress Advanced Topics
 description: Learn advanced details about cache and authentication.
 category:
   - developing
@@ -8,6 +8,9 @@ keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal,
 ## Allow a User to Bypass the Cache
 
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
+
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
@@ -23,7 +26,7 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/article
 
 ## External Authentication (e.g. Facebook login)
 
-If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and login. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
+If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
 ## Using Your Own Session-Style Cookies
 
@@ -44,6 +47,8 @@ WordPress does not use PHP session cookies; however, some themes and plugins do.
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon supports this by allowing sites to set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content. 
+
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
 **Examples of `STYXKEY` cookie names:**
 
@@ -89,7 +94,7 @@ Pantheon’s default is to not cache 404s, but if your application sets Cache-Co
 Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
 ### WordPress Sites
-WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than defauly, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
 
 ## Basic Authentication & Varnish
@@ -99,18 +104,19 @@ If you're using the Environment Access: Locked security setting on a site envir
 ## Pantheon's .vcl File
 
 The following is the contents of Pantheon's Varnish configuration (.vcl) file for reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what Pantheon Varnish does or does not cache.
-
-    ​   NO_CACHE
-    S+ESS[a-z0-9]+
-    fbs[a-z0-9_]+
-    SimpleSAML[A-Za-z]+
-    SimpleSAML[A-Za-z]+
-    PHPSESSID
-    wordpress[A-Za-z0-9_]*
-    wp-[A-Za-z0-9_]+
-    comment_author_[a-z0-9_]+
-    duo_wordpress_auth_cookie
-    duo_secure_wordpress_auth_cookie
-    STYXKEY[a-zA-Z0-9-_]+
-    has_js
-    Drupal[a-zA-Z0-9-_\.]+
+```nohighlight
+​   NO_CACHE
+S+ESS[a-z0-9]+
+fbs[a-z0-9_]+
+SimpleSAML[A-Za-z]+
+SimpleSAML[A-Za-z]+
+PHPSESSID
+wordpress[A-Za-z0-9_]*
+wp-[A-Za-z0-9_]+
+comment_author_[a-z0-9_]+
+duo_wordpress_auth_cookie
+duo_secure_wordpress_auth_cookie
+STYXKEY[a-zA-Z0-9-_]+
+has_js
+Drupal[a-zA-Z0-9-_\.]+
+```

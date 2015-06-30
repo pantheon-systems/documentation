@@ -1,6 +1,6 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
-description: Recommended documentation to learn about Pantheon's technologies.
+description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
 category:
   - getting-started
 keywords: getting started, get started, pantheon, best practices,
@@ -27,6 +27,8 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 - [Known platform considerations](/docs/articles/sites/known-limitations/) on Pantheon  
 
 - How [SSL & HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) are implemented on Pantheon
+
+- Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the backend, you may experience an error. Load the home page, and you can connect.
 
 ### Build
 
@@ -60,7 +62,6 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 ### Debug
 
 - Need to debug? Read [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/) and [Errors and Server Responses](/docs/articles/sites/errors-and-server-responses/). FTP onto your site and look in /logs, use [Terminus](https://github.com/pantheon-systems/cli) to tail your watchdog, and use New Relic.
-
 
 
 ## Support

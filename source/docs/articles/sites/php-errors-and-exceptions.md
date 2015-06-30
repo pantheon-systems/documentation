@@ -1,6 +1,6 @@
 ---
 title: PHP Errors and Exceptions
-description: Detailed information about basic PHP errors.  
+description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.  
 category:
   - debugging
   - drupal
@@ -109,16 +109,16 @@ See [http://stackoverflow.com/a/1869185](http://stackoverflow.com/a/1869185) for
 
 ​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](http://php.net/manual/en/language.exceptions.php).
 
-PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
+PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Handling Undefined Index Notices for PHP Variables
 
 When you import your site or enable some new modules, PHP notices may be reported on your Dev site that have never been reported before. These notices are now being made apparent because of the Dev environment's strict error reporting level.
 
 An example notice might look like this:
-
-    Notice: Undefined index: description in theme_imagefield_image_imagecache_lightbox2() (line 163 of /srv/bindings/xxxxxxxxx/code/sites/all/modules/contrib/lightbox2/lightbox2.formatter.inc)..
-
+```php
+Notice: Undefined index: description in theme_imagefield_image_imagecache_lightbox2() (line 163 of /srv/bindings/xxxxxxxxx/code/sites/all/modules/contrib/lightbox2/lightbox2.formatter.inc)..
+```
 Why is PHP reporting this?
 
 Variable declaration is not required by PHP, but is a recommended practice that can help to avoid security vulnerabilities or bugs if one forgets to provide a value to a variable that be used later on. PHP issues an E\_NOTICE, a very low-level error, as a reminder.
@@ -131,6 +131,7 @@ The require\_once() function simply checks to see if a file has been included al
 
 When this error surfaces, it simply means that the file in question is not where it should be. For example, the error will look something like this:
 
-    Fatal error: require_once(): Failed opening required ‘/srv/bindings/xxxxx/code/sites/all/modules/redis/redis.autoload.inc’ (include_path=‘.:/usr/share/pear:/usr/share/php’) in /srv/bindings/xxxxxx/code/includes/bootstrap.inc on line 2394
-
+```php
+Fatal error: require_once(): Failed opening required ‘/srv/bindings/xxxxx/code/sites/all/modules/redis/redis.autoload.inc’ (include_path=‘.:/usr/share/pear:/usr/share/php’) in /srv/bindings/xxxxxx/code/includes/bootstrap.inc on line 2394
+```
 To fix this error, look for the correct path to the file and update the require\_once().

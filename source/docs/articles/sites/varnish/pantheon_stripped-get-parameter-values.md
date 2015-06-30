@@ -1,6 +1,6 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
-description: Learn how Pantheon optimizes your site's cache performance.
+description: Detailed information on how Pantheon optimizes your site's cache performance.
 category:
   - developing
 keywords: google analytics, analytics, pantheon_stripped, utm, query parameters, cache

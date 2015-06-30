@@ -1,11 +1,11 @@
 ---
-title: Drupal's Performance and Caching Settings
-description: Use Varnish caching to maximize your site's performance.  
+title: Drupal 7 Performance and Varnish Caching Settings
+description: Optimize Drupal 7 and Varnish caching to maximize your site's performance.  
 category:
   - drupal
 keywords: drupal, performance, cache, caching, varnish, varnish caching
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish caching for high performance](/docs/articles/sites/drupal-varnish).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish Caching for High Performance](/docs/articles/sites/varnish).
 
 ## Drupal 7 Performance Configuration
 
@@ -29,7 +29,7 @@ Performance is often a trade-off between how fresh your content is, and how fast
  ![](/source/docs/assets/images/desk_images/180075.png)<br />
 On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
  ![](/source/docs/assets/images/desk_images/180077.png)<br />
-On the live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both checked. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
+On the Live environment, make sure  "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both enabled. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ## Drupal 6
 
@@ -58,11 +58,11 @@ As above, this determines the amount of time a cache will be honored in the reve
 
 ### Block Cache
 
-As above, can help with logged-in performance by preventing re-generation of block elements in sidebars every pageview.
+As above, this can help with logged-in performance by preventing re-generation of block elements in sidebars every pageview.
 
 ### Optimize CSS and JavaScript Files
 
-This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser-render times significantly. You might want to turn it off in dev if you are building a theme (or developing JS), but this should always be Enabled in production.
+This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser-render times significantly. You might want to turn it off in Dev if you are building a theme (or developing JS), but this should always be enabled in production.
 ![Drupal 6 Performance cache settings](/source/docs/assets/images/desk_images/31793.png)
 
 ### Contributed Modules

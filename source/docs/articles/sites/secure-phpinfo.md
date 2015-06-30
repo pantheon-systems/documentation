@@ -1,6 +1,6 @@
 ---
 title: Securely working with phpinfo
-description: Important security considerations when working with phpinfo on Pantheon
+description: Important security considerations when working with phpinfo on your Pantheon site.
 category:
   - developing
 keywords: security, phpinfo, php.ini, can i configure php.ini, php,
@@ -23,8 +23,8 @@ Drupal makes the phpinfo available to privileged users at: http://example.com/ad
 
 ## Method 2
 
-1. [Lock environment](https://pantheon.io/docs/articles/sites/security/locking-your-site/)  (if the environment does not currently need to be publicly accessible)
-2. Create a php file with an obscure filename that uses phpinfo
-3. Visit the file in a web browser to view phpinfo
+1. [Lock environment](https://pantheon.io/docs/articles/sites/security/locking-your-site/)  (if the environment does not currently need to be publicly accessible).
+2. Create a php file with an obscure filename that uses phpinfo.
+3. Visit the file in a web browser to view phpinfo.
  ![obscure-phpinfo-filename](/source/docs/assets/images/obscure-phpinfo-delete-immediately.png)
-4. Delete the file immediately so you do not expose sensitive information, such as a password) to connect to the DB.
+4. Delete the file immediately so you do not expose sensitive information, such as a password, to connect to the DB.

@@ -1,6 +1,6 @@
 ---
 title: Guide Example
-description: Learn how to create a great guide.
+description: Learn how to create a great guide for your Pantheon Drupal or WordPress site.
 draft: true
 
 ---
@@ -15,7 +15,7 @@ I'm proud of the Pantheon dashboard and all the technologies that feed it, but a
 
 <span style="color: red">Give a summary of how you plan to solve the problem. Include any known limitations that you can anticipate. If you're presenting a solution for mail, discuss whether the solution will be for incoming, outgoing, or both.</span>
 
-That's why we took care to engineer a Drush interface into our [runtime matrix](https://www.getpantheon.com/blog/why-we-built-pantheon-containers-instead-virtual-machines) from the ground up; no small feat. Even though your site could be running from different locations in Pantheon's platform, you can still use Drush to control it. But if you've never used Drush before, here are 5 steps to "feeling the Drush"
+That's why we took care to engineer a Drush interface into our [runtime matrix](https://www.pantheon.io/blog/why-we-built-pantheon-containers-instead-virtual-machines) from the ground up; no small feat. Even though your site could be running from different locations in Pantheon's platform, you can still use Drush to control it. But if you've never used Drush before, here are 5 steps to "feeling the Drush"
 
 ### <span style="color: red">Background</span>
 <span style="color: red">Here you can provide any background information as needed. Any additional technical info or context. Optional, but this is highly valuable if done well. Include how the solution plays into the general infrastructure of a website.
@@ -73,7 +73,7 @@ Drush can work on any local installation you might have, but better yet it's rea
 
 This part is pretty easy. you just log into your Pantheon account and click the "Download all Drush Aliases" link from your account screen:
 
-![Get your aliases right here](https://www.getpantheon.com/sites/default/files/aliases.jpg)
+![Get your aliases right here](https://www.pantheon.io/sites/default/files/aliases.jpg)
 
 
 Then drop it into your home Drush directory like so, and then run the **drush sa** command (short for "site-aliases") to insure you're aliases are at the ready:

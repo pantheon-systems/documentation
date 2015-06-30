@@ -1,6 +1,6 @@
 ---
 title: Using Pantheon.io For Better Uptime
-description: Understand the new pantheon.io system and how it improves uptime.
+description: Understand the new pantheon.io system and how it improves uptime for all your Pantheon Drupal or WordPress sites.
 category:
   - developing
 keywords: uptime, better uptime, using pantheon.io, pantheon.io, dns, subdomain, dns for pantheon.io, alias dns record, alias record, flattened cname, flattened redirect, non-www, troubleshoot dns, troubleshoot non-www
@@ -56,9 +56,9 @@ To fix this problem, the DNS will need to be updated with one of the recommended
 
 #### WWW sounds like the way to go. But how can I force traffic to use www?
 
-The simplest and most reliable option is to use a service to redirect requests from your bare domain to the www subdomain. Most DNS services offer this as a feature. These services ensure that the universe of bookmarks and SEO records for your site are built up as www urls and not the bare domain.
+The simplest and most reliable option is to use a service to redirect requests from your bare domain to the www subdomain. Most DNS services offer this as a feature. These services ensure that the universe of bookmarks and SEO records for your site are built up as www URLs and not the bare domain.
 ​ ![](/source/docs/assets/images/desk_images/376216.png)​
-To get started, all you need to do is setup the DNS configuration for the www and non-www domain using the settings on the "Domains" tab of the environment where you wish to add a domain
+To get started, all you need to do is set up the DNS configuration for the www and non-www domain using the settings on the "Domains" tab of the environment where you wish to add a domain.
 
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: This is not a general-purpose redirection service. If your DNS provider does not offer such a service, Pantheon operates a <a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#how-do-i-use-pantheon's-www-redirection-service?">"dub-dub-dubber" service</a>. It is a simple but robust tool to take an incoming request for a bare domain, and bounce it to the www subdomain. All other redirects must be done via PHP logic. You can read more here.</div>
@@ -69,7 +69,7 @@ To get started, all you need to do is setup the DNS configuration for the www an
 
 If you find that you are getting a domain like www.www.example.com this means that you have set your DNS for the www domain to the Dub Dub Dubber I.P. address (192.237.224.60).
  ![](/source/docs/assets/images/desk_images/376201.png)
-In order to correct this you should use the CNAME that is available on the dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
+In order to correct this you should use the CNAME that is available on the Dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
 
 ## Best Practices
 
@@ -82,7 +82,7 @@ In order to correct this you should use the CNAME that is available on the dashb
 
 ## Measure Twice, Cut Once
 
-Going live and changing DNS settings can be stressful, but so long as you have a clear plan of action you should be able to pull it off without a hitch. Planning how you're handling the question of the domain name is a good decision to get out of the way well before the actual launch day.
+Going live and changing DNS settings can be stressful, but as long as you have a clear plan of action you should be able to pull it off without a hitch. Planning how you're handling the question of the domain name is a good decision to get out of the way well before the actual launch day.
 
 We recommend making a checklist of everything you need to do to set up/cut over DNS and take a site live. It's a good idea to have all your tools and decisions finalized at least 48 hours in advance, and make sure your whole team (even if that's just you and a client) are on the same page.
 

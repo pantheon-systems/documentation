@@ -1,12 +1,12 @@
 ---
 title: Locking Your Site
-description: Learn how to keep your work hidden from the public for development or updates.
+description: Learn how to keep your Drupal or WordPress site hidden from the public for development or updates.
 category:
   - getting-started
   - drupal
 keywords: lock, password protect, lock site, password protect site, locked, lock environment, password protection, unlock a site, unlock an environment, remove password protection
 ---
-There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to Go Live or make updates.
+There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
 
 <div class="alert alert-info" role="alert"> <strong>Note:</strong> When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.</div>
 
@@ -24,8 +24,7 @@ If other members of your team on the site need to access the site, they will als
 ![Credentials](/source/docs/assets/images/environment-access.png)
 When your page refreshes, you will notice that the environment is now private. You will also be able to see the credentials needed to access that environment.
 
-You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
-
+You can set a different username and password for each environment. This is important if you only want the live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
  ![](/source/docs/assets/images/desk_images/62465.png)

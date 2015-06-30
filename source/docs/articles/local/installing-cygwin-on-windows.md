@@ -1,6 +1,6 @@
 ---
 title: Installing Cygwin on Windows
-description: Learn how to install and configure Cygwin.
+description: Learn how to install and configure Cygwin for Windows computers for Pantheon sites.
 category:
   - getting-started
 keywords: cygwin, install, linux tool, windows
@@ -30,7 +30,7 @@ To download the necessary packages, the recommended settings for this is the "Di
  ![Cygwin Connection Type](/source/docs/assets/images/desk_images/40753.png)  
 
 ## Select a Download Site
-Choose the nearest mirror site, or most stable location. If for some reason the download does not work you can always select another mirror.<br />
+Choose the nearest mirror site or most stable location. If for some reason the download does not work, you can always select another mirror.<br />
  ![Choose Cygwin mirror](/source/docs/assets/images/desk_images/40755.png)  
 
 ## Install the SSL Package
