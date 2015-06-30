@@ -161,7 +161,7 @@ If you have added a password to your key earlier then you will be prompted to en
 	<p>Navigate to &quot;Session&quot; in the &quot;Category&quot; box.</p>
 	</li>
 	<li>
-	<p>Put &quot;code.pantheon.io&quot; in the hostname box.</p>
+	<p>Put &quot;code.getpantheon.com&quot; in the hostname box.</p>
 	</li>
 	<li>
 	<p>Under &quot;Load, save, or delete a stored session,&quot; single-click &quot;Default Settings&quot; then the &quot;Save&quot; button.</p>

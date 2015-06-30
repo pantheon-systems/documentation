@@ -29,7 +29,7 @@ Our plugin provides an admin screen to see how many sessions have been started. 
 
 Command line users can use this quick snippit to test:
 ```bash
-curl -Is https://www.pantheon.io|grep PHPSESS|wc -l
+curl -Is https://www.getpantheon.com|grep PHPSESS|wc -l
 ```
 
 Obviously you should substitute your site URL in there, but the desired output is "0" (zero).

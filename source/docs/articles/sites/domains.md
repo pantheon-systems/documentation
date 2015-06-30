@@ -55,7 +55,7 @@ _Root domains_
 
 _Subdomains_
 
-* DNS `CNAME` record (highly available) - `edge.live.pantheon.io`
+* DNS `CNAME` record (highly available) - `edge.live.getpantheon.com`
 
 ### DNS Records for Custom Base Domains
 
@@ -68,7 +68,7 @@ _Root domains_
 
 _Subdomains_
 
-* DNS `CNAME` record (highly available) - `edge.live.pantheon.io`
+* DNS `CNAME` record (highly available) - `edge.live.getpantheon.com`
 
 ## Secure HTTPS Communication
 

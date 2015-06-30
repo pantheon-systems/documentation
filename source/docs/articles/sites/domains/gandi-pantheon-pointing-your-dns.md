@@ -40,5 +40,5 @@ We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS docum
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Be sure to include the trailing "."</div>
 ```nohighlight
-www 300 IN CNAME edge.live.pantheon.io.
+www 300 IN CNAME edge.live.getpantheon.com.
 ```

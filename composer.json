@@ -2,7 +2,7 @@
     "name": "Pantheon Systems",
     "description": "Documentation for Pantheon",
     "keywords": ["pantheon", "drupal", "wordpress"],
-    "homepage": "https://www.pantheon.io/",
+    "homepage": "https://www.getpantheon.com/",
     "type": "project",
     "require": {
         "drush/drush": "6.2.0",

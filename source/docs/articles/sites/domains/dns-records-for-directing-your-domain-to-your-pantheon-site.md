@@ -28,7 +28,7 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 <div class="alert alert-info" role="alert">
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
-	<dd>edge.live.pantheon.io</dd>
+	<dd>edge.live.getpantheon.com</dd>
 	<dt>DNS A record - Load-balanced IPv4 (legacy)</dt>
 	<dd>192.237.142.203</dd>
 	<dt>DNS A record - Load-balanced IPv4 (legacy)</dt>

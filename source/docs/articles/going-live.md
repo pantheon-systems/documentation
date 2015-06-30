@@ -67,7 +67,7 @@ Consider enabling New Relic monitoring to non-intrusively track the performance 
 
 Take a look at your performance settings, including enabling anonymous page caching, enabling aggregated stylesheets, and so forth. This will make a drastic difference in how fast your site can deliver content.
 
-Check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.pantheon.io](http://varnishcheck.pantheon.io/).
+Check to see if Varnish is properly caching your site using Pantheon's Varnish Check tool at [varnishcheck.getpantheon.com](http://varnishcheck.getpantheon.com/).
 
 Finally, you should load test your Live environment to make sure everything is optimally configured.
 
