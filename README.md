@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/pantheon-systems/documentation.png?label=ready&title=Contributions Needed)](https://waffle.io/pantheon-systems/documentation)
+[![Stories in Ready](https://badge.waffle.io/pantheon-systems/documentation.png?label=ready&title=Ready for Work)](https://waffle.io/pantheon-systems/documentation)
 Pantheon Documentation
 ======================
 
