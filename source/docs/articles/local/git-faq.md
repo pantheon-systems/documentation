@@ -197,13 +197,13 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 ```bash
-ssh -vT git@code.getpantheon.com
+ssh -vT git@code.pantheon.io
 ```
 The output should be similar to this:
 
     debug1: Reading configuration data /etc/ssh/ssh_config
     debug1: Applying options for *
-    debug1: Connecting to code.getpantheon.com [50.57.148.117] port 22.
+    debug1: Connecting to code.pantheon.io [50.57.148.117] port 22.
     debug1: Connection established.
     debug1: identity file /home/username/.ssh/id_rsa type 1
 
@@ -214,9 +214,9 @@ You should now be able to configure Git with the matching SSH key and clone your
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 ```bash
 $: git push
-To git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
+To git@code.pantheon.io:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
  ! [rejected] master -> master (non-fast-forward)
-error: failed to push some refs to 'git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9'
+error: failed to push some refs to 'git@code.pantheon.io:3ef6264e-51d9-43b9-a60b-6cc22c3081c9'
 To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes (e.g. 'git pull') before pushing again. See the
 'Note about fast-forwards' section of 'git push --help' for details.
