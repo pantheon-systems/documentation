@@ -73,3 +73,8 @@ Pantheon serves a default robots.txt that disallows crawlers for any \*.pantheon
 If you attempt to access your live environment with a pantheon.io domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
 Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
+
+
+## See also
+- [The Perfect Website Launch <span class="glyphicon  glyphicon-book" aria-hidden="true"></span>](https://pantheon.io/sites/default/files/perfect-website-launch-pantheon-ebook.pdf)
+- [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/)
