@@ -14,22 +14,22 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
 **Configure Site Monitoring Services:**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts for Non-cached Pages using Pingdom](#monitoring-services)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts for Non-cached Pages using Pingdom](#monitoring-services)<br>
 **Maximize Performance by Configuring Cache:**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration with Varnish for High Performance](/docs/articles/sites/varnish/)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Verify Varnish is Working on Your Pantheon Site](/docs/articles/sites/varnish/testing-varnish)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration with Varnish for High Performance](/docs/articles/sites/varnish/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Verify Varnish is Working on Your Pantheon Site](/docs/articles/sites/varnish/testing-varnish)<br>
 **Resolve all errors and/or notices found within the Status Tab in the Live Environment:**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Optional but highly recommended)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Load and Performance Testing](/docs/articles/load-and-performance-testing/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Add Your Domain to the Live Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Verify Redirection Sends Visitors to a Canonical Domain](#redirects)<br>
 **Update and Test DNS Records:**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Adjust TTL Value to 120s](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Adjust TTL Value to 120s](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)<br>
 
 ## Schedule Backups
 
