@@ -21,19 +21,28 @@ Once site plans are changed to a paid service level, custom domains can be added
 
 ## Step 1: Decide Which Type of Domain You Want
 
-**Examples of HTTPS Sites**
+**Examples of HTTPS Sites** 
 
-https://www.example.com
+Pantheon recommends using HTTPS to increase the security of your site.
 
-https://example.com and https://sub.example.com
+https://www.example.com 
+
+[https://example.com/subdirectory](/source/docs/articles/sites/domains/fastly-domain-masking/)
+
+https://example.com 
+
+https://subdomain.example.com
 
 **Examples of HTTP Sites**
 
-http://example.com/sub
-
 http://www.example.com
 
-http://example.com or http://sub.example.com
+http://example.com
+
+http://example.com/subdomain
+
+http://subdomain.example.com
+
 
 ## Step 2: Add a Domain to a Site Environment
 
