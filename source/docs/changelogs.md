@@ -1,17 +1,17 @@
 ---
 use: [changelogs]
 layout: default
-title: changelogs
+title: Changelogs
 ---
 
 
 <div class="container article">
   <div class="col-md-9">
   <h1>Changelogs</h1>
-    {% for changelog in data.changelogs %}
+    {% for changelogs in data.changelogs %}
         <article>
-          <h3><a href="{{ changelog.url }}">{{ changelog.title }}</a></h3>
-          <p> {{ changelog.description }} </p>  
+          <h3><a href="{{ changelogs.url }}">{{ changelogs.title }}</a></h3>
+          <p> {{ changelogs.description }} </p>  
           </article>
     {% endfor %}
 </div>

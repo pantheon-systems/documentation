@@ -25,7 +25,7 @@ sculpin_content_types:
             - authors
         permalink: pretty
 
-    changelog:
+    changelogs:
         type: path
         path: docs/changelogs
         singular_name: changelog
