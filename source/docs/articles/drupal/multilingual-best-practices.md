@@ -19,6 +19,6 @@ It’s possible to specify a site language given a particular domain or path. In
 
 Each of these configurations is possible with Drupal’s built-in language switching.  
 
-You can associate multiple domains with a single site environment. See [adding a domain to a site environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment) for details.
+You can associate multiple domains with a single site environment. See [adding a domain to a site environment](/docs/articles/sites/domains) for details.
 
 If you have a particular Pantheon platform related question that is not addressed in this document, please submit a support ticket through your Pantheon Dashboard and we’ll be happy to help.

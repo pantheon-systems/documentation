@@ -7,10 +7,10 @@ category:
   - wordpress
 keywords: domain mask, domain masking, masking your domain, mask domain with fastly, fastly, masking domain with fastly on pantheon, fastly condition
 ---
-There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using Drupal as a front end for marketing efforts or custom applications while using WordPress for blog content. This typically looks something like:
+There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using one system as a front end for marketing efforts or custom applications while using another for blog content, or for a custom application. This typically looks something like:
 
-* Drupal: http://www.example-site.com/
-* WordPress: http://www.example-site.com/blog/
+* Main Site: http://www.example-site.com/
+* Blog: http://www.example-site.com/blog/
 
 In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have it's own unique domain. However, by using an external service such as Fastly, this can be attained.  [Fastly](https://www.fastly.com) is a high power, industrial CDN that allows users a high degree of granular control over their Varnish VCL file through the Dashboard. It's free to register and start using Fastly.
 
