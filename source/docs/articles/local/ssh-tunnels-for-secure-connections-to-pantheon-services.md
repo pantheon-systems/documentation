@@ -22,25 +22,25 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
-From the Site Dashboard, access the environment you want to connect with, and click the **Connection Info** button.
+From the Site Dashboard, access the environment you want to connect with, and click the **Connection Info** button. Here you will find the required environment specific values for the command exmple found below.
 
 
 ![Connection info](/source/docs/assets/images/desk_images/168060.png)
 
 
-Take the port found within the Database section, and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (Dev, Test, or Live) for `$ENV`:
+Use the required values from the **Connection Info** tab, the desired environment (dev, test, or live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```
-ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@dbserver.$ENV.$SITE.drush.in
+ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.$SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
-Run the following command using the same port number found above, and substitute your database password found in **Connection Info**:
+Next, using the values found within the **Connection Info** tab, execute the following:
 ```bash
-mysql -u pantheon -h 127.0.0.1 -p -P $PORT pantheon -p$PASSWORD
+mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
 ```
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
-You can destroy the tunnel by substituting your computer's username and the dbserver port within the following command:
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash
-ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
+ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
 
 ## Use Sequel Pro to SSH Tunnel to a MySQL Database
@@ -53,16 +53,16 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Take the port found within the one-line connection string, and substitute the value for `$PORT` in the following command. Substitute the [site uuid](/docs/articles/sites/#site-uuid) (located within the Dashboard URL) for `$SITE` and the desired environment (Dev, Test, or Live) for `$ENV`:
+Use the port value from the above one-live connection string, the desired environment (dev, test, or live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
-ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@cacheserver.$ENV.$SITE.drush.in
+ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```
-Substitute the password and port found in the one-line connection string and run the following command:
+Using the password and port found in the one-line connection string, run the following command:
 ```bash
-redis-cli -h 127.0.0.1 -p $PORT -a $PASS
+redis-cli -h 127.0.0.1 -p PORT -a PASSWORD
 ```
 
-You can destroy the tunnel by substituting your computer's username and the cacheserver port within the following command:
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash
-ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
+ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
