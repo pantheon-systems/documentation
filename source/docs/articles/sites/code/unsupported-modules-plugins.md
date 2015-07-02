@@ -62,7 +62,7 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Taxonomy CSV  
 
-- Views Exports  
+- Views data export  
 
 
 
