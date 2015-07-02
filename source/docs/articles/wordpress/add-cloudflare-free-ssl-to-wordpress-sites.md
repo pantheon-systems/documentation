@@ -40,8 +40,8 @@ Go to the Page Rules section of your CloudFlare account.
 1. Click **Add rule**.
  ![CloudFlare Rules](/source/docs/assets/images/cloudflare-page-rules.png)
 1. Locate your DNS Settings in your CloudFlare account.
-1. Create an `A Record` and a `CNAME Record` that [point to your Pantheon site](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon-dns-records-for-http-sites).
-1. From your site's Pantheon Dashboard, go to the add [Domains/SSL tab](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon-dns-records-for-http-sites) and your domain name.
+1. Create an `A Record` and a `CNAME Record` that [point to your Pantheon site](/docs/articles/sites/domains/#dns-records-for-http-sites).
+1. From your site's Pantheon Dashboard, go to the add [Domains/SSL tab](/docs/articles/sites/domains/#dns-records-for-http-sites) and your domain name.
 
 ### Pushing the Changes Live
 

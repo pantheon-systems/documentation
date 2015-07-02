@@ -158,8 +158,8 @@ Now that the site is on a paid plan, you can associate your domain with the Live
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Add domain(s) to Live environment</td>
-			<td class="help"><a href="/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/">Adding a domain to a site environment</a><p>
-      <a href="/docs/articles/sites/domains/">Domains and SSL Tool</a></td>
+			<td class="help">
+      <a href="/docs/articles/sites/domains/">Domains and SSL</a></td>
 		</tr>
 	</tbody>
 	</table>
@@ -199,7 +199,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update DNS with Pantheon DNS record</td>
-			<td><a href="/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/">DNS records for directing your domain to your Pantheon site</a></td>
+			<td><a href="/docs/articles/sites/domains/">DNS records for directing your domain to your Pantheon site</a></td>
 		</tr>
 	</tbody>
 	</table>
