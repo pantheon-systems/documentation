@@ -199,7 +199,7 @@ If your site plan is Business, Professional, or Personal **or** using **HTTP** a
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Update DNS with Pantheon DNS record</td>
-			<td><a href="/docs/articles/sites/domains/">DNS records for directing your domain to your Pantheon site</a></td>
+			<td><a href="/docs/articles/sites/domains#step-3-configure-your-dns">DNS records for directing your domain to your Pantheon site</a></td>
 		</tr>
 	</tbody>
 	</table>
