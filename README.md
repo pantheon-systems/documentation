@@ -2,6 +2,8 @@
 Pantheon Documentation
 ======================
 
+[![Join the chat at https://gitter.im/pantheon-systems/documentation](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pantheon-systems/documentation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Documentation Site
 ------------------
 
