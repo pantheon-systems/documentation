@@ -6,7 +6,7 @@ category:
   - drupal
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---
-Core updates will appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available. Sometimes we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. Typically, if there’s an update available, you're better off merging it. 
+Core updates will appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available. _Due to caches, update notifications may appear on different Site Dashboards up to two hour apart._ Sometimes we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
 
 Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
