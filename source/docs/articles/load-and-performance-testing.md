@@ -1,6 +1,6 @@
 ---
 title: Load and Performance Testing
-description: Learn how to monitor internal execution performance.
+description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
 category:
   - going-live
 keywords: going live, testing, performance, new relic, varnish
@@ -29,6 +29,7 @@ High-performance is the ability to deliver a page in under a second; scalability
 ## Verify Varnish is Working
 
 To verify that the [Varnish](/docs/articles/sites/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
+
 ```nohighlight
 curl -I http://live-yoursite.pantheon.io
 HTTP/1.1 200 OK
@@ -46,7 +47,7 @@ Via: 1.1 varnish
 X-Pantheon-Edge-Server: 108.166.96.132
 Vary: Accept-Encoding, Cookie
 ```
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings#drupal-s-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings#drupal-7-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: Until Varnish has been correctly configured, don't worry about further testing.</div>

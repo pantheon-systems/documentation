@@ -23,7 +23,7 @@ We've included CLI instructions in many of our articles and guides.
 - [Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/)
 - [Prevent Spamming During Drupal Debugging and Testing](/docs/guides/rerouting-outbound-email/)
 - [Using Terminus to Create and Update Drupal Sites on Pantheon](/docs/guides/terminus-drupal-site-management/)
-- [Drush Command-Line Utility](/docs/articles/local/drush-command-line-utility/)
+- [Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/)
 - [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress/)
 - [Cron for Drupal](/docs/articles/drupal/cron/)
 - [CloudFront CDN Setup for WordPress](/docs/articles/wordpress/cloudFront-setup-for-wordpress/)

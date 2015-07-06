@@ -1,7 +1,10 @@
 ---
-title: Varnish Caching for High Performance
-description: Configure and verify the Drupal Varnish module is working on your site.
-keywords: varnish, cache, caching, pantheon, performance
+title: Varnish Caching for High Performance with Drupal and WordPress
+description: Configure and verify Varnish is working on your WordPress or Drupal sites.
+category:
+  - getting-started
+  - developing
+keywords: wordpress varnish, drupal varnish, cache, caching, pantheon, performance
 ---
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees application container workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second, much faster than a site's framework alone.  
 
@@ -10,14 +13,14 @@ Every site on Pantheon already uses Varnish; each HTTP request first goes to the
 Varnish can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by Varnish and end-users won't realize anything is wrong.
 
 
-## Configure Your Site for Varnish
+## Configure Your Drupal or WordPress Site for Varnish
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>:
 No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish module.  </div>
 
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as requested. If your site sends headers that forbid caching, Varnish won't cache your content.  
 
-See [Drupal's Performance Settings](/docs/articles/drupal/drupal-s-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
+See [Drupal's Performance Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
 
 ##See Also
 [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)

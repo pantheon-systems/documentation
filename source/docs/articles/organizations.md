@@ -1,6 +1,6 @@
 ---
 title: Organizations
-description: Pantheon organization types and the features available to them.
+description: Detailed information on Pantheon organization types and the features available to them.
 category:
 - managing
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management

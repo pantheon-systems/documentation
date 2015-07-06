@@ -1,5 +1,5 @@
 ---
-title: Unsupported Modules and Plugins
+title: Unsupported/Problematic Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
 keywords: modules, plugins, unsupported, drupal, wordpress
 ---
@@ -62,7 +62,7 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Taxonomy CSV  
 
-- Views Exports  
+- Views data export  
 
 
 

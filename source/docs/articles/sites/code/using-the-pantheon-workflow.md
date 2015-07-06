@@ -11,24 +11,31 @@ Every Pantheon site comes with three environments: Dev, Test, and Live. Separate
 
 ## Code Moves Up, Content Moves Down
 
-The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
+The core of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
 - **Content** includes files not under Git version control, like images and pdfs, and the database.
 
-### 1. Commit Code in Dev
+### 1. Commit code in Dev
 
 Update code in the Dev environment via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) or [Git](/docs/articles/local/starting-with-git/).
+
 ### 2. Combine fresh code from Dev and fresh content from Live in Test
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and freshly combine them in Test to be absolutely certain that your deployment to Live will go as planned.
 ![Site dashboard, test environment, code section](/source/docs/assets/images/desk_images/376212.png)
-After running this operation, be sure your database updates succeed, your exported configuration is in place, and the site is functioning as expected. It's also a good idea to review the **Status** tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
+
+After running this operation, be sure that:  
+- Your database updates succeed.  
+- Your exported configuration is in place.  
+- The site is functioning as expected.
+
+It's also a good idea to review the Status tab and run [**Launch Check**](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
 This may be a good time to run regression or "smoke" tests by stepping through your main workflows by hand, or by running an automated test suite. Use Test to make sure that everything is working correctly before deploying to Live.
 
 
-### 3. Deploy Code To Live
+### 3. Deploy code to Live
 
 After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website.
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
@@ -48,7 +55,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 ### Drupal
 
-* [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7) - Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+* [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7): Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 
 * [Views: Export to code](http://www.chapterthree.com/blog/matt_cheney/howto_best_practices_embedding_views_code)
 
@@ -58,14 +65,14 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 ## Uncommon Workflows
 
-Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the Content "up" which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** > **Clone** areas of the Dashboard.
+Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this uncommon case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Workflow** > **Clone** areas of the Dashboard.
 
 Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made. Also note that overwriting the database of a live site may cause downtime.
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
 
-## Understanding Write Permissions in Test & Live
+## Understanding Write Permissions in Test and Live
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev.
 
@@ -79,7 +86,7 @@ There are two ways to update code in Test or Live:
 
   We do not recommend hotfixing. Hotfixes should be the exception, not the norm.  Pushing a [hotfix via Git](/docs/articles/sites/code/hot-fixes) is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
 
-## Other Workflow Tools: Import, Export, & Wipe
+## Other Workflow Tools: Import, Export, Wipe
 
 You may also import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 

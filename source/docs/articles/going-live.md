@@ -1,6 +1,6 @@
 ---
 title: Going Live
-description: Best practices for preparing your site launch.
+description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
 category:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live
@@ -91,7 +91,7 @@ Finally, you should load test your Live environment to make sure everything is o
 		<tr>
 			<td class="complete">[ ]</td>
 			<td class="action">Optimize Performance Settings</td>
-			<td class="help"><a href="/docs/articles/drupal/drupal-s-performance-and-caching-settings/">Performance and caching settings</a></td>
+			<td class="help"><a href="/docs/articles/drupal/drupal-7-performance-and-caching-settings/">Performance and caching settings</a></td>
 		</tr>
 		<tr>
 			<td class="complete">[ ]</td>

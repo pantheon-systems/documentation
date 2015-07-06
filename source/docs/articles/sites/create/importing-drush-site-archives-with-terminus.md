@@ -1,6 +1,6 @@
 ---
 title: Importing Drush Site Archives with Terminus
-description: Import a Drush site archive using the Terminus, the Pantheon CLI tool.
+description: Import a Drupal Drush site archive using the Terminus, the Pantheon CLI tool.
 category:
   - getting-started
 keywords: drush, terminus, pantheon, move site, import site,
