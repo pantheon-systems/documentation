@@ -36,9 +36,12 @@ define('WP_DEBUG', true);
 
 ## Raw Webserver Log Files
 
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Varnish logs are not available for download. </div>
+
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
-From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
+From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.
 
 Once connected, you'll see several directories:
 
