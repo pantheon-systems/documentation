@@ -10,25 +10,25 @@ Congratulations, you're almost ready to launch your site on Pantheon! For Enterp
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
 ## Best Practices for Launching Sites Checklist
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a Plan for Your Site](/docs/articles/sites/settings/selecting-a-plan/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a Plan for Your Site](/docs/articles/sites/settings/selecting-a-plan/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
 **Configure Site Monitoring Services:**<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts for Non-cached Pages using Pingdom](#monitoring-services)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts with Pingdom](#monitoring-services) (Optional)<br>
 **Maximize Performance by Configuring Cache:**<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration](/docs/articles/sites/varnish/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Verify Varnish is Working on Your Pantheon Site](/docs/articles/sites/varnish/testing-varnish)<br>
-**Resolve all errors and/or notices:**<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Load and Performance Testing](/docs/articles/load-and-performance-testing/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Add Your Domain to the Live Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Configure Redirects](#redirects)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration](/docs/articles/sites/varnish/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Verify Varnish is Working](/docs/articles/sites/varnish/testing-varnish)<br>
+**Verify Best Practices and Resolve All Errors:**<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Load and Performance Testing](/docs/articles/load-and-performance-testing/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Add Your Domain to the Live Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Configure Redirects](#redirects)<br>
 **Update and Test DNS Records:**<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Optional but highly recommended)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Highly Recommended)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
 
 
 ## Schedule Backups
@@ -39,13 +39,13 @@ Ensure that your content is protected by scheduling daily and weekly backups. Th
 
 Consider enabling [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis/) monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
 
-[Pingodm](https://www.pingdom.com/) can also be used as an additional monitoring service to create site alerts for non-cached pages.
+[Pingdom](https://www.pingdom.com/) can also be used as an additional monitoring service to create site alerts for non-cached pages. This will help you determine if your site's backend is actually down.
 
 ##  Redirects
 
 Setup redirects for possible URL changes as a result of going live. Have plan to monitor and mitigate 404 Page not found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/).
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: For best results, do <strong>not</strong> rely global redirect logic within the application configuration (e.g. wp-config.php or settings.php). The <a href="https://www.drupal.org/project/redirect" target="blank">Redirect module</a> is recommended. </div>
+<strong>Warning</strong>: nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</div>
 
 
 
