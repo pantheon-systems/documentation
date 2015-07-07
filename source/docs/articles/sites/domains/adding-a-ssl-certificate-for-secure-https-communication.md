@@ -72,9 +72,11 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 - [Entrust](http://www.entrust.com/ "Entrust")
 - [GeoTrust](http://www.geotrust.com/ "GeoTrust")
 - [Go Daddy](http://www.godaddy.com/ "Go Daddy") 
+- [SSLMate](http://sslmate.com/ "SSLMate")
 - [Thawte](http://www.thawte.com/ "Thawte")
-- [VeriSign](http://www.verisigninc.com/ "VeriSign")
 - [TrustWave](https://ssl.trustwave.com/support/install-certificate-cpanel.php "TrustWave")
+- [VeriSign](http://www.verisigninc.com/ "VeriSign")
+
 
 
 ## Load Certificate into Pantheon
