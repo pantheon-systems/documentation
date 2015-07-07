@@ -53,7 +53,7 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Use the port value from the above one-live connection string, the desired environment (dev, test, or live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the port value from the above one-live connection string, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```
