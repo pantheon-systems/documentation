@@ -10,7 +10,7 @@ Pantheon provides two spaces for non-web-accessible data. Take some time to unde
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.</div>
 
-## Private Files and Uploads In Drupalw
+## Private Files and Uploads In Drupal
 
 This can be done by setting your file-system settings to private. These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
