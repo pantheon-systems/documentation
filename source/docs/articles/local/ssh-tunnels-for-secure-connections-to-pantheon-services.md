@@ -28,9 +28,9 @@ From the Site Dashboard, access the environment you want to connect with, and cl
 ![Connection info](/source/docs/assets/images/desk_images/168060.png)
 
 
-Use the required values from the **Connection Info** tab, the desired environment (dev, test, or live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```
-ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.$SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
+ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
 Next, using the values found within the **Connection Info** tab, execute the following:
 ```bash
