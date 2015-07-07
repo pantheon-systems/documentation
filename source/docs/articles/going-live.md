@@ -18,18 +18,18 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts for Non-cached Pages using Pingdom](#monitoring-services)<br>
 **Maximize Performance by Configuring Cache:**<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration with Varnish for High Performance](/docs/articles/sites/varnish/)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Optimize Your Site's Caching Configuration](/docs/articles/sites/varnish/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Verify Varnish is Working on Your Pantheon Site](/docs/articles/sites/varnish/testing-varnish)<br>
-**Resolve all errors and/or notices found within the Status Tab in the Live Environment:**<br>
+**Resolve all errors and/or notices:**<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Optional but highly recommended)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Load and Performance Testing](/docs/articles/load-and-performance-testing/)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Add Your Domain to the Live Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Verify Redirection Sends Visitors to a Canonical Domain](#redirects)<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Configure Redirects](#redirects)<br>
 **Update and Test DNS Records:**<br>
+<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Optional but highly recommended)<br>
 <span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
-<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Adjust TTL Value to 120s](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)<br>
+
 
 ## Schedule Backups
 
@@ -43,7 +43,7 @@ Consider enabling [New Relic](/docs/articles/sites/newrelic/new-relic-performanc
 
 ##  Redirects
 
-Setup redirects for possible URL changes as a result of going live. Have plan to monitor and mitigate 404 Page not found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/)
+Setup redirects for possible URL changes as a result of going live. Have plan to monitor and mitigate 404 Page not found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/).
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: For best results, do <strong>not</strong> rely global redirect logic within the application configuration (e.g. wp-config.php or settings.php). The <a href="https://www.drupal.org/project/redirect" target="blank">Redirect module</a> is recommended. </div>
 
