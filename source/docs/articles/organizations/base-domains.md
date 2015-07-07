@@ -35,4 +35,4 @@ For SEO and to prevent duplicate content, the robots.txt file attached to the cu
 User-agent: *
 Disallow: /
 ```
-To have the robots.txt that is in the source code be presented a custom domain will need to be added to the dashboard of the site with the neccessary DNS record added.
+To present an alternate robots.txt file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) and the appropriate DNS record created.
