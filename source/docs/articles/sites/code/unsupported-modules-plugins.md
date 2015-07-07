@@ -73,3 +73,5 @@ The modules listed below are not supported due to the use of the `/tmp` director
 - W3 Total Cache
 
 - batcache
+
+- timthumb
