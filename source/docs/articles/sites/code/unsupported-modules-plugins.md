@@ -74,4 +74,4 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - batcache
 
-- timthumb
+- Timthumb
