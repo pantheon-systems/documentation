@@ -163,12 +163,9 @@ For information about table prefixes on Pantheon, see [Importing an Existing Dru
 Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once a settings.php file has been created, the settings.php area of the report should resolve to green.
 
 ## Troubleshooting
-### cURL Request to a Remote API When Using http_build_query Does Not Return Expected Response
+#### Request to a Remote API Does Not Return Expected Response
 
-If you're using http_build_query, explicitly separate parameters with an "&":
-
-```$params = http_build_query($params, null, '&');```
-
-Or change the default value by adding the following line to `settings.php`:
+If the API expects `&` as an argument separator but receives `&amp;` when using http_build_query, for example,
+change the default arg_separator.ouput value by adding the following line to `wp-config.php`:
 
 ```ini_set('arg_separator.output', '&');```
