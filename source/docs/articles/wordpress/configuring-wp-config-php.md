@@ -62,3 +62,14 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 #### Are table prefixes supported?
 
 For information about table prefixes on Pantheon, see [this](/docs/articles/sites/create/importing-an-existing-site/#importing-an-existing-site#table-prefixes) article.
+
+## Troubleshooting
+#### cURL Request to a Remote API When Using http_build_query Does Not Return Expected Response
+
+If you're using http_build_query, explicitly separate parameters with an "&":
+
+```$params = http_build_query($params, null, '&');```
+
+Or change the default value by adding the following line to `wp-config.php`:
+
+```ini_set('arg_separator.output', '&');```
