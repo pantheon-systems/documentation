@@ -166,6 +166,6 @@ Drupal doesn’t ship with a settings.php in place; as the error suggests, you s
 #### Request to a Remote API Does Not Return Expected Response
 
 If the API expects `&` as an argument separator but receives `&amp;` when using http_build_query, for example,
-change the default arg_separator.ouput value by adding the following line to `wp-config.php`:
+change the default arg_separator.ouput value by adding the following line to `settings.php`:
 
 ```ini_set('arg_separator.output', '&');```
