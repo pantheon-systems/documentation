@@ -7,7 +7,7 @@ category:
 keywords: wordpress, importing, import site
 ---
 
-There are three major components that make up a dynamic site:
+There are three major components that make up a WordPress site:
 
 1. **Codebase** - all executable code, plugins, themes, and so forth.
 
@@ -15,10 +15,11 @@ There are three major components that make up a dynamic site:
 
 3. **Files** - anything under `wp-content/uploads`. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Most WordPress sites with session-using code are relying on PHP's default session manager, which uses temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment. You can read <a href="/docs/articles/wordpress/wordpress-and-php-sessions#wordpress-and-php-sessions">more here</a>.</div>
 
 ## Export WordPress via Plugins
-Popular plugins like [Duplicator](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) allow you to create single file archives quickly. For large imports, pasting in a web-readable url (e.g. Dropbox secret link) will be much faster than manually uploading. Make sure a link goes directly to the file, not a landing page.
+Popular plugins like [Duplicator](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) allow you to create single file archives quickly. For larger imports, pasting in a web-readable url (e.g. Dropbox secret link) will be much faster than manually uploading. Make sure a link goes directly to the file, not a landing page.
+
+For instructions on how to import a large site outside of the Pantheon Dashboard, see [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site/).
 
 <div class="alert alert-info" role="alert"> <strong>Note:</strong> Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</div>  
 You can simply upload the archive file produced and Pantheon will do the rest.
@@ -55,7 +56,7 @@ The code archive must include the following files and directories:
     ├── plugins
 ```
 ### Create Code Archive
-The code archive should not include the `wp-content/uploads` or any other static assets that should not be tracked in version control. If your codebase contains static files they should be moved to the `wp-content/uploads` directory before export.
+Do not include the `wp-content/uploads` or any other static assets that shouldn't be tracked in Git version control. If your codebase contains static files they should be moved to the `wp-content/uploads` directory before export.
 
 ```
 # Specify the destination folder.
@@ -87,19 +88,6 @@ cd $SOURCE/wp-content/uploads
 tar -czf $TARGET/files.tar.gz .
 ```
 
-
-
-## Import Via Terminus
-Using the following [Terminus](https://github.com/pantheon-systems/cli) command, you can import a single file archive in URL format that includes your codebase, database, and files:
-```nohighlight
-$ terminus sites create [--product=<productid>] \  
-                        [--name=<name>] \  
-                        [--label=<label>] \  
-                        [--org=<org>] \  
-                        [--import=<url>]  
-```
-
-
 ## Import via Dashboard
 
 From your Pantheon user Dashboard, click **Add a site**. You will first be prompted to name the site. The only valid characters are letters, numbers, and dashes. Enter a name and click **Continue**.
@@ -118,7 +106,7 @@ Once selected, you can upload a single URL or file archive of the site.
 Alternatively, you can provide separate archives for code (required), user files (optional) and database (optional).
 ![](/source/docs/assets/images/desk_images/247522.png)
 
-#### Relax While We Configure Your Codebase
+#### Relax While We Import Your Site
 Click **Import Site** and wait while we import and configure your site.
 #### Completed Installation
 When complete, just click the button to visit your Pantheon Dashboard.
@@ -134,10 +122,20 @@ Currently, we are shipping with one included/recommended plugin, which is design
 
 It sets a default cache lifetime of 10 minutes, and will automatically clear post pages (and taxonomy lists) when new content is created or updated. You can also manually flush the whole cache for a site.
 
+## Import Via Terminus
+Using the following [Terminus](https://github.com/pantheon-systems/cli) command, you can import a single file archive in URL format that includes your codebase, database, and files:
+```nohighlight
+$ terminus sites create [--product=<productid>] \  
+                        [--name=<name>] \  
+                        [--label=<label>] \  
+                        [--org=<org>] \  
+                        [--import=<url>]  
+```
+
+
 ## Troubleshooting
 The following warning can appear on newly created sites where the import of your site archive failed:
 ![Unable to Load Git History](/source/docs/assets/images/unable-to-load-git-history.png)
-
 
 Verify the steps for preparing your WordPress archives manually and re-create the archive. Return to the site configuration page as instructed above and import the verified archive.
 
