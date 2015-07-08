@@ -33,7 +33,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Schedule Backups
 
-Ensure that your content is protected by scheduling daily and weekly backups. That way you've got a fallback in case you want to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For detailed instructions, see <a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a>.
+Ensure that your content is protected by scheduling daily and weekly backups so you have a fallback in case you want to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For detailed instructions, see <a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a>.
 
 ## Monitoring Services
 
@@ -43,10 +43,9 @@ Consider enabling [New Relic](/docs/articles/sites/newrelic/new-relic-performanc
 
 ##  Redirects
 
-Setup redirects for possible URL changes as a result of going live. Have plan to monitor and mitigate 404 Page not found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/).
+Set up redirects for possible URL changes as a result of going live. Have a plan to monitor and mitigate 404 Page Not Found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/).
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</div>
-
 
 
 ## Get DNS Record and Update Your DNS
@@ -64,7 +63,7 @@ After you've added your domain to the Live environment, [update your domain's DN
 - Test has the same caching configuration as Live and does not show errors to users, but only one application server.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
-To learn more, see [using the Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
+To learn more, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/).
 
 #### Why is robots.txt is disallowing crawlers to my Live environment?
 
@@ -75,6 +74,6 @@ If you attempt to access your live environment with a pantheon.io domain, even i
 Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
 
 
-## See also
+## See Also
 - [The Perfect Website Launch <span class="glyphicon  glyphicon-book" aria-hidden="true"></span>](https://pantheon.io/sites/default/files/perfect-website-launch-pantheon-ebook.pdf)
 - [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/)
