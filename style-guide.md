@@ -149,8 +149,8 @@ Run "`git add`".
 
 ##Contrib Directory
 
-All Drupal sites used for generating documentation must install contributed modules to sites/all/modules/contrib. 
-All references must be to: 
+All Drupal sites used for generating documentation must install contributed modules to sites/all/modules/contrib.
+All references must be to:
 ```
 sites/all/modules/contrib
 ```
@@ -193,11 +193,23 @@ Title: Task focused, very concise.
 
 Description: Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment.   **Example**: Learn how to add and manage SSH keys.
 
+## Environments
+There are four types of environments in the Dashboard: Dev, Test, Live, and Multidev. When referring to an environment, always capitalize the name of the environment, but not the word "environment".
+
+**Correct**:
+From your Site Dashboard, go to the Dev environment.
+All Partner organizations have Multidev available on every site.
+On Test and Live, PHP errors are not displayed to users, but they'll still be logged.
+Load testing should only be performed on the Live environment.
+
+**Incorrect**  
+Go to the Dev Environment.
+The final step is to deploy your code and plugin settings to the live environment.
 
 ## FAQs
 
-Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list. 
-When it's an FAQ only doc, include categories as h2s and display the questions as h3s. If FAQs are included as part of a larger document, display them as h4s. 
+Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list.
+When it's an FAQ only doc, include categories as h2s and display the questions as h3s. If FAQs are included as part of a larger document, display them as h4s.
 
 **Example of a simple FAQ**:
 
@@ -231,9 +243,9 @@ File paths should be shown the same way code snippets are so that they're easier
 If it's a path within the Dashboard, separate tab/page names with an angle bracket ">".  
 
 **Example**: Settings > Add Ons > Add  
-  
+
 ## Filenames
-In general, filenames should be as short as possible. Add a hyphen (-) between each word.   
+In general, filenames should be as short as possible. Add a hyphen (-) between each word.
 **Example:** writing-a-guide.md
 
 
@@ -250,12 +262,10 @@ When writing an outline for a guide or article, decide what the main topics are.
 **Example**:
 
 ## Configuration
-The configuration topic may have a 1-3 paragraphs on its own, as well as several subtopics. 
+The configuration topic may have a 1-3 paragraphs on its own, as well as several subtopics.
 
 ###Stage and Commit Settings.php
 This is a subtopic of Configuration. Specific information related to settings.php will be shown here.
-
-
 
 
 ## Identifying Instances of Concepts
@@ -274,7 +284,7 @@ If there are tasks a user needs to have completed before continuing on with the 
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
-##Pantheon_Environment 
+##Pantheon_Environment
 TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
 
@@ -282,13 +292,15 @@ TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or 
 
 Notes are helpful to call out information that the user needs to be aware of while completing a task.  
 
-When adding a note to a document, use sentence case and bold only the word, not the colon. See the example below:
+When adding an informational note to a document, use the info alert styling bold the word "Note".
 
-**Note**: You will need to download and install Git before you can begin.
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> You will need to download and install Git before you can begin.</div>
 
-If there is critical or detrimental information a user must read before starting, bold the entire note:
+If there is **critical** or detrimental information a user must read before starting, use the danger alert styling and bold the word "Warning":
 
-**Note: Do not attempt to delete files until...**
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: This is a permanent change and once you delete it your site cannot be restored.</div>
 
 ## Numbers
 
@@ -310,7 +322,7 @@ Create Your Site.
 
 Choose Your Framework.
 
-Visit the Dev Environment.
+Visit the Dev environment.
 
 ## Punctuation
 
@@ -380,7 +392,7 @@ Best Practices:
 
 There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
 
-1. Instructing the user to click on a tab as part of a task:   
+1. Instructing the user to click on a tab as part of a task:
 In Settings, click the **Add Ons** tab.  
 To update the credit card, click the **Billing** tab.
 
@@ -391,7 +403,7 @@ You can change the credit card in the Billing tab.
 
 ## Titles
 
-For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing") and display it as H1. Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines. 
+For titles of helpdesk articles and WalkMe files, use gerunds (verb ending in "ing") and display it as H1. Create concise, task-based titles so the user can scan a page and quickly find the information they are looking for. The title should be able to fit on 1-2 lines.
 
 **Examples**:
 
