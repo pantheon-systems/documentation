@@ -1,10 +1,10 @@
 ---
-title: Private Files with Drupal
+title: Private Files
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 category:
     - development
     - drupal
-keywords: drupal, private files, files, private keys, private
+keywords: drupal, wordpress, private files, files, private keys, private
 ---
 Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
 <div class="alert alert-warning" role="alert">
@@ -18,7 +18,7 @@ This can be done by setting your file-system settings to private. These files wi
 
 This method covers private code, Commerce Kickstart or Ubercart encryption keys, certificates, or other data you want to manage with version-control, but do not want to make web-accessible.
 
-If you opt for this technique, the `private/` directory within your Drupal root is explicitly blocked from being web-accessible. In this instance you can create and use: `code/private`
+If you opt for this technique, the `private/` directory within your site's root is explicitly blocked from being web-accessible. In this instance you can create and use: `code/private`
 
 This folder will need to be on the same level as index.php, within the `code/` folder if you are using SFTP. You should create this manually if it does not exist.
 
