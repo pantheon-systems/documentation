@@ -2,7 +2,7 @@
 
 #About This Guide
 
-This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
+This style guide will help authors who create technical content write in consistent voice, tone, and style.
 
 For any questions or comments, [create an issue](https://github.com/pantheon-systems/documentation/issues).
 
@@ -193,19 +193,6 @@ Title: Task focused, very concise.
 
 Description: Give an overview of the WalkMe demonstration. This is the purpose of the task and accomplishment.   **Example**: Learn how to add and manage SSH keys.
 
-## Environments
-There are four types of environments in the Dashboard: Dev, Test, Live, and Multidev. When referring to an environment, always capitalize the name of the environment, but not the word "environment".
-
-**Correct**:
-From your Site Dashboard, go to the Dev environment.
-All Partner organizations have Multidev available on every site.
-On Test and Live, PHP errors are not displayed to users, but they'll still be logged.
-Load testing should only be performed on the Live environment.
-
-**Incorrect**  
-Go to the Dev Environment.
-The final step is to deploy your code and plugin settings to the live environment.
-
 ## FAQs
 
 Write the questions as if the user were asking them. If there are more than two steps in the answer, use a numbered list.
@@ -228,10 +215,6 @@ Yes. We have complete and total support for WordPress sites and developers.
 3. Select **Change Password**.
 
 4. Enter the information, and click **Save**.
-
-## [Glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary")
-
-The [glossary](https://docs.google.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0) includes an A-Z usage list of common terms used in Pantheon documentation.
 
 ### File Paths
 
@@ -392,7 +375,7 @@ Best Practices:
 
 There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
 
-1. Instructing the user to click on a tab as part of a task:
+1. Instructing the user to click on a tab as part of a task:  
 In Settings, click the **Add Ons** tab.  
 To update the credit card, click the **Billing** tab.
 
@@ -413,34 +396,47 @@ Generating SSH Keys
 
 ## User Interface Terminology
 
-See below for visual examples of the terms to use when referring to specific pages. Also see the [Glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary").
+See below for examples of the terms to use when referring to specific pages, tabs, or UI elements in the Dashboard.
+
+### Environments
+There are four types of environments in the Dashboard: Dev, Test, Live, and Multidev. When referring to an environment, always capitalize the name of the environment, but not the word "environment".
+
+When instructing a user to click on an environment tab, capitalize the name of the environment but not the word "tab".
+
+**Correct**:  
+From your Site Dashboard, go to the **Dev environment**.  
+Click the **Live tab**.  
+All Partner organizations have Multidev available on every site.  
+On Test and Live, PHP errors are not displayed to users, but they'll still be logged.  
+Load testing should only be performed on the Live environment.  
+
+**Incorrect**  
+Go to the Dev Environment.  
+The final step is to deploy your code and plugin settings to the live environment.
 
 ### User Dashboard
+It's always referred to as User Dashboard in order to reduce confusion between the Org Dashboard and Site Dashboard.
 
-### Sites Bar
+![User Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
 
-### Organizations Tab
-
-**@TODO**
-
-**@Brian MacKinney can you insert a screenshot here?**
-
-### Support Tab
-
-### Account Tab
+#### Tabs on the User Dashboard
+Organizations Tab
+When instructing a user to click on a tab, capitalize the tab name but not the word "tab".  
+**Examples**:  
+View a list of your Organizations by clicking the **Organizations tab**.  
+Open a ticket on the Support tab.
 
 ### Site Dashboard
 
 Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
-### Settings Menu
+![Site Dashboard](/source/docs/assets/images/site-dashboard-image.png)
 
-### Team Menu
-
-### Support Tab
-
-### Tool Tabs
-
+#### Site Dashboard Tools
+Capitalize the name of the tab, but not the word "tab".  
+**Examples**:  
+View the commit log by clicking the **Code tab**.  
+PHP errors are listed on the Errors tab.  
 
 ## Resources
 
