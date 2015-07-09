@@ -12,7 +12,7 @@ Pantheon provides two spaces for non-web-accessible data. Take some time to unde
 
 ## Private Files and Uploads In Drupal
 
-This can be done by setting your file-system settings to private. These files will be we accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
+This can be done by setting your file-system settings to private. These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
 ## Storing Private Keys and Certs
 

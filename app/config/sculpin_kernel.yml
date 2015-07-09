@@ -24,3 +24,10 @@ sculpin_content_types:
             - category
             - authors
         permalink: pretty
+
+    changelogs:
+        type: path
+        path: docs/changelogs
+        singular_name: changelog
+        enabled: true
+        permalink: pretty

@@ -8,9 +8,12 @@ keywords: wordpress, php sessions, php
 ---
 WordPress Core [does not use sessions](http://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables?replies=7). All "user state" is managed via cookies. This is a Core design decision.
 
-However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain.
+However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain. Sites that need to utilize PHP Sessions should install this plugin. 
 
-## Troubleshooting Plugins
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</div>
+
+## Troubleshooting Session Errors
 
 Prior to installing our sessions plugin, you might see the following error:
 
@@ -20,6 +23,8 @@ Warning: session_start(): user session functions not defined
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
 If `$_SESSIONs` are necessary for your application, you should [install our native PHP session handling plugin](https://wordpress.org/plugins/wp-native-php-sessions). Once enabled, your functionality will "just work".
+
+To improve the chances that the session-enabling pluting is loaded first, it's advisable to install it in the `mu-plugins` directory. That reduces the chances that other code attempts to start a session before the session handler is ready.
 
 ## Sessions and Scalability
 

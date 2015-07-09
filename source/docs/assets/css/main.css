@@ -1376,6 +1376,7 @@ pre {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 14px;
+  word-break: break-word;
 }
 /**.hljs {
   padding: 9px 14px;

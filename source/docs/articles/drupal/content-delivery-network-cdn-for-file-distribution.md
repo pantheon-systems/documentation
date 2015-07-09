@@ -1,5 +1,5 @@
 ---
-title: Content Delivery Network (CDN) for file distribution
+title: Content Delivery Network (CDN) for File Distribution
 description: Learn about the benefits of using a Content Delivery Network (CDN) on your Drupal site.
 category:
     - drupal

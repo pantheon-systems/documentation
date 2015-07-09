@@ -37,7 +37,7 @@ Then you can make an archive of this codebase to import into a new site, or push
 6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
 7. Click **Import Site**.
 
-The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
+The import process will create and deploy a new site based on the uploaded files. If there are issues,  see  [Importing an Existing Site](/docs/articles/sites/create/importing-an-existing-site/) for possible solutions, or open a support ticket from your dashboard. Be sure to include any error messages or relevant information.
 
 
 ## Additional Considerations

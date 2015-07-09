@@ -1,6 +1,6 @@
 ---
-title: Getting Started
-description: Learn how to create a site on Pantheon.
+title: Get Started
+description: Learn how to create a Drupal or WordPress site on Pantheon.
 category:
   - getting-started
 keywords: going live, getting started, create account, create site, import, faqs
@@ -24,7 +24,7 @@ If you want to develop directly on Pantheon, start with one of the many distribu
 On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ### Import an Existing Site
-If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
+If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/sites/create/importing-an-existing-site/) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
 
 ## Interact With Your Code
 There are two ways to add and update your site's code: Git source code management and SFTP.
@@ -70,7 +70,7 @@ If you're ready to move beyond the basics, check out our curated list of [Requir
 ## Frequently Asked Questions
 
 #### Does Pantheon offer professional services?
-Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.getpantheon.com/partners) for more information.
+Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
 
 If you're seeking an individual developer, there are a number of resources available to help you through this process. [Drupal.org](http://drupal.org/) has comprehensive documentation about [working with service providers](http://drupal.org/node/51169), including:
 
@@ -81,4 +81,7 @@ If you're seeking an individual developer, there are a number of resources avail
 #### Does Pantheon offer enterprise support?
 Pantheon provides a guided launch concierge to Enterprise customers during both migration and development on Pantheon. We can work directly with your stakeholders and development team to optimize and prepare your site for launch, identifying and eliminating platform issues. 24/7 emergency support is also available post-launch.
 
-Learn more about [Enterprise on Pantheon](https://www.getpantheon.com/enterprise).
+For more information, see [Enterprise on Pantheon](https://www.pantheon.io/enterprise).
+
+## Learn More
+If you're ready to move beyond the basics of setting up your Pantheon account and spinning up a site, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).

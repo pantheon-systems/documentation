@@ -137,7 +137,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/408428') !== FALS
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/411388') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/local/drush-command-line-utility'); exit();
+  header('Location: /docs/articles/local/drupal-drush-command-line-utility'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/515937') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');

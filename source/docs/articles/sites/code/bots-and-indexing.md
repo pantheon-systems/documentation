@@ -50,7 +50,7 @@ The pantheon.io domains are ONLY intended for development use and cannot be used
 
     // Redirect to force indexing with custom domain sitemap
     $subject = $_SERVER['HTTP_HOST'];
-    $pattern = '/pantheon.io/sitemap.xml$/';
+    $pattern = '#/pantheon.io/sitemap.xml$/#';
     preg_match($pattern, $subject, $matches);
     $counted = count($matches);
     if ($counted > 0 ) {

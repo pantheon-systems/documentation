@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-description: Answers to common questions about using Pantheon.
+description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
 category:
   - getting-started
 keywords: getting started, faqs, sites, pantheon, plans, developing, security
@@ -21,13 +21,14 @@ Pantheon supports the most recent release of WordPress via [upstream](https://gi
 
 ### How much does Pantheon cost?
 
-Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on our [pricing page](https://getpantheon.com/pricing).
+Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://pantheon.io/pricing).
+
 
 ### Where are the Pantheon servers located?
 
 All Pantheon servers are currently located in the United States. We have plans to expand to Europe, but we don't have an ETA for when they will be available for end-users.
 
-You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) for rapidly serving files from multiple locations. In most cases, sites running on Pantheon in the U.S. perform faster than sites running on local hosting, even if the user is halfway around the world. 
+You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) for rapidly serving files from multiple locations. In most cases, sites running on Pantheon in the U.S. perform faster than sites running on local hosting, even if the user is halfway around the world.
 
 Transatlantic hops in are usually 200-300ms, while Pantheon can usually speed up site page load times by seconds.
 
@@ -39,7 +40,8 @@ This is not officially supported, but the PHP runtime is complete. Some users ha
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files. 
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files.
+
 
 ### How does Pantheon work with DNS?
 
@@ -110,6 +112,7 @@ We're currently testing out integration strategies for Solr with our next-genera
 For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
 
 Read more about [getting support](https://pantheon.io/docs/articles/getting-support/) and our support offerings on [our pricing page](https://pantheon.io/pricing).
+
 
 ## Security
 

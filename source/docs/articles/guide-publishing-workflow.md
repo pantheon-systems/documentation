@@ -1,6 +1,6 @@
 ---
 title: Guide Publishing Workflow
-description: Learn how to create a great guide.
+description: Detailed information on creating a great guide for your Pantheon Drupal or WordPress site.
 draft: true
 ---
 Roles: <span style="color: orange">**Submitter**</span>, <span style="color: blue">**Writer**</span>, <span style="color: brown">**Editor**</span>, <span style="color: green">**Management Team**</span>, <span style="color: purple">**Technical Resource**</span>, <span style="color: magenta">**Tester**</span>, <span style="color: red">**Marketing Content Manager**</span>
