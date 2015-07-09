@@ -92,6 +92,6 @@ This will present you with a page where you can edit and add files:
 ## Resources
 
 - [ApacheSolr Module](https://drupal.org/project/apachesolr) 
-- [IndexDepot](https://www.indexdepot.com/en)
+- [IndexDepot](https://www.indexdepot.com/en/)
 - [IndexDepot Support](https://www.indexdepot.com/en/faq)
 - [FAQ](/docs/articles/frequently-asked-questions)

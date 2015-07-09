@@ -59,7 +59,7 @@ Once connected, you'll see several directories:
 
 #### How can I parse my Nginx access logs?
 
-You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
+You can use a free utility like [goaccess](http://goaccess.io/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
 ```nginx
 time_format %H:%M:%S %z
@@ -77,7 +77,7 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 
 #### Can I download Varnish logs?
 
-No, Varnish logs are not available for download. 
+No, Varnish logs are not available for download.
 
 #### My Drupal database logs are huge. Should I disable dblog?
 
