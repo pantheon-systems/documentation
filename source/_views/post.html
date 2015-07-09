@@ -17,16 +17,15 @@
             {{ page.blocks.content|raw }}
         </div>
         {% if page.previous_post or page.next_post %}
-        <div class="center-block">
-            <nav class="article">
+        <div>
+            <nav class="pager">
                 <ul>
                   {% if page.previous_post %}
-                      <li><a class="previous" href="{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">Previous</span></a></li>
+                      <li><a class="pager" href="{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">Previous</span></a></li>
                   {% endif %}
-                  <small class="text-center"></small>
 
                     {% if page.next_post %}
-                        <li><a class="next" href="{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">Next</span></a></li>
+                        <li><a class="pager" href="{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">Next</span></a></li>
                     {% endif %}
                 </ul>
             </nav>
