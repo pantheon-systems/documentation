@@ -132,7 +132,7 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
     </tr>
     <tr>
         <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">- Deploy code<br/>- Assign a "User in Charge": This is the person who created a site and is able to delete it.</td>
+        <td class="border-bottom">- Deploy code</td>
     </tr>
     <tr>
         <td class="border-bottom">Developer</td>
@@ -166,7 +166,7 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
     </tr>
     <tr>
         <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">- Deploy code<br/> - Assign a "User in Charge": This is the person who created a site and is able to delete it.</td>
+        <td class="border-bottom">- Deploy code</td>
     </tr>
     <tr>
         <td class="border-bottom">Developer</td>
