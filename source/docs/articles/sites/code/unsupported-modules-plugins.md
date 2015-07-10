@@ -62,11 +62,10 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Taxonomy CSV  
 
-- Views data export 
+- Views data export
 
-- Webform export
-
-Due to the way in which the UI writes files to the tmp directory this will cause issues with site that have multiple app containers. The solution is to use drush, as this only uses a single app container to process the export. The relevant drush command is `webform-export` (alias wfx). 
+- Webform export<br>
+ **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 
 
