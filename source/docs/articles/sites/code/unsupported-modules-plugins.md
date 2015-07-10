@@ -62,7 +62,11 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Taxonomy CSV  
 
-- Views data export  
+- Views data export
+
+- Webform export<br>
+ **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+
 
 
 
