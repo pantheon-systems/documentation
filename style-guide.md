@@ -159,7 +159,7 @@ sites/all/modules/contrib
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
-For help with SSH keys, see [Generating SSH Keys](https://www.pantheon.io/docs/articles/users/generating-ssh-keys/).
+For help with SSH keys, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/).
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
