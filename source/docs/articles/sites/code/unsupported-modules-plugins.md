@@ -21,6 +21,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Cache Expiration
 
+- Global Redirect  
+ **Issue**: Too many redirects error when site is in maintenance mode.  
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not ticked in the Gloabl Redirect adminsitration screen. 
+
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
