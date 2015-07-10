@@ -37,6 +37,6 @@ At this time, Pantheon does not provide or support:
 
 - [Webhooks](http://en.wikipedia.org/wiki/Webhook)
 - [Git hooks](http://git-scm.com/book/en/Customizing-Git-Git-Hooks)
-- Running[Jenkins](http://jenkins-ci.org/) or other Continuous Integration software on our servers. You'll need to self-host or use a hosted CI solution. [Compare solutions here](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software).
+- Running [Jenkins](http://jenkins-ci.org/) or other Continuous Integration software on our servers. You'll need to self-host or use a hosted CI solution. [Compare solutions here](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software).
 - Shell access
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/) Unit Testing PHP Framework: You can still write tests and include them in your code, but you'll need to run them on a CI server, not Pantheon.
