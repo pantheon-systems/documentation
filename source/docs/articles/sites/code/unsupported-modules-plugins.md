@@ -21,6 +21,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Cache Expiration
 
+- Global Redirect  
+ **Issue**: Too many redirects error when site is in maintenance mode.  
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not ticked in the Global Redirect administration page.
+
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
@@ -66,8 +70,6 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Webform export<br>
  **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
-
-
 
 
 ##WordPress Plugins
