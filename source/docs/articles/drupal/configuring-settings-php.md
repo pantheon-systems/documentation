@@ -161,3 +161,11 @@ For information about table prefixes on Pantheon, see [Importing an Existing Dru
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 
 Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once a settings.php file has been created, the settings.php area of the report should resolve to green.
+
+## Troubleshooting
+#### Request to a Remote API Does Not Return Expected Response
+
+If the API expects `&` as an argument separator but receives `&amp;` when using http_build_query, for example,
+change the default arg_separator.ouput value by adding the following line to `settings.php`:
+
+```ini_set('arg_separator.output', '&');```

@@ -62,3 +62,11 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 #### Are table prefixes supported?
 
 For information about table prefixes on Pantheon, see [this](/docs/articles/sites/create/importing-an-existing-site/#importing-an-existing-site#table-prefixes) article.
+
+## Troubleshooting
+#### Request to a Remote API Does Not Return Expected Response
+
+If the API expects `&` as an argument separator but receives `&amp;` when using http_build_query, for example,
+change the default arg_separator.ouput value by adding the following line to `wp-config.php`:
+
+```ini_set('arg_separator.output', '&');```

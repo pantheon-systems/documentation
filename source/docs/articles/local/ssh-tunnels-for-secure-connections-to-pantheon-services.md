@@ -14,70 +14,55 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [MySQL database](/docs/articles/local/accessing-mysql-databases/) (dbserver)
 - [Redis cache](/docs/articles/sites/redis-as-a-caching-backend/) (cacheserver)
 
-## Requirements to Create an SSH Tunnel
+## Prerequisites
 
-1. An SSH client, such as OpenSSH (ssh command already installed on Mac and Linux) or PuTTY (Windows)
-2. Target [site UUID](/docs/articles/sites#site-uuid) (found in the dashboard URL)
-3. Target environment name (Dev, Test, or Live)
-4. The service you want to connect to (dbserver or cacheserver)
-5. Target port for the service ("Connection Info" tab in the site environment Dashboard)
+- Local installation of a MySQL client
+- [Redis command-line client](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client)
+- Add an [SSH Key](/docs/articles/users/generating-ssh-keys) to your Pantheon User Dashboard
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
-These instructions require the use of the SSH command-line client.
-
-```bash
-# Site UUID from Dashboard URL
-SITE=SITE_UUID
-# dev, test or live
-ENV=ENVIRONMENT_NAME
-# Port from Connection Info in Dashboard
-PORT=CONNECTION_INFO_MYSQL_PORT
+From the Site Dashboard, access the environment you want to connect with, and click the **Connection Info** button. Here you will find the required environment specific values for the command exmple found below.
 
 
-# Create tunnel.
-ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@dbserver.$ENV.$SITE.drush.in
+![Connection info](/source/docs/assets/images/desk_images/168060.png)
 
 
-# Connect to Pantheon database with local MySQL client.
-mysql -u pantheon -h 127.0.0.1 -p -P $PORT pantheon
-
-
-# Destroy tunnel.
-ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
+Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```
-## Use Sequel Pro to SSH tunnel to a MySQL Database
+ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
+```
+Next, using the values found within the **Connection Info** tab, execute the following:
+```bash
+mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
+```
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
+```bash
+ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
+```
+
+## Use Sequel Pro to SSH Tunnel to a MySQL Database
 
 [Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
 
-## Manually Create an SSH tunnel to a Redis Cache Server
-
-These instructions require using the Redis command-line client; see [Using the Redis Command Line](/docs/articles/sites/redis-as-a-caching-backend/#using-the-redis-command-line-client).  
+## Manually Create an SSH Tunnel to a Redis Cache Server
 
 From the site environment, get the one-line connection string. It will be in the following format:
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-From the command-line:
+Use the port value from the above one-live connection string, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
-# Site UUID from Dashboard URL
-SITE=SITE_UUID
-# dev, test or live
-ENV=ENVIRONMENT_NAME
-# Port from Connection Info in Dashboard
-PORT=CONNECTION_INFO_REDIS_PORT
-# Password from Redis Connection Info
-PASS=CONNECTION_INFO_REDIS_PASSWORD
+ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
+```
+Using the password and port found in the one-line connection string, run the following command:
+```bash
+redis-cli -h 127.0.0.1 -p PORT -a PASSWORD
+```
 
-
-# Create tunnel.
-ssh -f -N -L $PORT:localhost:$PORT -p 2222 $ENV.$SITE@cacheserver.$ENV.$SITE.drush.in
-
-
-# Connect to Pantheon redis with local client.
-redis-cli -h 127.0.0.1 -p $PORT -a $PASS
-
-
-# Destroy tunnel.
-ps -fU $USER | grep "ssh -f" | grep "$PORT:" | awk '{print $2}' | xargs kill
+You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
+```bash
+ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
