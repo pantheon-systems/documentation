@@ -25,7 +25,7 @@ Follow the steps below to submit a request to our Support Team:
 If you cannot sign in to your Pantheon Dashboard, you can:  
   * Email Support directly at helpdesk@pantheon.io to open a case associated with an account in our helpdesk system.  
   * Visit our [Contact form](https://pantheon.io/contact-us) and choose **I can't login and I need support** from the drop-down list.  
-  * Use the [Password Reset](https://dashboard.pantheon.io/reset-password) form for Pantheon Dashboard access. For instructions, see our [Resetting Passwords](https://pantheon.io/docs/articles/sites/resetting-passwords/) article.  
+  * Use the [Password Reset](https://dashboard.pantheon.io/reset-password) form for Pantheon Dashboard access. For instructions, see our [Resetting Passwords](/docs/articles/sites/resetting-passwords/) article.  
   * If all else fails, email us at cse-support@pantheon.io and we can file a ticket on your behalf.
 
 ## Service Level Agreement (SLA) for Downtime
