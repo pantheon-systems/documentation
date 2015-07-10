@@ -96,7 +96,7 @@ _Subdomains_
 
 * DNS `CNAME` record - `env-sitename.pantheon.io`
 
-### Legacy DNS Configuration for Pantheon.io Sites
+### Legacy DNS Configuration for GotPantheon.com Sites
 
 These DNS records are for Pantheon-hosted sites already using a pantheon.io development URL. **Do not utilize our legacy DNS records for any new sites that use the pantheon.io development URL**. Please refer to the Domains panel on your site's Dashboard for the specific DNS records that will successfully route traffic to your site.
 
