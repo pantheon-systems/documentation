@@ -21,15 +21,15 @@ Once site plans are changed to a paid service level, custom domains can be added
 
 ## Step 1: Decide Which Type of Domain You Want
 
-**Examples of HTTPS Sites** 
+**Examples of HTTPS Sites**
 
 Pantheon recommends using HTTPS to increase the security of your site.
 
-https://www.example.com 
+https://www.example.com
 
-[https://example.com/subdirectory](/source/docs/articles/sites/domains/fastly-domain-masking/)
+[https://example.com/subdirectory](/docs/articles/sites/fastly-domain-masking/)
 
-https://example.com 
+https://example.com
 
 https://subdomain.example.com
 
