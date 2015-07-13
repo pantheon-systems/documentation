@@ -51,7 +51,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 <tr>
 <td>Pathologic</td>
 <td>The path of the base URL is changed and cached by the module itself.</td>
-<td>The documentation on Drupal.org for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your siteâ€™s cache after importing the data.</td>
+<td>The documentation on Drupal.org for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site's cache after importing the data.</td>
 </tr>
 <tr>
 <td>IMCE</td>
@@ -66,7 +66,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 <tr>
 <td>Schema</td>
 <td>The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a known bug in the schema module.</td>
-<td>Set a variable to suppress the error, shown here. Setting the variableschema_suppress_type_warnings to true will do it. You can achieve that by adding the following line to settings.php: <code>$conf[â€˜schema_suppress_type_warningsâ€™] = TRUE;</code></td>
+<td>Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:  
+```
+$conf[‘schema_suppress_type_warnings’] = TRUE;
+```</td>
 </tr>
 <tr>
 <td>Cache Expiration</td>
