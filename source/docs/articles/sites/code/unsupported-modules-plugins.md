@@ -66,10 +66,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 <tr>
 <td>Schema</td>
 <td>The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a known bug in the schema module.</td>
-<td>Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable <code>schema_suppress_type_warnings`</code> to **true** will do it. You can achieve that by adding the following line to <code>settings.php`</code>:  
+<td>Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable <code>schema_suppress_type_warnings</code> to **true** will do it. You can achieve that by adding the following line to <code>settings.php</code>:  
 <code>
 <pre>
-$conf[‘schema_suppress_type_warnings’] = TRUE;
+$conf['schema_suppress_type_warnings'] = TRUE;
 <pre>
 </code></td>
 </tr>
