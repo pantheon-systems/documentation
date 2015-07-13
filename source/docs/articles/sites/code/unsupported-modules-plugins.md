@@ -30,6 +30,8 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - IMCE
 
+- Mobile Tools 
+
 - Mollom  
  **Issue**: Cookies break Varnish.
 
