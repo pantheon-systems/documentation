@@ -72,8 +72,8 @@ https://developers.google.com/webmasters/mobile-sites/get-started/mistakes
 A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
 
  - [Desktop browsers](https://html5test.com/results/desktop.html)
- - [Tablet browsers](https://html5test.com/results/desktop.html)
- - [Mobile browsers](https://html5test.com/results/desktop.html)
+ - [Tablet browsers](https://html5test.com/results/tablet.html)
+ - [Mobile browsers](https://html5test.com/results/mobile.html)
  - [Other browsers](https://html5test.com/results/other.html)
 
 ### Using STYXKEY
