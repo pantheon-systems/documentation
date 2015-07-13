@@ -46,7 +46,8 @@ For Sandbox sites, within the Team modal, the site owner can click **Make Owner*
 
 Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers.
 
-###Enterprise - Organization-Level Roles/Permissions
+###Enterprise:  Organization-Level Roles/Permissions
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
@@ -60,21 +61,22 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
     </tr>
     <tr>
         <td>Administrator</td>
-        <td>- Manage settings<br>
-        - Remove members    <br>
-        - Edit member roles <br>
-        - Delete sites  <br>
-        - Remove sites from the Organization</td>
+        <td>* Manage settings<br>
+        * Remove members    <br>
+        * Edit member roles <br>
+        * Delete sites  <br>
+        * Remove sites from the Organization</td>
     </tr>
     <tr>
         <td class="border-bottom">Unprivileged</td>
-        <td class="border-bottom">- Create sites, for which they become the User in Charge<br/></td>
+        <td class="border-bottom">* Create sites, for which they become the User in Charge<br/></td>
     </tr>
 
 </table>
 
 
-### Enterprise Organization - Site-Level Roles/Permissions
+###Partners: Organization-Level Roles/Permissions
+
 <style>
     .data-table {
         border-collapse: collapse;
@@ -88,97 +90,77 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
     <tr>
         <th><strong>Role</strong></th>
         <th><strong>Permissions</strong></th>
+    </tr>
+    <tr>
+        <td>Administrator</td>
+        <td>* Remove members<br>
+        * Change member roles<br>
+        * Delete sites<br>
+        * Remove sites from the Organization<br>
+        * Manage settings</td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Team Member</td>
+        <td class="border-bottom">* Add Developers and Team Members to the Organization<br>
+        * Add users as Team Members to sites</td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Developer</td>
+        <td class="border-bottom">* Tag Sites<br>
+        * View People<br>* View Tickets </td>
+    </tr>
+</table>
+
+##Site-Level Roles/Permissions
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-e3zv{font-weight:bold}
+</style>
+<table class="tg">
+    <tr>
+        <th><strong>Role</strong></th>
+        <th><strong>Permissions</strong></th>
+        <th><strong>Enterprise Organization</strong></th>
+        <th><strong>Partner Organization</strong></th>
+    </tr>
+    <tr>
+        <td>Administrator</td>
+        <td>* Create and delete sites</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
+    </tr>
+    <tr>
+        <td>Team Member</td>
+        <td>* Deploy code to Test and Live<br/>* Use the Workflow tool on Test and Live<br/>* Change the PHP versions for all site environments<br/>* Add Team Members and Supporting Organizations</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
+    </tr>
+    <tr>
+        <td>Developer</td>
+        <td>* Commit code to Dev and Multidev environments<br/>* Add and Remove add-ons to sites. New Relic cannot be removed once added.</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
     </tr>
     <tr>
         <td>User in Charge</td>
-        <td>* *This is the user who created the site. This designation cannot be transferred.*<br>
-        - Functionally the same as an Organization Administrator &nbsp;</td>
+        <td>* This is the user who created the site. This designation cannot be transferred.<br/>* Can delete the site he/she created</td>
+        <td><center>X</center></td>
+        <td></td>
     </tr>
     <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">- Manage settings<br>
-        - Manage team (add/remove)<br>
-        - Deploy code to Test/Live<br>
-        </td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">- Deploy code to CDEs and Dev only</td>
+        <td>Owner</td>
+        <td>* Functionally is the same as an Organization Administrator</td>
+        <td></td>
+        <td><center>X</center></td>
     </tr>
 </table>
 
-###Partners - Organization-Level Roles/Permissions
-<style>
-    .data-table {
-        border-collapse: collapse;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #000;
-    }
-</style>
-
-<table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>- Remove members<br>
-        - Change member roles<br>
-        - Delete sites<br>
-        - Remove sites from the Organization<br>
-        - Manage settings</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">- Add Developers and Team Members to the Organization<br>
-        - Add users as Team Members to Sites</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">- Tag Sites<br>
-        - View People<br>- View Tickets </td>
-    </tr>
-</table>
-
-###Partners - Site-Level Roles/Permissions
-
-When Partner Organizations are added to sites as **Supporting Organizations**, the system grants all of their users access to the site, with the organization roles respected. 
-<style>
-    .data-table {
-        border-collapse: collapse;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #000;
-    }
-</style>
-
-<table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>- Create and delete sites</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">- Deploy code to Test and Live<br>
-        - Use the Workflow tool on Test and Live
-        - Change the PHP versions for all site environments
-        - Add Team members and Supporting Organizations</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">- Commit code to Dev and Multidev Environments<br>
-        - Add and Remove add-ons to sites New Relic cannot be removed once added.</td>
-    </tr>
-</table>
-
+<br>
 To promote a Developer to the Team Member role for a single site, add the user to the Site Team.
 
 ### Change Management - Disabled
 
-By default, Change Management is not enabled for Enterprise Organizations. If Change Management is disabled, roles cannot be selected at the Site level. At the Organization level, a checkbox is shown to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
+By default, Change Management is not enabled for Enterprise Organizations. If Change Management is disabled, roles cannot be selected at the site level. At the Organization level, a checkbox is shown to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the site level, there is no role selector&mdash;all users are Team Members.
