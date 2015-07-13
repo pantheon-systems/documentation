@@ -8,83 +8,46 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 ##Drupal Modules
 
-<div class="table-responsive">
-<table class="table table-condensed table-striped">
-<thead>
-<tr>
-<th width="20%">Module</th>
-<th width="40%">Issue</th>
-<th width="40%">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>APC</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Adaptive Image Styles</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Background Process</td>
-<td>The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform.</td>
-<td></td>
-</tr>
-<tr>
-<td>Backup &amp; Migrate</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Boost</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Mollom</td>
-<td>Cookies break Varnish.</td>
-<td></td>
-</tr>
-<tr>
-<td>Pathologic</td>
-<td>The path of the base URL is changed and cached by the module itself.</td>
-<td>The documentation on Drupal.org for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your siteâ€™s cache after importing the data.</td>
-</tr>
-<tr>
-<td>IMCE</td>
-<td></td>
-<td>Requires patch for Drupal 6. Drupal 7 works without any issues</td>
-</tr>
-<tr>
-<td>Registry Rebuild</td>
-<td>This is built into the Pantheon platform.</td>
-<td></td>
-</tr>
-<tr>
-<td>Schema</td>
-<td>The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a known bug in the schema module.</td>
-<td>Set a variable to suppress the error, shown here. Setting the variableschema_suppress_type_warnings to true will do it. You can achieve that by adding the following line to settings.php: <code>$conf[â€˜schema_suppress_type_warningsâ€™] = TRUE;</code></td>
-</tr>
-<tr>
-<td>Cache Expiration</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Varnish</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>HTTPRL</td>
-<td>This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.</td>
-<td></td>
-</tr>
-</tbody>
-  </table></div>
+- APC
+
+- Adaptive Image Styles
+
+- Background Process  
+**Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform.
+
+- Backup & Migrate
+
+- Boost
+
+- Cache Expiration
+
+- Global Redirect  
+ **Issue**: Too many redirects error when site is in maintenance mode.  
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not ticked in the Global Redirect administration page.
+
+- HTTPRL  
+**Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
+
+- IMCE
+
+- Mollom  
+ **Issue**: Cookies break Varnish.
+
+- Pathologic  
+ **Issue**: The path of the base URL is changed and cached by the module itself.  
+ **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
+
+- Registry Rebuild  
+This is built into the Pantheon platform.
+
+- Schema  
+**Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.  
+**Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:  
+   ```
+   $conf[‘schema_suppress_type_warnings’] = TRUE;
+   ```
+
+- Varnish
 
 ### Using the `/tmp` Directory
 **Issue**:
