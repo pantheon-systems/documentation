@@ -93,7 +93,7 @@ For further learning, we recommend checking out the following resources:
 
 - [Git Documentation](http://git-scm.com/documentation)
 - [Pro Git Book](http://git-scm.com/book)
-- [First Aid Git](http://ricardofilipe.com/projects/firstaidgit/)
+- [First Aid Git](http://firstaidgit.io/#/)
 - [Git Reference](http://gitref.org/)
 - [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html)
 - [Git Immersion](http://gitimmersion.com/)

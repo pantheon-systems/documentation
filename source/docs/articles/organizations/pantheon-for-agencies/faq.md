@@ -53,7 +53,7 @@ Members and roles of the Organization trickle down to the site. All Organization
 Yes. Roles designated on the Team page at the site level will override any roles assigned within the Organization.
 
 ### Do you have a status page?
-Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](https://status.getpantheon.com).
+Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](http://status.getpantheon.com).
 
 ### How do I submit a ticket when the dashboard is down?
 If you need to submit a ticket and can’t access the Dashboard, send an email to helpdesk@getpantheon.com.
