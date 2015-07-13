@@ -49,29 +49,30 @@ A site may need to deliver different content to different users without them log
 ### Using Modernizr
 [Modernizr](http://modernizr.com) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a  [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](http://wordpress.stackexchange.com/a/62362).
 
-#### Device Detection
+### Device Detection
 
-We do not recommend building separate mobile sites or using cookies that must be passed to the backend for mobile theme detection and configuration. 
+We do not recommend building separate mobile sites or using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by Varnish. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
 
-This will cause issues scaling request within your site in case of any load or traffic spikes as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by Varnish. That means if you recieve more uncached visitors than your Nginx and PHP processes this can result in timeouts and server errors.
+#### Best Practice Recommendations
 
-##### Best practice recomendation
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques with HTML5, CSS3, and JavaScript. This will avoid the need to compromise potential scalability in order to scale traffic. HTML5 and CSS3 is the high performance route, as you save on the backend load and browsers.
 
-Handling the mobile detaction using Responsive Web Design (RWD) techniques with HTML5 and CC3 and JavaScript are the suggested methods. This will avoid the need to compromise potential scalability in order to scale traffic. The HTML5 and CSS3 is the high performance route as you save on the backend load and browsers.
+**Issue**   
+Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
+ 
+**Recommended Solution**  
+While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**  
 
-> Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
-> While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site, and introduces possible sources of technical problems. You can often simplify things significantly by using responsive web design (RWD) and serving desktop and mobile on the same URL! **Responsive web design is Google’s recommended configuration.**
-
-More information on modile site best practices can be found Google in the offical developer documentation:
+More information on mobile site best practices can be found in the Google official developer documentation:
 
 https://developers.google.com/webmasters/mobile-sites/get-started/why
 https://developers.google.com/webmasters/mobile-sites/get-started/key
 https://developers.google.com/webmasters/mobile-sites/get-started/mistakes
 
-A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com), where a comparison can be done for a variety of clients:
+A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
 
  - [Desktop browsers](https://html5test.com/results/desktop.html)
- - [Tablet browser](https://html5test.com/results/desktop.html)
+ - [Tablet browsers](https://html5test.com/results/desktop.html)
  - [Mobile browsers](https://html5test.com/results/desktop.html)
  - [Other browsers](https://html5test.com/results/other.html)
 
