@@ -165,13 +165,13 @@ When linking to an article in a sentence without using the exact title, display 
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
-
+```
 For detailed instructions, see [Article Title](/docs/articles/path).
-
+```
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
-
+```
 For more information, see [Article Title](/docs/articles/path).
-
+```
 ## Dates
 
 Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
