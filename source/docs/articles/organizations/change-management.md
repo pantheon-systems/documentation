@@ -6,32 +6,30 @@ category:
   - developing
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
-Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the Organization as a Supporting Organization are accessible to privileged members of the Organization. The roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
+Change Management is an Organization-level feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Pantheon Partners](/partners), and is available as an add-on for Enterprise Organizations. Partner users can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
 
 ## Features
-* Partner Organizations can add people as Administrators, Team Members, and Developers to the Organization.
-* Enterprise Organizations with the Change Management add-on can assign Users or Supporting Organizations as Developers or Team Members to individual sites owned by the organization.
-* When an Organization is added to a site as a Supporting Organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site. All Organization members can access all sites associated with the Organization.
+* Enterprise organization administrators and site team members can add Users or Supporting Organizations to sites owned by Organization with the Developer or Team Member roles. 
+* Partner Organizations can have users with a role: Administrator, Team Member, or Developer. 
+* When an Organization is added to a site as a Supporting Organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site, unless the site is owned by an Enterprise Organization with change management enabled. In this case, the site-level role is respected for all users in the Supporting Organization.
 * Agencies added to sites by subscription owners are able to use Change Management internally.
 * All users in an Organization can see other users and their roles.
 
-## Managing People
-Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the Organization assign roles at the **Organization Dashboard's People tab**.
+## Managing an Organization's People
+When a team member or administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the Organization assign roles at the **Organization Dashboard's People tab**.
 
-
-### Add a New User
+### Add a User
 
 1. In the People tab, click **Add User**.
 2. Enter the email address of the new user, select a role, and click **Add user**.
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
 
-
-### Edit an Existing User
+### Change a User's Role
 
 1. In the People tab, select the user's name.
 2. Click **Operations**, and choose **Change Role**.
-2. Select the new role from the drop-down, and click **Set User Role**.
+3. Select the new role from the drop-down, and click **Set User Role**.
 
 ### Change Site Owner
 
@@ -41,10 +39,24 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 
 For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
 
+## Managing an Enterprise Site's Team
+
+Enterprise sites with Change Management can add users as either Team members or Developers to the site. 
+
+### Add a User to the Site, with a Role
+1. At the Site Dashboard, click **Team**
+2. Enter the user's email address, select a role, and click **Add Team Member**
+
+### Add a Supporting Organization to the Site, with a Role
+1. At the Site Dashboard, click **Team**
+2. Enter the Organization's name in the Organization Name Search Box, and click **Search**
+3. Select a role, and click **Add Supporting Organization**
+
+All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization. 
 
 ## Roles and Permissions
 
-Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers.
+These tables detail which actions each role can execute on each dashboard. 
 
 ###Enterprise:  Organization-Level Roles/Permissions
 
@@ -107,7 +119,7 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
     <tr>
         <td class="border-bottom">Developer</td>
         <td class="border-bottom">* Tag Sites<br>
-        * View People<br>* View Tickets </td>
+        * View People<br> * View Tickets </td>
     </tr>
 </table>
 
@@ -160,7 +172,3 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
 
 <br>
 To promote a Developer to the Team Member role for a single site, add the user to the Site Team.
-
-### Change Management - Disabled
-
-By default, Change Management is not enabled for Enterprise Organizations. If Change Management is disabled, roles cannot be selected at the site level. At the Organization level, a checkbox is shown to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the site level, there is no role selector&mdash;all users are Team Members.
