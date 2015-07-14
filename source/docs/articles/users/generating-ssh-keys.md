@@ -5,82 +5,78 @@ category:
   - getting-started
 keywords: ssh keys, ssh, generate keys  
 ---
-SSH as a protocol is not supported on Pantheon. <!--You can not connect via SSH using Putty.--> These directions are to allow you have passwordless access if you configure Drush or SFTP to use the keys setup by putty.
+On Pantheon, adding SSL to your site is a completely self-serve option; Pantheon does not provide Private Keys or CSRs, or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
+
+<!--You can not connect via SSH using Putty.--> These directions allow you have access without entering a password if you configure Drush or SFTP to use the keys set up by putty.  Once you've generated the CSR and Key, you can find the files to provide to your certificate provider.
 
 <div class="alert alert-info" role="alert"> <strong> Note:</strong> SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the troubleshooting section at the end of the document.</div>
 
-##Invalid SSH Keys
-Spaces and non-standard alphanumeric characters in the user or hostname can cause an SSH key to appear invalid to Pantheon.
-
-To fix this, edit the user or hostname and remove spaces and/or odd characters. This will not affect the key itself, as the user/hostname are simply appended as a comment for reference.
-
 Generating SSH keys is different for every platform. Please follow the directions that are most appropriate for you:
 
-1. [MacOS and Linux](/docs/articles/users/generating-ssh-keys#macos-and-linux)
+* [MacOS and Linux](/docs/articles/users/generating-ssh-keys#macos-and-linux)
 
-2. [Windows / Git GUI and OpenSSH](/docs/articles/users/generating-ssh-keys#windows-/-openssh)
+* [Windows / Git GUI and OpenSSH](/docs/articles/users/generating-ssh-keys#windows-/-openssh)
 
 <!--<li>
 	<p><a href="/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>
 	</li>-->
 ## MacOS and Linux
 
-Open your favorite terminal utility and generate a key:
+1. Open your Mac's Terminal application by going to **Applications** > **Utilities** > **Terminal**.
 
-```
-openssl req -new -newkey rsa:2048 -nodes -out www_mysite_com.csr -keyout www_mysite_com.key -subj "/C=US/ST=California/L=San Francisco/O=MySite LLC/CN=www.mysite.com"
-```
+2. Enter the following to generate a key:
 
-Unless you're an advanced user, just press ENTER for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
+  ```
+  openssl req -new -newkey rsa:2048 -nodes -out www_mysite_com.csr -keyout www_mysite_com.key -subj "/C=US/ST=California/L=San Francisco/O=MySite LLC/CN=www.mysite.com"
+  ```
 
-From the Terminal, output your SSH key to a file you can use:
-```nohighlight
-cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
-```
-Open the key_for_pantheon.txt on your desktop, select all and copy. You're now ready to paste this into the "Add Key" form on your account page.
+3. Unless you're an advanced user, just press ENTER for every question. If the command says the key already exists, you can either overwrite it or continue to the next step with your existing key.
+
+4. From the Terminal, output your SSH key to a file:
+  ```nohighlight
+  cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
+  ```
+5. Open the key_for_pantheon.txt on your desktop, and select and copy the entire string. You're now ready to [add the key to your account](http://localhost:8000/docs/articles/users/generating-ssh-keys#add-the-key-to-your-pantheon-account).
 
 ## Windows / OpenSSH
 
-[Download](http://git-scm.com/downloads) and install Git.
-![](/source/docs/assets/images/desk_images/46904.png)<br />
-Once you have downloaded the Git GUI installer you can get started with the setup wizard.
-![](/source/docs/assets/images/desk_images/46905.png)<br />
-Click **Next** to continue.<br />
-![](/source/docs/assets/images/desk_images/46906.png)<br />
-Select the installation folder that you want have Git installed. Unless you need to move this to another directory, you can leave the default path. Click **Next** to continue.
-![](/source/docs/assets/images/desk_images/46907.png)<br />
-If want to have the git GUI appear in the start menu you can go ahead and set the title. In this instance we simply set it to "Git". Click **Next** to continue.<br />
-![](/source/docs/assets/images/desk_images/46908.png)<br />
-A nice feature of the Git GUI is that it can set the PATH variable for you. If you are using Cygwin you will also need the have the Cygwin Git library installed so you can access git via the command line. Click **Next** to continue.<br />
-![](/source/docs/assets/images/desk_images/46909.png)<br />
-Choose option: **Checkout Windows-style...** (unless you prefer checking out with Unix line endings). It's really up to you, but most site code has Unix line endings. Click **Next** to continue.
-![](/source/docs/assets/images/desk_images/46910.png)<br />
-Voila! You are done with the installation of Git. Next you can move on the final steps of generating your SSH keys using the GUI. Click **Finish**.<br />
-![](/source/docs/assets/images/desk_images/46911.png)<br />
-From the Start menu, open the Git Gui and under the Help menu, click **Show SSH Key**. <br />
-![](/source/docs/assets/images/desk_images/46912.png)<br />
-You probably don't have one yet, so click **Generate Key**.<br />
-![](/source/docs/assets/images/desk_images/46915.png)<br />
-We recommend using a passphrase, but it's optional. It doesn't have to be the same as your Pantheon password, and it will help protect your key.<br />
-Ensure the whole key is selected (white text on a blue background). If it's not selected, triple-click on the random-looking text. Finally, click **Copy To Clipboard.**<br />
-![](/source/docs/assets/images/desk_images/46914.png)
+1. [Download](http://git-scm.com/downloads) and install Git. Once you have downloaded the Git GUI installer, complete the installation using the setup wizard.
 
-### Add the Key to your Pantheon Account
+2. Click **Next** to continue.
 
-Here we will only cover the basics, but if you need more detailed instructions on this section, then take a look at [Loading SSH Keys](/docs/articles/users/loading-ssh-keys).
+3. Select the installation folder where you want Git installed. Unless you need to move this to another directory, leave the default path. Click **Next** to continue.
+
+4. To have the Git GUI appear in the Start menu, set the title. Click **Next** to continue.
+
+5. A nice feature of the Git GUI is that it can set the PATH variable for you. If you are using Cygwin you will also need the have the Cygwin Git library installed so you can access Git via the command line. Click **Next** to continue.
+
+6. Choose option: **Checkout Windows-style...** (unless you prefer checking out with Unix line endings), and click **Next** to continue.
+
+7. Click **Finish**.
+
+    Voila! You are done with the installation of Git. Next you can move on the final steps of generating your SSH keys using the GUI.
+
+8. From the Start menu, open the Git GUI, and click **Help** > **Show SSH Key**. 
+
+9. You probably don't have one yet, so click **Generate Key**.
+
+10. Enter a passphrase (optional). It doesn't have to be the same as your Pantheon password, and it will help protect your key.
+
+11. Highlight the entire key. If it's not selected, triple-click on the text. Then click **Copy To Clipboard**.
+
+## Add the Key to Your Pantheon Account
+
+These instructions cover the basics, but if you need more information, see [Loading SSH Keys](/docs/articles/users/loading-ssh-keys).
+
 ![Adding SSH Keys](/source/docs/assets/images/add-ssh-key-dashboard.png)
 
-1. Sign in to Pantheon and visit the Account page.
-
+1. Sign in to Pantheon and select **Account**.
 2. Click **SSH Keys**.
+3. Paste the copied key into the box, and click **Add Key** to save it.
+4. Open the Git bash client, and put in the command to clone your Pantheon site. You can find this in the Dev environment of your site above the Git code log.
 
-3. Paste the copied public key into the box, and click **Add Key** to save it.
+  If you added a password to your key, you will be prompted to enter the password for the key you created using the Git GUI tool.
 
-4. Your computer is now set up to securely connect to the Pantheon git server.
-
-5. Open the git bash client, and put in the command to clone your Pantheon site. You can find this in the Dev environment of your site above the git code log.
-
-If you have added a password to your key earlier, you will be prompted to enter the password for the key you created using the git GUI tool.
 ![](/source/docs/assets/images/desk_images/46916.png)
 
 
@@ -208,12 +204,17 @@ If you have added a password to your key earlier, you will be prompted to enter 
 
 ## Troubleshooting
 
+####Invalid SSH Keys
+Spaces and non-standard alphanumeric characters in the user or hostname can cause an SSH key to appear invalid to Pantheon.
+
+To fix this, edit the user or hostname and remove spaces and/or odd characters. This will not affect the key itself, as the user/hostname are simply appended as a comment for reference.
+
 #### Control Path Error
 
-You may receive the following error:
-```nohighlight
-ControlPath too long fatal: Could not read from remote repository.
-```
+You may receive the following error:  
+`nohighlight
+ControlPath too long fatal: Could not read from remote repository.`
+
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh\_config`) for a declaration like this:
 ```bash
 Host *
@@ -221,7 +222,7 @@ ControlMaster auto
 ControlPath ~/.ssh/control-%l.%r@%h:%p
 ```
 
-There are two steps that you can try to fix this error:
+There are two steps that you can try to fix this error. First, run:
 ```bash
 Host *
 ControlMaster auto
