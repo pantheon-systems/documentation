@@ -20,7 +20,7 @@ Once the user has been added to the project, they will receive a welcome email n
 
 ## Invite a Team Member
 
-Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent with an invite to become a team member on the site.
+Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent an email with an invite to become a team member on the site.
 
 Once they have successfully signed up for an account, they will be automatically added to the team. As an added bonus if the user signs up, you'll get an extra free Dev site!
 
