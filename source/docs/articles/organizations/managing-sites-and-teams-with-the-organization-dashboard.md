@@ -15,7 +15,7 @@ The Organization Dashboard is where you manage all your sites in a single locati
 4. Choose the user's role.
 5. Click **Add user**.
 
-If the person does not yet have a Pantheon account, they will be sent an email with an invite to become a team member on the site. Once they have successfully created an account, they will be automatically added to the team.
+If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard. 
 
 ## Add Sites to Your Organization
 
