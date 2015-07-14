@@ -27,7 +27,9 @@ Generating SSH keys is different for every platform. Please follow the direction
 
 Open your favorite terminal utility and generate a key:
 
-    ssh-keygen
+```
+openssl req -new -newkey rsa:2048 -nodes -out www_mysite_com.csr -keyout www_mysite_com.key -subj "/C=US/ST=California/L=San Francisco/O=MySite LLC/CN=www.mysite.com"
+```
 
 Unless you're an advanced user, just press ENTER for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 
@@ -203,6 +205,7 @@ If you have added a password to your key earlier, you will be prompted to enter 
 
 
 <p>Your computer is now set up to securely connect to the Pantheon git server.</p>-->
+
 ## Troubleshooting
 
 #### Control Path Error
