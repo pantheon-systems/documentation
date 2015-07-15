@@ -21,4 +21,4 @@ Within your WordPress site, go to the Duplicator plugin page and create a new pa
 4. Select the **File** option, and upload the .zip file.
 5. Click **Import Site**.
 
-The import process will create and deploy a new site based on the file you uploaded. If there are issues, see [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site/) for possible solutions, or open a support ticket from your Dashboard. Be sure to include any error messages or relevant information.
+The import process will create and deploy a new site based on the file you uploaded. If there are issues, see [Migrate Sites on Pantheon](/docs/articles/sites/migrate) for possible solutions, or open a support ticket from your Dashboard. Be sure to include any error messages or relevant information.
