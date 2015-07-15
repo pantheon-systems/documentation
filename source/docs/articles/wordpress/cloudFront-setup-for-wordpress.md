@@ -7,9 +7,7 @@ category:
   - WordPress
 keywords: wordpress, cloudfront, cloudfront cdn, cdn
 ---
-## Amazon CloudFront
-
-CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy will be pulled from the the origin site directly.
+Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy will be pulled from the the origin site directly.
 
 ## Before You Begin
 
