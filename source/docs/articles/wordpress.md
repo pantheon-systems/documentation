@@ -5,7 +5,7 @@ keywords: wordpress, sites, pantheon
 ---
 WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope. Learn how to use this powerhouse CMS on the Pantheon platform with confidence by exploring our WordPress documentation.
 ## Get Started
-[Import an existing WordPress site](/docs/articles/wordpress/importing-a-wordpress-site) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
+[Export](/docs/articles/wordpress/export-an-existing-wordpress-site) and [import](/docs/articles/sites/create/importing-an-existing-site) an existing WordPress site or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
 ## WordPress Dashboard
 Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#using-wp-admin-to-manage-plugins-and-themes) and SFTP mode.
 ## wp-config.php

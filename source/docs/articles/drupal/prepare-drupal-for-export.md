@@ -6,7 +6,7 @@ category:
 keywords: import, importing site, pantheon, new site, drupal, export, export drupal, drupal archive, archive
 ---
 
-There are three major components that make up a dynamic site:
+There are three major components that make up a Drupal site:
 
 1. **Codebase** - all executable code, including Core, custom and contrib modules, plugins and themes, etc.
 2. **Database** - contains the content of the site and some site configurations.
@@ -129,4 +129,6 @@ You can upload each of your archive files separately, or by packaging the archiv
 
 Only one `.sql` file may be provided, if multiple are present the import will fail.
 
-For detailed instructions on importing your site archive, see [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site).
+## See Also
+- [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+- [Importing a Large Site Outside of the Pantheon Dashboard](/docs/articles/sites/create/importing-a-large-site/)

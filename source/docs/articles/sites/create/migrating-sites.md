@@ -14,7 +14,7 @@ We're revising our migration documentation. Our existing import documents includ
  - [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
  - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
  - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
- - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
+ - [Export an Existing WordPress Site](/docs/articles/wordpress/export-an-existing-wordpress-site/)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up

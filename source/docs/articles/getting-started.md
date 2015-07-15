@@ -23,8 +23,8 @@ If you want to develop directly on Pantheon, start with one of the many distribu
 2. **Visit the Dev installation**.  
 On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
-### Import an Existing Site
-If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/sites/create/importing-an-existing-site/) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
+### Export and Import an Existing Site
+If you have an existing site you wish to migrate, first create a [Drupal](/docs/articles/drupal/prepare-drupal-for-export) or [WordPress](/docs/articles/wordpress/export-an-existing-wordpress-site/) archive and [import](/docs/articles/sites/create/importing-an-existing-site) the site using the Pantheon Dashboard.
 
 ## Interact With Your Code
 There are two ways to add and update your site's code: Git source code management and SFTP.

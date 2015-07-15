@@ -1,5 +1,5 @@
 ---
-title: Importing a Large Site
+title: Importing a Large Site Outside of the Pantheon Dashboard
 description: Learn how to import a large Drupal or WordPress site into Pantheon outside of the Dashboard.
 category:
   - getting-started
