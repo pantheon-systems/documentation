@@ -57,8 +57,13 @@ In order to import a Drush archive, use:
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
 ```
 ## Test Your Site
+The following warning can appear on newly created site Dashboards where the import of your archive failed:
+![Unable to Load Git History](/source/docs/assets/images/unable-to-load-git-history.png)
+
+Verify the steps for preparing your [WordPress](/docs/articles/wordpress/export-an-existing-wordpress-site) or [Drupal](/docs/articles/drupal/prepare-drupal-for-export) archives manually and re-create the archive. Return to the site configuration page as instructed above and import the verified archive.
 
 We advocate using a behavioral testing framework to automate user acceptance testing. Please test your site on the platform. We recommend:
+
  - Using the Launch Check tool in the site Dashboard
  - Enabling our free New Relic Add on
  - Automated user acceptance testing with Behat, Selenium, or Casper.js
