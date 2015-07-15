@@ -14,7 +14,7 @@ Yes. We have complete and total support for WordPress sites and developers.
 
 ### Can I import an existing site?
 
-Yes. Please see [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site) for step-by-step instructions.
+Yes. Please see [Export an Existing WordPress Site](/docs/articles/wordpress/export-an-existing-wordpress-site) for step-by-step instructions.
 
 ### How do I configure wp-config?
 
@@ -91,7 +91,6 @@ You can clear the caches from your site's Pantheon Dashboard. This will take car
 
 ## Further Reading
 
-[Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/)
-
-
-[Launching a WordPress Site](/docs/articles/wordpress/starting-wordpress-site/)
+- [Export an Existing WordPress Site](/docs/articles/wordpress/export-an-existing-wordpress-site)
+- [Importing an Existing Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site)
+- [Launching a WordPress Site](/docs/articles/wordpress/starting-wordpress-site/)
