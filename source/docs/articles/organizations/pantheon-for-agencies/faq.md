@@ -13,7 +13,7 @@ Multidev allows you to more seamlessly collaborate on your website development p
 
 ### How does Multidev work?
 
-Forking a CDE creates an application server, a database server, and connects them to backing services. It creates a Git branch of your codebase off of master, and checks it out in the CDE's application server. It clones the database from the Development environment into the new database server, and clones the filesystem similarly. The new CDE has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads.
+Forking a Multidev environment creates an application server, a database server, and connects them to backing services. It creates a Git branch of your codebase off of master, and checks it out in the Multidev environment's application server. It clones the database from the Development environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads.
 
 
 ## Change Management
