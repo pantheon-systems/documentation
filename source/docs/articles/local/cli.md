@@ -28,7 +28,6 @@ We've included CLI instructions in many of our articles and guides.
 - [Cron for Drupal](/docs/articles/drupal/cron/)
 - [CloudFront CDN Setup for WordPress](/docs/articles/wordpress/cloudFront-setup-for-wordpress/)
 - [More Ways of Managing Code in SFTP Mode](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/)
-- [Migrating Sites from Other Hosts](/docs/articles/sites/create/migrating-sites/)
 - [Timeouts](/docs/articles/sites/timeouts/)
 - [Resetting Passwords](/docs/articles/sites/resetting-passwords/)
 - [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)

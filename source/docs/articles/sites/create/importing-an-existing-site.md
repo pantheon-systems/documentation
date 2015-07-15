@@ -56,3 +56,15 @@ In order to import a Drush archive, use:
 ```bash
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]
 ```
+## Test Your Site
+
+We advocate using a behavioral testing framework to automate user acceptance testing. Please test your site on the platform. We recommend:
+ - Using the Launch Check tool in the site Dashboard
+ - Enabling our free New Relic Add on
+ - Automated user acceptance testing with Behat, Selenium, or Casper.js
+ - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
+ - Logging in and clicking around your site.
+
+
+## Go Live
+Read our [Going Live Documentation](/docs/articles/going-live).
