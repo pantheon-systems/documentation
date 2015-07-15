@@ -23,7 +23,7 @@ On the Site Dashboard, click **Visit Development Site** to open the Development 
 
 ### Import an Existing Site
 <img src="/source/docs/assets/images/icon-tools.png" alt="Tools Icon" style="float:left;margin-right:15px;margin-top:10px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:5px;padding-bottom:0px;">
-If you have an existing Drupal or WordPress site that you want to import, choose <strong>Import manually</strong>. For additional details, see <a href="/docs/articles/sites/create/importing-an-existing-site/">Importing an Existing Drupal Site</a> or <a href="/docs/articles/wordpress/importing-a-wordpress-site/">Importing a WordPress Site</a>.</p>
+If you have an existing Drupal or WordPress site that you want to import, choose <strong>Import manually</strong>. For additional details, see <a href="/docs/articles/sites/migrate">Migrate Sites to Pantheon</a> or <a href="/docs/articles/wordpress/importing-a-wordpress-site/">Importing a WordPress Site</a>.</p>
 
 ## Interact With Your Code
 There are two ways to add and update your site's code: Git source code management and SFTP.</p>
