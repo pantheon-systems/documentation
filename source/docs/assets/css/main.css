@@ -1855,7 +1855,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     width: 100% !important;
   }
 }
-@-moz-document url-prefix(https://pantheon.io/docs//articles) {
+@-moz-document url-prefix(https://pantheon.io/docs/articles) {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 275px !important;
   }
