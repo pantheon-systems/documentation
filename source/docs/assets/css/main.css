@@ -1836,25 +1836,26 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
     padding-top: 20px !important;
     padding-bottom: 15px !important;
+
 }}
 }
 
-@-moz-document url-prefix(http://localhost:8000/docs/guides) {
+@-moz-document url-prefix(https://pantheon.io/docs/guides) {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 275px !important;
   }
 }
-@-moz-document url-prefix(http://localhost:8000/docs/changelog) {
+@-moz-document url-prefix(https://pantheon.io/docs/changelog) {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 275px !important;
   }
 }
-@-moz-document url(http://localhost:8000/docs) {
+@-moz-document url(https://pantheon.io/docs/) {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 100% !important;
   }
 }
-@-moz-document url-prefix(http://localhost:8000/docs/articles) {
+@-moz-document url-prefix(https://pantheon.io/docs//articles) {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 275px !important;
   }
