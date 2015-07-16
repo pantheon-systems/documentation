@@ -2,10 +2,14 @@
   {% block content_wrapper %}
     <article>
         <div class="article container">
-          
+
           <div class="col-md-9">
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
+              <span style="font-size:20px; font-weight:bold;"><a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="_blank"><strong>
+                <span class="icon-github">Edit on GitHub
+              </span></strong></a></span><br /><br />
+
 
 
             </header>
@@ -15,12 +19,7 @@
                   <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
                   {% endfor %}</p>
               {% endif %}-->
-              <a class="pull-right" href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="_blank">
-                <span class="icon-github">
-                </span>
-                Edit on GitHub
-              </a>
-              <br />
+
 
               <!--div class="outline-alert"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and -->
 
