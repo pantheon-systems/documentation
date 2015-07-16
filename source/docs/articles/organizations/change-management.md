@@ -77,7 +77,7 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
 <tr>
 <td class="tg-031e">Developer</td>
 <td class="tg-031e">- Tag Sites<br>- Access Sites<br>- Create Sites</td>
-<td class="tg-031e">- Commit code to CDEs and Dev<br>- Cannot deploy code or clone content to Test/Live, unless invited to the site or were the creator of the site, in which case they are on the site team as member or owner.</td>
+<td class="tg-031e">- Commit code to Multidev and Dev environments<br>- Cannot deploy code or clone content to Test/Live, unless invited to the site or were the creator of the site, in which case they are on the site team as member or owner.</td>
 </tr>
 <tr>
 <td class="tg-031e">Unprivileged*</td>

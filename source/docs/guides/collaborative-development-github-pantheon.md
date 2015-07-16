@@ -250,7 +250,7 @@ pantheon	ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.de
 ## Feature Branching
 
 Working with teams on Github requires a branching strategy. We are fans of Github flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on Github](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/docs/articles/sites/team-management).
-Locally, our codebase is in sync with both repositories. In order to start working on a new feature, we’ll checkout a branch. Since my site is associated with a supporting organization that has Multidev, I can test out any feature in a cloud development environment. These environments have an 11-character limit for branch names, so I'm choosing to use short branch names for my feature branches.  
+Locally, our codebase is in sync with both repositories. In order to start working on a new feature, we’ll checkout a branch. Since my site is associated with a supporting organization that has Multidev, I can test out any feature in a Multidev environment. These environments have an 11-character limit for branch names, so I'm choosing to use short branch names for my feature branches.  
 
 ```nohighlight
 $ git checkout -b configs
@@ -289,24 +289,24 @@ Total 365 (delta 70), reused 0 (delta 0)
 remote:
 remote: PANTHEON NOTICE:
 remote:
-remote: Skipping code sync, no cloud development environments were found for branch "configs".
+remote: Skipping code sync, no multidev environments were found for branch "configs".
 remote:
 To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
  * [new branch]      configs -> configs
 ```
-The platform is telling me that no cloud development environments (CDEs) were found associated with the Git branch. I can stay on the command-line and quickly create one with Terminus.
+The platform is telling me that no Multidev environments were found associated with the Git branch. I can stay on the command-line and quickly create one with Terminus.
 
 ```nohighlight
 $ terminus site create-env --site=d7-ci --env=configs --from-env=dev
 ```
-![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Cloud Development Environment named configs, created with Terminus")
-The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the CDE on my Github pull request.
+![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
+The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my Github pull request.
 
 ![New environment configuration admin url](/source/docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
 
 ### Create Pull Request
 
-We’re now ready to create a pull request on GitHub. The pull request can include things like links to the CDE where the team can view the effects of the commits, @-mentions of team members, and a list of tasks for team members to perform before merging.
+We’re now ready to create a pull request on GitHub. The pull request can include things like links to the Multidev environment where the team can view the effects of the commits, @-mentions of team members, and a list of tasks for team members to perform before merging.
 
 ![Pull request for configs branch](/source/docs/assets/images/configuration-pull-request-1.png "A pull request on github for the configs branch to be merged to master")
 

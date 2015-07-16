@@ -2,7 +2,7 @@
 
 #About This Guide
 
-This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
+This style guide will help Pantheors who create technical content write in consistent voice, tone, and style. See the [glossary](https://docs.google.com/a/pantheon.io/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit "Pantheon google drive, glossary") for an alphabetical listing of commonly used words, terms, UI elements, and titles.
 
 For any questions or comments, [create an issue](https://github.com/pantheon-systems/documentation/issues).
 
@@ -135,7 +135,7 @@ Select the **Settings** tab.
 Use sentence case for body content and short phrases, even when the content is a link. Sentence case means you only capitalize the first letter of the sentence.
 
 **Example:**
-We run our status checks on your site automatically once an hour. If you'd like fresher data, [run the checks now](www.getpantheon.com).  
+If you want to permanently opt-out of a check, you can use the [$conf array in settings.php](https://www.drupal.org/node/1525472).  
 
 **Code Snippets**
 
@@ -159,19 +159,19 @@ sites/all/modules/contrib
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
-For help with SSH keys, see [Generating SSH Keys](https://www.getpantheon.com/docs/articles/users/generating-ssh-keys/).
+For help with SSH keys, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/).
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
-
-For detailed instructions, see [Article Title](www.getpantheon.com).
-
+```
+For detailed instructions, see [Article Title](/docs/articles/path).
+```
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
-
-For more information, see [Article Title](www.getpantheon.com).
-
+```
+For more information, see [Article Title](/docs/articles/path).
+```
 ## Dates
 
 Use this format to indicate a date: January 10, 2014. Do not abbreviate the month.
@@ -413,7 +413,7 @@ Generating SSH Keys
 
 ## User Interface Terminology
 
-See below for visual examples of the terms to use when referring to specific pages. Also see the [Glossary](https://docs.google.com/a/getpantheon.com/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary").
+See below for visual examples of the terms to use when referring to specific pages. Also see the [Glossary](https://docs.google.com/a/pantheon.io/spreadsheets/d/1npBDQl1v0l-mukVC9yF9RSwvwjdSlrqUY5B1oDgy9kw/edit#gid=0 "Pantheon google drive, Glossary").
 
 ### User Dashboard
 

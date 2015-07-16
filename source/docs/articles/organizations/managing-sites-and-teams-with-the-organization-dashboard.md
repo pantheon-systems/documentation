@@ -9,37 +9,34 @@ The Organization Dashboard is where you manage all your sites in a single locati
 
 ## Add Users to Your Organization
 
-<div class="alert alert-info" role="alert">
-<strong>Note</strong>: Only existing Pantheon users may be added to your organization. If you want all new users whose email addresses are on your company's domain to automatically be added to your org upon registration, please contact your account executive.
-</div>
 1. Click on the **People tab**.
 2. Click **Add user**.
 3. Enter the user's email address.
 4. Choose the user's role.
 5. Click **Add user**.
 
-If the user does not exist on Pantheon, please direct them to  [https://dashboard.pantheon.io/register](https://dashboard.pantheon.io/register) and add them when their account is active. If your organization is set up to automatically add users with email addresses on your domain, simply ask them to create accounts on Pantheon with the correct email address.
+If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard. 
 
 ## Add Sites to Your Organization
 
 ### New Sites
 
-While creating a new site, any user in your org will see an "Organization Affiliation" select field containing any organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
+While creating a new site, any user in your Org will see an "Organization Affiliation" select field containing any Organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
 
 ### Existing Sites
 
-From the Site Dashboard you wish to add,
+From the Site Dashboard you want to add:
 
 
 1. Click **Team**.
 2. Click **Add Supporting Organization**.
-3. Search for your organization.
+3. Search for your Organization.
 4. Click **Add**.
 
 
 ## Manage Site Teams
 
-From the Sites tab, you may add users to or remove them from site teams. Members of Ally, Partner, And Strategic Partner organizations already have access to all sites in the org. However, if you need to add developers as full team members to a site, or outside contractors to individual sites, you'll need to add them to the site team.
+From the Sites tab, you can add users to or remove them from site teams. Members of Ally, Partner, And Strategic Partner Organizations already have access to all sites in the Org. However, if you need to add developers as full team members to a site, or outside contractors to individual sites, you'll need to add them to the site team.
 
 1. Check the box next to the site or sites you want to add the user to.
 2. Click **Team** and **Add a team member**.
@@ -53,9 +50,9 @@ Removing team members follows the same process.
 
 ## Filter Sites
 
-At the sites tab, the left panel contains groups of filters, for limiting the sites list. Filters will appear in each group, as sites are added that match the filters. You can add custom tags by selecting sites by their checkbox, and clicking **Tags** and **Add Tag(s)**, then writing in the tag you want to add.
+At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters. You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: Tags are case-sensitve.
 </div>
-To remove tags, select the site(s) you want to remove, and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
+To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
