@@ -1877,6 +1877,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     width: 275px !important;
   }
 }
+
 .gs-result .gs-title, .gs-result .gs-title * {
   font-size: 18px !important;
   text-decoration: none !important;
@@ -1913,7 +1914,11 @@ color: #274E13 !important;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
-
+@-moz-document url-prefix() {
+  .breadcrumb {
+    padding-top: 20px !important;
+  }
+}
 .page-header {
     padding-bottom: 9px;
     margin: auto;
