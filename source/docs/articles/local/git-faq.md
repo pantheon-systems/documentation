@@ -5,11 +5,11 @@ category:
   - developing
 keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
 ---
+
 ## Resolving Conflicts
 
 ### How do I resolve conflicts when updating Core?
-
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):
+<img src="/source/docs/assets/images/icon-workflow.svg" alt="Worfklow Icon" style="margin-right:30px;float:left;border:0;"><p style="margin-top:10px;margin-bottom:40px;">If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):</p>
 ```bash
 git pull -Xtheirs [upstream url] master
 ```
@@ -52,10 +52,10 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 - [Panopoly](https://github.com/populist/panopoly-drops-7.git): https://github.com/populist/panopoly-drops-7.git
 
 ### How can I manually resolve conflicts?
+<p>Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.</p>
 
-Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
-
-_"When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge." - [Git Manual](http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge)_
+<p style="margin-top:10px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
+" alt="Worfklow Icon" style="margin-right:30px;margin-top:0px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:  
@@ -135,8 +135,8 @@ From your local clone, you should be able to run the `git apply` command as per 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-
-If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.
+<p style="margin-top:30px;margin-bottom:30px;"><img src="/source/docs/assets/images/icon-performance-optimization.svg" alt="Performance Optimization Icon" style="margin-right:30px;margin-top:0px;float:left;border:0;"><br />
+If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.</p><br>
 
 1. Start a new Pantheon site with a vanilla version of Drupal. Choose the version that's appropriate for your project.
 2. Clone your vanilla Pantheon repository using the copy/paste string from the Dashboard.
