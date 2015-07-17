@@ -332,6 +332,7 @@ img.noborder {
   padding-top: 20px;
   padding-bottom: 20px;
   transition: all 0.2s ease-in;
+  background-color: transparent;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
@@ -729,30 +730,36 @@ img.noborder {
   padding: 8px 20px 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #999;
-}
-
-.pio-docs-sidebar .nav > li > a:hover,
-.pio-docs-sidebar .nav > li > a:focus {
   padding-left: 18px;
-  color: #444;
+  color: #44525E;
   text-decoration: none;
+
+}
+.pio-docs-sidebar .nav > li > a:focus,
+.pio-docs-sidebar .nav > li > a:active,
+.pio-docs-sidebar .nav > li > a:hover {
+  padding-left: 18px;
+  color: #44525E;
+  text-decoration: none;
+  border-right: 4px solid #DDE5E7;
+  background-color: transparent;
+
 }
 
 .pio-docs-sidebar .nav > .active > a,
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
-  color: #000;
-  background-color: rgb(244, 244, 244);
-  border-left: 4px solid #EFD01B;
-  font-weight: bold;
+  color: #44525E;
+  background-color: #EEF2F3;
+  border-right: 4px solid #DDE5E7;
 }
 
 /* Nav: second level (shown on .active) */
 .pio-docs-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
   padding-bottom: 10px;
+
 }
 .pio-docs-sidebar .nav .nav > li > a {
   padding-top: 5px;
@@ -761,15 +768,24 @@ img.noborder {
   font-size: 12px;
   font-weight: normal;
 }
-.pio-docs-sidebar .nav .nav > li > a:hover,
 .pio-docs-sidebar .nav .nav > li > a:focus {
-  padding-left: 29px;
+  border-right: 4px solid #DDE5E7;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #EEF2F3;
 }
 .pio-docs-sidebar .nav .nav > .active > a,
-.pio-docs-sidebar .nav .nav > .active:hover > a,
-.pio-docs-sidebar .nav .nav > .active:focus > a {
-  padding-left: 28px;
-  font-weight: bold;
+.pio-docs-sidebar .nav .nav > .a:focus {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #EEF2F3;
+
 }
 
 /* Back to top (hidden on mobile) */
@@ -781,11 +797,11 @@ img.noborder {
   margin-left: 10px;
   font-size: 12px;
   font-weight: 500;
-  color: #999;
+  color: #44525E;
 }
 .back-to-top:hover,
 .pio-docs-theme-toggle:hover {
-  color: #563d7c;
+  color: #44525E;
   text-decoration: none;
 }
 .pio-docs-theme-toggle {
@@ -1899,6 +1915,12 @@ color: #274E13 !important;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
+
+h1:after {
+  content: '\\';
+  color: #EFD01B;
+  margin-left: 16px;
+}
 @-moz-document url-prefix() {
   .breadcrumb {
     padding-top: 20px !important;
@@ -1916,10 +1938,4 @@ color: #cccccc;
 padding: 0.5em;
 white-space: pre-wrap;
 display: block;
-}
-
-.nav>li>a:focus, .nav>li>a:hover
-{
-  text-decoration: none;
-  background-color: transparent !important;
 }
