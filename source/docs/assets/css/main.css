@@ -769,7 +769,7 @@ img.noborder {
 .pio-docs-sidebar .nav .nav > .active:hover > a,
 .pio-docs-sidebar .nav .nav > .active:focus > a {
   padding-left: 28px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Back to top (hidden on mobile) */
