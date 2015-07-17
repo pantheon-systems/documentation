@@ -5,12 +5,12 @@ category:
   - getting-started
 keywords: going live, getting started, create account, create site, import, faqs
 ---
-<img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:15px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:10px;">
+<img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:15px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:20px;">
 Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever.</p>
 ## Create Your Free Account
 If you haven't already done so, create your [free Pantheon account](https://dashboard.pantheon.io/register).
 ## Create a Site
-<img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="float:left;margin-left:15px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:0px;">Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When one of your sites converts to a <a href="https://pantheon.io/pricing">paid plan</a>, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.</p>
+<img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="padding-top:2px;float:left;margin-left:15px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:0px;">Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When one of your sites converts to a <a href="https://pantheon.io/pricing">paid plan</a>, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.</p>
 
 Visit your Dashboard to [create a site](https://dashboard.pantheon.io/sites/create).
 
