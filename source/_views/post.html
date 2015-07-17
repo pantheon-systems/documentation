@@ -20,7 +20,7 @@
                         {% set newer_disabled = 'disabled' %}
                         {% set newer_url = '#void' %}
                     {% else %}
-                        {% set next_url = page.next_post.url %}
+                        {% set newer_url = page.next_post.url %}
                     {% endif %}
                     <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Newer</a></li>
                     {% if not page.previous_post %}
