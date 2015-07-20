@@ -14,6 +14,7 @@ The easiest way to import an existing site into Pantheon is to create a new site
 Next, determine if you will import one archive or multiple. By default, you have the option to give a single archive for your entire import.
 
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
+ 
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 

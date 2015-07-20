@@ -48,7 +48,7 @@ ln -s $HOME/drush-5.10.0/drush /usr/local/bin/drush
 
 See [this documentation](https://drupal.org/node/1674222) or [this video](http://youtu.be/TCg02d4am_Q) for more.
 
-Windows users have the option of [an exe installer](http://drush.ws/drush_windows_installer). On Linux you can install [via PEAR](https://drupal.org/node/2132447), or by using essentially the same instructions as on MacOS.
+Windows users have the option of [an exe installer](http://docs.drush.org/en/master/install/). On Linux you can install [via PEAR](https://drupal.org/node/2132447), or by using essentially the same instructions as on MacOS.
 
 Now that you've got Drush installed you can get a quick status check to be sure it works. Depending on your OS, this output may vary, but here's mine for reference:
 

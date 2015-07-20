@@ -144,7 +144,7 @@ If you don’t see what you’re expecting, review your settings.php and ensure 
 That’s it! Now when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in settings.php. Our settings.php will make sure email is not rerouted on Live, so it’s business as usual. Make sure you’re using a [SMTP gateway](https://pantheon.io/docs/articles/sites/code/email/#outgoing-email) on Live to ensure email deliverability.
 
 ###See Reroute Email In Action
-To see exactly what we did, I forked a new [MultiDev](https://pantheon.io/docs/articles/sites/multidev/) CDE called ```demo``` and requested a new account:
+To see exactly what we did, I forked a new [MultiDev](https://pantheon.io/docs/articles/sites/multidev/) Multidev environment called ```demo``` and requested a new account:
 
 ![Drupal site showing account requested and emails sent](/source/docs/assets/images/reroute-email-account-requested.png)
 

@@ -52,7 +52,7 @@ We encourage you to use a continuous integration server, like Jenkins, Travis-CI
 2. Pull the remote repository into the local clone of your testing site.
 3. Checkout the updates branch.
 4. Push the updates branch to Pantheon.
-5. Create a cloud development environment for the branch.
+5. Create a Multidev environment for the branch.
 6. Wipe the database and files from the update branch.
 7. Run acceptance tests for a new-site installation use case.
 8. Merge the code into dev.

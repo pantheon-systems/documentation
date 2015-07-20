@@ -21,10 +21,16 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Cache Expiration
 
+- Global Redirect  
+ **Issue**: Too many redirects error when site is in maintenance mode.  
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not ticked in the Global Redirect administration page.
+
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 - IMCE
+
+- Mobile Tools 
 
 - Mollom  
  **Issue**: Cookies break Varnish.
@@ -45,7 +51,6 @@ This is built into the Pantheon platform.
 
 - Varnish
 
-
 ### Using the `/tmp` Directory
 **Issue**:
 The modules listed below are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
@@ -62,8 +67,10 @@ The modules listed below are not supported due to the use of the `/tmp` director
 
 - Taxonomy CSV  
 
-- Views data export  
+- Views data export
 
+- Webform export<br>
+ **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 
 ##WordPress Plugins

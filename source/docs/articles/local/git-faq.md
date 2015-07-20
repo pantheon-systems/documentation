@@ -193,7 +193,7 @@ If you're having problems cloning your Git repository, verify that you have enab
 
 ### Why am I being prompted for my password after adding the public key?
 
-This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/docs/articles/error-permission-denied-publickey/).
+This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 ```bash

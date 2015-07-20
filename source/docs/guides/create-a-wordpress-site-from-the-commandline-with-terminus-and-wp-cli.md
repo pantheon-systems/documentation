@@ -40,7 +40,7 @@ Now we need to tell terminus who you are. You can do that with the `auth` comman
 ```nohighlight
 $ terminus auth login your@email.tld
 Your dashboard password (input will not be shown):
-Logging in as brian@getpantheon.com
+Logging in as brian@pantheon.io
 Saving session data
 
 ```
@@ -170,11 +170,11 @@ $ terminus wp core install --site=cli-test \
                            --title="WP-CLI Test" \
                            --admin_user=admin \
                            --admin_password=pantheon.rocks \
-                           --admin_email="cal@getpantheon.com"
+                           --admin_email="cal@pantheon.io"
 ```
 The same command shown on a single line:
 ```nohighlight
-terminus wp core install --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@getpantheon.com
+terminus wp core install --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@pantheon.io
 ```
 If everything goes as planned you'll see this message:
 ```bash

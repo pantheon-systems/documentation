@@ -9,13 +9,13 @@ keywords: getting started, faqs, sites, pantheon, plans, developing, security
 
 ### Can I put production sites on Pantheon?
 
-Yes. Hundreds of live production sites run on Pantheon.
+Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
 Pantheon supports Drupal 6 and 7, as well as development sandboxes for Drupal 8.
 
-## What versions of WordPress does Pantheon support?
+### What versions of WordPress does Pantheon support?
 
 Pantheon supports the most recent release of WordPress via [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured wp-config.php.
 
@@ -23,11 +23,16 @@ Pantheon supports the most recent release of WordPress via [upstream](https://gi
 
 Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://pantheon.io/pricing).
 
+
 ### Where are the Pantheon servers located?
 
 All Pantheon servers are currently located in the United States. We have plans to expand to Europe, but we don't have an ETA for when they will be available for end-users.
 
-### Can I run non Drupal applications on Pantheon?
+You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/) for rapidly serving files from multiple locations. In most cases, sites running on Pantheon in the U.S. perform faster than sites running on local hosting, even if the user is halfway around the world.
+
+Transatlantic hops in are usually 200-300ms, while Pantheon can usually speed up site page load times by seconds.
+
+### Can I run non-Drupal applications on Pantheon?
 
 This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
 
@@ -35,7 +40,8 @@ This is not officially supported, but the PHP runtime is complete. Some users ha
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drupal-drush-command-line-utility/), [WP-CLI](#does-pantheon-support-wp-cli?)), and SFTP files. Rsync is currently unstable on Pantheon. The engineering team is at work to improve its functionality on the platform.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](https://github.com/pantheon-systems/cli), [drush](/docs/articles/local/drupal-drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files.
+
 
 ### How does Pantheon work with DNS?
 
@@ -60,15 +66,15 @@ No. Pantheon's architecture is designed to provide high performance and a rich f
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
-## Does Pantheon support WordPress Multisite?
+### Does Pantheon support WordPress Multisite?
 
-No. While WordPress Mulitsites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
+No. While WordPress multisites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated and with  [@alias files pre-generated for you](https://pantheon.io/blog/drush-aliases-available) to use in your local environment.
+Yes. Pantheon comes with Drush pre-integrated and with [@alias files pre-generated](https://pantheon.io/blog/drush-aliases-available) for you to use in your local environment.
 
-## Does Pantheon support WP-CLI?
+### Does Pantheon support WP-CLI?
 
 Yes. [Terminus](https://github.com/pantheon-systems/cli) incorporates WP-CLI commands so that users can perform operations on the Pantheon platform.
 
@@ -78,11 +84,11 @@ Yes. Local development is a great best practice, and Pantheon supports a wide ar
 
 ### How does cron work with Drupal on Pantheon?
 
-The plafrorm will use drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and drush aliases.
+The platform will use Drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and Drush aliases.
 
-### How does Cron work with WordPress on Pantheon?
+### How does cron work with WordPress on Pantheon?
 
-WordPress runs it's own internal Cron-like system as visitors load your site. You can also use external services to schedule and create tasks, for more information see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
+WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, see [Cron for WordPress](/docs/articles/wordpress/cron-for-wordpress).
 
 ### Do you support ffmpeg transcoding?
 
@@ -90,7 +96,7 @@ We don't currently have support for transcoding. We do not have plans to add thi
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The best way to do this by calling the PHP function set\_time\_limit() in your routine that takes more time. Function reference: http://php.net/manual/en/function.set-time-limit.php
+The best way to do this by calling the PHP function [set\_time\_limit()](http://php.net/manual/en/function.set-time-limit.php) in your routine that takes more time.
 
 ## Caching and Performance
 
@@ -99,13 +105,14 @@ The best way to do this by calling the PHP function set\_time\_limit() in your r
 We're currently testing out integration strategies for Solr with our next-generation infrastructure. When we deploy it, it will almost certainly be the latest stable Solr available at that time.
 
 
-## Debugging
+## Support
 
 ### What support is available for Pantheon?
 
 For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets and IRC. We also have enterprise support plans available that offer Service Level Agreements and 24x7 on-call support.
 
-You can read more about our support offerings on [our pricing page](https://pantheon.io/pricing).
+Read more about [getting support](https://pantheon.io/docs/articles/getting-support/) and our support offerings on [our pricing page](https://pantheon.io/pricing).
+
 
 ## Security
 

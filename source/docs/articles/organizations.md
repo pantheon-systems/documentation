@@ -12,7 +12,7 @@ Access the Organization Dashboard from the User Dashboard in the Organizations t
 
 ## Multidev
 
-All Partner organizations have Multidev available on every site. Click on **Multidev** in your Site Dashboard to get going. Sites have a maximum of ten Cloud Development Environments (CDE's) and unlimited git branches, from which CDE's can be created on-demand. Learn how to [use Multidev](/source/docs/articles/sites/multidev).
+All Partner organizations have Multidev available on every site. Click on **Multidev** in your Site Dashboard to get going. Sites have a maximum of ten Multidev environments and unlimited git branches, from which Multidev environments can be created on-demand. Learn how to [use Multidev](/source/docs/articles/sites/multidev).
 
 ## Change Management
 
