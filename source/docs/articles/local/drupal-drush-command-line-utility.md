@@ -193,6 +193,22 @@ As an alternative to `drush sql-sync` you can use `drush sql-dump` instead.
 
 Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) from the Pantheon Dashboard.
 
+## Add Custom Drush Commands
+While we have the full spectrum of drush core already available for your use, you may have a command that you regularly use that you’d like to add, for instance, [Drush search and replace (sar)](https://www.drupal.org/project/sar) .
+
+Steps  
+1. Put site in Git mode
+2. Clone locally
+3. Create “drush” folder in Drupal root.
+4. Add “sar” Drush command to “drush” folder.
+5. Commit drush/sar
+6. Push your code up to master. 
+7. Deploy to Test and Live.
+8. Download your Pantheon Drush aliases (see Drush Aliases Available).
+9. Clear your Drush cache on each environment (example: “drush @pantheon.<site-name>.devcc  drush” ) .
+
+Note: If you have successfully set up Terminus, the Pantheon CLI, you can obtain your Drush aliases by using “terminus sites aliases”.  For more details, please visit our Support Document on Drupal Drush.  At this point, your added Drush command should be ready to use.   Drush 5 is the default version for newly created sites on Pantheon.  However, to take strict control over your Drush site aliases, see [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file).
+
 ## Use Drush to Update Modules on Pantheon
 
 First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and then:
