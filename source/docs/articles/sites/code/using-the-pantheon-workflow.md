@@ -38,7 +38,7 @@ This may be a good time to run regression or "smoke" tests by stepping through y
 
 ### 3. Deploy code to Live
 
-After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, click **Clear Caches** on your Live environment. For more details, see [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/).
+After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/).
 
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
 
