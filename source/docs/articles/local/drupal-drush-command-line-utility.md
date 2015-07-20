@@ -204,10 +204,10 @@ While we have the full spectrum of drush core already available for your use, yo
 5. Commit drush/sar.
 6. Push your code up to master. 
 7. Deploy to Test and Live.
-8. Download your Pantheon [drush aliases](/docs/articles/local/drupal-drush-command-line-utility/#list-available-site-aliases).
+8. Download your Pantheon [drush aliases](https://pantheon.io/blog/drush-aliases-available).
 9. Clear your drush cache on each environment. (example: “drush @pantheon.<site-name>.devcc drush”)
 
-If you have successfully set up Terminus, the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon.  However, to have strict control over your drush site aliases, see [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file).
+If you have successfully set up [Terminus](https://pantheon.io/docs/articles/local/cli/), the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon.  However, to have strict control over your drush site aliases, see [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file).
 
 ## Use Drush to Update Modules on Pantheon
 
