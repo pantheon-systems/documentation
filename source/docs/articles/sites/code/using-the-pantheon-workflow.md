@@ -23,6 +23,7 @@ Update code in the Dev environment via [SFTP](/docs/articles/sites/code/developi
 ### 2. Combine fresh code from Dev and fresh content from Live in Test
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and freshly combine them in Test to be absolutely certain that your deployment to Live will go as planned.
+
 ![Site dashboard, test environment, code section](/source/docs/assets/images/desk_images/376212.png)
 
 After running this operation, be sure that:  
@@ -37,8 +38,10 @@ This may be a good time to run regression or "smoke" tests by stepping through y
 
 ### 3. Deploy code to Live
 
-After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website.
+After testing your changes, you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/).
+
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
+
 ![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218.png)
 
 ## Configuration Management
@@ -50,7 +53,6 @@ Dealing with changes to your site's configuration, stored in the database, can b
 * [WP-CFM plugin](https://github.com/forumone/wp-cfm): exports bundles of configuration to `.json` files in `wp-content/config`.
 
 * [Advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
-
 
 
 ### Drupal
