@@ -13,8 +13,10 @@ If you need to add email to your new domain, you can add it at this time. Panthe
 After you've purchased your domain name, follow the instructions below.  
 
 ## Configure Domain Settings
-1. Sign in to your account at GoDaddy.com.
-2. Click **Manage My Domains**, then **Manage DNS**.
+
+1. Sign in to your account at GoDaddy.com.
+2. Click **Manage** next to Domains.
+3. Click the gear icon, and choose **Manage DNS**.
 3. Enter the **A record** or **CNAME** for your domain. Make sure to enter the IP address or the CNAME to point your domain to Pantheon. For more information, see [Going Live](/docs/articles/going-live/). 
 
 <div class="alert alert-warning" role="alert">
