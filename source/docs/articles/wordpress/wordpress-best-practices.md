@@ -14,7 +14,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Automate testing with [Behat](/docs/guides/automated-testing-wordpress-behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
-* [Add an SSL certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) and improve your site's security and SEO rankings by adding [CloudFlare Free SSL](/docs/articles/wordpress/add-cloudflare-free-ssl-to-wordpress-sites).
+* We recommend using SSL/HTTPS. Pro plans and above can [load a certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/articles/wordpress/add-cloudflare-free-ssl-to-wordpress-sites).
 
 * Use [JetBrains PhpStorm](docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress), a commercial PHP IDE that can be configured to work with WordPress sites so you can easily build and maintain custom plugins.
 
