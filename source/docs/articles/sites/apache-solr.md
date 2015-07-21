@@ -61,7 +61,7 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
 ## Add the IndexServer from the Dashboard
 
 First, you will need to add the IndexServer to your site. This can be done from the Dashboard by going to Settings > Add Ons > Solr:<br />
- ![](/source/docs/assets/images/desk_images/290603.png)
+ ![](/source/docs/assets/images/add-apache-solr.png)
 ## Add Apache Solr Search or Search API Solr Search Module
 
 Two contributed modules are supported by Pantheon:
