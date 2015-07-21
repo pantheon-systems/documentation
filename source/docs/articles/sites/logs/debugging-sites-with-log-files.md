@@ -54,7 +54,7 @@ Once connected, you'll see several directories:
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
 ### See Also
-- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs)
+- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/logs/downloading-live-error-logs)
 
 ## Frequently Asked Questions
 

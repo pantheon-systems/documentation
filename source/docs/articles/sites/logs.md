@@ -44,7 +44,7 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 !
 done
 ```
-For more information, see [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs/).
+For more information, see [Automate Downloading Logs from the Live Environment](/docs/articles/sites/logs/downloading-live-error-logs/).
 ## Download MySQL Slow Query Log
 1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
