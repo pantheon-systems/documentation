@@ -8,7 +8,7 @@ Log files track and record your site's activity which help you find, debug, and 
 
 Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
 
-## Download nginx and Code Related Logs
+## Download Raw Webserver Log Files
 1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Open a terminal window and paste the SFTP connection command.
