@@ -62,6 +62,6 @@ You now have a local copy of the `mysqld-slow-query.log` file.
 ## See Also
 - [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files)
 - [MySQL Slow Log](/docs/articles/sites/logs/mysql-slow-log/)
-- [PHP Slow Log](/docs/articles/sites/code/php-slow-log/)
+- [PHP Slow Log](/docs/articles/sites/logs/php-slow-log/)
 - [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/)
 - [Bots and Indexing](/docs/articles/sites/code/bots-and-indexing/)
