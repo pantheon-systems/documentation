@@ -19,6 +19,6 @@ Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend 
 
 ## See Also
 - [MySQL Troubleshooting with New Relic Pro](/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/)
-- [MySQL Slow Log](/docs/articles/sites/database/mysql-slow-log/)
+- [MySQL Slow Log](/docs/articles/sites/logs/mysql-slow-log/)
 - [Converting MySQL Tables from MyISAM to InnoDB](/docs/articles/sites/database/myisam-to-innodb/)
 - [Database Connection Errors](/docs/articles/sites/database/database-connection-errors/)
