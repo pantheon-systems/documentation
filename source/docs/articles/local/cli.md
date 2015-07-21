@@ -37,4 +37,4 @@ We've included CLI instructions in many of our articles and guides.
 - [Email on Pantheon](/docs/articles/sites/code/email)
 - [LDAP and LDAPS](/docs/articles/sites/code/ldap-and-ldaps)
 - [Private Files with Drupal](/docs/articles/drupal/private-files)
-- [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files)
+- [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files)

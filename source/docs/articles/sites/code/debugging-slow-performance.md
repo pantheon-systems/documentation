@@ -79,7 +79,7 @@ Don’t shoot the messenger - disabling db\_log will not fix bad code, and ignor
 
 As a graphic example, if your slowest database operation is an INSERT to watchdog, then you really should address the problem and fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking literally 70.6% of the execution time.  
  ![](/source/docs/assets/images/desk_images/200891.png)  
-Learn more about [debugging sites with log files](/docs/articles/sites/debugging-sites-with-log-files).
+Learn more about [debugging sites with log files](/docs/articles/sites/logs/debugging-sites-with-log-files).
 
 
 ## Too Many Database Queries
