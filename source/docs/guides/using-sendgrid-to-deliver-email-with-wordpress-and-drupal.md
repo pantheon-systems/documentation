@@ -15,7 +15,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 [SendGrid](https://sendgrid.com) has a lot of things going for it, all of which do the hard work for you when it comes to how mail is managed on your site. It can handle massive email campaigns while providing highly detailed and flexible reporting, along with the ability to scale and increase deliverability.
 
-For smaller sites with less traffic, it also allows up to 400 free emails per month. Regardless of your situation, SendGrid has you covered!
+For smaller sites with less traffic, it also allows up to 400 free emails per day. Regardless of your situation, SendGrid has you covered!
 
 ## Create a SendGrid Account
 
