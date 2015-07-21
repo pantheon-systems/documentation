@@ -6,9 +6,9 @@ draft: true
 ---
 Log files track and record your site's activity which help you find, debug, and isolate current or potential problems on your site. These logs can also be used to compile statistics on your visitors and referral traffic.
 
-Each environment (Multidev, Dev, Test, and Live) have their own respective log files, which can be obtained via SFTP.
+Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
 
-## Download Logs
+## Download nginx and Code Related Logs
 1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Open a terminal window and paste the SFTP connection command.
@@ -18,7 +18,7 @@ Each environment (Multidev, Dev, Test, and Live) have their own respective log f
    get -r logs
    ```
 
-You will now have a local copy of the logs directory, which contains the following:
+You now have a local copy of the logs directory, which contains the following:
 ```nohighlight
 ├── logs
     └──nginx-access.log
@@ -45,8 +45,23 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 done
 ```
 For more information, see [Automate Downloading Logs from the Live Environment](/docs/articles/sites/downloading-live-error-logs/).
+## Download MySQL Slow Query Log
+1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
+2. Click **Connection Info** and copy the **SFTP Command Line** command.
+3. Edit and execute the command by replacing `appserver` with `dbserver`, like so:
 
-## Debugging
+ ```nohighlight
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+ ```
 
-
-## Reporting
+4. Run the following SFTP command in terminal:
+```nohighlight
+get logs/mysqld-slow-query.log
+```
+You now have a local copy of the `mysqld-slow-query.log` file.
+## See Also
+- [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files)
+- [MySQL Slow Log](/docs/articles/sites/database/mysql-slow-log/)
+- [PHP Slow Log](/docs/articles/sites/code/php-slow-log/)
+- [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/)
+- [Bots and Indexing](/docs/articles/sites/code/bots-and-indexing/)
