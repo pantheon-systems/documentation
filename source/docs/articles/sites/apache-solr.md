@@ -49,18 +49,18 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
 	</tbody>
 </table>
 
-## Enabling Solr for a Pantheon Site
+## Enabling Solr for a Drupal Site
 
-1. Add the IndexServer from the Dashboard (Settings -> Add-Ons -> Solr).
+1. Add the Apache Solr Index Server from the Dashboard (Settings -> Add-Ons -> Apache Solr Index Server).
 2. Make sure you have the [latest version of Drupal](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update).
 3. Add either the Apache Solr Search or Search API Solr search module to your code base.
 4. Enable the Pantheon Apache Solr module.
 5. Post the schema.xml using the Pantheon Apache Solr module.
 6. Enable and configure your Solr module.
 
-## Add the IndexServer from the Dashboard
+## Add the Apache Solr Index Server from the Dashboard
 
-First, you will need to add the IndexServer to your site. This can be done from the Dashboard by going to Settings > Add Ons > Solr:<br />
+First, you will need to add the Index Server to your site. This can be done from the Dashboard by going to Settings > Add Ons > Apache Solr Index Server:<br />
  ![](/source/docs/assets/images/add-apache-solr.png)
 ## Add Apache Solr Search or Search API Solr Search Module
 
