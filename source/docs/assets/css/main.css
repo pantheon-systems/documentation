@@ -54,14 +54,6 @@ h4 {
   margin: 20px 0 10px 0;
   }
 
-.docs{
-  /* Navbar Site Title */
-  color:#fff;
-  font-weight: 700;
-  font-size: 1.3em;
-  margin: 7px 0 0;
-}
-
 .featured > li > a {
   text-transform: capitalize;
   margin-bottom: 10px;
@@ -96,7 +88,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
-  padding-top: 50px;
+  padding-top: 60px;
   background-color: #F4F4F4;
   color: #333;
 }
@@ -125,8 +117,7 @@ body.row.main {
 
 .search-form {
   margin-top: 8px;
-  margin-right: 50px;
-  width: 210px;
+  list-style: none;
 }
 
 .landing-search {
@@ -294,6 +285,35 @@ img.noborder {
 * Turn the `.navbar` at the top of the docs purple.
 */
 
+.navbar-nav{
+  float: right;
+}
+
+.docs svg{
+  margin-top: 7px;
+}
+
+#navbar ul li{
+  float: right;
+  text-transform: uppercase;
+  background: #222;
+}
+  #navbar ul li:focus{
+    background: #222;
+  }
+
+#navbar .create-account a{
+  color: #EFD01B;
+}
+
+#navbar .create-account::after{
+  content: &rsaquo;
+}
+
+.active-trail a{
+  box-shadow: inset 0 -4px 0 #EFD01B;
+}
+
 .pio-docs-nav {
   margin-bottom: 0;
   background-color: #222;
@@ -306,25 +326,27 @@ img.noborder {
 .pio-docs-nav .navbar-brand,
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
   transition: all 0.2s ease-in;
+  background-color: transparent;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
 .pio-docs-nav .navbar-nav > .active > a:hover {
-  color: #fff;
-  background-color: #444;
+  box-shadow: inset 0 -4px 0 #EFD01B;
+
 }
 .pio-docs-nav .navbar-toggle .icon-bar {
-  background-color: #FFFFFF;
+
 }
-.pio-docs-nav .navbar-header .navbar-toggle {
-  border-color: #fff;
-}
+
 .pio-docs-nav .navbar-header .navbar-toggle:hover,
 .pio-docs-nav .navbar-header .navbar-toggle:focus {
-  background-color: #f9f9f9;
-  border-color: #f9f9f9;
+
 }
 
 
@@ -428,10 +450,7 @@ img.noborder {
   padding: 30px 15px;
   color: #000000;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: #FFFFFF;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-  background-repeat: repeat-x;
+
 }
 
 .category {
@@ -711,31 +730,36 @@ img.noborder {
   padding: 8px 20px 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #999;
-}
-
-.pio-docs-sidebar .nav > li > a:hover,
-.pio-docs-sidebar .nav > li > a:focus {
   padding-left: 18px;
-  color: #444;
+  color: #44525E;
   text-decoration: none;
+
+}
+.pio-docs-sidebar .nav > li > a:focus,
+.pio-docs-sidebar .nav > li > a:active,
+.pio-docs-sidebar .nav > li > a:hover {
+  padding-left: 18px;
+  color: #44525E;
+  text-decoration: none;
+  border-right: 4px solid #DDE5E7;
   background-color: transparent;
-  border-left: 2px solid #ccc;
+
 }
 
 .pio-docs-sidebar .nav > .active > a,
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
-  color: #000;
-  background-color: transparent;
-  border-left: 2px solid #000;
+  color: #44525E;
+  background-color: #EEF2F3;
+  border-right: 4px solid #DDE5E7;
 }
 
 /* Nav: second level (shown on .active) */
 .pio-docs-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
   padding-bottom: 10px;
+
 }
 .pio-docs-sidebar .nav .nav > li > a {
   padding-top: 5px;
@@ -744,15 +768,24 @@ img.noborder {
   font-size: 12px;
   font-weight: normal;
 }
-.pio-docs-sidebar .nav .nav > li > a:hover,
 .pio-docs-sidebar .nav .nav > li > a:focus {
-  padding-left: 29px;
+  border-right: 4px solid #DDE5E7;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #EEF2F3;
 }
 .pio-docs-sidebar .nav .nav > .active > a,
-.pio-docs-sidebar .nav .nav > .active:hover > a,
-.pio-docs-sidebar .nav .nav > .active:focus > a {
-  padding-left: 28px;
-  font-weight: 500;
+.pio-docs-sidebar .nav .nav > .a:focus {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #EEF2F3;
+
 }
 
 /* Back to top (hidden on mobile) */
@@ -764,11 +797,11 @@ img.noborder {
   margin-left: 10px;
   font-size: 12px;
   font-weight: 500;
-  color: #999;
+  color: #44525E;
 }
 .back-to-top:hover,
 .pio-docs-theme-toggle:hover {
-  color: #563d7c;
+  color: #44525E;
   text-decoration: none;
 }
 .pio-docs-theme-toggle {
@@ -925,7 +958,7 @@ h1[id] {
   background-color: #999;
 }
 .color-swatches .gray-lighter {
-  background-color: #eee;
+
 }
 .color-swatches .brand-primary {
   background-color: #337ab7;
@@ -1840,26 +1873,12 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 }}
 }
 
-@-moz-document url-prefix(https://pantheon.io/docs/guides) {
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-    width: 275px !important;
-  }
-}
-@-moz-document url-prefix(https://pantheon.io/docs/changelog) {
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-    width: 275px !important;
-  }
-}
-@-moz-document url(https://pantheon.io/docs/) {
+@-moz-document url-prefix() {
 .gsc-search-box-tools .gsc-search-box .gsc-input {
     width: 100% !important;
   }
 }
-@-moz-document url-prefix(https://pantheon.io/docs/articles) {
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-    width: 275px !important;
-  }
-}
+
 .gs-result .gs-title, .gs-result .gs-title * {
   font-size: 18px !important;
   text-decoration: none !important;
@@ -1889,14 +1908,24 @@ color: #274E13 !important;
 }
 
 .breadcrumb {
-  padding: 8px 15px;
-  margin-top:30px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   margin-bottom: 0px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
 
+h1:after {
+  content: '\\';
+  color: #EFD01B;
+  margin-left: 16px;
+}
+@-moz-document url-prefix() {
+  .breadcrumb {
+    padding-top: 20px !important;
+  }
+}
 .page-header {
     padding-bottom: 9px;
     margin: auto;
