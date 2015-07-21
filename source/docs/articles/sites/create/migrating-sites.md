@@ -15,7 +15,6 @@ We're revising our migration documentation. Our existing import documents includ
  - [Importing a Large Site](/docs/articles/sites/create/importing-a-large-site)
  - [Importing Drush Archives with Terminus](/docs/articles/sites/create/importing-drush-site-archives-with-terminus)
  - [Importing WordPress Sites](/docs/articles/wordpress/importing-a-wordpress-site/)
- - [Clone a Drupal Site using Drush](/docs/articles/sites/create/clone-a-drupal-site-using-drush)
  - [Clone a WordPress Site with Duplicator Plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin)
 
 ## Pack Up
@@ -130,8 +129,10 @@ terminus sites create [--product=<productid>] \
 
 In the Dashboard, you create a new site and select **Import a site** when asked to choose a Start State.
  ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
+ 
 Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
+ 
 Selecting the link to provide separate code, files, and database archives will give you the option to import each individually via an upload or URL field.
 
 ### Distributions

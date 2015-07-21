@@ -66,6 +66,7 @@ These tables detail the actions each role can execute on each Dashboard.
 .tg .tg-e3zv{font-weight:bold}
 </style>
 <table class="tg">
+
     <tr>
         <th><strong>Role</strong></th>
         <th><strong>Permissions</strong></th>
@@ -82,7 +83,6 @@ These tables detail the actions each role can execute on each Dashboard.
         <td class="border-bottom">Unprivileged</td>
         <td class="border-bottom">* Create sites, for which they automatically become the User in Charge until the site is assigned an owner.<br/></td>
     </tr>
-
 </table>
 
 

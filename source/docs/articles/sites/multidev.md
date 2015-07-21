@@ -1,17 +1,17 @@
 ---
 title: Multidev
-description: Detailed information on Pantheon's cloud development environment, Multidev.
+description: Detailed information on Pantheon's Multidev.
 category:
 - developing
-keywords: multidev, organization, cloud development environment, cloud development environments, cde, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a cde, clone to development environment, delete cde, remove cde, delete multidev branch
+keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a environment, clone to development environment, delete multidev environment, remove multidev environment, delete multidev branch
 ---
-Multidev is cloud development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
+Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 
 ## Benefits of Multidev
 
 **Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
 
-**No more surprises.** Each developer on your team gets their own cloud development environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
+**No more surprises.** Each developer on your team gets their own Multidev environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
 **A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
 ![](/source/docs/assets/images/desk_images/170383.png)​
@@ -41,13 +41,13 @@ There are a number of terms used throughout the Multidev workflow:
 ## Getting Started
 
 1. From your Site Dashboard, click the **Multidev** tab.
-2. Click **Create Cloud Development Environment**. This will create a new fork of the environment that you choose in the select box on the pop-up modal, including code, database and files.
+2. Click **Create Multidev Environment**. This will create a new fork of the environment that you choose in the select box on the pop-up modal, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
-4. Click **Create Environment**.  
+4. Click **Create Environment**.
 
 It will take a few minutes to create the environment and clone the content from the source environment. You can continue working on the Dashboard while it's being created.
 
-You can create cloned cloud environments from Dev, Test or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
+You can create cloned Multidev environments from Dev, Test or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
@@ -87,7 +87,7 @@ Instructions for using the command-line to merge the changes into the target are
 
 ## Delete a Branch Environment
 
-Go to Multidev > Cloud Development Environments, and click **Delete Environment**.
+Go to Multidev > Multidev Environments, and click **Delete Environment**.
 
 When an environment is deleted, the branch will remain and needs to be removed manually.
 
@@ -98,7 +98,7 @@ A branch with no environment associated with it can be deleted by going to Multi
 Branches can be deleted locally and the commit can be pushed to Pantheon, but this may have unintended consequences if an environment is associated with it; use the interface instead.​
 
 ## Rename a Branch
-There is an 11-character limit for branch names. If you push a branch to Pantheon that exceeds the character limit, it cannot become a cloud development environment (CDE). The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
+There is an 11-character limit for branch names. If you push a branch to Pantheon that exceeds the character limit, it cannot become a Multidev environment. The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
 
 From the command line, rename the branch:
 

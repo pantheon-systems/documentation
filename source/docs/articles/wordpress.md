@@ -1,6 +1,6 @@
 ---
 title: WordPress
-description: Learn how to bring WordPress sites onto the platform, and considerations for developing and running them.
+description: Learn how to bring WordPress sites onto the Pantheon Website Management Platform, and considerations for developing and running them.
 keywords: wordpress, sites, pantheon
 ---
 WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope. Learn how to use this powerhouse CMS on the Pantheon platform with confidence by exploring our WordPress documentation.

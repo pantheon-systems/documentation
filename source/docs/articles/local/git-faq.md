@@ -6,6 +6,7 @@ category:
 keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
 ---
 ## Resolving Conflicts
+
 ### How do I resolve conflicts when updating Core?
 
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`):
@@ -43,11 +44,11 @@ git push origin master
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
 
 - [Open Academy](https://github.com/systemseed/openacademy-drops-7): https://github.com/systemseed/openacademy-drops-7
-- [Open Atrium](https://github.com/phase2/openatrium-drops-6.git): https://github.com/phase2/openatrium-drops-6.git
-- [Open Enterprise](https://github.com/levelten/openenterprise-drops-7.git): https://github.com/levelten/openenterprise-drops-7.git
+- [Open Atrium](https://github.com/phase2/openatrium-drops-6): https://github.com/phase2/openatrium-drops-6.git
+- [Open Enterprise](https://github.com/levelten/openenterprise-drops-7): https://github.com/levelten/openenterprise-drops-7.git
 - [Open Outreach](https://github.com/nedjo/openoutreach-drops-7): https://github.com/nedjo/openoutreach-drops-7
-- [Open Publish](https://github.com/phase2/openpublish-drops-7.git): https://github.com/phase2/openpublish-drops-7.git
-- [Open Public](https://github.com/phase2/openpublic-drops-7.git): https://github.com/phase2/openpublic-drops-7.git
+- [Open Publish](https://github.com/phase2/openpublish-drops-7): https://github.com/phase2/openpublish-drops-7.git
+- [Open Public](https://github.com/phase2/openpublic-drops-7): https://github.com/phase2/openpublic-drops-7.git
 - [Panopoly](https://github.com/populist/panopoly-drops-7.git): https://github.com/populist/panopoly-drops-7.git
 
 ### How can I manually resolve conflicts?
@@ -61,7 +62,7 @@ For example, the Git log may contain an entry similar to the following:
 ```bash
 CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
 ```
-1. From your local repository, run the following Git command to get a copy of the file in conflict:
+1. From your local repository, run this Git command to get a copy of the file in conflict:
 
  ```bash
  git checkout <commit ID> -- <file>`<br />
@@ -117,7 +118,7 @@ The "update\_drops" tags are from our upstream updates in the past (we don't tag
 
 The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
-Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can.".
+Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can."
 
 ### How do I revert or undo changes?
 
@@ -129,7 +130,7 @@ If you want to patch core or a module, you should use Git. You will need to swit
 
 Drupal.org has very good instructions about [applying patches with Git](http://drupal.org/node/1399218).
 
-From your local clone, you should be able to run the `git apply` command as per Drupal.org, commit your change, and push back to Pantheon. A good best practice is to include a link to the issue/comment where the patch came from in your commit message.
+From your local clone, you should be able to run the `git apply` command as per Drupal.org, commit your change, and push back to Pantheon. A best practice is to include a link to the issue/comment where the patch came from in your commit message.
 
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
@@ -144,27 +145,17 @@ If you're importing a site that has an existing Git history, you may be able to 
     ```bash
     git pull -Xours [your existing repo] [existing site branch]
     ```
-
-4. If there are any conflicts, you'll need to resolve them.<br />
+4. Resolve any conflicts.
 <div class="alert alert-info" role="alert">
 <strong>Note</strong>: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
-
-5. Once this is done, push back to Patheon:
-
-
-    ```bash
-    git push origin master
-    ```
-
+5. Once this is done, push back to Pantheon: `bash git push origin master`
 6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
 ### Can I use Git with On Server Development?
 
 Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
 
-When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked.
-
-If you have On Server Development disabled, you can interact with your code via Git.
+When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked. If you have On Server Development disabled, you can interact with your code via Git.
 
 ### What version of Git does Pantheon run?
 
@@ -189,7 +180,7 @@ We are updating our infrastructure so that code repositories do not have a singl
 
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
-If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL. To do so run:
+If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL:
 ```nohighlight
 git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
 ```
@@ -202,7 +193,7 @@ If you're having problems cloning your Git repository, verify that you have enab
 
 ### Why am I being prompted for my password after adding the public key?
 
-This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/docs/articles/error-permission-denied-publickey/).
+This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
 ```bash

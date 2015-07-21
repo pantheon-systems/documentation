@@ -3,18 +3,18 @@ title: Importing an Existing Site to Pantheon
 description: Detailed information on how to prepare and import your existing Drupal or WordPress site to Pantheon.
 category:
   - drupal
-  - getting-started
 keywords: import, importing site, pantheon, new site, drupal
 ---
-The easiest way to import an existing site into Pantheon is to create a new site and select **Import manually** when asked to choose a Start State.
+The easiest way to import an existing site into Pantheon is to create a new site and select **Import Archives** when asked to choose a start state.
 
 <div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
-Next, you'll need to determine if your imports will be via one archive, or multiple. By default, you have the option to give a single archive for your entire import.
+Next, determine if you will import one archive or multiple. By default, you have the option to give a single archive for your entire import.
 
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
+ 
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
@@ -24,7 +24,7 @@ If your site uses a distribution powered by an alternate upstream, such as Comme
 
 First, choose your distribution and visit your site's Dashboard once it's been created. You'll need to clone your new site using Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/articles/local/starting-with-git/).
 
-Finally, use the import tools within your Pantheon site's Dashboard to import your database and site files into the Dev environment (Workflow>>Import).
+Finally, use the import tools within your Pantheon site's Dashboard to import your database and site files into the Dev environment (Workflow > Import).
  ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 
@@ -120,11 +120,11 @@ The import screen allows you to toggle between uploading your archive files or s
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
-If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, you'll need to use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
+If you have a large database or a lot of files, you'll need to use the URL option. If you need to load more than 500MB of content, use the data migration tools (e.g. [direct MySQL access](/source/docs/articles/local/accessing-mysql-databases), [rsync or SFTP for files](/source/docs/articles/local/rsync-and-sftp)) after your codebase is imported.
 
 ## Import Single-File Archives
 
-If your single-file site archives are hosted at a public URL, you can use [terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
+If your single-file site archives are hosted at a public URL, you can use [Terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line tool, to create a site and import everything in one command.
 
 In order to import a Drush archive, use:
 ```bash

@@ -10,6 +10,7 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 
 ## Team Management
 You can add and delete users in the Team modal. Simply click **Team** located in the upper-right of your Dashboard.
+
 ![Team Management Window](/source/docs/assets/images/team-modal.png)
 ## Add a Team Member
 
@@ -19,9 +20,9 @@ Once the user has been added to the project, they will receive a welcome email n
 
 ## Invite a Team Member
 
-Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent with an invite to become a team member on the site.
+Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent an email with an invite to become a team member on the site.
 
-Once they have successfully signed up for an account, they will be automatically added to the team. As an added bonus if the user signs up, you'll get an extra free Dev site!
+Once they have successfully created an account, they will be automatically added to the team. As an added bonus if the user signs up, you'll get an extra free Dev site!
 
 ## Remove a Team Member
 
@@ -45,6 +46,7 @@ Within the Team modal, the site owner can click **Make Owner** next to the team 
 ![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
 #### Paid Sites
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+
 ![Invite a business owner to pay for this site](/source/docs/assets/images/payment-invite.png)<br />
 Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.
 

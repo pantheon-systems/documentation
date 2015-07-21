@@ -4,7 +4,9 @@ sculpin_theme:
 sculpin_content_types:
 
     posts:
-        enabled: false
+        permalink: docs/changelog/:year-:month-:filename/
+        path: docs/changelog
+        enabled: true
 
     articles:
         type: path

@@ -1,6 +1,6 @@
 ---
 title: The Site Dashboard
-description: Learn how to use the Site Dashboard to build and manage your sites.
+description: Learn how to use the Pantheon Site Dashboard to build and manage your sites.
 category:
   - developing
 keywords: sites, dashboard, pantheon, get started, settings, new site
@@ -50,12 +50,12 @@ The core of the Pantheon Workflow is to move code up from Dev to Test to Live an
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
 - **Content** includes files not under Git version control, like images and pdfs, and the database.  
 
-The [Code tool](/docs/articles/sites/code) on Dev/CDEs includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment.
+The [Code tool](/docs/articles/sites/code) on Dev/Multidev environments includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment.
 
 Learn how to use the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) to manage your site's code.
 
 ## Merge
-Visit this tab in the Dev environment when you have commits from CDEs that you need to merge into Test or Live.
+Visit this tab in the Dev environment when you have commits from Multidev environments that you need to merge into Test or Live.
 
 ## Status
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for

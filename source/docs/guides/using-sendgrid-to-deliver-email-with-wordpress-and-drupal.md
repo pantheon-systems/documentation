@@ -1,6 +1,6 @@
 ---
 title: Using SendGrid To Deliver Email with WordPress and Drupal
-description: SendGrid is the world's largest Email Infrastructure as a Service provider. Learn to send email from your website reliably.
+description: Detailed information on using SendGrid to deliver email through your WordPress and Drupal site.
 category:
   - developing
 authors:
@@ -52,7 +52,7 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 
 Pantheon recommends using the actively maintained [SMTP module](https://www.drupal.org/project/smtp) to send email with Drupal, regardless of your email gateway. Luckily, SendGrid plugs right in.
 
-Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://www.getpantheon.com/blog/five-steps-feeling-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
+Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
 ```nohighlight
 drush @pantheon.your-site.dev dl smtp
 drush @pantheon.your-site.dev en smtp -y

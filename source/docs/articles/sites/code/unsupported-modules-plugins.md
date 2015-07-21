@@ -1,5 +1,5 @@
 ---
-title: Unsupported Modules and Plugins
+title: Unsupported/Problematic Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
 keywords: modules, plugins, unsupported, drupal, wordpress
 ---
@@ -21,10 +21,16 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Cache Expiration
 
+- Global Redirect  
+ **Issue**: Too many redirects error when site is in maintenance mode.  
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not ticked in the Global Redirect administration page.
+
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 - IMCE
+
+- Mobile Tools 
 
 - Mollom  
  **Issue**: Cookies break Varnish.
@@ -45,13 +51,12 @@ This is built into the Pantheon platform.
 
 - Varnish
 
-
 ### Using the `/tmp` Directory
 **Issue**:
-The following modules are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, please see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
+The modules listed below are not supported due to the use of the `/tmp` directory. With multiple application servers, as exists on Live environments, Drupal assumes the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
 
-**Solution**:
-You can try using the `sites/default/filestmp` directory, as this will be shared between all environments and can essentially serve the same purpose as the `/tmp` directory. If you need a shared location that doesn't provide any public access to the files, we recommend using a tmp directory within the private files directory: `sites/default/files/private/tmp`.
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Using sites/default/files/tmp as a work around for these issues will produce unpredictable side effects and is not supported.</div>
 
 
 - Media: Browser Plus
@@ -62,8 +67,10 @@ You can try using the `sites/default/filestmp` directory, as this will be shared
 
 - Taxonomy CSV  
 
-- Views Exports  
+- Views data export
 
+- Webform export<br>
+ **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 
 ##WordPress Plugins
@@ -73,3 +80,5 @@ You can try using the `sites/default/filestmp` directory, as this will be shared
 - W3 Total Cache
 
 - batcache
+
+- Timthumb

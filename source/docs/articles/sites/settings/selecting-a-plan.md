@@ -5,7 +5,7 @@ category:
   - getting-started
 keywords: plan, how to select a plan, how to select a paid plan, what plans are available, how to view site plan, how to see plan, how to change plan, changing plans, change plan, select plan, selecting a plan
 ---
-Pantheon offers multiple service levels, called [Plans](https://www.getpantheon.com/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Basic Plan. Then once you start to grow and have more specific requirements, you can take a look at the Pro Plan, which can be part of the recipe to get your site or application to scale and perform better.
+Pantheon offers multiple service levels, called [Plans](https://www.pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Basic Plan. Then once you start to grow and have more specific requirements, you can take a look at the Pro Plan, which can be part of the recipe to get your site or application to scale and perform better.
 
 To get started, select the site you would like to associate with a plan.
 

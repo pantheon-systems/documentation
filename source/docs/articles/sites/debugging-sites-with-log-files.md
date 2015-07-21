@@ -38,7 +38,7 @@ define('WP_DEBUG', true);
 
 When developing a site, it can be useful to directly access the server logs for the site environment.  
 
-From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.  
+From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.
 
 Once connected, you'll see several directories:
 
@@ -59,7 +59,7 @@ Once connected, you'll see several directories:
 
 #### How can I parse my Nginx access logs?
 
-You can use a free utility like [goaccess](http://goaccess.prosoftcorp.com/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
+You can use a free utility like [goaccess](http://goaccess.io/) to parse your Pantheon Nginx access logs. The Pantheon log format can be stored in the <tt>.goaccessrc</tt> configuration file as follows:
 
 ```nginx
 time_format %H:%M:%S %z
@@ -75,11 +75,15 @@ The short answer is no, syslog is not available. Technically, you can log Drupal
 
 No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/docs/articles/sites/apache-solr).
 
+#### Can I download Varnish logs?
+
+No, Varnish logs are not available for download.
+
 #### My Drupal database logs are huge. Should I disable dblog?
 
 The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
 
-### How do I access logs in environments with multiple containers?
+#### How do I access logs in environments with multiple containers?
 
 Business and Enterprise plans have more than a single container in the Live environment. In order to download the logs from each application container, use the following shell script:
 

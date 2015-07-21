@@ -1,0 +1,52 @@
+{% extends "default" %}
+  {% block content_wrapper %}
+    <article>
+        <div class="article container">
+          
+          </div>
+          <div class="col-md-9">
+            <div class="page-header">
+            <header>
+              <h1 class="pio-docs-title">{{ page.title }}</h1>
+              <div class="entry-meta">
+            {% if page.authors %}
+                {% set author_list = page.authors %}
+                By {% include 'author_list.twig' %}
+            {% endif %}
+
+            <a href="https://twitter.com/share" class="twitter-share-button pull-right" data-via="getpantheon" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<span class="pull-right">
+<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share"></script></span>
+            <br>
+            {{ page.date|date('F d, Y') }}
+        </div>
+            </header>
+          </div>
+              <!--{% if page.category %}
+                  <p class="category">Categories:
+                  {% for category in page.category %}
+                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
+                  {% endfor %}
+                  </p>
+              {% endif %} -->
+                <div>
+                    {{ page.blocks.content|raw }}
+                </div>
+
+          </div>
+            <div class="col-md-3">
+              <div class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                <div id="toc"><h3>Contents</h3>
+                </div>
+
+                <p>
+                </p>
+                <!--<p><a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md">
+                  <button type="button" class="btn btn-outline">Improve This Doc</button>
+                </a></p>-->
+              </div>
+            </div>
+    </div>
+  </article>
+    {% endblock %}

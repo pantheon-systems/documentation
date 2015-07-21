@@ -1,6 +1,6 @@
 ---
 title: Automated Testing for WordPress with Behat
-description: Understand how to use Behat to write automated tests for your WordPress sites.
+description: Understand how to use Behat to write automated tests for your Pantheon WordPress sites.
 category:
   - developing
   - WordPress
@@ -124,7 +124,7 @@ Now that we've installed Behat locally, we can configure it for your WordPress s
 
 The starter kit comes with a `behat.yml` file that configured Behat to use Mink (browser drivers) and a placeholder `base_url` for the site we want to run tests on.
 
-Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](https://www.vim.org) or [Atom](http://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheon.io` to the URL of the site you want to test, and then save.
+Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](http://www.vim.org) or [Atom](http://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheon.io` to the URL of the site you want to test, and then save.
 
 Verify your changes look good with `git diff` and then commit your changes:
 
@@ -259,7 +259,7 @@ Then I should see "Post published"
 
 You'll also see the browser open and run through the test:
 
-[![Feature: Editor can post to blog. Behat, Selenium Server running, automating browser](/source/docs/assets/images/automated-testing-wordpress-behat.gif)](http://recordit.co/vEFYVJq4tM.gif)
+[![Feature: Editor can post to blog. Behat, Selenium Server running, automating browser](/source/docs/assets/images/automated-testing-wordpress-behat.gif)](http://g.recordit.co/vEFYVJq4tM.gif)
 
 
 Now you should be on your way to writing and running more automated Behat tests for your WordPress sites!

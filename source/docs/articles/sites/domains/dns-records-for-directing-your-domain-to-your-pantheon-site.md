@@ -7,11 +7,11 @@ keywords: dns, dns records, point your domain, point domain to pantheon, pointin
 ---
 The last step of launching your site on Pantheon is to update your DNS records to direct traffic to your domain to your Pantheon site. To learn more about launching your site, see [going live](/docs/articles/going-live/).
 
-### Pantheon Does Not Manage Your Domain Name or DNS For Your Site
+### Pantheon Does Not Manage Your Domain Name or DNS
 
-You will need to make these changes yourself with your registrar and/or DNS host, we cannot do it for you. Why? Our focus is on making a great platform; we're not a domain name registrar or a DNS hosting service.
+You will need to make these changes yourself with your registrar and/or DNS host; we cannot do it for you. Why? Our focus is on making a great platform; we're not a domain name registrar or a DNS hosting service.
 
-### Pantheon's Recommended DNS Configuration For pantheon.io Sites
+### Pantheon's Recommended DNS Configuration for Pantheon.io Sites
 
 You should configure the DNS for both your non-www (bare domain) and www domain, like example.com and www.example.com. If you don't, users who add (or omit) the www will not see your site and assume your site is down. There are also negative SEO implications if you have both configured without a redirect to a single canonical domain, like duplicate content.
 
@@ -24,7 +24,7 @@ See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pan
 
 ## Pantheon's Legacy DNS Configuration for pantheon.io Sites
 
-These DNS records are for Pantheon-hosted sites _already using a pantheon.io development URL_. **Do not utilize our legacy DNS records for any new sites which use the pantheon.io development URL** . Please refer to the "Domains" panel on your site's Dashboard for the specific DNS records that will successfully route traffic to your site.
+These DNS records are for Pantheon-hosted sites already using a pantheon.io development URL. **Do not utilize our legacy DNS records for any new sites that use the pantheon.io development URL**. Please refer to the Domains panel on your site's Dashboard for the specific DNS records that will successfully route traffic to your site.
 <div class="alert alert-info" role="alert">
 <dl class="records">
 	<dt>DNS CNAME record - highly available</dt>
@@ -40,7 +40,7 @@ These DNS records are for Pantheon-hosted sites _already using a pantheon.io dev
 </dl></div>
 
 ## Pantheon DNS Records for HTTP Sites  
-Your Site Dashboard recommends the specific DNS settings you should use. These can be found under the Domains /  SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
+Your Site Dashboard recommends the specific DNS settings you should use. These can be found under the Domains/SSL tab, per environment. Within the Domain Setup page, click the **Show recommended DNS records** link to the right of the domains you've added. In most cases, you'll only need to configure DNS for the Live environment:  
 ![Recommended DNS records](/source/docs/assets/images/pantheon-dns-records-for-http-sites.png "Pantheon Live environment dashboard showing the domains tool with links to recommended dns-records highlighted")
 ## DNS Records for HTTPS Sites (SSL/TLS)
 
@@ -73,10 +73,13 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 ### How long do DNS changes typically take?
 
 It depends on several factors, including the TTL of your DNS records. As a rule of thumb, DNS changes can take up to 48 hours to propagate across the entire Internet, so be patient - it'll happen. With that said, most updates happen in a couple hours.
+<div class="alert alert-info" role="alert"><strong>Note: </strong>
+We recommend lowering the TTL value (e.g. 120s) before making DNS changes for faster propagation.
+</div>
 
 ### Can I use a CNAME for my bare/naked/root domain?
 
-It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/docs/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon's-recommended-dns-configuration-for-pantheon.io-sites).
+It depends; the bare domain should only have an A record that maps to an IP. Some DNS providers ( [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/), [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) and others) let you use a CNAME with a bare domain (maybe referred to as ANAME, or CNAME Flattening), but it's non-standard. Check with your DNS provider’s documentation to see if this is an option. Alternatively, see the related FAQ item [Pantheon's WWW Redirection Service](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/#pantheon's-recommended-dns-configuration-for-pantheon.io-sites).
 
 
 See [Using Pantheon.io for Better Uptime](/docs/articles/sites/domains/using-pantheon-io-for-better-uptime) for more information.
@@ -87,11 +90,11 @@ If you need to direct traffic from a non-www domain (e.g. example.com), you can 
 
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
-Yes; many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.pantheon.io domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
+Yes, many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.pantheon.io domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
 
 ### Can I test my domain name without making DNS changes?
 
-Yes; see [developing with a domain without changing DNS](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/#dev_wo_dns).
+Yes, see [developing with a domain without changing DNS](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/#dev_wo_dns) for details.
 
 ### Why isn't my site loaded when I ping the provided Pantheon IP?
 

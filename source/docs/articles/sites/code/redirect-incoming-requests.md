@@ -6,7 +6,7 @@ category:
   - managing
 keywords: redirect, redirect request, redirect requests to another domain, redirect requrests to another path, redirect incoming requests, redirects, .htaccess, nginx, settings.php, wp-config.php, redirect via php, php redirect, php redirects,
 ---
-Often, it's useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
+It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 
 
 <div class="alert alert-info" role="alert">
@@ -25,13 +25,13 @@ Configuration also tends to be more maintainable as Drupal and WordPress devel
 Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well!
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the  <a href="/docs/articles/going-live">Pantheon site's dashboard</a>.</div>
+<strong>Note</strong>: Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the <a href="/docs/articles/going-live/#Add-Domain-to-the-Live-Environment"> site's Dashboard</a>.</div>
 
 
 ## Redirect to a Common Domain
 
-While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
-
+While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.  Choose one of the blocks of code below:
+```
     // Require WWW.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -42,7 +42,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
         exit();
       }
     }
-
+```
     // Remove WWW.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -54,11 +54,11 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
       }
     }
 
-## Redirecting to HTTPS
+## Redirect to HTTPS
 
 ### Require SSL for All Pages
 
-If you'd like to put all traffic on your site under HTTPS (a best-practice if you have an SSL cert) you should be checking for the `HTTP_X_SSL` code like so:
+If you'd like to put all traffic on your site under HTTPS (a best practice if you have an SSL cert), you should be checking for the `HTTP_X_SSL` code like so:
 
     // Require SSL.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
@@ -92,7 +92,7 @@ You can implement a secure domain for a specific set of page with Drupal modules
 
 ### Require SSL and Standardize Domain
 
-If you want to use SSL everywhere and standardize on your domain, you can combine this kind of logic into a single block:
+To use SSL everywhere and standardize on your domain, combine this kind of logic into a single block:
 
     // Require SSL, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
@@ -108,7 +108,7 @@ If you want to use SSL everywhere and standardize on your domain, you can combin
 
 ### Require SSL Everywhere Except Specific Pages
 
-If you want to use SSL for everything except some specific pages, such as an RSS feed:
+To use SSL for everything except some specific pages, such as an RSS feed:
 
     // SSL logic.
     $redirect_domain = 'www.yoursite.com';
@@ -133,9 +133,9 @@ If you want to use SSL for everything except some specific pages, such as an RSS
       }
     }
 
-## Redirecting to Subdirectories or Specific URLs
+## Redirect to Subdirectories or Specific URLs
 
-If you would like to redirect from a subdomain to a specific area of the site, use the following:
+To redirect from a subdomain to a specific area of the site, use the following:
 
     // Redirect subdomain to a specific path.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
@@ -159,7 +159,7 @@ The same technique works for single subdomain redirects. Just specify the path i
       exit();
     }
 
-## Redirecting Multiple Subdomains to a Single Domain
+## Redirect Multiple Subdomains to a Single Domain
 
     // Redirect multiple subdomains to a single domain.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
@@ -177,7 +177,7 @@ The same technique works for single subdomain redirects. Just specify the path i
       }
     }
 
-## Redirecting Legacy UNIX-Style User Home Folder Paths
+## Redirect Legacy UNIX-Style User Home Folder Paths
 
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 

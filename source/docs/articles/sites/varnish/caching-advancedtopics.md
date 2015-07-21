@@ -1,6 +1,6 @@
 ---
-title: Caching - Advanced Topics
-description: Detailed information on Caching optimization for your Drupal or WordPress site.
+title: Varnish Caching - Drupal and WordPress Advanced Topics
+description: Learn advanced details about cache and authentication.
 category:
   - developing
 keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
@@ -8,6 +8,9 @@ keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal,
 ## Allow a User to Bypass the Cache
 
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
+
+<div class="alert alert-danger" role="alert">
+<strong>Warning</strong>: Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
@@ -23,7 +26,7 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/article
 
 ## External Authentication (e.g. Facebook login)
 
-If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and login. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
+If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
 ## Using Your Own Session-Style Cookies
 
@@ -39,15 +42,50 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 ### WordPress Sites
 WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
 
-## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation Using STYXKEY
+## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
-A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon supports this by allowing sites to set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
 
-For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content. 
+### Using Modernizr
+[Modernizr](http://modernizr.com) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a  [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](http://wordpress.stackexchange.com/a/62362).
 
-In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
+### Device Detection
 
-**Examples of `STYXKEY` cookie names:**
+We do not recommend building separate mobile sites or using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by Varnish. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
+
+#### Best Practice Recommendations
+
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques with HTML5, CSS3, and JavaScript. This will avoid the need to compromise potential scalability in order to scale traffic. HTML5 and CSS3 is the high performance route, as you save on the backend load and browsers.
+
+**Issue**   
+Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
+ 
+**Recommended Solution**  
+While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**  
+
+More information on mobile site best practices can be found in the Google official developer documentation:
+
+https://developers.google.com/webmasters/mobile-sites/get-started/why
+https://developers.google.com/webmasters/mobile-sites/get-started/key
+https://developers.google.com/webmasters/mobile-sites/get-started/mistakes
+
+A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
+
+ - [Desktop browsers](https://html5test.com/results/desktop.html)
+ - [Tablet browsers](https://html5test.com/results/tablet.html)
+ - [Mobile browsers](https://html5test.com/results/mobile.html)
+ - [Other browsers](https://html5test.com/results/other.html)
+
+### Using STYXKEY
+You can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+
+For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
+
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header. 
+
+<div class="alert alert-info" role="alert">	<strong>Note</strong>:STYXKEY is not a replacement for responsive design.</div>
+
+**Examples of `STYXKEY` cookie names:**
 
 &#8211; `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
 
@@ -59,15 +97,16 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 **Invalid names that won't work:**
 
-&#8211; `STYXKEY`: Needs something after the `STYXKEY` text
+&#8211; `STYXKEY`: Needs something after the `STYXKEY` text
 
-&#8211; `styxkey-android`: The text `STYXKEY` must be uppercase
+&#8211; `styxkey-android`: The text `STYXKEY` must be uppercase
 
-&#8211; `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
+&#8211; `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
 
 &#8211; `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
-&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
+&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY
+
 
 ## Varnish Servers
 
@@ -91,7 +130,7 @@ Pantheon’s default is to not cache 404s, but if your application sets Cache-Co
 Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
 ### WordPress Sites
-WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than defauly, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
 
 ## Basic Authentication & Varnish

@@ -10,13 +10,14 @@ The Drupal system configuration in code is set in:
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php—no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a <em>Pantheon</em> database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+
 ## Pantheon Articles on Settings.php
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
-- [Reading Pantheon Environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
-- [Redis as a caching backend](/docs/articles/sites/redis-as-a-caching-backend)
+- [Reading Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
+- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)
 - [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
 - [SSO and Identity Federation](/docs/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
 
@@ -127,7 +128,7 @@ As an example, here's how you can hard-code your Drupal 7 caching configuration 
 
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
-See  [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration).
+See [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration).
 
 #### Why does Drupal report that settings.php is not protected? I can't change the permissions on settings.php.
 
@@ -150,11 +151,21 @@ Pantheon automatically injects database credentials into the site environment; i
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
+####Where can I find examples of Pantheon settings.php?
+You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
+
 #### Are table prefixes supported?
 
-
-For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/drupal/importing-an-existing-drupal-site-to-pantheon).
+For information about table prefixes on Pantheon, see [Importing an Existing Drupal Site to Pantheon](/docs/articles/sites/create/importing-an-existing-site/).
 
 #### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
 
 Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once a settings.php file has been created, the settings.php area of the report should resolve to green.
+
+## Troubleshooting
+#### Request to a Remote API Does Not Return Expected Response
+
+If the API expects `&` as an argument separator but receives `&amp;` when using http_build_query, for example,
+change the default arg_separator.ouput value by adding the following line to `settings.php`:
+
+```ini_set('arg_separator.output', '&');```

@@ -1,6 +1,6 @@
 ---
 title: Importing Drush Site Archives with Terminus
-description: Import a Drush site archive using the Terminus, the Pantheon CLI tool.
+description: Import a Drupal Drush site archive using the Terminus, the Pantheon CLI tool.
 category:
   - getting-started
 keywords: drush, terminus, pantheon, move site, import site,
@@ -55,7 +55,7 @@ At that point the script will poll as the site containers are spun up and the ar
 
 Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
 ```bash
-terminus sites-create-from-import --name=<sitename> --import=<archive/url.tar.gz>
+terminus sites create-from-import --name=<sitename> --import=<archive/url.tar.gz>
 ```
 You can script out imports like this to run several concurrently (or in serial).
 

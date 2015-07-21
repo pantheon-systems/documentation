@@ -25,3 +25,14 @@ The only action required on your end is creating a Wildcard CNAME DNS entry for 
 Sites associated with your organization will receive the appropriate base URL for all environments created while the organization remains a supporting organization. Multidev environments will also receive the URL. If the supporting organization is removed from the team, new environments will receive URL's following the default .pantheon.io pattern. This includes new Multidev environments and Test and Live environments created **after** the organization was removed.
 
 Environment URLs are permanent. If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom URL's to any environment, as a workaround for those wishing to use different URL's after launch and disassociation of the site with the organization.
+
+## Robots.txt with Custom Base Domains
+
+For SEO and to prevent duplicate content, the robots.txt file attached to the custom base domain will contain the following by default:
+
+```
+# http://live-sitename.agencyname.com/robots.txt
+User-agent: *
+Disallow: /
+```
+To present an alternate robots.txt file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) and the appropriate DNS record created.

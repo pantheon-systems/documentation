@@ -3,7 +3,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++
 
 /*!
- * JavaScript for Pantheon's docs (http://getpantheon.com)
+ * JavaScript for Pantheon's docs (http://pantheon.io)
  * Copyright 2014 Pantheon Systems, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see http://creativecommons.org/licenses/by/3.0/.
