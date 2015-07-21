@@ -105,6 +105,9 @@ body.row.main {
 .article {
   background-color: white;
   padding-bottom: 40px;
+  overflow-y:scroll!important;
+  overflow-x:scroll!important;
+  text-overflow: clip!important;
 }
 
 .topnav {
@@ -712,11 +715,7 @@ img.noborder {
   top: 70px;
   max-height: 90%;
 }
-@media (min-width: 768px) {
-  .pio-docs-sidebar {
-    padding-left: 20px;
-  }
-}
+
 
 /* First level of nav */
 .pio-docs-sidenav {

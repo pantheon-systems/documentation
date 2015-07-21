@@ -61,19 +61,19 @@
 
             // **showEffect**: Accepts String: "none", "fadeIn", "show", or "slideDown"
             // Used to display any of the table of contents nested items
-            showEffect: "none",
+            showEffect: "show",
 
             // **showEffectSpeed**: Accepts Number (milliseconds) or String: "slow", "medium", or "fast"
             // The time duration of the show animation
-            showEffectSpeed: "medium",
+            showEffectSpeed: "slow",
 
             // **hideEffect**: Accepts String: "none", "fadeOut", "hide", or "slideUp"
             // Used to hide any of the table of contents nested items
-            hideEffect: "slideUp",
+            hideEffect: "hide",
 
             // **hideEffectSpeed**: Accepts Number (milliseconds) or String: "slow", "medium", or "fast"
             // The time duration of the hide animation
-            hideEffectSpeed: "medium",
+            hideEffectSpeed: "slow",
 
             // **smoothScroll**: Accepts a boolean: true or false
             // Determines if a jQuery animation should be used to scroll to specific table of contents items on the page
@@ -97,7 +97,7 @@
 
             // **highlightOffset**: Accepts a number
             // The offset distance in pixels to trigger the next active table of contents item
-            highlightOffset: 50,
+            highlightOffset: 20,
 
             // **theme**: Accepts a string: "bootstrap", "jqueryui", or "none"
             // Determines if Twitter Bootstrap, jQueryUI, or Tocify classes should be added to the table of contents
