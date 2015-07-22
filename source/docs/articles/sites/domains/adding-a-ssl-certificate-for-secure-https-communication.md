@@ -8,6 +8,8 @@ keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl
 ---
 SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
+Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or CSRs, or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
+
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
 
