@@ -19,10 +19,9 @@ For two weeks, you'll receive a trial of New Relic's Pro plan for the site. New 
 After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).  
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.  
-  * To delete an app: From the New Relic menu bar, select **APM** > **Applications**.  
-  * To delete a server: From the New Relic menu bar, select **Servers** > **Servers**.
-2. Wait until the color-coded health status to turn gray, then select the app's or server's gear icon.
-3. Select **Delete app** from New Relic APM or **Delete server** from New Relic Servers, and then select the confirmation button.
+2. From the New Relic menu bar, select **APM** > **Applications**.  
+3. Wait until the color-coded health status to turn gray, then select the app's gear icon.
+4. Select **Delete app**, and click the confirmation button.
 
 ##See Also
 - [New Relic Performance Analysis on Pantheon](/docs/articles/sites/newrelic/new-relic-performance-analysis/)  
