@@ -6,46 +6,60 @@ category:
   - developing
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
-Change Management is a feature of Organizations that enables role-based permissions for users on the Organization. Sites which list the Organization as a supporting Organization are accessible to privileged members of the Organization. The roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
+Change Management is an Organization-level feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Pantheon Partners](/partners), and is available as an add-on for Enterprise Organizations. Partner users can access all sites associated with the Organization, with access restricted based on the user's role in that Organization. These roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
 
 ## Features
-* Organizations with Change Management can add people as Administrators, Team Members, and Developers to the Organization. Admins have all privileges; Team Members are a trusted role that can make changes that affect the Test and Live environments; and Developers can only work on Development environments.
-* When an Organization is added to a site as a supporting Organization (e.g. Agencies), the members and roles of the Organization are inherited for working on the site. All Organization members can access all sites associated with the organization.
-* Agencies added to Sites by subscription owners are able to use Change Management internally, but the subscription owners are not—they can only add full team members.
+* Enterprise Organization Administrators and Team Members can add Team Members or Supporting Organizations to sites owned by the Organization, with the Developer or Team Member roles.
+* Partner Organizations can assign users the role of an Administrator, Team Member, or Developer.
+* When an Organization is added to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the Organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
 * All users in an Organization can see other users and their roles.
 
+## Managing People in an Organization
+When a Team Member or Administrator adds a user to an Organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the Organization assign roles at the **Organization Dashboard's People tab**.
 
-## Managing People
-Each user in the Organization is assigned a role when they are invited to join, and the role is assigned by the user who invites them. Roles have predefined permissions that vary depending on which dashboard you are in (Site or Organization). The procedures are performed at the **Organization Dashboard's People tab** by Administrators of the Organization.
-
-
-### Add a New User
+### Add a User
 
 1. In the People tab, click **Add User**.
 2. Enter the email address of the new user, select a role, and click **Add user**.
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
 
+### Change a User's Role
 
-### Edit an Existing User
-
-1. In the People tab, select the user's name, click **Operations**, and choose **Change Role**.
-2. Select the new role from the drop-down, and click **Set User Role**.
+1. In the People tab, select the user's name.
+2. Click **Operations**, and choose **Change Role**.
+3. Select the new role from the drop-down, and click **Set User Role**.
 
 ### Change Site Owner
 
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-Enterprise Organizations can use the same process to assume ownership of a site, however Agency Partners do not have the ability to own sites directly.
+Enterprise Organizations can use the same process to assume ownership of a site; however, Partner Organizations cannot own sites directly.
 
-For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site.
+For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member who should receive ownership of the site.
 
+## Managing an Enterprise Site's Team
 
-## Permissions
+Enterprise sites with Change Management can add users as either Team Members or Developers to the site.
 
-### Change Management Enabled
+### Add a User to the Site
+1. At the Site Dashboard, click **Team**.
+2. Enter the user's email address, select a role, and click **Add Team Member**.
 
-Change Management is enabled for all Pantheon for Agencies Partners, and for some Pantheon for Enterprises customers. Actions that can be carried out in both contexts (e.g. deleting sites, adding/removing site team members, and viewing, submitting, and updating support tickets) are listed under Site Dashboard, but are enforced equally in the Organization Dashboard. Each role has all of the permissions of the roles listed below it.
+### Add a Supporting Organization to the Site
+1. At the Site Dashboard, click **Team**.
+2. Click **Add a Supporting Organization**, enter the Organization's name in the search box, and click **Search**.
+3. Select a role, and click **Add**.
+
+All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
+
+## Roles and Permissions
+
+These tables detail the actions each role can execute on each Dashboard.
+
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+
+###Enterprise:  Organization-Level Roles/Permissions
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -54,43 +68,63 @@ Change Management is enabled for all Pantheon for Agencies Partners, and for som
 .tg .tg-e3zv{font-weight:bold}
 </style>
 <table class="tg">
-<tr>
-<th class="tg-e3zv">Role</th>
-<th class="tg-e3zv">Organization Dashboard</th>
-<th class="tg-e3zv">Site Dashboard</th>
-</tr>
-<tr>
-<td class="tg-031e">Owner</td>
-<td class="tg-031e">Functionally the same as an Organization Admin. This is the person/org who pays for the Site.</td>
-<td class="tg-031e">Same as Organization Administrator. Pantheon for Agencies sites are owned by the person who created them until a payment instrument is associated. All roles can "own" sites in this way.</td>
-</tr>
-<tr>
-<td class="tg-031e">Organization Administrator</td>
-<td class="tg-031e">- Manage Settings<br>- Remove Members<br>- Edit Member Roles<br>- Delete Sites<br>- Remove Sites from the Organization</td>
-<td class="tg-031e">- If the Site is owned by the Organization, the Organization Administrator functions as an Owner.<br>- If the Site is not owned by the Organization, the Organization Administrator functions as a Team Member.</td>
-</tr>
-<tr>
-<td class="tg-031e">Team Member</td>
-<td class="tg-031e">- Add Org Team members and developers (but cannot remove/edit roles)</td>
-<td class="tg-031e">- Manage Settings<br>- Manage Team (add/remove)<br>- Deploy Code to Test/Live</td>
-</tr>
-<tr>
-<td class="tg-031e">Developer</td>
-<td class="tg-031e">- Tag Sites<br>- Access Sites<br>- Create Sites</td>
-<td class="tg-031e">- Commit code to Multidev and Dev environments<br>- Cannot deploy code or clone content to Test/Live, unless invited to the site or were the creator of the site, in which case they are on the site team as member or owner.</td>
-</tr>
-<tr>
-<td class="tg-031e">Unprivileged*</td>
-<td class="tg-031e">Disabled
-<td class="tg-031e">- Create new Sites<br>- Cannot deploy to Test/Live</td>
-</tr>
+
+    <tr>
+        <th><strong>Role</strong></th>
+        <th><strong>Permissions</strong></th>
+    </tr>
+    <tr>
+        <td>Administrator</td>
+        <td>&#8226; Manage settings<br>
+        &#8226; Remove members    <br>
+        &#8226; Change member roles <br>
+        &#8226; Create and delete sites  <br>
+        &#8226; Remove sites from the Organization</td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Unprivileged</td>
+        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge<br/></td>
+    </tr>
 </table>
-*Users cannot be granted this role in Organizations with Change Management. Only users who are added via email domain matching at user registration are given this role. Pantheon for Agencies partners should not use this role.
 
 
-### Change Management - Disabled
+###Partners: Organization-Level Roles/Permissions
 
-By default, Change Management is not enabled for some types of Organizations. If Change Management is disabled, roles cannot be selected at the Organization or Site levels. At the Organization level, a checkbox appears to set a user as an Administrator, otherwise it defaults to the Unprivileged role. At the Site level, there is no role selector&mdash;all users are Team Members.
+<style>
+    .data-table {
+        border-collapse: collapse;
+    }
+    .border-bottom {
+        border-bottom: 1px solid #000;
+    }
+</style>
+
+<table class="tg">
+    <tr>
+        <th><strong>Role</strong></th>
+        <th><strong>Permissions</strong></th>
+    </tr>
+    <tr>
+        <td>Administrator</td>
+        <td>&#8226; Remove members<br>
+        &#8226; Change member roles<br>
+        &#8226; Create and delete sites<br>
+        &#8226; Remove sites from the Organization<br>
+        &#8226; Manage settings</td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Team Member</td>
+        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
+         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Developer</td>
+        <td class="border-bottom">&#8226; Tag sites<br>
+         &#8226; View people<br> &#8226; View tickets </td>
+    </tr>
+</table>
+
+##Site-Level Roles/Permissions
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -99,29 +133,36 @@ By default, Change Management is not enabled for some types of Organizations. If
 .tg .tg-e3zv{font-weight:bold}
 </style>
 <table class="tg">
-<tr>
-<th class="tg-e3zv">Role</th>
-<th class="tg-e3zv">Organization Dashboard</th>
-<th class="tg-e3zv">Site Dashboard</th>
-</tr>
-<tr>
-<td class="tg-031e">Owner</td>
-<td class="tg-031e">Functionally the same as an Organization Admin, distinguished only by the user/organization's association with a payment instrument.  </td>
-<td class="tg-031e">Same as Organization Administrator.</td>
-</tr>
-<tr>
-<td class="tg-031e">Organization Administrator</td>
-<td class="tg-031e">Only role that can access this dashboard. All permissions are granted.</td>
-<td class="tg-031e">In Pantheon for Enterprise Organizations, the Site is owned by the Organization, and the Organization Administrator functions as site Owner and can:<br>- Manage Sites Service Level<br>- Delete Sites<br>- Manage Settings<br>If the Site is not owned by the Organization, the Organization Administrator functions as a Team Member.</td>
-</tr>
-<tr>
-<td class="tg-031e">Team Member</td>
-<td class="tg-031e">Role does not exist in organizations without Change Management</td>
-<td class="tg-031e">- Manage Settings<br>- Manage Team<br>- Manage Settings<br>- Deploy to Test/Live</td>
-</tr>
-<tr>
-<td class="tg-031e">Unprivileged*</td>
-<td class="tg-031e"> No Access</td>
-<td class="tg-031e">- Become Team Members for sites they create<br>- Can only access sites through invitation, are considered team members.</td>
-</tr>
+    <tr>
+        <th><strong>Role</strong></th>
+        <th><strong>Permissions</strong></th>
+        <th><strong>Enterprise Organization</strong></th>
+        <th><strong>Partner Organization</strong></th>
+    </tr>
+    <tr>
+        <td>Administrator</td>
+        <td>&#8226; Create and delete sites</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
+    </tr>
+    <tr>
+        <td>Team Member</td>
+        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Use the Workflow tool on Test and Live<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
+    </tr>
+    <tr>
+        <td>Developer</td>
+        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
+        <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
+        <td><center>X</center></td>
+        <td><center>X</center></td>
+    </tr>
+    <tr>
+        <td>Owner</td>
+        <td>&#8226; Functionally is the same as an Organization Administrator<br>
+        &#8226; Only role that can delete a site after it is live</td>
+        <td></td>
+        <td><center>X</center></td>
+    </tr>
 </table>
