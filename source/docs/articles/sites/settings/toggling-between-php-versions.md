@@ -16,3 +16,7 @@ Having environments run different versions of PHP is risky. This should be a ver
 
 
  ![](/source/docs/assets/images/desk_images/356186.png)
+
+## See Also
+* [Choose Your Own PHP Adventure: PHP 5.5 Now Available With 20% Performance Gains](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains)
+* [http://php.net/supported-versions.php](http://php.net/supported-versions.php)
