@@ -75,15 +75,15 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </tr>
     <tr>
         <td>Administrator</td>
-        <td>* Manage settings<br>
-        * Remove members    <br>
-        * Change member roles <br>
-        * Create and delete sites  <br>
-        * Remove sites from the Organization</td>
+        <td>&#8226; Manage settings<br>
+        &#8226; Remove members    <br>
+        &#8226; Change member roles <br>
+        &#8226; Create and delete sites  <br>
+        &#8226; Remove sites from the Organization</td>
     </tr>
     <tr>
         <td class="border-bottom">Unprivileged</td>
-        <td class="border-bottom">* Create sites, for which they automatically become the User in Charge until the site is assigned an owner.<br/></td>
+        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge<br/></td>
     </tr>
 </table>
 
@@ -106,21 +106,21 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </tr>
     <tr>
         <td>Administrator</td>
-        <td>* Remove members<br>
-        * Change member roles<br>
-        * Create and delete sites<br>
-        * Remove sites from the Organization<br>
-        * Manage settings</td>
+        <td>&#8226; Remove members<br>
+        &#8226; Change member roles<br>
+        &#8226; Create and delete sites<br>
+        &#8226; Remove sites from the Organization<br>
+        &#8226; Manage settings</td>
     </tr>
     <tr>
         <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">* Add Developers and Team Members to the Organization<br>
-         * Add users as Team Members to sites<br> * Create sites<br></td>
+        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
+         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
     </tr>
     <tr>
         <td class="border-bottom">Developer</td>
-        <td class="border-bottom">* Tag sites<br>
-         * View people<br> * View tickets </td>
+        <td class="border-bottom">&#8226; Tag sites<br>
+         &#8226; View people<br> &#8226; View tickets </td>
     </tr>
 </table>
 
@@ -141,27 +141,27 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </tr>
     <tr>
         <td>Administrator</td>
-        <td>* Create and delete sites</td>
+        <td>&#8226; Create and delete sites</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>
     <tr>
         <td>Team Member</td>
-        <td>* Deploy code to Test and Live<br/>* Use the Workflow tool on Test and Live<br/>* Change the PHP versions for all site environments<br/>* Add Team Members and Supporting Organizations</td>
+        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Use the Workflow tool on Test and Live<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>
     <tr>
         <td>Developer</td>
-        <td>* Can only commit code to Dev and Multidev environments<br/>* Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
+        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
         <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>
     <tr>
         <td>Owner</td>
-        <td>* Functionally is the same as an Organization Administrator<br>
-        * Only role that can delete a site after it is live</td>
+        <td>&#8226; Functionally is the same as an Organization Administrator<br>
+        &#8226; Only role that can delete a site after it is live</td>
         <td></td>
         <td><center>X</center></td>
     </tr>
