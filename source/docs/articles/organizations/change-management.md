@@ -57,6 +57,8 @@ All members of the Supporting Organization receive the role assigned on the site
 
 These tables detail the actions each role can execute on each Dashboard.
 
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+
 ###Enterprise:  Organization-Level Roles/Permissions
 
 <style type="text/css">
@@ -117,8 +119,8 @@ These tables detail the actions each role can execute on each Dashboard.
     </tr>
     <tr>
         <td class="border-bottom">Developer</td>
-        <td class="border-bottom">* Tag Sites<br>
-         * View People<br> * View Tickets </td>
+        <td class="border-bottom">* Tag sites<br>
+         * View people<br> * View tickets </td>
     </tr>
 </table>
 
@@ -157,12 +159,6 @@ These tables detail the actions each role can execute on each Dashboard.
         <td><center>X</center></td>
     </tr>
     <tr>
-        <td>User in Charge</td>
-        <td>* This role is automatically assigned to the user who created the site and cannot be transferred until the Owner takes over the site.<br/>* Can delete the site he/she created</td>
-        <td><center>X</center></td>
-        <td></td>
-    </tr>
-    <tr>
         <td>Owner</td>
         <td>* Functionally is the same as an Organization Administrator<br>
         * Only role that can delete a site after it is live</td>
@@ -170,5 +166,3 @@ These tables detail the actions each role can execute on each Dashboard.
         <td><center>X</center></td>
     </tr>
 </table>
-
-<br>
