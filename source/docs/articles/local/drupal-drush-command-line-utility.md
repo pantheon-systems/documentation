@@ -193,6 +193,42 @@ As an alternative to `drush sql-sync` you can use `drush sql-dump` instead.
 
 Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) from the Pantheon Dashboard.
 
+## Add Custom Drush Commands
+
+While we have the full spectrum of drush core already available for your use, you may want to add a command that you regularly use, for instance, [drush search and replace (sar)](https://www.drupal.org/project/sar).
+
+1. Put the site in Git mode.
+2. Clone locally.
+3. Create a “drush” folder in the Drupal root.
+4. Add the “sar” drush command to the “drush” folder.
+5. Commit drush/sar.
+6. Push your code up to master.
+7. Deploy to Test and Live.
+8. Download your Pantheon [drush aliases](https://pantheon.io/blog/drush-aliases-available).
+9. Clear your drush cache on each environment. (example: “drush @pantheon.<site-name>.devcc drush”)
+
+If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon. 
+## Drush Alias Strict Control
+Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
+
+For our example, we will write a policy file that changes all remote aliases to use `drush7` instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
+
+```
+function policy_drush_sitealias_alter(&$alias_record) {
+  // Fix pantheon aliases!
+  if ( isset($alias_record['remote-host']) &&
+      (substr($alias_record['remote-host'],0,10) == 'appserver.') ) {
+    $alias_record['path-aliases']['%drush-script'] = 'drush7';
+  }
+}
+```
+With this policy file in place, you will be able to use the latest version of Drush on Pantheon:
+
+    $ drush @pantheon.my-great-site.dev version
+    Drush Version   :  7.0.0-rc1
+
+For more information, see [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file).
+
 ## Use Drush to Update Modules on Pantheon
 
 First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and then:
