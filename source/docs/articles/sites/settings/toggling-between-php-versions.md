@@ -5,14 +5,29 @@ category:
   - developing
 keywords: php, php version, php versions, how to change php version, toggle php version, change php version, update php version, downgrade php version, switch php version
 ---
-Having environments run different versions of PHP is risky. This should be a very short-lived situation while you sort out any compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
+Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 20% performance gains after upgrading](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains).
 
 ## Upgrade Your PHP Version
 
-1. In your Site Dashboard, click the **Settings** menu and select the **PHP version** tab.
-2. Start by setting your development (or multi-dev) environment to the new version of PHP you would like to work with. That environment will now allow you to test the new version.
-3. Once you have resolved any PHP version compatibility issues or warnings, you can enable the new version in the test environment and deploy there for a final check.
-4. When you are ready to go live with the new PHP version, set the "Site Default" to the new version and deploy your compatibility changes (if any). Restore all environments to “Site Default” to insure they remain the same and you’re ready for the next update.
+<div class="alert alert-warning" role="alert">
+<strong>Note</strong>: Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
+</div>
 
+1. From the Site Dashboard, click **Settings** > **PHP version**.
+2. Temporarily set Dev or Multidev environment to the newer version of PHP.
+![](/source/docs/assets/images/desk_images/356186.png)
+3. Resolve any PHP version compatibility issues or warnings in Dev or Multidev.
+4. Temporarily set Test to the newer version of PHP and deploy there for a final check.
+5. Set the **Site Default** to the newer version and deploy your compatibility changes (if any) to Live.
+6. Restore all environments to `Site Default` to ensure they remain the same and you’re ready for the next update.
 
- ![](/source/docs/assets/images/desk_images/356186.png)
+## Resolve PHP Version Compatibility Issues
+
+We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the **Backward Incompatible Changes documentation** in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
+
+## See Also
+
+* [PHP Supported Versions](http://php.net/supported-versions.php)
+* [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
+* [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/)
+* [PHP Errors and Exceptions](https://pantheon.io/docs/articles/sites/php-errors-and-exceptions/)
