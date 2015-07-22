@@ -5,12 +5,11 @@ category:
   - getting-started
 keywords: going live, getting started, create account, create site, import, faqs
 ---
-Welcome to Pantheon! In a few simple steps, your Drupal or WordPress site will be up and running faster than ever.
-
+<img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:0px;margin-right:20px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:20px;margin-right:0px;">Welcome to Pantheon, the world’s fastest hosting for Drupal and WordPress. In a few simple steps, your site will be up and running on our distributed infrastructure with no single points of failure.</p>
 ## Create Your Free Account
 If you haven't already done so, create your [free Pantheon account](https://dashboard.pantheon.io/register).
 ## Create a Site
-Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When one of your sites converts to a [paid plan](https://pantheon.io/pricing), you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.
+<img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="padding-top:2px;float:right;margin-left:10px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:0px;">Pantheon offers two free sandbox sites for all user accounts, which are useful for trying out the Pantheon platform. When one of your sites converts to a <a href="https://pantheon.io/pricing">paid plan</a>, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.</p>
 
 Visit your Dashboard to [create a site](https://dashboard.pantheon.io/sites/create).
 
@@ -18,17 +17,16 @@ Visit your Dashboard to [create a site](https://dashboard.pantheon.io/sites/crea
 
 1. **Choose a distribution**.  
 If you want to develop directly on Pantheon, start with one of the many distributions available on the platform. For details, see [choosing your start state](/docs/articles/sites/create/choosing-start-state).
-![Core Startup](/source/docs/assets/images/core-startup.png)
 
 2. **Visit the Dev installation**.  
 On the Site Dashboard, click **Visit Development Site** to open the Development environment.  You'll then be prompted to complete the Drupal or WordPress installation forms.  
 
 ### Import an Existing Site
-If you have an existing Drupal or WordPress site that you want to import, choose **Import manually**. For additional details, see [Importing an Existing Drupal Site](/docs/articles/sites/create/importing-an-existing-site/) or [Importing a WordPress Site](/docs/articles/wordpress/importing-a-wordpress-site/).
+<img src="/source/docs/assets/images/icon-tools.png" alt="Tools Icon" style="float:left;margin-right:15px;margin-top:10px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:5px;padding-bottom:0px;">
+If you have an existing Drupal or WordPress site that you want to import, choose <strong>Import manually</strong>. For additional details, see <a href="/docs/articles/sites/create/importing-an-existing-site/">Importing an Existing Drupal Site</a> or <a href="/docs/articles/wordpress/importing-a-wordpress-site/">Importing a WordPress Site</a>.</p>
 
 ## Interact With Your Code
-There are two ways to add and update your site's code: Git source code management and SFTP.
-![Connection Mode Dashboard](/source/docs/assets/images/desk_images/180025.png)
+There are two ways to add and update your site's code: Git source code management and SFTP.</p>
 
 ### Git Connection Mode
 Git is a well-known, industry standard revision control system for managing site code. For more information, see [Starting with Git](/docs/articles/local/starting-with-git).
@@ -36,11 +34,9 @@ Git is a well-known, industry standard revision control system for managing site
 **Add an SSH Key**  
 From your User Dashboard, select **Account**, and click **SSH Keys**.
 For detailed instructions, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/).  
-![Add SSH Key Dashboard](/source/docs/assets/images/add-ssh-key-dashboard.png)  
 
 ### SFTP Connection Mode
 You can develop directly on the server using [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/).
-![](/source/docs/assets/images/desk_images/180036.png)
 
 ## Pantheon Credentials
 Your Pantheon.io username and password is only used to access your Dashboard to manage sites and submit support tickets. Any users on your Pantheon hosted sites will be distinct; there is no single sign-on between Pantheon.io and your Drupal or WordPress site, and Pantheon does not manage your users.  
@@ -65,7 +61,8 @@ When you're ready to launch your site, you'll need to [add a credit card](/docs/
 To gain a better understanding of how the Pantheon system architecture works, see [All About Application Containers](/docs/articles/sites/all-about-application-containers/).
 
 ## Essential Reading
-If you're ready to move beyond the basics, check out our curated list of [Required Reading: Essential Pantheon Documentation](/docs/articles/required-reading-essential-pantheon-documentation/).
+<img src="/source/docs/assets/images/icon-document-hand.png" alt="Tools Icon" style="float:left;margin-right:15px;margin-right:15px;margin-top:5px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:10px;padding-bottom:20px;">
+If you're ready to move beyond the basics, check out our curated list of <a href="/docs/articles/required-reading-essential-pantheon-documentation">Required Reading: Essential Pantheon Documentation</a>.</p>
 
 ## Frequently Asked Questions
 
