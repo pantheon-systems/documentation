@@ -30,5 +30,5 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 * [PHP Supported Versions](http://php.net/supported-versions.php)
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
-* [Debugging Sites with Log Files](/docs/articles/sites/debugging-sites-with-log-files/)
+* [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files/)
 * [PHP Errors and Exceptions](https://pantheon.io/docs/articles/sites/php-errors-and-exceptions/)
