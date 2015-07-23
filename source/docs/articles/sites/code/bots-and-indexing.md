@@ -39,8 +39,9 @@ Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (suc
 
 It is important to note that each of your site environments have a robots.txt associated with the bare ".pantheon.io" domain that contains the following:
 
-```bash
-User-agent: * Disallow: /
+```
+User-agent: *   
+Disallow: /
 ```
 The pantheon.io domains are ONLY intended for development use and cannot be used for production. If you're testing links or SEO prior to launch, a workaround may be to assign a test or beta domain to an environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you could possibly utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
 
