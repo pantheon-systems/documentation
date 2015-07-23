@@ -27,6 +27,12 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
  pantheon_test_4
  ```
 
+ To get only the highest `live` tag, use the following:
+
+ ```
+ git tag | grep pantheon_live_ | sort -k1.15n | tail -1
+ ```
+
 2. Select the highest `live` tag and check it out:
 
     ```bash
