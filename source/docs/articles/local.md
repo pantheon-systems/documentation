@@ -9,17 +9,17 @@ While Pantheon provides a number of options for on-server development, local dev
 
 If you're looking for a self-contained local development solution on Mac, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
 
-## Setting up Local Development for a Pantheon Site
+## Set up Local Development for a Pantheon Site
 
 To begin, you'll need:
 
 - A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
-- Git client for tracking code changes.
-- SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync.
+- Git client for tracking code changes
+- SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](https://github.com/pantheon-systems/cli)
 - [Drush](/docs/articles/local/drupal-drush-command-line-utility/) (optional)
 
-To save time, clear the target site environment's cache. This can be done from the Pantheon dashboard, from the application itself, or by running the following Terminus command:
+To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
 terminus site clear-caches --site=<site> --env=<env>
@@ -38,7 +38,7 @@ Each will need to be transferred from Pantheon to your local environment.
 
 ### Get the Code
 
-[Checkout the codebase using Git.](/docs/articles/local/starting-with-git/#clone-your-site-codebase)
+[Checkout the codebase using Git](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
 
 ### Get the Database
 
@@ -66,7 +66,7 @@ terminus site backup create --element=database --site=<site> --env=<env>
 terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 
-This will create and download the database to your Desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
+This will create and download the database to your desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
 
 ````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
@@ -82,7 +82,7 @@ Run the following Terminus commands:
 terminus site backup create --element=files --site=<site> --env=<env>
 terminus site backup get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
-This will create and download a backup of the site's files to your Desktop.
+This will create and download a backup of the site's files to your desktop.
 
 #### Via SFTP
 
@@ -97,7 +97,7 @@ SFTP is slower, but easier to use for some. If you don't have a GUI client like 
 - Enter `get -r *` and press ENTER to transfer the files down to your local environment.  
 - Once complete enter `exit` and press ENTER to exit your SFTP program.
 
-## Submitting Changes to Pantheon
+## Submit Changes to Pantheon
 
 ### Send the Code
 
