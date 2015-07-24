@@ -8,7 +8,7 @@ keywords: upstream, update upstream, apply updates, apply update, update core, u
 ---
 Core updates will appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available.
 
-<div class="alert alert-info" role="alert"
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Due to platform-wide codeserver caching settings, these update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.</div>
 
