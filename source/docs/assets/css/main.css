@@ -1941,22 +1941,42 @@ display: block;
 .alert-info {
   color: black !important;
   background-image: none !important;
-  background-color: transparent !important;
-  border: 2px solid #31708f;
+  border-left: solid #31708f;
   border-left-width: 8px;
-  border-radius: 4px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: 0px;
+  background-color: rgba(175, 212, 230, 0.27) !important;
   }
-  .alert-info h4 {
-  color: #31708f;
-  }
-  .alert-danger {
+.alert-warning{
   color: black !important;
   background-image: none !important;
-  background-color: transparent !important;
-  border: 2px solid #ce4844;
+  border-left: solid #31708f;
   border-left-width: 8px;
-  border-radius: 4px;
-  }
-  .alert-danger h4 {
-  color: #ce4844;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: 0px;
+  background-color: rgba(175, 212, 230, 0.27) !important;
+}
+.alert-warning h5 {
+  color: #31708f;
+}
+.alert-info h4 {
+  color: #31708f;
+}
+.alert-danger {
+  color: black !important;
+  background-image: none !important;
+  border-color: #d83f48;
+  border-left-width: 8px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: 0px;
+  background-color: rgb(250, 242, 242) !important;
+}
+.alert-danger h4 {
+  color: #d83f48;
   }
