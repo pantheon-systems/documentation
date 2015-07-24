@@ -15,7 +15,7 @@ The Dev environment also provides [one-click updates](/docs/articles/sites/code/
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 The Test and Live environments do not have write access to code outside of the deployment process.</div>
 

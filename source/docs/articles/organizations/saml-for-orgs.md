@@ -25,7 +25,7 @@ You will need to enter the following:
 
 + **Single sign-on URL**: `https://dashboard.pantheon.io/saml/example.com/consume`
 
-  <div class="alert alert-warning" role="alert">
+  <div class="alert alert-info" role="alert">
   <h4>Note</h4>
   Replace <code>example.com</code> with the domain you control</div>
 

@@ -58,7 +58,7 @@ Your connection data is as follows:
  
 
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 When you setup your SFTP client remember that <em>SFTP</em> will be the protocol and you will need to connect to your environment using port <em>2222</em>.</div>
 

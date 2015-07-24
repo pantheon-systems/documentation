@@ -1938,17 +1938,6 @@ padding: 0.5em;
 white-space: pre-wrap;
 display: block;
 }
-.alert-warning {
-  color: black !important;
-  background-image: none !important;
-  background-color: transparent !important;
-  border: 2px solid #EFD01B;
-  border-left-width: 8px;
-  border-radius: 4px;
-  }
- .alert-warning h4 {
-  color: #EFD01B;
- }
 .alert-info {
   color: black !important;
   background-image: none !important;

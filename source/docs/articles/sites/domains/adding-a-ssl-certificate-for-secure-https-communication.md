@@ -41,7 +41,7 @@ The output of `openssl` should be two files:
 `www_example_com.csr`  
 `www_example_com.key`
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
 <div class="alert alert-info" role="alert">

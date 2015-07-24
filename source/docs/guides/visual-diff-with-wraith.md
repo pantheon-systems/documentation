@@ -119,7 +119,7 @@ paths:
   great-vegetables: /content/great-vegetables
   lovely-vegetables: /content/lovely-vegetables
 ```
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
  YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
 Finally, execute Wraith:

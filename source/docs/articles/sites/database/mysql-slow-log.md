@@ -59,7 +59,7 @@ sftp> exit
 $  
 ```
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</div>
 

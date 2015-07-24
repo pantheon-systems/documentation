@@ -16,7 +16,7 @@ Using LDAP as a consumer of services is supported on the platform and will work 
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
 

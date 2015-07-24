@@ -48,7 +48,7 @@ A CloudFront distribution is not a Drupal distribution. A CF distribution simply
 5. Click **Save Configuration**. Your assets should now be coming from your CloudFront distribution.
 
 ## Verify Assets Are Coming From the CloudFront Distribution
-<div class="alert alert-warning">
+<div class="alert alert-info">
 <h4>Note</h4>
 Execute the following steps as an anonymous user (logged out).
 </div>

@@ -16,7 +16,7 @@ This method allows for transfer of unlimited data "server-to-server", which is m
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.</div>
 

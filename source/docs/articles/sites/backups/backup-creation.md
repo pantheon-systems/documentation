@@ -32,7 +32,7 @@ Clicking on the down arrow next to the Code, DB, or Files for a particular backu
 
 Now that you have created the archive files you can check out how to [Restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">Check this documentation for more information about signed URLS</a>.</div>
 

@@ -20,7 +20,7 @@ Click the **Zone file** in the list to start editing.
 
 Change the editing mode to "Expert" in the dropdown menu on the right.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 If you are editing a pre-existing Zone file, you will receive a notice (see image below, the notice is highlighted) that tells you that the zone file is currently being used and you will need to create a new version.</div>
 ![Configure the A records](/source/docs/assets/images/desk_images/197261.png)<br />

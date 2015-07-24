@@ -14,7 +14,7 @@ Varnish can also improve the availability of your site. For example, if a PHP fa
 
 
 ## Configure Your Drupal or WordPress Site for Varnish
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish module.  </div>
 
