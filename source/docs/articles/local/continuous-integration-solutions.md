@@ -6,7 +6,7 @@ category:
   - developing
 keywords: continuous integration, tests, testing, terminus, drupal,
 ---
-Continuous Integration is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by opening a support ticket.
+Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by opening a support ticket.
 
 ## Terminus Command-Line Interface
 
@@ -30,6 +30,13 @@ After enabling the SimpleTest module, you can use Drush to remotely execute Simp
     drush @pantheon.$SITE_NAME.$ENV test-run -l http://$ENV-$SITE_NAME.pantheon.io/ UserSaveTestCase --xml='sites/default/files'
 
 The end results would be written to http://dev-yoursitename.pantheon.io/sites/default/files/UserSaveTestCase.xml
+
+## Integration Bot
+
+We recommend creating a bot user account that will handle the tasks or jobs by an external continuous intergration service rather a standard user account. 
+
+- Add the bot to select projects
+- Manage separate SSH Keys for CI
 
 ## Known Limitations
 
