@@ -275,15 +275,15 @@ TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or 
 
 Notes are helpful to call out information that the user needs to be aware of while completing a task.  
 
-When adding an informational note to a document, use the info alert styling bold the word "Note".
+When adding an informational note to a document, use the info alert styling and wrap the word "Note" in H4 tags.
 
 <div class="alert alert-info" role="alert">
-<strong>Note:</strong> You will need to download and install Git before you can begin.</div>
+<h4>Note:</h4> You will need to download and install Git before you can begin.</div>
 
-If there is **critical** or detrimental information a user must read before starting, use the danger alert styling and bold the word "Warning":
+If there is **critical** or detrimental information a user must read before starting, use the danger alert styling and wrap the word "Warning" in H4 tags:
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: This is a permanent change and once you delete it your site cannot be restored.</div>
+<h4>Warning</h4>: This is a permanent change and once you delete it your site cannot be restored.</div>
 
 ## Numbers
 
