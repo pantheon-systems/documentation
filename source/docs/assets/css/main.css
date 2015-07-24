@@ -1938,3 +1938,27 @@ padding: 0.5em;
 white-space: pre-wrap;
 display: block;
 }
+.alert-warning {
+  color: black !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 2px solid #EFD01B;
+  border-left-width: 8px;
+  border-radius: 4px;
+  }
+.alert-info {
+  color: black !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 2px solid #31708f;
+  border-left-width: 8px;
+  border-radius: 4px;
+  }
+  .alert-danger {
+  color: black !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 2px solid #ce4844;
+  border-left-width: 8px;
+  border-radius: 4px;
+  }
