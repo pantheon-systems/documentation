@@ -16,8 +16,9 @@ Using LDAP as a consumer of services is supported on the platform and will work 
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
 
 ### Drupal
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
@@ -79,7 +80,8 @@ The following script has been used to troubleshoot a variety of configuration pr
 terminus drush --site=<site> --env=<env> scr ldap-test.php
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
 ````php

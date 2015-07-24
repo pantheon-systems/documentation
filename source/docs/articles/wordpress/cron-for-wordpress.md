@@ -82,7 +82,9 @@ The first thing you'll need to do is disable WP-Cron's internal processing. Add 
 define('DISABLE_WP_CRON', true);
 ````
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.</div>
 
 ### Free Services
 Once you have disabled WP-Cron, you will need a service that calls a URL at regular intervals. The easiest way to do this is to set up an account with a free cron service:
@@ -97,7 +99,9 @@ Any of the above services will get the job done. By disabling WP-Cron, you have 
 1. Set up an account
 2. Set up a job that calls `http://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Replace <code>yourdomain.tld</code> with your domain.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Replace <code>yourdomain.tld</code> with your domain.</div>
 
 Depending on what service you use, you may have the ability to set up multiple jobs at different times. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. If you create new schedules that need to be run more often than once every 15 minutes, you will need to adjust your job accordingly.
 

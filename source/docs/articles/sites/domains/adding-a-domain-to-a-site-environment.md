@@ -55,4 +55,5 @@ Example:
     192.237.142.203 puppies.cuddlyfanclub.com
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Remember to remove this change when you're done.</div>
+<h4>Note</h4>
+Remember to remove this change when you're done.</div>

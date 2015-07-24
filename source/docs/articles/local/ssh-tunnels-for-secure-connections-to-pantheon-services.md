@@ -37,7 +37,8 @@ Next, using the values found within the **Connection Info** tab, execute the fol
 mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
+<h4>Note</h4>
+Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill

@@ -57,7 +57,8 @@ $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 You can also use the above to develop Drupal 8 on Pantheon!
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
+<h4>Note</h4>
+If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
 
 ## Base Table or View Not Found
 This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the semaphore does not exist error.

@@ -14,8 +14,9 @@ You should:
 - [Enable New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis#enabling-new-relic) to monitor internal execution performance without needing any additional modules or tools.
 - Have access to a command-line environment, preferably with administrative privileges.
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: <strong>Load testing should only be performed on the Live environment</strong>. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+<strong>Load testing should only be performed on the Live environment</strong>. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</div>
 
 ## Performance vs. Scalability
 
@@ -50,7 +51,8 @@ Vary: Accept-Encoding, Cookie
 The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings#drupal-7-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Until Varnish has been correctly configured, don't worry about further testing.</div>
+<h4>Warning</h4>
+Until Varnish has been correctly configured, don't worry about further testing.</div>
 
 ## Timing an Uncached Page Request
 
@@ -94,7 +96,8 @@ If you're not satisfied with the response time, focus should be shifted to optim
 In order to test scale and throughput, we use AB, a simple tool made available by the Apache Project.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
+<h4>Warning</h4>
+Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
 
 Run the following command:
 ```nohighlight
@@ -150,8 +153,9 @@ Percentage of the requests served within a certain time (ms)
 ```
 The output provides insight into the requests per second, the most critical element in regards to the scalability of a site. Pay attention to the 90/95% response time as well, as this gives an idea of how the site is actually performing. Check that the number of failed requests is 0; if it's not, this should be investigated.
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.</div>
 
 ## Performance Goals
 

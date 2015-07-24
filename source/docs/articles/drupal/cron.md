@@ -18,8 +18,9 @@ For every site environment, Pantheon executes Cron at the top of each hour to al
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
 There is no way to configure when Pantheon executes Drupal cron.
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Setting the value to "Never" will be ignored; cron will always run at least hourly.
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Setting the value to "Never" will be ignored; cron will always run at least hourly.
 </div>
 ## Managing Cron
 
@@ -34,7 +35,8 @@ Alternatively, all scheduled cron tasks can be run with the following [Terminus]
 terminus drush --site=<site> --env=<env> cron
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 To ensure that Cron tasks are being run, you can check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
 ![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)

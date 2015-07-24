@@ -9,7 +9,8 @@ keywords: dns, dns records, point your domain, point domain to pantheon, pointin
 Gandi provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: This guide assumes you have already registered your domain through Gandi.net.</div>
+<h4>Note</h4>
+This guide assumes you have already registered your domain through Gandi.net.</div>
 
 ## Domain Configuration Page
 
@@ -38,7 +39,8 @@ We will be pointing our A record to 50.56.49.247, as per the [Pantheon DNS docum
 ```
 Change the www CNAME to match the following:
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Be sure to include the trailing "."</div>
+<h4>Note</h4>
+Be sure to include the trailing "."</div>
 ```nohighlight
 www 300 IN CNAME edge.live.getpantheon.com.
 ```

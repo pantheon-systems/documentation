@@ -8,13 +8,16 @@ keywords: upstream, update upstream, apply updates, apply update, update core, u
 ---
 Core updates will appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available.
 
-<div class="alert alert-info" role="alert"><strong>Note: </strong>Due to platform-wide codeserver caching settings, these update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Due to platform-wide codeserver caching settings, these update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.</div>
 
 Sometimes we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
 
 Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
 
 You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.</div>
 
@@ -55,7 +58,8 @@ In the event that the update fails you may see an error indicating a conflict wi
 Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: This does not solve all problems that may arise, but it should take care of most situations.</div>
+<h4>Note</h4>
+This does not solve all problems that may arise, but it should take care of most situations.</div>
 
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 

@@ -27,7 +27,8 @@ Select to accept the server's host key for the current session so it is stored i
  ![Create a saved connection](/source/docs/assets/images/desk_images/222984.png)<br />
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Under the Advanced Tab, the Remote Directory should be left blank as shown below.  </div>
+<h4>Note</h4>
+Under the Advanced Tab, the Remote Directory should be left blank as shown below.  </div>
  ![](/source/docs/assets/images/desk_images/272341.png)  
 
 

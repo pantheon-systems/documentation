@@ -67,9 +67,9 @@ The common community module for Drupal to use Redis is simply called [redis](htt
       $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
     }
   ```
-  
+
   <div class="alert alert-info">
-  <strong>Note:</strong> Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
+  <h4>Note</h4>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
 
 5. _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
@@ -170,7 +170,7 @@ redis> DBSIZE
 
 ### Redis is enabled but doesn't have any data
 
-When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results. 
+When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
 
 Example of a block that will result in an **incorrectly configured cache backend**:
 
@@ -189,7 +189,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
     $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
   }
 }
-  
+
 ```
 
 The preceding conditional will only evaluate as true if the application in the Live environment is being invoked through a web visitor, but not via command-line PHP. Therefore, Redis keys will only be populated through visits, but they will not be cleared or populated via Drush calls, which will result in caching issues for the site. Also, the cache configuration will only apply for the live site, making it difficult to confirm its operation in the development or staging environment prior to deployment.

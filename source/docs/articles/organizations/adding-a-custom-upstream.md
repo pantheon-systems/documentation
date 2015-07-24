@@ -89,7 +89,8 @@ Use the standard install process to make sure your distribution installs cleanly
 terminus site wipe --site=<site> --env=<env>
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 #### Acceptance Tests
 
 Run your automated acceptance tests, using behat, casper.js, or by manually executing user stories.
@@ -98,7 +99,8 @@ Run your automated acceptance tests, using behat, casper.js, or by manually exec
 
 When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
 <div class="alert alert-info" role="alert">
-<strong>Note:</strong> For private repositories, grant read-access to the <code>gf-pantheon</code> user on GitHub or to the <code>pantheon_distributions</code> user on Bitbucket.</div>
+<h4>Note</h4>
+For private repositories, grant read-access to the <code>gf-pantheon</code> user on GitHub or to the <code>pantheon_distributions</code> user on Bitbucket.</div>
 
 ## 5. Submit Product Information.
 

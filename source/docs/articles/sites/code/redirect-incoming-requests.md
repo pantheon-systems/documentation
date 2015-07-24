@@ -10,7 +10,8 @@ It's often useful to redirect requests to a different domain or path. While it's
 
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a>.</div>
+<h4>Note</h4>
+Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a>.</div>
 
 #### Why redirect with settings.php or wp-config.php and not .htaccess?
 
@@ -24,8 +25,9 @@ Configuration also tends to be more maintainable as Drupal and WordPress devel
 
 Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well!
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the <a href="/docs/articles/going-live/#Add-Domain-to-the-Live-Environment"> site's Dashboard</a>.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the <a href="/docs/articles/going-live/#Add-Domain-to-the-Live-Environment"> site's Dashboard</a>.</div>
 
 
 ## Redirect to a Common Domain

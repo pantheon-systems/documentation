@@ -14,7 +14,7 @@ The first two require you to enable the **pantheon\_api** module to allow Drupal
 2. Via [Terminus](https://github.com/pantheon-systems/cli): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Varnish caches cannot be selectively cleared.</div>
+<div class="alert alert-info" role="alert"><h4>Note</h4>Varnish caches cannot be selectively cleared.</div>
 
 
 ### WordPress

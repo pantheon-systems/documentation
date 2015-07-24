@@ -15,8 +15,9 @@ The Dev environment also provides [one-click updates](/docs/articles/sites/code/
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: The Test and Live environments do not have write access to code outside of the deployment process.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+The Test and Live environments do not have write access to code outside of the deployment process.</div>
 
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/) and [environment configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/). Then, dive in to [developing directly with SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and [explore more ways](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/) of utilizing built-in admin tools.

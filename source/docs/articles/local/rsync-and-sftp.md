@@ -6,7 +6,8 @@ category:
 keywords: rsync and sftp, files, transfer, file transfer, drupal, wordpress
 ---
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the Dashboard periodically or when you find that you can’t connect.</div>
+<h4>Warning</h4>
+Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the Dashboard periodically or when you find that you can’t connect.</div>
 
 
 If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
@@ -15,8 +16,9 @@ This method allows for transfer of unlimited data "server-to-server", which is m
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this manner cannot be committed and will not be available for deployment.</div>
 
 ## SFTP
 
@@ -66,7 +68,8 @@ rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.
 # (-a, -p, -o, -g, -D, etc are not).
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
+<h4>Note</h4>
+Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
 
 ## Examples
 

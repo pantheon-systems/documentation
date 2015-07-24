@@ -7,14 +7,15 @@ keywords: import, importing site, pantheon, new site, drupal
 ---
 The easiest way to import an existing site into Pantheon is to create a new site and select **Import Archives** when asked to choose a start state.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
 ![Choose your start state](/source/docs/assets/images/choose-your-start-state.png)
 
 Next, determine if you will import one archive or multiple. By default, you have the option to give a single archive for your entire import.
 
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
- 
+
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
@@ -70,7 +71,8 @@ The code archive should include the following directories:
     └── themes
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
+<h4>Note</h4>
+The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 
@@ -115,8 +117,9 @@ tar -czf $TARGET/files.tar.gz .
 
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 

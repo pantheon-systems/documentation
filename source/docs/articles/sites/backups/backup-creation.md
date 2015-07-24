@@ -7,7 +7,8 @@ keywords: backup, backup creation, create a backup, create backup, create backup
 ---
 Pantheon makes backups of an environment a simple and easy one-click operation. A backup is made up of three separate archives: a _database_ backup, a _files_ backup, and a _code_ backup.
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Backups need to be run separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Backups need to be run separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, these changes WILL BE LOST and there will be no way to recover them. The backups are based on the code currently in the git log.</div>
 
 ## Steps
 
@@ -18,7 +19,8 @@ Pantheon makes backups of an environment a simple and easy one-click operation. 
 You will notice the job indicator will turn green and provide the number of active jobs.
  ![](/source/docs/assets/images/desk_images/305276.png)
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
+<h4>Note</h4>
+There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files).
@@ -30,8 +32,9 @@ Clicking on the down arrow next to the Code, DB, or Files for a particular backu
 
 Now that you have created the archive files you can check out how to [Restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">Check this documentation for more information about signed URLS</a>.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">Check this documentation for more information about signed URLS</a>.</div>
 
 ## Frequently Asked Questions
 

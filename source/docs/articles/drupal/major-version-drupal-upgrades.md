@@ -12,7 +12,8 @@ Also, Pantheon needs to track the proper upstream Git history for your site to d
 
 ## Set up the Code and Migrate the Data
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Do not attempt the upgrades on the platform. This is not supported.</div>
+<h4>Warning</h4>
+Do not attempt the upgrades on the platform. This is not supported.</div>
 
 The best way to think about upgrading to the next major revision of Drupal on Pantheon is the same as when you get a new laptop or smartphone: first you set up both devices side-by-side, then you migrate the data from the old to the new.
 

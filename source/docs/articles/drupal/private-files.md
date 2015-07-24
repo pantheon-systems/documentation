@@ -7,8 +7,9 @@ category:
 keywords: drupal, wordpress, private files, files, private keys, private
 ---
 Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+If you have not already created these directories you will need to do that first. Creating the folders can be done via SFTP or git in Dev and pushed to your Test and Live environments.</div>
 
 ## Private Files and Uploads In Drupal
 
@@ -57,5 +58,6 @@ uc_credit_encryption_path: "private"
 ```
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
+<h4>Note</h4>
+We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
 </div>

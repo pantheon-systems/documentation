@@ -11,7 +11,8 @@ WordPress configuration is set in wp-config.php, located within your WordPress s
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes and caching.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a Pantheon database within your wp-config.php. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+You should NEVER put the database connection information for a Pantheon database within your wp-config.php. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
 
 ## Local Database Configuration for Development
 
@@ -20,7 +21,9 @@ If you are also developing locally and need to configure WordPress for your desk
 ## Pantheon's WordPress Config
 
 <script src="https://gist.github.com/joshkoenig/9646205.js"></script>
-<div class="alert alert-warning" role="alert"><strong>Note: </strong><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/articles/sites/code/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+<code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/articles/sites/code/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
 
 ##Frequently Asked Questions
 

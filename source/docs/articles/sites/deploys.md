@@ -24,7 +24,8 @@ From [Terminus](https://github.com/pantheon-systems/cli), run the following comm
 terminus site deploy [--site=<site>] [--env=<test>] [--from=<dev>] [--cc] [--updatedb] [--note=<note>]
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 
 Select the environment you wish to deploy from and summarize the deployment:

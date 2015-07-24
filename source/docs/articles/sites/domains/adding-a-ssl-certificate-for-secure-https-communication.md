@@ -11,7 +11,8 @@ SSL is a standard for establishing an encrypted link between your Pantheon site 
 Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or CSRs, or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
+<h4>Warning</h4>
+Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
 
 ## Steps to Enable SSL
 
@@ -40,10 +41,12 @@ The output of `openssl` should be two files:
 `www_example_com.csr`  
 `www_example_com.key`
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
 <div class="alert alert-info" role="alert">
-<strong>Windows Users</strong>: You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/articles/local/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
+<h4>Note</h4>
+Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/articles/local/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
 
 ## Get SSL Certificate
 
@@ -94,7 +97,8 @@ After submitting your certificates, you'll see:
 "HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
+<h4>Note</h4>
+It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
 
 ## DNS
 
@@ -107,7 +111,8 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 Before you point your DNS to the custom IP address you received after enabling SSL, you may verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
+<h4>Warning</h4>
+You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
 
 ### Chrome
 

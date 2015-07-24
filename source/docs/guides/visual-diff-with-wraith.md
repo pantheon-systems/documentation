@@ -119,8 +119,9 @@ paths:
   great-vegetables: /content/great-vegetables
   lovely-vegetables: /content/lovely-vegetables
 ```
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+ YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
 Finally, execute Wraith:
 ```bash
 wraith capture config
@@ -135,7 +136,8 @@ open shots/gallery.html
 
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
+<h4>Note</h4>
+The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
 Generate a CasperJS configuration file and navigation script.
 ```bash

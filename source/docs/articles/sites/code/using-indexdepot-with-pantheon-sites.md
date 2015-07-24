@@ -21,7 +21,8 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 - REST-like API
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: This article assumes that you have already enabled the ApacheSolr module.</div>
+<h4>Note</h4>
+This article assumes that you have already enabled the ApacheSolr module.</div>
 
 ## Create a New Index
 
@@ -69,7 +70,8 @@ Here we need to provide two items to the ApacheSolr configuration:
 When you’ve finished, click **Save**.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: A schema must be pushed in each environment (Dev/Test/Live).</div>
+<h4>Note</h4>
+A schema must be pushed in each environment (Dev/Test/Live).</div>
 
 ## Test Your New Solr Connection
 

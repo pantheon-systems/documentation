@@ -25,8 +25,9 @@ Next, enter the information to connect to the database. Each of the following ar
 ![Create a saved connection](/source/docs/assets/images/desk_images/224652.png)
 Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Ensure you have the correct database username and password for your environment.
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Ensure you have the correct database username and password for your environment.
 </div>
 ## Test the Database Connection
 

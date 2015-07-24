@@ -35,7 +35,9 @@ The New Relic interface provides severals views that display information about v
 
 1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data. 
 2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds.
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> the apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+The apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.</div>
 3. **Page Views** provides the number of page views per minute.
 4. The **Apdex & Top States by Load Time** presents a visualization of load times based on region; these can be viewed internally to the United States or globally.
 5. **Recent Events** logs the most recent events.

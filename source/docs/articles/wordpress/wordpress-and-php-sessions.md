@@ -8,10 +8,11 @@ keywords: wordpress, php sessions, php
 ---
 WordPress Core [does not use sessions](http://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables?replies=7). All "user state" is managed via cookies. This is a Core design decision.
 
-However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain. Sites that need to utilize PHP Sessions should install this plugin. 
+However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain. Sites that need to utilize PHP Sessions should install this plugin.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</div>
+<h4>Warning</h4>
+Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</div>
 
 ## Troubleshooting Session Errors
 

@@ -15,7 +15,7 @@ The Organization Dashboard is where you manage all your sites in a single locati
 4. Choose the user's role.
 5. Click **Add user**.
 
-If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard. 
+If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard.
 
 ## Add Sites to Your Organization
 
@@ -53,6 +53,7 @@ Removing team members follows the same process.
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters. You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Tags are case-sensitve.
+<h4>Note</h4>
+Tags are case-sensitve.
 </div>
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.

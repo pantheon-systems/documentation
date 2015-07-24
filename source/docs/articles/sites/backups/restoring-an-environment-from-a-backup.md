@@ -16,7 +16,8 @@ This is a  **destructive** process; this will  **wipe** your database and file
 
 When a restore starts, the operation is placed in a machine queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, submit a support ticket and ask.
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Pantheon does not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test, then pull the code change and clone the content to Live. This will minimize user-facing downtime.</div>
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Pantheon does not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test, then pull the code change and clone the content to Live. This will minimize user-facing downtime.</div>
 
 ## Restoring an Environment From Another Environment's Backup
 

@@ -15,7 +15,9 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 ## Installation
 You can install the plugin from your [WordPress dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/#using-wp-admin-to-manage-plugins-and-themes) by following these steps:
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Your site's Connection Mode must be [set to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview) in order to install plugins using the WordPress dashboard.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Your site's Connection Mode must be [set to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview) in order to install plugins using the WordPress dashboard.</div>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".

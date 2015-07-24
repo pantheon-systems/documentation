@@ -73,7 +73,8 @@ If you are using HTTPS for security and using an identity certificate, you **mus
 ### How long do DNS changes typically take?
 
 It depends on several factors, including the TTL of your DNS records. As a rule of thumb, DNS changes can take up to 48 hours to propagate across the entire Internet, so be patient - it'll happen. With that said, most updates happen in a couple hours.
-<div class="alert alert-info" role="alert"><strong>Note: </strong>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
 We recommend lowering the TTL value (e.g. 120s) before making DNS changes for faster propagation.
 </div>
 

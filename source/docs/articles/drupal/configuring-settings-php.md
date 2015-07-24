@@ -10,7 +10,8 @@ The Drupal system configuration in code is set in:
 
 Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php—no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
 
 ## Pantheon Articles on Settings.php
 
