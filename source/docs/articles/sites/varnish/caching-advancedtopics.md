@@ -57,9 +57,9 @@ We do not recommend building separate mobile sites or using cookies that are pas
 
 We recommend handling mobile detection using Responsive Web Design (RWD) techniques with HTML5, CSS3, and JavaScript. This will avoid the need to compromise potential scalability in order to scale traffic. HTML5 and CSS3 is the high performance route, as you save on the backend load and browsers.
 
-**Issue**   
+**Issue**
 Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
- 
+
 **Recommended Solution**  
 While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**  
 
@@ -81,9 +81,11 @@ You can set a cookie beginning with `STYXKEY` followed by one or more alphanumer
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
 
-In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header. 
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
-<div class="alert alert-info" role="alert">	<strong>Note</strong>:STYXKEY is not a replacement for responsive design.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+STYXKEY is not a replacement for responsive design.</div>
 
 **Examples of `STYXKEY` cookie names:**
 

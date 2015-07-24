@@ -26,7 +26,8 @@ terminus site clear-caches --site=<site> --env=<env>
 ```
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 There are three parts to any dynamic website:
 
@@ -55,7 +56,8 @@ Next, import the database into your local environment using a MySQL client.
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
+<h4>Note</h4>
+Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
 
 #### Via Terminus
 

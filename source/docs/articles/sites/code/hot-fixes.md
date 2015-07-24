@@ -64,7 +64,8 @@ Make your hotfixes and commit them locally. Then tag and push them to test by cr
     git push origin pantheon_test_5
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Your tag numbers will vary. We are showing 5 since in the list of tags above the highest number was 4. Be sure you have the right number before pushing.</div>
+<h4>Note</h4>
+Your tag numbers will vary. We are showing 5 since in the list of tags above the highest number was 4. Be sure you have the right number before pushing.</div>
 
 ## Test and Deploy
 

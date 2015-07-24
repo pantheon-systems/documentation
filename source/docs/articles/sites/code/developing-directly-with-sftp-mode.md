@@ -12,7 +12,8 @@ This is why we offer **SFTP mode**. This allows you to develop directly on Panth
 If you want to use your website framework's built-in update systems (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first!
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</div>
+<h4>Note</h4>
+Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</div>
 
  ![Enable SFTP mode](/source/docs/assets/images/desk_images/278855.png)
 <div class="alert alert-danger" role="alert"><strong>Warning:</strong> SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet. If you have pending changes and the site is migrated (which we may do at any time for various reasons), your changes will be lost without warning. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
@@ -20,7 +21,8 @@ If you want to use your website framework's built-in update systems (e.g. the <c
 As you work via SFTP, the Pantheon  Dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever mess around with Git directly.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: This does mean you won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</div>
+<h4>Note</h4>
+This does mean you won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</div>
 
 ## SFTP mode
 
@@ -87,7 +89,8 @@ Once your message is ready, clicking on commit will trigger the commit job and a
 The blocking UI will appear for all users on the team who are looking at that environment. This is to maintain the integrity of the changes and so each team member is aware of the current state of the code.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Your dashboard will track all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
+<h4>Note</h4>
+Your dashboard will track all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
 
 ## GUI Tool Guides
 

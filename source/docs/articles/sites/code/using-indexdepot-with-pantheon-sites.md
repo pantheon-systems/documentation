@@ -21,7 +21,8 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 - REST-like API
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: This article assumes that you have already enabled the ApacheSolr module.</div>
+<h4>Note</h4>
+This article assumes that you have already enabled the ApacheSolr module.</div>
 
 ## Create a New Index
 

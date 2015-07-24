@@ -94,7 +94,8 @@ The next step is to post the schema.xml, which describes Drupal fields to the So
 Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the vast majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
  ![](/source/docs/assets/images/desk_images/192443.png)  
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: You must post the schema.xml in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
+<h4>Note</h4>
+You must post the schema.xml in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
 
 ### 6. Enable and Configure Your Solr Module
 

@@ -23,7 +23,7 @@ Once the user has been added to the project, they will receive a welcome email n
 **Remove a Team Member**
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: All users can be removed except the site owner.</div>
+<h4>Note</h4>All users can be removed except the site owner.</div>
 
 In the Team modal, click the X next to the user you want to delete.
 

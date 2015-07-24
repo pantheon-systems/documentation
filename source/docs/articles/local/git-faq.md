@@ -68,7 +68,8 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git checkout <commit ID> -- <file>`<br />
  ```
   <div class="alert alert-info" role="alert">
-  <strong>Note</strong>: When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
+  <h4>Note</h4>
+  When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:  
 
@@ -147,7 +148,8 @@ If you're importing a site that has an existing Git history, you may be able to 
     ```
 4. Resolve any conflicts.
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
+<h4>Note</h4>
+You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
 5. Once this is done, push back to Pantheon: `bash git push origin master`
 6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 

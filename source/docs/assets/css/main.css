@@ -1954,6 +1954,9 @@ display: block;
   border-left-width: 8px;
   border-radius: 4px;
   }
+  .alert-info h4 {
+  color: #31708f;
+  }
   .alert-danger {
   color: black !important;
   background-image: none !important;

@@ -20,7 +20,8 @@ CloudFront is a pull-only content distribution network. All requests for assets 
 
 The first step in setting-up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/WorkingWithDownloadDistributions.html#DownloadDistValuesDomainName).
 <div class="alert alert-info">
-<strong>Note</strong>: A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+<h4>Note</h4>
+A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
 </div>
 1. In the CloudFront console, click **Create Distribution**.
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).

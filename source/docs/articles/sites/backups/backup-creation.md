@@ -18,7 +18,8 @@ Pantheon makes backups of an environment a simple and easy one-click operation. 
 You will notice the job indicator will turn green and provide the number of active jobs.
  ![](/source/docs/assets/images/desk_images/305276.png)
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
+<h4>Note</h4>
+There is no need to worry; you can carry on with development. We built the Dashboard to handle these type of interactions so you can focus on site development.</div>
 
 ## Accessing Backups  
 When the backup has finished, the jobs indicator will return to its start state letting you know that the active task is complete. You will notice a new backup in your log with three separate archives (Code, Database and Files).

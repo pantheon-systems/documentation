@@ -16,7 +16,8 @@ git clone https://github.com/phpmyadmin/phpmyadmin.git
 Alternatively, you can download a zip archive of the latest code from the GitHub repository.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: A repository for PHPMyAdmin exists on SourceForge, but we recommend the GitHub version as you get direct access to the code.
+<h4>Note</h4>
+A repository for PHPMyAdmin exists on SourceForge, but we recommend the GitHub version as you get direct access to the code.
 </div>
 ## Configure a New MySQL Connection
 

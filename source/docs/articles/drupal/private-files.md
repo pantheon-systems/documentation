@@ -57,5 +57,6 @@ uc_credit_encryption_path: "private"
 ```
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
+<h4>Note</h4>
+We do not encourage developers save credit card info on the platform but we do realize that for development this may be useful if you need a test payment method.
 </div>

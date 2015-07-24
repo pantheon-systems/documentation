@@ -43,7 +43,8 @@ The output of `openssl` should be two files:
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>: Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
 <div class="alert alert-info" role="alert">
-<strong>Windows Users</strong>: You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/articles/local/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
+<h4>Note</h4>
+You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/articles/local/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
 
 ## Get SSL Certificate
 
@@ -94,7 +95,8 @@ After submitting your certificates, you'll see:
 "HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
+<h4>Note</h4>
+It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
 
 ## DNS
 

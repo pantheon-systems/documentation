@@ -57,7 +57,8 @@ At this point you're ready to try loading your site under HTTPS. It's a good ide
 To start testing, open your website normally, and manually change the "Location" in your browser to start with `https` instead of plain `http`. You should try browsing a number of pages, logging in, etc.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for CloudFlare's free certificate provisioning.</div>
+<h4>Note</h4>
+If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for CloudFlare's free certificate provisioning.</div>
 
 Another common issue is to have the site load incorrectly due to the presence of insecure content on the page. Most modern browsers won't load CSS or JS files that are included via HTTP on a page that was requested over HTTPS. Getting fully switched to HTTPS usually requires some changes to your CMS settings in order to complete the transition.
 

@@ -10,7 +10,8 @@ It's often useful to redirect requests to a different domain or path. While it's
 
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a>.</div>
+<h4>Note</h4>
+Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a>.</div>
 
 #### Why redirect with settings.php or wp-config.php and not .htaccess?
 

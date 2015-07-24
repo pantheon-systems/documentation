@@ -79,7 +79,8 @@ The following script has been used to troubleshoot a variety of configuration pr
 terminus drush --site=<site> --env=<env> scr ldap-test.php
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
 ````php

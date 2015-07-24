@@ -19,7 +19,9 @@ Be sure that you:
 ## Create an Account
 If you already have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/free/), you are good to go. Otherwise, you will need to create one. Amazon offers free access to most of their services for the first year. This allows you to build out new systems and test things before committing money to a project.
 
-<div class="alert alert-info" role="alert"> <strong> Note:</strong> When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
 
 ## Create an IAM User
 [Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Before you can use CloudFront, you need to need to create an IAM user.
@@ -30,7 +32,9 @@ If you already have an account with [Amazon Web Services (AWS)](http://aws.amazo
 3. Enter a descriptive user name and click **Create**.
 4. View the new user security credentials by clicking **Show User Security Credentials**.
 
- <div class="alert alert-info" role="alert"> <strong>Note:</strong> You can only view or download a user's "Secret Access Key" immediately after the user has been created. This information cannot be accessed at a later point in time.</div>
+ <div class="alert alert-info" role="alert">
+ <h4>Note</h4>
+ You can only view or download a user's "Secret Access Key" immediately after the user has been created. This information cannot be accessed at a later point in time.</div>
 
 5. Click **Download Credentials**.
 
@@ -61,7 +65,9 @@ Execute the following [Terminus](https://github.com/pantheon-systems/cli) comman
 terminus wp plugin install amazon-s3-and-cloudfront --activate --site=your-awesome-site --env=dev
 ```
 
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> Replace <code>your-awesome-site</code> with your specific site name. To see a list of all your Pantheon hosted sites, run <code>terminus sites list</code> </div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Replace <code>your-awesome-site</code> with your specific site name. To see a list of all your Pantheon hosted sites, run <code>terminus sites list</code> </div>
 
 In order for the Amazon S3 and CloudFront plugin to function, you must also install the Amazon Web Services plugin:
 
@@ -87,7 +93,9 @@ From within your WordPress dashboard:
 
 1. Click **AWS** and select **Settings**.
 
-  <div class="alert alert-info" role="alert"> <strong>Note:</strong> You should already have your AWS user credentials, as they were generated in the sections above. For security reasons, you should not provide user credentials within the Settings page of this plugin, as it will be insecurely stored in the site's database.</div>
+  <div class="alert alert-info" role="alert">
+  <h4>Note</h4>
+  You should already have your AWS user credentials, as they were generated in the sections above. For security reasons, you should not provide user credentials within the Settings page of this plugin, as it will be insecurely stored in the site's database.</div>
 
 2. Add the provided code to the `wp-config.php` file located at the web root of your WordPress site using [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/):
 
@@ -95,11 +103,14 @@ From within your WordPress dashboard:
   define( 'AWS_ACCESS_KEY_ID', '********************' );
   define( 'AWS_SECRET_ACCESS_KEY', '****************************************' );
   ```
-  <div class="alert alert-info" role="alert"> <strong>Note:</strong> Replace the stars with your user credentials.</div>
+  <div class="alert alert-info" role="alert">
+  <h4>Note</h4>
+  Replace the stars with your user credentials.</div>
 
   Once the file has been updated and uploaded to Pantheon, the Settings page will show the following:
 
   ![AWS Plugin Settings User Added](/source/docs/assets/images/aws-plugin-add-user.png)
+
 1. Click **AWS**, then **S3 and CloudFront** from within your WordPress Dashboard.  
 2. Create a new bucket by entering a unique name, and then click **Create**.  
 3. Ensure that "Copy Files to S3" and "Rewrite File URLs" are both set to **ON**.
@@ -124,7 +135,9 @@ Now for the final step: turning on Amazon's CloudFront. These combined services 
 2. Click **Create Distribution**.
 3. From within the Web section, click **Get Started**.
 4. Click inside the **Origin Name** field and select your recently created S3 bucket.
-<div class="alert alert-info" role="alert"> <strong>Note:</strong> This action will automatically populate the <strong>Origin ID</strong> field.</div>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+This action will automatically populate the <strong>Origin ID</strong> field.</div>
 5. All other options are set to a default value. You can use the provided configuration or tweak them as you see fit.  
 6. Click **Create Distribution**.
 

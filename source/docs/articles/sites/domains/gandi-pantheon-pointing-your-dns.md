@@ -9,7 +9,8 @@ keywords: dns, dns records, point your domain, point domain to pantheon, pointin
 Gandi provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: This guide assumes you have already registered your domain through Gandi.net.</div>
+<h4>Note</h4>
+This guide assumes you have already registered your domain through Gandi.net.</div>
 
 ## Domain Configuration Page
 

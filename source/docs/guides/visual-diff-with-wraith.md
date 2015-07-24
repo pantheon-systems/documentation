@@ -135,7 +135,8 @@ open shots/gallery.html
 
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
+<h4>Note</h4>
+The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
 Generate a CasperJS configuration file and navigation script.
 ```bash

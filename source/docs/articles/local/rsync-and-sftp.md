@@ -66,7 +66,8 @@ rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.
 # (-a, -p, -o, -g, -D, etc are not).
 ```
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
+<h4>Note</h4>
+Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
 
 ## Examples
 

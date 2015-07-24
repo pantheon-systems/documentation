@@ -14,7 +14,7 @@ The easiest way to import an existing site into Pantheon is to create a new site
 Next, determine if you will import one archive or multiple. By default, you have the option to give a single archive for your entire import.
 
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
- 
+
 Selecting the link to provide separate code, files, and database archives will give you the option to import individually.
  ![Separate Archives Import](/source/docs/assets/images/separate-archives-import.png)​
 
@@ -70,7 +70,8 @@ The code archive should include the following directories:
     └── themes
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
+<h4>Note</h4>
+The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
 
 ## Create a Code Archive
 
