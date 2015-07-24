@@ -12,6 +12,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Adaptive Image Styles
 
+- Apache Solr Search   
+**Issue** If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.  
+**Solution** Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
+
 - Background Process  
 **Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform.
 
