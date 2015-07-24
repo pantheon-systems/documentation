@@ -16,7 +16,8 @@ Sometimes we will add new features to the Pantheon API module, and deploy bug fi
 
 Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
-<div class="alert alert-danger" role="alert"><strong>Warning:</strong> Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
 
 You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.</div>
 

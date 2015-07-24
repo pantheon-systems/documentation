@@ -51,7 +51,8 @@ Vary: Accept-Encoding, Cookie
 The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings#drupal-7-performance-settings) and [Varnish Caching for High Performance](/docs/articles/sites/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Until Varnish has been correctly configured, don't worry about further testing.</div>
+<h4>Warning</h4>
+Until Varnish has been correctly configured, don't worry about further testing.</div>
 
 ## Timing an Uncached Page Request
 
@@ -95,7 +96,8 @@ If you're not satisfied with the response time, focus should be shifted to optim
 In order to test scale and throughput, we use AB, a simple tool made available by the Apache Project.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
+<h4>Warning</h4>
+Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</div>
 
 Run the following command:
 ```nohighlight

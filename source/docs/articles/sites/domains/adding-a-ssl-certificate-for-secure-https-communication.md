@@ -11,7 +11,8 @@ SSL is a standard for establishing an encrypted link between your Pantheon site 
 Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or CSRs, or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
+<h4>Warning</h4>
+Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
 
 ## Steps to Enable SSL
 
@@ -110,7 +111,8 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 Before you point your DNS to the custom IP address you received after enabling SSL, you may verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
+<h4>Warning</h4>
+You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
 
 ### Chrome
 

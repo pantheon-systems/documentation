@@ -22,7 +22,8 @@ And for themes:<br />
 Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
+<h4>Warning</h4>
+You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
 
 ## Installing Modules and Themes with Drupal's Update Manager
 

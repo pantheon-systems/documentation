@@ -27,7 +27,8 @@ Pantheon offers several add-ons to help you build dynamic sites. These include [
 ###Delete Site
 If you no longer need your site, you can remove it here.
 <div class="alert alert-danger" role="alert">
-<strong>Warning</strong>: This is a permanent change and once you delete it your site cannot be restored.</div>
+<h4>Warning</h4>
+This is a permanent change and once you delete it your site cannot be restored.</div>
 
 ###About Site
 This tab shows general information about your site, such as the framework, upstream, date it was created, and your current plan.

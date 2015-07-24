@@ -1968,3 +1968,6 @@ display: block;
   border-left-width: 8px;
   border-radius: 4px;
   }
+  .alert-danger h4 {
+  color: #ce4844;
+  }
