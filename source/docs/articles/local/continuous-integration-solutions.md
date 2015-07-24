@@ -31,6 +31,13 @@ After enabling the SimpleTest module, you can use Drush to remotely execute Simp
 
 The end results would be written to http://dev-yoursitename.pantheon.io/sites/default/files/UserSaveTestCase.xml
 
+## Integration Bot
+
+We recommend creating a bot user account that will handle the tasks or jobs by an external Continuos Intergration service rather a standard user account. 
+
+- Add the bot to select projects
+- Manage separate SSH Keys for CI
+
 ## Known Limitations
 
 At this time, Pantheon does not provide or support:
