@@ -50,7 +50,8 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 [SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>:  Only enable SSL for your Live environment. It is not needed in Dev or Test.</div>
+<h4>Note</h4>
+Only enable SSL for your Live environment. It is not needed in Dev or Test.</div>
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.
@@ -79,7 +80,8 @@ The site owner is the person who pays for the site. You'll need to update the pa
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+<h4>Note</h4>
+We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
 
  ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
 

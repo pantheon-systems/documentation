@@ -70,7 +70,8 @@ Your tag numbers will vary. We are showing 5 since in the list of tags above the
 ## Test and Deploy
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.</div>
+<h4>Note</h4>
+Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.</div>
 
 If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently the deploys interface does not enable hotfix tags on test to be deployed directly to live.
 

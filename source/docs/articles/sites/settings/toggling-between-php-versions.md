@@ -10,7 +10,8 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Upgrade Your PHP Version
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
+<h4>Note</h4>
+Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
 </div>
 
 1. From the Site Dashboard, click **Settings** > **PHP version**.

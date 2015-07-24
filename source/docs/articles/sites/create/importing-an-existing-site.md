@@ -117,7 +117,8 @@ tar -czf $TARGET/files.tar.gz .
 The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) from which the archives can be fetched.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
+<h4>Note</h4>
+Dropbox URL's need to be modified so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
 
 The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 

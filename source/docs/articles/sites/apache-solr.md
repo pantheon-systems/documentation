@@ -192,7 +192,8 @@ terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
 ```
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>: Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 ### Error During Search API Solr Installation
 

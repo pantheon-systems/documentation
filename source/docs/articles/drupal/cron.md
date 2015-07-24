@@ -19,7 +19,8 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 
 There is no way to configure when Pantheon executes Drupal cron.
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Setting the value to "Never" will be ignored; cron will always run at least hourly.
+<h4>Note</h4>
+Setting the value to "Never" will be ignored; cron will always run at least hourly.
 </div>
 ## Managing Cron
 

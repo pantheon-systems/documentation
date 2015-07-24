@@ -20,7 +20,9 @@ If you are also developing locally and need to configure WordPress for your desk
 ## Pantheon's WordPress Config
 
 <script src="https://gist.github.com/joshkoenig/9646205.js"></script>
-<div class="alert alert-warning" role="alert"><strong>Note: </strong><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/articles/sites/code/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
+<div class="alert alert-warning" role="alert">
+<h4>Note</h4>
+<code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/articles/sites/code/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
 
 ##Frequently Asked Questions
 

@@ -70,7 +70,8 @@ Here we need to provide two items to the ApacheSolr configuration:
 When you’ve finished, click **Save**.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: A schema must be pushed in each environment (Dev/Test/Live).</div>
+<h4>Note</h4>
+A schema must be pushed in each environment (Dev/Test/Live).</div>
 
 ## Test Your New Solr Connection
 

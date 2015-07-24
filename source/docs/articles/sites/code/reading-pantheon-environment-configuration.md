@@ -44,7 +44,8 @@ If you are using a common CMS framework the code you need to load this configura
 ## Drupal 7 and Drupal 8
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a> for details.</div>
+<h4>Note</h4>
+Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a> for details.</div>
 
 Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this would be done in settings.php.
 

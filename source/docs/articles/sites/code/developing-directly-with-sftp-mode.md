@@ -58,7 +58,8 @@ Your connection data is as follows:
 
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: When you setup your SFTP client remember that <em>SFTP</em> will be the protocol and you will need to connect to your environment using port <em>2222</em>.</div>
+<h4>Note</h4>
+When you setup your SFTP client remember that <em>SFTP</em> will be the protocol and you will need to connect to your environment using port <em>2222</em>.</div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection information widget for the environment you are on.
 

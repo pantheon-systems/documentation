@@ -1946,6 +1946,9 @@ display: block;
   border-left-width: 8px;
   border-radius: 4px;
   }
+ .alert-warning h4 {
+  color: #EFD01B;
+ }
 .alert-info {
   color: black !important;
   background-image: none !important;

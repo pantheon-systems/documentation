@@ -46,7 +46,8 @@ git pull --no-rebase -Xtheirs --squash {paste-value-here} master
 git pull --no-rebase -Xtheirs --squash http://github.com/pantheon-systems/drops-7 master
 ```
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: <code>http://github.com/pantheon-systems/drops-7</code> to <code>git://github.com/pantheon-systems/drops-7.git</code>.</div>
+<h4>Note</h4>
+Replace "http" with "git" and then add ".git" to the end of the URL you just pasted. The URL will go from this: <code>http://github.com/pantheon-systems/drops-7</code> to <code>git://github.com/pantheon-systems/drops-7.git</code>.</div>
 
 **Final Command:**
 
@@ -76,7 +77,8 @@ Automatic merge went well; stopped before committing as requested
   ```
 
   <div class="alert alert-warning" role="alert">
-  <strong>Note</strong>: Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:</div>
+  <h4>Note</h4>
+  Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:</div>
 
 ```bash
 git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import

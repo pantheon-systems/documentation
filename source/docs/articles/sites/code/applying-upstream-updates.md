@@ -57,7 +57,8 @@ In the event that the update fails you may see an error indicating a conflict wi
 Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository.
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: This does not solve all problems that may arise, but it should take care of most situations.</div>
+<h4>Note</h4>
+This does not solve all problems that may arise, but it should take care of most situations.</div>
 
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 

@@ -49,7 +49,8 @@ A CloudFront distribution is not a Drupal distribution. A CF distribution simply
 
 ## Verify Assets Are Coming From the CloudFront Distribution
 <div class="alert alert-warning">
-<strong>Note</strong>: Execute the following steps as an anonymous user (logged out).
+<h4>Note</h4>
+Execute the following steps as an anonymous user (logged out).
 </div>
 1. Create an article on your site and upload an image to it.
 2. View the article in your browser.

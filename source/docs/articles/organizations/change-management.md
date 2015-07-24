@@ -154,7 +154,8 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <tr>
         <td>Developer</td>
         <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
-        <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
+        <h4>Note</h4>
+        You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>

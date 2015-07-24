@@ -28,4 +28,5 @@ After you've purchased your domain name, follow the instructions below.
 3. Edit the existing **A record** for the bare domain (non-www) with the IP address provided in the Pantheon Dashboard. Create a **CNAME** record for the www subdomain using the destination provided by Pantheon. For more information, see [Domains and SSL Tool](/docs/articles/sites/domains). 
 
 <div class="alert alert-warning" role="alert">
-<strong>Note</strong>: If you have SSL enabled on your site, you have been given a unique IP address. Point the A record to this IP address.</div>  
+<h4>Note</h4>
+If you have SSL enabled on your site, you have been given a unique IP address. Point the A record to this IP address.</div>  
