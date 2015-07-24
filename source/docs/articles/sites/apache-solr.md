@@ -81,8 +81,7 @@ Choose one or the the other and add it to your code base. Do not enable or confi
 ### 4. Enable the Pantheon Apache Solr Module
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong> If you previously installed the Acquia Solr module and you still have the files present in your codebase you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you do not you may receive an error when attempting to connect to the Solr server.
-</div>
+<strong>Note</strong>: If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you do not, you may receive an error when attempting to connect to the Solr server.</div>
 
 You must enable the Pantheon Apache Solr module in order to use Pantheon's Solr Service.  
 ​ ![](/source/docs/assets/images/desk_images/192432.png)  
