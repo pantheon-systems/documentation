@@ -26,7 +26,7 @@ Be sure that you have:
 1. Sign up for a [CloudFlare account](https://www.cloudflare.com/sign-up).
 2. Enter your domain name. CloudFlare will scan your current nameservers for all the DNS records applicable to your domain and display a list of all the DNS records it finds.
 3. Go to your Dashboard and verify that the three DNS records listed were found by CloudFlare.
-4. In CloudFlare, select the plan level you want to subscribe to. Select a paid plan if you want SSL support.
+4. In CloudFlare, select the plan level you want to subscribe to.
 5. Update your domain's nameservers with your domain name registrar. If you need help, check their site for instructions or contact their support department.
 6. Once you've updated your nameservers, return to CloudFlare to finish the setup process.
 
