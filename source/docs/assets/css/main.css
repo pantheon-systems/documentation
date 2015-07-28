@@ -105,8 +105,6 @@ body.row.main {
 .article {
   background-color: white;
   padding-bottom: 40px;
-  overflow-y:scroll!important;
-  overflow-x:scroll!important;
   text-overflow: clip!important;
 }
 
