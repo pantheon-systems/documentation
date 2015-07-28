@@ -32,7 +32,7 @@ Pantheon provides a default `.gitignore` file in the base of each site's code re
 - Work with [SERVER_NAME and SERVER_PORT on Pantheon](/docs/articles/sites/code/server_name-and-server_port/).
 
 ##Performance
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/docs/articles/sites/code/debugging-slow-performance/) and utilizing the [PHP slow log](/docs/articles/sites/code/php-slow-log/).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/docs/articles/sites/code/debugging-slow-performance/) and utilizing the [PHP slow log](/docs/articles/sites/logs/php-slow-log/).
 
 Learn how to use [bots and indexing](/docs/articles/sites/code/bots-and-indexing/) in a way that does not negatively impact performance. You can also incorporate external Solr services with [IndexDepot](/docs/articles/sites/code/using-indexdepot-with-pantheon-sites/).
 
