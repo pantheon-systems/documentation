@@ -47,7 +47,7 @@ Once connected, you'll see several directories:
 - **`files/`** - Pantheon File System (Valhalla) mount. `code/sites/default/files` and `code/wp-content/uploads` are symbolically linked to this directory. Read and write (upload), all environments.
 - **`logs/`** - Environment-specific access and error logs. Read only.
  - **`newrelic.log`** - New Relic log; check if an environment is not logging.
- - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/articles/logs/nginx-access-log).
+ - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log).
  - **`nginx-error.log`** - Webserver error log.
  - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
@@ -60,7 +60,7 @@ Once connected, you'll see several directories:
 
 #### How can I parse my Nginx access logs?
 
-See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/nginx-access-log).
+See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log).
 
 #### Can I log to the system logger and access syslog?
 
