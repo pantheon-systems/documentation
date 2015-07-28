@@ -2,7 +2,6 @@
 title: Log Files on Pantheon  
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
 keywords: log, access log, nginx access log, nginx log, nginx access, nginx error, nginx error log, php error, php error log, php fpm error, php fpm, php error, php slow, php slow log, pyinofity log, pyinofity, watcher log, watcher
-draft: true
 ---
 Log files track and record your site's activity which help you find, debug, and isolate current or potential problems on your site.
 
