@@ -7,9 +7,6 @@ authors:
   - joshkoenig
 date: 7/27/2015
 ---
-
-# Power User? Power Up!
-
 If you are an active developer on the Pantheon platform, you may benefit from joining our [Power Users group](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users). This is a community for people who are actively making use of Pantheon for many sites. 
 
 ## Power User Topics
