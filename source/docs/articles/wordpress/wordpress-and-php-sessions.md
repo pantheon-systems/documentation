@@ -12,7 +12,9 @@ However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` 
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</div>
+Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.
+</div>
+
 
 ## Troubleshooting Session Errors
 
@@ -23,9 +25,34 @@ Warning: session_start(): user session functions not defined
 ```
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
-If `$_SESSIONs` are necessary for your application, you should [install our native PHP session handling plugin](https://wordpress.org/plugins/wp-native-php-sessions). Once enabled, your functionality will "just work".
+### Install WP Native PHP Sessions Plugin
+If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
-To improve the chances that the session-enabling pluting is loaded first, it's advisable to install it in the `mu-plugins` directory. That reduces the chances that other code attempts to start a session before the session handler is ready.
+1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
+2. Make the file executable:
+
+ ```
+ chmod +x add-php-sessions-plugin.php
+ ```
+
+3. Login with [Terminus](https://github.com/pantheon-systems/cli):
+
+ ```
+ terminus auth login
+ ```
+
+4. Execute the installation script on your site:
+
+ ```
+ add-php-sessions-plugins.php <site>
+ ```
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Replace <code>&lt;site&gt;</code> with your Pantheon site name.
+</div>
+
+Once enabled, your functionality will "just work".
 
 ## Sessions and Scalability
 
