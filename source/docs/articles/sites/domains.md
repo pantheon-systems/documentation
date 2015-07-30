@@ -1,100 +1,143 @@
 ---
-title: Domains and SSL Tool
+title: Domains and DNS
 description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
 category:
   - developing
   - managing
   - going-live
 ---
-Pantheon provides distinct base domains for the consistent access of the Development, Testing, and Live production environments for each site on the platform from the moment they are launched.
+<div class="alert alert-info" role="alert">
+<h4>DNS Configuration Varies Per Site</h4>
+Your site's domain type, preferred domain (e.g. www or non-www), and whether you use HTTP or HTTPS determine your <a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> configuration. Understand the differences to ensure a smooth launch.
+</div>
 
-All sites on Pantheon can be divided into three base domain URL patterns.
+## Steps to add domains and configure DNS
 
-**Note:** In the example base domain patterns, `env` stands for either `dev`, `test`, or `live`; and `sitename` is the chosen name for the site:
+1. Enable SSL/HTTPS (highly recommended)
+2. Add domain(s) to your Pantheon Site Dashboard
+3. Get DNS recommendations
+4. Test with /etc/hosts (recommended)
+5. Add DNS records to route traffic to your Pantheon site
+6. Verify DNS configuration
 
-* [Pantheon.io base domains](https://pantheon.io/docs/articles/sites/domains/using-pantheon-io-for-better-uptime/): `env-sitename.pantheon.io`
-* Legacy GotPantheon.com base domains: `env.sitename.gotpantheon.com` or `env-sitename.gotpantheon.com`
-* [Custom organizational base domains](https://pantheon.io/docs/articles/organizations/base-domains/): `env-sitename.custom.domain.tld`
+## Domain types
 
-Once sites are launched at a paid service level, custom domains can be added to each environment. Securing visitor traffic with HTTPS communication requires uploading a custom certificate and setting the DNS `A` record to a dedicated IP. For all sites in all configurations, the recommended DNS records will be provided on the Domains and SSL tab.
+**Root domains** (aka bare, apex or naked domains) like **example.com** or **pantheon.io**
 
-* [Adding a Domain to a Site Environment](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/)
-* [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
-* [DNS Records for Directing Your Domain to Your Pantheon Site](/docs/articles/sites/domains/dns-records-for-directing-your-domain-to-your-pantheon-site/)
+**Subdomains** add a prefix before the domain like **www.example.com** or **blog.example.com**
+
+**Preferred domain** (aka canonical domain): Visitors may access your site using both the www and non-www versions of the URL (for instance, http://www.example.com and http://example.com). The <strong>preferred domain</strong> is the version that you want your visitors to end up on and determines what your DNS records will be.
+
+## 1. Enable SSL/HTTPS (highly recommended)
 
 
-## Recommended DNS Records
+<div class="alert alert-info" role="alert">
+<h4>Why choose SSL/HTTPS?</h4>
+<ul>
+  <li><strong>Security</strong>: Encrypts sensitive data (like passwords used to login to your site)</li>
+  <li><strong>SEO</strong>: Ranking signal for Search Engine Optimization. See [Google's Announcement](http://google.com)</li>
+  <li><strong>Add DNS A Records</strong> to route traffic through your site's dedicated SSL load balancer with a static IP address</li>
+  <li><strong>Standardize on www, non-www or other subdomain as your preferred domain</strong> by adding a 301 redirect in <code>settings.php</code> or <code>wp-config.php</code></li>
+</ul>
+</div>
 
-Each site’s base domain URL pattern determines which DNS records must be set in order for visitor traffic directed at the domain to resolve as expected. For every type of base domain, the Domains and SSL tool on each environment of a Pantheon site will show the recommended DNS records. These are the only records that should be set for a domain; any other value will result in a routing error.
+Available for Pro plans and above. Possible to use service like Cloudflare to add HTTPS to Personal sites.
 
-As Pantheon does not provide name servers, or have the ability to set up any domain records for sites, it is up to the site owner or technical contact to configure the domain, and verify that all records correspond to the recommendations shown in the Domains and SSL tool.
+## 2.  Add domain(s) to your Pantheon Site Dashboard
 
-Root domains, often known as bare or naked domains, are most often in the format of `example.com`, and usually require DNS `A` records. Subdomains frequently match `www.example.com` and are set to DNS `CNAME` entries. The Domains and SSL tool will present the appropriate recommendation for a DNS record depending on whether the custom domain is a root or subdomain.
+From the Site Dashboard:
 
-### DNS Records for Pantheon.io Base Domains
+1. Visit **Site Dashboard** >> **Live** >> **Domains**.
+2. Type your domain into the field and click **Add domain to the Live Environment**.
 
-Sites launched with the `env-sitename.pantheon.io` base domain should have the following recommended DNS records configured:
+From the Terminal, with [Terminus, the Pantheon Command Line Interface (CLI)](https://github.com/pantheon-systems/cli):
 
-_Root domains_
+```
+$ terminus site hostnames add --site=example --env=live --hostname=example.com
+Success: Added example.com to example-live
+$ terminus site hostnames add --site=example --env=live --hostname=www.example.com
+Success: Added www.example.com to example-live
+```
 
-* DNS `A` record (www-redirector) - `192.237.224.60`
-* DNS `AAAA` record (www-redirector) - `2001:4801:7901:0000:c5ce:526c:0000:001a`
+## 3. Get DNS Records
 
-_Subdomains_
+<div class="alert alert-info" role="alert">
+<h4>We recommend standardizing on www</h4>
+Pantheon routes around network failures for better uptime. This is possible because your site's domain name is not tied to a static shared resource. All DNS providers will allow you to add an A record to our WWW redirection service so you can standardize on www as your preferred domain.
 
-* DNS `CNAME` record - `env-sitename.pantheon.io`
+If you choose to standardize on a root domain instead of www you'll need to either enable SSL or use a DNS service that provides ALIAS or ANAME records or CNAME flattening. Not all DNS providers offer these types of records and services.
+</div>
 
-### DNS Records for Legacy GotPantheon.com Base Domains
+* Sites with HTTPS use A Records
+ - Use **DNS A records** after enabling SSL. Refer to Pantheon Site Dashboard for your site's dedicated SSL load balancer.
+* Sites without HTTPS have two main options
+  1. **Standardize on www as your preferred domain (simpler)**. Follow the recommendations in the Site Dashboard, a **DNS CNAME record** to standardize on subdomains like www.example.com or blog.example.com and an A record for the bare domain to the redirection service which will **redirect all traffic from example.com to www.example.com**.
+  2.  **Standardize on the root (non-www) domain as your preferred domain  (more steps)**. Sites with SSL enabled can standardize on the root domain. Otherwise, you can manage your DNS with a service like Cloudflare that offers "CNAME flattening," which allows you to point an A record at a domain name like live-example.pantheon.io, which you cannot traditionally do.  Other services that allow this type of setup: Route 53, DNSimple, DNS Made Easy, EasyDNS, CloudFlare, ClouDNS, and NameCheap.
 
-Sites launched with the `env.sitename.gotpantheon.com` or `env-sitename.gotpantheon.com` base domain should have the following recommended DNS records configured:
 
-_Root domains_
+## 4. Test with /etc/hosts
 
-* DNS `A` record (Load-balanced IPv4) - `192.237.142.203`
-* DNS `AAAA` record (Load-balanced IPv6) - `2001:4801:7901:0000:c5ce:526c:0000:000f`
+Temporarily modify the /etc/hosts file on your local workstation. For example, to test https://example.com add the IP address shown in your Site Dashboard to your /etc/hosts file
 
-_Subdomains_
+```
+example.com  1.2.3.4
+www.example.com 1.2.3.4
+```
+To test http://blog.example.com the line in /etc/hosts would look like:
 
-* DNS `CNAME` record (highly available) - `edge.live.getpantheon.com`
+```
+blog.example.com live-example-blog.pantheon.io
+```
 
-### DNS Records for Custom Base Domains
+Don't forget to remove this entry in your /etc/hosts file before actually updating your DNS records.
 
-Sites launched with a custom `env-sitename.custom.domain.tld` base domain should have the following recommended DNS records configured:
+## 5. Add DNS records to route traffic to your Pantheon site
 
-_Root domains_
+<div class="alert alert-info" role="alert">
+<h4>Pantheon is not a Domain Registrar nor DNS Provider</h4>
+Pantheon is not a domain registrar and does not provide DNS services. Once you determine the DNS records from your Pantheon Site Dashboard, add them through your domain registrar or DNS provider.
+</div>
 
-* DNS `A` record (Load-balanced IPv4) - `192.237.142.203`
-* DNS `AAAA` record (Load-balanced IPv6) - `2001:4801:7901:0000:c5ce:526c:0000:000f`
+Refer to instructions for your domain registrar or DNS provider to add the appropriate DNS records.
 
-_Subdomains_
+## 6. Verify DNS Configuration
 
-* DNS `CNAME` record (highly available) - `edge.live.getpantheon.com`
+Use `dig` in your terminal to look up the DNS records for a domain. You can also dig with web based utilities.
 
-## Secure HTTPS Communication
+```
+dig +short <domain>
+```
 
-All base domains on Pantheon enable HTTPS service by default, even on free sandbox sites, so everyone can [develop sites securely](/docs/articles/sites/domains/developing-with-ssl/) from the moment of installation. The free default HTTPS service on base domains uses a wildcard certificate to cover all sites on the platform with secure communication. Serving visitor traffic for a custom domain over HTTPS using a custom certificate requires at least a Pro service level site, in addition to the independent purchase of the certificate. Use the Domains and SSL tool to upload the necessary private key, any intermediary certificate bundles, and the custom certificate itself. When initiating the HTTPS service for an environment, a unique load-balanced IP is provisioned, to which the domain DNS `A` record must be set, in order for visitor traffic to be served with the custom certificate.
+For example for https://pantheon.io dig output for www.pantheon.io and pantheon.io both show the same IP address of the site's dedicated SSL load balancer:
 
-### DNS Records for HTTPS Enabled Environments
+**Example of HTTPS configuration**
+```
+$ dig +short pantheon.io
+50.57.202.75
+$ dig +short www.pantheon.io
+pantheon.io.
+50.57.202.75
+```
 
-Environments with HTTPS communications enabled should use the dedicated IP shown in the recommended DNS records. These examples only indicate the pattern of the typical records to set:
 
- _Root domains_
+## Troubleshooting
 
-* DNS `A` record (HTTPS IPv4) - `xxx.xxx.xxx.xxx`
-* DNS `AAAA` record (HTTPS IPv6) - `ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff`
+### Help! I'm getting a redirect loop or an extra www when I visit my site
 
-_Subdomains_
+Review the **Get DNS Records** section above and update your DNS so your root domain is the only domain pointing at Pantheon's redirection service (dub dub dubber). If you require assistance open up a support ticket with a screenshot of your DNS configuration and output from `dig +short <your domain>`.
 
-* DNS `A` record (HTTPS IPv4) - `xxx.xxx.xxx.xxx`
-* DNS `AAAA` record (HTTPS IPv6) - `ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff`
+### How long will it take for DNS changes to take effect?
 
-## Domain Redirection
+It can take 48 hours for your DNS changes to take effect. You can see the DNS records from DNS Servers around the world with tools like https://pulse.turbobytes.com/
 
-Redirecting to standardize on either root domains or subdomains using PHP is supported at all paid site service levels with the Legacy and Custom base domains, as well as HTTPS Enabled Environments for sites with any base domain.
+We recommend lowering your TTL to something like 120 seconds a few days before you intend to switch DNS and make your site live on Pantheon.
 
-For sites launched with Pantheon.io base domains, redirecting root domains using our www-redirector to standardize on the www subdomain is supported. Redirecting correctly configured subdomains using PHP to other subdomains is also supported. However, redirecting to root domains is not supported in the default configuration. To standardize on a root domain with a Pantheon.io base domain site, use a DNS provider with `CNAME` flattening for root domains, rather than setting any records to our www-redirector. In this case you would set the flattened `CNAME` record for the root domain to `env-sitename.pantheon.io`. Alternatively, you may obtain a load-balanced `A` record by setting the site to at least a Pro service level, enabling HTTPS service with a custom certificate, and configuring the DNS for HTTPS enabled environments.
 
-##See Also
+### Can I add domains to environments other than Live?
 
-* [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
-* [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
+Yes! Adding domains to your Test and Dev environments is a great way to test redirect logic in your settings.php or wp-config.php and other site functionality. Custom domains cannot be added to Multidev environments.
+
+## See Also
+* [Domain Basics (from Google)](http://google.com)
+* [Improving Uptime with pantheon.io CNAME records](https://pantheon.io/blog/improving-uptime-pantheonio]
+* [Going Live](/docs/articles/going-live)
