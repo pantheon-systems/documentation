@@ -86,7 +86,7 @@ Yes, we support Redis. Please see [Redis as a caching backend](/docs/articles/si
 
 ### Which caches do you clear?
 
-You can clear the caches from your site's Pantheon Dashboard. This will take care of clearing Varnish and Redis caches, if applicable. At this time, WordPress database caches are not cleared nor is selective Varnish cache clearing supported.
+You can clear the caches from your site's Pantheon Dashboard. This will take care of running `wp-cli cache flush` and clearing Varnish and Redis caches, if applicable. At this time, Varnish cache clearing supported.
 
 
 ## Further Reading
