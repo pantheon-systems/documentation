@@ -1248,7 +1248,7 @@ h1[id] {
   text-decoration: none !important;
   font-weight: bold;
   display: inline-block;
-  white-space: nowrap;
+  white-space: nowrap !important;
   line-height: 1;
 }
 .btn-primary:hover {
