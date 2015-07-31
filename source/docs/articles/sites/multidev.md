@@ -6,7 +6,7 @@ category:
 keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a environment, clone to development environment, delete multidev environment, remove multidev environment, delete multidev branch
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
-
+<img src="/source/docs/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
 ## Benefits of Multidev
 
 **Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
