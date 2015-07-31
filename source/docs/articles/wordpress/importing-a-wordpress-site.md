@@ -69,6 +69,14 @@ Currently, we are shipping with one included/recommended plugin, which is design
 
 It sets a default cache lifetime of 10 minutes, and will automatically clear post pages (and taxonomy lists) when new content is created or updated. You can also manually flush the whole cache for a site.
 
+## Troubleshooting
+If you see this error:
+
+```php
+Warning: session_start(): user session functions not defined
+```
+It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. [Read more on WordPress and PHP Sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
+
 **Further Reading:**
 
 - [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
