@@ -17,7 +17,7 @@ Due to the nature of our platform, the connection information will change from t
 
  ![Enable SFTP mode](/source/docs/assets/images/desk_images/278855.png)
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet. If you have pending changes and the site is migrated (which we may do at any time for various reasons), your changes will be lost without warning. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
+SFTP changes to code that have not been committed <em>will not be saved in backups</em> as they are not part of your code repository yet. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
 
 As you work via SFTP, the Pantheon  Dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever mess around with Git directly.
 
@@ -112,3 +112,17 @@ This is by design. Please see [Using the Pantheon Workflow
 
 ###I am receiving errors connecting to my server with an SFTP client.
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
+
+Do not specify a default remote directory within your SFTP client. When application servers are migrated, which can be done at anytime, the remote directory will change.
+
+### Connection Issues
+
+    Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
+    Response:	fzSftp started
+    Command:	open "dev.dc82c743-3088-426f-bfcf-e388e4add2b3@appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in" 2222
+    Error:	ssh_init: Host does not exist
+    Error:	Could not connect to server
+
+The vast majority of SFTP connection problems are DNS related and can be resolved by using Google's Public DNS service in place of your ISP's name servers. See the instructions here:  [Google's Public DNS](https://developers.google.com/speed/public-dns/)
+
+If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, we've seen that Cyberduck (or another client) will. View a list of [SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
