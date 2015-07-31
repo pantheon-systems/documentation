@@ -364,19 +364,42 @@ img.noborder {
   text-align: center;
   display: block;
 }
-  .cta-docs-footer p{
+ .cta-docs-footer p{
     margin: 0px;
     display: block;
-  }
-
+ }
 .pio-docs-footer {
   padding-top: 20px;
-  padding-bottom: 20px;
   margin-top: 0px;
-  color: #777;
   text-align: center;
+  position:absolute;
+  left:0;
+  right:0;
+  background-color: #181D21;
+  color: #B5C0C3;
+}
+
+.pio-docs-footer ul {
+    list-style-type: none!important;
+    color: #B5C0C3;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-right: 120px;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 15px;
 
 }
+.pio-docs-footer a:link, .pio-docs-footer a:visited {
+    color: #B5C0C3;
+    text-decoration: none;
+}
+.pio-docs-footer a:hover{
+    color: #EFD01B;
+    text-decoration: none;
+}
+
 .pio-docs-footer-links {
   padding-left: 0;
   margin-top: 20px;
@@ -1215,22 +1238,47 @@ h1[id] {
   border-color: #FE4A45;
 }
 
-.btn-primary{
+.btn-primary, .btn-primary:visited {
+  text-shadow: none !important;
   background: #EFD01B;
-  padding: 10px 20px;
-  border-radius: 6px;
-  color: #222;
+  color: #000 !important;
   transition: all 0.5s ease;
-  margin: 5px 10px;
+  margin: 0px 0px 0px 30px;
+  padding: 12px 22px 12px 16px;
+  text-decoration: none !important;
+  font-weight: bold;
   display: inline-block;
+  white-space: nowrap;
+  line-height: 1;
+}
+.btn-primary:hover {
+  color: #000;
+  text-decoration: none;
+  background: #d6b608;
 }
 
-  .btn-primary:hover{
-    color: #222;
-    text-decoration: none;
-    background: #F5E36B;
-  }
+.cta-docs-footer .btn-primary {
+    background: #000;
+    color: #fff !important;
+}
+.cta-docs-footer .btn-primary:hover {
+  color: #000 !important;
+  text-decoration: none;
+  background: #fff;
+}
+.cta-docs-footer a.btn-primary:after {
+    content: '\203a';
+    color: #EFD01B;
+    margin: 0 0 0 10px;
+    height: 100%;
+}
 
+a.btn-primary:after {
+    content: '\203a';
+    color: #000;
+    margin: 0 0 0 10px;
+    height: 100%;
+}
 
 /* Forms */
 .pio-example-control-sizing select,
