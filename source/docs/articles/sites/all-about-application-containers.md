@@ -11,7 +11,7 @@ Pantheon's infrastructure includes a number of layers. Our edge layer provides r
 
 Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux container with an optimized PHP stack in place. Each container includes its own Nginx, APC cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing.
 
-Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Pro level and above you can have many containers serving your site.
+Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Business level and above you can have [multiple containers](#multiple-application-containers) serving your site.
 
 ## What's In an Application Container?
 
@@ -42,3 +42,10 @@ While these are related topics, they need to be evaluated separately for your pr
 Typically, the best practice is to optimize for performance first, and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
 Because Pantheon does not handicap or limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. Support is happy to answer questions about site performance if you feel it's not up to where it should be. We also provide tools like [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis) to give you insights about your site's performance.
+
+## Multiple Application Containers
+Live environments on sites with a service level of Business and above can have multiple application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling). If a site has multiple application containers, load will be distributed among them.
+### Expected Behavior
+Requests can be served from any of the available containers. As a result, you may notice different log files for each container, this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/articles/sites/logs/downloading-live-error-logs).
+### Failover Application Containers
+All paid service levels have failover application containers which are <strong>not</strong> used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
