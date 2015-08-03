@@ -81,7 +81,7 @@ Learn more about the [Pantheon Workflow](https://pantheon.io/docs/articles/sites
 All PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](https://pantheon.io/docs/articles/sites/php-errors-and-exceptions/).
 
 ## Domain/SSL
-Use the [Domain/SSL tool](/docs/articles/sites/domains) to [add the custom domain(s)](/docs/articles/sites/domains/adding-a-domain-to-a-site-environment/) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For instructions on how to generate and handle the files needed for SSL, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
+Use the [Domain/SSL tab](/docs/articles/sites/domains) to add the custom domain(s) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For instructions on how to generate and handle the files needed for SSL, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ## Backups
 On this tab you can create backups, restore from an existing backup, or view the backup log to see a list of your prior backups. For detailed information, see [Backups](/docs/articles/sites/backups).
