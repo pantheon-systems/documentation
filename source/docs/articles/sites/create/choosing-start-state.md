@@ -35,7 +35,7 @@ $ terminus products list
 
 ## Importing an Existing Site
 
-For detailed information, see [Importing an existing site into Pantheon](/docs/articles/sites/create/importing-an-existing-site).
+For detailed information, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate).
 
 ## Sit Back and Relax
 

@@ -32,7 +32,7 @@ We have lots of [helpful articles](https://pantheon.io/docs/) to help you build 
 
 ### Build
 
-- [Importing](/docs/articles/sites/create/importing-an-existing-site//) a site onto Pantheon  
+- [Migrate](/docs/articles/sites/migrate/) a site onto Pantheon  
 
 - Using [SFTP](/docs/articles/local/rsync-and-sftp) (and rsync!)  
 
