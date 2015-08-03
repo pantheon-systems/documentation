@@ -80,7 +80,7 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
       /**
        * Add the domain module setup routine to the end of settings.php
        */
-      include DRUPAL_ROOT . 'sites/all/modules/domain/settings.inc';
+      include DRUPAL_ROOT . '/sites/all/modules/domain/settings.inc';
     }
 
 
