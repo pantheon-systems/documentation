@@ -52,7 +52,7 @@ If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessio
 Replace <code>&lt;site&gt;</code> with your Pantheon site name.
 </div>
 
-Once enabled, your functionality will "just work".
+Once enabled, your functionality will "just work". For more information, see [Fix WordPress PHP Session Problems on Pantheon with a Script](https://pantheon.io/blog/fix-wordpress-php-session-problems-pantheon-script).
 
 ## Sessions and Scalability
 
