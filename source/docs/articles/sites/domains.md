@@ -82,6 +82,12 @@ It depends on several factors, including the TTL of your DNS records. As a rule 
 If you need to direct traffic from a non-www domain (e.g. example.com), you can use our www-redirection service by setting an A record to 192.237.224.60. This is a simple web-server that will redirect to the www domain for your site. You must also configure the FQDN with a CNAME record to live-example.pantheon.io.
 ![](/source/docs/assets/images/desk_images/376194.png)
 
+### My domain has an extra "www." 
+
+If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` this means that you have set your DNS for the domain to the Dub Dub Dubber I.P. address (an A-record to 192.237.224.60).		
+![](/source/docs/assets/images/desk_images/376201.png)		
+To correct this, use the CNAME that is available on the Dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
+
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
 Yes, many Pantheon customers use third-party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do **not** direct traffic to a \*.pantheon.io domain. Instead, associate an intermediate domain with the live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
