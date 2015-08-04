@@ -20,7 +20,7 @@ You must have a paying plan to add a domain to a site environment. For more info
 1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains/SSL**.
 2. On the Domain Setup tab, enter the domain name you want associated with that environment, and click **Add New Domain to the Live Environment**.
 
-You to simultaneously add both the bare domain name and the fully qualified (www) domain name (FQDN). This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both. Uncheck the box for subdomains, as adding the www prefix to a subdomain is redundant.  
+You can simultaneously add both the bare domain name and the fully qualified (www) domain name (FQDN). This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both. Uncheck the box for subdomains, as adding the www prefix to a subdomain is redundant.  
 
 <div class="alert alert-warning" role="alert">
 <strong>Note</strong>:You must add every domain (hostname) to the site environment that you want Pantheon to be able to serve. Automatic resolution of domains and wildcards are not supported.</div>
@@ -46,7 +46,7 @@ At the Live environment's Domains/SSL tool, click  **Show recommended DNS record
 
 **Pantheon Does Not Manage Your Domain Name or DNS**. You will need to make these changes yourself with your registrar and/or DNS host; we cannot do it for you. Why? Our focus is on making a great platform; we're not a domain name registrar or a DNS hosting service.
 
-You should always configure the DNS for both your bare/root domain (example.com ) and FQDN (www.example.com), and redirect from  If you don't, users who add or omit the www will not see your site and assume your site is down.
+You should always configure the DNS for both your bare/root domain (example.com ) and FQDN (www.example.com), and redirect from the bare domain.  If you don't, users who add or omit the www will not see your site and assume your site is down.
 Search engines will see the same page served from both domains as duplicate content if you have both configured without a redirect to a single canonical domain.
 
 ### Serving Sites from Bare Domains with HTTP
