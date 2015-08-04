@@ -45,6 +45,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
       }
     }
 ```
+```
     // Remove WWW.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -55,6 +56,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
         exit();
       }
     }
+```    
 
 ## Redirect to HTTPS
 
