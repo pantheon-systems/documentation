@@ -46,8 +46,8 @@ At the Live environment's Domains/SSL tool, click  **Show recommended DNS record
 
 **Pantheon Does Not Manage Your Domain Name or DNS**. You will need to make these changes yourself with your registrar and/or DNS host; we cannot do it for you. Why? Our focus is on making a great platform; we're not a domain name registrar or a DNS hosting service.
 
-You should always configure the DNS for both your bare/root domain (example.com ) and FQDN (www.example.com), and redirect from the bare domain.  If you don't, users who add or omit the www will not see your site and assume your site is down.
-Search engines will see the same page served from both domains as duplicate content if you have both configured without a redirect to a single canonical domain.
+You should always configure the DNS for both your bare/root domain (example.com ) and FQDN (www.example.com), and redirect one to the other.  If you don't, users who add or omit the www will not see your site and assume your site is down.
+Search engines will see the same page served from both domains as duplicate content if you have both configured without a redirect to a single canonical domain. For more information, see [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain).
 
 ### Serving Sites from Bare Domains with HTTP
 Our dashboard assumes you will be redirecting traffic from the bare domain to the FQDN, and  recommends adding an A or AAAA record pointed to our www-redirection service for the bare domain. If you choose to serve your site from the bare domain, you can:
@@ -82,10 +82,10 @@ It depends on several factors, including the TTL of your DNS records. As a rule 
 If you need to direct traffic from a non-www domain (e.g. example.com), you can use our www-redirection service by setting an A record to 192.237.224.60. This is a simple web-server that will redirect to the www domain for your site. You must also configure the FQDN with a CNAME record to live-example.pantheon.io.
 ![](/source/docs/assets/images/desk_images/376194.png)
 
-### My domain has an extra "www." 
+### My domain has an extra "www."
 
-If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` this means that you have set your DNS for the domain to the Dub Dub Dubber I.P. address (an A-record to 192.237.224.60).		
-![](/source/docs/assets/images/desk_images/376201.png)		
+If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` this means that you have set your DNS for the domain to the Dub Dub Dubber I.P. address (an A-record to 192.237.224.60).
+![](/source/docs/assets/images/desk_images/376201.png)
 To correct this, use the CNAME that is available on the Dashboard for the environment where you are adding the domain, e.g. live-example.pantheon.io.
 
 ### Can a site on Pantheon be used with a third-party reverse proxy?
