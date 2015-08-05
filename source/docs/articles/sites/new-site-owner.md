@@ -58,7 +58,7 @@ From your Site Dashboard, click **Settings**, then click **Add Ons**. You will n
 
 
 ####Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have SSL enabled on Professional plans and above, you will need to re-enable SSL and re-load your SSL certificate into Pantheon. For more information, see [Enable SSL for Secure HTTPS Communication](docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have SSL enabled on Professional plans and above, you will need to re-enable SSL and re-load your SSL certificate into Pantheon. For more information, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ### Billing Tasks
 
