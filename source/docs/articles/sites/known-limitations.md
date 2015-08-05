@@ -49,7 +49,11 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 
 All enterprise customers and customers with SSL will have a dedicated incoming IP to route public traffic. The actual IP address location where code executes can change on Pantheon, as application containers are migrated throughout the infrastructure.
 
-Typically, it is not possible to support access to external web services via an IP address based restriction, for example, LDAP or FirstData. There's no way to predict what IP address your code will be executing "from". We offer the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) for Enterprise customers, as a solution to this problem.
+Typically, it is not possible to support access to external web services via an IP address based restriction, for example, LDAP or FirstData. There's no way to predict what IP address your code will be executing "from". 
+
+This is also a consideration for some payment gateways, including SagePay, which require a known IP address.
+
+We offer the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) for Enterprise customers, as a solution to this problem.
 
 ## Maintenance Mode
 
