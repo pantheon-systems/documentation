@@ -128,9 +128,9 @@ Three modules are required; [entity](https://drupal.org/project/entity),  [sear
 
 While Pantheon provides a stable, reliable, and basic Solr service, your individual site needs may require something more robust and customizable. In those cases, a dedicated hosted Solr service may be a better solution for your needs. Given that Solr can tolerate higher latency (one query per request vs hundreds of database queries), Solr servers do not need to be in the same data center to provide fast and responsive results.
 
-Some customers have reported success using external Solr service providers for their Solr indexing:
+Some customers have reported success using external Solr service providers for their Solr indexing:  
 
- - [IndexDepot](https://www.indexdepot.com/en/) see also: [Using IndexDepot With Pantheon Sites](https://pantheon.io/docs/articles/sites/code/using-indexdepot-with-pantheon-sites/)
+ - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](https://pantheon.io/docs/articles/sites/code/using-indexdepot-with-pantheon-sites/).
  - [OpenSolr](https://opensolr.com/)
  - [WebSolr](https://websolr.com/)
 
