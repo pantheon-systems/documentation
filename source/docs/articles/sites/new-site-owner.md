@@ -58,8 +58,7 @@ From your Site Dashboard, click **Settings**, then click **Add Ons**. You will n
 
 
 ####Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level.
-
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have SSL enabled on Professional plans and above, you will need to re-enable SSL and re-load your SSL certificate into Pantheon. For more information, see [Enable SSL for Secure HTTPS Communication](docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ### Billing Tasks
 
@@ -91,8 +90,6 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
 
 Resellers should contact Pantheon Support directly if you need to transfer ownership.
-
-
 
 
 ##See Also
