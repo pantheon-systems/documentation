@@ -23,7 +23,9 @@ This article will cover the techniques required to import a large site into Pant
 
 From your Pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
 
-## Import the Code
+## Import the Codebase
+
+**Codebase** - all executable code, including core, custom and contrib modules or plugins, themes, and libraries.
 
 As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with commit history intact. If you don’t have a version controlled codebase, the following will still work, though there won’t be a commit history for Pantheon’s Git repository to reference.
 
@@ -99,7 +101,9 @@ git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}
 
 ## Files
 
-Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. For these, it's best to use a utility such as an SFTP client or rsync. The biggest issue with these is having the transfer stopped due to connectivity issues. [To handle that scenario, try this handy bash script](https://www.evernote.com/shard/s404/sh/5bcfedb7-cda1-4647-9390-0112c2f9e703/f8defb098e992e2acd57280c4dcddb63):  
+**Files** - anything in `sites/default/files` for Drupal or `wp-content/uploads` for WordPress. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc. For information on highly populated directories, see [Known Limitations](/docs/articles/sites/known-limitations/#highly-populated-directories).
+
+Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. For these, it's best to use a utility such as an SFTP client or rsync. The biggest issue with these is having the transfer stopped due to connectivity issues. To handle that scenario, try this handy bash script:  
 
 ```bash
 ENV='ENV'
@@ -124,9 +128,11 @@ fi
 done
 ```
 This will connect to your Pantheon site's Dev environment, and start uploading your files. If an error occurs  during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as Filezilla, is a good option. To do this, [switch your site to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. To do this, [switch your site to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
 
 ## Database  
+
+**Database** - a single .sql dump that contains the content and active state of the site's configurations.
 
 You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your sql file much smaller and your import that much quicker.
 
