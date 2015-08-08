@@ -5,7 +5,7 @@ category:
     - developing
 keywords: enable redis, add redis, redis on wordpress, redis for wordpress, using redis on wordpress, configure redis on wordpress, configure redis
 ---
-Enable Redis cache server from your Pantheon Site Dashboard by going to Settings > Add Ons > Add.
+*Important:* First enable Redis cache server from your Pantheon Site Dashboard by going to Settings > Add Ons > Add. It may take a couple minutes for the Redis server to come online.
 
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
@@ -27,12 +27,26 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugin.
 
-1.  Install the WP-Redis plugin through the WordPress dashboard, but do not activate the plugin.
-2. Go to the WP-Redis plugin directory `wp-content/plugins/wp-redis/` and **move** the file object-cache.php to the directory `wp-content/`.
-  * Make sure the object-cache.php file is deleted from the WP-Redis directory.
-3. Log in to the WordPress dashboard, go to the Plugins section, and click on **Drop-Ins**.
+First install the WP Redis plugin through the WordPress dashboard (or via WP-CLI `wp plugin install wp-redis`), but do not activate the plugin (you never need to activate it due to it being loaded via a drop-in, in the next step).
+
+Secondly, create an external object cache drop-in plugin at `wp-content/object-cache.php` that contains the following:
+
+```php
+<?php
+# This is a Windows-friendly symlink :-)
+require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+```
+
+Lastly, push this file to Pantheon (via Git or SFTP).
+
+Once you push this to Pantheon, your WordPress site will store object cache values persistently in Redis.
+
+To verify, log in to the WordPress dashboard, go to the Plugins section, and click on **Drop-Ins** and look for WP Redis listed there. Again, you do not need to activate this plugin since the `object-cache.php` drop-in you added will load it; activating it will have no effect.
 
 ![Plugin drop ins](/docs/assets/images/plugin-drop-ins.png)  
+
+When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via WP-CLI `wp plugin update wp-redis`.
+
 This is one way to confirm that the plugin has been set up correctly. Another way to verify the configuration is by using the redis-cli.
 
 
@@ -67,9 +81,7 @@ redis>
 ## Troubleshooting
 
 ### Cannot Activate the Redis Plugin
-You do not need to activate the plugin. Once you install it, move the object-cache.php file over the the `/wp-content/` directory and delete object-cache.php from the WP-Redis directory on the server.
+You do not need to activate the plugin. You install it by adding the `object-cache.php` drop-in plugin as noted above.
 
-### Fatal error: Cannot redeclare class WP_Object_Cache...
-![Plugin fatal error redis](/docs/assets/images/redis-plugin-fatal-error.png)
-
-If you see a fatal error message within the WordPress dashboard, then you have not deleted the object-cache.php from the WP-Redis plugin directory.
+### Redis server went away
+Make sure you first enabled Redis on your site via the Dashboard and navigating to Settings > Add Ons > Add > Redis. It may take a couple minutes for the server to first come online.
