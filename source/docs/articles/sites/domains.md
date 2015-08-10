@@ -65,10 +65,10 @@ Users may also have success with **[ALIAS or ANAME](http://help.dnsmadeeasy.com/
 
 Learn more about ANAME records:
 
-*   [Route 53](http://aws.amazon.com/route53/faqs/#Supported_DNS_record_types)
 *   [DNSimple](http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
 *   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
+
 
 
 ## Frequently Asked Questions
