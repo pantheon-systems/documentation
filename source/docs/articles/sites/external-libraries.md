@@ -97,7 +97,7 @@ Pantheon runs the latest stable packaged version in Fedora, which is currently I
 
 If you need a library not listed on this page, please submit a support ticket including a description of your use case and a link to the library's webpage.
 
-All library's will evaluated by Pantheon's Operations Team on a case-by-case basis.
+All libraries will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
 #### Will you setup and configure the module/plugin for me?
 
