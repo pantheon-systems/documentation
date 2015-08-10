@@ -8,7 +8,8 @@ keywords: sso, identity federation, single sign-on, single sign on, security, ld
 Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions.  
 
 Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
-SSL certificates can and should be used for encrypted secure communication with externally hosted servers for authentication.
+
+SSL certificates can and should be used for encrypted secure communication with externally hosted servers for authentication.
 
 ## LDAP and LDAPS (LDAP over SSL)
 
@@ -27,9 +28,15 @@ Also, Pantheon includes the [PECL OAuth](http://us.php.net/oauth) PHP extension.
 ## IP-Based Security Considerations
 
 Pantheon is a cloud platform, so there are some considerations that you should be aware of.  
-Pantheon provides a single dedicated incoming IP address for sites with custom SSL certificates. Each dedicated IP is assigned by the datacenter.  
-Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
 
-Each Application Container worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
-Live sites on Pantheon on professional plans and above use multiple Application Container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
-In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
+Pantheon provides a single dedicated incoming IP address for sites with custom SSL certificates. Each dedicated IP is assigned by the datacenter.  
+
+Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
+
+Each application container worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
+
+Live sites on Pantheon on professional plans and above use multiple Application Container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
+
+In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
+
+For more infromation, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/code/dynamic-outgoing-ip-addresses).
