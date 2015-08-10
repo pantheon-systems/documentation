@@ -14,7 +14,7 @@ Help us create relevant and useful content for developers like yourself. See som
 
 ## Issues - Searching and Creating
 
-Before you edit a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on, or if you aren't ready to submit a pull request and want to get some initial feedback.
+Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on. If there isn't an issue, create one and add an outline for the article you want to create. This allows contributors to get some initial feedback.
 
 ###Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
