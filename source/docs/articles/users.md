@@ -25,7 +25,7 @@ It's easy to add, manage, and delete your site's users. For complete details, se
 
 With Pantheon for Agencies, you can build, launch, and run all your clients’ Drupal and WordPress sites through one dashboard.
 
-Learn how to [manage sites and teams with the organization dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/) or see the [Pantheon for Agencies FAQs article](/docs/articles/organizations/pantheon-for-agencies/faq/).
+Learn how to [manage sites and teams with the Organization Dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/) or see the [Pantheon for Agencies FAQs article](/docs/articles/organizations/pantheon-for-agencies-faq/).
 
 ##See Also
 - [Change Management](/docs/articles/organizations/change-management/)

@@ -35,8 +35,7 @@ From the Site Dashboard you want to add:
 
 
 ## Manage Site Teams
-
-From the Sites tab, you can add users to or remove them from site teams. Members of Ally, Partner, And Strategic Partner Organizations already have access to all sites in the Org. However, if you need to add developers as full team members to a site, or outside contractors to individual sites, you'll need to add them to the site team.
+If you need to add developers as full team members to a site, or outside contractors to individual sites, you'll need to add them to the site team:
 
 1. Check the box next to the site or sites you want to add the user to.
 2. Click **Team** and **Add a team member**.

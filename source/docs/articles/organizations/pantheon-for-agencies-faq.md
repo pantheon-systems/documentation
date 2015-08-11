@@ -9,7 +9,7 @@ keywords: agency, p4a, multidev, change management, site owner, ownership, suppo
 
 ### What is the benefit of Multidev?
 
-Multidev allows you to more seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+Multidev allows you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 
@@ -26,7 +26,7 @@ The person who creates the site owns it until someone else starts paying for it.
 
 ### Where can I learn more about these roles?
 
-Please see our [Change Management documentation](/docs/articles/organizations/change-management).
+See our [Change Management documentation](/docs/articles/organizations/change-management).
 
 ### How do we add new sites to an Organization?
 

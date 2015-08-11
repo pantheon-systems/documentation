@@ -5,20 +5,18 @@ category:
 - managing
 keywords: p4a, pantheon for agencies, agency profile, agency, team, add member, add members, add site, add sites, organization site, organization sites, p4a dashboard, agency dashboard, pantheon for agencies dashboard, products, custom upstream, custom upstreams, add product, add custom upstream
 ---
-Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all of your sites, people, and support tickets in one place. Land a support contract? Teaming up with another agency on a site? We’ve got you covered. Follow these instructions to get started.
+Scale your agency. Pantheon for Agencies (P4A) gives you the power to manage all of your sites, people, and support tickets in one place.
 
 ## Create Your Agency Profile
-Log in to your Pantheon Account and navigate to https://dashboard.pantheon.io/organizations. Need an account? [Sign up for Pantheon](https://dashboard.pantheon.io/register). Fill out the form. We ask for evidence that you have developed a few websites and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
-![Pantheon Agency Registration Page at https://dashboard.pantheon.io/register](/source/docs/assets/images/pantheon-for-agencies-registration.png)
+Log in to your Pantheon account and navigate to [https://dashboard.pantheon.io/organizations](https://dashboard.pantheon.io/organizations). We ask for evidence that you have developed a few websites and have your own presence on the web. When you’re a full partner, we’ll run that site on a Professional plan, for free.
 
 ## Invite Collaborators
 
-Enter the email addresses of the other members of your agency and assign them roles. Don’t worry, starting to add a third collaborator will reveal a fourth field, and so on.
+Enter the email addresses of the other members of your agency and assign them roles:
  ![Invite team members to your agency during registration](/source/docs/assets/images/create-org-invite-team-members.png)
 
 ## Add Sites
-
-You’re now prompted to add existing Pantheon sites that you own to your organization. Your agency will be added to the site teams as a “Supporting Organization”.
+Add existing sites to the organization. Your agency is added as a “Supporting Organization” on each site.
  ![Add existing sites to your agency during registration](/source/docs/assets/images/new-org-add-sites.png)
 
 ## Tour the Dashboard
@@ -28,32 +26,31 @@ Your Organization Dashboard has five tabs.
 
 ### Sites
 
-The Sites list will now show all of the sites your agency owns or has access to as a supporting organization. All sites created with your organization selected in the drop-down will be owned by your organization and will display here. You can quickly tag, sort, and filter your sites.
+The Sites list shows all sites your agency has access to as a supporting organization. You can quickly tag, sort, and filter your sites.
 [Learn more](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-sites-to-your-organization)
 
 ### People
 
-The People tab is where you can see all of your awesome collaborators, filter them by role, manage their roles, and add new users to your organization.
+View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
 [Learn more](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-users-to-your-organization)
 
 ### Products
 
-Partners and Strategic Partners can have custom upstreams from which all of their sites will be created and updated.
+Partners and Strategic Partners can have custom upstreams from which all of their sites are created and updated.
 [Learn more](/docs/articles/organizations/running-a-custom-upstream/).
 
 ### Support
-
-Every ticket from every site in your org is surfaced here. You can open new tickets associated with individual sites or for your organization in general. If you spot a bug, this is the best way to tell us about it. You can also respond to tickets here.
+Review, open, or reply to support tickets associated with your organization and its sites.
 
 ### Settings
 
-Upload your agency's logo! (85 x 85 px)
+Upload your agency's logo (85 x 85 px).
 
 ## Next Steps
 
 - [Create a Site](/docs/articles/sites/create)
 - [Migrate Sites to Pantheon](/docs/articles/sites/migrate)
-- Read the [FAQs](/docs/articles/organizations/pantheon-for-agencies/faq)
+- Read the [FAQs](/docs/articles/organizations/pantheon-for-agencies-faq)
 - Learn about Pantheon for Agencies features:
   - [Change Management](/docs/articles/organizations/change-management)
   - [Multidev](/docs/articles/sites/multidev)
