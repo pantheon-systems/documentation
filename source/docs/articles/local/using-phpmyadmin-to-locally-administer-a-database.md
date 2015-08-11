@@ -5,11 +5,11 @@ category:
   - developing
 keywords: phpmyadmin, database, mysql, mysql connection,
 ---
-[PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP so it is possible to install this on Windows, Mac OS X, and Linux.
+[PHPMyAdmin](https://github.com/phpmyadmin/phpmyadmin/) is a common tool to administer databases locally and can also provide DBAs the ability to access remote databases. PHPMyAdmin runs PHP, so you can install this on Windows, Mac OS X, and Linux.
 
 ## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to download it via GitHub. You can review our instructions for [Accessing MySQL database](/docs/articles/local/accessing-mysql-databases/) for your site.
+The recommended way to get a copy of PHPMyAdmin is to download it via GitHub. For instructions, see [Accessing MySQL database](/docs/articles/local/accessing-mysql-databases/).
 ```nohighlight
 git clone https://github.com/phpmyadmin/phpmyadmin.git
 ```
@@ -23,7 +23,7 @@ A repository for PHPMyAdmin exists on SourceForge, but we recommend the GitHub v
 
 Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection, create a copy of config.sample.inc.php and rename this to config.php.
 
-Add the necessary parameters for the environment's MySQL connection. These can be found on the "Connection Information" widget available on the site's Dashboard above the code log:
+Add the necessary parameters for the environment's MySQL connection. You can find this on the Connection Info tab on the site's Dashboard above the code log:
 
 ```sql
 /* Authentication type */
@@ -39,32 +39,26 @@ $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['extension'] = 'mysqli';
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 ```
-Once this is done, the permissions on the config.php should be set to at least 755. This can be done via a GUI or using the command line:
+Once this is done, set the permissions on the config.php to at least 755. This can be done via a GUI or using the command line:
 ```bash
 chmod 755 config.inc.php
 ```
-If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so that it's not writeable.<br />
-![enter your password](/source/docs/assets/images/desk_images/224903.png)<br />
-After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
+If the permissions are not correctly set, PHPMyAdmin will return an error prompting you to update the file so that it's not writeable. After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
-## Connecting to the Database
+## Connect to the Database
 
-At this point, you are all set and can begin to administer your database. There will be a new entry on the Workbench for the newly setup connection and you can click on the icon to initiate a session.<br />
-![enter your password](/source/docs/assets/images/desk_images/224907.png)
+You are now ready to administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
 
 ## Troubleshooting
 
 #### Unable to Connect to Remote Database
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's Dashboard.<br />
-![](/source/docs/assets/images/desk_images/224915.png)​
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, verify that you have the current connection information for the environment. If not, get the new information from the site's Dashboard.
 
 #### Database Credentials are Invalid
 
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
+The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
 
 #### Database is Reaped
 
-To conserve resources environments will be spun down after about two hours of inactivity. If your site is in sleep mode, you may get the following error:
-
-Go to the environment's URL in your browser to"wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. More information about this is available on the [known limitations](/docs/articles/sites/known-limitations) page.
+To conserve resources, environments are spun down after about two hours of inactivity. If your site is in sleep mode, you may get an error. Go to the environment's URL in your browser to "wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. For more information, see [Known Limitations](/docs/articles/sites/known-limitations).

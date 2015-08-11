@@ -5,7 +5,7 @@ category:
   - developing
 keywords: ssh, ssh tunnel, security, database, encryption, mysql database, redis cache server
 ---
-For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using  [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
+For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 
 This technique configures an SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.  
 
@@ -22,11 +22,9 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
-From the Site Dashboard, access the environment you want to connect with, and click the **Connection Info** button. Here you will find the required environment specific values for the command exmple found below.
-
+From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
 
 ![Connection info](/source/docs/assets/images/desk_images/168060.png)
-
 
 Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```
@@ -46,7 +44,7 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 
 ## Use Sequel Pro to SSH Tunnel to a MySQL Database
 
-[Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. Other MySQL clients can be configured in a similar manner.  
+[Sequel Pro](http://www.sequelpro.com/) is an open-source MySQL database client that supports SSH tunneling on Mac. You can configure other MySQL clients in a similar manner.  
 
 ## Manually Create an SSH Tunnel to a Redis Cache Server
 
@@ -54,7 +52,7 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Use the port value from the above one-live connection string, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the port value from the above one-live connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```

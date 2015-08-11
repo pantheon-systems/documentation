@@ -5,46 +5,35 @@ category:
   - getting-started
 keywords: cygwin, install, linux tool, windows
 ---
-[Cygwin](http://cygwin.com/install.html) is a collection of tools which provide a Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment you can use Cygwin to generate the .key and .csr file that are needed to get a SSL certificate from a provider.
+[Cygwin](http://cygwin.com/install.html) is a collection of tools which provide Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment, you can use Cygwin to generate the .key and .csr file that are needed to get a SSL certificate from a provider.
 
 ## Getting Started
-Before you begin, you should be sure to take a look at the [Getting an SSL Cert](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) documentation. Once you have one through the process of generating the command to get a valid CSR certificate for your domain, you can proceed with the rest of this tutorial.
+Before you begin, take a look at the [SSL documentation](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication). Once you have gone through the process of generating the command to get a valid CSR certificate for your domain, you can continue on to the steps below.
 
-## Download Cygwin
-Get started by downloading the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page.
+## Download and Install Cygwin
+Download the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page.
 
-## Install Cygwin
-Start the Cygwin installer using setup.exe. If you already have Cygwin installed or you would like to add extra packages after you have the program running on your system you can simply click setup.exe and running through the installer again.<br />
- ![Start Cygwin Installer](/source/docs/assets/images/desk_images/40750.png)  
+Start the Cygwin installer using setup.exe. If you already have Cygwin installed or you would like to add extra packages after you have the program running on your system, you can click setup.exe and run through the installer again.<br />
 
-## Select the Cygwin Root
-We have opted to the root directory directly inside the `C:\` directory. This will make it easier when we are trying to locate the CSR files we are going to generate later in the tutorial.<br />
- ![Cygwin Root install directory](/source/docs/assets/images/desk_images/40751.png)  
+### Select the Cygwin Root
+Putting the root directory directly inside the `C:\` directory makes it easier when trying to locate the CSR files.
 
-## Select the Package Directory
-Once you have chosen the default directory to install Cygwin, you will also need to select a Local Package directory. In this case we are using the same directory as the Cygwin Root directory.<br />
- ![Cygwin Local package directory](/source/docs/assets/images/desk_images/40752.png)
+### Select the Package Directory
+Once you have chosen the default directory to install Cygwin, select a Local Package directory. You can use the same directory as the Cygwin Root directory.
 
-## Choose Your Internet Connection
-To download the necessary packages, the recommended settings for this is the "Direct Connection".<br />
- ![Cygwin Connection Type](/source/docs/assets/images/desk_images/40753.png)  
+### Choose Your Internet Connection
+Download the necessary packages by selecting "Direct Connection".<br />
 
-## Select a Download Site
-Choose the nearest mirror site or most stable location. If for some reason the download does not work, you can always select another mirror.<br />
- ![Choose Cygwin mirror](/source/docs/assets/images/desk_images/40755.png)  
+### Select a Download Site
+Choose the nearest mirror site or most stable location. If for some reason the download does not work, you can always select another mirror.  
 
-## Install the SSL Package
-Start Cygwin and paste in the command that you got from the Wizard.<br />
- ![Select openSSL package](/source/docs/assets/images/desk_images/40768.png)  
+### Install the SSL Package
+Start Cygwin and paste in the command that you got from the wizard.  
 
-## Generate the CSR
-Once the installation is complete, you can run start a Cygwin terminal session. Here you can paste in the command you generated from the Wizard and get your private key and CSR certificate.<br />
- ![Generate the CSR with Cygwin](/source/docs/assets/images/desk_images/40769.png)
+### Generate the CSR
+Once the installation is complete, start a Cygwin terminal session. Here you can paste in the command you generated from the wizard and get your private key and CSR certificate.
 
-## Get the CSR Certificate
-Finally, you can navigate to the home directory within Cygwin's root and get a copy of both your private key and CSR certificate.<br />
- ![CSR cert in windows](/source/docs/assets/images/desk_images/40770.png)  
+### Get the CSR Certificate
+Finally, you can navigate to the home directory within Cygwin's root and get a copy of both your private key and CSR certificate.
 
-
-## Complete the Installation
-You can now navigate to the  [Getting an SSL Cert](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) documentation where you can complete the rest of the installation process on Pantheon.
+See [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) to complete the rest of the installation process on Pantheon.
