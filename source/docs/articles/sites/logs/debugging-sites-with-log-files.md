@@ -49,7 +49,7 @@ Once connected, you'll see several directories:
  - **`newrelic.log`** - New Relic log; check if an environment is not logging.
  - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log).
  - **`nginx-error.log`** - Webserver error log.
- - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.
+ - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.  You can also use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to this file (although it will only log it to a single application container).
  - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
  - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
 
@@ -64,7 +64,7 @@ See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-ac
 
 #### Can I log to the system logger and access syslog?
 
-The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.
+The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 #### Can I access Apache Solr logs?
 
