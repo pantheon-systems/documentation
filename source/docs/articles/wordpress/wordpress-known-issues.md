@@ -25,11 +25,11 @@ If you see this error:
 ```php
 Warning: session_start(): user session functions not defined
 ```
-It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. [Read more on WordPress and PHP Sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
+It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
 
 ## Site Networks / Multisite
 
-No, Pantheon does not support setting up and running a "Network" of sites on one direct installation.
+Pantheon does not support setting up and running a "Network" of sites on one direct installation.
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 

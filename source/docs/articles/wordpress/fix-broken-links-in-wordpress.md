@@ -17,7 +17,7 @@ You can install the plugin from your [WordPress dashboard](/docs/articles/sites/
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Your site's Connection Mode must be [set to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview) in order to install plugins using the WordPress dashboard.</div>
+Your site's Connection Mode must be <a href="/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview">set to SFTP</a>.</div>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".

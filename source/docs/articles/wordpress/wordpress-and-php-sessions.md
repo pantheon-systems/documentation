@@ -12,9 +12,8 @@ However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` 
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, be prepared to modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.
+Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.
 </div>
-
 
 ## Troubleshooting Session Errors
 
@@ -60,11 +59,11 @@ Starting a session for _every_ user is an application anti-pattern. Serving page
 
 Our plugin provides an admin screen to see how many sessions have been started. You can also examine the headers being sent by your website. If you start a new incognito window and see a "PHPSESS" cookie being sent in response to a request for your site, you have some over-eager sessions code.
 
-Command line users can use this quick snippit to test:
+Command line users can use this quick snippet to test:
 ```bash
 curl -Is https://www.getpantheon.com|grep PHPSESS|wc -l
 ```
 
-Obviously you should substitute your site URL in there, but the desired output is "0" (zero).
+You should substitute your site URL in there, but the desired output is "0" (zero).
 
 If your site is overly agressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on wordpress.org to alert the author to the problem and share your solution.

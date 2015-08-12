@@ -6,12 +6,12 @@ category:
 keywords: wordpress, cron, wp-cron
 ---
 ## WP-Cron Overview
-WP-Cron, one of the lesser known features of WordPress, executes specific tasks for WordPress powered sites. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Whether it's routine maintenance or scheduled alerts, any command that can be executed on Unix without user intervention can be scheduled as a Cron task.
+WP-Cron executes specific tasks for WordPress powered sites. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Whether it's routine maintenance or scheduled alerts, any command that can be executed on Unix without user intervention can be scheduled as a Cron task.
 
 WP-Cron is similar in nature to Cron, but differs in a couple of very important ways. This feature is designed solely to handle WordPress routine tasks:
 
- - Check for new version of the WordPress core, themes, and plugins.
- - Clean up spam.
+ - Check for new version of the WordPress core, themes, and plugins
+ - Clean up spam
 
 Plugins and themes can add tasks to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.  WP-Cron opens up a whole new world of things that a WordPress powered site can do.
 
@@ -29,7 +29,7 @@ If your WordPress powered site is high traffic, you may run into problems with W
 Both of these issues are addressed within WP-Cron's internal [ locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) and are not common problems; however, they can still occasionally happen.
 
 ## Manage WP-Cron Internally
-WP-Cron comes preconfigured and ready to run, so you don't need to do anything to enable it on your WordPress sites. Most WordPress site owners never realize the function even exists.
+WP-Cron comes preconfigured and ready to run, so you don't need to do anything to enable it on your WordPress sites.
 
 During the initial installation of WordPress, several tasks are automatically configured. You can use a few simple commands from the command line, or one of several plugins, to find the exact jobs being run by WP-Cron.
 
@@ -48,7 +48,7 @@ One of the first things you'll want to do is test WP-Cron to make sure everythin
 $ terminus wp cron test --site=SITE_NAME --env=<dev|test|live>
 ````
 
-If everything works correctly, the result will look like this:
+If everything works correctly, the result looks like this:
 
 ````bash
 Success: WP-Cron spawning is working as expected.

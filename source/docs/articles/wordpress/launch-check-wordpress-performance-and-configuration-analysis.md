@@ -5,7 +5,7 @@ category:
   - WordPress
 keywords: wordpress, launch check, analysis, configuration
 ---
-Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports can be found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
+Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
 
 ![status tab on live environment](/source/docs/assets/images/status-tab.png)
 
@@ -20,7 +20,7 @@ In short, you get a fast, repeatable report that can help detect common problems
 ##How Does it Work?
 WP Launch Check is an extension for WP-CLI designed for Pantheon.io customers. While designed initially for the Pantheon Dashboard it is intended to be fully usable outside of Pantheon.
 
-To use WP Launch Check from the command line, run ```wp launchcheck <subcommand>``` command.
+To use WP Launch Check from the command line, run: ```wp launchcheck <subcommand>```
 
 For more information about WP-CLI, visit their [GitHub page](https://github.com/wp-cli/wp-cli). For more information on WordPress Launch Check, go to the [GitHub repo](https://github.com/pantheon-systems/wp_launch_check/).
 
@@ -29,7 +29,7 @@ For more information about WP-CLI, visit their [GitHub page](https://github.com/
 
 ###Cron
 
-This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message: "Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php"
+This check verifies that Cron is enabled and what jobs are scheduled. It is enabled by default, but it if has been disabled you'll receive the following message: "Cron appears to be disabled, make sure DISABLE_WP_CRON is not defined in your wp-config.php."
 
 ###Database
 
@@ -69,7 +69,7 @@ This check lists all your enabled plugins and alerts you when they need to be up
 Displays the files that references sessions. If any are found, you'll be prompted to install the native PHP sessions plugin.
 
 ## Support
-If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it! Pull requests are always welcome!
+If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it. Pull requests are always welcome!
 
 ## See Also
 If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
