@@ -83,7 +83,7 @@ real 0m0.874s
 user 0m0.036s
 sys 0m0.004s
 ```
-As an added bonus, you can test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID.
+Test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID.
 
 To get the PHP-Session ID, log in to your site and check the browsers cookie setting and value. The Session ID can be passed in the following way:
 
@@ -197,7 +197,5 @@ There are a number of other tools to consider when you are planning your load te
 	</tbody>
 </table>
 
-## Next Steps
-
-- Enable Redis (if you haven't already) to alleviate database bottlenecks.
-- Debug and Profile your website codebase. If you find a bottleneck you can't resolve, contact support.
+## See Also
+- [Going Live](/docs/articles/going-live)

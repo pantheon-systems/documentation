@@ -6,24 +6,24 @@ keywords: drupal, sites, pantheon, upstream
 ---
 [Drupal](https://www.drupal.org) is an open source content management platform powering millions of websites and applications. It’s built, used, and supported by an active and diverse community of people around the world.
 
-Drupal sites on Pantheon run an optimized version of [Drupal](https://github.com/pantheon-systems/drops-7), based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API module](/docs/articles/sites/code/what-is-the-pantheon_api-module/). When new Drupal 7 sites are created, the platform clones the drops-7 repository as a part of its process and sets it as a remote to track, so that you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click. When existing Drupal sites are imported, our system replaces core with drops-7.
+Pantheon runs an optimized version of Drupal, based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API module](/docs/articles/sites/code/what-is-the-pantheon_api-module/). When new Drupal 7 sites are created the [drops-7](https://github.com/pantheon-systems/drops-7) repository is cloned and set as the site's upstream, so you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click. The import process for migrating an existing Drupal site replaces core with drops-7.
 
 ##Get Started
-[Migrate an existing Drupal site](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/getting-started/) using the Pantheon Dashboard tools.
+[Migrate an existing Drupal site](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/getting-started/) using the Pantheon Dashboard.
 
-##Clone a Drupal Site
-There may be times when you need to copy an existing Drupal site to an entirely new, separate environment. This is a fairly simple, manual process. For more information, see [Clone a Drupal Site Using Drush](/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup/).
+## Clone a Drupal Site From a Dashboard Backup
+See [Cloning an Existing Site from a Dashboard Backup](/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup/).
 
 ##Major Version Upgrades
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
-Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
+Also, Pantheon needs to track the proper upstream for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
 
 ## Updating Modules
-Drupal has a very good, built-in system for updating contributed modules through the administrative interface. Learn how to [update modules through Drupal on Pantheon](/docs/articles/drupal/updating-modules-through-drupal/).
+See [Updating Modules Through Drupal](/docs/articles/drupal/updating-modules-through-drupal/).
 
 ##Apache Solr
-[Apache Solr](/docs/articles/sites/apache-solr/) is an open source system for indexing and searching website content. Pantheon provides Apache Solr as a service. We manage a cluster of fast Solr index servers that communicate with your site via these popular Drupal modules:
+[Apache Solr](/docs/articles/sites/apache-solr/) is an open source system for indexing and searching website content. We manage a cluster of fast Solr index servers that communicate with your site via these popular Drupal modules:
 
 ​[Apache Solr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8  
 [Search API Solr](https://drupal.org/project/search_api_solr) - 7.x-1.2

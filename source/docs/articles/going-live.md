@@ -5,7 +5,7 @@ category:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live
 ---
-Congratulations, you're almost ready to launch your site on Pantheon! For Enterprise clients, our dedicated launch team guides you through these steps during the onboarding process. However, we have written this guide so that our self service clients can follow the same best practices for going live.
+For Enterprise clients, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
@@ -33,7 +33,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Schedule Backups
 
-Ensure that your content is protected by scheduling daily and weekly backups so you have a fallback in case you want to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For detailed instructions, see <a href="/docs/articles/sites/backups/backup-creation">Creating a backup</a>.
+Schedule daily and weekly backups in case you need to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For details, see [Backup Creation](/docs/articles/sites/backups/backup-creation).
 
 ## Monitoring Services
 
@@ -47,8 +47,6 @@ Set up redirects for possible URL changes as a result of going live. Have a plan
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
 nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</div>
-
-
 
 ## Get DNS Record and Update Your DNS
 
@@ -72,7 +70,7 @@ Pantheon serves a default robots.txt that disallows crawlers for any \*.pantheon
 
 If you attempt to access your live environment with a pantheon.io domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
-Pantheon does not allow crawlers on Dev, Test, or any branch environment. Adding a domain to an environment other than Live will not permit crawlers to that environment.
+Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a domain to an environment other than Live will not permit crawlers to that environment.
 
 
 ## See Also
