@@ -5,10 +5,10 @@ category:
   - drupal
 keywords: drupal, update, updating, security,
 ---
-If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be able to apply a one-click update in your Dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.
+If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you are able to apply a one-click update in your Dashboard. If you are running a site that does not yet have a one-click update available, we recommend you manually make the update immediately.
 
-1. Download [Drupal 7.32 Security Update](https://github.com/drupal/drupal/commit/26a7752c34321fd9cb889308f507ca6bdb777f08.patch).
-2. Apply the patch [per usual](https://www.drupal.org/patch/apply) or if you don’t use Git you can connect to your Dev environment via SFTP and edit includes/database/database.inc changing line 739 from:
+1. Download the [Drupal 7.32 security update](https://github.com/drupal/drupal/commit/26a7752c34321fd9cb889308f507ca6bdb777f08.patch).
+2. [Apply the patch](https://www.drupal.org/patch/apply). If you don’t use Git, you can connect to your Dev environment via SFTP and edit includes/database/database.inc changing line 739 from:
   ```
   foreach ($data as $i => $value) {
     ```
@@ -17,9 +17,7 @@ If your Drupal 7 site is based on the Pantheon Drupal 7 upstream, you will be ab
     foreach (array_values($data) as $i => $value) {
     ```
 3. That's it! Just make sure to pull your code from Dev, to Test, to Live.
- 
-
-For example, from your local machine:
+For example, from your local machine:
 
     $ cd panopoly-site/includes/database/
 

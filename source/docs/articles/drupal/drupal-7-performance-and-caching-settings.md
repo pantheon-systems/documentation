@@ -23,7 +23,7 @@ Minimum caching lifetime forces cached content to continue to exist before it c
  ![](/source/docs/assets/images/desk_images/180074.png)<br />
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
-Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 mins, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
+Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ## Bandwidth Optimization
  ![](/source/docs/assets/images/desk_images/180075.png)<br />
@@ -40,7 +40,7 @@ In Drupal 6, most users should set their cache mode to "Aggressive" to take adva
 Checking "External" prevents this kind of "double caching" by freeing Drupal from the responsibility to store a page that is also being stored at the reverse-proxy layer. Again, this should only be used on sites which don't want the long-term protection of an internal page cache.
 
 ### Compatibility Warnings
-Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
+Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode, no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
 
 Obviously, when the page is cached Externally in a reverse-proxy layer, Drupal is not consulted when cached pages are delivered.
 
@@ -50,15 +50,15 @@ As a developer, you should understand the implications of the code in your appli
 
 ### Minimum Cache Lifetime
 
-As above, this is useful for high traffic sites that don't want to be flushing their caches when every comment is submitted.
+This is useful for high traffic sites that don't want to be flushing their caches when every comment is submitted.
 
 ### Page Cache Maximum Age
 
-As above, this determines the amount of time a cache will be honored in the reverse-proxy layer. Set it as high as you are comfortable.
+This determines the amount of time a cache will be honored in the reverse-proxy layer. Set it as high as you are comfortable.
 
 ### Block Cache
 
-As above, this can help with logged-in performance by preventing re-generation of block elements in sidebars every pageview.
+This can help with logged-in performance by preventing re-generation of block elements in sidebars every pageview.
 
 ### Optimize CSS and JavaScript Files
 

@@ -6,7 +6,7 @@ category:
   - drupal
 keywords: drupal modules, performance, cache, caching, views, redis, views caching,
 ---
-While configuring [Drupal's performance and caching settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings) and using [redis as a Drupal caching backend](/docs/articles/sites/redis-as-a-caching-backend) will make a significant performance difference, not every module uses Drupal's caching out of the box.
+While configuring [Drupal's performance and caching settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings) and using [Redis as a Drupal caching backend](/docs/articles/sites/redis-as-a-caching-backend) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 
@@ -20,6 +20,7 @@ Views has a very granular caching system, down to the individual View display. T
 	<dt>Block Caching</dt>
 	<dd>If you're generating a block, this will expose the block to Drupal's built-in block caching.</dd>
 </dl>
+
 ### Configure Views Caching
 
 1. Go to /admin/structure/views/

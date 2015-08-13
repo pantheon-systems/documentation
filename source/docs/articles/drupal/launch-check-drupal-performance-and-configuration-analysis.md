@@ -5,11 +5,11 @@ category:
   - developing
 keywords: launch check, drupal, analysis, database, status, report
 ---
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports can be found in the site dashboard under the **Status** tab and are accessible by site team members.
+Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
 ![status tab on live environment](/source/docs/assets/images/status-tab.png)
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as  **static program analysis** by gathering performance & behavior patterns to see how a site works.  
+Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.  
 
 This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
 
@@ -33,7 +33,7 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 ## How Does it Work?
 
-To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
+To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
 
 ## Frequently Asked Questions
 
