@@ -4,10 +4,10 @@ description: The Pantheon user entity and its relationship to Drupal or WordPres
 category:
   - Platform
 ---
-Your User Dashboard is where you can easily access all of your sites and manage your account information.
+Access all of your sites and manage your account information from the User Dashboard.
 ![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
 ###Sites Tab
-All of the sites that you're a team member of are displayed here, along with the number of free sites you have remaining. When you are in a Site Dashboard, you can return to this page by clicking the Pantheon logo.
+Every site you're a team member of is displayed here, along with the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
 ###Organizations Tab
 If you belong to an Organization, you will see it listed here and can click on it to go to that Organization's Dashboard.
