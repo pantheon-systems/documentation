@@ -29,7 +29,8 @@ Pantheon maintains the [wp-redis](https://wordpress.org/plugins/wp-redis/) plugi
 
 1. Install the WP Redis plugin through the WordPress dashboard (or via WP-CLI `wp plugin install wp-redis`), but do not activate the plugin. You never need to activate it because it's loaded via a drop-in in the next step.
 2. Create an external object cache drop-in plugin at `wp-content/object-cache.php` that contains the following:
-  ```php
+
+  ```bash
   <?php
   # This is a Windows-friendly symlink :-)
   require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
