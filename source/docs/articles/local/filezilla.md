@@ -6,7 +6,7 @@ category:
     - developing
 keywords: filezilla, pantheon, sftp
 ---
-[FileZilla](http://winscp.net/eng/index.php) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
+[FileZilla](https://FileZilla-project.org/) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
 ## Getting Started
 
@@ -32,7 +32,8 @@ Under the Advanced Tab, the Remote Directory should be left blank as shown belo
  ![](/source/docs/assets/images/desk_images/272341.png)  
 
 
-## Authentication
+
+## Authentication
 
 **SSH Key-Based:** Once you are logged in you are directed to the root directory of your appserver. On the left side you will see your local computer and on the right you will have access to your site's appserver.  
 
