@@ -5,7 +5,7 @@ category:
   - developing
 keywords: server_name, server_port, SERVER_NAME, SERVER_PORT, environment config, environment configuration, HTTP_HOST, $_SERVER, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], settings.php, wp-config.php, assign port value, port value, server name
 ---
-There's code out there that relies on `$_SERVER['SERVER_NAME']` and sometimes `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
+Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
 
 In general, you don't want your code to rely on this, but some extensions (themes, modules, plugins) give you no choice. In that case, you will need to modify the `$_SERVER` variable in your `settings.php` (Drupal) or `wp-config.php` (WordPress) file to ensure the right values are present.
 
@@ -16,7 +16,7 @@ Adding the following code will pass the correct value when `'SERVER_NAME'` is us
 ```php
 $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 ```
-While this fix does correct symptoms such as undesirable URLs, it is recommended that all instances of `'SERVER_NAME'` be replaced with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L69-L71) for WordPress).
+While this fix does correct symptoms such as undesirable URLs, we recommended replacing all instances of `'SERVER_NAME'` with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L69-L71) for WordPress).
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

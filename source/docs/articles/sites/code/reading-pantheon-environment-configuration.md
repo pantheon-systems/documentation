@@ -39,7 +39,7 @@ Database credentials, Redis authentication, and other configuration data is prov
       string(6) "live"
     }
 
-If you are using a common CMS framework the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
+If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
 
 ## Drupal 7 and Drupal 8
 
@@ -47,7 +47,7 @@ If you are using a common CMS framework the code you need to load this configura
 <h4>Note</h4>
 Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a> for details.</div>
 
-Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this would be done in settings.php.
+Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in settings.php.
 
     <?php
     extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));

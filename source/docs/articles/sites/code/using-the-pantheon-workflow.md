@@ -1,6 +1,6 @@
 ---
 title: Using the Pantheon Workflow
-description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Website Management Platform Workflow.
+description: Understand how to use separate Dev, Test, and Live environments while learning more about the Pantheon Website Management Platform workflow.
 category:
   - going-live
   - developing
@@ -44,11 +44,9 @@ After testing your changes, you can take them live. Deploying code from Test to 
 
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/desk_images/376217.png)
 
-![Site Dashboard, live environment](/source/docs/assets/images/desk_images/376218.png)
-
 ## Configuration Management
 
-Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it would overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
+Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it will overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
 
 ### WordPress
 

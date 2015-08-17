@@ -11,23 +11,21 @@ It's often useful to redirect requests to a different domain or path. While it's
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">configuring settings.php</a>.</div>
+Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">Configuring settings.php</a>.</div>
 
 #### Why redirect with settings.php or wp-config.php and not .htaccess?
 
-Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files; it's like they don't even exist. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
-
+Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
 
 Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
 
-
 Configuration also tends to be more maintainable as Drupal and WordPress developers are typically literate in PHP, but very few people are naturally fluent in Apache2 rewrite rules and conditions.
 
-Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well!
+Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, a hostname with a matching record must be added to an environment on the <a href="/docs/articles/going-live/#Add-Domain-to-the-Live-Environment"> site's Dashboard</a>.</div>
+Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/articles/going-live/#Add-Domain-to-the-Live-Environment"> site's Dashboard</a>.</div>
 
 
 ## Redirect to a Common Domain
@@ -56,13 +54,13 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
         exit();
       }
     }
-```    
+```
 
 ## Redirect to HTTPS
 
 ### Require SSL for All Pages
 
-If you'd like to put all traffic on your site under HTTPS (a best practice if you have an SSL cert), you should be checking for the `HTTP_X_SSL` code like so:
+If you'd like to put all traffic on your site under HTTPS (a best practice if you have an SSL cert), check for the `HTTP_X_SSL` code:
 
     // Require SSL.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&

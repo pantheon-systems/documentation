@@ -3,7 +3,7 @@ title: Updating Core for Site's with Outdated Versions on Custom Distributions
 description: Learn to pull core updates when repository maintainers of alternate distributions are too slow.
 keywords: upstream, core, core update, core updates, upstream updates, manually pull updates, manually update, manually update upstream, pull upstream updates, pull core updates
 ---
-If your site reports a new version update is available and you don't see a [one-click update](/docs/articles/sites/code/applying-upstream-updates/#apply-a-core-update) in your site's Dashboard, take a look at the upstream URL (**Settings** >> **About Site**). If the recent commits are less than an hour or two old, wait and then access your Site Dashboard again to see if the one-click upstream update is available. If it's been more than an hour or two and you do see a recent commit in the upstream, open a support ticket. Otherwise, pull the updates into your site manually.
+If your site reports a new version update is available and you don't see a [one-click update](/docs/articles/sites/code/applying-upstream-updates/#apply-a-core-update) in your site's Dashboard, take a look at the upstream URL (**Settings** > **About Site**). If the recent commits are less than an hour or two old, wait and then access your Site Dashboard again to see if the one-click upstream update is available. If it's been more than an hour or two and you do see a recent commit in the upstream, open a support ticket. Otherwise, pull the updates into your site manually.
 
 
 ## Prerequisites
