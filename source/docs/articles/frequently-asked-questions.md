@@ -50,7 +50,7 @@ Pantheon can handle any domain name you point at it, however DNS configuration i
 ## Developing Sites
 
 #### Does Pantheon offer professional services?
-Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
+No. Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 

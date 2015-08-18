@@ -15,7 +15,7 @@ Access the [Organization Dashboard](/docs/articles/organizations/pantheon-for-ag
 
 
 ## Multidev
-All sites associated with any Partner organization will have [Multidev](/docs/articles/sites/multidev) enabled with up to 10 environments at their disposal.
+All sites associated with any Partner organization will have [Multidev](/docs/articles/sites/multidev) enabled with up to 10 environments at their disposal. All organization members will have access to these environments, however team members of a site outside the organization will not.
 
 ## Change Management
 
