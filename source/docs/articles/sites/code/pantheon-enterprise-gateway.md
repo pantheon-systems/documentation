@@ -7,7 +7,7 @@ keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewal
 ---
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website.
 
-This is available for Enterprise customers. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.
+This service is available as an add-on for Enterprise customers. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.
 
 ### How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
 
@@ -38,6 +38,10 @@ Secure integration with Pantheon Enterprise Gateway:
 For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+
+### Does the Pantheon Enterprise Gateway work from all site environments?
+
+Yes, it's configured on a site by site basis and works from all environments (Dev, Test, Live, and Multidev environments).
 
 ### Is Pantheon Enterprise Gateway a replacement for authentication?
 
