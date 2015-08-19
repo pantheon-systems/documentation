@@ -41,7 +41,7 @@ WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re
 
 ### Does the Pantheon Enterprise Gateway work from all site environments?
 
-Yes, it's configured on a site by site basis and works from all environments (Dev, Test, Live, and Multidev environments).
+Yes, it's configured on a site-by-site basis and works from all environments (Dev, Test, Live, and Multidev).
 
 ### Is Pantheon Enterprise Gateway a replacement for authentication?
 
