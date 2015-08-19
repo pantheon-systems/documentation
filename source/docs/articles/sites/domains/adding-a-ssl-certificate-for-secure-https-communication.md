@@ -89,13 +89,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
 2. Select **Domains / SSL**.
 2. Click **SSL**.
-3. Paste in the certificate information, including the header and footer, and press **Add Cert**. 
-  Example:   
------BEGIN CERTIFICATE REQUEST-----  
-x  
-y  
-z  
------END CERTIFICATE REQUEST-----  
+3. Paste in the certificate information, including the header (----BEGIN CERTIFICATE REQUEST----) and footer (----END CERTIFICATE REQUEST----), and press **Add Cert**. 
 
  ![Site dashboard add SSL certificate](/source/docs/assets/images/manage_domains_ssl.png)​
 
