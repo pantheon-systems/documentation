@@ -32,7 +32,7 @@ openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr
 -keyout www_example_com.key
 ```
 
-You'll be prompted interactively to enter information the needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
+You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
 
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
 
@@ -66,7 +66,7 @@ You can upload the same wildcard SSL certificate for multiple sites that share a
 
 ### Intermediary Certificates/Bundles
 
-Some SSL providers will give you an intermediary certificate, which is used to establish a chain of trust. If you received one, you'll need to add it in the Dashboard. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/) to test if the correct certificate chain is being served and see which chain you should be serving.
+Some SSL providers will give you an intermediary certificate, which is used to establish a chain of trust. If you received one, you'll need to add it in the Dashboard. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/) to generate the correct intermediary certificate.
 
 GoDaddy.com provides a bundle (gd\_bundle.crt). Use this as the intermediary certificate.
 
@@ -89,7 +89,14 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
 2. Select **Domains / SSL**.
 2. Click **SSL**.
-3. Paste in the certificate information, including the header and footer, and press **Add Cert**.
+3. Paste in the certificate information, including the header and footer, and press **Add Cert**. 
+  Example:   
+-----BEGIN CERTIFICATE REQUEST-----  
+x  
+y  
+z  
+-----END CERTIFICATE REQUEST-----  
+
  ![Site dashboard add SSL certificate](/source/docs/assets/images/manage_domains_ssl.png)​
 
 After submitting your certificates, you'll see a confirmation message:
@@ -114,7 +121,7 @@ Before you point your DNS to the custom IP address you received after enabling S
 <h4>Warning</h4>
 You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
 
-### Test with a Browser
+### Test with Chrome
 
 1. Point your browser to the custom IP address you received after enabling SSL: https://x.x.x.x
 2. Click the padlock in the address bar.
