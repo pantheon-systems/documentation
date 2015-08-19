@@ -8,7 +8,7 @@ keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl
 ---
 SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
-Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or CSRs, or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
+Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
@@ -16,23 +16,23 @@ Enable SSL before updating DNS. SSL for custom domains is available for Professi
 
 ## Steps to Enable SSL
 
-1. Generate Key and CSR
+1. Generate RSA Key and CSR
 2. Get SSL certificate
 3. Load certificate into Pantheon environment
 4. Test SSL (optional, but recommended)
 5. Update DNS
 6. Require SSL for all pages (optional, but recommended)
 
-## Generate Key and CSR
+## Generate RSA Key and CSR
 
-Run `openssl` from the command line to generate a RSA Private Key (.key file) and Certificate Signing Request (.csr file):
+Run `openssl` from the command line to generate an [RSA private key](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) (.key file) and [certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request) (.csr) file:
 
 ```bash
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr
 -keyout www_example_com.key
 ```
 
-You'll be prompted interactively to enter information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
+You'll be prompted interactively to enter information the needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
 
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
 
@@ -58,15 +58,17 @@ If the SSL provider asks you to select a web host server type, look for an optio
 
 ### Multiple Domains with Subject Alternative Names (SANs)
 
-A Subject Alternative Name is a public key certificate that is permitted to identify more than one entity or device. SANs may be the right choice if you need to manage multiple domains with a single certificate. For more information, see [SAN Certificates](http://www.digicert.com/subject-alternative-name.htm )
+A Subject Alternative Name is a public key certificate that is permitted to identify more than one entity or device. SANs may be the right choice if you need to manage multiple domains with a single certificate. For more information, see [SAN Certificates](http://www.digicert.com/subject-alternative-name.htm).
 
 ### Wildcard
 
-You can upload the same wildcard SSL certificate for multiple sites that share a domain, and add the correct subdomain to each site's domain tab in the Live environment.
+You can upload the same wildcard SSL certificate for multiple sites that share a domain, and add the correct subdomain to each site's Domain tab in the Live environment.
 
-### Intermediary Certificates
+### Intermediary Certificates/Bundles
 
-Your SSL provider may give you an intermediary certificate, which is used establish a chain of trust. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/), which tests if the correct certificate chain is being served, and tells you which chain you should be serving.
+Some SSL providers will give you an intermediary certificate, which is used to establish a chain of trust. If you received one, you'll need to add it in the Dashboard. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/) to test if the correct certificate chain is being served and see which chain you should be serving.
+
+GoDaddy.com provides a bundle (gd\_bundle.crt). Use this as the intermediary certificate.
 
 ## SSL Providers
 
@@ -82,17 +84,15 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 - [TrustWave](https://ssl.trustwave.com/support/install-certificate-cpanel.php "TrustWave")
 - [VeriSign](http://www.verisigninc.com/ "VeriSign")
 
-
-
 ## Load Certificate into Pantheon
 
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
-2. Select **Domains**.
-2. Select **SSL**.
-3. Paste in the requested information and press **Add Cert**.
- ![Site dashboard add SSL certificate step 2](/source/docs/assets/images/desk_images/259882.png)​
+2. Select **Domains / SSL**.
+2. Click **SSL**.
+3. Paste in the certificate information, including the header and footer, and press **Add Cert**.
+ ![Site dashboard add SSL certificate](/source/docs/assets/images/manage_domains_ssl.png)​
 
-After submitting your certificates, you'll see:
+After submitting your certificates, you'll see a confirmation message:
 
 "HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
 
@@ -108,23 +108,22 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 
 ## Test SSL
 
-Before you point your DNS to the custom IP address you received after enabling SSL, you may verify that the certificate is correct.
+Before you point your DNS to the custom IP address you received after enabling SSL, you can verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
 You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
 
-### Chrome
+### Test with a Browser
 
-Testing SSL is Chrome is similar for other browsers as well.
-
-1. Point Chrome to the custom IP address you received after enabling SSL: https://x.x.x.x
+1. Point your browser to the custom IP address you received after enabling SSL: https://x.x.x.x
 2. Click the padlock in the address bar.
-3. Click **Certificate Information**.<br />
+3. Select **Certificate Information**.<br />
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
 4. Verify certificate details match the domain(s) you'll point to the site.
  ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
-### cURL
+
+### Test with cURL
 
 Test SSL with `cURL` by issuing the following command:
 
@@ -152,7 +151,7 @@ It's a best-practice to put all traffic on your site under HTTPS, which you can 
 
 ### What should I do with a GoDaddy gd\_bundle.crt?
 
-Use it as the Intermediary Certificate.
+Use it as the intermediary certificate.
 
 ### Which order do I use for a basic Network Solutions SSL pack?
 
@@ -166,8 +165,8 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 
 ### How do I fix a chain file signing key mismatch?
 
-If you see `400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`
-it indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order. Also see [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
+`400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`  
+This indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order. Also see [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 
 ### What if I receive SSL chain errors on a mobile device?
 
@@ -177,6 +176,6 @@ Using an SSL checker (http://www.sslshopper.com/ssl-checker.html) will perform a
 
 If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 
-### What about mixed mode? (HTTP and HTTPS for different pages)
+### What about mixed mode (HTTP and HTTPS for different pages)?
 
-If you are transmitting any sensitive data we recommend [redirecting all traffic to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https), rather than using mixed mode.
+If you are transmitting any sensitive data, we recommend [redirecting all traffic to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https), rather than using mixed mode.
