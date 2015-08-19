@@ -20,7 +20,7 @@ You must be a Pantheon customer to use this script.</div>
 
 1. Save the code in a file with the extension .php and SFTP it up to your site.
 2. Place it in the code directory of your website.
-3. Point a browser to your newly created script that should be in the root directory of your Dev environment:
+3. Point a browser to your newly created script that's located in the root directory of your Dev environment:
 http://your.dev.url.gotpantheon.com/filename.php
 
 That's all there is to it—the script will do all the work.
@@ -37,8 +37,8 @@ If you want to run the script from the command line instead of adding it to your
 
 Make sure you have:
 
-- PHP installed on your computer.
-- Your database connection info for your Dev environment from your Site's Dashboard.
+- PHP installed on your computer
+- Your database connection info for your Dev environment from your Site's Dashboard
 
 Here is the command line script:
 
@@ -47,21 +47,19 @@ Here is the command line script:
 Here are the parameters you will need to configure before running the script:
 <dl>
 	<dt>host</dt>
-	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd>
+	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd><br>
   <dt>port</dt>
-  <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd>
+  <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd><br>
   <dt>user </dt>
-  <dd>This is the user name you use to connect to MySQL with.</dd>
+  <dd>This is the user name you use to connect to MySQL with.</dd><br>
   <dt>password</dt>
-  <dd>This is your MySQL password for the user you specified in the line above.</dd>
+  <dd>This is your MySQL password for the user you specified in the line above.</dd><br>
   <dt>database</dt>
   <dd>This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.</dd>
 </dl>
 
-Now, save the file. Then from a command window execute the program.
+Now, save the file. Execute the program from a command window.
 
-The script will tell you everything it is doing. It has safeties built in to keep it from changing anything but MyISAM tables. It will look at every table in your database and if the engine is MyISAM, it will change it to an InnoDB.
+The script will alert you to everything it's doing. It has safeties built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
 
-Once you have run it successfully, check everything!
-
-This is not a particularly dangerous script; the change is pretty simple. However, it's your data, so be careful.
+Once you have run it successfully, check everything. This is not a dangerous script; the change is pretty simple. However, it's your data, so be careful.
