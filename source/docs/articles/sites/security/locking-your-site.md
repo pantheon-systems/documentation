@@ -10,21 +10,20 @@ There are occasions you are working on a site and want to keep your progress hid
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the Your Sites page.</div>
+When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the your Sites page.</div>
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is private, the requesting client will have to supply the authentication credentials you set in order to access the site.
 
 ## Password Protect Your Site's Environments
-
 
 1. Select the environment (e.g. Dev), and click **Security**.
 2. Click **Locked**.
 3. Choose a username and password, and click **Lock Environment**.
 
 ![Lock environment](/source/docs/assets/images/lock-environment.png)
-If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
+If other members of your team on the site need to access the site, they can view the authentication credentials when they log in to their accounts.
 ![Credentials](/source/docs/assets/images/environment-access.png)
-When your page refreshes, you will notice that the environment is now private. You will also be able to see the credentials needed to access that environment.
+When your page refreshes, you will notice that the environment is now private. You can also see the credentials needed to access that environment.
 
 You can set a different username and password for each environment. This is important if you only want the live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 

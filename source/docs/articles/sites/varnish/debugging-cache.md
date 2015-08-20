@@ -5,7 +5,7 @@ category:
   - debugging
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 ---
-There are three ways to clear all Varnish caches if you are using Drupal and three ways if you are using WordPress.
+There are three ways to clear all Varnish caches for both Drupal and WordPress sites.
 
 ### Drupal
 The first two require you to enable the **pantheon\_api** module to allow Drupal to send the request to clear the Varnish caches.
@@ -18,7 +18,8 @@ The first two require you to enable the **pantheon\_api** module to allow Drupal
 
 
 ### WordPress
-1. From the WordPress Admin menu, select **Settings > Pantheon Cache**. Then click the **Clear Cache** button to clear all the caches.
+1. From the WordPress Admin menu, select **Settings > Pantheon Cache**.
+1. Click the **Clear Cache** button to clear all the caches.
 1. From the command line you can use Terminus:
 
  ```bash
@@ -36,7 +37,7 @@ If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 a
 If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 ### Drupal
-To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, you can also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.
+To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.
 
 
 ## 503 and 504 Gateway Timeouts
