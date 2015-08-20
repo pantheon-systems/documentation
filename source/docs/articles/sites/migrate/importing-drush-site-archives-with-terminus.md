@@ -17,17 +17,15 @@ There are a few things you'll need in order to make this work:
 
 ## Generate a Drush Archive
 
-The first thing we'll need is to generate a Drush archive of your existing site. If you have Drush access to the site direct via the shell, this is pretty easy using the archive-dump command:
+The first thing you'll need to do is to generate a Drush archive of your existing site. If you have Drush access to the site direct via the shell, it's easy with the archive-dump command:
 ```bash
 drush archive-dump --destination=drush-archive.tar.gz
 ```
-Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places.
-
-The important thing is that you have a Drush archive that can be downloaded via a URL.
+Executed from the site root will create a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a URL.
 
 ## Set Up Terminus
 
-If you haven't already, you'll want to set up Terminus, the Pantheon CLI tool, using Composer as described in the [installation instructions on GitHub](https://github.com/pantheon-systems/cli/wiki/installation).
+If you haven't already, set up Terminus, the Pantheon CLI, using Composer as described in the [installation instructions on GitHub](https://github.com/pantheon-systems/cli/wiki/installation).
 
 ## Import Your Archive
 
@@ -41,7 +39,7 @@ Success!
 ```
 You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus sites show` to get a list of your existing sites.
 
-The process to interactively start an import is as follows:
+Start an interactive import:
 ```nohighlight
 terminus sites create-from-import
 Provide a name for the site. This will be part of the default URL: my-drush-import

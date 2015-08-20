@@ -9,9 +9,9 @@ One of the key ways to find issues on your website is to check your database log
 
 ### Drupal
 
-Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. These event logs can be accessed in a couple ways:  
+Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:  
 
-1. Visit `/admin/reports/dblog` once logged in as administrator.
+1. Visit `/admin/reports/dblog` once you've logged in as administrator.
 2. Using [Terminus](https://github.com/pantheon-systems/cli):  
 
 ```bash
@@ -60,7 +60,7 @@ Once connected, you'll see several directories:
 
 #### How can I parse my Nginx access logs?
 
-See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log).
+See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log) for details.
 
 #### Can I log to the system logger and access syslog?
 
