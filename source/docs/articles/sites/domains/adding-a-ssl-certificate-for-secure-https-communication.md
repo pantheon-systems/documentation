@@ -68,6 +68,16 @@ You can upload the same wildcard SSL certificate for multiple sites that share a
 
 Your SSL provider may give you an intermediary certificate, which is used establish a chain of trust. If you get more than one intermediary certificate file, you'll need to combine them into one. Your provider may also send you a "certificate authority" or "CA" cert. If you have problems with your intermediate certificate, try [https://whatsmychaincert.com/](https://whatsmychaincert.com/), which tests if the correct certificate chain is being served, and tells you which chain you should be serving.
 
+### Algorithms
+
+When selecting a certificate algorithm, you may have the following choices:
+
+ - SHA-1(deprecated)
+ - SHA256 cert with SHA-1 root
+ - SHA256 cert and root
+
+While any of those will function on Pantheon, *SHA256 cert and root* would be the best to avoid [errors from the Chrome browser](https://www.chromium.org/Home/chromium-security/education/tls#TOC-Deprecation-of-TLS-Features-Algorithms-in-Chrome). In general, it is a best practice to avoid a certificate with a [deprecated SHA-1 algorithm](https://community.qualys.com/blogs/securitylabs/2014/09/09/sha1-deprecation-what-you-need-to-know).
+
 ## SSL Providers
 
 We don't specifically recommend one, but here are a few of many SSL providers:
