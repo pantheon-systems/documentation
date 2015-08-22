@@ -20,6 +20,6 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 
 - `utm_*` -- Matches standard Google Analytics parameters
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
-  - __Note:__ query parameters cannot contain any hyphens or camelCase keys. They should be all lowercase and without hyphens. Using either of the aforementioned naming schemes will result in an unique cache entry and lose the normalization benefit of `PANTHEON_STRIPPED`.
+  - __Note:__ query parameters cannot contain any hyphens or camelCase keys. They should be all lowercase and without hyphens. Using either of the aforementioned naming schemes will result in an unique cache entry and lose the normalization benefit of `PANTHEON_STRIPPED`. Underscores may be used as word delimiters.
   - __NO:__ `__myQueryParameter=value` or `__my-query-parameter=value`
-  - __YES:__ `__myqueryparameter=value`
+  - __YES:__ `__myqueryparameter=value` or `__my_query_parameter=value`
