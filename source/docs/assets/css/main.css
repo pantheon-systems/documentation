@@ -357,6 +357,35 @@ img.noborder {
 * Separated section of content at the bottom of all pages, save the homepage.
 */
 
+
+#edit .btn-secondary, .btn-secondar:visited {
+        text-shadow: none !important;
+        background: #ededed;
+        color: #000 !important;
+        margin: 0px 0px 5px 0px !important;
+        padding: 12px 22px 12px 16px;
+        text-decoration: none !important;
+        font-weight: bold;
+        display: inline-block;
+        white-space: nowrap !important;
+        line-height: 1;
+        border-color: transparent;
+        border: none;
+        text-transform: uppercase;
+        margin-left: 0px;
+
+    }
+
+#edit a {
+    margin-left: 20px;
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: medium;
+}
+#edit a:hover {
+    text-decoration: none;
+}
+
 .cta-docs-footer{
   padding: 20px;
   background: #DDE5E7;
