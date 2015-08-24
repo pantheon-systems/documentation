@@ -30,8 +30,10 @@ Under the Advanced Tab, leave the Remote Directory blank.  </div>
 
 ## Authentication
 
-**SSH Key-Based:** Once you are logged in, you are directed to the root directory of your appserver. Your local computer is shown on the left, and the right shows your site's appserver.  
+**SSH Key-Based:** Select the private key (likely id_rsa) associated with the public key loaded into your User dashboard.   
 
-**Password-Based:** To get to the site's root, navigate to the `code` directory and continue managing your files as normal.
+**Password-Based:** Enter your Pantheon acccount email address and password.
 
-Select to accept the server's host key for the current session so it is stored in cache. This allows you to connect to the server and manage your files for the current session.
+After logging in, you can access your application in the `/code` directory, Drupal's `/sites/default/files` in `/files`, and your application's logs in `/logs`. 
+
+You may need to select "accept" when prompted to accept the server's host key for the current session and store it in cache. This allows you to connect to the server and manage your files for the current session.
