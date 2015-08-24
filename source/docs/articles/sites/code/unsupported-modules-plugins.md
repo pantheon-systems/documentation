@@ -32,7 +32,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
-- IMCE
+- IMCE 6.x
 
 - Mobile Tools
 
