@@ -70,13 +70,13 @@ Your SSL provider may give you an intermediary certificate, which is used establ
 
 ### Algorithms
 
-When selecting a certificate algorithm, you may have the following choices:
+When selecting a certificate algorithm, you can choose from the following:
 
  - SHA-1(deprecated)
  - SHA256 cert with SHA-1 root
  - SHA256 cert and root
 
-While any of those will function on Pantheon, *SHA256 cert and root* would be the best to avoid [errors from the Chrome browser](https://www.chromium.org/Home/chromium-security/education/tls#TOC-Deprecation-of-TLS-Features-Algorithms-in-Chrome). In general, it is a best practice to avoid a certificate with a [deprecated SHA-1 algorithm](https://community.qualys.com/blogs/securitylabs/2014/09/09/sha1-deprecation-what-you-need-to-know).
+While all will function on Pantheon, selecting **SHA256 cert and root** will prevent [errors in the Chrome browser](https://www.chromium.org/Home/chromium-security/education/tls#TOC-Deprecation-of-TLS-Features-Algorithms-in-Chrome). In general, it is a best practice to avoid a certificate with a [deprecated SHA-1 algorithm](https://community.qualys.com/blogs/securitylabs/2014/09/09/sha1-deprecation-what-you-need-to-know).
 
 ## SSL Providers
 
