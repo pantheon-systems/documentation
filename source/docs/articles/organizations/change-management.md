@@ -1,5 +1,5 @@
 ---
-title: Change Management
+title: Role-Based Permissions & Change Management
 description: Learn about the features and benefits of role-based permissions for Pantheon sites.
 category:
   - getting-started

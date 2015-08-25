@@ -24,7 +24,7 @@ Setting the value to "Never" will be ignored; cron will always run at least hour
 </div>
 ## Managing Cron
 
-Cron can be managed via Drupal's admin interface at `admin/system/config/cron`.
+Cron can be managed via Drupal's admin interface at `admin/config/system/cron`.
 
 There are a couple of ways to interact with cron on Pantheon. One way is to execute Cron manually from the Drupal admin interface.<br />
 ![](/source/docs/assets/images/desk_images/73173.png)

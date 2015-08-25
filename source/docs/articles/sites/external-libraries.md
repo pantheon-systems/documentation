@@ -30,7 +30,7 @@ drush @pantheon.SITENAME.ENV dl pdftk token libraries
 drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
 ## [WKHTMLtoPDF](http://wkhtmltopdf.org/)
-![](/source/docs/assets/images/desk_images/110694.png)<br />
+
 WebKit HTML is a "simple shell utility to convert html to pdf using the webkit rendering engine, and qt." In other words, you can snapshot or capture the content of a web page easily in a PDF.
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
@@ -50,7 +50,7 @@ git push
 Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
 
 ## [PhantomJS](http://phantomjs.org/)
-![](/source/docs/assets/images/desk_images/110696.png)<br />
+
 In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
@@ -59,7 +59,7 @@ PhantomJS has the potential for a plethora of applications. For more information
 
 
 ## [Apache Tika](http://tika.apache.org/)
-![](/source/docs/assets/images/desk_images/110698.png)
+
 The Apache Tika™ toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
 
@@ -78,12 +78,13 @@ Navigate to the Tika settings page at: `/admin/config/search/apachesolr/attachme
 The last step will be to verify that your site is able to extract text from documents, click **Test your Tika Attachments** under the Actions section.
 
 If everything is working correctly, you should see the success message, _"Text can be successfully extracted"_ as shown below.
+
 ![](/source/docs/assets/images/desk_images/137839.png)
 ### WordPress Tika Configuration
 There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
 
 ## [ImageMagick](http://www.imagemagick.org)
-![](http://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/images/logo-fullsize.png)
+
 ImageMagick is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
 
 

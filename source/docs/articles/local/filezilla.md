@@ -6,7 +6,7 @@ category:
     - developing
 keywords: filezilla, pantheon, sftp
 ---
-[FileZilla](http://winscp.net/eng/index.php) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
+[FileZilla](https://FileZilla-project.org/) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
 ## Getting Started
 
@@ -30,10 +30,10 @@ Under the Advanced Tab, leave the Remote Directory blank.  </div>
 
 ## Authentication
 
-**SSH Key-Based:** Select the private key (likely id_rsa) associated with the public key loaded into your User dashboard.   
+**SSH Key-Based:** Select the private key (likely id_rsa) associated with the public key loaded into your User dashboard.
 
-**Password-Based:** Enter your Pantheon acccount email address and password.
+**Password-Based:** Enter your Pantheon account email address and password.
 
-After logging in, you can access your application in the `/code` directory, Drupal's `/sites/default/files` in `/files`, and your application's logs in `/logs`. 
+After logging in, you can access your application in the `/code` directory, Drupal's `/sites/default/files` in `/files`, and your application's logs in `/logs`.
 
 You may need to select "accept" when prompted to accept the server's host key for the current session and store it in cache. This allows you to connect to the server and manage your files for the current session.

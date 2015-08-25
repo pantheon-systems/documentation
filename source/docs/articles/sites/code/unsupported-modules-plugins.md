@@ -12,7 +12,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 - Adaptive Image Styles
 
-- Apache Solr Search   
+- Apache Solr Search
 **Issue** If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.  
 **Solution** Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
 
@@ -32,7 +32,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 - HTTPRL  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
-- IMCE
+- IMCE 6.x
 
 - Mobile Tools
 
@@ -87,3 +87,9 @@ Using sites/default/files/tmp as a work around for these issues will produce unp
 - batcache
 
 - Timthumb
+
+
+## Dynamic Outbound IPs
+Due to the cloud-based infrastructure of the Pantheon platform, outbound requests will be served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
+
+For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/code/dynamic-outgoing-ip-addresses).
