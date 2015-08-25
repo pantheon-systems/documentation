@@ -105,6 +105,11 @@ Your site won't load from the provided IP's because the Pantheon IP's used in t
 }
 </style>
 
+### How can I protect my site from DDoS attacks?
+Pantheon recommends using an external proxy service, such as [Sucuri](https://sucuri.net/) to mitigate all network-level attacks.
+
+For more information, see [Defend WordPress and Drupal Sites Against DDoS Attacks with Sucuri](/docs/articles/sites/domains/defend-wordpress-and-drupal-with-sucuri).
+
 ##See Also
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
