@@ -13,7 +13,7 @@ Due to the nature of our platform, the connection information will change from t
 
 ## Database Connection Information
 
-MySQL credentials for each site environment can be found in the Dashboard:<br />
+MySQL credentials for each site environment are located in the Dashboard:<br />
 ![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)<br />
 The following required fields are provided:
 
@@ -29,16 +29,16 @@ There's a wide array of MySQL clients that can be used, including [MySQL Workben
 
 ## SSH Tunneling
 
-Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to setup tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/).
+Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to set up tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/).
 
 ## Troubleshooting MySQL Connections
 
-If your site suddenly reverts to install.php, or you see database connection errors like the following:<br />
+There's an issue connecting to the Pantheon database if your site suddenly reverts to install.php or you see database connection errors like the following:<br />
 ![](/source/docs/assets/images/desk_images/64774.png)
 ```sql
 Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
-This indicates that there's an issue connecting to the Pantheon database. There are two common causes:
+There are two common causes for these errors:
 
 #### 1. Overwritten Pressflow Core
 

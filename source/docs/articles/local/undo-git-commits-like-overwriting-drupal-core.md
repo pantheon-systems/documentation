@@ -5,11 +5,11 @@ category:
   - drupal
 keywords: git, git commits, undo git commit, revert
 ---
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We [try](/docs/articles/required-reading-essential-pantheon-documentation) [our](/docs/articles/local/git-faq#git-faq) [best](/docs/articles/sites/code/applying-upstream-updates#core-updates) to warn you, but it is still possible to execute a Drush update on a local environment and push to Pantheon. This example is Drupal specific but the following steps can be applied to undo a commit on any framework, including WordPress.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We try our [best to warn you ](/docs/articles/sites/code/applying-upstream-updates#core-updates) but it is still possible to execute a Drush update on a local environment and push to Pantheon. This example is Drupal specific but the following steps can be applied to undo a commit on any framework, including WordPress.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-DO NOT UPDATE CORE VIA <code>drush up</code>.  But presumably you are here because that has already happened.</div>
+Do NOT update core via <code>drush up</code>.  But presumably you are here because that has already happened.</div>
 
 To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform. If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
 
@@ -28,7 +28,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
-At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit _9a11sd8f67af9679a6fsafasdf802834207489328_ when changes were made on _Date: Fri Dec 6 15:37:24 2014 -0700_
+At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit _9a11sd8f67af9679a6fsafasdf802834207489328_ when changes were made on _Date: Fri Dec 6 15:37:24 2014 -0700_.
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
@@ -38,7 +38,7 @@ If you made the change locally but have not sent it to Pantheon, you locally del
 ```nohighlight
 git reset --hard HEAD~1
 ```
-### Undo the Last Commit That is On Pantheon, but Not on Test or Live
+### Undo the Last Commit on Dev
 
 If you just made the erroneous change and pushed it to Pantheon and realized that there's a problem, you can overwrite history and pretend it never happened. Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques below.
 
@@ -48,7 +48,7 @@ git push --force origin master
 ```
 ### Undo the Last Commit on Pantheon That Has Been Deployed
 
-It is important to test changes before deploying them to test or live. This technique will reverse the last commit and leave the history.
+It is important to test changes before deploying them to Test or Live. This technique will reverse the last commit and leave the history.
 ```nohighlight
 git revert HEAD --no-edit
 git push origin master
@@ -79,11 +79,11 @@ The format of the command to reverse a specific change is:
 ```bash
 git revert COMMITID --no-edit
 ```
-As an example, let's say I want to get rid of the commit that included Devel. I'll just grab the commit ID of the Devel commit and use it in the revert command.
+As an example, to get rid of the commit that included Devel, just grab the commit ID of the Devel commit and use it in the revert command.
 ```bash
 git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
 ```
-Then, push the change to Pantheon.
+Then push the change to Pantheon.
 
 ```bash
 git push origin master

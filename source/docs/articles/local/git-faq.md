@@ -9,11 +9,11 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
 ## Resolving Conflicts
 
 ### How do I resolve conflicts when updating Core?
-<img src="/source/docs/assets/images/icon-workflow.svg" alt="Worfklow Icon" style="margin-top:25px;margin-right:15px;float:left;border:0;max-height:80px;"><p style="margin-top:10px;margin-bottom:40px;">If you receive the error that you have conflicts while updating core, the fastest resolution is often the <code>-Xtheirs</code> flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with <code>.gitignore</code>):</p>
+<img src="/source/docs/assets/images/icon-workflow.svg" alt="Worfklow Icon" style="margin-top:25px;margin-right:15px;float:left;border:0;max-height:80px;"><p style="margin-top:10px;margin-bottom:40px;">If you receive the error that you have conflicts while updating core, the fastest resolution is often the <code>-Xtheirs</code> flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with <code>.gitignore</code>).</p>
 ```bash
 git pull -Xtheirs [upstream url] master
 ```
-It's a good idea to double-check the conflicted files before going forward, and make sure no bugs were introduced.
+Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
 #### Drupal 7
 
@@ -153,17 +153,17 @@ You will get conflicts on all the binary files (e.g. favicon.ico), but you can j
 5. Once this is done, push back to Pantheon: `bash git push origin master`
 6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
 
-### Can I use Git with On Server Development?
+### Can I use Git with SFTP mode?
 
-Not simultaneously. It's an either/or decision, but it's easy to switch back and forth.
+Not simultaneously, but it's easy to switch back and forth.
 
-When you switch to On Server Development, you will not be able to interact with your code via Git. If you try pushing it will be blocked. If you have On Server Development disabled, you can interact with your code via Git.
+When you switch to On Server Development (SFTP), you cannot interact with your code via Git. If you try pushing it will be blocked. When Git mode is enabled, you can interact with your code via Git.
 
 ### What version of Git does Pantheon run?
 
 We are currently running Git 1.9.x.
 
-### Why were pushes denied because of changes in sites/default/files?
+### Why were pushes denied because of changes in `sites/default/files`?
 
 If you find that you're running into issues with commits that reference sites/default/files, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](http://help.github.com/remove-sensitive-data/).
 
@@ -190,14 +190,13 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify that you have enabled your SSH key in your User Dashboard. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
-
+If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
 
 ### Why am I being prompted for my password after adding the public key?
 
-This occurs when you have multiple SSH keys. For more information, see [Permission denied](https://help.github.com/articles/error-permission-denied-publickey/).
+This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
-The easiest way to find out which SSH keys your Git client is using when trying to connect is running the following command:
+The easiest way to find out which SSH keys your Git client is using when trying to connect is to run the following command:
 ```bash
 ssh -vT git@code.getpantheon.com
 ```

@@ -28,7 +28,7 @@ Some Drush 5 commands need to be executed from outside the context of a local wo
 
 #### Drush 6
 
-If your local Drush installation is version 6, most commands need to be executed with the `--strict=0` option in order to correctly parse Pantheon alias files.
+If your local Drush installation is version 6, you'll need to execute most commands with the `--strict=0` option in order to parse Pantheon alias files.
 
 ## Install Drush Aliases Locally
 Adding Pantheon aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. There are two methods for obtaining the aliases:
@@ -122,11 +122,9 @@ This is the fastest way to install a suite of modules or themes into your Panthe
 
 ## Use Registry Rebuild on Pantheon
 
-Sometimes, Drupal's list of PHP classes and files gets corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
+Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
-
-
-To rebuild the registry of a site, create a backup from your Dashboard, then:
+To rebuild the registry of a site, create a backup from your Dashboard, then run:
 ```bash
 drush @pantheon.SITENAME.ENV rr
 ```
@@ -142,7 +140,7 @@ To run the best practices report on Pantheon:
 ```bash
 drush @pantheon.SITENAME.ENV --detail abp
 ```
-To check caching settings on Pantheon (recommendation is to disable page compression):
+To check caching settings on Pantheon (we recommend that you disable page compression):
 ```bash
 drush @pantheon.SITENAME.ENV --vendor=pantheon --detail ac
 ```
@@ -207,11 +205,11 @@ While we have the full spectrum of drush core already available for your use, yo
 8. Download your Pantheon [drush aliases](https://pantheon.io/blog/drush-aliases-available).
 9. Clear your drush cache on each environment. (example: “drush @pantheon.<site-name>.devcc drush”)
 
-If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon. 
+If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon.
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-For our example, we will write a policy file that changes all remote aliases to use `drush7` instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
+For this example, we will write a policy file that changes all remote aliases to use `drush7` instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
 
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
@@ -222,7 +220,7 @@ function policy_drush_sitealias_alter(&$alias_record) {
   }
 }
 ```
-With this policy file in place, you will be able to use the latest version of Drush on Pantheon:
+With this policy file in place, you are able to use the latest version of Drush on Pantheon:
 
     $ drush @pantheon.my-great-site.dev version
     Drush Version   :  7.0.0-rc1
