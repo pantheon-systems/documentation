@@ -9,7 +9,7 @@ keywords: wordpress, wp config, database
 
 WordPress configuration is set in wp-config.php, located within your WordPress site root. When you install a WordPress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
 
-Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes and caching.
+Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes, and caching.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 You should NEVER put the database connection information for a Pantheon database within your wp-config.php. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
@@ -31,7 +31,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
 <script src="https://gist.github.com/timani/6bd845402c7f8d0939a4.js"></script>
 

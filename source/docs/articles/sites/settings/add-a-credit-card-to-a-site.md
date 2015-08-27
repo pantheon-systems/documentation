@@ -30,5 +30,5 @@ Clicking the message will take you to the Billing page to either select a plan o
 
 ## Additional Resources
 
-- [Updating Payment Methods](/docs/articles/updating-payment-methods/)
+- [Updating Payment Methods](/docs/articles/sites/updating-payment-methods/)
 - [New Site Owner FAQs](/docs/articles/sites/new-site-owner)

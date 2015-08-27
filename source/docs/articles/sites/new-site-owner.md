@@ -67,7 +67,7 @@ Yes. However, if you have Solr and/or Redis add ons enabled, they will break whe
 From your Site Dashboard, click **Settings**. Select a plan, and click **Update Plan**. Next, enter the payment information or invite someone to pay for the site, and click **Purchase Plan**.
 
 ####Can I update or change the payment method?
-You can update the payment method in the **Settings** page. For detailed instructions, see [Updating Payment Methods](/docs/articles/updating-payment-methods/).
+You can update the payment method in the **Settings** page. For detailed instructions, see [Updating Payment Methods](/docs/articles/sites/updating-payment-methods/).
 
 
 ####Can I transfer ownership of a site to someone else?
@@ -95,5 +95,5 @@ Resellers should contact Pantheon Support directly if you need to transfer owner
 ##See Also
 
 - [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
-- [Updating Payment Methods](/docs/articles/updating-payment-methods/)
+- [Updating Payment Methods](/docs/articles/sites/updating-payment-methods/)
 - [Team Management](/docs/articles/sites/team-management/)

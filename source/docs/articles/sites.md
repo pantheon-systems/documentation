@@ -81,13 +81,13 @@ Learn more about the [Pantheon Workflow](https://pantheon.io/docs/articles/sites
 All PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](https://pantheon.io/docs/articles/sites/php-errors-and-exceptions/).
 
 ## Domain/SSL
-Use the [Domain/SSL tab](/docs/articles/sites/domains) to add the custom domain(s) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For instructions on how to generate and handle the files needed for SSL, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
+Use the [Domain/SSL tab](/docs/articles/sites/domains) to add the custom domain(s) you would like pointed to this environment. You can also enable or disable SSL for an environment. If you chose to enable SSL, you must generate a private key and get your certificate from a recognized SSL provider. For more details, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ## Backups
 On this tab you can create backups, restore from an existing backup, or view the backup log to see a list of your prior backups. For detailed information, see [Backups](/docs/articles/sites/backups).
 
 ## Security
-There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to Go Live or make updates. Here you can set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. Learn more about [Locking Your Site](/docs/articles/sites/security/locking-your-site/).
+Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Locking Your Site](/docs/articles/sites/security/locking-your-site/).
 
 ## Site UUID
 Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The site UUID is found within the URL for the site Dashboard and resembles the following:

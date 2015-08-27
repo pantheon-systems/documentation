@@ -18,19 +18,17 @@ Yes. Please see [Migrate Sites to Pantheon](/docs/articles/sites/migrate) for st
 
 ### How do I configure wp-config?
 
-wp-config.php comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications.
-
-For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/articles/wordpress/configuring-wp-config-php).
+wp-config.php comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications. For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/articles/wordpress/configuring-wp-config-php).
 
 ## Debugging
 
-### Why isn't my status tab displaying as many details as for my Drupal sites.
+### Why isn't my status tab displaying as many details as for my Drupal sites?
 
 We are currently working on extending our Launch Check report to cover WordPress best practices. Stay tuned!
 
 ### Can I use PHP Sessions?
 
-If you need to use PHP's native session handling, please install the [WordPress native PHP sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/), which we maintain just for this purpose. This provides a horizintally scalable storage mechanism for sessions.
+If you need to use PHP's native session handling, please install the [WordPress native PHP sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/), which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
 
 If you are seeing errors like this:
 
@@ -38,7 +36,7 @@ If you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-You'll need the plugin. [More info on sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
+You'll need the plugin. [More information on sessions](/docs/articles/wordpress/wordpress-and-php-sessions/).
 
 ## Developing WordPress Sites
 
@@ -64,15 +62,15 @@ Absolutely. Pantheon allows you to integrate with any third-party service (e.g. 
 
 ## Security
 
-### Why can't I update plugins or WordPress core directly on production
+### Why can't I update plugins or WordPress core directly on production?
 
 Pantheon's security model restricts the Live environment so that the site cannot changes its own code. This means there is never a chance for a plugin to compromise the site by installing extra software (e.g. malware, backdoors, etc) after the fact.
 
-All changes to the codebase go through the Dev environment, and are tracked in version control.
+All changes to the codebase go through the Dev environment and are tracked in version control.
 
 ### What about Core security updates?
 
-Pantheon makes it easy to apply updates to WordPress via our dashboard, and you can take advantage of our deployment workflow to test the update before it goes live. (Just like Drupal.)
+Pantheon makes it easy to apply updates to WordPress via our Dashboard, and you can take advantage of our deployment workflow to test the update before it goes live. (Just like Drupal.)
 
 ## Caching and Performance
 

@@ -51,10 +51,10 @@ You can configure PHPStorm to recognize WP-CLI from within your project by follo
  ![Add web server PHPStorm](/source/docs/assets/images/add-web-server-phpstorm.png)
 ### Connection Tab
 
-Using your site's [SFTP connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information), configure the deployment connection and click **Test SFTP Connection**:
-![Configure deployment web server PHPStorm](/source/docs/assets/images/test-sftp-phpstorm.png)
+Using your site's [SFTP connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information), configure the deployment connection and click **Test SFTP Connection**.
+
 ### Mappings Tab
-Correspondence between project folders is made possible by providing the file paths within the Mappings tab. For each field, enter the following:
+Provide the file paths within the Mappings tab to allow correspondence between project folders:
 
 1. Local path: This field is automatically populated and requires no edits.
 2. Deployment path on server: `/code/wp-content/plugins`

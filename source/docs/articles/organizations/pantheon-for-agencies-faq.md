@@ -1,5 +1,5 @@
 ---
-title: Pantheon for Agencies FAQ
+title: Pantheon for Agencies FAQs
 description: Commonly asked questions and answers about Agency Partner Organizations using the Pantheon Platform.
 category:
 - managing
