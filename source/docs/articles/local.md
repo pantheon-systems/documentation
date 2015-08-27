@@ -5,15 +5,13 @@ category:
 - getting-started
 keywords: local development, pantheon, develop locally, developing
 ---
-While Pantheon provides a number of options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. While Pantheon cannot troubleshoot or support local development solutions, we can provide some suggestions and known working solutions.  
+While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions, however we can provide some suggestions and known working solutions.  
+If you're looking for a self-contained local development solution, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
 
-If you're looking for a self-contained local development solution on Mac, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
+## Before You Begin
+Be sure you have:
 
-## Set up Local Development for a Pantheon Site
-
-To begin, you'll need:
-
-- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/) and  [XAMPP](http://www.apachefriends.org/en/xampp.html) all work.
+- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/),  [XAMPP](http://www.apachefriends.org/en/xampp.html), and [Kalabox](http://www.kalamuna.com/products/kalabox) all work.
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](https://github.com/pantheon-systems/cli)
@@ -37,18 +35,17 @@ There are three parts to any dynamic website:
 
 Each will need to be transferred from Pantheon to your local environment.
 
-### Get the Code
+## Get the Code
 
 [Checkout the codebase using Git](/docs/articles/local/starting-with-git/#clone-your-site-codebase).
 
-### Get the Database
+## Get the Database
 
-#### Via the Pantheon Dashboard
+### Via Dashboard
+From within the site Dashboard:
 
-There are several ways to get a copy of your Pantheon database. One way is to download a complete database dump from within the Site Dashboard:
-
-- On-demand: Workflow > Export > Export Database
-- Scheduled or on-demand backup: Backups > Backup Log > Database download link
+- **Create on-demand backup**: Workflow > Export > Export Database
+- **Download scheduled or on-demand backup**: Backups > Backup Log > Database download link
 
 Next, import the database into your local environment using a MySQL client.
 
@@ -59,25 +56,24 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 <h4>Note</h4>
 Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
 
-#### Via Terminus
-
-You can also export the database running the following Terminus commands:
+### Via Terminus
+Create and export the database by running the following Terminus commands:
 
 ```nohighlight
 terminus site backup create --element=database --site=<site> --env=<env>
 terminus site backup get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
 ```
 
-This will create and download the database to your desktop. Once you have exported it to a local file, you can import it into your local MySQL database using the following command:
+You can now import the archive into your local MySQL database using the following command:
 
 ````sql
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
-### Get the Files
+## Get the Files
 
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/docs/articles/local/rsync-and-sftp/).
 
-#### Via Terminus
+### Via Terminus
 
 Run the following Terminus commands:
 ```nohighlight
@@ -86,53 +82,51 @@ terminus site backup get --element=files --site=<site> --env=<env> --to-director
 ```
 This will create and download a backup of the site's files to your desktop.
 
-#### Via SFTP
+### Via SFTP CLI
 
-SFTP is slower, but easier to use for some. If you don't have a GUI client like FileZilla, you can use the command line.
+SFTP is slower, but easier for some to use:
 
-- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
-- Open a terminal window.
-- Navigate to the proper directory.
-    - **Drupal**: sites/default
-    - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window, and press ENTER.
-- Enter `get -r *` and press ENTER to transfer the files down to your local environment.  
-- Once complete enter `exit` and press ENTER to exit your SFTP program.
+- [Copy the SFTP CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information)
+- From terminal, navigate to the proper directory on your local file system:
+    - **Drupal**: `sites/default`
+    - **WordPress**: `wp-content/uploads`
+- Paste the CLI command copied from your Dashboard
+- Run `get -r *` to transfer the files down to your local environment
 
 ## Submit Changes to Pantheon
 
 ### Send the Code
 
-Test your changes, then [Git commit locally and push to Pantheon](/docs/articles/local/starting-with-git/#push-changes-to-pantheon).
+Test your changes, then [commit locally and push to Pantheon](/docs/articles/local/starting-with-git/#push-changes-to-pantheon).
 
 ### Send the Database
 
-Perform a local database dump using the MySQL utility mysqldump:
+Create an archive using the MySQL utility mysqldump:
 ```sql
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
 ```
-Then import the file from the Pantheon Dashboard by accessing Workflow > Import. Upload the database archive and click **Import**.
+Upload and import the file from the Pantheon Dashboard at **Workflow** > **Import**.
 
 ### Send the Files
 
-#### Drupal: Via Drush
-If you have Drush and rsync, this is by far the easiest way to transfer your files up to your Pantheon site:
+**Drupal: Via Drush**
+
+Drush and rsync is by far the easiest way to send files for Drupal sites:
 
 ````nohighlight
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
 ````
 
-#### WordPress or Drupal: Via SFTP
-If you are using WordPress or you do not have Drush and rsync, you can use your SFTP client to upload the files.
+**WordPress or Drupal: Via SFTP**
 
-- Go to your Pantheon Dashboard and [copy the CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information).
-- Open a terminal window.
-- Navigate to the proper directory on your local file system.
-    - **Drupal**: sites/default/files
-    - **WordPress**: wp-content/uploads
-- Paste the SFTP connection command copied from your Pantheon Dashboard into your terminal window and press ENTER.
-- Enter `cd files` and press ENTER
-- Enter `put -r ./*` and press ENTER to transfer the files up.  
-- Once complete enter `exit` and press ENTER to exit your SFTP program.
+Send files using SFTP:
+
+- [Copy the SFTP CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information)
+- From terminal, navigate to the proper directory on your local file system:
+    - **Drupal**: `sites/default/files`
+    - **WordPress**: `wp-content/uploads`
+- Paste the CLI command copied from your Dashboard
+- Navigate to the correct remote directory by running `cd files`
+- Run `put -r ./*` to transfer the files up  
 
 You can of course transfer a single file or a single directory at a time instead of transferring every file, every time.

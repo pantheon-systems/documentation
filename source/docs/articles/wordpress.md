@@ -3,7 +3,7 @@ title: WordPress
 description: Learn how to bring WordPress sites onto the Pantheon Website Management Platform, and considerations for developing and running them.
 keywords: wordpress, sites, pantheon
 ---
-WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope. Learn how to use this powerhouse CMS on the Pantheon platform with confidence by exploring our WordPress documentation.
+WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope.
 ## Get Started
 [Migrate Sites to Pantheon](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
 ## WordPress Dashboard

@@ -13,7 +13,7 @@ Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
-Pantheon supports Drupal 6 and 7, as well as development sandboxes for Drupal 8.
+Pantheon supports Drupal 6 and 7. Users can create sandbox [Drupal 8 sites](/docs/articles/drupal/running-drupal-8/), but live Drupal 8 sites are unsupported. At this time, Drupal 8 support is on [Github](https://github.com/pantheon-systems/drops-8/issues) .
 
 ### What versions of WordPress does Pantheon support?
 
@@ -32,9 +32,9 @@ You can use a [CDN](/docs/articles/drupal/content-delivery-network-cdn-for-file-
 
 Transatlantic hops in are usually 200-300ms, while Pantheon can usually speed up site page load times by seconds.
 
-### Can I run non-Drupal applications on Pantheon?
+### Can I run other applications on Pantheon?
 
-This is not officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
+Only WordPress and Drupal applications are officially supported, but the PHP runtime is complete. Some users have experimented with running applications with custom PHP code.
 
 ### Does Pantheon have FTP or shell access?
 
@@ -45,12 +45,12 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any internet domain name you point at it. DNS configuration is still your responsibility at this time, but our [going live](/docs/articles/going-live) instructions provide you with the necessary IP addresses and/or CNAME records to configure with your DNS provider. Also see [Domains and SSL](/docs/articles/sites/domains) for more information.
-
-In order for your site to begin "listening" for your domain, you must first become a paying customer. We consider placing a real domain on on a site to be the point at which the site starts to go live.
-
+Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains and SSL](/docs/articles/sites/domains/) and [Going Live](/docs/articles/going-live/).
 
 ## Developing Sites
+
+#### Does Pantheon offer professional services?
+No. Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Partner Directory](https://www.pantheon.io/partners) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 
@@ -62,7 +62,7 @@ Not at the moment, but we're looking for a way to support it that allows us to m
 
 ### Does Pantheon support Drupal Multisite?
 
-No. Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. There are inherent risks when running multisite. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites. The codebase also becomes a single point of failure.
+No. Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites. The codebase also becomes a single point of failure.
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
@@ -72,11 +72,11 @@ No. While WordPress multisites have been successfully installed on the Pantheon 
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated and with [@alias files pre-generated](https://pantheon.io/blog/drush-aliases-available) for you to use in your local environment.
+Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, see [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/).
 
 ### Does Pantheon support WP-CLI?
 
-Yes. [Terminus](https://github.com/pantheon-systems/cli) incorporates WP-CLI commands so that users can perform operations on the Pantheon platform.
+Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](https://github.com/pantheon-systems/cli), the Pantheon CLI.
 
 ### Does Pantheon support local development?
 
@@ -92,7 +92,7 @@ WordPress runs its own internal cron-like system as visitors load your site. You
 
 ### Do you support ffmpeg transcoding?
 
-We don't currently have support for transcoding. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
+No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
 
 ### How do I increase the maximum execution time limit for a PHP script?
 

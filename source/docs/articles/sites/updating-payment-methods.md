@@ -5,8 +5,7 @@ category:
   - managing
 keywords: payment, payment method, credit card, add card, update card
 ---
-If you would like to add a new credit card or edit the existing card a site uses, it's quick and easy to do.
-
+Easily add a new credit card or edit the existing payment method of a site from within the Dashboard.
 
 ## Update an Existing Card
 
