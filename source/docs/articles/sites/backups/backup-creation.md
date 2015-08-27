@@ -81,7 +81,7 @@ In the `wp-content` directory, the following items are not backed up:
 
 Within the code, Pantheon uses a [.gitignore file](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore). It contains a list of directories that are ignored while backing up code.
 
-#### Why is the Drupal module Backup & Migrate not recommended on Pantheon?
+### Why is the Drupal module Backup & Migrate not recommended on Pantheon?
 
 As a product in general, Backup & Migrate is perfectly fine and fulfills many site owners’ needs, but it is not recommended within the context of the Pantheon platform. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
 
