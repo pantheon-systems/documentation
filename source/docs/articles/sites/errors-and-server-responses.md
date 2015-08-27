@@ -4,19 +4,17 @@ description: Detailed information on your Pantheon site's server responses and e
 category:
   - debugging
 ---
-## Pantheon Error Messages
+Error messages in the cloud are served when Pantheon is unable to fulfill a request. Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.
 
-Sometimes there are problems in the cloud and one of Pantheon's services is unable to fulfill a request. In those rare and unfortunate circumstances, Pantheon will serve an error message instead of expected site content.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.  
 
-Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.  
+If you feel that you reached one of these messages in error, submit a support ticket describing the full URL and circumstances which led to the error.
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Be aware if you are implementing a Drupal site using a module such as [services](https://www.drupal.org/project/services).  
-
-If you feel that you reached one of these messages in error, please submit a support ticket through your Dashboard describing the full URL and circumstances which led to the error.
+## Error Messages
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has enabled security for an environment with a username and password. This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/articles/sites/security/locking-your-site). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 

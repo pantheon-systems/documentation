@@ -6,7 +6,7 @@ keywords: wordpress, best practices, redis, wp-cfm, behat
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
 
-* Use [Redis](/docs/articles/sites/installing-redis-on-wordpress/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
+* Use [Redis](/docs/articles/wordpress/installing-redis-on-wordpress/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
 
 * Verify [Varnish](/docs/articles/sites/varnish/testing-varnish) is working on your site.
 
