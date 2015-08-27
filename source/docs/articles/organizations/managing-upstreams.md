@@ -49,22 +49,21 @@ Using the testing site created when you submitted your distribution, test your u
 
 ## Update Release Branching Strategy
 
-We encourage you to use a continuous integration server, like Jenkins, Travis-CI, or Circle-CI, to automate this process.
+We encourage you to use a continuous integration server, like Jenkins, Travis-CI, or Circle-CI, to automate this process. 
 
-1. Merge upstream updates into an update branch.
-2. Pull the remote repository into the local clone of your testing site.
-3. Checkout the updates branch.
-4. Push the updates branch to Pantheon.
-5. Create a Multidev environment for the branch.
-6. Wipe the database and files from the update branch.
+For example:
+
+1. Push updates into an `update` branch (not master) of your upstream repo.
+2. Fetch remote repo into a local clone of your testing site.
+3. Checkout the `update` branch.
+4. Push the `update` branch to Pantheon.
+5. Create a Multidev environment for the `update` branch.
+6. Wipe the `update` Multidev environment.
 7. Run acceptance tests for a new-site installation use case.
-8. Merge the code into dev.
-9. Wipe the Dev environment’s database and files.
-10. Test the code update installation process, and existing code update case.
-11. Copy content from Live and deploy code to Test.
-12. Test the code against test content for the existing site update case.
-13. Deploy the code to Live.
-14. Test your code against a live testing site (distribution demo site - pro plan?), ensuring that modules work in an environment with more than one application container.
+8. Clone database and files from Live to your Multidev environment.
+9. Test update process (run update.php) for an existing site update use case.
+10. Marge to Dev and deploy code to Test and Live.
+11. Test your updates against Live, ensuring that everything works in an environment with more than one application container (Pro plans and above).
 
 ## Deploy Updates to Downstream Sites
 
