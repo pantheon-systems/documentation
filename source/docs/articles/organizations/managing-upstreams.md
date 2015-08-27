@@ -5,36 +5,39 @@ category:
   - managing
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, branch, deploy update, deploy updates, update, updates
 ---
-Once you have a distribution running on Pantheon, keep it and its downstream sites up-to-date by merging in updates to core, extensions, and themes.
+Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework are removed from the platform.
 
 ## Merging Core Releases
+1. Create an update branch:
 
-Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework will be removed from the platform. To do so, `cd` to your local, current copy of the remote upstream repo and `checkout` an update branch. Then, `pull` down the latest changes from our core upstream repository with the following command for the applicable core:
+ ```bash
+ git checkout -b update
+ ```
+2. Pull down changes from the applicable core:
 
-#### WordPress
-```bash
-git pull git://github.com/pantheon-systems/wordpress.git master
-```
+ **WordPress**
+ ```bash
+ git pull git://github.com/pantheon-systems/wordpress.git master
+ ```
 
-#### Drupal 6
+ **Drupal 6**
 
-```bash
-git pull git://github.com/pantheon-systems/drops-6.git master
-```
+ ```bash
+ git pull git://github.com/pantheon-systems/drops-6.git master
+ ```
 
-#### Drupal 7
+ **Drupal 7**
 
-```bash
-git pull git://github.com/pantheon-systems/drops-7.git master
-```
+ ```bash
+ git pull git://github.com/pantheon-systems/drops-7.git master
+ ```
 
-Push those changes to the upstream remote
+3. Commit and push:
 
-```nohighlight
-cd upstreams/my_drupal_upstream
-git pull git://github.com/pantheon-systems/drops-7.git master
-git commit -m “Update to Drupal 7.33. http://link-to-release-notes” git push origin update
-```
+ ```nohighlight
+ git commit -m “Update to Drupal 7.33. http://link-to-release-notes”
+ git push origin update
+ ```
 
 ## Adding or Updating Custom Code
 
@@ -42,7 +45,7 @@ Follow your organization’s process for managing Git repositories. Do not merge
 
 ## Testing Your Updates
 
-Using the testing site created when you submitted your site, test your updates for new installs and upgrades.
+Using the testing site created when you submitted your distribution, test your updates for new installs and upgrades.
 
 ## Update Release Branching Strategy
 
@@ -68,4 +71,4 @@ We encourage you to use a continuous integration server, like Jenkins, Travis-CI
 1. Prepare release notes.
 2. Merge your pull request into the branch, providing a descriptive commit message. The message can follow the pattern: “Upstream release version, release notes http://link-to-release-notes”.
 
-After you have merged an update, all sites that use the distribution will be given the option to apply updates on their Site Dashboard at  Dev > Code. It typically takes up to an hour for the update to be detected. Use your browser’s hard refresh if the updates do not appear after the first hour (`cmd+shift+R` on OSX, `shift+f5` on Windows).
+After you have merged an update, all sites that use the distribution are given the option to apply updates on their Site Dashboard at Dev > Code. It typically takes up to an hour before the update is detected. Use your browser’s hard refresh if the updates do not appear after the first hour (`cmd+shift+R` on OSX, `shift+f5` on Windows).
