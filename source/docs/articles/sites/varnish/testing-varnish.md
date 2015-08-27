@@ -82,3 +82,7 @@ Right-click anywhere on the page, and select the **Inspect Element** option.
 
 1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
 2. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
+
+
+## See Also
+- [Drupal Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/)
