@@ -45,7 +45,7 @@ This check will display a list of exploited patterns in code, the file name that
 ###Object Cache
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress/).
+If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on WordPress](/docs/articles/wordpress/installing-redis-on-wordpress/).
 
 ```nohighlight
 Cannot redeclare class WP_Object_Cache in

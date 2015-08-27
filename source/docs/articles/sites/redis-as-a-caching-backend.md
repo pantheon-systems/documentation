@@ -35,7 +35,7 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 ### Using Redis with WordPress
 
-For detailed information, see [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress).
+For detailed information, see [Installing Redis on WordPress](/docs/articles/wordpress/installing-redis-on-wordpress).
 
 ### Using Redis with Drupal
 

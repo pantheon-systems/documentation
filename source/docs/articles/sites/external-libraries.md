@@ -5,9 +5,8 @@ category:
     - developing
 keywords: external libraries, external library, library, libraries, webkit html, wkhtmltopdf, phantomjs, apachetika, imagemagick, wordpress libraries, drupal libraries
 ---
-While Drupal's contributed modules offer a plethora of extended functionality, there are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available throughout the platform.
+There are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available on the platform.
 
-If there is a specific library that you require, submit a support request through your Dashboard. This process will take time, as any change to our platform must be evaluated by both Operations and Engineering for compatibility.
 
 <!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
 
@@ -31,7 +30,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
 ## [WKHTMLtoPDF](http://wkhtmltopdf.org/)
 
-WebKit HTML is a "simple shell utility to convert html to pdf using the webkit rendering engine, and qt." In other words, you can snapshot or capture the content of a web page easily in a PDF.
+WebKit HTML allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
@@ -54,9 +53,6 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
-
-PhantomJS has the potential for a plethora of applications. For more information, see the [PhantomJS website](http://phantomjs.org).
-
 
 ## [Apache Tika](http://tika.apache.org/)
 
@@ -93,29 +89,18 @@ Pantheon runs the latest stable packaged version in Fedora, which is currently I
 
 
 ## Troubleshooting and FAQs
-
 #### What if I need a library not listed here?
-
-If you need a library not listed on this page, please submit a support ticket including a description of your use case and a link to the library's webpage.
+If you need a library not listed on this page, submit a support ticket including a description of your use case and a link to the library's webpage.
 
 All libraries will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
 #### Will you setup and configure the module/plugin for me?
-
-No. It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site. We have provided as much information as you need to get setup with each library. This is also not part of our [available services](/docs/articles/getting-started).
-
-If there is some additional information that may help in the setup we can add it to the documentation.
+No. This is not within our [scope](docs/articles/scope-of-support/). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
 
 #### How long does the process take?
-
-This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.  
-
-
-If it is approved, we will let you know as well as give a timeline when the library may be included.  
-
+This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.  
 
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
 #### What version of XYZ library is installed?
-
 As these libraries are installed system-wide, we use the latest packaged version of the libraries available.  New versions may be installed without notice as security updates or other upstream changes are made available.

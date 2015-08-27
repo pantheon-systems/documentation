@@ -25,4 +25,4 @@ Pantheon analyzes code to provide performance and configuration recommendations 
 - [CloudFront CDN Setup for WordPress](/docs/articles/wordpress/cloudFront-setup-for-wordpress)
 - [Configuring JetBrains PhpStorm IDE with WordPress on Pantheon](/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress)
 - [Fix Broken Links in WordPress](/docs/articles/wordpress/fix-broken-links-in-wordpress)
-- [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress)
+- [Installing Redis on WordPress](/docs/articles/wordpress/installing-redis-on-wordpress)
