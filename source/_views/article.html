@@ -6,10 +6,17 @@
           <div class="col-md-9">
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
-              <span style="font-size:20px; font-weight:bold;"><a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="_blank"><strong>
-                <span class="icon-github">Edit on GitHub</span></strong></a></span><br /><br />
-
-
+              <div class="dropdown" id="edit">
+                  <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="true">
+                      <span class="icon-github"></span> Contribute to Docs
+                      <span class="caret"></span>
+                  </button>
+    <div class="dropdown-menu edit" aria-labelledby="dropdownMenu1">
+        <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank"><span class="glyphicon glyphicon-pencil"></span> Edit This Doc</a><br>
+        <a href="https://github.com/pantheon-systems/documentation/issues/new?title={{page.title}}%20Doc%20Update%20&body=Re%3A%20%5B{{page.title}}%5D(https%3A%2F%2Fpantheon.io{{page.url}})%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=type%3A%20doc%20update" target="blank"><span class="glyphicon glyphicon-tag"></span> Report Doc Issue</a><br>
+        <a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20article" target="blank"><span class="glyphicon glyphicon-file"></span> Suggest New Doc</a>
+    </div>
+</div>
 
             </header>
               <!--{% if page.category %}
@@ -23,14 +30,15 @@
               <!--div class="outline-alert"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and -->
 
 
-                <div>
+                <div style="margin-top:15px;">
                     {{ page.blocks.content|raw }}
                 </div>
           </div>
 
             <div class="col-md-3">
               <div class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
-                <div id="toc"><h3>Contents</h3>
+                <div id="toc">
+                    <h3>Contents</h3>
                 </div>
               </div>
             </div>
