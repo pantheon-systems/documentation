@@ -105,6 +105,11 @@ Your site won't load from the provided IP's because the Pantheon IP's used in t
 }
 </style>
 
+### A contrib module that I use for my Drupal site does not support IPv6; how should I proceed?
+[Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
+
+### My site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
+Do not create an AAAA (IPv6) record as recommended in the site Dashboard when configuring the domain's DNS. Only create the CNAME record for the `www` subdomain and the A record for the bare domain.
 ##See Also
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
