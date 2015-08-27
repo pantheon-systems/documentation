@@ -21,7 +21,7 @@ Pantheon analyzes code to provide performance and configuration recommendations 
 ## Additional Resources
 - [WordPress FAQ](/docs/articles/wordpress/wordpress-faq)
 - [Wordpress Known Issues](/docs/articles/wordpress/wordpress-known-issues)
-- [Add Cloudflare Free SSL to WordPress Sites](http://localhost:8000/docs/articles/wordpress/add-cloudflare-free-ssl-to-wordpress-sites)
+- [Adding HTTPS For Free with CloudFlare](/docs/guides/ssl-with-cloudflare/)
 - [CloudFront CDN Setup for WordPress](/docs/articles/wordpress/cloudFront-setup-for-wordpress)
 - [Configuring JetBrains PhpStorm IDE with WordPress on Pantheon](/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress)
 - [Fix Broken Links in WordPress](/docs/articles/wordpress/fix-broken-links-in-wordpress)
