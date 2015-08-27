@@ -11,18 +11,18 @@ Pantheon runs an optimized version of Drupal, based on [Pressflow](https://githu
 ##Get Started
 [Migrate an existing Drupal site](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/getting-started/) using the Pantheon Dashboard.
 
-## Clone a Drupal Site From a Dashboard Backup
+## Clone a Drupal Site From a Backup
 See [Cloning an Existing Site from a Dashboard Backup](/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup/).
 
-##Major Version Upgrades
+## Major Version Upgrades
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
-Also, Pantheon needs to track the proper upstream for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
+Also, Pantheon needs to track the proper upstream for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates are available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
 
 ## Updating Modules
 See [Updating Modules Through Drupal](/docs/articles/drupal/updating-modules-through-drupal/).
 
-##Apache Solr
+## Apache Solr
 [Apache Solr](/docs/articles/sites/apache-solr/) is an open source system for indexing and searching website content. We manage a cluster of fast Solr index servers that communicate with your site via these popular Drupal modules:
 
 ​[Apache Solr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8  
@@ -30,11 +30,11 @@ See [Updating Modules Through Drupal](/docs/articles/drupal/updating-modules-thr
 
 For most sites, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.
 
-##Launch Check
+## Launch Check
 
 Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. Go live with confidence using [Launch Check for Drupal](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
 
-##See Also
+## See Also
 - [Caching in Drupal Modules](/docs/articles/drupal/caching-in-drupal-modules/)
 - [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/)
 - [Cron for Drupal](/docs/articles/drupal/cron/)  
