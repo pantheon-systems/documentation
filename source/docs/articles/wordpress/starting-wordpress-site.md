@@ -8,28 +8,20 @@ keywords: going live, wordpress, launch site, create a site
 ---
 ## Create and Name Your Site
 
-After you have created an account, log into your Dashboard and click **Create your first site**.
-![Your sites & account dashboard](/source/docs/assets/images/create-first-site.png)​
-Enter a name and URL, then click **Create Site**. The only valid characters are letters, numbers and dashes.
-![Pick site name](/source/docs/assets/images/name-your-site.png)
+1. After you have created a Pantheon account, log into your Dashboard and click **Create your first site**.
+2. Enter a name and URL, then click **Create Site**. The only valid characters are letters, numbers and dashes.
 
-You will then have a short wait while Pantheon creates and allocates the resources for your site's environments. This takes only a few minutes under normal circumstances.
+  You will then have a short wait while Pantheon creates and allocates the resources for your site's environments.
 
 <!-- #2 -->
-## Choose Start State
+## Configure Your Site
 
-You now have several options. You can start with Drupal or WordPress core, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
+You now have several options. Select **Install WordPress**, which gives you a blank site with the code pulled from a Pantheon maintained fork of the project.
 
-Select **Install WordPress**.<br />
-![Choose start state](/source/docs/assets/images/core-startup.png)
 <!-- #3 -->
 ## Site Build
 
-Once you've selected your start state, Pantheon will build your site environments and prepare your WordPress site.
-![Site creation in progress](/source/docs/assets/images/desk_images/247524.png)
-
-When complete, just click the button to visit your Pantheon Dashboard.
-![](/source/docs/assets/images/visit-dashboard.png)
+Pantheon will now build your site environments and prepare your WordPress site. When complete, just click the button to visit your Pantheon Dashboard.
 
 <!-- #4 -->
 ## Visit New Site Dashboard
@@ -45,10 +37,7 @@ You will eventually have three environments (Dev, Test, and Live), each with a s
 <!-- #6 -->
 ## Complete the Installation
 
-Now you will add site information such as administrator username, password, and email address. Click **Continue** when done, and the installation will complete.
-​
-
-Next you will be redirected to your login page, use the username and password you set when configuring the site.
+Now you will add site information such as administrator username, password, and email address. Click **Continue** when done, and the installation will complete. On the login page, enter the username and password you set when configuring the site.
 
 <!-- #7 -->
 ## View Your Site
