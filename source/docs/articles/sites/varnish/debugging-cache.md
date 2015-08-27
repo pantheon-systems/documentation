@@ -29,7 +29,7 @@ The first two require you to enable the **pantheon\_api** module to allow Drupal
 
 
 ## No HTTP Cache Headers in Drupal
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 
 If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check the theme to see if Drupal messages are being set in an attempt to suppress user facing messages.
 
