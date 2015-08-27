@@ -68,7 +68,7 @@ For more information, see our [Service Level Agreement](https://pantheon.io/sla)
 
 ####Is there a support number we can call? If so, is this service available for every plan?
 
-For **Enterprise plans** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more detials, see [Enterprise Support Overview](https://pantheon.io/resources/pantheon-support-datasheet).
+For **Enterprise plans** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more details, see [Enterprise Support Overview](https://pantheon.io/resources/pantheon-support-datasheet).
 
 ####If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
