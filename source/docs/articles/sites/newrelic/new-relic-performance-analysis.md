@@ -8,7 +8,7 @@ keywords: new relic, new relic pro, performance analysis, enable new relic, what
 ---
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
-Enabling New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping out support team visualize corresponding performance and symptoms.
+Enabling New Relic on Pantheon not only makes it easy for you to monitor your performance, but it can also speed-up the support process by helping your support team visualize corresponding performance and symptoms.
 
 ## Enabling New Relic
 
