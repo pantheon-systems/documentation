@@ -89,7 +89,7 @@ body {
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
   padding-top: 60px;
-  background-color: #F4F4F4;
+  background-color: #fff;
   color: #333;
 }
 body.row.main {
@@ -104,6 +104,7 @@ body.row.main {
 
 .article {
   background-color: white;
+  margin-top: 25px;
   padding-bottom: 40px;
   text-overflow: clip!important;
 }
@@ -314,7 +315,6 @@ img.noborder {
 .active-trail a{
   box-shadow: inset 0 -4px 0 #EFD01B;
 }
-
 .pio-docs-nav {
   margin-bottom: 0;
   background-color: #222;
@@ -365,49 +365,40 @@ img.noborder {
 .pio-docs-nav .navbar-header .navbar-toggle:focus {
 
 }
-
-@media (min-width: 1px) {
-.container>.navbar-collapse a, .container>.navbar-nav {
-    font-size: xx-small;
+@media (max-width: 530px){
+.article {
+    margin-top: 105px !important;
 }
-.pio-docs-nav .navbar-nav > li > a {
-    letter-spacing: 0px !important;
+}
+@media (max-width: 992px){
+.article {
+    margin-top: 65px !important;
 }
 }
 @media (min-width: 450px) {
-.container>.navbar-collapse a, .container>.navbar-nav {
-    font-size: x-small;
-}
 .pio-docs-nav .navbar-nav > li > a {
     letter-spacing: 0px !important;
 }
 }
 @media (min-width: 596px) {
-.container>.navbar-collapse a, .container>.navbar-nav {
-    font-size: smaller;
-}
 .container>.navbar-collapse {
     margin-left:0px !important;
     margin-right:0px;
 }
 }
-@media (min-width: 850px) {
-.container>.navbar-collapse a, .container>.navbar-nav {
-    font-size: medium;
+
+.docs svg{
+  margin-left: 20px;
 }
-}
-@media (min-width: 1200px) {
-.container>.navbar-collapse a, .container>.navbar-nav {
-}
-}
+
 /*
 * CTA Button CSS for Contributors "CONTRIBUTE TO DOCS"
 */
-#edit .btn-secondary, .btn-secondar:visited {
+#contrib-cta-btn .btn-secondary, .btn-secondar:visited {
     text-shadow: none !important;
-    background: #ededed;
+    background: #D5D5D5;
     color: #000 !important;
-    margin: 0px 0px 5px 0px !important;
+    margin: 0px 0px 2px 0px !important;
     padding: 12px 22px 12px 16px;
     text-decoration: none !important;
     font-weight: bold;
@@ -420,13 +411,13 @@ img.noborder {
     margin-left: 0px;
 }
 
-#edit a {
+#contrib-cta-btn a {
     margin-left: 20px;
     margin-right: 40px;
     text-decoration: none;
     font-size: medium;
 }
-#edit a:hover {
+#contrib-cta-btn a:hover {
     text-decoration: none;
 }
 /*
@@ -439,14 +430,15 @@ img.noborder {
     left: 0;
     right: 0;
     bottom: 0;
-    font-weight: 200;
-    background: #186D8C;
+    background: #78868E;
     height: 70px;
     text-align: center;
     color: white;
     font-size: 18px;
+    font-weight: 700;
     z-index: 10;
     margin-top:10px;
+    color: #fff;
 }
 .float-foot a {
     margin-top:15px;
@@ -545,7 +537,7 @@ img.noborder {
 */
 @media (min-width: 995px) and (max-width: 1200px) {
 .pio-docs-footer {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 }
 @media (min-width: 768px) {
@@ -720,7 +712,6 @@ img.noborder {
 .pio-docs-header .container {
   position: relative;
 }
-
 @media (min-width: 768px) {
   .pio-docs-header {
     padding-top: 20px;
@@ -892,14 +883,12 @@ img.noborder {
 /* By default it's not affixed in mobile views, so undo that */
 .pio-docs-sidebar.affix {
   position: static;
-  top: 70px;
   max-height: 90%;
 }
 
 
 /* First level of nav */
 .pio-docs-sidenav {
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -995,37 +984,89 @@ img.noborder {
 }
 
 /* Show and affix the side nav when space allows it */
-@media (min-width: 992px) {
-  .pio-docs-sidebar .nav > .active > ul {
-    display: block;
-  }
-  /* Widen the fixed sidebar */
+@media (min-width: 1500px){
+.pio-docs-sidebar.affix-bottom {
+    width: 250px !important;
+    margin-left: 20px;
+}
+    .pio-docs-sidebar.affix-top {
+        width: 250px !important;
+        margin-left: 20px;
+
+    }
+    .pio-docs-sidebar.affix {
+        width: 250px !important;
+        margin-left: 20px;
+
+}
+.navbar-nav {
+}
+
+}
+
+@media (min-width: 1102px) and (max-width: 1499px){
+.pio-docs-sidebar.affix-bottom {
+    width: 250px !important;
+    margin-left: 40px;
+}
+    .pio-docs-sidebar.affix-top {
+        width: 250px !important;
+        margin-left: 40px;
+
+    }
+    .pio-docs-sidebar.affix {
+        width: 250px !important;
+        margin-left: 40px;
+
+}
+.navbar-nav {
+    margin-right: 16px;
+}
+}
+@media (min-width: 992px) and (max-width: 1101px){
+.pio-docs-sidebar.affix-bottom {
+    width: 200px !important;
+}
+    .pio-docs-sidebar.affix-top {
+        width: 200px !important;
+    }
+    .pio-docs-sidebar.affix {
+        width: 200px !important;
+}
+.navbar-nav {
+
+margin-right: 20px;
+}
+}
+
+@media (max-width: 1200px) {
+.container {
+}
+}
+ /* Widen the fixed sidebar */
   .pio-docs-sidebar.affix,
   .pio-docs-sidebar.affix-bottom {
-    width: 213px;
+      position: fixed;
+
   }
   .pio-docs-sidebar.affix {
+  }
+ .pio-docs-sidebar.affix-bottom {
+
+ }
+  .pio-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
-    top: 20px;
+    top: 40px;
+  }
+  .pio-docs-sidebar.affix-top {
   }
   .pio-docs-sidebar.affix-bottom {
-    position: absolute; /* Undo the static from mobile first approach */
   }
   .pio-docs-sidebar.affix-bottom .pio-docs-sidenav,
   .pio-docs-sidebar.affix .pio-docs-sidenav {
-    margin-top: 0;
-    margin-bottom: 0;
+
   }
 }
-@media (min-width: 1200px) {
-  /* Widen the fixed sidebar again */
-  .pio-docs-sidebar.affix-bottom,
-  .pio-docs-sidebar.affix {
-    width: 280px;
-  }
-}
-
-
 /*
 * Docs sections
 *
@@ -1456,9 +1497,12 @@ a.btn-primary:after {
 }
 .pio-navbar-top-example .navbar-fixed-top,
 .pio-navbar-bottom-example .navbar-fixed-bottom {
-  position: relative;
-  margin-right: 0;
-  margin-left: 0;
+
+}
+.navbar-fixed-top {
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 .pio-navbar-top-example {
   padding-bottom: 45px;
@@ -1485,6 +1529,7 @@ a.btn-primary:after {
     position: absolute;
   }
 }
+
 
 /* Pagination */
 .pio-example .pagination {
@@ -2031,12 +2076,15 @@ cursor: pointer;
   padding-right: 0px !important;
 }
 .gsc-input-box {
-  border-color:  none !important;
+  border: 1px solid  #78868E !important;
   height: 35px !important;
+  border-radius: 1px;
+
 }
 .cse input.gsc-input:focus, input.gsc-input:focus {
 background-image:none !important;
 background-repeat:no-repeat !important;
+border-radius: 0px;
 
 }
 
@@ -2049,9 +2097,11 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   width: 85% !important;
   height: 100% !important;
   margin-top: 8px !important;
-  border-color:  none !important;
-  border: 0px !important;
+  border-color:  #000 !important;
+  border: 1px !important;
   margin-bottom: 0px!important;
+  border-radius: 0px;
+  z-index: 100;
 }
 @-moz-document url-prefix() {
   input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
@@ -2094,25 +2144,55 @@ color: #274E13 !important;
 .gsc-above-wrapper-area{
   border-bottom: none !important;
 }
-
-.breadcrumb {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 0px;
-  list-style: none;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+#bread {
+    top: 60px;
+    padding: 5px;
+    position: absolute;
+    background-color: #DDE5E7;
+    z-index: 1;
+    color: #000;
+    font-weight: 900;
 }
+.navbar-fixed-top>.col-md-8>.active-trail {
+  font-weight: 400;
+  cursor: not-allowed;
+}
+.navbar-fixed-top>.col-md-8 {
+margin-top: 10px;
+}
+@-moz-document url-prefix() {
+    .navbar-fixed-top > .col-md-8 {
+        margin-top: 20px;
+    }
+}
+@-moz-document url-prefix() {
+    .navbar-fixed-top > .col-md-8 {
+    margin-top: 20px;
+}
+}
+@-moz-document url-prefix() {
+    .article {
+    margin-top: 30px !important;
+}
+}
+#bread .col-md-8 a {
+padding-bottom: 20px;
+}
+#bread .col-md-8 a:hover {
+    box-shadow: inset 0 -3px 0 #EFD01B;
+}
+#bread a {
+    color: #000;
+    text-decoration: none;
+}
+#bread a:hover {
+    color: #000;
 
+}
 h1:after {
   content: '\\';
   color: #EFD01B;
   margin-left: 16px;
-}
-@-moz-document url-prefix() {
-  .breadcrumb {
-    padding-top: 20px !important;
-  }
 }
 .page-header {
     padding-bottom: 9px;
@@ -2127,7 +2207,7 @@ padding: 0.5em;
 white-space: pre-wrap;
 display: block;
 }
-.alert-info {
+/* FIXME:  */.alert-info {
   color: black !important;
   background-image: none !important;
   border-left: solid #31708f;

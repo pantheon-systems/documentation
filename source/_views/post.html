@@ -25,5 +25,11 @@
                     <li class="{{ older_disabled }}"><a href="{{ older_url }}" title="{{ page.previous_post.title }}">Older</a></li>
                 </ul>
             </div>
-        </article>
+        </div>
+        <!-- SIDEBAR NAV - Search/TOC -->
+        <div class="col-md-3">
+            {% include ("sidebarnav.html") %}
+        </div>
+    </div>
+</article>
 {% endblock %}
