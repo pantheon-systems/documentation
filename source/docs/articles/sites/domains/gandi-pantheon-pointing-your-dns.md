@@ -27,13 +27,13 @@ You'll need to edit the A record and CNAME. The A record shows something like:
 www 10800 IN CNAME webredir.vip.gandi.net.
 ```
 
-1. Point the A record in the zone file to 50.56.49.247:
+1. Point the A record in the zone file to 192.237.224.60:
 ```nohighlight
-@ 300 IN A 50.56.49.247
+@ 192.237.224.60
 ```
 2. Next, change the www CNAME to match the following:
 ```nohighlight
-www 300 IN CNAME edge.live.getpantheon.com.
+www 300 IN CNAME live-example.pantheon.io.
 ```
 
 <div class="alert alert-warning" role="alert">
