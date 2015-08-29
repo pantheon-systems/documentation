@@ -63,7 +63,7 @@ For example:
 8. Clone database and files from Live to your Multidev environment.
 9. Test update process (run update.php) for an existing site update use case.
 10. Merge to Dev and deploy code to Test and Live.
-11. Test your updates against Live, ensuring that everything works in an environment with more than one application container (Pro plans and above).
+11. Test your updates against Live, ensuring that everything works in an environment with more than one application container (Business plans and above).
 
 ## Deploy Updates to Downstream Sites
 
