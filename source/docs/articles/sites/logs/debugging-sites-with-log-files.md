@@ -36,25 +36,7 @@ define('WP_DEBUG', true);
 ```
 
 ## Raw Webserver Log Files
-
-When developing a site, it can be useful to directly access the server logs for the site environment.  
-
-From your Dashboard for a given site environment, click **Connection Info** for SFTP access credentials and take note of the non-standard port.
-
-Once connected, you'll see several directories:
-
-- **`code/`** - All executable code; stored in Git version-controlled repository. Cannot write (upload) to `code` unless site Connection Mode is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/), on the Development environment only.
-- **`files/`** - Pantheon File System (Valhalla) mount. `code/sites/default/files` and `code/wp-content/uploads` are symbolically linked to this directory. Read and write (upload), all environments.
-- **`logs/`** - Environment-specific access and error logs. Read only.
- - **`newrelic.log`** - New Relic log; check if an environment is not logging.
- - **`nginx-access.log`** - Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log).
- - **`nginx-error.log`** - Webserver error log.
- - **`php-error.log`** - PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.  You can also use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to this file (although it will only log it to a single application container).
- - **`php-slow.log`** - PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [http://php-fpm.org/wiki/Features#request\_slowlog\_timeout](http://php-fpm.org/wiki/Features#request_slowlog_timeout).
- - **`watcher.log`** - Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
-
-### See Also
-- [Automate Downloading Logs from the Live Environment](/docs/articles/sites/logs/downloading-live-error-logs)
+When developing a site, it can be useful to directly access the server logs for the site environment. For instructions on how to download, see [Log Files on Pantheon](/docs/articles/sites/logs/#download-raw-webserver-log-files).
 
 ## Frequently Asked Questions
 
