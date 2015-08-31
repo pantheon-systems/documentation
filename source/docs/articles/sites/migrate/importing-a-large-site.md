@@ -7,12 +7,12 @@ category:
 keywords: import, importing site, pantheon, new site, large site
 ---
 
-This article will cover the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
+This article covers the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).
 * Your site’s code, files, or SQL archive is greater than 500MB (the URL upload import file limit).
 
-## Requirements & Tools
+## Requirements
 
 1. Intermediate to advanced [Git](http://git-scm.com/) command line interface (CLI) knowledge.
 2. Familiarity with using [bash](http://www.gnu.org/software/bash/) and [rsync](http://rsync.samba.org/) or an FTP program that supports [SFTP](http://en.wikipedia.org/wiki/SFTP).
@@ -21,7 +21,7 @@ This article will cover the techniques required to import a large site into Pant
 
 ## Create A New Pantheon Site  
 
-From your Pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. This will probably be WordPress, Drupal 6.x, or Drupal 7.x. Once the site is created, switch the site's connection mode from SFTP to Git.  
+From your Pantheon Dashboard, choose **Create a new site**. Name your site, select **Start from scratch**, and choose your starting codebase. After the site is created, switch the site's connection mode from SFTP to Git.  
 
 ## Import the Codebase
 
@@ -31,11 +31,11 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstarter, etc.
 
 1. Go to your code directory within your terminal.
 2. Bring in the Pantheon core files. If your existing site code is not version controlled with Git, run 'git init' first.
-3. From your site's Dashboard, go to the Dev environment.
+3. From your site's Dashboard, go to the **Dev** environment.
 4. Click **Settings**, then select **About Site**.
 5. Place your mouse over the upstream value, left click and select **Copy link** to get the site's Pantheon upstream location.  
  ![](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)  
-6. The following Git command will pull in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the value from step 5:
+6. The following Git command pulls in the Pantheon Drupal 7 specific core. Replace the {paste-value-here} with the link from step 5:
 
 **Original:**
 
@@ -57,13 +57,13 @@ Replace "http" with "git" and then add ".git" to the end of the URL you just pas
 git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
 ```  
 
-Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:  
+Once executed, Pantheon pulls in your core files, but doesn't commit them; you will be able to do a final review. You will see this message when it's done:  
 ```bash
 Squash commit -- not updating HEAD  
 Automatic merge went well; stopped before committing as requested
 ```
 
-7. From your Pantheon Dashboard, go to the Dev tab and select **Code**. Make sure your site is on Git mode, and copy the Git connection information found to the right of the Git tab.
+7. From your Pantheon Dashboard, go to the **Dev** tab and select **Code**. Make sure your site is in Git mode, and copy the Git connection information found to the right of the Git tab.
 
   ![](/source/docs/assets/images/pantheon-dashboard-git-connection-info.png)
 
@@ -86,7 +86,7 @@ Automatic merge went well; stopped before committing as requested
 git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
 ```
 
-9. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
+9. Run git add and commit to prepare the Pantheon core merge for pushing to the repository:
  ```
  git add -A
  ```
@@ -95,7 +95,7 @@ git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}
  ```
 10. Now pull from your Pantheon repository master branch: `git pull pantheon master`. Handle any conflicts as needed.  
 11. Git push back to your Pantheon site repository: `git push pantheon master`  
-12. Go to the Code tab of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
+12. Go to the Code tab of your Dev environment. You will see your site's pre-existing code commit history and the most recent commits adding Pantheon's core files.
 
 ![Pantheon Dashboard with Commit Messages](/source/docs/assets/images/pantheon-dashboard-git-commit-messages.png)
 
@@ -127,8 +127,8 @@ sleep 180
 fi
 done
 ```
-This will connect to your Pantheon site's Dev environment, and start uploading your files. If an error occurs  during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. To do this, [switch your site to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your S/FTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
+This connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping completely, it waits for 180 seconds and picks up where it left off.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. To do this, [switch your site to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#enabling-sftp-mode) and then using your site's SFTP connection information, connect to your site with your SFTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
 
 ## Database  
 

@@ -5,17 +5,17 @@ category:
 - debugging
 keywords: mysql slow log, logs, sql slow logs, sql log, mysql slow logs, mysql log, mysql performance, mysql troubleshooting, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
 ---
-Analyzing the MySQL Slow Log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
+Analyzing the MySQL slow log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
 
 ## Requirements
 
 - SFTP command line interface (CLI)
-- MySQL command line interface (CLI)
+- MySQL command line interface
 - A working knowledge of SQL queries and MySQL
 
 ## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL Slow Log, use the [method outlined here](/docs/articles/sites/logs#download-mysql-slow-query-log).
+To download the environment's MySQL slow log, use the [method outlined here](/docs/articles/sites/logs#download-mysql-slow-query-log).
 
 ```sql
 $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
@@ -65,13 +65,13 @@ The names may vary depending on the zone the server is located. Look for the fil
 
 ## Analyze The Mysql Slow Log
 
-There are several different tools that can be used to analyze a MySQL Slow Log:
+There are several different tools you can use to analyze a MySQL slow log:
 
 - <a href="https://code.google.com/p/mysql-log-filter/">Mysql Log Filter</a>  
 - <a href="http://www.percona.com/blog/files/utils/mysql_slow_log_parser">Percona Mysql Slow Log Parser</a>  
 - <a href="http://www.hackmysql.com/mysqlsla">Mysqlslsa</a>  
 
-These tools will allow you to see various summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL Slow Log on your own. Please refer to the documentation for the particulars of each of these programs. Here is an example usage of Mysql Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
+These tools allow you to see summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. Here is an example usage of MySQL log filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
 ```php
 $ php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates endpointas90kkud28a236-slow.log > site_name_slow_1s_noDupes.txt  
@@ -90,11 +90,11 @@ $ vi site_name_slow_1s_noDupes.txt
 # User@Host: pantheon[pantheon] @  [10.223.192.87]  
 SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0;  
 ```
-This particular query is, at it's worst, examining 132,363 records to return 5 while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer their queries to execute in milliseconds.
+This particular query is, at it's worst, examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
 
 ## Look at the slow queries by hour
 
-Another method is to look at slow queries by the hour, which can be useful to see if there are spikes in slow queries that correspond to site traffic patterns.
+Another method is to look at slow queries by the hour to see if there are spikes in slow queries that correspond to site traffic patterns.
 
     grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c  
 
@@ -108,4 +108,4 @@ Another method is to look at slow queries by the hour, which can be useful to se
 
 This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
-These are just a few ways your can troubleshoot MySQL performance using the MySQL Slow Log on your Pantheon website. For a more in depth look at finding serious MySQL performance issues using New Relic Pro and MySQL Slow Logs, please refer to [MySQL Troubleshooting with New Relic Pro](/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/).
+For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/).
