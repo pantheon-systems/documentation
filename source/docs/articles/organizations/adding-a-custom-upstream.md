@@ -8,6 +8,10 @@ keywords: custom upstream, distribution, remote repository, upstream
 ---
 Create a custom distribution of WordPress or Drupal and add it to the Pantheon platform. This will enable users of the affiliated organization to create sites using a specialized codebase as a starting point.
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Custom upstreams are available to the "Partner" and "Strategic Partner" tiers in Pantheon's Partner program. <a href="https://pantheon.io/docs/articles/organizations/pantheon-for-agencies/#create-your-agency-profile">Create your agency profile</a> to get started and see our <a href="https://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf">Partner Program Guide</a> for information on how to advance to Partner tiers.</div>
+
 ## Create a Remote Repository
 
 Create a remote repository and clone it locally, then pull the applicable Pantheon compatible upstream:
