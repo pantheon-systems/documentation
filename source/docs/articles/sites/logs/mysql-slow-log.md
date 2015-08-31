@@ -109,3 +109,6 @@ Another method is to look at slow queries by the hour to see if there are spikes
 This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
 For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/).
+
+## See Also
+- [Identify and Kill Queries with MySQL Command-Line Tool](/docs/articles/sites/database/kill-mysql-queries)
