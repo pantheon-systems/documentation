@@ -20,7 +20,7 @@ No module or plugin installation is required; do <strong>not</strong> install th
 
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as requested. If your site sends headers that forbid caching, Varnish won't cache your content.  
 
-See [Drupal's Performance Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
+See [Drupal's Performance Settings](/docs/articles/drupal/drupal-performance-and-caching-settings) for step-by-step instructions on how to optimize your caching configuration.
 
 ##See Also
 [Debugging Cache](/docs/articles/sites/varnish/debugging-cache/)

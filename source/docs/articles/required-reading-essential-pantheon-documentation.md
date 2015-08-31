@@ -36,7 +36,7 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 - [Applying Upstream Updates](/docs/articles/sites/code/applying-upstream-updates)
 - [Varnish Caching for High Performance with Drupal and WordPress](/docs/articles/sites/varnish)
 - [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)
-- [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings)
+- [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings)
 - [Content Delivery Network (CDN) for File Distribution](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution/)
 - [SSO and Identity Federation on Pantheon](/docs/articles/sites/code/sso-and-identity-federation/)
 - [Backup Creation](/docs/articles/sites/backups/backup-creation)
@@ -45,7 +45,6 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 
 - [PHP Errors and Exceptions](/docs/articles/sites/php-errors-and-exceptions/)
 - [Errors and Server Responses](/docs/articles/sites/errors-and-server-responses/)
-
 
 ## Support
 

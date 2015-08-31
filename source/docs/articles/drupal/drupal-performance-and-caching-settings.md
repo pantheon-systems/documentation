@@ -1,6 +1,6 @@
 ---
-title: Drupal 7 Performance and Varnish Caching Settings
-description: Optimize Drupal 7 and Varnish caching to maximize your site's performance.  
+title: Drupal Performance and Varnish Caching Settings
+description: Optimize Drupal and Varnish caching to maximize your site's performance.  
 category:
   - drupal
 keywords: drupal, performance, cache, caching, varnish, varnish caching
@@ -40,7 +40,7 @@ In Drupal 6, most users should set their cache mode to "Aggressive" to take adva
 Checking "External" prevents this kind of "double caching" by freeing Drupal from the responsibility to store a page that is also being stored at the reverse-proxy layer. Again, this should only be used on sites which don't want the long-term protection of an internal page cache.
 
 ### Compatibility Warnings
-Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode, no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
+Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
 
 Obviously, when the page is cached Externally in a reverse-proxy layer, Drupal is not consulted when cached pages are delivered.
 
