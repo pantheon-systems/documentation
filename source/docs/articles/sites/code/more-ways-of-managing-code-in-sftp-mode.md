@@ -11,7 +11,7 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 - Install and update modules and themes with Drupal's update manager.
 - Command line tools for managing code.
 
-## Using wp-admin to Manage Plugins and Themes
+##  Manage Plugins and Themes with wp-admin
 
 WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site.
 
@@ -19,29 +19,29 @@ When your Pantheon Dev environment is in SFTP mode, you can use these capabiliti
  ![Installing WP Plugins](/source/docs/assets/images/desk_images/278882.png)<br />
 And for themes:<br />
  ![Installing WP Themes](/source/docs/assets/images/desk_images/278883.png)<br />
-Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
 You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
 
-## Installing Modules and Themes with Drupal's Update Manager
+## Install Modules and Themes with Drupal's Update Manager
 
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface). When in SFTP mode this will work seamlessly on Pantheon.
 
-You'll need to grab the url to the code you want installed from Drupal.org:
+Get the URL to the code you want installed from Drupal.org:
  ![Drupal.org views module](/source/docs/assets/images/desk_images/278879.png)<br />
-And then paste it into Drupal's update manager UI. You can also upload a tarball or zip file from your desktop:
+Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
  ![Installing via update manager](/source/docs/assets/images/desk_images/278880.png)<br />
-Note that you still need to turn these changes into _commits_ in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
 <h4>Note</h4>
-You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode!</div>
+You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
 
-## Installing Code with Terminus: the Pantheon CLI
+## Install Code with Terminus: the Pantheon CLI
 
-Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](https://github.com/pantheon-systems/cli). This section is for developers who are CLI savvy only.
+Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](https://github.com/pantheon-systems/cli). This section is for developers who are CLI savvy.
 
 Assuming you've already set up and authenticated with [Terminus](https://github.com/pantheon-systems/cli), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
 

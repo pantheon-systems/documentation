@@ -6,15 +6,15 @@ category:
   - developing
 keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication
 ---
-LDAP as a provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Enterprise plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer  
 
-Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details will be up to the user as not all _instances_ can be supported.
+Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported.
 
-[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
+LDAP provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
 
-PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon hosted site.  
+PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.  
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -26,10 +26,9 @@ Users have reported success using [https://drupal.org/project/ldap](https://drup
 ### WordPress
 WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It will provide you with  all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway/) users.
 
-
 ##OpenLDAP Configuration for Client Certificates for LDAPS
 
-Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, LDAP configuration can be specified using the function [putenv()](http://php.net/manual/en/function.putenv.php).  
+Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
 If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/drupal/private-files) in your codebase: `SITEROOT/private`.
 
@@ -55,7 +54,7 @@ Ensure that your certificates do **not** have a password. There is an extremely 
     if (!file_exists($tls_key)) die($tls_key . ' client key does not exist');
     putenv("LDAPTLS_KEY=$tls_key");
 
-Additional configurations, such as whether to perform server certificate checks, can also be specified using putenv.
+You can also specify additional configurations with putnev, such as whether to perform server certificate checks.
 
     // LDAP - Never perform server certificate check in a TLS session.
     putenv('LDAPTLS_REQCERT=never');
@@ -69,19 +68,19 @@ Users do not have access to make modifications to ldap.conf. Instead, use putenv
 
 #### Is ldap_sso supported?
 
-The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP will need to be PHP-based and not webserver-based.  
+The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.  
 
 ## Troubleshooting
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.  
 
-The following script has been used to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](https://github.com/pantheon-systems/cli) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 ```bash
 terminus drush --site=<site> --env=<env> scr ldap-test.php
 ```
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
+Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). See a list of all your sites by running <code>terminus sites list</code></div>
 The entire script:
 
 ````php

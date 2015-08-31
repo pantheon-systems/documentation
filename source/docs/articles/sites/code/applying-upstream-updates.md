@@ -6,13 +6,13 @@ category:
   - drupal
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---
-Core updates will appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available.
+Core updates appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Due to platform-wide codeserver caching settings, these update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.</div>
+Due to platform-wide codeserver caching settings, update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.</div>
 
-Sometimes we will add new features to the Pantheon API module, and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
+Sometimes we will add new features to the Pantheon API module and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
 
 Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
 
@@ -23,25 +23,22 @@ You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrit
 
 If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
-
 ## Preparation
 
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream Updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 - If the Development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
 - If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
-- Change the Development environment connection to Git. (Note: Changing the connection mode to Git without committing code will delete those changes.)
+- Change the Development environment connection to Git. Note: Changing the connection mode to Git without committing code will delete those changes.
 
 ## Apply a Core Update
 
 1. Check the options you want to run after pulling the update.
 2. Click **Apply Updates**.
 ![A Pantheon site dashboard with upstream updates available.](/source/docs/assets/images/desk_images/357403.png)
-![Pantheon dashboard showing upstream update in progress.](/source/docs/assets/images/desk_images/357428.png)
-3. Test the update. Click **Visit Development Site** in the Development Environment to test it, or run your automatic user acceptance tests.
+3. Click **Visit Development Site** in the Development Environment to test it, or run your automatic user acceptance tests.
 4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/articles/local/git-faq#how-do-i-revert-or-undo-changes?) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking **Pull (Content from Live and) Code from Development** in the Code workspace in the Test Environment.
 6. Click **Visit Testing Environment** to test the update against your Live site’s content base.
-![Pantheon site dashboard, Test environment's Code tab, with commits ready to pull from Development.](/source/docs/assets/images/desk_images/357430.png)
 7. Deploy the upstream updates to your Live Environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
 ![The Code tab in a Pantheon site's dashboard's Live environment](/source/docs/assets/images/desk_images/357432.png)
 8. Click **Visit Live Environment** to verify the update is live.
@@ -49,11 +46,11 @@ If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-g
 
 ## Debug Failed Merges
 
-If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve. Here are debugging steps to find and correct the conflicts.
+If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve.
 
-## Auto-Resolve Conflicts
+### Auto-Resolve Conflicts
 
-In the event that the update fails you may see an error indicating a conflict with some files in core.
+In the event that the update fails, you may see an error indicating a conflict with some files in core.
 
 Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository.
 
@@ -63,7 +60,7 @@ This does not solve all problems that may arise, but it should take care of most
 
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 
-## Resolve Conflicts Locally With Drupal 7
+### Resolve Conflicts Locally With Drupal 7
 
 From within an up-to date Git clone on your local machine:
 ```bash
@@ -73,7 +70,7 @@ git push origin master
 ```
 You can add the `-Xtheirs` flag if you want to accept all changes.
 
-## Resolve Conflicts Locally With Drupal 6
+### Resolve Conflicts Locally With Drupal 6
 
 From within an up-to-date Git clone in your local environment:
 ```bash
@@ -81,7 +78,7 @@ git pull git://github.com/pantheon-systems/drops-6.git master
 # resolve other conflicts
 git push origin master
 ```
-## Resolve Conflicts Locally with WordPress
+### Resolve Conflicts Locally with WordPress
 
 From within an up-to-date Git clone in your local environment:
 ```bash
@@ -89,7 +86,7 @@ git pull git://github.com/pantheon-systems/WordPress.git master
 # resolve conflicts
 git push origin master  
 ```
-For more information on resolving conflicts, see the [Git FAQ page](/docs/articles/local/git-faq#frequently-asked-questions).
+For more information on resolving conflicts, see [Git FAQs](/docs/articles/local/git-faq#frequently-asked-questions).
 
 ## Troubleshooting
 
@@ -117,7 +114,7 @@ For example:
  ```nohighlight
  git checkout 72faeeff1c9356221694d1351cdb2000ab3c5d1c -- run-tests.sh
  ```
-3. When looking for a commit ID, you can find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
+3. When looking for a commit ID, find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
 
  ```bash
  git status
@@ -127,7 +124,7 @@ For example:
  new file: README.txt
  ```
 
-4. Next, you will need to run:
+4. Next, run:
  ```bash
  git add .
  ```
@@ -136,12 +133,12 @@ For example:
  ```bash
  git commit -am "verifying missing README.txt"
  ```
-6. You will receive confirmation from Git that the file has been committed. Lastly, you will need to run:
+6. After you receive confirmation from Git that the file was committed, run:
 
  ```bash
  git push origin master
  ```
-### 503 Errors When Running Update.php & Installing Modules
+### 503 Errors When Running Update.php and Installing Modules
 
 There are multiple reasons that 503s might occur when updating:
 

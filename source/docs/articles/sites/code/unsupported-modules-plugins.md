@@ -75,7 +75,7 @@ Using sites/default/files/tmp as a work around for these issues will produce unp
 - Views data export
 
 - Webform export<br>
- **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+ **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant Drush command is `webform-export` (alias wfx).
 
 
 ##WordPress Plugins
@@ -90,6 +90,6 @@ Using sites/default/files/tmp as a work around for these issues will produce unp
 
 
 ## Dynamic Outbound IPs
-Due to the cloud-based infrastructure of the Pantheon platform, outbound requests will be served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
+Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
 
 For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/code/dynamic-outgoing-ip-addresses).

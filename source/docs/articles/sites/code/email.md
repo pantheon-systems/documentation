@@ -5,22 +5,19 @@ category:
     - drupal
 keywords: email, email host, host email, outgoing mail, outgoing email, email solution, sendgrid, smtp, external, external smtp server, external smtp, spf record, spf records, spf, dns records, dns, exim
 ---
-Pantheon does not host inboxes for incoming mail. We recommend making use of an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
 
 ## Outgoing Email
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
 
-
-Pantheon has a partner relationship with SendGrid, a high-deliverability email service, which offers up to 400 emails a day for free, and can scale to millions if needed. For more information, see [Using Sendgrid To Deliver Email With WordPress and Drupal](/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal/).
+Pantheon has a partner relationship with [SendGrid](https://sendgrid.com/), a high-deliverability email service, which offers up to 400 emails a day for free and can scale to millions if needed. For more information, see [Using Sendgrid To Deliver Email With WordPress and Drupal](/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal/).
 
 We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails such as account registration, forgot password, etc., you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.
 
 Some customers have successfully used [SendGrid](/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
 
-Once you have chosen your SMTP provider, install and configure Drupal's SMTP module:
-
-[http://drupal.org/project/smtp](http://drupal.org/project/smtp)
+Once you have chosen your SMTP provider, install and configure [Drupal's SMTP module](http://drupal.org/project/smtp).
 
 ## Troubleshooting
 
