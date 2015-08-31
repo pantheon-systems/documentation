@@ -5,7 +5,7 @@ category:
     - drupal
 keywords: CDN, file distribution, drupal, content delivery network, amazon S3 CORS,
 ---
-A CDN (Content Delivery Network) is a distributed system for rapidly serving files from multiple locations.
+A Content Delivery Network (CDN) is a distributed system for rapidly serving files from multiple locations.
 
 A CDN quickly delivers content using a mix of caching, advanced seek/indexing technology, and multiple synchronized origins across a geographic area. By minimizing physical latency and allowing quick, smart retrieval of assets from a localized cache, delivery time can be greatly improved.
 
@@ -14,19 +14,19 @@ A CDN quickly delivers content using a mix of caching, advanced seek/indexing te
 While Pantheon's Valhalla networked file system and Varnish edge cache provide Enterprise-grade high-performance, high-availability solutions for static content, there are some limitations. Specifically, this configuration:
 
 - Is not optimized for serving very large files or streaming content
-- Lacks world-wide geoproximity (same data centers as application servers)
+- Lacks world-wide geo proximity (same data centers as application servers)
 - Does not allow selective cache expiration of a particular file
 
-If you have streaming content, large amounts of multi-national traffic or need to have extremely granular control over cache expiration, then a Content Delivery Network (CDN) may be a good solution for your needs.
+If you have streaming content, large amounts of multi-national traffic, or need to have extremely granular control over cache expiration, then a CDN may be a good solution for your needs.
 
 If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Enterprise clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
 
 <dl>
 	<dt>
 <a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
-	<dd>System of distributed servers to serve and stream content</dd>
+	<dd>A system of distributed servers to serve and stream content.</dd><br>
 	<dt>Origin Pull</dt>
-	<dd>Request is made to CDN; if a fresh cache is not available, request is made to origin (your site), the result is cached and delivered; subsequent requests will return cached content and do not access your site. Easiest to configure.</dd>
+	<dd>A request is made to CDN; if a fresh cache is not available, request is made to origin (your site), the result is cached and delivered; subsequent requests will return cached content and do not access your site. Easiest to configure.</dd><br>
 	<dt>Push</dt>
 	<dd>Content must be explicitly added to CDN by your site; if not, then it won't be available. Good for very large or multimedia (video / audio) content, but more difficult to configure.</dd>
 </dl>
@@ -70,11 +70,11 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 
 ## Amazon S3 CORS
 
-The [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module can be configured to directly upload to Amazon S3 from within your browser without needing to upload to Pantheon. This has numerous advantages and avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
+You can configure the [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module to directly upload to Amazon S3 from within your browser, without needing to upload to Pantheon. This avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
 
 ## Installation
 
-This is not the only way to install this, but these directions are known good and assume that you have an AWS S3 bucket set up.
+Before you start, be sure that you have an AWS S3 bucket set up.
 
 ```bash
 drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
@@ -84,7 +84,7 @@ drush @pantheon.SITENAME.dev cc all
 
 ```
 - /admin/reports/status - Make sure AWSSDK reports a version number
-- /admin/reports/awssdk - Verify it's correct.
+- /admin/reports/awssdk - Verify it's correct
 - /admin/config/media/awssdk - Specified Amazon Web Services Key, Amazon Web Services Secret Key
 - /admin/config/media/amazons3 - Default Bucket Name: amazon-s3-cors
 - /admin/config/media/file-system - Default download method: Amazon Simple Storage Service

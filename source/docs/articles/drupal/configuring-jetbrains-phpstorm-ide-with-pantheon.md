@@ -5,11 +5,9 @@ category:
   - developing
 keywords: drupal, jetbrains, phpstorm, pantheon, drush
 ---
-[JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with Drupal sites.
+[JetBrains PhpStorm](http://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that you can configure to work with your Drupal sites. For detailed information, see [Drupal Development Using PhpStorm](http://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm) and [Developing on Pantheon with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Developing+on+Pantheon+with+PhpStorm).
 
-For detailed information, see [Drupal development using PhpStorm](http://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm) and [Developing on Pantheon with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Developing+on+Pantheon+with+PhpStorm).
-
-This article will cover some best practices and recommendations for building a Drupal site on Pantheon using PhpStorm.
+This article covers some best practices and recommendations for building a Drupal site on Pantheon using PhpStorm.
 
 ## Initial Site Setup
 
@@ -45,25 +43,25 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 1. Put your [Dev environment into SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/), and click **Connection Info** to see the connection settings.
 2. Within PhpStorm, go to Tools > Deployment > Configuration.
 3. Click **plus** for the [add server dialog](http://www.jetbrains.com/phpstorm/webhelp/add-server-dialog.html).
-4. Enter the Pantheon site name followed by a dash, and the environment.<br />
+4. Enter the Pantheon site name followed by a dash and the environment.<br />
 **Example**: Yoursite-dev.
 5. Type SFTP and click **OK**.
 
 #### Connection Tab
   [Configure the server](http://www.jetbrains.com/phpstorm/webhelp/deployment-connection-tab.html) connection tab in the following order:
 
-* SFTP Host: (SFTP Host from Connection Info)
+* SFTP Host: SFTP Host from Connection Info
 * Port: 2222
-* Username: (Username from Connection Info)
+* Username: Username from Connection Info
 * Auth Type: Key Pair
-* Private Key File: (navigate to the location of your id\_rsa file. Example: /Users/jon/.ssh/id\_rsa)
-* Click Test SFTP Connection...
+* Private Key File: Navigate to the location of your id\_rsa file. Example: /Users/jon/.ssh/id\_rsa
+* Click **Test SFTP Connection...**
 * Root Path: Click Autodetect, and navigate to the end of the detected path and add /code to the end
 
 #### Mappings Tab
 
 1. Deployment path on server: /code
-2. Web path on server: (URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheon.io)
+2. Web path on server: URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheon.io
 3. Click **OK**.
 4. Go to Tools > Deployment > Automatic Upload > and select the server you created.
 

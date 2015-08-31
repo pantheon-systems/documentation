@@ -26,6 +26,6 @@ For instance, if you are upgrading from Drupal 6 to Drupal 7, follow these steps
 
 ## Content and Configuration
 
-While you can try to get Drupal to handle all the data architecture changes between major revisions — importing the old database and running update.php, this is often not a complete solution. Depending on the specific module stack and configuration of your current site, it may be faster and more direct to plan and execute a content migration to the new site rather than trying to use the built-in update tools.
+While you can try to get Drupal to handle all the data architecture changes between major revisions (importing the old database and running update.php), this is often not a complete solution. Depending on the specific module stack and configuration of your current site, it may be faster and more direct to plan and execute a content migration to the new site rather than trying to use the built-in update tools.
 
 If you are not having much luck with update.php, consider setting up the new site and using tools like the migrate.module to import your existing content. While this might initially seem like more work, it can often lead to a cleaner result more quickly, especially if your new site includes major architectural changes, features, or a redesign.

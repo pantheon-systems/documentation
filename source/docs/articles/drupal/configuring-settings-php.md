@@ -8,7 +8,7 @@ keywords: drupal, settings.php, database configuration, configuration
 The Drupal system configuration in code is set in:
 `sites/default/settings.php`
 
-Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the Database configuration without editing settings.php—no editing required. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
+Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing settings.php. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
@@ -57,7 +57,7 @@ Use these configuration snippets to specify a local configuration that will be i
 
 Depending on your use case, there are two possibilities:
 
-For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT'] - if it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
     // Pantheon - web only.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -67,7 +67,7 @@ For web only actions, like redirects, check for the existence of $\_SERVER['PANT
       }
     }
 
-For actions that should take place on every environment, such as redis caching, use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
+For actions that should take place on every environment, such as Redis caching, use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
 
     // Pantheon - all operations.
     if (defined('PANTHEON_ENVIRONMENT')) {
@@ -159,9 +159,9 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/articles/sites/migrate/export-an-existing-drupal-site#export-the-database).
 
-#### Status is showing that my configuration file is not protected and that I need to create a settings.php file?
+#### Status is showing that my configuration file is not protected and that I need to create a settings.php file.
 
-Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once a settings.php file has been created, the settings.php area of the report should resolve to green.
+Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once you have created a settings.php file, the settings.php area of the report should resolve to green.
 
 ## Troubleshooting
 #### Request to a Remote API Does Not Return Expected Response
