@@ -13,7 +13,7 @@ Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cac
 <h4>Warning</h4>
 Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
 
-This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this effect, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
+This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
 ## Ignoring GET Parameters
 
@@ -21,7 +21,7 @@ For the purpose of optimizing cache hits for identical content, Varnish ignores 
 
 For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> are considered distinct pages.
 
-The query parameters will still be passed to the application server, however the values will be replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+The query parameters are still passed to the application server, however the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
 
 For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values).
 
@@ -41,14 +41,14 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
 ### WordPress Sites
-WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Panthon Session WordPress plugin"). It is designed to handle the naming properly.
+WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin"). It is designed to handle the naming properly.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
 
 ### Using Modernizr
-[Modernizr](http://modernizr.com) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a  [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](http://wordpress.stackexchange.com/a/62362).
+[Modernizr](http://modernizr.com) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](http://wordpress.stackexchange.com/a/62362).
 
 ### Device Detection
 

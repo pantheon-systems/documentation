@@ -5,7 +5,7 @@ keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testin
 ---
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool will perform up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by submitting a support ticket.
+Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by submitting a support ticket.
 
 ## Test If Varnish Is Working by Reading HTTP Headers
 
@@ -32,7 +32,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
 - **X-Varnish: 2060657816 2060579796**
   - The X-Varnish header contains the ID of the current request and the ID of the request that populated the cache.
-  - If there is only one number, the cache was populated with the current request and can be considered a cache miss.
+  - If there is only one number, the cache was populated with the current request and is considered a cache miss.
 
 - **Age: 233**
   - How long the content has been stored in cache. If 0, it wasn't cached at all. If you see sequential Age: 0 headers from the same X-Pantheon-Styx-Hostname, your site is not being cached by Drupal.
@@ -46,7 +46,7 @@ Two of the headers listed above are Drupal specific. By default, WordPress does 
 ### Test Varnish with Firefox
 
 1. Install [Firebug](http://getfirebug.com/), the in-browser debugging plugin.
-2. Go to your Pantheon hosted domain and start Firebug by clicking the Firebug icon in Firefox. 
+2. Go to your Pantheon hosted domain and click the Firebug icon in Firefox. 
 3. Click the **Network** tab, then **HTML** to see the headers.
 
 ### Test Varnish with curl
