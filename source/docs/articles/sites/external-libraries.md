@@ -87,7 +87,7 @@ Pantheon runs the latest stable packaged version in Fedora, which is currently I
 
 ### Drupal ImageMagick Configuration
 
-Once you have downloaded and enabled the Imagemagick module, the next step will be configuring the image toolkit settings. Navigate to the Image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
+Once you have downloaded and enabled the Imagemagick module, you'll need to configure the image toolkit settings. Navigate to the Image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
 
 ## Troubleshooting and FAQs
