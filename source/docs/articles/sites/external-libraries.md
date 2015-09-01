@@ -83,9 +83,11 @@ There are no known plugins in the WordPress.org repository that will enable the 
 
 ImageMagick is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
 
-
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 
+### Drupal ImageMagick Configuration
+
+Once you have downloaded and enabled the Imagemagick module, the next step will be configuring the image toolkit settings. Navigate to the Image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
 
 ## Troubleshooting and FAQs
