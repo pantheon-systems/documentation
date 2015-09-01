@@ -3,10 +3,11 @@ title: Multidev
 description: Detailed information on Pantheon's Multidev.
 category:
 - developing
-keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev, multidev workflow, what is a branch, what is branching, branch, what is a commit, what is a fork, clone content, clone to a environment, clone to development environment, delete multidev environment, remove multidev environment, delete multidev branch
+keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 <img src="/source/docs/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
+
 ## Benefits of Multidev
 
 **Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
@@ -66,7 +67,7 @@ Multidev branch names must be all lowercase and less than 11 characters.</div>
 
 From the Dashboard, click **Multidev**, then select the name of the environment.
 
-Git instructions are shown in the Connection Mode of the code page. Each environment will have its own independent Connection Info and URL.
+Git instructions are shown in the Connection Mode of the code page. Each environment will have its own independent connection info and URL.
 
 ## Clone Content
 
@@ -80,7 +81,7 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 
 1. Edit your content locally via [Git](/docs/articles/local/starting-with-git/) or utilize on-server development via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) mode.
 2. Within the Pantheon Dashboard, click **Code**.
-3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git will be shown in the Commit Log.
+3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git are shown in the Commit Log.
 
 ## Merge Code
 
@@ -91,7 +92,7 @@ Instructions for using the command-line to merge the changes into the target are
 
 ## Delete a Branch Environment
 
-Go to Multidev > Multidev Environments, and click **Delete Environment**.
+Go to **Multidev** > **Multidev Environments**, and click **Delete Environment**.
 
 When an environment is deleted, the branch will remain and needs to be removed manually.
 
@@ -123,7 +124,7 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 #### How can I get Multidev and how much is does it cost?
 
-If you have a Business or Enterprise plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form from the Multidev tab in your Dashboard.
+If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form from the Multidev tab in your Dashboard.
 
 #### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
@@ -145,7 +146,7 @@ Yes, you can; your Git repository is not restricted. If you do not use Multidev,
 
 There is no limit on the number of branches you can have in your Git repository.
 
-The limit on forked environments is 5 for Business and 10 for Enterprise.
+The limit on forked environments is 5 for Business and 10 for Elite.
 
 #### Can I associate a domain with a branch environment?
 
@@ -153,7 +154,7 @@ At this time, custom domains cannot be associated with branch environments.
 
 #### What Git clients are supported?
 
-Any Git client can be used with Multidev. Use of the command-line Git client is recommended for compatibility with Dashboard instructions.
+You can use any Git client with Multidev. Use of the command-line Git client is recommended for compatibility with Dashboard instructions.
 
 #### Does Multidev support remote repositories, such as Github?
 

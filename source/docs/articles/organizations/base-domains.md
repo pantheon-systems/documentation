@@ -5,7 +5,7 @@ category:
   - managing
 keywords: development domain, base domain, change dev url, change development domain, change base domain, dev url, wildcard, cname, edge, dns
 ---
-Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace `pantheon.io` as the base domain for each environment on every site they run or are developing on the platform.
+Pantheon Partners, Strategic Partners, Elite-level clients, Resellers, and OEM Partners have the ability to replace `pantheon.io` as the base domain for each environment on every site they run or are developing on the platform.
 
 The base development domain should be a subdomain of your marketing site, such as `sites.awesomeagency.com`. A newly created site named "supersite" will then have a development environment URLs of `dev-supersite.sites.awesomeagency.com`.  
 

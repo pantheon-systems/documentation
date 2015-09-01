@@ -26,7 +26,7 @@ If you cannot sign in to your Pantheon Dashboard:
 
 
 ## Service Level Agreement (SLA) for Downtime
-Support tickets filed by Enterprise plans have a first acknowledgement of receipt guarantee:  
+Support tickets filed by Elite plans have a first acknowledgement of receipt guarantee:  
 
 * Downtime ticket: 30 minutes  
 * Standard support ticket: 2 hours
@@ -56,7 +56,7 @@ For more information, see our [Service Level Agreement](https://pantheon.io/sla)
 <table class="data-table">
     <tr>
         <th style="padding-left: 10px;" class="border-top border-bottom border-left border-right">Business Plan</th>
-        <th style="padding-left: 10px;" class="border-top border-bottom border-right">Enterprise Plan</th>
+        <th style="padding-left: 10px;" class="border-top border-bottom border-right">Elite Plan</th>
     </tr>
     <tr>
         <td style="padding-left: 10px;" class="border-bottom border-left border-right">Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via a support ticket).</td>
@@ -68,13 +68,13 @@ For more information, see our [Service Level Agreement](https://pantheon.io/sla)
 
 ####Is there a support number we can call? If so, is this service available for every plan?
 
-For **Enterprise plans** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more details, see [Enterprise Support Overview](https://pantheon.io/resources/pantheon-support-datasheet).
+For **Elite plans** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more details, see [Elite Plan Support Overview](https://pantheon.io/resources/pantheon-support-datasheet).
 
 ####If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
 
 ####When will you respond after we file a ticket?
-Our guaranteed first response time for Enterprise downtime tickets is 30 minutes and 2 hours for standard tickets. For other paying tiers, we provide best effort resolution time for all tickets on a highest priority, first-come basis.
+Our guaranteed first response time for Elite plan downtime tickets is 30 minutes and 2 hours for standard tickets. For other paying tiers, we provide best effort resolution time for all tickets on a highest priority, first-come basis.
 
 ####Is 24/7 phone support available for Business plans?
-No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Enterprise plans have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
+No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Elite plans have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.

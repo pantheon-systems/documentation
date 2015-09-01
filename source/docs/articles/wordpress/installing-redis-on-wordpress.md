@@ -15,8 +15,7 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
  | Personal      | No      |
  | Professional | **Yes**      |
  | Business | **Yes**      |
- | Enterprise | **Yes**      |
- | Pantheon One | **Yes**      |
+ | Elite | **Yes**      |
 
 ---
 

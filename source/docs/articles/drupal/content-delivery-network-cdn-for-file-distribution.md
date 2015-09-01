@@ -19,7 +19,7 @@ While Pantheon's Valhalla networked file system and Varnish edge cache provide E
 
 If you have streaming content, large amounts of multi-national traffic, or need to have extremely granular control over cache expiration, then a CDN may be a good solution for your needs.
 
-If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Enterprise clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
+If you don't meet those specific criteria, strongly consider just using Pantheon's existing infrastructure. It's highly optimized and can handle terrifying amounts of traffic. Many Elite-level  clients with very high-profile sites do not use CDNs and rely on Pantheon's optimized stack to deliver the performance their customers demand.
 
 <dl>
 	<dt>
