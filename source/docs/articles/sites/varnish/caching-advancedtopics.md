@@ -140,9 +140,9 @@ WordPress does not by default set cache headers, 404 or otherwise. If your site 
 
 If you're using the Environment Access: Locked security setting on a site environment, Varnish will not cache your content.
 
-## Pantheon's .vcl File
+## Pantheon's Varnish Cookie Handling
 
-The following is the "Cache-Busting Cookie Patterns" snippet from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns Varnish will not cache.
+The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns Varnish will not cache.
 ```nohighlight
 ​   NO_CACHE
 S+ESS[a-z0-9]+
