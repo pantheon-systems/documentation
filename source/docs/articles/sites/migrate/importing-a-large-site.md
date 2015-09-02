@@ -7,7 +7,7 @@ category:
 keywords: import, importing site, pantheon, new site, large site
 ---
 
-This article covers the techniques required to import a large site into Pantheon outside of the Dashboard interface. Follow this procedure if:
+This article covers the techniques required to import a large site into Pantheon outside of the Pantheon Dashboard. Follow this procedure if:
 
 * Your site’s code, files, or SQL archive is greater than 100MB (the direct file upload import size limit).
 * Your site’s code, files, or SQL archive is greater than 500MB (the URL upload import file limit).
@@ -136,6 +136,17 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your sql file much smaller and your import that much quicker.
 
+### Use Drush
+Drush users can use the following commands:
+
+```
+export SITENAME='your-site'
+export ENV="dev"
+$(drush @pantheon.$SITENAME.$ENV sql-connect) < your-local-site-db-dump.sql
+```
+
+### Use the Dashboard and Terminal
+
 1. Go to your site's Dev environment. Get the MySQL CLI connection by clicking the **Connection Info** tab. The connection string will look something like this:  
 
  ```
@@ -148,5 +159,5 @@ Your command will now look like:
  ```
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database\_dump.sql
  ```
-3. After you run the command, the sql file will be imported into your Pantheon Dev database.  
+3. After you run the command, the .sql file is imported into your Pantheon Dev database.  
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard, and you are good to go.
