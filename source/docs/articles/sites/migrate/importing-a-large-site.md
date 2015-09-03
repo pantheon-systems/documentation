@@ -83,7 +83,7 @@ Automatic merge went well; stopped before committing as requested
   Remove the site name from the end of the connection information, otherwise you will get an error and the command will fail. The final command will look like:</div>
 
 ```bash
-git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
+git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
 ```
 
 9. Run git add and commit to prepare the Pantheon core merge for pushing to the repository:
