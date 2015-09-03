@@ -65,3 +65,6 @@ You can destroy the tunnel by using the port value found within the **Connection
 ```bash
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
+
+## Troubleshooting
+To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases/#troubleshooting-mysql-connections).

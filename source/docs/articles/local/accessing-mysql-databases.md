@@ -33,6 +33,7 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 
 ## Troubleshooting MySQL Connections
 
+### Can't Connect to Local MySQL Server Through Socket
 There's an issue connecting to the Pantheon database if your site suddenly reverts to install.php or you see database connection errors like the following:<br />
 ![](/source/docs/assets/images/desk_images/64774.png)
 ```sql
@@ -40,15 +41,26 @@ Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'..
 ```
 There are two common causes for these errors:
 
-#### 1. Overwritten Pressflow Core
+**1. Overwritten Pressflow Core**
 
 Pantheon uses Pressflow, the API compatible version of Drupal for a number of reasons, including security, performance, and the ability to access server environment configurations. If you overwrite Pressflow (commonly done by unpacking Drupal core over a Git checkout or updating core using drush) your site will no longer be able to read the environmental configuration. Your Dashboard will also report this as an error.  
 
 If you've overwritten core, see [Core Updates](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update) for instructions on how to get back to Pressflow.
 
-#### 2. Non-Standard Bootstraps
+**2. Non-Standard Bootstraps**
 
 If you need to access the MySQL database credentials outside of Drupal, or need to implement the Domain Access module, see [Read Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration#domain-access).
+
+### Lost Connection to MySQL Server
+```
+ERROR 2013 (HY000): Lost connection to MySQL server at 'reading initial communication packet', system error: 0
+```
+
+This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 second of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
+
+```nohighlight
+terminus site wake --site=<site-name> --env=<env>
+```
 
 ## Frequently Asked Questions
 

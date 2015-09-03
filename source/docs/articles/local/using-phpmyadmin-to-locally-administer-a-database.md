@@ -48,17 +48,5 @@ If the permissions are not correctly set, PHPMyAdmin will return an error prompt
 ## Connect to the Database
 
 You are now ready to administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
-
-## Troubleshooting
-
-#### Unable to Connect to Remote Database
-
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, verify that you have the current connection information for the environment. If not, get the new information from the site's Dashboard.
-
-#### Database Credentials are Invalid
-
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, verify that you have the current connection information for the environment. If not, get the new information from the site's dashboard.
-
-#### Database is Reaped
-
-To conserve resources, environments are spun down after about two hours of inactivity. If your site is in sleep mode, you may get an error. Go to the environment's URL in your browser to "wake up" the reaped site. Once the page has loaded, try to connect again, and this time the database should be accessible. For more information, see [Known Limitations](/docs/articles/sites/known-limitations).
+## Troubleshooting MySQL Connections
+See [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases).
