@@ -8,9 +8,9 @@ When a person with access to your site(s) on the platform leaves the company or 
 
 After a user leaves, we recommend you:
 
-- Delete or block the user's account in Drupal or WordPress.
+- Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
 - Remove the user from the team and/or organization in the Pantheon Dashboard.
-- Change any account passwords the user may have had access to. 
+- Change any account passwords the user may have had access to.
 - Review the Git history in the commit log to see if the team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://codex.wordpress.org/FAQ_My_site_was_hacked).
 
 ## Remove a Team Member from a Site
@@ -27,7 +27,7 @@ When you delete a user from an organization, they lose the ability to perform an
 4. In the confirmation pop-up, type **remove** and click the **I understand the consequences, remove this user** button.
 
 ## Remove a Site Owner
-When a developer creates a site in a partner organization, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Organization admins cannot delete users from an organization until they no longer own any sites in the organization. The user account in question must [transfer ownership to another person in the organization](/docs/articles/organizations/change-management/#change-site-owner). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to use a workaround where the admin downloads a backup of the site, imports it as a new site, moves the domain name from the original site to the imported site, and deletes the original site(s). 
+When a developer creates a site in a partner organization, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Organization admins cannot delete users from an organization until they no longer own any sites in the organization. The user account in question must [transfer ownership to another person in the organization](/docs/articles/organizations/change-management/#change-site-owner). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to use a workaround where the admin downloads a backup of the site, imports it as a new site, moves the domain name from the original site to the imported site, and deletes the original site(s).
 
 For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the organization.
 
