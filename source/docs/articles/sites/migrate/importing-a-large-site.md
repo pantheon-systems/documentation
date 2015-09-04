@@ -136,28 +136,33 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your sql file much smaller and your import that much quicker.
 
-### Use Drush
-Drush users can use the following commands:
-
+### Import with Drush `sql-connect`
+Use [Terminus](https://github.com/pantheon-systems/cli) to update your local aliases file:
+```
+$ terminus auth login
+$ terminus sites aliases
+```
+Replace `database.sql` with the path to your local `.sql` archive and run:
 ```
 export SITENAME='your-site'
 export ENV="dev"
-$(drush @pantheon.$SITENAME.$ENV sql-connect) < your-local-site-db-dump.sql
+$(drush @pantheon.$SITENAME.$ENV sql-connect) < database.sql
 ```
 
-### Use the Dashboard and Terminal
+### Import with MySQL CLI
 
-1. Go to your site's Dev environment. Get the MySQL CLI connection by clicking the **Connection Info** tab. The connection string will look something like this:  
+1. From the Dev environment on the site Dashboard, click **Connection Info** and copy the connection string. It will look similar to this:
 
  ```
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
  ```
-2. In your command shell, navigate to the directory containing your SQL export. Place the MySQL connection information there, but add the following to the end:
-`< {database\_dump\_file.sql}`
+2. From terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and ammend it with:
+`< database.sql`
 Your command will now look like:
 
  ```
- mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database\_dump.sql
+ mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
 3. After you run the command, the .sql file is imported into your Pantheon Dev database.  
+
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard, and you are good to go.
