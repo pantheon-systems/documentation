@@ -36,16 +36,5 @@ After the configuration is complete, the new connection will available on the My
 ## Connect to the Database
 
 At this point, you are all set and can administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
-
-## Troubleshooting
-
-### Database Credentials are Invalid
-
-The database credentials are updated whenever a server is migrated or updated. If you notice the connection fails, please be sure to verify that you have the current connection information for the environment. If not, copy the new information from the site's Dashboard.<br />
-![](/source/docs/assets/images/desk_images/224670.png)​
-
-### Database is Reaped
-
-To conserve resources, environments are spun down after about two hours of inactivity. If your site is in sleep mode, you may get the following error:<br />
-![](/source/docs/assets/images/desk_images/224763.png)​<br />
-Go to the environment's URL in your browser to "wake up" the reaped site. Once the page has loaded, try to connect again and the database should be accessible. For more information, see [Known Limitations](/docs/articles/sites/known-limitations).
+## Troubleshooting MySQL Connections
+See [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases).
