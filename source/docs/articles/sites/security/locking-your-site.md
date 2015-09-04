@@ -4,8 +4,6 @@ description: Learn how to keep your Drupal or WordPress site hidden from the pub
 category:
   - getting-started
   - drupal
-  - htpasswd
-  - apache
 keywords: lock, password protect, lock site, password protect site, locked, lock environment, password protection, unlock a site, unlock an environment, remove password protection, htpasswd
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
