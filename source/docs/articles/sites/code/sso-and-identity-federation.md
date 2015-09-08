@@ -14,7 +14,7 @@ Use SSL certificates for encrypted secure communication with externally hosted s
 ## Two-Factor Authentication
 Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in.
 
-We strongly recommend using SAML (both for sites and the Dashboard) and OneLogin. Learn more about [two-factor authentication](/docs/guides/two-factor-authentication/).
+We strongly recommend using SAML, both for sites and the Dashboard. Learn more about [two-factor authentication](/docs/guides/two-factor-authentication/).
 
 ## LDAP and LDAPS (LDAP over SSL)
 
