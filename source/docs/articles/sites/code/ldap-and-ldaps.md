@@ -10,9 +10,11 @@ keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, 
 
 ## LDAP as a Consumer  
 
-Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported. For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
-
-LDAP provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication and authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon). However, we do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach is SAML (both for sites and the Dashboard) and OneLogin. Learn more about [two-factor authentication](/docs/guides/two-factor-authentication/).
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="https://pantheon.io/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
+</div>
+LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported. For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.  
 
