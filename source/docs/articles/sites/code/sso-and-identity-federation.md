@@ -11,6 +11,11 @@ Pantheon’s flexible infrastructure does not restrict protocols or ports used f
 
 Use SSL certificates for encrypted secure communication with externally hosted servers for authentication.
 
+## Two-Factor Authentication
+Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in.
+
+We strongly recommend using SAML (both for sites and the Dashboard) and OneLogin. Learn more about [two-factor authentication](/docs/guides/two-factor-authentication/).
+
 ## LDAP and LDAPS (LDAP over SSL)
 
 Both LDAP and LDAPS are supported on Pantheon. For more information, see [LDAP and LDAPS on Pantheon](/docs/articles/sites/code/ldap-and-ldaps/).
