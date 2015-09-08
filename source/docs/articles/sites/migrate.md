@@ -15,7 +15,7 @@ In this phase, you will create an archive of your site. Archives can be stored i
 
 You’ll need to package up your:
 
-- **Codebase** - all executable code, including Core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see the [Drupal](/docs/articles/sites/migrate/export-an-existing-drupal-site#manually-create-archive) or [WordPress](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives) export documentation.
+- **Codebase** - all executable code, including Core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [Drupal](/docs/articles/sites/migrate/export-an-existing-drupal-site#manually-create-archive) or [WordPress](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives) export documentation.
 
 - **Database** - a single .sql dump, contains the content and active state of the site's configurations.
 
