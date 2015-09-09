@@ -5,7 +5,8 @@ category:
   - developing
 authors:
   - erikmathy
-date: 2/25/2015
+  - rvtraveller
+date: 9/8/2015
 ---
 Email is a necessity when running a website, whether it’s used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
 
@@ -15,19 +16,17 @@ One of the most common reasons that email gets blocked is because it originates 
 
 [SendGrid](https://sendgrid.com) has a lot of things going for it, all of which do the hard work for you when it comes to how mail is managed on your site. It can handle massive email campaigns while providing highly detailed and flexible reporting, along with the ability to scale and increase deliverability.
 
-For smaller sites with less traffic, it also allows up to 400 free emails per day. Regardless of your situation, SendGrid has you covered!
+For smaller sites with less traffic, it also allows up to 400 free emails per day. Regardless of your situation, SendGrid has you covered.
 
 ## Create a SendGrid Account
 
 As a SendGrid partner, we offer Pantheon users a discount on higher-volume plans. Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a free or paid package that meets your business needs. If you’re going for the free plan to test the service out, you won’t have to provide any payment details.
 
-![SendGrid sign up form](/source/docs/assets/images/sendgrid-signup.png)​
-
-After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/marketing/login). From within the Account Settings page, click on **Manage Multiple User Credentials**.
+After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login). From within the Settings menu, click **Credentials**.
 
 ![SendGrid Multiple User setup](/source/docs/assets/images/sendgrid-multiple-users.png)
 
-This is where you can create site specific credentials so that sites have their own unique access to your SendGrid features and mail. Once you have created your site's credentials, and allowed the desired access (Web, API, and Mail), go to the applicable section below for the CMS your site is running.
+This is where you can create site specific credentials so that sites have their own unique access to your SendGrid features and mail. Once you have created your site's credentials, and allowed the desired access (UI/API and Mail), go to the applicable section below for the CMS your site is running.
 
 ## WordPress
 
@@ -72,7 +71,7 @@ Password: Your site's SendGrid password
 
 Include a valid From address and name for the sender within the email options section.
 
-After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid. You can also send a test email from the configuration page and watch it safely arrive in your inbox shortly thereafter.
+After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid. You can also send a test email from the configuration page and watch it safely arrive in your inbox shortly.
 
 ## Deploy Drupal SendGrid Configuration in Code
 
@@ -95,11 +94,7 @@ Using a code block like that will ensure that SendGrid is enabled wherever that 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
-First, log into [SendGrid](https://sendgrid.com/marketing/login) and select **Email Activity**.
-
-![SendGrid logged in user navigation](/source/docs/assets/images/sendgrid-user-navbar.png)​
-
-You will be taken to a page with a simple form marked Search by email. Enter the email address, and click **Search**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the **Search Options** link.
+First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a simple form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
 ![SendGrid email search options](/source/docs/assets/images/sendgrid-search-options.png)​
 
@@ -108,4 +103,4 @@ You can explore the Statistics and Email Reports from within your site's account
 
 ## Congratulations!
 
-You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. When you're ready to add advanced features like click and open tracking, access your [SendGrid account](https://sendgrid.com/marketing/login) and [upgrade plans](https://sendgrid.com/partners/pantheon). If you have questions at any point, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us). Or check out SendGrid’s [Email Infrastructure Guide](http://resources.sendgrid.com/email-infrastructure-guide/) for more advanced tips on how to create and publish DNS records for increased deliverability.
+You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. When you're ready to add advanced features like click and open tracking, access your [SendGrid account](https://sendgrid.com/login) and [upgrade plans](https://sendgrid.com/partners/pantheon). If you have questions at any point, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us). Or check out SendGrid’s [Email Infrastructure Guide](http://resources.sendgrid.com/email-infrastructure-guide/) for more advanced tips on how to create and publish DNS records for increased deliverability.
