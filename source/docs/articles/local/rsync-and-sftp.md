@@ -115,13 +115,17 @@ $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserv
 ### Upload a Directory to Pantheon
 If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
+<div class="alert alert-danger" role="alert">
+<h4>Warning</h4>
+Always use the `temp-dir flag` when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</div>
+
 ```nohighlight
 $: export ENV=test
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 ### Upload a Single File to Pantheon
-This example shows how to upload the logo.png file into a Pantheon site's theme folder.
+This example shows how to upload the logo.png file into a Pantheon site's theme folder. 
 
 ```nohighlight
 $: export ENV=dev
