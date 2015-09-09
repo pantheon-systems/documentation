@@ -16,15 +16,13 @@ One of the most common reasons that email gets blocked is because it originates 
 
 [SendGrid](https://sendgrid.com) has a lot of things going for it, all of which do the hard work for you when it comes to how mail is managed on your site. It can handle massive email campaigns while providing highly detailed and flexible reporting, along with the ability to scale and increase deliverability.
 
-For smaller sites with less traffic, it also allows up to 400 free emails per day. Regardless of your situation, SendGrid has you covered!
+For smaller sites with less traffic, it also allows up to 400 free emails per day. Regardless of your situation, SendGrid has you covered.
 
 ## Create a SendGrid Account
 
 As a SendGrid partner, we offer Pantheon users a discount on higher-volume plans. Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a free or paid package that meets your business needs. If you’re going for the free plan to test the service out, you won’t have to provide any payment details.
 
-![SendGrid sign up form](/source/docs/assets/images/sendgrid-signup.png)​
-
-After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login). From within the Settings menu, click on **Credentials**.
+After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login). From within the Settings menu, click **Credentials**.
 
 ![SendGrid Multiple User setup](/source/docs/assets/images/sendgrid-multiple-users.png)
 
@@ -73,7 +71,7 @@ Password: Your site's SendGrid password
 
 Include a valid From address and name for the sender within the email options section.
 
-After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid. You can also send a test email from the configuration page and watch it safely arrive in your inbox shortly thereafter.
+After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid. You can also send a test email from the configuration page and watch it safely arrive in your inbox shortly.
 
 ## Deploy Drupal SendGrid Configuration in Code
 
@@ -96,11 +94,7 @@ Using a code block like that will ensure that SendGrid is enabled wherever that 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
-First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**.
-
-![SendGrid logged in user navigation](/source/docs/assets/images/sendgrid-user-navbar.png)​
-
-You will be taken to a page with a simple form marked Search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the **Colorful Dots** near the top right corner.
+First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a simple form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
 ![SendGrid email search options](/source/docs/assets/images/sendgrid-search-options.png)​
 
