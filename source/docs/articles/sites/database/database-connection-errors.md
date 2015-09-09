@@ -70,3 +70,6 @@ This error shouldn’t cause any issues for your site:
 ```
 Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist' in /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc:2171 Stack trace: #0 /srv/bindings/7xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2171): PDOStatement->execute(Array) #1 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(683): DatabaseStatementBase->execute(Array, Array) #2 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2350): DatabaseConnection->query('SELECT expire, ...', Array, Array) #3 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(167): db_query('SELECT expire, ...', Array) #4 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(146): lock_may_be_available('schema:runtime:...') #5 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc(433): ...
 ```
+
+## See Also
+- [Troubleshooting MySQL Connections](/docs/articles/local/accessing-mysql-databases/#troubleshooting-mysql-connections)
