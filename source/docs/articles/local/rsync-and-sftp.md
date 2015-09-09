@@ -126,7 +126,7 @@ This example shows how to upload the logo.png file into a Pantheon site's theme 
 ```nohighlight
 $: export ENV=dev
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
+$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
 ## Known Issues
 
