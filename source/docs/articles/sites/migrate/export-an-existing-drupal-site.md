@@ -27,6 +27,8 @@ To log back into your imported site that is in maintenance mode, just go to /use
 
 <div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
+## Create Archive Using Backup and Migrate
+Drupal users can create single-file archives for sites hosted elsewhere or locally with the [Backup and Migrate](https://www.drupal.org/project/backup_migrate) module. When creating the archive, choose to backup your **entire site (code, files, & DB)**. Download the archive and/or send it to NodeSquirrel for a publicly accessible URL.
 
 ## Create Archive Using Drush
 

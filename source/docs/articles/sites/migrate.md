@@ -71,9 +71,7 @@ File size limits are per archive. Providing three files instead of one effective
 Import code, database, and files after creating the site using a combination of command-line tools (git, mysql-cli, and rsync) or with Git and the site dashbord's workflow tool.
 
 ### Create Single-file Archives
-Migrations using the importer, for sites that can be packaged with a total archived size less than 500MB are able to use single-file archives during the import process. Users can create these archives with [drush](/docs/articles/sites/migrate/export-an-existing-drupal-site#create-archive-using-drush) for Drupal sites and  [Plugins](/docs/articles/sites/migrate/export-an-existing-wordpress-site#export-wordpress-via-plugins) for WordPress.
-
-Drupal users can create single-file archives for sites hosted elsewhere or locally with the [Backup and Migrate](https://www.drupal.org/project/backup_migrate) module. When creating the archive, choose to backup your **entire site (code, files, & DB)**. You can choose to download the archive and/or send it to NodeSquirrel for a publicly accessible URL. 
+Migrations using the importer, for sites that can be packaged with a total archived size less than 500MB are able to use single-file archives during the import process. Users can create these archives with [drush](/docs/articles/sites/migrate/export-an-existing-drupal-site#create-archive-using-drush) or [Backup and Migrate](/docs/articles/sites/migrate/export-an-existing-drupal-site#create-archive-using-backup-and-migrate) for Drupal sites and  [Plugins](/docs/articles/sites/migrate/export-an-existing-wordpress-site#export-wordpress-via-plugins) for WordPress.
 
 ### Create Separate Archives of Code, Database, and Files
 
