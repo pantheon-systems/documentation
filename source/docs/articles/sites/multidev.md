@@ -55,6 +55,10 @@ You can also create an environment for an existing Git branch. Content can be cl
 
 First, create a branch locally and push it to Pantheon. Then create a Multidev environment for the branch:
 
+<div class="alert alert-danger" role="alert">
+<h4>Notice</h4>
+Branch names must be all lowercase, and less than 11 characters to be used for Multidev creation.</div>
+
 1. From your Site Dashboard, select **Multidev**.  
 2. Click **Git Branches**, and select **Create Environment** next to the branch name.
 
