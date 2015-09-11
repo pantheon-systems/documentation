@@ -18,7 +18,25 @@ use Behat\Gherkin\Node\PyStringNode,
  */
 class FeatureContext extends MinkContext
 {
-
+    /**
+     * @Then /^I should see the css selector "([^"]*)"$/
+     * @Then /^I should see the CSS selector "([^"]*)"$/
+     */
+    public function iShouldSeeTheCssSelector($css_selector)
+    {
+        $element = $this->getSession()->getPage()->find("css", $css_selector);
+        if (empty($element)) {
+            throw new \Exception(sprintf("The page '%s' does not contain the css selector '%s'", $this->getSession()->getCurrentUrl(), $css_selector));
+        }
+    } 
+    /**
+     * @When /^I send a ([^"]*) request to "([^"]*)"$/
+     */
+    public function iSendARequestTo($method, $url)
+    {
+        $client = $this->getSession()->getDriver()->getClient();
+        $client->request($method, $url);
+    }
     /**
      * Verify contributor CTA button
      *
