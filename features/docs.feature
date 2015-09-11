@@ -2,10 +2,10 @@ Feature: Docs
 
   Scenario Outline: Homepage 1 - Verify 200 status code for pages linked from the homepage
     Given I am on the homepage
-    When I send a GET request to "<end-point>"
-    And the response status code should be 200
+    When I send a GET request to "<page>"
+    Then the response status code should be 200
   Examples:
-    | end-point                                                                            |
+    | page                                                                                 |
     | articles                                                                             |
     | guides                                                                               |
     | changelog                                                                            |
@@ -21,29 +21,26 @@ Feature: Docs
     And I should see "All work is licensed"
     But I should not see "Join our weekly training."
 
-  Scenario: Search
+  Scenario Outline: Search
     Given I am on the homepage
     Then I should see the CSS selector "#search"
-    When I follow "All Articles"
+    Given I am on "<page>"
     Then I should see the CSS selector "#search"
-    Given I am on "articles/required-reading-essential-pantheon-documentation"
-    Then I should see the CSS selector "#search"
-    Given I am on the homepage
-    And I follow "Guides"
-    Then I should see the CSS selector "#search"
-    Given I am on "guides/automated-testing-wordpress-behat"
-    Then I should see the CSS selector "#search"
-    Given I am on the homepage
-    And I follow "Changelog"
-    Then I should see the CSS selector "#search"
-    Given I am on "changelog/2015-09-September"
-    Then I should see the CSS selector "#search"
+  Examples:
+    | page                                                                                 |
+    | articles                                                                             |
+    | articles/required-reading-essential-pantheon-documentation                           |
+    | guides                                                                               |
+    | guides/automated-testing-wordpress-behat                                             |
+    | changelog                                                                            |
+    | changelog/2015-09-September                                                          |
+
 
   @javascript
   Scenario: CTA - All links present
     Given I am on the homepage
     When I follow "Required Reading"
-    Then I press "Contribute to Docs"
-    And I should see "Edit This Doc"
+    And I press "Contribute to Docs"
+    Then I should see "Edit This Doc"
     And I should see "Report Doc Issue"
     And I should see "Suggest New Doc"
