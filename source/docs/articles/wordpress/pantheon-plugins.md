@@ -31,4 +31,4 @@ The [Pantheon Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) p
 
 ## See Also
 
-You can download and install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin to back your WP Object cache with Redis. This provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on WordPress](/docs/articles/sites/installing-redis-on-wordpress).
+You can download and install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin to back your WP Object cache with Redis. This provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on WordPress](/docs/articles/wordpress/installing-redis-on-wordpress).

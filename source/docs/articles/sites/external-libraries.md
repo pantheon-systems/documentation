@@ -105,7 +105,7 @@ If you need a library not listed on this page, submit a support ticket including
 All libraries will evaluated by Pantheon's Operations Team on a case-by-case basis.
 
 #### Will you setup and configure the module/plugin for me?
-No. This is not within our [scope](docs/articles/scope-of-support/). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
+No. This is not within our [scope](/docs/articles/scope-of-support/). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
 
 #### How long does the process take?
 This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.  

@@ -93,7 +93,7 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
 ### Varnish
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/)
+**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
 <hr>
 #### Views data export
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](#using-the-/tmp-directory) section below.

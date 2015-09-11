@@ -85,4 +85,4 @@ Right-click anywhere on the page, and select the **Inspect Element** option.
 
 
 ## See Also
-- [Drupal Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-7-performance-and-caching-settings/)
+- [Drupal Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
