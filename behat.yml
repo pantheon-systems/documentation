@@ -4,3 +4,4 @@ default:
         Behat\MinkExtension\Extension:
             base_url: http://localhost:8000/docs/
             goutte: ~
+            selenium2:
