@@ -1,7 +1,8 @@
 # behat.yml
 default:
     extensions:
-        Behat\MinkExtension\Extension:
+        Behat\MinkExtension:
             base_url: http://localhost:8000/docs/
             goutte: ~
             selenium2:
+                browser: "chrome"

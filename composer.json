@@ -1,19 +1,22 @@
 {
-    "name": "Pantheon Systems",
+    "name": "pantheon-systems/documentation",
     "description": "Documentation for Pantheon",
     "keywords": ["pantheon", "drupal", "wordpress"],
-    "homepage": "https://www.getpantheon.com/",
+    "homepage": "https://pantheon.io/docs/",
     "type": "project",
+    "license": "CC-BY-4.0",
+    "license": "MIT",
+    "minimum-stability": "alpha",
     "require": {
         "drush/drush": "6.2.0",
         "sculpin/sculpin": "2.*@dev",
-        "dflydev/embedded-composer-console": "@dev",
-        "dflydev/embedded-composer-core": "@dev",
-        "composer/composer": "@dev",
-        "behat/behat": "2.5.*@stable",
-        "behat/mink": "1.5.*@stable",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "behat/mink-selenium2-driver": "1.1.0"
+        "dflydev/embedded-composer-console": "1.0.*@dev",
+        "dflydev/embedded-composer-core": "1.0.*@dev",
+        "behat/behat": "3.0.*@stable",
+        "behat/mink": "1.6.*@stable",
+        "behat/mink-extension": "2.0.*@stable",
+        "behat/mink-goutte-driver": "1.1.*@stable",
+        "behat/mink-selenium2-driver": "1.2",
+        "composer/composer": "^1.0@alpha"
     }
 }
