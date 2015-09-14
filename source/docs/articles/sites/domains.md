@@ -92,6 +92,11 @@ The provided IP address resolves to our load-balancers. When a request comes in,
 ### A contrib module that I use for my Drupal site does not support IPv6; how should I proceed?
 [Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
 
+### Does Pantheon do any html domain substituion?
+Yes, for WordPress sites (which are more likely to contain hard-coded linked to other domains in their database), Pantheon will replace platform-assigned domains (i.e. `*.pantheon.io` and `*.gotpantheon.com`) with custom domains in the HTML body, when the HTML page is requested via the custom domain.  This prevents loading assets using different domain names representing the same site.  
+
+For example, when requesting `http://mysite.com` in a browser, we would replace any asset (images, CSS, JS) URL domains from `live-mysite.pantheon.io` to `mysite.com`.
+
 ### My site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
 Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when configuring the domain's DNS. Only create the CNAME record for the www subdomain and the A record for the bare domain.
 ##See Also
