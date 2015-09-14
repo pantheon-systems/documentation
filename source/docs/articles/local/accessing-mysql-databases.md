@@ -27,6 +27,57 @@ As each database server is in the cloud, the credentials will occasionally be up
 
 There's a wide array of MySQL clients that can be used, including [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/), [Sequel Pro](http://www.sequelpro.com/download), [Navicat](http://www.navicat.com/download), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
 
+### Open Sequel Pro Database Connection
+Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](https://github.com/pantheon-systems/cli) and [Drush](/docs/articles/local/drupal-drush-command-line-utility):
+```
+#!/bin/sh
+
+# exit on any errors:
+set -e
+
+if [ $# -lt 1 ]
+then
+  echo "Usage: $0 @pantheon-alias"
+  exit 1
+fi
+
+# Path to drush goes here:
+DRUSH='/usr/local/bin/drush'
+
+# Authenticate with Terminus
+PANTHEON_USER='XXXX'
+PANTHEON_PASS='XXXX'
+terminus auth login $PANTHEON_USER --password=$PANTHEON_PASS
+
+# see the following file:
+TEMPLATE='spf-template.spf'
+
+# may need to change this:
+TMP_SPF='/tmp/tmp.spf'
+
+# Update aliases
+terminus sites aliases
+
+echo "fetching connection string"
+CONNECTION_STRING=`$DRUSH $1 sql-connect`
+echo $CONNECTION_STRING
+DATABASE=`echo $CONNECTION_STRING | sed -e 's/.*--database=\([^\\ ]*\).*/\1/g'`
+HOST=`echo $CONNECTION_STRING | sed -e 's/.*--host=\([^\\ ]*\).*/\1/g'`
+PORT=`echo $CONNECTION_STRING | sed -e 's/.*--port=\([^\\ ]*\).*/\1/g'`
+PASSWORD=`echo $CONNECTION_STRING | sed -e 's/.*--password=\([^\\ ]*\).*/\1/g'`
+USER=`echo $CONNECTION_STRING | sed -e 's/.*--user=\([^\\ ]*\).*/\1/g'`
+
+# This is for Sequel Pro:
+eval "echo \"$(< $TEMPLATE)\""
+# For some reason, Sequel Pro or Open do not behave the same way given the -f
+# flag compared to opening a file from file system. So, we write to a tmp file.
+eval "echo \"$(< $TEMPLATE)\"" > $TMP_SPF
+
+# Swap this out to fit your system:
+open $TMP_SPF
+```
+
+Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c)!
 ## SSH Tunneling
 
 Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to set up tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/).
