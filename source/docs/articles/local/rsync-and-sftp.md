@@ -117,7 +117,7 @@ If you need to upload the files directory from a local installation called Foo i
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Always use the `temp-dir flag` when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</div>
+Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</div>
 
 ```nohighlight
 $: export ENV=test
