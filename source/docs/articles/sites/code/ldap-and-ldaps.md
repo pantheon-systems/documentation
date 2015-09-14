@@ -10,9 +10,11 @@ keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, 
 
 ## LDAP as a Consumer  
 
-Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported.
-
-LDAP provides access and maintenance of a distributed directory storing organized sets of records. LDAP is often used for single sign-on authentication, and many sites on Pantheon use LDAP and LDAPS for authentication. Authentication requests will originate from Pantheon to the LDAP server used (outbound from Pantheon).  
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="https://pantheon.io/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
+</div>
+LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported. For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.  
 
@@ -24,15 +26,15 @@ Pantheon does not support IP authentication schemes. We recommend certificate-ba
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
 
 ### WordPress
-WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It will provide you with  all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway/) users.
+WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It provides you with all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/articles/sites/code/pantheon-enterprise-gateway/) users.
 
-##OpenLDAP Configuration for Client Certificates for LDAPS
+## OpenLDAP Configuration for Client Certificates for LDAPS
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
 If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/drupal/private-files) in your codebase: `SITEROOT/private`.
 
-Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  
+Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 Ensure that your certificates do **not** have a password. There is an extremely strong probability that these certificates are different than the certificates used to secure a site environment using HTTPS. If you're unsure, check with your sever administrator to make sure that you are using the correct TLS certificates to communicate with your LDAP server.
 
@@ -156,8 +158,3 @@ foreach ($settings as $host => $setting) {
   var_dump($entries);
 }
 ````
-
-##See Also
-For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
-
-For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
