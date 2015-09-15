@@ -134,7 +134,25 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 **Database** - a single .sql dump that contains the content and active state of the site's configurations.
 
-You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your sql file much smaller and your import that much quicker.
+You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your .sql file much smaller and your import that much quicker.
+
+### Connect via Drush
+1. Set up the aliases by running the three commands shown below:
+
+ ```
+ terminus auth login
+ terminus sites aliases
+ drush cc drush
+ ```
+2. Use Drush sql-connect to generate the MySQL command line options.
+
+ ```
+ export SITENAME='your-site'
+ export ENV="dev"
+ $(drush @pantheon.$SITENAME.$ENV sql-connect) < your-local-site-db-dump.sql
+ ```
+
+### Connect via wp-cli
 
 ### Import with Drush `sql-connect`
 Use [Terminus](https://github.com/pantheon-systems/cli) to update your local aliases file:

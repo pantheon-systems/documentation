@@ -37,7 +37,7 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
         <td align="left">Yes</td>
 			</tr>
 			<tr>
-        <td align="left">Enterprise</td>
+        <td align="left">Elite</td>
         <td align="left">Yes</td>
 			</tr>
 			<tr>

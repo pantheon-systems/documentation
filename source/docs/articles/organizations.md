@@ -5,7 +5,8 @@ category:
 - managing
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management
 ---
-Organizations on Pantheon bring together users, sites, custom upstreams,  support, and Multidev to provide administrators with the tools needed to effectively manage a large number of sites. Enterprise clients should contact their sales representatives for service levels and feature availability. Partner organizations can [sign up for free](https://pantheon.io/agency) and learn more about plans offered in our [Partner Program Guide](http://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf).
+Organizations on Pantheon bring together users, sites, custom upstreams,  support, and Multidev to provide administrators with the tools needed to effectively manage a large number of sites. Partner organizations can [sign up for free](https://pantheon.io/agency) and learn more about plans offered in our [Partner Program Guide](http://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf).
+
 ## The Organization Dashboard
 Access the [Organization Dashboard](/docs/articles/organizations/pantheon-for-agencies/#tour-the-dashboard) in the following ways:
 
@@ -15,7 +16,7 @@ Access the [Organization Dashboard](/docs/articles/organizations/pantheon-for-ag
 
 
 ## Multidev
-All sites associated with any Partner organization will have [Multidev](/docs/articles/sites/multidev) enabled with up to 10 environments at their disposal. All organization members will have access to these environments, however team members of a site outside the organization will not.
+All sites associated with any Partner or Enterprise organization will have [Multidev](/docs/articles/sites/multidev) enabled with up to 10 environments at their disposal. All organization members will have access to these environments; however, team members of a site outside the organization will not.
 
 ## Change Management
 

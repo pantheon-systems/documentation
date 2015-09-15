@@ -5,7 +5,7 @@ category:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live
 ---
-For Enterprise clients, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
+For clients with an Elite plan, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
 
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 

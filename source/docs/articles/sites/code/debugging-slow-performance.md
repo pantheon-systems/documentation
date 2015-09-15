@@ -127,4 +127,4 @@ Of course, too much site traffic can be a problem if you just don't have enough 
 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.  
 
-If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/docs/articles/sites/settings/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Enterprise](https://pantheon.io/pricing#enterprise) is a good option.
+If you’ve reached this point, it’s probably time to consider upgrading your [Pantheon plan](/docs/articles/sites/settings/selecting-a-plan/). We have a number of self-service options for scaling to your needs, but if you’ve already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
