@@ -40,7 +40,7 @@ For Sandbox sites, within the Team modal, the site owner can click **Make Owner*
 
 ## Managing an Enterprise Site's Team
 
-Enterprise sites with Change Management can add users as either Team Members or Developers to the site.
+Enterprise sites can add users as either Team Members or Developers to the site.
 
 ### Add a User to the Site
 1. At the Site Dashboard, click **Team**.
