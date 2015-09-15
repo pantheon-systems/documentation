@@ -61,23 +61,23 @@ This does not solve all problems that may arise, but it should take care of most
 In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 
 ### Resolve Conflicts Locally With Drupal 8
-From within an up-to date Git clone on your local machine:
+From within an up-to-date Git clone on your local machine:
 ```bash
 git pull git://github.com/pantheon-systems/drops-8.git master
 # resolve conflicts
 git push origin master
 ```
-You can add the -Xtheirs flag if you want to accept all changes.
+Add the -Xtheirs flag if you want to accept all changes.
 
 ### Resolve Conflicts Locally With Drupal 7
 
-From within an up-to date Git clone on your local machine:
+From within an up-to-date Git clone on your local machine:
 ```bash
 git pull git://github.com/pantheon-systems/drops-7.git master
 # resolve conflicts
 git push origin master
 ```
-You can add the `-Xtheirs` flag if you want to accept all changes.
+Add the `-Xtheirs` flag if you want to accept all changes.
 
 ### Resolve Conflicts Locally With Drupal 6
 
