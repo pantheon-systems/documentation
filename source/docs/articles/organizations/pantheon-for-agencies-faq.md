@@ -34,9 +34,6 @@ When you or the administrators, team members, or developers in your agency [crea
 
 ## Support
 
-### Why does my Agency Organization have Change Management and Multidev, but not other Organizations I administer?
-All Partner, Ally, and Enterprise Organizations have Change Management and Multidev enabled by default.
-
 ### Why can't I access Multidev on my site when the Supporting Organization has the feature enabled?
 Only team members and administrators of an Supporting Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by upgrading to a Business or Elite plan. Team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
