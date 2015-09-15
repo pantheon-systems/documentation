@@ -16,20 +16,29 @@ Drush-savvy developers should also install and utilize [Terminus](/docs/articles
 Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
 ## Drush Versions
-Pantheon currently has Drush version 5.10.0 installed; Drush 5.x is compatible. Currently, Pantheon aliases are not Drush 6.x compatible, but we're working on it.
+Pantheon currently has Drush version 5.10.1 installed. You can run Drush 5.x, 7.x, and 8.x on your local installation to interact with your Pantheon Drupal installations. Pantheon alias files are not compatible with 6.x, however you can execute commands locally with this version by including the `--strict=0` option.
 
-You can run either Drush 5.x or 6.x on your local installation to interact with your Pantheon Drupal installations.
+For upgrade information, see [Introducing Drush 8](https://pantheon.io/blog/introducing-drush-8).
 
-###Known Issues
+#### Drush 7
+Create a new policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform. Our `hook_drush_sitealias_alter` function looks like this:
+```php
+function policy_drush_sitealias_alter(&$alias_record) {
+  // Fix pantheon aliases!
+  if ( isset($alias_record['remote-host']) &&
+      (substr($alias_record['remote-host'],0,10) == 'appserver.') ) {
+    $alias_record['path-aliases']['%drush-script'] = 'drush7';
+  }
+}
+```
 
-#### Drush 5
+With this policy file in place, you are able to use the latest version of Drush on Pantheon:
+```
+$ drush @pantheon.my-great-site.dev version
+Drush Version   :  7.0.0-rc1
+```
 
-Some Drush 5 commands need to be executed from outside the context of a local working Drupal installation.
-
-#### Drush 6
-
-If your local Drush installation is version 6, you'll need to execute most commands with the `--strict=0` option in order to parse Pantheon alias files.
-
+For more details, see our [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file) blog post.
 ## Install Drush Aliases Locally
 Adding Pantheon aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. There are two methods for obtaining the aliases:
 
@@ -253,7 +262,7 @@ $ drush @pantheon.SITENAME.ENV status
                         i
                         /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
                         i
- Drush version : 5.10.0
+ Drush version : 5.10.1
  Drush : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/drushrc.
  configuration php
 ```
@@ -286,7 +295,7 @@ $ drush @pantheon.SITENAME.ENV status
                            3.ini
                            /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php5
                            3.ini
- Drush version : 5.10.0
+ Drush version : 5.10.1
  Drush configuration : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/drus
                            hrc.php
  Drupal root : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/code
