@@ -36,3 +36,6 @@ User-agent: *
 Disallow: /
 ```
 To present an alternate robots.txt file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/articles/sites/domains#step-2-add-a-domain-to-a-site-environment) and the appropriate DNS record created.
+
+## See Also
+- [Enable HTTPS for Sites Using Customized Base Domains](/docs/articles/organizations/https-for-sites-using-customized-base-domains)
