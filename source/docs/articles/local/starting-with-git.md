@@ -88,9 +88,9 @@ Go back to your site's Dev tab in Pantheon, click the URL under "Development sit
 
 ## Troubleshooting
 
-### Git takes a long time to connect
+### Git Connection is Slow
 
-Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
+Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol results in the fastest connections. For OS X/Linux, add the following to your SSH config (~/.ssh/config):
 
     Host *.drush.in
         KexAlgorithms diffie-hellman-group1-sha1
