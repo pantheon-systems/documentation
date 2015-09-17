@@ -88,7 +88,7 @@ Select the appropriate framework below for your web application, then execute th
   <div role="tabpanel" class="tab-pane" id="d6">
   <pre><code>
   git pull git://github.com/pantheon-systems/drops-6.git master
-  # resolve other conflicts
+  # resolve conflicts
   git push origin master
   </code></pre>
   </div>
