@@ -15,5 +15,5 @@ This happens when you are trying to add it in while you're in SFTP mode. You nee
 1. On the Code tab of your Dashboard, click **Git**.  
 2. Create the file locally.  
 3. Open your terminal and run `git add .`.  
-4. Run `commit -m"enter a commit message`.  
+4. Run `commit -m "enter a commit message`.  
 5. Push the file by running `git push origin origin-name`.
