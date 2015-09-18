@@ -10,16 +10,16 @@ Drupal 8 includes the `sites/default/default.services.yml` configuration file to
 
 <div class="alert alert-danger">
 <h4>Warning</h4>
-Due to permission handling issues observed when using Git, we recommend creating the <code>services.yml</code> file via SFTP. For instructions, see <a href="/docs/articles/sites/code/developing-directly-with-sftp-mode">Developing on Pantheon Directly with SFTP Mode</a>.
+It is not possible to modify these permissions with Git. Users working via Git should finish up their code changes and briefly switch to <a href="/docs/articles/sites/code/developing-directly-with-sftp-mode">SFTP Mode</a> to change the permissions.
 </div>
 
 ## Create `services.yml`
 Using your preferred SFTP client, copy `sites/default/default.services.yml` into a new file named `sites/default/services.yml`. Do not simply rename the original file. The install script requires both files to present at the time of installation.
 
 ## Change Permissions for `sites/default`
-Depending on your client, use 'get info' or 'file attribute' to change permissions of the `sites/default` directory to 666 (Read and Write).
+Depending on your SFTP client, use 'get info' or 'file attribute' to change permissions of the `sites/default` directory to 777 (read + write + execute). Writable files, such as `services.yml`, should be changed to 666 (read + write).
 
-You can now upload the file and run the installation script as normal. These permissions will be set back to default after the script has finished.
+You can now upload the file and run the installation script as normal. These permissions will be set back to default after the script has finished. If you are modifying this file post installation, you will need to set the permissions back to the default (555 for directories, 444 for files) once you have made the desired changes.
 
 For more information, see the following [drupal.org](https://drupal.org) resources:
 - [Step 3: Create settings.php, services.yml and the files directory](https://www.drupal.org/documentation/install/settings-file)
