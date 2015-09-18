@@ -14,12 +14,12 @@ It is not possible to modify these permissions with Git. Users working via Git s
 </div>
 
 ## Create `services.yml`
-Using your preferred SFTP client, copy `sites/default/default.services.yml` into a new file named `sites/default/services.yml`. Do not simply rename the original file. The install script requires both files to present at the time of installation.
+Using your preferred SFTP client, copy `sites/default/default.services.yml` into a new file named `sites/default/services.yml`. Do not simply rename the original file. The install script requires both files to be present at the time of installation.
 
 ## Change Permissions for `sites/default`
 Depending on your SFTP client, use 'get info' or 'file attribute' to change permissions of the `sites/default` directory to 777 (read + write + execute). Writable files, such as `services.yml`, should be changed to 666 (read + write).
 
-You can now upload the file and run the installation script as normal. These permissions will be set back to default after the script has finished. If you are modifying this file post installation, you will need to set the permissions back to the default (555 for directories, 444 for files) once you have made the desired changes.
+You can now upload the file and run the installation script as normal. These permissions will automatically be set back to default after the script has finished. If you are modifying this file post installation, you will need to set the permissions back to the default (555 for directories, 444 for files) once you have made the desired changes.
 
 For more information, see the following [drupal.org](https://drupal.org) resources:
 - [Step 3: Create settings.php, services.yml and the files directory](https://www.drupal.org/documentation/install/settings-file)
