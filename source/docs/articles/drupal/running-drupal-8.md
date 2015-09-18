@@ -8,6 +8,10 @@ keywords: drupal, drupal 8
 
 Drupal 8 is currently in the beta phase of development in the [Drupal Core Release Cycle](https://www.drupal.org/core/release-cycle). During this phase, Drupal core developers work to improve the codebase by resolving all of the critical issues and tasks in the [Drupal issue queue](https://www.drupal.org/project/issues/drupal). Once all of the critical issues are completed, then the first release candidate of Drupal 8 will be available. A full release of Drupal 8 will be made once no new critical issues are found in a two week period. Follow the progress on the [Drupal 8 Release Countdown](https://drupalreleasedate.com/) which estimates when the Drupal 8.0 release will happen.
 
+## Going Live with Drupal 8
+
+Pantheon currently does not recommend running customer sites in production with Drupal 8. However, if you are doing a community or educational project with Drupal 8 that you would like to go live, please [contact us for a free live Drupal 8 site](https://pantheon.io/free-website-management-platform-beyond-hosting).
+
 ## Installing Drupal 8 on Pantheon
 
 Pantheon currently provides the latest Drupal 8 beta as a one click install through our [Drupal 8 Installation Page](https://dashboard.pantheon.io/products/drupal8/spinup):<br />
@@ -39,7 +43,3 @@ Pantheon currently supports using Drush with Drupal 8 on Pantheon. In order to u
 ## Using Drupal 8 Configuration Management on Pantheon
 
 Pantheon supports the [Drupal 8 Configuration Management system](https://www.drupal.org/documentation/administer/config) and defaults configuration into the sites/default/config directory for each Pantheon Drupal 8 site. Developers can export their configuration into that directory directly using Drush's config-export command or indirectly using Drupal's UI to download the configuration and then using SFTP/Git to place the configuration in sites/default/config. For more information on how this all works, check out Matt Cheney and David Strauss' presentation on [Drupal 8 CMI on Managed Workflow at Drupalcon Amsterdam](https://amsterdam2014.drupal.org/session/drupal-8-cmi-managed-workflow).
-
-## Going Live with Drupal 8
-
-Pantheon currently does not recommend running customer sites in production with Drupal 8. However, if you are doing a community or educational project with Drupal 8 that you would like to go live, please [contact us for a free live Drupal 8 site](https://pantheon.io/free-website-management-platform-beyond-hosting).
