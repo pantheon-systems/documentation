@@ -19,7 +19,9 @@ Using your preferred SFTP client, copy `sites/default/default.services.yml` into
 ## Change Permissions for `sites/default`
 Depending on your SFTP client, use 'get info' or 'file attribute' to change permissions of the `sites/default` directory to 777 (read + write + execute). Writable files, such as `services.yml`, should be changed to 666 (read + write).
 
-You can now upload the file and run the install script as normal. These permissions will automatically be set back to default after the install script has finished. If you are modifying this file post installation, you will need to set the permissions back to the default (555 for directories, 444 for files) once changes have been made.
+You can now upload the file and run the install script as normal. Permissions will automatically be set back to default after the install script has finished.
+
+If you are modifying post installation, you'll need to set the permissions back to default (555 for directories, 444 for files) once edits are complete. This file should be made non-writable for security concerns.
 
 For more information, see the following [drupal.org](https://drupal.org) resources:
 - [Step 3: Create settings.php, services.yml and the files directory](https://www.drupal.org/documentation/install/settings-file)
