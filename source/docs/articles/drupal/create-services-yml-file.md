@@ -8,7 +8,7 @@ keywords: drupal, services.yml, yml file
 ---
 Drupal 8 enables developers to define services used by core within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal 8 site.
 
-Core services should be defined within `sites/default/default.services.yml`. Module specific services should be defined within a separate `yml` file, located in the root directory of the respective module (`module_name.services.yml`).
+Core services should be defined within `sites/default/services.yml`. Module specific services should be defined within a separate `.yml` file, located in the root directory of the respective module (e.g. `module_name.services.yml`).
 ## Create and Modify `services.yml` via Git
 From within an up-to-date Git clone on your local environment, create the `services.yml` file inside the `sites/default` directory. Once edits are complete, commit and push the new file to the remote repository following standard Git workflows. For more instructions, see [Starting with Git](/docs/articles/local/starting-with-git/).
 ## Create and Modify `services.yml` via SFTP
