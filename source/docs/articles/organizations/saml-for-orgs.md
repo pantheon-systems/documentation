@@ -15,12 +15,11 @@ To upgrade to an Elite plan, or to add SAML SSO to an existing Elite plan, conta
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus
-Users in a SAML-enabled Pantheon organization will be unable to  authenticate using Terminus. The current workaround is to add a machine user outside of the organization, add it as a team member to individual sites, and authenticate normally. See planned work to add [Authentication via keys or tokens](https://github.com/pantheon-systems/cli/issues/291) to Terminus.
+Users in a SAML-enabled Pantheon organization are unable to authenticate using Terminus. The current workaround is to add a machine user outside of the organization, add it as a team member to individual sites, and authenticate normally. See planned work to add [Authentication via keys or tokens](https://github.com/pantheon-systems/cli/issues/291) to Terminus.
 
 ## Managing Users
 
-Pantheon organization administrators can [Manage sites and teams with the organization dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/). Automated user provisioning isn't available.
-
+Pantheon organization administrators can [manage sites and teams with the organization dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
