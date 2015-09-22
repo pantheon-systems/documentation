@@ -6,13 +6,20 @@ category:
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-SSO is available as an add-on for Enterprise Pantheon Organizations.
+SAML SSO is available as an add-on for Enterprise Pantheon Organizations.
 To upgrade to an Elite plan, or to add SAML SSO to an existing Elite plan, contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
 ## User Experience
 * User submits the Pantheon login form with email and any password, or the [SSO login form](https://dashboard.pantheon.io/sso) with just their email address.
 * User is redirected to the configured IdP.  
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
+
+## Terminus
+Users in a SAML-enabled Pantheon organization are unable to authenticate using Terminus. The current workaround is to add a machine user outside of the organization, add it as a team member to individual sites, and authenticate normally. See planned work to add [Authentication via keys or tokens](https://github.com/pantheon-systems/cli/issues/291) to Terminus.
+
+## Managing Users
+
+Pantheon organization administrators can [manage sites and teams with the organization dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
