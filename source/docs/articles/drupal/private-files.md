@@ -13,7 +13,9 @@ If you have not already created these directories, you will need to do that firs
 
 ## Private Files and Uploads In Drupal
 
-This can be done by setting your file-system settings to private. These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
+These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
+
+To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**. 
 
 ## Storing Private Keys and Certs
 
