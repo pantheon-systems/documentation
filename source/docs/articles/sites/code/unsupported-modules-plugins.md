@@ -57,10 +57,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Solution**: The alternative for now is to break up the files into smaller groups.
 <hr>
 #### Media: Browser Plus
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 #### Media: Filesystem
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 ### Mobile Tools
 **Issue**: Conflicts with Varnish. See [https://www.drupal.org/node/1976162#comment-7411366](https://www.drupal.org/node/1976162#comment-7411366).
@@ -74,7 +74,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 <hr>
 #### Plupload
-**Issue**: See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**: See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
@@ -88,7 +88,7 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
    ```
 <hr>
 #### Taxonomy CSV  
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 ### Varnish
 **Issue**: Conflicts with the existing platform configuration.
@@ -96,10 +96,10 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
 **Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
 <hr>
 #### Views data export
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 #### Webform export<br>
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the `/tmp` Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 <hr>
@@ -119,7 +119,7 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 
 For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/code/dynamic-outgoing-ip-addresses).
 
-## Using the `/tmp` Directory
+## Using the tmp Directory
 **Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
 
 <div class="alert alert-danger" role="alert">
