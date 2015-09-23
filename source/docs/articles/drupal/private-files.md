@@ -15,7 +15,7 @@ If you have not already created these directories, you will need to do that firs
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
-To configure, navigate to **Administration** >> **Configuration** >> **Media** >> **File System** and select **Private local files served by Drupal** as the default download method then click **Save Configuration**. 
+To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**. 
 
 ## Storing Private Keys and Certs
 
