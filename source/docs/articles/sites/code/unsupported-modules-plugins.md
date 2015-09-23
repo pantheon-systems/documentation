@@ -57,10 +57,17 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Solution**: The alternative for now is to break up the files into smaller groups.
 <hr>
 #### Media: Browser Plus
+<<<<<<< Updated upstream
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
 <hr>
 #### Media: Filesystem
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+=======
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+<hr>
+#### Media: Filesystem
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+>>>>>>> Stashed changes
 <hr>
 ### Mobile Tools
 **Issue**: Conflicts with Varnish. See [https://www.drupal.org/node/1976162#comment-7411366](https://www.drupal.org/node/1976162#comment-7411366).
@@ -74,7 +81,11 @@ We do not prevent you from installing and using these plugins/modules; however, 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 <hr>
 #### Plupload
+<<<<<<< Updated upstream
 **Issue**: See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+=======
+**Issue**: See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+>>>>>>> Stashed changes
 <hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
@@ -88,7 +99,11 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
    ```
 <hr>
 #### Taxonomy CSV  
+<<<<<<< Updated upstream
 **Issue**:  This module requires the use of the tmp directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+=======
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+>>>>>>> Stashed changes
 <hr>
 ### Varnish
 **Issue**: Conflicts with the existing platform configuration.
@@ -96,10 +111,17 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
 **Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
 <hr>
 #### Views data export
+<<<<<<< Updated upstream
 **Issue**: This module requires the use of the tmp directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
 <hr>
 #### Webform export<br>
 **Issue**:  This module requires the use of the tmp directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-/tmp-directory) section below.
+=======
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+<hr>
+#### Webform export<br>
+**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+>>>>>>> Stashed changes
 
 **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 <hr>
