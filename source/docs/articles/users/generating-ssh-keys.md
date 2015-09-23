@@ -30,12 +30,22 @@ Instructions for generating SSH keys are different for every platform. Select yo
  ssh-keygen
  ```
 2. Unless you're an advanced user, just press **enter** for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
-3. From the Terminal, output your SSH key to a file you can use:
+3. Copy the content from `~/.ssh/id_rsa.pub` to your clipboard.
 
+ Linux users must output the SSH key to a file:
  ```nohighlight
  cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
  ```
-4. Open the key_for_pantheon.txt file on your desktop, select all and copy. You're now ready to [add the key to your Pantheon account](/docs/articles/users/generating-ssh-keys/#add-the-key-to-your-pantheon-account).
+
+ Then open the key_for_pantheon.txt file on your desktop, select all and copy.
+
+ Mac users can execute the following to copy the SSH key in a single step:
+
+ ```nohighlight
+ pbcopy < ~/.ssh/id_rsa.pub
+ ```
+
+4. You're now ready to [add the key to your Pantheon account](/docs/articles/users/generating-ssh-keys/#add-the-key-to-your-pantheon-account).
 
 ## Windows / OpenSSH
 
