@@ -374,4 +374,5 @@ You can adjust your local settings to use Google's DNS (8.8.8.8) instead of the 
 Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
 
 ## Known Limitations
- [Migrate's support for spawning drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
+- [Migrate's support for spawning drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
+- For drush alias files you need to be a Team Member of the site to see it in your alias site list. This would also apply to Administrators in any type of organization, they are not automatically added to every site that is created.
