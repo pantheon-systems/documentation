@@ -64,6 +64,10 @@ $ terminus wp cron <your wp-cron command and switches here>
 
 All `terminus wp` commands require a site name and environment to operate.
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+If you have protected your site using the Security setting on your dashboard your terminus will be unable to execute cron and you may see Status Report errors on the dashboard.</div>
+
 
 ### Plugins
 
