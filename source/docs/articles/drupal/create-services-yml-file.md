@@ -25,6 +25,7 @@ You will need to set the permissions back to default (555 for directories, 444 f
 ## See Also
 
 View the following [Drupal.org](https://drupal.org) resources for more information:
+
 - [Create settings.php, services.yml and the files directory](https://www.drupal.org/documentation/install/settings-file)
 - [Services and dependency injection in Drupal 8](https://www.drupal.org/node/2133171)
 - [Service Tags](https://www.drupal.org/node/2239393)
