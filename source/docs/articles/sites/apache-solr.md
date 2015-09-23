@@ -76,7 +76,7 @@ Choose one or the the other and add it to your code base. Do not enable or confi
 
 One of the modules already included in every Pantheon Drupal site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, and Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
 
-Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Pantheon Apache Solr**.
+Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
  ![](/source/docs/assets/images/desk_images/192434.png)
 ### 4. Post the schema.xml Using the Pantheon Apache Solr Module
