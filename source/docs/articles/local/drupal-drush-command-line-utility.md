@@ -75,7 +75,7 @@ $ drush sa
 ```
 <div class="alert alert-info">
 <h4>Note</h4>
-You must be a <a href="/docs/articles/sites/team-management/#team-management">team member</a> of the site for it to be included within your alias file. Organization administrators will not see all associated sites within their alias file, but will see sites for which they are team members.
+You must be a <a href="/docs/articles/sites/team-management/#team-management">team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are team members. The alternative is to execute drush commands via <a href="/docs/articles/local/cli">Terminus</a> for sites in which you are not a direct team member.
 </div>
 ## Execute a Drush Command on a Pantheon Site Environment
 
