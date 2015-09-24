@@ -73,7 +73,10 @@ Once the Pantheon Drush aliases have been copied, verify that the site aliases a
 ```bash
 $ drush sa
 ```
-
+<div class="alert alert-info">
+<h4>Note</h4>
+You must be a <a href="/docs/articles/sites/team-management/#team-management">Team Member</a> of the site for it to be included within your alias file. Administrators of Organizations will not see all associated sites within their alias file, but will see sites for which they are Team Members.
+</div>
 ## Execute a Drush Command on a Pantheon Site Environment
 
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:
@@ -375,4 +378,3 @@ Currently, there is no way to manage Crontab on Pantheon. If you need a way to 
 
 ## Known Limitations
 - [Migrate's support for spawning drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
-- For drush alias files you need to be a Team Member of the site to see it in your alias site list. This would also apply to Administrators in any type of organization, they are not automatically added to every site that is created.
