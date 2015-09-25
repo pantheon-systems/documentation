@@ -5,7 +5,7 @@ category:
   - getting-started
 keywords: support, scope, customer support, getting started
 ---
-We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and view ticket response times, visit [Getting Support](/https://pantheon.io/docs/articles/getting-support).
+We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and view ticket response times, visit [Getting Support](https://pantheon.io/docs/articles/getting-support).
 
 - We don't touch client code.
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
