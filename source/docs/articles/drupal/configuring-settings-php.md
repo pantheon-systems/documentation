@@ -163,6 +163,9 @@ For information about table prefixes on Pantheon, see [Export an Existing Drupal
 
 Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once you have created a settings.php file, the settings.php area of the report should resolve to green.
 
+#### Can I edit settings.pantheon.php?
+No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
+
 ## Troubleshooting
 #### Request to a Remote API Does Not Return Expected Response
 
