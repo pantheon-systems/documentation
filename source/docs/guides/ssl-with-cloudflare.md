@@ -32,7 +32,7 @@ We recommend you take advantage of this feature as it frees you up from being ti
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target.
 
-As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains/SSL Tab](/docs/articles/sites/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
+As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/articles/sites/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
 
 ## CloudFlare Security Settings
 

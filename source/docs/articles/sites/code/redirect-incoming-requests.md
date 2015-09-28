@@ -1,6 +1,6 @@
 ---
 title: Redirect Incoming Requests
-description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
+description: Learn how to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
 category:
   - going-live
   - managing
@@ -58,11 +58,11 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
 
 ## Redirect to HTTPS
 
-### Require SSL for All Pages
+### Require HTTPS for All Pages
 
 If you'd like to put all traffic on your site under HTTPS (a best practice if you have an SSL cert), check for the `HTTP_X_SSL` code:
 
-    // Require SSL.
+    // Require HTTPS.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if (!isset($_SERVER['HTTP_X_SSL']) ||
@@ -73,13 +73,13 @@ If you'd like to put all traffic on your site under HTTPS (a best practice if yo
       }
     }
 
-### Require SSL for Specific Pages
+### Require HTTPS for Specific Pages
 
-If you don't want to have your whole site under HTTPS, we recommend using a secure subdomain (e.g. secure.yoursite.com). Mixed-mode secure sessions are vulnerable. There are also edge cases with caching that can create bugs with mixed-mode SSL. Putting the secure pages on a secure domain prevents confusion in caching between secure/insecure content.
+If you don't want to have your whole site under HTTPS, we recommend using a secure subdomain (e.g. secure.yoursite.com). Mixed-mode secure sessions are vulnerable. There are also edge cases with caching that can create bugs with mixed-mode HTTPS. Putting the secure pages on a secure domain prevents confusion in caching between secure/insecure content.
 
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
-    // Require SSL for admin pages.
+    // Require HTTPS for admin pages.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
@@ -92,11 +92,11 @@ You can implement a secure domain for a specific set of page with Drupal modules
       }
     }
 
-### Require SSL and Standardize Domain
+### Require HTTPS and Standardize Domain
 
-To use SSL everywhere and standardize on your domain, combine this kind of logic into a single block:
+To use HTTPS everywhere and standardize on your domain, combine this kind of logic into a single block:
 
-    // Require SSL, www.
+    // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
       if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
@@ -108,22 +108,22 @@ To use SSL everywhere and standardize on your domain, combine this kind of logic
       }
     }
 
-### Require SSL Everywhere Except Specific Pages
+### Require HTTPS Everywhere Except Specific Pages
 
-To use SSL for everything except some specific pages, such as an RSS feed:
+To use HTTPS for everything except some specific pages, such as an RSS feed:
 
-    // SSL logic.
+    // HTTPS logic.
     $redirect_domain = 'www.yoursite.com';
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
       $redirect_location = '';
-      // Do not require SSL for specific pages.
+      // Do not require HTTPS for specific pages.
       if (in_array($_SERVER['REQUEST_URI'], array('/rss.xml'))) {
-        // Check if SSL is enabled.
+        // Check if HTTPS is enabled.
         if (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] == 'ON') {
           $redirect_location = 'http://' . $redirect_domain . $_SERVER['REQUEST_URI'];
         }
       }
-      // Require SSL for everything else.
+      // Require HTTPS for everything else.
       else if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         $redirect_location = 'https://' . $redirect_domain . $_SERVER['REQUEST_URI'];
       }
