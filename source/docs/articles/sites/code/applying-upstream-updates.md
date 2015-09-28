@@ -7,16 +7,9 @@ category:
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---
 
-## Preparation
-
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
-- If the Development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
-- If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
-- Change the Development environment connection to Git. Note: Changing the connection mode to Git without committing code will delete those changes.
-
-## Apply a Core Update
-
 Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.
+
+## Apply Upstream Updates via the Dashboard
 
 1. Check the options you want to run after pulling the update.
 2. Click **Apply Updates**.
@@ -29,19 +22,13 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 8. Click **Visit Live Environment** to verify the update is live.
 ![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
 
-## About Core Updates
-Core updates appear on your Dashboard after review and testing by our team, usually within a week of release. These updates appear in your code workspace beneath the Connection Mode bar when they are available. Due to platform-wide codeserver caching settings, update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.
-
-Sometimes we will add new features to the Pantheon API module and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
-
-Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
-
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-Only use the one-click updates on the Dashboard to update your site's core. Do not update core using Drush or WP-CLI; you will overwrite your core.<br /><br />
-
-You cannot unpack a tarball from Drupal.org or WordPress.org; this will overwrite the core's auto-configuration feature and your site will lose its database connection.</div>
-
-If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+### Further Considerations
+- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+- If the Development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
+- If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
+- Core updates appear in your code workspace beneath the Connection Mode bar when they are available. Due to platform-wide codeserver caching settings, update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.
+- Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
+- Sometimes we will add new features to the Pantheon API module and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
 
 ## Debug Failed Merges
 
@@ -90,6 +77,8 @@ Conflicts can occur when the upstream you are trying to merge your code with has
 _"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - <u>Git Manual</u>
 
 ### Delete Merge Conflicts
+
+If you have overwritten core, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence:
 
