@@ -19,7 +19,7 @@ The following articles include techniques and configurations for settings.php on
 
 - [Reading Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration) (including domain\_access)
 - [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend)
-- [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring SSL)
+- [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests) (including WWW and non-WWW, requiring HTTPS)
 - [SSO and Identity Federation](/docs/articles/sites/code/sso-and-identity-federation) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development

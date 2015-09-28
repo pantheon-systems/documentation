@@ -48,17 +48,17 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 [Redis](/docs/articles/sites/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-[SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
+[HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
 <div class="alert alert-warning" role="alert">
 <h4>Note</h4>
-Only enable SSL for your Live environment. It is not needed in Dev or Test.</div>
+Only enable HTTPS for your Live environment. It is not needed in Dev or Test.</div>
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.
 
 
 ####Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have SSL enabled on Professional plans and above, you will need to re-enable SSL and re-load your SSL certificate into Pantheon. For more information, see [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have HTTPS enabled on Professional plans and above, you will need to re-enable HTTPS and re-load your SSL certificate into Pantheon. For more information, see [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/).
 
 ### Billing Tasks
 
