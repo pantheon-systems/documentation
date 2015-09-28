@@ -15,7 +15,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 - [All About Application Containers](/docs/articles/sites/all-about-application-containers/)
 - [Known Limitations](/docs/articles/sites/known-limitations/)  
-- [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication)
+- [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication)
 <div class="alert alert-info">
 <h4>Note</h4>
 Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the database, you may experience an error. Load the home page, and you can connect.
