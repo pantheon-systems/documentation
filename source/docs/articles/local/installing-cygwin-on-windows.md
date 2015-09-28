@@ -8,7 +8,7 @@ keywords: cygwin, install, linux tool, windows
 [Cygwin](http://cygwin.com/install.html) is a collection of tools which provide Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment, you can use Cygwin to generate the .key and .csr file that are needed to get a SSL certificate from a provider.
 
 ## Getting Started
-Before you begin, take a look at the [SSL documentation](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication). Once you have gone through the process of generating the command to get a valid CSR certificate for your domain, you can continue on to the steps below.
+Before you begin, take a look at the [HTTPS documentation](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication). Once you have gone through the process of generating the command to get a valid CSR certificate for your domain, you can continue on to the steps below.
 
 ## Download and Install Cygwin
 Download the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page.
@@ -27,7 +27,7 @@ Download the necessary packages by selecting "Direct Connection".<br />
 ### Select a Download Site
 Choose the nearest mirror site or most stable location. If for some reason the download does not work, you can always select another mirror.  
 
-### Install the SSL Package
+### Install the HTTPS Package
 Start Cygwin and paste in the command that you got from the wizard.  
 
 ### Generate the CSR
@@ -36,4 +36,4 @@ Once the installation is complete, start a Cygwin terminal session. Here you can
 ### Get the CSR Certificate
 Finally, you can navigate to the home directory within Cygwin's root and get a copy of both your private key and CSR certificate.
 
-See [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) to complete the rest of the installation process on Pantheon.
+See [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) to complete the rest of the installation process on Pantheon.
