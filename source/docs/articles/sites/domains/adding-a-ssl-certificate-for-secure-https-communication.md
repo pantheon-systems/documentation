@@ -1,27 +1,27 @@
 ---
-title: Enable SSL for Secure HTTPS Communication
-description: Learn how to implement SSL secure HTTPS communication and utilize a static IP address.
+title: Enable Secure HTTPS Communication
+description: Learn how to implement secure HTTPS communication and utilize a static IP address.
 category:
   - developing
   - launch
-keywords: secure https, https, ssl, security, encryption, enable ssl, enable ssl certificate, add ssl cert, add ssl, add https, add encryption, how to add an ssl, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types, ssl types, ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
+keywords: secure https, https, security, encryption, add ssl cert, add https, add encryption, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types,  ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
 ---
-SSL is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable SSL on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an SSL load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
+HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
-Adding SSL to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
+Adding HTTPS to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Enable SSL before updating DNS. SSL for custom domains is available for Professional plans and above.</div>
+Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above.</div>
 
-## Steps to Enable SSL
+## Steps to Enable HTTPS
 
-1. Generate RSA Key and CSR
-2. Get SSL certificate
-3. Load certificate into Pantheon environment
-4. Test SSL (optional, but recommended)
+1. Generate an RSA Key and CSR
+2. Get a certificate
+3. Load the certificate into Pantheon environment
+4. Test HTTPS (optional, but recommended)
 5. Update DNS
-6. Require SSL for all pages (optional, but recommended)
+6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
 
@@ -97,15 +97,13 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 ## Load Certificate into Pantheon
 
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
-2. Select **Domains / SSL**.
-2. Click **SSL**.
+2. Select **Domains/HTTPS**.
+2. Click **HTTPS**.
 3. Paste in the certificate information, including the header and footer, and click **Add Cert**.
-
- ![Site dashboard add SSL certificate](/source/docs/assets/images/manage_domains_ssl.png)​
 
 After submitting your certificates, you'll see a confirmation message:
 
-"HTTPS/SSL is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **SSL** tab. The **Domains** tab will be updated with new DNS recommendations.
+"HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -113,13 +111,13 @@ It may take up to 120 seconds to see the new IP address. If you're experiencing 
 
 ## DNS
 
-There are two options for configuring your DNS when you are using SSL. The platform has support for IPv4 (A records) and IPv6 (AAAA record).
+There are two options for configuring your DNS when you are using HTTPS. The platform has support for IPv4 (A records) and IPv6 (AAAA record).
 
 We recommend using an IPv4 address, unless you are familiar with and understand IPv6.
 
-## Test SSL
+## Test HTTPS
 
-Before you point your DNS to the custom IP address you received after enabling SSL, you can verify that the certificate is correct.
+Before you point your DNS to the custom IP address you received after enabling HTTPS, you can verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
@@ -127,7 +125,7 @@ You may see that the SSL certificate matches your intended domain, but do not ex
 
 ### Test with Chrome
 
-1. Point your browser to the custom IP address you received after enabling SSL: https://x.x.x.x
+1. Point your browser to the custom IP address you received after enabling HTTPS: https://x.x.x.x
 2. Click the padlock in the address bar.
 3. Select **Certificate Information**.<br />
  ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
@@ -136,7 +134,7 @@ You may see that the SSL certificate matches your intended domain, but do not ex
 
 ### Test with cURL
 
-Test SSL with `cURL` by issuing the following command:
+Test HTTPS with `cURL` by issuing the following command:
 
 ```
 $ curl -Ikv https://x.x.x.x --header "Host: mywebsite.com"
@@ -153,7 +151,7 @@ see that your certificate is being served:
 ...
 ```
 
-## Require SSL for All Pages
+## Require HTTPS for All Pages
 
 It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https).
 

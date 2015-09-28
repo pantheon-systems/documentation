@@ -10,15 +10,15 @@ Configuring your domain's DNS is required to route traffic to your Pantheon site
 
 ## Step 1: Determine the URL to Serve From
 
-We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers. If your site will use HTTPS, either [enable SSL](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) or use [Cloudflare's free SSL](/docs/guides/ssl-with-cloudflare/) before continuing.
+We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers. If your site will use HTTPS, either [enable HTTPS](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) or use [Cloudflare's free SSL](/docs/guides/ssl-with-cloudflare/) before continuing.
 
 ## Step 2: Add Domains to the Site Environment
 <div class="alert alert-danger" role="alert">
-<h4>Important</h4>If you are using HTTPS protocol, <a href="/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">enable SSL</a> before adding the domain to the site environment. The recommended DNS settings are different for HTTPS sites.</div>
+<h4>Important</h4>If you are using HTTPS protocol, <a href="/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">enable HTTPS</a> before adding the domain to the site environment. The recommended DNS settings are different for HTTPS sites.</div>
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/articles/sites/settings/selecting-a-plan/).
 
-1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains/SSL**.
+1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains/HTTPS**.
 2. On the Domain Setup tab, enter the domain name you want associated with that environment, and click **Add New Domain to the Live Environment**.
 
 You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
@@ -40,7 +40,7 @@ Example:
 Remove this entry when you're ready to configure DNS.
 
 ## Step 3: Configure Your DNS
-From the Live environment's Domains/SSL tool, click **Show recommended DNS records** to the right of the domains you've added.
+From the Live environment's Domains/HTTPS tool, click **Show recommended DNS records** to the right of the domains you've added.
 
 <div class="alert alert-danger" role="alert">
 <h4>Important</h4><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain; we cannot do it for you.</div>
@@ -109,4 +109,4 @@ Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when co
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https)
-* [Enable SSL for Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
+* [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
