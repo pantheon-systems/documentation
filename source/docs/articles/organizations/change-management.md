@@ -82,6 +82,16 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         &#8226; Remove sites from the Organization</td>
     </tr>
     <tr>
+        <td class="border-bottom">Team Member</td>
+        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
+         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
+    </tr>
+    <tr>
+        <td class="border-bottom">Developer</td>
+        <td class="border-bottom">&#8226; Tag sites<br>
+         &#8226; View people<br> &#8226; View tickets </td>
+    </tr>
+    <tr>
         <td class="border-bottom">Unprivileged</td>
         <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge<br/></td>
     </tr>
