@@ -16,9 +16,9 @@ Drush-savvy developers should also install and utilize [Terminus](https://github
 Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
 ## Drush Versions
-Pantheon currently has Drush version 5.10.1 installed. You can run Drush 5.x, 7.x and 8.x on your local installation to interact with your Pantheon Drupal installations. Drush 6.x is not supported.
+Pantheon currently has Drush version 5.10.1 installed. You can run Drush 5.x, 7.x, and 8.x on your local installation to interact with your Pantheon Drupal installations. Drush 6.x is not supported.
 
-For upgrade information, see our [Introducing Drush 8](https://pantheon.io/blog/introducing-drush-8) blog post.
+For upgrade information, see [Introducing Drush 8](https://pantheon.io/blog/introducing-drush-8).
 
 #### Drush 7
 Create a new policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform. Our `hook_drush_sitealias_alter` function looks like this:
