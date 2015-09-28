@@ -120,6 +120,7 @@ For example:
  ```bash
  git push origin master
  ```
+
 ### 503 Errors When Running Update.php and Installing Modules
 
 There are multiple reasons that 503s might occur when updating:
