@@ -61,7 +61,7 @@ Use [one-click updates](/docs/articles/sites/code/applying-upstream-updates#appl
 Two contributed modules are supported by Pantheon:
 
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8
-- [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.2
+- [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.2, 8.x-1.0 (Drupal 8 alpha version is available; final version is in development)
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
@@ -74,7 +74,7 @@ Choose one or the the other and add it to your code base. Do not enable or confi
 <div class="alert alert-info" role="alert">
 <h4>Note</h4> If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you do not, you may receive an error when attempting to connect to the Solr server.</div>
 
-One of the modules already included in every Pantheon Drupal site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, and Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
+One of the modules already included in every Pantheon Drupal site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
@@ -85,7 +85,7 @@ The next step is to post the schema.xml, which describes Drupal fields to the So
 
  ![](/source/docs/assets/images/desk_images/192435.png)  
 Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the vast majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
- ![](/source/docs/assets/images/desk_images/192443.png)  
+
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 You must post the schema.xml in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
