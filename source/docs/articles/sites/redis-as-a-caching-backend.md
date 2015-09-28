@@ -107,7 +107,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
  ### Using Redis with Drupal 8 
- At this time, sites running Drupal 8 cannot use Redis. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [issue queue](https://www.drupal.org/project/issues/redis?categories=All).
+ At this time, sites running Drupal 8 cannot use Redis. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [Port Redis issue queue](https://www.drupal.org/node/2233413)for updates.
 
 ## Using the Redis Command-Line Client
 
