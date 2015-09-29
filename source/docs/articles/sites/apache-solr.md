@@ -63,7 +63,7 @@ Two contributed modules are supported by Pantheon:
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.2
 
-Alpha releases of contrib modules for Drupal 8, such as [search_api_solr 8.x-1.0-alpha1](https://www.drupal.org/node/2576039), are not supported until development of the [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module for [drops-8](https://github.com/pantheon-systems/drops-8) has been finalized.
+Solr for Drupal 8 is not supported at this time. 
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
@@ -76,7 +76,7 @@ Choose one or the the other and add it to your code base. Do not enable or confi
 <div class="alert alert-info" role="alert">
 <h4>Note</h4> If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you do not, you may receive an error when attempting to connect to the Solr server.</div>
 
-One of the modules already included in every Pantheon Drupal site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
+One of the modules already included in every Pantheon Drupal 7 site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
