@@ -63,7 +63,7 @@ Two contributed modules are supported by Pantheon:
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.2
 
-Alpha releases of contrib modules for Drupal 8, such as [search_api_solr 8.x-1.0-alpha1](https://www.drupal.org/node/2576039), are not supported. Support is also blocked until development of the [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module for [drops-8](https://github.com/pantheon-systems/drops-8) has been finalized.
+Alpha releases of contrib modules for Drupal 8, such as [search_api_solr 8.x-1.0-alpha1](https://www.drupal.org/node/2576039), are not supported until development of the [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module for [drops-8](https://github.com/pantheon-systems/drops-8) has been finalized.
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
