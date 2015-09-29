@@ -30,7 +30,7 @@ Use the required values from the **Connection Info** tab, the desired environmen
 ```
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
-Next, using the values found within the **Connection Info** tab, execute the following:
+Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following:
 ```bash
 mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
 ```
@@ -52,11 +52,11 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Use the port value from the above one-live connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/docs/articles/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```
-Using the password and port found in the one-line connection string, run the following command:
+`PORT` is the database port specified in the **Connection Info** tab. Using the password and port found in the one-line connection string, run the following command:
 ```bash
 redis-cli -h 127.0.0.1 -p PORT -a PASSWORD
 ```
@@ -68,3 +68,10 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 
 ## Troubleshooting
 To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases/#troubleshooting-mysql-connections).
+
+If port 2222 is blocked on your network you will see an error similar to the following:
+```
+SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
+Fatal: Could not read from remote repository.
+```
+See [Port 2222 Blocked Workaround](/docs/articles/local/port-2222-blocked-workaround/) for more information.
