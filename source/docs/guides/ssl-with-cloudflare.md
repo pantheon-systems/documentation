@@ -46,7 +46,7 @@ It's important to use __Full__ protection mode. Because Pantheon provides HTTPS 
 
 ![SSL Details](/source/docs/assets/images/cloudflare-ssl-types.png)
 
-While "full" more is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
+While "full" mode is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
 
 Customers wanting to use CloudFlare in "strict" mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
 
@@ -99,7 +99,7 @@ Pantheon already handles the necessary environment settings to ensure that Drupa
 
 ### WordPress
 
-On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`. Note that you will need to _replace_ the existing code that sets these constants, since contants can only be defined once:
+On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`. Note that you will need to _replace_ the existing code that sets these constants, since constants can only be defined once:
 
     if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
