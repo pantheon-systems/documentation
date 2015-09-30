@@ -32,4 +32,4 @@ Once the key has been successfully added, it will appear under the list of avail
 To delete a key, go to the Account page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
 ![Delete SSH Key](/source/docs/assets/images/remove-ssh-key.png)
 
-If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP using your account password to authenticate. However, there will be no Git access as you need a valid key uploaded to your account.
+If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP and Git using your account password to authenticate.

@@ -7,7 +7,7 @@ keywords: going live, getting started, create account, create site, import, faqs
 ---
 <img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:0px;margin-right:20px;margin-top:15px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:20px;margin-right:0px;">Welcome to Pantheon, the world’s fastest hosting for Drupal and WordPress. In a few simple steps, your site will be up and running on our distributed infrastructure with no single points of failure.</p>
 ## Create Your Free Account
-If you haven't already done so, create your [free Pantheon account](https://pantheon.io/register). Agencies (even freelancers) who build websites for third parties can [sign up for Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). 
+If you haven't already done so, create your [free Pantheon account](https://pantheon.io/register). Agencies (even freelancers) who build websites for third parties can [sign up for Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies).
 ## Create a Site
 <img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="float:right;margin:5px;border:0;max-height:80px;"><p style="padding-top:0px;">Click "Create your first site" or visit <a href="https://dashboard.pantheon.io/sites/create" target="blank">https://dashboard.pantheon.io/sites/create</a>. All users receive two free sandbox sites. When one of your sites converts to a <a href="https://pantheon.io/pricing">paid plan</a>, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you. Pantheon for Agencies organizations do not have the two-sandbox restriction for sites associated with their organization.</p>
 
@@ -33,9 +33,7 @@ There are two ways to add and update your site's code: Git source code managemen
 ### Git Connection Mode
 Git is a well-known, industry standard version control system for managing code. For more information, see [Starting with Git](/docs/articles/local/starting-with-git).
 
-Using Git requires that you **add an SSH Key** to your account.  
-From your [User Dashboard, select **Account**](https://dashboard.pantheon.io/users/#account), and click **SSH Keys**.
-For detailed instructions, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/).  
+We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH Key](/docs/articles/users/loading-ssh-keys) into the [User Dashboard](https://dashboard.pantheon.io/users/#account). For detailed instructions, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/). Users without an SSH key loaded on their account can interact with code via Git by entering their Dashboard password when prompted in terminal.
 
 ### SFTP Connection Mode
 You can develop directly on the server using [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/).
