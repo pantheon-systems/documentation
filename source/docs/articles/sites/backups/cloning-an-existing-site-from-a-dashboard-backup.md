@@ -41,4 +41,4 @@ The import process will create and deploy a new site based on the uploaded files
 
 ## Additional Considerations
 Retaining Git history, importing large file structures or databases:
-The methods in this article will work well for small to medium sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, see [Importing a Large Site](/docs/articles/sites/migrate/importing-a-large-site).
+The methods in this article will work well for small to medium sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, see [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import).

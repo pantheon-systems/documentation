@@ -60,15 +60,15 @@ The importer accepts either single-file site archives or separate archives of th
 
 File size limits are per archive. Providing three files instead of one effectively increases the entire site import size limit to 1.5GB (500MB code, 500MB databse, 500MB files).
 
-**Importing After Creation**
+**Manual Site Import**
 
- Follow this procedure if any of the following apply:
+Manually import the site outside of our Importer Tool if any of the following apply:
 
- - You would like to [preserve the site's existing git history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history?).
- - Your site requires an upstream to an organizational or public distribution.
- - Your site exceeds file size limit for uploads. See [Importing a Large Site](/docs/articles/sites/migrate/importing-a-large-site).
+- Your site exceeds file size limit for uploads.
+- Your site requires an upstream to an organizational or public distribution.
+- You would like to preserve the site's existing git history.
 
-Import code, database, and files after creating the site using a combination of command-line tools (git, mysql-cli, and rsync) or with Git and the site dashbord's workflow tool.
+Import code, database, and files after creating the site using a combination of command-line tools (git, mysql-cli, and rsync) or with Git and the Site Dashboard's workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import) for detailed instructions.
 
 ### Create Single-file Archives
 Migrations using the importer: sites that can be packaged with a total archived size less than 500MB are able to use single-file archives during the import process. You can create these archives with [Drush](/docs/articles/sites/migrate/export-an-existing-drupal-site#create-archive-using-drush) or [Backup and Migrate](/docs/articles/sites/migrate/export-an-existing-drupal-site#create-archive-using-backup-and-migrate) for Drupal sites, and [Plugins](/docs/articles/sites/migrate/export-an-existing-wordpress-site#export-wordpress-via-plugins) for WordPress.
@@ -121,7 +121,7 @@ If the database or is larger than 500MB, use the **Connection Info** panel to co
 
 If the files archive is larger than 500MB, use an SFTP client or rsync to upload the uncompressed files.
 
-Please see [Importing a Large Site](/docs/articles/sites/migrate/importing-a-large-site) for further details.
+Please see [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import) for further details.
 ## Test Your Site
 When the site's code, database, and files are all in place, verify everything is working as expected. At the site dashboard, click "Visit Development Site" for initial verification.
 

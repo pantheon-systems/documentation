@@ -100,4 +100,4 @@ Only provide one `.sql` file; if multiple are present the import will fail.
 
 ## Next Steps
 - [Migrate Sites to Pantheon](/docs/articles/sites/migrate#move-in)
-- [Importing a Large Site Outside of the Pantheon Dashboard](/docs/articles/sites/migrate/importing-a-large-site/)
+- [Migrate to Pantheon: Manual Site Import Outside of the Pantheon Dashboard](/docs/articles/sites/migrate/manual-site-import/)
