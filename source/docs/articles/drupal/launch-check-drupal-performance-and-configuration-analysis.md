@@ -43,7 +43,7 @@ The Dashboard integration is intended to provide developers with the most action
 
 #### How can I manually run site audit on my site?
 
-You can get a list of all available site audit reports using [Terminus](https://github.com/pantheon-systems/cli):
+You can get a list of all available site audit reports using [Terminus](/docs/articles/local/cli/):
 ```nohighlight
 terminus drush help --site=<site> --env=<env> --filter=site_audit
 ```
@@ -73,7 +73,7 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 #### Site Audit isn't running on my site.
 
-If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](https://github.com/pantheon-systems/cli) command to execute Site Audit directly on your Pantheon site:
+If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/docs/articles/local/cli/) command to execute Site Audit directly on your Pantheon site:
 ```bash
 terminus drush --site=<site> --env=<env> -vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0
 ```

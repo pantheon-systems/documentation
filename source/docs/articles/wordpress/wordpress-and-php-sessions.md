@@ -34,7 +34,7 @@ If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessio
  chmod +x add-php-sessions-plugin.php
  ```
 
-3. Login with [Terminus](https://github.com/pantheon-systems/cli):
+3. Login with [Terminus](/docs/articles/local/cli/):
 
  ```
  terminus auth login

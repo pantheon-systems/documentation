@@ -30,7 +30,7 @@ There are a couple of ways to interact with cron on Pantheon. One way is to exec
 ![](/source/docs/assets/images/desk_images/73173.png)
 Click **Run cron** to run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
-Alternatively, you can run all scheduled cron tasks with the following [Terminus](https://github.com/pantheon-systems/cli) command:
+Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/articles/local/cli/) command:
 ```bash
 terminus drush --site=<site> --env=<env> cron
 ```
@@ -57,7 +57,7 @@ By having pingdom visit the site once a minute like a visitor, the site stays ac
 
 This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
 
-As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](https://github.com/pantheon-systems/cli), including Drush cron, to trigger scheduled operations.
+As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](/docs/articles/local/cli/), including Drush cron, to trigger scheduled operations.
 
 Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
@@ -80,7 +80,7 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 
 You can check the log messages through the Drupal Admin interface.  
 
-You can also use [Terminus](https://github.com/pantheon-systems/cli) to see when cron was last run with the following command:
+You can also use [Terminus](/docs/articles/local/cli/) to see when cron was last run with the following command:
 ```bash
 terminus drush --site=<site> --env=<env> wd-show --type='cron'
 ```

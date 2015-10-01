@@ -33,7 +33,7 @@ Every user, organization, product and site is assigned a UUID which is internal 
 ```
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
-You can also use [Terminus](https://github.com/pantheon-systems/cli) to find the UUID of your organizations:
+You can also use [Terminus](/docs/articles/local/cli/) to find the UUID of your organizations:
 
 ```
 $ terminus organizations list

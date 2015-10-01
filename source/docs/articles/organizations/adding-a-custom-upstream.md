@@ -58,7 +58,7 @@ git push origin master
 
 ### Create the Testing Site
 
-Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](https://github.com/pantheon-systems/cli):
+Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/articles/local/cli/):
 
 ```bash
 terminus sites create --name=<name-of-your-custom-upstream-test>

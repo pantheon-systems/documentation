@@ -104,7 +104,7 @@ In comparison, Pantheon’s backup mechanism:
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](https://github.com/pantheon-systems/cli).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/articles/local/cli/).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
 ```bash
 terminus site backup <get|load|create|list> [--site=<site>] [--env=<env>]
 [--element=<code|files|db|all>] [--to-directory=<directory>] [--latest]

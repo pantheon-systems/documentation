@@ -19,7 +19,7 @@ Drupal sites have the option of running update.php after deploying code.
 ![Deploy Log Live Environment](/source/docs/assets/images/deploy-log-live-env.png)
 
 <!--### Local Deployment with Terminus
-From [Terminus](https://github.com/pantheon-systems/cli), run the following command to deploy code from Dev to Test:
+From [Terminus](/docs/articles/local/cli/), run the following command to deploy code from Dev to Test:
 ```
 terminus site deploy [--site=<site>] [--env=<test>] [--from=<dev>] [--cc] [--updatedb] [--note=<note>]
 ```
