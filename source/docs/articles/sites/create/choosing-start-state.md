@@ -26,7 +26,7 @@ Drupal products offer a much richer out of the box experience, but are more comp
 It is not possible to change the upstream of the site. To change the upstream, create a site with your desired upstream distribution.</div>
 
 ### Product UUID
-There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all product UUID's available to you, run the following [Terminus](https://github.com/pantheon-systems/cli) command:
+There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all product UUID's available to you, run the following [Terminus](/docs/articles/local/cli/) command:
 ```
 $ terminus products list
 ```

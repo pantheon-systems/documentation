@@ -12,7 +12,7 @@ Error:  ssh_init: Host not found
 Error:  Could not connect to server''
 Debugging connectivity issues
 ```
-Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](https://github.com/pantheon-systems/cli) command:
+Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/docs/articles/local/cli/) command:
 ```
 terminus site wake --site=<site-name> --env=<env>
 ```

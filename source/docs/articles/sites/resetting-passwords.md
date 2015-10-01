@@ -18,7 +18,7 @@ In the password reset form, enter either the username or email address you used 
 
 Please keep in mind that your site password is stored in a database, so whatever you set in the Development environment may be different than Test or live, unless you keep the database content synced between the environments using the Pantheon Dashboard workflow tools or during deployment.
 
-If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](https://github.com/pantheon-systems/cli) command for generating one-time login links:
+If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/articles/local/cli/) command for generating one-time login links:
 
 ```bash
 $ terminus drush --site=<site> --env=<env> user-login
@@ -28,7 +28,7 @@ $ terminus drush --site=<site> --env=<env> user-login
 <h4>Note</h4>Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 ## WordPress User Login
-If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](https://github.com/pantheon-systems/cli).
+If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](/docs/articles/local/cli/).
 
 1. From the main login form, click **Lost Your Password?**.  
 2. Enter your username or password, and click **Get New Password**.

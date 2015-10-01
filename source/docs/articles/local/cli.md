@@ -7,6 +7,9 @@ category:
 keywords: pantheon, terminus, command line, cli
 ---
 The Terminus project's second version is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github").
+
+Terminus is in a pre-release state with constant development. The commands in the repo may change and not all functionality will work for all use cases.
+
 ## Installation
 Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Installation "Pantheon CLI wiki, installation page on Github").
 ## Use

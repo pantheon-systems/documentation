@@ -12,7 +12,7 @@ One of the key ways to find issues on your website is to check your database log
 Drupal, by default, logs events using the Database Logging module (dblog). Sometimes, PHP fatal errors can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:  
 
 1. Visit `/admin/reports/dblog` once you've logged in as administrator.
-2. Using [Terminus](https://github.com/pantheon-systems/cli):  
+2. Using [Terminus](/docs/articles/local/cli/):  
 
 ```bash
 terminus drush --site=<site> --env=<env> watchdog-show

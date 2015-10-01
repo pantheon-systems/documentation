@@ -11,7 +11,7 @@ There are three ways to clear all Varnish caches for both Drupal and WordPress s
 The first two require you to enable the **pantheon\_api** module to allow Drupal to send the request to clear the Varnish caches.
 
 1. From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
-2. Via [Terminus](https://github.com/pantheon-systems/cli): `terminus drush --site=<site> --env=<env> cc all`
+2. Via [Terminus](/docs/articles/local/cli/): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
 
 <div class="alert alert-info" role="alert"><h4>Note</h4>Varnish caches cannot be selectively cleared.</div>

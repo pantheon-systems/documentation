@@ -14,7 +14,7 @@ Be sure you have:
 - A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/),  [XAMPP](https://www.apachefriends.org/index.html), and [Kalabox](http://www.kalamuna.com/products/kalabox) all work.
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
-- [Terminus](https://github.com/pantheon-systems/cli)
+- [Terminus](/docs/articles/local/cli/)
 - [Drush](/docs/articles/local/drupal-drush-command-line-utility/) (optional)
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:

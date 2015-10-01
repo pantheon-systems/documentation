@@ -82,7 +82,7 @@ If your site cannot be packaged as a single archive less than 500MB, or you need
 Having planned and prepared, your move should be an execution, rather than trial and error.
 
 ### Import the Site Archive from the Command Line
-Single-file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](https://github.com/pantheon-systems/cli), the Pantheon command-line interface.
+Single-file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](/docs/articles/local/cli/), the Pantheon command-line interface.
 
 ```nohighlight
 terminus sites create [--name=<name>] [--label=<label>] [--org=<org>] [--import=<url>]

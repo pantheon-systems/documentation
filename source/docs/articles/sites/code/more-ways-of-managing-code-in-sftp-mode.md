@@ -41,9 +41,9 @@ You should never have to enter SFTP credentials to Drupal's admin area itself. I
 
 ## Install Code with Terminus: the Pantheon CLI
 
-Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](https://github.com/pantheon-systems/cli). This section is for developers who are CLI savvy.
+Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](/docs/articles/local/cli/). This section is for developers who are CLI savvy.
 
-Assuming you've already set up and authenticated with [Terminus](https://github.com/pantheon-systems/cli), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
+Assuming you've already set up and authenticated with [Terminus](/docs/articles/local/cli/), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
 
 ```nohighlight
 joshk@steppinrazor ~$ terminus sites show --nocache

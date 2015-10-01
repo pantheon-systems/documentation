@@ -17,7 +17,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 3. Enter the site title; this ensures you're aware of the site you're deleting.
 4. Click **I understand the consequences, delete this site**.
 ## Delete a Site with Terminus
-Run the following [Terminus](https://github.com/pantheon-systems/cli) command:
+Run the following [Terminus](/docs/articles/local/cli/) command:
 ```
 terminus sites delete --site=<site>
 ```

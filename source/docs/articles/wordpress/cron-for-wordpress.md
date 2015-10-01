@@ -34,7 +34,7 @@ WP-Cron comes preconfigured and ready to run, so you don't need to do anything t
 During the initial installation of WordPress, several tasks are automatically configured. You can use a few simple commands from the command line, or one of several plugins, to find the exact jobs being run by WP-Cron.
 
 ### WP-Cron From the CLI
-If you have [Terminus](https://github.com/pantheon-systems/cli) installed, you can easily see all the details of what is going on with WP-Cron. Terminus, through WP-CLI, can show you details like:
+If you have [Terminus](/docs/articles/local/cli/) installed, you can easily see all the details of what is going on with WP-Cron. Terminus, through WP-CLI, can show you details like:
 
  - What's scheduled to run
  - What will run next
@@ -54,7 +54,7 @@ If everything works correctly, the result looks like this:
 Success: WP-Cron spawning is working as expected.
 ````
 
-This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](http://wp-cli.org/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](https://github.com/pantheon-systems/cli). The command format is as follows:
+This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](http://wp-cli.org/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/articles/local/cli/). The command format is as follows:
 
 ````nohighlight
 $ terminus wp cron <your wp-cron command and switches here>

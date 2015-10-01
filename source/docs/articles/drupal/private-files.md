@@ -15,7 +15,7 @@ If you have not already created these directories, you will need to do that firs
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
-To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**. 
+To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
 
 ## Storing Private Keys and Certs
 
@@ -49,7 +49,7 @@ This depends on the workflow and that you are planning to implement. If you set 
 
 If you do not sync the databases, you may get some errors as there is a system check in Drupal to verify that directory is writable before that variable is set. However, because you have already pushed that up in code, setting that variable in Test or Live will do the trick.
 
-This can be done via [Terminus](https://github.com/pantheon-systems/cli):
+This can be done via [Terminus](/docs/articles/local/cli/):
 
 ```nohighlight
 # Set this to Test/Live
