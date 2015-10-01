@@ -57,12 +57,12 @@ Use these configuration snippets to specify a local configuration that will be i
 
 Depending on your use case, there are two possibilities:
 
-For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like redirects, check for the existence of $\_ENV['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
     // Pantheon - web only.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       // Only on dev web environment.
-      if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
+      if ($_ENV['PANTHEON_ENVIRONMENT'] == 'dev') {
         // Custom code.
       }
     }
