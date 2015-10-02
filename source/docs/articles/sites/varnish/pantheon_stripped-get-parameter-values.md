@@ -5,7 +5,10 @@ category:
   - developing
 keywords: google analytics, analytics, pantheon_stripped, utm, query parameters, cache
 ---
-In a typical scenario, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by Javascript to track different AdWords campaigns running for the same page on your site.
+In a typical scenario, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by JavaScript to track different AdWords campaigns running for the same page on your site.
+
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Variables that are converted to <code>PANTHEON_STRIPPED</code> cannot be read with PHP, and original values will not appear in the <code>nginx-access.log</code> or be available to the application backend. However, the parameters can be read using JavaScript and will appear correctly in analytics tools. Use AJAX to pass parameters to PHP.</div>
 
 Behind Pantheon's edge caching layer, your application server will see some specific query parameters have been altered by replacing the parameter value with `PANTHEON_STRIPPED` indicating that cache optimization is in effect for these parameters. It is also an indication that developers should not attempt to use these parameters in ways that would return different content in the response to the user.
 
