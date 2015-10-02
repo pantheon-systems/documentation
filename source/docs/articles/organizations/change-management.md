@@ -59,7 +59,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
 
-###Enterprise:  Organization-Level Roles/Permissions
+###Enterprise: Organization-Level Roles/Permissions
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -89,11 +89,13 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <tr>
         <td class="border-bottom">Developer</td>
         <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets </td>
+         &#8226; View people<br> &#8226; View tickets
+         <br> &#8226; Create sites<br></td>
     </tr>
     <tr>
         <td class="border-bottom">Unprivileged</td>
-        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge<br/></td>
+        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge
+        <br> &#8226; Cannot access the Org Dashboard or any sites in the Org</td>
     </tr>
 </table>
 
@@ -130,7 +132,8 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <tr>
         <td class="border-bottom">Developer</td>
         <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets </td>
+         &#8226; View people<br> &#8226; View tickets
+         <br> &#8226; Create sites<br> </td>
     </tr>
 </table>
 
@@ -164,8 +167,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <tr>
         <td>Developer</td>
         <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
-        <h4>Note</h4>
-        You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
+        <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>
