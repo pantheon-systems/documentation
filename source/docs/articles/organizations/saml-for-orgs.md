@@ -23,10 +23,7 @@ Pantheon organization administrators can [manage sites and teams with the organi
 
 ## Configure your IdP
 
-Refer to your IdP for general SAML 2.0 setup instructions, or to any Pantheon-specific documentation:
-
-* [Configuring SAML for Pantheon with Okta](/docs/articles/organizations/saml-for-orgs-with-okta)
-* [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
+Refer to your IdP for general SAML 2.0 setup instructions. 
 
 You will need to enter the following:
 
@@ -37,6 +34,12 @@ You will need to enter the following:
   Replace <code>example.com</code> with the domain you control</div>
 
 + **Audience URI (SP Entity ID)**: `https://dashboard.pantheon.io` or `https://dashboard.pantheon.io/`
+
+While there may be SAML setups that provide keys to configure your IdP, we do not provide them. We provide the SSO URL and Audience URI (SP Entity ID) as listed above.
+
+If your IdP is Okta or OneLogin, see:
+* [Configuring SAML for Pantheon with Okta](/docs/articles/organizations/saml-for-orgs-with-okta)
+* [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
 
 ## Enable SAML on Pantheon
 
