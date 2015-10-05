@@ -6,7 +6,7 @@ category:
   - managing
 keywords: drupal, upgrade, upgrading, revision upgrade, update, updating
 ---
-To upgrade Drupal to a new major version (i.e. version 6 to version 7) you must create a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
+To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Even the simplest of upgrades requires its own QA and deployment process.
 
 Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard.
 
