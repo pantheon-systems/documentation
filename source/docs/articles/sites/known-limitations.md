@@ -52,9 +52,9 @@ For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/c
 
 ## Maintenance Mode
 
-Drupal's built-in Maintenance Mode works and can be customized; clear caches when toggling.
+Pantheon may send a [generic Maintenance Mode message](/docs/articles/sites/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
 
-​Pantheon may send a generic Maintenance Mode message during platform problems; this message cannot be customized.
+Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
 ## Server Side Includes (SSI)
 
