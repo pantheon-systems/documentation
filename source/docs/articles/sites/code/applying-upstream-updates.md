@@ -40,32 +40,53 @@ In the event that the update fails, you may see an error indicating a conflict w
 
 If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 
-### Resolve Conflicts Locally With Drupal 7
+<div class="alert alert-warning" role="alert">
+<h4>Note</h4>
+This does not solve all problems that may arise, but it should take care of most situations.</div>
 
-From within an up-to-date Git clone on your local machine:
-```bash
-git pull git://github.com/pantheon-systems/drops-7.git master
-# resolve conflicts
-git push origin master
-```
-You can add the `-Xtheirs` flag if you want to accept all changes.
+In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
+### Resolve Conflicts Locally
+Select the appropriate framework below for your web application, then execute the commands from within an up-to-date Git clone on your local machine. Add the `-Xtheirs` flag if you want to accept all changes.
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
 
-### Resolve Conflicts Locally With Drupal 6
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre><code>
+  git pull git://github.com/pantheon-systems/drops-8.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre><code>
+  git pull git://github.com/pantheon-systems/drops-7.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d6">
+  <pre><code>
+  git pull git://github.com/pantheon-systems/drops-6.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <pre><code>
+  git pull git://github.com/pantheon-systems/WordPress.git master
+  # resolve conflicts
+  git push origin master  
+  </code></pre>
+  </div>
+</div>
 
-From within an up-to-date Git clone in your local environment:
-```bash
-git pull git://github.com/pantheon-systems/drops-6.git master
-# resolve other conflicts
-git push origin master
-```
-### Resolve Conflicts Locally with WordPress
-
-From within an up-to-date Git clone in your local environment:
-```bash
-git pull git://github.com/pantheon-systems/WordPress.git master
-# resolve conflicts
-git push origin master  
-```
 For more information on resolving conflicts, see [Git FAQs](/docs/articles/local/git-faq#frequently-asked-questions).
 
 ## Troubleshooting
