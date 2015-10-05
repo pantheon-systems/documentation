@@ -6,19 +6,15 @@ category:
   - managing
 keywords: drupal, upgrade, upgrading, revision upgrade, update, updating
 ---
-The best practice for doing a major Drupal revision upgrade (i.e. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
+To upgrade Drupal to a new major version (i.e. version 6 to version 7) you must create a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
 Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard.
-
-The best way to think about upgrading to the next major revision of Drupal on Pantheon is the same as when you get a new laptop or smartphone: first you set up both devices side-by-side, then you migrate the data from the old to the new.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
 Do not attempt the upgrades on the platform. This is not supported.</div>
 
 ## Upgrade from Drupal 6 to Drupal 7
-
-### Set up the Code and Migrate the Data
 
 1. Start a new site using Drupal 7 as the start state.
 2. Add the 7.x version of your contrib modules.
@@ -33,8 +29,6 @@ If you are not having much luck with update.php, consider setting up the new sit
 
 ## Upgrade to Drupal 8
 
-In Drupal 8, the migrate module is now in core and no longer supports upgrading through update.php.
-
 1. Start a new site using Drupal 8 as the start state.
 2. Add the 8.x version of your contrib modules.
 3. Import your existing data.
@@ -45,3 +39,10 @@ In Drupal 8, the migrate module is now in core and no longer supports upgrading 
 Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default.
 
 If needed, you can customize your migration using the included hooks or use the configuration schema to use the included plugins with your custom data set. The hooks in Drupal 8 let you alter data in the prepareRow stage without creating a custom migration to handle the data.
+
+## See Also
+View the following [Drupal.org](https://drupal.org) resources for more information:
+
+- [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
+- [Executing a Drupal 6/7 to Drupal 8 upgrade](https://www.drupal.org/node/2257723)
+- [Upgrading from Drupal 6 or 7 to Drupal 8](https://www.drupal.org/upgrade/migrate)
