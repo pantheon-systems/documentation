@@ -54,3 +54,25 @@ In Drupal, no modules are required to use CloudFlare, but there is an optional [
 
 https://support.cloudflare.com/hc/en-us/articles/200169456-Why-is-JavaScript-or-jQuery-not-working-on-my-site-
 
+## FAQ
+
+**Why is JavaScript or jQuery not working on my site?**
+
+If your js files are not loaded, check Firebug and see if one of your links is giving you the following error:
+
+```
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="qA7D'DGwpMH,)x"
+
+--qA7D'DGwpMH,)x
+X-Cf-Url: http://www.domain.com/sites/all/modules/admin_menu/admin_menu.js?nvql2t
+X-Cf-Status: 403
+Content-Transfer-Encoding: binary
+X-Cf-Max-Age: 7200
+X-Cf-Origin-Status: 403
+X-Cf-Cache-Status: EXPIRED
+Content-Type: text/html; charset=UTF-8
+X-Cf-Error: true
+```
+
+Cloudflare has a beta feature called Rocket Loader and it has the potential to break some JavaScript and jQuery functions as a beta feature. [Read full article](https://support.cloudflare.com/hc/en-us/articles/200169456-Why-is-JavaScript-or-jQuery-not-working-on-my-site-)
