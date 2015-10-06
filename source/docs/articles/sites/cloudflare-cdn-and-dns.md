@@ -51,6 +51,3 @@ In Drupal, no modules are required to use CloudFlare, but there is an optional [
 **Caching**: Pantheon's Varnish cache is not synchronized with CloudFlare's cache, and CloudFlare's cache expiration settings are independent of your site's cache expirations. If you need to clear all caches, clear the cache from your Site Dashboard and clear CloudFlare's cache.
 
 **Railgun**: At this time, CloudFlare Railgun is not available on Pantheon.
-
-https://support.cloudflare.com/hc/en-us/articles/200169456-Why-is-JavaScript-or-jQuery-not-working-on-my-site-
-
