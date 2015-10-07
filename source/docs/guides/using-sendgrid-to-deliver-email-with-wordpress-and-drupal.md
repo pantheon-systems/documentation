@@ -80,12 +80,13 @@ When making any changes to Pantheon installations, first make the change in your
 If you don't want to re-enter the configuration, and can't push your database to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the $conf array:
 
 ```
-$conf['smtp_on'] = TRUE;
-$conf['smtp_host'] = 'smtp.sendgrid.net';
-$conf['smtp_port'] = 25;
-$conf['smtp_username'] = 'your-sendgrid-username';
-$conf['smtp_password'] = 'your-sendgrid-password';
-$conf['smtp_from'] = 'your-email@yoursite.com';
+$conf['mail_system']['default-system'] = 'SmtpMailSystem'; 
+$conf['smtp_on'] = TRUE; 
+$conf['smtp_host'] = 'smtp.sendgrid.net'; 
+$conf['smtp_port'] = 25; 
+$conf['smtp_username'] = 'your-sendgrid-username'; 
+$conf['smtp_password'] = 'your-sendgrid-password'; 
+$conf['smtp_from'] = 'your-email@yoursite.com'; 
 $conf['smtp_fromname'] = 'Your Name';
 ```
 
