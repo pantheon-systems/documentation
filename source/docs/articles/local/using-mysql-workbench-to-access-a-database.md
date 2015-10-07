@@ -16,6 +16,7 @@ Start by getting the MySQL connection for the environment you want to access. To
 Now that you have the credentials for the database handy, you can start MySQL Workbench and set up your connection. Once the application has started, click the **+** icon on the top left of the screen to create a MySQL connection. Next, enter the information to connect to the database. Each of the following are required:
 
 **Connection Name** - A unique name (add a prefix for Dev/Test/Live)  
+**Connection Method** - Standard (TCP/IP)
 **Hostname** - MySQL database hostname  
 **Username** - MySQL database username  
 **Port** - MySQL database port (tip: Remember this value)  
