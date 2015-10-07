@@ -44,7 +44,7 @@ Due to <a href="https://codex.wordpress.org/Upgrading_WordPress_-_Extended_Instr
 * If you’ve been using the database for things other than Drupal or WordPress, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
 ### Plan the Import
-You can import during the site creation process using the importer tool or manually after the site has been created. Importing after creation requires code to be upload via git, along with separate imports of your database and files.  
+You can import during the site creation process using the importer tool or manually after the site has been created. Importing after creation requires code to be upload via git, along with separate imports of your database and files. Existing Drupal 8 sites must be imported manually.
 
 **The Importer Tool**
 
@@ -67,6 +67,7 @@ Manually import the site outside of our Importer Tool if any of the following ap
 - Your site exceeds file size limit for uploads.
 - Your site requires an upstream to an organizational or public distribution.
 - You would like to preserve the site's existing git history.
+- Your site is running Drupal 8.
 
 Import code, database, and files after creating the site using a combination of command-line tools (git, mysql-cli, and rsync) or with Git and the Site Dashboard's workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import) for detailed instructions.
 
