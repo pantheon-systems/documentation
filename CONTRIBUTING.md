@@ -38,7 +38,7 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
 
 From your local repo, run the following commands in order:  
 1. `git checkout master`  
-2. `git pull upstream master`  
+2. `git pull --rebase upstream master`
 3. `git push origin master`
 
 ## Add a New Doc
