@@ -66,8 +66,8 @@ The common community module for Drupal to use Redis is simply called [redis](htt
     }
   ```
 
-  <div class="alert alert-info">
-  <h4>Note</h4>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
+      <div class="alert alert-info">
+      <h4>Note</h4>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
 
 5. _Optional_ `sites/default/settings.php` configuration A - Higher performance for smaller page counts. This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
@@ -105,8 +105,8 @@ The common community module for Drupal to use Redis is simply called [redis](htt
  ![](/source/docs/assets/images/desk_images/71423.png)
  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
- ### Using Redis with Drupal 8 
- At this time, sites running Drupal 8 cannot use Redis. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [Port Redis issue queue](https://www.drupal.org/node/2233413)for updates.
+### Using Redis with Drupal 8
+At this time, sites running Drupal 8 cannot use Redis, because there isn't a Drupal 8 release of the Redis module yet. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [Port Redis issue queue](https://www.drupal.org/node/2233413)for updates.
 
 ## Using the Redis Command-Line Client
 
