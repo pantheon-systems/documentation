@@ -11,7 +11,7 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
 
-Pantheon has a partner relationship with [SendGrid](https://sendgrid.com/), a high-deliverability email service, which offers up to 400 emails a day for free and can scale to millions if needed. For more information, see [Using Sendgrid To Deliver Email With WordPress and Drupal](/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal/).
+Pantheon has a partner relationship with [SendGrid](https://sendgrid.com/), a high-deliverability email service, which offers up to 400 emails a day for free and can scale to millions if needed. For more information, see [Using Sendgrid To Deliver Email With WordPress and Drupal](/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal/). Keep in mind that SendGrid has a provisioning process (not all requests to use SendGrid are automatically approved) that can take from a couple of hours to a couple of days. If you need email when your site launches and you plan on using SendGrid, be sure to get started before your launch date. See [Provisioning at the SendGrid website](https://sendgrid.com/docs/Glossary/provisioning.html).
 
 We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails such as account registration, forgot password, etc., you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.
 
@@ -41,4 +41,5 @@ As consumers of cloud infrastructure, we don’t have control over our IP ranges
 At this time we do not support email off the platform, and recommend using a third-party solution like those listed above instead.
 
 #### Why does my Gmail user name and password not work?
-Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1).
+
+Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1).
