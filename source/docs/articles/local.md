@@ -20,7 +20,7 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus site clear-caches --site=<site> --env=<env>
+terminus site clear-cache --site=<site> --env=<env>
 ```
 
 <div class="alert alert-info" role="alert">
