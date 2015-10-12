@@ -153,7 +153,7 @@ englash english
 ```
 ## Purging the Cache
 
-If you would like to purge your cache, you can pass the `flushall` command to flush all keys from the cache.
+If you would like to clear your cache, you can pass the `flushall` command to flush all keys from the cache.
 ```bash
 redis> flushall
 OK
