@@ -13,4 +13,4 @@ The Drupal 8 testing organization owns all Drupal 8 sites created on the platfor
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Sites running versions of Drupal 8 prior to beta 13 do not have a supported upgrade path. If your upstream update fails (step 1), consider creating a new site and migrating your data with another method.</div>
+Sites running versions of Drupal 8 prior to beta 13 do not have a supported upgrade path. If your upstream update fails (step 1), consider creating a new site and <a href="/docs/articles/sites/code/applying-upstream-updates/#auto-resolve-conflicts">resolving conflicts</a>.</div>
