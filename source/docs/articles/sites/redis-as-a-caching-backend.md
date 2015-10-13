@@ -151,9 +151,9 @@ redis> KEYS engl[ia]sh
 $15
 englash english
 ```
-## Purging the Cache
+## Clear Cache
 
-If you would like to clear your cache, you can pass the `flushall` command to flush all keys from the cache.
+Pass the `flushall` command to clear all keys from the cache.
 ```bash
 redis> flushall
 OK
