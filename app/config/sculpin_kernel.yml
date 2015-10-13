@@ -26,3 +26,12 @@ sculpin_content_types:
             - category
             - authors
         permalink: pretty
+
+    issues:
+        type: path
+        path: docs/issues
+        singular_name: issue
+        enabled: true
+        permalink: pretty
+        taxonomies:
+            - status
