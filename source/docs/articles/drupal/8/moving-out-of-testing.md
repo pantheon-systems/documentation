@@ -10,6 +10,7 @@ The Drupal 8 testing organization "owns" all Drupal 8 sites created on the platf
 4. [Create a new Drupal 8 site](https://dashboard.pantheon.io/products/drupal8/spinup).
 5. [Import the code, database, and files archives](/docs/articles/sites/migrate/manual-site-import).
 
-
+<div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Sites running versions of Drupal 8 prior to beta 13 do not have a supported upgrade path. If your upstream update fails (step 1), consider creating a new site and rebuilding the site with Drupal 8-RC compatible code.
+</div>
