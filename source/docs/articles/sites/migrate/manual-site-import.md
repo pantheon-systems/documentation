@@ -9,6 +9,7 @@ Manually import your site to Pantheon outside of the provided [Importer Tool](/d
 * **Large Site Archives**: Site archive is greater than the automated import limits (100MB for direct file upload or 500MB for URL upload).
 * **Custom Upstream**: Site should receive updates based on an upstream other than vanilla Drupal or WordPress (e.g Panopoly or your agency's customized WordPress).
 * **Preserve Git History**: Site's existing Git commit history should be retained.
+* **Sites running Drupal 8**
 
 ## Requirements
 
