@@ -52,7 +52,7 @@ In Drupal, no modules are required to use CloudFlare, but there is an optional [
 
 **Railgun**: At this time, CloudFlare Railgun is not available on Pantheon.
 
-**Rocket Loader**: Has the potential to break some JavaScript and jQuery functions as a beta feature. [Read CloudFlare's support article](https://support.cloudflare.com/hc/en-us/articles/200169456-Why-is-JavaScript-or-jQuery-not-working-on-my-site-).
+**Rocket Loader**: This has the potential to break some JavaScript and jQuery functions as a beta feature, and we recommend disabling it in CloudFlare.
 
 
 ## FAQs
