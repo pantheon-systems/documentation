@@ -51,3 +51,27 @@ In Drupal, no modules are required to use CloudFlare, but there is an optional [
 **Caching**: Pantheon's Varnish cache is not synchronized with CloudFlare's cache, and CloudFlare's cache expiration settings are independent of your site's cache expirations. If you need to clear all caches, clear the cache from your Site Dashboard and clear CloudFlare's cache.
 
 **Railgun**: At this time, CloudFlare Railgun is not available on Pantheon.
+
+**Rocket Loader**: This has the potential to break some JavaScript and jQuery functions as a beta feature, and we recommend disabling it in CloudFlare.
+
+
+## FAQs
+
+**Why isn't JavaScript or jQuery working on my site?**
+
+If your JS files are not loading, check Firebug to see if one of your links shows the following error:
+
+```
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="qA7D'DGwpMH,)x"
+
+--qA7D'DGwpMH,)x
+X-Cf-Url: http://www.domain.com/sites/all/modules/admin_menu/admin_menu.js?nvql2t
+X-Cf-Status: 403
+Content-Transfer-Encoding: binary
+X-Cf-Max-Age: 7200
+X-Cf-Origin-Status: 403
+X-Cf-Cache-Status: EXPIRED
+Content-Type: text/html; charset=UTF-8
+X-Cf-Error: true
+```
