@@ -68,7 +68,7 @@ The names may vary depending on the zone the server is located. Look for the fil
 There are several different tools you can use to analyze a MySQL slow log:
 
 - <a href="https://code.google.com/p/mysql-log-filter/">Mysql Log Filter</a>  
-- <a href="http://www.percona.com/blog/files/utils/mysql_slow_log_parser">Percona Mysql Slow Log Parser</a>  
+- <a href="https://www.percona.com/doc/percona-server/5.6/diagnostics/slow_extended.html">Percona Mysql Slow Log Parser</a>  
 - <a href="http://www.hackmysql.com/mysqlsla">Mysqlslsa</a>  
 
 These tools allow you to see summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. Here is an example usage of MySQL log filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
