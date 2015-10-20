@@ -1,21 +1,11 @@
 ---
-title: Managing Sites and Teams with the Pantheon for Agencies Dashboard
+title: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
 category:
 - managing
 keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
 ---
 The Organization Dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove team members, and manage new or existing sites.
-
-## Add Users to Your Organization
-
-1. Click on the **People tab**.
-2. Click **Add user**.
-3. Enter the user's email address.
-4. Choose the user's role.
-5. Click **Add user**.
-
-If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard.
 
 ## Add Sites to Your Organization
 
@@ -56,3 +46,13 @@ At the Sites tab, the left panel contains groups of filters for limiting the sit
 Tags are case-sensitve.
 </div>
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
+
+## Add Users to Your Organization
+
+1. Click on the **People tab**.
+2. Click **Add user**.
+3. Enter the user's email address.
+4. Choose the user's role.
+5. Click **Add user**.
+
+If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard.
