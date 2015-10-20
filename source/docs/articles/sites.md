@@ -24,16 +24,22 @@ Here you can select or change your plan and payment method. For more information
 ### Add-Ons
 Pantheon offers several add-ons to help you build dynamic sites. These include [New Relic](/docs/articles/sites/newrelic/new-relic-performance-analysis/), [Apache Solr](/docs/articles/sites/apache-solr/), and [Redis](/docs/articles/sites/redis-as-a-caching-backend/).
 
-###Delete Site
+### Delete Site
 If you no longer need your site, you can remove it here.
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
 This is a permanent change and once you delete it your site cannot be restored.</div>
 
-###About Site
+### About Site
 This tab shows general information about your site, such as the framework, upstream, date it was created, and your current plan.
 
-###PHP Version
+#### View your Site's Upstream
+To find a link to your site's upstream, click **Settings**, then **About Site**.
+
+![Upstream link](/docs/assets/images/upstream-link.png)
+
+
+### PHP Version
 The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. Learn more about [Toggling Between PHP Versions](/docs/articles/sites/settings/toggling-between-php-versions/).
 
 ## Support
