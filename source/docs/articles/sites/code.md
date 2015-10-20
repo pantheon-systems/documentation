@@ -4,13 +4,20 @@ description: Learn how to work with your site's code on Pantheon's Dashboard cod
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
+
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/interface-dev-code-sftp-commit.png)
-The Dev environment also provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
+
+You can also view the diff output for each individual file:
+
+![Diff output](/source/docs/assets/images/diff-screen.png)
+
+### Upstream Updates
+The Dev environment provides [one-click updates](/docs/articles/sites/code/applying-upstream-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
   <dl>
     <dt>Upstream</dt>
-      <dd>A code repository that serves as a common package for your web application.</dd>
+      <dd>A code repository that serves as a common package for your web application.</dd><br>
     <dt>Repository</dt>
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
