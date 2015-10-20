@@ -6,12 +6,14 @@ category:
   - developing
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
-Change Management is an Organization-level feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Pantheon Partners](/partners) and Enterprise Organizations. Partner users can access all sites associated with the Organization, with access restricted based on the user's role in that Organization. These roles exist to restrict who can deploy and manage other users in the Organization or sites it works on.
+Change Management is an Organization feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Partner](/pantheon-partners), [EDU](/edu) and [Enterprise](/pantheon-enterprise) Organizations.
+
+Users added to the organization can access all sites associated with the Organization, with access restricted based on the user's role in that Organization. These roles exist to restrict who can deploy code on sites, and manage other users in the Organization or sites it works on.
 
 ## Features
-* Enterprise Organization Administrators and Team Members can add Team Members or Supporting Organizations to sites owned by the Organization, with the Developer or Team Member roles.
-* Partner Organizations can assign users the role of an Administrator, Team Member, or Developer.
-* When an Organization is added to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the Organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
+* Enterprise Administrators can add Team Members or Supporting Organizations to **sites** owned by the Organization, with the Developer or Team Member roles.
+* Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
+* When a site owner adds an organization to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the Organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
 * All users in an Organization can see other users and their roles.
 
 ## Managing People in an Organization
@@ -34,13 +36,13 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-Enterprise Organizations can use the same process to assume ownership of a site; however, Partner Organizations cannot own sites directly.
+Enterprise Organizations can assume ownership of a site by opening a support ticket; however, Partner Organizations cannot own sites directly.
 
-For Sandbox sites, within the Team modal, the site owner can click **Make Owner** next to the team member who should receive ownership of the site.
+For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the team member who should receive ownership of the site.
 
 ## Managing an Enterprise Site's Team
 
-Enterprise sites can add users as either Team Members or Developers to the site.
+Elite site Team Members can add users as either Team Members or Developers to the site.
 
 ### Add a User to the Site
 1. At the Site Dashboard, click **Team**.
