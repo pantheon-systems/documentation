@@ -8,39 +8,20 @@ keywords: Drupal drush, command line, drupal, terminus drush, cli
 ---
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Pantheon does not need the settings.php for your site to work, and your Drupal sites do not contain one out of the box. Drush commands require a settings.php file and it's considered a best practice to have one. Simply duplicate the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on a new site.
+Drush commands require a `settings.php` file and it's considered a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file, however you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Terminus Drush and Local Drush
-Drush-savvy developers should also install and utilize [Terminus](/docs/articles/local/cli/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote drush calls on your environments without having drush installed locally.
+Drush-savvy developers should also install and utilize [Terminus](/docs/articles/local/cli/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
-Using Terminus to operate Drush commands on your site environments negates the issues below, which stem from incompatibilities between locally and remotely installed versions of Drush. All of the commands below can be run from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
 ## Drush Versions
-Pantheon currently has Drush version 5.10.1 installed. You can run Drush 5.x, 7.x, and 8.x on your local installation to interact with your Pantheon Drupal installations. Pantheon alias files are not compatible with 6.x, however you can execute commands locally with this version by including the `--strict=0` option.
+For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/docs/articles/local/drush-versions).
 
-For upgrade information, see [Introducing Drush 8](https://pantheon.io/blog/introducing-drush-8).
-
-#### Drush 7
-Create a new policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform. Our `hook_drush_sitealias_alter` function looks like this:
-```php
-function policy_drush_sitealias_alter(&$alias_record) {
-  // Fix pantheon aliases!
-  if ( isset($alias_record['remote-host']) &&
-      (substr($alias_record['remote-host'],0,10) == 'appserver.') ) {
-    $alias_record['path-aliases']['%drush-script'] = 'drush7';
-  }
-}
-```
-
-With this policy file in place, you are able to use the latest version of Drush on Pantheon:
-```
-$ drush @pantheon.my-great-site.dev version
-Drush Version   :  7.0.0-rc1
-```
-
-For more details, see our [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file) blog post.
 ## Install Drush Aliases Locally
-Adding Pantheon aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. There are two methods for obtaining the aliases:
+Downloading the Pantheon aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. You don't need to download the Drush aliases file if you're using Terminus to invoke Drush.
+
+There are two methods for obtaining the aliases:
 
 ### Download with Terminus, the Pantheon CLI
 Once authenticated to Pantheon with `$ terminus auth login`, update your local aliases file.
@@ -56,18 +37,7 @@ To get started, go to your Pantheon Dashboard and click **Download all Drush ali
 
 ###Install the Pantheon Drush Aliases
 
-If you are on Linux/MacOS environment, put the generated pantheon.aliases.drushrc.php in either the `.drush` directory in your home, or the `aliases` directory of your local Drush installation.
-
-Drush will search for aliases in any of these files using the alias search path. The following locations are examined for alias files:
-
-1. In any path set in `$options['alias-path']` in drushrc.php, or (equivalently) any path passed in via --alias-path=... on the command line.
-2. If 'alias-path' is not set, then in one of the default locations:
-  - /etc/drush
-  - In the drush installation folder
-  - Inside the 'aliases' folder in the drush installation folder
-  - $HOME/.drush 
-
-3. Inside the sites folder of any bootstrapped Drupal site, or any local Drupal site indicated by an alias used as a parameter to a command.
+If you are on Linux/Mac OS environment, put the generated pantheon.aliases.drushrc.php in either the `$HOME/.drush` directory.
 
 When the aliases have been installed, clear the Drush cache:
 
@@ -84,8 +54,9 @@ $ drush sa
 ```
 <div class="alert alert-info">
 <h4>Note</h4>
-You must be a <a href="/docs/articles/sites/team-management/#team-management">team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are team members. The alternative is to execute drush commands via <a href="/docs/articles/local/cli">Terminus</a> for sites in which you are not a direct team member.
+You must be a <a href="/docs/articles/sites/team-management/#team-management">team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are team members. The alternative is to execute Drush commands via <a href="/docs/articles/local/cli">Terminus</a> for sites in which you are not a direct team member.
 </div>
+
 ## Execute a Drush Command on a Pantheon Site Environment
 
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:
@@ -110,7 +81,7 @@ Drupal user : Anonymous
 ```
 ## Add Modules and Themes with Drush
 
-Drush can be a very quick way to set up a new site by adding modules and themes. To use this workflow, first make sure your Dev (or MultiDev) environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command:
+Drush can be a very quick way to set up a new site by adding modules and themes. To use this workflow, first make sure your Dev or MultiDev environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command:
 
 ```nohighlight
 drush @pantheon.drupal-7-sandbox.dev dl views panels ctools media
@@ -144,7 +115,7 @@ drush @pantheon.SITENAME.ENV rr
 
 [Site Audit](https://drupal.org/project/site_audit) is a collection of Drush commands that analyze a site for compliance with Drupal best practices. Originally designed to provide an actionable report prior to load testing and launch, each report can be read using Drush or written as HTML to a file. Site Audit currently only supports Drupal 7 sites.  
 
-To see all the site audit commands on Pantheon, use:
+To see all the Site Audit commands on Pantheon, use:
 ```bash
 drush @pantheon.SITENAME.ENV help --filter=site_audit
 ```
@@ -187,7 +158,7 @@ For example, if a [migrate](https://drupal.org/project/migrate) command such as
 ```bash
 --feedback="1000 items"
 ```
-See the [migrate drush documentation](https://drupal.org/node/1561820) for details.
+See the [migrate Drush documentation](https://drupal.org/node/1561820) for details.
 
 ## Drush Commands with Known Issues
 
@@ -205,19 +176,20 @@ Commands that alter site code, such as pm-download (dl), will only work on a Dev
 
 ## Add Custom Drush Commands
 
-While we have the full spectrum of drush core already available for your use, you may want to add a command that you regularly use, for instance, [drush search and replace (sar)](https://www.drupal.org/project/sar).
+While we have the full spectrum of Drush core already available for your use, you may want to add a command that you regularly use; for instance, [Drush Search and Replace (sar)](https://www.drupal.org/project/sar).
 
 1. Put the site in Git mode.
 2. Clone locally.
-3. Create a “drush” folder in the Drupal root.
-4. Add the “sar” drush command to the “drush” folder.
+3. Create a Drush folder in the Drupal root.
+4. Add the “sar” Drush command to the Drush folder.
 5. Commit drush/sar.
 6. Push your code up to master.
 7. Deploy to Test and Live.
-8. Download your Pantheon [drush aliases](https://pantheon.io/blog/drush-aliases-available).
-9. Clear your drush cache on each environment. (example: “drush @pantheon.<site-name>.devcc drush”)
+8. Download your Pantheon [Drush aliases](https://pantheon.io/blog/drush-aliases-available).
+9. Clear your Drush cache on each environment. Example: `drush @pantheon.<site-name>.devcc drush`
 
-If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your drush aliases by using “terminus sites aliases”. At this point, you are able to start using the drush command you added.  Drush 5 is the default version for newly created sites on Pantheon.
+If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
+
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
@@ -241,7 +213,7 @@ For more information, see [Fix Up Drush Site Aliases with a Policy File](https:/
 
 ## Use Drush to Update Modules on Pantheon
 
-First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and then:
+First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and then run:
 ```bash
 drush @pantheon.SITENAME.dev up --no-core
 ```
