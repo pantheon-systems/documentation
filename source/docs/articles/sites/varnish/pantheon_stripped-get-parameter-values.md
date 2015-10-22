@@ -10,7 +10,7 @@ In a typical scenario, Pantheon's edge cache uses the entire request URL, includ
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 Variables that are converted to <code>PANTHEON_STRIPPED</code> cannot be read with PHP, and original values will not appear in the <code>nginx-access.log</code> or be available to the application backend. However, the parameters can be read using JavaScript and will appear correctly in analytics tools. Use AJAX to pass parameters to PHP.</div>
 
-Behind Pantheon's edge caching layer, your application server will see some specific query parameters have been altered by replacing the parameter value with `PANTHEON_STRIPPED` indicating that cache optimization is in effect for these parameters. It is also an indication that developers should not attempt to use these parameters in ways that would return different content in the response to the user.
+Behind Pantheon's edge caching layer, your application server will see some specific query parameters have been altered by replacing the parameter value with `PANTHEON_STRIPPED` indicating that cache optimization is in effect for these parameters. It is also an indication that developers should not attempt to use these parameters in ways that would return different content in the response to the user. For example, be careful if you have PHP code that constructs redirects shuttling visitors from one Google AdWords campaign landing page to another. If the incoming request parameters are used to construct the redirect response parameters, the URL may contain the stripped out GA `utm_` values. Developers may also experience unexpected behavior when they attempt to overload Google's `utm_` parameter namespace. The URL parameters that Google Analytics uses are specific to their platform and it is not intended to be extended by site developers. To use it as a general tracking parameter with patterns like `utm_mytrackingparameter` is discouraged.
 
 Since this URL modification happens entirely on the back-end, your client-side Javascript, and your Google Analytics tracking code, still see and use the original query parameters unaltered and will continue to function normally.
 
@@ -23,3 +23,10 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 
 - `utm_*` -- Matches standard Google Analytics parameters
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
+
+#### How do I test my Google Analytics or AdWords URLs on Pantheon?
+You can use [curl]() or [wget]() to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs:
+```shell
+(curl example)
+(wget example)
+```
