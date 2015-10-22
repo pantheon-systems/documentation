@@ -27,9 +27,12 @@
             </div>
         </div>
         <!-- SIDEBAR NAV - Search/TOC -->
+        {% if page.landing is defined %}
+        {% else %}
         <div class="col-md-3">
             {% include ("sidebarnav.html") %}
         </div>
+        {% endif %}
     </div>
 </article>
 {% endblock %}
