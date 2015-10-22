@@ -1,11 +1,16 @@
 ---
+use: [users]
+users: true
 title: User Dashboard and Account
+layout: landing
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
 category:
   - Platform
 ---
+
 Access all of your sites and manage your account information from the User Dashboard.
 ![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
+
 ###Sites Tab
 Every site you're a team member of is displayed here, along with the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
@@ -25,7 +30,7 @@ It's easy to add, manage, and delete your site's users. For complete details, se
 
 With Pantheon for Agencies, you can build, launch, and run all your clients’ Drupal and WordPress sites through one dashboard.
 
-Learn how to [manage sites and teams with the Organization Dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/) or see the [Pantheon for Agencies FAQs article](/docs/articles/organizations/pantheon-for-agencies-faq/).
+Learn how to [manage sites and teams with the Organization Dashboard](/docs/articles/organizations/dashboard/) or see the [Organization FAQs article](/docs/articles/organizations/faq/).
 
 ##See Also
 - [Change Management](/docs/articles/organizations/change-management/)

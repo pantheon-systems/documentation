@@ -1,4 +1,8 @@
 ---
+domains: true
+layout: landing
+use:
+    - domains
 title: Domains and DNS
 description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
 category:

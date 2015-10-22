@@ -1,4 +1,8 @@
 ---
+layout: landing
+varnish: true
+use:
+    - varnish
 title: Varnish Caching for High Performance with Drupal and WordPress
 description: Configure and verify Varnish is working on your WordPress or Drupal sites.
 category:

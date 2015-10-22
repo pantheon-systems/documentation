@@ -1,4 +1,8 @@
 ---
+layout: landing
+code: true
+use:
+    - code
 title: Pantheon Dashboard Code Tool
 description: Learn how to work with your site's code on Pantheon's Dashboard code tool.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream

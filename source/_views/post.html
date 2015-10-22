@@ -1,35 +1,35 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <article>
-    <div class="article container">
+    <div class="article container-fluid">
         <div class="col-md-9">
             <header>
                 <h1>Pantheon Changelog<br /><small>{{page.title}}</small></h1>
             </header>
             <div>{{ page.blocks.content|raw }}</div>
-            <div class="text-center">
-                <ul class="pagination">
-                    {% if not page.next_post %}
-                        {% set newer_disabled = 'disabled' %}
-                        {% set newer_url = '#void' %}
-                    {% else %}
-                        {% set newer_url = page.next_post.url %}
-                    {% endif %}
-                    <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Newer</a></li>
-                    {% if not page.previous_post %}
-                        {% set older_disabled = 'disabled' %}
-                        {% set older_url = '#void' %}
-                    {% else %}
-                        {% set older_url = page.previous_post.url %}
-                    {% endif %}
-                    <li class="{{ older_disabled }}"><a href="{{ older_url }}" title="{{ page.previous_post.title }}">Older</a></li>
-                </ul>
-            </div>
         </div>
         <!-- SIDEBAR NAV - Search/TOC -->
         <div class="col-md-3">
             {% include ("sidebarnav.html") %}
         </div>
+    </div>
+    <div class="text-center">
+        <ul class="pagination">
+            {% if not page.next_post %}
+                {% set newer_disabled = 'disabled' %}
+                {% set newer_url = '#void' %}
+            {% else %}
+                {% set newer_url = page.next_post.url %}
+            {% endif %}
+            <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Newer</a></li>
+            {% if not page.previous_post %}
+                {% set older_disabled = 'disabled' %}
+                {% set older_url = '#void' %}
+            {% else %}
+                {% set older_url = page.previous_post.url %}
+            {% endif %}
+            <li class="{{ older_disabled }}"><a href="{{ older_url }}" title="{{ page.previous_post.title }}">Older</a></li>
+        </ul>
     </div>
 </article>
 {% endblock %}

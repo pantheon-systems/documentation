@@ -26,14 +26,98 @@ sculpin_content_types:
             - category
             - authors
         permalink: pretty
-    8:
+    drupal:
         type: path
-        path: docs/article/drupal/8
+        path: docs/articles/drupal
         enabled: true
         permalink: pretty
-
+    eight:
+        type: path
+        path: docs/articles/drupal/8
+        enabled: true
+        permalink: pretty
     local:
         type: path
         path: docs/articles/local
+        enabled: true
+        permalink: pretty
+    organizations:
+        type: path
+        path: docs/articles/organizations
+        enabled: true
+        permalink: pretty
+    sites:
+        type: path
+        path: docs/articles/sites
+        enabled: true
+        permalink: pretty
+    backups:
+        type: path
+        path: docs/articles/sites/backups
+        enabled: true
+        permalink: pretty
+    code:
+        type: path
+        path: docs/articles/sites/code
+        enabled: true
+        permalink: pretty
+    create:
+        type: path
+        path: docs/articles/sites/create
+        enabled: true
+        permalink: pretty
+    database:
+        type: path
+        path: docs/articles/sites/database
+        enabled: true
+        permalink: pretty
+    domains:
+        type: path
+        path: docs/articles/sites/domains
+        enabled: true
+        permalink: pretty
+    files:
+        type: path
+        path: docs/articles/sites/files
+        enabled: true
+        permalink: pretty
+    logs:
+        type: path
+        path: docs/articles/sites/logs
+        enabled: true
+        permalink: pretty
+    migrate:
+        type: path
+        path: docs/articles/sites/migrate
+        enabled: true
+        permalink: pretty
+    newrelic:
+        type: path
+        path: docs/articles/sites/newrelic
+        enabled: true
+        permalink: pretty
+    security:
+        type: path
+        path: docs/articles/sites/security
+        enabled: true
+        permalink: pretty
+    settings:
+        type: path
+        path: docs/articles/sites/settings
+        enabled: true
+        permalink: pretty
+    varnish:
+        type: path
+        path: docs/articles/sites/varnish
+        enabled: true
+        permalink: pretty
+    users:
+        type: path
+        path: docs/articles/users
+        enabled: true
+        permalink: pretty
+    wordpress:
+        type: path
+        path: docs/articles/wordpress
         enabled: true
         permalink: pretty

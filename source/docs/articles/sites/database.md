@@ -1,4 +1,8 @@
 ---
+layout: landing
+database: true
+use:
+    - database
 title: Database Workflow Tool
 description: Learn about the database that runs in your Pantheon Drupal or WordPress site.
 keywords: mysql, sql, database, db, databases

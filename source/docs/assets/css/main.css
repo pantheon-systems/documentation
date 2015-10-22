@@ -18,7 +18,9 @@
 *
 * Update the basics of our documents to prep for docs content.
 */
-
+html {
+  height: 100%;
+}
 
 
 p, h1, h2, h3, h4, h5, h6, a, span {
@@ -91,6 +93,7 @@ body {
   padding-top: 60px;
   background-color: #fff;
   color: #333;
+  min-height: 100%;
 }
 body.row.main {
   position: relative;
@@ -496,6 +499,8 @@ img.noborder {
 }
 #footer svg {
     margin-right: 5px;
+    position: relative;
+    top: 10px;
 }
 .pio-docs-footer {
     text-align: center;
@@ -542,7 +547,7 @@ img.noborder {
 }
 @media (min-width: 768px) {
   .pio-docs-footer p {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 995px) {
@@ -890,6 +895,62 @@ img.noborder {
 /* First level of nav */
 .pio-docs-sidenav {
   margin-bottom: 20px;
+
+}
+.pio-landing-sidenav {
+    margin-left: -15px;
+    margin-right: 15px;
+    padding-left: 30px;
+    padding-top :9px;
+    padding-bottom: 30px;
+    height: 100%;
+    min-height: 100%;
+    background: #F5F8F8;
+
+}
+
+.pio-landing-sidenav ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.pio-landing-sidenav .list-group {
+  box-shadow: 0px 0px 0px;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 0px 0px;
+}
+.pio-landing-sidenav .list-group-item {
+  padding: 10px 0;
+  border: 0px;
+  background-color: transparent;
+}
+
+.pio-landing-sidenav p {
+  margin-bottom: 0px;
+  line-height: normal;
+  text-indent: 0;
+}
+
+.pio-landing-sidenav .list-group-item:before {
+	font-family: 'Glyphicons Halflings';
+  content: "\E022";
+	float: left;
+  color: #44525E;
+  opacity: 0.7;
+  display: block;
+  width: 1.5em;
+  position: relative;
+  top: -3px;
+}
+
+.pio-landing-sidenav a {
+color: #44525E;
+text-decoration: none;
+font-size: 13px;
+}
+
+.pio-landing-sidenav a:hover {
+color: #222222;
 }
 
 /* All levels of nav */
@@ -987,16 +1048,16 @@ img.noborder {
 @media (min-width: 1500px){
 .pio-docs-sidebar.affix-bottom {
     width: 250px !important;
-    margin-left: 20px;
+    margin-left: 50px;
 }
     .pio-docs-sidebar.affix-top {
         width: 250px !important;
-        margin-left: 20px;
+        margin-left: 50px;
 
     }
     .pio-docs-sidebar.affix {
         width: 250px !important;
-        margin-left: 20px;
+        margin-left: 50px;
 
 }
 .navbar-nav {
@@ -1004,7 +1065,7 @@ img.noborder {
 
 }
 
-@media (min-width: 1102px) and (max-width: 1499px){
+@media (min-width: 1202px) and (max-width: 1499px){
 .pio-docs-sidebar.affix-bottom {
     width: 250px !important;
     margin-left: 40px;
@@ -1012,7 +1073,6 @@ img.noborder {
     .pio-docs-sidebar.affix-top {
         width: 250px !important;
         margin-left: 40px;
-
     }
     .pio-docs-sidebar.affix {
         width: 250px !important;
@@ -1023,15 +1083,12 @@ img.noborder {
     margin-right: 16px;
 }
 }
-@media (min-width: 992px) and (max-width: 1101px){
+@media (min-width: 992px) and (max-width: 1201px){
 .pio-docs-sidebar.affix-bottom {
-    width: 200px !important;
 }
     .pio-docs-sidebar.affix-top {
-        width: 200px !important;
     }
     .pio-docs-sidebar.affix {
-        width: 200px !important;
 }
 .navbar-nav {
 
@@ -1047,6 +1104,7 @@ margin-right: 20px;
   .pio-docs-sidebar.affix,
   .pio-docs-sidebar.affix-bottom {
       position: fixed;
+      top: 40px;
 
   }
   .pio-docs-sidebar.affix {
@@ -1056,7 +1114,6 @@ margin-right: 20px;
  }
   .pio-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
-    top: 40px;
   }
   .pio-docs-sidebar.affix-top {
   }
@@ -1437,7 +1494,10 @@ h1[id] {
   background-color: #FE4A45;
   border-color: #FE4A45;
 }
-
+.panel-default>.panel-heading {
+    background-color: #DDE5E7 !important;
+    background-image: none !important;
+}
 .btn-primary, .btn-primary:visited {
   text-shadow: none !important;
   background: #EFD01B;
@@ -2076,7 +2136,6 @@ cursor: pointer;
   padding-right: 0px !important;
 }
 .gsc-input-box {
-  border: 1px solid  #78868E !important;
   height: 35px !important;
   border-radius: 1px;
 
@@ -2102,6 +2161,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   margin-bottom: 0px!important;
   border-radius: 0px;
   z-index: 100;
+  margin-left: -1px !important;
 }
 @-moz-document url-prefix() {
   input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
