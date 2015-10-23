@@ -45,7 +45,7 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains and SSL](/docs/articles/sites/domains/) and [Going Live](/docs/articles/going-live/).
+Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/articles/sites/domains/) and [Going Live](/docs/articles/going-live/).
 
 ## Developing Sites
 
