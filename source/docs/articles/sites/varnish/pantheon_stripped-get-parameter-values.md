@@ -25,7 +25,7 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
 
 #### How do I test my Google Analytics or AdWords URLs on Pantheon?
-You can use [curl](http://curl.haxx.se/) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs:
+You can use [curl](http://curl.haxx.se/) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
 ```shell
 # example using curl and grep
 curl -i "http://live-analytics-url-tester.pantheon.io/?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
