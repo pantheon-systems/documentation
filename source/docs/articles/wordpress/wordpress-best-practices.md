@@ -14,7 +14,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Automate testing with [Behat](/docs/guides/automated-testing-wordpress-behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
-* We recommend using SSL/HTTPS. Pro plans and above can [load a certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/ssl-with-cloudflare/).
+* We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/ssl-with-cloudflare/).
 
 * Run [Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis) to review errors and get recommendations on your site's configurations.
 
@@ -31,4 +31,4 @@ This article provides suggestions, tips, and best practices for developing and m
 `<?php get_template_part('content', 'sidebar'); ?>`  
 `<?php include('content-sidebar.php'); ?>`
 
-* If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post] (https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently. 
+* If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post] (https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently.

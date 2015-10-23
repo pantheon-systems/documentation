@@ -121,9 +121,9 @@ The Max-Age returned in the header may vary depending on which cache server is h
 
 Pantheon strips cookies from requests made to public files served from sites/default/files, which allows Varnish to cache the response.
 
-## SSL & Varnish
+## HTTPS & Varnish
 
-When a Pantheon environment is configured with SSL, a dedicated IP address to a load balancer is provided. Connections via SSL to the load balancer are decrypted by an SSL termination server using the client’s uploaded certificate, then handled like any other request, including the same rules for Varnish caching. The result is encrypted by the SSL termination server and served back to the client, completing the request.
+When a Pantheon environment is configured with HTTPS, a dedicated IP address to a load balancer is provided. Connections via HTTPS to the load balancer are decrypted by an HTTPS or TLS termination server using the client’s uploaded certificate, then handled like any other request, including the same rules for Varnish caching. The result is encrypted by the SSL termination server and served back to the client, completing the request.
 
 ## 404s & Varnish
 
