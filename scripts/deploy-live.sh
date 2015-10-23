@@ -18,7 +18,7 @@ open ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
 
 
 # rsync local output_prod/docs to files dir on appserver
-rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
 
 # Send the rysnc log file to remote directory "/docs-backups/`date +%F-%I%p`/"
