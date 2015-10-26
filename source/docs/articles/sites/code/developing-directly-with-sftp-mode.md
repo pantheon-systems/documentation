@@ -5,7 +5,7 @@ category:
   - developing
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin
 ---
-In some cases, working via `git push` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
+In some cases, working via `git` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
 This is why we offer **SFTP mode**. This allows you to develop directly on Pantheon and can be a major time-saver.
 
