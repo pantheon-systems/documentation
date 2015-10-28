@@ -45,6 +45,10 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
 File directories on Pantheon's file serving infrastructure cannot be moved or renamed. To move or rename a directory, create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
 
+## Renaming / Moving files using SFTP
+
+Like file directories, files on Pantheon cannot be renamed or moved. Our SFTP mode doesn’t support the `mv` command, which is what most apps do when they try to "rename" and "move". To rename or move a file, delete the old file and upload the new file.
+
 ## IP-Address Based Security Schemes
 IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
 
