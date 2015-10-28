@@ -105,7 +105,7 @@ Note that the default connection parameters are correct and do not need changing
 
 #### Search API Solr Search (search\_api\_solr)
 
-Three modules are required; [entity](https://drupal.org/project/entity),  [search\_api](https://drupal.org/project/search_api) and  [search\_api\_solr](https://drupal.org/project/search_api) need to be installed and enabled.  
+Three modules are required; [entity](https://drupal.org/project/entity),  [search\_api](https://drupal.org/project/search_api) and  [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.  
  ![](/source/docs/assets/images/desk_images/192457.png)
 
 ## Known Limitations of Pantheon's Solr Service
