@@ -53,6 +53,8 @@ If you have cleared the caches from your Pantheon Dashboard and are still seeing
 
 By default, Pantheon's edge will ignore most cookies, preventing them from breaking the cache and being passed to the backend. These cookies are still available to JavaScript, so analytics tools (e.g. Google, Chartbeat, etc.) will function out of the box on Pantheon. 
 
+Pantheon's edge will also ignore session cookies by default when the requested URL is a static asset such as images, CSS files, and static HTML documents. This could lead to authenticated users not being recognized when visiting pages ending in the .html or .htm extension, which could be a normal Drupal node with that URL set manually for reverse compatibility with an old site. The recommendation in this case is to send a 301 redirect from the URL with the .html or .htm extension to a URL with no such extension.
+
 To test whether or not a cookie is preventing Varnish from caching, you can examine the headers output (Age, Max-Age, Cookie) via the following curl command:
 
 ```nohighlight
