@@ -40,7 +40,7 @@ You may need to select "accept" when prompted to accept the server's host key fo
 
 ## Known Issues
 
-**Uploading files to the files directory**  Filezilla does not properly process the uploading of files where the target directory on Pantheon is `/files`.  This is due to the symlink that is in place from `sites/default/files`. You will need an alternate program that can complete the task.  
+### Uploading to the Files Directory
+Filezilla does not correctly upload files when the target directory on Pantheon is `/files`. This is due to the symlink that is in place from `sites/default/files`. You will need to use an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS), to complete the task.  
 
-Alternatives:
- - [Transmit](https://panic.com/transmit/) (Mac OS) 
+
