@@ -49,7 +49,7 @@ Using the testing site created when you submitted your distribution, test your u
 
 ## Update Release Branching Strategy
 
-We encourage you to use a continuous integration server, like Jenkins, Travis-CI, or Circle-CI, to automate this process. 
+We encourage you to use a continuous integration server, such as Jenkins, Travis-CI, or Circle-CI, to automate this process. 
 
 For example:
 
