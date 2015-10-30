@@ -37,3 +37,10 @@ Under the Advanced Tab, leave the Remote Directory blank.  </div>
 After logging in, you can access your application in the `/code` directory, Drupal's `/sites/default/files` in `/files`, and your application's logs in `/logs`.
 
 You may need to select "accept" when prompted to accept the server's host key for the current session and store it in cache. This allows you to connect to the server and manage your files for the current session.
+
+## Known Issues
+
+### Uploading to the Files Directory
+Filezilla does not correctly upload files when the target directory on Pantheon is `/files`. This is due to the symlink that is in place from `sites/default/files`. You will need to use an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS), to complete the task.  
+
+
