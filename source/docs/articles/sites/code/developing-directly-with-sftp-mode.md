@@ -106,7 +106,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 ### I can't write to my codebase on Test or Live.
 
 This is by design. Please see [Using the Pantheon Workflow
-](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-&-live) to learn why.
+](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
 ### My STP client takes a long time to connect
 
