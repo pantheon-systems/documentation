@@ -1,5 +1,5 @@
 ---
-title: Updating Core for Site's with Outdated Versions on Custom Distributions
+title: Updating Core for Sites with Outdated Versions on Custom Distributions
 description: Learn to pull core updates when repository maintainers of alternate distributions are too slow.
 keywords: upstream, core, core update, core updates, upstream updates, manually pull updates, manually update, manually update upstream, pull upstream updates, pull core updates
 ---
