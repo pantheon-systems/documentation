@@ -44,7 +44,6 @@ If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull 
 <h4>Note</h4>
 This does not solve all problems that may arise, but it should take care of most situations.</div>
 
-In the event the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
 ### Resolve Conflicts Locally
 Select the appropriate framework below for your web application, then execute the commands from within an up-to-date Git clone on your local machine. Add the `-Xtheirs` flag if you want to accept all changes.
 <!-- Nav tabs -->
