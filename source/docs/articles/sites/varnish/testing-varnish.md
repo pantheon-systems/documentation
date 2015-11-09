@@ -5,7 +5,7 @@ keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testin
 ---
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by submitting a support ticket.
+Use the [web utility](http://www.isvarnishworking.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. If you have any feedback, let us know by submitting a support ticket.
 
 ## Test If Varnish Is Working by Reading HTTP Headers
 
