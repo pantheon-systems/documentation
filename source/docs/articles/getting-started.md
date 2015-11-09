@@ -52,7 +52,7 @@ Find more Pantheon provided credentials in the site Dashboard's connection infor
 Learn more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/), both for code deployment and content (database and files).
 
 ## Known Limitations
-Familiarize yourself with Pantheon's [Platform Considerations](/docs/articles/sites/platform-considerations) now to reduce headaches later.
+Familiarize yourself with Pantheon's [platform considerations](/docs/articles/sites/platform-considerations) now to reduce headaches later.
 
 ## Prepare for Launch
 Ensure a successful launch by following our best practice checklist for [Going Live](/docs/articles/going-live) on Pantheon.
