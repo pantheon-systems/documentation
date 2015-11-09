@@ -26,7 +26,7 @@ You’ll need to package up your:
 ### Evaluate Your Site
 
 1. Review your codebase.
- - Are you running another application in addition to WordPress or Drupal? See [Known Limitations](/docs/articles/sites/known-limitations/#one-application-per-site).
+ - Are you running another application in addition to WordPress or Drupal? See [Platform Considerations](/docs/articles/sites/platform-considerations/#one-application-per-site).
 2. Measure your database size.
 3. Locate your non-version-controlled static assets.
 4. Review your logs.

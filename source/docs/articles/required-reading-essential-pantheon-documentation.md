@@ -14,7 +14,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Getting Started](/docs/articles/getting-started)  
 - [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow/)
 - [All About Application Containers](/docs/articles/sites/all-about-application-containers/)
-- [Known Limitations](/docs/articles/sites/known-limitations/)  
+- [Platform Considerations](/docs/articles/sites/platform-considerations/)  
 - [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication)
 <div class="alert alert-info">
 <h4>Note</h4>
