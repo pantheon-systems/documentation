@@ -14,7 +14,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Solution**: Pantheon recommends Redis as a caching backend, which has better performance.
 <hr>
 ### Adaptive Image Styles
-**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Known Limitations](/docs/articles/sites/known-limitations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
+**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/articles/sites/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
 ### Aquia Solr Search
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
