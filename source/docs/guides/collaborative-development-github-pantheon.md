@@ -199,7 +199,7 @@ remote:
 remote: PANTHEON NOTICE:
 remote:
 remote: Environment 'dev' (branch: master) is currently in SFTP mode.
-remote: It cannot recieve git pushes until you disable this via the Pantheon dashboard.
+remote: It cannot receive git pushes until you disable this via the Pantheon dashboard.
 remote: If you are trying to push changes to a different branch or environment, try:
 remote:     git push origin [branch-name]
 remote:
@@ -215,7 +215,7 @@ This push to Pantheon failed, because the Development environment was in SFTP mo
 Switch the connection mode to Git by clicking on the toggle, or via the command line:
 
 ```nohighlight
-$ terminus site connection-mode --site=d7-ci --env=dev --set=git
+$ terminus site set-connection-mode --site=d7-ci --env=dev --set=git
 ```
 
 ![Connection Mode set to Git](/source/docs/assets/images/connection-mode-git.png)

@@ -96,7 +96,7 @@ Success: Pow! You created a new site!
 $
 ```
 To create a site with one command, you need
-- **Product ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus products list`.
+- **Product ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
 - **site name:** A machine-readable name, that will become a part of your environments' URLs. `--site-name=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
 - **site label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
 - **Organization ID:** The UUID of the organization that will own the site.
@@ -117,7 +117,7 @@ For my test site, I used the following:
 **Label** = Command Line Test
 
 ```nohighlight
-$ terminus sites create --product=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
+$ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
                         --name=cli-test \  
                         --label="Command Line Test" \  
                         --org=YOUR-ORG-ID \  
