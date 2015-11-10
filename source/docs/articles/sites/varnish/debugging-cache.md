@@ -1,21 +1,18 @@
 ---
-title: Debugging Cache
+title: Understanding and Debugging Varnish Cache Issues
 description: Detailed information on debugging your Pantheon Drupal or WordPress Cache.
 category:
   - debugging
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 ---
-There are three ways to clear all Varnish caches for both Drupal and WordPress sites.
+In addition to clearning your CMS caches, we extend core functionality to clear all Varnish caches along our edge layer as well. This applies to Drupal and WordPress sites.
 
 ### Drupal
-The first two require you to enable the **pantheon\_api** module to allow Drupal to send the request to clear the Varnish caches.
+Note: The **pantheon\_api** module must be enabled to allow Drupal to send the request to clear the Varnish caches.
 
 1. From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
 2. Via [Terminus](/docs/articles/local/cli/): `terminus drush --site=<site> --env=<env> cc all`
 3. From the Pantheon Dashboard: Click **Clear Caches**
-
-<div class="alert alert-info" role="alert"><h4>Note</h4>Varnish caches cannot be selectively cleared.</div>
-
 
 ### WordPress
 1. From the WordPress Admin menu, select **Settings > Pantheon Cache**.
@@ -27,6 +24,9 @@ The first two require you to enable the **pantheon\_api** module to allow Drupal
  ```
 1. From the Pantheon Dashboard: Click **Clear Caches**.
 
+### Common Issues
+## Clear cache fails in dashboard or Terminus
+If you see a notification on the dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the dashboard notification may not help much to debug, running the same command via Terminus will likely provide actionable information. Commenting out redirections in settings.php, wp-config.php, or elsewhere can isolate issues as well as resolving any fatal PHP errors.
 
 ## No HTTP Cache Headers in Drupal
 If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
@@ -39,11 +39,6 @@ If you are experiencing issues with theme images not refreshing, you can manuall
 ### Drupal
 To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.
 
-
-## 503 and 504 Gateway Timeouts
-This can indicate an interrupted page delivery or timeout. The best way to debug this is to isolate the problem by identifying pages where the timeouts occur. If it's consistently on one URL, there is something happening in that code path that needs to be fixed.
-
-In the event that the problem persists, contact Support by creating a ticket from your Pantheon site's Dashboard.
 
 ## Clearing Caches In Drupal Doesn't Update Content/Views
 
