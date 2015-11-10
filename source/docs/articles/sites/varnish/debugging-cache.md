@@ -8,43 +8,41 @@ keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 In addition to clearning your CMS caches, we extend core functionality to clear all Varnish caches along our edge layer as well. This applies to Drupal and WordPress sites.
 
 ### Drupal
-Note: The **pantheon\_api** module must be enabled to allow Drupal to send the request to clear the Varnish caches.
+You must enable the **pantheon\_api** module to allow Drupal to send the request to clear the Varnish caches.
 
-1. From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
-2. Via [Terminus](/docs/articles/local/cli/): `terminus drush --site=<site> --env=<env> cc all`
-3. From the Pantheon Dashboard: Click **Clear Caches**
+- From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
+- Via [Terminus](/docs/articles/local/cli/): `terminus drush --site=<site> --env=<env> cc all`
+- From the Pantheon Dashboard: Click **Clear Caches**
 
 ### WordPress
-1. From the WordPress Admin menu, select **Settings > Pantheon Cache**.
-1. Click the **Clear Cache** button to clear all the caches.
-1. From the command line you can use Terminus:
+- From the WordPress Admin menu, select **Settings > Pantheon Cache**. Click the **Clear Cache** button to clear all the caches.
+- Via the command line, run the following Terminus command:
 
  ```bash
  $ terminus site clear-caches --site=<site> --env=<env>
  ```
-1. From the Pantheon Dashboard: Click **Clear Caches**.
+- From the Pantheon Dashboard: Click **Clear Caches**.
 
-### Common Issues
-## Clear cache fails in dashboard or Terminus
-If you see a notification on the dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the dashboard notification may not help much to debug, running the same command via Terminus will likely provide actionable information. Commenting out redirections in settings.php, wp-config.php, or elsewhere can isolate issues as well as resolving any fatal PHP errors.
+## Common Issues
+### Clear Cache Fails in Dashboard or Terminus
+If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via Terminus will likely provide actionable information. Commenting out redirections in settings.php, wp-config.php, or elsewhere can isolate issues as well as resolving any fatal PHP errors.
 
-## No HTTP Cache Headers in Drupal
+### No HTTP Cache Headers in Drupal
 If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/articles/drupal/drupal-performance-and-caching-settings). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 
 If you are still getting no-cache, must-revalidate, post-check=0, pre-check=0 as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check the theme to see if Drupal messages are being set in an attempt to suppress user facing messages.
 
-## Theme Images Not Refreshing
+### Theme Images Not Refreshing
 If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
-### Drupal
+#### Drupal
 To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.
 
+### Clearing Caches In Drupal Doesn't Update Content/Views
 
-## Clearing Caches In Drupal Doesn't Update Content/Views
+If you have cleared the caches from your Pantheon Dashboard and are still seeing stale Views on your Drupal powered site, it's possible that View's cache has persisted. For the Views that need to be dynamic, check that those Views have caching enabled and conservatively disable as desired.
 
-If you have cleared the caches from your Pantheon Dashboard and are still seeing stale Views on your Drupal powered site; it's possible that View's cache has persisted. For the Views that need to be dynamic, check that those Views have caching enabled and conservatively disable as desired.
-
-## Cookies & Varnish
+### Cookies & Varnish
 
 By default, Pantheon's edge will ignore most cookies, preventing them from breaking the cache and being passed to the backend. These cookies are still available to JavaScript, so analytics tools (e.g. Google, Chartbeat, etc.) will function out of the box on Pantheon. 
 
