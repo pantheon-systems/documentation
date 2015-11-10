@@ -23,7 +23,7 @@ The first two require you to enable the **pantheon\_api** module to allow Drupal
 1. From the command line you can use Terminus:
 
  ```bash
- $ terminus site clear-caches --site=<site> --env=<env>
+ $ terminus site clear-cache --site=<site> --env=<env>
  ```
 1. From the Pantheon Dashboard: Click **Clear Caches**.
 
