@@ -8,7 +8,7 @@ keywords: backup, backup creation, create a backup, create backup, create backup
 Pantheon makes creating a backup of an environment a simple one-click operation. A backup contains three separate archives: a database backup, a files backup, and a code backup.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be LOST with no way to recover them. The backups are based on the code currently in the Git log.</div>
+Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
 
 ## Create a Backup
 
@@ -106,7 +106,6 @@ In comparison, Pantheon’s backup mechanism:
 
 Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/articles/local/cli/).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
 ```bash
-terminus site backup <get|load|create|list> [--site=<site>] [--env=<env>]
-[--element=<code|files|db|all>] [--to-directory=<directory>] [--latest]
-[--keep-for]
+terminus site backups <get|load|create|list> [--site=<site>] [--env=<env>]
+[--element=<code|files|db|all>] [--to=<directory|file>] [--file=<filename>] [--latest] [--keep-for]
 ```
