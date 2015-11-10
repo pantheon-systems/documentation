@@ -107,6 +107,5 @@ In comparison, Pantheon’s backup mechanism:
 Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/articles/local/cli/).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
 ```bash
 terminus site backups <get|load|create|list> [--site=<site>] [--env=<env>]
-[--element=<code|files|db|all>] [--to-directory=<directory>] [--latest]
-[--keep-for]
+[--element=<code|files|db|all>] [--to=<directory|file>] [--file=<filename>] [--latest] [--keep-for]
 ```
