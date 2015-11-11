@@ -10,6 +10,9 @@ keywords: Drupal drush, command line, drupal, terminus drush, cli
 
 Drush commands require a `settings.php` file and it's considered a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file, however you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
 
+Switch to SFTP mode, check the connection settings link for information to connect via SFTP client or CLI, and add the file. You can find your code in the ~/code directory once you connect.
+https://pantheon.io/docs/articles/sites/code/developing-directly-with-sftp-mode/
+
 ## Terminus Drush and Local Drush
 Drush-savvy developers should also install and utilize [Terminus](/docs/articles/local/cli/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
