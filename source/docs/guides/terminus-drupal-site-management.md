@@ -233,7 +233,7 @@ Success: Successfully commited.
 And finally, let's create the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using `create-env`.
 
 ```nohighlight
-$ terminus site create-env --site=terminus-cli-create --env=test
+$ terminus site create-env --site=terminus-cli-create --to-env=test
 
   1. dev
   2. test

@@ -96,29 +96,28 @@ Success: Pow! You created a new site!
 $
 ```
 To create a site with one command, you need
-- **Product ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
-- **site name:** A machine-readable name, that will become a part of your environments' URLs. `--site-name=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
-- **site label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
+- **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
+- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `--site=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
+- **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
 - **Organization ID:** The UUID of the organization that will own the site.
 
 The format for creating a site with a single command is:
 
 ```nohighlight
-$ terminus sites create [--product=<productid>] \  
-                        [--name=<name>] \  
+$ terminus sites create [--upstream=<upstreamid>] \  
+                        [--site=<name>] \  
                         [--label=<label>] \  
-                        [--org=<org>] \  
-                        [--import=<url>]  
+                        [--org=<id>] \    
 ```
 
 For my test site, I used the following:  
-**Product** = WordPress
+**Upstream** = WordPress
 **Site Name** = cli-test  
 **Label** = Command Line Test
 
 ```nohighlight
 $ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
-                        --name=cli-test \  
+                        --site=cli-test \  
                         --label="Command Line Test" \  
                         --org=YOUR-ORG-ID \  
 ```
@@ -303,7 +302,6 @@ $ terminus site code commit --site=cli-test \
                             --env=dev \  
                             --message="Install Pinboard theme" \
                             --yes \  
-                            --branchname=master
 ```
 
 Terminus connects to Pantheon's API, which makes real-time updates to any Dashboard you have open. What you do in Terminus is immediately represented in your Dashboard, so it is always up to date.
@@ -326,7 +324,6 @@ $ terminus site code commit --site=cli-test \
                             --env=dev \  
                             --message="Create cli-test-theme child of pinboard theme" \
                             --yes \  
-                            --branchname=master
 ```
 
 Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
