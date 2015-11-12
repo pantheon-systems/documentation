@@ -86,7 +86,9 @@ Having planned and prepared, your move should be an execution, rather than trial
 Single-file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](/docs/articles/local/cli/), the Pantheon command-line interface.
 
 ```nohighlight
-terminus sites import [--name=<name>] [--label=<label>] [--org=<org>] 
+
+terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<url>]
+
 ```
 
 ### Create and Name the Site
