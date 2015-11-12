@@ -11,7 +11,7 @@ The Terminus project's second version is developed and supported at [https://git
 Terminus is in a pre-release state with constant development. The commands in the repo may change and not all functionality will work for all use cases.
 
 ## Installation
-Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Installation "Pantheon CLI wiki, installation page on Github").
+Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/blob/master/README.md#installation "Pantheon CLI wiki, installation page on Github").
 ## Use
 Usage instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Usage "Pantheon CLI wiki, usage page on Github").
 
