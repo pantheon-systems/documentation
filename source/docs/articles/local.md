@@ -14,5 +14,5 @@ While Pantheon provides several options for on-server development, [local develo
 
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 
+
 {% endfor %}
-<hr>

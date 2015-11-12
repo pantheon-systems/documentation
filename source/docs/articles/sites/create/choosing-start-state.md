@@ -28,7 +28,7 @@ It is not possible to change the upstream of the site. To change the upstream, c
 ### Product UUID
 There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all product UUID's available to you, run the following [Terminus](/docs/articles/local/cli/) command:
 ```
-$ terminus products list
+$ terminus upstreams list
 ```
 
 ## Importing an Existing Site
