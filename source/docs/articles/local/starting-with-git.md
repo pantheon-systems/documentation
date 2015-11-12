@@ -6,7 +6,7 @@ category:
   - developing
 keywords: git, git commands, clone, commit, push
 ---
-Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use local development, it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs/articles/local/developing-locally), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 ## Clone Your Site Codebase
 
