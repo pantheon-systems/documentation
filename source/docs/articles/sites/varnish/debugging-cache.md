@@ -8,7 +8,7 @@ keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 In addition to clearning your CMS caches, we extend core functionality to clear all Varnish caches along our edge layer as well. This applies to Drupal and WordPress sites.
 
 ### Drupal
-You must enable the **pantheon\_api** module to allow Drupal to send the request to clear the Varnish caches.
+Sites running Drupal 6/7 must enable the [pantheon\_api](/docs/articles/sites/code/what-is-the-pantheon_api-module/) module to allow Drupal to send the request to clear the Varnish caches. Drupal 8 sites must clear Varnish via the Pantheon Dashboard.
 
 - From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
 - Via [Terminus](/docs/articles/local/cli/): `terminus drush --site=<site> --env=<env> cc all`
