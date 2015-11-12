@@ -31,3 +31,9 @@ sculpin_content_types:
         path: docs/article/drupal/8
         enabled: true
         permalink: pretty
+
+    local:
+        type: path
+        path: docs/articles/local
+        enabled: true
+        permalink: pretty
