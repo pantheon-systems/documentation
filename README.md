@@ -27,9 +27,10 @@ Usage
 -----
 #### 1. Get the code:
 Fork and clone this repository. Issue pull-requests one document at a time.
-### Running Locally
+
+### Running Locally (Optional)
 #### 2. Get composer:
-If you do not wish to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
 Run the following command to install composer globally:
 ```
@@ -47,7 +48,7 @@ If you do not want to install sculpin globally, you can use the following comman
 ```
 ./vendor/bin/sculpin generate --server
 ```
-You can now visit your docs site at <http://localhost:8000/docs>
+Visit your docs site at: <http://localhost:8000/docs>
 
 In order to globally execute sculpin, run the following commands:
 ```
@@ -61,7 +62,7 @@ Build sculpin and run a local instance:
 ```
 sculpin generate --server
 ```
-You can now visit your docs site at <http://localhost:8000/docs>
+Visit your docs site at: <http://localhost:8000/docs>
 
 
 Finally, you can tell sculpin to watch the docs directory and automatically
