@@ -19,7 +19,7 @@ Sites running Drupal 6/7 must enable the [pantheon\_api](/docs/articles/sites/co
 - Via the command line, run the following Terminus command:
 
  ```bash
- $ terminus site clear-caches --site=<site> --env=<env>
+ $ terminus site clear-cache --site=<site> --env=<env>
  ```
 - From the Pantheon Dashboard: Click **Clear Caches**.
 
