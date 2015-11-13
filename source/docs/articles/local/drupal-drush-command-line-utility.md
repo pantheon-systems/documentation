@@ -8,7 +8,7 @@ keywords: Drupal drush, command line, drupal, terminus drush, cli
 ---
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Drush commands require a `settings.php` file and it's considered a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file, however you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
+Drush commands require a `settings.php` file and it's considered a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file, however you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) or [Git](/docs/articles/local/starting-with-git) for Drush to work on older Drupal versions. For more details on this file, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Terminus Drush and Local Drush
 Drush-savvy developers should also install and utilize [Terminus](/docs/articles/local/cli/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
