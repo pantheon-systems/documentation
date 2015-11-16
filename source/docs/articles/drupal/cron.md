@@ -18,10 +18,7 @@ For every site environment, Pantheon executes cron at the top of each hour to al
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
 There is no way to configure when Pantheon executes Drupal cron.
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Setting the value to "Never" will be ignored; cron will always run at least hourly.
-</div>
+
 ## Managing Cron
 
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
