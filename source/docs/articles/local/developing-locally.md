@@ -82,7 +82,7 @@ Create and export the database by running the following Terminus commands:
 
 ```nohighlight
 terminus site backups create --element=database --site=<site> --env=<env>
-terminus site backups get --element=database --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
+terminus site backups get --element=database --site=<site> --env=<env> --to=$HOME/Desktop/ --latest
 ```
 
 Import the archive into your local MySQL database using the following command:
@@ -99,7 +99,7 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 Run the following Terminus commands:
 ```nohighlight
 terminus site backups create --element=files --site=<site> --env=<env>
-terminus site backups get --element=files --site=<site> --env=<env> --to-directory=$HOME/Desktop/ --latest
+terminus site backups get --element=files --site=<site> --env=<env> --to=$HOME/Desktop/ --latest
 ```
 This will create and download a backup of the site's files to your desktop.
 
