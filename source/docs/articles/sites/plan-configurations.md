@@ -55,6 +55,6 @@ keywords: site, RAM, pantheon, backup, plan
     <td class="tg-yw4l">Memory Limit: 64<br>max memory: 51200MB</td>
     <td class="tg-yw4l">Memory Limit: 256<br>max memory: 235520MB<br></td>
     <td class="tg-yw4l">Memory Limit: 512<br>max memory: 471040MB</td>
-    <td class="tg-yw4l">Memory Limit: 2024max memory: 17179869184</td>
+    <td class="tg-yw4l">Memory Limit: 2024<br>max memory: 16777216MB<br></td>
   </tr>
 </table>
