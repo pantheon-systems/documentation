@@ -38,23 +38,23 @@ keywords: site, RAM, pantheon, backup, plan
   </tr>
   <tr>
     <td class="tg-7ojv">MySQL<br></td>
-    <td class="tg-yw4l">query cache size: 32<br>innodb buffer pool size: 128<br>CPU Shares: 250<br>Memory Limit: 256<br>Block IO Weight: 400</td>
-    <td class="tg-yw4l">query cache size: 64<br>innodb buffer pool size: 512<br>CPU Shares: 750<br>Memory Limit: 1024<br>Block IO Weight: 500</td>
-    <td class="tg-yw4l">query cache size: 64<br>innodb buffer pool size: 1024<br>CPU Shares: 1000<br>MemoryLimit: 1536<br>Block IO Weight: 600</td>
-    <td class="tg-yw4l">query cache size: 512<br>innodb buffer pool size: 8192<br>CPU Shares: 6000<br>Memory Limit: 10240 Block IO Weight: 800</td>
+    <td class="tg-yw4l">query cache size: 32<br>innodb buffer pool size: 128<br>Memory Limit: 256<br></td>
+    <td class="tg-yw4l">query cache size: 64<br>innodb buffer pool size: 512<br>Memory Limit: 1024<br></td>
+    <td class="tg-yw4l">query cache size: 64<br>innodb buffer pool size: 1024<br>Memory Limit: 1536<br></td>
+    <td class="tg-yw4l">query cache size: 512<br>innodb buffer pool size: 8192<br>Memory Limit: 10240 <br></td>
   </tr>
   <tr>
     <td class="tg-7ojv">PHP</td>
-    <td class="tg-yw4l">CPU Shares: 250<br>Memory Limit: 512<br>Block IO Weight: 100<br>apc shm size: 128<br>fpm max children: 4<br>memory limit: 256</td>
-    <td class="tg-yw4l">CPU Shares: 750<br>Memory Limit: 768<br>Block IO Weight: 300 <br>apc shm size: 256<br>pm max children: 8<br>php memory limit: 256</td>
-    <td class="tg-yw4l">CPU Shares: 1000 Memory Limit: 768<br>Block IO Weight: 400<br>apc shm size: 256</td>
-    <td class="tg-yw4l">php memory limit: 1024</td>
+    <td class="tg-yw4l">Memory Limit: 512<br>apc shm size: 128<br>fpm max children: 4<br></td>
+    <td class="tg-yw4l">Memory Limit: 768<br>apc shm size: 256<br>pm max children: 8<br>php memory limit: 256</td>
+    <td class="tg-yw4l">Memory Limit: 768<br>apc shm size: 256</td>
+    <td class="tg-yw4l">Memory limit: 1024</td>
   </tr>
   <tr>
     <td class="tg-7ojv">Redis</td>
-    <td class="tg-yw4l">CPU Shares: 8<br>Memory Limit: 64<br>Block IO Weight: 50<br>max memory: 52428800</td>
-    <td class="tg-yw4l">CPU Shares: 32<br>Memory Limit: 256<br>Block IO Weight: 100<br>max memory: 241172480</td>
-    <td class="tg-yw4l">CPU Shares: 32<br>Memory Limit: 512<br>Block IO Weight: 100<br>max memory: 482344960</td>
-    <td class="tg-yw4l">max memory: 17179869184<br>Memory Limit: 2024</td>
+    <td class="tg-yw4l">Memory Limit: 64<br>max memory: 51200MB</td>
+    <td class="tg-yw4l">Memory Limit: 256<br>max memory: 235520MB<br></td>
+    <td class="tg-yw4l">Memory Limit: 512<br>max memory: 471040MB</td>
+    <td class="tg-yw4l">Memory Limit: 2024max memory: 17179869184</td>
   </tr>
 </table>
