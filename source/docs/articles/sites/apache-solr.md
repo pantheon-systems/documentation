@@ -50,7 +50,7 @@ This will provision Apache Solr containers for every environment for your site. 
 
 ## Solr Support for WordPress
 
-We are developing a modern plugin interface for WordPress to our Apache Solr infrastructure. The plugin is currently developer-ready and available [on GitHub](https://github.com/pantheon-systems/solr-for-wordpress). It currently requires additional theme work to craft the user-facing search interface and results, but is being actively improved. See [the README](https://github.com/pantheon-systems/solr-for-wordpress) for details. Issues and pull requests are welcome!
+We are developing a modern plugin interface for WordPress to our Apache Solr infrastructure. The plugin is currently developer-ready and available [on GitHub](https://github.com/pantheon-systems/solr-power). It currently requires additional theme work to craft the user-facing search interface and results, but is being actively improved. See [the README](https://github.com/pantheon-systems/solr-power) for details. Issues and pull requests are welcome!
 
 ## Enabling Solr for a Drupal Site
 ### 1. Make sure you have the latest version of Drupal
@@ -60,8 +60,8 @@ Use [one-click updates](/docs/articles/sites/code/applying-upstream-updates#appl
 
 Two contributed modules are supported by Pantheon:
 
-- [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.4 and 6.x-1.8
-- [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.2
+- [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
+- [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
 
 Solr for Drupal 8 is not supported at this time. 
 
