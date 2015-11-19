@@ -10,3 +10,4 @@ composer.phar
 /vendor
 /source/docs/googled*
 *.DS_Store
+node_modules

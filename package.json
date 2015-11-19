@@ -1,0 +1,29 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Pantheon Docs https://pantheon.io/docs",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-a11y": "^0.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pantheon-systems/documentation.git"
+  },
+  "keywords": [
+    "pantheon",
+    "sculpin",
+    "documentation"
+  ],
+  "author": "https://pantheon.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pantheon-systems/documentation/issues"
+  },
+  "homepage": "https://github.com/pantheon-systems/documentation#readme"
+}
