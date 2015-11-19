@@ -50,7 +50,7 @@ This will provision Apache Solr containers for every environment for your site. 
 
 ## Solr Support for WordPress
 
-We are developing a modern plugin interface for WordPress to our Apache Solr infrastructure. The plugin is currently developer-ready and available [on GitHub](https://github.com/pantheon-systems/solr-power). It currently requires additional theme work to craft the user-facing search interface and results, but is being actively improved. See [the README](https://github.com/pantheon-systems/solr-power) for details. Issues and pull requests are welcome!
+We are developing a modern plugin interface for WordPress to our Apache Solr infrastructure. The plugin is currently developer-ready and available [on GitHub](https://github.com/pantheon-systems/solr-power). It currently requires additional theme work to craft the user-facing search interface and results, but is being actively improved. See [the README](https://github.com/pantheon-systems/solr-power/blob/master/README.md) for details. Issues and pull requests are welcome!
 
 ## Enabling Solr for a Drupal Site
 ### 1. Make sure you have the latest version of Drupal
