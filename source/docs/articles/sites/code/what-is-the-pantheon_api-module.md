@@ -4,7 +4,7 @@ description: Learn how to incorporate pantheon_api.module, Pantheon's internal A
 category:
   - getting-started
   - developing
-keywords: pantheon_api.module, pantheon api module, api, module, modules, api modules, pantheon api, use pantheon apis, use pantheon api, how to use pantheon api modules
+keywords: pantheon_api.module, pantheon api module, api, module, modules, api modules, pantheon api
 ---
 Pantheon supplies a few modules with all sites to provide better integration with the platform. There is a module dedicated to serving the ApacheSolr use-case, and there is the general `pantheon_api.module`.
 
@@ -14,6 +14,7 @@ The code for the API module is available within our upstream repositories:
 
 - [Drupal 6](https://github.com/pantheon-systems/drops-6/tree/master/modules/pantheon)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon)
+- [Drupal 8](https://github.com/pantheon-systems/drops-8/tree/master/modules/pantheon)
 
 It should always be enabled for all sites on Pantheon, and should not cause adverse effects if you export the site locally or to another environment.
 
