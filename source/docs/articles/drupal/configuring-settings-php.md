@@ -8,7 +8,9 @@ keywords: drupal, settings.php, database configuration, configuration
 The Drupal system configuration in code is set in:
 `sites/default/settings.php`
 
-Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing settings.php. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
+Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file which includes the necessary `settings.pantheon.inc`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
+
+For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing settings.php. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
@@ -26,6 +28,30 @@ The following articles include techniques and configurations for settings.php on
 
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
+## Drupal 8
+Configure environment-specific settings within the `settings.local.php` file, which is `.gitignored`. Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+
+    ​// Local development configuration.
+    if (!defined('PANTHEON_ENVIRONMENT')) {
+      // Database.
+      $databases['default']['default'] = array(
+        'database' => 'DATABASE',
+        'username' => 'USERNAME',
+        'password' => 'PASSWORD',
+        'host' => 'localhost',
+        'driver' => 'mysql',
+        'port' => 3306,
+        'prefix' => '',
+      );
+    }
+
+
+The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
+
+To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/articles/local/cli):
+```
+terminus drush --site=<site> --env=<env> ev 'return getenv("DRUPAL_HASH_SALT")'
+```
 ## Drupal 7
 
     ​// Local development configuration.
@@ -149,6 +175,7 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Where can I get a copy of a default.settings.php?
 
+- Drupal 8 - [https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
