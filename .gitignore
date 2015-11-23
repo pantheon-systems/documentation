@@ -11,3 +11,5 @@ composer.phar
 /source/docs/googled*
 *.DS_Store
 node_modules
+.vagrant
+bin/*

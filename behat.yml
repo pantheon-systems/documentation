@@ -5,4 +5,4 @@ default:
             base_url: http://localhost:8000/docs/
             goutte: ~
             selenium2:
-                browser: "chrome"
+              wd_host: http://localhost:8643/wd/hub

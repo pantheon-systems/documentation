@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Pantheon Docs https://pantheon.io/docs",
   "main": "Gruntfile.js",
-  "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
+    "a11y": "^0.4.0",
     "grunt-a11y": "^0.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt && rake && scripts/merge_conflicts.sh"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "documentation"
   ],
   "author": "https://pantheon.io",
-  "license": "ISC",
+  "license": "CC-BY-4.0",
   "bugs": {
     "url": "https://github.com/pantheon-systems/documentation/issues"
   },

@@ -3,19 +3,37 @@ machine:
   php:
     # https://circleci.com/docs/environment#php
     version: 5.5.11
+  environment:
+    PHANTOM_JS: phantomjs-1.9.8-linux-x86_64
 
 dependencies:
+  pre:
+    - wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+    - sudo tar xvjf $PHANTOM_JS.tar.bz2
+    - sudo mv $PHANTOM_JS /usr/local/share
+    - gem install html-proofer
   post:
-    # Build the static site
-    - ./vendor/bin/sculpin generate
+    # Build the static site.
+    - bin/sculpin generate
+    - cd output_dev && ln -s ./ source
 test:
   pre:
-    # Start Sculpin
-    - ./vendor/bin/sculpin server:
-        background: true
+    # Start Ghost Driver.
+    - phantomjs --webdriver=8643:
+       background: true
+    # Start Sculpin.
+    - bin/sculpin server:
+       background: true
   override:
-    # Run behat
-    - ./vendor/bin/behat
+    # Run behat.
+    - bin/behat
+    # Run a11y.
+    - grunt
+    # Look for merge conflicts.
+    - scripts/merge_conflicts.sh
+    # Run htmlproofer.
+    - rake
+
 # Custom notifications
 notify:
   webhooks:

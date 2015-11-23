@@ -4,7 +4,13 @@ module.exports = function(grunt) {
       dev: {
         options: {
           urls: [
-            'output_*/docs/articles/drupal/**/*.html'
+            'output_*/docs/about/*.html',
+            'output_*/docs/articles/**/*.html',
+            'output_*/docs/authors/**/*.html',
+            'output_*/docs/changelog/**/*.html',
+            'output_*/docs/guides/**/*.html',
+            'output_*/docs/objects/*.html',
+            'output_*/docs/search/*.html'
           ]
         }
       }
