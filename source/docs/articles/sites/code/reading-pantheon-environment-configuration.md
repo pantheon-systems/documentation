@@ -89,3 +89,65 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
 For more information, see [configuring wp-config.php](/docs/articles/wordpress/configuring-wp-config-php).
+
+
+## Using $_SERVER
+When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/docs/articles/local/cli), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/docs/articles/sites/code/redirect-incoming-requests/).
+
+For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).   
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+The <code>$_SERVER</code> variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of <code>phpinfo();</code> displayed on a site, don't leave this open to public viewing. </div>
+
+
+This is a partial example from a Wordpress site homepage:
+
+    <?php var_dump($_SERVER);  ?>
+    array(63) {
+      ["SERVER_SOFTWARE"]=>
+      string(11) "nginx/1.4.7"
+      ["REQUEST_URI"]=>
+      string(1) "/"
+      ["USER"]=>
+      string(32) "non-static-binding-string-inserted-here"
+      ["HOME"]=>
+      string(46) "/srv/bindings/non-static-binding-string-inserted-here"
+      ["SCRIPT_NAME"]=>
+      string(10) "/index.php"
+      ["DOCUMENT_URI"]=>
+      string(10) "/index.php"
+      ["DOCUMENT_ROOT"]=>
+      string(51) "/srv/bindings/non-static-binding-string-inserted-here/code"
+      ["SERVER_PROTOCOL"]=>
+      string(8) "HTTP/1.1"
+      ["GATEWAY_INTERFACE"]=>
+      string(7) "CGI/1.1"
+      ["REMOTE_ADDR"]=>
+      string(12) "72.188.192.8"  <= NOT A SITE IP ADDRESS
+      ["REMOTE_PORT"]=>
+      string(5) "55982"
+      ["SERVER_ADDR"]=>
+      string(13) "10.223.192.37"  <= NOT A SITE IP ADDRESS
+      ["SERVER_PORT"]=>
+      string(5) "11846"
+      ["SERVER_NAME"]=>
+      string(31) "endpointe7208f3b.chios.panth.io"
+      ["REDIRECT_STATUS"]=>
+      string(3) "200"
+      ["PATH_TRANSLATED"]=>
+      string(51) "/srv/bindings/non-static-binding-string-inserted-here/code"
+      ["HTTPS"]=>
+      string(3) "OFF"
+      ["SCRIPT_FILENAME"]=>
+      string(62) "/srv/bindings/non-static-binding-string-inserted-here/code//index.php"
+      ["HTTP_HOST"]=>
+      string(25) "example-wp-site.pantheon.io"
+      ["HTTP_USER_AGENT"]=>
+      string(120) "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko)         Chrome/46.0.2490.80 Safari/537.36"
+      ["HTTP_ACCEPT"]=>
+      string(74) "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      ["HTTP_ACCEPT_LANGUAGE"]=>
+      string(14) "en-US,en;q=0.8"
+      etc...
+    }

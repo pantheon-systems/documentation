@@ -5,7 +5,14 @@ category:
   - managing
 keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
 ---
-Pantheon makes creating a backup of an environment a simple one-click operation. A backup contains three separate archives: a database backup, a files backup, and a code backup.
+Pantheon makes creating a backup of an environment a simple one-click operation.
+
+If you prefer the command line, you can use [Terminus](/docs/articles/local/cli) to create backups:  
+```
+terminus site backups create [--site=<site>] [--env=<env>] [--element=<code|files|db|all>] [--keep-for]
+```
+
+A backup contains three separate archives: a database backup, a files backup, and a code backup.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
@@ -16,12 +23,20 @@ Select the **Backups** tab, and click **Create New Backup**. The status is shown
  ![](/source/docs/assets/images/desk_images/305276.png)
 
 ## Access Backups  
+### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
  ![](/source/docs/assets/images/desk_images/305286.png)
 
 The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
+
+### Via the Command Line
+You can also use  [Terminus](/docs/articles/local/cli) to download backups. Note that `--element=all` is only available when creating backups and not when downloading. Include the `--latest ` option to automatically download the most recently created backup. Select older archives by running `terminus site backups list`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+```
+terminus site backups get [--site=<site>] [--env=<env>]
+[--element=<code|files|db|all>] [--to=<directory|file>][--latest]
+```
 
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
 
