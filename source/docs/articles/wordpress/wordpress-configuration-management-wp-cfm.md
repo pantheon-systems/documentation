@@ -1,76 +1,101 @@
 ---
-title: WordPress Configuration Management (wp-cfm)
+title: WordPress Configuration Management (WP-CFM)
 description: Learn how to install and use the WordPress Configuration Management plugin on your Pantheon WordPress site.
 category:
   - managing
 keywords: wordpress, configuration, plugin
 ---
-While the [Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow) facilitates common best practices for developing WordPress sites, database management can seem like a major pain in cloud-based infrastructures. Multiple environments give you incredible freedom to develop new features risk free, but it requires a bit more thought to track database changes efficiently.
 
-We strongly recommend the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin for this task. Once implemented, you'll easily be able to carry database settings alongside code deployments to other environments on Pantheon. This process will ultimately store database values in your codebase, allowing them to be version controlled.
+The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin exports your site's configuration to a `.json` file stored in `wp-content/config`, which is then deployed and version controlled alongside your site's codebase. For more details on why we recommend managing configuration in code, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow#configuration-management).
 
 ## Install and Deploy WP-CFM
 
 Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/docs/articles/local/cli):
 
-1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev environment via the Pantheon Dashboard or with the following Terminus command:
+1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev environment via the Pantheon Dashboard or with Terminus:
  ```bash
  terminus site set-connection-mode --site=<site> --env=dev --mode=sftp
  ```
 
-2. Install the [wp-cfm plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with the following Terminus command:
+2. Install the [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
  terminus wp plugin install --activate wp-cfm --site=<site> --env=dev
  ```
 
-3. Commit this change using the Site Dashboard or the following Terminus command:
+3. Commit this change using the Site Dashboard or with Terminus:
  ```bash
  terminus site code commit --site=<site> --env=dev --message="Install wp-cfm plugin"
  ```
 
-4. Deploy this commit to the Test and Live environments using the Site Dashboard or the following Terminus commands:
+4. Deploy this commit to the Test and Live environments using the Pantheon Dashboard or with Terminus:
  ```bash
- # Deploy to Test
- terminus site deploy --site=<site> --env=test --cc --sync-content --note="Deploy wp-cfm plugin to the Test environment"
- # Deploy to Live
- terminus site deploy --site=<site> --env=live --cc --note="Deploy wp-cfm plugin to the Live environment"
+ # Deploy to Test|Live
+ terminus site deploy --site=<site> --env=<test|live> --cc --note="Deploy WP-CFM plugin to the <Test|Live> environment"
  ```
 
-5. Activate the plugin on the Test and Live environments using the WordPress Dashboard or the following Terminus command:
+5. Activate the plugin on the Test and Live environments using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp plugin activate wp-cfm --site=<site> --env=<live|test>
+ terminus wp plugin activate wp-cfm --site=<site> --env=<test|LIVE>
  ```
 
-## Create a Bundle
-From within the Dev environment's WordPress Dashboard, navigate to **Settings** > **WP-CFM** (`/wp-admin/options-general.php?page=wpcfm`). Click the **Add Bundle** button to toggle a list of values available for you to track:
-![wp-cfm wp-options list](/source/docs/assets/images/wp-cfm-options.png)
-By default, this list is a reflection of the existing rows within the `wp-options` table of the environment's database. For information on values stored within this table and how to track more tables, see the FAQ section below.
+## Site Bundling
+WP-CFM refers to a group of settings to track as a **bundle**. There are two approaches to bundling your site's configuration:
 
-There are two approaches to consider when creating your site bundles, which are explored below. After selecting the options you wish to track, name your bundle and click **Save Changes**.
-
-### Site-Wide Bundling
-Track configurations for the entire site by creating a new bundle and choosing the **Select All** option. This will track all changes made to the `wp-options` table. This includes modifications to plugins/themes and site-wide options such as permalinks.
-
-### Individual Bundling
-You can create multiple bundles to separately track database modifications. For example, you can manage modifications to the settings of a custom plugin in one bundle track the site-wide settings separately in another bundle.
+- **Site-wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
+- **Feature Specific Bundling**: Track plugin, theme, and site-wide settings (e.g. permalinks) separately by creating multiple bundles.
 <div class="alert alert-info">
 <h4>Note</h4>
-When using this strategy, do not to track changes for the same values in more than one bundle to avoid conflicts. WP-CFM shows a warning when configurations such as this exist, but the plugin does not restrict you from doing so.
+To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM provides a warning when observed, but the plugin does not restrict you from doing so.
 </div>
 
-## Write Database Values to the Codebase
-### View Changes: Diff
-Once you have created a bundle with the desired values selected, click **Diff**. The difference between values existing in the database vs values existing in the codebase will be shown. Values in green are not yet apart of your site's codebase.
-### Write Changes to Code: Push
-Select **Push** to write database values to your site's codebase.
+To create a bundle:
 
-A new file named `wp-content/config/bundle_name.json` will be created and version controlled in your site's repository on Pantheon. Review and commit your new file to the codebase on the Dev environment.
+1. From the Dev environment's WordPress Dashboard, navigate to: **Settings** > **WP-CFM** (`/wp-admin/options-general.php?page=wpcfm`).
+2. Select **Add Bundle**.
+3. Choose **Select All** to track all options in a single bundle or individually select configurations for feature specific bundling.
+4. Name your bundle and click **Save Changes**.
 
-### Import Changes to Test/Live: Pull
-Deploy your most recent commit of the `wp-content/config/bundle_name.json` file to the Test environment. Select **Copy Content from Live and Deploy Code from Development** or include `--sync-content` if you're deploying via Terminus.  
+## Write Database Values to the Codebase: Push
 
-From within the Test environment's WordPress Dashboard, navigate to **Settings** > **WP-CFM** (`/wp-admin/options-general.php?page=wpcfm`). Now that the `wp-content/config/bundle_name.json` file from Dev has been updated and deployed, you can select **Pull** to rewrite database configurations with a single click. Review the Test environment's site to test against content present on the Live environment. Repeat the "Pull" process within WP-CFM to align database changes on the Live environment.
+1. Click **Diff** to review database settings which are not currently stored in code.
+2. Select **Push** to export database values to the codebase.
 
+ This action creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations will be stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
+
+ ```
+ terminus wp config push <bundle_name> --site=<site> --env=dev
+ ```
+3. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
+
+ ```bash
+ terminus site code commit --site=<site> --env=dev --message="Create bundle_name.json for tracking configuration in code"
+ ```
+
+## Deploy Configuration: Pull
+### Dev to Test
+1. Deploy the `.json` file from Dev to Test
+
+ Select **Copy Content from Live and Deploy Code from Development** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
+
+ ```
+ terminus site deploy --site=<site> --env=test --cc --sync-content --note="Deploy code for <bundle_name> configuration"
+ ```  
+2. Import configuration from the codebase into the database by clicking **Pull** within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
+
+ ```
+ terminus wp config pull <bundle_name> --site=<site> --env=test
+ ```
+3. Test configuration on the Test environment URL with content copied from Live.
+
+### Test to Live
+1. Deploy the `.json` file from Test to Live.
+
+2. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
+
+ ```
+ terminus wp config pull <bundle_name> --site=<site> --env=live
+ ```
+3. Test configuration on Live.
 
 ## FAQ
 
@@ -84,14 +109,16 @@ From within the Test environment's WordPress Dashboard, navigate to **Settings**
 You can review values on the [All Settings Screen](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
 
 ### How can I extend WP-CFM to track more tables?
-If you want to track changes in any other tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [wp-cfm docs](http://forumone.github.io/wp-cfm/).
+If you want to track configurations in more tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [WP-CFM documentation](http://forumone.github.io/wp-cfm/).
 
 ### What's NOT tracked?
-Anything related to site content, posts, users, taxonomy, etc. If you know you want to track more, but you’re not sure what table a value is stored in try using the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin. This will allow you to view all queries made for a particular page request.
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the "Queries" tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identity more settings you wish to track.
 
-Install the plugin on the Dev environment and [enable debugging within `wp-config.php`](/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions). Then, use the **Queries** tab of the Debug Bar to locate the query used to execute the request you want to track. From there, you can deduce what table is used and extend WP-CFM so that the values are populated within your bundle options.
-
+<div class="alert alert-info">
+<h4>Note</h4>
+This plugin requires that <a href="/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions">debugging be enabled via <code>wp-config.php</code></a>.
+</div>
 ### Why aren't my site navigation menus tracked?
-The `wp_options` table stores serialized data on the active menus as part of the `theme_mods_yourthemename` row using the menu's unique identifier (`term_id`). Unless an active menu is added, deleted, de-selected, or replaced - WP-CFM won’t track updates by default.
+The `wp_options` table stores serialized value for active menus, identified with the `term_id` paramater of the `theme_mods_yourthemename` row. This table does not store menu data otherwise. By default, WP-CFM will only track when a menu is enabled or disabled for the site, and not when a menu's items are updated.
 
-This is because modifying the menu items of an existing and currently active menu does not change the menu's `term_id`, so `wp_options` remains unchanged. What this action does instead is modifies the taxonomy relationship between a menu and it's items, stored in the `wp_terms` and `wp_term_relationships` tables.
+Menus and menu items are considered to be taxonomies in WordPress. To track these values, extend WP-CFM so that `wp_terms` and `wp_term_relationships` tables are considered in addition to the default `wp_options`.
