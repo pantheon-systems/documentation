@@ -6,7 +6,7 @@ category:
 keywords: wordpress, configuration, plugin
 ---
 
-The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin exports your site's configuration to a `.json` file stored in `wp-content/config`, which is then deployed and version controlled alongside your site's codebase. For more details on why we recommend managing configuration in code, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow#configuration-management).
+The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin exports your site's configuration to a `.json` file stored in `wp-content/config`, which is then deployed and version controlled alongside your site's codebase. For details on why we recommend managing configuration in code, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow#configuration-management).
 
 ## Install and Deploy WP-CFM
 
@@ -41,26 +41,26 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 ## Site Bundling
 WP-CFM refers to a group of settings to track as a **bundle**. There are two approaches to bundling your site's configuration:
 
-- **Site-wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
+- **Site-Wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
 - **Feature Specific Bundling**: Track plugin, theme, and site-wide settings (e.g. permalinks) separately by creating multiple bundles.
 <div class="alert alert-info">
 <h4>Note</h4>
-To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM provides a warning when observed, but the plugin does not restrict you from doing so.
+To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM alerts you when it happens, but the plugin does not restrict you from doing so.
 </div>
 
 To create a bundle:
 
 1. From the Dev environment's WordPress Dashboard, navigate to: **Settings** > **WP-CFM** (`/wp-admin/options-general.php?page=wpcfm`).
 2. Select **Add Bundle**.
-3. Choose **Select All** to track all options in a single bundle or individually select configurations for feature specific bundling.
-4. Name your bundle and click **Save Changes**.
+3. Choose **Select All** to track all options in a single bundle or individually select configurations for feature-specific bundling.
+4. Name your bundle, and click **Save Changes**.
 
 ## Write Database Values to the Codebase: Push
 
-1. Click **Diff** to review database settings which are not currently stored in code.
+1. Click **Diff** to review database settings that are not currently stored in code.
 2. Select **Push** to export database values to the codebase.
 
- This action creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations will be stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
+This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
  ```
  terminus wp config push <bundle_name> --site=<site> --env=dev
@@ -73,7 +73,7 @@ To create a bundle:
 
 ## Deploy Configuration: Pull
 ### Dev to Test
-1. Deploy the `.json` file from Dev to Test
+1. Deploy the `.json` file from Dev to Test.
 
  Select **Copy Content from Live and Deploy Code from Development** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
 
@@ -85,7 +85,7 @@ To create a bundle:
  ```
  terminus wp config pull <bundle_name> --site=<site> --env=test
  ```
-3. Test configuration on the Test environment URL with content copied from Live.
+3. Test configuration on the Test environment URL with the content copied from Live.
 
 ### Test to Live
 1. Deploy the `.json` file from Test to Live.
@@ -95,30 +95,26 @@ To create a bundle:
  ```
  terminus wp config pull <bundle_name> --site=<site> --env=live
  ```
-3. Test configuration on Live.
+3. Test the configuration on Live.
 
-## FAQ
+## Frequently Asked Questions 
 
 ### What database values are tracked using WP-CFM?
 `wp_options` is the only table that is automatically tracked by the plugin. This table is populated by the following sources:
 
-- Default Settings (`/wp-admin/options-general.php`)
-- Theme option pages - Includes customizer options stored in the row `theme_mods_yourthemename`
+- Default settings (`/wp-admin/options-general.php`)
+- Theme option pages - includes customizer options stored in the row `theme_mods_yourthemename`
 - Settings and option pages for plugins (e.g. `/wp-admin/options-general.php?page=sendgrid-settings`)
 
-You can review values on the [All Settings Screen](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
+You can review values on the [All Settings page](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
 
 ### How can I extend WP-CFM to track more tables?
 If you want to track configurations in more tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [WP-CFM documentation](http://forumone.github.io/wp-cfm/).
 
-### What's NOT tracked?
-Site content, posts, users, taxonomy, etc. Review all queries for a page request using the "Queries" tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identity more settings you wish to track.
+### What's not tracked?
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identity more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions).
 
-<div class="alert alert-info">
-<h4>Note</h4>
-This plugin requires that <a href="/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions">debugging be enabled via <code>wp-config.php</code></a>.
-</div>
 ### Why aren't my site navigation menus tracked?
-The `wp_options` table stores serialized value for active menus, identified with the `term_id` paramater of the `theme_mods_yourthemename` row. This table does not store menu data otherwise. By default, WP-CFM will only track when a menu is enabled or disabled for the site, and not when a menu's items are updated.
+The `wp_options` table stores serialized value for active menus, identified with the `term_id` paramater of the `theme_mods_yourthemename` row. This table does not store menu data otherwise. By default, WP-CFM will only track when a menu is enabled or disabled for the site and not when a menu's items are updated.
 
 Menus and menu items are considered to be taxonomies in WordPress. To track these values, extend WP-CFM so that `wp_terms` and `wp_term_relationships` tables are considered in addition to the default `wp_options`.
