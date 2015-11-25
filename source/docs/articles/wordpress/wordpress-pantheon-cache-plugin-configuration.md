@@ -26,42 +26,42 @@ You'll want to strike a balance between freshness of content and speed. We recom
 
 Within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code, there are three functions that are useful to developers. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://codex.wordpress.org/Plugin_API/Action_Reference/save_post). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
 
-**flush_site**  
+### flush_site 
 Flushes the site cache for the entire site. This achieves the same result as the Clear Site Cache button on the Pantheon Cache administration page.
 
 ```
 /**
-	 * Clear the cache for the entire site.
-	 *
-	 * @return void
-	 */
-	public function flush_site()
+ * Clear the cache for the entire site.
+ *
+ * @return void
+ */
+public function flush_site()
 ```
 
-**clean_post_cache**  
+### clean_post_cache
 Flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed, but if not the default value is "true".
 
 ```
-  /**
-	 * Clear the cache for a post.
-	 *
-	 * @param  int $post_id A post ID to clean.
-	 * @return void
-	 */
-	public function clean_post_cache( $post_id, $include_homepage = true )
+/**
+ * Clear the cache for a post.
+ *
+ * @param  int $post_id A post ID to clean.
+ * @return void
+ */
+public function clean_post_cache( $post_id, $include_homepage = true )
 ```
 
-**clean_term_cache**  
+### clean_term_cache
 Flushes the cache for an individual term or terms which are passed in an array, or for a complete taxonomy passed via a single taxonomy ID.
-```
-  /**
-	 * Clear the cache for a given term or terms and taxonomy.
-	 *
-	 * @param int|array $ids Single or list of Term IDs.
-	 * @param string $taxonomy Can be empty and will assume tt_ids, else will use for context.
-	 * @return void
-	 */
-	public function clean_term_cache( $term_ids, $taxonomy )
+```php
+/**
+ * Clear the cache for a given term or terms and taxonomy.
+ *
+ * @param int|array $ids Single or list of Term IDs.
+ * @param string $taxonomy Can be empty and will assume tt_ids, else will use for context.
+ * @return void
+ */
+public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
 ## See Also
