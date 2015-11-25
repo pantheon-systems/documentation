@@ -97,7 +97,7 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
  ```
 3. Test the configuration on Live.
 
-## Frequently Asked Questions 
+## Frequently Asked Questions
 
 ### What database values are tracked using WP-CFM?
 `wp_options` is the only table that is automatically tracked by the plugin. This table is populated by the following sources:
@@ -106,13 +106,13 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
 - Theme option pages - includes customizer options stored in the row `theme_mods_yourthemename`
 - Settings and option pages for plugins (e.g. `/wp-admin/options-general.php?page=sendgrid-settings`)
 
-You can review values on the [All Settings page](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
+You can review values on the [All Settings Screen](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
 
 ### How can I extend WP-CFM to track more tables?
 If you want to track configurations in more tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [WP-CFM documentation](http://forumone.github.io/wp-cfm/).
 
 ### What's not tracked?
-Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identity more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions).
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/docs/articles/wordpress/configuring-wp-config-php/#frequently-asked-questions).
 
 ### Why aren't my site navigation menus tracked?
 The `wp_options` table stores serialized value for active menus, identified with the `term_id` paramater of the `theme_mods_yourthemename` row. This table does not store menu data otherwise. By default, WP-CFM will only track when a menu is enabled or disabled for the site and not when a menu's items are updated.
