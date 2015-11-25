@@ -6,13 +6,13 @@ category:
 keywords: wordpress, configuration, plugin
 ---
 
-The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin exports your site's configuration to a `.json` file stored in `wp-content/config`, which is then deployed and version controlled alongside your site's codebase. For details on why we recommend managing configuration in code, see [Using the Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow#configuration-management).
+Version-controlling site configuration within the codebase is a best practice. Since WordPress site configuration is stored in the database alongside content, developer workflows must account for migrating configuration from development and testing environments into production without affecting the content. The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant mechanism for enabling developers to practice configuration in code. The plugin exports WordPress site configuration from the mysql database's `wp_options` table to a `.json` file stored in `wp-content/config`.  After deploying the file to a new environment for the same site, it can then import the configuration from the `.json` file into the second `wp_options` table.
 
 ## Install and Deploy WP-CFM
 
 Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/docs/articles/local/cli):
 
-1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev environment via the Pantheon Dashboard or with Terminus:
+1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
  ```bash
  terminus site set-connection-mode --site=<site> --env=dev --mode=sftp
  ```
@@ -38,7 +38,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
  terminus wp plugin activate wp-cfm --site=<site> --env=<test|LIVE>
  ```
 
-## Site Bundling
+## Configuration Bundling
 WP-CFM refers to a group of settings to track as a **bundle**. There are two approaches to bundling your site's configuration:
 
 - **Site-Wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
@@ -80,7 +80,7 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
  ```
  terminus site deploy --site=<site> --env=test --cc --sync-content --note="Deploy code for <bundle_name> configuration"
  ```  
-2. Import configuration from the codebase into the database by clicking **Pull** within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
+2. Import configuration from the codebase into the database by clicking **Pull** for your bundle(s) within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
  ```
  terminus wp config pull <bundle_name> --site=<site> --env=test
@@ -89,6 +89,10 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
 
 ### Test to Live
 1. Deploy the `.json` file from Test to Live.
+
+ ```
+ terminus site deploy --site=<site> --env=live --cc --note="Deploy code for <bundle_name> configuration"
+ ```  
 
 2. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
