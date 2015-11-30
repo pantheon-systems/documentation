@@ -10,7 +10,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Verify [Varnish](/docs/articles/sites/varnish/testing-varnish) is working on your site.
 
-* Use [wp-cfm](https://pantheon.io/docs/articles/wordpress/wordpress-configuration-management-wp-cfm/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
+* Use [wp-cfm](https://pantheon.io/docs/articles/wordpress/configuration-management-plugin/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
 * Automate testing with [Behat](/docs/guides/automated-testing-wordpress-behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
