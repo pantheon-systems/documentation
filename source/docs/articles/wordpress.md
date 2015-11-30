@@ -13,7 +13,7 @@ The Pantheon architecture allows every environment on your site to run on it's o
 ## PHP Sessions
 While WordPress core itself does not use PHP sessions, some plugins and themes do. Learn how to implement [built-in session handling functions](/docs/articles/wordpress/wordpress-and-php-sessions).
 ## WordPress Configuration Management
-Keep track of database configurations with ease by using [wp-cfm](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm).
+Keep track of database configurations with ease by using [wp-cfm](/docs/articles/wordpress/configuration-management-plugin).
 ## WordPress Cron
 You are probably familiar with cron jobs, but do you know how `wp-cron` works? Learn and understand how [cron for WordPress](/docs/articles/wordpress/cron-for-wordpress) is triggered.
 ## Launch Check
