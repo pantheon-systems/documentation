@@ -20,17 +20,47 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 ---
 
 
-##Set up Redis with WordPress
-<div class="alert alert-info">
-<h4>Important</h4> First enable Redis from your Pantheon Site Dashboard by going to <strong>Settings > Add Ons > Add</strong>. It may take a couple minutes for the Redis server to come online.</div>
+## Enable Redis on the Pantheon Site Dashboard
+First enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+## Install Drop-in Plugin
+[WP Redis](https://wordpress.org/plugins/wp-redis/) is loaded via a drop-in file, so there's no need to activate it on your WordPress sites. The following installation methods are supported:
+### Preferred Method: Symlink Drop-in
+This method will store object cache values persistently in Redis while preserving the standard procedures for applying plugin updates.
 
-1.  Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin (maintained by Pantheon), but **do not** activate.
+1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/articles/local/cli) command:
+
+ ```
+ terminus wp plugin install wp-redis --site=<site> --env=dev
+ ```
+2. Using SFTP or Git, create a new file named `wp-content/object-cache.php` that contains the following:
+
+ ```
+ <?php
+ # This is a Windows-friendly symlink
+ require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+ ```
+3. Verify installation by selecting **Drop-ins** from the Plugins section of the WordPress Dashboard.
+
+When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
+
+```
+terminus wp plugin update wp-redis --site=<site> --env=dev
+```
+
+### Alternate Method: Move Plugin File
+This method does not support the normal Plugin update mechanism in WordPress.
+
+1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/articles/local/cli) command:
+
+ ```
+ terminus wp plugin install wp-redis --site=<site> --env=dev
+ ```
 2. Move the `object-cache.php` file from the plugin directory `wp-content/plugins/wp-redis/` to the `wp-content/` directory.
-3. From the Plugins section of the WordPress Dashboard, select **Drop-Ins**.
+3. Verify installation by selecting **Drop-ins** from the Plugins section of the WordPress Dashboard.
 
-The drop-in plugin name and description are shown when properly configured:
-![Plugin drop ins](/docs/assets/images/plugin-drop-ins.png)
-### Use the Redis Command-Line Client
+When a new version of the WP Redis plugin is released, you will need to re-install the plugin entirely.
+
+## Use the Redis Command-Line Client
 
 1. [Install Redis locally](http://redis.io/download).
 2. From the site Dashboard, select the desired environment (Dev, Test or Live).
@@ -55,7 +85,7 @@ redis>
 ## Troubleshooting
 
 ### Cannot Activate the Redis Plugin
-WP Redis is a drop-in plugin that should only be activated by moving `object-cache.php` as described above.
+WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
 ### Redis Server is Gone
 Enabled Redis via the Pantheon site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
