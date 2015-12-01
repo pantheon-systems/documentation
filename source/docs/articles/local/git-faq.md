@@ -15,9 +15,17 @@ git pull -Xtheirs [upstream url] master
 ```
 Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
+#### Drupal 8
+
+Run the following commands within your local Git repository:
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+# resolve conflicts here if needed...
+git push origin master
+```
 #### Drupal 7
 
-Run the following commands within your local environment:
+Run the following commands within your local Git repository:
 ```bash
 git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
 # resolve conflicts here if needed...
