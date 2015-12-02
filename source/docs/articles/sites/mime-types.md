@@ -7,11 +7,11 @@ Pantheon promotes and respects internet standards, and for MIME types, we treat 
 
 ##Add, Change, or Remove a File Extension to a MIME Type
 
-####We will consider:
+#### We will consider:
 - Adding anything not present on Pantheon with the recommendation of IANA list
 - Adding anything not on the IANA list as application/octet-stream
 - Changing any existing suffix that does not match the IANA MIME types
-- [Case by case] Adding a widely recognized MIME type to a suffix that does not exist in the IANA list
+- Adding a widely recognized MIME type to a suffix that does not exist in the IANA list (on a case-by-case basis)
 
 ####We will not consider:
 - Adding anything that conflicts with the IANA list
