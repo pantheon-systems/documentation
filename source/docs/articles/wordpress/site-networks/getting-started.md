@@ -1,0 +1,88 @@
+---
+title: Up and Running with WordPress Site Networks
+description: Get started with WordPress Site Networks. Learn about the Pantheon WordPress Site Network upstream product, start developing, or import existing networks.
+---
+
+Once a Pantheon employee has given you access to your WordPress Site Network site, you can import an existing site network or start from scratch. begin developing your Network on the platform.
+
+##Migrating Site Networks to Pantheon
+
+If your Network already exists, you will follow the instructions located in our [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/) article. 
+
+##Create a Network
+Before you begin, switch the Development environment to SFTP mode. Creating the Network requires making modifications to the wp-config.php file, which is not editable in Git mode.
+
+###Create a Network with WP-CLI (Recommended)
+
+If you’re comfortable with the command line, Terminus and WP-CLI let you convert an existing WordPress environment to Multisite in one command: `wp core multisite-convert`
+
+Before you begin, you’ll want to make sure:
+
+- Your WordPress environment is functioning as expected.
+- Terminus is configured locally, and you’re authenticated with Pantheon.
+
+Once you’ve confirmed these prerequisites, you can enable WordPress Multisite with one command.
+
+Subdirectory style
+```bash
+terminus wp core multisite-convert --site=<pantheon-site> --env=dev
+```
+
+Subdomains style
+```bash
+terminus wp core multisite-convert --site=<pantheon-site> --env=dev --subdomains
+```
+
+Optionally specify --title to use a custom title for your Multisite Network:
+
+```bash
+terminus wp core multisite-convert --site=<pantheon-site> --env=dev --title=”My Awesome Multisite Network”
+```
+
+For full compatibility with Pantheon, you’ll need to update DOMAIN_CURRENT_SITE to be set conditionally based on environment. Here is an example you can follow:
+
+https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db
+
+### Caveats for Creating the Network Via the WordPress Dashboard
+
+WordPress Site Networks can also be created from the WordPress admin, by following the [instructions at the codex[(http://codex.wordpress.org/Create_A_Network).
+
+Once you’ve created the network, you’ll be taken to a new screen:
+
+![](https://dl.dropboxusercontent.com/s/gu89aelpj4jqyin/2015-11-10%20at%209.52%20AM.png?dl=0)
+
+Copy the first block and add it to your site’s `wp-config.php`.
+
+Add the constants to your wp-config. A good place to put them is right below where you’ve added the WP_ALLOW_MULTISITE constant.
+
+Instead of defining DOMAIN_CURRENT_SITE explicitly, you’ll want to define it conditionally based on environment. Here is an example you can follow:
+
+https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db
+
+Ignore the second block. Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
+
+Once you log back in to WordPress, pat yourself on the back — you’ve completed the Multisite installation process.
+
+##Develop the Site Network
+
+Now that you’ve made it through the installation process, congratulations on setting up your first WordPress Multisite environment. You are on your way to glory!
+
+When logged into the WordPress Dashboard, you may notice a new “My Sites” menu item has appeared in the Toolbar. You can create your first site in the Network Admin:
+
+![](https://dl.dropboxusercontent.com/s/pxzxwfsvrt2xo5x/2015-11-14%20at%2011.05%20AM.png?dl=0)
+
+Note: If you’re using the subdomain feature of WordPress Multisite, you’ll need to add the domain for each site you create to the Pantheon Dashboard (as well as configure requisite DNS settings) in order for the site to be publicly accessible.
+
+Spend a little bit of time exploring the WordPress Network Dashboard to become acquainted with the variety of additional settings you now have. Take a look at what options are available for each site you create, how to manage users across WordPress Multisite, and the grab bag of Network Settings.
+
+Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/articles/wordpress/site-networks/managing/), and pick up a few additional [tips and tricks](/docs/articles/wordpress/site-networks/managing#tips-and-tricks/).
+
+## Wipe Development Environment to Start Over
+
+If you find you need to start over and re-install WordPress, you can:
+
+1. Wipe the Development Environment’s database and files. This operation leaves the codebase in tact. Visit the Pantheon Site Dashboard’s Development Environment, and select the Workflow Tool's “Wipe” function. From the command line, `terminus site wipe --env=dev`
+
+2. Remove the Multisite constant definitions block you added, from `wp-config.php`.
+
+3. Visit the development environment URL to re-install WordPress.
