@@ -11,6 +11,7 @@ Pantheon promotes and respects internet standards, and for MIME types, we treat 
 - Adding anything not present on Pantheon with the recommendation of IANA list
 - Adding anything not on the IANA list as application/octet-stream
 - Changing any existing suffix that does not match the IANA MIME types
+- [Case by case] Adding a widely recognized MIME type to a suffix that does not exist in the IANA list
 
 ####We will not consider:
 - Adding anything that conflicts with the IANA list
