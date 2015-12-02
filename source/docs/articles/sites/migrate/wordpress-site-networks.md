@@ -29,14 +29,14 @@ You can use Git to import your existing code and commit history. If you don’t 
  git add .
  git commit -m "initial commit"
  ```
-2. From the Dev environment of the site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
+2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
 3. Copy the SSH URL for the site repository, found in the [clone command](/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
  ```
 
-4. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in Step 3:
+4. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git pull --no-rebase --squash -Xtheirs <ssh_url> master
@@ -65,7 +65,7 @@ Preserve any logic necessary in the original `wp-config.php` and `.gitignore` fi
  git push pantheon master
  ```
 
-8. Go to the Code tab of your Dev environment on the site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
+8. Go to the Code tab of your Dev environment on the Site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
 
 
 ## Files
@@ -106,7 +106,7 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 You'll need a .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your .sql file much smaller and your import that much quicker.
 
-If your `.sql` file is less than 500MB, you can use the site dashboard's workflow tool's import function to import the database from a URL. If it is less than 100MB, you can upload the file directly. Larger files require the use of the command-line to import the data.
+If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Larger files require the use of the command line to import the data.
 
 1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 
