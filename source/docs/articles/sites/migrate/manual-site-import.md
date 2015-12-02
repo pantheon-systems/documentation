@@ -34,10 +34,12 @@ Starting from scratch allows your site to connect to that upstream so you can la
 
 As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code and commit history. If you don’t have a Git version controlled codebase, the following will still work.
 
-1. Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, run:
+1. Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, create a repository and add an initial commit:
 
  ```bash
  git init
+ git add .
+ git commit -m "initial commit"
  ```
 2. From the Dev environment of the site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
 3. Copy the SSH URL for the site repository, found in the [clone command](/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
