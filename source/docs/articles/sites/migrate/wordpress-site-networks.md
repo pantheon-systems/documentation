@@ -10,10 +10,15 @@ keywords: import, importing site, pantheon, new site, large site, distro, upstre
 * [Rsync or SFTP Client](https://pantheon.io/docs/articles/local/rsync-and-sftp/)
 * [MySQL Client](https://pantheon.io/docs/articles/local/accessing-mysql-databases/)
 * A Pantheon Employee must create a [WordPress Site Network](/docs/articles/wordpress/site-networks/) for you.
+* You have [created a compatible site archive](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives)
 
 ## Import the Codebase
 
-**Codebase** - all executable code, including core, custom and contrib modules or plugins, themes, and libraries.
+**Codebase** - all executable code, including core, plugins, themes, and libraries. Stored in the `~/code` directory.
+
+When you [created a compatible site archive](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives), you may have needed to move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replace the original directories with symlinks to their new homes. If you haven't done so, please do so now.
+
+It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase. Preserve any logic in the original that is compatible with the platform, and merge the two versions of each file.
 
 You can use Git to import your existing code and commit history. If you don’t have a Git version controlled codebase, the following will still work.
 
@@ -21,6 +26,8 @@ You can use Git to import your existing code and commit history. If you don’t 
 
  ```bash
  git init
+ git add .
+ git commit -m "initial commit"
  ```
 2. From the Dev environment of the site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
 3. Copy the SSH URL for the site repository, found in the [clone command](/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
@@ -40,6 +47,7 @@ You can use Git to import your existing code and commit history. If you don’t 
  Squash commit -- not updating HEAD  
  Automatic merge went well; stopped before committing as requested
  ```
+Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files.
 5. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in Step 3:
 
  ```bash
@@ -59,9 +67,10 @@ You can use Git to import your existing code and commit history. If you don’t 
 
 8. Go to the Code tab of your Dev environment on the site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
 
+
 ## Files
 
-**Files** - `wp-content/uploads` for WordPress. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc. For information on highly populated directories, see [Platform Considerations](/docs/articles/sites/platform-considerations/#highly-populated-directories).
+**Files** - `/wp-content/uploads` is a symlink to the `~/files` directory. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc. For information on highly populated directories, see [Platform Considerations](/docs/articles/sites/platform-considerations/#highly-populated-directories).
 
 Files are stored separately from the site's code. Larger file structures can fail in the Dashboard import due to sheer volume. It's best to use a utility such as an SFTP client or rsync. The biggest issue is having the transfer stopped due to connectivity issues. To handle that scenario, try this handy bash script:  
 
@@ -89,7 +98,7 @@ done
 ```
 This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.  
 
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/sites/default/files/`. You can now start your file upload.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.  
 
 ## Database  
 
@@ -115,6 +124,14 @@ Your command will now look like:
 
 You should now have all three of the major components of your site imported into Pantheon.
 
-## Search and Replace
+## WP Search and Replace
 
-When you imported your database, all of the URL's remained 
+When you imported your database, all of the URL's remained active at the previous site's domain name. Visiting the site at this point should return an incorrect connection information error message. To resolve it, the last step of the import process is to change the URL's to match the development environment using the wp-cli command, `wp search-replace`. In the example below, replace `example.com` with the Domain your site currently runs at.
+
+```bash
+terminus wp search-replace example.com dev-example-network.pantheon.io --url=example.com --network --site=example-network --env=dev
+```
+
+Visit the development environment and confirm your site was imported correctly!
+
+When you re-import the database with current content, prior to going live on Pantheon, you will need to run `wp search-replace` again.
