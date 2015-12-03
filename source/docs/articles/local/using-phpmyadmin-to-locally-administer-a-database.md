@@ -9,16 +9,8 @@ keywords: phpmyadmin, database, mysql, mysql connection,
 
 ## Download PHPMyAdmin
 
-The recommended way to get a copy of PHPMyAdmin is to download it via GitHub. For instructions, see [Accessing MySQL database](/docs/articles/local/accessing-mysql-databases/).
-```nohighlight
-git clone https://github.com/phpmyadmin/phpmyadmin.git
-```
-Alternatively, you can download a zip archive of the latest code from the GitHub repository.
+Visit [https://www.phpmyadmin.net/](https://www.phpmyadmin.net/) to download the latest version. For installation instructions or help with other issues, see the [PHPMyAdmin documentation](http://docs.phpmyadmin.net/en/latest/).
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-A repository for PHPMyAdmin exists on SourceForge, but we recommend the GitHub version as you get direct access to the code.
-</div>
 ## Configure a New MySQL Connection
 
 Since version 1.4.2, PHPMyAdmin added support for administration of multiple MySQL servers. To create a new connection, create a copy of config.sample.inc.php and rename this to config.php.
