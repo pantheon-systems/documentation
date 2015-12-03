@@ -4,11 +4,11 @@ description: Learn how to use the Pantheon Workflow on Sites Networks
 ---
 ## Using the Pantheon Workflow with Multisite
 
-The Pantheon Workflow enables you to easily create Dev and Test environments from Live data. When using WordPress Multisite on Pantheon, you can still sync the database and all static files between environments. However, for greatest precision, performing a search and replace operation on the database is best done at the command line with Terminus and WP-CLI.
+The Pantheon workflow enables you to easily create Dev and Test environments from live data. When using WordPress Multisite on Pantheon, you can still sync the database and all static files between environments. However, for greatest precision, performing a search and replace operation on the database is best done at the command line with Terminus and WP-CLI.
 
-### Basic search and replace on WordPress Multisite with a single site
+### Basic Search and Replace on WordPress Multisite with a Single Site
 
-Say, for instance, you’ve just converted a WordPress environment in Dev to Multisite. You want to reuse this environment in Test, so you deploy your wp-config.php changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
+Say, for instance, you’ve just converted a WordPress environment in Dev to Multisite. You want to reuse this environment in Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
 
 Because you just have one site on your Multisite Network, you can perform the search and replace in one operation:
 
@@ -16,7 +16,7 @@ Because you just have one site on your Multisite Network, you can perform the se
 terminus wp --site=handbuilt-site-network --env=test search-replace dev-handbuilt-site-network.pantheon.io test-handbuilt-site-network.pantheon.io --url=dev-handbuilt-site-network.pantheon.io --network
 ```
 
-Pro tip: Include the --dry-run flag to get a preview of the changes without destructively transforming the database.
+**Pro Tip**: Include the --dry-run flag to get a preview of the changes without destructively transforming the database.
 
 Before you run the command, let’s review each argument:
 
@@ -32,7 +32,7 @@ Ready to commit? Run the command! When you do, you’ll see output similar to th
 
 Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment.
 
-### Advanced search and replace on WordPress Multisite with multiple sites
+### Advanced Search and Replace on WordPress Multisite with Multiple Sites
 
 Once your WordPress Multisite environment is established, you’ll likely add multiple sites to it. When you add multiple sites to your WordPress Multisite environment, performing the search and replace when copying the database between environments becomes a bit more involved.
 
@@ -50,7 +50,7 @@ third-site.com -> third-site.test.pantheon.io
 
 Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
 
-We can handle the mapping above in three operations. There are two very important things to know about the following example:
+You can handle the mapping above in three operations. There are two very important things to know about the following example:
 
 Make sure to order your operations such that subsequent replacements don’t clobber early replacements.
 After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
@@ -63,9 +63,9 @@ terminus wp search-replace third-site.com --url=test.pantheon.io --network --sit
 
 [tk flesh out this example]
 
-### Flushing cache globally after search and replace
+### Flushing Cache Globally After Search and Replace
 
-Use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
+DO you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
@@ -73,7 +73,9 @@ With Terminus and WP-CLI, you can flush cache globally with one operation:
 terminus wp cache flush --site=handbuilt-site-network --env=test
 ```
 
-Note: Because the WordPress object cache stores its data as key=>value pairs, and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Because the WordPress object cache stores its data as key=>value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends. </div>
 
 ## Helpful Plugins With Multisite Features
 
@@ -95,10 +97,10 @@ Domain Mapping is the process of mapping any arbitrary domain (called an alias) 
 
 WordPress Multisite’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
 
-Unconfirmed makes it possible for super admins to manage unactivated users, by activating them manually, deleting their pending registrations, or resending the activation email.
+Unconfirmed makes it possible for super admins to manage unactivated users by activating them manually, deleting their pending registrations, or resending the activation email.
 
 ### [More Privacy Options](https://wordpress.org/plugins/more-privacy-options/)
-Adds three more levels of privacy(visibility) to the Settings-->Reading page.
+This adds three more levels of privacy(visibility) to the Settings --> Reading page.
 
 Site visible to any logged in community member - "Network Users Only".
 
@@ -111,7 +113,7 @@ Site visible only to administrators - "Site Admins Only".
 A central area where all the posts on a WordPress MU or WordPress MS site can be collected.
 
 ### [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/)
-Enhance Multisite for Network Admins with different topics
+Enhance Multisite for Network Admins with different topics.
 
 ### [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/)
 
@@ -119,11 +121,9 @@ This plugin can fix network activation issues with plugins not coded correctly f
 
 ## Network Tips and Tricks with WP-CLI
 
-Comfortable with the command line? Here are a number of WP-CLI tips and tricks to make it easier to manage your WordPress Multisite environment.
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. `wp core update-db` includes a `--network` flag for upgrading the database across all sites on a network.
 
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress Dashboard to update the database. `wp core update-db` includes a `--network` flag for upgrading the database across all sites on a network.
-
-`wp site *` is an entire set of commands for managing sites on a WordPress Multisite Network. Use `wp site create` to create a new site on the network, `wp site list` to see all available sites on the network, or `wp site empty` to clear a site of its posts and comments (while retaining options, users and other configuration details).
+`wp site *` is an entire set of commands for managing sites on a WordPress Multisite Network. Use `wp site create` to create a new site on the network, `wp site list` to see all available sites on the network, or `wp site empty` to clear a site of its posts and comments (while retaining options, users, and other configuration details).
 
 The super admin is a user role unique to WordPress Multisite. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
 
