@@ -131,3 +131,50 @@ Do not specify a default remote directory within your SFTP client. When applicat
 The vast majority of SFTP connection problems are DNS related and can be resolved by using Google's Public DNS service in place of your ISP's name servers. See the instructions here: [Google's Public DNS](https://developers.google.com/speed/public-dns/)
 
 If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, Cyberduck (or another client) will. View a list of [SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
+
+
+### DNS Hijacking
+
+There are cases Internet Providers (specifically Indonesian Telecom) hijacks DNS and you are unable to connect to SFTP. 
+
+Symptoms:
+
+When attempting to connect to SFTP, you get the following error:
+
+    Unable to connect to host codeserver.dev.<xxx>.drush.in, or the request timed out.
+    Be sure that the address is correct and that you have the necessary privileges, or try increasing the connection timeout (currently 10 seconds).
+
+Check to see if you are getting an I.P. address returned when you run the following command, replacing “<xxx>” with your site’s UUID:
+
+    dig codeserver.dev.<xxx>.drush.in
+
+Get the ANSWER portion like in the following example:
+
+    ;; ANSWER SECTION:
+    codeserver.dev.<xxx>.drush.in. 188 IN A xx.xx.xx.xxx
+
+Check the IP address here: https://www.whatismyip.com/ip-whois-lookup/
+
+    % [whois.apnic.net]
+    % Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+    
+    % Information related to 'xx.xx.xx.0 - xx.xx.xx.255'
+    
+    inetnum:        xx.xx.xx.0 - xx.xx.xx.255
+    netname:        TLKM_BB_SERVICE_36_86
+    descr:          PT TELKOM INDONESIA
+                    STO Gambir 3rd Floor
+                    Jl. Medan Merdeka Selatan No. 12
+                    Jakarta 10110
+    country:        ID
+    admin-c:        AR165-AP
+    tech-c:         HM444-AP
+    status:         ALLOCATED NON-PORTABLE
+    mnt-by:         MAINT-TELKOMNET
+    mnt-irt:        IRT-IDTELKOM-ID
+    changed:        hostmaster@telkom.net.id 20130123
+    source:         APNIC
+
+Solution:
+
+No permanent solution has been found. Your options for now is to use VPN or contact your ISP to resolve the issue. We had cases where in they had to change ISP in order to connect permanently.
