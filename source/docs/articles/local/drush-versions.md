@@ -28,7 +28,7 @@ For sites running 5.x, create a file called `policy.drush.inc` and place it in t
 The Pantheon platform executes hooks as they are written. If a policy file has incorrect logic (e.g. using Drush 7 with Drupal 8), the operation will fail.
 </div>
 
-The following example uses Drush 8 instead of 5.x for targets on the Pantheon platform. Our `hook_drush_sitealias_alter` function looks like this:
+The following example uses Drush 8 instead of 5.x for targets on the Pantheon platform. Our `hook_drush_sitealias_alter` function within the `policy.drush.inc` file looks like this:
 ```php
 function policy_drush_sitealias_alter(&$alias_record) {
   // Fix pantheon aliases!
@@ -38,7 +38,7 @@ function policy_drush_sitealias_alter(&$alias_record) {
   }
 }
 ```
-Commit the policy file to your site's repository and clear Drush cache by running `drush cc drush`, then check Drush version:
+Save the file and clear Drush cache by running `drush cc drush`, then check Drush version:
 ```
 $ drush @pantheon.SITENAME.ENV version
 drush version 8.x
