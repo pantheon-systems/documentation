@@ -79,28 +79,21 @@ Because the WordPress object cache stores its data as key=>value pairs and WordP
 
 ## Helpful Plugins With Multisite Features
 
-### [Co-Authors Plus](https://github.com/automattic/co-authors-plus)
-
-Co-Authors Plus makes it possible to assign multiple bylines to Posts, Pages, and Custom Post Types. Its Guest Authors feature permits assigning bylines without creating WordPress user accounts.
+- [Co-Authors Plus](https://github.com/automattic/co-authors-plus): Co-Authors Plus makes it possible to assign multiple bylines to Posts, Pages, and Custom Post Types. Its Guest Authors feature permits assigning bylines without creating WordPress user accounts.
 
 On WordPress Multisite, Co-Authors Plus’ Guest Authors feature permits site-specific user profiles.
 
-### [Mercator](https://github.com/humanmade/Mercator)
-
-Mercator makes it possible to map custom domains to the sites on your Multisite Network.
+- [Mercator](https://github.com/humanmade/Mercator): Mercator makes it possible to map custom domains to the sites on your Multisite Network.
 
 When setting up a Multisite install, the network is configured to create sites either as subdomains of the root site (e.g. subsite.network.com) or subfolders (e.g. network.com/subsite).
 
 Domain Mapping is the process of mapping any arbitrary domain (called an alias) to load a site. If an alias of arbitrarydomain.com is set for the site network.com/subsite, the site and wp-admin interface can be accessed over either the alias or the original URL.
 
-### [Unconfirmed](https://github.com/boonebgorges/unconfirmed)
-
-WordPress Multisite’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
+- [Unconfirmed](https://github.com/boonebgorges/unconfirmed): WordPress Multisite’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
 
 Unconfirmed makes it possible for super admins to manage unactivated users by activating them manually, deleting their pending registrations, or resending the activation email.
 
-### [More Privacy Options](https://wordpress.org/plugins/more-privacy-options/)
-This adds three more levels of privacy(visibility) to the Settings --> Reading page.
+- [More Privacy Options](https://wordpress.org/plugins/more-privacy-options/): This adds three more levels of privacy(visibility) to the Settings --> Reading page.
 
 Site visible to any logged in community member - "Network Users Only".
 
@@ -108,16 +101,11 @@ Site visible only to registered users of blog - "Site Members Only".
 
 Site visible only to administrators - "Site Admins Only".
 
-### [WP MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/)
+- [WP MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/): A central area where all the posts on a WordPress MU or WordPress MS site can be collected.
 
-A central area where all the posts on a WordPress MU or WordPress MS site can be collected.
+- [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/): Enhance Multisite for Network Admins with different topics.
 
-### [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/)
-Enhance Multisite for Network Admins with different topics.
-
-### [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/)
-
-This plugin can fix network activation issues with plugins not coded correctly for network activation.
+- [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/): This plugin can fix network activation issues with plugins not coded correctly for network activation.
 
 ## Network Tips and Tricks with WP-CLI
 
