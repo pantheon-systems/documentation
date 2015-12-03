@@ -2,6 +2,8 @@
 title: Managing WordPress Site Networks
 description: Learn how to use the Pantheon Workflow on Sites Networks
 ---
+WordPress Site Networks require additional care when deploying code and cloning databases between dev, test, and live environments. Refer to this document for procedures that will help you manage the environments effectively.
+
 ## Using the Pantheon Workflow with Multisite
 
 The Pantheon Workflow enables you to easily create Dev and Test environments from Live data. When using WordPress Multisite on Pantheon, you can still sync the database and all static files between environments. However, for greatest precision, performing a search and replace operation on the database is best done at the command line with Terminus and WP-CLI.
@@ -28,25 +30,105 @@ Before you run the command, let’s review each argument:
 
 Ready to commit? Run the command! When you do, you’ll see output similar to this:
 
-[tk sample output from search-replace execution]
+```
+Running wp search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io --url='dev-pantheonboarding.pantheon.io' --network='1'  on pantheonboarding-test
+    cmd: 'search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io'
+    flags: '--url='dev-pantheonboarding.pantheon.io' --network='1' '
+    site: 'pantheonboarding'
+    env: 'test'
+tput: No value for $TERM and no -T specified
++---------------------+-----------------------+--------------+------+
+| Table               | Column                | Replacements | Type |
++---------------------+-----------------------+--------------+------+
+| wp_blog_versions    | db_version            | 0            | SQL  |
+| wp_blogs            | domain                | 1            | SQL  |
+| wp_blogs            | path                  | 0            | SQL  |
+| wp_commentmeta      | meta_key              | 0            | SQL  |
+| wp_commentmeta      | meta_value            | 0            | SQL  |
+| wp_comments         | comment_author        | 0            | SQL  |
+| wp_comments         | comment_author_email  | 0            | SQL  |
+| wp_comments         | comment_author_url    | 0            | SQL  |
+| wp_comments         | comment_author_IP     | 0            | SQL  |
+| wp_comments         | comment_content       | 0            | SQL  |
+| wp_comments         | comment_approved      | 0            | SQL  |
+| wp_comments         | comment_agent         | 0            | SQL  |
+| wp_comments         | comment_type          | 0            | SQL  |
+| wp_links            | link_url              | 0            | SQL  |
+| wp_links            | link_name             | 0            | SQL  |
+| wp_links            | link_image            | 0            | SQL  |
+| wp_links            | link_target           | 0            | SQL  |
+| wp_links            | link_description      | 0            | SQL  |
+| wp_links            | link_visible          | 0            | SQL  |
+| wp_links            | link_rel              | 0            | SQL  |
+| wp_links            | link_notes            | 0            | SQL  |
+| wp_links            | link_rss              | 0            | SQL  |
+| wp_options          | option_name           | 0            | SQL  |
+| wp_options          | option_value          | 2            | PHP  |
+| wp_options          | autoload              | 0            | SQL  |
+| wp_postmeta         | meta_key              | 0            | SQL  |
+| wp_postmeta         | meta_value            | 0            | SQL  |
+| wp_posts            | post_content          | 1            | SQL  |
+| wp_posts            | post_title            | 0            | SQL  |
+| wp_posts            | post_excerpt          | 0            | SQL  |
+| wp_posts            | post_status           | 0            | SQL  |
+| wp_posts            | comment_status        | 0            | SQL  |
+| wp_posts            | ping_status           | 0            | SQL  |
+| wp_posts            | post_password         | 0            | SQL  |
+| wp_posts            | post_name             | 0            | SQL  |
+| wp_posts            | to_ping               | 0            | SQL  |
+| wp_posts            | pinged                | 0            | SQL  |
+| wp_posts            | post_content_filtered | 0            | SQL  |
+| wp_posts            | guid                  | 3            | SQL  |
+| wp_posts            | post_type             | 0            | SQL  |
+| wp_posts            | post_mime_type        | 0            | SQL  |
+| wp_registration_log | email                 | 0            | SQL  |
+| wp_registration_log | IP                    | 0            | SQL  |
+| wp_signups          | domain                | 0            | SQL  |
+| wp_signups          | path                  | 0            | SQL  |
+| wp_signups          | title                 | 0            | SQL  |
+| wp_signups          | user_login            | 0            | SQL  |
+| wp_signups          | user_email            | 0            | SQL  |
+| wp_signups          | activation_key        | 0            | SQL  |
+| wp_signups          | meta                  | 0            | SQL  |
+| wp_site             | domain                | 1            | SQL  |
+| wp_site             | path                  | 0            | SQL  |
+| wp_sitemeta         | meta_key              | 0            | SQL  |
+| wp_sitemeta         | meta_value            | 1            | PHP  |
+| wp_term_taxonomy    | taxonomy              | 0            | SQL  |
+| wp_term_taxonomy    | description           | 0            | SQL  |
+| wp_terms            | name                  | 0            | SQL  |
+| wp_terms            | slug                  | 0            | SQL  |
+| wp_usermeta         | meta_key              | 0            | SQL  |
+| wp_usermeta         | meta_value            | 1            | PHP  |
+| wp_users            | user_login            | 0            | SQL  |
+| wp_users            | user_nicename         | 0            | SQL  |
+| wp_users            | user_email            | 0            | SQL  |
+| wp_users            | user_url              | 0            | SQL  |
+| wp_users            | user_activation_key   | 0            | SQL  |
+| wp_users            | display_name          | 0            | SQL  |
++---------------------+-----------------------+--------------+------+
+Success: Made 10 replacements.
+```
 
-Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment.
+Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment. You will need to run this command
 
 ### Advanced search and replace on WordPress Multisite with multiple sites
 
 Once your WordPress Multisite environment is established, you’ll likely add multiple sites to it. When you add multiple sites to your WordPress Multisite environment, performing the search and replace when copying the database between environments becomes a bit more involved.
 
-As an example, consider a WordPress Multisite environment in Live that you’d like to copy to Test. This Multisite environment has three sites, two of which have custom mapped domains.
+As an example, consider a Live WordPress Multisite environment in Live that you’d like to copy to Test. This Site Network has three sites, two of which have custom mapped domains.
 
-In Live, the primary domain for WordPress is pantheon.io. This first site’s dashboard lives at pantheon.io/wp-admin/. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their dashboards live at `second-site.pantheon.io/wp-admin/` and `third-site.pantheon.io/wp-admin/`. However, each site has a mapped domain for the frontend — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
+In Live, the primary domain for WordPress is `example.com`. This first site’s dashboard lives at `example.com/wp-admin/`. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their dashboards live at `second-site.example.com/wp-admin/` and `third-site.example.com/wp-admin/`. However, each site has a mapped domain for the front end — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
 
 These domains can be used in almost every table in the database. When we clone the database to the Test environment, we need to perform a mapping:
 
-pantheon.io -> test.pantheon.io
-second-site.pantheon.io -> second-site.test.pantheon.io
-third-site.pantheon.io - > third-site.test.pantheon.io
+```bash
+example.com -> test-example.pantheon.io
+second-site.example.com -> second-site.test-example.pantheon.io
+third-site.pantheon.io - > test-third-site.test.pantheon.io
 second-site.com -> second-site.test.pantheon.io
 third-site.com -> third-site.test.pantheon.io
+```
 
 Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
 
@@ -56,8 +138,8 @@ Make sure to order your operations such that subsequent replacements don’t clo
 After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
 
 ```bash
-terminus wp search-replace pantheon.io test.pantheon.io --url=pantheon.io --network --site=handbuilt-site-network --env=test
-terminus wp search-replace second-site.com --url=test.pantheon.io --network --site=handbuilt-site-network --env=test
+terminus wp search-replace pantheon.io test-site-network.pantheon.io --url=pantheon.io --network --site=handbuilt-site-network --env=test
+terminus wp search-replace second-site.com --url=second-site.test.pantheon.io --network --site=handbuilt-site-network --env=test
 terminus wp search-replace third-site.com --url=test.pantheon.io --network --site=handbuilt-site-network --env=test
 ```
 
@@ -106,9 +188,9 @@ Site visible only to registered users of blog - "Site Members Only".
 
 Site visible only to administrators - "Site Admins Only".
 
-### [WP MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/)
+### [WordPress MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/)
 
-A central area where all the posts on a WordPress MU or WordPress MS site can be collected.
+A central area where all the posts on a WordPress MU or WordPress MS site can be collected. A simple way to share content from the blogs in a network, without suffering SEO penalties from duplicate content.
 
 ### [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/)
 Enhance Multisite for Network Admins with different topics
