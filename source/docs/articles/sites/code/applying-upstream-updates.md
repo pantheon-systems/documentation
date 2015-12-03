@@ -86,8 +86,6 @@ Select the appropriate framework below for your web application, then execute th
   </div>
 </div>
 
-For more information on resolving conflicts, see [Git FAQs](/docs/articles/local/git-faq#frequently-asked-questions).
-
 ## Troubleshooting
 
 ### Manually Resolving Conflicts
@@ -95,6 +93,9 @@ For more information on resolving conflicts, see [Git FAQs](/docs/articles/local
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
 
 _"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - <u>Git Manual</u>
+
+For more information on resolving conflicts, see [Git FAQs](/docs/articles/local/git-faq#how-can-i-manually-resolve-conflicts?).
+
 
 ### Delete Merge Conflicts
 
