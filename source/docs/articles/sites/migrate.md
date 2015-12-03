@@ -1,4 +1,8 @@
 ---
+migrate: true
+layout: landing
+use:
+    - migrate
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 category:
@@ -8,6 +12,7 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, the goal is the same: move to Pantheon and enjoy the freedom to build awesome sites.
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly.
+
 
 ## Pack Up
 

@@ -1,12 +1,15 @@
 ---
+organizations: true
+use: [organizations]
 title: Organizations
+layout: landing
 description: Detailed information on Pantheon organization types and the features available to them.
 category:
 - managing
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management
 ---
-Pantheon Organizations bring together users, sites, custom upstreams, and support tickets; and provide administrators with the tools needed to effectively manage a large number of sites.
 
+Pantheon Organizations bring together users, sites, custom upstreams, and support tickets; and provide administrators with the tools needed to effectively manage a large number of sites.
 ## Create an Organization
 Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
 
@@ -36,12 +39,12 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 ### Sites
 
 The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
-[Learn More](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-sites-to-your-organization).
+[Learn More](/docs/articles/organizations/dashboard/#add-sites-to-your-organization).
 
 ### People
 
 View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
-[Learn how to add users to the organization](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-users-to-your-organization).
+[Learn how to add users to the organization](/docs/articles/organizations/dashboard/#add-users-to-your-organization).
 
 ### Upstreams
 

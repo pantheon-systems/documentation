@@ -1,8 +1,11 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <article>
-    <div class="article container">
-        <div class="col-md-9">
+    <div class="article container-fluid">
+        <div class="col-md-3 pio-landing-sidenav">
+            {% include ("landing-index.html") %}
+        </div>
+        <div class="col-md-6" style="border-left=solid 1px gray">
             <header>
                 <h1 class="pio-docs-title">{{ page.title }}</h1>
                     <!-- Contrib dropdown button CTA Contribute to Docs -->

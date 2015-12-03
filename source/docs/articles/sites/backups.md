@@ -1,4 +1,8 @@
 ---
+backups: true
+layout: landing
+use:
+  - backups
 title: Backups Tool
 description: Learn about the Backups tool available on the Pantheon Website Management Platform.
 category:

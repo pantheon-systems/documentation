@@ -1,9 +1,15 @@
 ---
-title: Drupal
+drupal: true
+use:
+  - eight
+  - drupal
+title: Drupal on Pantheon
 description: Drupal is an open source content management platform powering millions of websites and applications.
 category: drupal
 keywords: drupal, sites, pantheon, upstream
+layout: landing
 ---
+
 [Drupal](https://www.drupal.org) is an open source content management platform powering millions of websites and applications. It’s built, used, and supported by an active and diverse community of people around the world.
 
 ## Drupal 8
@@ -37,10 +43,3 @@ For most sites, the apachesolr module is the easiest to configure and maintain, 
 ## Launch Check
 
 Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. Go live with confidence using [Launch Check for Drupal](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
-
-## See Also
-- [Caching in Drupal Modules](/docs/articles/drupal/caching-in-drupal-modules/)
-- [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/)
-- [Cron for Drupal](/docs/articles/drupal/cron/)  
-- [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
-- [Setting up CloudFront CDN with Drupal](/docs/articles/drupal/cdn-setting-up-cloudfront/)
