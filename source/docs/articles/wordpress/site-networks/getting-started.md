@@ -7,10 +7,10 @@ Once a Pantheon employee has given you access to your WordPress Site Network sit
 
 ## Migrating Site Networks to Pantheon
 
-If your network already exists, follow the instructions in the [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/) doc. 
+If your network already exists, follow the instructions in the [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/) doc.
 
 ## Create a Network
-Before you begin, switch the Development environment to SFTP mode. Creating the network requires making modifications to the `wp-config.php` file, which is not editable in Git mode.
+Before you begin, switch the Development environment to SFTP mode. Creating the network requires making modifications to the `wp-config.php` file using either WP-CLI or the WordPress Dashboard, which is not possible if the site's connection mode is set to Git.
 
 ### Create a Network with WP-CLI (Recommended)
 
@@ -19,7 +19,7 @@ If you’re comfortable with the command line, Terminus and WP-CLI let you conve
 Before you begin, make sure that:
 
 - Your WordPress environment is functioning as expected.
-- Terminus is configured locally, and you’re authenticated with Pantheon.
+- [Terminus](/docs/articles/local/cli) is configured locally, and you’re authenticated with Pantheon.
 
 Once you’ve confirmed these prerequisites, you can enable WordPress Multisite with one command.
 
@@ -41,15 +41,16 @@ terminus wp core multisite-convert --site=<pantheon-site> --env=dev --title=”M
 
 For full compatibility with Pantheon, you’ll need to update DOMAIN_CURRENT_SITE to be set conditionally based on environment. Here is an example:
 
-https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db
+<script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
+
 
 ### Caveats for Creating the Network Via the WordPress Dashboard
 
-WordPress Site Networks can also be created from the WordPress admin by following the [instructions at the codex](http://codex.wordpress.org/Create_A_Network).
+WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](http://codex.wordpress.org/Create_A_Network).
 
 Once you’ve created the network, you’ll be taken to a new page:
 
-![](https://dl.dropboxusercontent.com/s/gu89aelpj4jqyin/2015-11-10%20at%209.52%20AM.png?dl=0)
+![](/source/docs/assets/images/wp-network-setup.png)
 
 Copy the first block and add it to your site’s `wp-config.php` file.
 
@@ -69,7 +70,7 @@ Now that you’ve made it through the installation process, congratulations on s
 
 When logged in to the WordPress Dashboard, you may notice a new “My Sites” menu item in the Toolbar. You can create your first site in the Network Admin:
 
-![](https://dl.dropboxusercontent.com/s/pxzxwfsvrt2xo5x/2015-11-14%20at%2011.05%20AM.png?dl=0)
+![](/source/docs/assets/images/wp-network-admin-sites.png)
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

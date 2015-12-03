@@ -28,7 +28,7 @@ Before you run the command, let’s review each argument:
 `--url=dev-handbuilt-site-network.pantheon.io` is an associative argument to set the context with which to load WordPress. Because the database still has the Dev URL stored, WordPress thinks it should be the Dev domain until the search and replace has been performed
 `--network` is a flag to perform the search and replace across the entire network
 
-Ready to commit? Run the command! When you do, you’ll see output similar to this:
+Ready to move forward? Run the command! When you do, you’ll see output similar to this:
 
 ```
 Running wp search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io --url='dev-pantheonboarding.pantheon.io' --network='1'  on pantheonboarding-test
@@ -190,6 +190,8 @@ A central area where all the posts on a WordPress MU or WordPress MS site can be
 - [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/): Enhance Multisite for Network Admins with different topics.
 
 - [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/): This plugin can fix network activation issues with plugins not coded correctly for network activation.
+
+- [WP-CFM](https://wordpress.org/plugins/wp-cfm/): Configuration Management plugin for WordPress. You can "push" and "pull" database changes to and from your codebase for versioning. Multisite settings stored in the `wp_sitemeta` table are tracked by default, in addition to the `wp_options` table. Pull and push operations can be executed for all network sites by adding the `--network` flag to the WP-CLI command (e.g. `terminus wp config pull all --network --site=<site> --env=<env>`).
 
 ## Network Tips and Tricks with WP-CLI
 

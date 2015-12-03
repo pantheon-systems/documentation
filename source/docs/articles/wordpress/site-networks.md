@@ -43,7 +43,7 @@ User data is shared among all sites on the network. If you were to create a user
 
 User roles are a bit more complex. Because all sites on the network share the same `wp_users` table, a given user can be assigned a user role on any site and can have different user roles between sites (e.g. an Editor on one site, and an Administrator on another site). WordPress’ default behavior is that a user on the network has no role on any site, unless explicitly added. However, if the user is considered logged in on one site in the network, they’re logged in on all sites on the network. Users can’t access the WordPress Dashboard for a site unless they have a role on the site, but they will see the toolbar when logged in on a site they don’t have a role on.
 
-[Read more about site network user roles](https://codex.wordpress.org/000000).
+[Read more about site network user roles](https://codex.wordpress.org/Multisite_Network_Administration).
 
 ### 4. Sites share themes and plugins
 
@@ -51,4 +51,4 @@ The code for themes and plugins are shared among all sites on the network.
 
 Themes can be enabled for activation on a per-site basis, or network-enabled for activation on any site. Plugins can be activated individually on each site, or network-activated for activation across all sites.
 
-Note the difference between “enabling” and “activating”. Themes can be “enabled” for a site, making it possible for the administrator to activate one of a collection of themes. However, WordPress doesn’t support the concept of enabling plugins for activation. This can be accomplished with custom code in the `wp-content/mu-plugins/` directory. For more information about site-specific features within a network, read [].
+Note the difference between “enabling” and “activating”. Themes can be “enabled” for an entire network by the "super user" (network administrator), which then allows site administrators to activate the theme on individual sites they manage. When Plugins are installed but not network-activated, the site administrator has the ability to activate the plugin. Super users can also choose to activate plugins across the entire network, however site administrators cannot override that activation. Plugins active across the entire network are stored within the `wp-content/plugins` and/or `wp-content/mu-plugins` directories and are **not** displayed within an individual site's plugins list. For more information, see [Multisite Network Administration: Plugins](https://codex.wordpress.org/Multisite_Network_Administration#Plugins).

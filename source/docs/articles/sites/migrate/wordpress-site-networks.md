@@ -62,10 +62,10 @@ Preserve any logic necessary in the original `wp-config.php` and `.gitignore` fi
 7. Push your newly merged codebase up to your Pantheon site repository:
 
  ```bash
- git push pantheon master
+ git push pantheon master --force
  ```
 
-8. Go to the Code tab of your Dev environment on the Site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
+8. Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
 
 
 ## Files
