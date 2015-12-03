@@ -51,7 +51,7 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
   </div>
 </div>
 
-Double-check the conflicted files before going forward to make sure no bugs were introduced.
+Double-check the files before going forward to make sure no bugs were introduced.
 
 #### Upstreams for Drupal Products
 
