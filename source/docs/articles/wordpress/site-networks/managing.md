@@ -116,19 +116,25 @@ Now that you’ve performed the search and replace on your database, WordPress w
 
 Once your WordPress Multisite environment is established, you’ll likely add multiple sites to it. When you add multiple sites to your WordPress Multisite environment, performing the search and replace when copying the database between environments becomes a bit more involved.
 
-As an example, consider a Live WordPress Multisite environment in Live that you’d like to copy to Test. This Site Network has three sites, two of which have custom mapped domains.
+As an example, consider a Live WordPress Multisite environment in Live that you’d like to copy to Test. This Site, running at `example.com` Network has three sites, two of which have custom mapped domains. The Pantheon site machine name is `example-network`, making the test environment URL `test-example-network.pantheon.io`
 
 In Live, the primary domain for WordPress is `example.com`. This first site’s dashboard lives at `example.com/wp-admin/`. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their dashboards live at `second-site.example.com/wp-admin/` and `third-site.example.com/wp-admin/`. However, each site has a mapped domain for the front end — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
 
 These domains can be used in almost every table in the database. When we clone the database to the Test environment, we need to perform a mapping:
 
-```bash
-example.com -> test-example.pantheon.io
-second-site.example.com -> second-site.test-example.pantheon.io
-third-site.pantheon.io - > test-third-site.test.pantheon.io
-second-site.com -> second-site.test.pantheon.io
-third-site.com -> third-site.test.pantheon.io
-```
+- example.com -> test-example-network.pantheon.io
+- second-site.example.com -> second-site.test-example-network.pantheon.io
+- third-site.pantheon.io -> third-site.test-example-network.pantheon.io
+- second-site.com -> second-site.test-example-network.pantheon.io
+- third-site.com -> third-site.test-example-network.pantheon.io
+
+or if you've added the custom domain `test.example.com` to the test environment,
+
+- example.com -> test.example.com
+- second-site.example.com -> second-site.test.example.com
+- third-site.example.com -> third-site.test.example.com
+- second-site.com -> second-site.test.example.com
+- third-site.com -> third-site.test.example.com
 
 Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
 
@@ -138,21 +144,23 @@ Make sure to order your operations such that subsequent replacements don’t clo
 After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
 
 ```bash
-terminus wp search-replace pantheon.io test-site-network.pantheon.io --url=pantheon.io --network --site=handbuilt-site-network --env=test
-terminus wp search-replace second-site.com --url=second-site.test.pantheon.io --network --site=handbuilt-site-network --env=test
-terminus wp search-replace third-site.com --url=test.pantheon.io --network --site=handbuilt-site-network --env=test
+terminus wp search-replace example.com test-example-network.pantheon.io --url=example.com --network --site=example-network --env=test
 ```
-
-[tk flesh out this example]
+```bash
+terminus wp search-replace second-site.com  test-example-network.pantheon.io --url=second-site.test-example-network.pantheon.io --network --site=handbuilt-site-network --env=test
+```
+```bash
+terminus wp search-replace third-site.com test-example-network.pantheon.io --url=test-example-network.pantheon.io --network --site=handbuilt-site-network --env=test
+```
 
 ### Flushing Cache Globally After Search and Replace
 
-DO you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
+D you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
-terminus wp cache flush --site=handbuilt-site-network --env=test
+terminus wp cache flush --site=example-network --env=test
 ```
 
 <div class="alert alert-info" role="alert">
@@ -199,4 +207,4 @@ WordPress sometimes includes database schema changes in major releases. When you
 
 The super admin is a user role unique to WordPress Multisite. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
 
-[tk xargs example for commands that don’t have --network flag]
+Some wp-cli commands cannot receive the `--network` flag. For these commands, you will need to [tk xargs example for commands that don’t have --network flag]
