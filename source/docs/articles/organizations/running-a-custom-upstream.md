@@ -20,7 +20,7 @@ Pantheon provides support for running three types of custom distribution on the 
 <h4>Note</h4>
 You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</div>
 
-Organizational and Partner upstreams are available under contractual terms. Please [create your agency profile](/docs/articles/organizations/pantheon-for-agencies/#create-your-agency-profile) to start the process.
+Organizational and Partner upstreams are available under contractual terms. Please [create your agency profile](/docs/articles/organizations/#create-an-organization) to start the process.
 
 When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/docs/articles/organizations/adding-a-custom-upstream).  
 

@@ -10,35 +10,49 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
 
 ### How do I resolve conflicts when updating Core?
 <img src="/source/docs/assets/images/icon-workflow.svg" alt="Worfklow Icon" style="margin-top:25px;margin-right:15px;float:left;border:0;max-height:80px;"><p style="margin-top:10px;margin-bottom:40px;">If you receive the error that you have conflicts while updating core, the fastest resolution is often the <code>-Xtheirs</code> flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with <code>.gitignore</code>).</p>
-```bash
-git pull -Xtheirs [upstream url] master
-```
-Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
-#### Drupal 7
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
 
-Run the following commands within your local environment:
-```bash
-git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-# resolve conflicts here if needed...
-git push origin master
-```
-#### Drupal 6
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d6">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+  # resolve conflicts
+  git push origin master  
+  </code></pre>
+  </div>
+</div>
 
-Run the following commands from inside your local Git repository:
-```bash
-git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-# resolve conflicts here if needed...
-git push origin master
-```
-#### WordPress
+Double-check the files before going forward to make sure no bugs were introduced.
 
-Run the following commands from inside your local Git repository:
-```bash
-git pull -Xtheirs  git://github.com/pantheon-systems/WordPress.git master
-# resolve conflicts here if needed...
-git push origin master
-```
 #### Upstreams for Drupal Products
 
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.

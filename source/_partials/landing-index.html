@@ -1,0 +1,237 @@
+{% if page.local is defined %}
+<h3> All Local Docs</h3>
+<ul class="list-group">
+    {% for article in data.local %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.drupal is defined %}
+<h3>All Drupal Docs</h3>
+<ul class="list-group">
+    {% for article in data.drupal %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.eight is defined %}
+<ul class="list-group">
+    <h3>All Drupal 8 Docs</h3>
+    {% for article in data.eight %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.organizations is defined %}
+<h3>All Organization Docs</h3>
+<ul class="list-group">
+    {% for article in data.organizations %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.users is defined %}
+<h3>All User Docs</h3>
+<ul class="list-group">
+    {% for article in data.users %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.wordpress is defined %}
+<h3>All WordPress Docs</h3>
+<ul class="list-group">
+    {% for article in data.wordpress %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.wordpressnetworks is defined %}
+<h3>All WordPress Site Network Docs</h3>
+<ul class="list-group">
+    {% for article in data.wordpressnetworks %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+{% elseif page.sites is defined %}
+<h3>All Site Docs</h3>
+<h4><a href="/docs/articles/sites/backups">Backups</a></h4>
+<ul class="list-group">
+    {% for article in data.backups %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/code">Code</a></h4>
+<ul class="list-group">
+    {% for article in data.code %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/create">Create</a></h4>
+<ul class="list-group">
+    {% for article in data.create %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/database">Database</a></h4>
+<ul class="list-group">
+    {% for article in data.database %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/domains">Domains</a></h4>
+<ul class="list-group">
+    {% for article in data.domains %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/files">Files</a></h4>
+<ul class="list-group">
+    {% for article in data.files %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/logs">Logs</a></h4>
+<ul class="list-group">
+    {% for article in data.logs %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/migrate">Migrate</a></h4>
+<ul class="list-group">
+    {% for article in data.migrate %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/newrelic">New Relic</a></h4>
+<ul class="list-group">
+    {% for article in data.newrelic %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/security">Security</a></h4>
+<ul class="list-group">
+    {% for article in data.security %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/settings">Settings</a></h4>
+<ul class="list-group">
+    {% for article in data.settings %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a href="/docs/articles/sites/varnish">Varnish</a></h4>
+<ul class="list-group">
+    {% for article in data.varnish %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
+<h4><a>Miscellaneous</a></h4>
+<ul class="list-group">
+    <li class="list-group-item"><a href="/docs/articles/sites/all-about-application-containers"> All About Application Containers</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/apache-solr"> Apache Solr on Pantheon</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/cloudflare-cdn-and-dns/"> CloudFlare CDN and DNS on Pantheon</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/date-and-time"> Date and Time</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/debugging-connectivity-issues"> Debugging Connectivity Issues</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/deleting-a-site"> Deleting a Site on Pantheon</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/deploys"> The Pantheon Deploy Log</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/errors-and-server-responses"> Errors and Server Responses</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/external-libraries"> External Libraries</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/mime-types"> MIME Types</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/multidev"> Multidev</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/new-site-owner"> New Site Owner FAQs</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/php-errors-and-exceptions"> PHP Errors and Exceptions</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/platform-considerations"> Platform Considerations</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/redis-as-a-caching-backend"> Redis as a Caching Backend</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/resetting-passwords"> Resetting Passwords</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/secure-phpinfo"> Securely working with phpinfo</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/site-dashboard"> Site Dashboard</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/team-management"> Team Management</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/timeouts"> Timeouts on Pantheon</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/updating-payment-methods"> Updating Payment Methods</a></li>
+    <li class="list-group-item"><a href="/docs/articles/sites/what-is-apc-and-what-is-it-used-for"> What is APC and what is it used for?</a></li>
+    </ul>
+    {% elseif page.backups is defined %}
+    <h3>All Backup Docs</h3>
+    <ul class="list-group">
+        {% for article in data.backups %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.code is defined %}
+    <h3>All Code Docs</h3>
+    <ul class="list-group">
+        {% for article in data.code %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.create is defined %}
+    <h3>All Site Creation Docs</h3>
+    <ul class="list-group">
+        {% for article in data.create %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.database is defined %}
+    <h3>All Database Docs</h3>
+    <ul class="list-group">
+        {% for article in data.database %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.domains is defined %}
+    <h3>All Domain Docs</h3>
+    <ul class="list-group">
+        {% for article in data.domains %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.files is defined %}
+    <h3>All Files Docs</h3>
+    <ul class="list-group">
+        {% for article in data.files %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.logs is defined %}
+    <h3>All Log Docs</h3>
+    <ul class="list-group">
+        {% for article in data.logs %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.migrate is defined %}
+    <h3>All Migration Docs</h3>
+    <ul class="list-group">
+        {% for article in data.migrate %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.newrelic is defined %}
+    <h3>All New Relic Docs</h3>
+    <ul class="list-group">
+        {% for article in data.newrelic %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.security is defined %}
+    <h3>All Security Docs</h3>
+    <ul class="list-group">
+        {% for article in data.security %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.settings is defined %}
+    <h3>All Settings Docs</h3>
+    <ul class="list-group">
+        {% for article in data.settings %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        {% endfor %}
+    </ul>
+    {% elseif page.varnish is defined %}
+    <h3>All Varnish Docs</h3>
+    <ul class="list-group">
+        {% for article in data.varnish %}
+        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+    </ul>
+
+
+
+    {% else %}
+    {% endif %}

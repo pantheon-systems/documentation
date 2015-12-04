@@ -28,7 +28,8 @@ Before you run the command, let’s review each argument:
 `--url=dev-handbuilt-site-network.pantheon.io` is an associative argument to set the context with which to load WordPress. Because the database still has the Dev URL stored, WordPress thinks it should be the Dev domain until the search and replace has been performed
 `--network` is a flag to perform the search and replace across the entire network
 
-Ready to commit? Run the command! When you do, you’ll see output similar to this:
+
+Ready to move forward? Run the command! When you do, you’ll see output similar to this:
 
 ```
 Running wp search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io --url='dev-pantheonboarding.pantheon.io' --network='1'  on pantheonboarding-test
@@ -136,6 +137,7 @@ or if you've added the custom domain `test.example.com` to the test environment,
 - second-site.com -> second-site.test.example.com
 - third-site.com -> third-site.test.example.com
 
+
 Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
 
 You can handle the mapping above in three operations. There are two very important things to know about the following example:
@@ -155,11 +157,12 @@ terminus wp search-replace third-site.com test-example-network.pantheon.io --url
 
 ### Flushing Cache Globally After Search and Replace
 
-D you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
+DO you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
+<<<<<<< HEAD
 terminus wp cache flush --site=example-network --env=test
 ```
 
@@ -199,6 +202,8 @@ A central area where all the posts on a WordPress MU or WordPress MS site can be
 
 - [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/): This plugin can fix network activation issues with plugins not coded correctly for network activation.
 
+- [WP-CFM](https://wordpress.org/plugins/wp-cfm/): Configuration Management plugin for WordPress. You can "push" and "pull" database changes to and from your codebase for versioning. Multisite settings stored in the `wp_sitemeta` table are tracked by default, in addition to the `wp_options` table. Pull and push operations can be executed for all network sites by adding the `--network` flag to the WP-CLI command (e.g. `terminus wp config pull all --network --site=<site> --env=<env>`).
+
 ## Network Tips and Tricks with WP-CLI
 
 WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. `wp core update-db` includes a `--network` flag for upgrading the database across all sites on a network.
@@ -206,5 +211,3 @@ WordPress sometimes includes database schema changes in major releases. When you
 `wp site *` is an entire set of commands for managing sites on a WordPress Multisite Network. Use `wp site create` to create a new site on the network, `wp site list` to see all available sites on the network, or `wp site empty` to clear a site of its posts and comments (while retaining options, users, and other configuration details).
 
 The super admin is a user role unique to WordPress Multisite. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
-
-Some wp-cli commands cannot receive the `--network` flag. For these commands, you will need to [tk xargs example for commands that don’t have --network flag]

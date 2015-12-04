@@ -19,7 +19,7 @@ Users in a SAML-enabled Pantheon organization are unable to authenticate using T
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the organization dashboard](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the organization dashboard](/docs/articles/organizations/dashboard/). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
@@ -39,7 +39,7 @@ While there may be SAML setups that provide keys to configure your IdP, we do no
 
 If your IdP is Okta or OneLogin, see:
 
-* [Configuring SAML for Pantheon with Okta](/docs/articles/organizations/saml-for-orgs-with-okta)
+* [Configuring SAML for Pantheon with Okta](/docs/articles/organizations/sso)
 * [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)
 
 ## Enable SAML on Pantheon

@@ -1,7 +1,7 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <article>
-    <div class="article container">
+    <div class="article container-fluid">
         <div class="col-md-9">
             <div class="page-header">
                 <header>
@@ -16,7 +16,7 @@
                             {% endfor %}
                             <span class="pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="getpantheon" data-count="none">Tweet</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                            <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share"></script></span><br>
+                            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share"  data-url="https://pantheon.io{{ page.url }}" data-counter="none"></script><br></span>
                             {{ page.date|date('F d, Y') }}
                         </div>
                 </header>

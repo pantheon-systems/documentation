@@ -186,7 +186,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 6. Push your code up to master.
 7. Deploy to Test and Live.
 8. Download your Pantheon [Drush aliases](https://pantheon.io/blog/drush-aliases-available).
-9. Clear your Drush cache on each environment. Example: `drush @pantheon.<site-name>.devcc drush`
+9. Clear your Drush cache on each environment. Example: `drush @pantheon.<site-name>.dev cc drush`
 
 If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
 

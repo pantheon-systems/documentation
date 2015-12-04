@@ -82,7 +82,7 @@ If you'd like to put all traffic on your site under HTTPS (a best practice if yo
 
     // Require HTTPS.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTPS'] === 'ON') {
+      $_SERVER['HTTPS'] === 'OFF') {
       if (!isset($_SERVER['HTTP_X_SSL']) ||
         (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
         header('HTTP/1.0 301 Moved Permanently');
