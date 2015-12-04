@@ -39,9 +39,9 @@ Optionally specify --title to use a custom title for your Multisite Network:
 ```bash
 terminus wp core multisite-convert --site=<pantheon-site> --env=dev --title=”My Awesome Multisite Network”
 ```
+### Modify DOMAIN_CURRENT_SITE
 
 For full compatibility with Pantheon, you’ll need to update DOMAIN_CURRENT_SITE to be set conditionally based on environment. Here is an example:
-
 
 <script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
 
@@ -58,9 +58,9 @@ Copy the first block and add it to your site’s `wp-config.php` file.
 
 Add the constants to your wp-config right below where you added the WP_ALLOW_MULTISITE constant.
 
-Instead of defining DOMAIN_CURRENT_SITE explicitly, you’ll want to define it conditionally based on environment. Here is an example:
+As in the wp-cli conversion method example above, instead of defining DOMAIN_CURRENT_SITE explicitly, you’ll want to define it conditionally based on environment. Here is an example:
 
-https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db
+<script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
 
 Ignore the second block. Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
 

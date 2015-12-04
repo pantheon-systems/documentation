@@ -20,7 +20,7 @@ We support clients running a network of several functionally-similar sites. This
 ## Unsupported Use Cases
 We do not support uses of Multisite that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:
 
- - Software as a aervice (SAAS) products
+ - Software as a service (SAAS) products
  - Agencies using one WordPress installation to support several customers
 
 ## About WordPress Site Networks
