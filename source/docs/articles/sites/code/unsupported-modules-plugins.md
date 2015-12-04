@@ -45,7 +45,10 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Issue**:  If you follow the installation instructions for CKFinder, the `$baseUrl` path is not correctly set and will not recognize any path set via CKFinder.  [Drupal.org issue](https://www.drupal.org/node/2629000)
 
 **Solution**:  Manually edit the `ckfinder/config.php` file and edit the following line to the desired path:
-`$baseUrl = '/ckfinder/userfiles/';`
+
+```
+$baseUrl = '/ckfinder/userfiles/';
+```
 
 <hr>
 ### Global Redirect  
