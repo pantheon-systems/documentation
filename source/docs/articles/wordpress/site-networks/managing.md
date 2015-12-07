@@ -10,7 +10,7 @@ The Pantheon workflow enables you to easily create Dev and Test environments fro
 
 ### Basic Search and Replace on a Site Network
 
-Say, for instance, you’ve just site up a WordPress Site Network in your Dev environment. You want to push your changes to Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
+Say, for instance, you’ve just set up a WordPress Site Network in your Dev environment. You want to push your changes to Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
 
 Because you just started, you only have one site on your Network. The search and replace can be done in one operation:
 
