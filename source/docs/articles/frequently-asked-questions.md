@@ -13,7 +13,7 @@ Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
-Pantheon supports Drupal 6, 7 and 8. Users can create sandbox [Drupal 8 sites](/docs/articles/drupal/8/). At this time, Drupal 8 support is on [Github](https://github.com/pantheon-systems/drops-8/issues) .
+Pantheon supports Drupal 6, 7, and 8 sites.
 
 ### What versions of WordPress does Pantheon support?
 
