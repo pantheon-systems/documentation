@@ -4,15 +4,15 @@ description: Learn how to use the Pantheon Workflow on Sites Networks
 ---
 WordPress Site Networks require additional care when deploying code and cloning databases between dev, test, and live environments. Refer to this document for procedures that will help you manage the environments effectively.
 
-## Using the Pantheon Workflow with Multisite
+## Using the Pantheon Workflow with Site Networks
 
-The Pantheon workflow enables you to easily create Dev and Test environments from live data. When using WordPress Multisite on Pantheon, you can still sync the database and all static files between environments. However, for greatest precision, performing a search and replace operation on the database is best done at the command line with Terminus and WP-CLI.
+The Pantheon workflow enables you to easily create Dev and Test environments from live data. With Site Networks, you can still sync the database and all static files between environments, but performing a search and replace operation on the database must be done via the command line with Terminus and WP-CLI.
 
-### Basic Search and Replace on WordPress Multisite with a Single Site
+### Basic Search and Replace on a Site Network
 
-Say, for instance, you’ve just converted a WordPress environment in Dev to Multisite. You want to reuse this environment in Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
+Say, for instance, you’ve just set up a WordPress Site Network in your Dev environment. You want to push your changes to Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
 
-Because you just have one site on your Multisite Network, you can perform the search and replace in one operation:
+Because you just started, you only have one site on your Network. The search and replace can be done in one operation:
 
 ```bash
 terminus wp --site=handbuilt-site-network --env=test search-replace dev-handbuilt-site-network.pantheon.io test-handbuilt-site-network.pantheon.io --url=dev-handbuilt-site-network.pantheon.io --network
@@ -111,15 +111,15 @@ tput: No value for $TERM and no -T specified
 Success: Made 10 replacements.
 ```
 
-Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment. You will need to run this command
+Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment.
 
-### Advanced Search and Replace on WordPress Multisite with Multiple Sites
+### Advanced Search and Replace on Networks with Multiple Sites
 
-Once your WordPress Multisite environment is established, you’ll likely add multiple sites to it. When you add multiple sites to your WordPress Multisite environment, performing the search and replace when copying the database between environments becomes a bit more involved.
+Once your WordPress Site Network environment is established, you’ll likely start adding sites to it. That's the point, after all, but with multiple sites performing the search and replace when copying the database between environments becomes a bit more involved.
 
-As an example, consider a Live WordPress Multisite environment in Live that you’d like to copy to Test. This Site, running at `example.com` Network has three sites, two of which have custom mapped domains. The Pantheon site machine name is `example-network`, making the test environment URL `test-example-network.pantheon.io`
+As an example, consider a WordPress Network environment in Live that you’d like to copy to Test. This site, running at `example.com` Network has three sites, two of which have custom mapped domains. The Pantheon site machine name is `example-network`, making the test environment URL `test-example-network.pantheon.io`
 
-In Live, the primary domain for WordPress is `example.com`. This first site’s dashboard lives at `example.com/wp-admin/`. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their dashboards live at `second-site.example.com/wp-admin/` and `third-site.example.com/wp-admin/`. However, each site has a mapped domain for the front end — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
+In Live, the primary domain for WordPress is `example.com`. This first site’s dashboard lives at `example.com/wp-admin/`. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their WordPress admin dashboards live at `second-site.example.com/wp-admin/` and `third-site.example.com/wp-admin/`. However, each site has a mapped domain for the front end — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
 
 These domains can be used in almost every table in the database. When we clone the database to the Test environment, we need to perform a mapping:
 
@@ -142,8 +142,7 @@ Although WP-CLI supports regex search and replace, it’s likely that running th
 
 You can handle the mapping above in three operations. There are two very important things to know about the following example:
 
-Make sure to order your operations such that subsequent replacements don’t clobber early replacements.
-After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
+Make sure to order your operations such that subsequent replacements don’t clobber early replacements. After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
 
 ```bash
 terminus wp search-replace example.com test-example-network.pantheon.io --url=example.com --network --site=example-network --env=test
@@ -157,7 +156,7 @@ terminus wp search-replace third-site.com test-example-network.pantheon.io --url
 
 ### Flushing Cache Globally After Search and Replace
 
-DO you use Redis, Memcached, or another persistent storage backend with your object cache? Each time you run search and replace, you’ll need to flush your cache to ensure it doesn’t serve stale values.
+Do you use Redis as a persistent storage backend for your object cache? Each time you complete a set of search and replace operations, you’ll need to flush your cache to ensure it doesn’t serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
@@ -174,15 +173,15 @@ Because the WordPress object cache stores its data as key=>value pairs and WordP
 
 - [Co-Authors Plus](https://github.com/automattic/co-authors-plus): Co-Authors Plus makes it possible to assign multiple bylines to Posts, Pages, and Custom Post Types. Its Guest Authors feature permits assigning bylines without creating WordPress user accounts.
 
-On WordPress Multisite, Co-Authors Plus’ Guest Authors feature permits site-specific user profiles.
+On WordPress Networks, Co-Authors Plus’ Guest Authors feature permits site-specific user profiles.
 
 - [Mercator](https://github.com/humanmade/Mercator): Mercator makes it possible to map custom domains to the sites on your Multisite Network.
 
 When setting up a Multisite install, the network is configured to create sites either as subdomains of the root site (e.g. subsite.network.com) or subfolders (e.g. network.com/subsite).
 
-Domain Mapping is the process of mapping any arbitrary domain (called an alias) to load a site. If an alias of arbitrarydomain.com is set for the site network.com/subsite, the site and wp-admin interface can be accessed over either the alias or the original URL.
+Domain Mapping is the process of mapping a fully qualified domain (called an alias) to a particular site in the network. If an alias of arbitrarydomain.com is set for the site network.com/subsite, the site and wp-admin interface can be accessed over either the alias or the original URL.
 
-- [Unconfirmed](https://github.com/boonebgorges/unconfirmed): WordPress Multisite’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
+- [Unconfirmed](https://github.com/boonebgorges/unconfirmed): WordPress’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
 
 Unconfirmed makes it possible for super admins to manage unactivated users by activating them manually, deleting their pending registrations, or resending the activation email.
 
@@ -196,7 +195,7 @@ Site visible only to administrators - "Site Admins Only".
 
 - [WordPress MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/)
 
-A central area where all the posts on a WordPress MU or WordPress MS site can be collected. A simple way to share content from the blogs in a network, without suffering SEO penalties from duplicate content.
+A central area where all the posts on a WordPress Network can be collected. A simple way to share content from the blogs in a network, without suffering SEO penalties from duplicate content.
 
 - [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/): Enhance Multisite for Network Admins.
 
@@ -210,4 +209,4 @@ WordPress sometimes includes database schema changes in major releases. When you
 
 `wp site *` is an entire set of commands for managing sites on a WordPress Multisite Network. Use `wp site create` to create a new site on the network, `wp site list` to see all available sites on the network, or `wp site empty` to clear a site of its posts and comments (while retaining options, users, and other configuration details).
 
-The super admin is a user role unique to WordPress Multisite. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
+The super admin is a user role unique to WordPress Networks. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
