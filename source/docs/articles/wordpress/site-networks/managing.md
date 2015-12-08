@@ -15,17 +15,17 @@ Say, for instance, you’ve just set up a WordPress Site Network in your Dev env
 Because you just started, you only have one site on your Network. The search and replace can be done in one operation:
 
 ```bash
-terminus wp --site=handbuilt-site-network --env=test search-replace dev-handbuilt-site-network.pantheon.io test-handbuilt-site-network.pantheon.io --url=dev-handbuilt-site-network.pantheon.io --network
+terminus wp --site=<pantheon-site> --env=test search-replace dev-<pantheon-site>.pantheon.io test-<pantheon-site>.pantheon.io --url=dev-<pantheon-site>.pantheon.io --network
 ```
 
-**Pro Tip**: Include the --dry-run flag to get a preview of the changes without destructively transforming the database.
+**Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
 
 Before you run the command, let’s review each argument:
 
 `terminus wp` tells Terminus to perform a WP-CLI command
-`--site=handbuilt-site-network --env=test` are associative arguments interpreted by Terminus to know which site and which environment to run the WP-CLI command on
-`search-replace dev-handbuilt-site-network.pantheon.io test-handbuilt-site-network.pantheon.io` are three positional arguments interpreted by WP-CLI. WP-CLI interprets them as “run the search and replace command; use `dev-handbuilt-site-network.pantheon.io` as the string to search for; use `test-handbuilt-site-network.pantheon.io` as the value to replace it with.
-`--url=dev-handbuilt-site-network.pantheon.io` is an associative argument to set the context with which to load WordPress. Because the database still has the Dev URL stored, WordPress thinks it should be the Dev domain until the search and replace has been performed
+`--site=<pantheon-site> --env=test` are associative arguments interpreted by Terminus to know which site and which environment to run the WP-CLI command on
+`search-replace dev-<pantheon-site>.pantheon.io test-<pantheon-site>.pantheon.io` are three positional arguments interpreted by WP-CLI. WP-CLI interprets them as “run the search and replace command; use `dev-<pantheon-site>.pantheon.io` as the string to search for; use `test-<pantheon-site>.pantheon.io` as the value to replace it with.
+`--url=dev-<pantheon-site>.pantheon.io` is an associative argument to set the context with which to load WordPress. Because the database still has the Dev URL stored, WordPress thinks it should be the Dev domain until the search and replace has been performed
 `--network` is a flag to perform the search and replace across the entire network
 
 
@@ -145,13 +145,13 @@ You can handle the mapping above in three operations. There are two very importa
 Make sure to order your operations such that subsequent replacements don’t clobber early replacements. After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
 
 ```bash
-terminus wp search-replace example.com test-example-network.pantheon.io --url=example.com --network --site=example-network --env=test
+terminus wp search-replace example.com test-<pantheon-site>.pantheon.io --url=example.com --network --site=<pantheon-site> --env=test
 ```
 ```bash
-terminus wp search-replace second-site.com  test-example-network.pantheon.io --url=second-site.test-example-network.pantheon.io --network --site=handbuilt-site-network --env=test
+terminus wp search-replace second-site.com  test-<pantheon-site>.pantheon.io --url=second-site.test-<pantheon-site>.pantheon.io --network --site=<pantheon-site> --env=test
 ```
 ```bash
-terminus wp search-replace third-site.com test-example-network.pantheon.io --url=test-example-network.pantheon.io --network --site=handbuilt-site-network --env=test
+terminus wp search-replace third-site.com test-<pantheon-site>.pantheon.io --url=test-<pantheon-site>pantheon.io --network --site=<pantheon-site> --env=test
 ```
 
 ### Flushing Cache Globally After Search and Replace
@@ -161,8 +161,7 @@ Do you use Redis as a persistent storage backend for your object cache? Each tim
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
-<<<<<<< HEAD
-terminus wp cache flush --site=example-network --env=test
+terminus wp cache flush --site=<pantheon-site> --env=test
 ```
 
 <div class="alert alert-info" role="alert">
@@ -205,8 +204,8 @@ A central area where all the posts on a WordPress Network can be collected. A si
 
 ## Network Tips and Tricks with WP-CLI
 
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. `wp core update-db` includes a `--network` flag for upgrading the database across all sites on a network.
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. [`wp core update-db`](http://wp-cli.org/commands/core/update-db/) includes a `--network` flag for upgrading the database across all sites on a network.
 
-`wp site *` is an entire set of commands for managing sites on a WordPress Multisite Network. Use `wp site create` to create a new site on the network, `wp site list` to see all available sites on the network, or `wp site empty` to clear a site of its posts and comments (while retaining options, users, and other configuration details).
+[`wp site *`](http://wp-cli.org/commands/site/) is an entire set of commands for managing sites on a WordPress Multisite Network. Use [`wp site create`](http://wp-cli.org/commands/site/create/) to create a new site on the network, [`wp site list`](http://wp-cli.org/commands/site/list/) to see all available sites on the network, or [`wp site empty`](http://wp-cli.org/commands/site/empty/) to clear a site of its posts and comments (while retaining options, users, and other configuration details).
 
-The super admin is a user role unique to WordPress Networks. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? `wp super-admin add` and `remove` have you covered.
+The super admin is a user role unique to WordPress Networks. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? [`wp super-admin add`](http://wp-cli.org/commands/super-admin/add/) and [`remove`](http://wp-cli.org/commands/super-admin/remove/) have you covered.

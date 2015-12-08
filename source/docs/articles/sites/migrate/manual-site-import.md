@@ -15,8 +15,8 @@ Manually import your site to Pantheon outside of the provided [Importer Tool](/d
 ## Requirements
 
 * [Download](http://git-scm.com/downloads) and install [Git](/docs/articles/local/starting-with-git/)
-* [Rsync or SFTP Client](https://pantheon.io/docs/articles/local/rsync-and-sftp/)
-* [MySQL Client](https://pantheon.io/docs/articles/local/accessing-mysql-databases/)
+* [Rsync or SFTP Client](/docs/articles/local/rsync-and-sftp/)
+* [MySQL Client](/docs/articles/local/accessing-mysql-databases/)
 
 ## Create a New Pantheon Site and Start from Scratch
 

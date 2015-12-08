@@ -7,11 +7,11 @@ Once a Pantheon employee has given you access to your WordPress Site Network sit
 
 ## Migrating Site Networks to Pantheon
 
-If your network already exists, follow the instructions in the [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/) doc.
+If your network already exists, see [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/). The instructions below pertain only to new WordPress Site Networks.
 
 ## Create a Network
 
-Before you begin, switch the Development environment to SFTP mode. Creating the network requires making modifications to the `wp-config.php` file using either WP-CLI or the WordPress Dashboard, which is not possible if the site's connection mode is set to Git.
+Before you begin, set the [connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-mode) for the Development environment. This is required when making modifications through the WordPress Dashboard or via WP-CLI.
 
 ### Create a Network with WP-CLI (Recommended)
 
@@ -19,7 +19,7 @@ If you’re comfortable with the command line, Terminus and WP-CLI let you conve
 
 Before you begin, make sure that:
 
-- Your WordPress environment is functioning as expected.
+- Your WordPress environment is installed and functioning as expected.
 
 - [Terminus](/docs/articles/local/cli) is configured locally, and you’re authenticated with Pantheon.
 
@@ -46,19 +46,19 @@ For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` t
 
 <script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
 
-### Caveats for Creating the Network Via the WordPress Dashboard
+### Creating a Network through WordPress Dashboard
 
 WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](http://codex.wordpress.org/Create_A_Network).
 
 Once you’ve created the network, you’ll be taken to a new page:
 
-![](/source/docs/assets/images/wp-network-setup.png)
+![WordPress Network Admin Setup](/source/docs/assets/images/wp-network-setup.png)
 
 Copy the first block and add it to your site’s `wp-config.php` file.
 
 Add the constants to your wp-config right below where you added the `WP_ALLOW_MULTISITE` constant.
 
-As in the wp-cli conversion method example above, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you’ll want to define it conditionally based on environment. Here is an example:
+As in the WP-CLI conversion method example above, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you’ll want to define it conditionally based on environment. Here is an example:
 
 <script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
 
@@ -72,7 +72,7 @@ Now that you’ve made it through the installation process, congratulations on s
 
 When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu item in the Toolbar. Use that create your first site via the Network Admin:
 
-![](/source/docs/assets/images/wp-network-admin-sites.png)
+![WordPress Site Network Dashboard](/source/docs/assets/images/wp-network-admin-sites.png)
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
