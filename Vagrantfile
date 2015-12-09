@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
   set -ex
   phantomjs --webdriver=8643 &> /dev/null &
   su vagrant -c 'cd #{path} && composer install && bundle && npm install;
-  bin/sculpin generate && ln -sf #{path}/source #{path}/output_dev/.
+  bin/sculpin generate --env=prod && ln -sf #{path}/source #{path}/output_*
   bin/sculpin serve &
   disown'
 SCRIPT

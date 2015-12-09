@@ -3,7 +3,7 @@ require 'html/proofer'
 task default: %w[htmlproofer]
 
 task :htmlproofer do
-      HTML::Proofer.new("./output_dev", {
+      HTML::Proofer.new("./output_prod", {
         :disable_external => true,
       }).run
 end
