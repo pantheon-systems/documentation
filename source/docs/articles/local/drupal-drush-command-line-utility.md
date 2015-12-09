@@ -290,10 +290,12 @@ $ drush @pantheon.SITENAME.ENV cc all --strict=0
 'all' cache was cleared in [success]
 /srv/bindings/BINDINGID/code#ENV-SITENAME.pantheon.io
 ```
-### Drush Error: "Could not find a Drupal settings.php file" or missing system information from status
+### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
+
 ```bash
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
+
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
 ### Unable to Connect to drush.in Hostnames (DNS)
