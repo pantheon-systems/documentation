@@ -15,36 +15,48 @@ Before you begin, set the [connection mode to SFTP](/docs/articles/sites/code/de
 
 ### Create a Network with WP-CLI (Recommended)
 
-If you’re comfortable with the command line, Terminus and WP-CLI let you convert an existing WordPress environment to Multisite in one command: `wp core multisite-convert`
+**Before you begin, make sure that [Terminus](/docs/articles/local/cli) is configured locally, and you’re authenticated with Pantheon.**
 
-Before you begin, make sure that:
+You can install WordPress and enable the Multisite feature with the [`wp core multisite-install`](http://wp-cli.org/commands/core/multisite-install/) command.
 
-- Your WordPress environment is installed and functioning as expected.
+If you've already installed WordPress, convert an the existing site to a network in one command: `wp core multisite-convert`
 
-- [Terminus](/docs/articles/local/cli) is configured locally, and you’re authenticated with Pantheon.
-
-Once you’ve confirmed these prerequisites, you can enable WordPress Multisite with one command.
-
-Subdirectory style:
+This example will install and enable multisite in the subdirectory-style. Add the `--subdomains` option to the command.
 ```bash
-terminus wp core multisite-convert --site=<pantheon-site> --env=dev
+terminus wp core multisite-install --site=<example-network> --title=<site-title> --admin_user=<username> --admin_password=<password> --andmin-email=<email> --url=<url> --env=dev
 ```
+## Add Custom Domains to Dev, Test, and Live
 
-Subdomains style:
-```bash
-terminus wp core multisite-convert --site=<pantheon-site> --env=dev --subdomains
-```
-
-Optionally specify --title to use a custom title for your Multisite Network:
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+If you’re using the subdomain configuration, you must add the domain for each site you create to the Pantheon Dashboard, and configure requisite DNS settings) in order for the site to be accessible, for each environment you intend on serving it from.</div>
+<div class="alert alert-info" role="alert">
+<h4>Subdirectory Note</h4>
+Custom primary domains are not required for plain Subdirectory configurations, until the site network goes live.</div>
+If you are running a subdomain-style site network, and need to add sites to the network on the dev environment before cloning it to Test and Live, you must add custom domains, with the `www.` subdomain, to all environments. For the site, `www.example-network.com`, use the following Terminus commands to prepare the site.
 
 ```bash
-terminus wp core multisite-convert --site=<pantheon-site> --env=dev --title=”My Awesome Multisite Network”
+terminus site hostnames add www.dev.example-network.com --site=example-network --env=dev
+terminus site hostnames add www.test.example-network.com --site=example-network --env=test
+# Until you actually go live, you'll likely want to use a subdomain like beta.example-network.com.
+terminus site hostnames add beta.example-network.com --site=example-network --env=live
+# If you're ready to launch
+terminus site hostnames add www.example-network.com --site=example-network --env=live
+terminus site hostnames add example-network.com --site=example-network --env=live
 ```
+Add the above subdomains to your DNS for the domain, using the recommended settings from the site dashboard's domain panel for each environment.
+
+For subdomain-style networks, it is also useful to add the following wildcard DNS entries,
+
+- `*.dev` CNAME to `dev-example-network.pantheon.io`,
+- `*.test` CNAME to `test-example-network.pantheon.io`, and
+- `*.` CNAME to `live-example-network.pantheon.io`.
+
 ### Modify `DOMAIN_CURRENT_SITE`
 
 For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
 
-<script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/wordpress/site-networks/switch.php"></script>
 
 ### Creating a Network through WordPress Dashboard
 
@@ -60,7 +72,7 @@ Add the constants to your wp-config right below where you added the `WP_ALLOW_MU
 
 As in the WP-CLI conversion method example above, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you’ll want to define it conditionally based on environment. Here is an example:
 
-<script src="https://gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/wordpress/site-networks/switch.php"></script>
 
 Ignore the second block of code. Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
 
