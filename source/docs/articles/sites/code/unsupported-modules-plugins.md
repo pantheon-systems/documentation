@@ -107,6 +107,20 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
 
 #### Views data export
 **Issue**: This module requires the use of the `/tmp` directory. There is also a [patch](https://www.drupal.org/node/1782038) available, but we still cannot guarantee that the use of the `/tmp` directory will work successfully. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below for more information.
+
+**Solution**: A *possible* solution would be to set the export directory in `settings.php` to a `public://` streamwrapper location versus a `temporary://` one.  Example:
+```
+$conf['views_data_export_directory'] = 'public://';
+```
+or to a specific created directory:
+````
+$conf['views_data_export_directory'] = 'public://vde/';
+````
+Additionally, the variable can be set using drush:
+````
+drush vset views_data_export_directory 'public://'
+````
+
 <hr>
 
 #### Webform export<br>
