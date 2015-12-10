@@ -361,3 +361,4 @@ Currently, there is no way to manage Crontab on Pantheon. If you need a way to 
 
 ## Known Limitations
 - [Migrate's support for spawning Drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
+- Incorrect `['uri']` in pantheon.aliases.drushrc.php file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal. This may result in the following error
