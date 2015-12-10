@@ -51,7 +51,7 @@ Now you need to give the new user permission to manage S3 (Amazon Simple Storage
 You now have a user with full S3 access and are ready to configure WordPress.
 
 ## Configure CloudFront on WordPress
-There are several plugins that will help you manage cached assets in WordPress with CloudFront. The most popular is [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/). This is a beast of a plugin that has immense functionality. However, for the sole purpose of incorporating CloudFront, we are going to use the [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin.
+There are several plugins that will help you manage cached assets in WordPress with CloudFront; however, for the sole purpose of incorporating CloudFront, we are going to use the [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin.
 
 ## Install the Amazon S3 and CloudFront Plugin
 
