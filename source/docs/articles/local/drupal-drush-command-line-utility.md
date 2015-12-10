@@ -367,26 +367,5 @@ Currently, there is no way to manage Crontab on Pantheon. If you need a way to 
 drush @pantheon.example.live  st
 Drush command terminated abnormally due to an unrecoverable error.       [error]
 ```
-Setting the `--uri` option will not work, in order to resolve this the hostname will need to edited in `pantheon.aliases.drushrc.php` to the desired URI.
-
-```
-  $aliases['example.live'] = array(
-    'uri' => 'example.com', 
-    'db-allows-remote' => TRUE,
-    ...
-     ),
-  );
-```
-Once the `pantheon.aliases.drushrc.php` is updated the commands will run as expected:
-
-```
-drush @pantheon.example.live  st
-Initialized Drupal site www.example.com at sites/default      [notice]
- Drupal version         :  7.40                                                
- Site URI               :  www.example.com                           
- Database driver        :  mysql                                               
- Database hostname      :  164.332.987.40                                            
- Database               :  Connected                                           
- Drupal bootstrap       :  Successful                                          
- Drupal user            :  Anonymous                 
- ```
+Setting the `--uri` option will not work, in order to resolve this the recommendation is to use a [Drush policy file]( 
+https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
