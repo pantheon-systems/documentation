@@ -20,7 +20,7 @@ Be sure that you:
 If you already have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/free/), you are good to go. Otherwise, you will need to create one. Amazon offers free access to most of their services for the first year. This allows you to build out new systems and test things before committing money to a project.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h4>Note</h4>h
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
 
 ## Create an IAM User
@@ -51,7 +51,7 @@ Now you need to give the new user permission to manage S3 (Amazon Simple Storage
 You now have a user with full S3 access and are ready to configure WordPress.
 
 ## Configure CloudFront on WordPress
-There are several plugins that will help you manage cached assets in WordPress with CloudFront, however, for the sole purpose of incorporating CloudFront, we are going to use the [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin.
+There are several plugins that will help you manage cached assets in WordPress with CloudFront; however, for the sole purpose of incorporating CloudFront, we are going to use the [Amazon S3 and CloudFront](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) plugin.
 
 ## Install the Amazon S3 and CloudFront Plugin
 
