@@ -20,7 +20,7 @@ Be sure that you:
 If you already have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/free/), you are good to go. Otherwise, you will need to create one. Amazon offers free access to most of their services for the first year. This allows you to build out new systems and test things before committing money to a project.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>h
+<h4>Note</h4>
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
 
 ## Create an IAM User
