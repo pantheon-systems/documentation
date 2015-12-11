@@ -27,7 +27,7 @@ The easiest way to migrate your site is to use the [Pantheon Migration Plugin](h
 6. Commit your migrated code on the Dev environment of the site Dashboard on Pantheon.
 7. Deploy to Test and Live when you're ready to [launch on Pantheon](/docs/articles/going-live).
 
-## Manually Migrate from WP Engine
+## Migrate Manually
 
 1. Create and download a backup point from WP Engine.
 2. Unzip your site's backup point on your local machine.
