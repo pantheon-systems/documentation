@@ -2,14 +2,6 @@
 
 Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
-## Before You Start
-
-* If you don't have one already, sign up for a [GitHub account](https://github.com/signup/free).
-* Fork the pantheon-systems/documentation repository on GitHub.
-  Trying to edit or create a file in this repository will create your fork automatically.
-* [Clone your fork locally](https://help.github.com/articles/cloning-a-repository/).
-* Add our repo as a remote. `git remote add upstream git@github.com:pantheon-systems/documentation.git`.
-
 **NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
 
 ## Issues - Searching and Creating
@@ -27,12 +19,25 @@ Description: The document currently suggests using XYZ commands, but I get the f
 
 Add labels to issues by clicking the gear in the sidebar on the right. Labels are used to signify priority, category, and to help filter existing issues. For example, if a doc is incorrect, the label 'Doc Defect' should be applied.
 
-## Edit Existing Docs
+## Edit and Test Locally Using Vagrant
 
-1. Search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure your isn't duplicated.
-2. Locally, cd to the `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
-3. Edit locally, commit changes, and push to your fork.
-4. To preserve the accuracy of promised information throughout the docs, search the repository for links to the revised section and update related articles accordingly.
+**Note**: To preserve the accuracy of promised information throughout the docs, search the repository for links to sections that have been renamed and update accordingly.
+
+1. [Use Vagrant](https://github.com/pantheon-systems/documentation#option-1-use-vagrant-recommended) to run the docs site locally.
+2. Navigate to your local `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
+3. Edit/Create docs locally using your favorite text editor (e.g. [Atom](https://atom.io/)), then save the file changes.
+4. Verify modifications on the local site <http://docs.local:8000/docs>
+5. Test layout or code changes by running `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
+ - `grunt`: [a11y](https://github.com/addyosmani/a11y) accessibility audits
+ - `rake config[wraith.yaml]`: [Wraith](https://github.com/BBC-News/wraith) visual regression tool
+ - `rake htmlproofer`: [HTML::Proofer](https://github.com/gjtorikian/html-proofer) HTML validation
+ - `bin/behat`: [Behat](https://github.com/Behat/Behat)
+ - `scripts/merge_conflicts.sh`: Look for merge conflicts.
+6. Commit changes and push to your fork. Issue pull-requests one document/issue at a time.
+
+## Edit on GitHub
+
+Trying to edit or create a file in this repository will create your fork automatically. Commit changes and issue pull-requests one document/issue at a time. For more information, see [Using Pull Requests](https://help.github.com/articles/using-pull-requests/).
 
 ## Keep your Local Updated with Master
 
