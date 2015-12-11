@@ -108,7 +108,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 This is by design. Please see [Using the Pantheon Workflow
 ](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
-### My STP client takes a long time to connect
+### My SFTP client takes a long time to connect
 
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
 
