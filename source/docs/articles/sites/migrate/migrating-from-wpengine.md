@@ -1,5 +1,5 @@
 ---
-title: Migrate Sites from WP Engine to Pantheon
+title: Migrating Sites from WP Engine to Pantheon
 description: Get all the details you need to know to successfully migrate your site away from WP Engine.
 category:
   - WordPress
@@ -11,20 +11,20 @@ The easiest way to migrate your site is to use the [Pantheon Migration Plugin](h
 
 ## Migrate Using the Pantheon Migration Plugin (Recommended)
 1. Create and install a new WordPress site on Pantheon:
- - Choose Create a new site from your Pantheon Dashboard.
+ - Choose **Create a new site** from your Pantheon Dashboard.
  - Name your site.
- - Select Start from scratch, and choose WordPress.
+ - Select **Start from scratch**, and choose **WordPress**.
  - Click **Visit Development Site** and complete the installation process.
 2. From your site's production environment, install and activate the [Pantheon Migration Plugin](https://wordpress.org/plugins/bv-pantheon-migration/) plugin using the WordPress Dashboard.
 3. Still on your site's production environment, select **Pantheon Migration** from the WordPress Dashboard menu and enter the required information:
- - **Email**: Receive status updates on your migration.
+ - **Email**: This email address will receive status updates on the migration.
  - **Destination URL**: The Development URL of your newly created WordPress site on Pantheon (e.g. http://dev-sitename.pantheon.io).
  - **SFTP Server Address**: Host address found in your Pantheon Dashboard under SFTP Connection Info.  
  - **SFTP Username**: Username found in your Pantheon Dashboard under SFTP Connection Info.
  - **SFTP Password**: Password used to login to your Pantheon account.
-4. Click **Migrate**. You will be redirected to BlogVault's secure migration service. You can close this tab or even shut down your workstation while the migration runs in the background. You will receive an email when the migration has completed.  
+4. Click **Migrate**. You will be redirected to BlogVault's secure migration service. You can close this tab or shut down your computer while the migration runs. You will receive an email when the migration has completed.  
 5. Once completed, verify expected content on the Development URL of your Pantheon site.
-6. Commit your migrated code on the Dev environment of the site Dashboard on Pantheon.
+6. Commit your migrated code on the Dev environment of the Site Dashboard on Pantheon.
 7. Deploy to Test and Live when you're ready to [launch on Pantheon](/docs/articles/going-live).
 
 ## Migrate Manually
@@ -34,9 +34,9 @@ The easiest way to migrate your site is to use the [Pantheon Migration Plugin](h
 3. Remove the WP Engine remnants. There are a few files you'll need to remove:
   - Drop-in plugins (e.g. `wpengine-common`) located at: `\wp-content\mu-plugins`
   - .gitattributes and .gitignore. from the root folder
-  - If Object caching is enabled, the `object-cache.php` file located in `/wp-content`
+  - If object caching is enabled, the `object-cache.php` file located in `/wp-content`
 4. Replace existing `wp-config.php` with [Pantheon's `wp-config.php`](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php) file. Preserve necessary logic from your existing file.
-5. Move the `mysql.sql` database out of the `wp-content` directory and into project's root directory.
+5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 6. Compress the archive: Larger sites may need to [create separate archives](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives).
 7. Import your site:
       - **Via the Importer tool**: The importer accepts either single-file site archives or separate archives of the code, database, and files (100MB for file uploads, 500MB for URL uploads). Import during the creation process of your new site on Pantheon. For details, see [Migrate to Pantheon: The Importer Tool](/docs/articles/sites/migrate/#plan-the-import).
