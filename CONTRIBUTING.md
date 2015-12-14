@@ -26,12 +26,12 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
 1. [Use Vagrant](https://github.com/pantheon-systems/documentation#option-1-use-vagrant-recommended) to run the docs site locally.
 2. Navigate to your local `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
 3. Edit/Create docs locally using your favorite text editor (e.g. [Atom](https://atom.io/)), then save the file changes.
-4. Verify modifications on the local site <http://docs.local:8000/docs>
-5. Test layout or code changes by running `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
+4. Run `vagrant provision` and verify modifications on the local site <http://docs.local:8000/docs>
+5. Test layout or code changes with `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
  - `grunt`: [a11y](https://github.com/addyosmani/a11y) accessibility audits
- - `rake config[wraith.yaml]`: [Wraith](https://github.com/BBC-News/wraith) visual regression tool
- - `rake htmlproofer`: [HTML::Proofer](https://github.com/gjtorikian/html-proofer) HTML validation
+ - `rake`: [HTML::Proofer](https://github.com/gjtorikian/html-proofer) HTML validation
  - `bin/behat`: [Behat](https://github.com/Behat/Behat)
+ - `wraith capture wraith.yaml`: [Wraith](https://github.com/BBC-News/wraith) visual regression tool
  - `scripts/merge_conflicts.sh`: Look for merge conflicts.
 6. Commit changes and push to your fork. Issue pull-requests one document/issue at a time.
 
