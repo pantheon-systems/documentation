@@ -67,8 +67,11 @@ No. Pantheon's architecture is designed to provide high performance and a rich f
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
 ### Does Pantheon support WordPress Multisite?
+Yes, Pantheon supports the following use cases of [WordPress Site Networks](/docs/articles/wordpress/site-networks) created by WordPress' Multisite feature:
 
-No. While WordPress multisites have been successfully installed on the Pantheon platform, it is not a supported development practice due to [known issues](/docs/articles/wordpress/wordpress-known-issues#site-networks-/-multisite).
+- Blogs for faculty at a university
+- Franchise sites under a parent organization site
+- Sections within a media publication
 
 ### Does Pantheon support Drush?
 
