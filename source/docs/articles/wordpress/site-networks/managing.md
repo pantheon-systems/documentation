@@ -6,201 +6,134 @@ WordPress Site Networks require additional care when deploying code and cloning 
 
 ## Using the Pantheon Workflow with Site Networks
 
-The Pantheon workflow enables you to easily create Dev and Test environments from live data. With Site Networks, you can still sync the database and all static files between environments, but performing a search and replace operation on the database must be done via the command line with Terminus and WP-CLI.
+Code development and deployment will use the same [Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow) as any other site. Database clones,  initiated during a code deployment to test or during the creation of Test and Live environments, require a manual `wp search-replace` to complete. This is easy to do via the command line with Terminus and WP-CLI.
 
-### Basic Search and Replace on a Site Network
+As long as the primary site on Dev, Test, and Live have the same subdomain pattern (`www.` or bare), the only operation necessary to view all sites with hostnames present on the target environment is
 
-Say, for instance, you’ve just set up a WordPress Site Network in your Dev environment. You want to push your changes to Test, so you deploy your `wp-config.php` changes, and clone your database and files from Dev to Test. The last step is to perform a search and replace on the database.
+## Flushing Cache Globally After Search and Replace
 
-Because you just started, you only have one site on your Network. The search and replace can be done in one operation:
-
-```bash
-terminus wp --site=<pantheon-site> --env=test search-replace dev-<pantheon-site>.pantheon.io test-<pantheon-site>.pantheon.io --url=dev-<pantheon-site>.pantheon.io --network
-```
-
-**Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
-
-Before you run the command, let’s review each argument:
-
-`terminus wp` tells Terminus to perform a WP-CLI command
-`--site=<pantheon-site> --env=test` are associative arguments interpreted by Terminus to know which site and which environment to run the WP-CLI command on
-`search-replace dev-<pantheon-site>.pantheon.io test-<pantheon-site>.pantheon.io` are three positional arguments interpreted by WP-CLI. WP-CLI interprets them as “run the search and replace command; use `dev-<pantheon-site>.pantheon.io` as the string to search for; use `test-<pantheon-site>.pantheon.io` as the value to replace it with.
-`--url=dev-<pantheon-site>.pantheon.io` is an associative argument to set the context with which to load WordPress. Because the database still has the Dev URL stored, WordPress thinks it should be the Dev domain until the search and replace has been performed
-`--network` is a flag to perform the search and replace across the entire network
-
-
-Ready to move forward? Run the command! When you do, you’ll see output similar to this:
-
-```
-Running wp search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io --url='dev-pantheonboarding.pantheon.io' --network='1'  on pantheonboarding-test
-    cmd: 'search-replace dev-pantheonboarding.pantheon.io test-pantheonboarding.pantheon.io'
-    flags: '--url='dev-pantheonboarding.pantheon.io' --network='1' '
-    site: 'pantheonboarding'
-    env: 'test'
-tput: No value for $TERM and no -T specified
-+---------------------+-----------------------+--------------+------+
-| Table               | Column                | Replacements | Type |
-+---------------------+-----------------------+--------------+------+
-| wp_blog_versions    | db_version            | 0            | SQL  |
-| wp_blogs            | domain                | 1            | SQL  |
-| wp_blogs            | path                  | 0            | SQL  |
-| wp_commentmeta      | meta_key              | 0            | SQL  |
-| wp_commentmeta      | meta_value            | 0            | SQL  |
-| wp_comments         | comment_author        | 0            | SQL  |
-| wp_comments         | comment_author_email  | 0            | SQL  |
-| wp_comments         | comment_author_url    | 0            | SQL  |
-| wp_comments         | comment_author_IP     | 0            | SQL  |
-| wp_comments         | comment_content       | 0            | SQL  |
-| wp_comments         | comment_approved      | 0            | SQL  |
-| wp_comments         | comment_agent         | 0            | SQL  |
-| wp_comments         | comment_type          | 0            | SQL  |
-| wp_links            | link_url              | 0            | SQL  |
-| wp_links            | link_name             | 0            | SQL  |
-| wp_links            | link_image            | 0            | SQL  |
-| wp_links            | link_target           | 0            | SQL  |
-| wp_links            | link_description      | 0            | SQL  |
-| wp_links            | link_visible          | 0            | SQL  |
-| wp_links            | link_rel              | 0            | SQL  |
-| wp_links            | link_notes            | 0            | SQL  |
-| wp_links            | link_rss              | 0            | SQL  |
-| wp_options          | option_name           | 0            | SQL  |
-| wp_options          | option_value          | 2            | PHP  |
-| wp_options          | autoload              | 0            | SQL  |
-| wp_postmeta         | meta_key              | 0            | SQL  |
-| wp_postmeta         | meta_value            | 0            | SQL  |
-| wp_posts            | post_content          | 1            | SQL  |
-| wp_posts            | post_title            | 0            | SQL  |
-| wp_posts            | post_excerpt          | 0            | SQL  |
-| wp_posts            | post_status           | 0            | SQL  |
-| wp_posts            | comment_status        | 0            | SQL  |
-| wp_posts            | ping_status           | 0            | SQL  |
-| wp_posts            | post_password         | 0            | SQL  |
-| wp_posts            | post_name             | 0            | SQL  |
-| wp_posts            | to_ping               | 0            | SQL  |
-| wp_posts            | pinged                | 0            | SQL  |
-| wp_posts            | post_content_filtered | 0            | SQL  |
-| wp_posts            | guid                  | 3            | SQL  |
-| wp_posts            | post_type             | 0            | SQL  |
-| wp_posts            | post_mime_type        | 0            | SQL  |
-| wp_registration_log | email                 | 0            | SQL  |
-| wp_registration_log | IP                    | 0            | SQL  |
-| wp_signups          | domain                | 0            | SQL  |
-| wp_signups          | path                  | 0            | SQL  |
-| wp_signups          | title                 | 0            | SQL  |
-| wp_signups          | user_login            | 0            | SQL  |
-| wp_signups          | user_email            | 0            | SQL  |
-| wp_signups          | activation_key        | 0            | SQL  |
-| wp_signups          | meta                  | 0            | SQL  |
-| wp_site             | domain                | 1            | SQL  |
-| wp_site             | path                  | 0            | SQL  |
-| wp_sitemeta         | meta_key              | 0            | SQL  |
-| wp_sitemeta         | meta_value            | 1            | PHP  |
-| wp_term_taxonomy    | taxonomy              | 0            | SQL  |
-| wp_term_taxonomy    | description           | 0            | SQL  |
-| wp_terms            | name                  | 0            | SQL  |
-| wp_terms            | slug                  | 0            | SQL  |
-| wp_usermeta         | meta_key              | 0            | SQL  |
-| wp_usermeta         | meta_value            | 1            | PHP  |
-| wp_users            | user_login            | 0            | SQL  |
-| wp_users            | user_nicename         | 0            | SQL  |
-| wp_users            | user_email            | 0            | SQL  |
-| wp_users            | user_url              | 0            | SQL  |
-| wp_users            | user_activation_key   | 0            | SQL  |
-| wp_users            | display_name          | 0            | SQL  |
-+---------------------+-----------------------+--------------+------+
-Success: Made 10 replacements.
-```
-
-Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment.
-
-### Advanced Search and Replace on Networks with Multiple Sites
-
-Once your WordPress Site Network environment is established, you’ll likely start adding sites to it. That's the point, after all, but with multiple sites performing the search and replace when copying the database between environments becomes a bit more involved.
-
-As an example, consider a WordPress Network environment in Live that you’d like to copy to Test. This site, running at `example.com` Network has three sites, two of which have custom mapped domains. The Pantheon site machine name is `example-network`, making the test environment URL `test-example-network.pantheon.io`
-
-In Live, the primary domain for WordPress is `example.com`. This first site’s dashboard lives at `example.com/wp-admin/`. The second and third sites on the network have the slugs `second-site` and `third-site`. This means their WordPress admin dashboards live at `second-site.example.com/wp-admin/` and `third-site.example.com/wp-admin/`. However, each site has a mapped domain for the front end — the second site is served at `second-site.com` and the third site is exposed at `third-site.com`.
-
-These domains can be used in almost every table in the database. When we clone the database to the Test environment, we need to perform a mapping:
-
-- example.com -> test-example-network.pantheon.io
-- second-site.example.com -> second-site.test-example-network.pantheon.io
-- third-site.pantheon.io -> third-site.test-example-network.pantheon.io
-- second-site.com -> second-site.test-example-network.pantheon.io
-- third-site.com -> third-site.test-example-network.pantheon.io
-
-or if you've added the custom domain `test.example.com` to the test environment,
-
-- example.com -> test.example.com
-- second-site.example.com -> second-site.test.example.com
-- third-site.example.com -> third-site.test.example.com
-- second-site.com -> second-site.test.example.com
-- third-site.com -> third-site.test.example.com
-
-
-Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
-
-You can handle the mapping above in three operations. There are two very important things to know about the following example:
-
-Make sure to order your operations such that subsequent replacements don’t clobber early replacements. After you run the replacement for the main site on the network, you’ll need to change the --url parameter to the main site’s new URL.
-
-```bash
-terminus wp search-replace example.com test-<pantheon-site>.pantheon.io --url=example.com --network --site=<pantheon-site> --env=test
-```
-```bash
-terminus wp search-replace second-site.com  test-<pantheon-site>.pantheon.io --url=second-site.test-<pantheon-site>.pantheon.io --network --site=<pantheon-site> --env=test
-```
-```bash
-terminus wp search-replace third-site.com test-<pantheon-site>.pantheon.io --url=test-<pantheon-site>pantheon.io --network --site=<pantheon-site> --env=test
-```
-
-### Flushing Cache Globally After Search and Replace
-
-Do you use Redis as a persistent storage backend for your object cache? Each time you complete a set of search and replace operations, you’ll need to flush your cache to ensure it doesn’t serve stale values.
+If you use Redis as a persistent storage backend for your object cache you’ll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn’t serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
-terminus wp cache flush --site=<pantheon-site> --env=test
+terminus wp cache flush --env=test
+```
+The terminus command to clear all caches for an environment is:
+```bash
+terminus site clear-cache --env=test
 ```
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Because the WordPress object cache stores its data as key=>value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends. </div>
 
-## Helpful Plugins With Multisite Features
 
-- [Co-Authors Plus](https://github.com/automattic/co-authors-plus): Co-Authors Plus makes it possible to assign multiple bylines to Posts, Pages, and Custom Post Types. Its Guest Authors feature permits assigning bylines without creating WordPress user accounts.
+## Deploy Code to Test
 
-On WordPress Networks, Co-Authors Plus’ Guest Authors feature permits site-specific user profiles.
+Code that has been committed to master and is running on the Dev environment
+```bash
+terminus site deploy --test --sync-content --yes
+terminus wp search replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network --env=test
+terminus site clear-cache --env=test
+```
+## Clone Content from Live to Test
+Restore the Test database and files to the state of the Live environment.
+```bash
+terminus site clone-content --from-env=live --to-env=test --yes
+terminus wp search replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network --env=test
+terminus site clear-cache --env=test
+```
 
-- [Mercator](https://github.com/humanmade/Mercator): Mercator makes it possible to map custom domains to the sites on your Multisite Network.
+## Clone Content from Live to Dev
+Catch up Dev to Live before you start development. The first command will overwrite the DB in Dev.
+```bash
+terminus site clone-content --from-env=live --to-env=dev --yes
+terminus wp search replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network --env=test
+terminus site clear-cache --env=test
+```
 
-When setting up a Multisite install, the network is configured to create sites either as subdomains of the root site (e.g. subsite.network.com) or subfolders (e.g. network.com/subsite).
+## Subdomain Networks
 
-Domain Mapping is the process of mapping a fully qualified domain (called an alias) to a particular site in the network. If an alias of arbitrarydomain.com is set for the site network.com/subsite, the site and wp-admin interface can be accessed over either the alias or the original URL.
+Subdomain-style networks require custom hostnames added to all environments for all sub-sites they will be used on. Add hostnames to live for all subdomain sites.
 
-- [Unconfirmed](https://github.com/boonebgorges/unconfirmed): WordPress’s default behavior is to create new user accounts through an invite and activation process. When a WordPress administrator creates a new user account, WordPress sends a confirmation email to the user. The account isn’t created until the user accepts the invitation.
+```bash
+terminus wp site create --slug=$SLUG --env=live
+terminus site hostnames add --hostname=$SLUG.$DOMAIN --env=live
+```
+Add hostnames to dev and test environments for all subdomain sites necessary for development and testing.  
+```bash
+terminus wp site create --slug=$SLUG --env=live
+terminus site hostnames add --hostname=$SLUG.$DOMAIN --env=live
+terminus site hostnames add --hostname=$SLUG.$TESTDOMAIN --env=test
+terminus site hostnames add --hostname=$SLUG.$DEVDOMAIN --env=dev
+```
+The next time you clone content from Live to Test or Dev, this sub-site will be accessible in each environment after a simple `wp search-replace`.
 
-Unconfirmed makes it possible for super admins to manage unactivated users by activating them manually, deleting their pending registrations, or resending the activation email.
+```bash
+terminus site clone-content --from-env=live --to-env=test --yes
+terminus wp search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network --env=test
+terminus site clear-cache --env=test
+```
 
-- [More Privacy Options](https://wordpress.org/plugins/more-privacy-options/): This adds three more levels of privacy(visibility) to the Settings --> Reading page.
+## Search and Replace for Domain-Mapped Sites in a Network
 
-Site visible to any logged in community member - "Network Users Only".
+This is simple
 
-Site visible only to registered users of blog - "Site Members Only".
+1. Map the primary domain to the Test env domain as normal. All sites and sub-sites should be accessible from the default domains at this point.
+2. For each of the aliases you want to access from a domain-mapped URL in Test,
+ - Add the custom test.hostname to Test.
+ - `wp search-replace $DOMAIN2 $TESTDOMAIN2 --url=test.$DOMAIN`
 
-Site visible only to administrators - "Site Admins Only".
+Domain-mapping adds an alias URL to sites on a network, so that they can be accessed from the default subdomain or subdirectory of the main URL, or from a different Domain Name. As an example, consider a subdomain-style WordPress Network, with live running at `www.example-network.com`, test at `www.test.example-network.com`, and dev at `www.dev.example-network.com` The Network contains three sites, two of which have custom mapped domains. The second site's slug is `second-site`,  its' WordPress admin dashboard is at `second-site.example-network.com/wp-admin/`, and it has an alias domain mapped for the front end, served at `second-site.com`. Likewise,  `third-site` is administered at `third-site.example-network.com/wp-admin/`, and is served at `third-site.com`.
 
-- [WordPress MU Sitewide Tags](https://wordpress.org/plugins/wordpress-mu-sitewide-tags/)
+These domains can exist in almost every table in the database. When we clone the database from Live to  Test, we need to perform a mapping:
 
-A central area where all the posts on a WordPress Network can be collected. A simple way to share content from the blogs in a network, without suffering SEO penalties from duplicate content.
+- `www.$DOMAIN` -> `www.$TESTDOMAIN`
+- `second-site.$DOMAIN` -> `second-site.$TESTDOMAIN`
+- `third-site.$DOMAIN` -> `third-site.$TESTDOMAIN`
+- `second-site.com` -> `second-site.$TESTDOMAIN`
+- `third-site.com` -> `third-site.TESTDOMAIN`
 
-- [Multisite Enhancements](https://wordpress.org/plugins/multisite-enhancements/): Enhance Multisite for Network Admins.
+Although WP-CLI supports regex search and replace, it’s likely that running the operation for each search and replace pair will be much faster for your use case.
 
-- [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/): This plugin can fix network activation issues with plugins not coded correctly for network activation.
+You can handle the mapping above in three operations. There are two very important things to know about the following example:
 
-- [WP-CFM](https://wordpress.org/plugins/wp-cfm/): Configuration Management plugin for WordPress. You can "push" and "pull" database changes to and from your codebase for versioning. Multisite settings stored in the `wp_sitemeta` table are tracked by default, in addition to the `wp_options` table. Pull and push operations can be executed for all network sites by adding the `--network` flag to the WP-CLI command (e.g. `terminus wp config pull all --network --site=<site> --env=<env>`).
+- Order your operations such that subsequent replacements don’t clobber early replacements.
+- After you run the replacement for the main site on the network, you’ll need to change the `--url` parameter to the main site’s new URL.
+
+The first operation will map the primary site and all of its subsites:
+given `DOMAIN=example-network.com`, `TESTDOMAIN=test.example-network.com`, and `DEVDOMAIN=dev.example-network.com`
+```bash
+terminus wp search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network --env=test
+```
+- `www.$DOMAIN` -> `www.$TESTDOMAIN`
+- `second-site.$DOMAIN` -> `second-site.$TESTDOMAIN`
+- `third-site.$DOMAIN` -> `third-site.$TESTDOMAIN`
+
+The site URL will become `www.$TESTDOMAIN`.
+Then, we can to replace the aliases in the database with their test-environment URL's.
+```bash
+terminus wp search-replace second-site.com  second-site.$TESTDOMAIN --url=www.$TESTDOMAIN --network --env=test
+terminus wp search-replace third-site.com third-site.$TESTDOMAIN --url=twww.$TESTDOMAIN --network --env=test
+```
+### Preserve Domain-Mapped URLs
+
+If you want to use unique domain-mapped hostnames, like `www.test.second-site.com` and `www.dev.third-site.com`, as aliases for the sites on the Dev and Test environments instead of the default environment URLs, add them to the Test environment, and at your DNS host.
+```bash
+terminus site hostnames add --hostname=www.dev.$DOMAIN2 --env=test
+terminus site hostnames add --hostname=www.test.$DOMAIN2 --env=test
+terminus site hostnames add --hostname=www.dev.$DOMAIN3 --env=test
+terminus site hostnames add --hostname=www.test.$DOMAIN3 --env=test
+```
+After each clone from Live to Test, performing the first search and replace, map the new aliases.
+- `second-site.com` -> `test.second-site.com`
+- `third-site.com` -> `test.third-site.com`
+```bash
+terminus wp search-replace $DOMAIN test.$DOMAIN --url=www.$DOMAIN --env=test
+terminus wp search-replace $DOMAIN2 test.$DOMAIN2 --url=www.$TESTDOMAIN --env=test
+terminus wp search-replace $DOMAIN3 test.$DOMAIN3 --url=www.$TESTDOMAIN --env=test
+```
 
 ## Network Tips and Tricks with WP-CLI
 
