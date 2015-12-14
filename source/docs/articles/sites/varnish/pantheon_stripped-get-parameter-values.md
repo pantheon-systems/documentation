@@ -1,22 +1,40 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
-description: Detailed information on how Pantheon optimizes your site's cache performance.
+description: Information on why PANTHEON_STRIPPED is placed in the utm_source URL parameter.
 category:
   - developing
 keywords: google analytics, analytics, pantheon_stripped, utm, query parameters, cache
 ---
-In a typical scenario, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by JavaScript to track different AdWords campaigns running for the same page on your site.
+Typically, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by JavaScript to track different AdWords campaigns running for the same page on your site.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 Variables that are converted to <code>PANTHEON_STRIPPED</code> cannot be read with PHP, and original values will not appear in the <code>nginx-access.log</code> or be available to the application backend. However, the parameters can be read using JavaScript and will appear correctly in analytics tools. Use AJAX to pass parameters to PHP.</div>
 
+## Issue: PANTHEON_STRIPPED Displays in the utm_source URL Parameter in Google Analytics
 
-Behind Pantheon's edge caching layer, your application server will see some specific query parameters have been altered by replacing the parameter value with `PANTHEON_STRIPPED` indicating that cache optimization is in effect for these parameters. It is also an indication that developers should not attempt to use these parameters in ways that would return different content in the response to the user. For example, be careful if you have PHP code that constructs redirects shuttling visitors from one Google AdWords campaign landing page to another. If the incoming request parameters are used to construct the redirect response parameters, the URL may contain the stripped out GA `utm_` values. Developers may also experience unexpected behavior when they attempt to overload Google's `utm_` parameter namespace. The URL parameters that Google Analytics uses are specific to their platform and are not intended to be extended by site developers. Using it as a general tracking parameter with patterns like `utm_mytrackingparameter` is discouraged. Please refer to Google Analytics [URL Builder](https://support.google.com/analytics/answer/1033867) for a list of the valid `utm_` parameters.
+![pantheon_stripped](/source/docs/assets/images/pantheon_stripped.png)
 
-Since this URL modification happens entirely on the back end, your client-side Javascript, and your Google Analytics tracking code, still see and use the original query parameters unaltered and will continue to function normally.
+This is typically caused by a PHP redirection in your site’s code. If you redirect a request in PHP that contains the replaced values, then the URL will contain PANTHEON_STRIPPED values. Therefore, if you want to direct traffic to your Pantheon site using a campaign containing `utm` or similar GET parameters, avoid sending them to a page that redirects in PHP.
+
+If the URL for the campaign results in a redirection to a different domain or protocol, for example, if the campaign URLs look like this:
+
+`http://www.example.com/en?utm_source=twitter&utm_campaign=my_campaign`
+
+And then PHP redirection occurs in your site’s code, the campaign URLs will be modified to something like this:
+
+`https://www.example.com/en?utm_source=PANTHEON_STRIPPED&utm_campaign=PANTHEON_STRIPPED`
+
+Query keys will still be passed to the application server, but the values will be changed to PANTHEON_STRIPPED to indicate that the URL is being altered.
+
+You may also experience unexpected behavior when you overload Google's `utm_` parameter namespace. The URL parameters that Google Analytics uses are specific to their platform and are not intended to be extended by site developers. Using it as a general tracking parameter with patterns like `utm_mytrackingparameter` is discouraged. Please refer to Google Analytics [URL Builder](https://support.google.com/analytics/answer/1033867) for a list of the valid `utm_` parameters.
+
+
+## Resolution
+We recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects. If you have PHP redirects, remove them or use JavaScript.
+
+Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://support.google.com/analytics/answer/1033867) tool.
 
 For more information, see [Caching - Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics).
-
 
 #### Which query parameters are optimized?
 
