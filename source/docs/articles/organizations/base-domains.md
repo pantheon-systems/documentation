@@ -29,7 +29,7 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
  - Sites associated with your organization will receive the custom base URL for all environments (including Multidev) created while the organization remains a supporting organization. If the supporting organization is removed from the team, new environments will receive URLs following the default `.pantheon.io` pattern. This includes new Multidev environments and Test and Live environments created **after** the organization was removed.
 
- - After adding a custom domain to your organization, some workflow operations can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain. For example, restoring an environment from a backup or changing the PHP version.
+ - After adding a custom domain to your organization, some workflow operations such as restoring an environment from a backup or changing the PHP version, can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain. 
 
  - **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URL's after launch and disassociation of the site with the organization.
 
