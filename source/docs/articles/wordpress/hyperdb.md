@@ -32,5 +32,5 @@ Pass all front-end database read queries to the replica, leaving the master dedi
 
 Note: in this example, you’ll want some form of cache fallback if reads to the replica begin failing.
 
-### Distributed Reads for Localization or multisite
+### Distributed Reads for Localization or Site Networks
 For those scaling WordPress Multisite, one can allocate a collection of master servers amongst sites on the network. Sites A and B could use different MySQL masters, and continue to share the same codebase. This use-case is not yet possible on Pantheon. Secondary master database servers would need to be configured elsewhere.
