@@ -8,8 +8,10 @@ WordPress Site Networks require additional care when deploying code and cloning 
 
 Code development and deployment will use the same [Pantheon Workflow](/docs/articles/sites/code/using-the-pantheon-workflow) as any other site. Database clones, initiated during a code deployment to test or during the creation of Test and Live environments, require a manual `wp search-replace` to complete. This is easy to do via the command line with Terminus and WP-CLI.
 
-As long as the primary site on Dev, Test, and Live have the same subdomain pattern (`www.` or bare), the only operation necessary to view all sites with hostnames present on the target environment is
-
+As long as the primary site on Dev, Test, and Live have the same subdomain pattern (`www.` or bare), the only operation necessary to view all sites with hostnames present on the target environment is, where `DOMAIN=example.com` and `TESTDOMAIN=test.example.com`:
+```bash
+terminus wp search-replace $DOMAIN $TESTDOMAIN --network --env=test
+```
 ## Flushing Cache Globally After Search and Replace
 
 If you use Redis as a persistent storage backend for your object cache, you’ll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn’t serve stale values.
