@@ -28,14 +28,6 @@ class FeatureContext extends MinkContext
         if (empty($element)) {
             throw new \Exception(sprintf("The page '%s' does not contain the css selector '%s'", $this->getSession()->getCurrentUrl(), $css_selector));
         }
-    } 
-    /**
-     * @When /^I send a ([^"]*) request to "([^"]*)"$/
-     */
-    public function iSendARequestTo($method, $url)
-    {
-        $client = $this->getSession()->getDriver()->getClient();
-        $client->request($method, $url);
     }
     /**
      * Verify contributor CTA button
