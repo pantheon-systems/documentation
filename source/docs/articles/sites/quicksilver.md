@@ -1,6 +1,6 @@
 ---
-title: Automating and Upgrading your Pantheon Workflow with Quicksilver
-description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, running drush commands, and initiating automated testing operations with a CI server.
+title: Automating and Integrating your Pantheon Workflow with Quicksilver
+description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 ---
 
 ## How Quicksilver Works
@@ -11,23 +11,25 @@ description: Pantheon's Quicksilver Hooks system allows users to encode reaction
 ## Add a Valid `pantheon.yml` File
 Create a `pantheon.yml` file in the root of your code repository. Whether you commit this file locally, or create it via an SFTP connection, the platform will validate the YAML prior to receiving the commit. Uncommitted `pantheon.yml` files on the development environment have no effect.
 
-Let's explore a valid `pantheon.yml` file to learn.
-Quicksilver scripts can respond automatically to a handful workflows on the Pantheon Platform. Check back for more Quicksilver-able Workflows.
+Quicksilver scripts can respond automatically to a handful workflows on the Pantheon Platform. Check back for more Quicksilver-enabled Workflows.
 
-### Quicksilver-able Workflows
-Terminus initiation of the following workflows carrying the --workflows
+### Quicksilver-enabled Workflows
+
 #### clear_cache
-Clears all Varnish cache for Drupal and WordPress
+Clears Varnish and CMS cache for Drupal and WordPress.
 
 #### sync_code
-Takes place after pushing git in development; ensures code is on appservers
+Takes place after pushing from a local git repo to Pantheon, or committing on-server changes made via SFTP.
 
 #### clone_database
-Clones database from an environment
+Clones database from one environment to another.
 
 ### deploy
-When a code is pushed between environments
+When a code is pushed to Test or Live
 
+Let's explore a valid `pantheon.yml` file to learn more:
+
+### Pantheon YAML
 
 ```YAML
 api_version: 1
@@ -76,13 +78,10 @@ workflows:
         script: private/scripts/slack_clear_cache.php
 ```
 
-## Add PHP
+## Getting Started
 
 We have a few example `webphp` scripts you can start with over at [pantheon-systems/quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples)
 
 - [Post to Slack](https://github.com/pantheon-systems/quicksilver-examples/blob/master/slack_notification)
 - [Post Deployment Markers to New Relic](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy)
 - [Sanitize Database After Clone](https://github.com/pantheon-systems/quicksilver-examples/blob/master/db_sanitization)
-
-### Handling UTF8 responses
-Currently
