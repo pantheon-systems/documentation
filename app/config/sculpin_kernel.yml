@@ -121,3 +121,8 @@ sculpin_content_types:
         path: docs/articles/wordpress
         enabled: true
         permalink: pretty
+    wordpressnetworks:
+        type: path
+        path: docs/articles/wordpress/site-networks
+        enabled: true
+        permalink: pretty

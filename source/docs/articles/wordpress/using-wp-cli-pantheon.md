@@ -20,7 +20,7 @@ When working on the command-line, it's worth remembering the adage: "with great 
 Before you use WP-CLI for the first time, here are a few [global parameters](http://wp-cli.org/config/) you should be aware of:
 
 * `--path=<path>` - Specify the path to WordPress. If this parameter isn't provided, WP-CLI will look upward from its current directory to attempt to find WordPress.
-* `--url=<url>` - Identify the request as from given URL. In WordPress Multisite, this argument is how the target site is specified. 
+* `--url=<url>` - Identify the request as from given URL. In WordPress Site Networks, this argument is how the target site is specified.
 * `--user=<id|login|email>` - Run the command as a particular user. By default, WP-CLI commands are executed anonymously.
 
 Each of these global parameters define the **context** under which the command is run. They are important pre-condition statements to WordPress of how it should understand the request.

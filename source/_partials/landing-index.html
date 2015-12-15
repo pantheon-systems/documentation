@@ -40,6 +40,13 @@
     <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
     {% endfor %}
 </ul>
+{% elseif page.wordpressnetworks is defined %}
+<h3>All WordPress Site Network Docs</h3>
+<ul class="list-group">
+    {% for article in data.wordpressnetworks %}
+    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    {% endfor %}
+</ul>
 {% elseif page.sites is defined %}
 <h3>All Site Docs</h3>
 <h4><a href="/docs/articles/sites/backups">Backups</a></h4>

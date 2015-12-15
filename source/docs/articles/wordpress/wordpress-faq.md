@@ -50,7 +50,7 @@ Yes. Pantheon puts the power back in your hands by giving you a best-practice de
 
 ### Can I use WordPress Multisite?
 
-No, please see [WordPress Known Limitations: Site Networks / Multisite](/docs/articles/wordpress/wordpress-known-issues/#site-networks-/-multisite)
+Yes, Pantheon supports designated use cases for [WordPress Site Networks](/docs/articles/wordpress/site-networks) created by WordPress' Multisite feature.
 
 ### Can I install WordPress in my Drupal site (or vice versa)?
 

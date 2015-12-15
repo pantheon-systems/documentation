@@ -29,7 +29,8 @@ It means you have some code (plugin or theme) that's using PHP Sessions, which r
 
 ## Site Networks / Multisite
 
-Pantheon does not support setting up and running a "Network" of sites on one direct installation.
+Pantheon supports designated use cases for [WordPress Site Networks](/docs/articles/wordpress/site-networks) created by WordPress' Multisite feature.
+
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 

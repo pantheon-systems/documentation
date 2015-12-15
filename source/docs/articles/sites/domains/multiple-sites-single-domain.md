@@ -6,7 +6,7 @@ category:
   - drupal
 keywords: drupal, multisite, domains, wordpress, single domain
 ---
-Pantheon only supports one application codebase and one database per site. We do not support database prefixes or multisite. Our workflow, backup, and deployment tools only perform as expected given the standard Pantheon setup. 
+Pantheon only supports one application codebase and one database per site. We do not support database prefixes or Drupal multisite. Our workflow, backup, and deployment tools only perform as expected given the standard Pantheon setup.
 
 ## Best Practice Recommendations
 While we can't give specific recommendations for your sites, we can give general best practices for having two sites under one domain. This is a known CMS problem, as it is a very common issue for which many strategies and workarounds exist. To read more about the issue, see [Multi-headed Drupal](http://www.palantir.net/blog/multi-headed-drupal).
