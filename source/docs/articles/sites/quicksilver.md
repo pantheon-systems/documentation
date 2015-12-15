@@ -28,10 +28,10 @@ Takes place after pushing from a local git repo to Pantheon, or committing on-se
 #### clone_database
 Clones database from one environment to another.
 
-### deploy
+#### deploy
 When a code is pushed to Test or Live
 
-## Pantheon YAML
+### Pantheon YAML
 Let's explore a valid `pantheon.yml` file to learn more:
 
 ```YAML
