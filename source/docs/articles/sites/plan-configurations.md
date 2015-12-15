@@ -8,6 +8,7 @@ keywords: site, RAM, pantheon, backup, plan
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
 .tg th{font-family:Arial, sans-serif;font-size:16px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+
 .tg .tg-xlfc{font-size:100%;font-family:serif !important;;background-color:#ecf4ff;vertical-align:top}
 .tg .tg-0eef{font-weight:bold;background-color:#ecf4ff;color:#444444;vertical-align:top}
 .tg .tg-eyl8{font-weight:bold;background-color:#ecf4ff}
@@ -59,4 +60,3 @@ keywords: site, RAM, pantheon, backup, plan
   </tr>
 
 </table>
-<tr> * All sizes shown in MB
