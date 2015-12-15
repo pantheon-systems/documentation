@@ -95,7 +95,7 @@ Copy the first block and add the constants to your site’s `wp-config.php` file
 
 As in the WP-CLI installation method example, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you’ll want to define it conditionally based on environment. Here is an example:
 
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/wordpress/site-networks/switch.php"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
 
 Ignore the second block of code. Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
 
