@@ -72,7 +72,7 @@ The main directory listing includes Pantheon, logs, environment data and configu
 
 ## Authenticating
 
-There are two ways to get access to your Pantheon site via SFTP. One method is by using you Pantheon account's Dashboard password.  
+There are two ways to get access to your Pantheon site via SFTP. One method is by using your Pantheon account's Dashboard password.  
 
 Alternatively, you can connect via SFTP using the public [SSH key you uploaded to your account](/docs/articles/users/loading-ssh-keys). This allows password-less authentication. Learn how to [generate a SSH key](/docs/articles/users/generating-ssh-keys).
 
