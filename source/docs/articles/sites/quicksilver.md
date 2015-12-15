@@ -17,7 +17,7 @@ Create a `pantheon.yml` file in the root of your code repository. Whether you co
 Quicksilver scripts can respond automatically to a handful workflows on the Pantheon Platform. Check back for more Quicksilver-enabled Workflows.
 
 ### Quicksilver-enabled Workflows
-Initiating following workflows will trigger the scripts identified in your `pantheon.yml file`. Start these workflows with [Terminus](https://github.com/pantheon-systems/cli/) to see your quicksilver operations in real time. Log output is not yet available in the Site Dashboard. 
+Initiating following workflows will trigger the scripts identified in your `pantheon.yml file`. 
 
 #### clear_cache
 Clears Varnish and CMS cache for Drupal and WordPress.
@@ -84,7 +84,7 @@ workflows:
 
 ## Terminus Commands ##
 
-Developers making use of Quicksilver will want to make sure they are Terminus savvy. Get the latest release, and a few new commands are included:
+Developers making use of Quicksilver will want to make sure they are Terminus savvy. Get the latest [release](https://github.com/pantheon-systems/cli/releases), and a few new commands are included:
 
 ```shell
 $ terminus help workflows
