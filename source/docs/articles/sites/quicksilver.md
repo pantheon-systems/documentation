@@ -31,9 +31,8 @@ Clones database from one environment to another.
 ### deploy
 When a code is pushed to Test or Live
 
+## Pantheon YAML
 Let's explore a valid `pantheon.yml` file to learn more:
-
-### Pantheon YAML
 
 ```YAML
 api_version: 1
