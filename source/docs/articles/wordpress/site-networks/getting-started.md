@@ -25,7 +25,6 @@ This command installs and enables multisite by default with the subdirectory con
 ```bash
 terminus wp core multisite-install --site=<example-network> --title=<site-title> --admin_user=<username> --admin_password=<password> --andmin-email=<email> --url=<url> --env=dev
 ```
-<script src="http://gist-it.appspot.com/https://github.com/pantheon-systems/scripts/blob/site-networks/wordpress-networks/subdomains/create-subdomain-site-network.sh?footer=minimal&slice=12:19"></script>
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
 ## Add Custom Hostnames to Dev, Test, and Live
@@ -82,7 +81,7 @@ For subdomain-style networks, it is also useful to add the following wildcard DN
 
 For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Use the hostnames added above for each environment's network's primary site. Here is an example:
 
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/wordpress/site-networks/switch.php"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php?footer=minimal"></script>
 
 ### Caveats for Creating a Network through WordPress Dashboard
 
@@ -96,7 +95,7 @@ Copy the first block and add the constants to your site’s `wp-config.php` file
 
 As in the WP-CLI installation method example, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you’ll want to define it conditionally based on environment. Here is an example:
 
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/documentation/blob/master/source/docs/articles/wordpress/site-networks/switch.php"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
 
 Ignore the second block of code. Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
 
