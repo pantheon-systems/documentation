@@ -11,7 +11,7 @@ Typical WordPress sites are limited to the capacity of a single database to serv
 ## About HyperDB
 The [HyperDB](https://wordpress.org/support/plugin/hyperdb) plugin replaces the standard [`wpdb`](https://codex.wordpress.org/Class_Reference/wpdb) class so that WordPress is able to write and read from additional database servers. The drop-in plugin supports database replication, failover, load balancing, and partitioning — all tools for scaling WordPress.
 
-Keep in mind, HyperDB is a Super Admin tool with tons of tuning options based on database architecture and network topology. Before you implement a more complex configuration, it’s best to see if a simpler configuration suits your needs.
+Keep in mind, HyperDB is a powerful tool with several tuning options based on database architecture and network topology. Before you implement a complex configuration, it’s best to see if a simpler configuration suits your needs.
 
 ## Install and Configure HyperDB
 
