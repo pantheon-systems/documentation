@@ -2,7 +2,6 @@
     {% set crumbs = page.url|split('/') %}
     {% for crumb in crumbs %}
     {% if loop.first %}
-    <a href="{{ crumb }}">{{ crumb|capitalize }}</a>
     {% elseif loop.last %}
     <span class="active-trail disabled">{{ page.title }}</span>
     {% else %}
