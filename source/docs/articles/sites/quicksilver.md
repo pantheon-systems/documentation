@@ -3,10 +3,13 @@ title: Automating and Integrating your Pantheon Workflow with Quicksilver
 description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 ---
 
+Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
+
 ## How Quicksilver Works
 
 1. You trigger a Quicksilver-able workflow.
 2. The platform runs Quicksilver operations identified in a `pantheon.yml` file and stored in your codebase.
+3. You can get debugging output via [Terminus, the Pantheon CLI](https://pantheon.io/docs/articles/local/cli/)
 
 ## Add a Valid `pantheon.yml` File
 Create a `pantheon.yml` file in the root of your code repository. Whether you commit this file locally, or create it via an SFTP connection, the platform will validate the YAML prior to receiving the commit. Uncommitted `pantheon.yml` files on the development environment have no effect.
@@ -77,6 +80,32 @@ workflows:
         description: post to slack after each cache-clear
         script: private/scripts/slack_clear_cache.php
 ```
+
+## Terminus Commands ##
+
+Developers making use of Quicksilver will want to make sure they are Terminus savvy. Get the latest release, and a few new commands are included:
+
+```shell
+$ terminus help workflows
+##NAME
+    terminus workflows
+
+##DESCRIPTION
+    Actions to be taken on an individual site
+
+##SYNOPSIS
+    <command>
+
+##SUBCOMMANDS
+    list
+        List Worflows for a Site
+    show
+        Show operation details for a workflow
+    watch
+        Streams new and finished workflows to the console
+```
+
+The `list` and `show` commands will allow you to explore previous workflows and their Quicksilver operations. The `watch` command is a developers best-friend: it will set up Terminus to automatically "follow" the workflow activity of your site, dumping back any Quicksilver output along with them.
 
 ## Getting Started
 
