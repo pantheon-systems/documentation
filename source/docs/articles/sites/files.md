@@ -19,16 +19,14 @@ Valhalla symbolically links the `wp-content/uploads` directory for WordPress and
 ## Access via SFTP
 You can connect directly to the filesystem by copying your [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/articles/local/filezilla/) and navigating to the `/files` directory.
 
-## What do *these* files do?
-When you are logged in to your application server you may notice some files that you don't recognize and wonder how they got there and what they do. It's ok, we put them there, and here's why:
+## Pantheon-Related Files
+When you are logged in to your application server, you may notice some files that you don't recognize. Don't worry—we put them there, and here's why:
 
-**fusedav_version** shows the version of fusedav being used
+**fusedav_version**: shows the version of fusedav being used.
 
-**fusedav.conf** is the client configuration file for fusedav
+**fusedav.conf**: is the client configuration file for fusedav. fusedav is software used to mount shared storage (the folder */files*) to the application server. This folder is where your content-related files (images, attachments, and other things not stored in version control) are kept. For Drupal sites, there is a symlink to it from `sites/default/files`. For WordPress sites, there is a symlink from `wp-content/uploads`.
 
-```fusedav is software used to mount shared storage (the folder */files*) to the application server, this folder is where your content related files (images, attachments and other things not stored in version control) are kept. In the case of Drupal sites there is a symlink to it from sites/default/files, and in the case of WordPress sites there is a symlink from wp-content/uploads.```
-
-**htpasswd** is used in the event that you want to lock your environment with a username and password, there is a button on each environment dashboard that says "Public" and you can click on that and add a username and password to your site to keep it hidden while you are working on it (or for whatever reason you like!)
+**htpasswd**: is used when you want to lock your environment with a username and password. There is a Public button on each environment Dashboard that you can click to add a username and password to your site. This will keep your site hidden while you're working on it.
 
 ## Troubleshooting
 
