@@ -120,7 +120,7 @@ Additionally, the variable can be set using drush:
 ````
 drush vset views_data_export_directory 'public://'
 ````
-
+Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733)
 <hr>
 
 #### Webform export<br>
