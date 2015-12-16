@@ -60,3 +60,4 @@ keywords: site, RAM, pantheon, backup, plan
   </tr>
 
 </table>
+<tr> * All sizes shown in MB
