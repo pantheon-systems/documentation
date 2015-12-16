@@ -193,7 +193,7 @@ If you have successfully set up [Terminus](/docs/articles/local/cli/), the Panth
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong uri is used, and Drush will not allow you to override the uri value in the alias with a commandline `--uri` option. To avoid the need to edit the generated Pantheon aliases file every time it is downloaded, you may use a `hook_drush_sitealias_alter` function in `policy.drush.in` to change the URI for your specific Pantheon site:
+If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.in` to change the URI for your specific Pantheon site:
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
   // Provide the correct 'uri' for a specific site
@@ -202,9 +202,9 @@ function policy_drush_sitealias_alter(&$alias_record) {
   }
 }
 ```
-Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct uri to use for that site.
+Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
 
-For the next example, we will write a policy file that changes all remote aliases to use `drush7` instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
+For the next example, we will write a policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
 
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
