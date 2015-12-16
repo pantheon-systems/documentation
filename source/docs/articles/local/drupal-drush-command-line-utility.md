@@ -193,7 +193,18 @@ If you have successfully set up [Terminus](/docs/articles/local/cli/), the Panth
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-For this example, we will write a policy file that changes all remote aliases to use `drush7` instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
+If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.in` to change the URI for your specific Pantheon site:
+```
+function policy_drush_sitealias_alter(&$alias_record) {
+  // Provide the correct 'uri' for a specific site
+  if ($alias_record['#name'] == 'pantheon.SITENAME.live') {
+    $alias_record['uri'] = 'example.com';
+  }
+}
+```
+Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
+
+For the next example, we will write a policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
 
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
@@ -361,3 +372,10 @@ Currently, there is no way to manage Crontab on Pantheon. If you need a way to 
 
 ## Known Limitations
 - [Migrate's support for spawning Drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
+- Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
+
+ ```bash
+ drush @pantheon.example.live  st
+ Drush command terminated abnormally due to an unrecoverable error.       [error]
+ ```
+ Setting the `--uri` option will not work. To resolve this error, use a [Drush policy file](#drush-alias-strict-control).
