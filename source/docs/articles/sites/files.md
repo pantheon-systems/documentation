@@ -26,7 +26,7 @@ When you are logged in to your application server you may notice some files that
 
 **fusedav.conf** is the client configuration file for fusedav
 
-```fusedav is software used to mount network attached storage (the folder */files*) to the application server, this folder is where your content related files (images, attachments and other things not stored in version control) are kept. In the case of Drupal sites there is a symlink to it from sites/default/files, and in the case of WordPress sites there is a symlink from wp-content/uploads.```
+```fusedav is software used to mount shared storage (the folder */files*) to the application server, this folder is where your content related files (images, attachments and other things not stored in version control) are kept. In the case of Drupal sites there is a symlink to it from sites/default/files, and in the case of WordPress sites there is a symlink from wp-content/uploads.```
 
 **htpasswd** is used in the event that you want to lock your environment with a username and password, there is a button on each environment dashboard that says "Public" and you can click on that and add a username and password to your site to keep it hidden while you are working on it (or for whatever reason you like!)
 
