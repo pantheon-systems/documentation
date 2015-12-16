@@ -1,6 +1,8 @@
 # behat.yml
 default:
     extensions:
-        Behat\MinkExtension\Extension:
-            base_url: http://localhost:8000/docs/
+        Behat\MinkExtension:
+            base_url: http://docs.local:8000/docs
             goutte: ~
+            selenium2:
+              wd_host: http://docs.local:8643/wd/hub
