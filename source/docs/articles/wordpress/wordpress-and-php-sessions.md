@@ -43,7 +43,7 @@ If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessio
 4. Execute the installation script on your site:
 
  ```
- add-php-sessions-plugins.php <site>
+ add-php-sessions-plugin.php <site>
  ```
 
 <div class="alert alert-info" role="alert">
