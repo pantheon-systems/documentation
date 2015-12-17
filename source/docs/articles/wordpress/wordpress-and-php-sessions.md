@@ -27,7 +27,7 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 ### Install WP Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
-1. Save the [installation script](pl)  locally within your current $PATH as `add-php-sessions-plugin.php`
+1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
 2. Make the file executable:
 
  ```
