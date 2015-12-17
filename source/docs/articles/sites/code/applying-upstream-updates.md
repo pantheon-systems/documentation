@@ -57,28 +57,28 @@ Select the appropriate framework below for your web application, then execute th
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d8">
-  <pre><code>
+  <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
   git push origin master
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="d7">
-  <pre><code>
+  <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
   # resolve conflicts
   git push origin master
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="d6">
-  <pre><code>
+  <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
   # resolve conflicts
   git push origin master
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
-  <pre><code>
+  <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
   git push origin master  
