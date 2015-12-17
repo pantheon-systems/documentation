@@ -27,7 +27,7 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 ### Install WP Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
-1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
+1. Save the [installation script](pl)  locally within your current $PATH as `add-php-sessions-plugin.php`
 2. Make the file executable:
 
  ```
@@ -43,8 +43,21 @@ If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessio
 4. Execute the installation script on your site:
 
  ```
- add-php-sessions-plugins.php <site>
+ add-php-sessions-plugin.php <site>
  ```
+
+If you encounter the following errors:
+
+```
+$ add-php-sessions-plugin.php: line 1: ?php: No such file or directory
+$ add-php-sessions-plugin.php: line 3: /Applications: is a directory
+```
+
+One possible solution is to use the hashbang at the beginning of the add-php-sessions-plugin.php file:
+
+```
+#!/usr/bin/env php
+```
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
