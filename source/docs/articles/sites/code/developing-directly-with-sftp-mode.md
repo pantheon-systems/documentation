@@ -133,32 +133,27 @@ The vast majority of SFTP connection problems are DNS related and can be resolve
 If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, Cyberduck (or another client) will. View a list of [SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
 
 ### DNS Hijacking Issues
-
-There are cases Internet Providers (specifically Indonesian Telecom) hijacks DNS and you are unable to connect to SFTP. 
-
-Symptoms:
-
-When attempting to connect to SFTP, you get the following error:
+There have been observed cases in which Internet Service Providers (specifically Indonesian Telecom) hijack DNS, leaving you unable to connect via SFTP due to a timeout error:
 
     Unable to connect to host codeserver.dev.<xxx>.drush.in, or the request timed out.
     Be sure that the address is correct and that you have the necessary privileges, or try increasing the connection timeout (currently 10 seconds).
 
-Check to see if you are getting an I.P. address returned when you run the following command, replacing “<xxx>” with your site’s UUID:
+Replace `SITE_UUID` with your site's [UUID](/docs/articles/sites/#site-uuid) and run the following to obtain the returned IP address:
 
-    dig codeserver.dev.<xxx>.drush.in
+    dig codeserver.dev.<SITE_UUID>.drush.in
 
-Get the ANSWER portion like in the following example:
+The returned IP is found within the ANSWER portion of the output:
 
     ;; ANSWER SECTION:
-    codeserver.dev.<xxx>.drush.in. 188 IN A xx.xx.xx.xxx
+    codeserver.dev.<SITE_UUID>.drush.in. 188 IN A xx.xx.xx.xxx
 
-Check the IP address here: https://www.whatismyip.com/ip-whois-lookup/
+Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lookup/) and review the results. The following is an example of DNS hijacking:
 
     % [whois.apnic.net]
     % Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
-    
+
     % Information related to 'xx.xx.xx.0 - xx.xx.xx.255'
-    
+
     inetnum:        xx.xx.xx.0 - xx.xx.xx.255
     netname:        TLKM_BB_SERVICE_36_86
     descr:          PT TELKOM INDONESIA
@@ -174,6 +169,4 @@ Check the IP address here: https://www.whatismyip.com/ip-whois-lookup/
     changed:        hostmaster@telkom.net.id 20130123
     source:         APNIC
 
-Solution:
-
-No permanent solution has been found. Your options for now is to use VPN or contact your ISP to resolve the issue. We had cases where in they had to change ISP in order to connect permanently.
+Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
