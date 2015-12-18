@@ -31,14 +31,14 @@ You can simultaneously add both the bare domain name and the www subdomain. This
 <h4>Note</h4>Add all domains you wish to resolve to Pantheon within the desired environments. Automatic resolution of domains and wildcards are not supported.</div>
 
 ### Develop Using a Domain Without Changing DNS
-Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan and HTTPS enabled so that you are furnished a static IP.
+Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 1. From the Pantheon Dashboard, add the domain to the target site environment.
 2. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts file</a> with the provided IP address, default value for the Live environment, and the bare domain.
 
 Example:
 ```
-192.123.456.789 example.com
+192.237.142.203 live-example.pantheon.io example.com
 ```
 
 Remove this entry when you're ready to configure DNS.
