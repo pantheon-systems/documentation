@@ -146,7 +146,7 @@ drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
 ```
 ## Transfer Database Content Using Drush on Pantheon
 
-You cannot use `drush sql-sync` on Pantheon. Instead, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
+You cannot use `drush sql-sync` on Pantheon, but you can use [drush sql-sync-pipe](https://www.drupal.org/project/drush_sql_sync_pipe). If that option doesn't appeal to you, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
 ```sql
 gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ```
