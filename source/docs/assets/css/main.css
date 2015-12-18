@@ -509,7 +509,6 @@ img.noborder {
     right:0;
     color: #fff;
     font-weight: 500;
-    margin-top: 60px;
 }
 .pio-docs-footer p {
     text-align:center;
@@ -542,7 +541,7 @@ img.noborder {
 */
 @media (min-width: 995px) and (max-width: 1200px) {
 .pio-docs-footer {
-    margin-top: 30px;
+
 }
 }
 @media (min-width: 768px) {
