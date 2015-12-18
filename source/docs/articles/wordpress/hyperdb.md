@@ -1,9 +1,12 @@
 ---
-title: Scaling WordPress with MySQL Replication
+title: Scaling WordPress with MySQL Replicas and HyperDB
 description: Learn how to distribute requests to replica MySQL databases on WordPress using HyperDB.
 ---
 
-Replica MySQL database configuration via the [HyperDB](https://wordpress.org/support/plugin/hyperdb) plugin is available only for WordPress sites on the [Elite service level](/resources/elite-plan-overview). [Contact sales](/pantheon-elite-plans) to inquire about our Elite plans.
+<div class="alert alert-info">
+<h4>Note</h4>
+Replica MySQL databases are available for sites on the <a href="/resources/elite-plan-overview">Elite service level</a>. <a href="/pantheon-elite-plans">Contact sales</a> to inquire about our Elite plans."
+</div>
 
 ## Advantages of MySQL Replication
 Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "master" database to one or more "slave" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
@@ -34,6 +37,3 @@ Pass all front-end database read queries to the replica, leaving the master dedi
 <script src="http://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/master-write-replica-read.dbconfig.php?footer=minimal"></script>
 
 In this example, you’ll want [some form of cache fallback](/docs/articles/wordpress/installing-redis-on-wordpress/) if reads to the replica begin failing.
-
-### Distributed Reads for Localization or Site Networks
-For those scaling WordPress Multisite, one can allocate a collection of master servers amongst sites on the network. Sites A and B could use different MySQL masters, and continue to share the same codebase. This use case is not yet possible on Pantheon. Secondary master database servers would need to be configured elsewhere.
