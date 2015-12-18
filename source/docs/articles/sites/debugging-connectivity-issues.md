@@ -35,7 +35,7 @@ If an IP address is returned, it means that by using Google’s DNS you were abl
 
 
 ###Port 2222 or Other Blocked Ports
-Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit http://portquiz.net:2222/
+Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
 ##Test Connection on the Command Line
 We recommend using the command line when troubleshooting connection issues as GUIs can hide underlying errors. From the site Dashboard, copy the provided connection command for the desired service and run it in terminal.
