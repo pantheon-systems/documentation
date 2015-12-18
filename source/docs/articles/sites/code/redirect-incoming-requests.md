@@ -76,27 +76,20 @@ To direct all traffic to the bare domain using CloudFlare:
 
 ## Redirect to HTTPS
 
-To enable HTTPS throughout the Pantheon dev/test/live workflow (on dev-foo-project.pantheon.io, for example), use the following headers with any of the instructions below.
-
-replace `header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);`
-
-with `header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);`
-
 ### Require HTTPS for All Pages
-
-If you'd like to put all traffic on your site under HTTPS (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
+To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['PANTHEON_ENVIRONMENT'] === 'live'
       $_SERVER['HTTPS'] === 'OFF') {
       if (!isset($_SERVER['HTTP_X_SSL']) ||
         (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
         header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
+        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
         exit();
       }
     }
+
 
 ### Require HTTPS for Specific Pages
 
