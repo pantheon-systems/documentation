@@ -34,8 +34,8 @@ dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
 If an IP address is returned, it means that by using Google’s DNS you were able to resolve the hostname. Set your DNS to use [Google’s service](https://developers.google.com/speed/public-dns/), or another provider, and you should be able to connect.
 
 
-###Port 2222
-Make sure that port 2222 is not blocked by your internal firewall.
+###Port 2222 or Other Blocked Ports
+Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit http://portquiz.net:2222/
 
 ##Test Connection on the Command Line
 We recommend using the command line when troubleshooting connection issues as GUIs can hide underlying errors. From the site Dashboard, copy the provided connection command for the desired service and run it in terminal.
