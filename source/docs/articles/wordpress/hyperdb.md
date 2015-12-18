@@ -5,7 +5,7 @@ description: Learn how to distribute requests to replica MySQL databases on Word
 
 <div class="alert alert-info">
 <h4>Note</h4>
-Replica MySQL databases are available for sites on the <a href="/resources/elite-plan-overview">Elite service level</a>. <a href="/pantheon-elite-plans">Contact sales</a> to inquire about our Elite plans."
+Replica MySQL databases are available for sites on the <a href="/resources/elite-plan-overview">Elite service level</a>. <a href="/pantheon-elite-plans">Contact sales</a> to inquire about our Elite plans.
 </div>
 
 ## Advantages of MySQL Replication
