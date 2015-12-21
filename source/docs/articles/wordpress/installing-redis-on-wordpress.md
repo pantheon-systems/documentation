@@ -30,7 +30,7 @@ This method will store object cache values persistently in Redis while preservin
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/articles/local/cli) command:
 
  ```
- terminus wp plugin install wp-redis --site=<site> --env=dev
+ terminus wp 'plugin install wp-redis' --site=<site> --env=dev
  ```
 2. Using SFTP or Git, create a new file named `wp-content/object-cache.php` that contains the following:
 
