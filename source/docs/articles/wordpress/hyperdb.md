@@ -9,7 +9,7 @@ Replica MySQL databases are available for sites on the <a href="/resources/elite
 </div>
 
 ## Advantages of MySQL Replication
-Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "master" database to one or more "slave" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
+Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
 
 ## About HyperDB
 The [HyperDB](https://wordpress.org/support/plugin/hyperdb) plugin replaces the standard [`wpdb`](https://codex.wordpress.org/Class_Reference/wpdb) class so that WordPress is able to write and read from additional database servers. The drop-in plugin supports database replication, failover, load balancing, and partitioning — all tools for scaling WordPress.
@@ -22,7 +22,7 @@ Before you begin, an Enterprise Onboarding Manager must change your site service
 
 Download the archive of [HyperDB from the WordPress plugin repository](https://wordpress.org/support/plugin/hyperdb) and move the `db.php` file into the `/wp-content` directory. This is a drop-in plugin and does not require activation at any time.
 
-Next, configure the master/slave databases within `db-config.php`. This file should be stored within the same directory as the site's `wp-config.php` file.
+Next, configure the master/replica databases within `db-config.php`. This file should be stored within the same directory as the site's `wp-config.php` file.
 
 When the `db.php` database drop-in is deployed to production, WordPress will begin allocating MySQL database reads and writes based on the configuration details you’ve provided in `db-config.php`.
 
