@@ -88,6 +88,10 @@ Developers can use SSH tunnels to securely encrypt remote MySQL connections. For
 ```
 ERROR 2013 (HY000): Lost connection to MySQL server at 'reading initial communication packet', system error: 0
 ```
+Or
+```
+ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.in' (111)
+```
 
 This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 second of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
