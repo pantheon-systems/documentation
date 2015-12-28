@@ -7,7 +7,8 @@ keywords: outgoing, outgoing requests, outgoing request, static ip, static ip ou
 ---
 Outgoing requests sent by Drupal and WordPress applications facilitate tasks between your site and external services, such as authentication and payment gateways. 
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>: 
 Due to Pantheon's cloud-based infrastructure, these outbound requests are sent via dynamic IP addresses. There is no way to predict what IP address your code will be executed from.
 </div>
 
