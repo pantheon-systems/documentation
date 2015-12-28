@@ -28,7 +28,7 @@ git push origin master
 ```
 ### Drupal 6
 ```bash
-git pull git pull git://github.com/pantheon-systems/drops-6.git master
+git pull git://github.com/pantheon-systems/drops-6.git master
 git add .
 git commit -m “Update to Drupal 6 http://link-to-release-notes”
 git push origin master
