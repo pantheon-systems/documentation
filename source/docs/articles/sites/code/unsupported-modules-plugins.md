@@ -74,9 +74,6 @@ $baseUrl = '/ckfinder/userfiles/';
 ### Mobile Tools
 **Issue**: Conflicts with Varnish. See [https://www.drupal.org/node/1976162#comment-7411366](https://www.drupal.org/node/1976162#comment-7411366).
 <hr>
-### Mollom  
-**Issue**: Mollum cookies will invalidate Varnish.
-<hr>
 ### Pathologic  
  **Issue**: The path of the base URL is changed and cached by the module itself.  
 
