@@ -34,7 +34,7 @@ You can simultaneously add both the bare domain name and the www subdomain. This
 Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4>Important</h4>This process is for short-term DNS testing. Endpoint IPs will change over time. Be sure to use the Dashboard's recommendations and provided IPs when going Live.</div>
+<h4>Important</h4>This process is for short-term DNS testing. Endpoint IPs will change over time. Be sure to use the Dashboard's recommendations when going Live.</div>
 
 1. From the command line, dig for the Pantheon IPs for your Live Pantheon URL.
 
@@ -51,14 +51,12 @@ styx-xx.pantheon.io.
 ```
 
 2. From the Pantheon Dashboard, add your domain to the target site environment.
-3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts file</a> with one of the IP addresses revealed via dig, default value for the Live environment, and the bare domain.
-
+3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts file</a> with one of the IP addresses revealed via dig, default value for the Live environment, and the bare domain. Remove this entry when you're ready to configure DNS.
 Example:
 ```
 192.123.456.789 live-yoursite.pantheon.io yoursite.com
 ```
-
-Remove this entry when you're ready to configure DNS.
+ **Note**: Be sure to use the Dashboard's recommendations when going Live.
 
 ## Step 3: Configure Your DNS
 From the Live environment's Domains/HTTPS tool, click **Show recommended DNS records** to the right of the domains you've added.
