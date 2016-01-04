@@ -86,3 +86,4 @@ Right-click anywhere on the page, and select the **Inspect Element** option.
 
 ## See Also
 - [Drupal Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
+- [WordPress Pantheon Cache Plugin Configuration](/docs/articles/wordpress/wordpress-pantheon-cache-plugin-configuration/)
