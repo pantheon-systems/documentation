@@ -34,7 +34,7 @@ You can simultaneously add both the bare domain name and the www subdomain. This
 Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4>Important</h4>This process is for short-term DNS testing. Endpoint IPs will change over time. Be sure to use the Dashboard's recommendations when going Live.</div>
+<h4>Important</h4>This process is for short-term testing only. Be sure to use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</div>
 
 1. From the command line, dig for the Pantheon IPs for your Live Pantheon URL.
 
