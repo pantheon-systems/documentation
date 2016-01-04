@@ -5,35 +5,17 @@ category:
   - getting-started
 keywords: cygwin, install, linux tool, windows
 ---
-[Cygwin](http://cygwin.com/install.html) is a collection of tools which provide Linux tools and utilities for Windows computers. If you do not have access to a Mac or Linux environment, you can use Cygwin to generate the .key and .csr file that are needed to get a certificate from a provider.
+If you do not have access to a Mac or Linux environment, you can install [Cygwin](http://cygwin.com) to perform tasks typically not possible in Windows, such as:
 
-## Getting Started
-Before you begin, take a look at the [HTTPS documentation](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication). Once you have gone through the process of generating the command to get a valid CSR certificate for your domain, you can continue on to the steps below.
+* Using `openssl` to generate files required to [enable secure HTTPS communication](https://pantheon.io/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
+* Installing and using [Terminus, the Pantheon command line interface (CLI)](https://github.com/pantheon-systems/cli)  
 
-## Download and Install Cygwin
-Download the latest version of [Cygwin](http://cygwin.com/install.html) by going to the installer page.
+## Installation
+1. Download the [Cygwin](http://cygwin.com/install.html) installer and run `setup.exe`.
+2. Click **Next** through the defaults and select **mirror** for downloading packages.
+3. Search for each package, open the appropriate category (Net or PHP), and click **Skip** next to each package to select it for installation. Required packages: `curl`, `openssh`, `openssl` (Net), `php`, `php-curl`, `php-json`, `php-phar` (PHP)
+![Select openSSL package](/source/docs/assets/images/cygwin-select-packages.png)
+4. Complete the set up. Repeat this process when updating Cygwin or adding more packages.
 
-Start the Cygwin installer using setup.exe. If you already have Cygwin installed or you would like to add extra packages after you have the program running on your system, you can click setup.exe and run through the installer again.<br />
-
-### Select the Cygwin Root
-Putting the root directory directly inside the `C:\` directory makes it easier when trying to locate the CSR files.
-
-### Select the Package Directory
-Once you have chosen the default directory to install Cygwin, select a Local Package directory. You can use the same directory as the Cygwin Root directory.
-
-### Choose Your Internet Connection
-Download the necessary packages by selecting "Direct Connection".<br />
-
-### Select a Download Site
-Choose the nearest mirror site or most stable location. If for some reason the download does not work, you can always select another mirror.  
-
-### Install the HTTPS Package
-Start Cygwin and paste in the command that you got from the wizard.  
-
-### Generate the CSR
-Once the installation is complete, start a Cygwin terminal session. Here you can paste in the command you generated from the wizard and get your private key and CSR certificate.
-
-### Get the CSR Certificate
-Finally, you can navigate to the home directory within Cygwin's root and get a copy of both your private key and CSR certificate.
-
-See [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#get-an-ssl-certificate) to complete the rest of the installation process on Pantheon.
+## Using Cygwin
+Once you've installed Cygwin, you can run it and type in `openssl` commands or install and use [Terminus](/docs/articles/local/cli/).
