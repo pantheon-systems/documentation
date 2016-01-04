@@ -59,7 +59,7 @@ You don't have to! Pantheon automatically injects database credentials into the
 - Pantheon WordPress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
 - WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
-####Where can I find examples of Pantheon wp.config.php?
+####Where can I find examples of Pantheon wp-config.php?
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
 ## Troubleshooting
