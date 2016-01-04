@@ -19,6 +19,10 @@ When a restore starts, it is placed in a queue and executed. Depending on the si
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 We do not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test and pull the code change and clone the content to Live. This will minimize user-facing downtime.</div>
 
+## Restore the Live Environment From a Local Backup
+When you download a backup to your local environment, it will include the entire repository and all tags. This means that your Live environment will include code changes from Dev that have not yet been deployed to Live. To restore the correct code to Live, you'll need to checkout that tag. Example: `git checkout -b [branchname] [tagname]`    
+For more information on Git tags, see [Hot Fixes](https://pantheon.io/docs/articles/sites/code/hot-fixes/).
+
 ## Restore an Environment From Another Environment's Backup
 
 If you want to restore a different environment than the source, you have two options:
@@ -39,8 +43,8 @@ If you want to download a backup using wget, put the provided temporary link in
 ## Import Existing Content
 
 Once you have the downloaded parts and/or links, navigate to the target environment and click the **Workflow** tab.  
-If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
- ![Workflow Tab](/source/docs/assets/images/desk_images/169632.png)  
+If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.  
+![Workflow Tab](/source/docs/assets/images/desk_images/169632.png)  
 If using URLs, paste the URL (if using the direct Amazon S3 URL or another self hosted option), or choose **File** to upload an archive.  
 Once the URL or file is specified, click **Import** for each backup part to start the process.  
 Once the content has been uploaded, you will have to import the code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes?).  
