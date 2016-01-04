@@ -245,23 +245,21 @@ There are a number of patterns and strategies of Git code management for single 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
 #### How do I delete a remote branch?
-```bash
-git push origin :branchname
-```
-#### Why isn't every commit shown in the Pantheon Dashboard?
+Run:
+`git push origin :branchname`
+
+#### Why are some merge commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:
-```nohighlight
-git log --first-parent
-```
-<blockquote>This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge.<br />
-- Git Manual</blockquote>
+`
+git log --first-parent  
+`  
+According to the Git Manual, "this option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge."
 
-
-Pantheon does this so upstream updates or merges from multi-dev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
-```nohighlight
+Pantheon does this so upstream updates or merges from Multidev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
+`
 git log --graph
-```
+`
 #### Can I use .gitignore on Pantheon?
 
 Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
