@@ -79,7 +79,7 @@ $baseUrl = '/ckfinder/userfiles/';
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 <hr>
-#### Plupload
+### Plupload
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
