@@ -137,6 +137,11 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](https://pantheon.io/docs/articles/sites/varnish/caching-advancedtopics/) for details on how to bypass Varnish.
 <hr>
+
+### Sucuri Scanner
+**Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the binding ID of the file path will change with routine platform maintenance.
+<hr>
+
 ### Timthumb
 **Issue**: TimThumb is no longer supported or maintained. See [https://code.google.com/p/timthumb/](https://code.google.com/p/timthumb/).
 <hr>
