@@ -248,7 +248,7 @@ As a result of the varying techniques and to prevent code from being accidentall
 Run:
 `git push origin :branchname`
 
-### Why are some merge commits hidden?
+### Why are some merged commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:
 `
