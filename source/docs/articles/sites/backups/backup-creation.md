@@ -44,6 +44,12 @@ Now that you have created the archive files, check out how to [restore an enviro
 <h4>Note</h4>
 Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</div>
 
+## About Your Code Archives
+When you download a backup to your local environment, it will include the entire repository and all tags. This means that your Live environment will include code changes from Dev that have not yet been deployed to Live.
+
+If you need to have a local version of a particular version of a site, or if you want a copy running live on another host, you'll need to create a branch and checkout that tag. Example: `git checkout -b [branchname] [tagname]`    
+For more information on Git tags, see [Hot Fixes](https://pantheon.io/docs/articles/sites/code/hot-fixes/).
+
 ## Frequently Asked Questions
 
 #### Where are the backups stored?

@@ -10,7 +10,7 @@ Each site environment's backups are located on the Backups tab for the environme
 
 ## Restore an Environment From Its Own Backup
 
-You can restore each manual and automatic backup by clicking the **Restore** button to the right of a backup. ![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
+You can restore each manual and automatic backup by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method. ![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
 
 This is a **destructive** process that will **wipe** your database and files, and restore them from the backup.
 
@@ -18,10 +18,6 @@ When a restore starts, it is placed in a queue and executed. Depending on the si
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 We do not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test and pull the code change and clone the content to Live. This will minimize user-facing downtime.</div>
-
-## Restore the Live Environment From a Local Backup
-When you download a backup to your local environment, it will include the entire repository and all tags. This means that your Live environment will include code changes from Dev that have not yet been deployed to Live. To restore the correct code to Live, you'll need to checkout that tag. Example: `git checkout -b [branchname] [tagname]`    
-For more information on Git tags, see [Hot Fixes](https://pantheon.io/docs/articles/sites/code/hot-fixes/).
 
 ## Restore an Environment From Another Environment's Backup
 
@@ -39,6 +35,9 @@ This provides a temporary private link directly from Amazon S3, the external bac
 If you want to download a backup using wget, put the provided temporary link in double quotes:
 
     wget "https://pantheon-backups.s3.amazonaws.com..."
+
+## Restoring Your Codebase
+When you download a backup to your local environment, it will include the entire repository and all tags. This means that your Live environment will include code changes from Dev that have not yet been deployed to Live. To restore an environment, click the **Restore** button to the right of a backup.
 
 ## Import Existing Content
 
