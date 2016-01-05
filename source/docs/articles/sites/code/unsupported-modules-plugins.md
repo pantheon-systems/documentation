@@ -79,8 +79,13 @@ $baseUrl = '/ckfinder/userfiles/';
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 <hr>
-#### Plupload
-**Issue**: See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+### Plupload
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+
+**Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
+`
+$conf['plupload_temporary_uri'] ='public://temp';
+`	  
 <hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
