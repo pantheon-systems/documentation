@@ -53,7 +53,7 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-#### Upstreams for Drupal Products
+### Upstreams for Drupal Products
 
 For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
 
@@ -204,7 +204,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [adding the SSH key to your Pantheon account](/docs/articles/users/generating-ssh-keys).
+If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys).
 
 ### Why am I being prompted for my password after adding the public key?
 
@@ -224,7 +224,7 @@ The output should be similar to this:
 
 You should now be able to configure Git with the matching SSH key and clone your repository.
 
-#### How do I fix fast forward errors?
+### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 ```bash
@@ -236,7 +236,7 @@ To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes (e.g. 'git pull') before pushing again. See the
 'Note about fast-forwards' section of 'git push --help' for details.
 ```
-#### I have a Git conflict; can you fix it for me?
+### I have a Git conflict; can you fix it for me?
 
 No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/docs/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/docs/articles/local/git-faq#HowdoIrevertorundochanges?).
 
@@ -244,11 +244,11 @@ There are a number of patterns and strategies of Git code management for single 
 
 As a result of the varying techniques and to prevent code from being accidentally over-written, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
-#### How do I delete a remote branch?
+### How do I delete a remote branch?
 Run:
 `git push origin :branchname`
 
-#### Why are some merge commits hidden?
+### Why are some merge commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:
 `
@@ -260,6 +260,6 @@ Pantheon does this so upstream updates or merges from Multidev environments show
 `
 git log --graph
 `
-#### Can I use .gitignore on Pantheon?
+### Can I use .gitignore on Pantheon?
 
 Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
