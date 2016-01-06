@@ -174,7 +174,7 @@ Although not shown above, the output will be color-coded so you can quickly see 
 After seeing that the test failed, I visited the home page and realized it was because WordPress isn't installed yet. Even though I created the Dev environment I never actually installed WordPress. I could visit the home page to do the famous 5-minute install, but I decided to use [terminus and wp cli](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/) to install from the command line:
 
 ```nohighlight
-terminus wp core install --url=http://test-withrobots.pantheon.io \
+terminus wp 'core install' --url=http://test-withrobots.pantheon.io \
                            --title="Test With Robots" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
                            --admin_email=test@example.com

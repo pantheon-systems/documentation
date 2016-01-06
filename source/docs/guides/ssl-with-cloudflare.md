@@ -128,7 +128,7 @@ Also, you may have a number of stored references to `http` links stored in your 
 
 
 ```bash
-terminus wp search-replace http://www.mysite.com https://www.mysite.com --site=mysite --env=live
+terminus wp 'search-replace http://www.mysite.com https://www.mysite.com' --site=mysite --env=live
 ```
 
 You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp-cli.org/).

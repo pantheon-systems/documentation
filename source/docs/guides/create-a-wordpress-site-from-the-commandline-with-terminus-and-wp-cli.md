@@ -134,7 +134,7 @@ Now that WordPress code is there, it's time for step five of the "[Famous 5-minu
 All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the ``wp core install`` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
 
 ```nohighlight
-$ terminus wp core install --url=the.url.of.your.dev.site \
+$ terminus wp 'core install' --url=the.url.of.your.dev.site \
                            --title="Command Line Test Site" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
                            --admin_email=your@emailaddress.tld
@@ -164,7 +164,7 @@ With the URL for your site, you can execute the `wp core install` command and co
 To populate the database of the site you created, use the following command:
 
 ```nohighlight
-$ terminus wp core install --site=cli-test \
+$ terminus wp 'core install' --site=cli-test \
                            --url=http://dev-cli-test.pantheon.io \
                            --title="WP-CLI Test" \
                            --admin_user=admin \
@@ -173,7 +173,7 @@ $ terminus wp core install --site=cli-test \
 ```
 The same command shown on a single line:
 ```nohighlight
-terminus wp core install --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@pantheon.io
+terminus wp 'core install' --site=cli-test --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@pantheon.io
 ```
 If everything goes as planned you'll see this message:
 ```bash
@@ -194,7 +194,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/articles/wordpress/configuration-management-plugin).
 ```nohighlight
-$ terminus wp plugin install --activate --site=cli-test --env=dev
+$ terminus wp 'plugin install' --activate --site=cli-test --env=dev
 ```
 Results in
 ```bash
@@ -260,7 +260,7 @@ Using WP-CLI gives us the ability to upload images and modify posts. In this cas
 
 You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import.` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
 ```
-$ terminus wp media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
+$ terminus wp 'media import' https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
            --post_id=\"1\" \  
            --featured_image  \  
            --site=cli-test  
@@ -287,7 +287,7 @@ Position your Pantheon Dashboard window where you can see it while working in th
 
 
 ```nohighlight
-$ terminus wp theme install --activate \
+$ terminus wp 'theme install' --activate \
                             --site=cli-test pinboard
 ```
 
@@ -313,7 +313,7 @@ Now that we've committed our changes, go back to your test site in the browser a
 No WordPress site is ready for development without a child theme. Let's create one:
 
 ```nohighlight
-$ terminus wp scaffold child-theme --site=cli-test \
+$ terminus wp 'scaffold child-theme' --site=cli-test \
                             --parent-theme=pinboard \
                             --theme-name=cli-test-theme
 ```

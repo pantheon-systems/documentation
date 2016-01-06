@@ -27,7 +27,7 @@ Each of these global parameters define the **context** under which the command i
 
 Now that we've covered the most important basics, let's run a command:
 
-    $ terminus wp option get home --site=pantheon-demo --env=dev
+    $ terminus wp 'option get home' --site=pantheon-demo --env=dev
     [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
         cmd: 'option get home'
         flags: ''

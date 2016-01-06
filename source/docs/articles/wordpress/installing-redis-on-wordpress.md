@@ -44,7 +44,7 @@ This method will store object cache values persistently in Redis while preservin
 When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
 ```
-terminus wp plugin update wp-redis --site=<site> --env=dev
+terminus wp 'plugin update wp-redis' --site=<site> --env=dev
 ```
 
 ### Alternate Method: Move Plugin File
@@ -53,7 +53,7 @@ This method does not support the normal Plugin update mechanism in WordPress.
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/articles/local/cli) command:
 
  ```
- terminus wp plugin install wp-redis --site=<site> --env=dev
+ terminus wp 'plugin install wp-redis' --site=<site> --env=dev
  ```
 2. Move the `object-cache.php` file from the plugin directory `wp-content/plugins/wp-redis/` to the `wp-content/` directory.
 3. Verify installation by selecting **Drop-ins** from the Plugins section of the WordPress Dashboard.
