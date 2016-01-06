@@ -63,7 +63,7 @@ Two contributed modules are supported by Pantheon:
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
 
-Solr for Drupal 8 is not supported at this time. 
+Solr for Drupal 8 is not supported at this time.
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
@@ -181,12 +181,12 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 ####apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
 ```bash
-terminus drush --site=<site> --env=<env> vget apachesolr_service_class
+terminus drush --site=<site> --env=<env> "vget apachesolr_service_class"
 ```
 ####search_api_solr.module
 If you are using search_api_solr.module you can check it with the command:
 ```bash
-terminus drush --site=<site> --env=<env> vget search_api_solr_connection_class
+terminus drush --site=<site> --env=<env> "vget search_api_solr_connection_class"
 ```
 
 <div class="alert alert-info" role="alert">

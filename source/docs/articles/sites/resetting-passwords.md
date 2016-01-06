@@ -21,7 +21,7 @@ Please keep in mind that your site password is stored in a database, so whatever
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/articles/local/cli/) command for generating one-time login links:
 
 ```bash
-$ terminus drush --site=<site> --env=<env> user-login
+$ terminus drush --site=<site> --env=<env> "user-login"
 ```
 
 <div class="alert alert-info" role="alert">
