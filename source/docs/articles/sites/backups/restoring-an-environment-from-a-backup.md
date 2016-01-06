@@ -12,7 +12,7 @@ Each site environment's backups are located on the Backups tab for the environme
 
 You can restore each manual and automatic backup by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method. ![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
 
-This is a **destructive** process that will **wipe** your database and files, and restore them from the backup.
+This is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in at that time. 
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, submit a support ticket.
 
@@ -23,8 +23,8 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 If you want to restore a different environment than the source, you have two options:
 
-1. Download all three backup parts (code, database, and files) from the source environment, upload the database and files to the target environment, then update code.
-2. Download the code backup and use temporary links for the database and files to import the database and files to the target environment, then update code.
+1. Download all three backup parts (code, database, and files) from the source environment, upload the database and files to the target environment, then restore the code.
+2. Download the code backup and use temporary links for the database and files to import the database and files to the target environment, then restore the code.
 
 Regardless of the option you choose, restoring is basically the same process.
 
@@ -36,15 +36,23 @@ If you want to download a backup using wget, put the provided temporary link in
 
     wget "https://pantheon-backups.s3.amazonaws.com..."
 
-## Restoring Your Codebase
-When you download a backup to your local environment, it will include the entire repository and all tags. This means that your Live environment will include code changes from Dev that have not yet been deployed to Live. To restore an environment, click the **Restore** button to the right of a backup.
+### Restoring The Codebase
+When you download any code backup, it will include the entire repository and all tags. This means that regardless of the environment the backup comes from, it will initially reflect the state of the Dev environment at the time the backup was created. In order to restore Dev to the state of the Live environment's codebase, for instance, you will:
+1. Run `git tag` and locate the highest # tag starting with `pantheon_live_n`. 
+2. Checkout a branch for that tag: `git checkout [branch-name] [tag-name]`.
+3. Checkout master and merge the branch into it: `git checkout master` `git merge [branch-name]`. 
+4. Push back to Pantheon `git push origin master`.
 
 ## Import Existing Content
 
 Once you have the downloaded parts and/or links, navigate to the target environment and click the **Workflow** tab.  
-If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.  
+
+If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.  
 ![Workflow Tab](/source/docs/assets/images/desk_images/169632.png)  
 If using URLs, paste the URL (if using the direct Amazon S3 URL or another self hosted option), or choose **File** to upload an archive.  
-Once the URL or file is specified, click **Import** for each backup part to start the process.  
-Once the content has been uploaded, you will have to import the code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes?).  
-If the code belongs to a different site, you will need to determine your best strategy. You can take the code archive, remove the .git directory, and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you can attempt to merge the old Git repository history with the new; see [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history?) for more information.
+
+Once the URL or file is specified, click **Import** for each backup part to start the process.  
+
+Once the content has been uploaded, you will have to import the code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes?).  
+
+If the code belongs to a different site, you will need to determine your best strategy. You can take the code archive, remove the .git directory, and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you can attempt to merge the old Git repository history with the new; see [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history?) for more information.
