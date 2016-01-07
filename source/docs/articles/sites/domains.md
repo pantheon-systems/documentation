@@ -31,17 +31,27 @@ You can simultaneously add both the bare domain name and the www subdomain. This
 <h4>Note</h4>Add all domains you wish to resolve to Pantheon within the desired environments. Automatic resolution of domains and wildcards are not supported.</div>
 
 ### Develop Using a Domain Without Changing DNS
-Sometimes it's useful to develop on a site using a specific domain, but the overhead of temporarily changing DNS is too much. Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
+Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
-1. From the Pantheon Dashboard, add the domain to the target site environment.
-2. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts file</a> with the provided IP address, default value for the Live environment, and the bare domain.
+<div class="alert alert-danger" role="alert">
+<h4>Warning</h4>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</div>
 
-Example:
-```
-192.237.142.203 live-example.pantheon.io example.com
-```
+1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 
-Remove this entry when you're ready to configure DNS.
+ ```bash
+ $ dig +short live-yoursite.pantheon.io
+
+ styx-xx.pantheon.io.
+ 192.123.456.789
+ 104.123.456.78
+ 23.123.45.6
+ ```
+2. Add the desired domain to the Live environment of the Site Dashboard on Pantheon.
+3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts file</a> which includes one of the IP addresses returned in the above dig command followed by the bare domain:
+
+ ```
+ 192.123.456.789 example.com
+ ```
 
 ## Step 3: Configure Your DNS
 From the Live environment's Domains/HTTPS tool, click **Show recommended DNS records** to the right of the domains you've added.
