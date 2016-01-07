@@ -40,28 +40,38 @@ If you want to download a backup using wget, put the provided temporary link in
     wget "https://pantheon-backups.s3.amazonaws.com..."
 
 ### Restoring The Codebase
-The entire history is provided when cloning the site's codebase or downloading any code backup. By default, the backup will reflect the state of the Dev environment regardless of the environment in which it was created. However, you can restore the codebase via [tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging). For example, the following will reset the codebase on Dev to reflect the state of the Live environment:
+The entire history is provided when cloning the site's codebase or downloading any code backup. By default, the backup will reflect the state of the Dev environment regardless of the environment in which it was created. However, you can restore code on one environment from another via [tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging). For example, the following will rewind Dev to reflect the state of Live:
 
 1. [Clone the site's code](/docs/articles/local/starting-with-git/) or download an archive from the Backups Tool.
 2. From the command line, `cd` to the codebase directory.
-2. Run `git tag` and locate the highest numbered tag associated with the Live environment (e.g. `pantheon_live_114`).
-2. Rewrite the codebase by replacing `pantheon_live_n` with the tag found above and execute:
+3. Run `git tag` and locate the highest numbered tag associated with the Live environment (e.g. `pantheon_live_114`). The tag with the highest value reflects the current state of the Live environment.
+
+ If you wish to restore from a previous state of the Live environment, first confirm the tag points to the desired commit history and restoration point:
 
  ```
- git reset --hard pantheon_live_n
- ```
- If you would like to verify the state of any tag, you can switch to a new branch and checkout the tag before pushing to Pantheon:
-
- ```
- git checkout -b new-branch-name pantheon_env_n
+ git show [pantheon_live_n]
  ```
 
-3. Force push to Pantheon
+4. To preserve the history of your code changes while restoring the environment, run:
 
  ```
- git push origin master --force
+ git revert [pantheon_live_n]
  ```
-The Dev environment now reflects the same history and code as Live.
+ If you would like to overwrite the environment's codebase and history entirely so that it reflects the state of the code for the given tag, execute:
+
+ ```
+ git reset --hard [pantheon_live_n]
+ ```
+
+
+5. Push to Pantheon:
+
+ ```
+ git push origin master
+ ```
+
+If `reset` was used above, you will need to include the `--force` option to push your changes to Pantheon. The `--force` option should be used sparingly, especially in distributed team environments. For more information, see [`git push`](https://git-scm.com/docs/git-push).
+
 ## Import Existing Content
 
 Once you have the downloaded parts and/or links, navigate to the target environment and click the **Workflow** tab.  
