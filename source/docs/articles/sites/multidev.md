@@ -50,8 +50,10 @@ It will take a few minutes to create the environment and clone the content from 
 
 You can create cloned Multidev environments from Dev, Test or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
-**Please note**: If you receive an error message that the clone was aborted you should clear the Drupal or WordPress cache in the source environment and retry the procedure. This is because the cache tables can contain entries which exceed the transaction redo limit set by @innodb_log_file_size@.
-
+<div class="alert alert-info">
+<h4>Note</h4>
+The cache tables can contain entries which exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.
+</div>
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
 ## Create a New Multidev Environment
