@@ -6,13 +6,16 @@ category:
 keywords: restore backup, restore environment, restore, how to restore backup, how to restore, restore from another environment, restore any environment backup, restore environment backup, restores, backups
 ---
 Each site environment's backups are located on the Backups tab for the environment in the Pantheon Dashboard.  
- ![Backup Subtab](/source/docs/assets/images/desk_images/169631.png)
+
+![Backup Subtab](/source/docs/assets/images/desk_images/169631.png)
 
 ## Restore an Environment From Its Own Backup
 
-You can restore each manual and automatic backup by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method. ![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
+Restore each manual and automatic backup by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
 
-This is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in at that time. 
+![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
+
+This is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in at that time.
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, submit a support ticket.
 
@@ -37,12 +40,28 @@ If you want to download a backup using wget, put the provided temporary link in
     wget "https://pantheon-backups.s3.amazonaws.com..."
 
 ### Restoring The Codebase
-When you download any code backup, it will include the entire repository and all tags. This means that regardless of the environment the backup comes from, it will initially reflect the state of the Dev environment at the time the backup was created. In order to restore Dev to the state of the Live environment's codebase, for instance, you will:
-1. Run `git tag` and locate the highest # tag starting with `pantheon_live_n`. 
-2. Checkout a branch for that tag: `git checkout [branch-name] [tag-name]`.
-3. Checkout master and merge the branch into it: `git checkout master` `git merge [branch-name]`. 
-4. Push back to Pantheon `git push origin master`.
+The entire history is provided when cloning the site's codebase or downloading any code backup. By default, the backup will reflect the state of the Dev environment regardless of the environment in which it was created. However, you can restore the codebase via [tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging). For example, the following will reset the codebase on Dev to reflect the state of the Live environment:
 
+1. [Clone the site's code](/docs/articles/local/starting-with-git/) or download an archive from the Backups Tool.
+2. From the command line, `cd` to the codebase directory.
+2. Run `git tag` and locate the highest numbered tag associated with the Live environment (e.g. `pantheon_live_114`).
+2. Rewrite the codebase by replacing `pantheon_live_n` with the tag found above and execute:
+
+ ```
+ git reset --hard pantheon_live_n
+ ```
+ If you would like to verify the state of any tag, you can switch to a new branch and checkout the tag before pushing to Pantheon:
+
+ ```
+ git checkout -b new-branch-name pantheon_env_n
+ ```
+
+3. Force push to Pantheon
+
+ ```
+ git push origin master --force
+ ```
+The Dev environment now reflects the same history and code as Live.
 ## Import Existing Content
 
 Once you have the downloaded parts and/or links, navigate to the target environment and click the **Workflow** tab.  
