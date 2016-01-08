@@ -19,7 +19,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 
 2. Install the [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install' --activate wp-cfm --site=<site> --env=dev
+ terminus wp 'plugin install --activate wp-cfm' --site=<site> --env=dev
  ```
 
 3. Commit this change using the Site Dashboard or with Terminus:
