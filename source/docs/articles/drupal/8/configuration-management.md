@@ -32,13 +32,13 @@ This keeps us from needing to use `--site=book-blog` with all of our terminus co
 
 ### Workflow Example
 
-1. `terminus drush cex -y --env=dev`
+1. `terminus drush 'cex -y' 
 2. `terminus site code commit --env=dev --message="Export configuration to code"`
 3. `terminus site deploy --env=test --sync-content --cc --note="Deploy configuration to test"`
-4. `terminus drush cim -y --env=test`
+4. `terminus drush 'cim -y'
 5. `open http://test-mysite.pantheon.io`
 6. `terminus site deploy --env=live --cc --note="Deploy configuration to live"`
-7. `terminus drush cim -y --env=live`
+7. `terminus drush 'cim -y'
 8. `open live-mysite.pantheon.io`
 
 ## Configuration Tools for Drupal 8

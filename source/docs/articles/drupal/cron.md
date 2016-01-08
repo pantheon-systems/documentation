@@ -34,7 +34,7 @@ Click **Run cron** to run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
 Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/articles/local/cli/) command:
 ```bash
-terminus drush --site=<site> --env=<env> cron
+terminus drush --site=<site> --env=<env> "cron"
 ```
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -84,7 +84,7 @@ You can check the log messages through the Drupal Admin interface.
 
 You can also use [Terminus](/docs/articles/local/cli/) to see when cron was last run with the following command:
 ```bash
-terminus drush --site=<site> --env=<env> wd-show --type='cron'
+terminus drush --site=<site> --env=<env> "wd-show --type='cron'"
 ```
 ### Can I prevent Drupal Cron from running?
 
