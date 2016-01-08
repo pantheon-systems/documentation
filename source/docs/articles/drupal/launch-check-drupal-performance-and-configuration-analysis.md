@@ -45,7 +45,7 @@ The Dashboard integration is intended to provide developers with the most action
 
 You can get a list of all available site audit reports using [Terminus](/docs/articles/local/cli/):
 ```nohighlight
-terminus drush --site=<site> --env=<env> "help --filter=site_audit"
+terminus drush "help --filter=site_audit"
 ```
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -53,7 +53,7 @@ Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</co
 
 You can also execute a full report in HTML format.
 ```bash
-terminus drush --site=<site> --env=<env> "aa --skip=insights --html --bootstrap --detail --vendor=pantheon" > report.html
+terminus drush "aa --skip=insights --html --bootstrap --detail --vendor=pantheon" > report.html
 ```
 #### Is Launch Check available for Drupal 8 sites?
 Launch Check for Drupal 8 is currently in development and will be available at a later date.
@@ -77,7 +77,7 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/docs/articles/local/cli/) command to execute Site Audit directly on your Pantheon site:
 ```bash
-terminus drush --site=<site> --env=<env> "-vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0"
+terminus drush "-vd @pantheon.SITENAME.ENV aa --skip=insights --detail --vendor=pantheon --strict=0"
 ```
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 

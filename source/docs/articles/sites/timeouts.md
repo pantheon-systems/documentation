@@ -98,7 +98,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 
 #### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, just use `terminus drush "cron" --site=<sitename> --env=<env>` using [Terminus](/docs/articles/local/cli/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
+Yes, just use `terminus drush "cron"` using [Terminus](/docs/articles/local/cli/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
 
 #### What if I run into a timeout when using the Drupal Migrate UI?
 
