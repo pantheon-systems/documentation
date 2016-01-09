@@ -85,11 +85,11 @@ DNS changes can take up to 48 hours to propagate across the entire Internet, but
 ### How do I use Pantheon's WWW redirection service?
 The www-redirection service listens for requests and issues 301 redirects with www prepended to the host header. To use this service, simply configure the domain's DNS with the recommended DNS records within the Site Dashboard.
 
-![](/source/docs/assets/images/desk_images/376194.png)
+![www-redirection service](/source/docs/assets/images/desk_images/376194.png)
 
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
-![](/source/docs/assets/images/desk_images/376201.png)
+![Extra www example](/source/docs/assets/images/desk_images/376201.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheon.io`), found within the Site Dashboard on the target environment.
 
 ### Can a site on Pantheon be used with a third-party reverse proxy?

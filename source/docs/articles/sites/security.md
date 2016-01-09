@@ -36,7 +36,7 @@ Now when your page refreshes you will notice that the environment is now "Privat
 You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
-![](/source/docs/assets/images/desk_images/62465.png)
+![Locked site example](/source/docs/assets/images/desk_images/62465.png)
 ## Unlock a Site's Environment
 When you are ready to make your environment public again, click **Public** on your Site Dashboard. Next to Environment Access, click **Public**.
 This will clear the credentials you entered and make and web accessible resources available without a basic authentication prompt.

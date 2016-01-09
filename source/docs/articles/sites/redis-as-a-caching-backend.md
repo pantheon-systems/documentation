@@ -104,7 +104,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 ![Redis connect string](/source/docs/assets/images/desk_images/301638.png)
  - For Drupal 7 visit `/admin/config/development/performance/redis` and open **Connection Information**.
 
- ![](/source/docs/assets/images/desk_images/71423.png)
+ ![Drupal 7 configuring Redis](/source/docs/assets/images/desk_images/71423.png)
  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
 ### Using Redis with Drupal 8

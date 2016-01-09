@@ -16,7 +16,7 @@ Running different versions of PHP per environment is risky and should only be do
 
 1. From the Site Dashboard, click **Settings** > **PHP version**.
 2. Temporarily set Dev or Multidev environment to the newer version of PHP. _You will need to wait for the workflow to complete and then refresh the dashboard to see each change reflected._
-![](/source/docs/assets/images/desk_images/356186.png)
+![PHP Settings on the Pantheon Site Dashboard](/source/docs/assets/images/desk_images/356186.png)
 3. Resolve any PHP version compatibility issues or warnings in Dev or Multidev.
 4. Temporarily set Test to the newer version of PHP and deploy there for a final check.
 5. Set the **Site Default** to the newer version and deploy your compatibility changes (if any) to Live.

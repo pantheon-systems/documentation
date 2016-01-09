@@ -11,7 +11,7 @@ The Settings page allows you to view and manage your site's configurations. This
 
 ## About Site
 View general information on the site by selecting the **About Site** tab.
-![](/source/docs/assets/images/interface-site-settings-about.png)
+![About site tab on Pantheon Dashboard](/source/docs/assets/images/interface-site-settings-about.png)
 ## Plans
 Here you can [select the site's plan](/docs/articles/sites/settings/selecting-a-plan). For more detailed information on service levels, see [plan comparison](https://pantheon.io/pricing-comparison).
 ## Add Ons

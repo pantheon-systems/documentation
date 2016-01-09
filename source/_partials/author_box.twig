@@ -4,7 +4,7 @@
         {% if author.avatar %}
             <div class="pull-left">
                 <a href="{{ site.url }}/authors/{{ authorhandle }}">
-                    <img class="avatar img-thumbnail" src="{{ author.avatar }}" width="90" height="90" alt="">
+                    <img class="avatar img-thumbnail" src="{{ author.avatar }}" width="90" height="90" alt="{{ author.name }}">
                 </a>
             </div>
         {% endif %}

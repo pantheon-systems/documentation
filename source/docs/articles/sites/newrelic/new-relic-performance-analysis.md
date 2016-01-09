@@ -14,13 +14,13 @@ Enabling New Relic on Pantheon not only makes it easy for you to monitor to your
 
 To enable New Relic on your Pantheon site, click **Settings** in the upper-right corner of your Site Dashboard. Within the Add Ons tab, click **Add** next to New Relic.
 
-![](/source/docs/assets/images/desk_images/218052.png)  
+![Pantheon Dashboard enable New Relic](/source/docs/assets/images/desk_images/218052.png)  
 Pantheon will automatically configure New Relic on your behalf, including all configurations on the server.
 
 Access New Relic by clicking selecting the New Relic tab on the Site Dashboard.  
 
 
- ![](/source/docs/assets/images/desk_images/280225.png)  
+ ![Access New Relic](/source/docs/assets/images/desk_images/280225.png)  
 
 
 You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Open New Relic**.
@@ -102,7 +102,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 #### How can I share a link to a particular metric?
 
 In the New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
- ![](/source/docs/assets/images/desk_images/218071.png)
+ ![Permalink on the New Relic performance page](/source/docs/assets/images/desk_images/218071.png)
 
 #### How much is New Relic?
 

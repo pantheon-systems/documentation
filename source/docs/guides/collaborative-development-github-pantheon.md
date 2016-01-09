@@ -107,7 +107,7 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
 2. Click **Settings**, then select **About Site**.
 3. Copy the Upstream URL and modify it by replacing `https` with `git` and appending `.git master` to the end of the string.
  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
- ![](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)
+ ![Pantheon Dashboard about site tab](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)
 4. At the root of your local clone of the site repository, run
 `git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master`, replacing the upstream URL with the one you copied from the Site Dashboard and modified, if you need something other than Drupal 7.
 
