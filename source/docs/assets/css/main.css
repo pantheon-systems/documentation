@@ -19,7 +19,8 @@
 * Update the basics of our documents to prep for docs content.
 */
 html {
-  height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 
@@ -94,6 +95,7 @@ body {
   background-color: #fff;
   color: #333;
   min-height: 100%;
+  margin: 0 0 220px; /* bottom = footer height */
 }
 body.row.main {
   position: relative;
@@ -108,7 +110,6 @@ body.row.main {
 .article {
   background-color: white;
   margin-top: 25px;
-  padding-bottom: 40px;
   text-overflow: clip!important;
 }
 
@@ -447,12 +448,14 @@ img.noborder {
     margin-top:15px;
 }
 #footer {
-    display:inline;
     background-color: #000;
     font-size: 13px;
     line-height: 1.0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
 }
 #footer-icon p {
     margin: 0px 15px 0px 15px;
@@ -1272,6 +1275,9 @@ h1[id] {
 *
 * Avatars, names, and usernames for core team.
 */
+.avatar {
+    margin: 15px;
+}
 
 .pio-team .team-member {
   line-height: 32px;
@@ -2308,3 +2314,11 @@ display: block;
 .alert-danger h4 {
   color: #d83f48;
   }
+
+.author {
+    background-color:#F0F4F5;
+    border-style: hidden;
+    border-width: thin;
+    border-radius: 4px;
+    margin: 15px 15px 0px 0px;
+}

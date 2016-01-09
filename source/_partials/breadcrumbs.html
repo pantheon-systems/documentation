@@ -1,4 +1,13 @@
     {% if page.home is not defined %}
+    {% if page.author %}
+    <a href="/docs">Docs</a> &rsaquo;
+    <a href="/docs/authors">Authors</a> &rsaquo;
+    {% set authorhandle = page.author %}
+    {% if site.authors[authorhandle] %}
+        {% set author = site.authors[authorhandle] %}
+    <span class="active-trail disabled">{{ author.name }}</span>
+    {% endif %}
+    {% else %}
     {% set crumbs = page.url|split('/') %}
     {% for crumb in crumbs %}
     {% if loop.first %}
@@ -12,4 +21,5 @@
     <a href="/{{ url }}">{{ crumb|capitalize }}</a> &rsaquo;
     {% endif %}
     {% endfor %}
+    {% endif %}
     {% endif %}
