@@ -33,7 +33,7 @@ dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-If an IP address is returned, it means that by using Google’s DNS you were able to resolve the hostname. Set your DNS to use [Google’s service](https://developers.google.com/speed/public-dns/), or another provider, and you should be able to connect.
+If an IP address is returned, it means that by using Google’s DNS you were able to resolve the hostname. Set your DNS to use <a href="https://developers.google.com/speed/public-dns/">Google’s service</a>, or another provider, and you should be able to connect.
 </div>
 
 
