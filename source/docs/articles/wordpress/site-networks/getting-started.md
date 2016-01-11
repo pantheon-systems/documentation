@@ -289,6 +289,6 @@ Now that you’ve performed the search and replace on your database, WordPress w
 ```bash
 terminus site init-env --env=live --yes
 # NOTE: delete "www." if using the bare domain.
-terminus wp 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN' --network
+terminus wp 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network'
 ```
 Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/articles/wordpress/site-networks/managing/), and pick up a few additional [tips and tricks](/docs/articles/wordpress/site-networks/managing#tips-and-tricks/).
