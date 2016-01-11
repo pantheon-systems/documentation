@@ -34,52 +34,7 @@ When a code is pushed to Test or Live
 ### Pantheon YAML
 Let's explore a valid `pantheon.yml` file to learn more:
 
-```yaml
-api_version: 1
-
-workflows:
-  # Notify team of commit
-  sync_code:
-    after:
-      - type: webphp
-        description: post to slack after each code pushed
-        script: private/scripts/slack_code_push.php  
-  # Notify, sanitize,and notify
-  clone_database:
-    before:
-      - type: webphp
-        description: post to slack before cloning the database
-        script: private/scripts/backup_slack_before_db_clone.php
-    after:
-      - type: webphp
-        description: sanitize the db after each database Clone
-        script: private/scripts/sanitize_after_db_clone.php
-      - type: webphp
-        description: post to slack after the database clones
-        script: private/scripts/slack_after_db_clone.php
-  # Alert, Sanitize (if on test), update db, and post to slack
-  deploy:
-    before:
-      - type: webphp
-        description: post to slack before cloning the database
-        script: private/scripts/slack_before_deploy.php
-    after:
-      - type: webphp
-        description: sanitize the db after deploy to test
-        script: private/scripts/sanitize_after_db_clone.php
-      - type: webphp
-        description: pull configuration into the database
-        script: private/scripts/config_pull_after_deploy.php
-      - type: webphp
-        description: post to slack after each code pushed
-        script: private/scripts/slack_code_push.php
-    # Alert caches were cleared
-    clear_cache:
-      after:
-      - type: webphp
-        description: post to slack after each cache-clear
-        script: private/scripts/slack_clear_cache.php
-```
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml?footer=minimal"></script>
 
 ## Terminus Commands
 
