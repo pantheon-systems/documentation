@@ -28,7 +28,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git commit -m "initial commit"
  ```
 2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
-3. Copy the SSH URL for the site repository, found in the [clone command](/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+3. Copy the SSH URL for the site repository, found in the <a href="/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git

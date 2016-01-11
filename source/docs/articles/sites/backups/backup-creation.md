@@ -38,7 +38,7 @@ terminus site backups get [--site=<site>] [--env=<env>]
 [--element=<code|files|db|all>] [--to=<directory|file>][--latest]
 ```
 
-Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -69,7 +69,7 @@ Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
 ### How do I restore from my site from a full environment backup?
 
-In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 #### How long does a backup take?
 

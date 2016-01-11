@@ -6,7 +6,7 @@ category:
   - developing
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
-Change Management is an Organization feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Partner](/pantheon-partners), [EDU](/edu) and [Enterprise](/pantheon-enterprise) Organizations.
+Change Management is an Organization feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Partner](https://pantheon.io/pantheon-partners), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
 
 Users added to the organization can access all sites associated with the Organization, with access restricted based on the user's role in that Organization. These roles exist to restrict who can deploy code on sites, and manage other users in the Organization or sites it works on.
 

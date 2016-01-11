@@ -23,7 +23,7 @@ You will not be able to use SFTP or rsync to add any file or directory listed in
 
 There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.  
 
-[Connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
+[Connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/articles/sites#site-uuid) to connect; copy/pasting this example exactly will not work.
 
@@ -125,7 +125,7 @@ $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 ### Upload a Single File to Pantheon
-This example shows how to upload the logo.png file into a Pantheon site's theme folder. 
+This example shows how to upload the logo.png file into a Pantheon site's theme folder.
 
 ```nohighlight
 $: export ENV=dev

@@ -17,7 +17,7 @@ Spaces and non-standard alphanumeric characters in the user or hostname can caus
 Instructions for generating SSH keys are different for every platform. Select your platform:
 
  - [Mac OS and Linux](/docs/articles/users/generating-ssh-keys/#mac-os-and-linux)  
- - [Windows / Git GUI and OpenSSH](/docs/articles/users/generating-ssh-keys#windows-/-openssh)
+ - [Windows / Git GUI and OpenSSH](/docs/articles/users/generating-ssh-keys#windows-%2F-openssh)
 
 <!--<li>
 	<p><a href="/articles/users/generating-ssh-keys#generating-ssh-keys#generating-keys-on-windows-and-putty">Windows / PuTTY</a></p>

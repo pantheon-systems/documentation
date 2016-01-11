@@ -8,7 +8,7 @@ category:
 - getting-started
 keywords: local development, pantheon, develop locally, developing
 ---
-While Pantheon provides several options for on-server development, [local development](/docs/articles/local/developing-locally) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. If you're looking for a self-contained local development solution, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
+While Pantheon provides several options for on-server development, [local development](/docs/articles/local) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. If you're looking for a self-contained local development solution, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
 
 For large teams/sites, we recommend using [Multidev](https://pantheon.io/docs/articles/sites/multidev/) instead of local development.
 
@@ -153,7 +153,7 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-- [Copy the SFTP CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information)
+- [Copy the SFTP CLI command](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information)
 - From terminal, navigate to the proper directory on your local file system:
     - **Drupal**: `sites/default/files`
     - **WordPress**: `wp-content/uploads`

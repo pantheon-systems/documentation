@@ -11,7 +11,7 @@ If your network already exists, see [Migrate to Pantheon: WordPress Site Network
 
 ## Create the Network
 
-Before you begin, set the [connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-mode) for the Development environment. This is required when making necessary modifications to `wp-config.php` through the WordPress Dashboard or via WP-CLI.
+Before you begin, set the [connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-mode) for the Development environment. This is required when making necessary modifications to `wp-config.php` through the WordPress Dashboard or via WP-CLI.
 
 We prepared a set of simple shell scripts ([README](https://github.com/pantheon-systems/scripts/blob/site-networks/wordpress-networks/subdomains/README.md)) to create and manage a subdomain-style network. Take a look and improve it with a pull comment on the [current Pull Request](https://github.com/pantheon-systems/scripts/pull/1).
 
@@ -67,7 +67,7 @@ For launch, run:
 terminus site hostnames add www.example-network.com --site=example-network --env=live
 terminus site hostnames add example-network.com --site=example-network --env=live
 ```
-Bare domains on live require a [redirect to remove `www.`](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) added to `wp-config.php`, and [special DNS configuration](docs/articles/sites/domains/#serving-sites-from-bare-domains-with-http).
+Bare domains on live require a [redirect to remove `www.`](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) added to `wp-config.php`, and [special DNS configuration](/docs/articles/sites/domains/#serving-sites-from-bare-domains-with-http).
 
 Add the above subdomains to your domain name host for the domain, using the recommended settings from the Site Dashboard's domain panel for each environment (except for the case linked directly above).
 
@@ -291,4 +291,4 @@ terminus site init-env --env=live --yes
 # NOTE: delete "www." if using the bare domain.
 terminus wp search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network
 ```
-Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/articles/wordpress/site-networks/managing/), and pick up a few additional [tips and tricks](/docs/articles/wordpress/site-networks/managing#tips-and-tricks/).
+Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/articles/wordpress/site-networks/managing/), and pick up a few additional [tips and tricks](/docs/articles/wordpress/site-networks/managing#network-tips-and-tricks-with-wp-cli).

@@ -54,7 +54,7 @@ We are developing a modern plugin interface for WordPress to our Apache Solr inf
 
 ## Enabling Solr for a Drupal Site
 ### 1. Make sure you have the latest version of Drupal
-Use [one-click updates](/docs/articles/sites/code/applying-upstream-updates#apply-a-core-update) to make sure you are running the latest version of Drupal core.
+Use [one-click updates](/docs/articles/sites/code/applying-upstream-updates) to make sure you are running the latest version of Drupal core.
 
 ### 2. Add Apache Solr Search or Search API Solr Search Module
 

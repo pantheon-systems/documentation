@@ -58,7 +58,7 @@ For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/c
 
 ## Maintenance Mode
 
-Pantheon may send a [generic Maintenance Mode message](/docs/articles/sites/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+Pantheon may send a <a href="/docs/articles/sites/errors-and-server-responses#pantheon-503-target-in-maintenance" data-proofer-ignore>generic Maintenance Mode message</a> during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 

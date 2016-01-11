@@ -29,5 +29,5 @@ Update multiple sites from a single location to avoid individually changing each
 
 ### Additional Resources
 
-- [Adding a Credit Card to a Specific Site](/source/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
-- [New Site Owner FAQs](/source/docs/articles/sites/new-site-owner)
+- [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#select-a-plan-and-add-a-credit-card)
+- [New Site Owner FAQs](/docs/articles/sites/new-site-owner)

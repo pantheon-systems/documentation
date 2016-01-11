@@ -14,7 +14,7 @@ Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incomin
 Be sure that you:
 
 - Have an existing WordPress site or [create](/docs/articles/wordpress/starting-wordpress-site/) one
-- Set the site's [connection mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-mode) to SFTP
+- Set the site's [connection mode](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-mode) to SFTP
 
 ## Create an Account
 If you already have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/free/), you are good to go. Otherwise, you will need to create one. Amazon offers free access to most of their services for the first year. This allows you to build out new systems and test things before committing money to a project.
@@ -55,7 +55,7 @@ There are several plugins that will help you manage cached assets in WordPress w
 
 ## Install the Amazon S3 and CloudFront Plugin
 
-There are a few different ways you can install a plugin on a Pantheon hosted WordPress site. The following methods require your site to be in [SFTP Mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-mod).
+There are a few different ways you can install a plugin on a Pantheon hosted WordPress site. The following methods require your site to be in [SFTP Mode](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-mode).
 
 ### Install Via Terminus CLI
 

@@ -24,7 +24,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [WordPress Launch Check](/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis/)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Drupal Launch Check](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Load and Performance Testing](/docs/articles/load-and-performance-testing/)<br>
-&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Add Your Domain to the Live Environment](/docs/articles/sites/domains#step-2-add-a-domain-to-a-site-environment)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> <a href="/docs/articles/sites/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore>Add Your Domain to the Live Environment</a><br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Configure Redirects](#redirects)<br>
 **Update and Test DNS Records:**<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication) (Highly Recommended)<br>
@@ -50,7 +50,7 @@ nginx does not recognize or parse Apache's directory-level configuration files, 
 
 ## Get DNS Record and Update Your DNS
 
-After you've added your domain to the Live environment, [update your domain's DNS with the appropriate DNS record](/docs/articles/sites/domains#step-3-configure-your-dns), which will depend on your site's configuration. Once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched.
+After you've added your domain to the Live environment, <a href="/docs/articles/sites/domains/#step-3-configure-your-dns" data-proofer-ignore>update your domain's DNS with the appropriate DNS record</a>, which will depend on your site's configuration. Once you do this, traffic will be directed from your domain to Pantheon and your site will be fully launched.
 
 **Pantheon does not manage your domain name or DNS**. You will need to make these changes yourself. DNS changes can take up to 48 hours to propagate across the Internet. However, most updates happen in a couple hours.
 

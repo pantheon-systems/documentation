@@ -13,11 +13,11 @@ Whether by accident or by virtue of "web rot", links in your content may eventua
 As with most common problems WordPress site owners face, there's a plugin to help. Actually, there are many. If you go to WordPress.org and search for [broken link](https://wordpress.org/plugins/search.php?q=broken+link), you'll find over 700 plugins to evaluate. The [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin is the most popular and is active on more than 400,000 WordPress sites.
 
 ## Installation
-You can install the plugin from your [WordPress dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode/#using-wp-admin-to-manage-plugins-and-themes) by following these steps:
+You can install the plugin from your [WordPress dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#manage-plugins-and-themes-with-wp-admin) by following these steps:
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Your site's Connection Mode must be <a href="/docs/articles/sites/code/developing-directly-with-sftp-mode/#overview">set to SFTP</a>.</div>
+Your site's Connection Mode must be <a href="/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-mode">set to SFTP</a>.</div>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".

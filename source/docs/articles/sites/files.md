@@ -17,7 +17,7 @@ The Pantheon architecture is comprised of highly available [application containe
 Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal within the `/files` directory. Any [non-standard file locations](/docs/articles/sites/files/non-standard-files-locations/) should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
-You can connect directly to the filesystem by copying your [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/articles/local/filezilla/) and navigating to the `/files` directory.
+You can connect directly to the filesystem by copying your [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/articles/local/filezilla/) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
 When you are logged in to your application server, you may notice some files that you don't recognize. Don't worry—we put them there, and here's why:

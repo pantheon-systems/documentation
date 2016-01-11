@@ -12,13 +12,13 @@ WordPress began as a blogging platform and has now evolved into the most used Co
 ## Get Started
 [Migrate Sites to Pantheon](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
 ## WordPress Dashboard
-Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#using-wp-admin-to-manage-plugins-and-themes) and SFTP mode.
+Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#manage-plugins-and-themes-with-wp-admin) and SFTP mode.
 ## wp-config.php
 The Pantheon architecture allows every environment on your site to run on it's own container, meaning variables within the `wp-config.php` file change periodically. Despite dynamic variables, you are still free to [configure `wp-config.php`](/docs/articles/wordpress/configuring-wp-config-php) on Pantheon to fit your unique needs.
 ## PHP Sessions
 While WordPress core itself does not use PHP sessions, some plugins and themes do. Learn how to implement [built-in session handling functions](/docs/articles/wordpress/wordpress-and-php-sessions).
 ## WordPress Configuration Management
-Keep track of database configurations with ease by using [wp-cfm](/docs/articles/wordpress/wordpress-configuration-management-wp-cfm).
+Keep track of database configurations with ease by using [wp-cfm](/docs/articles/wordpress/configuration-management-plugin).
 ## WordPress Cron
 You are probably familiar with cron jobs, but do you know how `wp-cron` works? Learn and understand how [cron for WordPress](/docs/articles/wordpress/cron-for-wordpress) is triggered.
 ## Launch Check

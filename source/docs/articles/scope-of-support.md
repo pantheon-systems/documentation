@@ -16,4 +16,4 @@ We love helping developers succeed! We also have limits to the support we can pr
 - Pantheon support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
-If you need a professional to provide development support for your site, we have a large listing of qualified partners on our [Find a Partner](/find-a-partner) page.
+If you need a professional to provide development support for your site, we have a large listing of qualified partners on our [Find a Partner](https://pantheon.io/find-a-partner) page.
