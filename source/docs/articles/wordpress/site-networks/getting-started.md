@@ -23,7 +23,7 @@ Install WordPress and enable the Multisite feature with the [`wp core multisite-
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
 ```bash
-terminus wp 'core multisite-install' --site=<example-network> --title=<site-title> --admin_user=<username> --admin_password=<password> --andmin-email=<email> --url=<url> --env=dev
+terminus wp 'core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --andmin-email=<email> --url=<url>' --site=<example-network> --env=dev
 ```
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
@@ -112,7 +112,7 @@ When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu 
 You will have one site. To add another, use [`wp site create`](http://wp-cli.org/commands/site/create/).
 ```bash
 # Create the site on dev.
-terminus wp 'site create' --slug=$SLUG --env=dev
+terminus wp 'site create --slug=$SLUG' --env=dev
 ```
 For subdomain networks, add hostnames to Dev, Test, and Live.
 ```bash
@@ -154,7 +154,7 @@ On WordPress Networks, Co-Authors Plus’ guest authors feature permits site-spe
 
 - [Proper Network Activation](https://wordpress.org/plugins/proper-network-activation/): This plugin can fix network activation issues with plugins not coded correctly for network activation.
 
-- [WP-CFM](https://wordpress.org/plugins/wp-cfm/): Configuration Management plugin for WordPress. You can "push" and "pull" database changes to and from your codebase for versioning. Multisite settings stored in the `wp_sitemeta` table are tracked by default, in addition to the `wp_options` table. Pull and push operations can be executed for all network sites by adding the `--network` flag to the WP-CLI command (e.g. `terminus wp config pull all --network --site=<site> --env=<env>`).
+- [WP-CFM](https://wordpress.org/plugins/wp-cfm/): Configuration Management plugin for WordPress. You can "push" and "pull" database changes to and from your codebase for versioning. Multisite settings stored in the `wp_sitemeta` table are tracked by default, in addition to the `wp_options` table. Pull and push operations can be executed for all network sites by adding the `--network` flag to the WP-CLI command (e.g. `terminus wp 'config pull all --network' --site=<site> --env=<env>`).
 
 ## Wipe the Development Environment to Start Over
 
@@ -177,7 +177,7 @@ If you visit the Test environment at this point, it will show a database connect
 
 ```bash
 ## NOTE: the www. is necessary if the Dev, Test, and Live environments use it.
-terminus wp 'search-replace $DEVDOMAIN $TESTDOMAIN' --url=www.$DEVDOMAIN --network  --site=<example-network> --env=test
+terminus wp 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network'  --site=<example-network> --env=test
 ```
 ### `wp search-replace` Fundamentals
 **Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
@@ -289,6 +289,6 @@ Now that you’ve performed the search and replace on your database, WordPress w
 ```bash
 terminus site init-env --env=live --yes
 # NOTE: delete "www." if using the bare domain.
-terminus wp 'search-replace $TESTDOMAIN $DOMAIN' --url=www.$TESTDOMAIN --network
+terminus wp 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN' --network
 ```
 Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/articles/wordpress/site-networks/managing/), and pick up a few additional [tips and tricks](/docs/articles/wordpress/site-networks/managing#tips-and-tricks/).
