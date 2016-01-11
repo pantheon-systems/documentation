@@ -41,6 +41,9 @@ Pantheon cannot be used to host files over 256MB, no matter how the file is upl
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution. Modules such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors) allow uploads directly to S3 from your Drupal site without using Pantheon as an intermediary.
 
+## Git Repo Size Limitations
+There is a 2GB repo size limit. We suggest keeping multimedia assets out of the Git repo as it slows deploys to production and isn’t a proper use of Git. If the assets are currently in your repo, move them into a media file storage service ([Amazon S3](https://aws.amazon.com/s3/) is good and cost effective) and use version control to track URLs.
+
 ## Rename/Move Files or Directories
 
 ### Files
