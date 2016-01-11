@@ -11,16 +11,24 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 <h4>Warning</h4>
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 </div>
-## Delete a Site Using the Pantheon Dashboard
+
+## Delete a Site Using the Pantheon Site Dashboard
 1. Select **Settings** > **Delete Site**.
-2. Click the **Delete Site** button to launch the confirmation dialog.
+2. Click the **Delete Site** button.
 3. Enter the site title; this ensures you're aware of the site you're deleting.
 4. Click **I understand the consequences, delete this site**.
+
 ## Delete a Site with Terminus
 Run the following [Terminus](/docs/articles/local/cli/) command:
-```
-terminus site delete --site=<site>
-```
+`terminus site delete --site=<site>`
+
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus sites list</code></div>
+Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus sites list</code>.</div>
+
+## Delete a Site From the Organization Dashboard
+
+1. Select the checkbox next to the site you want to delete.
+2. Click **Operations**, and select **Delete Site**.
+3. Type **Delete**.
+4. Click **I understand the consequences, Delete these sites**.
