@@ -62,7 +62,7 @@ There are a few different ways you can install a plugin on a Pantheon hosted Wor
 Execute the following [Terminus](/docs/articles/local/cli/) command to install and activate the Amazon S3 and CloudFront plugin:
 
 ```bash
-terminus wp plugin install amazon-s3-and-cloudfront --activate --site=your-awesome-site --env=dev
+terminus wp 'plugin install amazon-s3-and-cloudfront --activate' --site=your-awesome-site --env=dev
 ```
 
 <div class="alert alert-info" role="alert">
@@ -72,7 +72,7 @@ Replace <code>your-awesome-site</code> with your specific site name. To see a li
 In order for the Amazon S3 and CloudFront plugin to function, you also need to install the Amazon Web Services plugin:
 
 ```bash
-terminus wp plugin install amazon-web-services --activate --site=your-awesome-site --env=dev
+terminus wp 'plugin install amazon-web-services --activate' --site=your-awesome-site --env=dev
 ```
 
 ### Install Via WordPress Dashboard

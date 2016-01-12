@@ -38,7 +38,7 @@ You will receive an email that contains a link you can use one time to reset you
 If you have access to the site view Terminus, you can also reset any user's password from the command line.
 
 ```nohighlight
-$ terminus wp user update \
+$ terminus wp 'user update' \
            --user_pass=NEWPASSWORD \
            --site=YOUR-PANTHEON-SITE-NAME
            --env=dev|test|live
