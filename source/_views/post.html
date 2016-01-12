@@ -17,14 +17,14 @@
         <ul class="pagination">
             {% if not page.next_post %}
                 {% set newer_disabled = 'disabled' %}
-                {% set newer_url = '#void' %}
+                {% set newer_url = page.url %}
             {% else %}
                 {% set newer_url = page.next_post.url %}
             {% endif %}
             <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Newer</a></li>
             {% if not page.previous_post %}
                 {% set older_disabled = 'disabled' %}
-                {% set older_url = '#void' %}
+                {% set older_url = page.url %}
             {% else %}
                 {% set older_url = page.previous_post.url %}
             {% endif %}

@@ -11,7 +11,7 @@ Follow the steps below to completely delete your site(s).
 
 The first thing to do is to backup and export your site(s). Yes, you are leaving the platform, but you should always have a backup of your work just in case you need it in the future.
 
-If you need to make a backup of an existing environment, see [Backup Creations](/docs/articles/sites/backups/backup-creation#steps).
+If you need to make a backup of an existing environment, see [Backup Creations](/docs/articles/sites/backups/backup-creation).
 
 For more information about exporting a backup of an environment, see [Restoring a Backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 

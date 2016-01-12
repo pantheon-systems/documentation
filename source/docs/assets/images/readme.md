@@ -23,7 +23,7 @@ Ex: sites-dev-code-pending-changes-ready-commit.png
 
 Take your newly named and locally saved images and compress them at [Tiny PNG](https://tinypng.com/) prior to adding to the repository.
 
-## Adding to the Repository
+## Adding Images to the Repository
 Move your newly compressed files to `/source/docs/assets/images/`.
 
 ## Embedding Images
@@ -31,8 +31,8 @@ Markdown syntax for images is `![Alt text](/path/to/filename.png "Optional Title
 
 Add a single space before the image syntax to embed images within a list (ordered or unordered).
 
-The code (when used within a list): 
-``` 
+The code (when used within a list):
+```
 1. Ordered list item
 2. Ordered list item
 3. Ordered list item
@@ -65,7 +65,7 @@ $ ln -s ./ source
 ```
 
 ## Committing Docs with Images
-Add image files and the docs they are embedded in to a single commit.
+Add new `png` files to the `source/docs/assets/images` directory, then include the image and `alt` attribute in the desired doc(s) within a single Pull Request.
 
 ## Updating Images
 Sometimes you will need to update an image because of a functionality or interface change. To do so:

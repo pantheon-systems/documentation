@@ -10,7 +10,7 @@ keywords: filezilla, pantheon, sftp
 
 ## Getting Started
 
-Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) for your site.
+Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) for your site.
 
 ## Download FileZilla
 
@@ -42,5 +42,3 @@ You may need to select "accept" when prompted to accept the server's host key fo
 
 ### Uploading to the Files Directory
 Filezilla does not correctly upload files when the target directory on Pantheon is `/files`. This is due to the symlink that is in place from `sites/default/files`. You will need to use an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS), to complete the task.  
-
-

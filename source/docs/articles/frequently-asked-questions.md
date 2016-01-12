@@ -40,7 +40,7 @@ Only WordPress and Drupal applications are officially supported, but the PHP run
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/docs/articles/local/cli/), [drush](/docs/articles/local/drupal-drush-command-line-utility/), [WP-CLI](#Does-Pantheon-support-WP-CLI?), and SFTP files.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/docs/articles/local/cli/), [drush](/docs/articles/local/drupal-drush-command-line-utility/), [WP-CLI](/docs/articles/frequently-asked-questions#does-pantheon-support-wp-cli%3F), and SFTP files.
 
 
 ### How does Pantheon work with DNS?
@@ -83,7 +83,7 @@ Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/docs/art
 
 ### Does Pantheon support local development?
 
-Yes. [Local development](/docs/articles/local/developing-locally) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
+Yes. [Local development](/docs/articles/local) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
 ### How does cron work with Drupal on Pantheon?
 

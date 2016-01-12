@@ -112,4 +112,4 @@ Plugin installed successfully.
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-&-live) of our Pantheon Workflow article to understand why.
+This is by design. Please read [this section](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-and-live) of our Pantheon Workflow article to understand why.

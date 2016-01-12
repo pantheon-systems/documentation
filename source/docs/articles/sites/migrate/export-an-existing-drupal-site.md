@@ -109,7 +109,7 @@ gzip $TARGET/db.sql
 
 Pantheon injects the database configuration dynamically during bootstrap. In the PRESSFLOW\_SETTINGS variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
 
-You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/source/docs/articles/drupal/configuring-settings-php).
+You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings. If you need a local configuration included in your settings.php, see [settings.php](/docs/articles/drupal/configuring-settings-php).
 
 ### Export Files
 

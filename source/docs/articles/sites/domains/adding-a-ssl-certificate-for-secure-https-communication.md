@@ -153,7 +153,7 @@ see that your certificate is being served:
 
 ## Require HTTPS for All Pages
 
-It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https).
+It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-https).
 
 
 ## Frequently Asked Questions
@@ -187,4 +187,4 @@ If the SSL chain is broken or you experience issues with mobile versions of the 
 
 ### What about mixed mode (HTTP and HTTPS for different pages)?
 
-If you are transmitting any sensitive data, we recommend [redirecting all traffic to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirecting-to-https), rather than using mixed mode.
+If you are transmitting any sensitive data, we recommend [redirecting all traffic to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-https), rather than using mixed mode.

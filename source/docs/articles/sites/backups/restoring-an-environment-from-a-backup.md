@@ -82,6 +82,6 @@ If using URLs, paste the URL (if using the direct Amazon S3 URL or another self
 
 Once the URL or file is specified, click **Import** for each backup part to start the process.  
 
-Once the content has been uploaded, you will have to import the code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes?).  
+Once the content has been uploaded, you will have to import the code. If the environment that you are restoring belongs to the same site, see the [Git FAQ on undoing and reverting changes](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes%3F).  
 
-If the code belongs to a different site, you will need to determine your best strategy. You can take the code archive, remove the .git directory, and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you can attempt to merge the old Git repository history with the new; see [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history?) for more information.
+If the code belongs to a different site, you will need to determine your best strategy. You can take the code archive, remove the .git directory, and overwrite the contents of the existing codebase and treat it as a single commit. Alternatively, you can attempt to merge the old Git repository history with the new; see [Git FAQ on importing an existing site with history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F) for more information.

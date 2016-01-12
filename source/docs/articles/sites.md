@@ -124,4 +124,4 @@ For example uses, see the following:
 
 - [Port 2222 Blocked Workaround](/docs/articles/local/port-2222-blocked-workaround#set-up-the-tunnel)
 - [rsync and sftp](/docs/articles/local/rsync-and-sftp/#sftp)
-- [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/#requirements-to-create-an-ssh-tunnel)
+- [SSH Tunnels for Secure Connections to Pantheon Services](/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services/#prerequisites)

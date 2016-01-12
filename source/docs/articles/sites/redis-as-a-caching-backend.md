@@ -104,7 +104,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 ![Redis connect string](/source/docs/assets/images/desk_images/301638.png)
  - For Drupal 7 visit `/admin/config/development/performance/redis` and open **Connection Information**.
 
- ![](/source/docs/assets/images/desk_images/71423.png)
+ ![Drupal 7 configuring Redis](/source/docs/assets/images/desk_images/71423.png)
  - For Drupal 6 visit  `admin/settings/performance/cache-backend` and you should be able to see the available backends and their statuses.
 
 ### Using Redis with Drupal 8
@@ -220,7 +220,7 @@ Fatal error: Class 'Redis_Cache' not found in
 ```
 It is possible that your `.gitignore` file is not up to date with the most recent version of your . To resolve this please make sure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration Dashboard. Take a look at the [wiki page](/docs/articles/sites/code/applying-upstream-updates#core-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration Dashboard. Take a look at the [wiki page](/docs/articles/sites/code/applying-upstream-updates) for the steps you will need to take to update, your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal Error: require\_once()
 

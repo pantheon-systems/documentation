@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 1.10
+assets_version: 1.11
 
 #######################################################################################################
 # The authors. Include your info here, under the "authors" key, using the following template:
@@ -37,7 +37,6 @@ authors:
       wordpress: https://profiles.wordpress.org/brian-mackinney
       linkedin: https://www.linkedin.com/in/bmackinney/en
       bio: Instructional Designer, user of Drupal, WordPress, and Pantheon. Baseball, Surfing, and camping with family on weekend.
-
   calevans:
       name: Cal Evans
       url: http://calevans.com
@@ -45,29 +44,25 @@ authors:
       twitter: calevans
       github: https://github.com/calevans
       bio: For the past 13 years Cal has worked with PHP and MySQL on Linux, OSX, and Windows. He has built a variety of projects ranging in size from simple web pages to multi-million dollar web applications. When not banging his head on his monitor, attempting a blood sacrifice to get a particular piece of code working, he enjoys building and managing development teams using his widely imitated but never patented management style of “management by wandering around”.These days, when not working with PHP, Cal can be found working on a variety of projects like CoderFaire. He speaks at conferences around the world on topics ranging from technical talks to motivational talks for developers. If you happen to meet him at a conference, don’t be afraid to buy him a shot of Bourbon.Cal is based in Nashville TN where he is happily married to wife 1.31, the lovely and talented Kathy. Together they have 2 wonderful kids. From blog.calevans.com/epk
-
   ari:
       name: Ari Gold
       avatar: https://secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg  twitter: http://twitter.com/AriAtPantheon
       github: https://github.com/ari-gold
       drupal: https://www.drupal.org/user/329006/
-      bio:  Enterprise Onboarding Manager.
-
-
+      bio:  Enterprise Onboarding Manager
   jessifischer:
       name: Jessi Fischer
       avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/JessiNew.jpg?itok=4NBut98U
       github: https://github.com/JessiFischer
       drupal: https://www.drupal.org/u/jayelebun
       linkedin: https://www.linkedin.com/in/jessifischer
-      bio: Enterprise Onboarding Manager.
-
+      bio: Enterprise Onboarding Manager
   erikmathy:
       name: Erik Mathy
       avatar: http://www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
       twitter: 1gearnobrains
       linkedin: http://www.linkedin.com/pub/erik-mathy/28/b51/627/en
-      bio: Enterprise Onboarding Manager.
+      bio: Enterprise Onboarding Manager
   populist:
       name: Matt Cheney
       avatar: https://avatars1.githubusercontent.com/u/520521
@@ -84,7 +79,7 @@ authors:
       avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg?itok=KE3XVhCn
       twitter: KateKligman
       linkedin: http://www.linkedin.com/in/katekligman
-      bio: Open source contributor, indie game developer, retro gamer.
+      bio: Open source contributor, indie game developer, retro gamer
   iameap:
       name: Eric Peterson
       url: https://www.eric.pe/terson

@@ -35,6 +35,13 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
  - `scripts/merge_conflicts.sh`: Look for merge conflicts.
 6. Commit changes and push to your fork. Issue pull-requests one document/issue at a time.
 
+### Updating Header and Subheaders
+Headers and Subheaders render as H2 and H3 tags when the site is published. These tags automatically generate anchors which can be relatively linked throughout the site. When creating or editing, avoid using numbers and special characters. If used, the URL would either need to be encoded or ignored from html-proofer tests using the `data-proofer-ignore` attribute.
+
+### Use of Images
+
+All images must include a descriptive `alt` value. For details, see the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md).
+
 ## Edit on GitHub
 
 Trying to edit or create a file in this repository will create your fork automatically. Commit changes and issue pull-requests one document/issue at a time. For more information, see [Using Pull Requests](https://help.github.com/articles/using-pull-requests/).
@@ -91,10 +98,6 @@ Some things to follow to help increase the chance that your pull request will be
 
 [style]: https://github.com/pantheon-systems/documentation/blob/master/style-guide.md
 [commit]: http://chris.beams.io/posts/git-commit/
-
-## Use of Images
-
-See the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md).
 
 ## Moderator Expectations
 

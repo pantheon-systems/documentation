@@ -12,23 +12,23 @@ To maximize your site's performance on Pantheon and to take advantage of our Var
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ## Caching
-![](/source/docs/assets/images/desk_images/180072.png)  
+![Drupal 7 Caching options](/source/docs/assets/images/desk_images/180072.png)  
 Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
-![](/source/docs/assets/images/desk_images/180073.png)  
+![Drupal 7 minimum cache lifetime](/source/docs/assets/images/desk_images/180073.png)  
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
- ![](/source/docs/assets/images/desk_images/180074.png)<br />
+ ![Drupal 7 expiration of cached pages](/source/docs/assets/images/desk_images/180074.png)<br />
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ## Bandwidth Optimization
- ![](/source/docs/assets/images/desk_images/180075.png)<br />
+ ![Drupal 7 compressed cached pages](/source/docs/assets/images/desk_images/180075.png)<br />
 On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
- ![](/source/docs/assets/images/desk_images/180077.png)<br />
+ ![Drupal 7 aggregate CSS and JS files](/source/docs/assets/images/desk_images/180077.png)<br />
 On the Live environment, make sure  "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both enabled. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ## Drupal 6

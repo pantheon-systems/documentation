@@ -1,27 +1,26 @@
 ---
 layout: default
-title: Author Archive
 nav: authors
 generator: guides_author_index
 use:
     - guides_categories
     - guides_tags
 ---
-{% block title %}{{ page.title }}: {{ page.author }}{% endblock %}
-
+{% set authorhandle = page.author %}
+{% if site.authors[authorhandle] %}
+    {% set author = site.authors[authorhandle] %}
+{% endif %}
+{% block title %}Guides by {{ author.name }}{% endblock %}
 {% block content %}
 
 {% set authorhandle = page.author %}
 
-<div class="blog-item">
-    <div class="blog-content">
+<div class="article container-fluid">
         {% if site.authors[authorhandle] %}
             {% set author = site.authors[authorhandle] %}
             {% include 'author_box.twig' %}
         {% endif %}
-
         <h2>Guides by {{ author.name }}</h2>
-
         <ul>
         {% for guide in page.author_guides %}
             <li><a href="{{ guide.url }}">{{ guide.title }}</a><br>
@@ -29,7 +28,6 @@ use:
             </li>
         {% endfor %}
         </ul>
-    </div>
 </div>
 
 {% endblock content %}

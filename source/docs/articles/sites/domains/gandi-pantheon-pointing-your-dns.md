@@ -42,4 +42,4 @@ Be sure to include the trailing "."</div>
 
 ## Add Your Domain to Pantheon
 
-In order for your domain to resolve to your Pantheon site, you need to add it to your Pantheon Site Dashboard. See [Domains and DNS](/docs/articles/sites/domains#step-2-add-a-domain-to-a-site-environment) for more details.
+In order for your domain to resolve to your Pantheon site, you need to add it to your Pantheon Site Dashboard. See <a href="/docs/articles/sites/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore>Domains and DNS</a> for more details.

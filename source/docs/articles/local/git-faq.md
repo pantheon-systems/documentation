@@ -69,7 +69,7 @@ For users who need any of the upstreams for Drupal distributions on Pantheon in 
 <p>Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.</p>
 
 <p style="margin-top:0px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
-" alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
+" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:  
@@ -238,7 +238,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again. See the
 ```
 ### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq#ImportwithExistingHistory), [Git issues performing core updates](/docs/articles/local/git-faq#.gitignoreonPantheon), and [resetting your code to a specific commit](/docs/articles/local/git-faq#HowdoIrevertorundochanges?).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/articles/local/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/docs/articles/local/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/docs/articles/local/git-faq/#how-do-i-revert-or-undo-changes%3F).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 

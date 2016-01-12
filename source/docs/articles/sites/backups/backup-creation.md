@@ -20,12 +20,12 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 ## Create a Backup
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
- ![](/source/docs/assets/images/desk_images/305276.png)
+ ![Create site backup Pantheon Dashboard](/source/docs/assets/images/desk_images/305276.png)
 
 ## Access Backups  
 ### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
- ![](/source/docs/assets/images/desk_images/305286.png)
+ ![Access site backups Pantheon Dashboard](/source/docs/assets/images/desk_images/305286.png)
 
 The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
 
@@ -38,7 +38,7 @@ terminus site backups get [--site=<site>] [--env=<env>]
 [--element=<code|files|db|all>] [--to=<directory|file>][--latest]
 ```
 
-Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -57,7 +57,7 @@ And then to checkout that tag to a new branch, use
 
 ```
 git checkout -b [branchname] [tagname]
-``` 
+```
 
 For more information on Git tags, see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
@@ -69,7 +69,7 @@ Backups are currently stored offsite for redundancy on Amazon EC2 instances.
 
 ### How do I restore from my site from a full environment backup?
 
-In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup#restoring-an-environment-from-a-backup).
+In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/docs/articles/sites/backups/restoring-an-environment-from-a-backup).
 
 #### How long does a backup take?
 

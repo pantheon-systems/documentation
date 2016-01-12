@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Changelog
-generator: pagination
 use:
 - posts
 ---
@@ -10,7 +9,7 @@ use:
 {% set year = '0' %}
     <h1>Pantheon Changelog</h1>
       <p>A list of the most recent platform improvements and documentation.</p>
-{% for post in page.pagination.items %}
+      {% for post in data.posts %}
   <div class="blog-post">
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}
 {% if year != this_year %}
@@ -28,7 +27,6 @@ use:
     </div>
 </div>
 {% endfor %}
-
 
 </div>
 </div>

@@ -473,7 +473,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1505741') !== FAL
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1744959') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /docs/articles/wordpress/wordpress-configuration-management-wp-cfm'); exit();
+  header('Location: /docs/articles/wordpress/configuration-management-plugin'); exit();
 }
 if (strpos($_SERVER['REQUEST_URI'], '/customer/portal/articles/1481956') !== FALSE ) {
   header('HTTP/1.0 301 Moved Permanently');

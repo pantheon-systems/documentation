@@ -94,6 +94,6 @@ Resellers should contact Pantheon Support directly if you need to transfer owner
 
 ##See Also
 
-- [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#add-a-credit-card-to-a-specific-site)
+- [Adding a Credit Card to a Specific Site](/docs/articles/sites/settings/add-a-credit-card-to-a-site#select-a-plan-and-add-a-credit-card)
 - [Updating Payment Methods](/docs/articles/sites/updating-payment-methods/)
 - [Team Management](/docs/articles/sites/team-management/)
