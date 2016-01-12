@@ -169,7 +169,7 @@ $ terminus wp 'core install
                            --title="WP-CLI Test" \
                            --admin_user=admin \
                            --admin_password=pantheon.rocks \
-                           --admin_email="cal@pantheon.io'
+                           --admin_email="cal@pantheon.io"'
                            --site=cli-test \
 ```
 The same command shown on a single line:
