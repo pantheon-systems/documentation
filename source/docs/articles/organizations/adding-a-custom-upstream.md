@@ -125,7 +125,7 @@ After you have a distribution that works on Pantheon, open a ticket titled "Prod
 - Links to evidence of testing on Pantheon. This should include the testing site, test files within the repository, and test reports.
 
 <div class="alert alert-info" role="alert">
-<h4>**Note</h4>
+<h4>Note</h4>
 You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</div>
 
 Public and Organizational distributions must also provide a promotional screenshot for the public installation page.
