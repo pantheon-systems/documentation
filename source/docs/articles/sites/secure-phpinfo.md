@@ -1,5 +1,5 @@
 ---
-title: Securely working with phpinfo
+title: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon site.
 category:
   - developing
