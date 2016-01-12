@@ -4,6 +4,31 @@ description: Get detailed information about site configurations per plan.
 keywords: site, RAM, pantheon, backup, plan
 ---
 
+## Glossary
+
+**ngnix Worker Processes**: Handle network connections, read and write content to disk, and communicate with upstream servers
+<hr>   
+**MySQL Query Cache Size**: Cache allocated to hold query results
+<hr>
+**MySQL Innodb Buffer Pool Size**: InnoDB data is stored in pages (blocks), either on disk or in memory. The buffer pool is a cache for these pages and when a page’s content is requested by a query, the page is cached in the buffer pool.  
+<hr>
+**PHP Memory Limit**: The maximum amount of memory a PHP process can use
+<hr>
+**PHP APC SHM Size**: The size of each shared memory segment   
+<hr>
+**PHP Max Children**: Number of allowed child processes
+<hr>
+**Redis Memory Limit**:  
+<hr>
+**Redis Max Memory**: Max amount of RAM allocated to Redis  
+
+## Locate Your Site's Configurations
+To find the configurations for a specific site, follow the steps below.
+1.  
+2.  
+3.  
+
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
@@ -32,32 +57,38 @@ keywords: site, RAM, pantheon, backup, plan
   </tr>
   <tr>
     <td class="tg-eyl8">ngnix<br></td>
-    <td class="tg-yw4l">Worker processes: 2<br></td>
-    <td class="tg-yw4l">Worker processes: 2<br></td>
-    <td class="tg-yw4l">Worker processes: <br></td>
-    <td class="tg-yw4l">Worker processes: <br></td>
+    <td class="tg-yw4l">Worker Processes: 2<br></td>
+    <td class="tg-yw4l">Worker Processes: 2<br></td>
+    <td class="tg-yw4l">Worker Processes: <br></td>
+    <td class="tg-yw4l">Worker Processes: <br></td>
   </tr>
   <tr>
     <td class="tg-7ojv">MySQL<br></td>
-    <td class="tg-yw4l">Query cache size: 32<br>Innodb buffer pool size: 128<br>Memory limit: 256<br></td>
-    <td class="tg-yw4l">Query cache size: 64<br>Innodb buffer pool size: 512<br>Memory limit: 1024<br></td>
-    <td class="tg-yw4l">Query cache size: 64<br>Innodb buffer pool size: 1024<br>Memory limit: 1536<br></td>
-    <td class="tg-yw4l">Query cache size: 512<br>Innodb buffer pool size: 8192<br>Memory limit: 10240 <br></td>
+    <td class="tg-yw4l">Query Cache Size: 32<br>Innodb Buffer Pool Size: 128<br>Memory Limit: 256<br></td>
+    <td class="tg-yw4l">Query Cache Size: 64<br>Innodb Buffer Pool Size: 512<br>Memory Limit: 1024<br></td>
+    <td class="tg-yw4l">Query Cache Size: 64<br>Innodb Buffer Pool Size: 1024<br>Memory Limit: 1536<br></td>
+    <td class="tg-yw4l">Query Cache Size: 512<br>Innodb Buffer Pool Size: 8192<br>Memory Limit: 10240 <br></td>
   </tr>
   <tr>
     <td class="tg-7ojv">PHP</td>
-    <td class="tg-yw4l">Memory limit: 512<br>APC SHM size: 128<br>FPM max children: 4<br></td>
-    <td class="tg-yw4l">Memory limit: 768<br>APC SHM size: 256<br>FPM max children: 8<br>PHP memory limit: 256</td>
-    <td class="tg-yw4l">Memory limit: 768<br>APC SHM size: 256</td>
-    <td class="tg-yw4l">Memory limit: 1024</td>
+    <td class="tg-yw4l">Memory Limit: 512<br>APC SHM Size: 128<br>FPM Max Children: 4<br></td>
+    <td class="tg-yw4l">Memory Limit: 768<br>APC SHM Size: 256<br>FPM Max Children: 8<br></td>
+    <td class="tg-yw4l">Memory Limit: 768<br>APC SHM Size: 256</td>
+    <td class="tg-yw4l">Memory Limit: 1024</td>
   </tr>
   <tr>
     <td class="tg-7ojv">Redis</td>
-    <td class="tg-yw4l">Memory limit: 64<br>Max memory: 51200</td>
-    <td class="tg-yw4l">Memory limit: 256<br>Max memory: 235520<br></td>
-    <td class="tg-yw4l">Memory limit: 512<br>Max memory: 471040</td>
-    <td class="tg-yw4l">Memory limit: 2024<br>Max memory: 16777216<br></td>
+    <td class="tg-yw4l">Memory Limit: 64<br>Max Memory: 51</td>
+    <td class="tg-yw4l">Memory Limit: 256<br>Max Memory: 235<br></td>
+    <td class="tg-yw4l">Memory Limit: 512<br>Max Memory: 471</td>
+    <td class="tg-yw4l">Memory Limit: 2024<br>Max Memory: 16777<br></td>
   </tr>
 
 </table>
-<tr> * All sizes shown in MB
+<tr> <p style="font-size:12px"> * All sizes shown in MB </p style>
+
+## Frequently Asked Questions (FAQs)
+
+#### Why don't backups and the database factor into the RAM being used?
+
+#### What is the difference between Dev/Test/Live, starting at the Business service level?
