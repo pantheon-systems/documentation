@@ -16,9 +16,14 @@
         "behat/mink-extension": "2.0.*@stable",
         "behat/mink-goutte-driver": "1.1.*@stable",
         "behat/mink-selenium2-driver": "1.2",
-        "composer/composer": "^1.0@alpha"
+        "composer/composer": "^1.0@alpha",
+        "guzzlehttp/guzzle": "6.1.*@stable"
+
     },
     "config": {
         "bin-dir": "bin"
+    },
+    "require": {
+        "pantheon-systems/cli": "^0.10.1"
     }
 }
