@@ -22,8 +22,27 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 8. Click **Visit Live Environment** to verify the update is live.
 ![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
 
+## Apply Upstream via Terminus
+
+If you prefer using the command line, you can apply updates with [Terminus](/docs/articles/local/cli/).
+
+### Update a Specific Site
+
+```
+terminus site upstream-updates apply --site=site --env=env --accept-upstream --updatedb
+```
+
+Learn more about this command by running `terminus help sites upstream-updates`.
+
+### Update Multiple Sites
+
+```
+terminus sites mass-update
+```
+Learn more about this command by running `terminus help sites mass-updates`.
+
 ### Further Considerations
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see  [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
+- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
 - If the Development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
 - If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
 - Core updates appear in your code workspace beneath the Connection Mode bar when they are available. Due to platform-wide codeserver caching settings, update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.
@@ -92,7 +111,7 @@ Select the appropriate framework below for your web application, then execute th
 
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
 
-_"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - <u>Git Manual</u>
+_"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - Git Manual
 
 For more information on resolving conflicts, see [Git FAQs](/docs/articles/local/git-faq#how-can-i-manually-resolve-conflicts%3F).
 
