@@ -16,6 +16,7 @@ dependencies:
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
+    - scripts/verify-env.sh # Verify Multidev environment
 test:
   pre:
     # Start Ghost Driver.
@@ -33,6 +34,7 @@ test:
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
     - rake
+
 
 # Custom notifications
 notify:
