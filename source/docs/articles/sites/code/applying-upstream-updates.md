@@ -22,7 +22,7 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 8. Click **Visit Live Environment** to verify the update is live.
 ![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
 
-## Apply Upstream via Terminus
+## Apply Upstream Updates via Terminus
 
 If you prefer using the command line, you can apply updates with [Terminus](/docs/articles/local/cli/).
 
@@ -32,14 +32,14 @@ If you prefer using the command line, you can apply updates with [Terminus](/doc
 terminus site upstream-updates apply --site=site --env=env --accept-upstream --updatedb
 ```
 
-Learn more about this command by running `terminus help sites upstream-updates`.
+Learn more about this command by running `terminus help site upstream-updates`.
 
 ### Update Multiple Sites
 
 ```
 terminus sites mass-update
 ```
-Learn more about this command by running `terminus help sites mass-updates`.
+Learn more about this command by running `terminus help site mass-updates`.
 
 ### Further Considerations
 - ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/articles/local/undo-git-commits-like-overwriting-drupal-core).
