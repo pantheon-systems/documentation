@@ -16,7 +16,7 @@ dependencies:
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
-    - scripts/verify-env.sh # Verify Multidev environment
+    - scripts/deploy-multidev.sh # Deploy Multidev environment
 test:
   pre:
     # Start Ghost Driver.
@@ -35,8 +35,8 @@ test:
     # Run htmlproofer.
     - rake
 
-
-# Custom notifications
-notify:
-  webhooks:
-    # A list of hashes representing hooks. Only the url field is supported.
+deployment:
+  production:
+    branch: master
+    commands:
+      - scripts/deploy-live.sh

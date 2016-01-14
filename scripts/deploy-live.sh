@@ -1,26 +1,36 @@
 #!/bin/bash
-# Note: Clear cache on $ENV after executing this script
-
-# Define env and site UUID
-export ENV=live
-export SITE=72e163bd-0054-4332-8bf8-219c50b78581
-
+# Deploy to Live
+# Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
 
 # Generate docs production files
-rm -rf output_prod/docs
 sculpin generate --env=prod
 
-# Create local directory and file to log rsync output (local path: "$HOME/sites/docs-backups"), then open for review in real-time
+# Create log dir
 mkdir ../docs-backups
 mkdir ../docs-backups/`date +%F-%I%p`
 echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
-open ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
 
-
-# rsync local output_prod/docs to files dir on appserver
-rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
-
+# rsync output_prod/* to files dir on appserver
+rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/
+if [ "$?" -eq "0" ]
+then
+    echo "Success: Deployed to https://pantheon.io/docs"
+else
+    echo "Error: Deploy failed, review rsync status"
+    exit 1
+fi
 
 # Send the rysnc log file to remote directory "/docs-backups/`date +%F-%I%p`/"
-rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/docs-backups/`date +%F-%I%p`
-open https://pantheon.io/docs/
+rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs-backups/`date +%F-%I%p`
+if [ "$?" -eq "0" ]
+then
+    echo "Success: Log file uploaded to files/docs-backups/"
+else
+    echo "Error: Log file failed to upload"
+    exit 1
+fi
+
+# Authenticate Terminus
+~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
+# Clear cache on Live env
+~/documentation/bin/terminus site clear-cache --site=panther --env=live
