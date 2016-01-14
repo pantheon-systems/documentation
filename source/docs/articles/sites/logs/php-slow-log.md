@@ -54,7 +54,7 @@ Make sure that you have:
 
 ## Analyze the PHP Slow Log
 
-Look for custom modules or theme files (template.php file, &ast;.tpl.php files, etc.). This trace has both a custom Feature module (/sites/all/modules/features/tdm_community.module, field_get_items() function) and a .tpl file (/sites/all/themes/thedailymeal/templates/page.tpl.php, render() function).
+Look for custom modules or theme files (template.php file, &ast;.tpl.php files, etc.). This trace has both a custom Feature module (/sites/all/modules/features/tdm_community.module, field_get_items() function) and a .tpl file (/sites/all/themes/themename/templates/page.tpl.php, render() function).
 
 ```php
 > 08-Dec-2014 19:04:01]  [pool www] pid 47289  
@@ -78,7 +78,7 @@ Look for custom modules or theme files (template.php file, &ast;.tpl.php files, 
 > [0x000000000327c348] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
 > [0x000000000327b400] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:5959  
 > [0x000000000327b2d0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:6053  
-> [0x000000000327a240] render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/themes/thedailymeal/templates/page.tpl.php:113  
+> [0x000000000327a240] render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/themes/themename/templates/page.tpl.php:113  
 ```
 Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same time stamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
