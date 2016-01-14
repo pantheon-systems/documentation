@@ -5,9 +5,13 @@ category:
   - developing
 keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix, deploy hot fix, quick fix, orphan commit, orphan commits, test hot fix, deploy hot fix, test hotfix, deploy hotfix
 ---
-This is recommended for experts only. You should not need to attempt this if you use [Multidev](/docs/articles/sites/multidev) and keep commits from reaching Dev that you do not intend on deploying.
+For Experts only. You should not need to attempt this if you use [Multidev](/docs/articles/sites/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
-<div class="alert alert-danger" role="alert"><h4>Warning: </h4> We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.</div>
+<div class="alert alert-danger" role="alert">
+<h4>Warning</h4>
+We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.
+</div>
+
 
 ## Requirements
 
