@@ -1,3 +1,4 @@
+[![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
 [![Stories in Ready](https://badge.waffle.io/pantheon-systems/documentation.png?label=ready&title=Ready for Work)](https://waffle.io/pantheon-systems/documentation)
 Pantheon Documentation
 ======================
