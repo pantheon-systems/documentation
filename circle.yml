@@ -37,6 +37,6 @@ test:
 
 deployment:
   production:
-    branch: master
+    branch: foomaster
     commands:
       - scripts/deploy-live.sh

@@ -2,26 +2,29 @@
 # Deploy to Live
 # Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
 
-# Generate docs production files
+#=====================================================#
+# Build prod env and create backup dirs on Circle     #
+#=====================================================#
 sculpin generate --env=prod
-
-# Create log dir
 mkdir ../docs-backups
 mkdir ../docs-backups/`date +%F-%I%p`
 echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
 
-# rsync output_prod/* to files dir on appserver
-rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/
+
+#===============================================================#
+# Deploy modified files to production, create log and backups   #
+#===============================================================#
+rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/
 if [ "$?" -eq "0" ]
 then
-    echo "Success: Deployed to https://pantheon.io/docs"
+    echo "Success: Deployed to https://live-static-docs.pantheon.io/docs"
 else
+    # If rsync returns an error code the build will fail and send notifications for review
     echo "Error: Deploy failed, review rsync status"
     exit 1
 fi
-
-# Send the rysnc log file to remote directory "/docs-backups/`date +%F-%I%p`/"
-rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs-backups/`date +%F-%I%p`
+# Upload log and backups to Valhalla on Live
+rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/docs-backups/`date +%F-%I%p`
 if [ "$?" -eq "0" ]
 then
     echo "Success: Log file uploaded to files/docs-backups/"
@@ -30,34 +33,34 @@ else
     exit 1
 fi
 
-# Authenticate Terminus
+
+#===============================================================#
+# Authenticate Terminus and clear caches on panther Live env    #
+#===============================================================#
 ~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
-# Clear cache on Live env
-~/documentation/bin/terminus site clear-cache --site=panther --env=live
+~/documentation/bin/terminus site clear-cache --site=static-docs --env=live
 
-# Delete Multidev environment from static-docs site
 
-    # Write existing environments for the static docs site to a text file
-    ~/documentation/bin/terminus site environments --site=static-docs > ./env_list.txt
-    # Filter env_list.txt into a single column for easier verification
-    echo "Existing environments:"
-    tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
-    # Remove outdated remote references
-    git remote prune origin
-    # Create list of remote branches that have been merged into master but leave out master, dev, test, and live
-    git branch -r --merged | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs > merged-branches.txt
-    # Loop to compare branches already merged into master with existing environments,
-        # If merged branch is found to have a corresponding Multidev, both the env and branch are deleted
-        readarray line < merged-branches.txt
-        # Read branches that have been merged into master one at a time from merged-branches.txt
-        while read line; do
-            # Using the first 11 characters, check against existing environments
-            if grep -Fxq "${line:0:11}" ./filtered_env_list.txt; then
-                # If result is not master, dev, test, or live, delete branch and multidev
-                if [ "${line:0:11}" != "master" ] && [ "${line:0:11}" != "dev" ] && [ "${line:0:11}" != "test" ] && [ "${line:0:11}" != "live" ]; then
-                    echo "Deleting the ${line:0:11} Multidev environment and branch on Pantheon..."
-                    ~/documentation/bin/terminus site delete-env --site=static-docs --env=${line:0:11} --remove-branch
-                fi
-            else
-            fi
-        done < merged-branches.txt
+#=====================================================#
+# Delete Multidev environment from static-docs site   #
+#=====================================================#
+# Identify existing environments for the static-docs site
+~/documentation/bin/terminus site environments --site=static-docs > ./env_list.txt
+echo "Existing environments:"
+tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
+# Identify branches merged into master - ignore master, dev, test, and live
+git remote prune origin # Delete outdated remote references
+git branch -r --merged | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs > merged-branches.txt
+#
+readarray branch < merged-branches.txt
+# Loop to read branches, reduce to 11 characters and check against environment list
+while read branch; do
+    # Using the first 11 characters, check against existing environments
+    if grep -Fxq "${branch:0:11}" ./filtered_env_list.txt; then
+        # If result is not master, dev, test, or live, delete branch and multidev
+        if [ "${branch:0:11}" != "master" ] && [ "${branch:0:11}" != "foomaster" ] && [ "${branch:0:11}" != "dev" ] && [ "${branch:0:11}" != "test" ] && [ "${branch:0:11}" != "live" ]; then
+            echo "Deleting the ${branch:0:11} Multidev environment and branch on Pantheon..."
+            ~/documentation/bin/terminus site delete-env --site=static-docs --env=${branch:0:11} --remove-branch
+        fi
+    fi
+done < merged-branches.txt
