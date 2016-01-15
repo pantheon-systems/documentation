@@ -36,7 +36,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         echo "Multidev created for $normalize_branch: http://"$normalize_branch"-static-docs.pantheon.io"
-        sleep 90 # Wait for multidev to be created
     fi
 
     # Update redirect script for the Multidev environment
@@ -49,12 +48,11 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
 
     # Create log dir
-    mkdir ../docs-backups
-    mkdir ../docs-backups/`date +%F-%I%p`
-    echo "rsync log - deploy to $normalize_branch environment on `date +%F-%I%p`" > ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
+    mkdir ../docs-rsync-logs
+    echo "rsync log - deploy to $normalize_branch environment on `date +%F-%I%p`" > ../docs-rsync-logs/rsync-`date +%F-%I%p`.log
 
     # rsync output_prod/* to Valhalla
-    rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/
+    rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/
     if [ "$?" -eq "0" ]
     then
         echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheon.io/docs"
@@ -63,10 +61,10 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         exit 1
     fi
     # Upload log file to Valhalla
-    rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs-backups/`date +%F-%I%p`
+    rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs-rsync-logs/
     if [ "$?" -eq "0" ]
     then
-        echo "Success: Log file uploaded to files/docs-backups/"
+        echo "Success: Log file uploaded to files/docs-rsync-logs/"
     else
         echo "Error: Log file failed to upload"
         exit 1
@@ -75,7 +73,4 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
     # Clear cache on multidev env
     ~/documentation/bin/terminus site clear-cache --site=static-docs --env=$normalize_branch
-
-else
-    echo "No Multidev environment required, skipping."
 fi

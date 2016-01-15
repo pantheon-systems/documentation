@@ -5,16 +5,20 @@
 #=====================================================#
 # Build prod env and create backup dirs on Circle     #
 #=====================================================#
+# TEMPORARY FOR TESTING - AVOIDING THE REDIRECT SCRIPT WILL NOT BE NEEDED IF DESTINATION IS PRODUCTION URL
+export avoid_redirect="window.location.hostname == 'live-static-docs.pantheon.io' ||"
+sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
+
 sculpin generate --env=prod
-mkdir ../docs-backups
-mkdir ../docs-backups/`date +%F-%I%p`
-echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
+# Creates dir and log file on the virtual machine so the log can be generated and then rsync'd to Valhalla for debugging purposes
+mkdir ../docs-rsync-logs
+echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync-logs/rsync-`date +%F-%I%p`.log
 
 
 #===============================================================#
-# Deploy modified files to production, create log and backups   #
+# Deploy modified files to production, create log   #
 #===============================================================#
-rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/
+rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://live-static-docs.pantheon.io/docs"
@@ -23,8 +27,8 @@ else
     echo "Error: Deploy failed, review rsync status"
     exit 1
 fi
-# Upload log and backups to Valhalla on Live
-rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/docs-backups/`date +%F-%I%p`
+# Upload log to Valhalla on Live
+rsync -vz --progress --temp-dir=../../../tmp/ -e -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/docs-rsync-logs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Log file uploaded to files/docs-backups/"
@@ -50,7 +54,7 @@ echo "Existing environments:"
 tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
 # Identify branches merged into master - ignore master, dev, test, and live
 git remote prune origin # Delete outdated remote references
-git branch -r --merged | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs > merged-branches.txt
+git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs > merged-branches.txt
 #
 readarray branch < merged-branches.txt
 # Loop to read branches, reduce to 11 characters and check against environment list
@@ -60,7 +64,7 @@ while read branch; do
         # If result is not master, dev, test, or live, delete branch and multidev
         if [ "${branch:0:11}" != "master" ] && [ "${branch:0:11}" != "foomaster" ] && [ "${branch:0:11}" != "dev" ] && [ "${branch:0:11}" != "test" ] && [ "${branch:0:11}" != "live" ]; then
             echo "Deleting the ${branch:0:11} Multidev environment and branch on Pantheon..."
-            ~/documentation/bin/terminus site delete-env --site=static-docs --env=${branch:0:11} --remove-branch
+            ~/documentation/bin/terminus site delete-env --site=static-docs --env=${branch:0:11} --remove-branch --yes
         fi
     fi
 done < merged-branches.txt
