@@ -80,14 +80,17 @@ To direct all traffic to the bare domain using CloudFlare:
 To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTPS'] === 'OFF') {
-      if (!isset($_SERVER['HTTP_X_SSL']) ||
-        (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
-        header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-        exit();
-      }
+    // Check if Drupal is running via command line
+    if (!function_exists('drupal_is_cli') || !drupal_is_cli()) {
+      if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+        $_SERVER['HTTPS'] === 'OFF') {
+        if (!isset($_SERVER['HTTP_X_SSL']) ||
+          (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
+          header('HTTP/1.0 301 Moved Permanently');
+          header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+          exit();
+        }
+      }
     }
 
 
@@ -98,14 +101,17 @@ If you don't want to have your whole site under HTTPS, we recommend using a secu
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTPS'] === 'ON') {
-      if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
-        // If admin, redirect to secure.
-        if (preg_match('/^\/admin/', $_SERVER['REQUEST_URI'])) {
-          header('HTTP/1.0 301 Moved Permanently');
-          header('Location: https://secure.yoursite.com'. $_SERVER['REQUEST_URI']);
-          exit();
+    // Check if Drupal is running via command line
+    if (!function_exists('drupal_is_cli') || !drupal_is_cli()) {
+      if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+        $_SERVER['HTTPS'] === 'ON') {
+        if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
+          // If admin, redirect to secure.
+          if (preg_match('/^\/admin/', $_SERVER['REQUEST_URI'])) {
+            header('HTTP/1.0 301 Moved Permanently');
+            header('Location: https://secure.yoursite.com'. $_SERVER['REQUEST_URI']);
+            exit();
+          }
         }
       }
     }
