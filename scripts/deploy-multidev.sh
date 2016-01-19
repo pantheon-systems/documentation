@@ -55,8 +55,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     if [ "$?" -eq "0" ]
     then
         #Use GitHub's API to post Multidev URL in a comment on the commit
-        export url="http://"$normalize_branch"-static-docs.pantheon.io"
-        curl -d '{ "body": "Successfully deployed to the ['"$normalize_branch"' environment]('"$url"')" }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        curl -d '{ "body": "Successfully deployed to the ['"$normalize_branch"']('"$url"') environment." }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
     else
         echo "Error: Deploy failed, review rsync status"
         exit 1
