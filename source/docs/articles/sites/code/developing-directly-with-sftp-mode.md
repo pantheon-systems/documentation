@@ -38,23 +38,12 @@ To get your SFTP login credentials, click **Connection Info**. You will see your
 The connection information is a bit different than what you might be used to, though it is based on your unique "Site ID". This is the long string at the end of your Dashboard URL and in your Git connection string, something like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
 
 Your connection data is as follows:
-<table>
-<tbody>
-		<tr>
-			<td><b>host: </b></td>
-			<td>appserver.dev.<tt>site-id</tt>.drush.in</td>
-		</tr>
-		<tr>
-			<td><b>user: </b></td>
-			<td>dev.<tt>site-id</tt>
-</td>
-		</tr>
-		<tr>
-			<td><b>port: </b></td>
-			<td>2222</td>
-		</tr>
-	</tbody>
-</table>
+
+**host:** `appserver.dev.site-id.drush.in`
+
+**user:** `dev.site-id`
+
+**port:** `2222`
  
 
 

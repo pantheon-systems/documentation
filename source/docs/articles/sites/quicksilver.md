@@ -32,7 +32,7 @@ Initiating the following workflows will trigger the scripts identified in your `
 ### Pantheon YAML
 Let's explore a valid `pantheon.yml` file to learn more:
 
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml?footer=minimal"></script>
+<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml?footer=minimal"></script>
 
 ## Terminus Commands
 

@@ -30,7 +30,7 @@ This is a common error with the SMTP module. It can be fixed in a few steps:
 3. Remove original file from {registry} table DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
 4. [`terminus drush "cc all"`](https://github.com/pantheon-systems/cli)
 
-A patch is available [here.](https://drupal.org/node/1369736#comment-5644064)
+See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 ## Frequently Asked Questions
 
