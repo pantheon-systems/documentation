@@ -35,6 +35,9 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         echo "Existing environment found for $normalize_branch: http://"$normalize_branch"-static-docs.pantheon.io"
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
+        #Use GitHub's API to post Multidev URL in a comment on the commit
+        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        curl -d '{ "body": "Successfully created the ['"$normalize_branch"']('"$url"') environment. New commits to this branch will automatically be deployed." }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
     fi
 
     # Update redirect script for the Multidev environment
@@ -54,9 +57,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/
     if [ "$?" -eq "0" ]
     then
-        #Use GitHub's API to post Multidev URL in a comment on the commit
-        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
-        curl -d '{ "body": "Successfully deployed to the ['"$normalize_branch"']('"$url"') environment." }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+        echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheon.io/docs"
     else
         echo "Error: Deploy failed, review rsync status"
         exit 1

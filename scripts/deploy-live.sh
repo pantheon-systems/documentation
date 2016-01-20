@@ -5,10 +5,6 @@
 #=====================================================#
 # Build prod env and create backup dirs on Circle     #
 #=====================================================#
-# TEMPORARY FOR TESTING - AVOIDING THE REDIRECT SCRIPT WILL NOT BE NEEDED IF DESTINATION IS PRODUCTION URL
-export avoid_redirect="window.location.hostname == 'live-static-docs.pantheon.io' ||"
-sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
-
 bin/sculpin generate --env=prod
 # Creates dir and log file on the virtual machine so the log can be generated and then rsync'd to Valhalla for debugging purposes
 mkdir ../docs-rsync-logs
@@ -18,17 +14,17 @@ echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync
 #===============================================================#
 # Deploy modified files to production, create log   #
 #===============================================================#
-rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/
+rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID	@appserver.live.$PROD_UUID	.drush.in:files/
 if [ "$?" -eq "0" ]
 then
-    echo "Success: Deployed to https://live-static-docs.pantheon.io/docs"
+    echo "Success: Deployed to https://pantheon.io/docs"
 else
     # If rsync returns an error code the build will fail and send notifications for review
     echo "Error: Deploy failed, review rsync status"
     exit 1
 fi
 # Upload log to Valhalla on Live
-rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/docs-rsync-logs/
+rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$PROD_UUID	@appserver.live.$PROD_UUID	.drush.in:files/docs-rsync-logs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Log file uploaded to files/docs-backups/"
@@ -42,8 +38,6 @@ fi
 # Authenticate Terminus and clear caches on panther Live env    #
 #===============================================================#
 ~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
-~/documentation/bin/terminus site clear-cache --site=static-docs --env=live
-
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
@@ -64,7 +58,7 @@ getExistingEnvs "filtered_env_list.txt"
 
 
 # Identify merged remote branches, ignoring Pantheon defaults and master
-git branch -r --merged | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
+git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 # Create an array of remote branches merged into master
