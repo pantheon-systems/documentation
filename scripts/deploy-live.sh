@@ -14,7 +14,7 @@ echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync
 #===============================================================#
 # Deploy modified files to production, create log   #
 #===============================================================#
-rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID	@appserver.live.$PROD_UUID	.drush.in:files/
+rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
@@ -24,7 +24,7 @@ else
     exit 1
 fi
 # Upload log to Valhalla on Live
-rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$PROD_UUID	@appserver.live.$PROD_UUID	.drush.in:files/docs-rsync-logs/
+rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs-rsync-logs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Log file uploaded to files/docs-backups/"
@@ -58,6 +58,7 @@ getExistingEnvs "filtered_env_list.txt"
 
 
 # Identify merged remote branches, ignoring Pantheon defaults and master
+git remote prune origin # remove outdated references on remote
 git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
