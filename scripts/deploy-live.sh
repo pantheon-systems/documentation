@@ -1,26 +1,81 @@
 #!/bin/bash
-# Note: Clear cache on $ENV after executing this script
+# Deploy to Live
+# Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
 
-# Define env and site UUID
-export ENV=live
-export SITE=72e163bd-0054-4332-8bf8-219c50b78581
-
-
-# Generate docs production files
-rm -rf output_prod/docs
-sculpin generate --env=prod
-
-# Create local directory and file to log rsync output (local path: "$HOME/sites/docs-backups"), then open for review in real-time
-mkdir ../docs-backups
-mkdir ../docs-backups/`date +%F-%I%p`
-echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
-open ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
+#=====================================================#
+# Build prod env and create backup dirs on Circle     #
+#=====================================================#
+bin/sculpin generate --env=prod
+# Creates dir and log file on the virtual machine so the log can be generated and then rsync'd to Valhalla for debugging purposes
+mkdir ../docs-rsync-logs
+echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync-logs/rsync-`date +%F-%I%p`.log
 
 
-# rsync local output_prod/docs to files dir on appserver
-rsync -bv --backup-dir=docs-backups/`date +%F-%I%p` --log-file=../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+#===============================================================#
+# Deploy modified files to production, create log   #
+#===============================================================#
+rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/
+if [ "$?" -eq "0" ]
+then
+    echo "Success: Deployed to https://pantheon.io/docs"
+else
+    # If rsync returns an error code the build will fail and send notifications for review
+    echo "Error: Deploy failed, review rsync status"
+    exit 1
+fi
+# Upload log to Valhalla on Live
+rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs-rsync-logs/
+if [ "$?" -eq "0" ]
+then
+    echo "Success: Log file uploaded to files/docs-backups/"
+else
+    echo "Error: Log file failed to upload"
+    exit 1
+fi
 
 
-# Send the rysnc log file to remote directory "/docs-backups/`date +%F-%I%p`/"
-rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ../docs-backups/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/docs-backups/`date +%F-%I%p`
-open https://pantheon.io/docs/
+#===============================================================#
+# Authenticate Terminus and clear caches on panther Live env    #
+#===============================================================#
+~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
+
+#=====================================================#
+# Delete Multidev environment from static-docs site   #
+#=====================================================#
+# Identify existing environments for the static-docs site
+~/documentation/bin/terminus site environments --site=static-docs > ./env_list.txt
+echo "Existing environments:"
+tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
+# Create array of existing environments on Static Docs
+getExistingEnvs() {
+    existing_env_array=() # Clear array
+    while read -r line # Read a line
+    do
+        existing_env_array+=( "$line" ) # Append line to the array
+    done < "$1"
+}
+getExistingEnvs "filtered_env_list.txt"
+
+
+# Identify merged remote branches, ignoring Pantheon defaults and master
+git remote prune origin # remove outdated references on remote
+git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
+# Delete empty line at the end of txt file produced by awk
+sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
+# Create an array of remote branches merged into master
+getMergedEnvs() {
+    merged_env_array=() # Clear array
+    while read -r line # Read a line
+    do
+        merged_env_array+=( "${line:0:11}" ) # Append first 11 characters of line to the array
+    done < "$1"
+}
+getMergedEnvs "merged-branches-clean.txt"
+
+# Compare existing environments and merged branches, delete only if the environment exists
+merged_env=" ${merged_env_array[*]} "
+for env in ${existing_env_array[@]}; do
+  if [[ $merged_env =~ " $env " ]] ; then
+    ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --yes
+  fi
+done
