@@ -48,10 +48,25 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
  ```
 
-4. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in Step 3:
+4. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in Step 3:
 
  ```bash
- git pull --no-rebase --squash -Xtheirs <ssh_url> master
+ git remote add pantheon <ssh_url>
+ ```
+
+5. **Drupal only**: Move your settings file to `settings.local.php` so that it will be ignored by git  and included from Pantheon's `settings.php`. First, make sure that you can modify it, and restore the protections after the move:
+
+ ```bash
+ chmod u+w sites/default/{.,settings.php}
+ mv sites/default/{settings.php,settings.local.php}
+ chmod u-w sites/default/{settings.local.php,.}
+ ```
+ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+
+6. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase:
+
+ ```bash
+ git pull --no-rebase --squash -Xtheirs pantheon master
  ```  
 
  Will yield:  
@@ -59,24 +74,23 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  Squash commit -- not updating HEAD  
  Automatic merge went well; stopped before committing as requested
  ```
-5. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in Step 3:
 
+7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
  ```bash
- git remote add pantheon <ssh_url>
- ```
-
-6. Run git add and commit to prepare the Pantheon core merge for pushing to the repository:
- ```bash
- git add -A
  git commit -m "Adding Pantheon core files"
  ```
-7. Push your newly merged codebase up to your Pantheon site repository:
+8. Align your local branch with it's remote counterpart on Pantheon:
+
+ ```bash
+ git pull pantheon master
+ ```
+9. Push your newly merged codebase up to your Pantheon site repository:
 
  ```bash
  git push pantheon master
  ```
 
-8. Go to the Code tab of your Dev environment on the site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
+10. Go to the Code tab of your Dev environment on the site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
 
 ## Files
 
