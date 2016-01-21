@@ -23,12 +23,12 @@ Machine tokens:
 4. Copy and save your machine token now, as you will not be able to view or edit it later.
 5. Click **I understand** to continue.
 
+![Machine token ready modal](/source/docs/assets/images/machine-token-ready.png)
 ## Authenticate into Terminus
 Use your token to authenticate into Terminus by running the following command:  
 ```bash
 terminus auth login --machine-token=<machine token>
 ```
-
 ## Revoke a Machine Token
 
 For security purposes, we recommend removing tokens from your account when they are no longer used.   
@@ -37,10 +37,12 @@ For security purposes, we recommend removing tokens from your account when they 
 2. Locate the token you want to delete, and click **Revoke Token**.
 3. Type **Revoke**, and click **I understand the consequences. Revoke this token.**
 
+![List of machine tokens in the user dashboard](/source/docs/assets/images/user-account-machine-token-list.png)
+
 ## Benefits of Using Machine Tokens
 
 - Bot Users with machine tokens can use Terminus to authenticate to and operate on Pantheon from a Continuous Integration (CI) server.
-- Users in organizations with SAML Single-Sign On (SSO) can authenticate with terminus. 
+- Users in organizations with SAML Single-Sign On (SSO) can authenticate with terminus.
 
 ## See Also
 - [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
