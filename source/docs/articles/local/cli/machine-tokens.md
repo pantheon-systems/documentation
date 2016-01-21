@@ -3,7 +3,7 @@ title: Creating and Revoking Machine Tokens
 description: Learn how to create a machine token in order to use Terminus.
 ---
 
-Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus (as of the 0.11.0 release).
+Machine tokens are used to uniquely identify your machine and securely authenticate via Terminus. Currently, this is  possible using [installations of Terminus based on the master branch](https://github.com/pantheon-systems/cli#installing-with-git). This feature will be rolled into the 0.11.0 release.
 
 Machine tokens:    
 
