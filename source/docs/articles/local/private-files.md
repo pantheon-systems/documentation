@@ -6,16 +6,24 @@ category:
     - drupal
 keywords: drupal, wordpress, private files, files, private keys, private
 ---
-Pantheon provides two spaces for non-web-accessible data. Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
+Pantheon provides two spaces for non-web-accessible data:   
+Drupal sites: `sites/default/files/private`   
+WordPress sites: `~/files/private`=`wp-content/uploads/private`
+
+Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</div>
 
-## Private Files and Uploads In Drupal
+## Private Files and Uploads
+### Drupal
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
 To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
+
+### WordPress
+These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `~/files/private`=`wp-content/uploads/private`
 
 ## Storing Private Keys and Certs
 
