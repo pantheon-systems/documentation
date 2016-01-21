@@ -12,13 +12,13 @@ dependencies:
     - wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
     - sudo tar xvjf $PHANTOM_JS.tar.bz2
     - sudo mv $PHANTOM_JS /usr/local/share
-    - bundle install
 
   post:
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
-    - scripts/deploy-multidev.sh # Deploy Multidev environment
+    # Deploy Multidev environment
+    - scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
