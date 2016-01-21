@@ -42,4 +42,3 @@ Users in Organizations with SSO can now authenticate via Terminus. You’ll no l
 
 ## See Also
 - [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
-- [Heroku CLI Authentication](https://devcenter.heroku.com/articles/authentication)
