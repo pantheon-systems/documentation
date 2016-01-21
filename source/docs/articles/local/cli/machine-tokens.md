@@ -33,12 +33,8 @@ For security purposes, we recommend removing tokens from your account when they 
 
 ## Benefits of Using Machine Tokens
 
-### Continuous Integration (CI)
-Create a bot user, add a machine token, and save that machine token in an environment variable on Circle CI. Include bash scripts in your repository at `~/code/private/scripts/` that authenticate to the site with Terminus to automate repetitive procedures.
-
-### Terminus Authentication for SAML/Single-Sign On (SSO)
-Users in Organizations with SSO can now authenticate via Terminus. You’ll no longer be redirected to the single-sign on page.
-
+- Bot Users with machine tokens can use Terminus to authenticate to and operate on Pantheon from a Continuous Integration (CI) server.
+- Users in organizations with SAML Single-Sign On (SSO) can authenticate with terminus. 
 
 ## See Also
 - [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
