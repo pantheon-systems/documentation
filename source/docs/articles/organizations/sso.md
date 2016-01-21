@@ -6,8 +6,8 @@ category:
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-SAML SSO is available as an add-on for Pantheon Enterprise Organizations.
-To upgrade to an Elite plan, or to add SAML SSO to an existing Elite plan, contact [Sales](https://pantheon.io/why-pantheon-enterprise).
+SAML SSO is available for Pantheon Enterprise, Pantheon for EDU+, and full Partner Organizations.
+To add SAML SSO to an existing Organization, please [contact support](https://dashboard.pantheon.io/users/#support/open-ticket).
 
 ## User Experience
 * User submits the Pantheon login form with email and any password, or the [SSO login form](https://dashboard.pantheon.io/sso) with just their email address.
