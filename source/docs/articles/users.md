@@ -21,7 +21,7 @@ If you belong to an Organization, you will see it listed here and can click on i
 Go to this tab to view details for open support tickets or to create a new one.
 
 ###Account Tab
-The Account tab is where you can update your user profile details, change your password, add and manage SSH keys, view billing details, and delete your account.
+The Account tab is where you can update your user profile details, change your password, add and manage SSH keys, view billing details, add machine tokens, and delete your account.
 
 ##Team Management
 It's easy to add, manage, and delete your site's users. For complete details, see [Team Management](https://pantheon.io/docs/articles/sites/team-management/).
