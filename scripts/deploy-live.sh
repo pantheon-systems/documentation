@@ -58,7 +58,6 @@ getExistingEnvs "filtered_env_list.txt"
 
 
 # Identify merged remote branches, ignoring Pantheon defaults and master
-git remote prune origin # remove outdated references on remote
 git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt

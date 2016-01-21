@@ -5,18 +5,22 @@ machine:
     version: 5.5.11
   environment:
     PHANTOM_JS: phantomjs-1.9.8-linux-x86_64
+    NOKOGIRI_USE_SYSTEM_LIBRARIES: 1
 
 dependencies:
+  cache_directories:
+    - ~/.composer/cache
   pre:
     - wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
     - sudo tar xvjf $PHANTOM_JS.tar.bz2
     - sudo mv $PHANTOM_JS /usr/local/share
-    - gem install html-proofer
+
   post:
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
-    - scripts/deploy-multidev.sh # Deploy Multidev environment
+    # Deploy Multidev environment
+    - scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
@@ -33,7 +37,7 @@ test:
     # Look for merge conflicts.
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
-    - rake
+    - bundle exec rake
 
 deployment:
   production:
