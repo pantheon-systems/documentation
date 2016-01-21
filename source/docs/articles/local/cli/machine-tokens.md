@@ -25,7 +25,9 @@ Machine tokens:
 
 ## Authenticate into Terminus
 Use your token to authenticate into Terminus by running the following command:  
-`terminus auth login --machine-token=<machine token>`
+```bash
+terminus auth login --machine-token=<machine token>
+```
 
 ## Revoke a Machine Token
 
