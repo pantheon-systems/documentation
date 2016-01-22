@@ -32,7 +32,7 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/drupal/private-files) in your codebase: `SITEROOT/private`.
+If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/articles/sites/private-files) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with settings.php, see [configuring settings.php](/docs/articles/drupal/configuring-settings-php/).
 
