@@ -8,6 +8,14 @@ keywords: git, git commands, clone, commit, push
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs/articles/local), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
+## Install Git
+
+Select your operating system and the download will automatically begin:
+
+[Mac OS](http://git-scm.com/download/mac)  
+[Windows](http://git-scm.com/download/win)  
+[Linux](https://git-scm.com/download/linux)  
+
 ## Clone Your Site Codebase
 
 The first step is to get a `git clone` of your code from Pantheon to your local computer.
@@ -21,7 +29,7 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
 ![Copy Past Git Clone](/docs/assets/images/git_string.png)<br />
 
-### Step 3: Run `git clone`
+### Step 3: Run Git Clone
 
 On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
@@ -55,7 +63,7 @@ You can then cut and paste the paths to these files when using `git add .`
 
 ## Push Changes to Pantheon
 
-Sending code to Pantheon is a two-step process with Git. First, you need to commit the files locally. Then you need to "push" them to the Pantheon cloud.
+Sending code to Pantheon is a two step process with Git. First, you need to commit the files locally. Then you need to "push" them to the Pantheon cloud.
 
 ### Step 1: Commit the Files Locally
 
@@ -64,7 +72,7 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 ```bash
 git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 ```
-If you don't specify a message on the command-line, git will open your default text-editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
+If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
 ![Git Commit](/docs/assets/images/git_commit.png)<br />
 There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
 
@@ -109,4 +117,4 @@ For further learning, we recommend the following resources:
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [SourceTree - Git GUI client](http://www.sourcetreeapp.com/)
 
-For Pantheon-specific Git questions, you may find answers in the [Git FAQs](/docs/articles/local/git-faq/) article.
+For Pantheon-specific Git questions, see the [Git FAQs](/docs/articles/local/git-faq/).
