@@ -37,17 +37,36 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         #Use GitHub's API to post Multidev URL in a comment on the commit
         export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
-        curl -d '{ "body": "Successfully created the ['"$normalize_branch"']('"$url"') environment. New commits to this branch will automatically be deployed." }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+
+        #Identify modified files from commit
+        git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
+        #Begin GH comment
+        echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$url")\u0020Multidev\u0020environment:\n" >> comment.txt
+        #Only for docs, not for site-wide changes
+        export doc_file="^(.*\.md)"
+        #Add doc link to comment for all docs changed
+        while IFS= read -r doc;
+        do
+          if [[ $doc =~ $doc_file ]]
+          then
+              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
+          else
+              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+          fi
+        done < modified_files.txt
+        export comment=`cat comment.txt`
+        curl -d '{ "body": "'$comment'" }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+
+        #Create comment on GH
     fi
+
 
     # Update redirect script for the Multidev environment
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheon.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
 
-
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod
-
 
     # Create log dir
     mkdir ../docs-rsync-logs
