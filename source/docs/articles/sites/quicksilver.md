@@ -1,15 +1,15 @@
 ---
-title: Automating and Integrating your Pantheon Workflow with Quicksilver
+title: Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks
 description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 ---
 
-Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
+Pantheon's Quicksilver Platform Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 
 The current release of Quicksilver supports one utility operation: `webphp`. This invokes a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](https://pantheon.io/docs/articles/sites/timeouts/#timeouts-that-aren't-configurable), and cannot be batched.
 
-## How Quicksilver Works
+## How Quicksilver Platform Hooks Works
 
-1. You trigger a Quicksilver-able workflow.
+1. You trigger a Quicksilver-Enabled workflow.
 2. The platform runs Quicksilver operations identified in a `pantheon.yml` file stored in your codebase.
 3. You can get debugging output via [Terminus, the Pantheon CLI](https://pantheon.io/docs/articles/local/cli/).
 
@@ -36,7 +36,7 @@ Let's explore a valid `pantheon.yml` file to learn more:
 
 ## Terminus Commands
 
-To use Quicksilver, it's recommended that you are familiar with Terminus. Get the latest [release](https://github.com/pantheon-systems/cli/releases), and a few new commands are included:
+To use Quicksilver Platform Hooks, it's recommended that you are familiar with Terminus. Get the latest [release](https://github.com/pantheon-systems/cli/releases), and a few new commands are included:
 
 ```bash
 $ terminus help workflows
