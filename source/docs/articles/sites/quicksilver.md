@@ -9,7 +9,7 @@ The current release of Quicksilver supports one utility operation: `webphp`. Thi
 
 ## How Quicksilver Platform Hooks Works
 
-1. You trigger a Quicksilver-Enabled workflow.
+1. You trigger a Quicksilver-enabled workflow.
 2. The platform runs Quicksilver operations identified in a `pantheon.yml` file stored in your codebase.
 3. You can get debugging output via [Terminus, the Pantheon CLI](https://pantheon.io/docs/articles/local/cli/).
 
