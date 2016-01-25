@@ -33,6 +33,33 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Check env_list.txt, create environment if one does not already exist
     if grep -Fxq "$normalize_branch" ./filtered_env_list.txt; then
         echo "Existing environment found for $normalize_branch: http://"$normalize_branch"-static-docs.pantheon.io"
+        export previous_commit=($(git log --format="%H" -n 2))
+        #Get comment ID and comment body from last commit comment
+        export previous_commit="${previous_commit[1]}"
+        curl https://api.github.com/repos/pantheon-systems/documentation/commits/"$previous_commit"/comments  > comment.json
+        export last_comment_id=`cat comment.json | jq ".[0].id"`
+        export existing_comment_body=`cat comment.json | jq ".[0].body"`
+        #Write the existing comment into our update
+        echo -n $existing_comment_body >> comment.txt
+        #Identify modified files from new commit
+        git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
+        #For docs and site-wide changes
+        export doc_file="^(.*\.md)"
+        #Add doc link to comment for all docs changed
+        while IFS= read -r doc;
+        do
+          if [[ $doc =~ $doc_file ]]
+          then
+              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
+          else
+              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+          fi
+        done < modified_files.txt
+        export comment=`cat comment.txt`
+        #Delete first comment so the PR isn't overpopulated with bot comments
+        curl -u $GITHUB_USER:$GITHUB_TOKEN -X DELETE https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id
+        #Create new comment on new commit, so when PR is open only one comment is present
+        curl -d '{ "body": "'$comment'" }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         #Use GitHub's API to post Multidev URL in a comment on the commit
