@@ -5,7 +5,6 @@ machine:
     version: 5.5.11
   environment:
     PHANTOM_JS: phantomjs-1.9.8-linux-x86_64
-    NOKOGIRI_USE_SYSTEM_LIBRARIES: 1
 
 dependencies:
   cache_directories:
@@ -14,13 +13,14 @@ dependencies:
     - wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
     - sudo tar xvjf $PHANTOM_JS.tar.bz2
     - sudo mv $PHANTOM_JS /usr/local/share
+    - bundle config build.nokogiri --use-system-libraries
 
   post:
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
-    - scripts/deploy-multidev.sh
+    - bash scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
@@ -43,4 +43,4 @@ deployment:
   production:
     branch: master
     commands:
-      - scripts/deploy-live.sh
+      - bash scripts/deploy-live.sh

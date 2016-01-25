@@ -14,7 +14,7 @@ echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync
 #===============================================================#
 # Deploy modified files to production, create log   #
 #===============================================================#
-rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/* --temp-dir=../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/
+rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"

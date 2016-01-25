@@ -4,13 +4,13 @@ module.exports = function(grunt) {
       dev: {
         options: {
           urls: [
-            'output_*/docs/about/*.html',
-            'output_*/docs/articles/**/*.html',
-            'output_*/docs/authors/**/*.html',
-            'output_*/docs/changelog/**/*.html',
-            'output_*/docs/guides/**/*.html',
-            'output_*/docs/objects/*.html',
-            'output_*/docs/search/*.html'
+            'output_dev/docs/about/*.html',
+            'output_dev/docs/articles/**/*.html',
+            'output_dev/docs/authors/**/*.html',
+            'output_dev/docs/changelog/**/*.html',
+            'output_dev/docs/guides/**/*.html',
+            'output_dev/docs/objects/*.html',
+            'output_dev/docs/search/*.html'
           ]
         }
       }
