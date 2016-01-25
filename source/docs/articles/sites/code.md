@@ -10,12 +10,12 @@ keywords: code, commit, sftp, development, how to connect, connection informatio
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 
 ## Pantheon Git Repository
-Your codebase is required to import your site into Pantheon, as it is used to create the initial code repository.
+Your entire codebase is required on Pantheon and is used to create the initial code repository.
 
 ### Drupal Code Structure
-Your archive should include your entire Drupal codebase, including modules, themes, installation profiles, libraries, etc.  
+Your code directory should include your entire Drupal codebase, including modules, themes, installation profiles, libraries, etc.  
 
-The code archive should not include the "files" directory (e.g. sites/default/files) or any other static assets that you do not want tracked in version control.
+Do not include the "files" directory (e.g. `sites/default/files`) or any other static assets that you do not want tracked in version control.
 
 The code archive should include the following directories:
 
@@ -33,14 +33,14 @@ The code archive should include the following directories:
            └── settings.php
     └── themes
 
-<div class="alert alert-info" role="alert">
-<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
-
 ### WordPress Code Structure
 
-Your archive should include your entire WordPress codebase, including plugins, themes, configuration files, etc.
+Your code directory should include your entire WordPress codebase, including plugins, themes, configuration files, etc.
 
-The code archive must include the following files and directories:
+Do not include the `wp-content/uploads` or any other static assets that you do not want tracked in Git version control.
+
+The code directory should include the following files and directories:
+
 ```nohighlight
 ├── index.php
 ├── wp-activate.php
@@ -64,7 +64,6 @@ The code archive must include the following files and directories:
     ├── themes
     ├── plugins
 ```
-
 
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
