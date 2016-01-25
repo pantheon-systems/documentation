@@ -3,11 +3,68 @@ layout: landing
 code: true
 use:
     - code
-title: Pantheon Dashboard Code Tool
-description: Learn how to work with your site's code on Pantheon's Dashboard code tool.
+title: Your Site Code on Pantheon
+description: Learn how to work with your site's code on the Pantheon Dashboard.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
+
+## Pantheon Git Repository
+Your codebase is required to import your site into Pantheon, as it is used to create the initial code repository.
+
+### Drupal Code Structure
+Your archive should include your entire Drupal codebase, including modules, themes, installation profiles, libraries, etc.  
+
+The code archive should not include the "files" directory (e.g. sites/default/files) or any other static assets that you do not want tracked in version control.
+
+The code archive should include the following directories:
+
+    ├── includes
+    ├── index.php
+    ├── misc
+    ├── modules
+    ├── profiles
+    ├── scripts
+    ├── sites
+        └── all
+           ├── modules
+           └── themes
+        └── default
+           └── settings.php
+    └── themes
+
+<div class="alert alert-info" role="alert">
+<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
+
+### WordPress Code Structure
+
+Your archive should include your entire WordPress codebase, including plugins, themes, configuration files, etc.
+
+The code archive must include the following files and directories:
+```nohighlight
+├── index.php
+├── wp-activate.php
+├── wp-config.php
+├── wp-comments-post.php
+├── wp-blog-header.php
+├── wp-admin
+├── wp-cron.php
+├── wp-load.php
+├── wp-links-opml.php
+├── wp-includes
+├── xmlrpc.php
+├── wp-trackback.php
+├── wp-signup.php
+├── wp-settings.php
+├── wp-mail.php
+├── wp-login.php
+├── wp-content
+    ├── index.php
+    ├── mu-plugins
+    ├── themes
+    ├── plugins
+```
+
 
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
