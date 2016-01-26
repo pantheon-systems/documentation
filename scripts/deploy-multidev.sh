@@ -11,6 +11,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export valid="^[-0-9a-z]" # allows digits 0-9, lower case a-z, and -
     if [[ $normalize_branch =~ $valid ]]; then
         export normalize_branch="${normalize_branch:0:11}"
+        #Remove - to avoid failures
+        export normalize_branch="${normalize_branch//-}"
         echo "Success: "$normalize_branch" is a valid branch name."
     else
         echo "Error: Multidev cannot be created due to invalid branch name: $normalize_branch"
@@ -33,14 +35,29 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Check env_list.txt, create environment if one does not already exist
     if grep -Fxq "$normalize_branch" ./filtered_env_list.txt; then
         echo "Existing environment found for $normalize_branch: http://"$normalize_branch"-static-docs.pantheon.io"
-        export previous_commit=($(git log --format="%H" -n 2))
         #Get comment ID and comment body from last commit comment
+        export previous_commit=($(git log --format="%H" -n 2))
         export previous_commit="${previous_commit[1]}"
-        curl https://api.github.com/repos/pantheon-systems/documentation/commits/"$previous_commit"/comments  > comment.json
+        #Save the body of previous comment for reuse
+        curl https://api.github.com/repos/pantheon-systems/documentation/commits/$previous_commit/comments?access_token=$GITHUB_TOKEN  > comment.json;
         export last_comment_id=`cat comment.json | jq ".[0].id"`
         export existing_comment_body=`cat comment.json | jq ".[0].body"`
-        #Write the existing comment into our update
-        echo -n $existing_comment_body >> comment.txt
+        export null="null"
+        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        #If previous comment doesn't exist, start a new one
+        if [ $existing_comment_body == $null ]; then
+          echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$url")\u0020Multidev\u0020environment:\n" >> comment.txt
+        else
+          #Write the existing comment into our update
+          echo -n $existing_comment_body >> comment.txt
+          #Convert into valid json value
+          sed  -i 's/ /\\u0020/g' comment.txt
+          sed -i 's/\"//g' comment.txt
+          export comment=`cat comment.txt`
+          #Delete first comment so the PR isn't overpopulated with bot comments
+          curl -X DELETE https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id?access_token=$GITHUB_TOKEN
+        fi
+
         #Identify modified files from new commit
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
         #For docs and site-wide changes
@@ -50,16 +67,16 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         do
           if [[ $doc =~ $doc_file ]]
           then
-              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
+              # Only add the modified file if it does not already exist in the comment
+              grep -- ''"${doc:7: -3}"'' comment.txt || echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
           else
-              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+              # Only add the modified file if it does not already exist in the comment
+              grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
         done < modified_files.txt
         export comment=`cat comment.txt`
-        #Delete first comment so the PR isn't overpopulated with bot comments
-        curl -u $GITHUB_USER:$GITHUB_TOKEN -X DELETE https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id
         #Create new comment on new commit, so when PR is open only one comment is present
-        curl -d '{ "body": "'$comment'" }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+        curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         #Use GitHub's API to post Multidev URL in a comment on the commit
@@ -82,7 +99,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
           fi
         done < modified_files.txt
         export comment=`cat comment.txt`
-        curl -d '{ "body": "'$comment'" }' -u $GITHUB_USER:$GITHUB_TOKEN -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
+        curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
         #Create comment on GH
     fi
