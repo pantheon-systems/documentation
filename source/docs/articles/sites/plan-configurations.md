@@ -22,13 +22,6 @@ keywords: site, RAM, pantheon, backup, plan
 <hr>
 **Redis Max Memory**: Max amount of RAM allocated to Redis  
 
-## Locate Your Site's Configurations
-To find the configurations for a specific site, follow the steps below.
-1.  
-2.  
-3.  
-
-
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
@@ -58,7 +51,7 @@ To find the configurations for a specific site, follow the steps below.
   <tr>
     <td class="tg-eyl8">ngnix<br></td>
     <td class="tg-yw4l">Worker Processes: 2<br></td>
-    <td class="tg-yw4l">Worker Processes: 2<br></td>
+    <td class="tg-yw4l">Worker Processes: 4<br></td>
     <td class="tg-yw4l">Worker Processes: <br></td>
     <td class="tg-yw4l">Worker Processes: <br></td>
   </tr>
@@ -86,6 +79,17 @@ To find the configurations for a specific site, follow the steps below.
 
 </table>
 <tr> <p style="font-size:12px"> * All sizes shown in MB </p style>
+
+## View Your Site's Specific Configurations
+
+### MySQL Configuration
+For a comprehensive list of MySQL settings, [access your database](https://pantheon.io/docs/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
+
+### Redis Configuration
+Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info** and then run the following command: `<your redis string> config get *memory*`
+
+### PHP Configuration
+ See [Securely Working with phpinfo](https://pantheon.io/docs/articles/sites/secure-phpinfo/#method-1-(drupal)) for ways to view your specific PHP configuration.
 
 ## Frequently Asked Questions (FAQs)
 
