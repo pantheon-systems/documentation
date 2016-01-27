@@ -22,6 +22,8 @@ keywords: site, RAM, pantheon, backup, plan
 <hr>
 **Redis Max Memory**: Max amount of RAM allocated to Redis  
 
+## Site Configurations 
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
