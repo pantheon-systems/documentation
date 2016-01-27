@@ -31,7 +31,7 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 * Write in an action-oriented style. Focus on helping the user complete the task at hand by writing in the active voice. An active voice is more direct and reduces ambiguity. Avoid passive voice as it is often vague and creates awkward sentences.
 
-* Be mindful of the audience's varying needs and prior knowledge. Write content  that users of all technical knowledge and experience-level can easily understand and follow.
+* Be mindful of the audience's varying needs and prior knowledge. Write content that users with various amounts of technical knowledge and experience can easily understand and follow.
 
 * Use of contractions:  Contractions can be used to create a conversational, informal tone, such as in FAQs or WalkMe content. Avoid using contractions in UI labels i.e. button names, page headers, etc.
 
