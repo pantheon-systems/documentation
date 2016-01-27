@@ -6,22 +6,25 @@ category:
   - getting-started
 keywords: pantheon, terminus, command line, cli
 ---
-The Terminus project's second version is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github").
+Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.
 
-Terminus is in a pre-release state with constant development. The commands in the repo may change and not all functionality will work for all use cases.
+Terminus is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github"). 
 
 ## Installation
 Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli#installation "Pantheon CLI wiki, installation page on Github").
+
 ## Use
 Usage instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Usage "Pantheon CLI wiki, usage page on Github").
 
 A list of available commands is maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Available-Commands "Pantheon CLI wiki, commands page on Github").
+
 ## Support
 Support is maintained at [https://github.com/pantheon-systems/cli/issues](https://github.com/pantheon-systems/cli/issues).
 
 ## Further Reading
 We've included CLI instructions in many of our articles and guides.
 
+- [Creating and Revoking Machine Tokens](/docs/articles/local/cli/machine-tokens/)
 - [Automated Testing WordPress with Behat](/docs/guides/automated-testing-wordpress-behat/)
 - [Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/)
 - [Prevent Spamming During Drupal Debugging and Testing](/docs/guides/rerouting-outbound-email/)
