@@ -41,7 +41,7 @@ The common community module for Drupal to use Redis is simply called [redis](htt
 
 1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org. Only the 7.x-2.x branch of the Redis module is currently supported for Drupal 7.x sites on Pantheon.
 
-2. Drupal 6.x sites will also need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis. See the "troubleshooting" section below for details.
+2. As there is no Redis module for Drupal 6.x, you need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis with Drupal 6.x. See the Troubleshooting section below for details.
 
 3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
 
