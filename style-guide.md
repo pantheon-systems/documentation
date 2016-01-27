@@ -35,7 +35,7 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 * Use of contractions:  Contractions can be used to create a conversational, informal tone, such as in FAQs or WalkMe content. Avoid using contractions in UI labels i.e. button names, page headers, etc.
 
-* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent. For instance,  when referring to a button or page name in technical documentation.
+* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent, for instance when referring to a button or page name in technical documentation.
 
 ## Web Content Types
 
