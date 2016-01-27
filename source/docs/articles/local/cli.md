@@ -6,9 +6,9 @@ category:
   - getting-started
 keywords: pantheon, terminus, command line, cli
 ---
-Terminus is Pantheon's command line interface. It allows you to do everything you would accomplish via the dashboard in a terminal. It is useful for those who prefer to type rather than click, but also for scripting, automation, and integration with other services and tools.
+Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.
 
-Terminus developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github"). That's where 
+Terminus is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github"). 
 
 ## Installation
 Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli#installation "Pantheon CLI wiki, installation page on Github").
