@@ -13,8 +13,6 @@ If your network already exists, see [Migrate to Pantheon: WordPress Site Network
 
 Before you begin, set the [connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-mode) for the Development environment. This is required when making necessary modifications to `wp-config.php` through the WordPress Dashboard or via WP-CLI.
 
-We prepared a set of simple shell scripts ([README](https://github.com/pantheon-systems/scripts/blob/site-networks/wordpress-networks/subdomains/README.md)) to create and manage a subdomain-style network. Take a look and improve it with a pull comment on the [current Pull Request](https://github.com/pantheon-systems/scripts/pull/1).
-
 ### Create a Network Using Terminus and WP-CLI (Recommended)
 
 **Before you begin, make sure that [Terminus](/docs/articles/local/cli) is configured locally and you’re authenticated with Pantheon.**
