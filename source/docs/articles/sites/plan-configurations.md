@@ -12,13 +12,13 @@ keywords: site, RAM, pantheon, backup, plan
 <hr>
 **MySQL Innodb Buffer Pool Size**: InnoDB data is stored in pages (blocks), either on disk or in memory. The buffer pool is a cache for these pages and when a page’s content is requested by a query, the page is cached in the buffer pool.  
 <hr>
-**PHP Memory Limit**: The maximum amount of memory a PHP process can use
+**PHP Memory Limit**: Maximum amount of memory a PHP process can use
 <hr>
-**PHP APC SHM Size**: The size of each shared memory segment   
+**PHP APC SHM Size**: Size of each shared memory segment   
 <hr>
 **PHP Max Children**: Number of allowed child processes
 <hr>
-**Redis Memory Limit**:  
+**Redis Memory Limit**: Recommended amount of memory for Redis
 <hr>
 **Redis Max Memory**: Max amount of RAM allocated to Redis  
 
@@ -52,8 +52,8 @@ keywords: site, RAM, pantheon, backup, plan
     <td class="tg-eyl8">ngnix<br></td>
     <td class="tg-yw4l">Worker Processes: 2<br></td>
     <td class="tg-yw4l">Worker Processes: 4<br></td>
-    <td class="tg-yw4l">Worker Processes: <br></td>
-    <td class="tg-yw4l">Worker Processes: <br></td>
+    <td class="tg-yw4l">Worker Processes: 8 <br></td>
+    <td class="tg-yw4l">Worker Processes: Varies<br></td>
   </tr>
   <tr>
     <td class="tg-7ojv">MySQL<br></td>
@@ -80,19 +80,21 @@ keywords: site, RAM, pantheon, backup, plan
 </table>
 <tr> <p style="font-size:12px"> * All sizes shown in MB </p style>
 
-## View Your Site's Specific Configurations
+## View Your Site's Configurations
 
 ### MySQL Configuration
 For a comprehensive list of MySQL settings, [access your database](https://pantheon.io/docs/articles/local/accessing-mysql-databases/) and issue the [SHOW VARIABLES;](http://dev.mysql.com/doc/refman/5.0/en/show-variables.html) query.
 
 ### Redis Configuration
-Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info** and then run the following command: `<your redis string> config get *memory*`
+Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info**, and then run: `<your redis string> config get *memory*`
 
 ### PHP Configuration
  See [Securely Working with phpinfo](https://pantheon.io/docs/articles/sites/secure-phpinfo/#method-1-(drupal)) for ways to view your specific PHP configuration.
 
 ## Frequently Asked Questions (FAQs)
 
-#### Why don't backups and the database factor into the RAM being used?
+#### Are these the entire specs and memory for my site?   
+No, your database and app server resources are not shared and are on their own application container with their own  memory.
 
-#### What is the difference between Dev/Test/Live, starting at the Business service level?
+#### Are the specs the same for all three environments (Dev/Test/Live)?  
+Yes they have the same infrastructure; however, it depends on your plan. Business plans and above have multiple web heads, which may lead unexpected results if code is not optimized for multiple app servers.
