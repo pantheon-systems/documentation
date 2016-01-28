@@ -108,6 +108,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Update redirect script for the Multidev environment
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheon.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
+    # Update CTA edit link so that the current branch is used
+    sed '12s/master/'"$CIRCLE_BRANCH"'/' w source/_views/article.html | tee source/_views/article.html
 
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod
