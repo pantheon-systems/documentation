@@ -62,19 +62,25 @@ git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 # Create an array of remote branches merged into master
-getMergedEnvs() {
-    merged_env_array=() # Clear array
-    while read -r line # Read a line
+getMergedBranch() {
+    merged_branch_array=() # Clear array
+    while read -r branch # Read a line
     do
-        merged_env_array+=( "${line:0:11}" ) # Append first 11 characters of line to the array
+        # Save the first 11 chars, then remove -'s to follow multidev naming strategy
+        multidev_name="${CIRCLE_BRANCH:0:11}"
+        multidev_name="${multidev_name//-}"
+        merged_branch_array+=( "$multidev_name" ) # Append to the array
     done < "$1"
 }
-getMergedEnvs "merged-branches-clean.txt"
+getMergedBranch "merged-branches-clean.txt"
 
 # Compare existing environments and merged branches, delete only if the environment exists
-merged_env=" ${merged_env_array[*]} "
+merged_branch=" ${merged_branch_array[*]} "
 for env in ${existing_env_array[@]}; do
-  if [[ $merged_env =~ " $env " ]] ; then
+  if [[ $merged_branch =~ " $env " ]] ; then
     ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --yes
   fi
 done
+
+# Delete branch from GH Repo
+git push origin --delete "$CIRCLE_BRANCH"
