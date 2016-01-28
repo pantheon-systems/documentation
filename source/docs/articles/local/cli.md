@@ -11,7 +11,7 @@ Terminus is Pantheon's command line interface. It allows you to do everything in
 Terminus is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github"). 
 
 ## Installation
-Installation instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli#installation "Pantheon CLI wiki, installation page on Github").
+Installation instructions can be found in the [project readme](https://github.com/pantheon-systems/cli#installation "Pantheon CLI readme, installation page on Github").
 
 ## Use
 Usage instructions are maintained at the [project wiki](https://github.com/pantheon-systems/cli/wiki/Usage "Pantheon CLI wiki, usage page on Github").
