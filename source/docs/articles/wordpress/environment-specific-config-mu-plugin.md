@@ -24,6 +24,7 @@ Any plugins that should be active in Dev and/or Test, but inactive in Live, pres
 ### Create the Plugin mu-plugins/site-config.php
 
 Copy this plugin file to the `mu-plugins` directory and edit accordingly.
+
 ```php
 <?php
 /*
@@ -86,6 +87,15 @@ Plugins with development-specific filters can also be added. In the example abov
 The [Developer plugin](https://wordpress.org/plugins/developer/) by Automattic also checks whether you have recommended development plugins enabled on your site. Adding those plugins to your codebase and then adding them to the $plugins array in the example plugin will ensure this happens automatically.
 
 ## Recommended Development Plugins
-@TODO - List plugins  - start with the plugins checked for by Developer
+
+- [wp-reroute-email](https://wordpress.org/plugins/wp-reroute-email/)
+- [developer](https://wordpress.org/plugins/developer/)
+
+Have another to suggest? [Edit this doc!](https://github.com/pantheon-systems/documentation/edit/master/source/docs/articles/wordpress/environment-specific-config-mu-plugin.md)
+
 ## Recommended Development Filters
-@TODO - is this helpful? 
+
+- [update_option](https://codex.wordpress.org/Function_Reference/update_option)
+- [jetpack_development_mode](http://jetpack.me/support/development-mode/)
+
+Have another to suggest? [Edit this doc!](https://github.com/pantheon-systems/documentation/edit/master/source/docs/articles/wordpress/environment-specific-config-mu-plugin.md)
