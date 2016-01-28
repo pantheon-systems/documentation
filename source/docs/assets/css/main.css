@@ -2321,3 +2321,17 @@ display: block;
     border-radius: 4px;
     margin: 15px 15px 0px 0px;
 }
+.thead-inverse {
+  background-color: #F0F4F5;
+  color: #000;
+  text-align: center;
+}
+.table-condensed>tbody>tr>td {
+  font-size: 14px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border: 1px solid #000;
+}
+.table>thead:first-child>tr:first-child>th {
+  border-top: 1px solid #000;
+}

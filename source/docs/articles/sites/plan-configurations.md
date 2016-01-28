@@ -7,69 +7,55 @@ Your site configurations depend on your current plan. The Pantheon platform scal
 
 ## Site Configurations
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-.tg th{font-family:Arial, sans-serif;font-size:16px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-.tg .tg-xlfc{font-size:100%;font-family:serif !important;;background-color:#ecf4ff;vertical-align:top}
-.tg .tg-0eef{font-weight:bold;background-color:#ecf4ff;color:#444444;vertical-align:top}
-.tg .tg-eyl8{font-weight:bold;background-color:#ecf4ff}
-.tg .tg-yw4l{vertical-align:top}
-.tg .tg-7ojv{font-weight:bold;background-color:#ecf4ff;vertical-align:top}
-</style>
-<table class="tg" style="undefined;table-layout: fixed; width: 835px">
-<colgroup>
-<col style="width: 80px">
-<col style="width: 204px">
-<col style="width: 191px">
-<col style="width: 193px">
-<col style="width: 198px">
-</colgroup>
-  <tr>
-    <th class="tg-xlfc"></th>
-    <th class="tg-0eef">Personal</th>
-    <th class="tg-0eef">Professional<br></th>
-    <th class="tg-0eef">Business</th>
-    <th class="tg-0eef">Elite</th>
-  </tr>
-  <tr>
-    <td class="tg-eyl8">App Servers<br></td>
-    <td class="tg-yw4l">1<br></td>
-    <td class="tg-yw4l">1<br></td>
-    <td class="tg-yw4l">2 <br></td>
-    <td class="tg-yw4l">4-8<br></td>
-  </tr>
-  <tr>
-    <td class="tg-eyl8">ngnix<br></td>
-    <td class="tg-yw4l">Worker Processes: 2<br></td>
-    <td class="tg-yw4l">Worker Processes: 4<br></td>
-    <td class="tg-yw4l">Worker Processes: 8 <br></td>
-    <td class="tg-yw4l">Worker Processes: Varies<br></td>
-  </tr>
-  <tr>
-    <td class="tg-7ojv">MySQL<br></td>
-    <td class="tg-yw4l">Query Cache Size: 32<br>Innodb Buffer Pool Size: 128<br>Memory Limit: 256<br></td>
-    <td class="tg-yw4l">Query Cache Size: 64<br>Innodb Buffer Pool Size: 512<br>Memory Limit: 1024<br></td>
-    <td class="tg-yw4l">Query Cache Size: 64<br>Innodb Buffer Pool Size: 1024<br>Memory Limit: 1536<br></td>
-    <td class="tg-yw4l">Query Cache Size: 512<br>Innodb Buffer Pool Size: 8192-16384 <br>Memory Limit: 10240 <br></td>
-  </tr>
-  <tr>
-    <td class="tg-7ojv">PHP</td>
-    <td class="tg-yw4l">Memory Limit: 512<br>APC SHM Size: 128<br>FPM Max Children: 4<br></td>
-    <td class="tg-yw4l">Memory Limit: 768<br>APC SHM Size: 256<br>FPM Max Children: 8<br></td>
-    <td class="tg-yw4l">Memory Limit: 768<br>APC SHM Size: 256</td>
-    <td class="tg-yw4l">Memory Limit: 1024</td>
-  </tr>
-  <tr>
-    <td class="tg-7ojv">Redis</td>
-    <td class="tg-yw4l">Memory Limit: 64<br>Max Memory: 51</td>
-    <td class="tg-yw4l">Memory Limit: 256<br>Max Memory: 235<br></td>
-    <td class="tg-yw4l">Memory Limit: 512<br>Max Memory: 471</td>
-    <td class="tg-yw4l">Memory Limit: 1024 - 17124<br>Max Memory: 16777<br></td>
-  </tr>
-
-</table>
-<tr> <p style="font-size:12px"> * All sizes shown in MB </p style>
+<table class="table table-condensed table-bordered">
+    <thead class="thead-inverse">
+      <tr>
+        <th scope="row" class="thead-inverse"></th>
+        <th>Personal</th>
+        <th>Professional</th>
+        <th>Business</th>
+        <th>Enterprise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="thead-inverse">App Servers</th>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>4-8</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">ngnix</th>
+        <td>Worker Processes: 2</td>
+        <td>Worker Processes: 4</td>
+        <td>Worker Processes: 8</td>
+        <td>Worker Processes: Varies</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">MySQL</th>
+        <td>Query Cache Size: 32<br>Innodb Buffer Pool Size: 128<br>Memory Limit: 256<br></td>
+        <td>Query Cache Size: 64<br>Innodb Buffer Pool Size: 512<br>Memory Limit: 1024</td>
+        <td>Query Cache Size: 64<br>Innodb Buffer Pool Size: 1024<br>Memory Limit: 1536</td>
+        <td>Query Cache Size: 512<br>Innodb Buffer Pool Size: 8192-16384<br>Memory Limit: 10240</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">PHP</th>
+        <td>Memory Limit: 512<br>APC SHM Size: 128<br>FPM Max Children: 4</td>
+        <td>Memory Limit: 768<br>APC SHM Size: 256<br>FPM Max Children: 8</td>
+        <td>Memory Limit: 768<br>APC SHM Size: 256</td>
+        <td>Memory Limit: 1024</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">Redis</th>
+        <td>Memory Limit: 64<br>Max Memory: 51</td>
+        <td>Memory Limit: 256<br>Max Memory: 235</td>
+        <td>Memory Limit: 512<br>Max Memory: 471</td>
+        <td>Memory Limit: 1024 - 17124<br>Max Memory: 16777</td>
+      </tr>
+    </tbody>
+  </table>
+  <tr> <p style="font-size:12px"> * All sizes shown in MB </p style>
 
 ## Glossary
 
