@@ -3,6 +3,8 @@ title: Configuring SAML SSO for Pantheon with Okta
 description: Detailed information to enable SAML single sign-on for your organization with Okta.
 category:
   - developing
+draft: true
+
 ---
 Starting from the Okta admin dashboard, do the following:
 
