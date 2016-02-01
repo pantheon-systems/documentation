@@ -22,7 +22,7 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 8. Profit.
 
 Using Terminus, you can complete the above process from the command line. Before you begin, it helps to create a `.env` file inside of any directory. We tend to use the base of the cloned site repository, and cd to that directory.
-Our `book-blog.env` file contains a single line:
+Our `.env` file contains a single line:
 ```
 TERMINUS_SITE="book-blog"
 ```
