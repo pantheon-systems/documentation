@@ -36,14 +36,14 @@ Because the WordPress object cache stores its data as key => value pairs and Wor
 Code that has been committed to master and is running on the Dev environment:
 ```bash
 terminus site deploy --test --sync-content --yes
-terminus wp 'search replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
+terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
 terminus site clear-cache --env=test
 ```
 ## Clone Content from Live to Test
 Restore the Test database and files to the state of the Live environment.
 ```bash
 terminus site clone-content --from-env=live --to-env=test --yes
-terminus wp 'search replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
+terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
 terminus site clear-cache --env=test
 ```
 
@@ -51,7 +51,7 @@ terminus site clear-cache --env=test
 Catch up Dev to Live before you start development. The first command will overwrite the DB in Dev.
 ```bash
 terminus site clone-content --from-env=live --to-env=dev --yes
-terminus wp 'search replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network' --env=dev
+terminus wp 'search-replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network' --env=dev
 terminus site clear-cache --env=dev
 ```
 
