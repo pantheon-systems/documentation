@@ -51,8 +51,8 @@ terminus site clear-cache --env=test
 Catch up Dev to Live before you start development. The first command will overwrite the DB in Dev.
 ```bash
 terminus site clone-content --from-env=live --to-env=dev --yes
-terminus wp 'search replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network' --env=test
-terminus site clear-cache --env=test
+terminus wp 'search replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network' --env=dev
+terminus site clear-cache --env=dev
 ```
 
 ## Subdomain Networks
