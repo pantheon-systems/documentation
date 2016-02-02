@@ -14,11 +14,11 @@ Configuring your domain's DNS is required to route traffic to your Pantheon site
 
 ## Step 1: Determine the URL to Serve From
 
-We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers. If your site will use HTTPS, either [enable HTTPS with your own certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) or use [Cloudflare's free SSL](/docs/guides/ssl-with-cloudflare/) before continuing.
+We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers. 
+
+If your site will use HTTPS, either [enable HTTPS with your own certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) or use [Cloudflare's free SSL service](/docs/guides/ssl-with-cloudflare/) before continuing.
 
 ## Step 2: Add Domains to the Site Environment
-<div class="alert alert-danger" role="alert">
-<h4>Important</h4>If you are using the HTTPS protocol with your own certificate, <a href="/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/">enable HTTPS</a> before adding the domain to the site environment. The recommended DNS settings are different for HTTPS sites. If you are going to use Cloudflare's service, set up DNS as described here first.</div>
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/articles/sites/settings/selecting-a-plan/).
 
@@ -28,7 +28,7 @@ You must have a paid plan to add a domain to a site environment. For more inform
 You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Add all domains you wish to resolve to Pantheon within the desired environments. Automatic resolution of domains and wildcards are not supported.</div>
+<h4>Note</h4>Add all domains you want to resolve to Pantheon within the desired environments. Automatic resolution of domains and wildcards are not supported.</div>
 
 ### Develop Using a Domain Without Changing DNS
 Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
@@ -59,7 +59,7 @@ From the Live environment's Domains/HTTPS tool, click **Show recommended DNS rec
 <div class="alert alert-danger" role="alert">
 <h4>Important</h4><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain; we cannot do it for you.</div>
 
-Using the provided destinations in the site Dashboard, create the recommended DNS entries at the domain's DNS provider. Pantheon's www-redirection service will automatically redirect requests to the www subdomain.
+Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider. Pantheon's www-redirection service will automatically redirect requests to the www subdomain.
 
 ### Serving Sites from Bare Domains with HTTP
 To serve your site from the bare domain, you must:
@@ -77,7 +77,7 @@ Learn more about ANAME records:
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
 
 
-## Frequently Asked Questions
+## Frequently Asked Questions (FAQs)
 
 ### How long do DNS changes typically take?
 DNS changes can take up to 48 hours to propagate across the entire Internet, but most updates happen much faster depending on the set TTL (Time to Live).
@@ -119,6 +119,7 @@ This will not:
 
 ### My site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
 Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when configuring the domain's DNS. Only create the CNAME record for the www subdomain and the A record for the bare domain.
+
 ##See Also
 
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
