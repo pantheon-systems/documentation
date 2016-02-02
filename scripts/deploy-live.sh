@@ -47,14 +47,14 @@ fi
 echo "Existing environments:"
 tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
 # Create array of existing environments on Static Docs
-getExistingEnvs() {
-    existing_env_array=() # Clear array
-    while read -r line # Read a line
+getExistingTerminusEnvs() {
+    existing_terminus_envs=() # Clear array
+    while read -r env # Read a line
     do
-        existing_env_array+=( "$line" ) # Append line to the array
+        existing_terminus_envs+=( "$env" ) # Append line to the array
     done < "$1"
 }
-getExistingEnvs "filtered_env_list.txt"
+getExistingTerminusEnvs "filtered_env_list.txt"
 
 
 # Identify merged remote branches, ignoring Pantheon defaults and master
@@ -62,19 +62,37 @@ git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 # Create an array of remote branches merged into master
-getMergedEnvs() {
-    merged_env_array=() # Clear array
-    while read -r line # Read a line
+getMergedBranchMultidevName() {
+    merged_branch_multidev_names=() # Clear array
+    while read -r branch # Read a line
     do
-        merged_env_array+=( "${line:0:11}" ) # Append first 11 characters of line to the array
+        # Save the first 11 chars, then remove -'s to follow multidev naming strategy
+        multidev_name="${branch:0:11}"
+        multidev_name="${multidev_name//-}"
+        merged_branch_multidev_names+=( "$multidev_name" ) # Append to the array
     done < "$1"
 }
-getMergedEnvs "merged-branches-clean.txt"
+getMergedBranchMultidevName "merged-branches-clean.txt"
 
 # Compare existing environments and merged branches, delete only if the environment exists
-merged_env=" ${merged_env_array[*]} "
-for env in ${existing_env_array[@]}; do
-  if [[ $merged_env =~ " $env " ]] ; then
+merged_branch=" ${merged_branch_multidev_names[*]} "
+for env in ${existing_terminus_envs[@]}; do
+  if [[ $merged_branch =~ " $env " ]] ; then
     ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --yes
   fi
+done
+
+getMergedBranch() {
+    merged_branch_array=() # Clear array
+    while read -r branch # Read a line
+    do
+        # Save the first 11 chars, then remove -'s to follow multidev naming strategy
+        merged_branch_array+=( "$branch" ) # Append to the array
+    done < "$1"
+}
+getMergedBranch "merged-branches-clean.txt"
+
+# Delete merged branches from GH Repo
+for branch in ${merged_branch_array[@]}; do
+  git push origin --delete "$branch"
 done
