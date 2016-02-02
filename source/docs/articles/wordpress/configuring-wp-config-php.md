@@ -20,7 +20,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ## Pantheon's WordPress Config
 
-<script src="https://gist.github.com/joshkoenig/9646205.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 <code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/articles/sites/code/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
@@ -31,17 +31,17 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of `$\_SERVER['PANTHEON\_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
-<script src="https://gist.github.com/timani/6bd845402c7f8d0939a4.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/%24_SERVER-environment?footer=minimal"></script>
 
-For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
+For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​`PANTHEON\_ENVIRONMENT`. Again, it will contain Dev, Test, or Live.
 
-<script src="https://gist.github.com/timani/f5600ecff83399da5069.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/web-cli-environment?footer=minimal"></script>
 
 As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](http://codex.wordpress.org/Editing_wp-config.php).
 
-<script src="https://gist.github.com/timani/3e7f882c5ca49709b4e4.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
 #### How can I read the Pantheon environmental configuration, like database credentials?
 
 See [Reading the Pantheon Environment Configuration](/docs/articles/sites/code/reading-pantheon-environment-configuration/).
@@ -54,13 +54,13 @@ See [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-req
 
 You don't have to! Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
 
-#### Where can I get a copy of a default wp-config.php for Pantheon?
+#### Where can I get a copy of a default `wp-config.php` for Pantheon?
 
 - Pantheon WordPress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
 - WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 ####Where can I find examples of Pantheon wp-config.php?
-You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
+You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples/tree/master/wordpress).
 
 ## Troubleshooting
 #### Request to a Remote API Does Not Return Expected Response
