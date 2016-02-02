@@ -6,19 +6,19 @@ category:
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-SAML SSO is included for Elite, Enterprise, and EDU+ customers. If you'd like to upgrade to an eligible plan, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). If you're an Agency interested in SAML SSO, register for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) and then reach out to your partnership manager to see if you qualify.
+SAML SSO is included for Elite, Enterprise, and EDU+ customers. If you'd like to upgrade to an eligible plan, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). If you're an Agency interested in SAML SSO, register for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) and then reach out to your Partnership Manager to see if you qualify.
 
 ## User Experience
 * User submits the Pantheon login form with their email address.
 * User is redirected to the configured IdP.  
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
-## Terminus authentication
+## Terminus Authentication
 Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/docs/articles/local/cli/) by using [machine tokens](/docs/articles/local/cli/machine-tokens/).
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the organization dashboard](/docs/articles/organizations/dashboard/). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/articles/organizations/dashboard/). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
@@ -34,7 +34,7 @@ You will need to enter the following:
 <h4>Note</h4>
 Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append SSO.</div>
 
-3. **Add an Attribute Statement** to map `mail` to `email`
+3. **Add an Attribute Statement** to map `mail` to `email`.
 
 4. **Additional configuration details:**
   * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
