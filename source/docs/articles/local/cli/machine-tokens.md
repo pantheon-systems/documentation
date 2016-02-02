@@ -38,7 +38,7 @@ For security purposes, we recommend removing tokens from your account when they 
 ## Benefits of Using Machine Tokens
 
 - Bot Users with machine tokens can use Terminus to authenticate to and operate on Pantheon from a Continuous Integration (CI) server.
-- Users in organizations with SAML Single-Sign On (SSO) can authenticate with terminus.
+- Users in organizations with SAML Single-Sign On (SSO) can authenticate with Terminus.
 
 ## See Also
 - [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
