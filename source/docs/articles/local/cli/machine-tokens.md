@@ -19,7 +19,7 @@ Machine tokens:
 4. Copy and save your machine token now, as you will not be able to view or edit it later.
 5. Click **I understand** to continue.
 
-![Machine token ready modal](/source/docs/assets/images/machine-token-ready1.png)
+![Machine token ready modal](/source/docs/assets/images/machine-token-ready.png)
 ## Authenticate into Terminus
 
 Use your token to authenticate into Terminus by running the following command:  
