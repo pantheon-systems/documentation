@@ -28,7 +28,7 @@ The following articles include techniques and configurations for settings.php on
 
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
-## Drupal 8
+### Drupal 8
 Configure environment-specific settings within the `settings.local.php` file, which is `.gitignored`. Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
     ​// Local development configuration.
@@ -52,7 +52,7 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 ```
 terminus drush --site=<site> --env=<env> "ev return getenv("DRUPAL_HASH_SALT")"
 ```
-## Drupal 7
+### Drupal 7
 
     ​// Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
@@ -68,7 +68,7 @@ terminus drush --site=<site> --env=<env> "ev return getenv("DRUPAL_HASH_SALT")"
       );
     }
 
-## Drupal 6
+### Drupal 6
 
     // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
@@ -78,6 +78,9 @@ terminus drush --site=<site> --env=<env> "ev return getenv("DRUPAL_HASH_SALT")"
     }
 
 ## Frequently Asked Questions
+
+#### Can I delete the `default.settings.php` file?
+Yes, but only if at least one other file (e.g. `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
 
 #### How can I write logic based on the Pantheon server environment?
 
