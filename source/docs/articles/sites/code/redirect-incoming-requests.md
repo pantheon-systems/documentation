@@ -117,7 +117,7 @@ To use HTTPS everywhere and standardize on your domain, combine this kind of log
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-      if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
+      if ($_SERVER['HTTP_HOST'] != 'yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
           $_SERVER['HTTP_X_SSL'] != 'ON' ) {
         header('HTTP/1.0 301 Moved Permanently');
