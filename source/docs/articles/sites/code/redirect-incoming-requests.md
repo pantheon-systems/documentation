@@ -112,12 +112,12 @@ You can implement a secure domain for a specific set of page with Drupal modules
 
 ### Require HTTPS and Standardize Domain
 
-To use HTTPS everywhere and standardize on your domain, combine this kind of logic into a single block:
+To use HTTPS everywhere and standardize on your domain (e.g. `www.yoursite.com`), combine this kind of logic into a single block:
 
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-      if ($_SERVER['HTTP_HOST'] != 'yoursite.com' ||
+      if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
           $_SERVER['HTTP_X_SSL'] != 'ON' ) {
         header('HTTP/1.0 301 Moved Permanently');
