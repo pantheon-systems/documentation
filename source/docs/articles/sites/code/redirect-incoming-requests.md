@@ -112,7 +112,7 @@ You can implement a secure domain for a specific set of page with Drupal modules
 
 ### Require HTTPS and Standardize Domain
 
-To use HTTPS everywhere and standardize on your domain, combine this kind of logic into a single block:
+To use HTTPS everywhere and standardize on your domain (e.g. `www.yoursite.com`), combine this kind of logic into a single block:
 
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
