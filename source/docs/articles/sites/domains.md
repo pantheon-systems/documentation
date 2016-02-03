@@ -14,10 +14,9 @@ Configuring your domain's DNS is required to route traffic to your Pantheon site
 
 ## Step 1: Determine the URL to Serve From
 
-We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers. 
+We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
 
-If your site will use HTTPS, either [enable HTTPS with your own certificate](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) or use [Cloudflare's free SSL service](/docs/guides/ssl-with-cloudflare/) before continuing.
-
+If you are using the HTTPS protocol with your own certificate, [enable HTTPS](docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [Cloudflare's free Universal SSL service](/docs/guides/ssl-with-cloudflare/), set up DNS as described here first.
 ## Step 2: Add Domains to the Site Environment
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/articles/sites/settings/selecting-a-plan/).
