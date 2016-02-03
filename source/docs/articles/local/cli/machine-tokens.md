@@ -25,9 +25,12 @@ Machine tokens:
 Use your token to authenticate into Terminus by running the following command:  
 `terminus auth login --machine-token=<machine token>`
 
+Machine tokens are keyed to the email address associated with your Pantheon user account. Once a token has been used to authenticate Terminus, future sessions are authenticated with your email address:
+`terminus auth login <email@example.com>`
+
 ## Switch Between Multiple Pantheon User Accounts
 
-Machine tokens are paired with your email address (Pantheon user account), so it is possible to use multiple user accounts/tokens on one machine.  
+Machine tokens are paired with the email address associated with your Pantheon user account, so you can easily switch between users:
 
 1. Log out of an account by running: `terminus auth logout`  
 2. Log in to another account by running: `terminus auth login <email@example.com>`
