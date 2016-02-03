@@ -44,7 +44,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         export null="null"
         export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
         #If previous comment doesn't exist, start a new one
-        if [ $existing_comment_body == $null ]; then
+        if [[ $existing_comment_body == $null ]]; then
           echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$url")\u0020Multidev\u0020environment:\n" >> comment.txt
         else
           #Write the existing comment into our update
@@ -108,7 +108,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheon.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
     # Update CTA edit link so that the current branch is used
-    sed '12s/master/'"$CIRCLE_BRANCH"'/' w source/_views/article.html | tee source/_views/article.html
+    sed -i '12s/master/'"$CIRCLE_BRANCH"'/g' source/_views/article.html
+    sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/landing.html
 
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod
