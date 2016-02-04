@@ -63,10 +63,9 @@ Some customers have reported success using external Solr service providers for t
 </dl>
 #### Check Index and Batch Sizes
 
-Are you only indexing only 50 items at a time and wondering why 100s of new content nodes generated in the last hour aren't being indexed? Numbers are important here. If you need to increase the number of items being indexed with each Solr indexing run, feel free to do so. However, don't get ridiculous here: setting 1000 items to be indexed per run could cause a page timeout. If a specific request times out, that could be because it's trying to POST too much data at once; try reducing the quantity of items being indexed per batch and see if that allows the items to be indexed.
+Are you only indexing only 50 items at a time and wondering why hundreds of new content nodes generated in the last hour aren't being indexed? Numbers are important here. If you need to increase the number of items being indexed with each Solr indexing run, feel free to do so. However, don't get ridiculous here: setting 1000 items to be indexed per run could cause a page timeout. If a specific request times out, that could be because it's trying to POST too much data at once; try reducing the quantity of items being indexed per batch and see if that allows the items to be indexed.
 
 ### Apache Spatial Search on Pantheon
 
 Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.  
-
-As an alternative, there are several external Solr service providers that do support Spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
+As an alternative, there are several external Solr service providers that do support spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
