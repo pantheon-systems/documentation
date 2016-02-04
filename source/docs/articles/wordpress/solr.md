@@ -37,8 +37,9 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 6. Use the **Query** tab to search for words and/or phrases to validate Solr's indexing configuration.
 
 Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
+
 ### Optimize Index
-For details, see [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/).
+For details, see the [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
 
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
@@ -50,5 +51,6 @@ The `schema.xml` file is not automatically sent to Solr when deploying the plugi
 This is required upon initial deployment of the plugin to any environment or when a custom `schema.xml` document is changed.
 ### Custom Fields
 The plugin does not currently index custom fields as expected, check [this issue](https://github.com/pantheon-systems/solr-power/issues/51) for progress updates.
+
 ### Custom Post Types
-Future development work may allow for indexing custom post types, however they are not yet supported. Pull requests are welcome!
+Future development work may allow for indexing custom post types; however, they are not yet supported. Pull requests are welcome!
