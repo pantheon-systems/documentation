@@ -37,7 +37,7 @@ fi
 #===============================================================#
 # Authenticate Terminus and clear caches on panther Live env    #
 #===============================================================#
-~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
+~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #

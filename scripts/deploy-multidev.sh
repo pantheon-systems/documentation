@@ -19,7 +19,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     fi
 
     # Authenticate Terminus
-    ~/documentation/bin/terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASS
+    ~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 
 
     # Write existing environments for the static docs site to a text file
