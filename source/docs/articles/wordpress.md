@@ -11,6 +11,33 @@ WordPress began as a blogging platform and has now evolved into the most used Co
 
 ## Get Started
 [Migrate Sites to Pantheon](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/wordpress/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
+## WordPress Code
+WordPress site code repositories are clones of one our [WordPress upstream](https://github.com/pantheon-systems/wordpress), and consist of the following files and directories:
+```
+├── index.php
+├── wp-activate.php
+├── wp-config.php
+├── wp-comments-post.php
+├── wp-blog-header.php
+├── wp-admin
+├── wp-cron.php
+├── wp-load.php
+├── wp-links-opml.php
+├── wp-includes
+├── xmlrpc.php
+├── wp-trackback.php
+├── wp-signup.php
+├── wp-settings.php
+├── wp-mail.php
+├── wp-login.php
+├── wp-content
+    ├── index.php
+    ├── mu-plugins
+    ├── themes
+    ├── plugins
+```
+This repository includes the [core themes from twenty-ten to the present](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/themes). Pantheon no longer updates these themes in the upstream repository after their release. They will likely be out of date when you install WordPress, and it is safe to update or remove them from your code repository without the potential of future conflicts. 
+The same is true for the [Akismet Plugin](https://github.com/pantheon-systems/wordpress/tree/master/wp-content/plugins). New WordPress sites ship with Akismet 3.1.5. Akismet is safe to upgrade or remove from your site's codebase. 
 ## WordPress Dashboard
 Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode#manage-plugins-and-themes-with-wp-admin) and SFTP mode.
 ## wp-config.php
