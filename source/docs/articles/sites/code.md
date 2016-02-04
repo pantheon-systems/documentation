@@ -14,7 +14,7 @@ Your site's code repository includes your entire codebase, including core Drupal
 
 ### Drupal Code Structure
 
-Drupal site code repositories consist of the following files and directories:
+Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-7](https://github.com/pantheon-systems/drops-7), or [Drops-8](https://github.com/pantheon-systems/drops-8), and consist of the following files and directories:
 
     ├── includes
     ├── index.php
@@ -29,11 +29,12 @@ Drupal site code repositories consist of the following files and directories:
         └── default
            └── settings.php
     └── themes
+
 <div class="alert alert-info"><h4>Note</h4>The <code>sites/default/files</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</div>
 
 ### WordPress Code Structure
 
-WordPress site code repositories consist of the following files and directories:
+WordPress site code repositories are clones of one our [WordPress upstream](https://github.com/pantheon-systems/wordpress), and consist of the following files and directories:
 
 ```nohighlight
 ├── index.php
