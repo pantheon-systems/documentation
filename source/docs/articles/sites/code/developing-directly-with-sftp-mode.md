@@ -120,6 +120,9 @@ This is caused by using the SFTP application's default connection settings. We r
 
 Do not specify a default remote directory within your SFTP client. When application servers are migrated, which can be done at anytime, the remote directory will change.
 
+### I can't move files from one folder to another.
+This is a known limitation of using SFTP for on-server development on the platform. You can work around the limitation by transfering the files from your local machine or using rsync.
+
 ### Connection Issues
 
     Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
