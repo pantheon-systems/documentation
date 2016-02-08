@@ -44,3 +44,4 @@ We've included CLI instructions in many of our articles and guides.
 - [LDAP and LDAPS](/docs/articles/sites/code/ldap-and-ldaps)
 - [Private Files with Drupal](/docs/articles/sites/private-files)
 - [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files)
+- [The Terminus Drush Extension (Deprecated)](docs/articles/local/terminus-the-pantheon-command-line-interface/)
