@@ -88,7 +88,7 @@ If you are seeing frequent problems with external web services, it's a good idea
 ## Overloaded Workers
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
-<script src="https://gist.github.com/timani/412437aa8c1e5e6b5abe.js"></script>
+<script src="//gist.github.com/timani/412437aa8c1e5e6b5abe.js"></script>
 
 ### Fix Errors
 

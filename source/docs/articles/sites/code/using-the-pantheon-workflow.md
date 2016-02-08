@@ -63,7 +63,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 * [Features module](http://drupal.org/project/features): Export sets of configuration like content types and fields to code as modules. 
 
-* Drupal 8 is tackling configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/docs/articles/drupal/8/configuration-management/).
+* Drupal 8 is tackling configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/docs/articles/drupal/drupal8/configuration-management/).
 
 ## Uncommon Workflows
 

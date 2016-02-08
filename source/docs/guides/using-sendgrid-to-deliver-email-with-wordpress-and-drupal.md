@@ -39,7 +39,7 @@ Simply enter your site's SendGrid account credentials and select the desired the
 
 ![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
 
-Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, [click here](#deliverability).
+Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
 ## Drupal
 
