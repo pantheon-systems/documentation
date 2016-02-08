@@ -29,7 +29,7 @@ terminus drush --site=<site> --env=<env> "watchdog-show --tail"
 
 ### WordPress
 
-Set the WP_DEBUG variable to "true" within your wp-settings.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
+Set the WP_DEBUG variable to "true" within your wp-config.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
 
 ```php
 define('WP_DEBUG', true);
