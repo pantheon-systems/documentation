@@ -108,7 +108,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 This is by design. Please see [Using the Pantheon Workflow
 ](/docs/articles/sites/code/using-the-pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
-### My SFTP client takes a long time to connect
+### My SFTP client takes a long time to connect.
 
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
 
@@ -119,6 +119,9 @@ Your SSH connection may be using a slow encryption protocol. Configuring your SS
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
 
 Do not specify a default remote directory within your SFTP client. When application servers are migrated, which can be done at anytime, the remote directory will change.
+
+### I can't move files from one folder to another.
+This is a known limitation of using SFTP for on-server development on the platform. You can work around the limitation by transferring the files from your local machine or using rsync.
 
 ### Connection Issues
 
