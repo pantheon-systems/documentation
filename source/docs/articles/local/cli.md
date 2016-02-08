@@ -8,7 +8,7 @@ keywords: pantheon, terminus, command line, cli
 ---
 Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.
 
-Terminus is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github"). 
+Terminus is developed and supported at [https://github.com/pantheon-systems/cli](https://github.com/pantheon-systems/cli "Pantheon's Terminus -CLI- Project on Github").
 
 ## Installation
 Installation instructions can be found in the [project readme](https://github.com/pantheon-systems/cli#installation "Pantheon CLI readme, installation page on Github").
@@ -44,4 +44,4 @@ We've included CLI instructions in many of our articles and guides.
 - [LDAP and LDAPS](/docs/articles/sites/code/ldap-and-ldaps)
 - [Private Files with Drupal](/docs/articles/sites/private-files)
 - [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files)
-- [The Terminus Drush Extension (Deprecated)](docs/articles/local/terminus-the-pantheon-command-line-interface/)
+- [The Terminus Drush Extension (Deprecated)](/docs/articles/local/terminus-the-pantheon-command-line-interface/)
