@@ -9,7 +9,7 @@ The Original Terminus project was a Drush extension and is now **deprecated**. I
 
 ## Terminus 1 Project
 
-You can still see the original, unmaintained Drush extension at [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus).
+You can still see the original, unmaintained Drush extension at [https://github.com/pantheon-systems/terminus-deprecated](https://github.com/pantheon-systems/terminus-deprecated).
 
 ## Terminus Support
 
