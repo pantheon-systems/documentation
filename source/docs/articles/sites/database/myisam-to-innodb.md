@@ -27,7 +27,7 @@ That's all there is to it—the script will do all the work.
 
 Here's the browser version of the script:
 
-<script src="https://gist.github.com/calevans/9944410.js"></script>
+<script src="//gist.github.com/calevans/9944410.js"></script>
 
 ##Advanced Method
 
@@ -42,7 +42,7 @@ Make sure you have:
 
 Here is the command line script:
 
-<script src="https://gist.github.com/calevans/9943627.js"></script>
+<script src="//gist.github.com/calevans/9943627.js"></script>
 
 Here are the parameters you will need to configure before running the script:
 <dl>

@@ -96,7 +96,7 @@ Pantheon runs the latest stable packaged version in Fedora, which is currently I
 
 Once you have downloaded and enabled the Imagemagick module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
-When creating a new preset, if the "Division by Zero" warning appears, add the `image_allow_insecure_derivatives` conf variable to your settings.php file as described [here](https://www.drupal.org/project/image_allow_insecure_derivatives).
+When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your settings.php file.
 
 ## Troubleshooting and FAQs
 #### What if I need a library not listed here?
