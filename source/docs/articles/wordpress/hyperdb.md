@@ -30,10 +30,10 @@ The following sample configurations can be used in place of the `dp-config.php` 
 
 ### Split Reads Between Master and Replica
 Split reads between the master and the replica, to simply distribute the load between two servers.
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/split-reads.dbconfig.php?footer=minimal"></script>
+<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/split-reads.dbconfig.php?footer=minimal"></script>
 
 ### Pass Frontend Read Queries to Replica, WordPress Dashboard Reads and Writes to Master
 Pass all front-end database read queries to the replica, leaving the master dedicated to WordPress dashboard reads and writes. This can better ensure WordPress dashboard availability during high front-end load.
-<script src="https://gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/master-write-replica-read.dbconfig.php?footer=minimal"></script>
+<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/master-write-replica-read.dbconfig.php?footer=minimal"></script>
 
 In this example, you’ll want [some form of cache fallback](/docs/articles/wordpress/installing-redis-on-wordpress/) if reads to the replica begin failing.

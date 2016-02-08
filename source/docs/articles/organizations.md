@@ -38,8 +38,8 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 
 ### Sites
 
-The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
-[Learn More](/docs/articles/organizations/dashboard/#add-sites-to-your-organization).
+The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**. For more details, see
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/articles/organizations/dashboard/#add-sites-to-your-organization).
 
 ### People
 

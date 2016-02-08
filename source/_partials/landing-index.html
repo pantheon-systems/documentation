@@ -2,49 +2,49 @@
 <h3> All Local Docs</h3>
 <ul class="list-group">
     {% for article in data.local %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.drupal is defined %}
 <h3>All Drupal Docs</h3>
 <ul class="list-group">
     {% for article in data.drupal %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.eight is defined %}
 <ul class="list-group">
     <h3>All Drupal 8 Docs</h3>
     {% for article in data.eight %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.organizations is defined %}
 <h3>All Organization Docs</h3>
 <ul class="list-group">
     {% for article in data.organizations %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.users is defined %}
 <h3>All User Docs</h3>
 <ul class="list-group">
     {% for article in data.users %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.wordpress is defined %}
 <h3>All WordPress Docs</h3>
 <ul class="list-group">
     {% for article in data.wordpress %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.wordpressnetworks is defined %}
 <h3>All WordPress Site Network Docs</h3>
 <ul class="list-group">
     {% for article in data.wordpressnetworks %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 {% elseif page.sites is defined %}
@@ -52,73 +52,73 @@
 <h4><a href="/docs/articles/sites/backups">Backups</a></h4>
 <ul class="list-group">
     {% for article in data.backups %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/code">Code</a></h4>
 <ul class="list-group">
     {% for article in data.code %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/create">Create</a></h4>
 <ul class="list-group">
     {% for article in data.create %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/database">Database</a></h4>
 <ul class="list-group">
     {% for article in data.database %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/domains">Domains</a></h4>
 <ul class="list-group">
     {% for article in data.domains %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/files">Files</a></h4>
 <ul class="list-group">
     {% for article in data.files %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/logs">Logs</a></h4>
 <ul class="list-group">
     {% for article in data.logs %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/migrate">Migrate</a></h4>
 <ul class="list-group">
     {% for article in data.migrate %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/newrelic">New Relic</a></h4>
 <ul class="list-group">
     {% for article in data.newrelic %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/security">Security</a></h4>
 <ul class="list-group">
     {% for article in data.security %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/settings">Settings</a></h4>
 <ul class="list-group">
     {% for article in data.settings %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4><a href="/docs/articles/sites/varnish">Varnish</a></h4>
 <ul class="list-group">
     {% for article in data.varnish %}
-    <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+    <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
 </ul>
 <h4>Miscellaneous</h4>
@@ -149,84 +149,84 @@
     <h3>All Backup Docs</h3>
     <ul class="list-group">
         {% for article in data.backups %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.code is defined %}
     <h3>All Code Docs</h3>
     <ul class="list-group">
         {% for article in data.code %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.create is defined %}
     <h3>All Site Creation Docs</h3>
     <ul class="list-group">
         {% for article in data.create %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.database is defined %}
     <h3>All Database Docs</h3>
     <ul class="list-group">
         {% for article in data.database %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.domains is defined %}
     <h3>All Domain Docs</h3>
     <ul class="list-group">
         {% for article in data.domains %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.files is defined %}
     <h3>All Files Docs</h3>
     <ul class="list-group">
         {% for article in data.files %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.logs is defined %}
     <h3>All Log Docs</h3>
     <ul class="list-group">
         {% for article in data.logs %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.migrate is defined %}
     <h3>All Migration Docs</h3>
     <ul class="list-group">
         {% for article in data.migrate %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.newrelic is defined %}
     <h3>All New Relic Docs</h3>
     <ul class="list-group">
         {% for article in data.newrelic %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.security is defined %}
     <h3>All Security Docs</h3>
     <ul class="list-group">
         {% for article in data.security %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.settings is defined %}
     <h3>All Settings Docs</h3>
     <ul class="list-group">
         {% for article in data.settings %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
         {% endfor %}
     </ul>
     {% elseif page.varnish is defined %}
     <h3>All Varnish Docs</h3>
     <ul class="list-group">
         {% for article in data.varnish %}
-        <li class="list-group-item"><a href="{{ article.url }}"><p> {{ article.title }}</p></a></li>
+        <li class="list-group-item"><p><a href="{{ article.url }}"> {{ article.title }}</a></p></li>
     {% endfor %}
     </ul>
 
