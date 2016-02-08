@@ -33,7 +33,7 @@ sculpin_content_types:
         permalink: pretty
     eight:
         type: path
-        path: docs/articles/drupal/8
+        path: docs/articles/drupal/drupal8
         enabled: true
         permalink: pretty
     local:

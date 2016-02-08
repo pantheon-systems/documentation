@@ -15,9 +15,11 @@ You can still see the original, unmaintained Drush extension at [https://github.
 
 This software is now deprecated and unsupported.
 
-## Terminus Commands
-
 <table>
+<thead>
+<th style="font-size:24px;"> Terminus Commands</th>
+</thead>
+<tbody>
 		<tr>
 			<td><a href="#pantheon-aliases">pantheon-aliases</a></td>
 			<td>Update the Pantheon Drush alias file at ~/.drush/pantheon.aliases.drushrc.php.</td>
@@ -198,6 +200,7 @@ This software is now deprecated and unsupported.
 			<td><a href="#pantheon-sites">pantheon-sites</a></td>
 			<td>List your Pantheon sites.</td>
 		</tr>
+    </tbody>
 	</table>
   <br />
   <dl>
