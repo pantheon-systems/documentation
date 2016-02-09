@@ -154,7 +154,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 ### Wordfence
 **Issue**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
-**Solution**: Disable cookies within the Wordfence options page, see [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
+**Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 <hr>
 
 ## Dynamic Outbound IPs
