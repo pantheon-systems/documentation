@@ -10,7 +10,7 @@ category:
   - managing
   - going-live
 ---
-You must configure your domain's DNS to route traffic to your Pantheon site.
+You'll need to go to your DNS hosting provider to configure your domain's DNS to route traffic to your Pantheon site.
 
 ## Step 1: Determine the URL to Serve From
 
