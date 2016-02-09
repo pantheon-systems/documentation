@@ -83,9 +83,9 @@ $baseUrl = '/ckfinder/userfiles/';
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
-`
+```
 $conf['plupload_temporary_uri'] ='public://temp';
-`	  
+```
 <hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
@@ -138,6 +138,11 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](https://pantheon.io/docs/articles/sites/varnish/caching-advancedtopics/) for details on how to bypass Varnish.
 <hr>
 
+### Revive Old Post
+**Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
+
+<hr>
+
 ### Sucuri Scanner
 **Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the binding ID of the file path will change with routine platform maintenance.
 <hr>
@@ -146,9 +151,10 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Issue**: TimThumb is no longer supported or maintained. See [https://code.google.com/p/timthumb/](https://code.google.com/p/timthumb/).
 <hr>
 
-### Revive Old Post
-**Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
+### Wordfence
+**Issue**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
+**Solution**: Disable cookies within the Wordfence options page, see [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 <hr>
 
 ## Dynamic Outbound IPs
