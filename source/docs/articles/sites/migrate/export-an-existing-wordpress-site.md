@@ -25,7 +25,7 @@ Popular plugins like [Duplicator](/docs/articles/wordpress/clone-a-wordpress-sit
 You can simply upload the archive file produced and Pantheon will do the rest.  If you cannot package your site as a single archive less than 500MB, create the archives [manually](#manually-create-separate-site-archives) and import the files separately.
 <div class="alert alert-danger" role="alert">
 <strong>Warning</strong>:  Archives cannot contain multiple <code>.sql</code> files, otherwise the import will fail.</div>
-For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate#move-in).
+For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate#import-your-site).
 
 ## Manually Create Separate Site Archives
 
@@ -99,6 +99,6 @@ You can upload each of your archive files separately, or package the archives wi
 Only provide one `.sql` file; if multiple are present the import will fail.
 
 ## Next Steps
-- [Migrate Sites to Pantheon](/docs/articles/sites/migrate#move-in)
+- [Migrate Sites to Pantheon](/docs/articles/sites/migrate#import-your-site)
 - [Migrate to Pantheon: Manual Site Import Outside of the Pantheon Dashboard](/docs/articles/sites/migrate/manual-site-import/)
 - [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/)

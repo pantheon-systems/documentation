@@ -6,7 +6,7 @@ keywords: drupal, multisite
 
 Pantheon only supports one application codebase and one database per site. We do not recommend using database prefixes or offer support for Drupal Multisite implementations. If you are currently struggling with a Drupal Multisite and want to use Pantheon, you'll need to "unwind" the implementation, separating it into individual sites. You may also create a custom upstream if appropriate for your use-case.
 
-## Migrate One Site Out of a Multisite to Pantheon 
+## Migrate One Site Out of a Multisite to Pantheon
 
 This method will safely migrate a single site out of your Drupal Multisite and into Pantheon. You may experience some issues, such as  warnings from Launch Check about multisite, but they are generally false positives, and you can clean that up once the site is liberated and on it's own.
 
@@ -37,7 +37,7 @@ This method requires one of the following organization service levels with custo
 
 1. Create a [custom upstream](/docs/articles/organizations/adding-a-custom-upstream/) based on the multisite configuration.
 
-2. [Archive](/docs/articles/sites/migrate/#pack-up) each of your sites.
+2. [Archive](/docs/articles/sites/migrate#create-archives) each of your sites.
 
 3. [Create a new site](https://dashboard.pantheon.io/sites/create) based on the upstream.
 
