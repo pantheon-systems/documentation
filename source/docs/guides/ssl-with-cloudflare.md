@@ -101,22 +101,18 @@ Pantheon already handles the necessary environment settings to ensure that Drupa
 
 On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`. Note that you will need to _replace_ the existing code that sets these constants, since constants can only be defined once:
 
-    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])):
+      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev'):
         $domain = 'sandbox.mysite.com';
-      }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test') {
+      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test'):
         $domain = 'staging.mysite.com';
-      }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
+      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
         $domain = 'www.mysite.com';
-      }
-      else {
+      else:
         # Fallback value for multidev or other environments.
         # This covers environment-sitename.pantheon.io domains
         # that are generated per environment.
         $domain = $_SERVER['HTTP_HOST'];
-      }
 
       # Define constants for WordPress on Pantheon.
       define('WP_HOME', 'https://' . $domain);
