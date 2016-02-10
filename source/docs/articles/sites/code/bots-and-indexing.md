@@ -47,14 +47,14 @@ The pantheon.io domains are ONLY intended for development use and cannot be used
 
  You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
- Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a gotpantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
+ Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
 
     // Redirect to force indexing with custom domain sitemap
     $subject = $_SERVER['HTTP_HOST'];
     $pattern = '#/pantheon.io/sitemap.xml$/#';
     preg_match($pattern, $subject, $matches);
     $counted = count($matches);
-    if ($counted > 0 ) {
+    if (($counted > 0 ) && (php_sapi_name() != "cli")) {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: http://yoursite.com/sitemap.xml'. $_SERVER['REQUEST_URI']);
         exit();
