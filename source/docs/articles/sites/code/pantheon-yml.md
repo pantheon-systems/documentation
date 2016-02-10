@@ -45,4 +45,4 @@ workflows:
 3. If the file contents are invalid, it will reject the commit.
 4. Once committed, the platform makes a copy of the file and sends it to our automation infrastructure provider. 
 5. When developers run workflows identified in the file’s `workflows:` section, it will perform the user-specified operations before or after the platform workflow runs. 
-6. If project configurations have changed, the platform will deploy those changes to the site environments. 
+6. If project configuration has changed, the platform will deploy those changes to the environment where the pantheon.yml file was deployed.
