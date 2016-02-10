@@ -66,19 +66,16 @@ Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-sp
           }
 
 // Configs for All environments but Live
-else {
-  //
-  // Activate Development Plugins
-  //
-    require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-        foreach ($plugins as $plugin);
-        if(is_plugin_active($plugin))false;
-            activate_plugin($plugin);
-  // Enable development mode for jetpack
-    add_filter( 'jetpack_development_mode', '__return_true' );
-  // Change options
-    update_option( 'admin_email', 'dev@ouragency.com' );
-    update_option( 'users_can_register', 0 );
+  else {
+    //
+    // Activate Development Plugins
+    //
+      require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+          foreach ($plugins as $plugin);
+          if(is_plugin_active($plugin))false;
+              activate_plugin($plugin);
+    // Enable development mode for jetpack
+      add_filter( 'jetpack_development_mode', '__return_true' );
 
 }
 
@@ -92,19 +89,5 @@ Plugins with development-specific filters can be enabled in Dev, for development
 
 The [Developer plugin](https://wordpress.org/plugins/developer/) by Automattic checks whether you have recommended development plugins enabled on your site. Adding those plugins to your codebase and then adding them to the $plugins array in the example plugin will ensure this happens automatically.
 
-## Recommended Development Plugins
+## Modifying Options
 
-- [wp-reroute-email](https://wordpress.org/plugins/wp-reroute-email/)
-- [developer](https://wordpress.org/plugins/developer/)
-
-## Recommended Development Filters
-
-- [pre_option_(option_name)](https://codex.wordpress.org/Plugin_API/Filter_Reference/pre_option_(option_name))
-- [jetpack_development_mode](http://jetpack.me/support/development-mode/)
-
-## Recommended Development Options
-### Core Options
-- [admin_email]()
-- [users_can_register]()
-
-Have another to suggest? [Edit this doc!](https://github.com/pantheon-systems/documentation/edit/master/source/docs/articles/wordpress/environment-specific-config-mu-plugin.md)
