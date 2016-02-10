@@ -8,50 +8,47 @@ keywords: Drupal drush, command line, drupal, terminus drush, cli
 ---
 [Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Drush commands require a `settings.php` file and it's considered a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file, however you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) or [Git](/docs/articles/local/starting-with-git) for Drush to work on older Drupal versions. For more details on this file, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
+Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) or [Git](/docs/articles/local/starting-with-git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/).
 
 ## Terminus Drush and Local Drush
 Drush-savvy developers should also install and utilize [Terminus](/docs/articles/local/cli/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
-You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
 ## Drush Versions
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/docs/articles/local/drush-versions).
 
-## Install Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file will allow you to run Drush calls against your Pantheon site environments. You don't need to download the Drush aliases file if you're using Terminus to invoke Drush.
+## Download Drush Aliases Locally
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. You don't need to download the Drush aliases file if you're using Terminus to invoke Drush.
 
-There are two methods for obtaining the aliases:
+There are two ways to obtain the aliases, either with Terminus or through the Dashboard.
 
 ### Download with Terminus, the Pantheon CLI
-Once authenticated to Pantheon with `$ terminus auth login`, update your local aliases file.
+Once authenticated to Pantheon with `$ terminus auth login`, update your local aliases file:
 ```nohighlight
 $ terminus sites aliases
 Pantheon aliases updated. [ok]
 'drush' cache was cleared [success]
 ```
-### Download and Move the File Manually
+### Download Using the Dashboard
 
-To get started, go to your Pantheon Dashboard and click **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file will be named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.<br />
-![Link to Pantheon Drush Aliases](/source/docs/assets/images/desk_images/169655.png)
+Go to your Pantheon User Dashboard and click **Sites** > **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file is named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.<br />
+![Link to Pantheon Drush Aliases](/source/docs/assets/images/drush-aliases.png)
 
-###Install the Pantheon Drush Aliases
+## Install the Pantheon Drush Aliases
 
-If you are on Linux/Mac OS environment, put the generated pantheon.aliases.drushrc.php in either the `$HOME/.drush` directory.
+If you are on Linux/Mac OS environment, put the generated pantheon.aliases.drushrc.php in the `$HOME/.drush` directory.
 
-When the aliases have been installed, clear the Drush cache:
+When the aliases have been installed, clear the Drush cache:  
+`$ drush cc drush`
 
-```bash
-$ drush cc drush
-```
 
 ## List Available Site Aliases
 
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 
-```bash
-$ drush sa
-```
+`$ drush sa`
+
 <div class="alert alert-info">
 <h4>Note</h4>
 You must be a <a href="/docs/articles/sites/team-management/#team-management">team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are team members. The alternative is to execute Drush commands via <a href="/docs/articles/local/cli">Terminus</a> for sites in which you are not a direct team member.
@@ -59,11 +56,9 @@ You must be a <a href="/docs/articles/sites/team-management/#team-management">te
 
 ## Execute a Drush Command on a Pantheon Site Environment
 
-Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:
+Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
+`drush @pantheon.SITENAME.ENV COMMAND`
 
-```bash
-drush @pantheon.SITENAME.ENV COMMAND
-```
 For example, to see the status of a site:
 
 ```nohighlight
@@ -81,7 +76,7 @@ Drupal user : Anonymous
 ```
 ## Add Modules and Themes with Drush
 
-Drush can be a very quick way to set up a new site by adding modules and themes. To use this workflow, first make sure your Dev or MultiDev environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command:
+Drush is the fastest way to install a suite of modules or themes into your Pantheon project. Make sure your Dev or Multidev environment is in SFTP mode, allowing Drush to write new files, then use the `dl` command:
 
 ```nohighlight
 drush @pantheon.drupal-7-sandbox.dev dl views panels ctools media
@@ -101,32 +96,31 @@ Project media (7.x-1.3) downloaded to [success]
 Project media contains 3 modules: media_internet, file_entity, media.
 ```
 
-This is the fastest way to install a suite of modules or themes into your Pantheon project.
+<div class="alert alert-danger" role="alert">
+<h4>Warning</h4>
+<strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/articles/sites/code/applying-upstream-updates">Core Updates</a>.
+</div>
 
 ## Use Registry Rebuild on Pantheon
 
 Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
-To rebuild the registry of a site, create a backup from your Dashboard, then run:
-```bash
-drush @pantheon.SITENAME.ENV rr
-```
+To rebuild the registry of a site, create a backup from your Dashboard, then run:  
+`drush @pantheon.SITENAME.ENV rr`
+
 ## Use Site Audit on Pantheon
 
-[Site Audit](https://drupal.org/project/site_audit) is a collection of Drush commands that analyze a site for compliance with Drupal best practices. Originally designed to provide an actionable report prior to load testing and launch, each report can be read using Drush or written as HTML to a file. Site Audit currently only supports Drupal 7 sites.  
+[Site Audit](https://drupal.org/project/site_audit) is a collection of Drush commands that analyze a site for compliance with Drupal best practices. Originally designed to provide an actionable report prior to load testing and launch, each report is read using Drush or written as HTML to a file. Site Audit currently only supports Drupal 7 sites.  
 
-To see all the Site Audit commands on Pantheon, use:
-```bash
-drush @pantheon.SITENAME.ENV help --filter=site_audit
-```
+To see all the Site Audit commands on Pantheon, use:  
+`drush @pantheon.SITENAME.ENV help --filter=site_audit`
+
 To run the best practices report on Pantheon:
-```bash
-drush @pantheon.SITENAME.ENV --detail abp
-```
+`drush @pantheon.SITENAME.ENV --detail abp`
+
 To check caching settings on Pantheon (we recommend that you disable page compression):
-```bash
-drush @pantheon.SITENAME.ENV --vendor=pantheon --detail ac
-```
+`drush @pantheon.SITENAME.ENV --vendor=pantheon --detail ac`
+
 ## Transfer Files Using rsync and Drush
 
 Pantheon provides [rsync](/docs/articles/local/rsync-and-sftp/) as an option for transferring the contents of `sites/default/files` to and from Pantheon.
@@ -139,7 +133,7 @@ drush -r . rsync @pantheon.SITENAME.ENV:%files @self:sites/default/
 ```
 ## Export a Local Database Using Drush
 
-Use the Drush command sql-dump to quickly export your database. Clear your caches first to save space.
+Use the `sql-dump` to quickly export your database. Clear your caches first to save space.
 ```bash
 drush cc all
 drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
@@ -155,15 +149,6 @@ If that option doesn't appeal to you, download a copy of the database from a bac
 ```sql
 gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ```
-## Timeouts When Using Long-Running Migrate or Other Drush Commands
-
-Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Instead, use an option to produce some sort of terminal response.  
-
-For example, if a [migrate](https://drupal.org/project/migrate) command such as migrate-rollback is disconnecting, use the feedback option to produce output:
-```bash
---feedback="1000 items"
-```
-See the [migrate Drush documentation](https://drupal.org/node/1561820) for details.
 
 ## Drush Commands with Known Issues
 
@@ -174,6 +159,8 @@ The following Drush commands are not supported and will not work on Pantheon sit
 `php-eval`
 
 As an alternative to `drush sql-sync` you can use `drush sql-dump` instead.
+=======
+>>>>>>> 80bb4fb... audit drupal drush doc
 
 ## Drush Commands That Alter Site Code
 
@@ -193,7 +180,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 8. Download your Pantheon [Drush aliases](https://pantheon.io/blog/drush-aliases-available).
 9. Clear your Drush cache on each environment. Example: `drush @pantheon.<site-name>.dev cc drush`
 
-If you have successfully set up [Terminus](/docs/articles/local/cli/), the Pantheon CLI, you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
+If you have successfully set up [Terminus](/docs/articles/local/cli/), you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
 
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
@@ -230,12 +217,8 @@ For more information, see [Fix Up Drush Site Aliases with a Policy File](https:/
 ## Use Drush to Update Modules on Pantheon
 
 First, make sure the Dev environment is set to [SFTP mode](/docs/articles/sites/code/developing-directly-with-sftp-mode/) and then run:
-```bash
-drush @pantheon.SITENAME.dev up --no-core
-```
-## Do Not Use Drush to Update Drupal Core on Pantheon
 
-Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. In short, **do not use Drush to update Drupal core on Pantheon**. For more details, see the [Core Updates](/docs/articles/sites/code/applying-upstream-updates/) article.
+`drush @pantheon.SITENAME.dev up --no-core`
 
 ## Troubleshooting
 
@@ -338,7 +321,7 @@ $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; WHEN: Thu Aug 30 12:28:25 2012
 ;; MSG SIZE rcvd: 78
 ```
-As you can see in the output above, the status: REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+As you can see in the output above, the status REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 ```nohighlight
 $ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
@@ -371,12 +354,16 @@ In this example, Google's DNS is able to properly resolve the drush.in hostname.
 
 You can adjust your local settings to use Google's DNS (8.8.8.8) instead of the default provided by your ISP to properly resolve the hostnames.
 
-## Crontab
+### Timeouts When Using Long-Running Migrate or Other Drush Commands
 
-Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
+Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Instead, use an option to produce some sort of terminal response. For example, if a [migrate](https://drupal.org/project/migrate) command such as `migrate-rollback` is disconnecting, use the `--feedback` option to produce output.
+
+See the [Drush Migrate documentation](https://drupal.org/node/1561820) for details.
 
 ## Known Limitations
+- Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
 - [Migrate's support for spawning Drush processes](https://drupal.org/node/1958170) to facilitate batch migrations is not supported on Pantheon.
+- The following Drush commands are not supported and will not work on Pantheon sites: `sql-sync`, `sql-sqlc`, `php-eval`. An alternative to `drush sql-sync` is to use `drush sql-dump` instead.
 - Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
