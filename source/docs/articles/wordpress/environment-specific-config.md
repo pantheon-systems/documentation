@@ -91,3 +91,8 @@ The [Developer plugin](https://wordpress.org/plugins/developer/) by Automattic c
 
 ## Modifying Options
 
+The [`pre_option_(option_name)`](https://codex.wordpress.org/Plugin_API/Filter_Reference/pre_option_(option_name)) filter is the recommended way to change options on an environment basis. 
+
+It runs after the value is pulled from the database, providing the ability to overwrite the option value before it’s used by WordPress.
+
+[`update_option()`](http://codex.wordpress.org/Function_Reference/update_option) should be avoided in this case as the value is only being changed under specific conditions and a database write of the new value is not required.
