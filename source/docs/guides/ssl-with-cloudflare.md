@@ -7,6 +7,7 @@ category:
 authors:
   - joshkoenig
   - iameap
+  - suzannealdrich
 date: 6/1/2015
 ---
 
@@ -26,11 +27,11 @@ When you first register, CloudFlare will direct you immediately towards migratin
 
 In addition to gratis HTTPS service, content distribution, and many nifty security features, CloudFlare also offers the ability to use a CNAME for the "root" domain for your site through something they call [CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
 
-We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. Here are some example DNS settings:
+We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. In addition, using CNAME Flattening is the only way to standardize on HTTPS with a root domain. Here are some example DNS settings:
 
 ![Example DNS Settings](/source/docs/assets/images/cloudflare-dns.png)
 
-In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target.
+In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target. In the case of legacy gotpantheon.com sites, use `edge.live.getpantheon.com` for the CNAME target of the root record.
 
 As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/articles/sites/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
 
@@ -74,14 +75,14 @@ The best way to do this on Pantheon is to make use of our environment variables.
 
     # Set the $base_url parameter if we are running on Pantheon:
 
-    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+    if (defined('PANTHEON_ENVIRONMENT'])) {
+      if (PANTHEON_ENVIRONMENT == 'dev') {
         $domain = 'sandbox.mysite.com';
       }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test') {
+      else if (PANTHEON_ENVIRONMENT == 'test') {
         $domain = 'staging.mysite.com';
       }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
+      else if (PANTHEON_ENVIRONMENT == 'live') {
         $domain = 'www.mysite.com';
       }
       else {
@@ -102,21 +103,18 @@ Pantheon already handles the necessary environment settings to ensure that Drupa
 On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants in your `wp-config.php`. Note that you will need to _replace_ the existing code that sets these constants, since constants can only be defined once:
 
     if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev'):
         $domain = 'sandbox.mysite.com';
-      }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test') {
+      elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'test'):
         $domain = 'staging.mysite.com';
-      }
-      if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
+      elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
         $domain = 'www.mysite.com';
-      }
-      else {
+      else:
         # Fallback value for multidev or other environments.
         # This covers environment-sitename.pantheon.io domains
         # that are generated per environment.
         $domain = $_SERVER['HTTP_HOST'];
-      }
+      endif;
 
       # Define constants for WordPress on Pantheon.
       define('WP_HOME', 'https://' . $domain);
@@ -163,7 +161,7 @@ There are a few things worth noting in the above example:
 
 Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheon.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
 
-## Compatibility and Limitiations
+## Compatibility and Limitations
 
 CloudFlare's free HTTPS service is compatible with browsers and clients that support server name indication (SNI), an extension of the TLS protocol. Whereas traditionally, a single IP address is bound to a single certificate, SNI allows a server to present multiple certificates across multiple domains from the same IP address.
 
