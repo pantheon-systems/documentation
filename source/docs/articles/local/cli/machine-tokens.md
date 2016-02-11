@@ -5,7 +5,8 @@ description: Learn how to create a machine token in order to use Terminus.
 
 Machine tokens are used to uniquely identify your machine and securely authenticate via [Terminus](https://github.com/pantheon-systems/cli#installation), as of the 0.10.2 release.
 
-Machine tokens:      
+Machine tokens:  
+
 * Provide the same access as your username and password  
 * Do not expire   
 * Can only be viewed when you’re creating it  
