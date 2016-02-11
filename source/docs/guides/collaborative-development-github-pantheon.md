@@ -1,6 +1,6 @@
 ---
-title: Collaborative Development Using Github and Pantheon
-description: Learn how to collaborate with your Pantheon team members using Github.
+title: Collaborative Development Using GitHub and Pantheon
+description: Learn how to collaborate with your Pantheon team members using GitHub.
 category:
   - developing
   - drupal
@@ -10,26 +10,26 @@ authors:
   - jessifischer
 date: 4/3/2015
 ---
-While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like Github or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a Github account as the example, although the steps should be similar for any provider.
+While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like GitHub or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a GitHub account as the example, although the steps should be similar for any provider.
 
 ## Git Repositories on Pantheon
 
 The codebase for your site is stored in a Git repository. This includes our versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
-This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at Github") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at Github"),
+This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"),
 or one of their forks that our users manage as [custom upstreams](/docs/articles/organizations/running-a-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location.
 
-These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using Github to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with Github.
+These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with GitHub.
 
 This guide will show you the basics for collaborating with others if your site:
 
-* is only on Pantheon and you’re moving development to Github
-* exists on Github and you want to deploy to Pantheon
+* is only on Pantheon and you’re moving development to GitHub
+* exists on GitHub and you want to deploy to Pantheon
 * isn’t using Git
 * doesn’t yet exist
 
 
-## Synchronizing Existing Pantheon Sites to Github
+## Synchronizing Existing Pantheon Sites to GitHub
 From your Site Dashboard's Development environment, copy the Git SSH clone URL and clone it to your local machine. Your local copy will now track the Pantheon repository as origin.
 
 ```nohighlight
@@ -53,11 +53,11 @@ origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.
 ```
 The output lists "origin" as the the remote with Pantheon SSH Git clone connection information as it's address.
 
-### Create a Repository on Github
+### Create a Repository on GitHub
 
 ![Create a Repository on GitHub](/source/docs/assets/images/create-git-repo.png)
 
-### Add the Github Repository as a Remote
+### Add the GitHub Repository as a Remote
 
 As long as you keep “Initialize this repository with a README” unchecked, you will see options for adding code to your repo. You need to replace the word “origin” in this case, because your local clone is already tracking the Pantheon site repository as origin.
 
@@ -75,9 +75,9 @@ origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.
 Note: Another option is to add another push URL for origin:
 git remote set-url --add origin git@github.com:pantheon-learning/d7-ci.git
 
-What's nice about this is then every time you do a git push origin <branch> code will be pushed to Github and Pantheon simultaneously.
+What's nice about this is then every time you do a git push origin <branch> code will be pushed to GitHub and Pantheon simultaneously.
 
-### Push the Pantheon Site's Codebase to Github
+### Push the Pantheon Site's Codebase to GitHub
 
 ```nohighlight
 $ git push -u github master
@@ -88,12 +88,12 @@ To git@github.com:pantheon-learning/d7-ci.git
 Branch master set up to track remote branch master from github.
 ```
 
-The repository on Github now has all of the same code as my site.
+The repository on GitHub now has all of the same code as my site.
 
 ![GitHub repo same as site](/source/docs/assets/images/github-repo-origin-sameas-remote.png)
 
-## Synchronizing Existing Site Repositories on Github With Pantheon
-This process will follow the same general procedures as moving your repo from Pantheon to Github, in reverse.
+## Synchronizing Existing Site Repositories on GitHub With Pantheon
+This process will follow the same general procedures as moving your repo from Pantheon to GitHub, in reverse.
 
 ### Create the Site
 
@@ -133,7 +133,7 @@ Automatic merge went well; stopped before committing as requested
 3. Now pull from your Pantheon repository master branch: `git pull pantheon master`. Handle any conflicts as needed.
 4. Git push back to your Pantheon site repository: `git push pantheon master`
 5. Go to the **Code tab** of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
-6. Push the repo with the newly updated core files to Github.
+6. Push the repo with the newly updated core files to GitHub.
   `$ git push origin master`
 
 ![Pantheon Dashboard with Commit Messages](/source/docs/assets/images/pantheon-dashboard-git-commit-messages.png)
@@ -174,7 +174,7 @@ master b802550] Create settings.php
  create mode 100644 sites/default/settings.php
 ```
 
-You’re ready to push the change to Github and Pantheon.
+You’re ready to push the change to GitHub and Pantheon.
 
 ```nohighlight
  $ git push github master
@@ -235,9 +235,9 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 
 ![Commit deployed to Pantheon Dashboard](/source/docs/assets/images/commit-deployed-pantheon-dashboard.png)
 
-The Github repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
+The GitHub repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
-Before I continue having to remember which remote, Github or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon and verify.
+Before I continue having to remember which remote, GitHub or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon and verify.
 ```nohighlight
 $ git remote rename origin pantheon
 $ git remote -v
@@ -249,7 +249,7 @@ pantheon	ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.de
 
 ## Feature Branching
 
-Working with teams on Github requires a branching strategy. We are fans of Github flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on Github](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/docs/articles/sites/team-management).
+Working with teams on GitHub requires a branching strategy. We are fans of GitHub flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/docs/articles/sites/team-management).
 Locally, our codebase is in sync with both repositories. In order to start working on a new feature, we’ll checkout a branch. Since my site is associated with a supporting organization that has Multidev, I can test out any feature in a Multidev environment. These environments have an 11-character limit for branch names, so I'm choosing to use short branch names for my feature branches.  
 
 ```nohighlight
@@ -263,7 +263,7 @@ In my local environment, I'm going to download the module and its dependencies:
 ```nohighlight
 $ drush dl configuration-7.x-2.x-dev xautoload
 ```
-After I enable the module, I test and verify that the module is working. Next I'll add, commit, and push to branches on Pantheon and Github.
+After I enable the module, I test and verify that the module is working. Next I'll add, commit, and push to branches on Pantheon and GitHub.
 ```nohighlight
 $ git status
 On branch configs
@@ -300,7 +300,7 @@ The platform is telling me that no Multidev environments were found associated w
 $ terminus site create-env --site=d7-ci --to-env=configs --from-env=dev
 ```
 ![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
-The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my Github pull request.
+The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my GitHub pull request.
 
 ![New environment configuration admin url](/source/docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
 
@@ -327,7 +327,7 @@ $ git push pantheom master
 
 Once we have the basic setup, there are other options to further optimize workflows:
 
-* A Continuous Integration Server like Jenkins, TravisCI, Bamboo, or CircleCI
+* A continuous integration server like Jenkins, Travis CI, Bamboo, or CircleCI
 * A suite of automated acceptance tests using Behat or PHPUnit
 
 These tools will allow your team to fully implement continuous delivery with automated testing and continuous integration.
