@@ -46,7 +46,7 @@ Find more Pantheon provided credentials in the site Dashboard's connection infor
 - [Developing on Pantheon Directly with SFTP Mode](/docs/articles/sites/code/developing-directly-with-sftp-mode#sftp-connection-information)
 - [Starting with Git](/docs/articles/local/starting-with-git/)
 - [Accessing MySQL Databases](/docs/articles/local/accessing-mysql-databases/)
-- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend#using-the-redis-command-line-client)
+- [Redis as a Caching Backend](/docs/articles/sites/redis-as-a-caching-backend#use-the-redis-command-line-client)
 - [Loading SSH Keys](/docs/articles/users/loading-ssh-keys/)
 ## The Pantheon Workflow
 Learn more about the [Pantheon workflow](/docs/articles/sites/code/using-the-pantheon-workflow/), both for code deployment and content (database and files).

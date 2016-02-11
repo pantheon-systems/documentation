@@ -12,7 +12,7 @@ Planned and in-progress work for Drupal 8 documentation on Pantheon can be track
 The following platform features are not yet available on Pantheon for sites running Drupal 8:
 
  - [Solr](/docs/articles/sites/apache-solr)
- - [Redis](/docs/articles/sites/redis-as-a-caching-backend#using-redis-with-drupal-8)
+ - [Redis](/docs/articles/sites/redis-as-a-caching-backend/#using-redis-with-drupal-8)
  - The [Status tool's](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis) [Site Audit](https://www.drupal.org/project/site_audit) functionality
 
 For more details on Pantheon's platform support for Drupal 8, follow the [Pantheon D8 issue on GitHub](https://github.com/pantheon-systems/drops-8/issues?q=is%3Aopen).
