@@ -149,7 +149,7 @@ drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
 The `drush sql-sync` command works on Pantheon as of Drush version 8.0.4. An alternative would be to use `drush sql-dump` and `drush sql-connect` to transfer the database over a pipe:
 
 ```bash
-drush @pantheon.mysite.dev sql-dump | $(drush @pantheon.mysite.multidev connect)
+drush @pantheon.mysite.dev sql-dump | $(drush @pantheon.mysite.multidev sql-connect)
 ```
 If that option doesn't appeal to you, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
 ```sql
