@@ -37,7 +37,8 @@ Pantheon's www-redirection service automatically redirects requests to the www s
 ```
 // Require WWW.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-  $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
       $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
     header('HTTP/1.0 301 Moved Permanently');
@@ -64,7 +65,8 @@ To direct all traffic to the bare domain using CloudFlare:
  ```
     // Redirect all traffic to non-www. For example yoursite.com
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' ||
           $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
         header('HTTP/1.0 301 Moved Permanently');
@@ -80,13 +82,15 @@ To direct all traffic to the bare domain using CloudFlare:
 To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
+    // Check if Drupal is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTPS'] === 'OFF') {
-      if (!isset($_SERVER['HTTP_X_SSL']) ||
-        (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
-        header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-        exit();
+      ($_SERVER['HTTPS'] === 'OFF') &&
+      (php_sapi_name() != "cli")) {
+      if (!isset($_SERVER['HTTP_X_SSL']) ||
+        (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+        exit();
       }
     }
 
@@ -98,8 +102,10 @@ If you don't want to have your whole site under HTTPS, we recommend using a secu
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
+    // Check if Drupal is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTPS'] === 'ON') {
+      ($_SERVER['HTTPS'] === 'ON') &&
+      (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         // If admin, redirect to secure.
         if (preg_match('/^\/admin/', $_SERVER['REQUEST_URI'])) {
@@ -116,7 +122,8 @@ To use HTTPS everywhere and standardize on your domain (e.g. `www.yoursite.com`)
 
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
           $_SERVER['HTTP_X_SSL'] != 'ON' ) {
@@ -159,7 +166,8 @@ To redirect from a subdomain to a specific area of the site, use the following:
 
     // Redirect subdomain to a specific path.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') {
+      ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+      (php_sapi_name() != "cli")) {
       $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
       header('HTTP/1.0 301 Moved Permanently');
       header("Location: $newurl");
@@ -173,7 +181,8 @@ The same technique works for single subdomain redirects. Just specify the path i
 ## Redirect From One Path to Another
 
     // 301 Redirect from /old to /new.
-    if ($_SERVER['REQUEST_URI'] == '/old') {
+    if (($_SERVER['REQUEST_URI'] == '/old') &&
+      (php_sapi_name() != "cli")) {
       header('HTTP/1.0 301 Moved Permanently');
       header('Location: /new');
       exit();
@@ -183,7 +192,8 @@ The same technique works for single subdomain redirects. Just specify the path i
 
     // Redirect multiple subdomains to a single domain.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      (php_sapi_name() != "cli")) {
       if (in_array($_SERVER['HTTP_HOST'], array(
         'sub1.youroldwebsite.com',
         'sub2.youroldwebsite.com',

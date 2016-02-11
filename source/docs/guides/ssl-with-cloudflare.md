@@ -145,7 +145,8 @@ You can also achieve this by writing your own redirection code into your `settin
 
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
          ($_SERVER['HTTP_X_FORWARDED_PROTO'] != 'https' ||
-         $_SERVER['HTTP_HOST'] != $domain)) {
+         $_SERVER['HTTP_HOST'] != $domain) &&
+         (php_sapi_name() != "cli")) {
       header('HTTP/1.0 301 Moved Permanently');
       header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
       header('Cache-Control: public, max-age=3600');
