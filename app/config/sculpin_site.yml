@@ -29,87 +29,87 @@ assets_version: 1.12
 authors:
   bmackinney:
       name: Brian MacKinney
-      url: http://brianmackinney.com
-      avatar: http://www.gravatar.com/avatar/d942a7d4b38d10e4f4ebab9cb148d9f9.png
+      url: //brianmackinney.com
+      avatar: //www.gravatar.com/avatar/d942a7d4b38d10e4f4ebab9cb148d9f9.png
       twitter: BrianMacKinney
-      github: https://github.com/bmackinney
-      drupal: https://www.drupal.org/u/brian-mackinney
-      wordpress: https://profiles.wordpress.org/brian-mackinney
-      linkedin: https://www.linkedin.com/in/bmackinney/en
+      github: //github.com/bmackinney
+      drupal: //www.drupal.org/u/brian-mackinney
+      wordpress: //profiles.wordpress.org/brian-mackinney
+      linkedin: //www.linkedin.com/in/bmackinney/en
       bio: Instructional Designer, user of Drupal, WordPress, and Pantheon. Baseball, Surfing, and camping with family on weekend.
   calevans:
       name: Cal Evans
-      url: http://calevans.com
-      avatar: http://2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
+      url: //calevans.com
+      avatar: //2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
       twitter: calevans
-      github: https://github.com/calevans
+      github: //github.com/calevans
       bio: For the past 13 years Cal has worked with PHP and MySQL on Linux, OSX, and Windows. He has built a variety of projects ranging in size from simple web pages to multi-million dollar web applications. When not banging his head on his monitor, attempting a blood sacrifice to get a particular piece of code working, he enjoys building and managing development teams using his widely imitated but never patented management style of “management by wandering around”.These days, when not working with PHP, Cal can be found working on a variety of projects like CoderFaire. He speaks at conferences around the world on topics ranging from technical talks to motivational talks for developers. If you happen to meet him at a conference, don’t be afraid to buy him a shot of Bourbon.Cal is based in Nashville TN where he is happily married to wife 1.31, the lovely and talented Kathy. Together they have 2 wonderful kids. From blog.calevans.com/epk
   ari:
       name: Ari Gold
-      avatar: https://secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg  twitter: http://twitter.com/AriAtPantheon
-      github: https://github.com/ari-gold
-      drupal: https://www.drupal.org/user/329006/
+      avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg  twitter: http://twitter.com/AriAtPantheon
+      github: //github.com/ari-gold
+      drupal: //www.drupal.org/user/329006/
       bio:  Enterprise Onboarding Manager
   jessifischer:
       name: Jessi Fischer
-      avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/JessiNew.jpg
-      github: https://github.com/JessiFischer
-      drupal: https://www.drupal.org/u/jayelebun
-      linkedin: https://www.linkedin.com/in/jessifischer
+      avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JessiNew.jpg
+      github: //github.com/JessiFischer
+      drupal: //www.drupal.org/u/jayelebun
+      linkedin: //www.linkedin.com/in/jessifischer
       bio: Enterprise Onboarding Manager
   erikmathy:
       name: Erik Mathy
-      avatar: http://www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
+      avatar: //www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
       twitter: 1gearnobrains
-      linkedin: http://www.linkedin.com/pub/erik-mathy/28/b51/627/en
+      linkedin: //www.linkedin.com/pub/erik-mathy/28/b51/627/en
       bio: Enterprise Onboarding Manager
   populist:
       name: Matt Cheney
-      avatar: https://avatars1.githubusercontent.com/u/520521
+      avatar: //avatars1.githubusercontent.com/u/520521
       twitter: populist
       bio: Website developer extraordinaire
   joshkoenig:
       name: Josh Koenig
-      avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
+      avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
       twitter: outlandishjosh
-      linkedin: http://www.linkedin.com/in/joshkoenig
+      linkedin: //www.linkedin.com/in/joshkoenig
       bio: Co-Founder & Head of Developer Experience
   kate:
       name: Kate Kligman
-      avatar: https://pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg
+      avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg
       twitter: KateKligman
-      linkedin: http://www.linkedin.com/in/katekligman
+      linkedin: //www.linkedin.com/in/katekligman
       bio: Open source contributor, indie game developer, retro gamer
   iameap:
       name: Eric Peterson
-      url: https://www.eric.pe/terson
-      avatar: https://s.gravatar.com/avatar/0cd9fdc3a5e346d8fd7b74c527a93346?s=300
+      url: //www.eric.pe/terson
+      avatar: //s.gravatar.com/avatar/0cd9fdc3a5e346d8fd7b74c527a93346?s=300
       twitter: iamEAP
-      gplus: https://plus.google.com/+iamEAP
-      github: https://github.com/iamEAP
-      linkedin: https://www.linkedin.com/in/iamEAP
-      drupal: https://www.drupal.org/u/iamEAP
+      gplus: //plus.google.com/+iamEAP
+      github: //github.com/iamEAP
+      linkedin: //www.linkedin.com/in/iamEAP
+      drupal: //www.drupal.org/u/iamEAP
       bio: Marketing engineering
   rvtraveller:
       name: Brian Thompson
-      avatar: https://www.gravatar.com/avatar/7260ed8618de5108bb3ddc6e6dea88f2.png
+      avatar: //www.gravatar.com/avatar/7260ed8618de5108bb3ddc6e6dea88f2.png
       twitter: rvtraveller26
-      linkedin: https://www.linkedin.com/in/1briant
+      linkedin: //www.linkedin.com/in/1briant
       bio: Developer by day, techie and gamer by night, camper on the weekends
   eeeschwartz:
     name: Erik Schwartz
-    url: http://erikschwartz.net
-    avatar: https://s.gravatar.com/avatar/bd808f082e76f519e9dcfe6ae8a2e7ca?s=80
+    url: //erikschwartz.net
+    avatar: //s.gravatar.com/avatar/bd808f082e76f519e9dcfe6ae8a2e7ca?s=80
     twitter: eeeschwartz
-    github: https://github.com/eeeschwartz/
-    linkedin: https://www.linkedin.com/in/eeeschwartz
+    github: //github.com/eeeschwartz/
+    linkedin: //www.linkedin.com/in/eeeschwartz
     bio: Civic developer, human centered!
   suzannealdrich:
       name: Suzanne Aldrich
-      url: https://suzanne.link
-      avatar: https://s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
+      url: //suzanne.link
+      avatar: //s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
       twitter: SuzanneAldrich
-      github: https://github.com/suzannealdrich
-      linkedin: https://www.linkedin.com/in/suzannealdrich
-      drupal: https://www.drupal.org/u/suzanne.aldrich
+      github: //github.com/suzannealdrich
+      linkedin: //www.linkedin.com/in/suzannealdrich
+      drupal: //www.drupal.org/u/suzanne.aldrich
       bio: Web technologist specializing in security, performance, and usability.
