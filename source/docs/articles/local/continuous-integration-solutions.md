@@ -33,7 +33,7 @@ The end result is written to http://dev-yoursitename.pantheon.io/sites/default/f
 
 ## Integration Bot
 
-We recommend creating a bot user account that will handle the tasks or jobs by an external continuous intergration service rather a standard user account.
+We recommend creating a bot user account that will handle the tasks or jobs by an external continuous integration service rather a standard user account.
 
 - Add the bot to select projects
 - Manage separate SSH Keys for CI
