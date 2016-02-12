@@ -41,7 +41,7 @@ Due to <a href="https://codex.wordpress.org/Upgrading_WordPress_-_Extended_Instr
 * If you’ve been using the database for things other than Drupal or WordPress, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
 ### Plan the Import
-You can import during the site creation process using the importer tool or manually after the site has been created. Importing after creation requires you to upload code via Git, along with separate imports of your database and files. Existing Drupal 8 sites must be imported manually.
+You can import during the site creation process using the importer tool or manually after the site has been created.
 
 **The Importer Tool**
 
@@ -49,11 +49,11 @@ Using our importer during the site creation process has the following effects on
 
  - New git history
  - Replacement and upgrade to the latest core version from our [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [WordPress](https://github.com/pantheon-systems/wordpress) repository
- - Assignment of the appropriate "vanilla" repository above as the code upstream, used for updating Drupal and WordPress core on the site
+ - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
 
 <div class="alert alert-danger" role="alert"><h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
-The importer accepts either single file site archives or separate archives of the code, database, and files. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include tar, zip, or gzip.
+The importer accepts either single file site archives or separate archives of the code, database, and files. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include `.tar`, `.zip`, `.gzip`, and `.sql`.
 
 File size limits are per archive. Providing three files instead of one effectively increases the entire site import size limit to 1.5GB (500MB code, 500MB database, 500MB files).
 
@@ -73,14 +73,16 @@ Import code, database, and files after creating the site using a combination of 
 
 ### Create Separate Archives of Code, Database, and Files
 
-If your site cannot be packaged as a single archive less than 500MB, or you need to use an upstream other than "vanilla" Drupal or WordPress, you'll need to create separate archives of each part of your site. For step-by-step instructions, see [Exporting an Existing WordPress Site](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives) or [Exporting an Existing Drupal Site](/docs/articles/sites/migrate/export-an-existing-drupal-site#manually-create-archive).
+If your site cannot be packaged as a single archive less than 500MB, you'll need to create separate archives of each part of your site. For step-by-step instructions, see [Exporting an Existing WordPress Site](/docs/articles/sites/migrate/export-an-existing-wordpress-site#manually-create-separate-site-archives) or [Exporting an Existing Drupal Site](/docs/articles/sites/migrate/export-an-existing-drupal-site#manually-create-archive).
 
 ## Import Your Site
 
 ### Import the Site Archive from the Command Line
 Single file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](/docs/articles/local/cli/), the Pantheon command-line interface.
 
-`terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<url>]`
+```
+terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<url>]
+```
 
 ### Create and Name the Site
 
@@ -132,8 +134,10 @@ We recommend:
 
 ### WordPress Troubleshooting
 #### Sessions Error
-`Warning: session_start(): user session functions not defined`  
+```
+Warning: session_start(): user session functions not defined
+```  
 This error means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more on [WordPress and PHP Sessions](https://pantheon.io/docs/articles/wordpress/wordpress-and-php-sessions).
 
 ## Go Live
-Read our [Going Live article](/docs/articles/going-live) and follow the checklist for a successful launch.
+Follow the [Going Live](/docs/articles/going-live) checklist for a successful launch.
