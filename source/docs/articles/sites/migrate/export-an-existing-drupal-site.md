@@ -53,7 +53,7 @@ Executing it from the site root creates a file called drush-archive.tar.gz that'
 <div class="alert alert-info" role="alert"><strong>Note: </strong>
 If you cannot package your site as a single archive less than 500MB, you will need to create the archives <strong><a href="#manually-create-archive">manually</a></strong> and import the files separately.
 </div>
-For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate#move-in).
+For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate#import-your-site).
 
 
 ## Manually Create Archive
@@ -131,5 +131,5 @@ s
 Only provide one `.sql` file; if multiple are present the import will fail.
 
 ## Next Steps
-- [Migrate Sites to Pantheon](/docs/articles/sites/migrate#move-in)
+- [Migrate Sites to Pantheon](/docs/articles/sites/migrate#import-your-site)
 - [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import/)
