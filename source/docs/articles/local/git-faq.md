@@ -9,7 +9,7 @@ keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpre
 
 ## Resolve Conflicts
 
-<p>Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.</p>
+Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
 " data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
@@ -80,8 +80,9 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 ```
 1. From your local repository, run this Git command to get a copy of the file in conflict:
 
- `git checkout <commit ID> -- <file>`<br />
-
+ ```
+ git checkout <commit ID> -- <file>
+ ```
   <div class="alert alert-info" role="alert">
   <h4>Note</h4>
   When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
@@ -96,21 +97,21 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
   new file: README.txt
   ```
 
-3. Run the Git add command:  
-`git add .`
-
-4. After performing the add, commit the file with an accompanying commit message:   
-`git commit -am "verifying missing README.txt"`
-
-  You will receive confirmation from Git that the file has been committed.
+4. Stage and commit:   
+ ```
+ git commit -am "verifying missing README.txt"
+ ```
+ You will receive confirmation from Git that the file has been committed.
 
 5. Run the Git push command:  
-`git push origin master`
+ ```
+ git push origin master
+ ```
 
+For more details, see [Applying Upstream Updates](/docs/articles/sites/code/applying-upstream-updates).
 ## General Git Questions
 ### Does Pantheon support Git submodules?
-
-We don't currently support Git submodules, but we're evaluating if it's the best approach to deliver to our users for managing upstream modules and themes. The best approach is to add and commit the code to Git as normal files.
+No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
 
 ### What are the Git tags?
 ```nohighlight
@@ -145,19 +146,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-<img src="/source/docs/assets/images/icon-performance-optimization.svg" alt="Performance Optimization Icon" style="margin-right:15px;max-height:80px;margin-top:5px;float:left;border:0;"><p style="padding-top:5px;margin-bottom:35px;">
-If you're importing a site that has an existing Git history, you may be able to retain the history if you can successfully merge from the Pantheon upstream.</p>
-
-1. Start a new Pantheon site with a vanilla version of Drupal. Choose the version that's appropriate for your project.
-2. Clone your Pantheon repository using the copy/paste string from the Dashboard.
-3. From within that clone, run something like:  
-`git pull -Xours [your existing repo] [existing site branch]`   
-4. Resolve any conflicts.
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-You will get conflicts on all the binary files (e.g. favicon.ico), but you can just Git add them again.</div>
-5. Once this is done, push back to Pantheon: `git push origin master`
-6. On the Pantheon Dashboard's Git log, we only show the first-parents. This means we will only show the commit you directly push to your Pantheon site, otherwise users would have their changes swamped by Drupal commits after every upgrade. You can run `git log` from within your repository to view your full history.
+For detailed instructions, see [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import).
 
 ### Can I use Git with SFTP mode?
 
@@ -187,7 +176,9 @@ We are updating our infrastructure so that code repositories do not have a singl
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
 If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL:  
-`git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git`  
+```
+git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
+```  
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream, you will have to change origin in the command above.
 
@@ -200,7 +191,9 @@ If you're having problems cloning your Git repository, verify your SSH key in yo
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 The easiest way to find out which SSH keys your Git client is using when trying to connect is to run the following command:  
-`ssh -vT git@code.getpantheon.com`
+```
+ssh -vT git@code.getpantheon.com
+```
 
 The output should be similar to this:
 
@@ -233,17 +226,26 @@ There are a number of patterns and strategies of Git code management for single 
 As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
 ### How do I delete a remote branch?
-Run: `git push origin :branchname`
+Use the `--delete` option:
+```
+git push origin --delete branchname
+```
+Alternatively, you can prefix the branch with a colon.
 
 ### Why are some merged commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:  
-`git log --first-parent`  
+```
+git log --first-parent
+```  
 
 According to the Git Manual, "this option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge."
 
 Pantheon does this so upstream updates or merges from Multidev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
-`git log --graph`
+
+```
+git log --graph
+```
 
 ### Can I use .gitignore on Pantheon?
 
