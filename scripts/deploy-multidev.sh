@@ -11,7 +11,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     if [[ $normalize_branch =~ $valid ]]; then
         export normalize_branch="${normalize_branch:0:11}"
         #Remove - to avoid failures
-        export normalize_branch="${normalize_branch//-}"
+        export normalize_branch="${normalize_branch//[-_]}"
         echo "Success: "$normalize_branch" is a valid branch name."
     else
         echo "Error: Multidev cannot be created due to invalid branch name: $normalize_branch"
