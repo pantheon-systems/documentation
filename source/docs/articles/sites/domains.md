@@ -10,7 +10,7 @@ category:
   - managing
   - going-live
 ---
-You'll need to go to your DNS hosting provider to configure your domain's DNS to route traffic to your Pantheon site.
+Routing traffic to sites on Pantheon requires modifying the DNS configuration at the domain's DNS hosting provider.
 
 ## Step 1: Determine the URL to Serve From
 
@@ -46,9 +46,11 @@ Use the following workaround to allow your local workstation to access your Pant
  23.123.45.6
  ```
 2. Add the desired domain to the Live environment of the Site Dashboard on Pantheon.
-3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">hosts file</a> which includes one of the IP addresses returned in the above dig command followed by the bare domain:  
-`192.123.456.789 example.com`  
+3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">hosts file</a> which includes one of the IP addresses returned in the above dig command followed by the bare domain:
 
+ ```
+ 192.123.456.789 example.com  
+ ```
 ## Step 3: Configure Your DNS
 From the Live environment's Domains/HTTPS tool, click **Show recommended DNS records** to the right of the domains you've added.
 
@@ -61,7 +63,12 @@ Using the provided destinations in the Site Dashboard, create the recommended DN
 To serve your site from the bare domain, you must:
 
 1. Select a DNS provider that supports CNAME flattening, such as [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
-2. Do not add the recommended DNS entries from the Dashboard. Instead, create CNAME records for both the bare domain (@) and the www subdomain, pointing to `live-yoursite.pantheon.io`.
+2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
+
+ ```bash
+ CNAME @ live-yoursite.pantheon.io
+ CNAME www live-yoursite.pantheon.io
+ ```
 3. [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
 One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheon.io`), and creates corresponding A records.
