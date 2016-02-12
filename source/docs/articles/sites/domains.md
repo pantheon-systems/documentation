@@ -69,6 +69,7 @@ To serve your site from the bare domain, you must:
  CNAME @ live-yoursite.pantheon.io
  CNAME www live-yoursite.pantheon.io
  ```
+ ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
 3. [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
 One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheon.io`), and creates corresponding A records.
