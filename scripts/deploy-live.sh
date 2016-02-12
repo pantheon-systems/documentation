@@ -79,7 +79,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] ; then
-    ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --yes
+    ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --remove-branch --yes
   fi
 done
 
