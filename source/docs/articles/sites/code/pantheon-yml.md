@@ -47,6 +47,7 @@ workflows:
 5. When developers run workflows identified in the file’s `workflows:` section, it will perform the user-specified operations before or after the platform workflow runs.
 6. If project configuration has changed, the platform will deploy those changes to the environment where the pantheon.yml file was deployed.
 
+## Validation
 When adding a valid `pantheon.yml` file via Git, you will see the following output on `git push`:
 ```
 remote: PANTHEON NOTICE:
