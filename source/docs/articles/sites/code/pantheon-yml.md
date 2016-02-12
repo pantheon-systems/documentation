@@ -69,6 +69,6 @@ remote: Valid versions are: 1
 
 When adding a valid `pantheon.yml` file via SFTP, you will see the following message on the associated environment:
 
-![uncommitted changes to pantheon.yml](/docs/assets/images/uncommitted-pantheon-yml.png)
+![uncommitted changes to pantheon.yml](/source/docs/assets/images/uncommitted-pantheon-yml.png)
 
 If the file is invalid, commit attempts will fail.
