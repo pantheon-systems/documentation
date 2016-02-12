@@ -69,7 +69,7 @@ Alternatively, you can connect via SFTP using the public [SSH key you uploaded t
 
 Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or to push them to Test/Live. You should commit early and commit often.
 
-After you have made a change to your code, you will see a message that appears bellow the comment box to let you know you have some changes that are not in your repository.
+After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository.
  ![Viewing changes made via SFTP](/source/docs/assets/images/desk_images/278859.png)<br />
 Clicking on the notification message expands the listing of the pending changes.
 
