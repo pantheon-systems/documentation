@@ -69,6 +69,7 @@ To serve your site from the bare domain, you must:
  CNAME @ live-yoursite.pantheon.io
  CNAME www live-yoursite.pantheon.io
  ```
+ The @ value will show the bare domain once created in CloudFlare:
  ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
 3. [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
