@@ -24,17 +24,19 @@ In addition to extremely high overhead costs, common pitfalls include:
 - Last-minute requests for additional resources
 
 
-Pantheon eliminates these risks entirely by running sites on a web-scale infrastructure from start. Provisioning more containers to handle viral traffic happens at the speed of software through an automated process.
+Pantheon eliminates these risks entirely by running sites on a web-scale infrastructure from the start. Provisioning more containers to handle viral traffic happens at the speed of software through an automated process.
 
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack along with isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and enabled addon services such as [Redis](/docs/articles/sites/redis-as-a-caching-backend) and [Apache Solr](/docs/articles/sites/apache-solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/docs/articles/sites/redis-as-a-caching-backend) and/or [Apache Solr](/docs/articles/sites/apache-solr).
 
 For more information on containers, see [All About Application Containers](/docs/articles/sites/all-about-application-containers/).
 
 ## Add and Remove Application Containers
-Application containers can be added by upgrading the site's plan within the Site Dashboard to a Business plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
+Add containers to handle increased traffic by upgrading the site's plan within the Site Dashboard to a Business plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
+
+The platform does not assume when additional containers should be added or removed from the site in response to traffic and/or resource consumption. Only the task to provision or remove the additional container is automated.
 
 ## New Relic
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Enabling New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping our support team visualize corresponding performance and symptoms.
