@@ -28,7 +28,8 @@ When you're ready to test a new set of changes, take your code from Dev, your co
 
 ![Site dashboard, test environment, code section](/source/docs/assets/images/test-env.png)
 
-After running this operation, be sure that:  
+After running this operation, be sure that:
+
 * Your database updates succeed  
 * Your exported configuration is in place  
 * The site is functioning as expected
@@ -65,9 +66,9 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev. There are two ways to update code in Test or Live:
 
-1. **Use the Workflow**: Deploy code from Dev to Test to Live via the Site Dashboard as outlined above.
+1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard as outlined above.
 
-2. **Hotfixes**: We do not recommend hotfixing. Hotfixes should be the exception, not the norm.  Pushing a [hotfix via Git](/docs/articles/sites/code/hot-fixes) is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice.
+2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm.  Pushing a [hotfix via Git](/docs/articles/sites/code/hot-fixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
 ## Other Workflow Tools: Import, Export, Wipe
 
