@@ -10,7 +10,7 @@ For clients with an Elite plan, our dedicated launch team guides you through the
 We recommend that you **prepare the Live environment at least 24 hours before your launch**. If you rush a launch,  the probability of avoidable mistakes and problems will increase.
 
 ## Best Practices for Launching Sites Checklist
-&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Deploy to the Live Environment](/docs/articles/sites/code/using-the-pantheon-workflow/#3.-deploy-code-to-live.)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a Plan for Your Site](/docs/articles/sites/settings/selecting-a-plan/)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
 **Configure Site Monitoring Services:**<br>
