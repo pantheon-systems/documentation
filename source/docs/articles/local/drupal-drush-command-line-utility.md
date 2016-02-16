@@ -19,30 +19,31 @@ You can run all of the commands below from Terminus instead of using Drush alias
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/docs/articles/local/drush-versions).
 
 ## Download Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. You don't need to download the Drush aliases file if you're using Terminus to invoke Drush.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments.
 
 There are two ways to obtain the aliases, either with Terminus or through the Dashboard.
 
 ### Download with Terminus, the Pantheon CLI
-Authenticate Terminus with [machine tokens](/docs/articles/local/cli/machine-tokens/) or Pantheon Dashboard credentials, then update your local aliases file:
+Authenticate Terminus with [machine tokens](/docs/articles/local/cli/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 ```nohighlight
 $ terminus sites aliases
 [info] Pantheon aliases updated
 ```
 ### Download Using the Dashboard
+Download your Pantheon site aliases to manually update your local aliases file:
 
-Go to your Pantheon User Dashboard and click **Sites** > **Download all Drush aliases** to get a compiled list of every Pantheon site you have associated with your account. The resulting file is named pantheon.aliases.drushrc.php. If you add a site to your account, you will have to download a new copy of your Drush aliases.<br />
+1. From your Pantheon User Dashboard, click **Sites** > **Download all Drush aliases**
+2. Move the generated `pantheon.aliases.drushrc.php` into your local drush root directory (e.g. `$HOME/.drush`).
+3. Clear Drush cache:
+
+ ```
+ drush cc cache
+ ```
+
 ![Link to Pantheon Drush Aliases](/source/docs/assets/images/drush-aliases.png)
+If you add a site to your account, you will have to download a new copy of your Drush aliases.
 
-## Install the Pantheon Drush Aliases
-
-If you are on Linux/Mac OS environment, put the generated pantheon.aliases.drushrc.php in the `$HOME/.drush` directory.
-
-When the aliases have been installed, clear the Drush cache:  
-```
-$ drush cc drush
-```
-## List Available Site Aliases
+### List Available Site Aliases
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 ```
 $ drush sa
@@ -101,7 +102,7 @@ Project media contains 3 modules: media_internet, file_entity, media.
 
 ## Use Registry Rebuild on Pantheon
 
-Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [registry\_rebuild](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
+Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
 To rebuild the registry of a site, create a backup from your Dashboard, then run:  
 ```
