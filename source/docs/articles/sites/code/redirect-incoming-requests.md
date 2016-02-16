@@ -83,15 +83,15 @@ To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traff
 
     // Require HTTPS.
     // Check if Drupal is running via command line
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['HTTPS'] === 'OFF') &&
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+      ($_SERVER['HTTPS'] === 'OFF') &&
       (php_sapi_name() != "cli")) {
-      if (!isset($_SERVER['HTTP_X_SSL']) ||
-        (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
-        header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-        exit();
-      }
+      if (!isset($_SERVER['HTTP_X_SSL']) || 
+      (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
+        header('HTTP/1.0 301 Moved Permanently')
+        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+        exit();
+      }
     }
 
 
