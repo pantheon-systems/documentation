@@ -5,23 +5,36 @@ category:
   - developing
 keywords: scalability, wordpress, pantheon
 ---
-Pantheon site architecture and automation allows site owners to accommodate increasing traffic to web servers by adding additional nodes running PHP and NGINX. This article covers issues in scaling web applications, reviews the consistent infrastructure and architecture of every Pantheon environment, and explains common pitfalls we see based on assumed vertical scaling.
+Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pageviews to hundreds of millions of pageviews without downtime.
 
-## Vertical vs. Horizontal Scaling
+## Vertical vs. Horizontal Scalability
 
-**Vertical scaling** means that you scale by adding more resources or power to your single machine (e.g. CPU, RAM), and is limited to a single machine.
+**Vertical Scalability**: Reconfigure the existing architecture of a single machine to increase available resources (CPUs, memory, etc.) to scale up
 
-**Horizontal scaling** means that you scale by adding more node or machines.
+**Horizontal Scalability**: Provision additional containers within a cluster of distributed machines to scale out
 
-The key to running a site that can handle a large amount of traffic consistently, without risking downtime, is an elastic architecture. Simply put, this means the ability to run the website on many machines at once. Your website must transcend a single server in order to scale. With an elastic architecture, you can provision more machines to run your website when traffic increases. When traffic has calmed down, you can save resources and turn off your extra capacity. Without an elastic architecture, your website is inherently not scalable.
+Vertical scalability is often used as a starting point for sites running on traditional hosts. Resources are scaled up on a single machine until a cluster-style architecture can be implemented to achieve horizontal scalability. For a site to handle copious amounts of traffic and activity, it must transcend a single server.
+
+In addition to extremely high overhead costs, common pitfalls include:
+
+- Surprise architectural migrations
+- Problems with shared instances
+- Downtime while someone resizes a server
+- One-off science projects to build out your complex snowflake cluster
+- Last-minute requests for additional resources
+
+
+Pantheon eliminates these risks entirely by running sites on a web-scale infrastructure from start. Provisioning more containers to handle viral traffic happens at the speed of software through an automated process.
+
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux container with an optimized PHP stack in place. Each container includes its own NGINX, APC cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing.
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack along with isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and enabled addon services such as [Redis](/docs/articles/sites/redis-as-a-caching-backend) and [Apache Solr](/docs/articles/sites/apache-solr).
 
 For more information on containers, see [All About Application Containers](/docs/articles/sites/all-about-application-containers/).
 
-## Add and Remove Application Servers
+## Add and Remove Application Containers
+Application containers can be added by upgrading the site's plan within the Site Dashboard to a Business plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
 
 ## New Relic
 New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Enabling New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping our support team visualize corresponding performance and symptoms.
@@ -32,4 +45,4 @@ For more information, see [New Relic Performance Analysis on Pantheon](/docs/art
 You'll need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).
 
 ## Managing Temporary Files
-One of WordPress’s most important functions is managing media (images, documents, etc ) that go along with posts. These are placed in the `uploads` area of `wp-content`, but in order to make WordPress horizontally-scalable, you must find a way for uploads to be available to all PHP App servers. Open-source tools like GlusterFS, NFS, and Ceph are common answers, and Amazon’s EFS is an option in that cloud ecosystem.
+One of WordPress’s most important functions is managing media within the `wp-content/uploads` directory for images and static assets. However, for WordPress to achieve horizontally scalability, media must be available to all containers. Open-source tools like GlusterFS, NFS, and Ceph are common answers, and Amazon’s EFS is an option in that cloud ecosystem.
