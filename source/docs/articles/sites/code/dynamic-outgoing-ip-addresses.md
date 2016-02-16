@@ -23,7 +23,7 @@ IP-based security is not recommended on Pantheon—or any cloud platform. Instea
 For more information, see [SSO and Identity Federation on Pantheon](/docs/articles/sites/code/sso-and-identity-federation/#ip-based-security-considerations).
 
 ## IP Address Ranges
-We do not provide IP ranges for outgoing requests for application containers and other platform services. A limitation of cloud-based infrastructure is that the range of IP addresses can change at any time as new servers and systems are provisioned. This can happen at any time for sercurity patches, upgrades, updates, and release of new features, which is a large part of the flexibility provided by containers and allows for zero downtime deployment of server resources.
+We do not provide IP ranges for outgoing requests for application containers and other platform services. A limitation of cloud-based infrastructure is that the range of IP addresses can change at any time as new servers and systems are provisioned. This can happen at any time for security patches, upgrades, updates, and release of new features, which is a large part of the flexibility provided by containers and allows for zero downtime deployment of server resources.
 
 Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Elite level product called a Pantheon Enterprise Gateway that will provide variables to each of your environments in order to establish a direct route to your sites.
 
