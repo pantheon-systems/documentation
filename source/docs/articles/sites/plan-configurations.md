@@ -89,7 +89,7 @@ There are many "under the hood" configuration values not show here, but these ar
 No, your database and application container resources are not shared. They operate in their own linux userspace with their own memory.
 
 #### Are the specs the same for all three environments (Dev/Test/Live)?  
-Yes they have the same infrastructure; however, Business plans and above have multiple application containers.
+Yes they have the same infrastructure; however, Business plans and above have multiple application containers, while Dev and Test environments have only one. 
 
 ## Calculating Concurrent User / Dynamic Page Capacity
 
