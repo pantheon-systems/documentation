@@ -21,7 +21,7 @@ Please keep in mind that your site password is stored in a database, so whatever
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/articles/local/cli/) command for generating one-time login links:
 
 ```bash
-$ terminus drush --site=<site> --env=<env> "user-login"
+$ terminus drush "user-login"
 ```
 
 <div class="alert alert-info" role="alert">
@@ -40,10 +40,6 @@ If you have access to the site view Terminus, you can also reset any user's pass
 ```nohighlight
 $ terminus wp 'user update' \
            --user_pass=NEWPASSWORD \
-           --site=YOUR-PANTHEON-SITE-NAME
-           --env=dev|test|live
 ```
 
-As with most terminus commands, you have to give the site's name and the environment you want to make the change in.
-
-As a side note, `terminus wp user update` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the firleds that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.
+As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.

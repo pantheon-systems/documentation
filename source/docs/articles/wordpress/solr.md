@@ -17,12 +17,12 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 ## Install and Configure Plugin
 1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/articles/local/cli/):
  ```bash
- terminus site set-connection-mode --site=<site> --env=dev --mode=sftp
+ terminus site set-connection-mode --mode=sftp
  ```
 
 2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install --activate solr-power' --site=<site> --env=dev
+ terminus wp 'plugin install --activate solr-power'
  ```
  Upon activation, the plugin will generate and send a [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document to the Solr server.
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.

@@ -9,7 +9,7 @@ Pantheon makes creating a backup of an environment a simple one-click operation.
 
 If you prefer the command line, you can use [Terminus](/docs/articles/local/cli) to create backups:  
 ```
-terminus site backups create [--site=<site>] [--env=<env>] [--element=<code|files|db|all>] [--keep-for]
+terminus site backups create [--element=<code|files|db|all>] [--keep-for]
 ```
 
 A backup contains three separate archives: a database backup, a files backup, and a code backup.
@@ -34,7 +34,7 @@ Click the down arrow next to Code, Database, or Files to access the link for the
 ### Via the Command Line
 You can also use  [Terminus](/docs/articles/local/cli) to download backups. Note that `--element=all` is only available when creating backups and not when downloading. Include the `--latest ` option to automatically download the most recently created backup. Select older archives by running `terminus site backups list`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
 ```
-terminus site backups get [--site=<site>] [--env=<env>]
+terminus site backups get
 [--element=<code|files|db|all>] [--to=<directory|file>][--latest]
 ```
 
@@ -138,6 +138,5 @@ In comparison, Pantheon’s backup mechanism:
 
 Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/articles/local/cli/).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
 ```bash
-terminus site backups <get|load|create|list> [--site=<site>] [--env=<env>]
-[--element=<code|files|db|all>] [--to=<directory|file>] [--file=<filename>] [--latest] [--keep-for]
+terminus site backups <get|load|create|list> [--element=<code|files|db|all>] [--to=<directory|file>] [--file=<filename>] [--latest] [--keep-for]
 ```

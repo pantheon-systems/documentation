@@ -14,7 +14,7 @@ Debugging connectivity issues
 ```
 Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/docs/articles/local/cli/) command:
 ```
-terminus site wake --site=<site-name> --env=<env>
+terminus site wake
 ```
 ### Resolve DNS Issues
 Check to see if you get an IP address returned when you run the following command, replacing `<xxx>` with your site’s UUID:  

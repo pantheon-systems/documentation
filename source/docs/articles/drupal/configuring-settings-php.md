@@ -50,7 +50,7 @@ The `HASH_SALT` value should also be set within `settings.local.php`. See Drush 
 
 To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/articles/local/cli):
 ```
-terminus drush --site=<site> --env=<env> "ev return getenv("DRUPAL_HASH_SALT")"
+terminus drush "ev return getenv("DRUPAL_HASH_SALT")"
 ```
 ### Drupal 7
 

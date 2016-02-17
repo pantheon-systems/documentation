@@ -178,7 +178,6 @@ terminus wp 'core install --url=http://test-withrobots.pantheon.io \
                            --title="Test With Robots" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
                            --admin_email=test@example.com'
-                           --site=withrobots \
 ```
 I get the following output:
 

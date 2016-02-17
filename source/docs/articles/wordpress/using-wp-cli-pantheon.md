@@ -39,7 +39,7 @@ From the example above:
 
 * `terminus wp` tells Terminus we'd like to execute a WP-CLI command.
 * `option get` is the command itself ([docs](http://wp-cli.org/commands/option/get/)). `home` is the key for the option we're requesting.
-* `--site=pantheon-demo` and `--env=dev` tell Terminus which site and environment to run the command in, respectively.
+* `--site=pantheon-demo` and `--env=dev` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
 The first part of the output is Terminus telling you which command it's running, and where. The last line, "http://pantheon-demo.pantheon.io", is the response of `wp option get`.
 

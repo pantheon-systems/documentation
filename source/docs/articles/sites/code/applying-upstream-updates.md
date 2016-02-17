@@ -29,7 +29,7 @@ If you prefer using the command line, you can apply updates with [Terminus](/doc
 ### Update a Specific Site
 
 ```
-terminus site upstream-updates apply --site=site --env=env --updatedb
+terminus site upstream-updates apply --updatedb
 ```
 
 Learn more about this command by running `terminus help site upstream-updates`.

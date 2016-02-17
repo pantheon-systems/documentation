@@ -14,28 +14,28 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 
 1. [Set the connection mode to SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
  ```bash
- terminus site set-connection-mode --site=<site> --env=dev --mode=sftp
+ terminus site set-connection-mode --mode=sftp
  ```
 
 2. Install the [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install --activate wp-cfm' --site=<site> --env=dev
+ terminus wp 'plugin install --activate wp-cfm'
  ```
 
 3. Commit this change using the Site Dashboard or with Terminus:
  ```bash
- terminus site code commit --site=<site> --env=dev --message="Install wp-cfm plugin"
+ terminus site code commit --message="Install wp-cfm plugin"
  ```
 
 4. Deploy this commit to the Test and Live environments using the Pantheon Dashboard or with Terminus:
  ```bash
  # Deploy to Test|Live
- terminus site deploy --site=<site> --env=<test|live> --cc --note="Deploy WP-CFM plugin to the <Test|Live> environment"
+ terminus site deploy --cc --note="Deploy WP-CFM plugin to the <Test|Live> environment"
  ```
 
 5. Activate the plugin on the Test and Live environments using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin activate wp-cfm' --site=<site> --env=<test|LIVE>
+ terminus wp 'plugin activate wp-cfm'
  ```
 
 ## Configuration Bundling
@@ -63,12 +63,12 @@ To create a bundle:
 This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
  ```
- terminus wp 'config push <bundle_name>' --site=<site> --env=dev
+ terminus wp 'config push <bundle_name>'
  ```
 3. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
 
  ```bash
- terminus site code commit --site=<site> --env=dev --message="Create bundle_name.json for tracking configuration in code"
+ terminus site code commit --message="Create bundle_name.json for tracking configuration in code"
  ```
 
 ## Deploy Configuration: Pull
@@ -78,12 +78,12 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
  Select **Copy Content from Live and Deploy Code from Development** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
 
  ```
- terminus site deploy --site=<site> --env=test --cc --sync-content --note="Deploy code for <bundle_name> configuration"
+ terminus site deploy --cc --sync-content --note="Deploy code for <bundle_name> configuration"
  ```  
 2. Import configuration from the codebase into the database by clicking **Pull** for your bundle(s) within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
  ```
- terminus wp 'config pull <bundle_name>' --site=<site> --env=test
+ terminus wp 'config pull <bundle_name>'
  ```
 3. Test configuration on the Test environment URL with the content copied from Live.
 
@@ -91,13 +91,13 @@ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where config
 1. Deploy the `.json` file from Test to Live.
 
  ```
- terminus site deploy --site=<site> --env=live --cc --note="Deploy code for <bundle_name> configuration"
+ terminus site deploy --env=live --cc --note="Deploy code for <bundle_name> configuration"
  ```  
 
 2. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
  ```
- terminus wp 'config pull <bundle_name>' --site=<site> --env=live
+ terminus wp 'config pull <bundle_name>' --env=live
  ```
 3. Test the configuration on Live.
 
