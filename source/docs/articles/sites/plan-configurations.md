@@ -51,7 +51,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>n/a</td>
         <td>235</td>
         <td>471</td>
-        <td>16777</td>
+        <td>up to 16777</td>
       </tr>
     </tbody>
   </table>
