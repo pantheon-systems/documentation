@@ -96,7 +96,7 @@ ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.
 This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 second of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
 ```nohighlight
-terminus site wake --site=<site-name> --env=<env>
+terminus site wake
 ```
 ### Can't Connect to Local MySQL Server Through Socket
 See [Database Connection Errors](/docs/articles/sites/database/database-connection-errors/) to troubleshoot

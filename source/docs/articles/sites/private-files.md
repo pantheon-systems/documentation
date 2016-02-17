@@ -61,9 +61,9 @@ This can be done via [Terminus](/docs/articles/local/cli/):
 
 ```nohighlight
 # Set this to Test/Live
-$: terminus drush --site=<site> --env=<env> "vset uc_credit_encryption_path 'private'"
+$: terminus drush "vset uc_credit_encryption_path 'private'"
 # verify the path is set on Test/Live
-$: terminus drush --site=<site> --env=<env> "vget uc_credit_encryption_path
+$: terminus drush "vget uc_credit_encryption_path
 uc_credit_encryption_path: 'private'"
 ```
 

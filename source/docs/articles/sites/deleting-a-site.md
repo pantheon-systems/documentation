@@ -20,7 +20,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ## Delete a Site with Terminus
 Run the following [Terminus](/docs/articles/local/cli/) command:
-`terminus site delete --site=<site>`
+`terminus site delete`
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

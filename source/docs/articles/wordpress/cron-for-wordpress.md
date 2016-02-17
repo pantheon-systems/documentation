@@ -45,7 +45,7 @@ You can also schedule your own jobs, execute existing jobs, and manage just abou
 One of the first things you'll want to do is test WP-Cron to make sure everything is working correctly. When you execute the command below, make sure to replace SITE_NAME with your site's name from your Pantheon Dashboard and provide the desired environment (Dev, Test, Live).
 
 ````nohighlight
-$ terminus wp 'cron test' --site=SITE_NAME --env=<dev|test|live>
+$ terminus wp 'cron test'
 ````
 
 If everything works correctly, the result looks like this:
@@ -58,8 +58,6 @@ This lets you know that WP-Cron is working properly on your site. From here, you
 
 ````nohighlight
 $ terminus wp 'cron <your wp-cron command and switches here>'
-           --site=YOUR_SITE_NAME
-           --env=dev|test|live
 ````
 
 All `terminus wp` commands require a site name and environment to operate.

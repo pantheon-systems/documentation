@@ -24,7 +24,7 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus site clear-cache --site=<site> --env=<env>
+terminus site clear-cache
 ```
 
 <div class="alert alert-info" role="alert">
@@ -83,8 +83,8 @@ Replace <code>database.sql.gz</code> with the name of the database archive downl
 Create and export the database by running the following Terminus commands:
 
 ```nohighlight
-terminus site backups create --element=database --site=<site> --env=<env>
-terminus site backups get --element=database --site=<site> --env=<env> --to=$HOME/Desktop/ --latest
+terminus site backups create --element=database
+terminus site backups get --element=database --to=$HOME/Desktop/ --latest
 ```
 
 Import the archive into your local MySQL database using the following command:
@@ -100,8 +100,8 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 
 Run the following Terminus commands:
 ```nohighlight
-terminus site backups create --element=files --site=<site> --env=<env>
-terminus site backups get --element=files --site=<site> --env=<env> --to=$HOME/Desktop/ --latest
+terminus site backups create --element=files
+terminus site backups get --element=files --to=$HOME/Desktop/ --latest
 ```
 This will create and download a backup of the site's files to your desktop.
 
