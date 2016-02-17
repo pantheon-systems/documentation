@@ -10,11 +10,11 @@ Upstream maintainers bear the responsibility of updating Drupal and WordPress co
 ## Merging Core Releases
 1. Create an update branch:
 
- ```bash
- git checkout -b update
- ```
+```bash
+git checkout -b update
+```
 2. Pull down changes from the applicable core:
- 
+
  <!-- Nav tabs -->
  <ul class="nav nav-tabs" role="tablist">
  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
@@ -49,10 +49,10 @@ Upstream maintainers bear the responsibility of updating Drupal and WordPress co
  
 3. Commit and push:
 
- ```nohighlight
- git commit -m “Update to Drupal 7.33. http://link-to-release-notes”
- git push origin update
- ```
+```nohighlight
+git commit -m “Update to Drupal 7.33. http://link-to-release-notes”
+git push origin update
+```
 
 ## Adding or Updating Custom Code
 
