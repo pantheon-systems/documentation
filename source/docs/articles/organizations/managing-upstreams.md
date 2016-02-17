@@ -14,39 +14,39 @@ Upstream maintainers bear the responsibility of updating Drupal and WordPress co
  git checkout -b update
  ```
 2. Pull down changes from the applicable core:
-
+ 
  <!-- Nav tabs -->
  <ul class="nav nav-tabs" role="tablist">
-   <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-   <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-   <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
-   <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+ <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+ <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+ <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+ <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
  </ul>
-
+ 
  <!-- Tab panes -->
  <div class="tab-content">
-   <div role="tabpanel" class="tab-pane active" id="d8">
-   <pre><code class="bash hljs">
-   git pull git://github.com/pantheon-systems/drops-8.git master
-   </code></pre>
-   </div>
-   <div role="tabpanel" class="tab-pane" id="d7">
-   <pre><code class="bash hljs">
-   git pull git://github.com/pantheon-systems/drops-7.git master
-   </code></pre>
-   </div>
-   <div role="tabpanel" class="tab-pane" id="d6">
-   <pre><code class="bash hljs">
-   git pull git://github.com/pantheon-systems/drops-6.git master
-   </code></pre>
-   </div>
-   <div role="tabpanel" class="tab-pane" id="wp">
-   <pre><code class="bash hljs">
-   git pull git://github.com/pantheon-systems/WordPress.git master
-   </code></pre>
-   </div>
+ <div role="tabpanel" class="tab-pane active" id="d8">
+ <pre><code class="bash hljs">
+ git pull git://github.com/pantheon-systems/drops-8.git master
+ </code></pre>
  </div>
-
+ <div role="tabpanel" class="tab-pane" id="d7">
+ <pre><code class="bash hljs">
+ git pull git://github.com/pantheon-systems/drops-7.git master
+ </code></pre>
+ </div>
+ <div role="tabpanel" class="tab-pane" id="d6">
+ <pre><code class="bash hljs">
+ git pull git://github.com/pantheon-systems/drops-6.git master
+ </code></pre>
+ </div>
+ <div role="tabpanel" class="tab-pane" id="wp">
+ <pre><code class="bash hljs">
+ git pull git://github.com/pantheon-systems/WordPress.git master
+ </code></pre>
+ </div>
+ </div>
+ 
 3. Commit and push:
 
  ```nohighlight
