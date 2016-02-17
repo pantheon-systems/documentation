@@ -65,7 +65,8 @@ The platform resources provided to your website depend on your current plan. Pan
 <hr>
 **PHP Memory Limit**: Maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective. 
 <hr>
-**MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.   
+**MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
+<hr>
 **Redis Cache Suze**: Amount of data a Redis instance can store. Note these numbers are intentionally set below the maximum memory for the Redis instance (which is the next logical power of 2) in order to insure good performance. 
 
 ## Viewing Service Configuration Details
