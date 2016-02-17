@@ -1,5 +1,5 @@
 ---
-title: Platform Reasources by Plan
+title: Platform Resources by Plan
 description: Get detailed information about platform resources by plan level.
 keywords: site, RAM, pantheon, backup, plane
 ---
