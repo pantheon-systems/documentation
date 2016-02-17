@@ -1,7 +1,7 @@
 ---
 title: Platform Reasources by Plan
 description: Get detailed information about platform resources by plan level.
-keywords: site, RAM, pantheon, backup, plan
+keywords: site, RAM, pantheon, backup, plane
 ---
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
@@ -14,7 +14,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <th>Personal</th>
         <th>Professional</th>
         <th>Business</th>
-        <th>Enterprise</th>
+        <th>Elite</th>
       </tr>
     </thead>
     <tbody>
