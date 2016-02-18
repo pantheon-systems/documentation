@@ -4,7 +4,7 @@ machine:
     # https://circleci.com/docs/environment#php
     version: 5.5.11
   pre:
-    - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1    
+    - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
 
 dependencies:
   pre:
@@ -36,7 +36,7 @@ test:
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
     - bundle exec rake
-    - sitespeed.io -u https://pantheon.io/docs/  -b firefox  -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
+    - sitespeed.io -u https://pantheon.io/docs/  --budget budget.json -b firefox  -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
 
 deployment:
   production:
