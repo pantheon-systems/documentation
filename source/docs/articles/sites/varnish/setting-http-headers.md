@@ -21,7 +21,7 @@ For an in-depth explanation of the max-age header, see the [W3.org official docu
 
 ## Prevent a Single Page from Caching
 
-If you want a single page to be kept from caching, it's possible to use PHP to set Cache-Control headers from within Drupal's settings.php or WordPress's wp-config.php file. In this simple example, the PHP code checks for the '/cart' path and, if it's there, sets the Cache-Control in such a manner as to tell Varnish to not cache that particular page.
+To exclude a page from being cached, you can use PHP to set Cache-Control headers from within Drupal's `settings.php` or WordPress's `wp-config.php` file. In this example, the PHP code checks for the '/cart' path, and if it's there, sets the Cache-Control to keep Varnish from caching that particular page.
 
 ```
 // wp-config.php or settings.php
