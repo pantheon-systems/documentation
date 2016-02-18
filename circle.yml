@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   pre:
-    npm install -g sitespeed.io
+    - npm install -g sitespeed.io
 
   cache_directories:
     - ~/.composer/cache
