@@ -81,34 +81,41 @@ Machine name of the site; used as part of the default URL [ if left blank will b
 
 Choose organization: 1
 
-  1. Awesome Codebase
-  2. Backdrop
-  3. Community Media Starter Kit
-  4. CiviCRM Starter Kit
-  5. Commerce Kickstart
-  6. DKAN
-  7. Drupal 6
-  8. Drupal 7
-  9. Drupal 8 Beta
-  10. Introduction to Theming Basics for Drupal 7
-  11. FreakPress
-  12. Mukurtu CMS
-  13. Open Academy
-  14. Open Atrium 2
-  15. Open Outreach
-  16. OpenAid
-  17. OpenIdeaL
-  18. OpenPublic
-  19. OpenPublish
-  20. OpenScholar
-  21. Panopoly
-  22. Plato Típico
-  23. Pushtape
-  24. Restaurant
-  25. University of Texas at Austin Distribution
-  26. WordPress
+ 1. WordPress
+ 2. OpenPublish
+ 3. FreakPress
+ 4. RedHen Raiser
+ 5. OpenPublic
+ 6. Awesome Codebase
+ 7. Pushtape
+ 8. OpenAid
+ 9. Panopoly
+ 10. Open Outreach
+ 11. Panopoly
+ 12. C suite
+ 13. Commerce Kickstart
+ 14. Kickstart
+ 15. OpenScholar
+ 16. Drupal 8 SXSW
+ 17. Static HTML
+ 18. Drupal 8
+ 19. Open Restaurant
+ 20. Mukurtu CMS
+ 21. EasyFlow
+ 22. Backdrop
+ 23. CiviCRM Starter Kit
+ 24. Community Media Starter Kit
+ 25. DKAN
+ 26. Drupal 6
+ 27. Restaurant
+ 28. Atrium
+ 29. EC LMS
+ 30. OpenIdeaL
+ 31. Plato Típico
+ 32. Introduction to Theming Basics for Drupal 7
+ 33. Drupal 7
 
-Select one: 8
+Select one: 33
 Creating new Drupal 7 installation ...
 Working ............................................
 Success: Pow! You created a new site!
