@@ -224,7 +224,6 @@ When transitioning from a system that used a tilde to indicate a home directory,
 
 ## Redirect to Force Lowercase Letters
 
-To force lowercase letters for your URL, use the following snippet in your `settings.php` or `wp-config.php` file:
 
     if (!ctype_lower($SERVER['REQUEST_URI'])) {
       $request_uri = strtolower($SERVER['REQUESTURI']);
@@ -232,4 +231,4 @@ To force lowercase letters for your URL, use the following snippet in your `sett
       header('Location: http://www.yoursite.com'. $requesturi);
     }
 
-For Drupal, you can also use the Global Redirect module.
+Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
