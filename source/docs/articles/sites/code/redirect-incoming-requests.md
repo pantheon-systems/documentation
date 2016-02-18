@@ -221,3 +221,15 @@ When transitioning from a system that used a tilde to indicate a home directory,
     if ($legacy_username) {
       // Your custom logic.
     }
+
+## Redirect to force lowercase letters
+
+To force lowercase letters for your URL, you can use the following snippet in your settings.php or wp-config.php
+
+    if (!ctype_lower($SERVER['REQUEST_URI'])) {
+      $request_uri = strtolower($SERVER['REQUESTURI']);
+      header('HTTP/1.0 301 Moved Permanently');
+      header('Location: http://www.yoursite.com'. $requesturi);
+    }
+
+For Drupal, you can also use Global Redirect module
