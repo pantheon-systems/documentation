@@ -6,6 +6,7 @@ machine:
 
 dependencies:
   pre:
+    - npm install -g phantomjs
     - npm install -g sitespeed.io
 
   cache_directories:
