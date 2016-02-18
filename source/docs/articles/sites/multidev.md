@@ -97,14 +97,15 @@ Instructions for using the command-line to merge the changes into the target are
 ### Comparing Multidev Environments Locally
 The Multidev overview page provides a list of all existing environments for a site, along with a quick comparison between environments and master (Dev). The "ahead" count represents the number of commits existing on the Multidev environment which have not been merged into master (Dev), while the "behind" count represents commits existing in Master that do not exist on the Multidev branch.
 
-To view a similar comparison locally, navigate to the site's root directory and run:
+Counts displayed within the Multidev overview page are ordered by time of the commit, which can cause discrepancies in certain scenarios (i.e. if an old commit was cherry-picked to more-recently).
+
+You can view a similar comparison locally by navigating to the site's root directory and running:
 
 ```
 git show-branch <multidev-name> origin/master
 ```
 
-The [`show-branch`](https://git-scm.com/docs/git-show-branch) output is formatted into two columns and color coded to communicate which commits exist on each branch. This allows you to identify which commits exist on the Multidev environment as compared to Dev. 
-
+The [`show-branch`](https://git-scm.com/docs/git-show-branch) output is formatted into two columns and color coded to illustrate which commits exist on the Multidev branch as compared to master (Dev).
 
 ## Delete a Branch Environment
 
