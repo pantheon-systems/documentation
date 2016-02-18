@@ -36,7 +36,7 @@ test:
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
     - bundle exec rake
-    - sitespeed.io -u https://pantheon.io/docs/  --budget budget.json -b firefox  -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
+    - sitespeed.io -u http://localhost:8000/docs   --budget budget.json -b firefox  -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
 
 deployment:
   production:
