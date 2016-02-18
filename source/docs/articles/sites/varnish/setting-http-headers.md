@@ -7,7 +7,7 @@ keywords: varnish, cache, headers, caching, drupal, wordpress
 This article will help you set up HTTP headers to prevent individual pages from being cached.
 
 ## Use Internal Page Cache
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. [Learn more](/docs/articles/sites/varnish/).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. [Learn more about Varnish](/docs/articles/sites/varnish/).
 
 ## Use HTTP Headers for Downstream Varnish Caching
 How and why
