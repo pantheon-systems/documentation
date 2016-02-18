@@ -9,6 +9,7 @@
 composer.phar
 /vendor
 /source/docs/googled*
+/source/docs/assets/compiled/*
 *.DS_Store
 node_modules
 .vagrant

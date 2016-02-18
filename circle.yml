@@ -9,6 +9,8 @@ dependencies:
     - ~/.composer/cache
 
   post:
+    # Build the CSS.
+    - grunt
     # Build the static site.
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
@@ -23,10 +25,12 @@ test:
     - bin/sculpin server:
        background: true
   override:
+    # Run sitespeed.io
+    - bash scripts/run-sitespeed-test.sh
     # Run behat.
     - bin/behat
     # Run a11y.
-    - grunt
+    - grunt test
     # Look for merge conflicts.
     - scripts/merge_conflicts.sh
     # Run htmlproofer.

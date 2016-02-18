@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "default": 70,
+    "criticalpath": 38,
+    "ydns": 9,
+    "yminify": 59,
+    "ycookiefree":19,
+    "jsnumreq":51,
+    "thirdpartyasyncjs": 15,
+    "totalrequests": 65
+  },
+  "timings": {
+    "serverResponseTime": 300,
+    "domContentLoadedTime": 2500,
+    "frontEndTime": 5000,
+    "speedIndex": 1000
+  },
+  "wpt": {
+    "SpeedIndex": 1000
+  },
+  "gpsi": {
+    "score": 90
+  }
+}
