@@ -40,8 +40,6 @@ test:
     - bundle exec rake
     - sitespeed.io -u http://localhost:8000/docs  -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
 
-
-
 deployment:
   production:
     branch: master
