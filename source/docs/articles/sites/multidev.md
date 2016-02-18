@@ -94,6 +94,16 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 3. Select the environment with commits that can be merged into the target.  
 Instructions for using the command-line to merge the changes into the target are shown and can be pasted directly into the terminal without modification.
 
+### Compare Multidev Environments Locally
+The Multidev overview page provides a list of all existing environments for a site, along with a quick comparison between environments and master (Dev). The "ahead" count represents the number of commits existing on the Multidev environment that have not been merged into master (Dev), while the "behind" count represents commits in master that do not exist on the Multidev branch.
+
+Counts displayed on the Multidev overview page are ordered by time of the commit, which can cause discrepancies in certain scenarios (i.e. if an existing commit was cherry-picked from one environment branch into another).
+
+You can view a similar comparison locally by navigating to the site's root directory and running:  
+`git show-branch <multidev-name> origin/master`
+
+The [`show-branch`](https://git-scm.com/docs/git-show-branch) output is formatted into two columns and color coded to illustrate which commits exist on the Multidev branch as compared to master (Dev).
+
 ## Delete a Branch Environment
 
 Go to **Multidev** > **Multidev Environments**, and click **Delete Environment**.
