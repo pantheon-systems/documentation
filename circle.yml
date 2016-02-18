@@ -4,8 +4,6 @@ machine:
     # https://circleci.com/docs/environment#php
     version: 5.5.11
 
-
-
 dependencies:
   pre:
     npm install -g sitespeed.io
