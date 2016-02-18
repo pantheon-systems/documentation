@@ -4,7 +4,7 @@ description: Learn how to import a Drupal or WordPress site into Pantheon outsid
 keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
 ---
 
-Manually import your site to Pantheon outside of the provided [Importer Tool](/docs/articles/sites/migrate/#plan-the-import) when any of the following apply:
+Manually import your site to Pantheon outside of the provided [Importer tool](/docs/articles/sites/migrate/#plan-the-import) when any of the following apply:
 
 * **Large Site Archives**: Site archive is greater than the automated import limits (100MB for direct file upload or 500MB for URL upload).
 * **Custom Upstream**: Site should receive updates based on an upstream other than vanilla Drupal or WordPress (e.g Panopoly or your agency's customized WordPress).
@@ -41,20 +41,20 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  git add .
  git commit -m "initial commit"
  ```
-2. From the Dev environment of the site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
+2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) to Git.
 3. Copy the SSH URL for the site repository, found in the <a href="/docs/articles/local/starting-with-git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
  ```
 
-4. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in Step 3:
+4. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git remote add pantheon <ssh_url>
  ```
 
-5. **Drupal only**: Move your settings file to `settings.local.php` so that it will be ignored by git  and included from Pantheon's `settings.php`. First, make sure that you can modify it, and restore the protections after the move:
+5. **Drupal only**: Move your settings file to `settings.local.php` so that it will be ignored by Git and included from Pantheon's `settings.php`. First, make sure that you can modify it, and restore the protections after the move:
 
  ```bash
  chmod u+w sites/default/{.,settings.php}
@@ -74,6 +74,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  Squash commit -- not updating HEAD  
  Automatic merge went well; stopped before committing as requested
  ```
+ Authenticate using your Pantheon Dashboard credentials when prompted for a password. We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH key](/docs/articles/users/generating-ssh-keys/) into the User Dashboard.
 
 7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
  ```bash
@@ -90,7 +91,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  git push pantheon master
  ```
 
-10. Go to the Code tab of your Dev environment on the site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
+10. Go to the Code tab of your Dev environment on the Site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
 
 ## Files
 
