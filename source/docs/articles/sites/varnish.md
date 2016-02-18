@@ -14,6 +14,8 @@ Varnish is an HTTP accelerator that quickly serves both static content and anony
 
 Every site on Pantheon already uses Varnish; each HTTP request first goes to the pool of Varnish servers to seamlessly cache your site content. If a current cache isn't found, the request will continue to the application container worker, then the response will be cached on the way back to the browser.  
 
+![Varnish Diagram](/source/docs/assets/images/varnish.png)
+
 Varnish can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by Varnish and end-users won't realize anything is wrong.
 
 
