@@ -74,7 +74,7 @@ PHP errors are not always obvious at first glance, so don’t ignore error messa
 ## Drupal Note Regarding Watchdog
 Compounding the issue, writing those errors to watchdog takes time and is a blocking operation - other queries can’t happen until the write is done. The bigger the table, the longer the write will take.  
 
-Don’t shoot the messenger—disabling db\_log will not fix bad code.  
+Don’t shoot the messenger—disabling dblog will not fix bad code.  
 
 As an example, if your slowest database operation is an INSERT to watchdog, then you should fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking 70.6% of the execution time.  
  ![Example of INSERT consuming execution time](/source/docs/assets/images/desk_images/200891.png)  
