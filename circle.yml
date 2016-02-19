@@ -4,6 +4,7 @@ machine:
     # https://circleci.com/docs/environment#php
     version: 5.5.11
   pre:
+    # @todo look for a better way to install phantomjs.
     - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
 
 dependencies:
@@ -18,6 +19,7 @@ dependencies:
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
+    # uncomment this line once the PR is made to pantheon-systems/documentation
     #- bash scripts/deploy-multidev.sh
 test:
   pre:
@@ -36,6 +38,9 @@ test:
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
     - bundle exec rake
+    # @todo, Switch the test to http://"$normalize_branch"-static-docs.pantheon.io
+    # also this line may have to be moved to a place where normalize_branch
+    # can be constructed.
     - sitespeed.io -u http://localhost:8000/docs   --budget budget.json -b firefox  --skipTest=ycookiefree,avoidfont -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
 
 deployment:
