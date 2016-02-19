@@ -75,7 +75,7 @@ The best way to do this on Pantheon is to make use of our environment variables.
 
     # Set the $base_url parameter if we are running on Pantheon:
 
-    if (defined('PANTHEON_ENVIRONMENT'])) {
+    if (defined('PANTHEON_ENVIRONMENT')) {
       if (PANTHEON_ENVIRONMENT == 'dev') {
         $domain = 'sandbox.mysite.com';
       }
