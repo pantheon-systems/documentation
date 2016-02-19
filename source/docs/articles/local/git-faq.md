@@ -232,6 +232,17 @@ git push origin --delete branchname
 ```
 Alternatively, you can prefix the branch with a colon.
 
+### How do I keep multiple remote repositories in sync?
+A simple option is to configure Git with a multi-remote origin within `.git/config`, such as:
+
+```
+[remote "origin"]
+	url = ssh://codeserver.dev.<SITE_UUID>@codeserver.dev.<SITE_UUID>.drush.in:2222/~/repository.git
+	url = git@github.com:systemseed/example.git
+```
+
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/authors/mrfelton) for contributing this tip in the [Power Users](/docs/articles/power-users) group.
+
 ### Why are some merged commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:  

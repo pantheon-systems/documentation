@@ -8,6 +8,7 @@ category:
 authors:
   - bmackinney
   - jessifischer
+  - mrfelton
 date: 4/3/2015
 ---
 While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like GitHub or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a GitHub account as the example, although the steps should be similar for any provider.
@@ -72,10 +73,17 @@ github	git@github.com:pantheon-learning/d7-ci.git (push)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (push)
 ```
-Note: Another option is to add another push URL for origin:
-git remote set-url --add origin git@github.com:pantheon-learning/d7-ci.git
+#### Configure Origin as a Multi-Remote Destination (Optional)
 
-What's nice about this is then every time you do a git push origin <branch> code will be pushed to GitHub and Pantheon simultaneously.
+Another option is to add another push URL for origin within `.git/config`:
+
+```
+[remote "origin"]
+	url = ssh://codeserver.dev.<SITE_UUID>@codeserver.dev.<SITE_UUID>.drush.in:2222/~/repository.git
+	url = git@github.com:systemseed/example.git
+```
+
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/authors/mrfelton) for contributing this tip in the [Power Users](/docs/articles/power-users) group.
 
 ### Push the Pantheon Site's Codebase to GitHub
 
