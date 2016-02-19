@@ -6,8 +6,8 @@ keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, 
 
 Logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
 
-## Password/SSH Key
-The script requires access to your codebase, which means you will be interactively prompted for your password. To avoid this, add an SSH key to your Pantheon user account. See [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/) for more information.
+## Enable Passwordless Access
+Logs are stored within application container(s) which house your site's codebase and files. [Add an SSH key](/docs/articles/users/generating-ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Create Script
 Open terminal and run the following commands to create and access a new local directory:
@@ -17,16 +17,12 @@ cd $HOME/site-logs
 ```
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and save the following:
 ```
-# Replace SITE_UUID with value from Dashboard URL
-SITE_UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-for app_server in `dig +short appserver.live.$SITE_UUID.drush.in`;
+# Replace SITE with value from Dashboard URL
+SITE=xxxxxxxxxxx
+ENV=live
+for app_server in `dig +short appserver.$ENV.$SITE.drush.in`;
 do
-mkdir $app_server
-sftp -o Port=2222 live.$SITE_UUID@$app_server << !
-  cd logs
-  lcd $app_server
-  mget *.log
-!
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs $app_server
 done
 ```
 ## Collect Logs
