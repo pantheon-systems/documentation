@@ -1,6 +1,6 @@
 {
   "rules": {
-    "default": 90
+    "default": 60
   },
   "timings": {
     "serverResponseTime": 300,
