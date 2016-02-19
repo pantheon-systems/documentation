@@ -319,7 +319,7 @@ Locally, I now checkout the master branch, pull from github master, and push to 
 ```nohighlight
 $ git checkout master
 $ git pull github master
-$ git push pantheom master
+$ git push pantheon master
 ```
 ![Merged PR commit in the Pantheon dashboard](/source/docs/assets/images/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github")
 
