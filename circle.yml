@@ -41,6 +41,8 @@ test:
     # @todo, Switch the test to http://"$normalize_branch"-static-docs.pantheon.io
     # also this line may have to be moved to a place where normalize_branch
     # can be constructed.
+    # @todo, revisit contents of the  budget file. It copied from the
+    # sitespeed.io repo with little change.
     - sitespeed.io -u http://localhost:8000/docs   --budget budget.json -b firefox  --skipTest=ycookiefree,avoidfont -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName test
 
 deployment:
