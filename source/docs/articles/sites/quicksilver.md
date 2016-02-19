@@ -34,6 +34,17 @@ Let's explore a valid `pantheon.yml` file to learn more:
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml?footer=minimal"></script>
 
+Note that if you want to hook onto deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy which contains those adjustments to pantheon.yml will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
+
+**When Updating:**  
+**pantheon.yml**: Updates will fire on the next sequential workflow, not post-deploy.  
+**scripts**:  Updates will fire post-deploy.  
+**script location**: Updates will fire on next sequential workflow, not post-deploy.
+
+**When Adding:**  
+**pantheon.yml**: Updates will fire on the next sequential workflow, not post-deploy.  
+**scripts**: Updates will fire on the next sequential workflow.  
+
 ## Terminus Commands
 
 To use Quicksilver Platform Hooks, it's recommended that you are familiar with Terminus. Get the latest [release](https://github.com/pantheon-systems/cli/releases), and a few new commands are included:
