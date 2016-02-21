@@ -4,6 +4,10 @@ Help us create relevant and useful content for developers like yourself. See som
 
 **NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
 
+## Code of Conduct
+
+This project adheres to the [Contributor Covenant](CODE_OF_CONDUCT.md) code of conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to docs@pantheon.io.
+
 ## Issues - Searching and Creating
 
 Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on. If there isn't an issue, create one and add an outline for the article you want to create. This allows contributors to get some initial feedback.
