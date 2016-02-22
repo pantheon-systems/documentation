@@ -54,7 +54,19 @@ terminus drush "ev return getenv("DRUPAL_HASH_SALT")"
 ```
 
 ### Trusted Host Setting
-A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be suppressed with the following:
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, you can use a configuration such as:
+```
+if (defined('PANTHEON_ENVIRONMENT')) {
+  if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test'))) {
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT'] }-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
+  }
+  else {
+    $settings['trusted_host_patterns'][] = array(
+      '^www\.yoursite\.com$',
+    );
+  }
+}
+```
 
 
 ### Drupal 7

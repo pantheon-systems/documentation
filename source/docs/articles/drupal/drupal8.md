@@ -18,7 +18,7 @@ The following platform features are not yet available on Pantheon for sites runn
 For more details on Pantheon's platform support for Drupal 8, follow the [Pantheon D8 issue on GitHub](https://github.com/pantheon-systems/drops-8/issues?q=is%3Aopen).
 
 ### Trusted Host Setting
-A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be ignored or suppressed. For more details, see [Configuring settings.php](/docs/articles/drupal/configuring-settings-php).
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/docs/articles/drupal/configuring-settings-php).
 ## Additional Resources
 
 [Applying Upstream Updates](/docs/articles/sites/code/applying-upstream-updates)  
