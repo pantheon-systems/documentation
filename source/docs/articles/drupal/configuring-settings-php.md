@@ -68,6 +68,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
     # Replace value with custom domain(s) added in the site Dashboard
     $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
+    $settings['trusted_host_patterns'][] = '^yoursite\.com$';
   }
 }
 ```
