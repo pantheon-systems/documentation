@@ -97,6 +97,20 @@ If you find that `www.example.com` resolves to `www.www.example.com`, or `subdom
 ![Extra www example](/source/docs/assets/images/desk_images/376201.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheon.io`), found within the Site Dashboard on the target environment.
 
+### Why is my Drupal 8 site inaccessible after adding a custom domain?
+The following response is served for requests originating from an "untrusted" host on Drupal 8 sites which have enabled the `trusted_host_patterns` setting:
+
+**The provided host name is not valid for this server.**
+
+Resolve by including custom domain(s) within existing `settings.php` configurations:
+```
+if (defined('PANTHEON_ENVIRONMENT')) {
+  if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
+    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
+  }
+}
+```
+For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php#trusted-host-setting).
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
 Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheon.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
