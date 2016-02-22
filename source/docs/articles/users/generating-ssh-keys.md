@@ -218,4 +218,4 @@ ControlPath ~/.ssh/control-%r
 ```
 #### Server Refused to Allocate pty
 
-This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/articles/users/generating-ssh-keys).
+This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support <a href="/docs/articles/frequently-asked-questions/#does-pantheon-have-ftp-or-shell-access?" data-proofer-ignore> direct SSH connections</a>.
