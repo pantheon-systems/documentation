@@ -114,26 +114,13 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod
 
-    # Create log dir
-    mkdir ../docs-rsync-logs
-    echo "rsync log - deploy to $normalize_branch environment on `date +%F-%I%p`" > ../docs-rsync-logs/rsync-`date +%F-%I%p`.log
-
     # rsync output_prod/* to Valhalla
-    rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
+    rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
     if [ "$?" -eq "0" ]
     then
         echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheon.io/docs"
     else
         echo "Error: Deploy failed, review rsync status"
-        exit 1
-    fi
-    # Upload log file to Valhalla
-    rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs-rsync-logs/
-    if [ "$?" -eq "0" ]
-    then
-        echo "Success: Log file uploaded to files/docs-rsync-logs/"
-    else
-        echo "Error: Log file failed to upload"
         exit 1
     fi
 
