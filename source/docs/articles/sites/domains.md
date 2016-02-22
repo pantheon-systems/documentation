@@ -104,11 +104,9 @@ The following response is served for requests originating from an "untrusted" ho
 
 Resolve by including custom domain(s) within existing `settings.php` configurations:
 ```
-if (defined('PANTHEON_ENVIRONMENT')) {
-  if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
-    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
-  }
-}
+# Replace value with custom domain(s) added in the site Dashboard
+$settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
+$settings['trusted_host_patterns'][] = '^yoursite\.com$';
 ```
 For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php#trusted-host-setting).
 ### Can a site on Pantheon be used with a third-party reverse proxy?
