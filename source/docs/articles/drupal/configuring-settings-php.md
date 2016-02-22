@@ -52,6 +52,28 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 ```
 terminus drush "ev return getenv("DRUPAL_HASH_SALT")"
 ```
+
+### Trusted Host Setting
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
+<div class="alert alert-info">
+<h4>Note</h4>
+Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.
+</div>
+```
+if (defined('PANTHEON_ENVIRONMENT')) {
+  if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.getpantheon.io";
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";  
+
+    # Replace value with custom domain(s) added in the site Dashboard
+    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
+    $settings['trusted_host_patterns'][] = '^yoursite\.com$';
+  }
+}
+```
+
+
 ### Drupal 7
 
     ​// Local development configuration.
