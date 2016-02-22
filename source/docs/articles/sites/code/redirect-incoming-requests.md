@@ -83,7 +83,7 @@ To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traff
 
     // Require HTTPS.
     // Check if Drupal is running via command line
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'OFF') &&
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || 
@@ -221,3 +221,14 @@ When transitioning from a system that used a tilde to indicate a home directory,
     if ($legacy_username) {
       // Your custom logic.
     }
+
+## Redirect to Force Lowercase Letters
+
+
+    if (preg_match('/[A-Z]+/', $_SERVER['REQUEST_URI'])) {
+      $request_uri = strtolower($_SERVER['REQUEST_URI']);
+      header('Location: http://www.yoursite.com' . $request_uri, TRUE, 301);
+      exit;
+    }
+
+Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
