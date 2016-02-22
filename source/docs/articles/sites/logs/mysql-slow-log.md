@@ -21,7 +21,7 @@ To download the environment's MySQL slow log, use the [method outlined here](/do
 $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
 live.91fd3bea-d11b-401a-85e0-0@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in's password:
 Connected to dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in.  
-sftp> cd data  
+sftp> cd logs  
 sftp> ls -l  
 get-rw-rw---- 1 16373 16373 16384 Dec 15 16:55 aria_log.00000001  
 -rw-rw---- 1 16373 16373 52 Dec 15 16:55 aria_log_control  

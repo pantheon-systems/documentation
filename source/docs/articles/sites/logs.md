@@ -56,7 +56,8 @@ To automate this process, see [Automate Downloading Logs from the Live Environme
 ```nohighlight
 get logs/mysqld-slow-query.log
 ```
-You now have a local copy of the `mysqld-slow-query.log` file.
+You now have a local copy of the `mysqld-slow-query.log` file. To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/articles/sites/logs/downloading-live-error-logs/).
+
 ## See Also
 - [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files)
 - [MySQL Slow Log](/docs/articles/sites/logs/mysql-slow-log/)
