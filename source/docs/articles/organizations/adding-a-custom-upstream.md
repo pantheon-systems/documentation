@@ -28,6 +28,12 @@ git pull git://github.com/pantheon-systems/drops-6.git master
 git pull git://github.com/pantheon-systems/drops-7.git master
 ```
 
+**Drupal 8**
+
+```bash
+git pull git://github.com/pantheon-systems/drops-8.git master
+```
+
 **WordPress**
 
 ```bash
