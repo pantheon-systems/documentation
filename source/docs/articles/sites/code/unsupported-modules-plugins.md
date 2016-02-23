@@ -63,7 +63,35 @@ $baseUrl = '/ckfinder/userfiles/';
 ### IMCE 6.x
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
-**Solution**: The alternative for now is to break up the files into smaller groups.
+**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
+
+1. [Enable Redis](/docs/articles/sites/redis-as-a-caching-backend) if available for your site's plan, otherwise Database cache is utilized. Currently all plans can use Redis except Personal. 
+2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
+
+ ```
+ $cache_key = 'imce-' . $file;
+ $cache = cache_get($cache_key);
+ if ($cache) {
+  return $cache->data;
+ }
+ if
+ (is_file($file) && ($dot = strrpos($file, '.')) &&
+ in_array(strtolower(substr($file, $dot+1)), array('jpg', 'jpeg',
+ 'gif','png')) && ($info = @getimagesize($file)) &&
+ in_array($info[2], array(IMAGETYPE_JPEG, IMAGETYPE_GIF, IMAGETYPE_PNG)) )
+ {
+   $result = array('width' => $info[0], 'height' => $info[1], 'type' => $info[2], 'mime' => $info['mime']);
+   cache_set($cache_key, $result);
+   return $result;
+ }
+ return FALSE;
+ }
+ ```
+
+3. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
+
+You are welcome to modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
+
 <hr>
 #### Media: Browser Plus
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
