@@ -17,29 +17,48 @@ Core updates for [distributions](https://www.drupal.org/documentation/build/dist
 
 
 ## Pull Core Updates Manually
-Navigate to the directory of your site's code repository on your local machine, then run the following commands to pull core version updates for the CMS version in use:
+Navigate to the directory of your site's code repository on your local machine, then run the following commands to pull core version updates for the CMS version in use. The `Xtheirs` flag will attempt to automatically resolve conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with .gitignore).
 
-### Drupal 7
-```bash
-git pull git://github.com/pantheon-systems/drops-7.git master
-git add .
-git commit -m “Update to Drupal 7.33. http://link-to-release-notes”
-git push origin master
-```
-### Drupal 6
-```bash
-git pull git://github.com/pantheon-systems/drops-6.git master
-git add .
-git commit -m “Update to Drupal 6 http://link-to-release-notes”
-git push origin master
-```
-### WordPress
-```bash
-git pull git://github.com/pantheon-systems/wordpress.git master
-git add .
-git commit -m “Update WordPress Core http://link-to-release-notes”
-git push origin master
-```
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre><code class="bash hljs">
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre><code class="bash hljs">
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d6">
+  <pre><code class="bash hljs">
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <pre><code class="bash hljs">
+  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+  # resolve conflicts
+  git push origin master  
+  </code></pre>
+  </div>
+</div>
+
 After testing to ensure everything looks good, deploy the updates to Test and Live. The same method can be applied to update [modules](https://www.drupal.org/node/1974964).
 
 ## Communicate
