@@ -75,7 +75,7 @@ Higher plan levels on Pantheon deploy multiple containers for the live environme
 
 Pantheon's edge starts by randomly distributing requests to application containers. However, to allow sites to fully use every bit of container capacity, nginx uses a short request queue (about 128) so that containers refuse to queue more requests once they've already filled up. Such a refused connection causes the Pantheon edge to reattempt the request against up to all other healthy containers and up to a few unhealthy containers (where an unhealthy container is any container with a failed connection or 5xx code in the last 10 minutes).
 
-### Any HTTP 502 or 560 Respponse to Requests with Idempotent HTTP Methods
+### Any HTTP 502 or 560 Response to Requests with Idempotent HTTP Methods
 
 When Pantheon updates application container software or configuration, the resulting reloads and restarts can briefly cause the first requests to return HTTP 502 responses. When the HTTP method of the request is idempotent (is safe to re-attempt, which on Pantheon includes all methods except POST, PUT, DELETE, and PATCH), we retry the request against up to a few healthy application containers.
 
