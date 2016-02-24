@@ -67,6 +67,19 @@ There are many things that could cause your site to exceed the request timeout l
 ### Required Key Not Found
 When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](https://pantheon.io/docs/articles/users/loading-ssh-keys/) for instructions.
 
+## Retries Across Application Server Containers (High Availability)
+
+Higher plan levels on Pantheon deploy multiple containers for the live environment. Rather than just supporting scale, Pantheon also uses the extra containers for high-availability. Here are the different cases when Pantheon's edge may retry a request against a different application container.
+
+### Failed Connections
+
+Pantheon's edge starts by randomly distributing requests to application containers. However, to allow sites to fully use every bit of container capacity, nginx uses a short request queue (about 128) so that containers refuse to queue more requests once they've already filled up. Such a refused connection causes the Pantheon edge to reattempt the request against up to all other healthy containers and up to a few unhealthy containers (where an unhealthy container is any container with a failed connection or 5xx code in the last 10 minutes).
+
+### Any HTTP 502 or 560 Respponse to Requests with Idempotent HTTP Methods
+
+When Pantheon updates application container software or configuration, the resulting reloads and restarts can briefly cause the first requests to return HTTP 502 responses. When the HTTP method of the request is idempotent (is safe to re-attempt, which on Pantheon includes all methods except POST, PUT, DELETE, and PATCH), we retry the request against up to a few healthy application containers.
+
+Additionally, customer code may determine that a resource necessary to process a request is unavailable. By sending an HTTP 560 response, the application can trigger the same reattempts under the same conditions as an HTTP 502 response.
 
 ## Administrative Pages in Drupal
 It is unfortunately possible for some normal administrative operations to outlast the request timeout in Drupal. Submitting the modules page, manually running cron, running update.php, or flushing caches can be extremely slow operations on Drupal powered sites with large numbers of modules and/or a lot of data and activity.
