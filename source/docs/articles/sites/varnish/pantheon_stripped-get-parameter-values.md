@@ -14,7 +14,7 @@ Variables that are converted to <code>PANTHEON_STRIPPED</code> cannot be read wi
 
 ![pantheon_stripped](/source/docs/assets/images/pantheon_stripped.png)
 
-This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have hit the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals". 
+This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have hit the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals".
 
 You may also experience unexpected behavior when you overload Google's `utm_` parameter namespace. The URL parameters that Google Analytics uses are specific to their platform and are not intended to be extended by site developers. Using it as a general tracking parameter with patterns like `utm_mytrackingparameter` is discouraged. Please refer to Google Analytics [URL Builder](https://support.google.com/analytics/answer/1033867) for a list of the valid `utm_` parameters.
 
@@ -48,23 +48,31 @@ Location: https://pantheon.io/?utm_campaign=documentation_example
 Connection: keep-alive
 ```
 
-Note that the resulting `Location` header, which is where a browser would bounce to, still has your `utm_campaign` value in addition to being on https. That's great. We also include a special `X-Pre-Strip-Debug` header to help with debugging. 
+Note that the resulting `Location` header, which is where a browser would bounce to, still has your `utm_campaign` value in addition to being on https. That's great. We also include a special `X-Pre-Strip-Debug` header to help with debugging.
 
-However, as far as Pantheon's application environments are concerned, the value coming in was `PANTHEON_STRIPPED`. 
+However, as far as Pantheon's application environments are concerned, the value coming in was `PANTHEON_STRIPPED`.
 Query keys will still be passed to the application server, but the values will be changed to PANTHEON_STRIPPED to indicate that the URL is being altered. Looking in the `nginx-access.log` you would see something like this:
 
 ```
 nginx-access.log:10.223.193.24 - - [26/Jun/2015:17:12:52 +0000]  "GET /utm_campaign=PANTHEON_STRIPPED HTTP/1.1" 301 5 "http://www.google.com/aclk?sa=l&&ctype=4&clui=3&rct=j&q=&ved=0CB4QwgUoAg&adurl=http://example.com/features%3Futm_source%3Dgoogle_adwords%26utm_medium%3Dcpc%26utm_term%3Dmam%26utm_campaign%3Drlsa_mam%26utm_content%3Drlsa_mam_broad" "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4" 0.002 "108.87.108.187, 184.106.100.21, 10.189.246.4"
 ```
 
-Please note that this behavior only holds for HTTP redirects with a status code of 301 or 302, and only if the resulting redirect URLs parameters remain the same as on the way in. It is possible for your PHP code or CMS to pick up `PANTHEON_STRIPPED` and place it in a link that users are invited to click, or to issue a redirect that re-formulates the structure of the url to the point that we cannot restore the original parameters. 
+Please note that this behavior only holds for HTTP redirects with a status code of 301 or 302, and only if the resulting redirect URLs parameters remain the same as on the way in. It is possible for your PHP code or CMS to pick up `PANTHEON_STRIPPED` and place it in a link that users are invited to click, or to issue a redirect that re-formulates the structure of the url to the point that we cannot restore the original parameters.
 
 ## Resolution
-We always recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects. 
+We always recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects.
 
 Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://support.google.com/analytics/answer/1033867) tool.
 
 For more information, see [Caching - Advanced Topics](/docs/articles/sites/varnish/caching-advancedtopics).
+
+To avoid recycling query strings and tracking parameters on URLs within a site's framework, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
+
+```
+// Remove query strings and tracking parameters from URLs
+$strip = array('/&?__.+?(&|$)$/', '/&?utm_.+?(&|$)$/');
+$_SERVER['REQUEST_URI'] = preg_replace( $strip, '', $_SERVER['REQUEST_URI'] );
+```
 
 #### Which query parameters are optimized?
 
