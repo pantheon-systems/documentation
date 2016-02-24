@@ -11,24 +11,14 @@ All Pantheon sites consist of three parts:
 * **Files**: Images, user uploads, and other files that are not stored in version control, located in /sites/default/files (Drupal) or /wherever/wp-uploads/go (WordPress).
 * **Database**: The MySQL database utilized by your code to store content, settings, etc.
 
-## Copy Your Code/Files/Database
+You can clone an existing site from a Dashboard backup using the Importer tool when creating a new site. However, if your site exceeds the file size limit for uploads or if you need to preserve the site's existing Git history you will need to [manually import](/docs/articles/sites/migrate/manual-site-import) each archive instead of using the Importer tool.
+
+## Download Archives
 
 1. From your Site Dashboard, go to the Live environment and click **Backups**.
-2. Select the backup you want to clone from, and download each of the backup files (code, database, files) by clicking the **download** icon.
+2. Select the backup you want to clone from, and download each of the backup archives (Code, Database, Files) by clicking **Direct Download**.
 
-When you download a code archive for an environment, it contains the full Git repository checked out at master. If this code archive is combined with the database and files archive from that point in time, the code might not match the snapshot deployed on that environment. If you want to make a clone of Live or Test and it is a few commits behind Dev, use Git to checkout the appropriate tag for the state of code you want. This will leave the repository in a detached head state so you can create and then merge a branch back into master prior to uploading it.  
-
-To get the master branch in the same state as the code checked out on a tag:
-```
-git checkout pantheon_env_nnn
-git checkout -b new_branch_name
-git checkout master
-git merge new_branch_name
-```
-Then you can make an archive of this codebase to import into a new site, or push the master branch back up to the origin, or push the new branch and try it out on Multidev.
-
-## Import Your Code/Files/Database
-
+## Import Archives
 1. Go to the Account page on [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/).
 2. Click **Create A New Site**.
 3. Name your new site.
@@ -38,7 +28,3 @@ Then you can make an archive of this codebase to import into a new site, or push
 7. Click **Import Site**.
 
 The import process will create and deploy a new site based on the uploaded files. If there are issues, see [Migrate Sites to Pantheon](/docs/articles/sites/migrate) for possible solutions, or open a support ticket from your Dashboard. Be sure to include any error messages or relevant information.
-
-## Additional Considerations
-Retaining Git history, importing large file structures or databases:
-The methods in this article will work well for small to medium sites, but will not import the Git repository commit history or logs. Also, Pantheon's import process cannot handle exceptionally large file structures or databases. For any of these scenarios, see [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import).

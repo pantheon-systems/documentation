@@ -45,21 +45,8 @@ Now that you have created the archive files, check out how to [restore an enviro
 Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</div>
 
 ## About Your Code Archives
-When you download a backup to your local environment, it will include the entire repository and all tags. This means that initially, the code you see will reflect the state of the Dev environment, regardless of which environment you downloaded it from.
+Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
 
-To get the code to the state of the Test or Live environment, you'll need to create a branch and checkout that tag. Each Deploy to Test and Live adds another tag to the repository. To see the tags, run
-
-```
-git tag
-```
-
-And then to checkout that tag to a new branch, use
-
-```
-git checkout -b [branchname] [tagname]
-```
-
-For more information on Git tags, see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
 ## Frequently Asked Questions
 
