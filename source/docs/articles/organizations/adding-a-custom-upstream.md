@@ -60,6 +60,8 @@ Create a remote repository and clone it locally, then pull the applicable Panthe
 
 Follow conventions for using the `/profiles` directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
 
+<div class="alert alert-danger"><h4>WARNING:</h4>Your Upstream must not contain the tags <code>pantheon_test_n</code> or <code>pantheon_live_n</code>. Pantheon site repositories add these tags when you deploy code to Test and Live environments, and the platform will recognize and automatically deploy code at the tagged commit to those environments immediately, every time you create a site with the upstream.</div>
+
 Push the repository to your upstream's remote location.
 
 ```bash
@@ -125,7 +127,8 @@ For private repositories, create a dedicated user with read-only access to the r
 After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
-- Upstream URL (https)\*\*
+- Upstream URL: Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git`
+Public repository URLs do not require the `username:password@` portion of the above example URL\*\*
 - Upstream Branch (usually master)\*\*
 - If the upstream repository is public or private\*\*
 - Description (< 200 characters, basic HTML allowed)
