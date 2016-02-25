@@ -48,7 +48,7 @@ You can import during the site creation process using the importer tool or manua
 Using our importer during the site creation process has the following effects on the codebase:
 
  - New git history
- - Replacement and upgrade to the latest core version from our [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [WordPress](https://github.com/pantheon-systems/wordpress) repository
+ - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [WordPress](https://github.com/pantheon-systems/wordpress) repository
  - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
 
 <div class="alert alert-danger" role="alert"><h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
