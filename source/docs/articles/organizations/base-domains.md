@@ -1,11 +1,11 @@
 ---
 title: Customizing Your Base Domain
-description: Replace "pantheon.io" within Pantheon environments by adding a custom development domain.
+description: Replace "pantheonsite.io" within Pantheon environments by adding a custom development domain.
 category:
   - managing
 keywords: development domain, base domain, change dev url, change development domain, change base domain, dev url, wildcard, cname, edge, dns
 ---
-Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace `pantheon.io` as the base domain for each environment on every site they run or are developing on the platform.
+Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace `pantheonsite.io` as the base domain for each environment on every site they run or are developing on the platform.
 
 The base development domain can either be a subdomain of your primary site (`sites.mydomain.com`) or a dedicated domain name (`mypantheonprojects.com`).
 
@@ -27,7 +27,7 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
 ## Effects and Considerations
 
- - Sites associated with your organization will receive the custom base URL for all environments (including Multidev) created while the organization remains a supporting organization. If the supporting organization is removed from the team, new environments will receive URLs following the default `.pantheon.io` pattern. This includes new Multidev environments and Test and Live environments created **after** the organization was removed.
+ - Sites associated with your organization will receive the custom base URL for all environments (including Multidev) created while the organization remains a supporting organization. If the supporting organization is removed from the team, new environments will receive URLs following the default `.pantheonsite.io` pattern. This includes new Multidev environments and Test and Live environments created **after** the organization was removed.
 
  - After adding a custom domain to your organization, some workflow operations such as restoring an environment from a backup or changing the PHP version, can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain.
 

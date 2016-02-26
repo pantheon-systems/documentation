@@ -32,7 +32,7 @@ Be sure that you have:
 ## Fastly Setup
 
 1. Sign up for a [Fastly account](https://www.fastly.com/signup/).
-2. Create a new service. In the "Origin service address", use the Pantheon sub-domain specific to your main site's Live environment. You will find that on it's Domains/HTTPS tab, and will look like live-{site-name}.pantheon.io.
+2. Create a new service. In the "Origin service address", use the Pantheon sub-domain specific to your main site's Live environment. You will find that on it's Domains/HTTPS tab, and will look like live-{site-name}.pantheonsite.io.
 3. In the domain entry, put the www.site-example.com domain you want to serve as the root level. Fastly does not serve A names, such as site-example.com, so the www is required.
 4. Once Fastly has finished setting up the service, click **Configure**, and select the **Hosts** tab.
 5. Click the **+ New** button and add the Pantheon sub-domain for the secondary site's Live environment.
@@ -66,7 +66,7 @@ Click **Content**, and select **New**. In the pop-up form, enter the following:
 * Name: Main_Server_Host
 * Type/Action: Request, Set
 * Destination: http.host
-* Source: live-{site-name}.pantheon.io <-- Main content server's Pantheon subdomain.
+* Source: live-{site-name}.pantheonsite.io <-- Main content server's Pantheon subdomain.
 * Ignore If Set: No
 * Priority: 10
 
@@ -77,7 +77,7 @@ Now click **+ New** a second time and enter:
 * Name: Blog_Server_Host
 * Type/Action: Request, Set
 * Destination: http.host
-* Source: live-{site-name}.pantheon.io <-- Secondary content server's Pantheon subdomain.
+* Source: live-{site-name}.pantheonsite.io <-- Secondary content server's Pantheon subdomain.
 * Ignore If Set: No
 * Priority: 10
 

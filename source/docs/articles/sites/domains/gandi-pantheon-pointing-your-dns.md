@@ -33,7 +33,7 @@ www 10800 IN CNAME webredir.vip.gandi.net.
 ```
 2. Next, change the www CNAME to match the following:
 ```nohighlight
-www 300 IN CNAME live-example.pantheon.io.
+www 300 IN CNAME live-example.pantheonsite.io.
 ```
 
 <div class="alert alert-warning" role="alert">

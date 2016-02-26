@@ -5,7 +5,7 @@ keywords: https development domain, base domain, change dev url, change developm
 ---
 Enable HTTPS across all sites using your organization's customized base domain by adding a wildcard certificate to the primary site.
 
-**Customized base domains** on Pantheon replace `pantheon.io` as the base domain for all sites associated with your organization. This feature is available to Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners. For more information, see [Customizing Your Base Domain](/docs/articles/organizations/base-domains)
+**Customized base domains** on Pantheon replace `pantheonsite.io` as the base domain for all sites associated with your organization. This feature is available to Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners. For more information, see [Customizing Your Base Domain](/docs/articles/organizations/base-domains)
 ## Before You Begin
 Be sure that you have:
 

@@ -29,10 +29,10 @@ Here is an example of a code snippet to set the `$base_url` per environment:
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
   switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
     case 'dev':
-      $base_url = 'http://dev-example.pantheon.io'; // NO trailing slash!
+      $base_url = 'http://dev-example.pantheonsite.io'; // NO trailing slash!
       break;
     case 'test':
-      $base_url = 'http://test-example.pantheon.io'; // NO trailing slash!
+      $base_url = 'http://test-example.pantheonsite.io'; // NO trailing slash!
       break;
     case 'live':
       $base_url = 'http://www.example.tld'; // NO trailing slash!

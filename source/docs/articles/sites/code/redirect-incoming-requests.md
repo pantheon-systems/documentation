@@ -42,7 +42,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
-      $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
+      $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheonsite.io') {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']);
     exit();
@@ -70,7 +70,7 @@ To direct all traffic to the bare domain using CloudFlare:
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
       (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' ||
-          $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheon.io') {
+          $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheonsite.io') {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: http://yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
@@ -88,7 +88,7 @@ To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traff
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'OFF') &&
       (php_sapi_name() != "cli")) {
-      if (!isset($_SERVER['HTTP_X_SSL']) || 
+      if (!isset($_SERVER['HTTP_X_SSL']) ||
       (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);

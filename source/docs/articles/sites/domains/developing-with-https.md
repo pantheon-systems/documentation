@@ -4,7 +4,7 @@ description: Learn how to develop Drupal or WordPress sites using HTTPS on Panth
 keywords: https,  develop with HTTPS, develop with https, encryption, security, enable ssl, add https to dev, add https to environment
 ---
 ## Switch to HTTPS
-Every free Pantheon development site comes ready to roll with HTTPS for development. If you're viewing your site at `http://dev-yoursite.pantheon.io`, simply switch your connection mode to HTTPS by visiting `https://dev-yoursite.pantheon.io`.
+Every free Pantheon development site comes ready to roll with HTTPS for development. If you're viewing your site at `http://dev-yoursite.pantheonsite.io`, simply switch your connection mode to HTTPS by visiting `https://dev-yoursite.pantheonsite.io`.
 
 To make sure that HTTPS is used every time you visit a site, add logic to `settings.php` or `wp-config.php` to [redirect all incoming requests to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/).
 

@@ -38,9 +38,9 @@ Use the following workaround to allow your local workstation to access your Pant
 1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 
  ```bash
- $ dig +short live-yoursite.pantheon.io
+ $ dig +short live-yoursite.pantheonsite.io
 
- styx-xx.pantheon.io.
+ styx-xx.pantheonsite.io.
  192.123.456.789
  104.123.456.78
  23.123.45.6
@@ -66,14 +66,14 @@ To serve your site from the bare domain, you must:
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
 
  ```bash
- CNAME @ live-yoursite.pantheon.io
- CNAME www live-yoursite.pantheon.io
+ CNAME @ live-yoursite.pantheonsite.io
+ CNAME www live-yoursite.pantheonsite.io
  ```
  The @ value will show the bare domain once created in CloudFlare:
  ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
 3. [Redirect incoming requests](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
-One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheon.io`), and creates corresponding A records.
+One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
 
 Learn more about ANAME records:
 
@@ -95,7 +95,7 @@ The www-redirection service listens for requests and issues 301 redirects with w
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
 ![Extra www example](/source/docs/assets/images/desk_images/376201.png)
-Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheon.io`), found within the Site Dashboard on the target environment.
+Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
 ### Why is my Drupal 8 site inaccessible after adding a custom domain?
 The following response is served for requests originating from an "untrusted" host on Drupal 8 sites which have enabled the `trusted_host_patterns` setting:
@@ -111,7 +111,7 @@ $settings['trusted_host_patterns'][] = '^yoursite\.com$';
 For more details, see [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php#trusted-host-setting).
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
-Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheon.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
+Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheonsite.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
 
 ### Can I test my domain name without making DNS changes?
 
@@ -124,15 +124,15 @@ The provided IP address resolves to our load balancers. When a request comes in,
 [Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
 
 ### Does Pantheon do any HTML domain substitution?
-Yes, for WordPress sites (which are more likely to contain hard-coded links to other domains in their database), Pantheon will replace platform-assigned domains for that environment (e.g. `dev-mysite.pantheon.io` or `live-mysite.gotpantheon.com`) with custom domains in the HTML body when the HTML page is requested via the custom domain.  This prevents loading assets using different domain names representing the same site.  
+Yes, for WordPress sites (which are more likely to contain hard-coded links to other domains in their database), Pantheon will replace platform-assigned domains for that environment (e.g. `dev-mysite.pantheonsite.io` or `live-mysite.gotpantheon.com`) with custom domains in the HTML body when the HTML page is requested via the custom domain.  This prevents loading assets using different domain names representing the same site.  
 
-For example, when requesting `http://mysite.com` in a browser, we replace any asset (images, CSS, JS) URL domains from `live-mysite.pantheon.io` to `mysite.com`.
+For example, when requesting `http://mysite.com` in a browser, we replace any asset (images, CSS, JS) URL domains from `live-mysite.pantheonsite.io` to `mysite.com`.
 
 This will not:
 
 * Affect Drupal
 * Substitute HTTPS domains
-* Substitute platform domains from another environment (i.e. `dev-mysite.pantheon.io` will not be substituted for `mysite.com` if that is a custom domain for the Live environment)
+* Substitute platform domains from another environment (i.e. `dev-mysite.pantheonsite.io` will not be substituted for `mysite.com` if that is a custom domain for the Live environment)
 
 ### My site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
 Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when configuring the domain's DNS. Only create the CNAME record for the www subdomain and the A record for the bare domain.

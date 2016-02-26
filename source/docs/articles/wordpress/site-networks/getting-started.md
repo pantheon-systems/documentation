@@ -30,7 +30,7 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 <div class="alert alert-info" role="alert">
 <h4>Subdomains Note</h4>
 <p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment. Custom hostnames cannot be added to Multidev environments.</p>
-<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheon.io. Therefore, you should add a custom primary domain for each environment at this point.
+<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h4>Subdirectory Note</h4>
 Custom primary hostnames are not necessary for plain subdirectory-configured networks.</div>
@@ -71,9 +71,9 @@ Add the above subdomains to your domain name host for the domain, using the reco
 
 For subdomain-style networks, it is also useful to add the following wildcard DNS entries at your DNS host.
 
-- `*.dev` CNAME to `dev-example-network.pantheon.io`,
-- `*.test` CNAME to `test-example-network.pantheon.io`, and
-- `*.` CNAME to `live-example-network.pantheon.io`.
+- `*.dev` CNAME to `dev-example-network.pantheonsite.io`,
+- `*.test` CNAME to `test-example-network.pantheonsite.io`, and
+- `*.` CNAME to `live-example-network.pantheonsite.io`.
 
 ### Modify DOMAIN_CURRENT_SITE
 
@@ -201,9 +201,9 @@ WP-CLI interprets them as:
 Ready to move forward? Run the command! When you do, you’ll see output similar to this:
 
 ```
-Running wp search-replace dev-example-network.pantheon.io test-example-network.pantheon.io --url='dev-example-network.pantheon.io' --network='1'  on example-network-test
-    cmd: 'search-replace dev-example-network.pantheon.io test-example-network.pantheon.io'
-    flags: '--url='dev-example-network.pantheon.io' --network='1' '
+Running wp search-replace dev-example-network.pantheonsite.io test-example-network.pantheonsite.io --url='dev-example-network.pantheonsite.io' --network='1'  on example-network-test
+    cmd: 'search-replace dev-example-network.pantheonsite.io test-example-network.pantheonsite.io'
+    flags: '--url='dev-example-network.pantheonsite.io' --network='1' '
     site: 'example-network'
     env: 'test'
 tput: No value for $TERM and no -T specified

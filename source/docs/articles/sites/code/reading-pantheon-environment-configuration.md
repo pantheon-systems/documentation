@@ -142,7 +142,7 @@ This is a partial example from a Wordpress site homepage:
       ["SCRIPT_FILENAME"]=>
       string(62) "/srv/bindings/non-static-binding-string-inserted-here/code//index.php"
       ["HTTP_HOST"]=>
-      string(25) "example-wp-site.pantheon.io"
+      string(25) "example-wp-site.pantheonsite.io"
       ["HTTP_USER_AGENT"]=>
       string(120) "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko)         Chrome/46.0.2490.80 Safari/537.36"
       ["HTTP_ACCEPT"]=>

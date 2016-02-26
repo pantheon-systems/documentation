@@ -11,7 +11,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 <h4>Note</h4>
 This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">simplesaml_php auth module</a> from drupal.org.</div>
 
-When you're done following the quickstart instructions above and have completed all the directions below, you'll have something like http://dev-simplesaml.pantheon.io. Note the "Federated Log In" link. See the [pantheon-simplesaml-example](https://github.com/ari-gold/pantheon-simplesaml-example) repo to see how it was implemented. If you click each commit message of the most recent commits, you'll see what was added in each commit.
+When you're done following the quickstart instructions above and have completed all the directions below, you'll have something like http://dev-simplesaml.pantheonsite.io. Note the "Federated Log In" link. See the [pantheon-simplesaml-example](https://github.com/ari-gold/pantheon-simplesaml-example) repo to see how it was implemented. If you click each commit message of the most recent commits, you'll see what was added in each commit.
 
 - Download [SimpleSAMLphp version 1.11.x](http://simplesamlphp.org/) and add it to your Git repository as `/private/simplesamlphp-1.11.x`
 - Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.11.x/www`:
