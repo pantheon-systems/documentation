@@ -32,7 +32,9 @@ Automatic resolution of domains is not supported. For each domain that you want 
 
 While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
-Pantheon's www-redirection service automatically redirects requests to the www subdomain as long as <a href="/docs/articles/sites/domains/#step-3-configure-your-dns" data-proofer-ignore>DNS has been configured</a> appropriately. However, this service does not apply to sites with HTTPS enabled and the following block should be used to standardize on www:
+Pantheon's www-redirection service automatically redirects requests to the www subdomain as long as <a href="/docs/articles/sites/domains/#step-3-configure-your-dns" data-proofer-ignore>DNS has been configured</a> appropriately. However, this service does not apply to sites with HTTPS enabled.
+
+### Redirect to www for Sites with HTTPS
 
 ```
 // Require WWW.
@@ -48,7 +50,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 }
 ```
 
-
+### Redirect from www to the Bare Domain
 
 If you prefer to use the bare domain, use the following code block and run your DNS settings through a service that supports CNAME flattening. For details, see <a href="/docs/articles/sites/domains/#step-3-configure-your-dns" data-proofer-ignore>Domains and DNS</a>.
 
