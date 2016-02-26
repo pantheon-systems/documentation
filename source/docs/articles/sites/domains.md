@@ -142,3 +142,4 @@ Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when co
 * [Redirect to a Common Domain](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/articles/sites/code/redirect-incoming-requests/#redirect-to-https)
 * [Enable Secure HTTPS Communication](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication/)
+* [Default Base Domain](/docs/articles/sites/domains/default-base-domain)
