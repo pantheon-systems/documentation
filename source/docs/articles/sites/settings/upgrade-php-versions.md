@@ -18,14 +18,14 @@ Current PHP Versions for site environments can be verified from the site Dashboa
 Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
 </div>
 
-1. Use [Terminus](/docs/articles/local/cli) to temprarily set Dev or Multidev envirnoment to the newer version of PHP: `terminus site set-php-version --env=<dev|multidev> --site=<site>`
+1. Use [Terminus](/docs/articles/local/cli) to set Dev or Multidev envirnoment to the newer version of PHP: `terminus site set-php-version --env=<dev|multidev> --site=<site> --version=5.5`
 
- _Verify the version of an environment in the site Dashboard or with Terminus: `terminus site environment-info`_
+ _You can verify the version of PHP for an environment using the site Dashboard, [`phpinfo()`](/docs/articles/sites/secure-phpinfo/), or via Terminus: `terminus site environment-info`_
 
 2. Resolve any PHP version compatibility issues or warnings in Dev or Multidev.
-3. Temporarily set Test to the newer version of PHP and deploy there for a final check.
-4. Set the **Site Default** to the newer version and deploy your compatibility changes (if any) to Live.
-5. Restore all environments to `Site Default` to ensure they remain the same and you’re ready for the next update.
+3. Set Test to the newer version of PHP and deploy there for a final check: `terminus site set-php-version --env=test --version=5.5`
+4. Set the **Site Default** to the newer version: `terminus site set-php-version --site=<site> --version=5.5`
+5. Deploy your compatibility changes (if any) to Live.
 
 ## Resolve PHP Version Compatibility Issues
 
