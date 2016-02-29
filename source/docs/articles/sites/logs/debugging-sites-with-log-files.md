@@ -45,7 +45,7 @@ When developing a site, it can be useful to directly access the server logs for 
 See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log) for details.
 
 #### Why do I see requests coming from 10.x.x.x IPs in nginx-access.log?
-The first entry reflects the internal IP address of Pantheon's routing layer, Styx. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
+The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
 
 The client IP for the following example is `122.248.101.126`:
 
