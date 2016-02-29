@@ -19,8 +19,7 @@ dependencies:
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
-    # uncomment this line once the PR is made to pantheon-systems/documentation
-    #- bash scripts/deploy-multidev.sh
+    - bash scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
