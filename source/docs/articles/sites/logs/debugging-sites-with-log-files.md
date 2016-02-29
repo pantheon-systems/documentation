@@ -44,6 +44,15 @@ When developing a site, it can be useful to directly access the server logs for 
 
 See [Parsing nginx Access Logs with GoAccess](/docs/articles/sites/logs/nginx-access-log) for details.
 
+#### Why do I see requests coming from 10.x.x.x IPs in nginx-access.log?
+The first entry reflects the internal IP address of Pantheon's routing layer, Styx. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
+
+The client IP for the following example is `122.248.101.126`:
+
+```nginx
+10.x.x.x - - [19/Feb/2016:02:00:00 +0000]  "GET /edu HTTP/1.1" 200 13142 "https://pantheon.io/agencies/pantheon-for-agencies" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0" 0.399 "122.248.101.126, 50.57.202.75, 10.x.x.x, 10.x.x.x"
+```
+
 #### Can I log to the system logger and access syslog?
 
 The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
