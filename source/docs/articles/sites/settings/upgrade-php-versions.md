@@ -7,9 +7,7 @@ keywords: php, php version, php versions, how to change php version, toggle php 
 ---
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 20% performance gains after upgrading](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains).
 ## Verify Current PHP Versions
-Current PHP versions for site environments can be verified from the Site Dashboard within **Settings** > **PHP version**. The site default PHP version is applied to every environment unless a PHP version for that environment is explicitly selected.
-
-![PHP Versions](/source/docs/assets/images/php-versions.png)
+Verify current PHP versions for site environments from the Site Dashboard by clicking **Settings** > **PHP version**. The site default PHP version is applied to every environment unless a PHP version for that environment is explicitly selected.
 
 ## Upgrade PHP Versions
 
@@ -20,7 +18,7 @@ Running different versions of PHP per environment is risky and should only be do
 
 1. Use [Terminus](/docs/articles/local/cli) to set Dev or Multidev envirnoment to the newer version of PHP: `terminus site set-php-version --env=<dev|multidev> --site=<site> --version=5.5`
 
- _You can verify the version of PHP for an environment using the site Dashboard, [`phpinfo()`](/docs/articles/sites/secure-phpinfo/), or via Terminus: `terminus site environment-info`_
+ You can verify the version of PHP for an environment using the Site Dashboard, [`phpinfo()`](/docs/articles/sites/secure-phpinfo/), or via Terminus: `terminus site environment-info`.
 
 2. Resolve any PHP version compatibility issues or warnings in Dev or Multidev.
 3. Set Test to the newer version of PHP and deploy there for a final check: `terminus site set-php-version --env=test --version=5.5`
@@ -29,7 +27,7 @@ Running different versions of PHP per environment is risky and should only be do
 
 ## Resolve PHP Version Compatibility Issues
 
-We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the **Backward Incompatible Changes documentation** in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
+We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the Backward Incompatible Changes documentation in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
 
 ## See Also
 
