@@ -7,7 +7,7 @@ keywords: php, php version, php versions, how to change php version, toggle php 
 ---
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 20% performance gains after upgrading](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains).
 ## Verify Current PHP Versions
-Current PHP Versions for site environments can be verified from the site Dashboard within **Settings** > **PHP version**. The site default PHP version will be applied to every environment unless a PHP version for that environment is explicitly selected.
+Current PHP versions for site environments can be verified from the Site Dashboard within **Settings** > **PHP version**. The site default PHP version is applied to every environment unless a PHP version for that environment is explicitly selected.
 
 ![PHP Versions](/source/docs/assets/images/php-versions.png)
 
