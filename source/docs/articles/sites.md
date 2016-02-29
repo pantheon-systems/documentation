@@ -55,7 +55,7 @@ To find a link to your site's upstream, click **Settings**, then **About Site**.
 
 
 ### PHP Version
-The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. Learn more about [Toggling Between PHP Versions](/docs/articles/sites/settings/toggling-between-php-versions/).
+The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/docs/articles/sites/settings/upgrade-php-versions/).
 
 ## Support
 If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can contact Support by opening a ticket from your Dashboard. Learn more about our [scope of support](/docs/articles/scope-of-support/).

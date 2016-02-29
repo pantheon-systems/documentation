@@ -19,4 +19,4 @@ The **Add Ons** tab provides the ability to enable additional features, such as 
 ## Delete Site
 See [Deleting a Site on Pantheon](/docs/articles/sites/deleting-a-site/).
 ## PHP Version
-See [Toggling Between PHP Versions](/docs/articles/sites/settings/toggling-between-php-versions).
+See [Upgrade PHP Versions](/docs/articles/sites/settings/upgrade-php-versions).
