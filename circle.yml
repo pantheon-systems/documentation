@@ -13,8 +13,7 @@ dependencies:
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
-    # @todo, uncomment this line.
-    #- bash scripts/deploy-multidev.sh
+    - bash scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
