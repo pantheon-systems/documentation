@@ -7,7 +7,7 @@ keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewal
 ---
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website. This is available for customers with an Elite plan. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.
 
-![pantheon enterprise gateway](/source/docs/assets/images/PEG_Diagram.png)
+![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
 ### How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
 
