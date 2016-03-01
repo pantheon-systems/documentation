@@ -112,7 +112,7 @@ You are welcome to modify this patch according to your needs, such as performing
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
 ```
-$conf['plupload_temporary_uri'] ='private://temp';
+$conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
 You may also need to add this line to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
