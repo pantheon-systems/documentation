@@ -3,15 +3,8 @@ machine:
   php:
     # https://circleci.com/docs/environment#php
     version: 5.5.11
-  pre:
-    # @todo look for a better way to install phantomjs.
-    # - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
 
 dependencies:
-  pre:
-    - npm install -g phantomjs-prebuilt
-    - npm install -g sitespeed.io
-
   cache_directories:
     - ~/.composer/cache
 
