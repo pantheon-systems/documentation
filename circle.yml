@@ -13,7 +13,8 @@ dependencies:
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
-    - bash scripts/deploy-multidev.sh
+    # @todo, remove commented out deploy
+    #- bash scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
@@ -23,6 +24,8 @@ test:
     - bin/sculpin server:
        background: true
   override:
+    # Run sitespeed.io
+    - bash scripts/run-sitespeed-test.sh
     # Run behat.
     - bin/behat
     # Run a11y.
@@ -31,12 +34,6 @@ test:
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
     - bundle exec rake
-    # @todo, Switch the test to http://"$normalize_branch"-static-docs.pantheon.io
-    # also this line may have to be moved to a place where normalize_branch
-    # can be constructed.
-    # @todo, revisit contents of the  budget file. It copied from the
-    # sitespeed.io repo with little change.
-    - bash scripts/run-sitespeed-test.sh
 
 deployment:
   production:
