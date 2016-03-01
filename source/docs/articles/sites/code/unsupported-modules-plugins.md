@@ -112,8 +112,14 @@ You are welcome to modify this patch according to your needs, such as performing
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
 ```
-$conf['plupload_temporary_uri'] ='public://temp';
+$conf['plupload_temporary_uri'] ='private://temp';
 ```
+
+You may also need to add this line to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
+`$temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);`  
+
+This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
+
 <hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/articles/local/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
@@ -191,8 +197,6 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 For more information, see [Dynamic Outgoing IP Addresses](/docs/articles/sites/code/dynamic-outgoing-ip-addresses).
 
 ## Using the tmp Directory
-**Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. For more details on Pantheon's distributed infrastructure, see [All About Application Containers](/docs/articles/sites/all-about-application-containers).
+**Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared. 
 
-<div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Using sites/default/files/tmp as a work around for these issues will produce unpredictable side effects and is not supported.</div>
+**Solution**: For more details, see [Temporary File Management with Multiple Application Containers](/docs/articles/sites/files/temp-files).
