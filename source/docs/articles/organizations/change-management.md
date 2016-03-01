@@ -174,7 +174,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td><center>X</center></td>
     </tr>
     <tr>
-        <td>Owner</td>
+        <td>User In Charge</td>
         <td>&#8226; Functionally is the same as an Organization Administrator<br>
         &#8226; Only role that can delete a site after it is live</td>
         <td></td>
