@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "default": 60
+  },
+  "timings": {
+    "serverResponseTime": 300,
+    "domContentLoadedTime": 700,
+    "speedIndex": 1000
+  },
+  "wpt": {
+    "SpeedIndex": 1000
+  },
+  "gpsi": {
+    "score": 90
+  }
+}
