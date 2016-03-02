@@ -42,10 +42,10 @@ If you have [Terminus](/docs/articles/local/cli/) installed, you can easily see 
 
 You can also schedule your own jobs, execute existing jobs, and manage just about everything WP-Cron related&mdash;all from the command line.
 
-One of the first things you'll want to do is test WP-Cron to make sure everything is working correctly. When you execute the command below, make sure to replace SITE_NAME with your site's name from your Pantheon Dashboard and provide the desired environment (Dev, Test, Live).
+One of the first things you'll want to do is test WP-Cron to make sure everything is working correctly. When you execute the command below, make sure to replace SITE_NAME with your site's name from your Pantheon Dashboard and replace ENV_NAME with the desired environment ("dev", "test", "live", or multidev branch name).
 
 ````nohighlight
-$ terminus wp 'cron test'
+$ terminus wp "cron test" --site=SITE_NAME --env=ENV_NAME
 ````
 
 If everything works correctly, the result looks like this:
@@ -69,7 +69,7 @@ If you have protected your site using the Security setting on your Dashboard, Te
 
 ### Plugins
 
-If you want to keep an eye on WP-Cron but don't like the command line, there are several plugins you can use. [WP Control](https://wordpress.org/plugins/wp-crontrol/screenshots/ "Wp-Crontroll website"), for example, will show you all of the events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
+If you want to keep an eye on WP-Cron but don't like the command line, there are several plugins you can use. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, will show you all of the events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
 
 [WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") will do a similar job with a slightly different UI. This plugin requires you to do a one-time installation the WPX framework, which you can do straight from the plugin manager page.
 
