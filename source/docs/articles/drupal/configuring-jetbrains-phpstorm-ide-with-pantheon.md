@@ -61,7 +61,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 #### Mappings Tab
 
 1. Deployment path on server: /code
-2. Web path on server: URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheon.io
+2. Web path on server: URL of your Pantheon Dev environment. Example: http://dev-yoursite.pantheonsite.io
 3. Click **OK**.
 4. Go to Tools > Deployment > Automatic Upload > and select the server you created.
 

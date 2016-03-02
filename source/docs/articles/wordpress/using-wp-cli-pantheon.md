@@ -33,7 +33,7 @@ Now that we've covered the most important basics, let's run a command:
         flags: ''
         site: 'pantheon-demo'
         env: 'dev'
-    http://pantheon-demo.pantheon.io
+    http://pantheon-demo.pantheonsite.io
 
 From the example above:
 
@@ -41,7 +41,7 @@ From the example above:
 * `option get` is the command itself ([docs](http://wp-cli.org/commands/option/get/)). `home` is the key for the option we're requesting.
 * `--site=pantheon-demo` and `--env=dev` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
-The first part of the output is Terminus telling you which command it's running, and where. The last line, "http://pantheon-demo.pantheon.io", is the response of `wp option get`.
+The first part of the output is Terminus telling you which command it's running, and where. The last line, "http://pantheon-demo.pantheonsite.io", is the response of `wp option get`.
 
 Feeling comfortable with WP-CLI? Here are a [few of many commands](http://wp-cli.org/commands/) you may find helpful in your journeys:
 

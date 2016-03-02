@@ -36,10 +36,10 @@ This keeps us from needing to use `--site=book-blog` with all of our terminus co
 2. `terminus site code commit --env=dev --message="Export configuration to code"`
 3. `terminus site deploy --env=test --sync-content --cc --note="Deploy configuration to test"`
 4. `terminus drush 'cim -y'
-5. `open http://test-mysite.pantheon.io`
+5. `open http://test-mysite.pantheonsite.io`
 6. `terminus site deploy --env=live --cc --note="Deploy configuration to live"`
 7. `terminus drush 'cim -y'
-8. `open live-mysite.pantheon.io`
+8. `open live-mysite.pantheonsite.io`
 
 ## Configuration Tools for Drupal 8
 With [Drupal 8](https://pantheon.io/drupal8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.

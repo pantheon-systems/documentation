@@ -145,7 +145,7 @@ see that your certificate is being served:
 
 ```
 ...
-* Connected to live-sitename.pantheon.io (x.x.x.x) port 443 (#0)
+* Connected to live-sitename.pantheonsite.io (x.x.x.x) port 443 (#0)
 * TLS 1.2 connection using TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 * Server certificate: www.yourdomain.com
 ...

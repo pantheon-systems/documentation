@@ -66,9 +66,9 @@ To learn more, see [Using the Pantheon Workflow](/docs/articles/sites/code/using
 
 #### Why is robots.txt is disallowing crawlers to my Live environment?
 
-Pantheon serves a default robots.txt that disallows crawlers for any \*.pantheon.io domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
+Pantheon serves a default robots.txt that disallows crawlers for any \*.pantheonsite.io domain. Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
 
-If you attempt to access your live environment with a pantheon.io domain, even if you have a domain associated with the environment, the default robots.txt will be served.
+If you attempt to access your live environment with a pantheonsite.io domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
 Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a domain to an environment other than Live will not permit crawlers to that environment.
 

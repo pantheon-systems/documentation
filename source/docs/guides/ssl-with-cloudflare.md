@@ -31,7 +31,7 @@ We recommend you take advantage of this feature as it frees you up from being ti
 
 ![Example DNS Settings](/source/docs/assets/images/cloudflare-dns.png)
 
-In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheon.io` domain as the target. In the case of legacy gotpantheon.com sites, use `edge.live.getpantheon.com` for the CNAME target of the root record.
+In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheonsite.io` domain as the target. In the case of legacy gotpantheon.com sites, use `edge.live.getpantheon.com` for the CNAME target of the root record.
 
 As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/articles/sites/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
 
@@ -87,7 +87,7 @@ The best way to do this on Pantheon is to make use of our environment variables.
       }
       else {
         # Fallback value for multidev or other environments.
-        # This covers environment-sitename.pantheon.io domains
+        # This covers environment-sitename.pantheonsite.io domains
         # that are generated per environment.
         $domain = $_SERVER['HTTP_HOST'];
       }
@@ -111,7 +111,7 @@ On WordPress, you should similarly set the `WP_HOME` and `WP_SITEURL` constants 
         $domain = 'www.mysite.com';
       else:
         # Fallback value for multidev or other environments.
-        # This covers environment-sitename.pantheon.io domains
+        # This covers environment-sitename.pantheonsite.io domains
         # that are generated per environment.
         $domain = $_SERVER['HTTP_HOST'];
       endif;
@@ -155,12 +155,12 @@ You can also achieve this by writing your own redirection code into your `settin
 
 There are a few things worth noting in the above example:
 
-1. This technique has the added benefit of insuring that any visitor who somehow gets a link to the `env-sitename.pantheon.io` domain will be immediately bounced to your proper production hostname.
+1. This technique has the added benefit of insuring that any visitor who somehow gets a link to the `env-sitename.pantheonsite.io` domain will be immediately bounced to your proper production hostname.
 2. Checking `isset($_SERVER['PANTHEON_ENVIRONMENT'])` is important because this will only be `TRUE` if the request is running as a result of a web request through Pantheon's PHP container matrix. This prevents redirects from interrupting command-line operations.
 3. `$_SERVER['HTTP_X_FORWARDED_PROTO']` is PHP's way of exposing the `X-Forwarded-Proto` HTTP header, an internet standard for communicating when another "upstream" service has terminated HTTPS.
 4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and CloudFlare, further upstream) to cache the redirect, which is always nice.
 
-Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheon.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
+Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheonsite.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
 
 ## Compatibility and Limitations
 

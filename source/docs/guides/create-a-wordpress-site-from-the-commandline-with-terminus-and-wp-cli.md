@@ -97,7 +97,7 @@ $
 ```
 To create a site with one command, you need
 - **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
-- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `--site=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheon.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
+- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `--site=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
 - **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
 - **Organization ID:** The UUID of the organization that will own the site.
 
@@ -165,7 +165,7 @@ To populate the database of the site you created, use the following command:
 
 ```nohighlight
 $ terminus wp 'core install
-                           --url=http://dev-cli-test.pantheon.io \
+                           --url=http://dev-cli-test.pantheonsite.io \
                            --title="WP-CLI Test" \
                            --admin_user=admin \
                            --admin_password=pantheon.rocks \
@@ -183,7 +183,7 @@ Success: WordPress installed successfully.
 
 Now go to your Dev environment
 ```bash
-$ open http://dev-cli-test.pantheon.io/wp-admin
+$ open http://dev-cli-test.pantheonsite.io/wp-admin
 ```
 Log in using the username and password you set in the `wp core install` command. You've got a speedy WordPress admin ready to start developing!
 

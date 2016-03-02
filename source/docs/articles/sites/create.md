@@ -12,7 +12,7 @@ keywords: create a site, creating new sites, how to create a site, creating site
 On your User Dashboard, click  **Create your first site** or **Create a new site**.
 
 ### Name Your Site
-Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheon.io domain.
+Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheonsite.io domain.
 ![Name your site](/source/docs/assets/images/name-your-site.png)
 ### Choose Your Framework
 Click **Install WordPress**  or **Install Drupal**  or any of the distributions available on the Platform.
