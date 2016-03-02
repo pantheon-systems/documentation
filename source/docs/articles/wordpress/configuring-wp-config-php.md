@@ -31,11 +31,11 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of `$\_SERVER['PANTHEON\_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like [redirects](/docs/articles/sites/code/redirect-incoming-requests), check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/%24_SERVER-environment?footer=minimal"></script>
 
-For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​`PANTHEON\_ENVIRONMENT`. Again, it will contain Dev, Test, or Live.
+For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​`PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live.
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/web-cli-environment?footer=minimal"></script>
 
