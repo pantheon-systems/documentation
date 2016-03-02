@@ -8,14 +8,13 @@ category:
 - getting-started
 keywords: local development, pantheon, develop locally, developing
 ---
-While Pantheon provides several options for on-server development, [local development](/docs/articles/local) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. If you're looking for a self-contained local development solution, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
-
-For large teams/sites, we recommend using [Multidev](https://pantheon.io/docs/articles/sites/multidev/) instead of local development.
+While Pantheon provides several options for on-server development, [local development](/docs/articles/local) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](https://pantheon.io/docs/articles/sites/multidev/) instead of local development.
 
 ## Before You Begin
 Be sure you have:
 
-- A local development stack. Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  [MAMP](http://www.mamp.info/),  [WAMP](http://www.wampserver.com/),  [XAMPP](https://www.apachefriends.org/index.html), and [Kalabox](http://www.kalamuna.com/products/kalabox) all work.
+- A local stack capable of running Drupal or Wordpress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/),  [XAMPP](https://www.apachefriends.org/index.html), and  all work.
+    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/articles/sites/all-about-application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.  
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](/docs/articles/local/cli/)
