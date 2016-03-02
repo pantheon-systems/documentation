@@ -9,7 +9,7 @@ Enable HTTPS across all sites using your organization's Vanity domain by adding 
 ## Before You Begin
 Be sure that you have:
 
-- A Vanity domain, otherwise  [request one](/docs/articles/organizations/vanity-domains/#request-the-base-domain) and [consider the effects](/docs/articles/organizations/vanity-domains/#effects-and-considerations) before proceeding
+- A Vanity domain, otherwise  [request one](/docs/articles/organizations/vanity-domains/#request-the-vanity-domain) and [consider the effects](/docs/articles/organizations/vanity-domains/#effects-and-considerations) before proceeding
 - A Wildcard SSL Certificate from an [SSL Provider](/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication#ssl-providers)
 
 ## Create HTTPS Endpoint
