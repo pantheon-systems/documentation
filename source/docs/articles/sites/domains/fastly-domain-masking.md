@@ -25,7 +25,7 @@ Be sure that you have:
 - A Fastly [account](https://www.fastly.com/signup/)
 
 ## Pantheon Setup
-1. In the Dashboard of the Pantheon site you want to use to serve the base domain, ex. http://www.example-site.com/, go to its Live environment and select the **Domains/HTTPS** tab.
+1. In the Dashboard of the Pantheon site you want to use to serve the Vanity domain, ex. http://www.example-site.com/, go to its Live environment and select the **Domains/HTTPS** tab.
 2. Enter the main domain as well as its "www" prefix.
 3. In the Pantheon site you want to act as the secondary content source, ensure that you have a Live environment setup.
 

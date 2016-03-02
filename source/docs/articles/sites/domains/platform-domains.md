@@ -13,7 +13,7 @@ Every site on Pantheon is given three environments (Dev, Test, and Live), each w
 - live-site-name.pantheonsite.io
 - multidev-env-site-name.pantheonsite.io
 
-## Legacy Base Domains
+## Legacy Platform Domains
 DNS configurations that use the `gotpantheon.com` Legacy Platform domain will continue to work, as requests are permanently redirected to `pantheonsite.io`. However, we recommend switching the CNAME value from `gotpantheon.com` to `pantheonsite.io` within the domain's DNS provider to take advantage of uptime and reliability improvements.
 
 Sites using the `pantheon.io` Legacy Platform domain already enjoy these improvements and can use `pantheonsite.io` if they wish to standardize on the new domain.

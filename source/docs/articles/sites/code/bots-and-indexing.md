@@ -37,7 +37,7 @@ Some legitimate [bots/crawlers/proxies](http://www.httpuseragent.org/list/) (suc
 
 ## Robots.txt: Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a robots.txt associated with the bare `.pantheonsite.io` domain, or `sites.myagency.com` custom base domain, that contains the following:
+It is important to note that each of your site environments have a robots.txt associated with the bare `.pantheonsite.io` domain, or `sites.myagency.com` custom Vanity domain, that contains the following:
 
 ```
 User-agent: *
