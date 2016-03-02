@@ -62,7 +62,7 @@ Review, open, or reply to support tickets associated with your organization and 
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All organizations have Multidev and Change Management. Ally Partners and Pantheon EDU customers do not qualify for custom upstreams, custom base domains, email domains, or single sign-on (SSO).
+All organizations have Multidev and Change Management. Ally Partners and Pantheon EDU customers do not qualify for custom upstreams, custom Vanity domains, email domains, or single sign-on (SSO).
 
 ### Multidev for All Sites
 All sites associated with any organization will have [Multidev](/docs/articles/sites/multidev) enabled with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments, unless the site service level includes it (Business and Elite sites, and those owned by an Enterprise organization).
@@ -71,8 +71,8 @@ All sites associated with any organization will have [Multidev](/docs/articles/s
 
 User roles at the organization level determine their level of access to sites supported or owned by the organization. [Learn more about change management](/docs/articles/organizations/change-management).
 
-### Custom Base Domains
-Organizations can run site environments using their own base domains, like sites.myorganization.com, instead of using pantheon.io. [Learn more about custom base domains](/docs/articles/organizations/base-domains).
+### Vanity Domains
+Organizations can run site environments using their own custom Vanity domains, like `sites.myorganization.com`, instead of using `pantheonsite.io`. [Learn more about Vanity domains](/docs/articles/organizations/vanity-domains).
 
 ### Email-Based Registration
 New users who sign up with the email address domain you specify will be automatically added to your organization.
