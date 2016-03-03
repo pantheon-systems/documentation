@@ -172,7 +172,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](https://pantheon.io/docs/articles/sites/varnish/caching-advancedtopics/) for details on how to bypass Varnish.
 <hr>
 
-### Monarch
+### Monarch Social Sharing
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 
 **Solution**: None at this time.
