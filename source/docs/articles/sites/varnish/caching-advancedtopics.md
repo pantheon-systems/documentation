@@ -140,7 +140,76 @@ WordPress does not by default set cache headers, 404 or otherwise. If your site 
 
 If you're using the Environment Access: Locked security setting on a site environment, Varnish will not cache your content.
 
-## Pantheon's Varnish Cookie Handling
+## Purging URLs from Varnish
+
+Pantheon supports purging of individual URLs from the Varnish edge cache through an API call. This is useful in situations where you want to selectively clear paths without flushing your site's entire cache. With this technique, it is possible to set very long cache lifetimes in general, and then take control over managing the edge cache in your code. It requires upfront knowledge of where your content appears on your site, as it cannot automatically discover all the places where the cache might need to be purged. Therefore, it is recommended for power users and very high traffic sites only.
+
+### Example
+
+Our example is a site that hosts a blog, and displays blog posts individually. It also has a list of "Recent blog posts", which displays 10 posts per page and uses the query string `?page=x` to navigate them. The site also displays slightly different markup for users in Europe, to comply with the local laws, using a special `STYXKEY` cookie (explained in the "Using STYXKEY" section above).
+
+An editor modifies the blog post at `/blog/2015-03-20-my-blog-post`. Varnish has an existing copy of that page's content in its cache, as well as the listing page, `/recent-blog-posts`, on **page 4**. To selectively purge all the old versions of this blog post then, the following PHP code would need to be executed when the editor clicks "Save":
+
+    $paths = array(
+      '/blog/2015-03-20-my-blog-post',
+      '/recent-blog-posts?page=4',
+    );
+    $cookies = array(
+      '', // Represents "no cookie present".
+      'STYXKEY_european_user=yes'
+    );
+    try {
+      pantheon_purge_edge_urls($paths, $cookies);
+    }
+    catch (Exception $e) {
+      // Do some error handling.
+    }
+
+Assuming the content is available on the hostname `example.com`, the following would be purged:
+
+    http://example.com/blog/2015-03-20-my-blog-post []
+    http://example.com/recent-blog-posts?page=4 []
+    http://example.com/blog/2015-03-20-my-blog-post [STYXKEY_european_user=yes]
+    http://example.com/recent-blog-posts?page=4 [STYXKEY_european_user=yes]
+
+As you can see, keeping track of which URLs need to be purged is a non-trivial task; the method of computing this list is left up to your individual implementation.
+
+### Usage documentation
+
+`function pantheon_purge_edge_urls($paths, $hostnames = NULL, $cookies = NULL, $https = NULL)`
+
+Send a PURGE request to the Varnish edge cache, for every combination of hostname, path, and cookies given as parameters.
+
+There is a limit to how much content you may purge in a single call. That limit is **10**, calculated by multiplying `$hostnames` x `$paths` x `$cookies`. If the limit is exceeded, an `UnexpectedValueException` will be thrown.
+
+There is no wildcard support at this time.
+
+- `$paths`
+  - Required. Array of paths, or a single string path. Include query string.
+  - Example: `array('/', '/blogs', '/otherpath?key=value')`
+- `$cookies`
+  - Optional. Array of cookies, or single string cookie, or `NULL`.
+  - All combinations of cookies, hostnames and paths will be purged.
+    If `NULL` or `''`, no cookie will be sent.
+  - Example: `array('STYXKEY123=on', '')`
+- `$hostnames`
+  - Optional. Array of hostnames, or single string hostname, or `NULL`.
+    If `NULL`, the hostname will be taken from the current request's $_SERVER['HTTP_HOST'] value.
+  - Example: `array('example.com', 'eu.example.com')`
+- `$https`
+  - Optional boolean. If `TRUE`, the https version of the content is purged,
+    else the plain http version. Defaults to `NULL`, which does autodetect based
+    on the current request's scheme.
+- `@return`
+  - An object with properties `code` and `body`. The code is the response code,
+    `200` means OK. The `body` contains a message detailing the action taken, for
+    example:
+      `Purged Varnish cache for hosts: ['x'], paths: ['/'], cookies: [STYXKEY123=on'], https: False`
+- `@exceptions`
+  - Throws `InvalidArgumentException` if bad arguments are passed, and `UnexpectedValueException` in the case of API or other errors.
+
+
+## Pantheon's Varnish cookie handling
 
 The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns Varnish will not cache.
 ```nohighlight
