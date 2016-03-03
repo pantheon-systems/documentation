@@ -172,6 +172,12 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](https://pantheon.io/docs/articles/sites/varnish/caching-advancedtopics/) for details on how to bypass Varnish.
 <hr>
 
+### Monarch
+**Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
+
+**Solution**: None at this time.
+<hr>
+
 ### Revive Old Post
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
 
