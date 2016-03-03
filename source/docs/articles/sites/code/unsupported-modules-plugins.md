@@ -115,7 +115,7 @@ You are welcome to modify this patch according to your needs, such as performing
 $conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
-You may also need to add this line to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
+You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
 `$temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);`  
 
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
