@@ -174,8 +174,6 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 
 ### Monarch Social Sharing
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
-
-**Solution**: None at this time.
 <hr>
 
 ### Revive Old Post
