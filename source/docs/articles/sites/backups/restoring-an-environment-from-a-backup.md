@@ -46,7 +46,10 @@ Code archives contain the full remote Git repository and reflect the state of co
 This method is recommended for distributed teams working collaboratively. To undo commits while preserving the site's Git history:
 
 1. Identify the commit you want to undo using the commit history provided in the Site Dashboard or by reviewing `git log` locally.
-2. Copy the commit ID.
+2. Copy the commit ID:
+
+ ![commit ID](/source/docs/assets/images/commit-id.png)
+
 3. Replace <ID> with the commit ID and run: `git revert <ID> --no-edit`
 4. Push the reverted codebase to Pantheon: `git push origin master`
 5. Deploy the change from Dev up to Test and Live.
@@ -57,7 +60,10 @@ For more information, see [git-revert](https://git-scm.com/docs/git-revert).
 This is a destructive process. If you're not comfortable with this technique, use `git revert` instead. To reset the codebase and overwrite history:
 
 1. Identify the last commit you want included using the commit history provided within the Site Dashboard or by reviewing `git log` locally.
-2. Copy the commit ID.
+2. Copy the commit ID:
+
+ ![commit ID](/source/docs/assets/images/commit-id.png)
+
 3. Replace <ID> with the commit ID you want to reset and run: `git reset <ID> --hard`
 4. Push the reset codebase to Pantheon: `git push origin master --force`
  The `--force` option should be used sparingly, especially in distributed team environments. For more information, see [git push](https://git-scm.com/docs/git-push).
