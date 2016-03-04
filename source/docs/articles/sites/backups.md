@@ -11,8 +11,9 @@ keywords: backups, backing up, archive, archives, create backup
 ---
 The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service.
 
-We strongly urge you to backup your site regularly.<br />
-![Backups tab](/source/docs/assets/images/backups-image.png)
+We strongly urge you to backup your site regularly.
+
+![Backups tab](/source/docs/assets/images/backup-tool.png)
 
 ##Create a Backup
 You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live). For detailed instructions creating a backup, see [Backup Creation](/docs/articles/sites/backups/backup-creation).
