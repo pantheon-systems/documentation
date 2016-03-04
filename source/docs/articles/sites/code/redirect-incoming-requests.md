@@ -13,15 +13,15 @@ It's often useful to redirect requests to a different domain or path. While it's
 <h4>Note</h4>
 Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">Configuring settings.php</a>.</div>
 
-#### Why redirect with settings.php or wp-config.php and not .htaccess?
+## Redirecting via PHP instead of .htaccess
 
-Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files. Instead, redirect logic should be stored in the site's settings.php for Drupal or wp-config.php for WordPress.  
+Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.  
 
-Using settings.php or wp-config.php for redirects has a number of advantages. First, as it's executable code with application state awareness, logic and decisions can be made that a web server would have no context for. Conditional logic, regular expressions, and much more are possible.  
+Some advantages of redirecting via PHP instead of `.htaccess` include:
 
-Configuration also tends to be more maintainable as Drupal and WordPress developers are typically literate in PHP, but very few people are naturally fluent in Apache2 rewrite rules and conditions.
-
-Finally, as settings.php or wp-config.php is parsed very early in the bootstrap process, redirects like this are "cheap", meaning low overhead. If you use a 301 redirect, Varnish will cache it as well.
+- Logic and decisions can be made that a web server would have no context for, as it's executable code with application state awareness. Conditional logic, regular expressions, and much more are possible.
+- Configuration tends to be more maintainable as Drupal and WordPress developers are typically literate in PHP, but very few people are naturally fluent in Apache2 rewrite rules and conditions.
+- Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, Varnish will cache it as well.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
