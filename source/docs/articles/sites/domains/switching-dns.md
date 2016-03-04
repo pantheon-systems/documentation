@@ -14,7 +14,7 @@ If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/d
 Also, check `settings.php` or `wp-config.php` and comment out any hardcoded redirect logic for Pantheon's Platform domains (e.g.  `live-mysite.pantheon.io`). Once DNS has been configured, you can update the redirects to use the default Platform domain (e.g. `live-mysite.pantheonsite.io`) if needed.
 
 ## Determine the New DNS Records
-Since the same domain cannot be added to more than one environment, you'll need to use a temporary domain name to determine the DNS records. If the launched site has `example.com` configured, temporarily add something like `example-new.com` to the new site's Live environment and click **Show recommended DNS records** for both the bare domain and wwww.
+Since the same domain cannot be added to more than one environment, you'll need to use a temporary domain name to determine the DNS records. If the launched site has `example.com` configured, temporarily add something like `example-new.com` to the new site's Live environment and click **Show recommended DNS records** for both the bare domain and www.
 
 The temporary domain you add within the new site does not need to be a registered domain. It's purpose is to determine the new DNS values required when switching the domain.
 ## 1. Lower the Time to Live (TTL)
