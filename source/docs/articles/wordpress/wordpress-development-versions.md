@@ -10,7 +10,7 @@ Pantheon provides [one-click updates](/docs/articles/sites/code/applying-upstrea
 
 <div class="alert alert-danger">
 <h4>Warning</h4>
-Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a Multidev environment or within an isolated local environment on a branch other than master.
+Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a <a href="/docs/articles/sites/multidev/">Multidev</a> environment or within an isolated local environment on a branch other than master.
 </div>
 
 ## Update Core within WordPress Dashboard
