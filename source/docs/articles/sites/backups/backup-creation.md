@@ -20,12 +20,14 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 ## Create a Backup
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
- ![Create site backup Pantheon Dashboard](/source/docs/assets/images/desk_images/305276.png)
+
+![Create site backup Pantheon Dashboard](/source/docs/assets/images/manual-site-backup.png)
 
 ## Access Backups  
 ### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
- ![Access site backups Pantheon Dashboard](/source/docs/assets/images/desk_images/305286.png)
+
+![Access site backups Pantheon Dashboard](/source/docs/assets/images/direct-download-backup.png)
 
 The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
 
@@ -45,21 +47,8 @@ Now that you have created the archive files, check out how to [restore an enviro
 Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</div>
 
 ## About Your Code Archives
-When you download a backup to your local environment, it will include the entire repository and all tags. This means that initially, the code you see will reflect the state of the Dev environment, regardless of which environment you downloaded it from.
+Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
 
-To get the code to the state of the Test or Live environment, you'll need to create a branch and checkout that tag. Each Deploy to Test and Live adds another tag to the repository. To see the tags, run
-
-```
-git tag
-```
-
-And then to checkout that tag to a new branch, use
-
-```
-git checkout -b [branchname] [tagname]
-```
-
-For more information on Git tags, see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
 ## Frequently Asked Questions
 
