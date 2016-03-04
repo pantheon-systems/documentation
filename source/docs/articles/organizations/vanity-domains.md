@@ -23,7 +23,7 @@ From your Organization Dashboard, go to Support and open a ticket with "Request 
 
 At your DNS provider, create a wildcard CNAME record pointing to our edge. If you go with `sites.example.com`, the record would need to be created as follows:
 
-`*.sites.example.com` **CNAME** `edge.live.pantheonsite.io`
+`*.sites.example.com` **CNAME** `edge.live.getpantheon.com`
 
 ## Effects and Considerations
 
