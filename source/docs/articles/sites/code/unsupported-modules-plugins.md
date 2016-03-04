@@ -163,6 +163,8 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+
+Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 <hr>
 ##WordPress Plugins
 
