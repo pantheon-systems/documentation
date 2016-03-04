@@ -7,13 +7,13 @@ keywords: restore backup, restore environment, restore, how to restore backup, h
 ---
 Each site environment's backups are located on the Backups tab for the environment in the Pantheon Dashboard.  
 
-![Backup Subtab](/source/docs/assets/images/desk_images/169631.png)
+![Backup tool](/source/docs/assets/images/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
-Restore each manual and automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
+Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
 
-![Backups and Restore Button](/source/docs/assets/images/desk_images/169624.png)
+![Backups and Restore Button](/source/docs/assets/images/restore-button.png)
 
 This is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in at that time.
 
@@ -37,7 +37,7 @@ If you want to download a backup using wget, put the provided temporary link in
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.  
-![Workflow Tab](/source/docs/assets/images/desk_images/169632.png)  
+![Workflow Tab](/source/docs/assets/images/workflow-tab.png)  
 
 ### Restore Code
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment. However, if you would like to rewind an environment's codebase to a previous state we recommend using `git revert` or `git reset` instead of a code archive.

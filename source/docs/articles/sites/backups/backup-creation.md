@@ -20,12 +20,14 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 ## Create a Backup
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
- ![Create site backup Pantheon Dashboard](/source/docs/assets/images/desk_images/305276.png)
+
+![Create site backup Pantheon Dashboard](/source/docs/assets/images/manual-site-backup.png)
 
 ## Access Backups  
 ### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
- ![Access site backups Pantheon Dashboard](/source/docs/assets/images/desk_images/305286.png)
+
+![Access site backups Pantheon Dashboard](/source/docs/assets/images/direct-download-backup.png)
 
 The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
 
