@@ -49,7 +49,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
 
  For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
 
- <script src="//gist.github.com/danielbachhuber/69c44664d4d63a6e19db.js"></script>
+ <script src="https://gist.github.com/aeligature/93d4a3fc55a2c5aa1f7a.js"></script>
 
 5. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
