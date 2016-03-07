@@ -33,7 +33,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
     # Check env_list.txt, create environment if one does not already exist
     if grep -Fxq "$normalize_branch" ./filtered_env_list.txt; then
-        echo "Existing environment found for $normalize_branch: http://"$normalize_branch"-static-docs.pantheon.io"
+        echo "Existing environment found for $normalize_branch: http://"$normalize_branch"-static-docs.pantheonsite.io"
         #Get comment ID and comment body from last commit comment
         export previous_commit=($(git log --format="%H" -n 2))
         export previous_commit="${previous_commit[1]}"
@@ -42,7 +42,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         export last_comment_id=`cat comment.json | jq ".[0].id"`
         export existing_comment_body=`cat comment.json | jq ".[0].body"`
         export null="null"
-        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        export url="http://"$normalize_branch"-static-docs.pantheonsite.io/docs"
         #If previous comment doesn't exist, start a new one
         if [[ $existing_comment_body == $null ]]; then
           echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$url")\u0020Multidev\u0020environment:\n" >> comment.txt
@@ -67,7 +67,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
           if [[ $doc =~ $doc_file ]]
           then
               # Only add the modified file if it does not already exist in the comment
-              grep -- ''"${doc:7: -3}"'' comment.txt || echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
+              grep -- ''"${doc:7: -3}"'' comment.txt || echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
           else
               # Only add the modified file if it does not already exist in the comment
               grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
@@ -79,7 +79,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         #Use GitHub's API to post Multidev URL in a comment on the commit
-        export url="http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        export url="http://"$normalize_branch"-static-docs.pantheonsite.io/docs"
 
         #Identify modified files from commit
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
@@ -92,7 +92,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         do
           if [[ $doc =~ $doc_file ]]
           then
-              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheon.io/"${doc:7: -3}")\n" >> comment.txt
+              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
           else
               echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
@@ -105,7 +105,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
 
     # Update redirect script for the Multidev environment
-    export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheon.io' ||"
+    export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheonsite.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
     # Update CTA edit link so that the current branch is used
     sed -i '12s/master/'"$CIRCLE_BRANCH"'/g' source/_views/article.html
@@ -118,7 +118,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
     if [ "$?" -eq "0" ]
     then
-        echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheon.io/docs"
+        echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheonsite.io/docs"
     else
         echo "Error: Deploy failed, review rsync status"
         exit 1
