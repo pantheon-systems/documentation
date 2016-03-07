@@ -101,7 +101,7 @@ For debugging modules or plugins, it may be beneficial to review the values with
 The <code>$_SERVER</code> variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of <code>phpinfo();</code> displayed on a site, don't leave this open to public viewing. </div>
 
 
-This is a partial example from a Wordpress site homepage:
+This is a partial example from a WordPress site homepage:
 
     <?php var_dump($_SERVER);  ?>
     array(63) {
