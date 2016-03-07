@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a3470cb09dcdd17c18560f697f7f2f9",
-    "content-hash": "7dd867bd69bcdb440e9f7cd3c796302b",
+    "hash": "8dc5e352c2f1f33d8bbb54b49d226be2",
+    "content-hash": "6ec9d18b3c0668e825fd857370c7ff55",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -445,17 +445,17 @@
             "time": "2015-12-04 15:28:43"
         },
         {
-            "name": "pantheon-systems/cli",
-            "version": "0.10.2",
+            "name": "pantheon-systems/terminus",
+            "version": "0.10.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pantheon-systems/cli.git",
-                "reference": "b86ca027ab6811f2bdfe0c675ae39748336807d2"
+                "url": "https://github.com/pantheon-systems/terminus.git",
+                "reference": "7c53289d7912ec1d8b6db57d7bf450b2a720ed33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/cli/zipball/b86ca027ab6811f2bdfe0c675ae39748336807d2",
-                "reference": "b86ca027ab6811f2bdfe0c675ae39748336807d2",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/7c53289d7912ec1d8b6db57d7bf450b2a720ed33",
+                "reference": "7c53289d7912ec1d8b6db57d7bf450b2a720ed33",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "psy/psysh": "@stable",
                 "ramsey/array_column": "~1.1",
                 "rmccue/requests": "^1.6",
-                "symfony/finder": "~2.8|~3.0",
+                "symfony/finder": "~2.7|~3.0",
                 "symfony/yaml": "~2.1|~3.0",
                 "twig/twig": "1.*",
                 "vlucas/phpdotenv": "~2.1"
@@ -486,6 +486,11 @@
                 "bin/terminus"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Terminus": "php"
@@ -504,7 +509,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2016-01-27 23:45:19"
+            "time": "2016-02-26 19:36:38"
         },
         {
             "name": "psr/http-message",
@@ -3030,7 +3035,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sculpin/sculpin/zipball/c4f0814b955af3b96d6bb4499151a4a6b7fb3f62",
+                "url": "https://api.github.com/repos/sculpin/sculpin/zipball/0a5489a37fb6d498985c23cca5fa42d176be8c99",
                 "reference": "c4f0814b955af3b96d6bb4499151a4a6b7fb3f62",
                 "shasum": ""
             },
@@ -4221,6 +4226,7 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
+        "pantheon-systems/terminus": 0,
         "sculpin/sculpin": 20,
         "dflydev/embedded-composer-console": 20,
         "dflydev/embedded-composer-core": 20,
