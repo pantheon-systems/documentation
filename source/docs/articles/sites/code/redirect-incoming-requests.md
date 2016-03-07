@@ -234,3 +234,7 @@ When transitioning from a system that used a tilde to indicate a home directory,
     }
 
 Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+When using multiple snippets, be sure to step through the logic.  This is particularly important when a redirect to HTTPS is desired, but also redirects to specific pages.  The `IF` statements need to be in the correct order, otherwise, a wholesale redirect that is evaluated *prior* to redirects of specific urls may prevent the second statement from ever being read.</div>
