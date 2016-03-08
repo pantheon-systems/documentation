@@ -45,7 +45,7 @@ Disallow: /
 ```
 The pantheonsite.io domains are ONLY intended for development use and cannot be used for production. Robots.txt is only visible on Live with a domain, and is not available on Dev or Test. If you're testing links or SEO prior to launch, a workaround is to assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
 
-You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
+You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/) plugin, which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
 Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
 
@@ -62,7 +62,28 @@ if (($counted > 0 ) && (php_sapi_name() != "cli")) {
 }
 ```
 
-### XMLSiteMap Module
-The default settings for the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module may generate a blank `sitemap.xml` page. To resolve this issue, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/articles/local/cli): `terminus site clear-cache`
+### Troubleshooting
+
+#### Sitemaps Produce a White Screen of Death (WSOD)
+Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
+
+For example, if you're running the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module (Drupal sites), navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/articles/local/cli): `terminus site clear-cache`
 
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
+
+#### Redirecting Sitemap Paths
+Some themes, modules, or plugins may assume a particular name or path for sitemaps. This can potentially result in a 404, which should be resolved by enforcing redirects via PHP.
+
+For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin load the sitemap at `yoursite.com/sitemap_index.xml`, but a 404 error will be returned on `yoursite.com/sitemap.xml`. You can enforce redirects via PHP by add the following to `wp-config.php`:
+
+```php
+// 301 Redirect from /sitemap.xml to /sitemap_index.xml
+if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
+  (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: /sitemap_index.xml');
+  exit();
+}
+```
+
+For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/articles/sites/code/redirect-incoming-requests).
