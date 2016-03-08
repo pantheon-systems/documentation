@@ -333,9 +333,9 @@ Now you're ready to edit the cli-test theme, allowing for upstream theme improve
 ![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
-## Importing content from a WXR File
+## Importing Content from a WXR File
 
-With the `wp import` command you can import content from another WordPress site that you've exported to a WXR file. It is important to note that the command runs on the app server, so the file should be placed somewhere in the wp-content directory before running the command if it isn't already in site's files. You cannot import a file from your local machine. You can see the full documentation for `wp import` on the [wp-cli import documentation page](http://wp-cli.org/commands/media/import/).
+With the `wp import` command, you can import content from another WordPress site that you've exported to a WXR file. It is important to note that the command runs on the app server, so place the file somewhere in the wp-content directory before running the command. You cannot import a file from your local machine. For more information, see the documentation for `wp import` on the [wp-cli import documentation page](http://wp-cli.org/commands/media/import/).
 
 
 ## The Power of Terminus and WP-CLI
