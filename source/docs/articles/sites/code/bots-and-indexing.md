@@ -45,17 +45,24 @@ Disallow: /
 ```
 The pantheonsite.io domains are ONLY intended for development use and cannot be used for production. Robots.txt is only visible on Live with a domain, and is not available on Dev or Test. If you're testing links or SEO prior to launch, a workaround is to assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
 
- You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
+You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site\_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps plugin](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/), which will maintain sitemap updates automatically once the initial build has been completed. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
- Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
+Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
 
-    // Redirect to force indexing with custom domain sitemap
-    $subject = $_SERVER['HTTP_HOST'];
-    $pattern = '#/pantheonsite.io/sitemap.xml$/#';
-    preg_match($pattern, $subject, $matches);
-    $counted = count($matches);
-    if (($counted > 0 ) && (php_sapi_name() != "cli")) {
-        header('HTTP/1.0 301 Moved Permanently');
-        header('Location: http://yoursite.com/sitemap.xml'. $_SERVER['REQUEST_URI']);
-        exit();
-    }
+```php
+// Redirect to force indexing with custom domain sitemap
+$subject = $_SERVER['HTTP_HOST'];
+$pattern = '#/pantheonsite.io/sitemap.xml$/#';
+preg_match($pattern, $subject, $matches);
+$counted = count($matches);
+if (($counted > 0 ) && (php_sapi_name() != "cli")) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://yoursite.com/sitemap.xml'. $_SERVER['REQUEST_URI']);
+    exit();
+}
+```
+
+### XMLSiteMap Module
+The default settings for the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module may generate a blank `sitemap.xml` page. To resolve this issue, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/articles/local/cli): `terminus site clear-cache`
+
+Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
