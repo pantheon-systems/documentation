@@ -29,5 +29,5 @@ If the migration is not successful, contact <migrations@pantheon.io> and include
 
 <div class=“alert alert-note”>
 <h4>Note</h4>
-The <a href="https://wordpress.org/plugins/wp-native-php-sessions/“>WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/articles/wordpress/wordpress-and-php-sessions/“>WordPress and PHP Sessions</a>.
+The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/articles/wordpress/wordpress-and-php-sessions/">WordPress and PHP Sessions</a>.
 </div>
