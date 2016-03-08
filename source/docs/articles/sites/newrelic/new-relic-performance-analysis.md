@@ -55,7 +55,7 @@ The apdex is not the most accurate representation of your sites' load-times. It 
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
 
 ### Drupal
-To disable ew Relic for anonymous traffic on Drupal-based sites, add the following to your `sites/default/settings.php`:
+To disable New Relic for anonymous traffic on Drupal-based sites, add the following to your `sites/default/settings.php`:
 
 ```
 // Disable New Relic for anonymous users.
