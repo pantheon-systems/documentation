@@ -7,15 +7,20 @@ category:
 keywords: redirect, redirect request, redirect requests to another domain, redirect requrests to another path, redirect incoming requests, redirects, .htaccess, nginx, settings.php, wp-config.php, redirect via php, php redirect, php redirects,
 ---
 It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
+<div class="alert alert-danger" role="alert">
+<h4>Warning</h4>
+When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
+</div>
 
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Drupal sites on Pantheon technically do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information on settings.php and environment logic, see <a href="/docs/articles/drupal/configuring-settings-php">Configuring settings.php</a>.</div>
 
 ## Redirecting via PHP instead of .htaccess
 
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.  
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Drupal 7 sites on Pantheon do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information, see <a href="/docs/articles/drupal/configuring-settings-php">Configuring settings.php</a>.</div>
+
 
 Some advantages of redirecting via PHP instead of `.htaccess` include:
 
@@ -234,7 +239,3 @@ When transitioning from a system that used a tilde to indicate a home directory,
     }
 
 Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When using multiple snippets, be sure to step through the logic.  This is particularly important when a redirect to HTTPS is desired, but also redirects to specific pages.  The `IF` statements need to be in the correct order, otherwise, a wholesale redirect that is evaluated *prior* to redirects of specific urls may prevent the second statement from ever being read.</div>
