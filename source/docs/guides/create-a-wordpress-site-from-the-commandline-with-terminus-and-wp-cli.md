@@ -333,6 +333,11 @@ Now you're ready to edit the cli-test theme, allowing for upstream theme improve
 ![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
+## Importing content from a WXR File
+
+With the `wp import` command you can import content from another WordPress site that you've exported to a WXR file. It is important to note that the command runs on the app server, so the file should be placed somewhere in the wp-content directory before running the command if it isn't already in site's files. You cannot import a file from your local machine. You can see the full documentation for `wp import` on the [wp-cli import documentation page](http://wp-cli.org/commands/media/import/).
+
+
 ## The Power of Terminus and WP-CLI
 
 If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
