@@ -1,6 +1,6 @@
 ---
-title: Migrating Sites with the Pantheon Migration Plugin
-description: Get all the details you need to know to successfully migrate your site.
+title: Migrate to Pantheon: WordPress
+description: Learn how to migrate WordPress sites to Pantheon using the Pantheon Migration plugin from BlogVault.
 category:
   - WordPress
   - getting-started
@@ -31,3 +31,8 @@ If the migration is not successful, contact <migrations@pantheon.io> and include
 <h4>Note</h4>
 The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/articles/wordpress/wordpress-and-php-sessions/">WordPress and PHP Sessions</a>.
 </div>
+
+## See Also
+
+- [Migrate to Pantheon: WordPress Site Networks](/docs/articles/sites/migrate/wordpress-site-networks/)
+- [Migrate to Pantheon: Manual Site Import](/docs/articles/sites/migrate/manual-site-import)

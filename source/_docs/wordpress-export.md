@@ -6,6 +6,8 @@ tags: [code, migrate]
 keywords: import, importing site, new site, WordPress, export, export wordpress, wordpress archive, archive
 ---
 
+We highly recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). For details, see [Migrate to Pantheon: WordPress](docs/articles/sites/migrate/pantheon-migration-plugin). However, you can migrate using alternative methods described here if needed.
+
 There are three major components of a WordPress site:
 
 1. **Codebase** - all executable code, plugins, themes, and so forth.
