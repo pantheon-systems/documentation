@@ -171,7 +171,7 @@ Customers have also reported success by making the export path [configurable](ht
 ### Contact Form 7
 **Issue**: This plugin utilizes a static value, `$_SERVER['SERVER_NAME']`, instead of `$_SERVER['HTTP_HOST']` which is generated dynamically. 
 
-**Soltuion**: Add the following to `wp-config.php`: `$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];`
+**Solution**: Add the following to `wp-config.php`: `$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];`
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
 <hr>
