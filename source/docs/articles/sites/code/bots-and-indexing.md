@@ -47,7 +47,7 @@ The pantheonsite.io domains are ONLY intended for development use and cannot be 
 
 You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/) plugin or the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/), which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
-Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain. You can place this in settings.php.
+Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain and place this in `settings.php`.
 
 ```php
 // Redirect to force indexing with custom domain sitemap
@@ -67,12 +67,12 @@ if (($counted > 0 ) && (php_sapi_name() != "cli")) {
 #### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
-For example, Drupal sites running the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module should navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/articles/local/cli): `terminus site clear-cache`
+For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/articles/local/cli): `terminus site clear-cache`
 
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
 
 #### Legacy Sitemap Submissions Generating 404s
-Sitemaps can (and should) be submitted directly to Google Webmaster Tools. However, if there are legacy submissions out there generating 404s you'll need to redirect via PHP within `wp-config.php` or `settings.php`. For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin can use the following:
+Sitemaps can (and should) be submitted directly to Google Webmaster Tools. However, if there are legacy submissions out there generating 404s, you'll need to redirect via PHP within `wp-config.php` or `settings.php`. For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin can use the following:
 
 ```php
 // 301 Redirect from /sitemap.xml to /sitemap_index.xml
