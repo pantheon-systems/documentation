@@ -168,7 +168,7 @@ Customers have also reported success by making the export path [configurable](ht
 <hr>
 ##WordPress Plugins
 
-### Contact 7
+### Contact Form 7
 **Issue**: The plugin attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
 
 <hr>
