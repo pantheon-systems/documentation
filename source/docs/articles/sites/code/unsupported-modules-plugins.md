@@ -93,10 +93,10 @@ $baseUrl = '/ckfinder/userfiles/';
 You are welcome to modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
 
 <hr>
-#### Media: Browser Plus
+### Media: Browser Plus
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
-#### Media: Filesystem
+### Media: Filesystem
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 ### Mobile Tools
@@ -132,7 +132,7 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
    $conf[‘schema_suppress_type_warnings’] = TRUE;
    ```
 <hr>
-#### Taxonomy CSV  
+### Taxonomy CSV  
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 ### Varnish
@@ -141,7 +141,7 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/a
 **Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
 <hr>
 
-#### Views data export
+### Views data export
 **Issue**: This module requires the use of the `/tmp` directory. There is also a [patch](https://www.drupal.org/node/1782038) available, but we still cannot guarantee that the use of the `/tmp` directory will work successfully. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below for more information.
 
 **Solution**: A possible solution would be to set the export directory in `settings.php` to a `public://` stream wrapper location versus a `temporary://` one.  Example:
@@ -159,7 +159,7 @@ drush vset views_data_export_directory 'public://'
 Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733)
 <hr>
 
-#### Webform export<br>
+### Webform export<br>
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/articles/sites/code/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
@@ -167,6 +167,11 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 <hr>
 ##WordPress Plugins
+
+### Contact Form 7
+**Issue**: The plugin attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](https://pantheon.io/docs/articles/sites/code/server_name-and-server_port/).
+
+<hr>
 
 ### Caching Plugins (e.g. Batcache, W3 Total Cache, or WP Super Cache)
 **Issue**: Conflicts with Varnish.
