@@ -120,17 +120,16 @@ Run your automated acceptance tests, using behat, casper.js, or by manually exec
 When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-For private repositories, create a dedicated user with read-only access to the repository.</div>
+For private repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters. </div>
 
 ## Submit Product Information
 
 After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
-- Upstream URL: Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git`
-Public repository URLs do not require the `username:password@` portion of the above example URL\*\*
-- Upstream Branch (usually master)\*\*
-- If the upstream repository is public or private\*\*
+- Upstream URL: Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git` -  Do not use an email address in place of the username. Public repository URLs do not require the `username:password@` portion of the above example URL
+- Upstream Branch (usually master)
+- If the upstream repository is public or private
 - Description (< 200 characters, basic HTML allowed)
 - Logo (70x80)
 - Default connection mode (SFTP or Git)
