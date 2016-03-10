@@ -9,11 +9,11 @@ permalink: atom.xml
     <link href="{{ site.url }}/"/>
     <updated>{{ site.calculated_date | date('c') }}</updated>
     <id>{{ site.url }}/</id>
-    {% if site.author or site.email %}
-        <author>
-            {% if site.author %}<name><![CDATA[{{ site.author }}]]></name>{% endif %}
+    {% if site.contributor or site.email %}
+        <contributor>
+            {% if site.contributor %}<name><![CDATA[{{ site.contributor }}]]></name>{% endif %}
             {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
-        </author>
+        </contributor>
     {% endif %}
     <generator uri="http://sculpin.io/">Sculpin</generator>
     {% for post in data.posts|slice(0, 10) %}

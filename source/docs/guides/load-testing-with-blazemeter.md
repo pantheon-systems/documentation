@@ -3,7 +3,7 @@ title: Load Testing Drupal and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your Pantheon Drupal or WordPress site.
 category:
   - going-live
-authors:
+contributors:
   - jessifischer
 date: 2/25/2015
 ---
@@ -13,7 +13,7 @@ Your site is loaded with content and is almost ready to go live. You know what i
 
 The days of simple static HTML sites are fading, and for Drupal and WordPress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers.
 
-Important note about Drupal: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the DBlog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/articles/sites/logs/debugging-sites-with-log-files/).
+Important note about Drupal: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the DBlog and fix any errors. For more information on how to identify these errors, see [Debugging Sites with Log Files](/docs/debugging-sites-with-log-files/).
 
 ##Strategy and Planning
 
@@ -51,7 +51,7 @@ Example: `http://livesitename.pantheonsite.io/` and add an asterisk at the end s
 
 Here is an example of what these settings would look like if we were to test our own site:
 
-![The BlazeMeter settings window](/source/docs/assets/images/blazemeter-settings-example.png)
+![The BlazeMeter settings window](/source/assets/images/blazemeter-settings-example.png)
 
 ###Integrate New Relic
 
@@ -83,13 +83,13 @@ Results are graphed, along with any error messages, response times, and so forth
 
 Now that you’ve run your load test, you can review the results on BlazeMeter and see a summary of users, throughput, errors, response times, and bandwidth. You can also access an aggregate report of load times on each page and a list of errors generated, demonstrated below.
 
-![The BlazeMeter settings window](/source/docs/assets/images/blazemeter-review-results.png)
+![The BlazeMeter settings window](/source/assets/images/blazemeter-review-results.png)
 
 The report is a nice high-level overview of site performance, but you’ll want more details for the full picture. New Relic (which you can enable through the Pantheon Site Dashboard) will provide more information on slow transactions and appserver response times for both web and non-web transactions.
 
 You can also view the load report directly to evaluate the number of users and the concurrent response time, shown here:
 
-![The BlazeMeter load report](/source/docs/assets/images/blazemeter-load-report.png)
+![The BlazeMeter load report](/source/assets/images/blazemeter-load-report.png)
 
 
 Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). WordPress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).
@@ -99,4 +99,4 @@ Depending on the application you’re running, you can also access error and slo
 
 The errors and performance hits you discover will each will have a different solution. We recommend doing a search of the error message and reading solutions posted by others, or post your own issue and see if anyone else has an answer. Additionally, if a specific module or plugin is slow, check the issue queue to see if the problem is known and if a patch is available.
 
-Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](https://pantheon.io/docs/articles/sites/logs/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](https://pantheon.io/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well.
+Outside of error messages, one the most common performance hit comes from slow queries. After the load test, check through the [mySQL slow logs](/docs/mysql-slow-log/) by downloading these logs via SFTP or, for a deeper dive try [troubleshooting mySQL with New Relic Pro](/docs/mysql-troubleshooting-with-new-relic-pro/). If you have calls to external services, check through New Relic reports to see if these are slowing load times as well.

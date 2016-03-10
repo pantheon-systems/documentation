@@ -2,7 +2,7 @@
 
 #About This Guide
 
-This style guide will help authors who create technical content write in consistent voice, tone, and style.
+This style guide will help contributors who create technical content write in consistent voice, tone, and style.
 
 For any questions or comments, [create an issue](https://github.com/pantheon-systems/documentation/issues).
 
@@ -220,7 +220,7 @@ Yes. We have complete and total support for WordPress sites and developers.
 
 File paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
 ```
-/source/docs/assets/images/
+/source/assets/images/
 ```
 
 If it's a path within the Dashboard, separate tab/page names with an angle bracket ">".  
@@ -417,7 +417,7 @@ The final step is to deploy your code and plugin settings to the live environmen
 ### User Dashboard
 It's always referred to as User Dashboard in order to reduce confusion between the Org Dashboard and Site Dashboard.
 
-![User Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
+![User Dashboard](/source/assets/images/pantheon-user-dashboard1.png)
 
 #### Tabs on the User Dashboard
 Organizations Tab
@@ -430,7 +430,7 @@ Open a ticket on the Support tab.
 
 Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
-![Site Dashboard](/source/docs/assets/images/site-dashboard-image.png)
+![Site Dashboard](/source/assets/images/site-dashboard-image.png)
 
 #### Site Dashboard Tools
 Capitalize the name of the tab, but not the word "tab".  
@@ -446,7 +446,7 @@ PHP errors are listed on the Errors tab.
 
 [Knowledge Base Best Practices](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices "MIT.edu, KB best practices")
 
-[Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
+[Atlassian contributor Guidelines](https://confluence.atlassian.com/display/ALLDOC/contributor+Guidelines#contributorGuidelines-9.DocumentationStyleGuidelines)
 
 [Atlassian Writing Style](https://design.atlassian.com/latest/product/foundations/writing-style/)
 

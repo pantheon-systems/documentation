@@ -53,12 +53,8 @@
 <!-- Nav Breadcrumbs -->
 {% if page.home is not defined %}
     <div class="navbar-fixed-top" id="bread">
-        <div class="col-md-8">
-        {% include("breadcrumbs.html") %}
-    </div>
     <div class="col-md-4">
         <li class="search-form"> {% include("search_box.html") %}</li>
-
     </div>
 </div>
 {% endif %}

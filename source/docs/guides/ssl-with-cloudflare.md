@@ -4,7 +4,7 @@ description: Enjoy the protection of HTTPS and other security features using Clo
 category:
   - going-live
   - security
-authors:
+contributors:
   - joshkoenig
   - iameap
   - suzannealdrich
@@ -29,23 +29,23 @@ In addition to gratis HTTPS service, content distribution, and many nifty securi
 
 We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. In addition, using CNAME Flattening is the only way to standardize on HTTPS with a root domain. Here are some example DNS settings:
 
-![Example DNS Settings](/source/docs/assets/images/cloudflare-dns.png)
+![Example DNS Settings](/source/assets/images/cloudflare-dns.png)
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheonsite.io` domain as the target. In the case of legacy gotpantheon.com sites, use `edge.live.getpantheon.com` for the CNAME target of the root record.
 
-As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/articles/sites/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
+As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
 
 ## CloudFlare Security Settings
 
 The next step is to go to the "Crypto" page and enable the "SSL with SPDY" option and set it to **Full** protection mode:
 
-![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
+![Enable SSL](/source/assets/images/cloudflare-ssl.png)
 
 It takes a few minutes to go into effect as CloudFlare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
 
 It's important to use __Full__ protection mode. Because Pantheon provides HTTPS service out of the box you can encrypt end-to-end, but because the certificate provided by Pantheon is for the sandbox domain you cannot use the "strict" mode:
 
-![SSL Details](/source/docs/assets/images/cloudflare-ssl-types.png)
+![SSL Details](/source/assets/images/cloudflare-ssl-types.png)
 
 While "full" mode is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
 
@@ -137,7 +137,7 @@ The final step is to standardize all traffic under HTTPS. This is a much better 
 
 In order to go all-in, you will need to configure your site to redirect any requests that are unencrypted over to HTTPS. One way to do this is via CloudFlare's "Page Rules" feature:
 
-![CloudFlare Page Rules](/source/docs/assets/images/cloudflare-always-https.png)
+![CloudFlare Page Rules](/source/assets/images/cloudflare-always-https.png)
 
 By setting up a blanket page rule to match all URLs and apply the "Always HTTPS" parameter, CloudFlare redirect browsers making HTTP requests to HTTPS.
 

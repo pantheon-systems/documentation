@@ -1,0 +1,11 @@
+{% if contributor_list %}
+    {% for contributorhandle in contributor_list %}
+        {% if site.contributors[contributorhandle] %}
+            {% set contributor = site.contributors[contributorhandle] %}
+            <span><i class="icon-user"></i> <a href="{{ site.url }}/contributors/{{ contributorhandle }}" title="Posts from {{ contributorhandle }}">{{ contributor.name }}</a></span>
+        {% else %}
+            <span><i class="icon-user"></i> {{ contributorhandle }}</span>
+        {% endif %}
+        {% if not loop.last %}, {% endif %}
+    {% endfor %}
+{% endif %}

@@ -20,7 +20,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a plan that meets your business needs. After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login). From within the Settings menu, click **Credentials**.
 
-![SendGrid Multiple User setup](/source/docs/assets/images/sendgrid-multiple-users.png)
+![SendGrid Multiple User setup](/source/assets/images/sendgrid-multiple-users.png)
 
 This is where you can create site specific credentials so that sites have their own unique access to your SendGrid features and mail. Once you have created your site's credentials, and allowed the desired access (UI/API and Mail), go to the applicable section below for the CMS your site is running.
 
@@ -37,7 +37,7 @@ Once you have installed and activated the plugin, click on the SendGrid menu ite
 Simply enter your site's SendGrid account credentials and select the desired the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
-![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
+![WP Settings example](/source/assets/images/sendgrid_wpconfig.png)​
 
 Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
@@ -56,7 +56,7 @@ drush @pantheon.your-site.dev en smtp -y
 
 Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.  
 
-![Settings example](/source/docs/assets/images/desk_images/151706.png)​  
+![Settings example](/source/assets/images/desk_images/151706.png)​  
 ​
 First, make sure the module is enabled by selecting **On** in the Install Options box.
 Add the following values for the associated fields:  
@@ -93,7 +93,7 @@ For testing purposes, your first few deliveries should be to email addresses tha
 
 First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
-![SendGrid email search options](/source/docs/assets/images/sendgrid-search-options.png)​
+![SendGrid email search options](/source/assets/images/sendgrid-search-options.png)​
 
 You can explore the Statistics and Email Reports from within your site's account to gain insight into email activity, statistics on email clients, and much more.
 

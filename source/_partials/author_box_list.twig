@@ -1,8 +1,0 @@
-{% if author_list %}
-    {% for authorhandle in author_list %}
-        {% if site.authors[authorhandle] %}
-            {% set author = site.authors[authorhandle] %}
-            {% include 'author_box.twig' %}
-        {% endif %}
-    {% endfor %}
-{% endif %}

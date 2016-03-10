@@ -108,8 +108,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheonsite.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
     # Update CTA edit link so that the current branch is used
-    sed -i '12s/master/'"$CIRCLE_BRANCH"'/g' source/_views/article.html
-    sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/landing.html
+    sed -i '12s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
 
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod

@@ -4,7 +4,7 @@ description: Understand how to use Behat to write automated tests for your Panth
 category:
   - developing
   - WordPress
-authors:
+contributors:
   - ari
 date: 3/31/2015
 ---
@@ -35,9 +35,9 @@ The test is easy to understand so designers, project managers, and even non-tech
 
 ## Install
 
-If you don't already have a WordPress site, you can [create one for free](/docs/articles/wordpress/starting-wordpress-site/) on Pantheon. In this guide, I'm using [Git](/docs/articles/local/starting-with-git/), but you can adjust the following steps for [SFTP](/docs/articles/sites/code/developing-directly-with-sftp-mode/) if you prefer.
+If you don't already have a WordPress site, you can [create one for free](/docs/starting-wordpress-site/) on Pantheon. In this guide, I'm using [Git](/docs/starting-with-git/), but you can adjust the following steps for [SFTP](/docs/developing-directly-with-sftp-mode/) if you prefer.
 
-First, I'll download my WordPress site's codebase by doing a [`git clone`](/docs/articles/local/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
+First, I'll download my WordPress site's codebase by doing a [`git clone`](/docs/starting-with-git/#clone-your-site-codebase) of my Pantheon site:
 
 ```nohighlight
 git clone <string from Pantheon Site Dashboard>
@@ -258,7 +258,7 @@ Then I should see "Post published"
 
 You'll also see the browser open and run through the test:
 
-[![Feature: Editor can post to blog. Behat, Selenium Server running, automating browser](/source/docs/assets/images/automated-testing-wordpress-behat.gif)](http://g.recordit.co/vEFYVJq4tM.gif)
+[![Feature: Editor can post to blog. Behat, Selenium Server running, automating browser](/source/assets/images/automated-testing-wordpress-behat.gif)](http://g.recordit.co/vEFYVJq4tM.gif)
 
 
 Now you should be on your way to writing and running more automated Behat tests for your WordPress sites!

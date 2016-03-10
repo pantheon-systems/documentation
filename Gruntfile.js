@@ -5,9 +5,9 @@ module.exports = function(grunt) {
         options: {
           failOnError: 'true',
           urls: [
-            'output_dev/docs/about/*.html',
-            'output_dev/docs/articles/**/*.html',
-            'output_dev/docs/authors/**/*.html',
+            'output_dev/**/*.html',
+            'output_dev/docs/**/*.html',
+            'output_dev/docs/contributors/**/*.html',
             'output_dev/docs/changelog/**/*.html',
             'output_dev/docs/guides/**/*.html',
             'output_dev/docs/search/*.html'

@@ -1,0 +1,36 @@
+---
+use: [docs,guides,posts]
+permalink: docs/sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.site_url }}{{ site.url }}</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% for doc in data.docs %}
+  <url>
+    <loc>{{ site.site_url }}{{ doc.url }}</loc>
+    <lastmod>{{ doc.date|date('Y-M-d') }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for guide in data.guides %}
+  <url>
+    <loc>{{ site.site_url }}{{ guide.url }}</loc>
+    <lastmod>{{ guide.date|date('Y-M-d') }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for post in data.posts %}
+  <url>
+    <loc>{{ site.site_url }}{{ post.url }}</loc>
+    <lastmod>{{ posts.date|date('Y-M-d') }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+</urlset>

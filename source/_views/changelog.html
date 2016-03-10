@@ -9,9 +9,9 @@
             <header>
               <h1 class="pio-docs-title">{{ page.title }}</h1>
               <div class="entry-meta">
-            {% if page.authors %}
-                {% set author_list = page.authors %}
-                By {% include 'author_list.twig' %}
+            {% if page.contributors %}
+                {% set contributor_list = page.contributors %}
+                By {% include 'contributor_list.twig' %}
             {% endif %}
 
             <a href="https://twitter.com/share" class="twitter-share-button pull-right" data-via="getpantheon" data-count="none">Tweet</a>
@@ -23,13 +23,6 @@
         </div>
             </header>
           </div>
-              <!--{% if page.category %}
-                  <p class="category">Categories:
-                  {% for category in page.category %}
-                  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
-                  {% endfor %}
-                  </p>
-              {% endif %} -->
                 <div>
                     {{ page.blocks.content|raw }}
                 </div>

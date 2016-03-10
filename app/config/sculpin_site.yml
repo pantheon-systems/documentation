@@ -8,7 +8,7 @@ site_url: https://pantheon.io
 assets_version: 1.12
 
 #######################################################################################################
-# The authors. Include your info here, under the "authors" key, using the following template:
+# The contributors. Include your info here, under the "contributors" key, using the following template:
 #
 #  handle:
 #      name: Your Name
@@ -22,11 +22,11 @@ assets_version: 1.12
 #      wordpress: https://profiles.wordpress.org/
 #      bio: this is a short bio, it should not be so long, just a quick info that defines you.
 #
-# Please provide at least "name" and "bio" . The googleplus url is useful to show your author info
+# Please provide at least "name" and "bio" . The googleplus url is useful to show your contributor info
 # on Google search results.
 #######################################################################################################
 
-authors:
+contributors:
   bmackinney:
       name: Brian MacKinney
       url: //brianmackinney.com

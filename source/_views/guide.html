@@ -7,13 +7,10 @@
                 <header>
                     <h1 class="pio-docs-title">{{ page.title }}</h1>
                         <div class="entry-meta">
-                            {% if page.authors %}
-                            {% set author_list = page.authors %}
-                            By {% include 'author_list.twig' %}
+                            {% if page.contributors %}
+                            {% set contributor_list = page.contributors %}
+                            By {% include 'contributor_list.twig' %}
                             {% endif %}
-                            {% for category in page.categories %}
-                            <br>in <a href="{{ site.url }}/entries/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-                            {% endfor %}
                             <span class="pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="getpantheon" data-count="none">Tweet</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                             <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script src="//platform.linkedin.com/in.js" type="IN/Share"  data-url="https://pantheon.io{{ page.url }}" data-counter="none"></script><br></span>
@@ -21,13 +18,6 @@
                         </div>
                 </header>
             </div>
-                <!--{% if page.category %}
-                <p class="category">Categories:
-                {% for category in page.category %}
-                <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
-            </p>
-            {% endif %} -->
             <div>
                 {{ page.blocks.content|raw }}
             </div>

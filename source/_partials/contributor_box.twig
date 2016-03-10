@@ -1,0 +1,25 @@
+
+<div class="contributor">
+    <div class="media">
+        {% if contributor.avatar %}
+            <div class="pull-left">
+                <a href="{{ site.url }}/contributors/{{ contributorhandle }}">
+                    <img class="avatar img-thumbnail" src="{{ contributor.avatar }}" width="90" height="90" alt="{{ contributor.name }}">
+                </a>
+            </div>
+        {% endif %}
+        <div class="media-body">
+            <div class="media-heading" style="padding-top:20px;">
+                <a style="font-size:22px;font-weight:bold" href="{{ site.url }}/contributors/{{ contributorhandle }}">{{ contributor.name }}</a>
+                    {% if contributor.url %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.url }}" target="_blank"><i class="icon icon-globe"></i></a>{% endif %}
+                    {% if contributor.twitter %}<a aria-hidden="true" style="font-size:22px" href="https://twitter.com/{{ contributor.twitter }}" target="_blank"> <i class="icon icon-twitter"></i></a>{% endif %}
+                    {% if contributor.github %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.github }}" target="_blank"><i class="icon icon-github"></i></a>{% endif %}
+                    {% if contributor.drupal %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.drupal }}" target="_blank"> <i class="icon icon-drupal"></i></a>{% endif %}
+                    {% if contributor.wordpress %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.wordpress }}" target="_blank"> <i class="icon icon-wordpress"></i></a>{% endif %}
+                    {% if contributor.linkedin %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.linkedin }}" target="_blank"> <i class="icon icon-linkedin"></i></a>{% endif %}
+                    {% if contributor.gplus %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.gplus }}" target="_blank"> <i class="icon icon-gplus"></i></a>{% endif %}
+            </div>
+            <p>{{ contributor.bio }}</p>
+        </div>
+    </div>
+</div><!--/.contributor-->
