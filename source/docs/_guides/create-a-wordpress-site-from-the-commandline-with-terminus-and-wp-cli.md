@@ -29,7 +29,7 @@ Once installed, test it using the following command:
 $ terminus art
 ```
 
-![The Pantheon logo represented in ASCII art](/source/assets/images/command-line-terminus-art.png)
+![The Pantheon logo represented in ASCII art](/source/docs/assets/images/command-line-terminus-art.png)
 
 If you see the Pantheon lightning fist, you'll know that terminus is installed properly.
 
@@ -193,7 +193,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 ## Prepare for Development
 
-I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/configuration-management-plugin).
+I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/wp-cfm).
 ```nohighlight
 $ terminus wp 'plugin install --activate' --site=cli-test --env=dev
 ```
@@ -210,7 +210,7 @@ Activating 'wp-cfm'...
 Success: Plugin 'wp-cfm' activated.
 ```
 
-Now I can [use WP-CFM](/docs/configuration-management-plugin) to create a bundle that will track my configurations and export them to code.
+Now I can [use WP-CFM](/docs/wp-cfm) to create a bundle that will track my configurations and export them to code.
 
 If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus site code diffstat` and `$ terminus site code commit`
 
@@ -221,17 +221,17 @@ $ terminus site code diffstat --site=cli-test --env=dev
 +---------------------------------------------------------------------------------+-----------+--------+-----------+
 | wp-content/plugins/wp-cfm/languages/wpcfm.po                                    | 0         | A      | 79        |
 | wp-content/plugins/wp-cfm/includes/class-wp-cli.php                             | 0         | A      | 79        |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
+| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
 | wp-content/plugins/wp-cfm/README.md                                             | 0         | A      | 70        |
-| wp-content/plugins/wp-cfm/assets/css/admin.css                                  | 0         | A      | 186       |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
+| wp-content/plugins/wp-cfm/docs/assets/css/admin.css                                  | 0         | A      | 186       |
+| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
 | wp-content/plugins/wp-cfm/includes/class-readwrite.php                          | 0         | A      | 294       |
-| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
+| wp-content/plugins/wp-cfm/docs/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
 | wp-content/plugins/wp-cfm/includes/class-helper.php                             | 0         | A      | 133       |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
+| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
 | wp-content/plugins/wp-cfm/readme.txt                                            | 0         | A      | 132       |
-| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
-| wp-content/plugins/wp-cfm/assets/js/admin.js                                    | 0         | A      | 189       |
+| wp-content/plugins/wp-cfm/docs/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
+| wp-content/plugins/wp-cfm/docs/assets/js/admin.js                                    | 0         | A      | 189       |
 | wp-content/plugins/wp-cfm/templates/page-settings.php                           | 0         | A      | 122       |
 | wp-content/plugins/wp-cfm/includes/integrations/custom-field-suite.php          | 0         | A      | 170       |
 | wp-content/plugins/wp-cfm/wp-cfm.php                                            | 0         | A      | 182       |
@@ -294,7 +294,7 @@ $ terminus wp 'theme install --activate' \
 
 Watch your Dashboard. It recognizes your uncommitted changes.
 
-![Screenshot of the pantheon dashboard showing uncommitted changes](/source/assets/images/pantheon-dashboard-uncommitted-changes.png)
+![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
 
 We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything update in the browser.
 
@@ -330,7 +330,7 @@ $ terminus site code commit --site=cli-test \
 
 Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
 
-![Screenshot of the final website created following the steps in this guide](/source/assets/images/pantheon-final-command-line-test-site.png)
+![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
 
 
 ## Importing Content from a WXR File

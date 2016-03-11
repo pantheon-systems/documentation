@@ -29,10 +29,10 @@ In Drupal, setting the value to "Never" will be ignored; system cron will always
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
 There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.<br />
-![Drupal admin configure cron](/source/assets/images/desk_images/73173.png)
+![Drupal admin configure cron](/source/docs/assets/images/desk_images/73173.png)
 Click **Run cron** to run all scheduled tasks.
-![Click Run Cron](/source/assets/images/desk_images/73176.png)
-Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/cli/) command:
+![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
+Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
 ```bash
 terminus drush "cron"
 ```
@@ -41,9 +41,9 @@ terminus drush "cron"
 Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
-![Reports--->Recent Log Messages](/source/assets/images/desk_images/74068.png)
+![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
 If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called "cron\_example".
-![Cron log entry in reports](/source/assets/images/desk_images/74077.png)
+![Cron log entry in reports](/source/docs/assets/images/desk_images/74077.png)
 
 ### How Can I Schedule Cron to Run More Often?
 
@@ -59,7 +59,7 @@ By having pingdom visit the site once a minute like a visitor, the site stays ac
 
 This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
 
-As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](/docs/cli/), including Drush cron, to trigger scheduled operations.
+As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
 
 Another very effective solution is to leverage a service such as [EasyCron](http://www.easycron.com). You can set custom schedules, notifications, and logging through their web interface or through their [module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
@@ -70,8 +70,8 @@ Another very effective solution is to leverage a service such as [EasyCron](http
 The most common causes are:
 
 - Missing sites/default/settings.php
-- [PHP fatal errors](/docs/php-errors-and-exceptions/)
-- [Invalid redirection logic in settings.php](/docs/redirect-incoming-requests/)
+- [PHP fatal errors](/docs/php-errors/)
+- [Invalid redirection logic in settings.php](/docs/redirects/)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### What is the maximum execution time of cron?
@@ -82,14 +82,14 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 
 You can check the log messages through the Drupal Admin interface.  
 
-You can also use [Terminus](/docs/cli/) to see when cron was last run with the following command:
+You can also use [Terminus](/docs/terminus/) to see when cron was last run with the following command:
 ```bash
 terminus drush "wd-show --type='cron'"
 ```
 ### Can I prevent Drupal Cron from running?
 
 Yes, from within Drupal at `admin/system/config/cron`, select **Never** from the "Run cron every" drop-down menu, then save the configuration. However, Pantheon system cron will run every hour and there is no way to disable it.
-![Stop cron from running](/source/assets/images/desk_images/74128.png)  
+![Stop cron from running](/source/docs/assets/images/desk_images/74128.png)  
 ## Resources
 
 - [Drupal.org Community Documentation - Set up Cron](http://drupal.org/cron)

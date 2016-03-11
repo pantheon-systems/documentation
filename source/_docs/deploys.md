@@ -16,10 +16,10 @@ Drupal site deploys come with the ability to run `update.php` after  code deploy
 The Deploys tool in the Live environment deploys only the code from the Test environment. If you cloned the database and files from the Live environment when you deployed to Test, your Live environment will behave exactly as the Test environment did prior to the deploy. Deploys are performed by adding a git tag to the last commit on the Test environment.
 All sites have the option of clearing all caches after deploying code.
 Drupal sites have the option of running update.php after deploying code.
-![Deploy Log Live Environment](/source/assets/images/deploy-log-live-env.png)
+![Deploy Log Live Environment](/source/docs/assets/images/deploy-log-live-env.png)
 
 <!--### Local Deployment with Terminus
-From [Terminus](/docs/cli/), run the following command to deploy code from Dev to Test:
+From [Terminus](/docs/terminus/), run the following command to deploy code from Dev to Test:
 ```
 terminus site deploy [--site=<site>] [--env=<test>] [--from=<dev>] [--cc] [--updatedb] [--note=<note>]
 ```
@@ -42,4 +42,4 @@ Success: Woot! Code deployed to test
 After you've tested to ensure your database content has been successfully pulled down from Live, and that no errors were introduced by the code changes pulled up from Dev, you can deploy to the live site by running the same command and selecting the desired environment.-->
 
 ## See Also
-- [Using the Pantheon Workflow](/docs/using-the-pantheon-workflow)
+- [Using the Pantheon Workflow](/docs/pantheon-workflow)

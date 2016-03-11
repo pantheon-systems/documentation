@@ -6,7 +6,7 @@ categories:
 keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php
 ---
 There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
- ![Can't connect to local MySQL server through socket](/source/assets/images/desk_images/64774.png)
+ ![Can't connect to local MySQL server through socket](/source/docs/assets/images/desk_images/64774.png)
 
 ```sql
 Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
@@ -72,4 +72,4 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 ```
 
 ## See Also
-- [Troubleshooting MySQL Connections](/docs/accessing-mysql-databases/#troubleshooting-mysql-connections)
+- [Troubleshooting MySQL Connections](/docs/mysql-access/#troubleshooting-mysql-connections)

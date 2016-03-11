@@ -23,9 +23,9 @@ Starting from the Okta admin dashboard, do the following:
 - **Audience URI (SP Entity ID)**: `https://dashboard.pantheon.io`
 - **Name ID format**: `EmailAddress`
 - **Application username**: `Email`
-  ![Okta settings](/source/assets/images/okta-4.png)
+  ![Okta settings](/source/docs/assets/images/okta-4.png)
 8.  Click **Show Advanced Settings**, select **Compressed** for **Request compression**, and click **Next**.
- ![Okta settings](/source/assets/images/okta-5.png)
+ ![Okta settings](/source/docs/assets/images/okta-5.png)
 
 9. Copy the values found in the Okta Pantheon app **Sign On** tab >> **View Setup Instructions** for **Identity Provider Single sign on URL** and **X.509 Certificate** for step 7.
 

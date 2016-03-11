@@ -12,7 +12,7 @@ The Vanity domain can either be a subdomain of your primary site (`sites.mydomai
 If a subdomain of your primary site is configured, a newly created site named "supersite" will then have a Dev environment URL of `dev-supersite.sites.mydomain.com`. If a dedicated domain name is used, the site would instead have a Dev environment URL of `dev-supersite.mypantheonprojects.com`.
 <div class="alert alert-info">
 <h4>Note</h4>
-<strong>Pantheon Partners:</strong> Running your agency's primary site on Pantheon is <strong>free</strong>, as is the option to add an SSL. This means you can use your primary site as an HTTPS endpoint at no cost. This offer is available to Pantheon Partner organizations exclusively. For more information, see <a href="/docs/https-for-sites-using-a-custom-vanity-domain">Enable HTTPS for Sites Using a Custom Vanity Domain</a>.
+<strong>Pantheon Partners:</strong> Running your agency's primary site on Pantheon is <strong>free</strong>, as is the option to add an SSL. This means you can use your primary site as an HTTPS endpoint at no cost. This offer is available to Pantheon Partner organizations exclusively. For more information, see <a href="/docs/enable-https-vanity-domain">Enable HTTPS for Sites Using a Custom Vanity Domain</a>.
 </div>
 
 ## Request the Vanity Domain
@@ -54,4 +54,4 @@ Disallow: /
 To present an alternate robots.txt file from within the source code, a custom domain needs to be <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore>added to the site's Dashboard</a> and the appropriate DNS record created.
 
 ## See Also
-- [Enable HTTPS for Sites Using a Custom Vanity Domain](/docs/https-for-sites-using-a-custom-vanity-domain)
+- [Enable HTTPS for Sites Using a Custom Vanity Domain](/docs/enable-https-vanity-domain)

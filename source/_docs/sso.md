@@ -14,7 +14,7 @@ SAML SSO is included for Elite, Enterprise, and EDU+ customers. If you'd like to
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/docs/cli/) by using [machine tokens](/docs/machine-tokens/).
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/docs/terminus/) by using [machine tokens](/docs/machine-tokens/).
 
 ## Managing Users
 
@@ -64,4 +64,4 @@ Open a support ticket with Pantheon with the following:
 
 ## Troubleshooting
 ### Cannot Authenticate with Username/Password When Creating a New Machine Token
-If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session. 
+If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.

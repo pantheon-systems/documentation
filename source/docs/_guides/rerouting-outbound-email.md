@@ -12,15 +12,15 @@ If your Drupal site sends outbound email, you don't want to accidentally spam yo
 
 Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.
 
-Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](/docs/configuring-settings-php/) with [environmental variables](/docs/reading-pantheon-environment-configuration/), and never worry about spamming users during debugging or testing again.
+Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](/docs/settings-php/) with [environmental variables](/docs/read-environment-config/), and never worry about spamming users during debugging or testing again.
 
 As an added bonus, you’ll be able to funnel all dev and testing emails to a single inbox—no more logging in to a bunch of email accounts just to test your business expectations.
 
 ## Installation
 
-Download and install as usual. You can use [SFTP](/docs/developing-directly-with-sftp-mode/) on Pantheon or the [Drupal UI](/docs/more-ways-of-managing-code-in-sftp-mode/#install-modules-and-themes-with-update-manager) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
+Download and install as usual. You can use [SFTP](/docs/sftp/) on Pantheon or the [Drupal UI](/docs/more-sftp/#install-modules-and-themes-with-update-manager) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
-I chose [Drupal 7 as a start state](/docs/choosing-start-state/#importing-an-existing-site) and performed a [git clone](/docs/starting-with-git/) of my Pantheon site.
+I chose [Drupal 7 as a start state](/docs/start-state/#importing-an-existing-site) and performed a [git clone](/docs/git/) of my Pantheon site.
 ```nohighlight
 $ cd sites
 $ git clone [pantheon git clone ssh connection string]
@@ -53,7 +53,7 @@ $ git push origin master
 ```
 Now check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
 
-![The dashboard's showing the code was deployed to the Dev environment](/source/assets/images/verify-reroute-email-dashboard-commits1.png)
+![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/verify-reroute-email-dashboard-commits1.png)
 
 
 
@@ -133,11 +133,11 @@ $ terminus --env=live drush "en reroute_email -y"
 ```
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 
-![The Reroute Email Configuration menu shows the email settings](/source/assets/images/reroute-email-config-settings.png)
+![The Reroute Email Configuration menu shows the email settings](/source/docs/assets/images/reroute-email-config-settings.png)
 
 If you don’t see what you’re expecting, review your settings.php and ensure the commit is showing on your Dashboard:
 
-![The dashboard showing the code was deployed to the Dev environment](/source/assets/images/verify-reroute-email-dashboard-commits2.png)
+![The dashboard showing the code was deployed to the Dev environment](/source/docs/assets/images/verify-reroute-email-dashboard-commits2.png)
 
 ##Go Forth and Test
 
@@ -146,11 +146,11 @@ That’s it! Now when Drupal sends out an email from any environment (except Liv
 ###See Reroute Email In Action
 To see exactly what we did, I forked a new [MultiDev](/docs/multidev/) Multidev environment called ```demo``` and requested a new account:
 
-![Drupal site showing account requested and emails sent](/source/assets/images/reroute-email-account-requested.png)
+![Drupal site showing account requested and emails sent](/source/docs/assets/images/reroute-email-account-requested.png)
 
 Requesting a new account fires off two emails: one to the requestor and another to the site owner; both are successfully rerouted to the email address defined in settings.php:
 
-![Email showing the reroute was successful](/source/assets/images/reroute-email-confirmation.png)
+![Email showing the reroute was successful](/source/docs/assets/images/reroute-email-confirmation.png)
 
 ##See Also  
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)

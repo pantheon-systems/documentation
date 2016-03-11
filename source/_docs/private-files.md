@@ -57,7 +57,7 @@ This depends on the workflow and that you are planning to implement. If you set 
 
 If you do not sync the databases, you may get some errors as there is a system check in Drupal to verify that directory is writable before that variable is set. However, because you have already pushed that up in code, setting that variable in Test or Live will do the trick.
 
-This can be done via [Terminus](/docs/cli/):
+This can be done via [Terminus](/docs/terminus/):
 
 ```nohighlight
 # Set this to Test/Live

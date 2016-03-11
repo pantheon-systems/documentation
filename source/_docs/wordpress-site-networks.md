@@ -1,144 +1,61 @@
 ---
-title: Migrate to Pantheon: WordPress Site Networks
-description: Learn how to import a WordPress Site Network into Pantheon.
-keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
+title: WordPress Site Networks
+description: Overview of WordPress multisite support on the Pantheon Platform. Includes supported use cases, links to terms of service, and links to relevant documentation for getting started and managing multisite development within the Pantheon workflow.
 ---
 
-## Requirements
+Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network) created by WordPress' Multisite feature. Pantheon's WordPress Site Networks support is meant for the site network use case: a common codebase which powers a set of related sites (e.g. a group of blogs, an organization with different chapters, etc.).
 
-* [Download](http://git-scm.com/downloads) and install [Git](/docs/starting-with-git/)
-* [Rsync or SFTP Client](/docs/rsync-and-sftp/)
-* [MySQL Client](/docs/accessing-mysql-databases/)
-* A Pantheon employee must create a [WordPress Site Network](/docs/site-networks/) for you.
-* You have [created a compatible site archive](/docs/export-an-existing-wordpress-site#manually-create-separate-site-archives)
+Running a WordPress Site Network requires a special configuration that is only available on [Elite plans](https://pantheon.io/pantheon-elite-plans), and only Pantheon employees have the ability to create the sites and add you to the team. [Complete this form](https://pantheon.io/pantheon-elite-plans) if you have questions about the network you’d like to host on Pantheon.
 
-## Import the Codebase
+Setting up a site network on top of a vanilla WordPress installation is not supported.
 
-**Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.
+## Supported Use Cases
+We support clients running a network of functionally-similar sites. This includes, but is not limited to, networks of:
 
-When you [created a compatible site archive](/docs/export-an-existing-wordpress-site#manually-create-separate-site-archives), you may have needed to move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replaced the original directories with symlinks to their new homes. If you haven't, please do so now. In more recent versions of WordPress multisite, blog-specific uploads are stored in `wp-content/uploads/sites/<id>`.
+ - Blogs for faculty at a university
+ - Franchise sites under a parent organization site
+ - Sections within a media publication
 
-Import your existing code and commit history via Git. If you don’t have a Git version controlled codebase, the following will walk you through the initialization process.
+## Unsupported Use Cases
+We do not support uses of WordPress Site Networks that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:
 
-1. Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, run:
+ - Software as a service (SAAS) products
+ - Agencies using one WordPress installation to support several customers
 
- ```bash
- git init
- git add .
- git commit -m "initial commit"
- ```
-2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
-3. Copy the SSH URL for the site repository, found in the <a href="/docs/starting-with-git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+## About WordPress Site Networks
+The WordPress Multisite feature lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, Multisite can make it much easier to fix bugs and deploy new features across all of those sites. For official documentation on WordPress Site Networks, see [WordPress Codex Network Documentation](https://codex.wordpress.org/Category:Network).
 
- ```bash
- ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
- ```
+Before you get started using WordPress Multisite, there are a few key details to keep in mind.
 
-4. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
+### 1. The decision is permanent
 
- ```bash
- git pull --no-rebase --squash -Xtheirs <ssh_url> master
- ```  
+The choice between running classic single-site WordPress or WordPress in Multisite mode is permanent. Once you perform the setup (which is relatively straightforward to do), it’s technically challenging to switch back to single-site, and not supported on Pantheon.
 
- This will yield:  
- ```bash
- Squash commit -- not updating HEAD  
- Automatic merge went well; stopped before committing as requested
- ```
- Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files. It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase.
+### 2. Choose between subdirectories and subdomains
 
- For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
+When configuring WordPress Multisite, you’ll be need to choose between using subdirectories or subdomains. You’re choosing between `mydomain.com/first-site` / `mydomain.com/second-site` or `first-site.mydomain.com` / `second-site.mydomain.com`.
 
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
+The key differences are:
+- Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can’t be mapped to sites on subdomains.
+- Using subdomains will require you to set up your own DNS and add each domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
+- Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain.
 
-5. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
+### 3. Users are shared
 
- ```bash
- git remote add pantheon <ssh_url>
- ```
+User data is shared among all sites on a WordPress Site Network. If you were to create a user with a username of “janedoe”, she will have the only “janedoe” username across all of the sites. If you were to change her display name from “Jane Doe” to “J. Doe”, the change would apply everywhere her name is displayed, regardless of the site.
 
-6. Run `git add` and `git commit` to prepare the Pantheon core merge for pushing to the repository:
- ```bash
- git add -A
- git commit -m "Adding Pantheon core files"
- ```
-7. Push your newly merged codebase up to your Pantheon site repository:
+User roles are a bit more complex. Because all sites on a WordPress Site Network share the same `wp_users` table, a given user can be assigned a user role on any site and can have different user roles between sites (e.g. an Editor on one site, and an Administrator on another site).
 
- ```bash
- git push pantheon master --force
- ```
- <div class="alert alert-info">
- <h4>Note</h4>
- The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.
- </div>
-8. Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
+WordPress’ default behavior is that a user on a WordPress Site Network has no role on any site, unless explicitly added. However, if the user is considered logged in on one site in the network, they’re logged in on all sites on the WordPress Site Network. Users can’t access the WordPress Dashboard for a site unless they have a role on the site, but they will see the toolbar when logged in on a site they don’t have a role on.
 
-## Files
+[Read more about site network user roles](https://codex.wordpress.org/Multisite_Network_Administration).
 
-**Files** - Any content uploaded through the WordPress Dashboard. These files should be exclusively stored within `wp-content/uploads`, which is a symlink to the `~/files` directory.
+### 4. Sites share themes and plugins
 
-This directory is a shared filesystem and is stored separately from the site's codebase. If your WordPress Site Network stores uploads in another directory, you must reconcile the archive as part of the import process. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
+The code for themes and plugins are shared among all sites on a WordPress Site Network.
 
-File archives can be imported via the Site Dashboard on **Workflow** > **Import**; however, the archive must be within the size limits for the upload method in use (100MB for file uploads, 500MB for URL uploads).
+Themes can be enabled for activation on a per-site basis, or network-enabled for activation on any site. Plugins can be activated individually on each site, or network-activated for activation across all sites.
 
-For larger file transfers, we recommend running rsync from the old environment directly to your new environment on Pantheon to forgo downloading all the files locally. However, if the files already exist on your local machine you can transfer them to Pantheon with this handy script and avoid connectivity issues:
-```bash
-ENV='dev'
-SITE='SITEID'
+Note the difference between “enabling” and “activating”. Themes can be “enabled” for an entire network by the "super user" (network administrator), which then allows site administrators to activate the theme on individual sites they manage. When plugins are installed but not network-activated, the site administrator has the ability to activate the plugin.
 
-read -sp "Your Pantheon Password: " PASSWORD
-if [[ -z "$PASSWORD" ]]; then
-echo "Woops, need password"
-exit
-fi
-
-while [ 1 ]
-do
-sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/* --temp-dir=../tmp/  ./files/
-if [ "$?" = "0" ] ; then
-echo "rsync completed normally"
-exit
-else
-echo "Rsync failure. Backing off and retrying..."
-sleep 180
-fi
-done
-```
-This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
-
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.  
-
-## Database  
-
-**Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
-
-If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
-
-1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the database connection string. It will look similar to this:
-
- ```
- mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
- ```
-2. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
-`< database.sql`
-Your command will now look like:
-
- ```
- mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
- ```
-3. After you run the command, the .sql file is imported into your Pantheon Dev database.  
-
-You should now have all three of the major components of your site imported into Pantheon.
-
-## WP Search and Replace
-
-When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
-
-**Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
-```bash
-terminus wp 'search-replace example.com dev-example-network.pantheonsite.io --url=example.com --network'
-```
-
-Visit the Development environment and confirm your site was imported correctly!
-
-When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
+Super users can also choose to activate plugins across the entire network; however, site administrators cannot override that activation. Plugins active across the entire network are stored within the `wp-content/plugins` and/or `wp-content/mu-plugins` directories and are **not** displayed within an individual site's plugins list. For more information, see [Multisite Network Administration: Plugins](https://codex.wordpress.org/Multisite_Network_Administration#Plugins).

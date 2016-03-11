@@ -27,12 +27,6 @@ assets_version: 1.12
 #######################################################################################################
 
 contributors:
-  rachel:
-    name: Rachel Whitton
-    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
-    twitter: rachwhitton
-    github: //github.com/rachelwhitton
-    bio: Pantheon docs
   bmackinney:
       name: Brian MacKinney
       url: //brianmackinney.com

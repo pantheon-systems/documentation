@@ -30,22 +30,22 @@ Describe the goal in greater detail.
 
 1. Instruction (imperative object with object)
 
-![title](/assets/images/ "alt")
+![title](/docs/assets/images/ "alt")
 
 2. Instruction
 
-![title](/assets/images/ "alt")
+![title](/docs/assets/images/ "alt")
 
 ## Procedure 2 Goal
 Describe the goal in greater detail.
 
 1. Instruction
 
-![title](/assets/images/ "alt")
+![title](/docs/assets/images/ "alt")
 
 2. Instruction
 
-![title](/assets/images/ "alt")
+![title](/docs/assets/images/ "alt")
 ```
 ## Guide Articles
 

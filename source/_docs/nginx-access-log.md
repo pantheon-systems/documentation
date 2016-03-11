@@ -44,8 +44,8 @@ open report.html
 
 ## See Also
 - [Log Files on Pantheon](/docs)
-- [Debugging Sites with Log Files](/docs/debugging-sites-with-log-files)
+- [Debugging Sites with Log Files](/docs/debug-log-files)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
-- [PHP Errors and Exceptions](/docs/php-errors-and-exceptions/)
+- [PHP Errors and Exceptions](/docs/php-errors/)
 - [Bots and Indexing](/docs/bots-and-indexing/)

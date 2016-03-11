@@ -3,7 +3,7 @@ title: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
 keywords: mysql, mysql query, mysql queries, kill query, kill queries, kill mysql, kill mysql queries, queries, query, debug mysql, debug, mysql error, kill all queries, kill all mysql queries, kill all mysql
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [Access the appropriate environment's MySQL Database](/docs/accessing-mysql-databases).
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [Access the appropriate environment's MySQL Database](/docs/mysql-access).
 
 ## Identify Long-Running Queries
 After successfully creating a local MySQL connection to the site's database, run the following command to show a list of active threads:
@@ -29,8 +29,8 @@ mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the foll
 Copy the provided query in the output and run as instructed.
 
 ## See Also
-- [Access MySQL Databases](/docs/accessing-mysql-databases)
+- [Access MySQL Databases](/docs/mysql-access)
 - [Database Connection Errors](/docs/database-connection-errors)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](/docs/mysql-troubleshooting-with-new-relic-pro/)
+- [MySQL Troubleshooting with New Relic Pro](/docs/debug-mysql-new-relic/)
 - [Converting MySQL Tables From MyISAM to InnoDB](/docs/myisam-to-innodb/)

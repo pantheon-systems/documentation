@@ -9,7 +9,7 @@ categories:
 authors:
   - populist
 date: 4/13/2015
-image: https.pantheon.io/assets/images/pantheon-fistbump.png
+image: https.pantheon.io/docs/assets/images/pantheon-fistbump.png
 keywords: Drupal, WordPress, security, two-factor auth, 2fa, onelogin, Pantheon
 ---
 Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see [Multi Factor Authentication in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and [Two Step Authentication on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
@@ -25,10 +25,10 @@ For a single site, there are many different [WordPress plugins for two-factor au
 1. Install and activate the [Clef plugin](https://wordpress.org/plugins/wpclef/) on your WordPress site.
 2. Download and set up the [Clef mobile app](https://getclef.com/apps/) on either iOS or Android.
 3. Use the app on your mobile phone to scan the “wave” provided by Clef to connect your mobile phone to the website.
-![TFA Wave Setup](/source/assets/images/tfa-wave-setup.png)
+![TFA Wave Setup](/source/docs/assets/images/tfa-wave-setup.png)
 4. Configure the [security settings for the Clef plugin](http://support.getclef.com/article/60-recommended-password-settings-for-clef-wordpress-plugin) to **Disable passwords for Clef users** and create a private **Override URL**, which allows users to log in with their passwords if needed.
 5. Log in to your WordPress site by using the Clef mobile app to scan the “wave” provided on the WordPress login form.
-![TFA Wave Login](/source/assets/images/tfa-wave-login.png)
+![TFA Wave Login](/source/docs/assets/images/tfa-wave-login.png)
 
 
 ## Set Up Two-Factor Authentication With WordPress (Organization)
@@ -40,21 +40,21 @@ For an organization-wide solution, there are many different [WordPress plugins f
 1. Sign up and create a [OneLogin account](https://www.onelogin.com/) for your organization.
 2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard. This needs to be done for each WordPress site that is being managed by OneLogin.
 3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
-![TFA OneLogin Config](/source/assets/images/tfa-wp-onelogin-config.png)
+![TFA OneLogin Config](/source/docs/assets/images/tfa-wp-onelogin-config.png)
 4. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
-![TFA OneLogin Methods](/source/assets/images/tfa-onelogin-tfa-methods.png)
+![TFA OneLogin Methods](/source/docs/assets/images/tfa-onelogin-tfa-methods.png)
 5. Create user accounts in the Users Administration area of OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their WordPress username and email.
-![TFA OneLogin New User](/source/assets/images/tfa-onelogin-new-user.png)
+![TFA OneLogin New User](/source/docs/assets/images/tfa-onelogin-new-user.png)
 
 ### WordPress Instructions
 
 1. Install and activate the [OneLogin plugin](https://wordpress.org/plugins/onelogin-saml-sso/) on your WordPress site.
 2. Configure the **Identity Provider Settings** in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
-![TFA OneLogin Ident](/source/assets/images/tfa-wp-onelogin-ident.png)
+![TFA OneLogin Ident](/source/docs/assets/images/tfa-wp-onelogin-ident.png)
 3. Configure the **Attribute** in the SSO/SAML Settings in the WordPress Admin with what is shown in the screenshot; values are case-sensitive.
-![TFA OneLogin Attributes](/source/assets/images/tfa-wp-onelogin-attribute.png)
+![TFA OneLogin Attributes](/source/docs/assets/images/tfa-wp-onelogin-attribute.png)
 4. Configure the **Customize Actions and Links** in the SSO/SAML Settings within the WordPress Admin to **Prevent local login**. This requires OneLogin as the authentication solution.
-![TFA OneLogin Custom Actions](/source/assets/images/tfa-onelogin-custom-actions.png)
+![TFA OneLogin Custom Actions](/source/docs/assets/images/tfa-onelogin-custom-actions.png)
 5. Now use the OneLogin dashboard to log in to your WordPress site!
 
 ## Setting Up Two-Factor Authentication With Drupal (Single Site)
@@ -64,14 +64,14 @@ For a single site, there are a few [different Drupal modules](https://groups.dru
 1. Install and enable the [TFA module](https://www.drupal.org/project/tfa) and the [TFA Basic plugins module](https://www.drupal.org/project/tfa_basic) on your Drupal site.
 2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/users) for either iOS or Android.
 3. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
-![TFA Module Settings](/source/assets/images/tfa-drupal-module-settings.png)
+![TFA Module Settings](/source/docs/assets/images/tfa-drupal-module-settings.png)
 4. Go to the Security settings on each user profile you want to use TFA, and click **Enable TFA**.
 5. Enter your current password, and view the TFA Setup - Application page.
-![TFA setup](/source/assets/images/tfa-drupal-otp-setup.png)
+![TFA setup](/source/docs/assets/images/tfa-drupal-otp-setup.png)
 6. Use the app on your mobile phone to scan the QR code to install a new TFA account on your mobile phone.
 7. Enter the six digit TFA code on your mobile app for your specific site to complete the setup. You will then be prompted to confirm a trusted browser (which is optional and will skip TFA on that browser in the future), and to write down TFA recovery codes (best practice).
 8. Log in to your Drupal site by using the TOTP mobile app to generate a six digit code.
-![TFA setup](/source/assets/images/tfa-drupal-login.png)
+![TFA setup](/source/docs/assets/images/tfa-drupal-login.png)
 
 
 ## Set Up Two-Factor Authentication With Drupal (Organization)
@@ -83,18 +83,18 @@ For an organization-wide solution, there are many different [Drupal modules for 
 1. Sign up and create a [OneLogin account](https://www.onelogin.com/) for your organization.
 2. Install the Drupal SAML 2.0 app connector as part of the OneLogin dashboard. This will need to be done for each Drupal site that is being managed by OneLogin.
 3. Edit the OneLogin Drupal app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
-![TFA OneLogin Config](/source/assets/images/tfa-drupal-onelogin-config.png)
+![TFA OneLogin Config](/source/docs/assets/images/tfa-drupal-onelogin-config.png)
 4. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
-![TFA OneLogin Methods](/source/assets/images/tfa-onelogin-tfa-methods.png)
+![TFA OneLogin Methods](/source/docs/assets/images/tfa-onelogin-tfa-methods.png)
 5. Create user accounts in the Users Administration area in OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their Drupal username and email.
-![TFA OneLogin New User](/source/assets/images/tfa-onelogin-new-user.png)
+![TFA OneLogin New User](/source/docs/assets/images/tfa-onelogin-new-user.png)
 
 ### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin module](https://github.com/onelogin/drupal-saml) on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
 2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.   
 3. Configure the OneLogin module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
-![TFA OneLogin Options](/source/assets/images/tfa-drupal-onelogin-options.png)
+![TFA OneLogin Options](/source/docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
 
 ##See Also

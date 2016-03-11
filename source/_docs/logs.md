@@ -29,7 +29,7 @@ You now have a local copy of the logs directory, which contains the following:
     └──pyinotify.log
     └──watcher.log
 ```
-To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/downloading-live-error-logs/).
+To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
 ### Log Directory Contents
 - **`newrelic.log`**: New Relic log; check if an environment is not logging.
 - **`nginx-access.log`**: Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).
@@ -52,12 +52,12 @@ To automate this process, see [Automate Downloading Logs from the Live Environme
 ```nohighlight
 get logs/mysqld-slow-query.log
 ```
-You now have a local copy of the `mysqld-slow-query.log` file. To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/downloading-live-error-logs/).
+You now have a local copy of the `mysqld-slow-query.log` file. To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
 
 ## See Also
-- [Debugging Sites with Log Files](/docs/debugging-sites-with-log-files)
+- [Debugging Sites with Log Files](/docs/debug-log-files)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
-- [PHP Errors and Exceptions](/docs/php-errors-and-exceptions/)
+- [PHP Errors and Exceptions](/docs/php-errors/)
 - [Bots and Indexing](/docs/bots-and-indexing/)
 - [New Relic](/docs/newrelic)

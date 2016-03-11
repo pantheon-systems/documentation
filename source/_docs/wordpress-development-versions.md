@@ -6,7 +6,7 @@ categories:
 tags:
   - code
 ---
-Pantheon provides [one-click updates](/docs/applying-upstream-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
+Pantheon provides [one-click updates](/docs/upstream-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <div class="alert alert-danger">
 <h4>Warning</h4>
@@ -14,7 +14,7 @@ Development versions and beta releases are not supported and should not be run o
 </div>
 
 ## Update Core within WordPress Dashboard
-1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/docs/developing-directly-with-sftp-mode/) or with [Terminus](/docs/cli):
+1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/docs/sftp/) or with [Terminus](/docs/terminus):
 
  ```
  terminus site set-connection-mode --mode=sftp
@@ -40,13 +40,13 @@ Development versions and beta releases are not supported and should not be run o
 
 
 ## Update Core Manually with Git
-1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/docs/cli):
+1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/docs/terminus):
 
  ```
  terminus site set-connection-mode --mode=git
  ```
 
-2. From within the [local clone of your site's code repository](/docs/starting-with-git/#clone-your-site-codebase):
+2. From within the [local clone of your site's code repository](/docs/git/#clone-your-site-codebase):
 
  ```
  git checkout -b "wpcore"
@@ -80,4 +80,4 @@ Create the Multidev from within the Site Dashboard by selecting **Multidev** > *
 ## Troubleshooting
 
 ### Database Update Required
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus 'wp core update-db'](/docs/cli).
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus 'wp core update-db'](/docs/terminus).

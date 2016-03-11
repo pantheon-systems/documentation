@@ -2,7 +2,7 @@
 title: Environment-Specific Configuration for WordPress Sites
 description: Learn how to turn plugins on and off conditionally, based on the environment they are running on.
 ---
-You may sometimes use settings and plugins in your Development environment that you do not use on Live, in order to improve the development and debugging processes. This article shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/docs/reading-pantheon-environment-configuration/).
+You may sometimes use settings and plugins in your Development environment that you do not use on Live, in order to improve the development and debugging processes. This article shows you how to use the same codebase with different settings for each environment, using values for the [PANTHEON_ENVIRONMENT variable](/docs/read-environment-config/).
 To quickly see which environment you are on, consider installing the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/).
 
 ## Customizations to wp-config.php

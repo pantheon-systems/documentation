@@ -11,7 +11,7 @@ There are some scenarios when an external library is required. Pantheon has inst
 <!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
 
 
-<p><img alt="" class="basic" src="/source/assets/images/desk_images/110693.png" style="width: 473px; height: 107px;" /></p>
+<p><img alt="" class="basic" src="/source/docs/assets/images/desk_images/110693.png" style="width: 473px; height: 107px;" /></p>
 
 
 <p>In its own words: &quot;If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.&quot;</p>
@@ -39,7 +39,7 @@ Download and enable the print module and extensions via drush:
 ```
 drush @pantheon.{sitename}.{env} en print --y
 ```
-Create a symlink to the hosted library and your site's libraries directory [via Git](/docs/starting-with-git/#clone-your-site-codebase):
+Create a symlink to the hosted library and your site's libraries directory [via Git](/docs/git/#clone-your-site-codebase):
 ```bash
 mkdir -p sites/all/libraries/wkhtmltopdf
 ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf

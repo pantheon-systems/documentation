@@ -29,9 +29,9 @@ Pantheon eliminates these risks entirely by running sites on a web-scale infrast
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/docs/redis-as-a-caching-backend) and/or [Apache Solr](/docs/apache-solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/docs/redis) and/or [Apache Solr](/docs/solr).
 
-For more information on containers, see [All About Application Containers](/docs/all-about-application-containers/).
+For more information on containers, see [All About Application Containers](/docs/application-containers/).
 
 ## Add and Remove Application Containers
 Add containers by upgrading the site's plan within the Site Dashboard to a Business plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
@@ -41,7 +41,7 @@ The platform does not assume when additional containers are added or removed in 
 ## New Relic
 Consider enabling New Relic as an add-on service for your site within the Site Dashboard. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
-For more information, see [New Relic Performance Analysis on Pantheon](/docs/new-relic-performance-analysis/).
+For more information, see [New Relic Performance Analysis on Pantheon](/docs/new-relic-analysis/).
 
 ## Handle Traffic Spikes
 You'll need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).

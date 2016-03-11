@@ -67,7 +67,7 @@ if (($counted > 0 ) && (php_sapi_name() != "cli")) {
 #### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
-For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/cli): `terminus site clear-cache`
+For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus site clear-cache`
 
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
 
@@ -84,4 +84,4 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/redirect-incoming-requests).
+For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/redirects).

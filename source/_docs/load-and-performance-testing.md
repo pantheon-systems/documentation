@@ -11,7 +11,7 @@ We highly recommend load testing a site both prior and post launch to ensure you
 
 You should:
 
-- [Enable New Relic](/docs/new-relic-performance-analysis#enable-new-relic) to monitor internal execution performance without needing any additional modules or tools.
+- [Enable New Relic](/docs/new-relic-analysis#enable-new-relic) to monitor internal execution performance without needing any additional modules or tools.
 - Have access to a command-line environment, preferably with administrative privileges.
 
 <div class="alert alert-info" role="alert">
@@ -48,7 +48,7 @@ Via: 1.1 varnish
 X-Pantheon-Edge-Server: 108.166.96.132
 Vary: Accept-Encoding, Cookie
 ```
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/drupal-performance-and-caching-settings#drupal-7-performance-configuration) and [Varnish Caching for High Performance](/docs/varnish) documentation.
+The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/drupal-cache#drupal-7-performance-configuration) and [Varnish Caching for High Performance](/docs/varnish) documentation.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
@@ -198,4 +198,4 @@ There are a number of other tools to consider when you are planning your load te
 </table>
 
 ## See Also
-- [Going Live](/docs/going-live)
+- [Going Live](/docs/launch)

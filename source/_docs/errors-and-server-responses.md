@@ -14,7 +14,7 @@ If you feel that you reached one of these messages in error, submit a support ti
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/locking-your-site). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/lock-environment). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
@@ -47,7 +47,7 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 ### Pantheon - 503 Target Not Responding
 "The web page you were looking for could not be delivered." No application containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
-This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/selecting-a-plan/).
+This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/select-plan/).
 
 ### Pantheon - 503 Database not responding
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
@@ -65,7 +65,7 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
 ### Required Key Not Found
-When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/loading-ssh-keys/) for instructions.
+When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/add-ssh-key/) for instructions.
 
 ## Retries Across Application Server Containers (High Availability)
 
@@ -111,7 +111,7 @@ Even with the watchdog off these errors will still be written to the PHP error l
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/new-relic-performance-analysis#end-user-overview) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/new-relic-analysis#end-user-overview) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan
@@ -129,8 +129,8 @@ If you are seeing timeouts in unexpected places, debugging with New Relic or loo
 
 In the best of all possible worlds, there are no slow queries, all external calls are fast, and the application is a finely-tuned highly-optimized cheetah of the web. In reality, sometimes we just need to get around a pesky timeout in order to get the job done.
 
-[Terminus](/docs/cli/) is a great workaround for many administrative bottlenecks. There are no time limits because it runs via the PHP command-line. Enabling/disabling modules or plugins, running update.php for Drupal, clearing caches, are all actions supported by Terminus for both WordPress and Drupal.
+[Terminus](/docs/terminus/) is a great workaround for many administrative bottlenecks. There are no time limits because it runs via the PHP command-line. Enabling/disabling modules or plugins, running update.php for Drupal, clearing caches, are all actions supported by Terminus for both WordPress and Drupal.
 
 ## Handle More Traffic
 
-See [Debugging Performance Bottlenecks](/docs/debugging-slow-performance) for details on how to streamline your site to handle additional traffic.
+See [Debugging Performance Bottlenecks](/docs/debug-slow-performance) for details on how to streamline your site to handle additional traffic.

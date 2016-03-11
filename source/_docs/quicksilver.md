@@ -11,7 +11,7 @@ The current release of Quicksilver supports one utility operation: `webphp`. Thi
 
 1. You trigger a Quicksilver-enabled workflow.
 2. The platform runs Quicksilver operations identified in a `pantheon.yml` file stored in your codebase.
-3. You can get debugging output via [Terminus, the Pantheon CLI](/docs/cli/).
+3. You can get debugging output via [Terminus, the Pantheon CLI](/docs/terminus/).
 
 ## Add a Valid pantheon.yml File
 Create a `pantheon.yml` file in the root of your code repository. Whether you commit this file locally or create it via an SFTP connection, the platform will validate the YAML prior to receiving the commit. Uncommitted `pantheon.yml` files on the Development environment have no effect.

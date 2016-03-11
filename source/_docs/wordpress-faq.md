@@ -18,7 +18,7 @@ Yes. Please see [Migrate Sites to Pantheon](/docs/migrate) for step-by-step inst
 
 ### How do I configure wp-config?
 
-wp-config.php comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications. For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/configuring-wp-config-php).
+wp-config.php comes pre-configured to work under normal circumstances right out of the box. Most sites should not need to make modifications. For detailed instructions, or if you have a need to customize see [Configuring wp-config](/docs/wp-config-php).
 
 ## Debugging
 
@@ -36,7 +36,7 @@ If you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-You'll need the plugin. [More information on sessions](/docs/wordpress-and-php-sessions/).
+You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/).
 
 ## Developing WordPress Sites
 
@@ -50,7 +50,7 @@ Yes. Pantheon puts the power back in your hands by giving you a best-practice de
 
 ### Can I use WordPress Multisite?
 
-Yes, Pantheon supports designated use cases for [WordPress Site Networks](/docs/site-networks) created by WordPress' Multisite feature.
+Yes, Pantheon supports designated use cases for [WordPress Site Networks](/docs/wordpress-site-networks) created by WordPress' Multisite feature.
 
 ### Can I install WordPress in my Drupal site (or vice versa)?
 
@@ -80,7 +80,7 @@ You don't need to! Pantheon provides a web-scale infrastructure, which includes 
 
 ### Do you support cache backends?
 
-Yes, we support Redis. Please see [Redis as a caching backend](/docs/redis-as-a-caching-backend).
+Yes, we support Redis. Please see [Redis as a caching backend](/docs/redis).
 
 ### Which caches do you clear?
 
@@ -89,6 +89,6 @@ You can clear the caches from your site's Pantheon Dashboard. This will take car
 
 ## Further Reading
 
-- [Export an Existing WordPress Site](/docs/export-an-existing-wordpress-site)
+- [Export an Existing WordPress Site](/docs/wordpress-export)
 - [Migrate Sites to Pantheon](/docs/migrate)
-- [Launching a WordPress Site](/docs/starting-wordpress-site/)
+- [Launching a WordPress Site](/docs/launch-wordpress/)

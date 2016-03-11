@@ -16,5 +16,5 @@ Some advantages of redirecting via PHP instead of `.htaccess` include:
 - Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, Varnish will cache it as well.
 
 ## See Also
-- [Redirect Incoming Requests](/docs/redirect-incoming-requests/)
+- [Redirect Incoming Requests](/docs/redirects/)
 - [Prevent Image Hotlinking](https://www.maketecheasier.com/prevent-people-from-hotlinking-your-images)

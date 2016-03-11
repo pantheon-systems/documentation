@@ -8,12 +8,12 @@ Files are user uploads, usually images or documents. They are excluded from vers
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
 
-The Pantheon architecture is comprised of highly available [application containers](/docs/all-about-application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
+The Pantheon architecture is comprised of highly available [application containers](/docs/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
-Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal within the `/files` directory. Any [non-standard file locations](/docs/non-standard-files-locations/) should be symbolically linked to `/files` or moved manually.
+Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal within the `/files` directory. Any [non-standard file locations](/docs/non-standard-file-paths/) should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
-You can connect directly to the filesystem by copying your [connection information](/docs/developing-directly-with-sftp-mode#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/filezilla/) and navigating to the `/files` directory.
+You can connect directly to the filesystem by copying your [connection information](/docs/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/docs/filezilla/) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
 When you are logged in to your application server, you may notice some files that you don't recognize. Don't worry—we put them there, and here's why:

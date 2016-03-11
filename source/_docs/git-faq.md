@@ -12,7 +12,7 @@ contributors: mrfelton
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
-<p style="margin-top:0px;margin-bottom:40px;"><img src="/source/assets/images/icon-version-control.svg
+<p style="margin-top:0px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
 " data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
 
 ### How do I resolve conflicts when updating Core?
@@ -109,7 +109,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git push origin master
  ```
 
-For more details, see [Applying Upstream Updates](/docs/applying-upstream-updates).
+For more details, see [Applying Upstream Updates](/docs/upstream-updates).
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
@@ -134,7 +134,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/docs/undo-git-commits-like-overwriting-drupal-core).
+See [Undo Git commits like overwriting Drupal core](/docs/undo-commits).
 
 ### How do I apply a patch from Drupal.org on Pantheon?
 
@@ -147,7 +147,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Migrate to Pantheon: Manual Site Import](/docs/manual-site-import).
+For detailed instructions, see [Migrate to Pantheon: Manual Site Import](/docs/manual-import).
 
 ### Can I use Git with SFTP mode?
 
@@ -185,7 +185,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/generating-ssh-keys).
+If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/generate-ssh-key).
 
 ### Why am I being prompted for my password after adding the public key?
 

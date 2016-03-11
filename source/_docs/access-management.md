@@ -33,7 +33,7 @@ When a developer creates a site in a partner organization, they automatically be
 For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the organization.
 
 ## See Also
-[Accessing an Account After the Owner Leaves](/docs/access-account-after-owner-leaves/)  
+[Accessing an Account After the Owner Leaves](/docs/site-access/)  
 [Role-Based Permissions & Change Management](/docs/change-management/)  
 [Secure Your Site with Two-Factor Authentication](/docs/guides/two-factor-authentication/)  
 [Team Management](/docs/team-management)

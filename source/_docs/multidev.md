@@ -6,7 +6,7 @@ categories:
 keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
-<img src="/source/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
+<img src="/source/docs/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
 
 ## Benefits of Multidev
 
@@ -15,7 +15,7 @@ Multidev is development environments for teams and allows a developer to fork th
 **No more surprises.** Each developer on your team gets their own Multidev environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
 **A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
-![Pantheon standard workflow vs multidev](/source/assets/images/desk_images/170383.png)​
+![Pantheon standard workflow vs multidev](/source/docs/assets/images/desk_images/170383.png)​
 
 ## Branching and Multidev Terminology
 
@@ -83,7 +83,7 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 
 ## Edit Code
 
-1. Edit your content locally via [Git](/docs/starting-with-git/) or utilize on-server development via [SFTP](/docs/developing-directly-with-sftp-mode/) mode.
+1. Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
 2. Within the Pantheon Dashboard, click **Code**.
 3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git are shown in the Commit Log.
 

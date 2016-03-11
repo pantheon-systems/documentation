@@ -26,7 +26,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 <hr>
 ### Backup & Migrate
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the workflow tools on the dashboard. See [Backup Creation](/docs/backup-creation#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the workflow tools on the dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the dashboard for each environment.
 <hr>
@@ -38,7 +38,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 ### Cache Expiration
 **Issue**: Unfortunately, there is no way to selectively purge the Varnish cache.
 
-**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advancedtopics/) for details on how to bypass Varnish.
+**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 
 <hr>
 ### CKFinder
@@ -65,7 +65,7 @@ $baseUrl = '/ckfinder/userfiles/';
 
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
 
-1. [Enable Redis](/docs/redis-as-a-caching-backend) if available for your site's plan, otherwise Database cache is utilized. Currently all plans can use Redis except Personal.
+1. [Enable Redis](/docs/redis) if available for your site's plan, otherwise Database cache is utilized. Currently all plans can use Redis except Personal.
 2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```
@@ -122,7 +122,7 @@ This will move the temporary upload destination from the individual server mount
 
 <hr>
 ### Registry Rebuild  
-This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drupal-drush-command-line-utility/#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
+This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
 <hr>
 ### Schema  
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
@@ -138,7 +138,7 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/d
 ### Varnish
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-performance-and-caching-settings/)
+**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)
 <hr>
 
 ### Views data export
@@ -179,7 +179,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### Caching Plugins (e.g. Batcache, W3 Total Cache, or WP Super Cache)
 **Issue**: Conflicts with Varnish.
 
-**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advancedtopics/) for details on how to bypass Varnish.
+**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 <hr>
 
 ### Monarch Social Sharing
@@ -208,7 +208,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ## Dynamic Outbound IPs
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
 
-For more information, see [Dynamic Outgoing IP Addresses](/docs/dynamic-outgoing-ip-addresses).
+For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
 
 ## Using the tmp Directory
 **Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.

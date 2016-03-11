@@ -10,7 +10,7 @@ keywords: filezilla, pantheon, sftp
 
 ## Getting Started
 
-Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/docs/developing-directly-with-sftp-mode#sftp-connection-information) for your site.
+Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/docs/sftp#sftp-connection-information) for your site.
 
 ## Download FileZilla
 

@@ -6,17 +6,17 @@ keywords: wordpress, best practices, redis, wp-cfm, behat
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
 
-* Use [Redis](/docs/installing-redis-on-wordpress/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
+* Use [Redis](/docs/wordpress-redis/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
 
-* Verify [Varnish](/docs/testing-varnish) is working on your site.
+* Verify [Varnish](/docs/test-varnish) is working on your site.
 
-* Use [wp-cfm](/docs/configuration-management-plugin/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
+* Use [wp-cfm](/docs/wp-cfm/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
 * Automate testing with [Behat](/docs/guides/automated-testing-wordpress-behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
 * We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/enable-https/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/ssl-with-cloudflare/).
 
-* Run [Launch Check](/docs/launch-check-wordpress-performance-and-configuration-analysis) to review errors and get recommendations on your site's configurations.
+* Run [Launch Check](/docs/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
 *  We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com/), or [Brackets](http://brackets.io/).
 

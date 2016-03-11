@@ -11,7 +11,7 @@ Using New Relic on Pantheon not only makes it easy for you to monitor to your pe
 
 ##Enabling New Relic
 Enable New Relic on your Pantheon site by clicking **Settings** in the upper-right corner of your Site Dashboard. Go to the Add Ons tab, and click **Add** next to New Relic.
-![New Relic Add On](/source/assets/images/new-relic-add-on-image.png)
+![New Relic Add On](/source/docs/assets/images/new-relic-add-on-image.png)
 
 For two weeks, you'll receive a trial of New Relic's Pro plan for the site. New relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
@@ -24,5 +24,5 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 4. Select **Delete app**, and click the confirmation button.
 
 ##See Also
-- [New Relic Performance Analysis on Pantheon](/docs/new-relic-performance-analysis/)  
-- [MySQL Troubleshooting With New Relic Pro](/docs/mysql-troubleshooting-with-new-relic-pro/)
+- [New Relic Performance Analysis on Pantheon](/docs/new-relic-analysis/)  
+- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)

@@ -7,7 +7,7 @@ This page is used to keep track of common platform considerations, mostly derive
 
 ## Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/docs/site-networks) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Site Networks](/docs/wordpress-site-networks) created by WordPress' Multisite feature.
 
 We do not support [Drupal Multisite](http://drupal.org/documentation/install/multi-site). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
@@ -58,7 +58,7 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 ## IP-Address Based Security Schemes
 IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
 
-For more information, see [Dynamic Outgoing IP Addresses](/docs/dynamic-outgoing-ip-addresses).
+For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
 
 ## Maintenance Mode
 

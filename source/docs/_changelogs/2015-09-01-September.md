@@ -19,7 +19,7 @@ If you’re a member of an Organization or Agency, you can now set your default 
 ####New Articles/Guides
 [Access Management for Site Owners and Administrators](/docs/access-management/)  
 
-[Enable HTTPS for Sites Using a Custom Vanity Domain](/docs/https-for-sites-using-a-custom-vanity-domain/)
+[Enable HTTPS for Sites Using a Custom Vanity Domain](/docs/enable-https-vanity-domain/)
 
 [Identify and Kill Queries with MySQL Command-Line Tool](/docs/kill-mysql-queries/)
 

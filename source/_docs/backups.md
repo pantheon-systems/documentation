@@ -9,12 +9,12 @@ The Backups tab is where you manage all the details for your site's backup. A ba
 
 We strongly urge you to backup your site regularly.
 
-![Backups tab](/source/assets/images/backup-tool.png)
+![Backups tab](/source/docs/assets/images/backup-tool.png)
 
 ##Create a Backup
-You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live). For detailed instructions creating a backup, see [Backup Creation](/docs/backup-creation).
+You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live). For detailed instructions creating a backup, see [Backup Creation](/docs/create-backups).
 ##Restore From an Existing Backup
-Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/docs/restoring-an-environment-from-a-backup/).
+Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/docs/restore-environment-backup/).
 ##Backup Log
 The backup log displays a list of existing backups for that environment. You can also create a new backup or restore your site from an existing backup.
 ##Backup Schedule

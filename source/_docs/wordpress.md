@@ -7,7 +7,7 @@ keywords: wordpress, sites, pantheon
 WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope.
 
 ## Get Started
-[Migrate Sites to Pantheon](/docs/migrate) or [launch a new one](/docs/starting-wordpress-site) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/clone-a-wordpress-site-with-duplicator-plugin) to clone an existing site.
+[Migrate Sites to Pantheon](/docs/migrate) or [launch a new one](/docs/launch-wordpress) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/wordpress-duplicator) to clone an existing site.
 ## WordPress Code
 WordPress site code repositories are clones of one our [WordPress upstream](https://github.com/pantheon-systems/wordpress), and consist of the following files and directories:
 ```
@@ -36,22 +36,22 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
 This repository includes the [core themes from twenty-ten to the present](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/themes). Pantheon no longer updates these themes in the upstream repository after their release. They will likely be out of date when you install WordPress, and it is safe to update or remove them from your code repository without the potential of future conflicts.
 The same is true for the [Akismet Plugin](https://github.com/pantheon-systems/wordpress/tree/master/wp-content/plugins). New WordPress sites ship with Akismet 3.1.5. Akismet is safe to upgrade or remove from your site's codebase.
 ## WordPress Dashboard
-Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/more-ways-of-managing-code-in-sftp-mode#manage-plugins-and-themes-with-wp-admin) and SFTP mode.
+Learn how to [manage plugins and themes using the WordPress Dashboard](/docs/more-sftp#manage-plugins-and-themes-with-wp-admin) and SFTP mode.
 ## wp-config.php
-The Pantheon architecture allows every environment on your site to run on it's own container, meaning variables within the `wp-config.php` file change periodically. Despite dynamic variables, you are still free to [configure `wp-config.php`](/docs/configuring-wp-config-php) on Pantheon to fit your unique needs.
+The Pantheon architecture allows every environment on your site to run on it's own container, meaning variables within the `wp-config.php` file change periodically. Despite dynamic variables, you are still free to [configure `wp-config.php`](/docs/wp-config-php) on Pantheon to fit your unique needs.
 ## PHP Sessions
-While WordPress core itself does not use PHP sessions, some plugins and themes do. Learn how to implement [built-in session handling functions](/docs/wordpress-and-php-sessions).
+While WordPress core itself does not use PHP sessions, some plugins and themes do. Learn how to implement [built-in session handling functions](/docs/wordpress-sessions).
 ## WordPress Configuration Management
-Keep track of database configurations with ease by using [wp-cfm](/docs/configuration-management-plugin).
+Keep track of database configurations with ease by using [wp-cfm](/docs/wp-cfm).
 ## WordPress Cron
-You are probably familiar with cron jobs, but do you know how `wp-cron` works? Learn and understand how [cron for WordPress](/docs/cron-for-wordpress) is triggered.
+You are probably familiar with cron jobs, but do you know how `wp-cron` works? Learn and understand how [cron for WordPress](/docs/wordpress-cron) is triggered.
 ## Launch Check
-Pantheon analyzes code to provide performance and configuration recommendations for your dynamic WordPress sites. Go live with confidence using [Launch Check for WordPress](/docs/launch-check-wordpress-performance-and-configuration-analysis).
+Pantheon analyzes code to provide performance and configuration recommendations for your dynamic WordPress sites. Go live with confidence using [Launch Check for WordPress](/docs/wordpress-launch-check).
 ## Additional Resources
 - [WordPress FAQ](/docs/wordpress-faq)
 - [WordPress Known Issues](/docs/wordpress-known-issues)
 - [Adding HTTPS For Free with CloudFlare](/docs/guides/ssl-with-cloudflare/)
-- [CloudFront CDN Setup for WordPress](/docs/cloudFront-setup-for-wordpress)
-- [Configuring JetBrains PhpStorm IDE with WordPress on Pantheon](/docs/configuring-phpstorm-on-pantheon-for-wordpress)
-- [Fix Broken Links in WordPress](/docs/fix-broken-links-in-wordpress)
-- [Installing Redis on WordPress](/docs/installing-redis-on-wordpress)
+- [CloudFront CDN Setup for WordPress](/docs/wordpress-cloudfront)
+- [Configuring JetBrains PhpStorm IDE with WordPress on Pantheon](/docs/wordpress-phpstorm)
+- [Fix Broken Links in WordPress](/docs/wordpress-broken-links)
+- [Installing Redis on WordPress](/docs/wordpress-redis)

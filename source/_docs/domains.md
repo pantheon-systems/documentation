@@ -15,7 +15,7 @@ We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and
 If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [CloudFlare's free Universal SSL service](/docs/guides/ssl-with-cloudflare/), set up DNS as described here first.
 ## Step 2: Add Domains to the Site Environment
 
-You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/selecting-a-plan/).
+You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/select-plan/).
 
 1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains/HTTPS**.
 2. On the Domain Setup tab, enter the domain name you want associated with that environment, and click **Add New Domain to the Live Environment**.
@@ -66,8 +66,8 @@ To serve your site from the bare domain, you must:
  CNAME www live-yoursite.pantheonsite.io
  ```
  The @ value will show the bare domain once created in CloudFlare:
- ![CloudFlare example records](/source/assets/images/cloudflare-cnames.png)
-3. [Redirect incoming requests](/docs/redirect-incoming-requests/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
+ ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
+3. [Redirect incoming requests](/docs/redirects/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
 One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
 
@@ -86,11 +86,11 @@ DNS changes can take up to 48 hours to propagate across the entire Internet, but
 ### How do I use Pantheon's WWW redirection service?
 The www-redirection service listens for requests and issues 301 redirects with www prepended to the host header. To use this service, simply configure the domain's DNS with the recommended DNS records within the Site Dashboard.
 
-![www-redirection service](/source/assets/images/desk_images/376194.png)
+![www-redirection service](/source/docs/assets/images/desk_images/376194.png)
 
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
-![Extra www example](/source/assets/images/desk_images/376201.png)
+![Extra www example](/source/docs/assets/images/desk_images/376201.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
 ### Why is my Drupal 8 site inaccessible after adding a custom domain?
@@ -104,7 +104,7 @@ Resolve by including custom domain(s) within existing `settings.php` configurati
 $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
 $settings['trusted_host_patterns'][] = '^yoursite\.com$';
 ```
-For more details, see [Configuring Settings.php](/docs/configuring-settings-php#trusted-host-setting).
+For more details, see [Configuring Settings.php](/docs/settings-php#trusted-host-setting).
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
 Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheonsite.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
@@ -135,7 +135,7 @@ Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when co
 
 ##See Also
 
-* [Redirect to a Common Domain](/docs/redirect-incoming-requests/#redirect-to-a-common-domain)
-* [Redirecting to HTTPS](/docs/redirect-incoming-requests/#redirect-to-https)
+* [Redirect to a Common Domain](/docs/redirects/#redirect-to-a-common-domain)
+* [Redirecting to HTTPS](/docs/redirects/#redirect-to-https)
 * [Enable Secure HTTPS Communication](/docs/enable-https/)
 * [Platform Domains](/docs/platform-domains)

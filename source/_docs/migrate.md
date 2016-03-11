@@ -17,7 +17,7 @@ Are you running another application in addition to WordPress or Drupal? You need
 
 You’ll need to package up your:
 
-- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [Drupal](/docs/export-an-existing-drupal-site#manually-create-archive) or [WordPress](/docs/export-an-existing-wordpress-site#manually-create-separate-site-archives) export documentation.
+- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [Drupal](/docs/drupal-export#manually-create-archive) or [WordPress](/docs/wordpress-export#manually-create-separate-site-archives) export documentation.
 
 - **Database** - A single .sql dump, contains the content and active state of the site's configurations.
 
@@ -62,19 +62,19 @@ Manually import the site outside of our importer tool if any of the following ap
 - You would like to preserve the site's existing Git history.
 - Your site is running Drupal 8.
 
-Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-site-import) for detailed instructions.
+Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for detailed instructions.
 
 ### Create Single File Archives
- Sites that can be packaged with a total archived size less than 500MB are able to use single file archives during the import process. You can create these archives with [Drush](/docs/export-an-existing-drupal-site#create-archive-using-drush) or [Backup and Migrate](/docs/export-an-existing-drupal-site#create-archive-using-backup-and-migrate) for Drupal sites, and [Plugins](/docs/export-an-existing-wordpress-site#export-wordpress-via-plugins) for WordPress.
+ Sites that can be packaged with a total archived size less than 500MB are able to use single file archives during the import process. You can create these archives with [Drush](/docs/drupal-export#create-archive-using-drush) or [Backup and Migrate](/docs/drupal-export#create-archive-using-backup-and-migrate) for Drupal sites, and [Plugins](/docs/wordpress-export#export-wordpress-via-plugins) for WordPress.
 
 ### Create Separate Archives of Code, Database, and Files
 
-If your site cannot be packaged as a single archive less than 500MB, you'll need to create separate archives of each part of your site. For step-by-step instructions, see [Exporting an Existing WordPress Site](/docs/export-an-existing-wordpress-site#manually-create-separate-site-archives) or [Exporting an Existing Drupal Site](/docs/export-an-existing-drupal-site#manually-create-archive).
+If your site cannot be packaged as a single archive less than 500MB, you'll need to create separate archives of each part of your site. For step-by-step instructions, see [Exporting an Existing WordPress Site](/docs/wordpress-export#manually-create-separate-site-archives) or [Exporting an Existing Drupal Site](/docs/drupal-export#manually-create-archive).
 
 ## Import Your Site
 
 ### Import the Site Archive from the Command Line
-Single file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](/docs/cli/), the Pantheon command-line interface.
+Single file site archives less than 500MB, downloadable from a publicly accessible URL, can import from the command line with [Terminus](/docs/terminus/), the Pantheon command-line interface.
 
 ```
 terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<url>]
@@ -94,7 +94,7 @@ If your site is in a single file archive, upload the file or provide the publicl
 
 <h4>Note</h4>
 Modify Dropbox URLs so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
- ![Single Archive Import](/source/assets/images/single-archive-import.png)
+ ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 
 If you prepared separate code, database, and files archives:
 
@@ -106,16 +106,16 @@ When it completes, proceed to [test your site](#test-your-site).
 
 ### Import After Creation
 
-At the new site's Dashboard, clone the code repository with Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/starting-with-git/).
+At the new site's Dashboard, clone the code repository with Git. Once cloned, synchronize the code locally and merge in favor of the Pantheon master branch for any conflicts. Then, push the code back up to your Pantheon site repository. For instructions on how to clone using Git, see [Starting with Git](/docs/git/).
 
 If the database and/or files meet the file size limits described above, you can import them into the Dev environment using the Workflow > Import tool.
- ![Import tool for database and files](/source/assets/images/import-tool-db-and-files.png)
+ ![Import tool for database and files](/source/docs/assets/images/import-tool-db-and-files.png)
 
 If the database is larger than 500MB, use the **Connection Info** panel to connect and import via a MySQL client or using the MySQL command line.
 
 If the files archive is larger than 500MB, use an SFTP client or rsync to upload the uncompressed files.
 
-See [Migrate to Pantheon: Manual Site Import](/docs/manual-site-import) for further details.
+See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for further details.
 
 ## Test Your Site
 When the site's code, database, and files are all in place, verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for initial verification.
@@ -133,7 +133,7 @@ We recommend:
 ```
 Warning: session_start(): user session functions not defined
 ```  
-This error means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more on [WordPress and PHP Sessions](/docs/wordpress-and-php-sessions).
+This error means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more on [WordPress and PHP Sessions](/docs/wordpress-sessions).
 
 ## Go Live
-Follow the [Going Live](/docs/going-live) checklist for a successful launch.
+Follow the [Going Live](/docs/launch) checklist for a successful launch.

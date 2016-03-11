@@ -31,7 +31,7 @@ Access the [Organization Dashboard](/docs/organization-dashboard) in the followi
 - From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click  the Organization name.
 
 All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings.
- ![The Organization dashboard, site tab](/source/assets/images/organization-dashboard-tour.png)
+ ![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
 
 ### Sites
 
@@ -45,11 +45,11 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Upstreams
 
-[Custom Upstreams](/docs/running-a-custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
+[Custom Upstreams](/docs/manage-custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
 
 Ally Partners and Pantheon EDU customers do not qualify for custom upstreams.
 
-[Learn more about custom upstreams](/docs/running-a-custom-upstream/).
+[Learn more about custom upstreams](/docs/manage-custom-upstream/).
 
 ### Support
 Review, open, or reply to support tickets associated with your organization and its sites. [Learn about our Scope of Support](/docs/scope-of-support).
@@ -84,7 +84,7 @@ Every entity (user, organization, product and site) is assigned a UUID which is 
 ```
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
-You can also use [Terminus](/docs/cli/) to find the UUID of your organizations:
+You can also use [Terminus](/docs/terminus/) to find the UUID of your organizations:
 
 ```
 $ terminus organizations list
@@ -93,6 +93,6 @@ $ terminus organizations list
 
 ## Next Steps
 
-- [Create a Site](/docs/create)
+- [Create a Site](/docs/create-sites)
 - [Migrate Sites to Pantheon](/docs/migrate)
 - Read the [FAQs](/docs/organization-faq)

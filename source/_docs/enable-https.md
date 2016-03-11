@@ -1,8 +1,6 @@
 ---
 title: Enable Secure HTTPS Communication
 description: Learn how to implement secure HTTPS communication and utilize a static IP address.
-contributors:
-  - rachel
 categories:
   - sites
 tags:
@@ -50,7 +48,7 @@ The output of `openssl` should be two files:
 Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/installing-cygwin-on-windows">Installing Cygwin on Windows</a>.</div>
+You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</div>
 
 ## Get SSL Certificate
 
@@ -132,9 +130,9 @@ You may see that the SSL certificate matches your intended domain, but do not ex
 1. Point your browser to the custom IP address you received after enabling HTTPS: https://x.x.x.x
 2. Click the padlock in the address bar.
 3. Select **Certificate Information**.<br />
- ![Image showing to click padlock and Certificate Information](/source/assets/images/verify-ssl-cert-valid-chrome-0.png)
+ ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
 4. Verify certificate details match the domain(s) you'll point to the site.
- ![Certificate information](/source/assets/images/verify-ssl-cert-valid-chrome.png)
+ ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
 ### Test with cURL
 
@@ -157,7 +155,7 @@ see that your certificate is being served:
 
 ## Require HTTPS for All Pages
 
-It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/redirect-incoming-requests/#redirect-to-https).
+It's a best-practice to put all traffic on your site under HTTPS, which you can accomplish by adding a short PHP snippet to `settings.php` or `wp-config.php`. See Pantheon documentation: [Redirecting Incoming Requests: Redirecting to HTTPS](/docs/redirects/#redirect-to-https).
 
 
 ## Frequently Asked Questions
@@ -191,4 +189,4 @@ If the SSL chain is broken or you experience issues with mobile versions of the 
 
 ### What about mixed mode (HTTP and HTTPS for different pages)?
 
-If you are transmitting any sensitive data, we recommend [redirecting all traffic to HTTPS](/docs/redirect-incoming-requests/#redirect-to-https), rather than using mixed mode.
+If you are transmitting any sensitive data, we recommend [redirecting all traffic to HTTPS](/docs/redirects/#redirect-to-https), rather than using mixed mode.

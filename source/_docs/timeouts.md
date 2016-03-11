@@ -5,7 +5,7 @@ categories:
   - debugging
 keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr timeout, user-configurable timeouts
 ---
-Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code, or when attempting to run a long-running job that would be better suited for [Terminus](/docs/cli/).
+Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code, or when attempting to run a long-running job that would be better suited for [Terminus](/docs/terminus/).
 
 
 ## User-Configurable Timeouts
@@ -98,11 +98,11 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 
 #### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, just use `terminus drush "cron"` using [Terminus](/docs/cli/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
+Yes, just use `terminus drush "cron"` using [Terminus](/docs/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
 
 #### What if I run into a timeout when using the Drupal Migrate UI?
 
-As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/cli/). You can even configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170).
+As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/). You can even configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170).
 
 #### Can Pantheon change the non-configurable timeouts for my site?
 
