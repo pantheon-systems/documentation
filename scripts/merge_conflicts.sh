@@ -3,7 +3,7 @@ set -e
 path=$(dirname "$0")
 base=$(cd $path/.. && pwd)
 
-cd $base/output_dev
+cd $base/output_dev/docs
 if grep -q "&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD" $(find . -type f); then
   echo 'Merge HEAD hash: fail' && exit 1
 elif grep -q "<<<<<<< HEAD" $(find . -type f); then

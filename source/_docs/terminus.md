@@ -25,13 +25,13 @@ Support is maintained at [https://github.com/pantheon-systems/cli/issues](https:
 We've included CLI instructions in many of our articles and guides.
 
 - [Creating and Revoking Machine Tokens](/docs/machine-tokens/)
-- [Automated Testing WordPress with Behat](/docs/guides/automated-testing-wordpress-behat/)
-- [Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI](/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli/)
+- [Automated Testing WordPress with Behat](/docs/guides/wordpress-automated-testing/)
+- [Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI](/docs/guides/wordpress-commandline/)
 - [Prevent Spamming During Drupal Debugging and Testing](/docs/guides/rerouting-outbound-email/)
 - [Using Terminus to Create and Update Drupal Sites on Pantheon](/docs/guides/terminus-drupal-site-management/)
 - [Drush Command-Line Utility](/docs/drush)
 - [Cron for WordPress](/docs/wordpress-cron/)
-- [Cron for Drupal](/docs/cron/)
+- [Cron for Drupal](/docs/drupal-cron/)
 - [CloudFront CDN Setup for WordPress](/docs/wordpress-cloudfront/)
 - [More Ways of Managing Code in SFTP Mode](/docs/more-sftp/)
 - [Migrate Sites to Pantheon](/docs/migrate)

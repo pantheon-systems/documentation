@@ -25,7 +25,7 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 - [rsync and SFTP](/docs/rsync-and-sftp)
 - [Configuring settings.php](/docs/settings-php) or [Configuring wp-config.php](/docs/wp-config-php)
 - [Drupal Drush Command-Line Utility](/docs/drush)
-- [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/cron)
+- [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/drupal-cron)
 
 ## Launch
 - [Going Live](/docs/launch/)

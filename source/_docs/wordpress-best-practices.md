@@ -12,9 +12,9 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Use [wp-cfm](/docs/wp-cfm/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
-* Automate testing with [Behat](/docs/guides/automated-testing-wordpress-behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
+* Automate testing with [Behat](/docs/guides/wordpress-automated-testing/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
-* We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/enable-https/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/ssl-with-cloudflare/).
+* We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/enable-https/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/cloudflare-enable-https/).
 
 * Run [Launch Check](/docs/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 

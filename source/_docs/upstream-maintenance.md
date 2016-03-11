@@ -6,7 +6,7 @@ categories:
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, branch, deploy update, deploy updates, update, updates
 ---
 Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework are removed from the platform.
-
+maintenance
 ## Merging Core Releases
 1. Create an update branch:
 
@@ -22,7 +22,7 @@ git checkout -b update
  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
  </ul>
- 
+
  <!-- Tab panes -->
  <div class="tab-content">
  <div role="tabpanel" class="tab-pane active" id="d8">
@@ -46,7 +46,7 @@ git checkout -b update
  </code></pre>
  </div>
  </div>
- 
+
 3. Commit and push:
 
 ```nohighlight

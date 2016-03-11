@@ -124,7 +124,7 @@ We recommend:
 
  - Using the Status tool in the Site Dashboard
  - Enabling [New Relic](/docs/newrelic)
- - [Automated user acceptance testing](/docs/guides/automated-testing-wordpress-behat) with Behat, Selenium, or Casper.js
+ - [Automated user acceptance testing](/docs/guides/wordpress-automated-testing) with Behat, Selenium, or Casper.js
  - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Manual [user acceptance testing](https://en.wikipedia.org/wiki/Acceptance_testing#User_acceptance_testing)
 
