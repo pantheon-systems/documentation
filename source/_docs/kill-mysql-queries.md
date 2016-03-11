@@ -1,6 +1,8 @@
 ---
 title: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
+categories: [sites]
+tags: [database, debug, code]
 keywords: mysql, mysql query, mysql queries, kill query, kill queries, kill mysql, kill mysql queries, queries, query, debug mysql, debug, mysql error, kill all queries, kill all mysql queries, kill all mysql
 ---
 Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [Access the appropriate environment's MySQL Database](/docs/mysql-access).

@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
-categories:
-  - getting-started
+categories: [users]
+tags: [dashboard]
 keywords: getting started, faqs, sites, pantheon, plans, developing, security
 ---
 ## Getting Started
@@ -45,7 +45,7 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/domains) and [Going Live](/docs/launch/).
+Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/domains) and [Going Live](/docs/going-live).
 
 ## Developing Sites
 

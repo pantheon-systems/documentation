@@ -1,8 +1,8 @@
 ---
 title: Generating SSH Keys
 description: Understand how to generate SSH keys to configure Drupal Drush or SFTP.
-categories:
-  - getting-started
+categories: [users]
+tags: [dashboard]
 keywords: ssh keys, ssh, generate keys  
 ---
 Pantheon does not support the SSH protocol. <!--You can not connect via SSH using Putty.--> These directions allow you to have passwordless access if you configure Drush or SFTP to use the keys set up by putty.

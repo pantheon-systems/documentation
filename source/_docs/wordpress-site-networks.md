@@ -1,6 +1,8 @@
 ---
 title: WordPress Site Networks
 description: Overview of WordPress multisite support on the Pantheon Platform. Includes supported use cases, links to terms of service, and links to relevant documentation for getting started and managing multisite development within the Pantheon workflow.
+categories: [wordpress]
+tags: [code]
 ---
 
 Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network) created by WordPress' Multisite feature. Pantheon's WordPress Site Networks support is meant for the site network use case: a common codebase which powers a set of related sites (e.g. a group of blogs, an organization with different chapters, etc.).

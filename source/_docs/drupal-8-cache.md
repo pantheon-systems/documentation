@@ -1,8 +1,8 @@
 ---
 title: Drupal 8 Performance and Varnish Caching Settings
 description: Optimize Drupal 8 and Varnish caching to maximize your site's performance.  
-categories:
-  - drupal
+categories: [drupal]
+tags: [drupal-8, code]
 keywords: drupal, drupal 8, performance, cache, caching, varnish, varnish caching
 ---
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. For more information, see [Varnish Caching for High Performance](/docs/varnish).
@@ -13,7 +13,7 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 ## Caching
 ![caching settings](/source/docs/assets/images/drupal-8-performance-settings.png)
 
-In Drupal 8, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching** (see Page Cache Maximum Age below). 
+In Drupal 8, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching** (see Page Cache Maximum Age below).
 
 ![block cache](/source/docs/assets/images/drupal-8-block-cache.png)
 

@@ -2,6 +2,8 @@
 title: Migrate to Pantheon: Manual Site Import
 description: Learn how to import a Drupal or WordPress site into Pantheon outside of the Importer Tool.
 keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
+categories: [sites]
+tags: [migrate]
 ---
 
 Manually import your site to Pantheon outside of the provided [Importer tool](/docs/migrate/#plan-the-import) when any of the following apply:

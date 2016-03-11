@@ -1,8 +1,8 @@
 ---
 title: Accessing MySQL Databases
 description: Configure and troubleshoot your Pantheon website's MySQL database connections.
-categories:
-  - developing
+categories: [sites]
+tags: [database]
 keywords: mysql, database, mysql databases, database connection
 ---
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.

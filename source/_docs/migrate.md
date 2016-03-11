@@ -1,8 +1,8 @@
 ---
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
-categories:
-- getting-started
+categories: [sites]
+tags: [migrate]
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
 
@@ -136,4 +136,4 @@ Warning: session_start(): user session functions not defined
 This error means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more on [WordPress and PHP Sessions](/docs/wordpress-sessions).
 
 ## Go Live
-Follow the [Going Live](/docs/launch) checklist for a successful launch.
+Follow the [Going Live](/docs/going-live) checklist for a successful launch.

@@ -2,6 +2,8 @@
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
 keywords: code, commit, sftp, files, filesystem, file location, directory location, directory, codebase
+categories: [sites]
+tags: [files]
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
 

@@ -2,6 +2,8 @@
 title: Enable HTTPS for Sites Using a Custom Vanity Domain
 description: Learn how to enable HTTPS for all sites using your Organization's custom Vanity domain.
 keywords: https development domain, vanity domain, change dev url, change development domain, change vanity domain, dev url, wildcard, cname, edge, dns, https
+categories: [organizations]
+tags: [domains, https]
 ---
 Enable HTTPS across all sites using your organization's Vanity domain by adding a wildcard certificate to the primary site.
 

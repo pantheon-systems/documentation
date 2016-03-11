@@ -1,8 +1,8 @@
 ---
 title: Configuring wp-config.php
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
-categories:
-  - developing
+categories: [wordpress]
+tags: [code]
 keywords: wordpress, wp config, database
 ---
 ## Overview

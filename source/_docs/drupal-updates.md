@@ -1,9 +1,8 @@
 ---
 title: Major Version Drupal Upgrades
 description: Detailed instructions on how to upgrade your site to the next major version of Drupal.
-categories:
-  - drupal
-  - managing
+categories: [drupal]
+tags: [code]
 keywords: drupal, upgrade, upgrading, revision upgrade, update, updating
 ---
 To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Even the simplest of upgrades requires its own QA and deployment process.

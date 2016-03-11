@@ -1,10 +1,8 @@
 ---
 title: Domain Masking With Fastly and Pantheon
 description: Learn how to serve two Pantheon Drupal or WordPress sites with one common domain by using Fastly to create a domain masking setup.
-categories:
-  - developing
-  - drupal
-  - wordpress
+categories: [sites]
+tags: [domains]
 keywords: domain mask, domain masking, masking your domain, mask domain with fastly, fastly, masking domain with fastly on pantheon, fastly condition
 ---
 There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using one system as a front end for marketing efforts or custom applications, while using another for blog content or as a custom application. This typically looks something like:

@@ -1,8 +1,8 @@
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
-categories:
-  - developing
+categories: [local]
+tags: [code, git]
 keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
 contributors: mrfelton
 ---

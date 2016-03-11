@@ -1,5 +1,7 @@
 ---
 title: Drupal 8 on Pantheon
+categories: [drupal]
+tags: [drupal-8, code]
 ---
 
 [Drupal 8](https://www.drupal.org/drupal-8.0) is now available on Pantheon! New Drupal 8 sites will use the [drops-8](https://github.com/pantheon-systems/drops-8) upstream repository and can be created via [Terminus](/docs/terminus) or the [Dashboard](https://dashboard.pantheon.io/products/drupal8/spinup). To bring an existing Drupal 8 site onto Pantheon, see [Migrate to Pantheon: Manual Site Import](/docs/manual-import). However, things may break and our support is limited at this time.

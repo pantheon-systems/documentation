@@ -1,8 +1,8 @@
 ---
 title: PHP Slow Log
 description: Improve the stability of your Drupal or WordPress site using PHP Slow Log and PHP FPM Error Log to identify serious performance issues.
-categories:
-- debugging
+categories: [sites]
+tags: [code, debug]
 keywords: performance, slow, slow performance, poor performance, debug, troubleshoot slow site, slow sites, troubleshoot performance, php error, php errors, watchdog, database query, database queries, php slow log, php fpm error log, fpm error log, php log, php execution, execute php, caching, cache, drupal performance, wordpress performance
 ---
 One of the key ways to find issues on your website is to check your PHP logs. This article instructs you on how to use your PHP slow log and PHP FPM error logs to find performance issues and PHP errors on Pantheon sites.

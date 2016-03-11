@@ -1,9 +1,8 @@
 ---
 title: What is the "pantheon_api.module"
 description: Learn how to incorporate pantheon_api.module, Pantheon's internal API modules, on your Drupal sites.
-categories:
-  - getting-started
-  - developing
+categories: [drupal]
+tags: [code]
 keywords: pantheon_api.module, pantheon api module, api, module, modules, api modules, pantheon api, use pantheon apis, use pantheon api, how to use pantheon api modules
 ---
 Pantheon supplies a few modules with all sites to provide better integration with the platform. There is a module dedicated to serving the Apache Solr use case, and there is the general `pantheon_api.module`.

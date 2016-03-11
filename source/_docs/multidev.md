@@ -1,8 +1,8 @@
 ---
 title: Multidev
 description: Detailed information on Pantheon's Multidev.
-categories:
-- developing
+categories: [users]
+tags: [dashboard]
 keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.

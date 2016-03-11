@@ -1,8 +1,8 @@
 ---
 title: Scope of Support
 description: Understand how Pantheon Website Management Platform's support team can help you.
-categories:
-  - getting-started
+categories: [users]
+tags: [code, debug]
 keywords: support, scope, customer support, getting started
 ---
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and view ticket response times, visit [Getting Support](/docs/getting-support).

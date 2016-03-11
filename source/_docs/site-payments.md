@@ -1,8 +1,8 @@
 ---
 title: Adding a Credit Card to a Site
 description: Learn how to add a credit card as a payment method for your Drupal or WordPress site.
-categories:
-  - going-live
+categories: [users]
+tags: [dashboard]
 keywords: add payment method, add card, add credit card, access more features, access new relic, access workflow, add payment method, select a plan, how to update payment method, how to add a card
 ---
 ##Select a Plan and Add a Credit Card

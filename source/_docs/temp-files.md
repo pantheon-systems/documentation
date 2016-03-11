@@ -1,8 +1,8 @@
 ---
 title: Temporary File Management with Multiple Application Containers
 description: Learn how to work with temporary files in distributed environments.
-categories:
-- getting-started
+categories: [sites]
+tags: [files]
 keywords: tmp, temp files, tmp files, temporary files, multiple application containers, distributed environments
 ---
 Live sites on Business and Elite plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `/tmp/` directory on one instance is not able to access the `/tmp/` contents on another application server.

@@ -1,8 +1,8 @@
 ---
 title: Backup Creation
 description: Detailed information on how to create a backup of any Drupal or WordPress site environment.
-categories:
-  - managing
+categories: [sites]
+tags: [backups]
 keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
 ---
 Pantheon makes creating a backup of an environment a simple one-click operation.

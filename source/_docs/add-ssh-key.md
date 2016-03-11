@@ -1,8 +1,8 @@
 ---
 title: Loading SSH Keys
 description: Learn how to load your public SSH key into your Pantheon Website Management Platform account.
-categories:
-  - getting-started
+categories: [users]
+tags: [dashboard, platform]
 keywords: ssh keys, load ssh keys, add ssh key, delete ssh key
 ---
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.

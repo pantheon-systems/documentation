@@ -2,6 +2,8 @@
 title: Parsing nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
 keywords: log, access log, nginx access log, nginx log, nginx access
+categories: [sites]
+tags: [debug, logs]
 ---
 Pantheon uses nginx web servers for optimal performance. Log files record the web server events and activities and can help you identify potential issues and gather information about users.
 

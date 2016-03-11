@@ -1,9 +1,8 @@
 ---
 title: Export an Existing WordPress Site
 description: Detailed information on how to prepare and export your existing Drupal site for migration to Pantheon.
-categories:
-  - wordpress
-  - getting-started
+categories: [wordpress]
+tags: [code, migrate]
 keywords: import, importing site, new site, WordPress, export, export wordpress, wordpress archive, archive
 ---
 

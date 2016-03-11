@@ -1,8 +1,8 @@
 ---
 title: Load Testing Drupal and WordPress with BlazeMeter
 description: Learn how to use BlazeMeter to load test your Pantheon Drupal or WordPress site.
-categories:
-  - going-live
+categories: [sites]
+tags: [code]
 contributors:
   - jessifischer
 date: 2/25/2015

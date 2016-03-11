@@ -1,8 +1,8 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
-categories:
-  - getting-started
+categories: [users]
+tags: [dashboard]
 keywords: getting started, get started, pantheon, best practices,
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
@@ -28,7 +28,7 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 - [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/drupal-cron)
 
 ## Launch
-- [Going Live](/docs/launch/)
+- [Going Live](/docs/going-live)
 - [Domains and DNS](/docs/domains)
 ## Run
 - [Optimization for Pantheon and the Cloud](/docs/cloud-optimization)

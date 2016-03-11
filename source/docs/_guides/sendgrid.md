@@ -1,8 +1,8 @@
 ---
 title: Using SendGrid To Deliver Email with WordPress and Drupal
 description: Detailed information on using SendGrid to deliver email through your WordPress and Drupal site.
-categories:
-  - developing
+categories: [sites]
+tags: [code]
 authors:
   - erikmathy
   - rvtraveller

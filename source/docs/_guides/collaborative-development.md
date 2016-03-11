@@ -1,10 +1,8 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
 description: Learn how to collaborate with your Pantheon team members using GitHub.
-categories:
-  - developing
-  - drupal
-  - wordpress
+categories: [sites]
+tags: [code]
 contributors:
   - bmackinney
   - jessifischer

@@ -1,8 +1,8 @@
 ---
 title: Get Started
 description: Learn how to create a Drupal or WordPress site on Pantheon.
-categories:
-  - getting-started
+categories: [users]
+tags: [dashboard]
 keywords: going live, getting started, create account, create site, import, faqs
 ---
 <img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:0px;margin-right:20px;margin-top:15px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:20px;margin-right:0px;">Welcome to Pantheon, the world’s fastest hosting for Drupal and WordPress. In a few simple steps, your site will be up and running on our distributed infrastructure with no single points of failure.</p>
@@ -55,7 +55,7 @@ Learn more about the [Pantheon workflow](/docs/pantheon-workflow/), both for cod
 Familiarize yourself with Pantheon's [platform considerations](/docs/platform-considerations) now to reduce headaches later.
 
 ## Prepare for Launch
-Ensure a successful launch by following our best practice checklist for [Going Live](/docs/launch) on Pantheon.
+Ensure a successful launch by following our best practice checklist for [Going Live](/docs/going-live) on Pantheon.
 
 ## The Pantheon Platform
 Read [All About Application Containers](/docs/application-containers/) for a better understanding of the Pantheon architecture.

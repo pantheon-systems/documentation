@@ -2,6 +2,8 @@
 title: Platform Considerations
 description: A list of the Pantheon platform considerations.
 keywords: known limitations, multisite, applications, use more than one application, large directories, inodes, streaming media, large file, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
+categories: [users]
+tags: [dashboard, files]
 ---
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 

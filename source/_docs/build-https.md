@@ -1,6 +1,8 @@
 ---
 title: Developing with HTTPS
 description: Learn how to develop Drupal or WordPress sites using HTTPS on Pantheon environments.
+categories: [sites]
+tags: [code, domains]
 keywords: https,  develop with HTTPS, develop with https, encryption, security, enable ssl, add https to dev, add https to environment
 ---
 ## Switch to HTTPS

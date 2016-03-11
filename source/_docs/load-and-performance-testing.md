@@ -1,8 +1,8 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
-categories:
-  - going-live
+categories: [sites]
+tags: [code]
 keywords: going live, testing, performance, new relic, varnish
 ---
 We highly recommend load testing a site both prior and post launch to ensure your site is optimally configured.
@@ -198,4 +198,4 @@ There are a number of other tools to consider when you are planning your load te
 </table>
 
 ## See Also
-- [Going Live](/docs/launch)
+- [Going Live](/docs/going-live)

@@ -1,6 +1,8 @@
 ---
 title: Moving Drupal 8 Sites Out of Testing
 description: Pantheon sites created during the Drupal 8 testing period will be deleted at some point in the future. Follow these instructions to keep your site on the platform.
+categories: [drupal]
+tags: [drupal-8, code]
 ---
 The Drupal 8 testing organization "owns" all Drupal 8 sites created on the platform prior to October 9, 2015. All of these sites will be moved into our freezer at some point in the future. To keep your site running on the platform, follow these instructions:
 

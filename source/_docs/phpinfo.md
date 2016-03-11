@@ -1,8 +1,8 @@
 ---
 title: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon site.
-categories:
-  - developing
+categories: [sites]
+tags: [code, debug]
 keywords: security, phpinfo, php.ini, can i configure php.ini, php,
 ---
 We serve our customers by provisioning isolated linux containers with an optimized PHP stack. The php.ini is part of a highly tuned configuration and is not user-configurable.

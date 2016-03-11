@@ -2,6 +2,8 @@
 title: Testing Varnish
 description: Detailed information on how to determine if Drupal Varnish is working on your site.
 keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testing varnish
+categories: [sites]
+tags: [code, varnish]
 ---
 ## Verify Varnish is Working on Your Pantheon Site
 

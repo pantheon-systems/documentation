@@ -1,8 +1,8 @@
 ---
 title: Pantheon Enterprise Gateway
 description: Configuring your Drupal or WordPress site to use the Pantheon Enterprise Gateway as a defense-in-depth solution to access systems behind firewalls.
-categories:
-  - developing
+categories: [sites]
+tags: [code]
 keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewall, secure tunnel, tunnel, create firewall, firewalls, gateways, gateway
 ---
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website. This is available for customers with an Elite plan. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.

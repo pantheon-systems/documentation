@@ -1,9 +1,8 @@
 ---
 title: PHP Errors and Exceptions
 description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.  
-categories:
-  - debugging
-  - drupal
+categories: [sites]
+tags: [code, debug]
 keywords: performance, slow, slow performance, poor performance, debug, troubleshoot slow site, slow sites, troubleshoot performance, php error, php errors, watchdog, database query, database queries, php slow log, php fpm error log, fpm error log, php log, php execution, execute php, caching, cache, drupal performance, wordpress performance, php exception, exceptions, errors
 ---
 There are three basic kinds of PHP errors:

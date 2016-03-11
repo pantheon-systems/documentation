@@ -1,8 +1,8 @@
 ---
 title: Hot Fixes
 description: Learn how to deploy and test hot fixes and preserve orphan commits on your Pantheon site.
-categories:
-  - developing
+categories: [sites]
+tags: [code, git]
 keywords: hot fix, hot fixes, hotfix, hotfixes, git tag, git tags, deploy hotfix, deploy hot fix, quick fix, orphan commit, orphan commits, test hot fix, deploy hot fix, test hotfix, deploy hotfix
 ---
 For Experts only. You should not need to attempt this if you use [Multidev](/docs/multidev) and keep commits from reaching Dev that you do not intend on deploying.

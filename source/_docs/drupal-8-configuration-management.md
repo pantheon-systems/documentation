@@ -1,9 +1,8 @@
 ---
 title: Configuration Workflow for Drupal 8 Sites
 description: Configure Drupal's performance and caching settings to make significant improvements.
-categories:
-  - developing
-  - drupal
+categories: [drupal]
+tags: [drupal-8, code]
 keywords: drupal, configuration, drupal 8
 ---
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.

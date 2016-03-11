@@ -1,8 +1,8 @@
 ---
 title: New Relic
 description: Learn about the New Relic tool in your Pantheon Website Management Platform dashboard
-categories:
-- developing
+categories: [sites]
+tags: [debug, new relic]
 keywords: new relic,
 ---
 [New Relic](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.

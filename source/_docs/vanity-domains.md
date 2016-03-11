@@ -1,8 +1,8 @@
 ---
 title: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
-categories:
-  - managing
+categories: [organizations]
+tags: [domains]
 keywords: development domain, vanity domain, change dev url, change development domain, base domain, change vanity domain, dev url, wildcard, cname, edge, dns
 ---
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
