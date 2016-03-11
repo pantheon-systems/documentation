@@ -1,7 +1,7 @@
 ---
 title: SERVER_NAME and SERVER_PORT on Pantheon
 description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your Pantheon Website Management Platform environment configuration.
-category:
+categories:
   - developing
 keywords: server_name, server_port, SERVER_NAME, SERVER_PORT, environment config, environment configuration, HTTP_HOST, $_SERVER, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], settings.php, wp-config.php, assign port value, port value, server name
 ---

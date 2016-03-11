@@ -1,13 +1,13 @@
 ---
 title: Installing Cygwin on Windows
 description: Learn how to install and configure Cygwin for Windows computers for Pantheon sites.
-category:
+categories:
   - getting-started
 keywords: cygwin, install, linux tool, windows
 ---
 If you do not have access to a Mac or Linux environment, you can install [Cygwin](http://cygwin.com) to perform tasks typically not possible in Windows, such as:
 
-* Using `openssl` to generate files required to [enable secure HTTPS communication](/docs/adding-a-ssl-certificate-for-secure-https-communication/)
+* Using `openssl` to generate files required to [enable secure HTTPS communication](/docs/enable-https/)
 * Installing and using [Terminus, the Pantheon command line interface (CLI)](https://github.com/pantheon-systems/cli)  
 
 ## Installation

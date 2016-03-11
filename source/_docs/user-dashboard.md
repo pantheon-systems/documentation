@@ -1,7 +1,7 @@
 ---
 title: Content
 description: TBD.
-category:
+categories:
   - none
 draft: true
 ---

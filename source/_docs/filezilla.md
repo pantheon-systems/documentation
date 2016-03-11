@@ -1,7 +1,7 @@
 ---
 title: FileZilla on Pantheon
 description: Detailed information about using the FileZilla FTP client for your Pantheon site.
-category:
+categories:
     - getting-started
     - developing
 keywords: filezilla, pantheon, sftp

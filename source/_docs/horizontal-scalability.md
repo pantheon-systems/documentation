@@ -1,7 +1,7 @@
 ---
 title: Horizontal Scalability
 description: Learn about scaling web applications and architecture of every Pantheon environment.
-category:
+categories:
   - developing
 keywords: scalability, wordpress, pantheon
 ---

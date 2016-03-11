@@ -1,0 +1,13 @@
+---
+layout: categories
+title: Doc Tags
+use:
+    - docs_tags
+---
+<div class="article container-fluid" style="margin-top=-30px;">
+  <div class="col-md-12">
+  {% for tag,docs in data.docs_tags %}
+  <li><a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}">{{ tag|capitalize }}</a></li>
+  {% endfor %}
+</div>
+</div>

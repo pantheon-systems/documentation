@@ -1,0 +1,12 @@
+---
+layout: category
+generator: docs_tag_index
+---
+<header>
+    <h1 class="pio-docs-title">{{ page.tag|title}}</h1>
+</header>
+<ul>
+    {% for doc in page.tag_docs %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+</ul>

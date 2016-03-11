@@ -1,7 +1,7 @@
 ---
 title: Team Management
 description: Working with the Pantheon Website Management Platform deployment tools in a team driven environment.
-category:
+categories:
   - getting-started
   - managing
 keywords: team management, roles, permissions, team members, developer, privileges, change site owner, ownership, site owner, organization, supporting organization, agency, supporting agency

@@ -1,7 +1,7 @@
 ---
 title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
-category:
+categories:
   - developing
 keywords: drupal, settings.php, database configuration, configuration
 ---

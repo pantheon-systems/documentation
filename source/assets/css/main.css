@@ -222,37 +222,6 @@ img.noborder {
   font-weight: normal;
 }
 
-/* Outline button for use within the docs */
-.btn-outline {
-  color: #000;
-  background-color: white;
-  margin-top: 30px;
-  font-weight: 700;
-  padding: 15px;
-  border-color: #000;
-}
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  color: #000;
-  border-color: #000;
-}
-
-/* Inverted outline button (white on dark) */
-.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #FE4A45;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #563d7c;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
-}
-
 /* Pantheon "B" icon */
 .pio-docs-booticon {
   display: block;
@@ -395,35 +364,6 @@ img.noborder {
   margin-left: 20px;
 }
 
-/*
-* CTA Button CSS for Contributors "CONTRIBUTE TO DOCS"
-*/
-#contrib-cta-btn .btn-secondary, .btn-secondar:visited {
-    text-shadow: none !important;
-    background: #D5D5D5;
-    color: #000 !important;
-    margin: 0px 0px 2px 0px !important;
-    padding: 12px 22px 12px 16px;
-    text-decoration: none !important;
-    font-weight: bold;
-    display: inline-block;
-    white-space: nowrap !important;
-    line-height: 1;
-    border-color: transparent;
-    border: none;
-    text-transform: uppercase;
-    margin-left: 0px;
-}
-
-#contrib-cta-btn a {
-    margin-left: 20px;
-    margin-right: 40px;
-    text-decoration: none;
-    font-size: medium;
-}
-#contrib-cta-btn a:hover {
-    text-decoration: none;
-}
 /*
 * Footer
 *
@@ -820,7 +760,8 @@ img.noborder {
 .pio-docs-title {
   color: #000000;
   display: block;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 /*
 * Featured sites
@@ -1502,23 +1443,33 @@ h1[id] {
     background-color: #DDE5E7 !important;
     background-image: none !important;
 }
-.btn-primary, .btn-primary:visited {
-  text-shadow: none !important;
-  background: #EFD01B;
-  color: #000 !important;
-  transition: all 0.5s ease;
-  margin: 0px 0px 0px 30px;
-  padding: 12px 22px 12px 16px;
-  text-decoration: none !important;
-  font-weight: bold;
-  display: inline-block;
-  white-space: nowrap !important;
-  line-height: 1;
+#doc-head {
+  background-color: #fff;
+}
+.btn-contribute {
+    height: 20px;
+    color: #222;
+    float:left;
+    background-color: #EFD01B;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0px 8px 0px 0px;
+    margin-right: 5px;
+    font-size: 75%;
+    font-weight: bold;
+    vertical-align: baseline;
+    top: -2px !important;
+}
+.dropdown-menu {
+  font-size: 75%;
+}
+.btn-contribute:hover {
+    color: #222
+}
+
+.btn-primary, .btn-primary:visited, .btn-primary:focus {
 }
 .btn-primary:hover {
-  color: #000;
-  text-decoration: none;
-  background: #d6b608;
 }
 
 a.btn-primary:after {
@@ -2208,21 +2159,55 @@ color: #274E13 !important;
 .gsc-above-wrapper-area{
   border-bottom: none !important;
 }
-#bread {
+
+#subnav {
     top: 60px;
-    padding: 5px;
     position: absolute;
-    background-color: #DDE5E7;
-    z-index: 1;
-    color: #000;
-    font-weight: 900;
+    background-color: #EFEFEF;
+    z-index: 1001;
+    color: #313945;
+    padding-bottom: 5px;
+    transition: all 0.2s ease-in;
+
+}
+#subnav ul li a{
+ color:#313945;
+ font-weight: bold;
+ transition: all 0.2s ease-in;
+ text-transform: capitalize;
+ background-color:transparent;
+ padding-left:0px;
+ padding-right: 0px;
+ margin-left:10px;
+ margin-right:5px;
+}
+#subnav ul li a:hover {
+ color:#313945;
+ box-shadow: inset 0 -4px 0 #EFD01B;
+}
+#subnav ul li a:focus {
+  box-shadow: inset 0 -4px 0 #EFD01B;
+}
+
+#subnav .dropdown-menu {
+      background-color: #EFEFEF;
+      text-align: left;
+}
+
+#subnav .dropdown > .dropdown-menu  a {
+  color: #313945 !important;
+  transition: all 0.2s ease-in;
+  padding-bottom: 10px;
+  padding-right: 0px;
+  padding-left: 10px;
+  margin: 0px;
+}
+#subnav .dropdown > .dropdown-menu  a:hover {
+  color: #313945 !important;
 }
 .navbar-fixed-top>.col-md-8>.active-trail {
   font-weight: 400;
   cursor: not-allowed;
-}
-.navbar-fixed-top>.col-md-8 {
-margin-top: 10px;
 }
 @-moz-document url-prefix() {
     .navbar-fixed-top > .col-md-8 {
@@ -2238,12 +2223,6 @@ margin-top: 10px;
     .article {
     margin-top: 30px !important;
 }
-}
-#bread .col-md-8 a {
-padding-bottom: 20px;
-}
-#bread .col-md-8 a:hover {
-    box-shadow: inset 0 -3px 0 #EFD01B;
 }
 #bread a {
     color: #000;
@@ -2321,17 +2300,37 @@ display: block;
     border-radius: 4px;
     margin: 15px 15px 0px 0px;
 }
-.thead-inverse {
-  background-color: #F0F4F5;
-  color: #000;
+.jumbotron {
+  text-align: left;
+  background-color: transparent;
+}
+.featured-docs {
+  margin:0 auto;
+  float:none;
+  max-width:800px;
+}
+.jumbotron>p>a:hover{
+  text-decoration: none;
+}
+.featured-docs h2{
   text-align: center;
+
 }
-.table-condensed>tbody>tr>td {
-  font-size: 14px;
+.featured_docs a{
+  text-align: center;
+  text-decoration: none;
+  font-weight: 200;
 }
-.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-  border: 1px solid #000;
+.featured_docs h1{
+  font-weight: 200;
+  margin: 0px;
 }
-.table>thead:first-child>tr:first-child>th {
-  border-top: 1px solid #000;
+.featured_docs h1:after{
+  content: '';
+}
+.featured_docs small{
+  padding-left: 10px;
+}
+.jumbotron small{
+  padding-left: 10px;
 }

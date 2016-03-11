@@ -1,7 +1,7 @@
 ---
 title: Role-Based Permissions & Change Management
 description: Learn about the features and benefits of role-based permissions for Pantheon sites.
-category:
+categories:
   - getting-started
   - developing
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  

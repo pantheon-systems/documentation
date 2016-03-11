@@ -1,7 +1,7 @@
 ---
 title: Optimization for Pantheon and the Cloud
 description: Learn how to optimize your Drupal or WordPress site to efficiently function on Pantheon's cloud.  
-category:
+categories:
   - developing
 keywords: optimize, optimize on pantheon, cloud, solutions
 ---

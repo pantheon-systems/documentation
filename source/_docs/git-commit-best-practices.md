@@ -1,7 +1,7 @@
 ---
 title: Git Commit Best Practices
 description:
-category:
+categories:
   - getting-started
 
 draft: true

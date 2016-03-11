@@ -1,7 +1,7 @@
 ---
 title: Understanding and Debugging Varnish Cache Issues
 description: Detailed information on debugging your Pantheon Drupal or WordPress Cache.
-category:
+categories:
   - debugging
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
 ---

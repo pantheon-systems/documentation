@@ -1,7 +1,7 @@
 ---
 title: Organizations
 description: Detailed information on Pantheon organization types and the features available to them.
-category:
+categories:
 - managing
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management
 ---
@@ -24,7 +24,7 @@ Organizations can either **own** or **support** sites. Enterprise, Reseller, OEM
 When a site is associated with an organization, it provides all privileged users in the organization with access to the site. Association also provides the site with extra features based on the organization service level.
 
 ## The Organization Dashboard
-Access the [Organization Dashboard](/docs/dashboard) in the following ways:
+Access the [Organization Dashboard](/docs/organization-dashboard) in the following ways:
 
 - From the User Dashboard, click the **Organizations** tab.
 - From the Site Dashboard, click the Organization's name next to your site's service level.
@@ -36,12 +36,12 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 ### Sites
 
 The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**. For more details, see
-[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/dashboard/#add-sites-to-your-organization).
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/#add-sites-to-your-organization).
 
 ### People
 
 View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
-[Learn how to add users to the organization](/docs/dashboard/#add-users-to-your-organization).
+[Learn how to add users to the organization](/docs/organization-dashboard/#add-users-to-your-organization).
 
 ### Upstreams
 

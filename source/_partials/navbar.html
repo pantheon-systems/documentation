@@ -46,15 +46,34 @@
                 <li class="create-account"><a href="https://pantheon.io/register" target="_blank">Create Free Account <span class="">&rsaquo;</span></a></li>
                 <li class=""><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
                 <li class=""><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank">Support</a></li>
-                <li class="active-trail"><a href="/docs">Documentation</a></li>
+                <li class="active-trail"><a href="https://pantheon.io/docs" target="_blank">Documentation</a></li>
             </ul>
-        </div>
-</div>
-<!-- Nav Breadcrumbs -->
-{% if page.home is not defined %}
-    <div class="navbar-fixed-top" id="bread">
-    <div class="col-md-4">
-        <li class="search-form"> {% include("search_box.html") %}</li>
+      </div>
     </div>
-</div>
-{% endif %}
+<!-- Nav Breadcrumbs -->
+    <div class="navbar-fixed-top col-md-12" id="subnav">
+        <div class="col-md-12 navbar-collapse collapse">
+          <ul style="float:left;" class="nav navbar-nav">
+          <li class="dropdown">
+            <a data-proofer-ignore class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/docs/"><span class="glyphicon glyphicon-home"></span>  Docs</a></li>
+              <li><a href="/docs/categories">  Categories</a></li>
+              <li><a href="/docs/categories">  Tags</a></li>
+              <li><a href="/docs/contributors">  Contributors</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-proofer-ignore class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guides  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/docs/guides"><span class="glyphicon glyphicon-home"></span>  Guides</a></li>
+              <li><a href="/docs/guides/categories">  Categories</a></li>
+              <li><a href="/docs/guides/categories">  Tags</a></li>
+              <li><a href="/docs/guides/contributors">  Contributors</a></li>
+            </ul>
+          </li>
+          <li><a href="/docs/changelog">Changelog</a></li>
+          <li style="width:40%;float:right;padding-top: 10px;">{% include("search_box.html") %}
+        </ul>
+    </div>
+  </div>

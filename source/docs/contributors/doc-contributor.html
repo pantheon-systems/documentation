@@ -1,0 +1,11 @@
+---
+layout: category
+generator: docs_contributor_index
+---
+{% set contributorhandle = page.contributor %}
+<div class="article container-fluid">
+        {% if site.contributors[contributorhandle] %}
+            {% set contributor = site.contributors[contributorhandle] %}
+            {% include 'doc_contributor_box.twig' %}
+        {% endif %}
+</div>

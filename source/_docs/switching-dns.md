@@ -9,7 +9,7 @@ tags:
 There are some scenarios (e.g. a redesigned site) where you may want to switch a domain's DNS between Pantheon sites. While each environment can configure its own custom domain, the same domain cannot be added to more than one environment. However, it's possible to point a domain to another site with minimal impact to visitors.
 
 ## Before You Begin
-If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/adding-a-ssl-certificate-for-secure-https-communication/) on the new site before proceeding.
+If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) on the new site before proceeding.
 
 Also, check `settings.php` or `wp-config.php` and comment out any hardcoded redirect logic for Pantheon's Platform domains (e.g.  `live-mysite.pantheon.io`). Once DNS has been configured, you can update the redirects to use the default Platform domain (e.g. `live-mysite.pantheonsite.io`) if needed.
 

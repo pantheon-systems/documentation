@@ -1,0 +1,12 @@
+---
+layout: category
+generator: guides_tag_index
+---
+<header>
+    <h1 class="pio-guides-title">{{ page.tag|title}}</h1>
+</header>
+<ul>
+    {% for guide in page.tag_guides %}
+        <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+---
+layout: category
+generator: docs_category_index
+---
+<header>
+    <h1 class="pio-docs-title">{{ page.category|title}}</h1>
+</header>
+<ul>
+    {% for doc in page.category_docs %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+</ul>

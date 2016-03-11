@@ -1,0 +1,15 @@
+---
+layout: categories
+title: Doc Categories
+use:
+    - docs_categories
+---
+<div class="article container-fluid" style="margin-top=-30px;">
+  <div class="col-md-12">
+  <ul>
+{% for category,docs in data.docs_categories %}
+<li><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|capitalize }}</a></li>
+{% endfor %}
+</ul>
+</div>
+</div>

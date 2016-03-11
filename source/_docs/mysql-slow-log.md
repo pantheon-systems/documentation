@@ -1,7 +1,7 @@
 ---
 title: MySQL Slow Log
 description: Learn how to use a site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
-category:
+categories:
 - debugging
 keywords: mysql slow log, logs, sql slow logs, sql log, mysql slow logs, mysql log, mysql performance, mysql troubleshooting, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
 ---

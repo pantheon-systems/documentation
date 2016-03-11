@@ -1,7 +1,7 @@
 ---
 title: Redirect Incoming Requests
 description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
-category:
+categories:
   - going-live
   - managing
 keywords: redirect, redirect request, redirect requests to another domain, redirect requrests to another path, redirect incoming requests, redirects, .htaccess, nginx, settings.php, wp-config.php, redirect via php, php redirect, php redirects,

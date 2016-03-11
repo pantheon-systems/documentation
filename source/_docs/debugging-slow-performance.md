@@ -1,7 +1,7 @@
 ---
 title: Debugging Slow Performance
 description: Detailed information on how to identify common problems with Drupal or WordPress performance speeds and deploy solutions.
-category:
+categories:
   - debugging
   - going-live
 keywords: performance, slow, slow performance, poor performance, debug, troubleshoot slow site, slow sites, troubleshoot performance, php error, php errors, watchdog, database query, database queries, php slow, php execution, execute php, caching, cache, drupal performance, wordpress performance

@@ -1,7 +1,7 @@
 ---
 title: Get Started
 description: Learn how to create a Drupal or WordPress site on Pantheon.
-category:
+categories:
   - getting-started
 keywords: going live, getting started, create account, create site, import, faqs
 ---

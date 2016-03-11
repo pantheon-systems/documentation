@@ -1,7 +1,7 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-category:
+categories:
 - getting-started
 keywords: local development, pantheon, develop locally, developing
 ---

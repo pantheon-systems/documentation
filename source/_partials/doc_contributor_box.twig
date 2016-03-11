@@ -20,6 +20,12 @@
                     {% if contributor.gplus %}<a aria-hidden="true" style="font-size:22px" href="{{ contributor.gplus }}" target="_blank"> <i class="icon icon-gplus"></i></a>{% endif %}
             </div>
             <p>{{ contributor.bio }}</p>
+            <ul>
+            {% for doc in page.contributor_docs %}
+                <li><a href="{{ doc.url }}">{{ doc.title }}</a><br>
+                </li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
 </div><!--/.contributor-->

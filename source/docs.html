@@ -1,50 +1,94 @@
 ---
 layout: jumbo
-title: Docs
 home: true
-description: Pantheon Documentation Site
+use:
+- docs_categories
+- docs_tags
 ---
-<div class="article container-fluid" style="padding-bottom: 0px;">
-    {% if page.home is defined %}
-    {% include("search_box.html") %}
-    {% endif %}
-    <!--Getting Started Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
-        <a href="/docs/getting-started">
-        <img class="noborder" style="padding-top: 10px" src="/source/assets/images/launch-websites-faster.png" alt="Launch">
-        <h2 align="middle">Getting Started</h2></a>
-        <p align ="middle">Learn how to create a site on Pantheon</p>
-    </div>
-    <!--Required Reading Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
-        <a href="/docs/required-reading-essential-pantheon-documentation">
-        <img class="noborder" style="padding-top: 10px" src="/source/assets/images/dashboard-large.png" alt="Required">
-        <h2 align="middle">Required Reading</h2></a>
-        <p align ="middle">Essential Pantheon documentation</p>
-    </div>
-    <!--Guides Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 5px; margin: 15px auto 15px auto">
-    <a href="/docs/guides">
-    <img class="noborder" style="padding-top: 10px" src="/source/assets/images/devops-robot.png" alt="Guides">
-    <h2 align="middle">Guides</h2></a>
-    <p align ="middle">Best practices for dynamic sites</p>
-    </div>
-    <!--Articles Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 22px; margin: 15px auto 15px auto">
-        <a href="/docs/all">
-        <h2 align="middle"><span style="margin-right: 10px;" class="glyphicon glyphicon-list" aria-hidden="true"></span>All Articles</h2></a>
-        <p align ="middle">Browse through the entire list of articles</p>
-    </div>
-    <!--Changelog Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 22px; margin: 15px auto 15px auto">
-        <a href="/docs/changelog">
-        <h2 align="middle"><span style="margin-right: 10px;" class="glyphicon glyphicon-wrench" aria-hidden="true"></span>Changelog</h2></a>
-        <p align ="middle">Recent platform and documentation changes</p>
-    </div>
-    <!--Changelog Thumbnail-->
-    <div class="col-md-4 thumbnail" style="padding-top: 22px; margin: 15px auto 15px auto">
-        <a href="/docs/power-users">
-        <h2 align="middle"><span style="margin-right: 10px;" class="glyphicon glyphicon-user" aria-hidden="true"></span>Power Users Group</h2></a>
-        <p align ="middle">Share best practices with other active users</p>
-    </div>
+<div class="article container-fluid">
+  <div class="col-md-12">
+  <!--Featured Docs-->
+  <div class="jumbotron">
+    <h1><i class="fa fa-share-alt"></i> Most Shared Docs</h1>
+    <p>
+      <a href="/docs/enable-https">Enable Secure HTTPS Communication</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/"><small>See More ›</small></a>
+    </p>
+  </div>
+  <!--Drupal Featured Docs-->
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-drupal"></i> Drupal</h2>
+    <p>
+      <a href="/docs/enable-https">Enable Secure HTTPS Communication</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+  <!--WordPress Featured Docs-->
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-wordpress"></i> WordPress</h2>
+    <p>
+      <a href="/docs/enable-https">Enable Secure HTTPS Communication</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+  <!--Local Featured Docs-->
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-cogs"></i> Sites</h2>
+    <p>
+      <a href="/docs/accessing-mysql-databases">Access MySQL</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-terminal"></i> Local</h2>
+    <p>
+      <a href="/docs/enable-https">Enable Secure HTTPS Communication</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+  <!--WordPress Featured Docs-->
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-user"></i> Users</h2>
+    <p>
+      <a href="/docs/enable-https">Enable Secure HTTPS Communication</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+  <!--Local Featured Docs-->
+  <div class="col-md-3 featured_docs">
+    <h2><i class="fa fa-users"></i> Organizations</h2>
+    <p>
+      <a href="/docs/accessing-mysql-databases">Access MySQL</a><br>
+      <a href="/docs/configuring-settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/getting-started">Get Started</a><br>
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/categories/drupal"><small>See More ›</small></a>
+    </p>
+  </div>
+</div>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: Domains and DNS
 description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
-category:
+categories:
   - developing
   - managing
   - going-live
@@ -12,7 +12,7 @@ Routing traffic to sites on Pantheon requires modifying the DNS configuration at
 
 We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
 
-If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/adding-a-ssl-certificate-for-secure-https-communication/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [CloudFlare's free Universal SSL service](/docs/guides/ssl-with-cloudflare/), set up DNS as described here first.
+If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [CloudFlare's free Universal SSL service](/docs/guides/ssl-with-cloudflare/), set up DNS as described here first.
 ## Step 2: Add Domains to the Site Environment
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/selecting-a-plan/).
@@ -137,5 +137,5 @@ Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when co
 
 * [Redirect to a Common Domain](/docs/redirect-incoming-requests/#redirect-to-a-common-domain)
 * [Redirecting to HTTPS](/docs/redirect-incoming-requests/#redirect-to-https)
-* [Enable Secure HTTPS Communication](/docs/adding-a-ssl-certificate-for-secure-https-communication/)
+* [Enable Secure HTTPS Communication](/docs/enable-https/)
 * [Platform Domains](/docs/platform-domains)

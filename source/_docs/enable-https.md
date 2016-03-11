@@ -1,9 +1,13 @@
 ---
 title: Enable Secure HTTPS Communication
 description: Learn how to implement secure HTTPS communication and utilize a static IP address.
-category:
-  - developing
-  - launch
+contributors:
+  - rachel
+categories:
+  - sites
+tags:
+  - domains
+  - https
 keywords: secure https, https, security, encryption, add ssl cert, add https, add encryption, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types,  ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
 ---
 HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data. Google takes this a step further, and recommends [protecting all of your websites with HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https?hl=en). Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.

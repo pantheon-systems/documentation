@@ -10,7 +10,7 @@ Enable HTTPS across all sites using your organization's Vanity domain by adding 
 Be sure that you have:
 
 - A Vanity domain, otherwise  [request one](/docs/vanity-domains/#request-the-vanity-domain) and [consider the effects](/docs/vanity-domains/#effects-and-considerations) before proceeding
-- A Wildcard SSL Certificate from an [SSL Provider](/docs/adding-a-ssl-certificate-for-secure-https-communication#ssl-providers)
+- A Wildcard SSL Certificate from an [SSL Provider](/docs/enable-https#ssl-providers)
 
 ## Create HTTPS Endpoint
 Configuring your custom Vanity domain as an HTTPS endpoint enables all environment URLs (including Multidev) associated with your organization to be accessible via HTTPS. This requires adding a wildcard certificate to the Vanity domain in use, which is either a subdomain of your primary site (`sites.mydomain.com`) or a dedicated domain name (`mypantheonprojects.com`).
@@ -25,4 +25,4 @@ Organizations using a dedicated domain name for their Pantheon custom subdomain 
 Direct the wildcard DNS to the IP address associated with the wildcard cert. This can be found within the **Domains/SSL** tab for the environment where your wildcard certificated was loaded.
 ## See Also
 - [Domains and DNS](/docs/domains)
-- [Enable SSL for Secure HTTPS Communication](/docs/adding-a-ssl-certificate-for-secure-https-communication)
+- [Enable SSL for Secure HTTPS Communication](/docs/enable-https)

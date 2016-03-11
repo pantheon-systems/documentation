@@ -1,7 +1,7 @@
 ---
 title: Undo Git Commits
 description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, and Pantheon.
-category:
+categories:
   - drupal
 keywords: git, git commits, undo git commit, revert
 ---

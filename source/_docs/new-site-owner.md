@@ -1,7 +1,7 @@
 ---
 title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
-category:
+categories:
     - developing
 keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
 ---
@@ -48,7 +48,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 [Redis](/docs/redis-as-a-caching-backend/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-[HTTPS](/docs/adding-a-ssl-certificate-for-secure-https-communication/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
+[HTTPS](/docs/enable-https/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
 <div class="alert alert-warning" role="alert">
 <h4>Note</h4>
 Only enable HTTPS for your Live environment. It is not needed in Dev or Test.</div>
@@ -58,7 +58,7 @@ From your Site Dashboard, click **Settings**, then click **Add Ons**. You will n
 
 
 ####Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have HTTPS enabled on Professional plans and above, you will need to re-enable HTTPS and re-load your SSL certificate into Pantheon. For more information, see [Enable Secure HTTPS Communication](/docs/adding-a-ssl-certificate-for-secure-https-communication/).
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have HTTPS enabled on Professional plans and above, you will need to re-enable HTTPS and re-load your SSL certificate into Pantheon. For more information, see [Enable Secure HTTPS Communication](/docs/enable-https/).
 
 ### Billing Tasks
 

@@ -1,0 +1,13 @@
+---
+layout: categories
+title: Guide Tags
+use:
+    - guides_tags
+---
+<div class="article container-fluid" style="margin-top=-30px;">
+  <div class="col-md-12">
+  {% for tag,guides in data.guides_tags %}
+  <li><a href="{{ site.url }}/guides/tags/{{ tag|url_encode(true) }}">{{ tag|capitalize }}</a></li>
+  {% endfor %}
+</div>
+</div>

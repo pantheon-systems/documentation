@@ -1,7 +1,7 @@
 ---
 title: Temporary File Management with Multiple Application Containers
 description: Learn how to work with temporary files in distributed environments.
-category:
+categories:
 - getting-started
 keywords: tmp, temp files, tmp files, temporary files, multiple application containers, distributed environments
 ---

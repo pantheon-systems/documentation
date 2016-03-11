@@ -1,7 +1,7 @@
 ---
 title: MySQL Troubleshooting with New Relic Pro
 description: Learn how to use integrated reporting services with New Relic to isolate MySQL performance issues on your Drupal or WordPress sites.
-category:
+categories:
   - developing
 keywords: mysql, mysql troubleshooting, new relic, new relic pro, system logs, logs, performance, mysql performance, mysql help, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
 ---

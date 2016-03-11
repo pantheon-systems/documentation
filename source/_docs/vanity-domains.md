@@ -1,7 +1,7 @@
 ---
 title: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
-category:
+categories:
   - managing
 keywords: development domain, vanity domain, change dev url, change development domain, base domain, change vanity domain, dev url, wildcard, cname, edge, dns
 ---

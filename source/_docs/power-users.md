@@ -1,7 +1,7 @@
 ---
 title: The Pantheon Power Users Group
 description: Share best practices with other experienced and active users of Pantheon's platform.
-category:
+categories:
   - developing
 contributors:
   - joshkoenig

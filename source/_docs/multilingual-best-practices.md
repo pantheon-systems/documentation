@@ -1,7 +1,7 @@
 ---
 title: Multilingual Best Practices on Pantheon
 description: Detailed instructions on how to configure a multilingual site on Pantheon.
-category:
+categories:
   - developing
 keywords: drupal, multilingual, pantheon, language, multi-language
 ---

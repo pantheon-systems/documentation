@@ -1,7 +1,7 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
-category:
+categories:
   - getting-started
 keywords: getting started, get started, pantheon, best practices,
 ---
@@ -15,7 +15,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Using the Pantheon Workflow](/docs/using-the-pantheon-workflow/)
 - [All About Application Containers](/docs/all-about-application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)  
-- [Enable Secure HTTPS Communication](/docs/adding-a-ssl-certificate-for-secure-https-communication)
+- [Enable Secure HTTPS Communication](/docs/enable-https)
 <div class="alert alert-info">
 <h4>Note</h4>
 Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the database, you may experience an error. Load the home page, and you can connect.

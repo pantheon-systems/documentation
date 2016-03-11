@@ -1,7 +1,7 @@
 ---
 title: NGINX
 description: Learn how NGINX serves your site
-category:
+categories:
 - developing
 draft: true
 ---

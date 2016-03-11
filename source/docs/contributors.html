@@ -1,0 +1,15 @@
+---
+layout: categories
+title: Doc Contributors
+use:
+    - docs_contributors
+    - contributor_docs
+---
+<div class="article container-fluid" style="margin-top=-30px;">
+    {% for contributorhandle,docs in data.docs_contributors %}
+    {% if site.contributors[contributorhandle] %}
+        {% set contributor = site.contributors[contributorhandle] %}
+        {% include 'doc_contributor_box.twig' %}
+    {% endif %}
+    {% endfor %}
+</div>

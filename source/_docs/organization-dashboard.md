@@ -1,7 +1,7 @@
 ---
 title: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
-category:
+categories:
 - managing
 keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
 ---

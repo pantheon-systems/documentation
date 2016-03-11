@@ -15,14 +15,17 @@ sculpin_content_types:
         enabled: true
         taxonomies:
             - categories
+            - tags
+            - contributors
         permalink: docs/:basename/
 
     guides:
         type: path
-        path: docs/guides
+        path: docs/_guides
         singular_name: guide
         enabled: true
         taxonomies:
-            - category
+            - categories
+            - tags
             - contributors
-        permalink: pretty
+        permalink: docs/guides/:basename/

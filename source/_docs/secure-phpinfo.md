@@ -1,7 +1,7 @@
 ---
 title: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon site.
-category:
+categories:
   - developing
 keywords: security, phpinfo, php.ini, can i configure php.ini, php,
 ---

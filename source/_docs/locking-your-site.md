@@ -1,7 +1,7 @@
 ---
 title: Locking Your Site
 description: Learn how to keep your Drupal or WordPress site hidden from the public for development or updates.
-category:
+categories:
   - getting-started
   - drupal
 keywords: lock, password protect, lock site, password protect site, locked, lock environment, password protection, unlock a site, unlock an environment, remove password protection, htpasswd

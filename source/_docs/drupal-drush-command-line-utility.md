@@ -1,7 +1,7 @@
 ---
 title: Drupal Drush Command-Line Utility
 description: Administer and maintain your site from your local Drupal Drush installation.
-category:
+categories:
   - getting-started
   - developing
 keywords: Drupal drush, command line, drupal, terminus drush, cli

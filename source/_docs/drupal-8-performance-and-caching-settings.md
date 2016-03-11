@@ -1,7 +1,7 @@
 ---
 title: Drupal 8 Performance and Varnish Caching Settings
 description: Optimize Drupal 8 and Varnish caching to maximize your site's performance.  
-category:
+categories:
   - drupal
 keywords: drupal, drupal 8, performance, cache, caching, varnish, varnish caching
 ---

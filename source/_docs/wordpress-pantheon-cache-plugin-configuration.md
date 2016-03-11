@@ -1,7 +1,7 @@
 ---
 title: WordPress Pantheon Cache Plugin Configuration
 description: Optimize WordPress and Varnish caching to maximize your site's performance.  
-category:
+categories:
   - WordPress
 keywords: WordPress, performance, cache, caching, varnish, varnish caching
 ---

@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
 description: Learn about the Backups tool available on the Pantheon Website Management Platform.
-category:
+categories:
   - developing
 keywords: backups, backing up, archive, archives, create backup
 ---

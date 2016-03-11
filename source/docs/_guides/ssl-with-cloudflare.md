@@ -1,7 +1,7 @@
 ---
 title: Adding HTTPS For Free With CloudFlare
 description: Enjoy the protection of HTTPS and other security features using CloudFlare's free DNS service
-category:
+categories:
   - going-live
   - security
 contributors:

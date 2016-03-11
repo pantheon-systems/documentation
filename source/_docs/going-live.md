@@ -1,7 +1,7 @@
 ---
 title: Going Live
 description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
-category:
+categories:
   - going-live
 keywords: site launch, launch, pantheon, new site, best practices, going live
 ---
@@ -27,7 +27,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore>Add Your Domain to the Live Environment</a><br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span>  [Configure Redirects](#redirects)<br>
 **Update and Test DNS Records:**<br>
-&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable Secure HTTPS Communication](/docs/adding-a-ssl-certificate-for-secure-https-communication) (Highly Recommended)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable Secure HTTPS Communication](/docs/enable-https) (Highly Recommended)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Get and Update DNS Records](#get-dns-record-and-update-your-dns)<br>
 
 

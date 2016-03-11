@@ -1,7 +1,7 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
-category:
+categories:
     - drupal
     - developing
 keywords: drupal, CDN, content delivery network, cloudfront distribution, cloudfront

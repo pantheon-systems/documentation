@@ -1,7 +1,7 @@
 ---
 title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
-category:
+categories:
   - developing
 keywords: outgoing, outgoing requests, outgoing request, static ip, static ip outgoing, dynamic ip, dynamic outgoing ip, dynamic ip outgoing, outbound requests, dynamic outgoing ip addresses, payment gateway, gateway
 ---

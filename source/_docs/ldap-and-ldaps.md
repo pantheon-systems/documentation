@@ -1,7 +1,7 @@
 ---
 title: LDAP and LDAPS
 description: Detailed information on how to configure LDAP and LDAPS on your Pantheon Drupal or WordPress website.
-category:
+categories:
   - going-live
   - developing
 keywords: ldap, ldaps, ldap and ldaps, using ldap as a provider, ldap provider, using ldap as a consumer, ldap comsumer, openldap, putenv, ldap_sso, ldap sso, troubleshoot ldap, troubleshoot ldaps, configure ldap, configure ldaps, sso, ip authentication

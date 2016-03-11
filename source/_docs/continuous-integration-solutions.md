@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
-category:
+categories:
   - going-live
   - developing
 keywords: continuous integration, tests, testing, terminus, drupal,

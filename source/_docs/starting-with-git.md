@@ -1,7 +1,7 @@
 ---
 title: Starting With Git
 description: Use Git version control to deploy code into your Pantheon development environment.
-category:
+categories:
   - getting-started
   - developing
 keywords: git, git commands, clone, commit, push

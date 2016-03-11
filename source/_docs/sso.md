@@ -1,7 +1,7 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-category:
+categories:
   - developing
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
@@ -18,7 +18,7 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/d
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/dashboard/). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/organization-dashboard/). Automated user provisioning isn't available.
 
 ## Configure your IdP
 

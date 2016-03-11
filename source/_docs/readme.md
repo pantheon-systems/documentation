@@ -54,7 +54,7 @@ Know how to solve problems that aren't the same every time? Write us a guide and
 ---
 title:
 description:
-category:
+categories:
   -
 
 ---

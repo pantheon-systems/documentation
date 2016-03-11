@@ -1,7 +1,7 @@
 ---
 title: Resetting Passwords
 description: Learn how to reset your Pantheon Website Management Platform dashboard passwords.
-category:
+categories:
   - managing
 keywords: reset password, reset drupal password, reset wordpress password, password, reset
 ---

@@ -1,7 +1,7 @@
 ---
 title: Clone a WordPress Site to Pantheon Using the Duplicator Plugin
 description: Learn to copy a WordPress site to Pantheon using the Duplicator plugin.
-category:
+categories:
   - WordPress
   - getting-started
   - developing

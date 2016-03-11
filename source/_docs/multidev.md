@@ -1,7 +1,7 @@
 ---
 title: Multidev
 description: Detailed information on Pantheon's Multidev.
-category:
+categories:
 - developing
 keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev
 ---

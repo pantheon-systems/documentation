@@ -1,7 +1,7 @@
 ---
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your site.
-category:
+categories:
   - developing
 keywords: drupal, cron, cron execution, run cron,
 ---

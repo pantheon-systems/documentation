@@ -1,0 +1,15 @@
+{% extends "default" %}
+{% block content_wrapper %}
+<article>
+    <div class="article container-fluid">
+        <div class="col-md-9">
+            <header>
+                <h1 class="pio-docs-title">{{ page.title }}</h1>
+            </header>
+            <div style="margin-top:15px;">
+                {{ page.blocks.content|raw }}
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}

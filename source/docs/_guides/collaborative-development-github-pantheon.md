@@ -1,7 +1,7 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
 description: Learn how to collaborate with your Pantheon team members using GitHub.
-category:
+categories:
   - developing
   - drupal
   - wordpress
@@ -83,7 +83,7 @@ Another option is to add another push URL for origin within `.git/config`:
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/guides/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
 
 ### Push the Pantheon Site's Codebase to GitHub
 

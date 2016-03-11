@@ -1,7 +1,7 @@
 ---
 title: Session and Cookie Handling
 description: Details about configuring settings for session expiration and cookies.
-category:
+categories:
   - developing
   - drupal
 keywords: drupal, session expiration, cookie lifetime, session,
