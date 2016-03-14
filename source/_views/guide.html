@@ -3,7 +3,7 @@
 <div class="col-md-12">
         <div class="article col-md-9">
           <h1 class="pio-docs-title">{{ page.title }}</h1>
-                {% if page.categories %}
+                <!--{% if page.categories %}
                 <small><i class="fa fa-folder"></i> Categories:</small>
                 {% for category in page.categories %}
                 <a href="/docs/guides/categories/{{ category|url_encode(true) }}"><small>{{ category|capitalize }}</small></a>{% if not loop.last %}, {% endif %}
@@ -13,7 +13,7 @@
                 <small><i style="margin-left:20px;" class="fa fa-tags"></i> Tags:</small>
                 {% for tag in page.tags %}
                 <a href="/docs/guides/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
+                {% endfor %}-->
                 {% endif %}
                 {% if page.contributors %}
                 {% set contributor_list = page.contributors %}

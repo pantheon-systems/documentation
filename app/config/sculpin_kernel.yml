@@ -25,7 +25,5 @@ sculpin_content_types:
         singular_name: guide
         enabled: true
         taxonomies:
-            - categories
-            - tags
             - contributors
         permalink: docs/guides/:basename/
