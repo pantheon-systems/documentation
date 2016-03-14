@@ -1,7 +1,7 @@
 ---
 title: Content Delivery Network (CDN) for File Distribution
 description: Learn about the benefits of using a Content Delivery Network (CDN) on your Drupal site.
-categories: [sites]
+categories: [drupal]
 tags: [files]
 keywords: CDN, file distribution, drupal, content delivery network, amazon S3 CORS,
 ---

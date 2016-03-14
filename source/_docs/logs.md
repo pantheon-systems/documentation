@@ -62,4 +62,4 @@ You now have a local copy of the `mysqld-slow-query.log` file. To automate this 
 - [PHP Slow Log](/docs/php-slow-log/)
 - [PHP Errors and Exceptions](/docs/php-errors/)
 - [Bots and Indexing](/docs/bots-and-indexing/)
-- [New Relic](/docs/newrelic)
+- [New Relic](/docs/new-relic)

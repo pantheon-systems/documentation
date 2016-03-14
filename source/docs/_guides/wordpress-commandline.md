@@ -223,17 +223,17 @@ $ terminus site code diffstat --site=cli-test --env=dev
 +---------------------------------------------------------------------------------+-----------+--------+-----------+
 | wp-content/plugins/wp-cfm/languages/wpcfm.po                                    | 0         | A      | 79        |
 | wp-content/plugins/wp-cfm/includes/class-wp-cli.php                             | 0         | A      | 79        |
-| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
 | wp-content/plugins/wp-cfm/README.md                                             | 0         | A      | 70        |
-| wp-content/plugins/wp-cfm/docs/assets/css/admin.css                                  | 0         | A      | 186       |
-| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
+| wp-content/plugins/wp-cfm/assets/css/admin.css                                  | 0         | A      | 186       |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
 | wp-content/plugins/wp-cfm/includes/class-readwrite.php                          | 0         | A      | 294       |
-| wp-content/plugins/wp-cfm/docs/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
+| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
 | wp-content/plugins/wp-cfm/includes/class-helper.php                             | 0         | A      | 133       |
-| wp-content/plugins/wp-cfm/docs/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
+| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
 | wp-content/plugins/wp-cfm/readme.txt                                            | 0         | A      | 132       |
-| wp-content/plugins/wp-cfm/docs/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
-| wp-content/plugins/wp-cfm/docs/assets/js/admin.js                                    | 0         | A      | 189       |
+| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
+| wp-content/plugins/wp-cfm/assets/js/admin.js                                    | 0         | A      | 189       |
 | wp-content/plugins/wp-cfm/templates/page-settings.php                           | 0         | A      | 122       |
 | wp-content/plugins/wp-cfm/includes/integrations/custom-field-suite.php          | 0         | A      | 170       |
 | wp-content/plugins/wp-cfm/wp-cfm.php                                            | 0         | A      | 182       |

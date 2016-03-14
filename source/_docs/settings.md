@@ -13,7 +13,7 @@ View general information on the site by selecting the **About Site** tab.
 ## Plans
 Here you can [select the site's plan](/docs/select-plan). For more detailed information on service levels, see [plan comparison](https://pantheon.io/pricing-comparison).
 ## Add Ons
-The **Add Ons** tab provides the ability to enable additional features, such as [New Relic](/docs/newrelic), [Apache Solr](/docs/solr/), and [Redis](/docs/redis/).
+The **Add Ons** tab provides the ability to enable additional features, such as [New Relic](/docs/new-relic), [Apache Solr](/docs/solr/), and [Redis](/docs/redis/).
 ## Delete Site
 See [Deleting a Site on Pantheon](/docs/delete-site/).
 ## PHP Version
