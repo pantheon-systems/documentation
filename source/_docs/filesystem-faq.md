@@ -1,7 +1,7 @@
 ---
 title: Filesystem Writable Error
 description: Understand writable errors and the Pantheon website management system architecture.
-categories: [sites]
+categories: [developing]
 tags: [files]
 keywords: filesystem, error writable, public download method, writable, settings.php, filesystem error, file permissions, permissions
 ---

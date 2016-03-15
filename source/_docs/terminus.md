@@ -1,8 +1,8 @@
 ---
 title: Terminus, the Pantheon Command-Line Interface (CLI)
 description: Learn how to use Pantheon's CLI, Terminus, to develop your sites from the command line.
-categories: [local]
-tags: [terminus]
+categories: [developing]
+tags: [terminus, local]
 keywords: pantheon, terminus, command line, cli
 ---
 Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.

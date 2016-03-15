@@ -1,7 +1,7 @@
 ---
 title: Applying Upstream Updates
 description: Detailed information on applying and debugging upstream updates, such as Drupal and WordPress releases.
-categories: [sites]
+categories: [developing]
 tags: [code]
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---

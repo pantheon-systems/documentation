@@ -1,7 +1,7 @@
 ---
 title: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
-categories: [sites]
+categories: [managing]
 tags: [code]
 keywords: php, php version, php versions, how to change php version,  change php version, update php version, downgrade php version, switch php version
 ---

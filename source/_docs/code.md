@@ -1,7 +1,7 @@
 ---
 title: Your Site Code on Pantheon
 description: Learn how to work with your site's code on the Pantheon Dashboard.
-categories: [sites]
+categories: [managing]
 tags: [code]
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
@@ -99,4 +99,4 @@ Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that doe
 - [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/)
 - [LDAP and LDAPS](/docs/ldap-and-ldaps/)
 - [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/)
-- [SSO and Identity Federation on Pantheon](/docs/sso-identity-federation/)
+- [SSO and Identity Federation on Pantheon](/docs/sso/)

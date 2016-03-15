@@ -1,7 +1,7 @@
 ---
 title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
-categories: [sites]
+categories: [developing]
 tags: [code]
 keywords: outgoing, outgoing requests, outgoing request, static ip, static ip outgoing, dynamic ip, dynamic outgoing ip, dynamic ip outgoing, outbound requests, dynamic outgoing ip addresses, payment gateway, gateway
 ---
@@ -20,7 +20,7 @@ Each application container worker uses a distinct application server, each with 
 
 IP-based security is not recommended on Pantheon—or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
 
-For more information, see [SSO and Identity Federation on Pantheon](/docs/sso-identity-federation/#ip-based-security-considerations).
+For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/#ip-based-security-considerations).
 
 ## IP Address Ranges
 We do not provide IP ranges for outgoing requests for application containers and other platform services. A limitation of cloud-based infrastructure is that the range of IP addresses can change at any time as new servers and systems are provisioned. This can happen at any time for security patches, upgrades, updates, and release of new features, which is a large part of the flexibility provided by containers and allows for zero downtime deployment of server resources.

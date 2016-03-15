@@ -1,7 +1,7 @@
 ---
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
-categories: [sites]
+categories: [developing]
 tags: [migrate]
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
@@ -17,7 +17,7 @@ Are you running another application in addition to WordPress or Drupal? You need
 
 You’ll need to package up your:
 
-- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [Drupal](/docs/drupal-export#manually-create-archive) or [WordPress](/docs/wordpress-export#manually-create-separate-site-archives) export documentation.
+- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [drupal](/docs/drupal-export#manually-create-archive) or [wordpress](/docs/wordpress-export#manually-create-separate-site-archives) export documentation.
 
 - **Database** - A single .sql dump, contains the content and active state of the site's configurations.
 
@@ -44,7 +44,7 @@ You can import during the site creation process using the importer tool or manua
 Using our importer during the site creation process has the following effects on the codebase:
 
  - New git history
- - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [WordPress](https://github.com/pantheon-systems/wordpress) repository
+ - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [wordpress](https://github.com/pantheon-systems/wordpress) repository
  - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
 
 <div class="alert alert-danger" role="alert"><h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>

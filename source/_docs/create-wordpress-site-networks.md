@@ -1,7 +1,7 @@
 ---
 title: Getting Started with WordPress Site Networks
 description: Learn about the Pantheon WordPress Site Network support, start developing, or import existing networks.
-categories: [wordpress]
+categories: [WordPress]
 tags: [create]
 ---
 

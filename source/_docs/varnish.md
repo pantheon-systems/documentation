@@ -1,7 +1,7 @@
 ---
 title: Varnish Caching for High Performance with Drupal and WordPress
 description: Configure and verify Varnish is working on your WordPress or Drupal sites.
-categories: [sites]
+categories: [developing]
 tags: [code, varnish]
 keywords: wordpress varnish, drupal varnish, cache, caching, pantheon, performance
 ---

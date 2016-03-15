@@ -1,7 +1,7 @@
 ---
 title: Launching a WordPress Site
 description: Detailed information on creating a new Pantheon WordPress site.  
-categories: [wordpress]
+categories: [WordPress]
 tags: [create]
 keywords: going live, wordpress, launch site, create a site
 ---

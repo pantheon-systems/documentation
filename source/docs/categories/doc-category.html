@@ -1,12 +1,20 @@
 ---
-layout: category
+layout: taxon
 generator: docs_category_index
 ---
 <header>
-    <h1 class="pio-docs-title">{{ page.category|title}}</h1>
+{% set taxon = page.category %}
+  {% if taxon == "WordPress" %}
+  <title>WordPress | {{ site.title }}</title>
+    <h1 class="pio-docs-title">WordPress</h1>
+  {% else %}
+  <title>{{ taxon|capitalize }} | {{ site.title }}</title>
+    <h1 class="pio-docs-title">{{ taxon|capitalize }}</h1>
+  {% endif %}
+  {% if site[taxon] %}
+    <h4>{{ site[taxon] }}</h4>
+  {% endif %}
 </header>
-<ul>
-    {% for doc in page.category_docs %}
-        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endfor %}
-</ul>
+  {% for doc in page.category_docs %}
+    <a href="{{ doc.url }}">{{ doc.title }}</a><br>
+  {% endfor %}

@@ -1,7 +1,7 @@
 ---
 title: New Relic
 description: Learn about the New Relic tool in your Pantheon Website Management Platform dashboard
-categories: [sites]
+categories: [developing]
 tags: [debug]
 keywords: new relic,
 ---

@@ -1,7 +1,7 @@
 ---
 title: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
-categories: [sites]
+categories: [managing]
 tags: [backups]
 keywords: restore backup, restore environment, restore, how to restore backup, how to restore, restore from another environment, restore any environment backup, restore environment backup, restores, backups
 ---

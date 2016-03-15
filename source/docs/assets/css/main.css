@@ -2314,19 +2314,10 @@ display: block;
 }
 .featured-docs h2{
   text-align: center;
-
+  margin-top: 0px;
 }
 .featured_docs a{
-  text-align: center;
   text-decoration: none;
-  font-weight: 200;
-}
-.featured_docs h1{
-  font-weight: 200;
-  margin: 0px;
-}
-.featured_docs h1:after{
-  content: '';
 }
 .featured_docs small{
   padding-left: 10px;

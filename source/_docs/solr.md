@@ -1,7 +1,7 @@
 ---
 title: Apache Solr on Pantheon
 description: Detailed information on using Apache Solr on the Pantheon Website Management Platform.
-categories: [sites]
+categories: [developing]
 tags: [code]
 keywords: apche, apache solr, index, indexing, searching, index and search, indexing and searching, solr, how to enable solr, enable solr, solr api, indexserver solr, solr indexserver, solr api, enable solr search, apachesolr, apache solor search module, solr modules, configure solr,
 ---

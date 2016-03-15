@@ -1,7 +1,7 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
-categories: [users]
+categories: [managing]
 tags: [platform]
 keywords: getting started, get started, pantheon, best practices,
 ---
@@ -38,7 +38,7 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 - [Redis as a Caching Backend](/docs/redis)
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
 - [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
-- [SSO and Identity Federation on Pantheon](/docs/sso-identity-federation/)
+- [SSO and Identity Federation on Pantheon](/docs/sso/)
 - [Backup Creation](/docs/create-backups)
 
 ## Debug

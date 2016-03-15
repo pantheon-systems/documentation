@@ -1,8 +1,8 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
 description: Understand alternative code management options when using SFTP Mode, such as WP-cli, Drupal Drush, and other command line tools.
-categories: [sites]
-tags: [code, sftp]
+categories: [developing]
+tags: [code, local]
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, wp-cli, drush, terminus, command line tools, cli, comand line tool
 ---
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.

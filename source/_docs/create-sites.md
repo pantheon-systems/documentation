@@ -1,8 +1,8 @@
 ---
 title: Creating Sites
 description:  How to create a new Drupal or WordPress site on the Pantheon Website Management Platform.
-categories: [sites]
-tags: [create]
+categories: [managing]
+tags: [create, code]
 keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
 ---
 On your User Dashboard, click  **Create your first site** or **Create a new site**.

@@ -74,7 +74,6 @@ Any bits of code should be wrapped in backticks.  Any standalone code blocks sho
 
 Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
 
-
 ### Anchor Tags
 
 Use headings in a logical manner. The system we use should generate these from the headings as a TOC block.
@@ -220,7 +219,7 @@ Yes. We have complete and total support for WordPress sites and developers.
 
 File paths should be shown the same way code snippets are so that they're easier to read. File paths should be wrapped in backticks.  
 ```
-/source/assets/images/
+/source/docs/assets/images/
 ```
 
 If it's a path within the Dashboard, separate tab/page names with an angle bracket ">".  
@@ -268,7 +267,7 @@ If there are tasks a user needs to have completed before continuing on with the 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
 ##Pantheon_Environment
-TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
+TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals `$_ENV['PANTHEON_ENVIRONMENT']` (always around) or `$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
 
 ## Notes

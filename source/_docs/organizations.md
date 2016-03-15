@@ -1,8 +1,8 @@
 ---
 title: Organizations
 description: Detailed information on Pantheon organization types and the features available to them.
-categories: [organizations]
-tags: [platform]
+categories: [managing]
+tags: [platform, organizations]
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management
 ---
 
@@ -45,11 +45,11 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 ### Upstreams
 
-[Custom Upstreams](/docs/manage-custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
+[Custom Upstreams](/docs/running-custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
 
 Ally Partners and Pantheon EDU customers do not qualify for custom upstreams.
 
-[Learn more about custom upstreams](/docs/manage-custom-upstream/).
+[Learn more about custom upstreams](/docs/running-custom-upstream/).
 
 ### Support
 Review, open, or reply to support tickets associated with your organization and its sites. [Learn about our Scope of Support](/docs/scope-of-support).
@@ -75,7 +75,7 @@ Organizations can run site environments using their own custom Vanity domains, l
 New users who sign up with the email address domain you specify will be automatically added to your organization.
 
 ### Single Sign-On (SSO)
-SSO allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. [Learn more about SSO with SAML](/docs/sso).
+SSO allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. [Learn more about SSO with SAML](/docs/sso-organizations).
 
 
 ## Retrieving the Organization UUID

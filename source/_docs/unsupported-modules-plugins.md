@@ -1,7 +1,7 @@
 ---
 title: Unsupported/Problematic Modules and Plugins
 description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
-categories: [sites]
+categories: [developing]
 tags: [code, debug]
 ---
 This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform.

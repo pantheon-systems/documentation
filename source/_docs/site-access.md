@@ -2,7 +2,7 @@
 title: Accessing an Account After the Owner Leaves
 description: Learn how to access an account and set a new owner to a site.
 keywords: access an account, new owner, update site owner
-categories: [users]
+categories: [managing]
 tags: [platform]
 ---
 

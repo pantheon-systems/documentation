@@ -1,8 +1,8 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with WordPress on Pantheon
 description: Best practices and recommendations for building a WordPress site using JetBrains PhpStorm.
-categories: [wordpress]
-tags: [code]
+categories: [WordPress]
+tags: [code, local]
 keywords: wordpress, jetbrains, phpstorm
 ---
 ## Overview

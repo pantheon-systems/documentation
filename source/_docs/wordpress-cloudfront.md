@@ -1,7 +1,7 @@
 ---
 title: CloudFront CDN Setup for WordPress
 description: Learn to set up and configure CloudFront CDN on your Pantheon WordPress site.
-categories: [wordpress]
+categories: [WordPress]
 tags: [code]
 keywords: wordpress, cloudfront, cloudfront cdn, cdn
 ---

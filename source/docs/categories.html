@@ -1,15 +1,15 @@
 ---
-layout: categories
-title: Doc Categories
+layout: taxon
 use:
     - docs_categories
 ---
-<div class="article container-fluid" style="margin-top=-30px;">
-  <div class="col-md-12">
-  <ul>
+<title>Doc Categories | {{ site.title }}</title>
+<h1 class="pio-docs-title">Doc Categories</h1>
+
 {% for category,docs in data.docs_categories %}
-<li><a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|capitalize }}</a></li>
+{% if category == "WordPress" %}
+  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">WordPress</a><br>
+{% else %}
+  <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|capitalize }}</a><br>
+{% endif %}
 {% endfor %}
-</ul>
-</div>
-</div>

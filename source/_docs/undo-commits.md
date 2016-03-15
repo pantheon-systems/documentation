@@ -1,8 +1,8 @@
 ---
 title: Undo Git Commits
 description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, and Pantheon.
-categories: [local]
-tags: [code, git]
+categories: [developing]
+tags: [code, local]
 keywords: git, git commits, undo git commit, revert
 ---
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to execute a Drush update on a local environment and push to Pantheon. This example is Drupal specific but the following steps can be applied to undo a commit on any framework, including WordPress.

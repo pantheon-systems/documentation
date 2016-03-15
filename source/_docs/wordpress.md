@@ -2,7 +2,7 @@
 title: WordPress
 description: Learn how to bring WordPress sites onto the Pantheon Website Management Platform, and considerations for developing and running them.
 keywords: wordpress, sites, pantheon
-categories: [wordpress]
+categories: [WordPress]
 tags: [code]
 ---
 

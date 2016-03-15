@@ -6,14 +6,24 @@
                 {% if page.categories %}
                 <small><i class="fa fa-folder"></i> Categories:</small>
                 {% for category in page.categories %}
-                <a href="/docs/categories/{{ category|url_encode(true) }}"><small>{{ category|capitalize }}</small></a>{% if not loop.last %}, {% endif %}
+                  {% if category == "WordPress" %}
+                    <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>WordPress</small></a>
+                  {% else %}
+                    <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>{{ category|capitalize }}</small></a>
+                  {% endif %}
                 {% endfor %}
                 {% endif %}
                 {% if page.tags %}
                 <small><i style="margin-left:20px;" class="fa fa-tags"></i> Tags:</small>
-                {% for tag in page.tags %}
-                <a href="/docs/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
+                  {% for tag in page.tags %}
+                    {% if tag == "getting-started" %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Getting Started</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                    {% elseif tag == "drupal-8" %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Drupal 8</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                    {% else %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                    {% endif %}
+                  {% endfor %}
                 {% endif %}
                 {% if page.contributors %}
                 {% set contributor_list = page.contributors %}

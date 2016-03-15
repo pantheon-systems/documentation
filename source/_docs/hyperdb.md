@@ -1,7 +1,7 @@
 ---
 title: Scaling WordPress with MySQL Replicas and HyperDB
 description: Learn how to distribute requests to replica MySQL databases on WordPress using HyperDB.
-categories: [wordpress]
+categories: [WordPress]
 tags: [code, database]
 ---
 

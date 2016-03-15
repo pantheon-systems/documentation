@@ -1,7 +1,7 @@
 ---
 title: Configuring SAML SSO for Pantheon with Okta
 description: Detailed information to enable SAML single sign-on for your organization with Okta.
-categories: [organizations]
+categories: [managing]
 tags: [code]
 draft: true
 
@@ -29,7 +29,7 @@ Starting from the Okta admin dashboard, do the following:
 
 9. Copy the values found in the Okta Pantheon app **Sign On** tab >> **View Setup Instructions** for **Identity Provider Single sign on URL** and **X.509 Certificate** for step 7.
 
-10. Open a ticket with support as outlined in [Enabling SAML on Pantheon](/docs/sso/#enable-saml-on-pantheon).
+10. Open a ticket with support as outlined in [Enabling SAML on Pantheon](/docs/sso-organizations/#enable-saml-on-pantheon).
 
 ## See Also
-* [Single Sign-On for Pantheon Organizations](/docs/sso/)
+* [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/)

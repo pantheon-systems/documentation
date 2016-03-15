@@ -1,7 +1,7 @@
 ---
 title: Debugging Slow Performance
 description: Detailed information on how to identify common problems with Drupal or WordPress performance speeds and deploy solutions.
-categories: [sites]
+categories: [developing]
 tags: [database, debug, code]
 keywords: performance, slow, slow performance, poor performance, debug, troubleshoot slow site, slow sites, troubleshoot performance, php error, php errors, watchdog, database query, database queries, php slow, php execution, execute php, caching, cache, drupal performance, wordpress performance
 ---
@@ -118,7 +118,7 @@ There are a large number of caches involved in every single request, including:
 
 - [Varnish](/docs/varnish) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/alternative-php-cache/) - PHP has it’s own opcode cache, which is not shared between application servers.
-- [Drupal](https://drupal.org/node/326504) and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated.
+- [drupal](https://drupal.org/node/326504) and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic

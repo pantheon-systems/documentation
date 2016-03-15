@@ -1,7 +1,7 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
 description: Information on why PANTHEON_STRIPPED is placed in the utm_source URL parameter.
-categories: [sites]
+categories: [developing]
 tags: [code, varnish]
 keywords: google analytics, analytics, pantheon_stripped, utm, query parameters, cache
 ---

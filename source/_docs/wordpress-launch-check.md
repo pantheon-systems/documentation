@@ -1,7 +1,7 @@
 ---
 title: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site.
-categories: [wordpress]
+categories: [WordPress]
 tags: [code]
 keywords: wordpress, launch check, analysis, configuration
 ---

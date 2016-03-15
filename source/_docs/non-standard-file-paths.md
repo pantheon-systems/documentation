@@ -1,7 +1,7 @@
 ---
 title: Non-Standard Files Locations
 description: Learn how to address non-standard file locations from within the Pantheon filesystem.
-categories: [sites]
+categories: [developing]
 tags: [files, code]
 keywords: files, file locations, where to put site content, content directory, content file location, file location, file location for unique directories, file location for unique directory, file location for non-standard directory, directories
 ---

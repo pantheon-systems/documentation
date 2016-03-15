@@ -1,8 +1,8 @@
 ---
 title: Role-Based Permissions & Change Management
 description: Learn about the features and benefits of role-based permissions for Pantheon sites.
-categories: [users]
-tags: [platform]
+categories: [managing]
+tags: [platform, organizations]
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
 Change Management is an Organization feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Partner](https://pantheon.io/pantheon-partners), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.

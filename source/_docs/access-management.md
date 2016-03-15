@@ -2,7 +2,7 @@
 title: Access Management for Site Owners and Administrators
 description: Learn how to remove a team member or outside resource from a site.
 keywords: remove team member, delete team member, delete user
-categories: [users]
+categories: [managing]
 tags: [platform]
 ---
 
@@ -10,10 +10,10 @@ When a person with access to your site(s) on the platform leaves the company or 
 
 After a user leaves, we recommend you:
 
-- Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
+- Delete or block the user's account in [drupal](https://www.drupal.org/node/627158) or [wordpress](https://codex.wordpress.org/Users_Users_SubPanel).
 - Remove the user from the team and/or organization in the Pantheon Dashboard.
 - Change any shared account passwords the user may have had access to.
-- Review the Git history in the commit log to see if the team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://codex.wordpress.org/FAQ_My_site_was_hacked).
+- Review the Git history in the commit log to see if the team member made code changes after leaving. See recommendations from [drupal](https://www.drupal.org/node/2365547) and [wordpress](https://codex.wordpress.org/FAQ_My_site_was_hacked).
 
 ## Remove a Team Member from a Site
 When you delete a user from a site, they lose the ability to perform any site operations via the Dashboard or Terminus.

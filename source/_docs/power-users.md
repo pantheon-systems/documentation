@@ -1,7 +1,8 @@
 ---
 title: The Pantheon Power Users Group
 description: Share best practices with other experienced and active users of Pantheon's platform.
-categories: [users]
+categories: [managing]
+tags: [platform]
 contributors:
   - joshkoenig
 date: 7/27/2015

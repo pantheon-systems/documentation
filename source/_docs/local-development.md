@@ -1,8 +1,8 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [local]
-tags: [code]
+categories: [developing]
+tags: [code, local]
 keywords: local development, pantheon, develop locally, developing
 ---
 While Pantheon provides several options for on-server development, [local development](/docs) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.

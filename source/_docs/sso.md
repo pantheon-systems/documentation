@@ -1,67 +1,47 @@
 ---
-title: Single Sign-On for Pantheon Organizations
-description: Detailed information to enable SAML single sign-on for your organization.
-categories: [sites]
-tags: [code]
+title: SSO and Identity Federation on Pantheon
+description: Use SSO to centrally manage user identities and provide seamless integration across multiple applications.
+categories: [managing]
+tags: [platform]
+keywords: sso, identity federation, single sign-on, single sign on, security, ldap, ldaps, ssl, shibboleth, simplesamlphp, oauth, ip based, ip-based, ip based security, ip-based security, security recommendations
 ---
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
+Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions.  
 
-SAML SSO is included for Elite, Enterprise, and EDU+ customers. If you'd like to upgrade to an eligible plan, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). If you're an Agency interested in SAML SSO, register for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) and then reach out to your Partnership Manager to see if you qualify.
+Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
 
-## User Experience
-* User submits the Pantheon login form with their email address.
-* User is redirected to the configured IdP.  
-* After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
+Use SSL certificates for encrypted secure communication with externally hosted servers for authentication.
 
-## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/docs/terminus/) by using [machine tokens](/docs/machine-tokens/).
+## Two-Factor Authentication
+Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in.
 
-## Managing Users
+We strongly recommend using SAML, both for sites and the Dashboard. Learn more about [two-factor authentication](/docs/guides/two-factor-authentication/).
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/organization-dashboard/). Automated user provisioning isn't available.
+## LDAP and LDAPS (LDAP over SSL)
 
-## Configure your IdP
+Both LDAP and LDAPS are supported on Pantheon. For more information, see [LDAP and LDAPS on Pantheon](/docs/ldap-and-ldaps/).
 
-Refer to your IdP for general SAML 2.0 setup instructions.
+## Shibboleth and SimpleSAMLphp
 
-You will need to enter the following:
+[Shibboleth](http://shibboleth.net/) is an open-source single sign-on solution. Use [SimpleSAMLphp](http://simplesamlphp.org/) as a service provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see [Using SimpleSAMLphp](/docs/shibboleth-sso).
 
-1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Example-Org-Name-SSO`
+## OAuth
 
-2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
+[OAuth](http://oauth.net/) is an open authorization standard and customers have reported success using it.  
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append SSO.</div>
+Also, Pantheon includes the [PECL OAuth](http://us.php.net/oauth) PHP extension. If you need a different version, you can download the library and rename the class to avoid a naming conflict.
 
-3. **Add an Attribute Statement** to map `mail` to `email`.
+## IP-Based Security Considerations
 
-4. **Additional configuration details:**
-  * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
-  * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
-  * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
-  * The NameID format: `unspecified`
-  * The SAML assertion, and the SAML response can be individually or simultaneously signed.
-  * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
+Pantheon is a cloud platform, so there are some considerations that you should be aware of.  
 
+Pantheon provides a single dedicated incoming IP address for sites with custom SSL certificates. Each dedicated IP is assigned by the datacenter.  
 
-<!--If your IdP is Okta or OneLogin, see:
+Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
 
-* [Configuring SAML for Pantheon with Okta](/docs/saml-for-orgs-with-okta)
-* [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)-->
+Each application container worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
 
-## Enable SAML on Pantheon
+Live sites on Pantheon on Professional plans and above use multiple application container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
 
-Open a support ticket with Pantheon with the following:
+In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
 
-1. **Email Domain(s)**: The email domain(s) your organization controls. Only users with email addresses in this domain will use the Organization's IdP.
-
-2. **Single Sign-on URL**: The URL of your IdP that we will redirect to for authentication.
-
-3. **Certificate**: The X.509 certificate used to validate incoming SAML requests. Please share this via https://gist.github.com/
-
-4. **Date/time to enable**: A time you'd like Pantheon to enable SSO, when you can test and ensure everything works.
-
-## Troubleshooting
-### Cannot Authenticate with Username/Password When Creating a New Machine Token
-If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
+For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).

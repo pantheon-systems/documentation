@@ -1,7 +1,7 @@
 ---
 title: Pantheon Enterprise Gateway
 description: Configuring your Drupal or WordPress site to use the Pantheon Enterprise Gateway as a defense-in-depth solution to access systems behind firewalls.
-categories: [sites]
+categories: [developing]
 tags: [code]
 keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewall, secure tunnel, tunnel, create firewall, firewalls, gateways, gateway
 ---

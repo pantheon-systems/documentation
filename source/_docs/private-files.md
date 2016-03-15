@@ -1,7 +1,7 @@
 ---
 title: Private Files
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
-categories: [sites]
+categories: [developing]
 tags: [files]
 keywords: drupal, wordpress, private files, files, private keys, private
 ---

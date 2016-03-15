@@ -1,7 +1,7 @@
 ---
 title: New Relic Performance Analysis on Pantheon
 description: Learn how to utilize New Relic performance metrics and reports for your Pantheon site.
-categories: [sites]
+categories: [developing]
 tags: [debug]
 keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance
 ---

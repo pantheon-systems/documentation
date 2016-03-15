@@ -1,8 +1,8 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop on Pantheon Website Management Platform environments.
-categories: [sites]
-tags: [code, sftp]
+categories: [developing]
+tags: [code, local, getting-started]
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin
 ---
 In some cases, working via `git` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
@@ -86,7 +86,7 @@ Your Dashboard tracks all changes made within your codebase. File change notific
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- PHPStorm with [WordPress](/docs/wordpress-phpstorm) and [Drupal](/docs/drupal-phpstorm)
+- PHPStorm with [wordpress](/docs/wordpress-phpstorm) and [drupal](/docs/drupal-phpstorm)
 - [FileZilla](/docs/filezilla/)
 - [WinSCP](/docs/winscp/)
 

@@ -1,7 +1,7 @@
 ---
 title: Switching DNS From One Pantheon Site to Another
 description: Learn how to change DNS details between Pantheon sites.
-categories: [sites]
+categories: [developing]
 tags: [create, domains]
 ---
 There are some scenarios (e.g. a redesigned site) where you may want to switch a domain's DNS between Pantheon sites. While each environment can configure its own custom domain, the same domain cannot be added to more than one environment. However, it's possible to point a domain to another site with minimal impact to visitors.

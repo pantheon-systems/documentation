@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 description: Overview of WordPress multisite support on the Pantheon Platform. Includes supported use cases, links to terms of service, and links to relevant documentation for getting started and managing multisite development within the Pantheon workflow.
-categories: [wordpress]
+categories: [WordPress]
 tags: [code]
 ---
 

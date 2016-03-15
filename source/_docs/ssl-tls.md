@@ -1,7 +1,7 @@
 ---
 title: Pantheon SSL/TLS Support
 description: Pantheon's recommendation regarding HTTPS/TLS in light of PCI DSS v3.1.
-categories: [sites]
+categories: [developing]
 tags: [code, debug]
 ---
 - **HTTPS**: (HTTP over SSL or HTTP Secure) is the use of Secure Socket Layer (SSL) or Transport Layer Security (TLS) as a sublayer under regular HTTP application layering. HTTPS encrypts and decrypts user page requests as well as the pages that are returned by the Web server.

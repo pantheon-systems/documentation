@@ -1,7 +1,7 @@
 ---
 title: The pantheon.yml Configuration File
 description: Developers can set project configuration in a pantheon.yml file stored in the root of their code repository.  
-categories: [sites]
+categories: [developing]
 tags: [code]
 ---
 

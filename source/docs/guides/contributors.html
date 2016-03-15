@@ -1,9 +1,10 @@
 ---
-layout: categories
-title: Guide Contributors
+layout: taxon
 use:
     - guides_contributors
 ---
+<title>Guide Contributors | {{ site.title }}</title>
+<h1 class="pio-docs-title">Guide Contributors</h1>
 <div class="article container-fluid" style="margin-top=-30px;">
 {% for contributorhandle,guides in data.guides_contributors %}
     {% if site.contributors[contributorhandle] %}
