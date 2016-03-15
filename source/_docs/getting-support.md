@@ -3,7 +3,7 @@ title: Getting Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
 keywords: support, scope, customer support, help
 categories: [users]
-tags: [dashboard]
+tags: [platform]
 ---
 Submit a ticket with our Support Team to request assistance on issues within our [scope of support](/docs/scope-of-support/).
 ## File a Ticket Through the Dashboard

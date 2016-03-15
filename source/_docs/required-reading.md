@@ -2,7 +2,7 @@
 title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
 categories: [users]
-tags: [dashboard]
+tags: [platform]
 keywords: getting started, get started, pantheon, best practices,
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.

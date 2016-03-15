@@ -2,7 +2,7 @@
 title: Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks
 description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 categories: [users]
-tags: [dashboard]
+tags: [platform]
 ---
 
 Pantheon's Quicksilver Platform Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
