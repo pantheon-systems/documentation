@@ -1,841 +1,631 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users/access-management') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/access-management'); exit();
+  helpdesk_redirect(' /docs/access-management');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/accessing-mysql-databases') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/mysql-access'); exit();
+  helpdesk_redirect(' /docs/mysql-access');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users/access-account-after-owner-leaves') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/'); exit();
+  helpdesk_redirect(' /docs/');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/settings/add-a-credit-card-to-a-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/site-access'); exit();
+  helpdesk_redirect(' /docs/site-access');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/all-about-application-containers') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/application-containers'); exit();
+  helpdesk_redirect(' /docs/application-containers');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/apache-solr') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/solr'); exit();
+  helpdesk_redirect(' /docs/solr');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/applying-upstream-updates') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/upstream-updates'); exit();
+  helpdesk_redirect(' /docs/upstream-updates');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs/downloading-live-error-logs') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  '); exit();
+  helpdesk_redirect(' ');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/quicksilver') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/quicksilver'); exit();
+  helpdesk_redirect(' /docs/quicksilver');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/backups/backup-creation') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/create-backups'); exit();
+  helpdesk_redirect(' /docs/create-backups');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/backups') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/backups'); exit();
+  helpdesk_redirect(' /docs/backups');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/bots-and-indexing') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/bots-and-indexing'); exit();
+  helpdesk_redirect(' /docs/bots-and-indexing');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/caching-in-drupal-modules') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-caching-modules'); exit();
+  helpdesk_redirect(' /docs/drupal-caching-modules');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/create/choosing-start-state') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/start-state'); exit();
+  helpdesk_redirect(' /docs/start-state');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-duplicator'); exit();
+  helpdesk_redirect(' /docs/wordpress-duplicator');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/clone-new-site-backups'); exit();
+  helpdesk_redirect(' /docs/clone-new-site-backups');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/cloudflare-cdn-and-dns') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/cloudflare'); exit();
+  helpdesk_redirect(' /docs/cloudflare');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/cloudFront-setup-for-wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-cloudfront'); exit();
+  helpdesk_redirect(' /docs/wordpress-cloudfront');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal8/configuration-management') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-8-configuration-management'); exit();
+  helpdesk_redirect(' /docs/drupal-8-configuration-management');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-phpstorm'); exit();
+  helpdesk_redirect(' /docs/drupal-phpstorm');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-phpstorm'); exit();
+  helpdesk_redirect(' /docs/wordpress-phpstorm');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/configuring-settings-php') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/settings-php'); exit();
+  helpdesk_redirect(' /docs/settings-php');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/configuring-wp-config-php') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wp-config-php'); exit();
+  helpdesk_redirect(' /docs/wp-config-php');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/pantheon_stripped'); exit();
+  helpdesk_redirect(' /docs/pantheon_stripped');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/content-delivery-network'); exit();
+  helpdesk_redirect(' /docs/content-delivery-network');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/continuous-integration-solutions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/continuous-integration'); exit();
+  helpdesk_redirect(' /docs/continuous-integration');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/database/myisam-to-innodb') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/myisam-to-innodb'); exit();
+  helpdesk_redirect(' /docs/myisam-to-innodb');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/adding-a-custom-upstream') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/custom-upstream'); exit();
+  helpdesk_redirect(' /docs/custom-upstream');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/create') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/create-sites'); exit();
+  helpdesk_redirect(' /docs/create-sites');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/cli/machine-tokens') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/machine-tokens'); exit();
+  helpdesk_redirect(' /docs/machine-tokens');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal8/create-services-yml-file') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/services-yml'); exit();
+  helpdesk_redirect(' /docs/services-yml');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/cron') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-cron'); exit();
+  helpdesk_redirect(' /docs/drupal-cron');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/cron-for-wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-cron'); exit();
+  helpdesk_redirect(' /docs/wordpress-cron');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/database/database-connection-errors') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/database-connection-errors'); exit();
+  helpdesk_redirect(' /docs/database-connection-errors');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/database') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/database-workflow'); exit();
+  helpdesk_redirect(' /docs/database-workflow');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/date-and-time') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/date-and-time'); exit();
+  helpdesk_redirect(' /docs/date-and-time');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/debugging-connectivity-issues') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/debug-connections'); exit();
+  helpdesk_redirect(' /docs/debug-connections');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs/debugging-sites-with-log-files') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/debug-log-files'); exit();
+  helpdesk_redirect(' /docs/debug-log-files');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/debugging-slow-performance') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/debug-slow-performance'); exit();
+  helpdesk_redirect(' /docs/debug-slow-performance');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users/deleting-your-pantheon-account') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/delete-account'); exit();
+  helpdesk_redirect(' /docs/delete-account');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/deleting-a-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/delete-site'); exit();
+  helpdesk_redirect(' /docs/delete-site');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/developing-directly-with-sftp-mode') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/sftp'); exit();
+  helpdesk_redirect(' /docs/sftp');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/developing-with-https') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/build-https'); exit();
+  helpdesk_redirect(' /docs/build-https');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/fastly-domain-masking') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/fastly-domain'); exit();
+  helpdesk_redirect(' /docs/fastly-domain');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/domains'); exit();
+  helpdesk_redirect(' /docs/domains');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal8/drupal-8-performance-and-caching-settings') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-8-cache'); exit();
+  helpdesk_redirect(' /docs/drupal-8-cache');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal8') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-8'); exit();
+  helpdesk_redirect(' /docs/drupal-8');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/drupal-drush-command-line-utility') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drush'); exit();
+  helpdesk_redirect(' /docs/drush');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal-performance-and-caching-settings') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-cache'); exit();
+  helpdesk_redirect(' /docs/drupal-cache');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal'); exit();
+  helpdesk_redirect(' /docs/drupal');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/dynamic-outgoing-ip-addresses') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/outgoing-ips'); exit();
+  helpdesk_redirect(' /docs/outgoing-ips');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/email') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/email'); exit();
+  helpdesk_redirect(' /docs/email');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/https-for-sites-using-a-custom-vanity-domain') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/enable-https-vanity-domain'); exit();
+  helpdesk_redirect(' /docs/enable-https-vanity-domain');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/enable-https'); exit();
+  helpdesk_redirect(' /docs/enable-https');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/solr') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-solr'); exit();
+  helpdesk_redirect(' /docs/wordpress-solr');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/solr') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/solr-drupal'); exit();
+  helpdesk_redirect(' /docs/solr-drupal');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/environment-specific-config') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/environment-specific-config'); exit();
+  helpdesk_redirect(' /docs/environment-specific-config');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/errors-and-server-responses') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/errors-and-server-responses'); exit();
+  helpdesk_redirect(' /docs/errors-and-server-responses');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/export-an-existing-drupal-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-export'); exit();
+  helpdesk_redirect(' /docs/drupal-export');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/export-an-existing-wordpress-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-export'); exit();
+  helpdesk_redirect(' /docs/wordpress-export');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/external-libraries') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/external-libraries'); exit();
+  helpdesk_redirect(' /docs/external-libraries');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/unwind-a-multisite') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/unwind-multisite'); exit();
+  helpdesk_redirect(' /docs/unwind-multisite');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/filezilla') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/filezilla'); exit();
+  helpdesk_redirect(' /docs/filezilla');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/files/filesystem-faqs') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/filesystem-faq'); exit();
+  helpdesk_redirect(' /docs/filesystem-faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/fix-broken-links-in-wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-broken-links'); exit();
+  helpdesk_redirect(' /docs/wordpress-broken-links');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/frequently-asked-questions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/faq'); exit();
+  helpdesk_redirect(' /docs/faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/gandi-pantheon-pointing-your-dns') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/gandi-domain'); exit();
+  helpdesk_redirect(' /docs/gandi-domain');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users/generating-ssh-keys') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/generate-ssh-key'); exit();
+  helpdesk_redirect(' /docs/generate-ssh-key');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/getting-started') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/getting-started'); exit();
+  helpdesk_redirect(' /docs/getting-started');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/site-networks/getting-started') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/create-wordpress-site-networks'); exit();
+  helpdesk_redirect(' /docs/create-wordpress-site-networks');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/getting-support') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/getting-support'); exit();
+  helpdesk_redirect(' /docs/getting-support');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/getting-the-client-ip-address') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/client-ip'); exit();
+  helpdesk_redirect(' /docs/client-ip');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/git-faq') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/git-faq'); exit();
+  helpdesk_redirect(' /docs/git-faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/going-live') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/going-live'); exit();
+  helpdesk_redirect(' /docs/going-live');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/horizontal-scalability') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/horizontal-scalability'); exit();
+  helpdesk_redirect(' /docs/horizontal-scalability');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/hot-fixes') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/hot-fixes'); exit();
+  helpdesk_redirect(' /docs/hot-fixes');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/database/kill-mysql-queries') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/kill-mysql-queries'); exit();
+  helpdesk_redirect(' /docs/kill-mysql-queries');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/importing-drush-site-archives-with-terminus') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drush-import'); exit();
+  helpdesk_redirect(' /docs/drush-import');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/installing-cygwin-on-windows') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/cygwin-windows'); exit();
+  helpdesk_redirect(' /docs/cygwin-windows');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/installing-redis-on-wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-redis'); exit();
+  helpdesk_redirect(' /docs/wordpress-redis');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/ldap-and-ldaps') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/ldap-and-ldaps'); exit();
+  helpdesk_redirect(' /docs/ldap-and-ldaps');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-launch-check'); exit();
+  helpdesk_redirect(' /docs/drupal-launch-check');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-launch-check'); exit();
+  helpdesk_redirect(' /docs/wordpress-launch-check');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/starting-wordpress-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/launch-wordpress'); exit();
+  helpdesk_redirect(' /docs/launch-wordpress');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/load-and-performance-testing') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/load-and-performance-testing'); exit();
+  helpdesk_redirect(' /docs/load-and-performance-testing');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users/loading-ssh-keys') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/add-ssh-key'); exit();
+  helpdesk_redirect(' /docs/add-ssh-key');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/local-development'); exit();
+  helpdesk_redirect(' /docs/local-development');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/security/locking-your-site') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/lock-environment'); exit();
+  helpdesk_redirect(' /docs/lock-environment');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/logs'); exit();
+  helpdesk_redirect(' /docs/logs');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/mime-types') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/mime-types'); exit();
+  helpdesk_redirect(' /docs/mime-types');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/major-version-drupal-upgrades') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-updates'); exit();
+  helpdesk_redirect(' /docs/drupal-updates');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/multiple-sites-single-domain') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/single-application-sites'); exit();
+  helpdesk_redirect(' /docs/single-application-sites');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/drush-versions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drush-versions'); exit();
+  helpdesk_redirect(' /docs/drush-versions');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/dashboard') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/organization-dashboard'); exit();
+  helpdesk_redirect(' /docs/organization-dashboard');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/managing-upstreams') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/managing-upstreams'); exit();
+  helpdesk_redirect(' /docs/managing-upstreams');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/site-networks/managing') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/managing-wordpress-site-networks'); exit();
+  helpdesk_redirect(' /docs/managing-wordpress-site-networks');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/migrate'); exit();
+  helpdesk_redirect(' /docs/migrate');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/manual-site-import') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/manual-import'); exit();
+  helpdesk_redirect(' /docs/manual-import');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/wordpress-site-networks') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/migrate-wordpress-site-networks'); exit();
+  helpdesk_redirect(' /docs/migrate-wordpress-site-networks');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/migrate/migrating-from-wpengine') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/migrate-from-wpengine'); exit();
+  helpdesk_redirect(' /docs/migrate-from-wpengine');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/more-sftp'); exit();
+  helpdesk_redirect(' /docs/more-sftp');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/drupal8/moving-out-of-testing') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-8-testing'); exit();
+  helpdesk_redirect(' /docs/drupal-8-testing');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/multidev') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/multidev'); exit();
+  helpdesk_redirect(' /docs/multidev');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/multilingual-best-practices') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/multilingual'); exit();
+  helpdesk_redirect(' /docs/multilingual');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs/mysql-slow-log') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/mysql-slow-log'); exit();
+  helpdesk_redirect(' /docs/mysql-slow-log');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/debug-mysql-new-relic'); exit();
+  helpdesk_redirect(' /docs/debug-mysql-new-relic');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/newrelic') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/new-relic'); exit();
+  helpdesk_redirect(' /docs/new-relic');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/newrelic/new-relic-performance-analysis') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/new-relic-analysis'); exit();
+  helpdesk_redirect(' /docs/new-relic-analysis');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/new-site-owner') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/site-owner-faq'); exit();
+  helpdesk_redirect(' /docs/site-owner-faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/files/non-standard-files-locations') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/non-standard-file-paths'); exit();
+  helpdesk_redirect(' /docs/non-standard-file-paths');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/optimizing') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/cloud-optimization'); exit();
+  helpdesk_redirect(' /docs/cloud-optimization');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-6-image-cache'); exit();
+  helpdesk_redirect(' /docs/drupal-6-image-cache');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/organizations'); exit();
+  helpdesk_redirect(' /docs/organizations');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/php-errors-and-exceptions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/php-errors'); exit();
+  helpdesk_redirect(' /docs/php-errors');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs/php-slow-log') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/php-slow-log'); exit();
+  helpdesk_redirect(' /docs/php-slow-log');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/pantheon-enterprise-gateway') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/pantheon-enterprise-gateway'); exit();
+  helpdesk_redirect(' /docs/pantheon-enterprise-gateway');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/files') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/files'); exit();
+  helpdesk_redirect(' /docs/files');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/faq') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/organization-faq'); exit();
+  helpdesk_redirect(' /docs/organization-faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/pantheon-plugins') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/plugins'); exit();
+  helpdesk_redirect(' /docs/plugins');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/security/SSL-TLS') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/ssl-tls'); exit();
+  helpdesk_redirect(' /docs/ssl-tls');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/settings') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/settings'); exit();
+  helpdesk_redirect(' /docs/settings');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/logs/nginx-access-log') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/nginx-access-log'); exit();
+  helpdesk_redirect(' /docs/nginx-access-log');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/platform-considerations') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/platform-considerations'); exit();
+  helpdesk_redirect(' /docs/platform-considerations');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/platform-domains') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/platform-domains'); exit();
+  helpdesk_redirect(' /docs/platform-domains');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/plan-configurations') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/platform-resources'); exit();
+  helpdesk_redirect(' /docs/platform-resources');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/port-2222-blocked-workaround') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/port-2222'); exit();
+  helpdesk_redirect(' /docs/port-2222');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/private-files') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/private-files'); exit();
+  helpdesk_redirect(' /docs/private-files');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/reading-pantheon-environment-configuration') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/read-environment-config'); exit();
+  helpdesk_redirect(' /docs/read-environment-config');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/redirect-incoming-requests') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/redirects'); exit();
+  helpdesk_redirect(' /docs/redirects');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/redis-as-a-caching-backend') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/redis'); exit();
+  helpdesk_redirect(' /docs/redis');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/refreshing-dns-records-on-your-local-machine') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/local-dns'); exit();
+  helpdesk_redirect(' /docs/local-dns');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/fix-broken-links-that-reference-ip-port-instead-of-domain-name') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-broken-links'); exit();
+  helpdesk_redirect(' /docs/drupal-broken-links');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/required-reading-essential-pantheon-documentation') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/required-reading'); exit();
+  helpdesk_redirect(' /docs/required-reading');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/resetting-passwords') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/resetting-passwords'); exit();
+  helpdesk_redirect(' /docs/resetting-passwords');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/backups/restoring-an-environment-from-a-backup') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/restore-environment-backup'); exit();
+  helpdesk_redirect(' /docs/restore-environment-backup');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/change-management') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/change-management'); exit();
+  helpdesk_redirect(' /docs/change-management');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/running-a-custom-upstream') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/running-custom-upstream'); exit();
+  helpdesk_redirect(' /docs/running-custom-upstream');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/server_name-and-server_port') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/server_name-and-server_port'); exit();
+  helpdesk_redirect(' /docs/server_name-and-server_port');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/ssh-tunnels'); exit();
+  helpdesk_redirect(' /docs/ssh-tunnels');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/sso-and-identity-federation') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/sso'); exit();
+  helpdesk_redirect(' /docs/sso');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/hyperdb') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/hyperdb'); exit();
+  helpdesk_redirect(' /docs/hyperdb');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/scope-of-support') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/scope-of-support'); exit();
+  helpdesk_redirect(' /docs/scope-of-support');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/secure-phpinfo') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/phpinfo'); exit();
+  helpdesk_redirect(' /docs/phpinfo');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/security') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/security'); exit();
+  helpdesk_redirect(' /docs/security');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/settings/selecting-a-plan') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/select-plan'); exit();
+  helpdesk_redirect(' /docs/select-plan');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/session-and-cookie-handling') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/sessions-and-cookies'); exit();
+  helpdesk_redirect(' /docs/sessions-and-cookies');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/cdn-setting-up-cloudfront') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-cloudfront'); exit();
+  helpdesk_redirect(' /docs/drupal-cloudfront');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/setting-up-a-domain-with-godaddy') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/godaddy-domain'); exit();
+  helpdesk_redirect(' /docs/godaddy-domain');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/sso') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/sso-organizations'); exit();
+  helpdesk_redirect(' /docs/sso-organizations');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/starting-with-git') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/git'); exit();
+  helpdesk_redirect(' /docs/git');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/domains/switching-dns') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/switching-dns'); exit();
+  helpdesk_redirect(' /docs/switching-dns');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/team-management') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/team-management'); exit();
+  helpdesk_redirect(' /docs/team-management');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/files/temp-files') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/temp-files'); exit();
+  helpdesk_redirect(' /docs/temp-files');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/cli') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/terminus'); exit();
+  helpdesk_redirect(' /docs/terminus');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/varnish/testing-varnish') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/testing-varnish'); exit();
+  helpdesk_redirect(' /docs/testing-varnish');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-development-versions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-development-versions'); exit();
+  helpdesk_redirect(' /docs/wordpress-development-versions');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/deploys') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/deploys'); exit();
+  helpdesk_redirect(' /docs/deploys');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/power-users') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/power-users'); exit();
+  helpdesk_redirect(' /docs/power-users');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/sites'); exit();
+  helpdesk_redirect(' /docs/sites');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/terminus-the-pantheon-command-line-interface') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/terminus-deprecated'); exit();
+  helpdesk_redirect(' /docs/terminus-deprecated');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/pantheon-yml') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/pantheon-yml'); exit();
+  helpdesk_redirect(' /docs/pantheon-yml');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/timeouts') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/timeouts'); exit();
+  helpdesk_redirect(' /docs/timeouts');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/varnish/debugging-cache') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/debug-cache'); exit();
+  helpdesk_redirect(' /docs/debug-cache');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/undo-git-commits-like-overwriting-drupal-core') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/undo-commits'); exit();
+  helpdesk_redirect(' /docs/undo-commits');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/unsupported-modules-plugins') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/unsupported-modules-plugins'); exit();
+  helpdesk_redirect(' /docs/unsupported-modules-plugins');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/update-core-for-sites-running-outdated-versions-custom-distributions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/custom-distribution-updates'); exit();
+  helpdesk_redirect(' /docs/custom-distribution-updates');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/updating-modules-through-drupal') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/drupal-module-updates'); exit();
+  helpdesk_redirect(' /docs/drupal-module-updates');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/updating-payment-methods') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/update-payment-method'); exit();
+  helpdesk_redirect(' /docs/update-payment-method');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/settings/upgrade-php-versions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/php-versions'); exit();
+  helpdesk_redirect(' /docs/php-versions');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/users') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/user-dashboard'); exit();
+  helpdesk_redirect(' /docs/user-dashboard');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/using-indexdepot-with-pantheon-sites') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  '); exit();
+  helpdesk_redirect(' ');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/using-mysql-workbench-to-access-a-database') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/mysql-workbench'); exit();
+  helpdesk_redirect(' /docs/mysql-workbench');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/htaccess') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/htaccess'); exit();
+  helpdesk_redirect(' /docs/htaccess');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/shibboleth-sso'); exit();
+  helpdesk_redirect(' /docs/shibboleth-sso');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/using-wp-cli-pantheon') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wp-cli'); exit();
+  helpdesk_redirect(' /docs/wp-cli');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/using-winscp') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/winscp'); exit();
+  helpdesk_redirect(' /docs/winscp');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/using-the-pantheon-workflow') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/pantheon-workflow'); exit();
+  helpdesk_redirect(' /docs/pantheon-workflow');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/organizations/vanity-domains') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/vanity-domains'); exit();
+  helpdesk_redirect(' /docs/vanity-domains');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/varnish/caching-advancedtopics') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/caching-advanced-topics'); exit();
+  helpdesk_redirect(' /docs/caching-advanced-topics');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/varnish') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/varnish'); exit();
+  helpdesk_redirect(' /docs/varnish');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/what-is-apc-and-what-is-it-used-for') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/alternative-php-cache'); exit();
+  helpdesk_redirect(' /docs/alternative-php-cache');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code/what-is-the-pantheon_api-module') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/pantheon_api-module'); exit();
+  helpdesk_redirect(' /docs/pantheon_api-module');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress'); exit();
+  helpdesk_redirect(' /docs/wordpress');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-best-practices') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-best-practices'); exit();
+  helpdesk_redirect(' /docs/wordpress-best-practices');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/configuration-management-plugin') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wp-cfm'); exit();
+  helpdesk_redirect(' /docs/wp-cfm');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-faq') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-faq'); exit();
+  helpdesk_redirect(' /docs/wordpress-faq');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-known-issues') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-known-issues'); exit();
+  helpdesk_redirect(' /docs/wordpress-known-issues');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-pantheon-cache-plugin-configuration') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-cache-plugin'); exit();
+  helpdesk_redirect(' /docs/wordpress-cache-plugin');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/site-networks') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-site-networks'); exit();
+  helpdesk_redirect(' /docs/wordpress-site-networks');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/wordpress/wordpress-and-php-sessions') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/wordpress-sessions'); exit();
+  helpdesk_redirect(' /docs/wordpress-sessions');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/sites/code') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/code'); exit();
+  helpdesk_redirect(' /docs/code');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/articles/local/rsync-and-sftp') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/rsync-and-sftp'); exit();
+  helpdesk_redirect(' /docs/rsync-and-sftp');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/guides/ssl-with-cloudflare') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/guides/cloudflare-enable-https'); exit();
+  helpdesk_redirect(' /docs/guides/cloudflare-enable-https');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/guides/automated-testing-wordpress-behat') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/guides/wordpress-automated-testing'); exit();
+  helpdesk_redirect(' /docs/guides/wordpress-automated-testing');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/guides/collaborative-development-github-pantheon') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/guides/collaborative-development'); exit();
+  helpdesk_redirect(' /docs/guides/collaborative-development');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/guides/wordpress-commandline'); exit();
+  helpdesk_redirect(' /docs/guides/wordpress-commandline');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/guides/sendgrid'); exit();
+  helpdesk_redirect(' /docs/guides/sendgrid');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2016-01-January') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2016/01'); exit();
+  helpdesk_redirect(' /docs/changelog/2016/01');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2016-02-February') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2016/02'); exit();
+  helpdesk_redirect(' /docs/changelog/2016/02');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-01-January') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/01'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/01');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-02-February') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/02'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/02');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-03-March') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/03'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/03');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-04-April') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/04'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/04');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-05-May') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/05'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/05');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-06-June') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/06'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/06');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-07-July') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/07'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/07');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-08-August') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/08'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/08');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-09-September') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/09'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/09');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-10-October') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/10'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/10');
 }
 if (strpos($_SERVER['REQUEST_URI'], '/docs/changelog/2015-12-December') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location:  /docs/changelog/2015/12'); exit();
+  helpdesk_redirect(' /docs/changelog/2015/12');
 }

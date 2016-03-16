@@ -10,8 +10,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     $row++;
     if ($row > 1) {
 $redirect = "if (strpos(\$_SERVER['REQUEST_URI'], '$data[0]') !== FALSE ) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: $data[1]'); exit();
+  helpdesk_redirect('$data[1]');
 }\n";
       fwrite($index_file, $redirect);
     }
