@@ -55,7 +55,7 @@ $baseUrl = '/ckfinder/userfiles/';
 ### Composer Manager
 **Issue**: Composer Manager expects to be able to write files to directories that are not writable on Pantheon.
 
-**Solution**: As per the recommendations found [here](https://www.drupal.org/node/2405805), ensure that the automatic generation of files is disabled in your settings.php for the live and test environments (dev as well if you have your dev site in git mode):
+**Solution**: As per the recommendations found in the [module documentation](https://www.drupal.org/node/2405805), ensure that the automatic generation of files is disabled in your settings.php for the live and test environments (dev as well if you have your dev site in git mode):
 ```
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live' || $_SERVER['PANTHEON_ENVIRONMENT'] === 'test')) {
   $conf['composer_manager_autobuild_file'] = 0;
