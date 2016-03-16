@@ -2,7 +2,7 @@
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 categories: [developing]
-tags: [migrate]
+tags: [migrate, getting-started]
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
 

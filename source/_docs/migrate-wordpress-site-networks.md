@@ -2,7 +2,7 @@
 title: Migrate to Pantheon: WordPress Site Networks
 description: Learn how to import a WordPress Site Network into Pantheon.
 keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
-categories: [WordPress]
+categories: [wordpress]
 tags: [migrate]
 ---
 

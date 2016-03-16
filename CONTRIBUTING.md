@@ -78,10 +78,10 @@ Only the following categories should be included (case sensitive):
 
 - developing
 - managing
-- WordPress
+- wordpress
 - drupal
 
- If you feel that another category should be created, indicate the suggestion within your Pull Request and a moderator will review.
+ If you feel that another category should be created, indicate the suggestion within your pull request and a moderator will review.
 #### Tags
 Only the following tags should be included (case sensitive):
 
@@ -102,7 +102,7 @@ Only the following tags should be included (case sensitive):
 - drupal-8
 - terminus
 
-If you feel that another tag should be created, indicate the suggestion within your Pull Request and a moderator will review.
+If you feel that another tag should be created, indicate the suggestion within your pull request and a moderator will review.
 
 ### Contributors
 Create a contributor profile within your **first** contribution. Fill out the information below and add it to the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Commit this change alongside your new guide.

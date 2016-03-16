@@ -6,7 +6,7 @@
                 {% if page.categories %}
                 <small><i class="fa fa-folder"></i> Categories:</small>
                 {% for category in page.categories %}
-                  {% if category == "WordPress" %}
+                  {% if category == "wordpress" %}
                     <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>WordPress</small></a>
                   {% else %}
                     <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>{{ category|capitalize }}</small></a>
@@ -17,11 +17,11 @@
                 <small><i style="margin-left:20px;" class="fa fa-tags"></i> Tags:</small>
                   {% for tag in page.tags %}
                     {% if tag == "getting-started" %}
-                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Getting Started</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Getting Started</small></a>{% if not loop.last %}<small>, </small>{% endif %}
                     {% elseif tag == "drupal-8" %}
-                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Drupal 8</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Drupal 8</small></a>{% if not loop.last %}<small>, </small>{% endif %}
                     {% else %}
-                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}<a data-proofer-ignore><small>, </small></a>{% endif %}
+                      <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}<small>, </small>{% endif %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}

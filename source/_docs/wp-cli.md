@@ -1,7 +1,7 @@
 ---
 title: Using WP-CLI On The Pantheon Platform
 description: Administer and maintain your WordPress site on Pantheon using the command-line.
-categories: [WordPress]
+categories: [wordpress]
 tags: [terminus, local]
 keywords: WordPress, command line, WP-CLI, terminus wp, cli
 ---

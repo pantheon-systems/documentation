@@ -2,7 +2,7 @@
 title: Starting With Git
 description: Use Git version control to deploy code into your Pantheon development environment.
 categories: [developing]
-tags: [code, local]
+tags: [code, local, getting-started]
 keywords: git, git commands, clone, commit, push
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.

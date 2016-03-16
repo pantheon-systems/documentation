@@ -2,7 +2,7 @@
 title: WordPress Best Practices
 description: A list of suggestions for developing WordPress sites on Pantheon.
 keywords: wordpress, best practices, redis, wp-cfm, behat
-categories: [WordPress]
+categories: [wordpress]
 tags: [code]
 ---
 

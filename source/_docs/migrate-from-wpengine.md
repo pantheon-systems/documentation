@@ -1,7 +1,7 @@
 ---
 title: Migrating Sites from WP Engine to Pantheon
 description: Get all the details you need to know to successfully migrate your site away from WP Engine.
-categories: [WordPress]
+categories: [wordpress]
 tags: [migrate]
 keywords: wordpress, pantheon, wpengine
 ---

@@ -1,7 +1,7 @@
 ---
 title: WordPress FAQs
 description: Questions to Frequently Asked Questions concerning WordPress on the Pantheon Website Management Platform.
-categories: [WordPress]
+categories: [wordpress]
 tags: [code]
 keywords: wordpress, faqs, import, configure
 ---

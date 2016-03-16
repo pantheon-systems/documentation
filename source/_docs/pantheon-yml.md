@@ -2,7 +2,7 @@
 title: The pantheon.yml Configuration File
 description: Developers can set project configuration in a pantheon.yml file stored in the root of their code repository.  
 categories: [developing]
-tags: [code]
+tags: [code, platform]
 ---
 
 Configuration stored in [YAML](https://en.wikipedia.org/wiki/YAML) files has become a standard across PaaS (Platform as a Service) providers. The `pantheon.yml` file allows developers to hook into platform workflows. It will soon give developers the ability to configure other settings for their sites.

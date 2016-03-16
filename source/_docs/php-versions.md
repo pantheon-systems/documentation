@@ -2,7 +2,7 @@
 title: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 categories: [managing]
-tags: [code]
+tags: [code, platform]
 keywords: php, php version, php versions, how to change php version,  change php version, update php version, downgrade php version, switch php version
 ---
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 20% performance gains after upgrading](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains).

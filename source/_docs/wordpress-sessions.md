@@ -1,7 +1,7 @@
 ---
 title: WordPress and PHP Sessions
 description: Detailed information on understanding the behaviors of WordPress and PHP sessions.
-categories: [WordPress]
+categories: [wordpress]
 tags: [code]
 keywords: wordpress, php sessions, php
 ---
