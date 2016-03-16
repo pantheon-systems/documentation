@@ -1,211 +1,212 @@
 old id,New
-/docs/articles/users/access-management, /docs/access-management
-/docs/articles/local/accessing-mysql-databases, /docs/mysql-access
-/docs/articles/users/access-account-after-owner-leaves, /docs/
-/docs/articles/sites/settings/add-a-credit-card-to-a-site, /docs/site-access
-/docs/articles/sites/all-about-application-containers, /docs/application-containers
-/docs/articles/sites/apache-solr, /docs/solr
-/docs/articles/sites/code/applying-upstream-updates, /docs/upstream-updates
-/docs/articles/sites/logs/downloading-live-error-logs, , /docs/download-logs
-/docs/articles/sites/quicksilver, /docs/quicksilver
-/docs/articles/sites/backups/backup-creation, /docs/create-backups
-/docs/articles/sites/backups, /docs/backups
-/docs/articles/sites/code/bots-and-indexing, /docs/bots-and-indexing
-/docs/articles/drupal/caching-in-drupal-modules, /docs/drupal-caching-modules
-/docs/articles/sites/create/choosing-start-state, /docs/start-state
-/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin, /docs/wordpress-duplicator
-/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup, /docs/clone-new-site-backups
-/docs/articles/sites/cloudflare-cdn-and-dns, /docs/cloudflare
-/docs/articles/wordpress/cloudFront-setup-for-wordpress, /docs/wordpress-cloudfront
-/docs/articles/drupal/drupal8/configuration-management, /docs/drupal-8-configuration-management
-/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon, /docs/drupal-phpstorm
-/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress, /docs/wordpress-phpstorm
-/docs/articles/drupal/configuring-settings-php, /docs/settings-php
-/docs/articles/wordpress/configuring-wp-config-php, /docs/wp-config-php
-/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values, /docs/pantheon_stripped
-/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution, /docs/content-delivery-network
-/docs/articles/local/continuous-integration-solutions, /docs/continuous-integration
-/docs/articles/sites/database/myisam-to-innodb, /docs/myisam-to-innodb
-/docs/articles/organizations/adding-a-custom-upstream, /docs/custom-upstream
-/docs/articles/sites/create, /docs/create-sites
-/docs/articles/local/cli/machine-tokens, /docs/machine-tokens
-/docs/articles/drupal/drupal8/create-services-yml-file, /docs/services-yml
-/docs/articles/drupal/cron, /docs/drupal-cron
-/docs/articles/wordpress/cron-for-wordpress, /docs/wordpress-cron
-/docs/articles/sites/database/database-connection-errors, /docs/database-connection-errors
-/docs/articles/sites/database, /docs/database-workflow
-/docs/articles/sites/date-and-time, /docs/date-and-time
-/docs/articles/sites/debugging-connectivity-issues, /docs/debug-connections
-/docs/articles/sites/logs/debugging-sites-with-log-files, /docs/debug-log-files
-/docs/articles/sites/code/debugging-slow-performance, /docs/debug-slow-performance
-/docs/articles/users/deleting-your-pantheon-account, /docs/delete-account
-/docs/articles/sites/deleting-a-site, /docs/delete-site
-/docs/articles/sites/code/developing-directly-with-sftp-mode, /docs/sftp
-/docs/articles/sites/domains/developing-with-https, /docs/build-https
-/docs/articles/sites/domains/fastly-domain-masking, /docs/fastly-domain
-/docs/articles/sites/domains, /docs/domains
-/docs/articles/drupal/drupal8/drupal-8-performance-and-caching-settings, /docs/drupal-8-cache
-/docs/articles/drupal/drupal8, /docs/drupal-8
-/docs/articles/local/drupal-drush-command-line-utility, /docs/drush
-/docs/articles/drupal/drupal-performance-and-caching-settings, /docs/drupal-cache
-/docs/articles/drupal, /docs/drupal
-/docs/articles/sites/code/dynamic-outgoing-ip-addresses, /docs/outgoing-ips
-/docs/articles/sites/code/email, /docs/email
-/docs/articles/organizations/https-for-sites-using-a-custom-vanity-domain, /docs/enable-https-vanity-domain
-/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication, /docs/enable-https
-/docs/articles/wordpress/solr, /docs/wordpress-solr
-/docs/articles/drupal/solr, /docs/solr-drupal
-/docs/articles/wordpress/environment-specific-config, /docs/environment-specific-config
-/docs/articles/sites/errors-and-server-responses, /docs/errors-and-server-responses
-/docs/articles/sites/migrate/export-an-existing-drupal-site, /docs/drupal-export
-/docs/articles/sites/migrate/export-an-existing-wordpress-site, /docs/wordpress-export
-/docs/articles/sites/external-libraries, /docs/external-libraries
-/docs/articles/drupal/unwind-a-multisite, /docs/unwind-multisite
-/docs/articles/local/filezilla, /docs/filezilla
-/docs/articles/sites/files/filesystem-faqs, /docs/filesystem-faq
-/docs/articles/wordpress/fix-broken-links-in-wordpress, /docs/wordpress-broken-links
-/docs/articles/frequently-asked-questions, /docs/faq
-/docs/articles/sites/domains/gandi-pantheon-pointing-your-dns, /docs/gandi-domain
-/docs/articles/users/generating-ssh-keys, /docs/generate-ssh-key
-/docs/articles/getting-started, /docs/getting-started
-/docs/articles/wordpress/site-networks/getting-started, /docs/create-wordpress-site-networks
-/docs/articles/getting-support, /docs/getting-support
-/docs/articles/drupal/getting-the-client-ip-address, /docs/client-ip
-/docs/articles/local/git-faq, /docs/git-faq
-/docs/articles/going-live, /docs/going-live
-/docs/articles/sites/horizontal-scalability, /docs/horizontal-scalability
-/docs/articles/sites/code/hot-fixes, /docs/hot-fixes
-/docs/articles/sites/database/kill-mysql-queries, /docs/kill-mysql-queries
-/docs/articles/sites/migrate/importing-drush-site-archives-with-terminus, /docs/drush-import
-/docs/articles/local/installing-cygwin-on-windows, /docs/cygwin-windows
-/docs/articles/wordpress/installing-redis-on-wordpress, /docs/wordpress-redis
-/docs/articles/sites/code/ldap-and-ldaps, /docs/ldap-and-ldaps
-/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis, /docs/drupal-launch-check
-/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis, /docs/wordpress-launch-check
-/docs/articles/wordpress/starting-wordpress-site, /docs/launch-wordpress
-/docs/articles/load-and-performance-testing, /docs/load-and-performance-testing
-/docs/articles/users/loading-ssh-keys, /docs/add-ssh-key
-/docs/articles/local, /docs/local-development
-/docs/articles/sites/security/locking-your-site, /docs/lock-environment
-/docs/articles/sites/logs, /docs/logs
-/docs/articles/sites/mime-types, /docs/mime-types
-/docs/articles/drupal/major-version-drupal-upgrades, /docs/drupal-updates
-/docs/articles/sites/domains/multiple-sites-single-domain, /docs/single-application-sites
-/docs/articles/local/drush-versions, /docs/drush-versions
-/docs/articles/organizations/dashboard, /docs/organization-dashboard
-/docs/articles/organizations/managing-upstreams, /docs/managing-upstreams
-/docs/articles/wordpress/site-networks/managing, /docs/managing-wordpress-site-networks
-/docs/articles/sites/migrate, /docs/migrate
-/docs/articles/sites/migrate/manual-site-import, /docs/manual-import
-/docs/articles/sites/migrate/wordpress-site-networks, /docs/migrate-wordpress-site-networks
-/docs/articles/sites/migrate/migrating-from-wpengine, /docs/migrate-from-wpengine
-/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode, /docs/more-sftp
-/docs/articles/drupal/drupal8/moving-out-of-testing, /docs/drupal-8-testing
-/docs/articles/sites/multidev, /docs/multidev
-/docs/articles/drupal/multilingual-best-practices, /docs/multilingual
-/docs/articles/sites/logs/mysql-slow-log, /docs/mysql-slow-log
-/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro, /docs/debug-mysql-new-relic
-/docs/articles/sites/newrelic, /docs/new-relic
-/docs/articles/sites/newrelic/new-relic-performance-analysis, /docs/new-relic-analysis
-/docs/articles/sites/new-site-owner, /docs/site-owner-faq
-/docs/articles/sites/files/non-standard-files-locations, /docs/non-standard-file-paths
-/docs/articles/optimizing, /docs/cloud-optimization
-/docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6, /docs/drupal-6-image-cache
-/docs/articles/organizations, /docs/organizations
-/docs/articles/sites/php-errors-and-exceptions, /docs/php-errors
-/docs/articles/sites/logs/php-slow-log, /docs/php-slow-log
-/docs/articles/sites/code/pantheon-enterprise-gateway, /docs/pantheon-enterprise-gateway
-/docs/articles/sites/files, /docs/files
-/docs/articles/organizations/faq, /docs/organization-faq
-/docs/articles/wordpress/pantheon-plugins, /docs/plugins
-/docs/articles/sites/security/SSL-TLS, /docs/ssl-tls
-/docs/articles/sites/settings, /docs/settings
-/docs/articles/sites/logs/nginx-access-log, /docs/nginx-access-log
-/docs/articles/sites/platform-considerations, /docs/platform-considerations
-/docs/articles/sites/domains/platform-domains, /docs/platform-domains
-/docs/articles/sites/plan-configurations, /docs/platform-resources
-/docs/articles/local/port-2222-blocked-workaround, /docs/port-2222
-/docs/articles/sites/private-files, /docs/private-files
-/docs/articles/sites/code/reading-pantheon-environment-configuration, /docs/read-environment-config
-/docs/articles/sites/code/redirect-incoming-requests, /docs/redirects
-/docs/articles/sites/redis-as-a-caching-backend, /docs/redis
-/docs/articles/local/refreshing-dns-records-on-your-local-machine, /docs/local-dns
-/docs/articles/drupal/fix-broken-links-that-reference-ip-port-instead-of-domain-name, /docs/drupal-broken-links
-/docs/articles/required-reading-essential-pantheon-documentation, /docs/required-reading
-/docs/articles/sites/resetting-passwords, /docs/resetting-passwords
-/docs/articles/sites/backups/restoring-an-environment-from-a-backup, /docs/restore-environment-backup
-/docs/articles/organizations/change-management, /docs/change-management
-/docs/articles/organizations/running-a-custom-upstream, /docs/running-custom-upstream
-/docs/articles/sites/code/server_name-and-server_port, /docs/server_name-and-server_port
-/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services, /docs/ssh-tunnels
-/docs/articles/sites/code/sso-and-identity-federation, /docs/sso
-/docs/articles/wordpress/hyperdb, /docs/hyperdb
-/docs/articles/scope-of-support, /docs/scope-of-support
-/docs/articles/sites/secure-phpinfo, /docs/phpinfo
-/docs/articles/sites/security, /docs/security
-/docs/articles/sites/settings/selecting-a-plan, /docs/select-plan
-/docs/articles/drupal/session-and-cookie-handling, /docs/sessions-and-cookies
-/docs/articles/drupal/cdn-setting-up-cloudfront, /docs/drupal-cloudfront
-/docs/articles/sites/domains/setting-up-a-domain-with-godaddy, /docs/godaddy-domain
-/docs/articles/organizations/sso, /docs/sso-organizations
-/docs/articles/local/starting-with-git, /docs/git
-/docs/articles/sites/domains/switching-dns, /docs/switching-dns
-/docs/articles/sites/team-management, /docs/team-management
-/docs/articles/sites/files/temp-files, /docs/temp-files
-/docs/articles/local/cli, /docs/terminus
-/docs/articles/sites/varnish/testing-varnish, /docs/testing-varnish
-/docs/articles/wordpress/wordpress-development-versions, /docs/wordpress-development-versions
-/docs/articles/sites/deploys, /docs/deploys
-/docs/articles/power-users, /docs/power-users
-/docs/articles/sites, /docs/sites
-/docs/articles/local/terminus-the-pantheon-command-line-interface, /docs/terminus-deprecated
-/docs/articles/sites/code/pantheon-yml, /docs/pantheon-yml
-/docs/articles/sites/timeouts, /docs/timeouts
-/docs/articles/sites/varnish/debugging-cache, /docs/debug-cache
-/docs/articles/local/undo-git-commits-like-overwriting-drupal-core, /docs/undo-commits
-/docs/articles/sites/code/unsupported-modules-plugins, /docs/unsupported-modules-plugins
-/docs/articles/sites/code/update-core-for-sites-running-outdated-versions-custom-distributions, /docs/custom-distribution-updates
-/docs/articles/drupal/updating-modules-through-drupal, /docs/drupal-module-updates
-/docs/articles/sites/updating-payment-methods, /docs/update-payment-method
-/docs/articles/sites/settings/upgrade-php-versions, /docs/php-versions
-/docs/articles/users, /docs/user-dashboard
-/docs/articles/sites/code/using-indexdepot-with-pantheon-sites, , /docs/indexdepot
-/docs/articles/local/using-mysql-workbench-to-access-a-database, /docs/mysql-workbench
-/docs/articles/sites/code/htaccess, /docs/htaccess
-/docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso, /docs/shibboleth-sso
-/docs/articles/wordpress/using-wp-cli-pantheon, /docs/wp-cli
-/docs/articles/local/using-winscp, /docs/winscp
-/docs/articles/sites/code/using-the-pantheon-workflow, /docs/pantheon-workflow
-/docs/articles/organizations/vanity-domains, /docs/vanity-domains
-/docs/articles/sites/varnish/caching-advancedtopics, /docs/caching-advanced-topics
-/docs/articles/sites/varnish, /docs/varnish
-/docs/articles/sites/what-is-apc-and-what-is-it-used-for, /docs/alternative-php-cache
-/docs/articles/sites/code/what-is-the-pantheon_api-module, /docs/pantheon_api-module
-/docs/articles/wordpress, /docs/wordpress
-/docs/articles/wordpress/wordpress-best-practices, /docs/wordpress-best-practices
-/docs/articles/wordpress/configuration-management-plugin, /docs/wp-cfm
-/docs/articles/wordpress/wordpress-faq, /docs/wordpress-faq
-/docs/articles/wordpress/wordpress-known-issues, /docs/wordpress-known-issues
-/docs/articles/wordpress/wordpress-pantheon-cache-plugin-configuration, /docs/wordpress-cache-plugin
-/docs/articles/wordpress/site-networks, /docs/wordpress-site-networks
-/docs/articles/wordpress/wordpress-and-php-sessions, /docs/wordpress-sessions
-/docs/articles/sites/code, /docs/code
-/docs/articles/local/rsync-and-sftp, /docs/rsync-and-sftp
-/docs/guides/ssl-with-cloudflare, /docs/guides/cloudflare-enable-https
-/docs/guides/automated-testing-wordpress-behat, /docs/guides/wordpress-automated-testing
-/docs/guides/collaborative-development-github-pantheon, /docs/guides/collaborative-development
-/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli, /docs/guides/wordpress-commandline
-/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal, /docs/guides/sendgrid
-/docs/changelog/2016-01-January, /docs/changelog/2016/01
-/docs/changelog/2016-02-February, /docs/changelog/2016/02
-/docs/changelog/2015-01-January, /docs/changelog/2015/01
-/docs/changelog/2015-02-February, /docs/changelog/2015/02
-/docs/changelog/2015-03-March, /docs/changelog/2015/03
-/docs/changelog/2015-04-April, /docs/changelog/2015/04
-/docs/changelog/2015-05-May, /docs/changelog/2015/05
-/docs/changelog/2015-06-June, /docs/changelog/2015/06
-/docs/changelog/2015-07-July, /docs/changelog/2015/07
-/docs/changelog/2015-08-August, /docs/changelog/2015/08
-/docs/changelog/2015-09-September, /docs/changelog/2015/09
-/docs/changelog/2015-10-October, /docs/changelog/2015/10
-/docs/changelog/2015-12-December, /docs/changelog/2015/12
+/docs/articles,/docs
+/docs/articles/users/access-management,/docs/access-management
+/docs/articles/local/accessing-mysql-databases,/docs/mysql-access
+/docs/articles/users/access-account-after-owner-leaves,/docs/site-access
+/docs/articles/sites/settings/add-a-credit-card-to-a-site,/docs/site-payments
+/docs/articles/sites/all-about-application-containers,/docs/application-containers
+/docs/articles/sites/apache-solr,/docs/solr
+/docs/articles/sites/code/applying-upstream-updates,/docs/upstream-updates
+/docs/articles/sites/logs/downloading-live-error-logs,/docs/download-logs
+/docs/articles/sites/quicksilver,/docs/quicksilver
+/docs/articles/sites/backups/backup-creation,/docs/create-backups
+/docs/articles/sites/backups,/docs/backups
+/docs/articles/sites/code/bots-and-indexing,/docs/bots-and-indexing
+/docs/articles/drupal/caching-in-drupal-modules,/docs/drupal-caching-modules
+/docs/articles/sites/create/choosing-start-state,/docs/start-state
+/docs/articles/wordpress/clone-a-wordpress-site-with-duplicator-plugin,/docs/wordpress-duplicator
+/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup,/docs/clone-new-site-backups
+/docs/articles/sites/cloudflare-cdn-and-dns,/docs/cloudflare
+/docs/articles/wordpress/cloudFront-setup-for-wordpress,/docs/wordpress-cloudfront
+/docs/articles/drupal/drupal8/configuration-management,/docs/drupal-8-configuration-management
+/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon,/docs/drupal-phpstorm
+/docs/articles/wordpress/configuring-phpstorm-on-pantheon-for-wordpress,/docs/wordpress-phpstorm
+/docs/articles/drupal/configuring-settings-php,/docs/settings-php
+/docs/articles/wordpress/configuring-wp-config-php,/docs/wp-config-php
+/docs/articles/sites/varnish/pantheon_stripped-get-parameter-values,/docs/pantheon_stripped
+/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution,/docs/content-delivery-network
+/docs/articles/local/continuous-integration-solutions,/docs/continuous-integration
+/docs/articles/sites/database/myisam-to-innodb,/docs/myisam-to-innodb
+/docs/articles/organizations/adding-a-custom-upstream,/docs/custom-upstream
+/docs/articles/sites/create,/docs/create-sites
+/docs/articles/local/cli/machine-tokens,/docs/machine-tokens
+/docs/articles/drupal/drupal8/create-services-yml-file,/docs/services-yml
+/docs/articles/drupal/cron,/docs/drupal-cron
+/docs/articles/wordpress/cron-for-wordpress,/docs/wordpress-cron
+/docs/articles/sites/database/database-connection-errors,/docs/database-connection-errors
+/docs/articles/sites/database,/docs/database-workflow
+/docs/articles/sites/date-and-time,/docs/date-and-time
+/docs/articles/sites/debugging-connectivity-issues,/docs/debug-connections
+/docs/articles/sites/logs/debugging-sites-with-log-files,/docs/debug-log-files
+/docs/articles/sites/code/debugging-slow-performance,/docs/debug-slow-performance
+/docs/articles/users/deleting-your-pantheon-account,/docs/delete-account
+/docs/articles/sites/deleting-a-site,/docs/delete-site
+/docs/articles/sites/code/developing-directly-with-sftp-mode,/docs/sftp
+/docs/articles/sites/domains/developing-with-https,/docs/build-https
+/docs/articles/sites/domains/fastly-domain-masking,/docs/fastly-domain
+/docs/articles/sites/domains,/docs/domains
+/docs/articles/drupal/drupal8/drupal-8-performance-and-caching-settings,/docs/drupal-8-cache
+/docs/articles/drupal/drupal8,/docs/drupal-8
+/docs/articles/local/drupal-drush-command-line-utility,/docs/drush
+/docs/articles/drupal/drupal-performance-and-caching-settings,/docs/drupal-cache
+/docs/articles/drupal,/docs/drupal
+/docs/articles/sites/code/dynamic-outgoing-ip-addresses,/docs/outgoing-ips
+/docs/articles/sites/code/email,/docs/email
+/docs/articles/organizations/https-for-sites-using-a-custom-vanity-domain,/docs/enable-https-vanity-domain
+/docs/articles/sites/domains/adding-a-ssl-certificate-for-secure-https-communication,/docs/enable-https
+/docs/articles/wordpress/solr,/docs/wordpress-solr
+/docs/articles/drupal/solr,/docs/solr-drupal
+/docs/articles/wordpress/environment-specific-config,/docs/environment-specific-config
+/docs/articles/sites/errors-and-server-responses,/docs/errors-and-server-responses
+/docs/articles/sites/migrate/export-an-existing-drupal-site,/docs/drupal-export
+/docs/articles/sites/migrate/export-an-existing-wordpress-site,/docs/wordpress-export
+/docs/articles/sites/external-libraries,/docs/external-libraries
+/docs/articles/drupal/unwind-a-multisite,/docs/unwind-multisite
+/docs/articles/local/filezilla,/docs/filezilla
+/docs/articles/sites/files/filesystem-faqs,/docs/filesystem-faq
+/docs/articles/wordpress/fix-broken-links-in-wordpress,/docs/wordpress-broken-links
+/docs/articles/frequently-asked-questions,/docs/faq
+/docs/articles/sites/domains/gandi-pantheon-pointing-your-dns,/docs/gandi-domain
+/docs/articles/users/generating-ssh-keys,/docs/generate-ssh-key
+/docs/articles/getting-started,/docs/getting-started
+/docs/articles/wordpress/site-networks/getting-started,/docs/create-wordpress-site-networks
+/docs/articles/getting-support,/docs/getting-support
+/docs/articles/drupal/getting-the-client-ip-address,/docs/client-ip
+/docs/articles/local/git-faq,/docs/git-faq
+/docs/articles/going-live,/docs/going-live
+/docs/articles/sites/horizontal-scalability,/docs/horizontal-scalability
+/docs/articles/sites/code/hot-fixes,/docs/hot-fixes
+/docs/articles/sites/database/kill-mysql-queries,/docs/kill-mysql-queries
+/docs/articles/sites/migrate/importing-drush-site-archives-with-terminus,/docs/drush-import
+/docs/articles/local/installing-cygwin-on-windows,/docs/cygwin-windows
+/docs/articles/wordpress/installing-redis-on-wordpress,/docs/wordpress-redis
+/docs/articles/sites/code/ldap-and-ldaps,/docs/ldap-and-ldaps
+/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis,/docs/drupal-launch-check
+/docs/articles/wordpress/launch-check-wordpress-performance-and-configuration-analysis,/docs/wordpress-launch-check
+/docs/articles/wordpress/starting-wordpress-site,/docs/launch-wordpress
+/docs/articles/load-and-performance-testing,/docs/load-and-performance-testing
+/docs/articles/users/loading-ssh-keys,/docs/add-ssh-key
+/docs/articles/local,/docs/local-development
+/docs/articles/sites/security/locking-your-site,/docs/lock-environment
+/docs/articles/sites/logs,/docs/logs
+/docs/articles/sites/mime-types,/docs/mime-types
+/docs/articles/drupal/major-version-drupal-upgrades,/docs/drupal-updates
+/docs/articles/sites/domains/multiple-sites-single-domain,/docs/single-application-sites
+/docs/articles/local/drush-versions,/docs/drush-versions
+/docs/articles/organizations/dashboard,/docs/organization-dashboard
+/docs/articles/organizations/managing-upstreams,/docs/managing-upstreams
+/docs/articles/wordpress/site-networks/managing,/docs/managing-wordpress-site-networks
+/docs/articles/sites/migrate,/docs/migrate
+/docs/articles/sites/migrate/manual-site-import,/docs/manual-import
+/docs/articles/sites/migrate/wordpress-site-networks,/docs/migrate-wordpress-site-networks
+/docs/articles/sites/migrate/migrating-from-wpengine,/docs/migrate-from-wpengine
+/docs/articles/sites/code/more-ways-of-managing-code-in-sftp-mode,/docs/more-sftp
+/docs/articles/drupal/drupal8/moving-out-of-testing,/docs/drupal-8-testing
+/docs/articles/sites/multidev,/docs/multidev
+/docs/articles/drupal/multilingual-best-practices,/docs/multilingual
+/docs/articles/sites/logs/mysql-slow-log,/docs/mysql-slow-log
+/docs/articles/sites/newrelic/mysql-troubleshooting-with-new-relic-pro,/docs/debug-mysql-new-relic
+/docs/articles/sites/newrelic,/docs/new-relic
+/docs/articles/sites/newrelic/new-relic-performance-analysis,/docs/new-relic-analysis
+/docs/articles/sites/new-site-owner,/docs/site-owner-faq
+/docs/articles/sites/files/non-standard-files-locations,/docs/non-standard-file-paths
+/docs/articles/optimizing,/docs/cloud-optimization
+/docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6,/docs/drupal-6-image-cache
+/docs/articles/organizations,/docs/organizations
+/docs/articles/sites/php-errors-and-exceptions,/docs/php-errors
+/docs/articles/sites/logs/php-slow-log,/docs/php-slow-log
+/docs/articles/sites/code/pantheon-enterprise-gateway,/docs/pantheon-enterprise-gateway
+/docs/articles/sites/files,/docs/files
+/docs/articles/organizations/faq,/docs/organization-faq
+/docs/articles/wordpress/pantheon-plugins,/docs/plugins
+/docs/articles/sites/security/SSL-TLS,/docs/ssl-tls
+/docs/articles/sites/settings,/docs/settings
+/docs/articles/sites/logs/nginx-access-log,/docs/nginx-access-log
+/docs/articles/sites/platform-considerations,/docs/platform-considerations
+/docs/articles/sites/domains/platform-domains,/docs/platform-domains
+/docs/articles/sites/plan-configurations,/docs/platform-resources
+/docs/articles/local/port-2222-blocked-workaround,/docs/port-2222
+/docs/articles/sites/private-files,/docs/private-files
+/docs/articles/sites/code/reading-pantheon-environment-configuration,/docs/read-environment-config
+/docs/articles/sites/code/redirect-incoming-requests,/docs/redirects
+/docs/articles/sites/redis-as-a-caching-backend,/docs/redis
+/docs/articles/local/refreshing-dns-records-on-your-local-machine,/docs/local-dns
+/docs/articles/drupal/fix-broken-links-that-reference-ip-port-instead-of-domain-name,/docs/drupal-broken-links
+/docs/articles/required-reading-essential-pantheon-documentation,/docs/required-reading
+/docs/articles/sites/resetting-passwords,/docs/resetting-passwords
+/docs/articles/sites/backups/restoring-an-environment-from-a-backup,/docs/restore-environment-backup
+/docs/articles/organizations/change-management,/docs/change-management
+/docs/articles/organizations/running-a-custom-upstream,/docs/running-custom-upstream
+/docs/articles/sites/code/server_name-and-server_port,/docs/server_name-and-server_port
+/docs/articles/local/ssh-tunnels-for-secure-connections-to-pantheon-services,/docs/ssh-tunnels
+/docs/articles/sites/code/sso-and-identity-federation,/docs/sso
+/docs/articles/wordpress/hyperdb,/docs/hyperdb
+/docs/articles/scope-of-support,/docs/scope-of-support
+/docs/articles/sites/secure-phpinfo,/docs/phpinfo
+/docs/articles/sites/security,/docs/security
+/docs/articles/sites/settings/selecting-a-plan,/docs/select-plan
+/docs/articles/drupal/session-and-cookie-handling,/docs/sessions-and-cookies
+/docs/articles/drupal/cdn-setting-up-cloudfront,/docs/drupal-cloudfront
+/docs/articles/sites/domains/setting-up-a-domain-with-godaddy,/docs/godaddy-domain
+/docs/articles/organizations/sso,/docs/sso-organizations
+/docs/articles/local/starting-with-git,/docs/git
+/docs/articles/sites/domains/switching-dns,/docs/switching-dns
+/docs/articles/sites/team-management,/docs/team-management
+/docs/articles/sites/files/temp-files,/docs/temp-files
+/docs/articles/local/cli,/docs/terminus
+/docs/articles/sites/varnish/testing-varnish,/docs/testing-varnish
+/docs/articles/wordpress/wordpress-development-versions,/docs/wordpress-development-versions
+/docs/articles/sites/deploys,/docs/deploys
+/docs/articles/power-users,/docs/power-users
+/docs/articles/sites,/docs/sites
+/docs/articles/local/terminus-the-pantheon-command-line-interface,/docs/terminus-deprecated
+/docs/articles/sites/code/pantheon-yml,/docs/pantheon-yml
+/docs/articles/sites/timeouts,/docs/timeouts
+/docs/articles/sites/varnish/debugging-cache,/docs/debug-cache
+/docs/articles/local/undo-git-commits-like-overwriting-drupal-core,/docs/undo-commits
+/docs/articles/sites/code/unsupported-modules-plugins,/docs/unsupported-modules-plugins
+/docs/articles/sites/code/update-core-for-sites-running-outdated-versions-custom-distributions,/docs/custom-distribution-updates
+/docs/articles/drupal/updating-modules-through-drupal,/docs/drupal-module-updates
+/docs/articles/sites/updating-payment-methods,/docs/update-payment-method
+/docs/articles/sites/settings/upgrade-php-versions,/docs/php-versions
+/docs/articles/users,/docs/user-dashboard
+/docs/articles/sites/code/using-indexdepot-with-pantheon-sites,/docs/indexdepot
+/docs/articles/local/using-mysql-workbench-to-access-a-database,/docs/mysql-workbench
+/docs/articles/sites/code/htaccess,/docs/htaccess
+/docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso,/docs/shibboleth-sso
+/docs/articles/wordpress/using-wp-cli-pantheon,/docs/wp-cli
+/docs/articles/local/using-winscp,/docs/winscp
+/docs/articles/sites/code/using-the-pantheon-workflow,/docs/pantheon-workflow
+/docs/articles/organizations/vanity-domains,/docs/vanity-domains
+/docs/articles/sites/varnish/caching-advancedtopics,/docs/caching-advanced-topics
+/docs/articles/sites/varnish,/docs/varnish
+/docs/articles/sites/what-is-apc-and-what-is-it-used-for,/docs/alternative-php-cache
+/docs/articles/sites/code/what-is-the-pantheon_api-module,/docs/pantheon_api-module
+/docs/articles/wordpress,/docs/wordpress
+/docs/articles/wordpress/wordpress-best-practices,/docs/wordpress-best-practices
+/docs/articles/wordpress/configuration-management-plugin,/docs/wp-cfm
+/docs/articles/wordpress/wordpress-faq,/docs/wordpress-faq
+/docs/articles/wordpress/wordpress-known-issues,/docs/wordpress-known-issues
+/docs/articles/wordpress/wordpress-pantheon-cache-plugin-configuration,/docs/wordpress-cache-plugin
+/docs/articles/wordpress/site-networks,/docs/wordpress-site-networks
+/docs/articles/wordpress/wordpress-and-php-sessions,/docs/wordpress-sessions
+/docs/articles/sites/code,/docs/code
+/docs/articles/local/rsync-and-sftp,/docs/rsync-and-sftp
+/docs/guides/ssl-with-cloudflare,/docs/guides/cloudflare-enable-https
+/docs/guides/automated-testing-wordpress-behat,/docs/guides/wordpress-automated-testing
+/docs/guides/collaborative-development-github-pantheon,/docs/guides/collaborative-development
+/docs/guides/create-a-wordpress-site-from-the-commandline-with-terminus-and-wp-cli,/docs/guides/wordpress-commandline
+/docs/guides/using-sendgrid-to-deliver-email-with-wordpress-and-drupal,/docs/guides/sendgrid
+/docs/changelog/2016-01-January,/docs/changelog/2016/01
+/docs/changelog/2016-02-February,/docs/changelog/2016/02
+/docs/changelog/2015-01-January,/docs/changelog/2015/01
+/docs/changelog/2015-02-February,/docs/changelog/2015/02
+/docs/changelog/2015-03-March,/docs/changelog/2015/03
+/docs/changelog/2015-04-April,/docs/changelog/2015/04
+/docs/changelog/2015-05-May,/docs/changelog/2015/05
+/docs/changelog/2015-06-June,/docs/changelog/2015/06
+/docs/changelog/2015-07-July,/docs/changelog/2015/07
+/docs/changelog/2015-08-August,/docs/changelog/2015/08
+/docs/changelog/2015-09-September,/docs/changelog/2015/09
+/docs/changelog/2015-10-October,/docs/changelog/2015/10
+/docs/changelog/2015-12-December,/docs/changelog/2015/12
