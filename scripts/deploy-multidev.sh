@@ -67,7 +67,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
           if [[ $doc =~ $doc_file ]]
           then
               # Only add the modified file if it does not already exist in the comment
-              grep -- ''"${doc:7: -3}"'' comment.txt || echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
+              grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:8: -3}")\n" >> comment.txt
           else
               # Only add the modified file if it does not already exist in the comment
               grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
@@ -92,7 +92,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         do
           if [[ $doc =~ $doc_file ]]
           then
-              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
+              echo -n "-\u0020["${doc:8: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:8: -3}")\n" >> comment.txt
           else
               echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
