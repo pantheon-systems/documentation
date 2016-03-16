@@ -70,7 +70,10 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 
 ## Amazon S3 CORS
 
-NOTE:  The latest version of the Amazon S3 CORS module has Composer Manager as a dependency.  At present, we do not recommend using Composer Manager on the platform, and so a previous version of the module may be required.  Native Composer installations *are* supported on Pantheon.  Track the issue on [Drupal.org](https://www.drupal.org/node/2688553).
+<div class="alert alert-info">
+<h4>Note</h4>
+The latest version of the Amazon S3 CORS module has Composer Manager as a dependency.  Composer Manager is not recommended or supported on the platform at this time. Native Composer installations are supported.  For details, see related drupal.org issue <a href="https://www.drupal.org/node/2688553">Composer Manager dependency</a>.
+</div>
 
 You can configure the [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module to directly upload to Amazon S3 from within your browser, without needing to upload to Pantheon. This avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
 
