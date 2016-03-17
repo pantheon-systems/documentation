@@ -2,7 +2,7 @@
 title: Debugging Sites with Log Files
 description: Learn to debug your Pantheon Drupal or WordPress sites using log files.
 categories: [developing]
-tags: [debug, code, logs]
+tags: [debug, code, logs, featured]
 keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, debug sql, troubleshoot mysql, troubleshoot sql, database logs, db logs, where are db logs stored, where are database logs
 ---
 One of the key ways to find issues on your website is to check your database logs to isolate current or potential problems.
