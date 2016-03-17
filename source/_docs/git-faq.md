@@ -242,7 +242,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/guides/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
 
 ### Why are some merged commits hidden?
 
