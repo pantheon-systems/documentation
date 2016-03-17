@@ -25,10 +25,10 @@
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                {% if page.contributors %}
+                <!--{% if page.contributors %}
                 {% set contributor_list = page.contributors %}
                 <small><i  style="margin-left:20px;" class="fa fa-users"></i> Contributors: {% include 'doc_contributor_list.twig' %}</small>
-                {% endif %}
+                {% endif %}-->
                 <span class="pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="getpantheon" data-count="none">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script src="//platform.linkedin.com/in.js" type="IN/Share"  data-url="https://pantheon.io{{ page.url }}" data-counter="none"></script></span>
