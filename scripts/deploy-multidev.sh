@@ -67,7 +67,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
           if [[ $doc =~ $doc_file ]]
           then
               # Only add the modified file if it does not already exist in the comment
-              grep -- ''"${doc:7: -3}"'' comment.txt || echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
+              grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:8: -3}")\n" >> comment.txt
           else
               # Only add the modified file if it does not already exist in the comment
               grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
@@ -92,7 +92,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         do
           if [[ $doc =~ $doc_file ]]
           then
-              echo -n "-\u0020["${doc:7: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:7: -3}")\n" >> comment.txt
+              echo -n "-\u0020["${doc:8: -3}"](http://"$normalize_branch"-static-docs.pantheonsite.io/"${doc:8: -3}")\n" >> comment.txt
           else
               echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
@@ -107,9 +107,11 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Update redirect script for the Multidev environment
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheonsite.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
+    sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
     # Update CTA edit link so that the current branch is used
-    sed -i '12s/master/'"$CIRCLE_BRANCH"'/g' source/_views/article.html
-    sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/landing.html
+    sed -i '42s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+    sed -i '32s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+
 
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod

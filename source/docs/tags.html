@@ -1,0 +1,17 @@
+---
+layout: taxon
+use:
+    - docs_tags
+---
+<title>Doc Tags | {{ site.title }}</title>
+<h1 class="pio-docs-title">Doc Tags</h1>
+
+{% for tag,docs in data.docs_tags %}
+{% if tag == "getting-started" %}
+  <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}">Getting Started</a><br>
+{% elseif tag == "drupal-8" %}
+  <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}">Drupal 8</a><br>
+{% else %}
+  <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}">{{ tag|capitalize }}</a><br>
+{% endif %}
+{% endfor %}

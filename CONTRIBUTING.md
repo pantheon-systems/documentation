@@ -44,7 +44,7 @@ Headers and Subheaders render as H2 and H3 tags when the site is published. Thes
 
 ### Use of Images
 
-All images must include a descriptive `alt` value. For details, see the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/docs/assets/images/readme.md).
+All images must include a descriptive `alt` value. For details, see the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/assets/images/readme.md).
 
 ## Edit on GitHub
 
@@ -60,20 +60,52 @@ From your local repo, run the following commands in order:
 ## Add a New Doc
 
 ### Front Matter
-All of our documentation is generated from markdown files, found at [`source/docs/articles/`](/source/docs/articles/) and [`source/docs/guides/`](source/docs/guides/). These markdown files must have front matter that allow the page to render successfully. This is required if you plan to create a new doc. Here's an example:
+All of our documentation is generated from markdown files, found at [`source/_docs/`](/source/_docs/) and [`source/docs/guides/`](source/docs/guides/). These markdown files must have front matter that allow the page to render successfully. This is required if you plan to create a new doc. Here's an example:
 ```
 ---
-title: Starting With Git
-description: Use Git version control with your Pantheon site.
-category:
-  - getting-started
-  - developing
-
+title: Git FAQs
+description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
+categories: [developing]
+tags: [code, local]
+keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
+contributors: mrfelton
 ---
 ```
+### Taxonomies
+Docs should include three unique taxonomies: categories, tags, and contributors. Currently, the only taxonomy used within Guides is contributors.
+#### Categories
+Only the following categories should be included (case sensitive):
 
-### Attribution
-If you're creating your **first** guide, you must also create an Author profile. Fill out the information below and add it to the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Commit this change alongside your new guide.
+- developing
+- managing
+- wordpress
+- drupal
+
+ If you feel that another category should be created, indicate the suggestion within your pull request and a moderator will review.
+#### Tags
+Only the following tags should be included (case sensitive):
+
+- platform
+- getting-started
+- local
+- code
+- backups
+- domains
+- varnish
+- organizations
+- migrate
+- files
+- create
+- database
+- debug
+- logs
+- drupal-8
+- terminus
+
+If you feel that another tag should be created, indicate the suggestion within your pull request and a moderator will review.
+
+### Contributors
+Create a contributor profile within your **first** contribution. Fill out the information below and add it to the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Commit this change alongside your new guide.
 ```
 your_handle:
    name: Your Name
@@ -87,7 +119,7 @@ your_handle:
    wordpress: https://profiles.wordpress.org/
 bio: This shouldn't be long, just a short intro.
 ```
-Please provide at least "name" and "bio". The "gplus" URL is useful to show your author info on Google search results.
+Please provide at least "name" and "bio". The "gplus" URL is useful to show your contributor info on Google search results.
 
 
 ## Submit a Pull Request
@@ -105,7 +137,7 @@ Some things to follow to help increase the chance that your pull request will be
 
 ## Moderator Expectations
 
-Moderators will review and comment on pull requests within three business days. We may suggest changes, improvements, or alternatives in which case the original author will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
+Moderators will review and comment on pull requests within three business days. We may suggest changes, improvements, or alternatives in which case the original contributor will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
 
 ## Additional Resources
 

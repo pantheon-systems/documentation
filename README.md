@@ -89,6 +89,7 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  until you identify and resolve the problem.  
 5. Images  
  For images to render on your local environment you need to apply these commands from within the `documentation` directory:
+
  ```
  $ cd output_dev
  $ ln -s ./ source

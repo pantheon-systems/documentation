@@ -4,125 +4,26 @@ sculpin_theme:
 sculpin_content_types:
 
     posts:
-        permalink: docs/changelog/:year-:month-:filename/
+        permalink: docs/changelog/:year/:month/
         path: docs/changelog
         enabled: true
 
-    articles:
+    docs:
         type: path
-        path: docs/articles
-        singular_name: article
+        path: _docs
+        singular_name: doc
         enabled: true
         taxonomies:
-            - category
-        permalink: pretty
+            - categories
+            - tags
+            - contributors
+        permalink: docs/:basename/
 
     guides:
         type: path
-        path: docs/guides
+        path: docs/_guides
         singular_name: guide
         enabled: true
         taxonomies:
-            - category
-            - authors
-        permalink: pretty
-    drupal:
-        type: path
-        path: docs/articles/drupal
-        enabled: true
-        permalink: pretty
-    eight:
-        type: path
-        path: docs/articles/drupal/drupal8
-        enabled: true
-        permalink: pretty
-    local:
-        type: path
-        path: docs/articles/local
-        enabled: true
-        permalink: pretty
-    organizations:
-        type: path
-        path: docs/articles/organizations
-        enabled: true
-        permalink: pretty
-    sites:
-        type: path
-        path: docs/articles/sites
-        enabled: true
-        permalink: pretty
-    backups:
-        type: path
-        path: docs/articles/sites/backups
-        enabled: true
-        permalink: pretty
-    code:
-        type: path
-        path: docs/articles/sites/code
-        enabled: true
-        permalink: pretty
-    create:
-        type: path
-        path: docs/articles/sites/create
-        enabled: true
-        permalink: pretty
-    database:
-        type: path
-        path: docs/articles/sites/database
-        enabled: true
-        permalink: pretty
-    domains:
-        type: path
-        path: docs/articles/sites/domains
-        enabled: true
-        permalink: pretty
-    files:
-        type: path
-        path: docs/articles/sites/files
-        enabled: true
-        permalink: pretty
-    logs:
-        type: path
-        path: docs/articles/sites/logs
-        enabled: true
-        permalink: pretty
-    migrate:
-        type: path
-        path: docs/articles/sites/migrate
-        enabled: true
-        permalink: pretty
-    newrelic:
-        type: path
-        path: docs/articles/sites/newrelic
-        enabled: true
-        permalink: pretty
-    security:
-        type: path
-        path: docs/articles/sites/security
-        enabled: true
-        permalink: pretty
-    settings:
-        type: path
-        path: docs/articles/sites/settings
-        enabled: true
-        permalink: pretty
-    varnish:
-        type: path
-        path: docs/articles/sites/varnish
-        enabled: true
-        permalink: pretty
-    users:
-        type: path
-        path: docs/articles/users
-        enabled: true
-        permalink: pretty
-    wordpress:
-        type: path
-        path: docs/articles/wordpress
-        enabled: true
-        permalink: pretty
-    wordpressnetworks:
-        type: path
-        path: docs/articles/wordpress/site-networks
-        enabled: true
-        permalink: pretty
+            - contributors
+        permalink: docs/guides/:basename/

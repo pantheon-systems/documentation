@@ -1,0 +1,23 @@
+---
+layout: taxon
+generator: docs_tag_index
+---
+<header>
+{% set taxon = page.tag %}
+{% if taxon == "getting-started" %}
+  <title>Getting Started | {{ site.title }}</title>
+  <h1 class="pio-docs-title">Getting Started</h1>
+{% elseif taxon == "drupal-8" %}
+  <title>Drupal 8 | {{ site.title }}</title>
+  <h1 class="pio-docs-title">Drupal 8</h1>
+{% else %}
+  <title>{{ taxon|capitalize }} | {{ site.title }}</title>
+  <h1 class="pio-docs-title">{{ taxon|capitalize }}</h1>
+{% endif %}
+{% if site[taxon] %}
+  <h4>{{ site[taxon] }}</h4>
+{% endif %}
+</header>
+  {% for doc in page.tag_docs %}
+    <a href="{{ doc.url }}">{{ doc.title }}</a><br>
+  {% endfor %}
