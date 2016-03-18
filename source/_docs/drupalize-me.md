@@ -1,6 +1,8 @@
 ---
 title: Manage Drupal Sites with Pantheon
 description: View the instructional video series produced by our friends at Drupalize.me to learn about Pantheon.
+categories: [drupal]
+tags: [code]
 ---
 
 Learn about Pantheon from our friends at Drupalize.me.
