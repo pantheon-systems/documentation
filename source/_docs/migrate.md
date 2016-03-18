@@ -8,7 +8,7 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly.
 
-We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). For more details, see [Migrate to Pantheon: WordPress](/docs/articles/sites/migrate/pantheon-migration-plugin).
+We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). For more details, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress).
 
 ## Create Archives
 

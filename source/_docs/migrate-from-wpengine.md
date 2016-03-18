@@ -43,7 +43,7 @@ If the migration is not successful, contact <migrations@pantheon.io> and include
 8. Test your site once the code, database, and files are all in place. Verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for verification.
 
 ## Considerations
-
+For additional details, see [Platform Considerations](/docs/platform-considerations).
 ### Folder Permission Errors
 If you receive any permission errors, verify your current PHP handler. You may need to switch it to SuPHP or DSO, depending on which one was running on the previous side.
 
