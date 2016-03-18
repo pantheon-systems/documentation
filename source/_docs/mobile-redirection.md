@@ -1,8 +1,10 @@
 ---
 title: Enable Mobile Redirection with CloudFlare
 description: Learn how to use CloudFlare to set up mobile redirection.
-category:
+categories:
   - developing
+tags:
+  - domains
 keywords: dns, cloudflare, mobile, redirect-incoming-requests, mobile tools
 ---
 This article walks you though setting up a mobile redirect service through CloudFlare to automatically redirect visitors using mobile device visitors to a mobile optimized home page.
