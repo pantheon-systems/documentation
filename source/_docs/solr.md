@@ -22,7 +22,7 @@ Currently, all plans except for a Personal plan can use Solr. Solr is available 
 
 ## Using Solr with WordPress or Drupal
 
-For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/solr) or [Enabling Solr with Drupal](/docs/solr).
+For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr) or [Enabling Solr with Drupal](/docs/solr-drupal).
 
 ## Known Limitations of Pantheon's Solr Service
 
