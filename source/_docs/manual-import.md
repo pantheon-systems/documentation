@@ -113,7 +113,7 @@ fi
 
 while [ 1 ]
 do
-sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/* --temp-dir=../tmp/  ./files/
+sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/ --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 if [ "$?" = "0" ] ; then
 echo "rsync completed normally"
 exit
@@ -123,7 +123,7 @@ sleep 180
 fi
 done
 ```
-This script connects to your Pantheon site's Dev environment and starts downloading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.  
+This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.  
 
 If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
 
