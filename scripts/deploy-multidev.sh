@@ -109,8 +109,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
     # Update CTA edit link so that the current branch is used
-    sed -i '42s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-    sed -i '32s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+    sed -i '43s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+    sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
 
 
     # Regenerate sculpin to reflect new redirect logic
