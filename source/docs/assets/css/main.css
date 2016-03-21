@@ -2209,6 +2209,10 @@ color: #274E13 !important;
   font-weight: 400;
   cursor: not-allowed;
 }
+#subnav .subnav-search {
+  float:right;
+  width:60%;
+}
 @-moz-document url-prefix() {
     .navbar-fixed-top > .col-md-8 {
         margin-top: 20px;

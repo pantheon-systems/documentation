@@ -51,9 +51,7 @@
       </div>
     </div>
 <!-- Sub Navbar -->
-    <div class="navbar-fixed-top col-md-12" id="subnav">
-        <div class="col-md-12 navbar-collapse collapse">
-          <div class="col-md-6 pull-right">{% include("search_box.html") %}</div>
+    <div class="navbar-fixed-top col-md-12 navbar-collapse collapse" id="subnav">
           <ul style="float:left;" class="nav navbar-nav">
           <li class="dropdown">
             <a data-proofer-ignore class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs  <span class="caret"></span></a>
@@ -72,5 +70,5 @@
           </li>
           <li><a href="/docs/changelog">Changelog</a></li>
         </ul>
-    </div>
+        <span class="subnav-search">{% include("search_box.html") %}</span>
   </div>
