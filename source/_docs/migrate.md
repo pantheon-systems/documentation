@@ -28,7 +28,7 @@ You’ll need to package up your:
 
 Follow these best practices before exporting your site:
 
-* **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance in Drupal, or with extra code (we recommend the [Maintenance Mode plugin](https://wordpress.org/plugins/wp-maintenance-mode/)) in WordPress.  This will prevent the contents of your database from getting out of sync while you’re exporting.
+* **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance in Drupal, or with extra code (we recommend the [Maintenance Mode](https://wordpress.org/plugins/wp-maintenance-mode/)) plugin in WordPress.  This will prevent the contents of your database from getting out of sync while you’re exporting.
 * **Upgrade to the latest version of Drupal or WordPress core**. If your site runs an old version of core, our import process forces you to upgrade. Doing it before importing can avoid problems stemming from an out-of-sync database and codebase, and can expose incompatibilities that should be fixed.
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 Due to <a href="https://codex.wordpress.org/Upgrading_WordPress_-_Extended_Instructions#Upgrading_Across_Multiple_Versions">WordPress's incremental upgrade practice</a>, we highly recommend upgrading WordPress to the latest version in place or in a local environment before attempting to import the site to Pantheon. Importing an old site will upgrade WordPress code directly to the latest version.</div>

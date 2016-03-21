@@ -17,7 +17,7 @@ We recommend using an external SMTP server or service for all production use-cas
 
 Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
 
-Once you have chosen your SMTP provider, install and configure [Drupal's SMTP module](http://drupal.org/project/smtp).
+Once you have chosen your SMTP provider, install and configure [Drupal's SMTP](http://drupal.org/project/smtp) module.
 
 ## Troubleshooting
 

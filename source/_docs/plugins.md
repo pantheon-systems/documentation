@@ -12,11 +12,11 @@ Pantheon's WordPress upstream adds [two must-use plugins](https://github.com/pan
 
 ### Pantheon-Updates
 
-The [Pantheon Updates plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) prevents automatic updates of all plugins, themes, and WordPress core. We do this because it is unsafe to update directly on the live environment without testing updates in a private environment first. The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from wordpress.org. Any plugin or theme updates must be performed in a Development environmentent before being committed to code and deployed to the Test and Live environments. WordPress core updates must be applied to a Development environment via our Git-based [upstream core updates feature](/docs/upstream-updates/).
+The [Pantheon Updates](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin prevents automatic updates of all plugins, themes, and WordPress core. We do this because it is unsafe to update directly on the live environment without testing updates in a private environment first. The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from wordpress.org. Any plugin or theme updates must be performed in a Development environmentent before being committed to code and deployed to the Test and Live environments. WordPress core updates must be applied to a Development environment via our Git-based [upstream core updates feature](/docs/upstream-updates/).
 
 ###Pantheon-Cache
 
-The [Pantheon Cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-cache.php) facilitates communication between Pantheon's Edge Cache layer and WordPress. It allows you to set the default cache age, clear individual pages on demand, and it will automatically clear relevant urls when the site is updated.
+The [Pantheon Cache](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress. It allows you to set the default cache age, clear individual pages on demand, and it will automatically clear relevant urls when the site is updated.
 
 Access the plugin by going to the WordPress dashboard and clicking **Settings** > **Pantheon Cache**.
 
