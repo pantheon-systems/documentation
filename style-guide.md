@@ -2,7 +2,7 @@
 
 #About This Guide
 
-This style guide will help authors who create technical content write in consistent voice, tone, and style.
+This style guide will help contributors who create technical content write in consistent voice, tone, and style.
 
 For any questions or comments, [create an issue](https://github.com/pantheon-systems/documentation/issues).
 
@@ -31,11 +31,11 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 * Write in an action-oriented style. Focus on helping the user complete the task at hand by writing in the active voice. An active voice is more direct and reduces ambiguity. Avoid passive voice as it is often vague and creates awkward sentences.
 
-* Be mindful of the audience's varying needs and prior knowledge. Write content  that users of all technical knowledge and experience-level can easily understand and follow.
+* Be mindful of the audience's varying needs and prior knowledge. Write content that users with various amounts of technical knowledge and experience can easily understand and follow.
 
 * Use of contractions:  Contractions can be used to create a conversational, informal tone, such as in FAQs or WalkMe content. Avoid using contractions in UI labels i.e. button names, page headers, etc.
 
-* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent. For instance,  when referring to a button or page name in technical documentation.
+* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent, for instance when referring to a button or page name in technical documentation.
 
 ## Web Content Types
 
@@ -73,7 +73,6 @@ Any bits of code should be wrapped in backticks.  Any standalone code blocks sho
 ### Links
 
 Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
-
 
 ### Anchor Tags
 
@@ -268,7 +267,7 @@ If there are tasks a user needs to have completed before continuing on with the 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
 ##Pantheon_Environment
-TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals $_ENV['PANTHEON_ENVIRONMENT'] (always around) or '$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
+TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals `$_ENV['PANTHEON_ENVIRONMENT']` (always around) or `$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
 
 ## Notes
@@ -417,7 +416,7 @@ The final step is to deploy your code and plugin settings to the live environmen
 ### User Dashboard
 It's always referred to as User Dashboard in order to reduce confusion between the Org Dashboard and Site Dashboard.
 
-![User Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
+![User Dashboard](/source/assets/images/pantheon-user-dashboard1.png)
 
 #### Tabs on the User Dashboard
 Organizations Tab
@@ -430,7 +429,7 @@ Open a ticket on the Support tab.
 
 Terms to use when referring to the Dashboard: Site Dashboard or the Dashboard.
 
-![Site Dashboard](/source/docs/assets/images/site-dashboard-image.png)
+![Site Dashboard](/source/assets/images/site-dashboard-image.png)
 
 #### Site Dashboard Tools
 Capitalize the name of the tab, but not the word "tab".  
@@ -446,7 +445,7 @@ PHP errors are listed on the Errors tab.
 
 [Knowledge Base Best Practices](http://kb.mit.edu/confluence/display/handbook/Knowledge+Base+Best+Practices "MIT.edu, KB best practices")
 
-[Atlassian Author Guidelines](https://confluence.atlassian.com/display/ALLDOC/Author+Guidelines#AuthorGuidelines-9.DocumentationStyleGuidelines)
+[Atlassian contributor Guidelines](https://confluence.atlassian.com/display/ALLDOC/contributor+Guidelines#contributorGuidelines-9.DocumentationStyleGuidelines)
 
 [Atlassian Writing Style](https://design.atlassian.com/latest/product/foundations/writing-style/)
 

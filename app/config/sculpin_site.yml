@@ -5,10 +5,15 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 1.12
+assets_version: 2.0
+
+managing: Learn how to manage sites, users, teams, and organizations on Pantheon.
+developing: Learn how to build and launch your site on Pantheon.
+featured: Get answers to common questions by browsing our most frequently used docs.
+
 
 #######################################################################################################
-# The authors. Include your info here, under the "authors" key, using the following template:
+# The contributors. Include your info here, under the "contributors" key, using the following template:
 #
 #  handle:
 #      name: Your Name
@@ -22,11 +27,11 @@ assets_version: 1.12
 #      wordpress: https://profiles.wordpress.org/
 #      bio: this is a short bio, it should not be so long, just a quick info that defines you.
 #
-# Please provide at least "name" and "bio" . The googleplus url is useful to show your author info
+# Please provide at least "name" and "bio" . The googleplus url is useful to show your contributor info
 # on Google search results.
 #######################################################################################################
 
-authors:
+contributors:
   bmackinney:
       name: Brian MacKinney
       url: //brianmackinney.com
@@ -113,3 +118,11 @@ authors:
       linkedin: //www.linkedin.com/in/suzannealdrich
       drupal: //www.drupal.org/u/suzanne.aldrich
       bio: Web technologist specializing in security, performance, and usability.
+  mrfelton:
+    name: Tom Kirkpatrick
+    url: //www.systemseed.com
+    avatar: //avatars2.githubusercontent.com/u/200251?v=3&s=400
+    twitter: mrfelton
+    github: //github.com/mrfelton
+    drupal: //www.drupal.org/u/mrfelton
+    bio: After many years of developing custom web solutions and CMS systems I realised the error of my ways and decided to pool all of my efforts into making Drupal a better CMS platform. These days, I eat, sleep and breath Drupal.

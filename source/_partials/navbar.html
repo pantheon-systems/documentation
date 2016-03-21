@@ -48,17 +48,29 @@
                 <li class=""><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank">Support</a></li>
                 <li class="active-trail"><a href="/docs">Documentation</a></li>
             </ul>
-        </div>
-</div>
-<!-- Nav Breadcrumbs -->
-{% if page.home is not defined %}
-    <div class="navbar-fixed-top" id="bread">
-        <div class="col-md-8">
-        {% include("breadcrumbs.html") %}
+      </div>
     </div>
-    <div class="col-md-4">
-        <li class="search-form"> {% include("search_box.html") %}</li>
-
+<!-- Sub Navbar -->
+    <div class="navbar-fixed-top col-md-12" id="subnav">
+        <div class="col-md-12 navbar-collapse collapse">
+          <div class="col-md-6 pull-right">{% include("search_box.html") %}</div>
+          <ul style="float:left;" class="nav navbar-nav">
+          <li class="dropdown">
+            <a data-proofer-ignore class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/docs/"><span class="glyphicon glyphicon-home"></span>  Docs</a></li>
+              <li><a href="/docs/categories">  Categories</a></li>
+              <li><a href="/docs/tags">  Tags</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-proofer-ignore class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guides  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/docs/guides"><span class="glyphicon glyphicon-home"></span>  Guides</a></li>
+              <li><a href="/docs/guides/contributors">  Contributors</a></li>
+            </ul>
+          </li>
+          <li><a href="/docs/changelog">Changelog</a></li>
+        </ul>
     </div>
-</div>
-{% endif %}
+  </div>

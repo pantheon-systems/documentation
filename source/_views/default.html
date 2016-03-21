@@ -51,13 +51,13 @@
     <meta name="twitter:site" content="@getpantheon">
     <meta name="twitter:title" content="{{ page.title}}">
     <meta name="twitter:description" content="{{ page.description }}">
-    {% if page.authors %}
-        {% set author_list = page.authors %}
-        {% if author_list %}
-            {% for authorhandle in author_list %}
-                {% if site.authors[authorhandle] %}
-                    {% set author = site.authors[authorhandle] %}
-    <meta name="twitter:creator" content="@{{ author.twitter }}">
+    {% if page.contributors %}
+        {% set contributor_list = page.contributors %}
+        {% if contributor_list %}
+            {% for contributorhandle in contributor_list %}
+                {% if site.contributors[contributorhandle] %}
+                    {% set contributor = site.contributors[contributorhandle] %}
+    <meta name="twitter:creator" content="@{{ contributor.twitter }}">
                 {% endif %}
               {% if not loop.last %},
               {% endif %}
@@ -75,15 +75,16 @@
     <meta property="og:site_name" content="Pantheon Documentation" />
     <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css?v={{ site.assets_version }}">
-    <link href="{{ site.url }}/assets/fonts/pan-docs-icons/css/pan-docs.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.tocify.css">
+    <link rel="stylesheet" href="/docs/assets/css/main.css?v={{ site.assets_version }}">
+    <link href="/docs/assets/fonts/pan-docs-icons/css/pan-docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/docs/assets/css/jquery.tocify.css">
     <script src="//www.google-analytics.com/analytics.js"></script>
-    <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="/docs/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

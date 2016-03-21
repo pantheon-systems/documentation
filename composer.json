@@ -24,6 +24,6 @@
         "bin-dir": "bin"
     },
     "require": {
-        "pantheon-systems/cli": "^0.10.2"
+        "pantheon-systems/terminus": "0.10.*@stable"
     }
 }

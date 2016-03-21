@@ -6,30 +6,17 @@
 # Build prod env and create backup dirs on Circle     #
 #=====================================================#
 bin/sculpin generate --env=prod
-# Creates dir and log file on the virtual machine so the log can be generated and then rsync'd to Valhalla for debugging purposes
-mkdir ../docs-rsync-logs
-echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ../docs-rsync-logs/rsync-`date +%F-%I%p`.log
-
 
 #===============================================================#
-# Deploy modified files to production, create log   #
+# Deploy modified files to production                           #
 #===============================================================#
-rsync --log-file=../docs-rsync-logs/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
 else
     # If rsync returns an error code the build will fail and send notifications for review
     echo "Error: Deploy failed, review rsync status"
-    exit 1
-fi
-# Upload log to Valhalla on Live
-rsync -vz --progress --temp-dir=../../../tmp/ -e 'ssh -p 2222' ../docs-rsync-logs/rsync-`date +%F-%I%p`.log live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs-rsync-logs/
-if [ "$?" -eq "0" ]
-then
-    echo "Success: Log file uploaded to files/docs-backups/"
-else
-    echo "Error: Log file failed to upload"
     exit 1
 fi
 
