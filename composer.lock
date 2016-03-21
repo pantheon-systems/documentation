@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8dc5e352c2f1f33d8bbb54b49d226be2",
-    "content-hash": "6ec9d18b3c0668e825fd857370c7ff55",
+    "hash": "a259da5ddef673af3f4061d86f6b7de9",
+    "content-hash": "c90849e6679e633a4e49990a596c053b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -446,16 +446,16 @@
         },
         {
             "name": "pantheon-systems/terminus",
-            "version": "0.10.5",
+            "version": "0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/terminus.git",
-                "reference": "7c53289d7912ec1d8b6db57d7bf450b2a720ed33"
+                "reference": "c7ece65a959406897849c0354511dc261555455a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/7c53289d7912ec1d8b6db57d7bf450b2a720ed33",
-                "reference": "7c53289d7912ec1d8b6db57d7bf450b2a720ed33",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/c7ece65a959406897849c0354511dc261555455a",
+                "reference": "c7ece65a959406897849c0354511dc261555455a",
                 "shasum": ""
             },
             "require": {
@@ -509,7 +509,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2016-02-26 19:36:38"
+            "time": "2016-03-17 00:14:49"
         },
         {
             "name": "psr/http-message",
@@ -3414,7 +3414,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/41ee6c70758f40fa1dbf90d019ae0a66c4a09e74",
+                "url": "https://api.github.com/repos/symfony/config/zipball/ee4cdda66aff834c8125e8f2c15932461667c521",
                 "reference": "41ee6c70758f40fa1dbf90d019ae0a66c4a09e74",
                 "shasum": ""
             },
@@ -3935,7 +3935,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/6f1979c3b0f4c22c77a8a8971afaa7dd07f082ac",
+                "url": "https://api.github.com/repos/symfony/process/zipball/d9d21cfcc3e202ee34777d6da38897695d4d208d",
                 "reference": "6f1979c3b0f4c22c77a8a8971afaa7dd07f082ac",
                 "shasum": ""
             },
