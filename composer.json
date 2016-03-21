@@ -24,6 +24,6 @@
         "bin-dir": "bin"
     },
     "require": {
-        "pantheon-systems/terminus": "0.10.*@stable"
+        "pantheon-systems/terminus": "0.11.*@stable"
     }
 }
