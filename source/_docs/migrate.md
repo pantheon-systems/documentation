@@ -30,7 +30,9 @@ Follow these best practices before exporting your site:
 
 * **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance in Drupal, or with extra code (we recommend the [Maintenance Mode plugin](https://wordpress.org/plugins/wp-maintenance-mode/)) in WordPress.  This will prevent the contents of your database from getting out of sync while you’re exporting.
 * **Upgrade to the latest version of Drupal or WordPress core**. If your site runs an old version of core, our import process forces you to upgrade. Doing it before importing can avoid problems stemming from an out-of-sync database and codebase, and can expose incompatibilities that should be fixed.
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
 Due to <a href="https://codex.wordpress.org/Upgrading_WordPress_-_Extended_Instructions#Upgrading_Across_Multiple_Versions">WordPress's incremental upgrade practice</a>, we highly recommend upgrading WordPress to the latest version in place or in a local environment before attempting to import the site to Pantheon. Importing an old site will upgrade WordPress code directly to the latest version.</div>
 * **Clear all caches**. This removes unnecessary and out-of-date files from both the database and your filesystem, which will save time and valuable space.
 * Take a look at your codebase and **remove any non-core code from your site** that you aren’t planning on running on Pantheon.
@@ -43,11 +45,12 @@ You can import during the site creation process using the importer tool or manua
 
 Using our importer during the site creation process has the following effects on the codebase:
 
- - New git history
+ - New Git history
  - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [wordpress](https://github.com/pantheon-systems/wordpress) repository
  - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
 
-<div class="alert alert-danger" role="alert"><h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+<div class="alert alert-info" role="alert">
+<h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
 The importer accepts either single file site archives or separate archives of the code, database, and files. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include `.tar`, `.zip`, `.gzip`, and `.sql`.
 
@@ -98,9 +101,9 @@ Modify Dropbox URLs so they end in <code>dl=1</code> instead of the default <cod
 
 If you prepared separate code, database, and files archives:
 
- - Click **Provide separate code, database, and files archives**.
- - Import each archive via the corresponding file upload or URL field.
- - Click **Import Site** and wait for your site to complete.
+ 1. Click **Provide separate code, database, and files archives**.
+ 2. Import each archive via the corresponding file upload or URL field.
+ 3. Click **Import Site** and wait for your site to complete.
 
 When it completes, proceed to [test your site](#test-your-site).
 
