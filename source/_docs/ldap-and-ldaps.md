@@ -25,7 +25,7 @@ Pantheon does not support IP authentication schemes. We recommend certificate-ba
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
 
 ### WordPress
-WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It provides you with all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/) users.
+WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It provides you with all the configuration options needed, including the ability to specify an alternate port to run on.
 
 ## OpenLDAP Configuration for Client Certificates for LDAPS
 
