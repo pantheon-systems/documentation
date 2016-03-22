@@ -52,6 +52,25 @@ $baseUrl = '/ckfinder/userfiles/';
 ```
 
 <hr>
+### Composer Manager
+**Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
+
+**Solution**: As suggested within the [module documentation](https://www.drupal.org/node/2405805), dependencies should be managed in Dev exclusively. Place the following configuration within `settings.php` to disable autobuild on Test/Live. This will also set appropriate file paths for composer and packages so that they are stored within the root directory of the site's codebase and version controlled:
+```
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+    # Set appropriate paths for Composer Manager
+    $conf['composer_manager_file_dir'] = $_SERVER["HOME"] . '/code';
+    $conf['composer_manager_vendor_dir'] = $_SERVER["HOME"] . '/code/vendor';
+  }
+    if (($_ENV['PANTHEON_ENVIRONMENT'] === 'live') || ($_ENV['PANTHEON_ENVIRONMENT'] === 'test' )) {
+    # Disable autobuild on test and live
+    $conf['composer_manager_autobuild_file'] = 0;
+    $conf['composer_manager_autobuild_packages'] = 0;
+  }
+}
+```
+<hr>
 ### Global Redirect  
  **Issue**: Too many redirects error when site is in maintenance mode.  
 
