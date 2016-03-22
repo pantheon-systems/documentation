@@ -72,7 +72,7 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 
 <div class="alert alert-info">
 <h4>Note</h4>
-The latest version of the Amazon S3 CORS module has Composer Manager as a dependency, which can be problematic on Pantheon if the <a href="/docs/unsupported-modules-plugins/#composer-manager">recommended configuration</a> is not implemented.
+The latest version of the Amazon S3 CORS module has Composer Manager as a dependency, which can be problematic on Pantheon if the <a href="/docs/unsupported-modules-plugins/#composer-manager">recommended configuration</a> is not implemented. Alternatively, you can use the <a href="/docs/content-delivery-network#s3-files-system-(s3fs)">S3 File System</a>.
 </div>
 
 You can configure the [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module to directly upload to Amazon S3 from within your browser, without needing to upload to Pantheon. This avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
@@ -93,6 +93,11 @@ drush @pantheon.SITENAME.dev cc all
 - /admin/config/media/awssdk - Specified Amazon Web Services Key, Amazon Web Services Secret Key
 - /admin/config/media/amazons3 - Default Bucket Name: amazon-s3-cors
 - /admin/config/media/file-system - Default download method: Amazon Simple Storage Service
+
+## S3 Files System (s3fs)
+
+[3 File System](https://www.drupal.org/project/s3fs) provides an additional file system to your Drupal site
+alongside the public and private file systems, which stores files in Amazon's Simple Storage Service (S3), or any S3-compatible storage service. This is a great alternative to Amazon S3 CORS.
 
 ## Known Limitations
 
