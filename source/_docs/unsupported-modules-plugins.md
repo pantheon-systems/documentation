@@ -70,6 +70,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   }
 }
 ```
+There is an open [drupal.org issue](https://www.drupal.org/node/2567885) where file creation errors occur despite autobuild settings being disabled. This can be resolved by applying the [provided patch (#25)](https://www.drupal.org/node/2567885#comment-10874438) until the fix has been merged into a future release.
 <hr>
 ### Global Redirect  
  **Issue**: Too many redirects error when site is in maintenance mode.  
