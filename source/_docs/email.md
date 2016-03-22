@@ -9,6 +9,8 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 ## Outgoing Email
 
+NOTE: Pantheon recommends using a 3rd party email provider.  Failure to do so will result in significant delays and deleted messages.
+
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
 
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email With WordPress and Drupal](/docs/guides/sendgrid/). Keep in mind that SendGrid has a provisioning process (not all requests to use SendGrid are automatically approved) that can take from a couple of hours to a couple of days. If you need email when your site launches and you plan on using SendGrid, be sure to get started before your launch date. See [Provisioning at the SendGrid website](https://sendgrid.com/docs/Glossary/provisioning.html).
