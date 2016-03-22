@@ -9,7 +9,10 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 ## Outgoing Email
 
-NOTE: Pantheon recommends using a 3rd party email provider.  Failure to do so will result in significant delays and deleted messages.
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Pantheon recommends using a third-party email provider.  Failure to do so will result in significant delays and deleted messages.
+</div>
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
 
