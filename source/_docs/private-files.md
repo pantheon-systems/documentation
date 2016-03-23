@@ -5,9 +5,14 @@ categories: [developing]
 tags: [files]
 keywords: drupal, wordpress, private files, files, private keys, private
 ---
-Pantheon provides two spaces for non-web-accessible data:   
+Pantheon provides two potential spaces for storing non-web accessible data. Deciding which one to use will depend on whether or not this data should be kept under version control.
+
+For non-versioned controlled data, such as private files containing passwords, store this in the private directory in the filesystem. The file system private directory location will be a bit different for Drupal and Wordpress sites.
+
 Drupal sites: `sites/default/files/private`   
 WordPress sites: `~/files/private`=`wp-content/uploads/private`
+
+For version-controlled data, such as cloudhook scripts, you'll want to use the private directory located at the site root. In both Drupal and Wordpress, this lives in `code/private`
 
 Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
 <div class="alert alert-info" role="alert">
