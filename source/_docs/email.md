@@ -17,13 +17,13 @@ We recommend using an external SMTP server or service for all production use-cas
 
 Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
 
-Once you have chosen your SMTP provider, install and configure [Drupal's SMTP](http://drupal.org/project/smtp) module.
+Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](http://drupal.org/project/smtp) module.
 
 ## Troubleshooting
 
 #### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
 
-This is a common error with the SMTP module. It can be fixed in a few steps:
+This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
 1. Copy the file from .../files/mailsystem/filename.inc
 2. Place in a custom module's includes dir and .info file using files[] = includes/filename.inc

@@ -14,7 +14,7 @@ While we can't give specific recommendations for your sites, we can give general
 
 - Separate installs with [redirection to a subdomain](/docs/redirects/#redirect-to-subdirectories-or-specific-urls)
 - Features-based installs with Pantheon Enterprise [custom upstreams](/docs/custom-upstream) and [redirection to a subdomain](/docs/redirects/#redirect-to-subdirectories-or-specific-urls)
-- Domain access on a single site install. For a Drupal site, try the [Subfolders Domain ](https://www.drupal.org/project/subfolders_domain) module but there is no guarantee it will work.
+- Domain access on a single site install. For a Drupal site, try the [Subfolders Domain (sub domains)](https://www.drupal.org/project/subfolders_domain) module but there is no guarantee it will work.
 - [Organic Groups](https://www.drupal.org/project/og)  
 
 ##See Also

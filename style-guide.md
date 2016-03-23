@@ -341,9 +341,9 @@ Atomic/Official Documentation: When you’re writing technical documentation and
 There are many modules and themes available in Drupal. For more information, see [Installing Modules](https://www.drupal.org/documentation/install/modules-themes/modules-7 "Drupal.org, installing modules"). [This links directly to Drupal’s existing documentation.]
 
 ### Linking to Drupal Modules or WordPress Plugins
-When creating a link to a plugin or module, link only the name of the plugin or module and not the word "plugin" or "module".  
+When creating a link to a plugin or module, link only the name of the plugin or module and not the word "plugin" or "module". Please use the official plugin or module name within the link, not the slug.
 **Correct**:  
-Install and activate the [OneLogin](https://wordpress.org/plugins/onelogin-saml-sso/) plugin on your WordPress site.
+Install and activate the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/) plugin on your WordPress site.
 
 **Incorrect**:  
 Install and activate the [OneLogin plugin](https://wordpress.org/plugins/onelogin-saml-sso/) on your WordPress site.

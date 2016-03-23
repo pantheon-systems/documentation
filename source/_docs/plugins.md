@@ -25,7 +25,7 @@ We recommend setting the **Default Cache Time** to 600 seconds.
 The **Clear Caches** option will clear the cache for the entire site, but it does not clear Varnish or Redis. To clear individual page cache, log in to `/wp-admin` and visit any page of your site to clear the page cache.
 
 ## Pantheon Sessions Plugin
-The [Pantheon Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin resolves errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin resolves errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
 ## See Also
 

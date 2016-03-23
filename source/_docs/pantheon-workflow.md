@@ -50,7 +50,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 ### WordPress
 
-* [WP-CFM](https://github.com/forumone/wp-cfm) plugin: exports bundles of configuration to `.json` files in `wp-content/config`
+* [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`
 * [Advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 

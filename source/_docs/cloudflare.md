@@ -37,7 +37,7 @@ If you don't see the `__cfduid=` keypair, check that you're loading a URL that's
 
 ## Drupal Modules
 
-In Drupal, no modules are required to use CloudFlare, but there is an optional [CloudFlare contrib](https://drupal.org/project/cloudflare) module that provides integration with CloudFlare's API from within your Drupal site.
+In Drupal, no modules are required to use CloudFlare, but there is an optional [CloudFlare](https://drupal.org/project/cloudflare) contrib module that provides integration with CloudFlare's API from within your Drupal site.
 
 ## WordPress Plugins
 
