@@ -62,7 +62,7 @@ To create a bundle:
 
 This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
- ```
+ ```bash
  terminus wp 'config push <bundle_name>'
  ```
 3. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
