@@ -5,30 +5,26 @@ categories: [wordpress]
 tags: [migrate]
 keywords: wordpress, pantheon, wpengine
 ---
-The easiest way to migrate your site is to use the [Pantheon Migration Plugin](https://wordpress.org/plugins/bv-pantheon-migration/) created by BlogVault, but you can also migrate manually.
+We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). However, sites can also be migrated manually.
 
 ## Migrate Using the Pantheon Migration Plugin (Recommended)
-1. Create and install a new WordPress site on Pantheon:
+
+1. [Create a Pantheon account](https://dashboard.pantheon.io/register) or log in to your account.
+2. Create and install a new WordPress site on Pantheon:
  - Choose **Create a new site** from your Pantheon Dashboard.
  - Name your site.
- - Select **Start from scratch**, and choose **WordPress**.
+ - Select **Start from Scratch**, and choose **WordPress**.
  - Click **Visit Development Site** and complete the installation process.
-2. From your site's live environment on WP Engine, install and activate the [Pantheon Migration Plugin](https://wordpress.org/plugins/bv-pantheon-migration/) using the WordPress Dashboard.
-3. Still on your site's Live environment on WP Engine, select **Pantheon Migration** from the WordPress Dashboard menu and enter the required information:
- - **Email**: This email address will receive status updates on the migration.
- - **Destination URL**: The Development URL of your newly created WordPress site on Pantheon (e.g. http://dev-sitename.pantheonsite.io).
- - **SFTP Server Address**: Host address found in your Pantheon Dashboard under SFTP Connection Info.  
- - **SFTP Username**: Username found in your Pantheon Dashboard under SFTP Connection Info.
- - **SFTP Password**: Password used to login to your Pantheon account.
-4. Click **Migrate**. You will be redirected to BlogVault's secure migration service. You can close this tab or shut down your computer while the migration runs. You will receive an email when the migration has completed.  
-5. Once completed, verify expected content on the Development URL of your Pantheon site.
-6. Commit your migrated code on the Dev environment of the Site Dashboard on Pantheon.
-7. Deploy to Test and Live when you're ready to [launch on Pantheon](/docs/going-live).
+3. Save your SFTP connection information.
+![SFTP Connection Information](/source/docs/assets/images/sftp-connection.png)
+4. Right click on the **Visit Development Site** and select **Copy Link Address**.
+5. Go to your web host (source site), and install and activate the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin.
+6. Enter your email address, Pantheon SFTP credentials, and Dev site URL you saved earlier.
+![BlogVault Plugin](/source/docs/assets/images/bv-details.png)
+7. Start the migration! You will get an email when the migration begins and another when it completes.
 
-<div class="alert alert-info">
-<h4>Note</h4>
-You may need to preserve logic in <code>wp-config.php</code> after the migration process has completed. For site's to work on the platform, <a href="https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php">Pantheon's <code>wp-config.php</code></a> must be used.
-</div>
+If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
+
 
 ## Migrate Manually
 
@@ -47,7 +43,7 @@ You may need to preserve logic in <code>wp-config.php</code> after the migration
 8. Test your site once the code, database, and files are all in place. Verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for verification.
 
 ## Considerations
-
+For additional details, see [Platform Considerations](/docs/platform-considerations).
 ### Folder Permission Errors
 If you receive any permission errors, verify your current PHP handler. You may need to switch it to SuPHP or DSO, depending on which one was running on the previous side.
 
