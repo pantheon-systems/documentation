@@ -27,7 +27,7 @@ We are currently working on extending our Launch Check report to cover WordPress
 
 ### Can I use PHP Sessions?
 
-If you need to use PHP's native session handling, please install the [WordPress native PHP sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/), which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
+If you need to use PHP's native session handling, please install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin, which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
 
 If you are seeing errors like this:
 

@@ -37,7 +37,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 ### Drupal 7.x and 6.x Sites
 
-1. Add [the Redis module](http://drupal.org/project/redis) from Drupal.org.
+1. Add the [Redis](http://drupal.org/project/redis) module from Drupal.org.
 
  As there is no Redis module for Drupal 6.x, you need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis with Drupal 6.x. See [more information](/docs/redis/#drupal-6-cache-backport) in the Troubleshooting section below.
 

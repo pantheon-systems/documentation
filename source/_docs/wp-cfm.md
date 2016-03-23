@@ -17,7 +17,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
  terminus site set-connection-mode --mode=sftp
  ```
 
-2. Install the [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with Terminus:
+2. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
  terminus wp 'plugin install --activate wp-cfm'
  ```

@@ -12,7 +12,7 @@ keywords: drupal, sites, pantheon, upstream
 Pantheon runs an unmodified core version of Drupal 8. When you create a new Drupal 8 site, it clones the [drops-8](https://github.com/pantheon-systems/drops-8) repository and sets it as the site's upstream, so you can [apply core updates](/docs/upstream-updates/) with a single click.
 
 ## Drupal 7
-Pantheon runs an optimized version of Drupal, based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API module](/docs/pantheon_api-module/). When you create a new Drupal 7 site, it clones the [drops-7](https://github.com/pantheon-systems/drops-7) repository and sets it as the site's upstream, so you can [apply core updates](/docs/upstream-updates/) with a single click. The import process for migrating an existing Drupal site replaces core with drops-7.
+Pantheon runs an optimized version of Drupal, based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API](/docs/pantheon_api-module/) module. When you create a new Drupal 7 site, it clones the [drops-7](https://github.com/pantheon-systems/drops-7) repository and sets it as the site's upstream, so you can [apply core updates](/docs/upstream-updates/) with a single click. The import process for migrating an existing Drupal site replaces core with drops-7.
 
 ## Get Started
 [Migrate an existing Drupal site](/docs/migrate) or [launch a new one](/docs/getting-started/) using the Pantheon Dashboard.

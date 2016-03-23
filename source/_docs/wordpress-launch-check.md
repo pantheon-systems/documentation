@@ -66,7 +66,7 @@ This check lists all your enabled plugins and alerts you when they need to be up
 - [batcache](https://wordpress.org/plugins/batcache/)
 
 ###PHP Sessions
-Displays the files that references sessions. If any are found, you'll be prompted to install the native PHP sessions plugin.
+Displays the files that references sessions. If any are found, you'll be prompted to install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin.
 
 ## Support
 If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it. Pull requests are always welcome!

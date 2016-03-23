@@ -37,7 +37,7 @@ A more in-depth description of CDN properties can be found in Wim Leer's [Key Pr
 
 You do not need permission, action, or configuration from Pantheon to use a CDN. However, you will need to make alterations to your site code and configuration.
 
-Most sites use the [CDN module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
+Most sites use the [CDN](https://drupal.org/project/cdn) module to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
 
 First, download the module. If you use drush:
 ```bash

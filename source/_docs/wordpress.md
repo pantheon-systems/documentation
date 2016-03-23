@@ -9,7 +9,7 @@ tags: [code]
 WordPress began as a blogging platform and has now evolved into the most used Content Management System today. This open source software thrives through its expanding community and highly customizable core, making it a perfect fit for projects of any scope.
 
 ## Get Started
-[Migrate Sites to Pantheon](/docs/migrate) or [launch a new one](/docs/launch-wordpress) using the Pantheon Dashboard tools. You can also use the [Duplicator plugin](/docs/wordpress-duplicator) to clone an existing site.
+[Migrate Sites to Pantheon](/docs/migrate) or [launch a new one](/docs/launch-wordpress) using the Pantheon Dashboard tools. You can also use the [Duplicator](/docs/wordpress-duplicator) plugin to clone an existing site.
 ## WordPress Code
 WordPress site code repositories are clones of one our [WordPress upstream](https://github.com/pantheon-systems/wordpress), and consist of the following files and directories:
 ```
