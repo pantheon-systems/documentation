@@ -1,41 +1,52 @@
 ---
-title: Private Files
+title: Private Directories
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 categories: [developing]
 tags: [files]
 keywords: drupal, wordpress, private files, files, private keys, private
 ---
-Pantheon provides two potential places for storing non-web accessible data. Deciding which one to use will depend on whether or not you want the data to be version controlled.
+The Pantheon platform recognizes two distinct private directories which can be used for storing non-web accessible data.
 
-For non-versioned controlled data, such as private files containing passwords, store this in the private directory in the filesystem. 
+**Private Path for Valhalla (Filesystem)**
+Drupal: `sites/default/files/private`   
+WordPress: `wp-content/uploads/private`
 
-Drupal sites: `sites/default/files/private`   
-WordPress sites: `~/files/private`=`wp-content/uploads/private`
+**Private Path for Code**
+Drupal: `/private`   
+WordPress: `/private`
 
-For version-controlled data, such as cloudhook scripts, you'll want to use the private directory located at the site root. In both Drupal and Wordpress, this lives in `code/private`.
+Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
 
-Take some time to understand the best method for you if you are looking for more refined permissions for your files and code.
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</div>
 
-## Private Files and Uploads
-### Drupal
+## Private Path for Code
+Store data that should be version controlled, such as cloudhook scripts, within the `/private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `/private`. If you're connecting via Git, use the `/private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
+
+
+## Private Path for Files
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. For details on integrating this service on Drupal see the [related blog post](https://pantheon.io/blog/key-drupal-security). You can use the [Lockr](https://github.com/CellarDoorMedia/Lockr-Partners/tree/master/pantheon/wordpress/lockr-pantheon) plugin to integrate service on WordPress sites.
+
+Alternatively, you can store sensitive data in a json or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `/files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
+```
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
+  $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
+  $stripe_data = json_load($json_text, 1);
+  $conf['stripe_key'] = $stripe_data['key'];
+}
+else {
+  // We aren't in prod, load a fallback or null key.
+  $conf['stripe_key'] = 'foo';
+}
+```
+This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
+### Additional Drupal Configuration
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
 
 To configure, go to **Administration** > **Configuration** > **Media** > **File System**, select **Private local files served by Drupal** as the default download method, and click **Save Configuration**.
 
-### WordPress
-These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `~/files/private`=`wp-content/uploads/private`
-
-## Storing Private Keys and Certs
-
-This method covers private code, Commerce Kickstart or Ubercart encryption keys, certificates, or other data you want to manage with version-control, but do not want to make web-accessible.
-
-If you opt for this technique, the `private/` directory within your site's root is explicitly blocked from being web-accessible. In this instance you can create and use: `code/private`
-
-This folder needs to be on the same level as index.php, within the `code/` folder if you are using SFTP. You should create this manually if it does not exist.
 
 ## Troubleshooting
 
