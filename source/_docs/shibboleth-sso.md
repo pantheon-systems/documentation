@@ -60,7 +60,7 @@ With configuration completed, add SimpleSaml files to your repository:
 
 ```
 git add private/simplesamlphp-1.11.x
-git commit -am "Adding SimpleSaml files."
+git commit -am "Adding SimpleSaml config files."
 ```
 
 You can now visit your site/simplesaml and complete your metadata configuration.
