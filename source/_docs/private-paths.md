@@ -1,5 +1,5 @@
 ---
-title: Private Directories
+title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 categories: [developing]
 tags: [files]
