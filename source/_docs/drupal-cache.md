@@ -5,7 +5,7 @@ categories: [drupal]
 tags: [varnish, code]
 keywords: drupal, performance, cache, caching, varnish, varnish caching
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.​ For more information, see  [Varnish Caching for High Performance](/docs/varnish).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. For more information, see [Varnish Caching for High Performance](/docs/varnish).
 
 ## Drupal 7 Performance Configuration
 
@@ -29,7 +29,7 @@ Performance is often a trade-off between how fresh your content is, and how fast
  ![Drupal 7 compressed cached pages](/source/docs/assets/images/desk_images/180075.png)<br />
 On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
  ![Drupal 7 aggregate CSS and JS files](/source/docs/assets/images/desk_images/180077.png)<br />
-On the Live environment, make sure  "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files" are both enabled. This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
+On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ## Drupal 6
 
@@ -37,7 +37,7 @@ On the Live environment, make sure  "Aggregate and compress CSS files" and "A
 
 In Drupal 6, most users should set their cache mode to "Aggressive" to take advantage of the reverse-proxy layer. This is like checking "cache pages for anonymous users": Drupal will "double cache" the pages locally. That can be an advantage as they'll be held until the next cache flush, which can last much longer in practice than the reverse-proxy layer.
 
-Checking "External" prevents this kind of "double caching" by freeing Drupal from the responsibility to store a page that is also being stored at the reverse-proxy layer. Again, this should only be used on sites which don't want the long-term protection of an internal page cache.
+Checking "External" prevents this kind of "double caching" by freeing Drupal from the responsibility to store a page that is also being stored at the reverse-proxy layer. Again, this should only be used on sites that don't want the long-term protection of an internal page cache.
 
 ### Compatibility Warnings
 Any module implementing Drupal's `hook_boot()` or `hook_exit()` will show up with a compatibility warning on External or Aggressive modes. This is because when Drupal uses Aggressive mode no logic is executed on a successful cache hit. As soon as the CMS detects that the URL being request has a cache, it returns that cache.
@@ -58,11 +58,12 @@ This determines the amount of time a cache will be honored in the reverse-proxy 
 
 ### Block Cache
 
-This can help with logged-in performance by preventing re-generation of block elements in sidebars every pageview.
+This can help with logged-in performance by preventing regeneration of block elements in sidebars every pageview.
 
 ### Optimize CSS and JavaScript Files
 
-This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser-render times significantly. You might want to turn it off in Dev if you are building a theme (or developing JS), but this should always be enabled in production.
+This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser render times significantly. You might want to turn it off in Dev if you are building a theme (or developing JS), but this should always be enabled in production.
+
 ![Drupal 6 Performance cache settings](/source/docs/assets/images/desk_images/31793.png)
 
 ### Contributed Modules
