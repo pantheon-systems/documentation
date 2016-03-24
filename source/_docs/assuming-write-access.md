@@ -5,9 +5,9 @@ keywords: symbolic links, write access
 categories: [developing]
 tags: [code]
 ---
-Some modules and plugins rely on hard-coded file paths outside of the standard files path for the given framework. WordPress stores files within `wp-content/uploads` and Drupal uses `/sites/default/files`. A WordPress plugin that writes files to `wp-content/plugins/plugin-name/some-other-directory` incorrectly assumes the path is writeable on any given environment. However, the codebase on the Live and Test environments is not writeable on Pantheon by design.
+Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon. WordPress stores files within `wp-content/uploads` and Drupal uses `/sites/default/files`. These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments. Extensions that create files within the codebase (e.g. `wp-content/plugins/plugin-name/some-other-directory` or `/sites/all/modules/module-name/some-other-directory`) incorrectly assume write access that is not granted on the Live and Test environments.
 
-The best solution is to communicate with the maintainer of the module/plugin in use and request that hard-coded nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround for nonstandard file paths to avoid failures on Test and Live.
+The best solution is to communicate with the maintainer of the module or plugin and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
 
 <div class="alert alert-info">
 <h4>Note</h4>
