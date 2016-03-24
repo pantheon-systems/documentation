@@ -7,22 +7,21 @@ keywords: drupal, wordpress, private files, files, private keys, private
 ---
 The Pantheon platform recognizes two distinct private directories which can be used for storing non-web accessible data.
 
-**Private Path for Valhalla (Filesystem)**
+Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
+
+**Private Path for Files (not under version control)**
 Drupal: `sites/default/files/private`   
 WordPress: `wp-content/uploads/private`
 
-**Private Path for Code**
-Drupal: `/private`   
-WordPress: `/private`
-
-Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
+**Private Path for Code (under version control)**
+Drupal and WordPress: `/private`   
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</div>
 
 ## Private Path for Code
-Store data that should be version controlled, such as cloudhook scripts, within the `/private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `/private`. If you're connecting via Git, use the `/private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
+Store data that should be version controlled, such as [Quicksilver](/docs/quicksilver/) scripts, within the `/private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `/private`. If you're connecting via Git, use the `/private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
 
 
 ## Private Path for Files
