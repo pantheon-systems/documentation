@@ -2,32 +2,32 @@
 title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 categories: [developing]
-tags: [files]
+tags: [files, code]
 keywords: drupal, wordpress, private files, files, private keys, private
 ---
-The Pantheon platform recognizes two distinct private directories which can be used for storing non-web accessible data.
+The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
 
-**Private Path for Files (not under version control)**
+**Private Path for Files (Not Version Controlled)**  
 Drupal: `sites/default/files/private`   
 WordPress: `wp-content/uploads/private`
 
-**Private Path for Code (under version control)**
+**Private Path for Code (Version Controlled)**  
 Drupal and WordPress: `/private`   
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</div>
+If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.
+</div>
 
 ## Private Path for Code
 Store data that should be version controlled, such as [Quicksilver](/docs/quicksilver/) scripts, within the `/private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `/private`. If you're connecting via Git, use the `/private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
 
-
 ## Private Path for Files
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. For details on integrating this service on Drupal see the [related blog post](https://pantheon.io/blog/key-drupal-security). You can use the [Lockr](https://github.com/CellarDoorMedia/Lockr-Partners/tree/master/pantheon/wordpress/lockr-pantheon) plugin to integrate service on WordPress sites.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. For details on integrating this service on Drupal, see the [related blog post](https://pantheon.io/blog/key-drupal-security). You can use the [Lockr](https://github.com/CellarDoorMedia/Lockr-Partners/tree/master/pantheon/wordpress/lockr-pantheon) plugin to integrate service on WordPress sites.
 
-Alternatively, you can store sensitive data in a json or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `/files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
+Alternatively, you can store sensitive data in a JSON or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `/files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
@@ -40,6 +40,7 @@ else {
 }
 ```
 This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
+
 ### Additional Drupal Configuration
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
@@ -55,7 +56,7 @@ If you receive the above error, you may need to visit and resubmit the file syst
 
 ### Selectively Exposing Code
 
-In the case where you have a private code library which needs to have a specific sub-directory exposed (e.g. using SimpleSamlPHP), you can do this with symlinks:
+If you have a private code library that needs to have a specific sub-directory exposed (e.g. using SimpleSamlPHP), you can do this with symlinks:
 
     # from within a git checkout
     ln -s private/simplesamlphp/www ./simplesaml
@@ -83,5 +84,5 @@ uc_credit_encryption_path: 'private'"
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-We do not encourage developers save credit card info on the platform, but we do realize that for development this may be useful if you need a test payment method.
+We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
 </div>
