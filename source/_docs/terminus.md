@@ -41,6 +41,6 @@ We've included CLI instructions in many of our articles and guides.
 - [Apache Solr on Pantheon](/docs/solr)
 - [Email on Pantheon](/docs/email)
 - [LDAP and LDAPS](/docs/ldap-and-ldaps)
-- [Private Files with Drupal](/docs/private-files)
+- [Private Files with Drupal](/docs/private-paths)
 - [Debugging Sites with Log Files](/docs/debug-log-files)
 - [The Terminus Drush Extension (Deprecated)](/docs/terminus-deprecated/)
