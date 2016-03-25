@@ -36,3 +36,27 @@ You will see a new recommended DNS record.
 	* **Drop path** will redirect all mobile requests to your mobile-optimized website homepage
 	* **Keep path** will redirect all mobile requests to the same resource hosted on your mobile-optimized website.
 8. Wait a couple of minutes for it to update, then test it by entering the web URL in your mobile device's browser. You should be redirected to the mobile domain you have chosen.
+
+## Alternative Methods for Mobile Redirection
+### Modules/Plugins
+
+For both Drupal and WordPress, modules/plugins exist that will redirect mobile traffic, based on screen resolution or the detected user agent:
+
+ * [Drupal mobile redirect modules](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&text=mobile+redirect&solrsort=iss_project_release_usage+desc&op=Search)
+ * [WordPress mobile redirect plugins](https://wordpress.org/plugins/tags/mobile-redirect)
+
+### JavaScript
+
+JavaScript can detect the page width or user agent and redirect, here are a couple of examples:
+#### Page Width
+```javascript
+if (screen.width <= 800) {
+window.location = "http://m.example.com";
+}
+```
+#### User Agent
+```javascript
+if ((navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i))){
+   location.replace("http://m.example.com");
+}
+```
