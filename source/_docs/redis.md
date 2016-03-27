@@ -201,7 +201,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 This conditional will be true for both web visits and Drush calls. All Redis cache backend settings, plus any other application configuration that should be true no matter the context, should always be enclosed in these types of conditional blocks on Pantheon.
 
-However, all redirection logic should remain nested in `isset($SERVER[’PANTHEONENVIRONMENT’])` conditionals, as you only want redirections to occur on web visits, not any Drush invocations.
+However, all redirection logic should remain nested in `isset($SERVER['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not any Drush invocations.
 
 In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will fix these problems and will be easier for yourself and others to read and maintain.
 
