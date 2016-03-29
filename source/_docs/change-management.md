@@ -5,18 +5,18 @@ categories: [managing]
 tags: [platform, organizations]
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  
 ---
-Change Management is an Organization feature that enables role-based permissions for users in the Organization. It is automatically enabled for all [Partner](https://pantheon.io/pantheon-partners), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
+Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/pantheon-partners), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
 
-Users added to the organization can access all sites associated with the Organization, with access restricted based on the user's role in that Organization. These roles exist to restrict who can deploy code on sites, and manage other users in the Organization or sites it works on.
+Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
 ## Features
-* Enterprise Administrators can add Team Members or Supporting Organizations to **sites** owned by the Organization, with the Developer or Team Member roles.
+* Enterprise Administrators can add Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or Team Member roles.
 * Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
-* When a site owner adds an organization to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the Organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
-* All users in an Organization can see other users and their roles.
+* When a site owner adds an organization to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
+* All users in an organization can see other users and their roles.
 
 ## Managing People in an Organization
-When a Team Member or Administrator adds a user to an Organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the Organization assign roles at the **Organization Dashboard's People tab**.
+When a Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
 
 ### Add a User
 
@@ -49,7 +49,7 @@ Elite site Team Members can add users as either Team Members or Developers to th
 
 ### Add a Supporting Organization to the Site
 1. At the Site Dashboard, click **Team**.
-2. Click **Add a Supporting Organization**, enter the Organization's name in the search box, and click **Search**.
+2. Click **Add a Supporting Organization**, enter the organization's name in the search box, and click **Search**.
 3. Select a role, and click **Add**.
 
 All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.

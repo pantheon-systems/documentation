@@ -49,8 +49,6 @@ View all of your collaborators, filter them by role, manage their roles, and add
 
 Ally Partners and Pantheon EDU customers do not qualify for custom upstreams.
 
-[Learn more about custom upstreams](/docs/running-custom-upstream/).
-
 ### Support
 Review, open, or reply to support tickets associated with your organization and its sites. [Learn about our Scope of Support](/docs/scope-of-support).
 
