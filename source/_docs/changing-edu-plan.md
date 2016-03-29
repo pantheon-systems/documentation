@@ -5,7 +5,7 @@ categories: [managing]
 tags: [platform, organizations]
 keywords: pantheon, pantheon for agencies, org, organization, edu, edu+
 ---
-Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for site's within their organization. When a site is not associated with an organization, you can add a credit card to change the site's plan. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
+Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for site's within their [organization](/docs/organizations/). When a site is not associated with an organization, you can add a credit card to change the site's plan. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
 
 If you have a free Pantheon for EDU account and would like to upgrade to Pantheon for EDU+, [complete this form](https://pantheon.io/pantheon-edu-plus) to contact our Sales team. 
 
