@@ -21,7 +21,7 @@ On the Site Dashboard, click **Visit Development Site** to open the Development 
 
 ## Free Sites
 
-Free sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two free sandbox sites for all user accounts. When one of your sites converts to a paid plan, you can start another sandbox site. If you need additional development sites, contact us and we'll be happy to work with you.
+Free sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two free sandbox sites for all user accounts. If you have reached your limit of Sandbox sites, delete an unused site or take a site live. If you're building sites for third parties, sign up for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/pantheon-top-edu).
 
 ## Your Pantheon Account
 Your account is your own individual account, and every account can manage multiple projects or sites at a time. Pantheon doesn't recommend sharing your account with other people. If you're collaborating on a project or handing over ownership to a client, use our  team management and ownership transfer tools.  
