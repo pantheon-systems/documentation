@@ -43,50 +43,22 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 
 ## Drupal
 
-### Download the Drupal SMTP Module
+### Download the Drupal Sendgrid Integration module
 
-Pantheon recommends using the actively maintained [SMTP module](https://www.drupal.org/project/smtp) to send email with Drupal, regardless of your email gateway. Luckily, SendGrid plugs right in.
+Pantheon recommends using the actively maintained [Sendgrid Integration module](https://www.drupal.org/project/sendgrid_integration) to send email with Drupal.
 
 Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
 ```nohighlight
-drush @pantheon.your-site.dev dl smtp
-drush @pantheon.your-site.dev en smtp -y
+drush @pantheon.your-site.dev dl sendgrid_integration
+drush @pantheon.your-site.dev en sendgrid_integration -y
 ```
 ### Add Your SendGrid Account Details
 
-Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Modules**, and go to SMTP Authentication Support in the Mail section. Click **Configure** and you’ll see the SMTP settings page.  
+Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Configuration**, and go to SendGrid Settings in the System section.
 
-![Settings example](/source/docs/assets/images/desk_images/151706.png)​  
-​
-First, make sure the module is enabled by selecting **On** in the Install Options box.
-Add the following values for the associated fields:  
-SMTP server: smtp.sendgrid.net  
-SMTP port: 25  
-Username: Your site's SendGrid username  
-Password: Your site's SendGrid password  
+![Settings example](source/docs/assets/images/sendgrid_integration.png)​  
 
-Include a valid From address and name for the sender within the email options section.
-
-After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid. You can also send a test email from the configuration page and watch it safely arrive in your inbox shortly.
-
-## Deploy Drupal SendGrid Configuration in Code
-
-When making any changes to Pantheon installations, first make the change in your Dev environment. Next, move it to Test, and after testing, migrate your changes to Live.
-
-If you don't want to re-enter the configuration, and can't push your database to Live (e.g. because the site is already launched), you can get started with exported configuration. SMTP credentials are among the easiest to export to code, since you can drop them right into your settings.php file using the $conf array:
-
-```
-$conf['mail_system']['default-system'] = 'SmtpMailSystem';
-$conf['smtp_on'] = TRUE;
-$conf['smtp_host'] = 'smtp.sendgrid.net';
-$conf['smtp_port'] = 25;
-$conf['smtp_username'] = 'your-sendgrid-username';
-$conf['smtp_password'] = 'your-sendgrid-password';
-$conf['smtp_from'] = 'your-email@yoursite.com';
-$conf['smtp_fromname'] = 'Your Name';
-```
-
-Using a code block like that will ensure that SendGrid is enabled wherever that settings.php file is used, and allows you to push the configuration from Dev to Test to Live.
+Add your Sendgrid credentials. After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid.
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
