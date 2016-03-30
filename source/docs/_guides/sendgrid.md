@@ -58,7 +58,7 @@ At this time, this module is only available for Drupal 7 sites. Follow [this iss
 
 Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Configuration**, and go to SendGrid Settings in the System section.
 
-![Settings example](source/docs/assets/images/sendgrid_integration.png)​  
+![Settings example](/source/docs/assets/images/sendgrid_integration.png)​  
 
 Add your SendGrid credentials. After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid's API.
 
