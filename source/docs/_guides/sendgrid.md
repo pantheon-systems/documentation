@@ -32,7 +32,7 @@ The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-deli
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
 ### Add Your SendGrid Account Details
-Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s Dashboard. You will be able to select between sending mail via the SendGrid Web API or SMTP. Either will work on Pantheon, but using SMTP requires the installation of [Swift Mailer](https://wordpress.org/plugins/swift-mailer/).
+Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s Dashboard. You will be able to select between sending mail via the SendGrid Web API or SMTP. We strongly recommend configuring the plugin to send mail through SendGrid's API. SMTP requests are associated with dynamic outgoing IP addresses on Pantheon, which can have a negative impact on deliverability.
 
 Simply enter your site's SendGrid account credentials and select the desired the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
@@ -43,22 +43,24 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 
 ## Drupal
 
-### Download the Drupal Sendgrid Integration module
+### Download the Drupal SendGrid Integration module
 
-Pantheon recommends using the actively maintained [Sendgrid Integration module](https://www.drupal.org/project/sendgrid_integration) to send email with Drupal.
+Pantheon recommends using the actively maintained [SendGrid Integration module](https://www.drupal.org/project/sendgrid_integration) to send email with Drupal.
 
 Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
 ```nohighlight
 drush @pantheon.your-site.dev dl sendgrid_integration
 drush @pantheon.your-site.dev en sendgrid_integration -y
 ```
+
+At this time, this module is only available for Drupal 7 sites. Follow [this issue](https://www.drupal.org/node/2676416) for details on Drupal 8 development.
 ### Add Your SendGrid Account Details
 
 Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Configuration**, and go to SendGrid Settings in the System section.
 
 ![Settings example](source/docs/assets/images/sendgrid_integration.png)​  
 
-Add your Sendgrid credentials. After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid.
+Add your SendGrid credentials. After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid's API.
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
