@@ -1,0 +1,3 @@
+https://pantheon.io/docs
+https://pantheon.io/docs/guides
+https://pantheon.io/docs/guides/cloudflare-enable-https
