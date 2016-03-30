@@ -32,9 +32,11 @@ The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-deli
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
 ### Add Your SendGrid Account Details
-Once you have installed and activated the plugin, click on the SendGrid menu item in the Settings tab on the site’s Dashboard. You will be able to select between sending mail via the SendGrid Web API or SMTP. We strongly recommend configuring the plugin to send mail through SendGrid's API. SMTP requests are associated with dynamic outgoing IP addresses on Pantheon, which can have a negative impact on deliverability.
-
-Simply enter your site's SendGrid account credentials and select the desired the protocol for sending mail. Next, enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
+1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item. 
+2. Although you can select the SendGrid Web API or SMTP to send mail, we strongly recommend configuring the plugin to send mail through SendGrid's API. SMTP requests are associated with dynamic outgoing IP addresses on Pantheon, which can have a negative impact on deliverability.
+3. Enter your site's SendGrid account credentials and select the desired the protocol for sending mail. 
+4. Enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).  
+5. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
 ![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
@@ -47,20 +49,22 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 
 Pantheon recommends using the actively maintained [SendGrid Integration module](https://www.drupal.org/project/sendgrid_integration) to send email with Drupal.
 
-Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon dashboard, or even use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
+Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon Dashboard, or use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
 ```nohighlight
 drush @pantheon.your-site.dev dl sendgrid_integration
 drush @pantheon.your-site.dev en sendgrid_integration -y
 ```
 
 At this time, this module is only available for Drupal 7 sites. Follow [this issue](https://www.drupal.org/node/2676416) for details on Drupal 8 development.
+
 ### Add Your SendGrid Account Details
 
-Log into Drupal in your Pantheon Dev environment. From the menu at the top of the screen, select **Configuration**, and go to SendGrid Settings in the System section.
-
+1. Log in to Drupal in your Pantheon Dev environment. 
+2. Select **Configuration** from the Drupal menu, and go to **SendGrid settings** in the System section.
 ![Settings example](/source/docs/assets/images/sendgrid_integration.png)​  
+3. Add your SendGrid credentials, and click **Save configuration**.  
 
-Add your SendGrid credentials. After you save the configuration, your Drupal application on Pantheon is now set up to send email through SendGrid's API.
+Your Drupal application on Pantheon is now set up to send email through SendGrid's API.
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
