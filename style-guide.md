@@ -27,7 +27,7 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 ## General Guidelines for All Content
 
-* Avoid gender-specific language. Use the imperative. This form of a verb lets you use the second person (you, your) rather than the third person (him, her, she, his).
+* Avoid gender-specific language. Use the imperative form. This form of a verb lets you use the second person (you, your) rather than the third person (him, her, she, his).
 
 * Write in an action-oriented style. Focus on helping the user complete the task at hand by writing in the active voice. An active voice is more direct and reduces ambiguity. Avoid passive voice as it is often vague and creates awkward sentences.
 
@@ -68,7 +68,7 @@ The best practice is to limit the amount of fonts used in a document and remain 
 
 ### Code Snippets
 
-Any bits of code should be wrapped in backticks.  Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.")
+Any bits of code should be wrapped in backticks.  Any standalone code blocks should use [backtick code fencing](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks "Markdown extra fenced code blocks.").
 
 ### Links
 
@@ -339,6 +339,14 @@ Atomic/Official Documentation: When you’re writing technical documentation and
 **Example**:
 
 There are many modules and themes available in Drupal. For more information, see [Installing Modules](https://www.drupal.org/documentation/install/modules-themes/modules-7 "Drupal.org, installing modules"). [This links directly to Drupal’s existing documentation.]
+
+### Linking to Drupal Modules or WordPress Plugins
+When creating a link to a plugin or module, link only the name of the plugin or module and not the word "plugin" or "module". Please use the official plugin or module name within the link, not the slug.
+**Correct**:  
+Install and activate the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/) plugin on your WordPress site.
+
+**Incorrect**:  
+Install and activate the [OneLogin plugin](https://wordpress.org/plugins/onelogin-saml-sso/) on your WordPress site.
 
 ## Referring to Rules and Concepts
 

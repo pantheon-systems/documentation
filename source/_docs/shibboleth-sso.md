@@ -8,7 +8,7 @@ keywords: drupal, simplesamlphp, shibboleth sso, sso, saml, single-sign on,
 Start by following the SimpleSAMLphp's [service provider quickstart instructions](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">simplesaml_php auth module</a> from drupal.org.</div>
+This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">simpleSAMLphp Authentication</a> module from drupal.org.</div>
 
 When you're done following the quickstart instructions above and have completed all the directions below, you'll have something like http://dev-simplesaml.pantheonsite.io. Note the "Federated Log In" link. See the [pantheon-simplesaml-example](https://github.com/ari-gold/pantheon-simplesaml-example) repo to see how it was implemented. If you click each commit message of the most recent commits, you'll see what was added in each commit.
 
@@ -56,6 +56,13 @@ $config = array (
   'store.sql.password' => $db['password'],
 ```
 
+With configuration completed, add SimpleSaml files to your repository:
+
+```
+git add private/simplesamlphp-1.11.x
+git commit -am "Adding SimpleSaml config files."
+```
+
 You can now visit your site/simplesaml and complete your metadata configuration.
 
 ## Drupal Configuration
@@ -73,4 +80,4 @@ You can now enable and configure the module. If SAML authentication fails becaus
 
 ## Varnish Not Working/Cookie Being Set for Anonymous Users
 
-The current version of the simplesamlphp\_auth module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
+The current version of the simpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.

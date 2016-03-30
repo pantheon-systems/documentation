@@ -6,6 +6,8 @@ tags: [code, migrate]
 keywords: import, importing site, new site, WordPress, export, export wordpress, wordpress archive, archive
 ---
 
+We highly recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). For details, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress). However, you can migrate using alternative methods described here if needed.
+
 There are three major components of a WordPress site:
 
 1. **Codebase** - all executable code, plugins, themes, and so forth.
@@ -19,7 +21,7 @@ In order to successfully migrate your WordPress site to Pantheon, you must provi
 
 ## Export WordPress via Plugins
 
-Popular plugins like [Duplicator](/docs/wordpress-duplicator/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) allow you to create single file archives quickly. For larger imports, pasting in a web-readable URL (e.g. Dropbox secret link) is much faster than manually uploading. Make sure a link goes directly to the file and not a landing page.
+Popular plugins like [Duplicator](/docs/migrate-wordpress-duplicator/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) allow you to create single file archives quickly. For larger imports, pasting in a web-readable URL (e.g. Dropbox secret link) is much faster than manually uploading. Make sure a link goes directly to the file and not a landing page.
 
 You can simply upload the archive file produced and Pantheon will do the rest.  If you cannot package your site as a single archive less than 500MB, create the archives [manually](#manually-create-separate-site-archives) and import the files separately.
 <div class="alert alert-danger" role="alert">

@@ -108,16 +108,23 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export avoid_redirect="window.location.hostname == '$normalize_branch-static-docs.pantheonsite.io' ||"
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
     sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+    export avoid_redirect2="window.location.hostname == '$normalize_branch-static-docs.pantheon.io' ||"
+    sed -i '9i\'"      ${avoid_redirect2}"'\' source/_views/default.html
+    sed -i '9i\'"      ${avoid_redirect2}"'\' source/_views/taxon.html
+    export avoid_redirect3="window.location.hostname == '$normalize_branch-static-docs.gotpantheon.com' ||"
+    sed -i '9i\'"      ${avoid_redirect3}"'\' source/_views/default.html
+    sed -i '9i\'"      ${avoid_redirect3}"'\' source/_views/taxon.html
+
     # Update CTA edit link so that the current branch is used
-    sed -i '42s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-    sed -i '32s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+    sed -i '43s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+    sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
 
 
     # Regenerate sculpin to reflect new redirect logic
     bin/sculpin generate --env=prod
 
     # rsync output_prod/* to Valhalla
-    rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
+    rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
     if [ "$?" -eq "0" ]
     then
         echo "Success: Deployed to http://"$normalize_branch"-static-docs.pantheonsite.io/docs"

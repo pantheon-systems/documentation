@@ -89,7 +89,7 @@ Using the above example will prevent you from ever changing the named options. I
 
 Plugins with development-specific filters can be enabled in Dev for development without unwanted production-like behavior. In the example above, we've activated Jetpack's [development mode filter](http://jetpack.me/support/development-mode/) everywhere except for Live. This allows developers to build and test with Jetpack, without connecting Dev and Test environments to WordPress.com.
 
-The [Developer plugin](https://wordpress.org/plugins/developer/) by Automattic checks whether you have recommended development plugins enabled on your site. Adding those plugins to your codebase and then adding them to the $plugins array in the example plugin will ensure this happens automatically.
+The [Developer](https://wordpress.org/plugins/developer/) plugin by Automattic checks whether you have recommended development plugins enabled on your site. Adding those plugins to your codebase and then adding them to the $plugins array in the example plugin will ensure this happens automatically.
 
 ## Use the pre_option to Modify Options
 

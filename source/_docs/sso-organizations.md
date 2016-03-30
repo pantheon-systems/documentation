@@ -44,12 +44,6 @@ Replace <code>Example-Org-Name</code> with your Pantheon organization name. Sepa
   * The SAML assertion, and the SAML response can be individually or simultaneously signed.
   * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
-
-<!--If your IdP is Okta or OneLogin, see:
-
-* [Configuring SAML for Pantheon with Okta](/docs/saml-for-orgs-with-okta)
-* [Configuring SAML for Pantheon with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)-->
-
 ## Enable SAML on Pantheon
 
 Open a support ticket with Pantheon with the following:

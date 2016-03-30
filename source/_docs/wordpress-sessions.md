@@ -7,7 +7,7 @@ keywords: wordpress, php sessions, php
 ---
 WordPress Core [does not use sessions](http://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables?replies=7). All "user state" is managed via cookies. This is a Core design decision.
 
-However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires an [additional plugin](https://wordpress.org/plugins/wp-native-php-sessions) which we maintain. Sites that need to utilize PHP Sessions should install this plugin.
+However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
@@ -16,15 +16,15 @@ Given the variety of implementations, this plugin will not solve all <code>$_SES
 
 ## Troubleshooting Session Errors
 
-Prior to installing our sessions plugin, you might see the following error:
+Prior to installing WordPress Native PHP Sessions, you might see the following error:
 
 ```php
 Warning: session_start(): user session functions not defined
 ```
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
-### Install WP Native PHP Sessions Plugin
-If `$_SESSIONs` are necessary for your application, install the [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
+### Install WordPress Native PHP Sessions Plugin
+If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
 1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
 2. Make the file executable:

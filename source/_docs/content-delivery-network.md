@@ -37,7 +37,7 @@ A more in-depth description of CDN properties can be found in Wim Leer's [Key Pr
 
 You do not need permission, action, or configuration from Pantheon to use a CDN. However, you will need to make alterations to your site code and configuration.
 
-Most sites use the [CDN module](https://drupal.org/project/cdn) to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
+Most sites use the [CDN](https://drupal.org/project/cdn) module to alter file URLs to direct browsers to the CDN instead of your web server. No size fits all, but this will work for most circumstances.
 
 First, download the module. If you use drush:
 ```bash
@@ -72,7 +72,7 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 
 <div class="alert alert-info">
 <h4>Note</h4>
-The latest version of the Amazon S3 CORS module has Composer Manager as a dependency.  Composer Manager is not recommended or supported on the platform at this time. Native Composer installations are supported.  For details, see related drupal.org issue <a href="https://www.drupal.org/node/2688553">Composer Manager dependency</a>.
+The latest version of the Amazon S3 CORS module has Composer Manager as a dependency, which can be problematic on Pantheon if the <a href="/docs/unsupported-modules-plugins/#composer-manager">recommended configuration</a> is not implemented. Alternatively, you can use the <a href="/docs/content-delivery-network#s3-files-system">S3 File System</a>.
 </div>
 
 You can configure the [Amazon S3 CORS](https://drupal.org/project/amazons3_cors) module to directly upload to Amazon S3 from within your browser, without needing to upload to Pantheon. This avoids file size limitations on Pantheon and reduces the number of steps necessary to process files.
@@ -93,6 +93,11 @@ drush @pantheon.SITENAME.dev cc all
 - /admin/config/media/awssdk - Specified Amazon Web Services Key, Amazon Web Services Secret Key
 - /admin/config/media/amazons3 - Default Bucket Name: amazon-s3-cors
 - /admin/config/media/file-system - Default download method: Amazon Simple Storage Service
+
+## S3 Files System
+
+[S3 File System](https://www.drupal.org/project/s3fs) provides an additional file system to your Drupal site
+alongside the public and private file systems, which stores files in Amazon's Simple Storage Service (S3), or any S3-compatible storage service. This is a supported alternative to Amazon S3 CORS.
 
 ## Known Limitations
 

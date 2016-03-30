@@ -17,7 +17,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
  terminus site set-connection-mode --mode=sftp
  ```
 
-2. Install the [WP-CFM plugin](https://wordpress.org/plugins/wp-cfm/) on the Dev Environment using the WordPress Dashboard or with Terminus:
+2. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
  terminus wp 'plugin install --activate wp-cfm'
  ```
@@ -60,11 +60,12 @@ To create a bundle:
 1. Click **Diff** to review database settings that are not currently stored in code.
 2. Select **Push** to export database values to the codebase.
 
-This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
+ This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
- ```
+ ```bash
  terminus wp 'config push <bundle_name>'
  ```
+
 3. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
 
  ```bash

@@ -25,13 +25,13 @@ Pantheon does not support IP authentication schemes. We recommend certificate-ba
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.
 
 ### WordPress
-WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It provides you with all the configuration options needed, including the ability to specify an alternate port to run on. The ability to designate a specific port is required for [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/) users.
+WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=LDAP) available. One of the most popular is [Simple LDAP Login](https://wordpress.org/plugins/simple-ldap-login/). It provides you with all the configuration options needed, including the ability to specify an alternate port to run on.
 
 ## OpenLDAP Configuration for Client Certificates for LDAPS
 
 Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).  
 
-If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/private-files) in your codebase: `SITEROOT/private`.
+If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/private-paths) in your codebase: `SITEROOT/private`.
 
 Then, specify the location of the certificate file(s) in sites/default/settings.php using putenv. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with settings.php, see [configuring settings.php](/docs/settings-php/).
 
