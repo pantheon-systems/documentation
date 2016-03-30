@@ -12,10 +12,7 @@ In less than five minutes, you can have your own site up and running on Pantheon
 1. From your User Dashboard, click **Create New Site**.
 2. Enter a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheonsite.io domain.
 3. Select your framework. Choose WordPress, Drupal 7, Drupal 8, or any of the distributions available on the platform.
-
-### Visit the Dev Installation
-
-On the Site Dashboard, click **Visit Development Site** to open the Development environment URL. Complete the installation process for the framework you selected.  
+4. On the Site Dashboard, click **Visit Development Site** to complete the installation process for the framework you selected.  
 
 ![Visit development site button](/source/docs/assets/images/visit-development-site.png)
 
