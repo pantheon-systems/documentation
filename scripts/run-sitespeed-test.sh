@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This construction of a branch name is is copied from deploy-multidev.#!/bin/sh
+# This construction of a branch name is is copied from deploy-multidev.
 # This section does not include the error handling present in that file
-# because this script would not be reach if deploy-multidev.#!/bin/sh
+# because this script would not be reach if deploy-multidev.
 # exited with an error on the branch name.
 # @todo find out if there is a way to create the variable globally.
 export normalize_branch="$CIRCLE_BRANCH"
