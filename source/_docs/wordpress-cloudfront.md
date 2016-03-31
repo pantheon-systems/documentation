@@ -75,7 +75,7 @@ terminus wp 'plugin install amazon-web-services --activate'
 
 ### Install Via WordPress Dashboard
 
-Access your WordPress dashboard by appending `/wp-admin` to your [Development Site URL](/docs/create-sites/#visit-the-dev-installation) and log in using your WordPress credentials.
+Access your WordPress dashboard by appending `/wp-admin` to your [Development Site URL](/docs/create-sites#create-a-site) and log in using your WordPress credentials.
 
 1. Click **Plugins**, then select **Add New**.
 1. Paste the name of the plugin in the "Search Plugins" box and press enter.
