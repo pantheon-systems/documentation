@@ -26,7 +26,7 @@ From your Pantheon Dashboard:
 
 * Choose **Create a new site**.
 * Name your site.
-* Select **Start from scratch**, and choose your starting codebase.
+* Select **Start from Scratch**, and choose your starting codebase.
 
 Starting from scratch allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click.
 
@@ -56,7 +56,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  git remote add pantheon <ssh_url>
  ```
 
-5. **Drupal only**: Move your settings file to `settings.local.php` so that it will be ignored by Git and included from Pantheon's `settings.php`. First, make sure that you can modify it, and restore the protections after the move:
+5. **Drupal only**: To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
 
  ```bash
  chmod u+w sites/default/{.,settings.php}
