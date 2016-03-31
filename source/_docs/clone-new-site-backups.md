@@ -20,9 +20,9 @@ You can clone an existing site from a Dashboard backup using the Importer tool w
 
 ## Import Archives
 1. Go to the Account page on [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/).
-2. Click **Create A New Site**.
+2. Click **Create New Site**.
 3. Name your new site.
-4. Choose **Import Archives**.
+4. Choose **Archive Importer**.
 5. Select the **Provide separate code, database, and files archives** link.
 6. In each of the fields, change the option from URL to File, then select the archives you previously downloaded.
 7. Click **Import Site**.

@@ -18,7 +18,7 @@ Are you running another application in addition to WordPress or Drupal? You need
 
 You’ll need to package up your:
 
-- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [drupal](/docs/drupal-export#manually-create-archive) or [wordpress](/docs/wordpress-export#manually-create-separate-site-archives) export documentation.
+- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see our [Drupal](/docs/drupal-export#manually-create-archive) or [WordPress](/docs/wordpress-export#manually-create-separate-site-archives) export documentation.
 
 - **Database** - A single .sql dump, contains the content and active state of the site's configurations.
 
@@ -86,10 +86,10 @@ terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<ur
 
 ### Create and Name the Site
 
-Click on the [**Create Site**](https://dashboard.pantheon.io/sites/create) button at either the user or Organization Dashboard. Enter a name and click **Create Site**.
+Click the [**Create New Site**](https://dashboard.pantheon.io/sites/create) button at either the user or Organization Dashboard. Enter a name and click **Create Site**.
 
 ### Choose a Start State
-To use our site importer, select **Import Archives**.
+To use our site importer, select **Archive Importer**.
 To import after creation, select the intended upstream and install it, and skip ahead to [import after creation](#import-after-creation).
 
 ### Import Archives
