@@ -9,7 +9,7 @@ keywords: agency, p4a, multidev, change management, elite, site owner, ownership
 
 ### What is the benefit of Multidev?
 
-Multidev allows you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+[Multidev](/docs/multidev/) allows you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 
@@ -18,10 +18,10 @@ Creating a Multidev environment creates an application server, a database server
 
 ## Change Management
 
-From within the Organization Dashboard, you can assign organization members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into test or live environments.
+From within the [Organization Dashboard](/docs/organization-dashboard/), you can assign [organization](/docs/organizations) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
-Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner organizations cannot specifiy which members have access to specific sites.
+Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
 
 ### How is site ownership determined?
 The person who creates the site owns it until someone else starts paying for it. The user or Enterprise Organization who pays for the site is the owner thereafter.
@@ -32,7 +32,7 @@ See [Role-Based Permissions & Change Management](/docs/change-management) for de
 
 ### How do we add new sites to an Organization?
 
-When you or the administrators, team members, or developers in your agency [create sites](https://dashboard.pantheon.io/sites/create), you have the option of associating it with your organization. Once there, all members of the Organization can access the Site's Dashboard from the Organization Dashboard.
+When you or the administrators, team members, or developers in your agency [create sites](https://dashboard.pantheon.io/sites/create), you have the option of associating it with your organization. Once there, all members of the organization can access the Site's Dashboard from the Organization Dashboard.
 
 ## Support
 
@@ -47,15 +47,15 @@ Pantheon Enterprise Organizations are able to own sites; Pantheon Partner Organi
 No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the organization access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
 
 ### What privileges and roles are granted when adding a Supporting Organization?
-All organization members have access to the site, with permissions determined by their roles at the Organization level.
+All organization members have access to the site, with permissions determined by their roles at the organization level.
 
 ### Can the site owner override privileges and access for team members of a Supporting Organization?
-Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the Organization.
+Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
 
 ### Do you have a status page?
 Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](http://status.getpantheon.com).
 
-### How do I submit a ticket when the dashboard is down?
+### How do I submit a ticket when the Dashboard is down?
 If you need to submit a ticket and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
 
 ### As a Partner, do I get enhanced support?

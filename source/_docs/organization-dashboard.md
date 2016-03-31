@@ -11,7 +11,7 @@ The Organization Dashboard is where you manage all your sites in a single locati
 
 ### New Sites
 
-While creating a new site, any user in your Org will see an "Organization Affiliation" select field containing any Organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
+While creating a new site, any user in your [organization](/docs/organizations/) will see an "Organization Affiliation" select field containing any organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
 
 ### Existing Sites
 

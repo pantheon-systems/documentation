@@ -8,7 +8,7 @@ keywords: team management, roles, permissions, team members, developer, privileg
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 
 ## Team Management
-You can add and delete users in the Team modal. Simply click **Team** located in the upper-right of your Dashboard.
+You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Dashboard.
 
 ![Team Management Window](/source/docs/assets/images/team-modal.png)
 ## Add a Team Member
@@ -38,7 +38,7 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. This link is only visible when the Sandbox site _does not_ have a credit card associated with the site. To disassociate a credit card, visit the site's Billing tab within the Settings modal.
+Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. This link is only visible when the Sandbox site does not have a credit card associated with the site. To disassociate a credit card, go to **Settings** and click the Billing tab.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>Only the current site owner has the ability to assign a new owner; team members will not see this option.</div>
@@ -55,18 +55,19 @@ The site owner is the person who pays for the site. You'll need to update the pa
 
 ## Add a Supporting Organization
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a _supporting organization_, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
-1. Click **Team** in the upper-right of the Site Dashboard.
+1. Click **Team** in the Site Dashboard.
 2. Click **Add Supporting Organization** at the bottom of the team management window.
 3. Enter the complete name of the agency. An exact match is required.
 4. Check that the agency is the one you expected.
 5. Click the **Add Agency** button to make them a supporting organization.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Because supporting organizations have full access to a site, only the site owner can perform this action.</div>
+<h4>Note</h4>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</div>
  ![Add a supporting organization button](/source/docs/assets/images/multi_org1.png)
  ![Confirm supporting organization](/source/docs/assets/images/multi_org2.png)
 
 ## See Also
 [Role-Based Permissions & Change Management](/docs/change-management/)
+[Organizations](/docs/organizations/)
