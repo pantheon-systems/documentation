@@ -27,11 +27,11 @@ git log --pretty=oneline -10
 This will give you a list of commit IDs and the commit message. For example:
 
 ```nohighlight
-c24030f49d9e330324228f47c2b6c8b06f00eeb1 ctools
-a44306655691d281e852d84fe45a80f7026984cd Views
-ee24ab75e44239102bd0e72da8fb3b423168b4c5 Devel
-b02d4de85147a98d155e6ece9b044ab5ec529881 Generate Errors
-55eae780dd2bcfdce9a39c077b8b294b174c1556 Solr
+c24030f49d9e330324228f47c2b6c8b06f00eeb1 Add theme styles
+a44306655691d281e852d84fe45a80f7026984cd Add akismet
+ee24ab75e44239102bd0e72da8fb3b423168b4c5 Remove Hello Dolly
+b02d4de85147a98d155e6ece9b044ab5ec529881 Add Redis
+55eae780dd2bcfdce9a39c077b8b294b174c1556 Add Solr
 79d21b2837cbfc78cbe32f35c058818c796a9187 Initial Commit
 ...
 ```
@@ -40,7 +40,7 @@ The format of the command to reverse a specific change is:
 ```bash
 git revert COMMITID --no-edit
 ```
-As an example, to get rid of the commit that included Devel, just grab the commit ID of the Devel commit and use it in the revert command.
+As an example, to get rid of the commit that removed Hello Dolly, just grab the commit ID of the "Remove Hello Dolly" commit and use it in the revert command.
 ```bash
 git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
 ```
