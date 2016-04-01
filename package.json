@@ -6,6 +6,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "a11y": "^0.4.0",
+    "sitespeed.io": "^3.11.5",
     "grunt-a11y": "^0.1.4"
   },
   "scripts": {

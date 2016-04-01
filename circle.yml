@@ -13,7 +13,8 @@ dependencies:
     - bin/sculpin generate
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
-    - bash scripts/deploy-multidev.sh
+    # @todo, remove commented out deploy
+    #- bash scripts/deploy-multidev.sh
 test:
   pre:
     # Start Ghost Driver.
@@ -23,6 +24,8 @@ test:
     - bin/sculpin server:
        background: true
   override:
+    # Run sitespeed.io
+    - bash scripts/run-sitespeed-test.sh
     # Run behat.
     - bin/behat
     # Run a11y.
