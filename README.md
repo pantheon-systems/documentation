@@ -61,7 +61,7 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 3. Start your local server:  
  If you do not want to install sculpin globally, you can use the following commands to start your local server:  
  ```
- ./vendor/bin/sculpin generate --server
+ ./bin/sculpin generate --server
  ```  
  Visit your docs site at: <http://localhost:8000/docs>  
 
