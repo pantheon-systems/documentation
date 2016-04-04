@@ -117,13 +117,13 @@ module.exports = function (phantom, ready) {
 Next, the `configs/capture.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
 Open `configs/capture.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
-```nohighlight
+```yaml
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
 ```
 You also need to add navigation paths in `configs/capture.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `about` and `contact` items and added some additional pages for Wraith to compare.
-```nohighlight
+```yaml
 paths:
   home: /
   login: /user/login
@@ -131,7 +131,7 @@ paths:
   lovely-vegetables: /content/lovely-vegetables
 ```
 Next, update the global `before_capture:` hook and replace its value with the `javascript/wait--phantom.js` script you updated.
-```nohighlight
+```yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 #before_capture: 'javascript/disable_javascript--phantom.js'
 before_capture: 'javascript/wait--phantom.js'
@@ -140,7 +140,7 @@ before_capture: 'javascript/wait--phantom.js'
 <h4>Note</h4>
  YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</div>
 Finally, execute Wraith:
-```bash
+```nohighlight
 wraith capture capture
 ```
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
@@ -157,13 +157,13 @@ Wraith can capture portions of a website with CSS selectors and display them in 
 The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
-```nohighlight
+```yaml
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "casperjs"
 ```
 
 Edit the new configuration file, `configs/capture.yaml`, to add selectors to the paths.  Note the path format has changed to support URL components with selectors.
-```nohighlight
+```yaml
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
@@ -187,7 +187,7 @@ module.exports = function (phantom, ready) {
 }
 ```
 Finally, tweak the `before_capture:` line in `configs/capture.yaml` to use the CasperJS wait script.
-```nohighlight
+```yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--casper.js'
 ```
@@ -202,7 +202,7 @@ wraith capture capture
 
 Wraith supports capturing and comparing a single website against previous revisions of itself with a history mode. To set it up, edit the YAML configuration file to remove one of the domains and add a `history_dir` folder.
 
-```nohighlight
+```yaml
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
 
