@@ -27,7 +27,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 Install via [Homebrew](http://brew.sh/):
 
-```bash
+```nohighlight
 brew install phantomjs198
 brew install imagemagick
 brew install casperjs --devel
@@ -37,7 +37,7 @@ brew install casperjs --devel
 
 On Ubuntu:
 
-```bash
+```nohighlight
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
@@ -46,13 +46,13 @@ npm install -g casperjs
 
 Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
-```bash
+```nohighlight
 gem install wraith
 ```
 
 Wraith should now be accessible from the command line.
 
-```bash
+```nohighlight
 $ wraith
 
   Commands:
@@ -81,11 +81,11 @@ mkdir wraith
 cd wraith
 ```
 Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
-```bash
+```nohighlight
 wraith setup
 ```
 You should see the following output:
-```bash
+```nohighlight
 create  configs
 create  configs/capture.yaml
 create  configs/history.yaml
@@ -117,7 +117,7 @@ module.exports = function (phantom, ready) {
 Next, the `configs/capture.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
 Open `configs/capture.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
-```javascript
+```nohighlight
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
@@ -130,7 +130,7 @@ paths:
   great-vegetables: /content/great-vegetables
   lovely-vegetables: /content/lovely-vegetables
 ```
-Next, update the global before_capture: hook and replace its value with the `javascript/wait--phantom.js` script you updated.
+Next, update the global `before_capture:` hook and replace its value with the `javascript/wait--phantom.js` script you updated.
 ```nohighlight
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 #before_capture: 'javascript/disable_javascript--phantom.js'
@@ -144,7 +144,7 @@ Finally, execute Wraith:
 wraith capture capture
 ```
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
-```bash
+```nohighlight
 open shots/gallery.html
 ```
 ![Full Screen Diff Example](/source/docs/assets/images/fullscreen-diff.png)
@@ -157,13 +157,13 @@ Wraith can capture portions of a website with CSS selectors and display them in 
 The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</div>
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
-```
+```nohighlight
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "casperjs"
 ```
 
 Edit the new configuration file, `configs/capture.yaml`, to add selectors to the paths.  Note the path format has changed to support URL components with selectors.
-```javascript
+```nohighlight
 domains:
   dev: "http://dev-panopoly-dreams.pantheon.io"
   test: "http://test-panopoly-dreams.pantheon.io"
@@ -192,7 +192,7 @@ Finally, tweak the `before_capture:` line in `configs/capture.yaml` to use the C
 before_capture: 'javascript/wait--casper.js'
 ```
 Run Wraith to produce a new gallery from the selectors. To execute this Wraith test, run the following command:
-```bash
+```nohighlight
 wraith capture capture
 ```
 ![Headers Diff Example](/source/docs/assets/images/headers-diff.png)
