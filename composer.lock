@@ -446,16 +446,16 @@
         },
         {
             "name": "pantheon-systems/terminus",
-            "version": "0.11.0",
+            "version": "0.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/terminus.git",
-                "reference": "c7ece65a959406897849c0354511dc261555455a"
+                "reference": "7557cb2587ab03ebbef0289aad272bc8c359fc48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/c7ece65a959406897849c0354511dc261555455a",
-                "reference": "c7ece65a959406897849c0354511dc261555455a",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/7557cb2587ab03ebbef0289aad272bc8c359fc48",
+                "reference": "7557cb2587ab03ebbef0289aad272bc8c359fc48",
                 "shasum": ""
             },
             "require": {
@@ -509,7 +509,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2016-03-17 00:14:49"
+            "time": "2016-03-30 23:16:53"
         },
         {
             "name": "psr/http-message",
