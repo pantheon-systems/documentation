@@ -44,20 +44,21 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Option 2. Install manually
 1. Get composer:
- If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
-
+  If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+ 
  Run the following command to install composer globally:  
- ```
+  ```
  curl -sS https://getcomposer.org/installer | php
  mv composer.phar /usr/local/bin/composer
  ```
-
- **Note**: Run the `mv` command with sudo if it fails.  
+ **Note**: Run the `mv` command with sudo if it fails.
+ 
 2. Install dependencies:  
  From within the `documentation` repo, run the following command to install all needed dependencies:  
  ```
  composer install
  ```  
+
 3. Start your local server:  
  If you do not want to install sculpin globally, you can use the following commands to start your local server:  
  ```
@@ -87,10 +88,16 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  ```
  If you use --watch and see it constantly running, regenerating, drop --watch
  until you identify and resolve the problem.  
-5. Images  
- For images to render on your local environment you need to apply these commands from within the `documentation` directory:
+  
+4. Images:
+  
+  For images to render on your local environment you need to apply these commands from within the `documentation` directory:
 
  ```
  $ cd output_dev
  $ ln -s ./ source
  ```
+ 
+5. Compiling CSS changes: 
+
+CSS is compiled by the grunt default task. This compilation can be re-run simply by calling `grunt` from the root directory of this repository. The `grunt watch` command can also be used while making multiple edits to CSS that require repeated compilation.

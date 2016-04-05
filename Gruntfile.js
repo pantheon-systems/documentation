@@ -4,6 +4,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           {expand: true, src: ['node_modules/bootstrap/dist/**'], dest: 'source/docs/assets/'},
+          {expand: true, src: ['node_modules/bootstrap/dist/css/bootstrap'], dest: 'source/docs/assets/compiled/'},
           {expand: true, src: ['node_modules/highlight.js/styles/tomorrow-night-eighties.css'], dest: 'source/docs/assets/'},
           {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/css/font-awesome.min.css'], dest: 'source/docs/assets/'},
           {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/fonts/**'], dest: 'source/docs/assets/'}
@@ -27,6 +28,31 @@ module.exports = function(grunt) {
           ],
         }
       }
+    },
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+            {
+              json: {
+                "sourceMappingURL=bootstrap.min.css.map": "sourceMappingURL=/docs/assets/node_modules/bootstrap/dist/css/bootstrap.min.css.map"
+              }
+            }
+          ],
+          usePrefix: false
+        },
+        files: [
+          {src: ['source/docs/assets/compiled/compiled.css'], dest: 'source/docs/assets/compiled/compiled.css'}
+        ]
+      }
+    },
+    watch: {
+      files: [
+        'source/docs/assets/node_modules/*',
+        'source/docs/assets/css/*',
+        'source/docs/assets/fonts/*',
+      ],
+      tasks: ['copy', 'css_url_replace', 'replace']
     },
     a11y: {
       dev: {
@@ -52,8 +78,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-css-url-replace');
+  grunt.loadNpmTasks('grunt-replace');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-a11y');
 
-  grunt.registerTask('default', ['copy', 'css_url_replace']);
+  grunt.registerTask('default', ['copy', 'css_url_replace', 'replace']);
   grunt.registerTask('test', ['a11y']);
 }

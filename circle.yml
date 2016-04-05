@@ -25,7 +25,7 @@ test:
     - bin/sculpin server:
        background: true
   override:
-    # Run sitespeed.io
+    # Run sitespeed.io performance testing.
     - bash scripts/run-sitespeed-test.sh
     # Run behat.
     - bin/behat
