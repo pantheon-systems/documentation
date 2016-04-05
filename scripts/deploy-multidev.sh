@@ -67,18 +67,22 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
         #For docs and site-wide changes
         export md_file="^(.*\.md)"
-        export guide_path="^(.*_guides.*)(.*\.md)"
         #Add doc link to comment for all docs changed
         while IFS= read -r doc;
         do
           if [[ $doc =~ $md_file ]]
           then
+            export guide_path="^(.*_guides.*)(.*\.md)"
+            export doc_path="^(.*_docs.*)(.*\.md)"
             if [[ $doc =~ $guide_path ]]
             then
               export guide=docs/guides${doc:19: -3}
               echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
-            else
+            elif [[ $doc =~ $file_path ]]
+            then
               echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+            else
+              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
             fi
           else
               echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
@@ -95,20 +99,23 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
         #Begin GH comment
         echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$docs_url")\u0020Multidev\u0020environment:\n" >> comment.txt
-        #Only for docs, not for site-wide changes
         export md_file="^(.*\.md)"
-        export guide_path="^(.*_guides.*)(.*\.md)"
         #Add doc link to comment for all docs changed
         while IFS= read -r doc;
         do
           if [[ $doc =~ $md_file ]]
           then
+            export guide_path="^(.*_guides.*)(.*\.md)"
+            export doc_path="^(.*_docs.*)(.*\.md)"
             if [[ $doc =~ $guide_path ]]
             then
               export guide=docs/guides${doc:19: -3}
               echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
-            else
+            elif [[ $doc =~ $file_path ]]
+            then
               echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+            else
+              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
             fi
           else
               echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
