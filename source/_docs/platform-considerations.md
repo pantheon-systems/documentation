@@ -109,3 +109,9 @@ Pantheon does not currently support any PHP frameworks outside of Drupal and Wor
 
 ## Unsupported Drupal Modules and WordPress Plugins
 See [Unsupported Modules and Plugins](/docs/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
+
+## Inactive Site Freezing
+
+Sandbox sites with no recent development activity are automatically placed in cold storage or "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's dashboard will be unavailable.
+
+A site can be unfrozen with a single click. Simply visit the site's dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
