@@ -66,11 +66,11 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         #Identify modified files from new commit
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
         #For docs and site-wide changes
-        export md_file="^(.*\.md)"
+        export doc_file="(source.*\.md)"
         #Add doc link to comment for all docs changed
         while IFS= read -r doc;
         do
-          if [[ $doc =~ $md_file ]]
+          if [[ $doc =~ $doc_file ]]
           then
             export guide_path="^(.*_guides.*)(.*\.md)"
             export doc_path="^(.*_docs.*)(.*\.md)"
@@ -99,11 +99,11 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
         #Begin GH comment
         echo -n "The\u0020following\u0020doc(s)\u0020have\u0020been\u0020deployed\u0020to\u0020the\u0020["$normalize_branch"]("$docs_url")\u0020Multidev\u0020environment:\n" >> comment.txt
-        export md_file="^(.*\.md)"
+        export doc_file="(source.*\.md)"
         #Add doc link to comment for all docs changed
         while IFS= read -r doc;
         do
-          if [[ $doc =~ $md_file ]]
+          if [[ $doc =~ $doc_file ]]
           then
             export guide_path="^(.*_guides.*)(.*\.md)"
             export doc_path="^(.*_docs.*)(.*\.md)"
