@@ -38,10 +38,10 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
 
 Pantheon's www-redirection service automatically redirects requests to the www subdomain as long as <a href="/docs/domains/#step-3-configure-your-dns" data-proofer-ignore>DNS has been configured</a> appropriately. However, this service does not apply to sites with HTTPS enabled.
 
-### Redirect to www for Sites with HTTPS
+### Redirect to www
 
 ```
-// Require WWW.
+// Require www.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
   (php_sapi_name() != "cli")) {
