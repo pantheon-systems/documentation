@@ -113,7 +113,7 @@ You are welcome to modify this patch according to your needs, such as performing
 
 <hr>
 ### Live CSS
-**Issue**: This module requires write access to modify theme CSS files which are part of the site Git repo and, therefore, cannot be written to on the test and live environments.
+**Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
 <hr>
 ### Media: Browser Plus
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
