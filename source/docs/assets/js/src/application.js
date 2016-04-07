@@ -10,7 +10,6 @@
  * Attribution to Twitter Bootstrap (http://getbootstrap.com)
  */
 
-/* global ZeroClipboard */
 
 !function ($) {
   'use strict';
@@ -126,7 +125,7 @@
       $(this).siblings('.progress').find('.progress-bar-striped').toggleClass('active')
     })
 
-    // Config ZeroClipboard
+    /*//Config ZeroClipboard
     ZeroClipboard.config({
       moviePath: '/docs/assets/flash/ZeroClipboard.swf',
       hoverClass: 'btn-clipboard-hover'
@@ -170,7 +169,7 @@
         .attr('title', 'Flash required')
         .tooltip('fixTitle')
         .tooltip('show')
-    })
+    })*/
 
   })
 
