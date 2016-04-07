@@ -16,4 +16,4 @@ export url=https://$url/docs
 # production urls is used as a source, the production domain is then replaced
 # with the multdev url.
 sed "s,https://pantheon.io/docs,$url,g" scripts/sitespeed-urls.txt > /tmp/sitespeed-urls-multidev.txt
-sitespeed.io -u $url --no=3 --budget budget.json -b firefox -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName multidev --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,domContentLoadedTime
+sitespeed.io -u $url --no=1 --budget budget.json -b firefox -r $CIRCLE_ARTIFACTS/sitespeed --suppressDomainFolder --outputFolderName multidev --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,domContentLoadedTime
