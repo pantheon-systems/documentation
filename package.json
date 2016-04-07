@@ -4,9 +4,17 @@
   "description": "Pantheon Docs https://pantheon.io/docs",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt": "^0.4.5",
     "a11y": "^0.4.0",
-    "grunt-a11y": "^0.1.4"
+    "bootstrap": "^3.3.6",
+    "grunt": "^0.4.5",
+    "grunt-a11y": "^0.1.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-css-url-replace": "^0.2.7",
+    "grunt-replace": "^0.11.0",
+    "highlight.js": "^9.3.0",
+    "node-font-awesome": "^1.0.2",
+    "sitespeed.io": "^3.11.5"
   },
   "scripts": {
     "test": "grunt && rake && scripts/merge_conflicts.sh"

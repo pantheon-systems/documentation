@@ -41,23 +41,29 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 2. From inside the project root, run `vagrant up`
 3. You will be prompted for the administration password on your host machine. Obey.
 4. Visit <http://docs.local:8000/docs> in your browser of choice.
+5. Automatically regenerate Sculpin and re-compile CSS upon file modifications:
+
+ ```
+ vagrant ssh -- -t 'cd /vagrant; fuser -k -n tcp 8000;grunt watch & ./bin/sculpin generate --server --watch'
+ ```
 
 ### Option 2. Install manually
 1. Get composer:
- If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+  If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
  Run the following command to install composer globally:  
- ```
+  ```
  curl -sS https://getcomposer.org/installer | php
  mv composer.phar /usr/local/bin/composer
  ```
+ **Note**: Run the `mv` command with sudo if it fails.
 
- **Note**: Run the `mv` command with sudo if it fails.  
 2. Install dependencies:  
- From within the `documentation` repo, run the following command to install all needed dependencies:  
+ From within the root directory of this repository, run the following command to install all needed dependencies:  
  ```
  composer install
  ```  
+
 3. Start your local server:  
  If you do not want to install sculpin globally, you can use the following commands to start your local server:  
  ```
@@ -79,18 +85,19 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  ```
  Visit your docs site at: <http://localhost:8000/docs>
 
+4. Images:
 
- Finally, you can tell sculpin to watch the docs directory and automatically
- regenerate anything changed:
- ```
- sculpin generate --server --watch
- ```
- If you use --watch and see it constantly running, regenerating, drop --watch
- until you identify and resolve the problem.  
-5. Images  
- For images to render on your local environment you need to apply these commands from within the `documentation` directory:
+  For images to render on your local environment you need to apply these commands from within the `documentation` directory:
 
  ```
  $ cd output_dev
  $ ln -s ./ source
+ ```
+
+5. Automatically regenerate Sculpin and re-compile CSS upon file modifications:
+
+ [Install `grunt`](http://gruntjs.com/getting-started) and run the following from the root directory of this repository:
+
+ ```
+ grunt watch & ./bin/sculpin generate --server --watch
  ```
