@@ -7,6 +7,7 @@ export normalize_branch="$CIRCLE_BRANCH"
 export normalize_branch="${normalize_branch:0:11}"
 # Remove - to avoid failures
 export normalize_branch="${normalize_branch//[-_]}"
+~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
 tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
 export url=`head -1 filtered_env_hostnames.txt`
