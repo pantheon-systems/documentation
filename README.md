@@ -123,17 +123,18 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
  Visit the local docs site at: <http://localhost:8000/docs>
 
- Finally, you can tell sculpin to watch the docs directory and automatically regenerate upon file modification:
+ Finally, you can tell sculpin to watch the docs directory and automatically
+ regenerate upon file modification:
 
-  ```
-  php C:\your-path-to-sculpin\sculpin.phar generate --server --watch
-  ```
+ ```
+ php C:\your-path-to-sculpin\sculpin.phar generate --server --watch
+ ```
 
-  If changes cause Sculpin to continuously regenerate files, drop `--watch` until you investigate and debug.
+ If changes cause Sculpin to continuously regenerate files, drop `--watch` until you investigate and debug.
 
 9. On the command prompt, create the following link for images to render on your local environment. Note: You may have to run the command shell as an administrator.
 
-  ```
-  cd output_dev
-  mklink /d source .
-  ```
+ ```
+ cd output_dev
+ mklink /d source .
+ ```
