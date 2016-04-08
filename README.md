@@ -26,13 +26,12 @@ documentation.
 
 Usage
 -----
-###Get the code:
+## Get the code:
 Fork and clone this repository. Issue pull-requests one document at a time.
 
-### Running Locally (Optional)
-------------
+## Local Setup: Mac OS X and Linux (Optional)
 
-### Option 1: Use Vagrant (recommended)
+### Option 1: Vagrant (Recommended)
 1. Install requirements:
  * [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.x
  * [ansible](http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine) >= 1.8.x
@@ -47,9 +46,9 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  vagrant ssh -- -t 'cd /vagrant; fuser -k -n tcp 8000;grunt watch & ./bin/sculpin generate --server --watch'
  ```
 
-### Option 2. Install manually
-1. Get composer:
-  If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+### Option 2: Composer
+1. Install composer:
+ If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
  Run the following command to install composer globally:  
   ```
@@ -89,10 +88,11 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
   For images to render on your local environment you need to apply these commands from within the `documentation` directory:
 
- ```
- $ cd output_dev
- $ ln -s ./ source
- ```
+
+   ```
+   $ cd output_dev
+   $ ln -s ./ source
+   ```
 
 5. Automatically regenerate Sculpin and re-compile CSS upon file modifications:
 
@@ -101,3 +101,51 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  ```
  grunt watch & ./bin/sculpin generate --server --watch
  ```
+
+## Local Setup: Git for Windows (Optional)
+
+### Option 1: Vagrant (Recommended)
+Follow the [above steps](#option-1-vagrant-recommended) to run the docs site on a virtual machine.
+
+### Option 2: Composer
+
+1. If you do not already have PHP installed, use [Windows Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=PHP56) or [install manually](http://php.net/manual/en/install.windows.manual.php).
+
+ **Note**: Be sure to add the [folder containing php.exe to your PATH environment variable](http://php.net/manual/en/faq.installation.php#faq.installation.addtopath) and reopen any command prompt shells.
+
+2. Install [Git for Windows](https://git-for-windows.github.io/).
+3. Clone the documentation repository.
+4. Download [Sculpin](https://download.sculpin.io/sculpin.phar).
+5. Download [Composer](https://getcomposer.org/composer.phar).
+6. On the command prompt navigate to the documentation repository.
+7. Install project dependencies:
+
+ ```
+ php C:\your-path-to-composer\composer.phar install
+ ```
+
+8. Build Sculpin and run a local instance:
+
+ ```
+ php C:\your-path-to-sculpin\sculpin.phar generate --server
+ ```
+
+ Visit the local docs site at: <http://localhost:8000/docs>
+
+ Finally, you can tell sculpin to watch the docs directory and automatically
+ regenerate upon file modification:
+
+ ```
+ php C:\your-path-to-sculpin\sculpin.phar generate --server --watch
+ ```
+
+ If changes cause Sculpin to continuously regenerate files, drop `--watch` until you investigate and debug.
+
+9. On the command prompt, create the following link for images to render on your local environment. Note: You may have to run the command shell as an administrator.
+
+ ```
+ cd output_dev
+ mklink /d source .
+ ```
+
+ **Note**: Run command prompt as administrator if you encounter permission errors.
