@@ -125,10 +125,10 @@ domains:
 You also need to add navigation paths in `configs/capture.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `about` and `contact` items and added some additional pages for Wraith to compare.
 ```yaml
 paths:
-  home: /
-  login: /user/login
-  great-vegetables: /content/great-vegetables
-  lovely-vegetables: /content/lovely-vegetables
+  home: "/"
+  login: "/user/login"
+  great-vegetables: "/content/great-vegetables"
+  lovely-vegetables: "/content/lovely-vegetables"
 ```
 Next, update the global `before_capture:` hook and replace its value with the `javascript/wait--phantom.js` script you updated.
 ```yaml
@@ -172,7 +172,7 @@ domains:
 
 paths:
   home:
-    path: /
+    path: "/"
     selector: "#header"
 ```
 To increase the reliability of the screenshot captures, tweak the capture time in `javascript/wait--casper.js`. Change the timeout from 2000 to 10000.
