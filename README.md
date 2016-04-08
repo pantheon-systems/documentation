@@ -101,9 +101,18 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  ```
  grunt watch & ./bin/sculpin generate --server --watch
  ```
+
 ## Local Setup: Git for Windows (Optional)
 
-1. If you do not already have PHP installed, use [Windows Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=PHP56) or [install manually](http://php.net/manual/en/install.windows.manual.php). Be sure to add the folder containing php.exe to your PATH environment variable and reopen any command prompt shells so they use new PATH setting.
+### Option 1: Vagrant (Recommended)
+Follow the [above steps](#option-1-vagrant-recommended) to run the docs site on a virtual machine.
+
+### Option 2: Composer
+
+1. If you do not already have PHP installed, use [Windows Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=PHP56) or [install manually](http://php.net/manual/en/install.windows.manual.php).
+
+ **Note**: Be sure to add the [folder containing php.exe to your PATH environment variable](http://php.net/manual/en/faq.installation.php#faq.installation.addtopath) and reopen any command prompt shells.
+
 2. Install [Git for Windows](https://git-for-windows.github.io/).
 3. Clone the documentation repository.
 4. Download [Sculpin](https://download.sculpin.io/sculpin.phar).
@@ -138,3 +147,5 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  cd output_dev
  mklink /d source .
  ```
+
+ **Note**: Run command prompt as administrator if you encounter permission errors.
