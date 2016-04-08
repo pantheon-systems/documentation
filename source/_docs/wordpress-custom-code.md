@@ -1,6 +1,6 @@
 ---
-title: Managing Custom Code for WordPress
-description: Learn how to manage custom plugins or themes for WordPress sites using GitHub Updater.
+title: Managing Custom Code for WordPress with Plugins
+description: Learn how to manage custom plugins or themes for WordPress sites using GitHub Updater or WP Pusher.
 categories: [wordpress]
 tags: [terminus, code]
 contributors:
