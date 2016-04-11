@@ -13,23 +13,23 @@ We recommend managing custom code as plugins or modules within individual reposi
 Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).
 </div>
 ## Before You Begin
-1. Install [Composer](https://getcomposer.org/doc/00-intro.md)
+1. Install [Composer](https://getcomposer.org/doc/00-intro.md).
 2. Move custom code to individual repositories, and host them on [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/).
-3. Set the Dev environment's connection mode to Git from within the site Dashboard or via [Terminus](/docs/terminus):
+3. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```nohighlight
  $ terminus site set-connection-mode --mode=git
  ```
 
-4. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you have not done so already.
+4. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
 
 ## Initialize Composer
 Run `composer init` from within the root directory of your site's codebase and use the interactive setup guide to initiate Composer. Enter `dev` when prompted for `Minimum Stability []:` and `yes` when asked if you would like to add the vendor directory to your `.gitignore` file.
 
-### Defining Composer Packages
-Run `git status` after initializing your project with Composer, to verify your working state. You should have one modified file (`.gitignore`) and one untracked file (`composer.json`).  
+### Define Composer Packages
+Run `git status` after initializing your project with Composer, to verify your working state. You should have one modified file (`.gitignore`) and one untracked file (`composer.json`). For additional details, see [Creating your very own Composer Package](http://knpuniversity.com/screencast/question-answer-day/create-composer-package). 
 
-Open `composer.json` using your preferred text editor and define a new package to require your custom code:
+**WordPress**: Open `composer.json` using your preferred text editor and define a new package to require your custom code:  
 
 ```json
 "repositories": {
@@ -48,9 +48,8 @@ Open `composer.json` using your preferred text editor and define a new package t
   }
 }
 ```
-For additional details, see [Creating your very own Composer Package](http://knpuniversity.com/screencast/question-answer-day/create-composer-package).
 
-The above example is for WordPress, however the same approach can be used for managing modules with Drupal:
+**Drupal**: Open `composer.json` using your preferred text editor and define a new package to require your custom code:  
 
 ```json
 "repositories": {
@@ -129,11 +128,11 @@ git push origin master
 - [Drupal Composer](http://drupal-composer.org/)
 - [Drupal Packagist](https://packagist.drupal-composer.org/)
 - [Composer Tools & Frameworks for Drupal](http://www.slideshare.net/GetPantheon/composer-tools-and-frameworks-for-drupal-20-may)
-- [cweagans/composer-patches](https://github.com/cweagans/composer-patches) to manage patches.
+- Manage patches with [cweagans/composer-patches](https://github.com/cweagans/composer-patches)
 
 ## WordPress Resources
 - [WordPress Packagist](https://wpackagist.org)
-- [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer) to manage Drop-ins:
+-  Manage drop-ins with [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer)
 
  ```json
  "require": {
