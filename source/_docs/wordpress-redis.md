@@ -49,15 +49,15 @@ terminus wp 'plugin update wp-redis'
 
 ### Install via Composer
 
-1. Set the Dev environment's connection mode to Git from within the site Dashboard or via Terminus:
+1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
  ```
  terminus site set-connection-mode --mode=git
  ```
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and initialize composer with `composer init`, if you have not done so already.
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and initialize Composer with `composer init`, if you have not done so already.
 
-3. Use the following within `composer.json` to install the WP Redis plugin as a Drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
+3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
  ```json
  "repositories": {
@@ -95,14 +95,14 @@ terminus wp 'plugin update wp-redis'
 ## Use the Redis Command-Line Client
 
 1. [Install Redis locally](http://redis.io/download).
-2. From the site Dashboard, select the desired environment (Dev, Test or Live).
-3. Click the **Connection Info** button, copy the Redis connection string and run the command in your local terminal.
+2. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
+3. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
 
 Execute the following command to return existing Redis keys:
 ```bash
 redis> keys *
 ```
-If Redis is configured properly, it will show appropriate keys. If nothing is returned, proceed to the troubleshooting section below.
+If Redis is configured properly, it will show the appropriate keys. If nothing is returned, proceed to the troubleshooting section below.
 
 To check if a specific key exists, you can pass the exists command:
 ```bash
@@ -120,4 +120,4 @@ redis>
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
 ### Redis Server is Gone
-Enabled Redis via the Pantheon site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+Enabled Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
