@@ -52,12 +52,12 @@ The following examples can also be used in addition to CloudFlare's mobile redir
 #### Page Width
 ```javascript
 if (screen.width <= 800) {
-window.location = "http://m.example.com";
+window.location = "https://m.example.com";
 }
 ```
 #### User Agent
 ```javascript
 if ((navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i))){
-   location.replace("http://m.example.com");
+   location.replace("https://m.example.com");
 }
 ```
