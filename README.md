@@ -27,7 +27,7 @@ documentation.
 Usage
 -----
 ## Get the code:
-Fork and clone this repository. Issue pull-requests one document at a time.
+Fork and clone this repository. Issue pull requests one document at a time.
 
 ## Local Setup: Mac OS X and Linux (Optional)
 
@@ -48,9 +48,9 @@ Fork and clone this repository. Issue pull-requests one document at a time.
 
 ### Option 2: Composer
 1. Install composer:
- If you do not want to install composer globally, please refer to [getcomposer.org instuctions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+ If you do not want to install Composer globally, please refer to [getcomposer.org instructions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
- Run the following command to install composer globally:  
+ Run the following command to install Composer globally:  
   ```
  curl -sS https://getcomposer.org/installer | php
  mv composer.phar /usr/local/bin/composer
@@ -64,20 +64,20 @@ Fork and clone this repository. Issue pull-requests one document at a time.
  ```  
 
 3. Start your local server:  
- If you do not want to install sculpin globally, you can use the following commands to start your local server:  
+ If you do not want to install Sculpin globally, use the following commands to start your local server:  
  ```
  ./bin/sculpin generate --server
  ```  
  Visit your docs site at: <http://localhost:8000/docs>  
 
- In order to globally execute sculpin, run the following commands:  
+ In order to globally execute Sculpin, run the following commands:  
  ```
  curl -O https://download.sculpin.io/sculpin.phar
  sudo chmod +x sculpin.phar
  mv sculpin.phar /usr/local/bin/sculpin
  ```
 
- Build sculpin and run a local instance:
+ Build Sculpin and run a local instance:
 
  ```
  sculpin generate --server
@@ -132,7 +132,7 @@ Follow the [above steps](#option-1-vagrant-recommended) to run the docs site on 
 
  Visit the local docs site at: <http://localhost:8000/docs>
 
- Finally, you can tell sculpin to watch the docs directory and automatically
+ Finally, you can tell Sculpin to watch the docs directory and automatically
  regenerate upon file modification:
 
  ```
