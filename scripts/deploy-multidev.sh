@@ -22,12 +22,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Authenticate Terminus
     ~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 
-    # Get the environment hostname and URL
-    ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
-    tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
-    export url=https://`head -1 filtered_env_hostnames.txt`
-    export hostname=`head -1 filtered_env_hostnames.txt`
-    export docs_url=$url/docs
 
     # Write existing environments for the static docs site to a text file
     ~/documentation/bin/terminus site environments --site=static-docs > ./env_list.txt
@@ -41,6 +35,13 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Check env_list.txt, create environment if one does not already exist
     if grep -Fxq "$normalize_branch" ./filtered_env_list.txt; then
         echo "Existing environment found for $normalize_branch"
+        # Get the environment hostname and URL
+        ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
+        tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
+        export url=https://`head -1 filtered_env_hostnames.txt`
+        export hostname=`head -1 filtered_env_hostnames.txt`
+        export docs_url=$url/docs
+
         #Get comment ID and comment body from last commit comment
         export previous_commit=($(git log --format="%H" -n 2))
         export previous_commit="${previous_commit[1]}"
@@ -78,7 +79,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
             then
               export guide=docs/guides${doc:19: -3}
               echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
-            elif [[ $doc =~ $file_path ]]
+            elif [[ $doc =~ $doc_path ]]
             then
               echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
             else
@@ -94,6 +95,13 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     else
         ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
         #Use GitHub's API to post Multidev URL in a comment on the commit
+
+        # Get the environment hostname and URL
+        ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
+        tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
+        export url=https://`head -1 filtered_env_hostnames.txt`
+        export hostname=`head -1 filtered_env_hostnames.txt`
+        export docs_url=$url/docs
 
         #Identify modified files from commit
         git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
@@ -111,7 +119,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
             then
               export guide=docs/guides${doc:19: -3}
               echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
-            elif [[ $doc =~ $file_path ]]
+            elif [[ $doc =~ $doc_path ]]
             then
               echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
             else
