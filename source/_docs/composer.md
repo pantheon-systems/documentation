@@ -31,7 +31,7 @@ Run `git status` after initializing your project with Composer, to verify your w
 
 Open `composer.json` using your preferred text editor and define a new package to require your custom code:
 
-```
+```json
 "repositories": {
   "my-custom-plugin": {
     "type": "package",
@@ -52,7 +52,7 @@ For additional details, see [Creating your very own Composer Package](http://knp
 
 The above example is for WordPress, however the same approach can be used for managing modules with Drupal:
 
-```
+```json
 "repositories": {
   "my-custom-module": {
     "type": "package",
@@ -72,7 +72,7 @@ The above example is for WordPress, however the same approach can be used for ma
 
 Next, add the [packagist.org](https://packagist.org/) repository and require [`composer/installers`](https://github.com/composer/installers) along with your custom plugin/module:
 
-```
+```json
 "repositories": {
   "my-custom-plugin": {
     "type": "package",
@@ -100,7 +100,7 @@ Next, add the [packagist.org](https://packagist.org/) repository and require [`c
 }
 ```
 `composer/installers` allows you to define installation paths for package types, such as plugins for WordPress:
-```
+```json
 "extra": {
   "installer-paths": {
     "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
@@ -109,7 +109,7 @@ Next, add the [packagist.org](https://packagist.org/) repository and require [`c
   }
 ```
 Or modules for Drupal:
-```
+```json
 "extra": {
   "installer-paths": {
     "sites/all/themes/{$name}/": ["type:drupal-theme"],
@@ -129,12 +129,13 @@ git push origin master
 - [Drupal Composer](http://drupal-composer.org/)
 - [Drupal Packagist](https://packagist.drupal-composer.org/)
 - [Composer Tools & Frameworks for Drupal](http://www.slideshare.net/GetPantheon/composer-tools-and-frameworks-for-drupal-20-may)
-- [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches) to manage patches.
+- [cweagans/composer-patches](https://github.com/cweagans/composer-patches) to manage patches.
 
 ## WordPress Resources
 - [WordPress Packagist](https://wpackagist.org)
 - [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer) to manage Drop-ins:
- ```
+
+ ```json
  "require": {
    "composer/installers": "^1.0.21",
    "koodimonni/composer-dropin-installer": "*",
