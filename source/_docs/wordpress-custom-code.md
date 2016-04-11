@@ -19,10 +19,10 @@ Pantheon does not support Git submodules (placing a Git repository within a subd
 1. Separate custom code into site-specific plugins or themes stored within individual repositories outside of your project.
 2. Host your custom extensions remotely on [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/).
 
-For more details on separating custom code, see related [blog post](https://pantheon.io/blog/wordpress-development-git).
+For more details on separating custom code, see this related [blog post](https://pantheon.io/blog/wordpress-development-git).
 
 ## GitHub Updater
-[GitHub Updater](https://github.com/afragen/github-updater) is an open-source plugin developed by [Andy Fragen](https://thefragens.com) that extends the existing notification and update mechanisms within WordPress to plugins and themes hosted outside of the official WordPress repository on GitHub, Bitbucket, or GitLab. This will display update notifications within the WordPress dashboard for public and private repositories alike.
+[GitHub Updater](https://github.com/afragen/github-updater) is an open-source plugin developed by [Andy Fragen](https://thefragens.com) that extends the existing notification and update mechanisms within WordPress to plugins and themes hosted outside of the official WordPress repository on GitHub, Bitbucket, or GitLab. This will display update notifications within the WordPress dashboard for public and private repositories.
 
 1. Modify your plugin and/or theme to add support for the GitHub Updater by providing the required declarations. The following [plugin example](https://github.com/afragen/github-updater/#plugins) should be placed within the plugin's header:
   <pre><code>/*
@@ -46,14 +46,14 @@ For more details on separating custom code, see related [blog post](https://pant
 3. Download the [latest release](https://github.com/afragen/github-updater/releases) of the GitHub Updater plugin (select the **zip** option).
 4. Unzip the archive and rename the folder to `github-updater`, then re-zip the file.
 5. Install the plugin by uploading the renamed zip file within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
-6. Active GitHub Updater from the Plugin page (`/wp-admin/plugins.php`).
+6. Activate GitHub Updater from the Plugin page (`/wp-admin/plugins.php`).
 7. Navigate to **Settings** > **GitHub Updater** > **Install Plugin**/**Install Theme** to install your custom extensions. Alternatively, you can upload your plugin/theme using the same method described above for installing the GitHub Updater plugin.
 
-Notifications within the WordPress Dashboard will now include updates to your custom code. If expected updates are not found within `/wp-admin/update-core.php`, click **Check Again** to clear [transients](https://codex.wordpress.org/Transients_API), or wait for them to reset automatically.
+Notifications within the WordPress dashboard will now include updates to your custom code. If expected updates are not found within `/wp-admin/update-core.php`, click **Check Again** to clear [transients](https://codex.wordpress.org/Transients_API), or wait for them to reset automatically.
 
 
 ## WP Pusher
-[WP Pusher](https://wppusher.com/) provides a similar method for managing your custom code, but with some key differences. WP Pusher is free for open source code hosted in public repositories. Supporting private repositories requires you to purchase a license. Currently, update notifications are not displayed within the WordPress Dashboard, but you can configure the plugin to automatically install updates on Pantheon following a push to the remote repository (e.g. GitHub, Bitbucket, or GitLab). There are no declarations required within your plugin or theme, so modifications to existing custom extensions are not required.
+[WP Pusher](https://wppusher.com/) provides a similar method for managing your custom code, but with some key differences. WP Pusher is free for open source code hosted in public repositories. Supporting private repositories requires you to purchase a license. Currently, update notifications are not displayed within the WordPress dashboard, but you can configure the plugin to automatically install updates on Pantheon following a push to the remote repository (e.g. GitHub, Bitbucket, or GitLab). There are no declarations required within your plugin or theme, so modifications to existing custom extensions are not required.
 
 1. [Download WP Pusher](https://wppusher.com/). WP Pusher is free for open source code hosted in public repositories.
 2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus site set-connection-mode --mode=sftp`
