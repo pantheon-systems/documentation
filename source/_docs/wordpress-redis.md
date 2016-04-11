@@ -24,7 +24,7 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 First enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 ## Install Drop-in Plugin
 [WP Redis](https://wordpress.org/plugins/wp-redis/) is loaded via a drop-in file, so there's no need to activate it on your WordPress sites. The following installation methods are supported:
-### Preferred Method: Symlink Drop-in
+### Install via Symlink Drop-in
 This method will store object cache values persistently in Redis while preserving the standard procedures for applying plugin updates.
 
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/terminus) command:
@@ -47,18 +47,50 @@ When a new version of the WP Redis plugin is released, you can upgrade by the no
 terminus wp 'plugin update wp-redis'
 ```
 
-### Alternate Method: Move Plugin File
-This method does not support the normal Plugin update mechanism in WordPress.
+### Install via Composer
 
-1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/terminus) command:
+1. Set the Dev environment's connection mode to Git from within the site Dashboard or via Terminus:
 
  ```
- terminus wp 'plugin install wp-redis'
+ terminus site set-connection-mode --mode=git
  ```
-2. Move the `object-cache.php` file from the plugin directory `wp-content/plugins/wp-redis/` to the `wp-content/` directory.
-3. Verify installation by selecting **Drop-ins** from the Plugins section of the WordPress Dashboard.
 
-When a new version of the WP Redis plugin is released, you will need to re-install the plugin entirely.
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and initialize composer with `composer init`, if you have not done so already.
+
+3. Use the following within `composer.json` to install the WP Redis plugin as a Drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
+
+ ```json
+ "repositories": {
+   "wpackagist": {
+     "type": "composer",
+     "url": "https://wpackagist.org"
+   }
+ },
+ "require": {
+   "composer/installers": "^1.0.21",
+   "koodimonni/composer-dropin-installer": "*",
+   "wpackagist-plugin/wp-redis": "0.4.0"
+   },
+   "extra": {
+     "installer-paths": {
+       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+       },
+     "dropin-paths": {
+        "wp-content": [
+        "package:wpackagist-plugin/wp-redis:object-cache.php"
+      ]
+    }
+  }
+ ```
+
+4. Run `composer install` to install WP Redis into the `wp-content` directory.  
+5. Use git status to verify your local state, then commit and push your code to Pantheon:
+
+ ```
+ git status
+ git commit -Am "Initiate composer, require custom code"
+ git push origin master
+ ```
 
 ## Use the Redis Command-Line Client
 
