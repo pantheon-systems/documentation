@@ -172,7 +172,7 @@ As you know, every website built on Pantheon has a minimum of three environment,
 Now armed with this knowledge, you can see that with a little bash magic you can use Terminus to get the URL of your site:
 
 ```bash
-$ echo "http://`terminus site hostnames list --bash | awk '{print $1}`"
+$ echo "`terminus site hostnames list | awk '{if (NR!=1) print "http://" $1}'`"
 ```
 
 With the URL for your site, you can execute the `wp core install` command and complete the example above.
