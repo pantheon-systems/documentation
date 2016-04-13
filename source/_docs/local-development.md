@@ -10,8 +10,8 @@ While Pantheon provides several options for on-server development, local develop
 ## Before You Begin
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/),  [XAMPP](https://www.apachefriends.org/index.html), and  all work.
-    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine. 
+- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](/docs/terminus/)
@@ -20,7 +20,7 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus site clear-cache
+terminus site clear-cache --site=<site> --env=<env>
 ```
 
 <div class="alert alert-info" role="alert">
