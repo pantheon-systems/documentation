@@ -70,11 +70,11 @@ Are you only indexing only 50 items at a time and wondering why hundreds of new 
 Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.  
 As an alternative, there are several external Solr service providers that do support spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted Solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
 
-### Allow Fields in a Solr Query
-Pantheon defaults to the Dismax parser for Solr queries. This parser is great for user-entered text because it's forgiving and similar to Google's parser, but it does not recognize field:value syntax.
+### Specify Query Parsers to Allow Fields
+Pantheon's Solr configuration uses the [DisMax](https://cwiki.apache.org/confluence/display/solr/The+DisMax+Query+Parser) query mode by default. This parser is great for user-entered text because it's forgiving and similar to Google's parser, but it does not recognize `field:value` syntax.
 
-The solution is to specify the parser in the request. Both the Lucene and Edismax parsers support the required field:value syntax. You can add them to a query by adding `&defType=lucene` or `&defType=edismax` to the end. For example:
+The solution is to specify the parser in the request. Both the [Lucene](https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser) and [eDisMax](https://cwiki.apache.org/confluence/display/solr/The+Extended+DisMax+Query+Parser) parsers support the required field:value syntax. You can add them to a query by adding `&defType=lucene` or `&defType=edismax` to the end. For example:
 ```
 /select?q=ts_ol_full_text:property&fl=label,bundle,ts_ol_full_text&wt=json&defType=edismax
 ```  
-See [this article]( https://wiki.apache.org/solr/QueryParser) to learn how to specify the desired parser in the query itself.
+For details on supported query parsers, see [Query Syntax and Parsing]( https://cwiki.apache.org/confluence/display/solr/Query+Syntax+and+Parsing).
