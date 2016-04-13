@@ -78,15 +78,15 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
             if [[ $doc =~ $guide_path ]]
             then
               export guide=docs/guides${doc:19: -3}
-              echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
+              grep -- ''"${guide}"'' comment.txt || echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
             elif [[ $doc =~ $doc_path ]]
             then
-              echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+              grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
             else
-              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+              grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
             fi
           else
-              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+              grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
         done < modified_files.txt
         export comment=`cat comment.txt`
@@ -118,15 +118,15 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
             if [[ $doc =~ $guide_path ]]
             then
               export guide=docs/guides${doc:19: -3}
-              echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
+              grep -- ''"${guide}"'' comment.txt || echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
             elif [[ $doc =~ $doc_path ]]
             then
-              echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+              grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
             else
-              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+              grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
             fi
           else
-              echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+            grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
           fi
         done < modified_files.txt
         export comment=`cat comment.txt`
