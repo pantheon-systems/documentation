@@ -27,7 +27,7 @@ Pantheon does not support Git submodules (placing a Git repository within a subd
 Run `composer init` from within the root directory of your site's codebase and use the interactive setup guide to initiate Composer. Enter `dev` when prompted for `Minimum Stability []:` and `yes` when asked if you would like to add the vendor directory to your `.gitignore` file.
 
 ### Define Composer Packages
-Run `git status` after initializing your project with Composer, to verify your working state. You should have one modified file (`.gitignore`) and one untracked file (`composer.json`). For additional details, see [Creating your very own Composer Package](http://knpuniversity.com/screencast/question-answer-day/create-composer-package). 
+Run `git status` after initializing your project with Composer, to verify your working state. You should have one modified file (`.gitignore`) and one untracked file (`composer.json`). For additional details, see [Creating your very own Composer Package](http://knpuniversity.com/screencast/question-answer-day/create-composer-package).
 
 **WordPress**: Open `composer.json` using your preferred text editor and define a new package to require your custom code:  
 
@@ -125,13 +125,13 @@ git push origin master
 
 ## Drupal Resources
 
+- [Drupal Packagist](https://packagist.drupal-composer.org/), a Composer repository for Drupal. It provides all projects from Drupal.org as packages for Composer.
 - [Drupal Composer](http://drupal-composer.org/)
-- [Drupal Packagist](https://packagist.drupal-composer.org/)
 - [Composer Tools & Frameworks for Drupal](http://www.slideshare.net/GetPantheon/composer-tools-and-frameworks-for-drupal-20-may)
 - Manage patches with [cweagans/composer-patches](https://github.com/cweagans/composer-patches)
 
 ## WordPress Resources
-- [WordPress Packagist](https://wpackagist.org)
+- [WordPress Packagist](https://wpackagist.org), mirrors the WordPress plugin and theme directories as a Composer repository.
 -  Manage drop-ins with [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer)
 
  ```json
