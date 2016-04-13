@@ -47,7 +47,7 @@ Saving session data
 
 ```
 
-You'll need to enter your password. If you are scripting a process, create a [machine token](/docs/machine-tokens/). You'll you have successfully authenticated when you see the Pantheon logo.
+You'll need to enter your password. If you are scripting a process, create a [machine token](/docs/machine-tokens/). You'll know you have successfully authenticated when you see the Pantheon logo.
 
 ## Create Your Site
 
@@ -97,7 +97,7 @@ working .............................
 Success: Pow! You created a new site!
 $
 ```
-To create a site with one command, you need
+To create a site with one command, you'll need:
 - **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
 - **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `--site=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
 - **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
@@ -127,14 +127,14 @@ $ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4b \
 
 Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-From terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
+From Terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
 
 ## Clone the Codebase and Dotenv
 Run the following command within backticks to [create a local repository of your site's codebase](/docs/git):
 
     `terminus site connection-info --site=<site-name> --env=dev --field=git_command`
 
-Terminus has built-in support for [PHP Dotenv](https://github.com/vlucas/phpdotenv), which provides an alternative to manually setting `--site` and `--env` within each command. Navigate into the site's local repository and create a `.env` file within the project's root directory:
+Terminus has built-in support for [PHP Dotenv](https://github.com/vlucas/phpdotenv), which provides an alternative to manually setting `--site` and `--env` within each command. Navigate to the site's local repository and create a `.env` file within the project's root directory:
 
 ```
 TERMINUS_SITE='cli-test'
