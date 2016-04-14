@@ -1,5 +1,5 @@
 ---
-title: Using the Environment Indicator
+title: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 categories: [developing]
 tags: [platform]
@@ -17,7 +17,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus site set-connection-mode --mode=sftp
  ```
 
-2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
+2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin install pantheon-hud --activate'
@@ -29,7 +29,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus site deploy --env=test --sync-content --note="Install Pantheon HUD plugin"
  ```
 
-4. Activate the plugin within the WordPress dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
+4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin activate pantheon-hud' --env=test
@@ -41,7 +41,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
  terminus site deploy --env=live --note="Install Pantheon HUD plugin"
  ```
 
-6. Activate the plugin within the WordPress dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
+6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin activate pantheon-hud' --env=live
