@@ -27,6 +27,13 @@ The **Clear Caches** option will clear the cache for the entire site, but it doe
 ## Pantheon Sessions Plugin
 The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin resolves errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
+## Pantheon HUD
+[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) gives you situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
+
+![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
+
+For installation details, see [Configuring Environment Indicators](/docs/environment-indicator).
+
 ## See Also
 
 You can download and install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin to back your WP Object cache with Redis. This provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on WordPress](/docs/wordpress-redis).
