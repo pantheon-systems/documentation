@@ -66,12 +66,12 @@ Visit this tab in the Dev environment when you have commits from Multidev enviro
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
 [Drupal sites](/docs/drupal-launch-check/) or [WordPress sites](/docs/wordpress-launch-check/).
 
-## Workflow
+## Database/Files
 ###Clone
-Use this tab to clone database and files from an environment.
+Use this tool to clone database and files from an environment.
 
 ###Import
-You can import an archive of site fils or a MySQL database via URL or file upload.
+You can import an archive of site files or a MySQL database via URL or file upload.
 
 ###Export
 With the Export tool, you can export the database or files from an environment to use in local development or a migration process.
