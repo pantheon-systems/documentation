@@ -1,15 +1,15 @@
 ---
-title: Environment Indicator
+title: Using the Environment Indicator
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 categories: [developing]
 tags: [platform]
 ---
 Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/docs/multidev/).
 
-For a heads-up display into your Pantheon environment and situational awareness, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
+For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 
-##Wordpress: Pantheon HUD
-The Pantheon HUD plugin is developed and maintained on GitHub, [create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
+## Wordpress: Pantheon HUD
+The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
 
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
 
@@ -17,37 +17,37 @@ The Pantheon HUD plugin is developed and maintained on GitHub, [create an issue]
  terminus site set-connection-mode --mode=sftp
  ```
 
-2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
+2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin install pantheon-hud --activate'
  ```
 
-3. Deploy the plugin to the Test environment within the site Dashboard or with Terminus:
+3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
  ```nohighlight
  terminus site deploy --env=test --sync-content --note="Install Pantheon HUD plugin"
  ```
 
-4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
+4. Activate the plugin within the WordPress dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin activate pantheon-hud' --env=test
  ```
 
-5. Deploy the plugin to the Live environment within the site Dashboard or with Terminus:
+5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
 
  ```nohighlight
  terminus site deploy --env=live --note="Install Pantheon HUD plugin"
  ```
 
-6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
+6. Activate the plugin within the WordPress dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
  terminus wp 'plugin activate pantheon-hud' --env=live
  ```
 
-All environments will now show the following heads up display for logged-in users with the `manage_options` capability:
+All environments will now show the following indicator for logged-in users with the `manage_options` capability:
 
 ![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
 
@@ -114,13 +114,13 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  }
  ```
 
-4. Deploy the module to the Test environment within the site Dashboard or with Terminus:
+4. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
 
  ```nohighlight
  terminus site deploy --env=test --sync-content --note="Install and configure Environment Indicator"
  ```
 
-5. Deploy the module to the Live environment within the site Dashboard or with Terminus:
+5. Deploy the module to the Live environment within the Site Dashboard or with Terminus:
 
  ```nohighlight
  terminus site deploy --env=live --note="Install and configure Environment Indicator"
