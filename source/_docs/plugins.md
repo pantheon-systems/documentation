@@ -28,11 +28,11 @@ The **Clear Caches** option will clear the cache for the entire site, but it doe
 The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin resolves errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
 ## Pantheon HUD
-[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) gives you situational awareness within the WordPress dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
+[Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) gives you situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
 ![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
 
-For installation details, see [Using the Environment Indicator](/docs/environment-indicator).
+For installation details, see [Configuring Environment Indicators](/docs/environment-indicator).
 
 ## See Also
 
