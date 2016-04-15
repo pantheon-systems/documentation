@@ -27,7 +27,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 <hr>
 ### Backup & Migrate
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database/Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the Dashboard for each environment.
 <hr>

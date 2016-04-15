@@ -66,7 +66,7 @@ Visit this tab in the Dev environment when you have commits from Multidev enviro
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
 [Drupal sites](/docs/drupal-launch-check/) or [WordPress sites](/docs/wordpress-launch-check/).
 
-## Database/Files
+## Database / Files
 ###Clone
 Use this tool to clone database and files from an environment.
 
@@ -84,7 +84,7 @@ Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 ## Errors
 All PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/docs/php-errors/).
 
-## Domains/HTTPS
+## Domains / HTTPS
 Use the [Domains/HTTPS tab](/docs/domains) to add the custom domain(s) you would like pointed to this environment. You can also enable or disable HTTPS for an environment. If you choose to enable HTTPS, you must generate a private key and get your certificate from a recognized certificate authority. For more details, see [Enable Secure HTTPS Communication](/docs/enable-https/).
 
 ## Backups
