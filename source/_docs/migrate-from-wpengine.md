@@ -16,7 +16,7 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
  - Select **Start from Scratch**, and choose **WordPress**.
  - Click **Visit Development Site** and complete the installation process.
 3. Save your SFTP connection information.
-![SFTP Connection Information](/source/docs/assets/images/sftp-connection.png)
+![SFTP Connection Information](/source/docs/assets/images/sftp-connection-info.png)
 4. Right click on the **Visit Development Site** and select **Copy Link Address**.
 5. Go to your web host (source site), and install and activate the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin.
 6. Enter your email address, Pantheon SFTP credentials, and Dev site URL you saved earlier.

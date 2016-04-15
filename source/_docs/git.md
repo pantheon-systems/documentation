@@ -26,7 +26,7 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 ### Step 2: Copy the Git Clone Command
 
 At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/docs/assets/images/git_string.png)<br />
+![Copy Past Git Clone](/docs/assets/images/git-string.png)<br />
 
 ### Step 3: Run Git Clone
 

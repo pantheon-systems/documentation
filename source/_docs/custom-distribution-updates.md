@@ -13,7 +13,7 @@ Core updates for [distributions](https://www.drupal.org/documentation/build/dist
 
 1. Access the site's Dashboard and change the [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
 2. Copy the clone command.
- ![Git clone](/source/docs/assets/images/git_string.png)
+ ![Git clone](/source/docs/assets/images/git-string.png)
 3. In a local terminal, paste the command. Git will unpackage the code in a directory created using your site name.
 4. Use `cd your-site-name` to navigate to the new folder.
 

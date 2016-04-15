@@ -35,7 +35,7 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 
 To get your SFTP login credentials, click **Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
 
- ![SFTP Connection Data](/source/docs/assets/images/connection-info-image.png)<br />
+ ![SFTP Connection Data](/source/docs/assets/images/sftp-connection-info.png)<br />
 
 The connection information is a bit different than what you might be used to, though it is based on your unique "Site ID". This is the long string at the end of your Dashboard URL and in your Git connection string, something like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
 
