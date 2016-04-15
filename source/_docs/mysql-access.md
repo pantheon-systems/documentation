@@ -14,7 +14,7 @@ Due to the nature of our platform, the connection information will change from t
 ## Database Connection Information
 
 MySQL credentials for each site environment are located in the Dashboard:<br />
-![MySQL Credentials](/source/docs/assets/images/desk_images/168060.png)<br />
+![MySQL Credentials](/source/docs/assets/images/mysql-info.png)<br />
 The following required fields are provided:
 
 - **Server**: The hostname of the MySQL server.

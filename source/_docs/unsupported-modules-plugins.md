@@ -27,9 +27,9 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 <hr>
 ### Backup & Migrate
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the workflow tools on the dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
-**Solution**: You can use the automated backups that are available on the dashboard for each environment.
+**Solution**: You can use the automated backups that are available on the Dashboard for each environment.
 <hr>
 ### Boost
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).

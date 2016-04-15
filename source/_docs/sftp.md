@@ -15,7 +15,7 @@ If you want to use your website framework's built-in update systems (e.g. the <c
 <h4>Note</h4>
 Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</div>
 
- ![Enable SFTP mode](/source/docs/assets/images/desk_images/278855.png)
+ ![Enable SFTP mode](/source/docs/assets/images/enable-sftp.png)
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
 
@@ -34,7 +34,9 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 ## SFTP Connection Information
 
 To get your SFTP login credentials, click **Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
- ![SFTP Connection Data](/source/docs/assets/images/desk_images/278856.png)<br />
+
+ ![SFTP Connection Data](/source/docs/assets/images/sftp-connection-info.png)<br />
+
 The connection information is a bit different than what you might be used to, though it is based on your unique "Site ID". This is the long string at the end of your Dashboard URL and in your Git connection string, something like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
 
 Your connection data is as follows:
@@ -69,14 +71,12 @@ Alternatively, you can connect via SFTP using the public [SSH key you uploaded t
 
 Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or to push them to Test/Live. You should commit early and commit often.
 
-After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository.
- ![Viewing changes made via SFTP](/source/docs/assets/images/desk_images/278859.png)<br />
-Clicking on the notification message expands the listing of the pending changes.
+After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository. Clicking on the notification message expands the listing of the pending changes.
 
-Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.<br />
- ![Writing a commit message](/source/docs/assets/images/desk_images/278861.png)<br />
-Once your message is ready, click **Commit**.<br />
- ![Committing Blocking UI](/source/docs/assets/images/desk_images/278852.png)<br />
+Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
+
+Once your message is ready, click **Commit**.
+
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

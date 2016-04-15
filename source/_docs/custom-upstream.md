@@ -101,7 +101,7 @@ git push origin master
 
 Visit the Development site URL and complete the site installation process to make sure your distribution installs cleanly.
 
-Testers might find it helpful to use the wipe functionality as part of the workflow tools to easily run through the install process multiple times:
+Testers might find it helpful to use the wipe functionality in the Database / Files tab to easily run through the install process multiple times:
 ```bash
 terminus site wipe
 ```
