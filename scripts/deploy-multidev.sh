@@ -42,10 +42,10 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export hostname=`head -1 filtered_env_hostnames.txt`
     export docs_url=$url/docs
   else
+    # Create multidev
     ~/documentation/bin/terminus site create-env --site=static-docs --from-env=dev --to-env=$normalize_branch
-    #Use GitHub's API to post Multidev URL in a comment on the commit
 
-    # Get the environment hostname and URL
+    # Get the environment hostname and identify deployment URL
     ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
     tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
     export url=https://`head -1 filtered_env_hostnames.txt`
@@ -103,12 +103,13 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   git diff-tree --no-commit-id --name-only -r $CIRCLE_SHA1 > modified_files.txt
   #For docs and site-wide changes
   export doc_file="(source.*\.md)"
-  #Add doc link to comment for all docs changed
+  #Add multidev link to comment for all md content types, otherwise link to source file of the diff
   while IFS= read -r doc;
   do
     if [[ $doc =~ $doc_file ]]
     then
       export guide_path="^(.*_guides.*)(.*\.md)"
+      export changelog_path="^(.*_changelogs.*)(.*\.md)"
       export doc_path="^(.*_docs.*)(.*\.md)"
       if [[ $doc =~ $guide_path ]]
       then
@@ -117,17 +118,21 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
       elif [[ $doc =~ $doc_path ]]
       then
         grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+      elif [[ $doc =~ $changelog_path ]]
+      then
+        export changelog=docs/changelog${doc:23: 5}/${doc:29: 2}
+        grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020["$changelog"]("$url"/"$changelog")\n" >> comment.txt
       else
         grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
       fi
     else
       grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
     fi
-  done < modified_files.txt
-  export comment=`cat comment.txt`
-  #Create new comment on new commit, so when PR is open only one comment is present
-  curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
+    done < modified_files.txt
 
+  #Create new comment on new commit, so when PR is open only one comment is present
+  export comment=`cat comment.txt`
+  curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
   # Clear cache on multidev env
   ~/documentation/bin/terminus site clear-cache --site=static-docs --env=$normalize_branch
