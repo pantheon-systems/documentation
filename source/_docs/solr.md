@@ -5,11 +5,11 @@ categories: [developing]
 tags: [code]
 keywords: apche, apache solr, index, indexing, searching, index and search, indexing and searching, solr, how to enable solr, enable solr, solr api, indexserver solr, solr indexserver, solr api, enable solr search, apachesolr, apache solor search module, solr modules, configure solr,
 ---
-Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the free sandbox. No permission or action is required from Pantheon to use Solr.  
+Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the free Sandbox. No permission or action is required from Pantheon to use Solr.  
 
 ## Which Plans Can Use Solr?
 
-Currently, all plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
+All plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
 | Plans        | Supported
 | ------------- |:-------------:|
@@ -68,4 +68,13 @@ Are you only indexing only 50 items at a time and wondering why hundreds of new 
 ### Apache Spatial Search on Pantheon
 
 Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.  
-As an alternative, there are several external Solr service providers that do support spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
+As an alternative, there are several external Solr service providers that do support spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted Solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
+
+### Specify Query Parsers to Allow Fields
+Pantheon's Solr configuration uses the [DisMax](https://cwiki.apache.org/confluence/display/solr/The+DisMax+Query+Parser) query mode by default. This parser is great for user-entered text because it's forgiving and similar to Google's parser, but it does not recognize `field:value` syntax.
+
+The solution is to specify the parser in the request. Both the [Lucene](https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser) and [eDisMax](https://cwiki.apache.org/confluence/display/solr/The+Extended+DisMax+Query+Parser) parsers support the required field:value syntax. You can add them to a query by adding `&defType=lucene` or `&defType=edismax` to the end. For example:
+```
+/select?q=ts_ol_full_text:property&fl=label,bundle,ts_ol_full_text&wt=json&defType=edismax
+```  
+For details on supported query parsers, see [Query Syntax and Parsing]( https://cwiki.apache.org/confluence/display/solr/Query+Syntax+and+Parsing).
