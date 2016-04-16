@@ -24,7 +24,6 @@ module.exports = function(grunt) {
             'source/docs/assets/node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
             'source/docs/assets/css/main.css',
             'source/docs/assets/fonts/pan-docs-icons/css/pan-docs.css',
-            'source/docs/assets/css/jquery.tocify.css'
           ],
         }
       }
@@ -66,9 +65,6 @@ module.exports = function(grunt) {
             'output_dev/docs/tags/**/*.html',
             'output_dev/docs/changelog/**/*.html',
             'output_dev/docs/guides/**/*.html',
-            'output_dev/docs/guides/contributors/**/*.html',
-            'output_dev/docs/guides/categories/**/*.html',
-            'output_dev/docs/guides/tags/**/*.html',
             'output_dev/docs/search/*.html'
           ]
         }

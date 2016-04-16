@@ -1,14 +1,13 @@
 ---
-layout: default
+layout: taxon
 title: Changelog
 use:
 - posts
 ---
-<div class="article container-fluid">
-  <div class="col-md-9">
 {% set year = '0' %}
-    <h1>Pantheon Changelog</h1>
-      <p>A list of the most recent platform improvements and documentation.</p>
+<h1 style="margin: 0">Changelog</h1>
+
+A list of the most recent platform improvements and documentation.
       {% for post in data.posts %}
   <div class="blog-post">
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}

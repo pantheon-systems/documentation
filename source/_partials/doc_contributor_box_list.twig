@@ -1,8 +1,0 @@
-{% if contributor_list %}
-    {% for contributorhandle in contributor_list %}
-        {% if site.contributors[contributorhandle] %}
-            {% set contributor = site.contributors[contributorhandle] %}
-            {% include 'doc_contributor_box.twig' %}
-        {% endif %}
-    {% endfor %}
-{% endif %}

@@ -41,3 +41,9 @@ deployment:
     branch: master
     commands:
       - bash scripts/deploy-live.sh
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
