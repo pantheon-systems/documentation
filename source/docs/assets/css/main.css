@@ -430,9 +430,7 @@ img.noborder {
     color: #EFD01B !important;
 }
 #footer-icon a {
-    text-align:center;
     text-decoration:none;
-    margin-left: 30px;
     margin-right: 30px;
 }
 #footer-icon a:visited {
