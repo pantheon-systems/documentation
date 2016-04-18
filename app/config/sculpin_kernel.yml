@@ -5,7 +5,7 @@ sculpin_content_types:
 
     posts:
         permalink: docs/changelog/:year/:month/
-        path: docs/changelog
+        path: _changelog
         enabled: true
 
     docs:
@@ -20,10 +20,9 @@ sculpin_content_types:
         permalink: docs/:basename/
 
     guides:
-        type: path
-        path: docs/_guides
-        singular_name: guide
-        enabled: true
+        type: meta
         taxonomies:
+            - categories
+            - tags
             - contributors
         permalink: docs/guides/:basename/

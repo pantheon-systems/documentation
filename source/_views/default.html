@@ -76,7 +76,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/docs/assets/compiled/compiled.css?v={{ site.assets_version }}">
     <script src="//www.google-analytics.com/analytics.js"></script>
-    <script src="//www.google-analytics.com/analytics.js"></script>
     <script src="/docs/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -89,6 +88,23 @@
     ga('send', 'pageview');
 
     </script>
+    <script type="text/javascript">// <![CDATA[
+      (function(w, d, s) {
+        function go(){
+        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+        if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.src = url; js.id = id;
+          fjs.parentNode.insertBefore(js, fjs);
+        };
+        load('//platform.twitter.com/widgets.js', 'tweetjs');
+        load('//platform.linkedin.com/in.js', 'lnkdjs');
+
+       }
+       if (w.addEventListener) { w.addEventListener("load", go, false); }
+        else if (w.attachEvent) { w.attachEvent("onload",go); }
+       }(window, document, 'script'));
+// ]]></script>
+
   </head>
 <body>
         <!-- Google Tag Manager -->

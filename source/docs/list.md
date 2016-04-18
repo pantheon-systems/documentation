@@ -1,7 +1,7 @@
 ---
 title: All Docs
 layout: taxon
-use: [docs]
+use: [guides, docs]
 ---
 <title>All Docs | {{ site.title }}</title>
 <h1 class="pio-docs-title">All Docs</h1>

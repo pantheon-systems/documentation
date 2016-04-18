@@ -430,9 +430,7 @@ img.noborder {
     color: #EFD01B !important;
 }
 #footer-icon a {
-    text-align:center;
     text-decoration:none;
-    margin-left: 30px;
     margin-right: 30px;
 }
 #footer-icon a:visited {
@@ -548,8 +546,21 @@ img.noborder {
   overflow: hidden;
   border: 0;
 }
-
-
+.btn-pio {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: #333;
+    color: #FFF;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .btn-pio:hover {
+    color: #fff;
+}
 /*
 * Homepage
 *

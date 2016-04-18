@@ -60,8 +60,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '43s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+  sed -i '38s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
 
 
   # Regenerate sculpin to reflect new redirect logic
@@ -108,19 +107,20 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   do
     if [[ $doc =~ $doc_file ]]
     then
-      export guide_path="^(.*_guides.*)(.*\.md)"
       export changelog_path="^(.*_changelogs.*)(.*\.md)"
       export doc_path="^(.*_docs.*)(.*\.md)"
-      if [[ $doc =~ $guide_path ]]
+      if [[ $doc =~ $doc_path ]]
       then
-        export guide=docs/guides${doc:19: -3}
-        grep -- ''"${guide}"'' comment.txt || echo -n "-\u0020["$guide"]("$url"/"$guide")\n" >> comment.txt
-      elif [[ $doc =~ $doc_path ]]
-      then
-        grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+        export guide=${doc:13: -3}
+        if ls -a output_dev/docs/guides | grep "$guide"
+        then
+          grep -- ''"$guide"'' comment.txt || echo -n "-\u0020[docs/guides/"$guide"]("$url"/docs/guides/"$guide")\n" >> comment.txt
+        else
+          grep -- ''"${doc:8: -3}"'' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+        fi
       elif [[ $doc =~ $changelog_path ]]
       then
-        export changelog=docs/changelog${doc:23: 5}/${doc:29: 2}
+        export changelog=docs/changelog/${doc:19: 4}/${doc:24: 2}
         grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020["$changelog"]("$url"/"$changelog")\n" >> comment.txt
       else
         grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt

@@ -25,14 +25,9 @@
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                <!--{% if page.contributors %}
-                {% set contributor_list = page.contributors %}
-                <small><i  style="margin-left:20px;" class="fa fa-users"></i> Contributors: {% include 'doc_contributor_list.twig' %}</small>
-                {% endif %}-->
-                <span class="pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="getpantheon" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script src="//platform.linkedin.com/in.js" type="IN/Share"  data-url="https://pantheon.io{{ page.url }}" data-counter="none"></script></span>
-                {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
+                <span class="pull-right">
+                <a data-proofer-ignore class="twitter-share-button" data-count="vertical" data-url="https://pantheon.io{{ page.url }}"></a>
+                <script data-proofer-ignore  type="IN/Share" data-counter="none" data-url="https://pantheon.io{{ page.url }}"></script></span>
                 <div style="float:right;" class="dropdown">
                 <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <span class="icon-github"></span>
@@ -45,7 +40,13 @@
                   <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20content" target="blank">Suggest New Content</a></li>
                   </ul>
                 </div>
-                  <hr style="margin-top:10px;">
+                <br>
+                {% if page.contributors %}
+                {% set contributor_list = page.contributors %}
+                <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
+                {% endif %}
+                {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
+                <hr style="margin-top:10px;">
             <div style="margin-top:15px;">
                 {{ page.blocks.content|raw }}
             </div>
