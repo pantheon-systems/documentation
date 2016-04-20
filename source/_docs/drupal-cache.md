@@ -8,7 +8,8 @@ keywords: drupal, performance, cache, caching, varnish, varnish caching
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. For more information, see [Varnish Caching for High Performance](/docs/varnish).
 
 ## Drupal 8
-At this time, Varnish clearing on a per-page basis through cache tags is not supported.
+
+At this time, Varnish purging based on [cache tags](https://www.drupal.org/developing/api/8/cache/tags) is not supported.
 
 ## Drupal 7 Performance Configuration
 
