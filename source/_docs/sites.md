@@ -74,7 +74,7 @@ Use this tool to clone database and files from an environment.
 You can import an archive of site files or a MySQL database via URL or file upload.
 
 ###Export
-With the Export tool, you can export the database or files from an environment to use in local development or a migration process.
+With the Export tool, you can export the database or files from an environment to use in local development or a migration process. These exports are available for 365 days from the time of creation.
 
 ###Wipe
 Use this tool if you need to completely wipe database and files for an environment. Wiping completely resets the database and files and you will lose all data. To get your site back online, you will need to either re-import, or re-run install.php.
