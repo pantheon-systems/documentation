@@ -19,10 +19,10 @@ Be sure that you have:
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-The following instructions will enable automatic redirects for the domain associated with the site's Live environment. If you wish to test redirects on another environment, you will need to add a subdomain (e.g. `m-test.example.com`) to the Test environment then configure the subdomain on CloudFlare with the provided DNS records.</div>
+The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on CloudFlare with the provided DNS records.</div>
 
 ## Add the Mobile Domain to Live
-1. From the Live environment of the Site Dashboard, select **Domains/HTTPS**.
+1. Go to the Live environment on your Site Dashboard, and select **Domains/HTTPS**.
 2. Add the domain you intend to use for the mobile-optimized site (e.g. `m.example.com`). Take note of the recommended DNS records for the subdomain.
 
 ## Enable Mobile Redirection on CloudFlare
@@ -32,10 +32,10 @@ The following instructions will enable automatic redirects for the domain associ
 4. Configure your mobile domain (e.g. `m.example.com`) as a subdomain using the recommended DNS records from Pantheon.
 5. Click the **Speed** icon at top of the page.
 6. Scroll down to the **Mobile Redirect** section.
-7. Set up the mobile domain as needed. There are two options here - **Keep Path** or **Drop Path**:
+7. Set up the mobile domain as needed. There are two options here:
 	* **Drop Path** will redirect all mobile requests to your mobile-optimized website homepage.
 	* **Keep Path** will redirect all mobile requests to the same resource hosted on your mobile-optimized website.
-8. Allow changes to propagate, then test the redirect on a mobile device. The request should redirect to the configured mobile domain.
+8. Allow the changes to propagate, then test the redirect on a mobile device. The request should redirect to the configured mobile domain.
 
 ## CloudFlare Alternatives for Mobile Redirection
 In order for CloudFlare's mobile redirection service to work, the domain must be hosted on the CloudFlare platform (both root and www). As an alternative, mobile redirection can be implemented with JavaScript or via plugins and/or modules for your site's given framework:
