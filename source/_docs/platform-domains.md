@@ -12,13 +12,19 @@ Every site on Pantheon is given multiple environments (Dev, Test, and Live), eac
 - multidev-env-site-name.pantheonsite.io
 
 ## Legacy Platform Domains
-DNS configurations that use the `gotpantheon.com` or `pantheon.io` legacy platform domain will continue to work, as requests are permanently redirected to `pantheonsite.io`. However, we recommend switching the CNAME value from `gotpantheon.com` to `pantheonsite.io` within the domain's DNS provider to prevent unnecssary redirects and take advantage of uptime and reliability improvements.
+
+DNS configurations for paid sites that use the `gotpantheon.com` or `pantheon.io` legacy platform domain will continue to work, as requests will be permanently redirected to `pantheonsite.io` beginning in early May.  However, we recommend switching the CNAME value from `gotpantheon.com` or `pantheon.io` to `pantheonsite.io` within the domain's DNS provider to prevent unnecessary redirects and take advantage of uptime and reliability improvements.
+
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Sandbox sites that are converged will lose their legacy <code> pantheon.io </code> domain. We suggest you update your DNS configuration to <code> pantheonsite.io </code> immediately.
+</div>
 
 ## Platform Domains as CDN Origin
 
 Customers frequently use CDNs on top of Pantheon, and are free to use platform domains for this purpose. They can rely on Pantheon's HTTPS edge to ensure secure communication between their CDN provider and their "origin" instance on Pantheon. For an example of this use case, see [Adding HTTPS For Free With Cloudflare](/docs/guides/cloudflare-enable-https/).
 
-If you use the platform in this way, you cannot use legacy platform domains and must update your configuration to use a `pantheonsite.io` domain. 
+If you use the platform in this way, you cannot use legacy platform domains and must update your configuration to use a `pantheonsite.io` domain.
 
 ## Vanity Domains
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace `pantheonsite.io` for each environment on every site they run with a custom vanity domain.
