@@ -27,6 +27,8 @@ When you're ready to test a new set of changes, take your code from Dev, your co
 
 ![Site dashboard, test environment, code section](/source/docs/assets/images/test-env.png)
 
+While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).
+
 After running this operation, be sure that:
 
 * Your database updates succeed  
