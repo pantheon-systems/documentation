@@ -25,6 +25,7 @@
                     {% endif %}
                   {% endfor %}
                 {% endif %}
+                {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
                 <span class="pull-right">
                 <a data-proofer-ignore class="twitter-share-button" data-count="vertical" data-url="https://pantheon.io{{ page.url }}"></a>
                 <script data-proofer-ignore  type="IN/Share" data-counter="none" data-url="https://pantheon.io{{ page.url }}"></script></span>
@@ -45,7 +46,6 @@
                 {% set contributor_list = page.contributors %}
                 <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
                 {% endif %}
-                {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
                 <hr style="margin-top:10px;">
             <div style="margin-top:15px;">
                 {{ page.blocks.content|raw }}
