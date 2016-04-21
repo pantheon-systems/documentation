@@ -21,7 +21,7 @@ View details for open support tickets or create a new one.
 This is where you can update and manage your personal account details. Use the options on the left navigation menu to:
 
 - Update your user profile details
-- Connect and disconnect your Google account
+- Connect and disconnect your Google account (used for logging in to Pantheon with your Google identity)
 - Change your password  
 - Set your login destination (if you're a member of an organization or agency)  
 - Add and manage [SSH keys](/docs/generate-ssh-key/)  
