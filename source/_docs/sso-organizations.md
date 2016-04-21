@@ -61,4 +61,4 @@ Open a support ticket with Pantheon with the following:
 If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
 
 ### Cannot Login Using Google Account
-Members of organizations that use single sign-on are unable to login to Pantheon with their Google account, and must log in using their company email address.
+Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing Social Login could circumvent that policy.
