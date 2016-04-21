@@ -8,28 +8,28 @@ tags: [platform]
 Access all of your sites and manage your account information from the User Dashboard.
 ![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
 
-###Sites Tab
-Every site you're a team member of is displayed here, along with the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
+### Sites Tab
+Here you can add a new site, see every site you're a team member of, and see the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-###Organizations Tab
-If you belong to an Organization, you will see it listed here and can click on it to go to that Organization's Dashboard.
+### Organizations Tab
+If you belong to an organization, you will see it listed here and can click it to go to that organization's Dashboard.
 
-###Support Tab
-Go to this tab to view details for open support tickets or to create a new one.
+### Support Tab
+View details for open support tickets or create a new one.
 
-###Account Tab
-The Account tab is where you can update your user profile details, change your password, add and manage SSH keys, view billing details, add machine tokens, and delete your account.
+### Account Tab
+This is where you can update and manage your personal account details. Use the options on the left navigation menu to:
 
-##Team Management
-It's easy to add, manage, and delete your site's users. For complete details, see [Team Management](/docs/team-management/).
-![Team Management Window](/source/docs/assets/images/team-modal.png)
-##Pantheon for Agencies
+- Update your user profile details
+- Connect and disconnect your Google account
+- Change your password  
+- Set your login destination (if you're a member of an organization or agency)  
+- Add and manage [SSH keys](/docs/generate-ssh-key/)  
+- View billing details  
+- Add [machine tokens](/docs/machine-tokens/)  
+- [Delete your account](/docs/delete-account/)
 
-With Pantheon for Agencies, you can build, launch, and run all your clients’ Drupal and WordPress sites through one dashboard.
-
-Learn how to [manage sites and teams with the Organization Dashboard](/docs/organization-dashboard/) or see the [Organization FAQs article](/docs/organization-faq/).
-
-##See Also
-- [Change Management](/docs/change-management/)
+## See Also
+- [Role-Based Permissions & Change Management](/docs/change-management/)
 - [New Site Owner FAQs](/docs/site-owner-faq/)
 - [Add a Credit Card to a Site](/docs/site-payments/)
