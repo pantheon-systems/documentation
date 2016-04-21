@@ -4,7 +4,7 @@ description: Detailed information to enable SAML single sign-on for your organiz
 categories: [managing]
 tags: [platform, organizations]
 ---
-[Single sign-on](/docs/sso/) (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/).
 
 SAML SSO is included for Elite, Enterprise, and EDU+ customers. If you'd like to upgrade to an eligible plan, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) account and be a Pantheon Partner to qualify.
 
@@ -60,5 +60,5 @@ Open a support ticket with Pantheon with the following:
 ### Cannot Authenticate with Username/Password When Creating a New Machine Token
 If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
 
-### Cannot Login Using Google Account
-Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing Social Login could circumvent that policy.
+### Cannot Log in Using a Google Account
+Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing social login could circumvent that policy.
