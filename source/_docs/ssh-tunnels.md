@@ -18,7 +18,7 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 
 - Local installation of a MySQL client
 - [Redis command-line client](/docs/redis/#use-the-redis-command-line-client)
-- Add an [SSH Key](/docs/generate-ssh-key) to your Pantheon User Dashboard
+- Add an [SSH key](/docs/ssh-keys) to your Pantheon User Dashboard
 
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
