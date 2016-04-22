@@ -5,13 +5,13 @@ categories: [managing]
 tags: [platform, getting-started, local]
 keywords: ssh keys, ssh, generate keys
 ---
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best-practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
+To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 
 Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the troubleshooting section at the end of the document.</div>
+SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the Troubleshooting section at the end of the document.</div>
 
 ## Generate an SSH Key
 
