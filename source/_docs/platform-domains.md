@@ -13,7 +13,7 @@ Every site on Pantheon is given multiple environments (Dev, Test, and Live), eac
 
 ## Legacy Platform Domains
 
-DNS configurations for paid sites that use the `gotpantheon.com` or `pantheon.io` legacy platform domain will continue to work, as requests will be permanently redirected to `pantheonsite.io` beginning in early May.  However, we recommend switching the CNAME value from `gotpantheon.com` or `pantheon.io` to `pantheonsite.io` within the domain's DNS provider to prevent unnecessary redirects and take advantage of uptime and reliability improvements.
+DNS configurations for paid sites that use the `gotpantheon.com` or `pantheon.io` legacy platform domain will continue to work, as requests will be permanently redirected to `pantheonsite.io` beginning in early May 2016.  However, we recommend switching the CNAME value from `gotpantheon.com` or `pantheon.io` to `pantheonsite.io` within the domain's DNS provider to prevent unnecessary redirects and take advantage of uptime and reliability improvements.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
