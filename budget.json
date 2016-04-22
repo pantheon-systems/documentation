@@ -3,7 +3,6 @@
     "default": 70,
     "criticalpath": 38,
     "ydns": 5,
-    "yminify": 59,
     "ycookiefree":19,
     "jsnumreq":51,
     "thirdpartyasyncjs": 15,
