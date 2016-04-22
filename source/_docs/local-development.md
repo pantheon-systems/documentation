@@ -57,7 +57,7 @@ git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository
 ```
 If everything worked correctly, you will see Git fetching the data:<br />
 ![Git Clone During](/source/docs/assets/images/git_clone.png)<br />
-If you run into permission problems, check your [SSH key](/docs/add-ssh-key/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 

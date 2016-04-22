@@ -9,7 +9,7 @@ keywords: debug, debugging sites, debug sites, debugging site, debugging mysql, 
 Logs help you find, debug, and isolate current or potential problems on your live site. You can automate the process of accessing and maintaining these logs with a simple script.
 
 ## Enable Passwordless Access
-Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/generate-ssh-key/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Create Script
 Open terminal and run the following commands to create and access a new local directory:

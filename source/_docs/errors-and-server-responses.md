@@ -65,7 +65,7 @@ Typically the request timeout is much shorter than the hard timeout for PHP. Whi
 There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
 ### Required Key Not Found
-When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/add-ssh-key/) for instructions.
+When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/ssh-keys) for instructions.
 
 ## Retries Across Application Server Containers (High Availability)
 

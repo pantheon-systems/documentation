@@ -32,7 +32,7 @@ There are two ways to add and update your site's code: Git source code managemen
 ### Git Connection Mode
 Git is a well-known, industry standard version control system for managing code. For more information, see [Starting with Git](/docs/git).
 
-We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH Key](/docs/add-ssh-key) into the [User Dashboard](https://dashboard.pantheon.io/users/#account). For detailed instructions, see [Generating SSH Keys](/docs/generate-ssh-key/). Users without an SSH key loaded on their account can interact with code via Git by entering their Dashboard password when prompted in terminal.
+We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH key](/docs/ssh-keys) into the [User Dashboard](https://dashboard.pantheon.io/users/#account). For detailed instructions, see [Generating and Adding SSH Keys](/docs/ssh-keys). Users without an SSH key loaded on their account can interact with code via Git by entering their Dashboard password when prompted in terminal.
 
 ### SFTP Connection Mode
 You can develop directly on the server using [SFTP mode](/docs/sftp/).
@@ -46,7 +46,7 @@ Find more Pantheon provided credentials in the site Dashboard's connection infor
 - [Starting with Git](/docs/git/)
 - [Accessing MySQL Databases](/docs/mysql-access/)
 - [Redis as a Caching Backend](/docs/redis#use-the-redis-command-line-client)
-- [Loading SSH Keys](/docs/add-ssh-key/)
+- [Generating and Adding SSH Keys](/docs/ssh-keys/)
 ## The Pantheon Workflow
 Learn more about the [Pantheon workflow](/docs/pantheon-workflow/), both for code deployment and content (database and files).
 

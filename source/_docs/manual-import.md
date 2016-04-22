@@ -76,7 +76,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  Squash commit -- not updating HEAD  
  Automatic merge went well; stopped before committing as requested
  ```
- Authenticate using your Pantheon Dashboard credentials when prompted for a password. We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH key](/docs/generate-ssh-key/) into the User Dashboard.
+ Authenticate using your Pantheon Dashboard credentials when prompted for a password. We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH key](/docs/ssh-keys/) into the User Dashboard.
 
 7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
  ```bash
