@@ -102,7 +102,10 @@ Yes, just use `terminus drush "cron"` using [Terminus](/docs/terminus/). With th
 
 #### What if I run into a timeout when using the Drupal Migrate UI?
 
-As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/). You can even configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170).
+As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/). You can even configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
+```
+$conf['migrate_drush_path'] = '../drush';
+```
 
 #### Can Pantheon change the non-configurable timeouts for my site?
 
