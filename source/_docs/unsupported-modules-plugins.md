@@ -222,11 +222,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### Wordfence
-**Issue**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
+**Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 
-**Issue**: Wordfence firewall expects specific write access to wp-content/wflogs during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
+**Issue** #2: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
 <hr>
 
 ## Dynamic Outbound IPs
