@@ -34,7 +34,7 @@ Click **Run cron** to run all scheduled tasks.
 ![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
 Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
 ```bash
-terminus drush "cron"
+terminus drush "cron" --site=<site> --env=<env>
 ```
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
