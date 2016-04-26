@@ -18,9 +18,8 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
 ### AdvAgg 
-**Issue**: AdvAgg can cause conflicts with the platform Varnish caching leading to vearious errors, typically seen as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through.` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through.`.
+**Issue**: We do not recommend using AdvAgg as it can cause conflicts with Varnish caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
 
-**Solution**: Pantheon recommends not using AdvAgg if possible.
 ### Aquia Solr Search
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
