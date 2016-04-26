@@ -20,12 +20,8 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus site clear-cache --site=<site> --env=<env>
+terminus site clear-cache
 ```
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 There are three parts to any dynamic website:
 

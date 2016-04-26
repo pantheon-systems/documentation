@@ -108,10 +108,6 @@ If you are using search_api_solr.module, you can check it with the command:
 terminus drush "vget search_api_solr_connection_class"
 ```
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code>.</div>
-
 ### Error During Search API Solr Installation
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
