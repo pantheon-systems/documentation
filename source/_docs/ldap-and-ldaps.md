@@ -79,9 +79,7 @@ Use the following script to troubleshoot a variety of configuration problems. Cu
 ```bash
 terminus drush "scr ldap-test.php"
 ```
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). See a list of all your sites by running <code>terminus sites list</code></div>
+
 The entire script:
 
 ````php

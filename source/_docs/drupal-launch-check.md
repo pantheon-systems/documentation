@@ -47,9 +47,6 @@ You can get a list of all available site audit reports using [Terminus](/docs/te
 ```nohighlight
 terminus drush "help --filter=site_audit"
 ```
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 You can also execute a full report in HTML format.
 ```bash

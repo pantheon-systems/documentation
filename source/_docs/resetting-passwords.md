@@ -24,9 +24,6 @@ If you still can’t get access to your site using password reset, for example i
 $ terminus drush "user-login"
 ```
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
-
 ## WordPress User Login
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](/docs/terminus/).
 
