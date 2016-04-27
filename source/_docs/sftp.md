@@ -17,7 +17,7 @@ Due to the nature of our platform, the connection information will change from t
 
  ![Enable SFTP mode](/source/docs/assets/images/enable-sftp.png)
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet. You must commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.</div>
+Commit Frequently: SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet. You *must* commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.  Additionally, bindings are migrated as a regaular part of maintenance.  This can delete uncommitted changes.</div>
 
 As you work via SFTP, the Pantheon Dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
