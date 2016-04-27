@@ -5,7 +5,7 @@ categories: [developing]
 tags: [code, local, getting-started, featured]
 keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin
 ---
-In some cases, working via `git` is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
+In some cases, working via Git is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
 This is why we offer **SFTP mode**. This allows you to develop directly on Pantheon and can be a major time-saver.
 
@@ -17,13 +17,13 @@ Due to the nature of our platform, the connection information will change from t
 
  ![Enable SFTP mode](/source/docs/assets/images/enable-sftp.png)
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-Commit Frequently: SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet. You *must* commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.  Additionally, bindings are migrated as a regular part of maintenance.  This can delete uncommitted changes.</div>
+Commit frequently; SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet. You *must* commit these file changes if you want to keep them permanently. If you switch from SFTP to Git mode while uncommitted changes are pending, you will be presented with a dialog confirming that you don't want to keep these changes, and if confirmed, they will be deleted.  Additionally, bindings are migrated as a regular part of maintenance.  This can delete uncommitted changes.</div>
 
 As you work via SFTP, the Pantheon Dashboard will track your changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-This means you won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</div>
+You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</div>
 
 ## SFTP Mode
 
