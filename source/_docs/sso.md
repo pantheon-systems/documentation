@@ -5,7 +5,7 @@ categories: [managing]
 tags: [platform]
 keywords: sso, identity federation, single sign-on, single sign on, security, ldap, ldaps, ssl, shibboleth, simplesamlphp, oauth, ip based, ip-based, ip based security, ip-based security, security recommendations
 ---
-Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions.  
+Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organization](/docs/sso-organizations/).
 
 Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
 
@@ -40,8 +40,6 @@ Pantheon does not have a mechanism for providing a dedicated outbound IP address
 
 Each application container worker uses a distinct application server, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.  
 
-Live sites on Pantheon on Professional plans and above use multiple application container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  
-
-In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
+Live sites on Pantheon on Professional plans and above use multiple application container workers. This means (among other things) multiple distinct application servers and distinct outbound IPs.  In short, IP-based security is not recommended on Pantheon - or any cloud platform. Instead, we recommend that you encrypt your communication using SSL certificates and other forms of authentication.
 
 For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
