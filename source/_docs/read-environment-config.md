@@ -83,6 +83,10 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
       include DRUPAL_ROOT . '/sites/all/modules/domain/settings.inc';
     }
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Adding this snippet may cause the Status Tab to show that Fast 404 pages are not enabled, when if configured properly, they actually are.
+</div>
 
 ## WordPress
 
