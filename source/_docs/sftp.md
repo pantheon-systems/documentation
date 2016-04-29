@@ -9,12 +9,13 @@ In some cases, working via Git is not the best option. You may not like local de
 
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to [use your website framework's built-in update systems](/docs/more-sftp/) (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first.
 
-<div class="alert alert-danger" role="alert"><h4>SFTP Mode Considerations: </h4>
+<div class="alert alert-danger" role="alert"><h4>SFTP Mode Considerations </h4>
+<h5>Commit frequently and keep in mind: </h5>
 <ul>
-<li> <strong>Commit frequently</strong>. If you switch from SFTP to Git mode while uncommitted changes are pending, you'll need to confirm that you don't want to keep the changes, and if confirmed, they will be permanently deleted.
-<li> SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet.   <li> The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.
-<li> Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
-<li> You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.
+  <li> SFTP changes to code that have not been committed will <strong>not be saved in backups</strong> as they are not part of your code repository yet.   
+  <li> The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.
+  <li> Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
+  <li> You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.
 </ul>
 </div>
 
