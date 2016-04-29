@@ -184,9 +184,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
     $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
     // Use Redis for Drupal locks (semaphore).
     $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-  }
 }
-
 ```
 
 The preceding conditional will only evaluate as true if the application in the Live environment is being invoked through a web visitor, but not via command line PHP. Therefore, Redis keys will only be populated through visits, but they will not be cleared or populated via Drush calls, which will result in caching issues for the site. Also, the cache configuration will only apply for the live site, making it difficult to confirm its operation in the development or staging environment prior to deployment.
