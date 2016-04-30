@@ -32,7 +32,7 @@ Ensure you have the correct database username and password for your environment.
 
 After entering all the information, click **Test Connection** to initiate a connection with the remote database. If it succeeds, you'll receive a confirmation message.
 
-After the configuration is complete, the new connection will available on the MySQL Workbench workspace. 
+After the configuration is complete, the new connection will be available on the MySQL Workbench workspace. 
 
 ## Connect to the Database
 
