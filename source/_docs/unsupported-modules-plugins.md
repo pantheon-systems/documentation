@@ -216,6 +216,10 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 <hr>
 
+### Instashow
+**Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+<hr>
+
 ### Monarch Social Sharing
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 <hr>
