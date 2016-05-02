@@ -12,7 +12,7 @@ Planned and in-progress work for Drupal 8 documentation on Pantheon can be track
 ## Known Issues
 
 ### Installation Requires SFTP Mode
-Drupal 8 currently requires that the `settings.php` file be writeable in order to complete the installation. This means that if you switch from SFTP to Git mode in your Dashboard before completing the installation, the installation will fail. The workaround is to simply leave your site in SFTP mode until you have completed the installation and committed the `settings.php` file. You can [follow the issue on drupal.org](https://github.com/pantheon-systems/documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3AD8).
+Drupal 8 currently requires that the `settings.php` file be writeable in order to complete the installation. This means that if you switch from SFTP to Git mode in your Dashboard before completing the installation, the installation will fail. The workaround is to simply leave your site in SFTP mode until you have completed the installation and committed the `settings.php` file. You can [follow the issue on drupal.org](https://www.drupal.org/node/2156401).
 
 ### Unavailable Features
 The following platform features are not yet available on Pantheon for sites running Drupal 8:
