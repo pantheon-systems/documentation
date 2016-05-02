@@ -5,11 +5,15 @@ tags: [drupal-8, code]
 ---
 
 [Drupal 8](https://www.drupal.org/drupal-8.0) is now available on Pantheon! New Drupal 8 sites will use the [drops-8](https://github.com/pantheon-systems/drops-8) upstream repository and can be created via [Terminus](/docs/terminus) or the [Dashboard](https://dashboard.pantheon.io/products/drupal8/spinup). To bring an existing Drupal 8 site onto Pantheon, see [Migrate to Pantheon: Manual Site Import](/docs/manual-import). However, things may break and our support is limited at this time.
+
 ## Docs Progress
 Planned and in-progress work for Drupal 8 documentation on Pantheon can be tracked in our <a href="https://github.com/pantheon-systems/documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3AD8">D8 Milestone</a>. Pull requests are always welcome.
+
 ## Known Issues
+
 ### Installation Requires SFTP Mode
-Drupal 8 currently requires that the settings.php file be writeable in order to complete installation. This means that if you switch from SFTP to Git mode in your dashboard before completing the installation, the installation will fail. The workaround is to simply leave your site in SFTP mode until you have completed the installation and committed the settings.php file. You can <a href="https://github.com/pantheon-systems/documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3AD8">follow the issue on drupal.org</a>.
+Drupal 8 currently requires that the `settings.php` file be writeable in order to complete the installation. This means that if you switch from SFTP to Git mode in your Dashboard before completing the installation, the installation will fail. The workaround is to simply leave your site in SFTP mode until you have completed the installation and committed the `settings.php` file. You can [follow the issue on drupal.org](https://github.com/pantheon-systems/documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3AD8).
+
 ### Unavailable Features
 The following platform features are not yet available on Pantheon for sites running Drupal 8:
 
