@@ -83,7 +83,7 @@ Before you start, be sure that you have an AWS S3 bucket set up.
 
 ```bash
 drush @pantheon.SITENAME.dev dl media-2.x-dev amazons3 amazons3_cors devel jquery_update awssdk views file_entity
-drush @pantheon.SITENAME.dev make sites/all/modules/awssdk/awssdk.make --no-core
+drush @pantheon.SITENAME.dev make --no-core code/sites/all/modules/awssdk/awssdk.make code 
 drush @pantheon.SITENAME.dev en devel amazons3 amazons3_cors media jquery_update libraries awssdk views file_entity awssdk_ui
 drush @pantheon.SITENAME.dev cc all
 

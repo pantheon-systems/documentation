@@ -184,9 +184,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
     $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
     // Use Redis for Drupal locks (semaphore).
     $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-  }
 }
-
 ```
 
 The preceding conditional will only evaluate as true if the application in the Live environment is being invoked through a web visitor, but not via command line PHP. Therefore, Redis keys will only be populated through visits, but they will not be cleared or populated via Drush calls, which will result in caching issues for the site. Also, the cache configuration will only apply for the live site, making it difficult to confirm its operation in the development or staging environment prior to deployment.
@@ -218,7 +216,7 @@ The best and easiest way to update your core is by using Pantheon administration
 
 ### Fatal Error: require\_once()
 
-Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the example code snippet to match your path to the Redis module. The error would like something like this:
+Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the example code snippet to match your path to the Redis module. The error would look something like this:
 ```bash
 Fatal error: require_once(): Failed opening required
 '/srv/bindings/xxxxxxxxx/code/sites/all/modules/redis/redis.autoload.inc'

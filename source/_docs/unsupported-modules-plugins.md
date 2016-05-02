@@ -17,6 +17,9 @@ We do not prevent you from installing and using these plugins/modules; however, 
 ### Adaptive Image Styles
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
+### AdvAgg 
+**Issue**: We do not recommend using AdvAgg as it can cause conflicts with Varnish caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
+
 ### Aquia Solr Search
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
@@ -143,6 +146,15 @@ You may also need to add this line within the `filefield_sources_plupload.module
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
 
 <hr>
+### reCAPTCHA
+
+**Issue**: If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
+
+**Solution**: Override the default arg_separator.output value in `settings.php` by adding the following line:
+
+`ini_set('arg_separator.output', '&');`
+
+<hr>
 ### Registry Rebuild  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
 <hr>
@@ -202,6 +214,10 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: Conflicts with Varnish.
 
 **Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
+<hr>
+
+### Instashow
+**Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
 
 ### Monarch Social Sharing

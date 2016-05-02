@@ -112,6 +112,6 @@ See [Unsupported Modules and Plugins](/docs/unsupported-modules-plugins) for an 
 
 ## Inactive Site Freezing
 
-Sandbox sites with no recent development activity are automatically placed in cold storage or "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's dashboard will be unavailable.
+Sandbox sites that are over a year old that have not had code commits or other Git activity for 6 months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
-A site can be unfrozen with a single click. Simply visit the site's dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again.
+You can reactivate a site with a single click. Simply visit the site's Dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard.
