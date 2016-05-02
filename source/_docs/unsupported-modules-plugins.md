@@ -148,11 +148,11 @@ This will move the temporary upload destination from the individual server mount
 <hr>
 ### reCAPTCHA
 
-**Issue**: If your site is running PHP 5.3, form submissions that use the reCaptcha module might continually fail with the message `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
+**Issue**: If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
-**Solution**: Override the default arg_separator.output value in settings.php.
+**Solution**: Override the default arg_separator.output value in `settings.php` by adding the following line:
 
-ini_set('arg_separator.output', '&');
+`ini_set('arg_separator.output', '&');`
 
 <hr>
 ### Registry Rebuild  
