@@ -46,7 +46,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
-      $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheonsite.io') {
+      $_SERVER['HTTP_HOST'] == 'thatothersiteyouhad.com') {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']);
     exit();
@@ -73,8 +73,7 @@ To direct all traffic to the bare domain using CloudFlare:
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
       (php_sapi_name() != "cli")) {
-      if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com' ||
-          $_SERVER['HTTP_HOST'] == 'live-yoursite.pantheonsite.io') {
+      if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com') {
         header('HTTP/1.0 301 Moved Permanently');
         header('Location: http://yoursite.com'. $_SERVER['REQUEST_URI']);
         exit();
