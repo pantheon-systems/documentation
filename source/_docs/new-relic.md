@@ -15,6 +15,10 @@ Enable New Relic on your Pantheon site by clicking **Settings** in the upper-rig
 
 For two weeks, you'll receive a trial of New Relic's Pro plan for the site. New relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
+Access New Relic by clicking selecting the **New Relic** tab on the Site Dashboard.  
+
+Go to the New Relic workspace on your Dashboard, and click **Open New Relic**.
+
 ## Remove Multidev Environments in New Relic
 After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).  
 
