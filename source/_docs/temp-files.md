@@ -26,10 +26,10 @@ For example, replace `'plupload_temporary_uri'` with the applicable module or th
 $conf['plupload_temporary_uri'] = $_SERVER['HOME'] . '/tmp';
 ```
 
-Visit the [Unsupported/Problematic Modules and Plugins](https://pantheon.io/docs/unsupported-modules-plugins/) doc for other possible workarounds on popular extensions.
+Visit the [Unsupported/Problematic Modules and Plugins](https://pantheon.io/docs/unsupported-modules-plugins/) doc to see other possible workarounds for popular extensions.
 
 ### WordPress
-As with Drupal, plugings that allow the temporary location to be set can update the option as follows:
+As with Drupal, plugins that allow the temporary location to be set can update the option as follows:
 Replace `'some_tmp_settings'` with the applicable plugin or theme option used to configure the temporary directory path:
 
 ```
