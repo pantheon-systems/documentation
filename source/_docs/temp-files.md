@@ -19,13 +19,17 @@ Pantheon's upstream for [wordpress](https://github.com/pantheon-systems/WordPres
 Modules, plugins, and/or themes that override Pantheon's temporary directory configuration are typically not supported within our distributed environment. However, you may be able to resolve issues by adjusting the setting used to configure the temporary directory path within the module, plugin and/or theme.
 
 ### Drupal
-Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path. The following is an example for the Plupload module:
+Some modules provide variables that can be altered in order to set a temporary file location.
+For example, replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path. The following is an example for the Plupload module:
 
 ```
 $conf['plupload_temporary_uri'] = $_SERVER['HOME'] . '/tmp';
 ```
 
+Visit the [Unsupported/Problematic Modules and Plugins](https://pantheon.io/docs/unsupported-modules-plugins/) doc for other possible workarounds on popular extensions.
+
 ### WordPress
+As with Drupal, plugings that allow the temporary location to be set can update the option as follows:
 Replace `'some_tmp_settings'` with the applicable plugin or theme option used to configure the temporary directory path:
 
 ```
