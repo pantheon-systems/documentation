@@ -12,7 +12,15 @@ Live sites on Business and Elite plans have multiple [application containers](/d
 While you may test methods to alter the routing of temporary file storage, there is no warranty that these methods will be 100% effective.  
 </div>
 
-Pantheon's upstream for [wordpress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L75-L78) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L128-L136) configures the temporary directory path dynamically based on the application container processing the request. This ensures the accessibility of temporary files generated for a given task until the request has been complete.  This is essentially the same for Drupal 7, only the temporary path assignment comes from the Pressflow settings.
+Pantheon's upstream for [wordpress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L75-L78) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L128-L136) configures the temporary directory path dynamically based on the application container processing the request. This ensures the accessibility of temporary files generated for a given task until the request has been complete.  
+
+To obtain a similar effect for Drupal 7, you may test including this snippet in `settings.php`:
+
+```
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $config['system.file']['path']['temporary'] = $_SERVER['HOME'] .'/tmp';
+}
+```
 
 ## Modules/Plugins/Themes Override
 
