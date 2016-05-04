@@ -8,7 +8,7 @@ keywords: support, scope, customer support, getting started
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and view ticket response times, visit [Getting Support](/docs/getting-support).
 
 - We don't touch client code.
-The code that runs your site belongs to you.  Pantheon provides updates to the upstream for the site, which *only* affects core files and Pantheon-specific additions.  It is your responsibility *not to overwite the upstream*.  If you do, updates on the dashboard will cause conflicts that *you* must [resolve them manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) via Git.
+The code that runs your site belongs to you.  Pantheon provides updates to the upstream for the site, which *only* affects core files and Pantheon-specific additions.  It is your responsibility *not to overwite the upstream*.  If you do, updates on the dashboard will cause conflicts that *you* must [resolve manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) via Git.
 
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
