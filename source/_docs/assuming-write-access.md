@@ -44,7 +44,7 @@ The instructions for creating a symlink are supported on Mac and Linux machines 
 7. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
 ## Troubleshooting
-Some modules/plugins check and verify if the target directory exist using if_dir() which returns bool(false) if the directory is a symlink. Patching the module/plugin to use if_link() instead of if_dir() might help.
+Some modules and plugins verify that the target directory exists using `if_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `if_link()` instead of `if_dir()`.
 
 ## See Also		
 For more details on creating symbolic links on Mac/Linux, see [this thread](http://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).		
