@@ -43,5 +43,8 @@ The instructions for creating a symlink are supported on Mac and Linux machines 
 6. Deploy to Test and confirm results.
 7. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
+## Troubleshooting
+Some modules and plugins verify that the target directory exists using `is_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `is_link()` instead of `is_dir()`.
+
 ## See Also		
 For more details on creating symbolic links on Mac/Linux, see [this thread](http://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).		
