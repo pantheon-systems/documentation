@@ -5,7 +5,7 @@ categories: [drupal]
 tags: [code]
 keywords: drupal, simplesamlphp, shibboleth sso, sso, saml, single-sign on,
 ---
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.11/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from drupal.org.</div>
