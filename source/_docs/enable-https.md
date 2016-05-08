@@ -27,8 +27,7 @@ Enable HTTPS before updating DNS. HTTPS for custom domains is available for Prof
 Run `openssl` from the command line to generate an [RSA private key](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) (.key file) and [certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request) (.csr) file:
 
 ```bash
-openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr
--keyout www_example_com.key
+openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr -keyout www_example_com.key
 ```
 
 You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
