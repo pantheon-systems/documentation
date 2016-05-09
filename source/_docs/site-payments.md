@@ -23,8 +23,8 @@ We do not recommend entering your client's credit card information on their beha
 
 Developing your site and enjoying the advanced features like Workflow, Team Management, and New Relic can all be accessed for free; however, there are also premium features that require you to have a payment method associated with your site.
 
-For example, when adding SSL you are prompted to update your site's plan:
- ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/desk_images/309237.png)
+For example, when enabling HTTPS you are prompted to update your site's plan:
+ ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/update-plan-prompt-https.png)
 Clicking the message takes you to the Billing page to either select a plan or to enter your payment information.
 
 

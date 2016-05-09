@@ -12,14 +12,14 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 
 1. Check the options you want to run after pulling the update.
 2. Click **Apply Updates**.
-![A Pantheon site dashboard with upstream updates available.](/source/docs/assets/images/desk_images/357403.png)
+![A Pantheon site dashboard with upstream updates available.](/source/docs/assets/images/upstream-updates.png)
 3. Click **Visit Development Site** in the Development Environment to test it, or run your automatic user acceptance tests.
 4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/undo-commits) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking **Pull (Content from Live and) Code from Development** in the Code workspace in the Test Environment.
 6. Click **Visit Testing Environment** to test the update against your Live site’s content base.
 7. Deploy the upstream updates to your Live Environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
-8. Click **Visit Live Environment** to verify the update is live.
-![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/desk_images/357435.png)
+8. Click **Visit Live Site**, then verify the update is live.
+![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/visit-live-site.png)
 
 ## Apply Upstream Updates via Terminus
 

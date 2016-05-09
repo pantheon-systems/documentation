@@ -29,18 +29,18 @@ In Drupal, setting the value to "Never" will be ignored; system cron will always
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
 There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.<br />
-![Drupal admin configure cron](/source/docs/assets/images/desk_images/73173.png)
+![Drupal admin configure cron](/source/docs/assets/images/cron-config.png)
 Click **Run cron** to run all scheduled tasks.
-![Click Run Cron](/source/docs/assets/images/desk_images/73176.png)
+![Click Run Cron](/source/docs/assets/images/run-cron.png)
 Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
 ```bash
 terminus drush "cron"
 ```
 
 To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
-![Reports--->Recent Log Messages](/source/docs/assets/images/desk_images/74068.png)
+![Reports--->Recent Log Messages](/source/docs/assets/images/recent-log-reports.png)
 If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called "cron\_example".
-![Cron log entry in reports](/source/docs/assets/images/desk_images/74077.png)
+![Cron log entry in reports](/source/docs/assets/images/drupal-reports.png)
 
 ### How Can I Schedule Cron to Run More Often?
 
@@ -86,7 +86,7 @@ terminus drush "wd-show --type='cron'"
 ### Can I prevent Drupal Cron from running?
 
 Yes, from within Drupal at `admin/system/config/cron`, select **Never** from the "Run cron every" drop-down menu, then save the configuration. However, Pantheon system cron will run every hour and there is no way to disable it.
-![Stop cron from running](/source/docs/assets/images/desk_images/74128.png)  
+![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 ## Resources
 
 - [Drupal.org Community Documentation - Set up Cron](http://drupal.org/cron)
