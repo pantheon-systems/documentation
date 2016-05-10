@@ -35,6 +35,8 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 
 One of the modules already included in every Pantheon Drupal 7 site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
 
+The Pantheon Apache Solr module uses the core Search module "administer search" permission. You will not be able to post schema.xml if the core Search module is disabled.
+
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
  ![Drupal Admin Search and Metadata Solr](/source/docs/assets/images/desk_images/192434.png)
