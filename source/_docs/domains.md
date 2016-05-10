@@ -84,11 +84,11 @@ DNS changes can take up to 48 hours to propagate across the entire Internet, but
 ### How do I use Pantheon's WWW redirection service?
 The www-redirection service listens for requests and issues 301 redirects with www prepended to the host header. To use this service, simply configure the domain's DNS with the recommended DNS records within the Site Dashboard.
 
-![www-redirection service](/source/docs/assets/images/desk_images/376194.png)
+![www-redirection service](/source/docs/assets/images/www-redirection-service.png)
 
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
-![Extra www example](/source/docs/assets/images/desk_images/376201.png)
+![Extra www example](/source/docs/assets/images/extra-www-example.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
 ### Why is my Drupal 8 site inaccessible after adding a custom domain?

@@ -50,7 +50,7 @@ When you set up your SFTP client, remember that SFTP is the protocol and you nee
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
 There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
- ![Cyberduck Example](/source/docs/assets/images/desk_images/278857.png)<br />
+ ![Cyberduck Example](/source/docs/assets/images/cyberduck-example.png)<br />
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
 

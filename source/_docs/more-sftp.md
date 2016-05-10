@@ -16,9 +16,9 @@ When using Pantheon's SFTP mode to develop directly on your Dev environment, you
 WordPress's admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site.
 
 When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your Dev environment. It works for plugins:
- ![Installing WP Plugins](/source/docs/assets/images/desk_images/278882.png)<br />
+ ![Installing WP Plugins](/source/docs/assets/images/install-plugins.png)<br />
 And for themes:<br />
- ![Installing WP Themes](/source/docs/assets/images/desk_images/278883.png)<br />
+ ![Installing WP Themes](/source/docs/assets/images/install-themes.png)<br />
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
@@ -30,9 +30,9 @@ You should never have to enter SFTP credentials to WordPress's admin area itself
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface). When in SFTP mode this will work seamlessly on Pantheon.
 
 Get the URL to the code you want installed from Drupal.org:
- ![Drupal.org views module](/source/docs/assets/images/desk_images/278879.png)<br />
+ ![Drupal.org views module](/source/docs/assets/images/views-module.png)<br />
 Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
- ![Installing via update manager](/source/docs/assets/images/desk_images/278880.png)<br />
+ ![Installing via update manager](/source/docs/assets/images/install-via-update-manager.png)<br />
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">

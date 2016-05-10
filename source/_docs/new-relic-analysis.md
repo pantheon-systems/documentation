@@ -24,7 +24,7 @@ The New Relic interface provides severals views that display information about v
 
 ## End-User Overview
 
-![End-User Interface](/source/docs/assets/images/desk_images/78125.png)
+![End-User Interface](/source/docs/assets/images/new-relic-end-user.png)
 
 1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data. 
 2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds.
@@ -37,7 +37,7 @@ The apdex is not the most accurate representation of your sites' load-times. It 
 
 ## Appserver Overview
 
-![Appserver Overview](/source/docs/assets/images/desk_images/77851.png)
+![Appserver Overview](/source/docs/assets/images/new-relic-overview.png)
 
 1. The **response time** represents the duration that it takes for the request to be received by Nginx, processed by the application server, and returned to the client for processing and rendering. The end-user response time is different than the appserver response time, as the end user's response time is affected by variables such as connection speed, network latency, and browser.
 2. The **slow transactions** represent points of the process that take longer than a defined amount of time. This feature can be used to test a site against a set of timed-expectations to discover and fix problems.
@@ -97,7 +97,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 #### How can I share a link to a particular metric?
 
 In the New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
- ![Permalink on the New Relic performance page](/source/docs/assets/images/desk_images/218071.png)
+ ![Permalink on the New Relic performance page](/source/docs/assets/images/new-relic-permalink.png)
 
 #### How much is New Relic?
 
