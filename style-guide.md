@@ -23,7 +23,7 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 * Use numbered lists for chronological steps.
 
-* Use bulleted lists to highlight information in a visually appealing way. This also gives the user a visual rest by breaking up blocks of content.
+* Use bulleted lists to highlight information in a visually appealing way. Breaking up content into smaller content blocks improves readabillity.
 
 ## General Guidelines for All Content
 
@@ -33,9 +33,9 @@ Write in a friendly, yet professional tone.  Pantheon is "Fast, Proven, Innovati
 
 * Be mindful of the audience's varying needs and prior knowledge. Write content that users with various amounts of technical knowledge and experience can easily understand and follow.
 
-* Use of contractions:  Contractions can be used to create a conversational, informal tone, such as in FAQs or WalkMe content. Avoid using contractions in UI labels i.e. button names, page headers, etc.
+* Use of contractions:  Contractions can be used to create a conversational, informal tone, such as in FAQs or WalkMe content. Avoid using contractions in UI labels (e.g. button names, page headers, etc.).
 
-* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent, for instance when referring to a button or page name in technical documentation.
+* Text Formatting (Bold vs. Italics): Avoid using italics in web content as it decreases readability. Use bold if you need to make content prominent, for instance when referring to a button or page name in technical documentation. Use only one style of formatting (bold, code block, italic).
 
 ## Web Content Types
 
@@ -237,7 +237,7 @@ See the *Chicago Manual of Style* for all grammar-related questions.
 
 ## Headings and Subheadings
 
-When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown in H2 tags, and subheadings should be shown in H3 tags.
+When writing a heading or subheading in a document, use an imperative verb and not a gerund (a verb ending in "ing"). Headings should be shown in H2 tags, and subheadings should be shown in H3 tags. Only use bold formatting for headers, even when it includes a file name. Example: **Creating a services.yml File for Drupal 8**
 
 When writing an outline for a guide or article, decide what the main topics are. Those will be your headings (tagged as H2). If there are subtopics that belong under a category, display those as subheaders (tagged as H3).
 
