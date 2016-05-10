@@ -40,7 +40,7 @@ The Pantheon Apache Solr module requires the core Search module to have administ
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
  ![Drupal Admin Search and Metadata Solr](/source/docs/assets/images/desk_images/192434.png)
-### 4. Post the `schema.xml` Using the Pantheon Apache Solr Module
+### 4. Post the schema.xml Using the Pantheon Apache Solr Module
 
 The next step is to post the `schema.xml`, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.  
 
