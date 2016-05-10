@@ -33,21 +33,34 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 <div class="alert alert-info" role="alert">
 <h4>Note</h4> If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.</div>
 
-One of the modules already included in every Pantheon Drupal 7 site is [pantheon\_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr). This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. pantheon\_apachesolr is not required if you are using a third-party Solr service.
+The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
+
+The Pantheon Apache Solr module requires the core Search module to have administrator permission granted for "Administer search". You will not be able to post `schema.xml` if the core Search module is disabled.
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
  ![Drupal Admin Search and Metadata Solr](/source/docs/assets/images/desk_images/192434.png)
 ### 4. Post the schema.xml Using the Pantheon Apache Solr Module
 
-The next step is to post the schema.xml, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.  
+The next step is to post the `schema.xml`, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.  
 
  ![Solr configuration schema](/source/docs/assets/images/desk_images/192435.png)  
-Choose the appropriate schema for the module that you are using (apachesolr or search\_api\_solr) and Solr version (3.5.0). In the majority of cases, you will want to use 3.x/schema.xml. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
+Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr) and Solr version (3.5.0). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
+
+Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
+```php
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+ // set schema
+ $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
+ //or if you have a contrib folder for modules use
+ //$conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
+}
+```
+
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-You must post the schema.xml in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
+You must post the <code>schema.xml</code> in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
 
 ### 5. Enable and Configure Your Solr Module
 
