@@ -844,6 +844,10 @@ img.noborder {
   max-height: 90%;
 }
 
+.tocify-hide {
+  display: none !important;
+}
+
 
 /* First level of nav */
 .pio-docs-sidenav {

@@ -232,7 +232,8 @@
             if(!firstElem.length) {
 
                 self.element.addClass(hideTocClassName);
-
+                $('#doc').addClass('col-md-12');
+                $('#doc').removeClass('col-md-9');
                 return;
 
             }

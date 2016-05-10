@@ -21,7 +21,6 @@ module.exports = function(grunt) {
             'source/docs/assets/node_modules/highlight.js/styles/tomorrow-night-eighties.css',
             'source/docs/assets/node_modules/node-font-awesome/node_modules/font-awesome/css/font-awesome.min.css',
             'source/docs/assets/node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'source/docs/assets/node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
             'source/docs/assets/css/main.css',
             'source/docs/assets/fonts/pan-docs-icons/css/pan-docs.css',
           ],
