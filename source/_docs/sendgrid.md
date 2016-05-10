@@ -46,27 +46,56 @@ Install and activate the latest release through the WordPress dashboard or place
 Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
 ## Drupal
+Two methods can be used to integrate SendGrid with your Drupal site: SMTP or API.
+#### Considerations
+- SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
+- API integration can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)).
+ For more details, see [Unsupported/Problematic Modules and Plugins](/docs/unsupported-modules-plugins/#composer-manager).
 
-### Download the Drupal SendGrid Integration module
+### SendGrid SMTP Integration
 
-Pantheon recommends using the actively maintained [SendGrid Integration module](https://www.drupal.org/project/sendgrid_integration) to send email with Drupal.
+Support for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the pre-release version.
 
-Download and enable the latest recommended release in the `code/sites/all/modules` directory. You can push it with Git, use the SFTP account in your Pantheon Dashboard, or use [Drush](https://pantheon.io/blog/five-steps-feeling-drupal-drush). The following commands can be used to download and enable the module if you have Drush configured locally:
-```nohighlight
-drush @pantheon.your-site.dev dl sendgrid_integration
-drush @pantheon.your-site.dev en sendgrid_integration -y
-```
+1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
-At this time, this module is only available for Drupal 7 sites. Follow [this issue](https://www.drupal.org/node/2676416) for details on Drupal 8 development.
+ ```nohighlight
+ terminus drush 'en smtp -y'
+ ```
+2. Visit `/admin/config/system/smtp` once you've logged in as administrator.
+3. From within Install Options, select **On**.
+4. Use the following within SMTP Server Settings:
 
-### Add Your SendGrid Account Details
+ **SMTP server**: smtp.sendgrid.com <br>
+ **SMTP port**: 465<br>
+ **Use encrypted protocol**: Use SSL<br>
 
-1. Log in to Drupal in your Pantheon Dev environment.
-2. Select **Configuration** from the Drupal menu, and go to **SendGrid settings** in the System section.
-![Settings example](/source/docs/assets/images/sendgrid_integration.png)​  
-3. Add your SendGrid credentials, and click **Save configuration**.  
+5. Provide your site-specific SendGrid credentials and click **Save configuration**.  
 
-Your Drupal application on Pantheon is now set up to send email through SendGrid's API.
+Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
+
+### SendGrid API Integration
+The SendGrid Integration module is not supported on Drupal 8 sites at this time. This method can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)).
+
+1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
+
+ ```nohighlight
+ terminus drush 'en sendgrid_integration -y'
+ ```
+
+2. From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+
+3. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+
+4. Add the provided [code block](/docs/unsupported-modules-plugins/#composer-manager) within `settings.php` to address issues with the required Composer Manager module.
+
+5. Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
+
+ ```
+ terminus drush 'composer-manager install'
+ ```
+
+Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
@@ -81,3 +110,7 @@ You can explore the Statistics and Email Reports from within your site's account
 ## Congratulations!
 
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](http://resources.sendgrid.com/email-infrastructure-guide/) for advanced tips on how to create and publish DNS records for increased deliverability.
+
+## See Also
+
+- [Prevent Spamming During Drupal Debugging and Testing](/docs/guides/rerouting-outbound-email)
