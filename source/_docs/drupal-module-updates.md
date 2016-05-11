@@ -17,5 +17,5 @@ Drupal has a very good, built-in system for updating contributed modules through
 6. If there are updates available, select the ones you want and click **Download These Updates**.  
 7. Once the updates are downloaded successfully, select **Perform updates in site maintenance mode** and click **Continue**.  
 8. The updates will run, and if there are any database updates required, you will have the option to do so. If there were no issues, your module(s) will reflect their new versions in the Modules page.
-9. Return to the **Code** tool in the Dev environment of the Site Dashboard.
+9. Return to Dev environment of your Pantheon Site Dashboard and select the **Code** tab.
 10. Enter a commit message and click **Commit** to add changes to version control.
