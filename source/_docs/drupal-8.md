@@ -20,6 +20,7 @@ The following platform features are not yet available on Pantheon for sites runn
  - [Solr](/docs/solr)
  - [Redis](/docs/redis/#drupal-8-sites)
  - The [Status tool's](/docs/drupal-launch-check) [Site Audit](https://www.drupal.org/project/site_audit) functionality
+ - [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
 For more details on Pantheon's platform support for Drupal 8, follow the [Pantheon D8 issue on GitHub](https://github.com/pantheon-systems/drops-8/issues?q=is%3Aopen).
 ### Trusted Host Setting
