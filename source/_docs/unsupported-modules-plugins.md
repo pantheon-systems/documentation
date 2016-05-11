@@ -17,7 +17,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 ### Adaptive Image Styles
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
-### AdvAgg 
+### AdvAgg
 **Issue**: We do not recommend using AdvAgg as it can cause conflicts with Varnish caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
 <hr>
 ### Apache Solr Multilingual
@@ -47,7 +47,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### Cache Expiration
 **Issue**: Unfortunately, there is no way to selectively purge the Varnish cache.
 
-**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
+**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 
 <hr>
 ### CKFinder
@@ -218,7 +218,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### Caching Plugins (e.g. Batcache, W3 Total Cache, or WP Super Cache)
 **Issue**: Conflicts with Varnish.
 
-**Solution**: See [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
+**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 <hr>
 
 ### Instashow

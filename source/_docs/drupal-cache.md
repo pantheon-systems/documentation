@@ -5,11 +5,11 @@ categories: [drupal]
 tags: [varnish, code]
 keywords: drupal, performance, cache, caching, varnish, varnish caching
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings. For more information, see [Varnish Caching for High Performance](/docs/varnish).
+To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
 
 ## Drupal 8
 
-At this time, Varnish purging based on [cache tags](https://www.drupal.org/developing/api/8/cache/tags) is not supported.
+At this time, Varnish purging based on [cache tags](https://www.drupal.org/developing/api/8/cache/tags) is not supported. For configuration instructions, see [Drupal 8 Performance and Varnish Caching Settings](/docs/drupal-8-cache).
 
 ## Drupal 7 Performance Configuration
 
@@ -73,3 +73,6 @@ This setting controls whether or not to compile and cache your CSS and JavaScri
 ### Contributed Modules
 
 Contributed modules like `views.module` and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should definitely look at implementing their cache settings to provide a good logged-in user experience.
+
+## See Also
+- [Varnish Caching for High Performance](/docs/varnish)

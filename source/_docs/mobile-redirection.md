@@ -45,7 +45,7 @@ In order for CloudFlare's mobile redirection service to work, the domain must be
 
 
 ### JavaScript
-You can detect the page width or user agent via JavaScript, then redirect requests to your configured and optimized mobile site. We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. For details, see [Varnish Caching - Drupal and WordPress Advanced Topics](/docs/caching-advanced-topics/#device-detection).
+You can detect the page width or user agent via JavaScript, then redirect requests to your configured and optimized mobile site. We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics/#device-detection).
 
 The following examples can also be used in addition to CloudFlare's mobile redirection service to detect user agents not yet supported, such as tablets.
 
