@@ -4,6 +4,7 @@ description: Detailed information about configuring your Drupal database setting
 categories: [drupal]
 tags: [code, drupal-8]
 keywords: drupal, settings.php, database configuration, configuration
+contributors: mmenavas
 ---
 The Drupal system configuration in code is set in:
 `sites/default/settings.php`
@@ -176,6 +177,32 @@ As an example, here's how you can hard-code your Drupal 7 caching configuration 
       else if (PANTHEON_ENVIRONMENT == 'live') {
         // Google Analytics.
         $conf['googleanalytics_account'] = 'UA-XXXXXXXX-Z';
+      }
+    }
+
+Drupal 8's [configuration override system](https://www.drupal.org/node/1928898) uses the global `$config` variable:
+
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Drupal caching in development environments.
+      if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
+        // Expiration of cached pages - none.
+        $config['system.performance']['cache']['page']['max_age'] = 0;
+        // Aggregate and compress CSS files in Drupal - off.
+        $config['system.performance']['css']['preprocess'] = false;
+        // Aggregate JavaScript files in Drupal - off.
+        $config['system.performance']['js']['preprocess'] = false;
+      }
+      // Drupal caching in test and live environments.
+      else {
+        // Expiration of cached pages - 15 minutes.
+        $config['system.performance']['cache']['page']['max_age'] = 900;
+        // Aggregate and compress CSS files in Drupal - on.
+        $config['system.performance']['css']['preprocess'] = true;
+        // Aggregate JavaScript files in Drupal - on.
+        $config['system.performance']['js']['preprocess'] = true;
+        // Google Analytics.
+        $config['google_analytics.settings']['account'] = 'UA-xxxxxxx-xx';
       }
     }
 
