@@ -91,8 +91,8 @@ If you find that `www.example.com` resolves to `www.www.example.com`, or `subdom
 ![Extra www example](/source/docs/assets/images/extra-www-example.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
-### Why does my domain work without "www" in Safari and Firefox but not in Chrome?
-When Firefox and Safari have problems resolving the server name that has been typed into the location bar, by default they  try to prepend the name with the prefix `www.` and/or append the suffix `.com`. If you already have `www.example.com` properly set in your DNS but not the bare domain `example.com`, it will work on Firefox and Safari since it will auto prepend `www.`. Chrome returns an error of "example.com server DNS address could not be found" or redirects to Google search. The solution is to check `example.com` and make sure it is properly set up and resolving.
+### Why does my bare domain resolve to "www." in Safari and Firefox, but fails to resolve in Chrome?
+By default, Firefox and Safari will prepend any bare domain that cannot be reached with `www.`. Chrome does not auto prepend domains that do not resolve properly. This behavior indicates that the DNS for the `www.` subdomain has been properly configured while the bare domain (`example.com`) has not. To resolve, ensure that the bare domain has been added to the target environment on Pantheon and verify configurations set within the domain's DNS provider.
 
 ### Why is my Drupal 8 site inaccessible after adding a custom domain?
 The following response is served for requests originating from an "untrusted" host on Drupal 8 sites which have enabled the `trusted_host_patterns` setting:
