@@ -91,8 +91,8 @@ If you find that `www.example.com` resolves to `www.www.example.com`, or `subdom
 ![Extra www example](/source/docs/assets/images/extra-www-example.png)
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
-### Why does my domain works without "www." in Safari and Firefox but not in Chrome?
-When Firefox and Safari have problem resolving the server name that has been typed into the location bar, by default it will try to prepend the name with the prefix `www.` and/or append the suffix `.com`. Meaning if you already have `www.example.com` properly set in your DNS but *not* the bare domain `example.com`, the tendency of this will work on Firefox and Safari since it will auto prepend `www.`. Chrome on the otherhand will show error of "exmample.com server DNS address could not be found" or it will try to redirect to google search. Solution is to check `example.com` if its properly setup and resolving.
+### Why does my domain work without "www" in Safari and Firefox but not in Chrome?
+When Firefox and Safari have problems resolving the server name that has been typed into the location bar, by default they  try to prepend the name with the prefix `www.` and/or append the suffix `.com`. If you already have `www.example.com` properly set in your DNS but not the bare domain `example.com`, it will work on Firefox and Safari since it will auto prepend `www.`. Chrome returns an error of "example.com server DNS address could not be found" or redirects to Google search. The solution is to check `example.com` and make sure it is properly set up and resolving.
 
 ### Why is my Drupal 8 site inaccessible after adding a custom domain?
 The following response is served for requests originating from an "untrusted" host on Drupal 8 sites which have enabled the `trusted_host_patterns` setting:
