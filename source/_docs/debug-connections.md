@@ -21,7 +21,7 @@ terminus site wake
 ### Resolve DNS Issues
 Check to see if you get an IP address returned when you run the following command, replacing `<xxx>` with your site’s UUID:  
 ```
-dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
+dig codeserver.dev.<xxx>.drush.in +short
 ```
 
 If there is no IP in the output, the ISP is failing to recognize the hostname.
