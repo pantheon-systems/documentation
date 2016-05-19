@@ -16,7 +16,7 @@ For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
 
-## Pantheon Articles on Settings.php
+## Pantheon Articles on settings.php
 
 The following articles include techniques and configurations for settings.php on Pantheon:
 
@@ -103,7 +103,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ## Frequently Asked Questions
 
-#### Can I delete the `default.settings.php` file?
+#### Can I delete the default.settings.php file?
 Yes, but only if at least one other file (e.g. `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
 
 #### How can I write logic based on the Pantheon server environment?

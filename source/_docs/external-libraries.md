@@ -27,9 +27,9 @@ To install, first put your development site in SFTP mode. Then, execute the foll
 drush @pantheon.SITENAME.ENV dl pdftk token libraries
 drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
-## [WKHTMLtoPDF](http://wkhtmltopdf.org/)
+## WKHTMLtoPDF
 
-WebKit HTML allows you to create a snapshot or capture the content of a web page easily in a PDF.
+[WebKit HTML](http://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
@@ -49,9 +49,9 @@ git push
 ### WordPress
 Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
 
-## [PhantomJS](http://phantomjs.org/)
+## PhantomJS
 
-In its own words, "PhantomJS is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG."
+In its own words, [PhantomJS](http://phantomjs.org/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
 
@@ -62,9 +62,9 @@ Once you have downloaded and enabled the PhantomJS Capture module, you'll need t
 **Path to phantomJS:** `/srv/bin/phantomjs`
 
 
-## [Apache Tika](http://tika.apache.org/)
+## Apache Tika
 
-The Apache Tika toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
+The {Apache Tika](http://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
@@ -85,9 +85,9 @@ If everything is working correctly, you will see a _"Text can be successfully ex
 ### WordPress Tika Configuration
 There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
 
-## [ImageMagick](http://www.imagemagick.org)
+## ImageMagick
 
-ImageMagick is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
+[ImageMagick](http://www.imagemagick.org) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.   
 
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 

@@ -27,8 +27,8 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 
 If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
-<div class=“alert alert-note”>
-<h4>Note</h4>
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>  
 The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.
 </div>
 
