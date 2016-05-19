@@ -29,10 +29,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
  <div class="alert alert-info">
  <h4>Note</h4> You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).
  </div>
-5. Select the **Actions** tab and index your site's posts, pages, and/or attachments on Solr by clicking all that apply:
- - **Load All post(s)**
- - **Load All page(s)**
- - **Load All attachment(s)**
+5. Select the **Actions** tab to index your site's content by clicking the **Execute** button next to "Index Searchable Post Types".
 6. Use the **Query** tab to search for words and/or phrases to validate Solr's indexing configuration.
 
 Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
