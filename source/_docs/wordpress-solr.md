@@ -29,16 +29,16 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
  <div class="alert alert-info">
  <h4>Note</h4> You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).
  </div>
-5. Select the **Actions** tab to index your site's content by clicking the **Execute** button next to "Index Searchable Post Types".
+5. Select the **Actions** tab to index your site's content by clicking **Execute** next to "Index Searchable Post Types".
 6. Use the **Query** tab to search for words and/or phrases to validate Solr's indexing configuration.
-
-Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
+7. Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
 
 ### Optimize Index
 For details, see the [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
 
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
+
 ### Re-Indexing
 New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Settings** > **Solr Options** > **Indexing**, you must manually re-index the site on the **Actions** tab.
 ### Initial Deploy to Test and Live
