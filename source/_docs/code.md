@@ -83,7 +83,7 @@ The Test and Live environments do not have write access to code outside of the d
 
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/pantheon-workflow/) and [environment configuration](/docs/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/docs/sftp/) and [explore more ways](/docs/more-sftp/) of utilizing built-in admin tools.
-### `.gitignore`
+### .gitignore
 Pantheon provides a default `.gitignore` file in the base of each site's code repository and in `sites/default/files`. You can use this file to exclude directories from version control and backups.
 
 ##Performance

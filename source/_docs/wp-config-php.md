@@ -54,7 +54,7 @@ See [Redirect Incoming Requests](/docs/redirects).
 
 You don't have to! Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
 
-#### Where can I get a copy of a default `wp-config.php` for Pantheon?
+#### Where can I get a copy of a default wp-config.php for Pantheon?
 
 - Pantheon WordPress -  [https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php](https://github.com/wp-ulysses/WordPress/blob/master/wp-config.php)
 - WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
