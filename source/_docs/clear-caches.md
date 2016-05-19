@@ -1,6 +1,6 @@
 ---
 title: Clearing Caches for Drupal and WordPress
-description: Learn how to purge varnish for Drupal and WordPress sites on Pantheon.
+description: Learn how to purge Varnish for Drupal and WordPress sites on Pantheon.
 categories: [developing]
 tags: [varnish]
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies
@@ -15,7 +15,7 @@ Drupal 6/7 sites must enable the [pantheon_api](/docs/pantheon_api-module/) modu
 - From the Pantheon Dashboard on the target environment: Click **Clear Caches**
 
 ## Clear Caches: WordPress
-- From the WordPress Admin menu, select **Settings > Pantheon Cache**. Click the **Clear Cache** button to clear all the caches.
+- From the WordPress Admin menu, select **Settings > Pantheon Cache**. Click **Clear Cache** to clear all the caches.
 - Via the command line, run the following Terminus command:
 
  ```bash
