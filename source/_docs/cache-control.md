@@ -6,7 +6,7 @@ tags: [varnish, code]
 keywords: cache, caching, varnish, cookies, wordpress, drupal
 ---
 ## Exclude Specific Pages from Caching
-You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, set the `Cache-Control` HTTP header to prevent caching.
+You can use regular expressions to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, set the `Cache-Control` HTTP header to prevent caching.
 
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
@@ -79,7 +79,7 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 </code></pre>
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you re-run the command, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Varnish](/docs/test-varnish).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Varnish](/docs/test-varnish).
 
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
