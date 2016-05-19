@@ -5,7 +5,28 @@ categories: [managing]
 tags: [create, getting-started]
 keyword: start state, new site, site, pantheon, wordpress, drupal, distribution
 ---
-When you create a new site with Pantheon, you can choose a base Drupal or WordPress version, a Pantheon optimized distribution, or import archives for an existing site.
+When you create a new site with Pantheon, you can choose to install a base Drupal or WordPress version, a Pantheon optimized distribution, or import archives for an existing site.
+
+## Available Distributions on Pantheon
+
+* [WordPress](https://wordpress.org/)
+* [Drupal 7](https://www.drupal.org/drupal-7.0)
+* [Drupal 8](https://www.drupal.org/8)
+* [OpenPublish](https://www.drupal.org/project/openpublish)
+* [CiviCRM Starter Kit](https://www.drupal.org/project/civicrm_starterkit)
+* [DKAN](https://www.drupal.org/project/dkan)
+* [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart)
+* [OpenAid](https://www.drupal.org/project/openaid)
+* [Atrium](http://openatrium.com/#!/)
+* [OpenIdeaL](http://www.openidealapp.com/)
+* [Open Outreach](https://www.drupal.org/project/openoutreach)
+* [Open Public](http://openpublicapp.com/#!/)
+* [Panopoly](https://www.drupal.org/project/panopoly)
+* [Plato Típico](https://www.drupal.org/project/plato_tipico)
+* [Pushtape](https://www.drupal.org/project/pushtape)
+* [RedHen Raiser](https://www.drupal.org/project/redhen_raiser)
+* [Private Distribution (Custom Upstream)](/docs/custom-upstream)
+
 
 ## Start with Core
 
