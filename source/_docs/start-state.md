@@ -9,6 +9,8 @@ When you create a new site with Pantheon, you can choose to install a base Drupa
 
 ## Available Distributions on Pantheon
 
+Please note that public distributions are not maintained by Pantheon. If the upstream is out of date, contact the maintainer through [Drupal.org](https://www.drupal.org/) or the distribution's GitHub issue queue. 
+
 * [WordPress](https://wordpress.org/)
 * [Drupal 7](https://www.drupal.org/drupal-7.0)
 * [Drupal 8](https://www.drupal.org/8)
