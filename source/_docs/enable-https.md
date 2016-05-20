@@ -23,6 +23,7 @@ Enable HTTPS before updating DNS. HTTPS for custom domains is available for Prof
 6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
+While some certificate providers instruct you to create these on your server, they can be created from any system. What follows are the instructions to generate these on your local system using openssl. This is our reccommended method, but if for some reason you cannot use openssl, there are online tools available such as https://www.gogetssl.com/online-csr-generator
 
 Run `openssl` from the command line to generate an [RSA private key](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) (.key file) and [certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request) (.csr) file:
 
