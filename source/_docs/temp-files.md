@@ -45,7 +45,12 @@ update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
 ```
 
 ## Use Pantheon's Networked File System
-Another option is to manage temporary resources within Valhalla, Pantheon's networked filesystem, which is common across application containers.
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+This approach can potentially void the warranty of uptime for the site, so please be aware of this implication before implementing.
+</div>
+
+Another option is to manage temporary resources within Valhalla, Pantheon's networked filesystem, which is common across application containers.  
 
 ### Drupal
 Create a `tmp/` directory within `sites/default/files/` and add the following to `settings.php`:
