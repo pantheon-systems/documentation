@@ -25,7 +25,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
  ```
  Upon activation, the plugin will generate and send a [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document to the Solr server.
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.
-4. Select the **Indexing** tab to customize content indexed on Solr. Click **Save Changes** after making modifications.
+4. Select the **Indexing** tab to customize content indexed on Solr. The plugin supports custom fields by taking a comma delimited list of the custom field keys. The plugin supports indexing all publicly queryable post types. Click **Save Changes** after making modifications.
  <div class="alert alert-info">
  <h4>Note</h4> You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).
  </div>
@@ -45,8 +45,4 @@ New, deleted, and modified posts and pages are automatically added to the Solr i
 The `schema.xml` file is not automatically sent to Solr when deploying the plugin to another environment for the first time. Login to the WordPress Dashboard on the environment's URL and click **Repost schema.xml** within  **Settings** > **Solr Options** > **Actions**. Then re-index the site.
 
 This is required upon initial deployment of the plugin to any environment or when a custom `schema.xml` document is changed.
-### Custom Fields
-The plugin does not currently index custom fields as expected, check [this issue](https://github.com/pantheon-systems/solr-power/issues/51) for progress updates.
 
-### Custom Post Types
-Future development work may allow for indexing custom post types; however, they are not yet supported. Pull requests are welcome!
