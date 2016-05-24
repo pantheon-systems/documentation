@@ -21,7 +21,7 @@ Pantheon does not support Git submodules (placing a Git repository within a subd
  $ terminus site set-connection-mode --mode=git
  ```
 
-4. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
+4. [Clone the site's codebase](docs/git/#clone-your-site-codeba), if you haven't already.
 
 ## Initialize Composer
 Run `composer init` from within the root directory of your site's codebase and use the interactive setup guide to initiate Composer. Enter `dev` when prompted for `Minimum Stability []:` and `yes` when asked if you would like to add the vendor directory to your `.gitignore` file.
