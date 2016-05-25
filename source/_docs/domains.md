@@ -71,6 +71,7 @@ One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://hel
 
 Learn more about ANAME records:
 
+*   [Dyn](http://dyn.com/managed-dns/alias/)
 *   [DNSimple](http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
 *   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
