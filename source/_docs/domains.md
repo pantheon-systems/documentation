@@ -56,7 +56,7 @@ Using the provided destinations in the Site Dashboard, create the recommended DN
 ### Serving Sites from Bare Domains with HTTP
 To serve your site from the bare domain, you must:
 
-1. Select a DNS provider that supports CNAME flattening, such as [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
+1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/) [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
 
  ```bash
