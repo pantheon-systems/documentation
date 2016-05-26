@@ -79,19 +79,18 @@ Traditionally, Drupal developers have added modules (and themes and profiles) by
 
 ## Committing the vendor directory
 
-Much of the documentation on Composer says that the `vendor` directory should not be committed to version control.
+Much of the documentation on Composer says that the `vendor` directory should not be committed to version control. This recommendation presumes some abstraction layer between the git repository developers commit to and the way their code is deployed to a live site (and test sites for that matter). That abstraction might be a build system that takes the development team's repository, and creates a "build artifact" from the repository (by running `composer install` and possibly other steps like compiling Sass) which is then deployed. That build artifact might be tracked in a separate git repository. In fact, this mental model has been the way many teams have used Pantheon for years. They use GitHub, Bitbucket, or some other external repository as the repository where developers commit their changes. A continuous integration service then builds the developers' changes and sends them to Pantheon. If this is the model you are using, you do not have to commit your `vendor` directory.
 
+If Pantheon is your site's only repository, then you do have to commit the `vendor` directory. Pantheon uses the same git repository to control how code is deployed to all Pantheon environments. We consider it a security feature to make it easy for developers to see how exactly the same code is deployed to all environments. Many teams using Pantheon consider a two-repository model to be unnecessarily complex.
+
+As the Drupal community comes to a clearer consensus on how to manage build steps, Pantheon will add more documentation on how to integrate common build processes with Pantheon tools.
 
 ## Is your project Drupal or is Drupal a dependency of your project?
 
 Composer usage has raise a philosophical question for may site developers. Traditionally, Drupal has encouraged a mental model where Drupal *is* the site and modules and custom code is placed inside Drupal. Composer encourages a mental model where code not written specifically for the a given project is a dependency. This question manifests itself in the `composer.json` file. The `name` property in Drupal core's `composer.json` file is `drupal/drupal`. Many Composer-minded developers would prefer that the top-level name property for their projects were something like `mycompanyname/myprojectname` and `drupal/drupal` is listed as a required dependency. This approach is done in [Drupal Project](https://github.com/drupal-composer/drupal-project).
 
-
-
 ## Repository structure
 
-
-## Installing a module with Composer
 
 ## What about Composer Manager?
 
