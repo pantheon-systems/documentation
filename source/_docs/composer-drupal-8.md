@@ -66,13 +66,8 @@ composer require drupal/address
 
 ```
 
-Address module depends on a few external packages (because problems of mailing addresses are not Drupal-specific). Those external packages are downloaded to the `vendor` directory. Address module itself will be put in Drupal's `module` directory.
+Address module depends on a few external packages (because problems of mailing addresses are not Drupal-specific). Those external packages are downloaded to the `vendor` directory. Address module itself will be put in Drupal's `module` directory. `composer require` can also be used for themes and profiles which will also be placed in the appropriate Drupal directories.
 
-
-
-
-Delete this paragraph?
-Traditionally, Drupal developers have added modules (and themes and profiles) by downloading them manually from Drupal.org and placing them in the appropriate directories. There are helper scripts for this task like `drush pm-download` that make this task of downloading modules easier.
 
 
 
@@ -84,6 +79,37 @@ Much of the documentation on Composer says that the `vendor` directory should no
 If Pantheon is your site's only repository, then you do have to commit the `vendor` directory. Pantheon uses the same git repository to control how code is deployed to all Pantheon environments. We consider it a security feature to make it easy for developers to see how exactly the same code is deployed to all environments. Many teams using Pantheon consider a two-repository model to be unnecessarily complex.
 
 As the Drupal community comes to a clearer consensus on how to manage build steps, Pantheon will add more documentation on how to integrate common build processes with Pantheon tools.
+
+## Merge conflicts
+
+The concept of a build process mentioned about can be seen on Drupal.org. As of Drupal core 8.1.0, the `vendor` directory is not committed to git. Drupal.org then uses a build process to populate the vendor directory if you simply want to download a zip or tar file of Drupal and be able to install it. The `vendor` directory most be present for Drupal to be installable. This is why [Pantheon's git repository for Drupal 8](https://github.com/pantheon-systems/drops-8) still has the vendor directory populated. We expect it to be installable. A side effect of this process is that you mind find git conflicts when you attempt to apply updates to Drupal Core through the Pantheon dashboard. It is possible that the same files in the `vendor` have been updated by your installation of modules and by changes in Drupal core. When this happens the easiest means of resolving the conflicts is to simply delete the vendor directory and run `composer install` again. Step by step this means:
+
+Adding our version of Drupal core as an upstream to your local checkout of your Pantheon site and fetching.
+
+```
+git remote add drops-8 git@github.com:pantheon-systems/drops-8.git
+git fetch drops-8.
+```
+
+Merge from drops-8:
+
+```
+git merge drops-8/master
+```
+
+If there are conflicts in `vendor`, remove it and re-populate:
+
+```
+rm -rf vendor/
+composer install
+```
+
+We recommend `composer install` in this case instead of `composer update` because `install` will re-download the same packages as were previously installed. `update` might download newer versions of packages than have been tested for Drupal core.
+
+## Updating packages
+
+It will still be necessary at time to update your packages. It is best to update only the packages you intend to update rather than performing a blanket update. For updating specific modules, say address module, run `composer update drupal/address` instead of a broad `composer update`.
+
 
 ## Is your project Drupal or is Drupal a dependency of your project?
 
@@ -99,9 +125,9 @@ Composer Manager module was written for Drupal 7 and Drupal 8 sites (prior to 8.
 
 
 
-## Merge conflicts
 
-## Updating packages
+
+
 
 
 
