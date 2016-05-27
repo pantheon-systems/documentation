@@ -5,7 +5,7 @@ categories: [Drupal 8]
 tags: [code, local]
 ---
 
-Composer is a dependency management tool that allows for PHP code to be more easily shared across project and systems. As Drupal 8 was written, many old subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
+Composer is a dependency management tool that allows for PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
 
 ## Installing Composer on your local machine
 
@@ -21,7 +21,7 @@ Composer's purpose is managing dependencies. To perform this task, Composer need
 
 ### Listing dependencies with 	`composer.json` and `composer.lock`
 
-Composer list dependencies with its `composer.json` file. A very simple (and still valid) `composer.json` might simply list the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
+Composer list dependencies with its `composer.json` file. A very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
 
 ```json
 {
@@ -31,7 +31,7 @@ Composer list dependencies with its `composer.json` file. A very simple (and sti
 }
 ```
 
-If you placed this file in an empty directory, you could run `composer install` which would download Monolog and generate a `composer.lock` file. The composer.lock file also is in the JSON format. The main purpose of the lock file is to list exactly what was downloaded by recording details like the url from which Monolog was downloaded, the commit hash used from Monolog's git repository and information composer could use to ensure the same version of Monolog would be downloaded again by the next running of `composer install`. After some period of time (in which Monolog released a new version), running `composer update` would result in downloading that new version of Monolog and changes to the `composer.lock` directory.
+If you placed this file in an empty directory, you could run `composer install` which would download Monolog and generate a `composer.lock` file. The composer.lock file also uses the JSON format. The main purpose of the lock file is to list exactly what was downloaded by recording details like the url from which Monolog was downloaded, the commit hash used from Monolog's git repository and information Composer could use to ensure the same version of Monolog would be downloaded again by the next running of `composer install`. After some period of time (in which Monolog released a new version), running `composer update` would result in downloading that new version of Monolog and changes to the `composer.lock` directory.
 
 Another dependency could be added to both `composer.json` and `composer.lock` by running `composer require`. For instance
 
@@ -41,7 +41,7 @@ composer require phpunit/php-timer
 
 ### Retrieving dependencies from a wider list of packages
 
-For Composer to interpret `"monolog/monolog": "1.0.*"` into something that can actually be downloaded it needs to ask an external system where `monolog/monolog` can be found. For most of the PHP world, https://packagist.org/ is the primary place Composer uses. Drupal is still evolving how it aggregates its packages.
+For Composer to interpret `"monolog/monolog": "1.0.*"` into something that can actually be downloaded, it needs to ask an external system where `monolog/monolog` can be found. For most of the PHP world, [packagist.org](https://github.com/pantheon-systems/documentation/issues/1410) is the primary place Composer uses. Drupal is still evolving how it aggregates its packages.
 
 ### Placing dependencies in a `vendor` directory.
 
@@ -53,7 +53,7 @@ Much of the information in this section comes from [drupal.org documentation on 
 
 Composer assumes that packages use Semantic Versioning where releases have three numbers signifying `MAJOR.MINOR.PATCH` releases. Drupal modules however have release numbers like `8.x-1.2`. This pattern indicates that the release is the third official release (`8.x-1.0` and `8.x-1.1` being the first two) made from the `8.x-1.x` branch. The `8.x` indicates that the release is compatible with Drupal 8. All this to say, Drupal needs an alternative to packagist.org in order to map Drupal release numbers to Composer-compatible semantic versions.
 
-The first step to installing Drupal modules with Composer is to ensure that the `composer.json` in your Drupal site knows about an alternative to packagist.org where Drupal modules can be found. Eventually, drupal.org will provide this information. For now, use https://packagist.drupal-composer.org.
+The first step to installing Drupal modules with Composer is to ensure that the `composer.json` in your Drupal site knows about an alternative to packagist.org where Drupal modules can be found. [Eventually, drupal.org will provide this information](https://www.drupal.org/node/2718229). For now, use https://packagist.drupal-composer.org.
 
 ```
 composer config repositories.drupal composer https://packagist.drupal-composer.org
@@ -69,20 +69,30 @@ composer require drupal/address
 Address module depends on a few external packages (because problems of mailing addresses are not Drupal-specific). Those external packages are downloaded to the `vendor` directory. Address module itself will be put in Drupal's `module` directory. `composer require` can also be used for themes and profiles which will also be placed in the appropriate Drupal directories.
 
 
+## Whether to commit the vendor directory
 
-
-
-## Committing the vendor directory
-
-Much of the documentation on Composer says that the `vendor` directory should not be committed to version control. This recommendation presumes some abstraction layer between the git repository developers commit to and the way their code is deployed to a live site (and test sites for that matter). That abstraction might be a build system that takes the development team's repository, and creates a "build artifact" from the repository (by running `composer install` and possibly other steps like compiling Sass) which is then deployed. That build artifact might be tracked in a separate git repository. In fact, this mental model has been the way many teams have used Pantheon for years. They use GitHub, Bitbucket, or some other external repository as the repository where developers commit their changes. A continuous integration service then builds the developers' changes and sends them to Pantheon. If this is the model you are using, you do not have to commit your `vendor` directory.
+[Much of the documentation on Composer says that the `vendor` directory should not be committed to version control.](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md) This recommendation presumes some abstraction layer between the git repository developers commit to and the way their code is deployed to a live site (and test sites for that matter). That abstraction might be a build system that takes the development team's repository, and creates a "build artifact" from the repository (by running `composer install` and possibly other steps like compiling Sass) which is then deployed. That build artifact might be tracked in a separate git repository. [In fact, this mental model has been the way many teams have used Pantheon for years](https://pantheon.io/blog/example-repository-build-drupal-composer-travis). They use GitHub, Bitbucket, or some other external repository as the repository where developers commit their changes. A continuous integration service then builds the developers' changes and sends them to Pantheon. If this is the model you are using, you do not have to commit your `vendor` directory.
 
 If Pantheon is your site's only repository, then you do have to commit the `vendor` directory. Pantheon uses the same git repository to control how code is deployed to all Pantheon environments. We consider it a security feature to make it easy for developers to see how exactly the same code is deployed to all environments. Many teams using Pantheon consider a two-repository model to be unnecessarily complex.
 
-As the Drupal community comes to a clearer consensus on how to manage build steps, Pantheon will add more documentation on how to integrate common build processes with Pantheon tools.
+### Avoiding committing dependencies as submodules
 
-## Merge conflicts
+**@todo, recommend one of the for approaches listed in https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md The gitignore option seems like the one that would work cleanest on Pantheon and could be changed in drops-8. However I have not been able to get it to work. In using `vendor/**/.git` as a .gitignore rule, I still get packages added as submodules.**
 
-The concept of a build process mentioned about can be seen on Drupal.org. As of Drupal core 8.1.0, the `vendor` directory is not committed to git. Drupal.org then uses a build process to populate the vendor directory if you simply want to download a zip or tar file of Drupal and be able to install it. The `vendor` directory most be present for Drupal to be installable. This is why [Pantheon's git repository for Drupal 8](https://github.com/pantheon-systems/drops-8) still has the vendor directory populated. We expect it to be installable. A side effect of this process is that you mind find git conflicts when you attempt to apply updates to Drupal Core through the Pantheon dashboard. It is possible that the same files in the `vendor` have been updated by your installation of modules and by changes in Drupal core. When this happens the easiest means of resolving the conflicts is to simply delete the vendor directory and run `composer install` again. Step by step this means:
+### Working with Continuous integration
+
+
+As the Drupal community comes to a clearer consensus on how to manage build steps, Pantheon will add more documentation and examples for on how to integrate common build processes with Pantheon tools.
+
+For those interested in working in the two-repository model, see some of our GitHub repositories
+
+* [ci-scripts](https://github.com/pantheon-systems/ci-scripts): Helper scripts for doing Continuous Integration with Pantheon
+* [example-drupal8-circle-composer](https://github.com/pantheon-systems/example-drupal8-circle-composer): Building Drupal 8 from Circle CI with Composer.
+
+
+### Merge conflicts
+
+The concept of a build process mentioned about can be seen on Drupal.org. As of Drupal core 8.1.0, the `vendor` directory is not committed to git. Drupal.org then uses a build process to populate the vendor directory if you simply want to download a zip or tar file of Drupal and be able to install it. The `vendor` directory most be present for Drupal to be installable. This is why [Pantheon's git repository for Drupal 8](https://github.com/pantheon-systems/drops-8) still has the vendor directory populated. We expect it to be installable. A side effect of this process is that you might find git conflicts when you attempt to apply updates to Drupal core through the Pantheon dashboard. It is possible that the same files in the `vendor` have been updated by your installation of modules and by changes in Drupal core. When this happens the easiest means of resolving the conflicts is to simply delete the vendor directory and run `composer install` again. Step by step this means:
 
 Adding our version of Drupal core as an upstream to your local checkout of your Pantheon site and fetching.
 
@@ -113,27 +123,8 @@ It will still be necessary at time to update your packages. It is best to update
 
 ## Is your project Drupal or is Drupal a dependency of your project?
 
-Composer usage has raise a philosophical question for may site developers. Traditionally, Drupal has encouraged a mental model where Drupal *is* the site and modules and custom code is placed inside Drupal. Composer encourages a mental model where code not written specifically for the a given project is a dependency. This question manifests itself in the `composer.json` file. The `name` property in Drupal core's `composer.json` file is `drupal/drupal`. Many Composer-minded developers would prefer that the top-level name property for their projects were something like `mycompanyname/myprojectname` and `drupal/drupal` is listed as a required dependency. This approach is done in [Drupal Project](https://github.com/drupal-composer/drupal-project).
-
-## Repository structure
-
+Composer usage has raise a philosophical question for may site developers. Traditionally, Drupal has encouraged a mental model where Drupal *is* the site and modules and custom code is placed inside Drupal. Composer encourages a mental model where code not written specifically for the a given project is a dependency. This question manifests itself in the `composer.json` file. The `name` property in Drupal core's `composer.json` file is `drupal/drupal`. Many Composer-minded developers would prefer that the top-level name property for their projects were something like `mycompanyname/myprojectname` and `drupal/drupal` would then be listed as a required dependency. This approach is done in [Drupal Project](https://github.com/drupal-composer/drupal-project). Drupal Project will also put the docroot of the website in the `web` directory rather than the git root as Pantheon currently presumes. We are investigating ways to best support this mental model.
 
 ## What about Composer Manager?
 
 Composer Manager module was written for Drupal 7 and Drupal 8 sites (prior to 8.1.0) to use as a system for tracking Composer packages needed by the modules installed on the site. As of Drupal 8.1.0 (released in April 2016), it is easier for site builders to use Drupal core's `composer.json` instead of Composer Manager module.
-
-
-
-
-
-
-
-
-
-
-## Install profiles
-
-
-## WordPress Resources
-
-
