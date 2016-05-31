@@ -12,6 +12,7 @@ When a code repo is larger than 2GB, it increases the possibility of Git errors 
 2. Change directory to the repository by running: `cd repository-name`
 
 ### Step 2: Create local copies of all remote branches.
+Run the following command to create local copise of all branches
 ```
 for BRANCH in `git branch -r | grep -v HEAD | grep -v master`; do git branch --track "${BRANCH#origin/}"; done
 ```
