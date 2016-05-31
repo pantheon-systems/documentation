@@ -61,7 +61,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 Double-check the files before going forward to make sure no bugs were introduced.
 
 ### Where can I find a site's upstream URL?
-The upstream URL is provided within the site dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
+The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
 ```nohighlight
 terminus site upstream-info
 ```
