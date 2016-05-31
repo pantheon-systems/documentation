@@ -5,14 +5,14 @@ categories: [developing]
 tags: [code, local]
 keywords: git, git commands, drupal, wordpress
 ---
-When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. This article walks you through pruning down a large Git repository so that your site is compatible with all functions on the platform. Please be aware that the steps described below use the BASH shell and Perl extensively. 
+When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. This article walks you through pruning down a large Git repository so that your site is compatible with all functions on the platform. Please be aware that the steps described below use the Bash shell and Perl extensively. 
 
 ### Step 1: Make a local clone of the pantheon repository.
-1. Follow [these instructions](https://pantheon.io/docs/git/#clone-your-site-codebase) to create your local clone
+1. Follow [these instructions](https://pantheon.io/docs/git/#clone-your-site-codebase) to create your local clone.
 2. Change directory to the repository by running: `cd repository-name`
 
 ### Step 2: Create local copies of all remote branches.
-Run the following command to create local copise of all branches
+Run the following command to create local copies of all branches:
 ```
 for BRANCH in `git branch -r | grep -v HEAD | grep -v master`; do git branch --track "${BRANCH#origin/}"; done
 ```
@@ -38,11 +38,13 @@ print "$sums{$_} $_\n" for (keys %sums);
 ### Step 5: Determine what patterns to filter out.
 Review the patterns in large_files.txt to determine that patterns you need to filter out. A pattern may be the path of a file by name, the path of a directory by name, or an expandable path.
 
-- Example of a pattern for a single file name: `PATTERN1=myfile.txt`
+**Example Patterns**:
 
-- Example of a pattern for a directory. This will also match on all files under that directory: `PATTERN2=my_directory`
+- Single file name: `PATTERN1=myfile.txt`
 
-- Example of an expandable path pattern that matches all SQL files with in mydirectory: `PATTERN3=mydirectory/*.sql`
+- Directory. This will also match on all files under that directory: `PATTERN2=my_directory`
+
+- Expandable path pattern that matches all SQL files within mydirectory: `PATTERN3=mydirectory/*.sql`
 
 ### Step 6: Filter out files and directories that match our patterns.
 Run the following command (this may take hours to complete):
