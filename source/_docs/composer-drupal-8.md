@@ -127,4 +127,4 @@ Composer usage has raise a philosophical question for may site developers. Tradi
 
 ## What about Composer Manager?
 
-Composer Manager module was written for Drupal 7 and Drupal 8 sites (prior to 8.1.0) to use as a system for tracking Composer packages needed by the modules installed on the site. As of Drupal 8.1.0 (released in April 2016), it is easier for site builders to use Drupal core's `composer.json` instead of Composer Manager module.
+Composer Manager module was written for Drupal 7 and Drupal 8 sites (prior to 8.1.0) to use as a system for tracking Composer packages needed by the modules installed on the site. As of Drupal 8.1.0 (released in April 2016), it is easier for site builders to use Drupal core's `composer.json` instead of Composer Manager module. [Composer Manager has made its final release for Drupal 8](https://www.drupal.org/project/composer_manager/releases/8.x-1.0-rc2) and [the maintainer recommends no longer using it](https://twitter.com/bojan_zivanovic/status/737694659829436416).
