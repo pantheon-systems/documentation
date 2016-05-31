@@ -5,35 +5,31 @@ categories: [developing]
 tags: [code, local]
 keywords: git, git commands, drupal, wordpress
 ---
-When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. This article walks you through pruning down a large Git repository so that your site is compatible with all functions on the platform.
+When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. This article walks you through pruning down a large Git repository so that your site is compatible with all functions on the platform. Please be aware that the steps described below use the BASH shell and Perl extensively. 
 
 ### Step 1: Make a local clone of the pantheon repository.
-1. Run the following command:
-```
-git clone ssh://codeserver.dev.482ae619-7334-4013-b8d2-01c2e765cc70@codeserver.dev.482ae619-7334-4013-b8d2-01c2e765cc70.drush.in:2222/~/repository.git
-```
+1. Follow [these instructions](https://pantheon.io/docs/git/#clone-your-site-codebase) to create your local clone
 2. Change directory to the repository by running: `cd repository-name`
 
 ### Step 2: Create local copies of all remote branches.
-For a branch in `$(git branch -r | grep -v HEAD | grep -v master)`, run:
 ```
-git branch --track "${BRANCH#origin/}"; done
+for BRANCH in `git branch -r | grep -v HEAD | grep -v master`; do git branch --track "${BRANCH#origin/}"; done
 ```
 
 ### Step 3: Get a full list of all local branches.
-Run the following command:
+Run the following command to set a variable containing all local branches to be used in later steps. 
 ```
 BRANCHES=$(for BRANCH in $(git branch --list | grep -v master); do echo "${BRANCH}"; done; echo master)
 ```
 
-### Step 4: Add large files to a new file.
+### Step 4: Create a list of large files to review.
 Get a list of all large files in all branches and add it to a file called "large_files.txt".  This may take several minutes to complete.
 ```
 git rev-list $BRANCHES | while read rev; do git ls-tree -lr $rev | cut -c54- | grep -v '^ '; done | sort -u | perl -e '
 while (<>) {
-chomp;
-@stuff=split("\t");
-$sums{$stuff[1]} += $stuff[0];
+  chomp;
+  @stuff=split("\t");
+  $sums{$stuff[1]} += $stuff[0];
 }
 print "$sums{$_} $_\n" for (keys %sums);
 ' | sort -rn > large_files.txt
@@ -53,7 +49,7 @@ Run the following command (this may take hours to complete):
 git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch PATTERN1 PATTERN2 PATTERN3 ...' --prune-empty --tag-name-filter cat -- --all
 ```
 
-### Step 7: Push your local changes to the remote repository.
+### Step 7: Push your local changes to the Pantheon repository.
 Run the following commands to push your changes to the remote repository:
 ```
 git push origin --force --all
