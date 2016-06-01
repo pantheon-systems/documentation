@@ -18,14 +18,16 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
  - Select **Start from Scratch**, and choose **WordPress**.
  - Click **Visit Development Site** and complete the installation process.
 3. Create a [Pantheon machine token](https://pantheon.io/docs/machine-tokens/). Make sure the token has a descriptive name, including the name of your site on Pantheon. Save this machine token somewhere safe!
-![Create a machine token](/source/docs/assets/images/pantheon-create-machine-token.png)
+ ![Create a machine token](/source/docs/assets/images/pantheon-create-machine-token.png)
+ <div class="alert alert-info" role="alert">
+ <h4>Note</h4>  
+ Earlier versions of the <a href="https://wordpress.org/plugins/bv-pantheon-migration/">Pantheon Migration</a> plugin request SFTP details instead of a Pantheon machine token. If prompted for SFTP credentials, please upgrade the plugin to the latest release.
+ </div>
 4. Right click on the **Visit Development Site** and select **Copy Link Address**.
 5. Go to your web host (source site), and install and activate the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin.
 6. Enter your Pantheon Dev site URL and Pantheon machine token you saved earlier.
 ![BlogVault Plugin](/source/docs/assets/images/blogvault-setup-machine-token.png)
 7. Start the migration! You will receive an email, to the email address associated with your Pantheon account, when the migration begins and another email when the migration completes.
-
-**Note:** earlier versions of the plugin used SFTP instead of Pantheon machine tokens. If your plugin is asking for SFTP credentials please upgrade to the latest version.
 
 If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
