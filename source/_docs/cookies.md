@@ -34,8 +34,12 @@ The following example can be used interchangeably between WordPress and Drupal:
 if(isset($_COOKIE['STYXKEY_gorp'])){
 
   $foo = $_COOKIE['STYXKEY_gorp'];
-  // Generate content based on cookie value
-  // Do NOT set cookies here; Set-Cookie headers bypass cache
+  // Generate varied content based on cookie value
+  // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
+  if ($foo == 'ca') {
+    str_replace('football', 'hockey');
+  }
+
 }
 else{
   /**
