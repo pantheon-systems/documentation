@@ -36,7 +36,7 @@ We've included CLI instructions in many of our articles and guides.
 - [Migrate Sites to Pantheon](/docs/migrate)
 - [Timeouts](/docs/timeouts/)
 - [Resetting Passwords](/docs/resetting-passwords/)
-- [Understanding and Debugging Varnish Cache Issues](/docs/debug-cache/)
+- [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
 - [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/)
 - [Apache Solr on Pantheon](/docs/solr)
 - [Email on Pantheon](/docs/email)

@@ -64,7 +64,7 @@ We always recommend distributing campaign URLs that are in their final, non-redi
 
 Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://support.google.com/analytics/answer/1033867) tool.
 
-For more information, see [Caching - Advanced Topics](/docs/caching-advanced-topics).
+For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
 To avoid recycling query strings and tracking parameters on URLs within a site's framework, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
 

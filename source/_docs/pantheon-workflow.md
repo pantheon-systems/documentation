@@ -42,7 +42,7 @@ This may be a good time to run regression or smoke tests by stepping through you
 
 ### 3. Deploy code to Live.
 
-After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Understanding and Debugging Varnish Cache Issues](/docs/debug-cache/).
+After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-caches/).
 
 ![Site dashboard, live environment, workflow section](/source/docs/assets/images/deploy-live.png)
 

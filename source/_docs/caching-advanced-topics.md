@@ -1,6 +1,6 @@
 ---
-title: Varnish Caching - Drupal and WordPress Advanced Topics
-description: Learn advanced details about cache and authentication.
+title: Caching: Advanced Topics
+description: Learn advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 categories: [developing]
 tags: [varnish, code]
 keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
@@ -66,9 +66,9 @@ While Google supports multiple mobile site configurations, creating separate mob
 
 More information on mobile site best practices can be found in the Google official developer documentation:
 
-https://developers.google.com/webmasters/mobile-sites/get-started/why
-https://developers.google.com/webmasters/mobile-sites/get-started/key
-https://developers.google.com/webmasters/mobile-sites/get-started/mistakes
+- [Why make a website mobile-friendly?](https://developers.google.com/webmasters/mobile-sites/get-started/why)
+- [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/webmasters/mobile-sites/get-started/key)
+- [What are the top three mistakes beginners want to avoid?](https://developers.google.com/webmasters/mobile-sites/get-started/mistakes)
 
 A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
 
