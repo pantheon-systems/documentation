@@ -7,6 +7,7 @@ tags:
   - domains
 keywords: dns, cloudflare, mobile, redirect-incoming-requests, mobile tools
 ---
+
 CloudFlare's mobile redirect service is available to domains hosting DNS on any of their plans. For details on this service, see [About CloudFlare Mobile Redirect](https://support.cloudflare.com/hc/en-us/articles/200168336-About-CloudFlare-Mobile-Redirect).
 
 ## Before You Begin
@@ -20,6 +21,9 @@ Be sure that you have:
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on CloudFlare with the provided DNS records.</div>
+
+### Considerations
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
 ## Add the Mobile Domain to Live
 1. Go to the Live environment on your Site Dashboard, and select **Domains/HTTPS**.
@@ -47,14 +51,8 @@ In order for CloudFlare's mobile redirection service to work, the domain must be
 ### JavaScript
 You can detect user agent via JavaScript, then redirect requests to your configured and optimized mobile site. For cache considerations, we do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics/#device-detection).
 
-The following examples can also be used in addition to CloudFlare's mobile redirection service to detect user agents not yet supported, such as tablets.
+The following example can also be used in addition to CloudFlare's mobile redirection service to detect user agents not yet supported, such as tablets.
 
-#### Page Width
-```javascript
-if (screen.width <= 800) {
-window.location = "https://m.example.com";
-}
-```
 #### User Agent
 ```javascript
 if ((navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i))){
