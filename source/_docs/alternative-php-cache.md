@@ -23,7 +23,7 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 ```php
 Warning: require_once(): Unable to allocate memory for pool.
 ```
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic Pro](/docs/new-relic-analysis#enable-new-relic) to log and visualize performance.
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. If you want to learn more about how much memory your site is using, enable [New Relic Pro](/docs/new-relic) to log and visualize performance.
 
 
 #### How can I determine what my current APC settings are?
