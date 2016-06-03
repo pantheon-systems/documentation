@@ -1,13 +1,13 @@
 ---
 title: MySQL Troubleshooting with New Relic Pro
-description: Learn how to use integrated reporting services with New Relic to isolate MySQL performance issues on your Drupal or WordPress sites.
+description: Learn how to use integrated reporting services with New Relic Pro to isolate MySQL performance issues on your Drupal or WordPress sites.
 categories: [developing]
 tags: [database, debug]
 keywords: mysql, mysql troubleshooting, new relic, new relic pro, system logs, logs, performance, mysql performance, mysql help, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
 ---
-While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use New Relic. It comes integrated with the majority of our service plans. This article explains how, in conjunction with more traditional system logs, to use New Relic Pro. This article uses a Drupal installation to help illustrate the techniques, but you can also use this with WordPress sites.
+While going through MySQL and PHP slow logs is a great way to find issues, modern reporting services that are integrated with your site help speed the process up tremendously. There are a few different systems to choose from, but at Pantheon we use New Relic Pro. It comes integrated with all plans. This article explains how, in conjunction with more traditional system logs, to use New Relic Pro. This article uses a Drupal installation to help illustrate the techniques, but you can also use this with WordPress sites.
 
-## Open New Relic
+## Open New Relic Pro
 
 From within Pantheon, go to the Dashboard for the site you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Click the **New Relic** tab, and select **Open New Relic**.
 

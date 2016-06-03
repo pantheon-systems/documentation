@@ -80,7 +80,7 @@ As an example, if your slowest database operation is an INSERT to watchdog, then
 Learn more about [debugging sites with log files](/docs/debug-log-files).
 
 ## Too Many Database Queries
-The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic dashboard](/docs/new-relic-analysis) by going to the Map tab, which shows you how the various low-level components in your application are performing together.  
+The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic Pro dashboard](/docs/new-relic) by going to the Map tab, which shows you how the various low-level components in your application are performing together.  
  ![New Relic map tab](/source/docs/assets/images/new-relic-map.png)<br />
 Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high. In the upper-right, the average query duration is shown and is actually very respectable.  
 

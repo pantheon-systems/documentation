@@ -111,7 +111,7 @@ Even with the watchdog off these errors will still be written to the PHP error l
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/new-relic-analysis#end-user-overview) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic Pro](/docs/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan

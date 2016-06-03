@@ -44,7 +44,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 ####What add-ons are available for my site?
 [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
 
-[New Relic](/docs/new-relic-analysis/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+[New Relic Pro](/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
