@@ -19,25 +19,17 @@ Services such as MySQL and SFTP are running; however, the local client is unable
 terminus site wake
 ```
 ### Resolve DNS Issues
-Check to see if you get an IP address returned when you run the following command, replacing `<xxx>` with your site’s UUID:  
+Some ISPs have issues resolving a `drush.in` hostname. Troubleshoot connection errors using the following `dig` command,  replacing `<xxx>` with your [site’s UUID](/docs/sites/#site-uuid):  
 ```
-dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
+dig codeserver.dev.<xxx>.drush.in +short
 ```
-
-If there is no IP in the output, the ISP is failing to recognize the hostname.
-
-The next step is to test this command with name server, in this case Google’s 8.8.8.8 IP address:
+If there is no IP provided in the output, the default DNS server used for the query (typically configured by your ISP) has failed to recognize the hostname. Run the query again with an alternate DNS server specified, such as one of [Google’s Public DNS IP Addresses](https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses):
 
 ```
 dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
 192.317.200.218
 ```
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-If an IP address is returned, it means that by using Google’s DNS you were able to resolve the hostname. Set your DNS to use <a href="https://developers.google.com/speed/public-dns/">Google’s service</a>, or another provider, and you should be able to connect.
-</div>
-
+If an IP address is returned, [configure your network settings to use Google Public DNS](https://developers.google.com/speed/public-dns/docs/using#configure_your_network_settings_to_use_google_public_dns).
 
 ###Port 2222 or Other Blocked Ports
 Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit [http://portquiz.net:2222/](http://portquiz.net:2222/)
