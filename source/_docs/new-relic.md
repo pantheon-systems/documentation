@@ -94,7 +94,16 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 3. Wait until the color-coded health status to turn gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
+## Disable New Relic
+
+1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.  
+2.  
+3. 
+
 ## Frequently Asked Questions
+
+#### How do I change the New Relic site owner now that our Pantheon site has a new site owner?
+
 
 #### How can I share a link to a particular metric?
 
