@@ -14,7 +14,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Select a Plan for Your Site](/docs/select-plan/)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Schedule Daily and Weekly Backups](#schedule-backups)<br>
 **Configure Site Monitoring Services:**<br>
-&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic for Performance Analysis](#monitoring-services)<br>
+&nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Enable New Relic Pro for Performance Analysis](#monitoring-services)<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Create Site Alerts with Pingdom](#monitoring-services) (Optional)<br>
 **Maximize Performance by Configuring Cache:**<br>
 &nbsp;&nbsp;&nbsp;<span class="glyphicon  glyphicon-unchecked" aria-hidden="true"></span> [Redis as a Caching Backend](/docs/redis)<br>
@@ -37,7 +37,7 @@ Schedule daily and weekly backups in case you need to revert your site content. 
 
 ## Monitoring Services
 
-Consider enabling [New Relic](/docs/new-relic-analysis/) monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
+Consider enabling [New Relic Pro](/docs/new-relic) monitoring to non-intrusively track the performance of your site; this is one of the first places Pantheon will look when there are performance concerns.
 
 [Pingdom](https://www.pingdom.com/) can also be used as an additional monitoring service to create site alerts for non-cached pages. This will help you determine if your site's backend is actually down.
 

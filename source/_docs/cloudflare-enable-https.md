@@ -173,7 +173,7 @@ Although SNI allows services like CloudFlare to economically offer HTTPS for fre
 * Versions of Firefox prior to 2.0
 * Versions of iOS 3 and older
 * Versions of Android 2.x and older
-* New Relic's [availability monitoring service](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits)
+* The New Relic Pro [availability monitoring service](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits)
 
 Or check this [more complete compatibility list](http://en.wikipedia.org/wiki/Server_Name_Indication#Implementation).
 
