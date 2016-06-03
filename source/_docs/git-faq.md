@@ -60,17 +60,11 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-### What are the upstreams for Drupal products?
-
-For users who need any of the upstreams for Drupal distributions on Pantheon in order to resolve a conflict, we have added these URLs. If any of the upstream URLs are not working, please let us know.
-
-- [Open Academy](https://github.com/systemseed/openacademy-drops-7): https://github.com/systemseed/openacademy-drops-7
-- [Open Atrium](https://github.com/phase2/openatrium-drops-6): https://github.com/phase2/openatrium-drops-6.git
-- [Open Enterprise](https://github.com/levelten/openenterprise-drops-7): https://github.com/levelten/openenterprise-drops-7.git
-- [Open Outreach](https://github.com/nedjo/openoutreach-drops-7): https://github.com/nedjo/openoutreach-drops-7
-- [Open Publish](https://github.com/phase2/openpublish-drops-7): https://github.com/phase2/openpublish-drops-7.git
-- [Open Public](https://github.com/phase2/openpublic-drops-7): https://github.com/phase2/openpublic-drops-7.git
-- [Panopoly](https://github.com/populist/panopoly-drops-7.git): https://github.com/populist/panopoly-drops-7.git
+### Where can I find a site's upstream URL?
+The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
+```nohighlight
+terminus site upstream-info
+```
 
 ### How can I manually resolve conflicts?
 
