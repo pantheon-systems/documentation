@@ -5,39 +5,39 @@ categories: [developing]
 tags: [debug]
 keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance
 ---
-[New Relic Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free.
-
-Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
+[New Relic Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Enable New Relic Pro
 To enable New Relic Pro on your Pantheon site, select the **New Relic** tab on your Site Dashboard, and click **Enable New Relic Pro**. New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
 You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Open New Relic**.
 
-The New Relic interface provides several views that display information about various aspects of your website's performance.
-
 ## Browser Overview
 
-![Browser Overview](/source/docs/assets/images/new-relic-end-user.png)
+The Browser Overview page gives you a summary of your website's performance at a glance. View it in New Relic by selecting **Browser** from the navigation menu.
 
-1. The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data.
-2. The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds.
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a broad idea. The provided slow traces are the key to figuring out why your site is running poorly.</div>
-3. **Throughput by Browser** provides the number of page views per minute broken down by user agents.
-4. The **Recent Session Traces** provide a detailed timeline of the load and interaction events.
-5. **Page Views with JS errors** displays any errors that are happening in your JavaScript and shows you on which browsers they are occuring.
+- The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data.
+
+- The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. Please not the Apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a general idea. The provided slow traces are the key to figuring out why your site is running poorly.
+
+- **Throughput by Browser** provides the number of page views per minute broken down by user agents.
+
+- The **Recent Session Traces** provide a detailed timeline of the load and interaction events.
+
+- **Page Views with JS errors** displays any errors that are happening in your JavaScript and shows you on which browsers they are occurring.
+
+For detailed information, see [New Relic's Browser documentation](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser#enhanced-features).
 
 ## Appserver Overview
+New Relic APM automatically refreshes your list of applications every six minutes with the most current color-coded health status and recent events. To view your app index, select **APM** > **Applications** from the New Relic menu.
 
-![Appserver Overview](/source/docs/assets/images/new-relic-overview.png)
+- The **Web Transactions Time** represents the duration that it takes for the request to be received by Nginx, processed by the application server, and returned to the client for processing and rendering. The end-user response time is different than the appserver response time, as the end user's response time is affected by variables such as connection speed, network latency, and browser.
+- **Transactions** show points of the process that take longer than a defined amount of time. This feature can be used to test a site against a set of timed-expectations to discover and fix problems.
+- **Error Rate** shows you what percentage of transactions are generating errors.
+- **Throughput** displays the number of requests per minute.
+- The **Servers** display shows the number of [application containers](/docs/application-containers), or appservers, associated with that environment.
 
-1. The **Web Transactions Time** represents the duration that it takes for the request to be received by Nginx, processed by the application server, and returned to the client for processing and rendering. The end-user response time is different than the appserver response time, as the end user's response time is affected by variables such as connection speed, network latency, and browser.
-2. **Transactions** show points of the process that take longer than a defined amount of time. This feature can be used to test a site against a set of timed-expectations to discover and fix problems.
-3. **Error Rate** shows you what percentage of transactions are generating errors.
-4. **Throughput** displays the number of requests per minute.
-5. The **Servers** display shows the number of [application containers](/docs/application-containers), or appservers, associated with that environment.
+For detailed information, see [New Relic's Application documentation](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-your-applications-index).
 
 ## Only Log Authenticated Users
 
@@ -116,8 +116,7 @@ if (extension_loaded('newrelic')) {
 
 #### How can I share a link to a particular metric?
 
-In the New Relic performance page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
- ![Permalink on the New Relic performance page](/source/docs/assets/images/new-relic-permalink.png)
+At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
 
 #### How much is New Relic Pro?
 
