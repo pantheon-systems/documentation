@@ -12,7 +12,7 @@ permalink: docs/sitemap.xml
   {% for doc in data.docs %}
   <url>
     <loc>{{ site.site_url }}{{ doc.url }}</loc>
-    <lastmod>{{ doc.date|date('Y-M-d') }}</lastmod>
+    <lastmod>{{ doc.date|date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,7 +20,7 @@ permalink: docs/sitemap.xml
   {% for guide in data.guides %}
   <url>
     <loc>{{ site.site_url }}{{ guide.url }}</loc>
-    <lastmod>{{ guide.date|date('Y-M-d') }}</lastmod>
+    <lastmod>{{ guide.date|date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -28,7 +28,7 @@ permalink: docs/sitemap.xml
   {% for post in data.posts %}
   <url>
     <loc>{{ site.site_url }}{{ post.url }}</loc>
-    <lastmod>{{ posts.date|date('Y-M-d') }}</lastmod>
+    <lastmod>{{ posts.date|date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
