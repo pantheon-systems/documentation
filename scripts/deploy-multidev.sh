@@ -61,7 +61,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
   # Update CTA edit link so that the current branch is used
   sed -i '39s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '42i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
+  sed -i '42i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
 
 
   # Regenerate sculpin to reflect new redirect logic
