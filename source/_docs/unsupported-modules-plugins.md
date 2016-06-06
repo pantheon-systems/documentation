@@ -210,9 +210,9 @@ Customers have also reported success by making the export path [configurable](ht
 ### Autoptimize
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
-**Solution**: Configure Autoptimize to write files within the standard path for WordPress (`wp-content/uploads`) by adding the following to `wp-config.php`:
+**Solution**: Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
 ```
-define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/');
+define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 ```
 For additional details, see the [Autoptimize's FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symblic link](/docs/assuming-write-access/#create-a-symbolic-link).
 
