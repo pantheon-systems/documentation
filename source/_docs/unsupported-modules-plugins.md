@@ -207,6 +207,11 @@ Customers have also reported success by making the export path [configurable](ht
 <hr>
 ##WordPress Plugins
 
+### Autoptimize
+**Issue**: Autoptimize expects write access to the site's codebase, which is prevented in Test and Live environments on Pantheon by design.
+
+**Solution**: As suggested in the section of the plugin's [FAQ](https://wordpress.org/plugins/autoptimize/faq), titled "Can I change the directory & filename of cached autoptimize files?", you can change the default location that this plugin will write the cache files to by adding two lines to your wp-config.php file.
+
 ### Contact Form 7
 **Issue**: This plugin utilizes a static value, `$_SERVER['SERVER_NAME']`, instead of `$_SERVER['HTTP_HOST']` which is generated dynamically.
 
