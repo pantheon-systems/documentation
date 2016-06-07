@@ -62,7 +62,7 @@ composer config repositories.drupal composer https://packagist.drupal-composer.o
 Once Composer knows where to find modules, they can be added easily with `composer require`. For instance, [address module](https://www.drupal.org/project/address) could be installed via Composer with
 
 ```
-composer require drupal/address
+composer require drupal/address --prefer-dist
 
 ```
 
@@ -77,7 +77,7 @@ If Pantheon is your site's only repository, then you do have to commit the `vend
 
 ### Avoiding committing dependencies as submodules
 
-**@todo, recommend one of the for approaches listed in https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md The gitignore option seems like the one that would work cleanest on Pantheon and could be changed in drops-8. However I have not been able to get it to work. In using `vendor/**/.git` as a .gitignore rule, I still get packages added as submodules.**
+Sometimes running composer commands like `install`, `update`, or `require` result in the downloading of `.git` directories for the dependencies being downloaded. Downloading the git source of a dependency may be helpful for editing and contributing back to a dependency but it is unlikely to be needed for most site building. Use `--prefer-dist` when running `composer require` so that Composer will download a distribution of the dependency that does not include the git history of that dependency. Then when you `git add` the dependency, git will not attempt to add the dependency as [a git submodule, which is not supported on Pantheon](https://pantheon.io/docs/git-faq/#does-pantheon-support-git-submodules%3F).
 
 ### Working with Continuous integration
 
