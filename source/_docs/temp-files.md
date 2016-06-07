@@ -13,7 +13,7 @@ Drupal 7 sites can add the following within `settings.php` to achieve the same c
 
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['system.file']['path']['temporary'] = $_SERVER['HOME'] .'/tmp';
+  $conf['file_temporary_path'] = $_SERVER['HOME'] .'/tmp';
 }
 ```
 
