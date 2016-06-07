@@ -64,12 +64,13 @@ You can output the size of your repository by running [`git count-objects -vH`](
  This may take hours to complete.
 
 8. Push your local changes to Pantheon:
+ 
  ```
  git push origin --force --all
  git push origin --force --tags
  ```
-
-In some scenarios, `git push origin --force --tags` may throw an error. The current workaroud is to delete the tags remotely using `git push origin :refs/tags/[tag]`
+ 
+ In some scenarios, `git push origin --force --tags` may throw an error. The current workaroud is to delete the tags remotely using `git push origin :refs/tags/[tag]`
 
 
 9. Recover local disk space and optimize your local repository with the following:
