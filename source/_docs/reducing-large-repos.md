@@ -53,7 +53,7 @@ You can output the size of your repository by running [`git count-objects -vH`](
  **Example Patterns**:
  - Single file name: `myfile.txt`
  - Directory. This will also match on all files under that directory: `my_directory`
- - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory/*.sql`
+ - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory\/*.sql`
 
 7. Filter out files and directories according to problematic patterns:
 
