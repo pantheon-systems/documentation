@@ -92,11 +92,25 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 ## AMP Validation Errors
-New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. Place the following within `wp-config.php` or `settings.php` to  disable New Relic's Browser monitoring agent on all AMP pages and resolve validation errors:
+New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
+### Identify AMP Pages
+Start by identifying all AMP pages for your site using a custom function. If your site uses the [Accelerated Mobile Pages (AMP)](https://www.drupal.org/project/amp) module or the [AMP](https://wordpress.org/plugins/amp/) plugin to create AMP pages, you can identify them using a regular expression within `wp-config.php` or `settings.php`:
 ```php
-$amp="/.*\?amp.*|.*\/amp\/.*/";
+function your_custom_function_that_identifies_your_site_amp_pages() {
+  if (preg_match("/.*\?amp.*|.*\/amp\/.*/", $_SERVER['REQUEST_URI'])) {
+    return TRUE;
+  }
+}
+```
+This function returns `TRUE` for all URIs containing `/amp/` and `?amp`. If the AMP module or plugin were not used to implement AMP pages, you will need to strategize isolating these pages according to their implementation.
+
+### Disable New Relic Browser Agent
+Once you have tested and validated a custom function to identify AMP pages, add the following to  disable New Relic's Browser monitoring agent on all AMP pages and resolve validation errors:
+```php
 if (extension_loaded('newrelic')) {
-  if (preg_match($amp, $_SERVER['REQUEST_URI'])) {
+  // Your custom function should return boolean TRUE|FALSE
+  $amp = your_custom_function_that_identifies_your_site_amp_pages();  
+  if ($amp) {
     newrelic_disable_autorum (FALSE);
   }
 }
