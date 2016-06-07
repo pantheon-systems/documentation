@@ -15,7 +15,7 @@ Due to the use of Perl and the Bash shell, the following process is supported on
 </div>
 
 ## Determine Repository File Size
-You can output the size of your repository by running [`git count-objuects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.
+You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.
 
 ## Prune and Optimize Large Repositories
 
@@ -58,7 +58,7 @@ You can output the size of your repository by running [`git count-objuects -vH`]
 7. Filter out files and directories according to problematic patterns:
 
  ```
- git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch my_directory\/*.sql' --prune-empty --tag-name-filter cat -- —all
+ git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch my_directory\/*.sql myfile.txt' --prune-empty --tag-name-filter cat -- —all
  ```
 
  This may take hours to complete.
@@ -66,8 +66,11 @@ You can output the size of your repository by running [`git count-objuects -vH`]
 8. Push your local changes to Pantheon:
  ```
  git push origin --force --all
- git push origin :refs/tags/4.4.2
+ git push origin --force --tags
  ```
+
+In some scenarios, `git push origin --force --tags` may throw an error. The current workaroud is to delete the tags remotely using `git push origin :refs/tags/[tag]`
+
 
 9. Recover local disk space and optimize your local repository with the following:
  ```
