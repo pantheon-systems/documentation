@@ -17,7 +17,7 @@ Pantheon uses nginx web servers for optimal performance. Log files record the we
 
 Be sure that you have:
 
-- [A local copy of the target site environment's `nginx-access.log` file](/docs)
+- [A local copy of the target site environment's `nginx-access.log` file](/docs/logs)
 - [GoAccess](http://goaccess.io/) installed:
  - **Mac OS X**: Install via [Homebrew](http://brew.sh/)
  - **Windows**: Use [Cygwin](http://cygwin.com/install.html)
@@ -45,7 +45,7 @@ open report.html
 ```
 
 ## See Also
-- [Log Files on Pantheon](/docs)
+- [Log Files on Pantheon](/docs/logs)
 - [Debugging Sites with Log Files](/docs/debug-log-files)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
