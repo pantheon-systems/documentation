@@ -99,8 +99,7 @@ Start by strategizing and testing logic to identify AMP pages based on your site
 ```php
 if (extension_loaded('newrelic')) {
   // Add AMP page identifying logic here that would, for example,    
-  // set variable $amp to TRUE or FALSE
-  //  if $amp is true, disable new relic
+  // set variable $amp to TRUE or FALSE. If $amp is true, disable new relic
   if ($amp) {
     newrelic_disable_autorum (FALSE);
   }
