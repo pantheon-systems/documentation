@@ -91,6 +91,21 @@ if (function_exists('newrelic_ignore_transaction')) {
     }
 }
 ```
+## AMP Validation Errors
+New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
+
+Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:  
+
+```php
+if (extension_loaded('newrelic')) {
+  // Add AMP page identifying logic here that would, for example,    
+  // set variable $amp to TRUE or FALSE
+  //  if $amp is true, disable new relic
+  if ($amp) {
+    newrelic_disable_autorum (FALSE);
+  }
+}
+```
 
 ## Frequently Asked Questions
 
