@@ -30,7 +30,7 @@ If you cannot sign in to your Pantheon Dashboard:
 ## Customer Support Response Times
 
 ###Elite Plans and Priority Enterprise Support Customers    
-* **On-call ticket**: Available 24/7/365 with a guaranteed response time guarantee for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
+* **On-call ticket**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
 
 ###Paid and Free Sites
@@ -81,4 +81,4 @@ You can file a downtime ticket for outages on our Support page, and we provide 2
 No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
 
 #### What is Priority Enterprise Support?
-For organizations that want the highest level of support for their whole team, [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support) provides the assurance of SLA-backed 24/7/365 emergency support, expedited responses to normal tickets, and expert onboarding and training. Contact [Sales](https://pantheon.io/contact-us) for more information.
+For organizations that want the highest level of support for their whole team, [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support) provides the assurance of SLA-backed 24/7/365 emergency support, expedited responses to standard tickets, and expert onboarding and training. Contact [Sales](https://pantheon.io/contact-us) for more information.
