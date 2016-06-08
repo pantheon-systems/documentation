@@ -37,6 +37,9 @@ After logging in, you can access your application in the `/code` directory, Drup
 
 You may need to select "accept" when prompted to accept the server's host key for the current session and store it in cache. This allows you to connect to the server and manage your files for the current session.
 
+When you disconnect, if you use the quick reconnect icon, you will be taken back to your most recent location.
+If you need to get back to your site root directory, please be sure to reconnect using the site manager, rather the quick reconnect.
+
 ## Known Issues
 
 ### Uploading to the Files Directory
