@@ -150,7 +150,7 @@ At this time, there are no permissions or access controls for managing the deplo
 
 #### What are the naming conventions for branches?
 
-Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters.
+Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master', 'settings', 'team', 'support', and 'billing'. 
 
 #### Can I fork my code without using Multidev?
 
