@@ -19,6 +19,12 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   fi
 
 
+# Test mention-bot config
+
+
+
+
+
   # Authenticate Terminus
   ~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 
