@@ -77,7 +77,9 @@ You can import an archive of site files or a MySQL database via URL or file uplo
 With the Export tool, you can export the database or files from an environment to use in local development or a migration process. These exports are available for 365 days from the time of creation.
 
 ###Wipe
-Use this tool if you need to completely wipe database and files for an environment. Wiping completely resets the database and files and you will lose all data. To get your site back online, you will need to either re-import, or re-run install.php.
+Use this tool if you need to completely wipe your database and files for an environment. Wiping completely resets the database and files and you will lose all content for that specific environment. For example, if you wipe the Dev environment, Test and Live are not affected. You will then need to either import the database and files from a backup, clone them from another environment, or re-install Drupal or WordPress.
+
+ To get your site back online, you will need to either re-import, or re-run install.php.
 
 Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 
