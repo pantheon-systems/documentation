@@ -23,10 +23,16 @@ html {
     min-height: 100%;
 }
 
-
-p, h1, h2, h3, h4, h5, h6, a, span {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+@font-face {
+  font-family: 'pan-docs';
+  src: url('../fonts/AvenirLTStd-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+p, h1, h2, h3, h4, h5, h6, a {
+  font-family: 'pan-docs';
+}
+
 
 p{
   margin: 0 0 20px;
@@ -85,8 +91,8 @@ h4 {
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: 'pan-docs';
+  font-size: 14px;
   line-height: 1.65em;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
@@ -299,14 +305,13 @@ img.noborder {
 }
 .pio-docs-nav .navbar-brand,
 .pio-docs-nav .navbar-nav > li > a {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  transition: all 0.2s ease-in;
-  background-color: transparent;
+transition: 200ms all;  background-color: transparent;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
