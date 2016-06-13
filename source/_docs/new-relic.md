@@ -12,32 +12,7 @@ To enable New Relic Pro on your Pantheon site, select the **New Relic** tab on y
 
 You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Open New Relic**.
 
-## Browser Overview
-
-The Browser Overview page gives you a summary of your website's performance at a glance. View it in New Relic by selecting **Browser** from the navigation menu.
-
-- The **Browser Page Load Time** represents the average time it takes the browser to process and render the page once Nginx has sent out the data.
-
-- The **Apdex Score** attempts to break down the end-user response times into three categories based upon load-time thresholds. Please not the Apdex is not the most accurate representation of your sites' load-times. It is simply there to give you a general idea. The provided slow traces are the key to figuring out why your site is running poorly.
-
-- **Throughput by Browser** provides the number of page views per minute broken down by user agents.
-
-- The **Recent Session Traces** provide a detailed timeline of the load and interaction events.
-
-- **Page Views with JS errors** displays any errors that are happening in your JavaScript and shows you on which browsers they are occurring.
-
-For detailed information, see [New Relic's Browser documentation](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/new-relic-browser#enhanced-features).
-
-## Appserver Overview
-New Relic APM automatically refreshes your list of applications every six minutes with the most current color-coded health status and recent events. To view your app index, select **APM** > **Applications** from the New Relic menu.
-
-- The **Web Transactions Time** represents the duration that it takes for the request to be received by Nginx, processed by the application server, and returned to the client for processing and rendering. The end-user response time is different than the appserver response time, as the end user's response time is affected by variables such as connection speed, network latency, and browser.
-- **Transactions** show points of the process that take longer than a defined amount of time. This feature can be used to test a site against a set of timed-expectations to discover and fix problems.
-- **Error Rate** shows you what percentage of transactions are generating errors.
-- **Throughput** displays the number of requests per minute.
-- The **Servers** display shows the number of [application containers](/docs/application-containers), or appservers, associated with that environment.
-
-For detailed information, see [New Relic's Application documentation](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-your-applications-index).
+To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
 
 ## Only Log Authenticated Users
 
@@ -141,8 +116,8 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 ##See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
-- [General New Relic Documentation](https://newrelic.com/docs/)
-- [Official New Relic Videos and Tutorials](http://newrelic.com/resources/videos)
+- [New Relic Documentation](https://newrelic.com/docs/)
+- [New Relic Videos and Tutorials](http://newrelic.com/resources/videos)
 - [Case Studies](http://newrelic.com/resources/case-studies)
 - [What is Real User Monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
