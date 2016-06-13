@@ -62,7 +62,7 @@ First, create a branch locally and push it to Pantheon. Then create a Multidev e
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Multidev branch names must be all lowercase and less than 11 characters.</div>
+Multidev branch names must be all lowercase and less than 11 characters. Environments cannot be created with the following reserved names: 'master', 'settings', 'team', 'support', and 'billing'.</div>
 
 1. From your Site Dashboard, select **Multidev**.  
 2. Click **Git Branches**, and select **Create Environment** next to the branch name.
@@ -150,7 +150,7 @@ At this time, there are no permissions or access controls for managing the deplo
 
 #### What are the naming conventions for branches?
 
-Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master', 'settings', 'team', 'support', and 'billing'. 
+Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: 'master', 'settings', 'team', 'support', and 'billing'. 
 
 #### Can I fork my code without using Multidev?
 
