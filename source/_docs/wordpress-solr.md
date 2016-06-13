@@ -37,7 +37,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 6. Use the **Query** tab to quickly validate Solr's indexing configuration. You can also install and activate the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to debug and validate Solr queries (optional):
  ![Debug Bar Solr Search extended menu](/source/docs/assets/images/solr-power-debug-bar-extension.png)
-7. Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
+7. Deploy the plugin to the site's Test and Live environments after validation and testing.
 
 ### Optimize Index
 For details, see the [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
@@ -47,9 +47,6 @@ This plugin is under active development on [GitHub](https://github.com/pantheon-
 
 ### Re-Indexing
 New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Settings** > **Solr Options** > **Indexing**, you must manually re-index the site on the **Actions** tab.
-### Initial Deploy to Test and Live
-The `schema.xml` file is not automatically sent to Solr when deploying the plugin to another environment for the first time. Login to the WordPress Dashboard on the environment's URL and click **Repost schema.xml** within  **Settings** > **Solr Options** > **Actions**. Then re-index the site.
 
-This is required upon initial deployment of the plugin to any environment or when a custom `schema.xml` document is changed.
 ### Enable Solr for AJAX and WordPress Dashboard
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
