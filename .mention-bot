@@ -1,4 +1,1 @@
-{
-  "userBlacklist": ["bmackinney", "barthballard"], // users in this list will never be mentioned by mention-bot
-  "actions": []
-}
+{ "actions": [] }
