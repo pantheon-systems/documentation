@@ -4,6 +4,7 @@ description: Understand how to adjust and customize the WordPress configuration 
 categories: [wordpress]
 tags: [code]
 keywords: wordpress, wp config, database
+contributors: masonjames
 ---
 ## Overview
 
