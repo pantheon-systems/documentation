@@ -11,7 +11,7 @@ Pantheon provides support for running three types of custom distribution on the 
 
 1. **Public Distributions** - High quality distributions like [Commerce Kickstart](http://drupal.org/project/commerce_kickstart) or [Open Atrium](http://drupal.org/project/openatrium) which are released on [drupal.org](https://drupal.org/) and are supported by their distribution authors for everyone to use.
 
-2. **Organizational Upstreams** - Organization-specific distributions that are private to the members of each organization, such as [OpenBerkeley](http://vcaf.berkeley.edu/initiatives/vcio-projects/open-berkeley).
+2. **Organizational Upstreams** - Organization-specific distributions that are private to the members of each organization, such as [OpenBerkeley](http://open.berkeley.edu).
 
 3. **Partner Upstreams** - Private company specific upstreams built and supported by our [Pantheon Partners](https://www.pantheon.io/partners/program) for their internal development. For more information, check out [our blog post about how this can work](https://www.pantheon.io/blog/building-sites-common-codebases-pantheon-one-agencies).
 
