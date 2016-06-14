@@ -50,19 +50,9 @@
     <meta name="twitter:site" content="@getpantheon">
     <meta name="twitter:title" content="{{ page.title}}">
     <meta name="twitter:description" content="{{ page.description }}">
-    {% if page.contributors %}
-        {% set contributor_list = page.contributors %}
-        {% if contributor_list %}
-            {% for contributorhandle in contributor_list %}
-                {% if site.contributors[contributorhandle] %}
-                    {% set contributor = site.contributors[contributorhandle] %}
-    <meta name="twitter:creator" content="@{{ contributor.twitter }}">
-                {% endif %}
-              {% if not loop.last %},
-              {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endif %}
+    {% if page.contributors %}{% set contributor_list = page.contributors %}{% if contributor_list %}{% for contributorhandle in contributor_list %}{% if site.contributors[contributorhandle] %}{% set contributor = site.contributors[contributorhandle] %}<meta name="twitter:creator" content="@{{ contributor.twitter }}">
+    {% endif %}{% endfor %}{% endif %}{% endif %}
+
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="{{ page.image }}">
     <!-- Open Graph data -->
@@ -121,7 +111,7 @@
     <![endif]-->
     {% include("navbar.html") %}
     <!-- container -->
-    <div class="container-fluid" style="margin-top:30px;">
+    <div class="container-fluid">
         <div class="row">
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
