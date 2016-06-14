@@ -61,8 +61,7 @@ $baseUrl = '/ckfinder/userfiles/';
 
 <hr>
 ### Composer Manager
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-This module has been deprecated by it's authors. [Composer Manager](https://www.drupal.org/project/composer_manager/releases) Suggestions made below are not guaranteed to be successful in all use cases.</div>
+**This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.**
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
