@@ -3,8 +3,7 @@
 <div class="col-md-12">
         <div id="doc" class="article col-md-9">
           <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
-                {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
-                {% set fullpath = page.url|replace({'/guides': ''}) %}
+                {% set fullpath = page.url|replace({'/docs': '/_docs', '/guides': ''}) %}
                 <div class="dropdown">
                 <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <span class="icon-github"></span>
