@@ -293,6 +293,10 @@ img.noborder {
 .active-trail a{
   box-shadow: inset 0 -4px 0 #EFD01B;
 }
+#subnav ul li a.active-trail {
+  box-shadow: inset 0 -4px 0 #EFD01B;
+}
+
 .pio-docs-nav {
   margin-bottom: 0;
   background-color: #222;

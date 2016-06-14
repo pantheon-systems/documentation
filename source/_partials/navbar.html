@@ -52,12 +52,32 @@
       </div>
     </div>
 <!-- Sub Navbar -->
+<script type="text/javascript">
+function setActive() {
+  aObj = document.getElementById('subnav').getElementsByTagName('a');
+  for(i=0;i<aObj.length;i++) {
+    if(document.location.href.indexOf(aObj[i].href)>=0 ){
+      aObj[i].className='active-trail';
+      if(/\/guides.*/.test(aObj[i].href)>=1) {
+        $('#docs').removeClass('active-trail');
+      }
+      if(/\/contributor.*/.test(aObj[i].href)>=1) {
+        $('#docs').removeClass('active-trail');
+      }
+      if(/\/changelog.*/.test(aObj[i].href)>=1) {
+        $('#docs').removeClass('active-trail');
+      }
+    }
+  }
+}
+window.onload = setActive;
+</script>
     <div class="navbar-fixed-top col-md-12 navbar-collapse collapse" id="subnav">
           <ul style="float:left;" class="nav navbar-nav">
-          <li><a href="/docs/">Docs</a></li>
-          <li><a href="/docs/guides">Guides</a></li>
-          <li><a href="/docs/contributors">Contributors</a></li>
-          <li><a href="/docs/changelog">Changelog</a></li>
+          <li><a id="docs" href="/docs">Docs</a></li>
+          <li><a id="guides" href="/docs/guides">Guides</a></li>
+          <li><a id="contributors" href="/docs/contributors">Contributors</a></li>
+          <li><a id="changelogs" href="/docs/changelog">Changelog</a></li>
         </ul>
         <span class="subnav-search">{% include("search_box.html") %}</span>
   </div>
