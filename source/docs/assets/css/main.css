@@ -92,7 +92,7 @@ h4 {
 
 body {
   font-family: 'pan-docs';
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65em;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
@@ -314,7 +314,8 @@ img.noborder {
   color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-transition: 200ms all;  background-color: transparent;
+  transition: 200ms all;
+  background-color: transparent;
 }
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
@@ -346,6 +347,65 @@ transition: 200ms all;  background-color: transparent;
 .pio-docs-nav .navbar-header .navbar-toggle:focus {
 
 }
+#subnav {
+    float: left;
+    top: 60px;
+    position: absolute;
+    background-color: #EFEFEF !important;
+    z-index: 1001;
+    color: #222;
+    transition: 200ms all;
+    padding: 0px;
+}
+#subnav ul li {
+  background-color: #EFEFEF !important;
+
+}
+#subnav ul li a{
+ color:#222;
+ background-color: #EFEFEF !important;
+ font-weight: bold;
+ transition: 200ms all;
+ text-transform: capitalize;
+ background-color:transparent;
+ padding-left:0px;
+ padding-right: 0px;
+ margin-left:10px;
+ margin-right:5px;
+}
+#subnav ul li a:hover {
+ color:#222;
+ box-shadow: inset 0 -4px 0 #EFD01B;
+}
+#subnav ul li a:focus {
+  box-shadow: inset 0 -4px 0 #EFD01B;
+}
+
+#subnav .dropdown-menu {
+      background-color: #EFEFEF;
+      text-align: left;
+}
+
+#subnav .dropdown > .dropdown-menu  a {
+  color: #222 !important;
+  transition: 200ms all;
+  padding-bottom: 10px;
+  padding-right: 0px;
+  padding-left: 10px;
+  margin: 0px;
+}
+#subnav .dropdown > .dropdown-menu  a:hover {
+  color: #222 !important;
+}
+.navbar-fixed-top>.col-md-8>.active-trail {
+  font-weight: 400;
+  cursor: not-allowed;
+}
+#subnav .subnav-search {
+  float:right;
+  width:60%;
+}
+
 /*Responsive layout*/
 @media screen and (min-width : 768px) {
   .pio-docs-nav .navbar-nav > li > a {
@@ -374,6 +434,7 @@ transition: 200ms all;  background-color: transparent;
   }
 
 
+
 }
 @-moz-document url-prefix() {
   .subnav-search {
@@ -395,7 +456,45 @@ transition: 200ms all;  background-color: transparent;
 }
 #subnav .subnav-search {
   float: none !important;
+
 }
+#subnav ul {
+  width: 100%;
+  margin: auto;
+}
+#subnav ul li{
+  width: auto;
+  padding-bottom: 5px;
+  color: #fff !important;
+}
+#subnav {
+  background-color: ##DDE5E7 !important;
+
+}
+
+#subnav ul li a.active-trail {
+  background-color: #EFD01B !important;
+  color: #222 !important;
+  box-shadow: none !important;
+  margin-left: 0px;
+  padding-left: 10px;
+  margin-right: 0px;
+}
+#subnav ul li a.active-trail:hover {
+  color:#222 !important;
+  padding-left: 20px;
+  box-shadow: inset 0 -2px 0 #222 !important;
+
+
+}
+
+#subnav ul li a:hover {
+ box-shadow: inset 0 -2px 0 #EFD01B !important;
+ padding-left: 20px;
+ margin-left: 0px;
+ }
+
+
 .docs-fm-resp {
   margin-left: 5px !important;
 
@@ -961,7 +1060,7 @@ transition: 200ms all;  background-color: transparent;
 .pio-landing-sidenav a {
 color: #44525E;
 text-decoration: none;
-font-size: 13px;
+font-size: 14px;
 }
 
 .pio-landing-sidenav a:hover {
@@ -2234,64 +2333,6 @@ color: #274E13 !important;
   border-bottom: none !important;
 }
 
-#subnav {
-    float: left;
-    top: 60px;
-    position: absolute;
-    background-color: #EFEFEF !important;
-    z-index: 1001;
-    color: #313945;
-    transition: all 0.2s ease-in;
-
-}
-#subnav ul li {
-  background-color: #EFEFEF !important;
-
-}
-#subnav ul li a{
- color:#313945;
- background-color: #EFEFEF !important;
- font-weight: bold;
- transition: all 0.2s ease-in;
- text-transform: capitalize;
- background-color:transparent;
- padding-left:0px;
- padding-right: 0px;
- margin-left:10px;
- margin-right:5px;
-}
-#subnav ul li a:hover {
- color:#313945;
- box-shadow: inset 0 -4px 0 #EFD01B;
-}
-#subnav ul li a:focus {
-  box-shadow: inset 0 -4px 0 #EFD01B;
-}
-
-#subnav .dropdown-menu {
-      background-color: #EFEFEF;
-      text-align: left;
-}
-
-#subnav .dropdown > .dropdown-menu  a {
-  color: #313945 !important;
-  transition: all 0.2s ease-in;
-  padding-bottom: 10px;
-  padding-right: 0px;
-  padding-left: 10px;
-  margin: 0px;
-}
-#subnav .dropdown > .dropdown-menu  a:hover {
-  color: #313945 !important;
-}
-.navbar-fixed-top>.col-md-8>.active-trail {
-  font-weight: 400;
-  cursor: not-allowed;
-}
-#subnav .subnav-search {
-  float:right;
-  width:60%;
-}
 
 #bread a {
     color: #000;
