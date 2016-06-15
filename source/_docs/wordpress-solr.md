@@ -21,9 +21,8 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install --activate solr-power'
+ terminus wp 'plugin install --activate solr-power --activate'
  ```
- Upon activation, the plugin will generate and send a [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document to the Solr server.
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.
 4. Select the **Indexing** tab and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
  <div class="alert alert-info">
@@ -41,6 +40,11 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 ### Optimize Index
 For details, see the [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
+
+### Schema.xml
+Upon activation of the plugin on the Dev or Multidev environment, a default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document is automatically sent to the Solr server. The `schema.xml` file is submitted automatically when deploying the plugin to another environment on Pantheon.
+
+You can configure a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory.
 
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
