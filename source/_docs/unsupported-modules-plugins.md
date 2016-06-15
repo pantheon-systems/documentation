@@ -65,16 +65,18 @@ $baseUrl = '/ckfinder/userfiles/';
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
-**Solution**: As suggested within the [module documentation](https://www.drupal.org/node/2405805), manage dependencies in Dev exclusively. Place the following configuration within `settings.php` to disable autobuild on Pantheon. This will also set appropriate file paths for Composer and packages so that they are stored within the root directory of the site's codebase and version controlled:
+**Solution**: As suggested within the [module documentation](https://www.drupal.org/node/2405805), manage dependencies in Dev exclusively. Place the following configuration within `settings.php` to disable autobuild on Pantheon. This will also set appropriate file paths for Composer so that checks to see if the path is writable will not fail. Packages, however, are stored within the root directory of the site's codebase and version controlled:
 ```
+
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   # Set appropriate paths for Composer Manager
-  $conf['composer_manager_file_dir'] = $_SERVER["HOME"] . '/code';
-  $conf['composer_manager_vendor_dir'] = $_SERVER["HOME"] . '/code/vendor';
+  $conf['composer_manager_file_dir'] = 'private://composer/'.$_ENV['PANTHEON_ENVIRONMENT'];
+  $conf['composer_manager_vendor_dir'] = $_SERVER['HOME'] . '/code/vendor';
   # Disable autobuild on Pantheon
   $conf['composer_manager_autobuild_file'] = 0;
   $conf['composer_manager_autobuild_packages'] = 0;
 }
+
 ```
 Note: This disables auto-building in *all* Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  
 
