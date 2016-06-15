@@ -5,17 +5,11 @@ categories: [developing]
 tags: [files]
 keywords: tmp, temp files, tmp files, temporary files, multiple application containers, distributed environments
 ---
-Live sites on Business and Elite plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `/tmp/` directory on one instance is not able to access the `/tmp/` contents on another application server.
+Live sites on Business and Elite plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `/tmp` directory on one instance is not able to access the `/tmp` contents on another application server.
 
-Pantheon's upstream for [wordpress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L75-L78) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L128-L136) configures the temporary directory path dynamically based on the application container processing the request. This ensures the accessibility of temporary files generated for a given task until the request has been complete.
+Pantheon's upstream for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L75-L78) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L128-L136) configures the temporary directory path dynamically based on the application container processing the request. This ensures the accessibility of temporary files generated for a given task until the request has been complete.
 
-Drupal 7 sites can add the following within `settings.php` to achieve the same configuration:
-
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['file_temporary_path'] = $_SERVER['HOME'] .'/tmp';
-}
-```
+Drupal 7 sites do not have the option to set or overrride the system `/tmp` path.
 
 ## Modules/Plugins/Themes Override
 
@@ -34,16 +28,9 @@ Replace `'some_tmp_settings'` with the applicable plugin or theme option used to
 ```
 update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
 ```
-
-## Use Pantheon's Networked File System
-Another option is to manage temporary resources within Valhalla, Pantheon's networked filesystem, which is common across application containers.
-
-### Drupal
-Create a `tmp/` directory within `sites/default/files/` and add the following to `settings.php`:
-
-```
-$conf['file_temporary_path'] = 'public://tmp';
-```
+## Using Valhalla, Pantheon's Networked Filesystem
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+While this technique can work, it comes with a strong caution. Using the filesystem for <code>/tmp</code> requests is not a fail-safe alternative.</div>
 
 ### WordPress
 Create a `tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:  
@@ -58,10 +45,10 @@ This will allow for consistent execution of requests to temporary files for site
 If you prefer to manage your temporary files privately, use the following to ensure resources are available across application containers. These files will be web-accessible based on the access control rules that you set for your site.
 
 #### Drupal
-Create a `private/tmp/` directory within `sites/default/files/` and add the following to `settings.php`:
+Create a `private/tmp/` directory within `sites/default/files/` and add the following to `settings.php`.  Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path.
 
 ```
-$conf['file_temporary_path'] = 'private://tmp';
+$conf['plupload_temporary_uri'] = 'private://tmp';
 ```
 
 #### WordPress
