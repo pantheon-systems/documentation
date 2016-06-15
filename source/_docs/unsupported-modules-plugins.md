@@ -61,10 +61,7 @@ $baseUrl = '/ckfinder/userfiles/';
 
 <hr>
 ### Composer Manager
-<div class="alert alert-danger">
-<h4>Warning</h4>
 This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
-</div>
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
@@ -81,10 +78,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 
 ```
-<div class="alert alert-info">
-<h4>Note</h4>
 This disables auto-building in <em>all</em> Pantheon environments. This will allow Drush commands such as <code>pm-enable</code> and <code>pm-disable</code> to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when <em>explicitly</em> told to do so via <code>drush composer-manager [COMMAND] [OPTIONS]</code> or <code>drush composer-json-rebuild</code>. This is the setting recommended by Pantheon.  While <code>composer.json</code> can be rebuilt via terminus while the DEV site is in SFTP mode, <code>composer install</code> must be run locally, committed via Git, and pushed back to Pantheon.
-</div>
 
 <hr>
 ### Global Redirect  
