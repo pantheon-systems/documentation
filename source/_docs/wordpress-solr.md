@@ -21,9 +21,8 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install --activate solr-power'
+ terminus wp 'plugin install --activate solr-power --activate'
  ```
- Upon activation, the plugin will generate and send a [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document to the Solr server.
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.
 4. Select the **Indexing** tab and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
  <div class="alert alert-info">
@@ -37,19 +36,21 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 6. Use the **Query** tab to quickly validate Solr's indexing configuration. You can also install and activate the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to debug and validate Solr queries (optional):
  ![Debug Bar Solr Search extended menu](/source/docs/assets/images/solr-power-debug-bar-extension.png)
-7. Deploy the plugin to the site's Live environment after validation and testing. The `schema.xml` file must be sent to Solr when the plugin is deployed to another environment for the first time. Select **Repost schema.xml** from the **Actions** tab, then validate expected results.
+7. Deploy the plugin to the site's Test and Live environments after validation and testing.
 
 ### Optimize Index
 For details, see the [Optimize command](http://solarium.readthedocs.org/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
+
+### Schema.xml
+Upon activation of the plugin on the Dev or Multidev environment, a default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document is automatically sent to the Solr server. The `schema.xml` file is submitted automatically when deploying the plugin to another environment on Pantheon.
+
+You can configure a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory.
 
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 
 ### Re-Indexing
 New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Settings** > **Solr Options** > **Indexing**, you must manually re-index the site on the **Actions** tab.
-### Initial Deploy to Test and Live
-The `schema.xml` file is not automatically sent to Solr when deploying the plugin to another environment for the first time. Login to the WordPress Dashboard on the environment's URL and click **Repost schema.xml** within  **Settings** > **Solr Options** > **Actions**. Then re-index the site.
 
-This is required upon initial deployment of the plugin to any environment or when a custom `schema.xml` document is changed.
 ### Enable Solr for AJAX and WordPress Dashboard
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
