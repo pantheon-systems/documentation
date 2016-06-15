@@ -78,8 +78,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 
 ```
-This disables auto-building in <em>all</em> Pantheon environments. This will allow Drush commands such as <code>pm-enable</code> and <code>pm-disable</code> to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when <em>explicitly</em> told to do so via <code>drush composer-manager [COMMAND] [OPTIONS]</code> or <code>drush composer-json-rebuild</code>. This is the setting recommended by Pantheon.  While <code>composer.json</code> can be rebuilt via terminus while the DEV site is in SFTP mode, <code>composer install</code> must be run locally, committed via Git, and pushed back to Pantheon.
-
+This disables auto-building in *all* Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  While `composer.json` can be rebuilt via terminus while the DEV site is in SFTP mode, `composer install` must be run locally, committed via Git, and pushed back to Pantheon.
 <hr>
 ### Global Redirect  
  **Issue**: Too many redirects error when site is in maintenance mode.  
