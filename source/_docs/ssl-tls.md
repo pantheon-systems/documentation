@@ -14,13 +14,13 @@ There are several types of encryption methods that browsers use:
 We recommend organizations that are working to achieve PCI compliance while using Pantheon services engage a third-party service provider like [CloudFlare](https://www.cloudflare.com/) to terminate SSL/TLS connections.  Terminating SSL/TLS connections with a service provider that specializes in providing SSL/TLS gives you greater control over your configuration and ensures your service will track closely with changes to PCI DSS.
 
 #### What versions of TLS do you support?
-We only support TLS 1.1 and TLS 1.2. We have ended support for all versions of SSL and TLS 1.0. [Older browsers and mobile devices](https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers) that do not support TLS 1.1 and 1.2 are likely to experience problems and security vulnerabilities.
+We only support TLS 1.1 and TLS 1.2. We have ended support for all versions of SSL and plan to end support for TLS 1.0 on June 30, 2016. [Older browsers and mobile devices](https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers) that do not support TLS 1.1 and 1.2 are likely to experience problems and security vulnerabilities. If you need to continue support for TLS 1.0, you can do so with [CloudFlare](https://www.cloudflare.com/).
 
 #### Where is SSL/TLS being used in your environment?  
 TLS 1.1 and 1.2 are being used between the web browser and customer sites using load balancers provided by Pantheon. Pantheon load balancers are configured to prefer the highest grade encryption supported by the browsers.
 
 #### How are you mitigating risks with SSL/TLS until you can migrate?  
-We have configured load balancers to aggressively negotiate the highest grade encryption available to both the browser and the load balancers. This ensures that the vast majority of traffic uses a modern encryption suite. 
+We have configured load balancers to aggressively negotiate the highest grade encryption available to both the browser and the load balancers. This ensures that the vast majority of traffic uses a modern encryption suite.
 
 #### How are you monitoring for new vulnerabilities associated with TLS?
 We monitor the U.S. Government National Vulnerability Database for announcements regarding TLS vulnerabilities.
