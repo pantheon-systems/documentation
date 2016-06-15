@@ -74,7 +74,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $conf['composer_manager_autobuild_packages'] = 0;
 }
 ```
-Note: This disables auto-building in *all* Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.
+Note: This disables auto-building in *all* Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  While `composer.json` can be rebuilt via terminus while the DEV site is in SFTP mode, `composer install` must be run locally, committed vis Git, and pushed back to Pantheon.
 
 There is an open [drupal.org issue](https://www.drupal.org/node/2567885) where file creation errors occur despite autobuild settings being disabled. This can be resolved by applying the [provided patch (#25)](https://www.drupal.org/node/2567885#comment-10874438) until the fix has been merged into a future release.
 <hr>
