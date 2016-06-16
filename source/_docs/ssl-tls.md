@@ -16,6 +16,10 @@ We recommend organizations that are working to achieve PCI compliance while usin
 #### What versions of TLS do you support?
 We only support TLS 1.1 and TLS 1.2. We have ended support for all versions of SSL and plan to end support for TLS 1.0 on June 30, 2016. [Older browsers and mobile devices](https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers) that do not support TLS 1.1 and 1.2 are likely to experience problems and security vulnerabilities. If you need to continue support for TLS 1.0, you can do so with [CloudFlare](https://pantheon.io/docs/cloudflare/). For details, see [CloudFlare's documentation](https://support.cloudflare.com/hc/en-us/articles/205043158-PCI-3-1-and-TLS-1-2).
 
+#### After you end support for TLS 1.0, do I need to do anything?
+No.  Very few sites will need to take action to support TLS 1.0 via CloudFlare. However, If you need to allow [browsers and devices](https://en.wikipedia.org/wiki/Template:TLS/SSL_support_history_of_web_browsers) that are no longer supported in TLS 1.1+ to access your site, you'll need to enable support for TLS 1.0 via [CloudFlare](https://pantheon.io/docs/cloudflare/).
+
+
 #### Where is SSL/TLS being used in your environment?  
 TLS 1.1 and 1.2 are being used between the web browser and customer sites using load balancers provided by Pantheon. Pantheon load balancers are configured to prefer the highest grade encryption supported by the browsers.
 
