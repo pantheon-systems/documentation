@@ -25,3 +25,10 @@ In your code/git root create a directory named `web`. This will be the directory
 
 ### Move your site files from the code/git root to the web directory
 This can be done with the `mv` command, in Finder, etc. After the files or moved use `git add -A` to add and commit the moved files and deploy them to Pantheon.
+
+### Alternate docroot and Quicksilver
+Note that if you are using a Quicksilver platform hook with the type `webphp` that the path to the script is relative to the doctroot, `web`, not the project root.
+
+So, for example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file would need to be located at `web/private/scripts/my_quicksilver_script.php`.
+
+This is because `webphp` scripts are run with Nginx, which is serving from the alternate docroot.
