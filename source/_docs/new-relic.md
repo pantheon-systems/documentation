@@ -8,9 +8,9 @@ keywords: new relic, new relic pro, performance analysis, enable new relic, what
 [New Relic Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Enable New Relic Pro
-To enable New Relic Pro on your Pantheon site, select the **New Relic** tab on your Site Dashboard, and click **Enable New Relic Pro**. New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
+To enable New Relic Pro on your Pantheon site, select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
-You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Open New Relic**.
+You should visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
 
