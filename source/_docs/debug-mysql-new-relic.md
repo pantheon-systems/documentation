@@ -9,7 +9,7 @@ While going through MySQL and PHP slow logs is a great way to find issues, moder
 
 ## Open New Relic Pro
 
-From within Pantheon, go to the Dashboard for the site you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Click the **New Relic** tab, and select **Open New Relic**.
+From within Pantheon, go to the Dashboard for the site you suspect is having problems with MySQL query performance. Select the environment: Dev, Test, or Live. Click the **New Relic** tab, and select **Go to New Relic**.
 
 ## Investigate Activity
 
