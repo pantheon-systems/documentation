@@ -24,4 +24,4 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
-If you need a professional to provide development support for your site, we have a large listing of qualified partners on our [Find an Agency](https://pantheon.io/agencies/agency-finder) page.
+If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust. 
