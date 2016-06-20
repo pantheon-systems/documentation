@@ -5,7 +5,7 @@ layout: default
 <div class="container article search-results">
   <div class="col-md-7">
   <script>
-    function() {
+    (function() {
       var cx = '016844496173863628783:moj1j4obfwm';
       var gcse = document.createElement('script');
       gcse.type = 'text/javascript';
@@ -13,7 +13,7 @@ layout: default
       gcse.src = '//cse.google.com/cse.js?cx=' + cx;
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(gcse, s);
-    }();
+    })();
   </script>
   <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
 </div>
