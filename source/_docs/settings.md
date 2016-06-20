@@ -10,11 +10,15 @@ The Settings page allows you to view and manage your site's configurations. This
 ## About Site
 View general information on the site by selecting the **About Site** tab.
 ![About site tab on Pantheon Dashboard](/source/docs/assets/images/interface-site-settings-about.png)
+
 ## Plans
 Here you can [select the site's plan](/docs/select-plan). For more detailed information on service levels, see [plan comparison](https://pantheon.io/pricing-comparison).
+
 ## Add Ons
-The **Add Ons** tab provides the ability to enable additional features, such as [New Relic](/docs/new-relic), [Apache Solr](/docs/solr/), and [Redis](/docs/redis/).
+The **Add Ons** tab provides the ability to enable additional features, such as [Apache Solr](/docs/solr/) and [Redis](/docs/redis/).
+
 ## Delete Site
 See [Deleting a Site on Pantheon](/docs/delete-site/).
+
 ## PHP Version
 See [Upgrade PHP Versions](/docs/php-versions).

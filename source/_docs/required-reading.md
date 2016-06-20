@@ -32,7 +32,7 @@ Pantheon containers spin down after ~1 hour of idle time. Live environments on a
 - [Domains and DNS](/docs/domains)
 ## Run
 - [Optimization for Pantheon and the Cloud](/docs/cloud-optimization)
-- [New Relic Performance Analysis on Pantheon](/docs/new-relic-analysis)
+- [New Relic Pro](/docs/new-relic)
 - [Applying Upstream Updates](/docs/upstream-updates)
 - [Varnish Caching for High Performance with Drupal and WordPress](/docs/varnish)
 - [Redis as a Caching Backend](/docs/redis)

@@ -38,10 +38,10 @@ Add containers by upgrading the site's plan within the Site Dashboard to a Busin
 
 The platform does not assume when additional containers are added or removed in response to traffic and/or resource consumption.
 
-## New Relic
-Consider enabling New Relic as an add-on service for your site within the Site Dashboard. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
+## New Relic Pro
+Consider enabling New Relic Pro for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
-For more information, see [New Relic Performance Analysis on Pantheon](/docs/new-relic-analysis/).
+For more information, see [New Relic Pro](/docs/new-relic).
 
 ## Handle Traffic Spikes
 You'll need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).

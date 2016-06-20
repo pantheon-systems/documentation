@@ -18,7 +18,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
 - All containers are created equally; free accounts are not underpowered.
 - All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
   - Packages: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
-  - Extensions: APC, New Relic, OAuth, Redis
+  - Extensions: APC, New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
   - Maximum PHP execution time is 90 seconds
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
@@ -40,13 +40,13 @@ While these are related topics, they need to be evaluated separately for your pr
 
 Typically, the best practice is to optimize for performance first and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
-Because Pantheon does not restrict or limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide tools like [New Relic](/docs/new-relic-analysis) to give you insights about your site's performance.
+Because Pantheon does not restrict or limit free sandbox or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic APM Pro](/docs/new-relic) to give you insights about your site's performance.
 
 ## Multiple Application Containers
 Live environments on sites with a service level of Business and above can have multiple application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling). If a site has multiple application containers, the load will be distributed among them.
 
 ### Expected Behavior
-Requests can be served from any of the available containers. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/download-logs).
+Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/download-logs).
 
 ### Failover Application Containers
 All paid service levels have failover application containers which are <strong>not</strong> used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.

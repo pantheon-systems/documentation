@@ -111,7 +111,7 @@ Even with the watchdog off these errors will still be written to the PHP error l
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic](/docs/new-relic-analysis#end-user-overview) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic Pro](/docs/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 
 ### Upgrade Your Plan
@@ -123,7 +123,7 @@ If the all the errors have been resolved and the views, batches and tasks have b
 
 There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
 
-If you are seeing timeouts in unexpected places, debugging with New Relic or looking at your php slow logs can be informative.
+If you are seeing timeouts in unexpected places, debugging with New Relic Pro or looking at your php slow logs can be informative.
 
 ## Admin Work-Arounds
 

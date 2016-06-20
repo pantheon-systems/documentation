@@ -127,7 +127,7 @@ When the site's code, database, and files are all in place, verify everything is
 We recommend:
 
  - Using the Status tool in the Site Dashboard
- - Enabling [New Relic](/docs/new-relic)
+ - Enabling [New Relic Pro](/docs/new-relic)
  - [Automated user acceptance testing](/docs/guides/wordpress-automated-testing) with Behat, Selenium, or Casper.js
  - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Manual [user acceptance testing](https://en.wikipedia.org/wiki/Acceptance_testing#User_acceptance_testing)
