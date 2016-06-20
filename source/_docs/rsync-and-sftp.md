@@ -134,4 +134,4 @@ $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/th
 ```
 ## Known Issues
 
-If you're uploading many files, and your Live environment has multiple app containers, first upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or Terminus to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
+If you're uploading many files, and your Live environment has [multiple application containers](/docs/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or Terminus to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
