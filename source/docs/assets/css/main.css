@@ -419,6 +419,11 @@ img.noborder {
     top: 40px !important;
 
   }
+  .search-results {
+    margin-top: 45px !important;
+
+  }
+
   #subnav .subnav-search {
     float: right !important;
     width: 50% !important;
