@@ -6,7 +6,7 @@ tags: [varnish, code]
 keywords: cache, caching, varnish, cookies, wordpress, drupal
 ---
 ## Exclude Specific Pages from Caching
-You can use a variety of mechanisms to determine which responses from your Drupal or WordPress application should be excluded entirely from caching. Ultimately, these mechanism result in the setting of HTTP headers which signal cacheability to Varnish and recipients of the response, like a browser. Some teams of web developers choose to aggregate all of their caching logic in one place, often the settings.php file of Drupal or the wp-config.php file of WordPress (as done in the below Drupal 7 and WordPress examples). Alternatively, you can spread out cache-related code such that it is closest to the elements (sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
+You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser. Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or the `wp-config.php` file of WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
 
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
@@ -18,7 +18,7 @@ You can use a variety of mechanisms to determine which responses from your Drupa
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d8">
   <br>
-  <p><a href="https://www.drupal.org/developing/api/8/render/arrays/cacheability">Drupal 8's system of cacheability metadata</a> is much more advanced than the tools available in Drupal 7 or WordPress. The concept is that Drupal builds HTML out of render arrays (specially formed PHP arrays). If one layer of a render array cannot be cached at all (if it's cache max age should be zero) that cacheability metadata can be set with </p>
+  <p><a href="https://www.drupal.org/developing/api/8/render/arrays/cacheability">Drupal 8's system of cacheability metadata</a> is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with: </p>
   <pre><code class="php hljs">
 // $build is a render array.
 $build['#cache']['max-age'] = 0;
@@ -27,7 +27,7 @@ $build['#cache']['max-age'] = 0;
   </div>
   <div role="tabpanel" class="tab-pane" id="d7">
   <br>
-  <p>Here is an example of more global way of determining a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
+  <p>Here is an example of a global way to determine a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
   <pre><code class="php hljs">
   // Set or replace $regex_path_match accordingly.
   if ((preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
