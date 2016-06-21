@@ -100,9 +100,9 @@ This is optional, but recommended. The easiest method is to use the [mysqldump](
 ```php
 # Specify the destination folder.
 TARGET=~/Desktop
-# Create the database backup.
+# Create the database archive.
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
-# Compress the backup.
+# Compress the archive.
 gzip $TARGET/db.sql
 ```
 #### Table Prefixes
