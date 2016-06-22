@@ -7,11 +7,11 @@ title: About Pantheon Docs
 
 ## We Have a New Docs Site!
 
-Welcome! You may have arrived here from a link to our old helpdesk.getpantheon.com site, which we didn't know about! Please proceed to our new docs page at [https://pantheon.io/docs](https://pantheon.io/docs) to search for the page you were looking for.
+You may have arrived here from a link to our old helpdesk.getpantheon.com site. View our new docs site at [https://pantheon.io/docs](https://pantheon.io/docs) to search for the page you were looking for and update your bookmark.
 
-## Open Sourced and Built with Sculpin
+## Open Source and Built with Sculpin
 
-The new docs site is open sourced and built with [Sculpin](https://sculpin.io/). Pull requests are always welcome! You can open issues on [GitHub](https://github.com/pantheon-systems/documentation).
+The new docs site is open source and built with [Sculpin](https://sculpin.io/). Pull requests are always welcome! You can open issues on [GitHub](https://github.com/pantheon-systems/documentation).
 
 ## Roadmap
 
