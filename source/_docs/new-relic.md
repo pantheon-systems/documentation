@@ -66,7 +66,7 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.  
 2. From the New Relic menu bar, select **APM** > **Applications**.  
-3. Wait until the color-coded health status to turn gray, then select the app's gear icon.
+3. Wait until the color-coded health status turns gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
 ## AMP Validation Errors
