@@ -62,7 +62,9 @@ If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull 
 <h4>Note</h4>
 This does not solve all problems that may arise, but it should take care of most situations.</div>
 
+
 ### Resolve Conflicts Locally
+
 Select the appropriate framework below for your web application, then execute the commands from within an up-to-date Git clone on your local machine. The `Xtheirs` flag will attempt to automatically resolve conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with .gitignore).
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -106,7 +108,7 @@ Select the appropriate framework below for your web application, then execute th
 
 <div class="alert alert-warning" role="alert">
 <h4>Note</h4>
-For sites using a distribution other than the core ones listed above, please see *Settings -> About site -> Upstream* to find your upstream url.</div>
+For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> to find your upstream URL.</div>
 
 ## Troubleshooting
 
