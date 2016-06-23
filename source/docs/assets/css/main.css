@@ -2440,3 +2440,12 @@ display: block;
 .jumbotron small{
   padding-left: 10px;
 }
+
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+  font-family: 'pan-docs' !important;
+  font-size: 16px !important;
+}
+
+.gs-result .gs-title, .gs-result .gs-title {
+  font-size: 20px !important;
+}
