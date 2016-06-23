@@ -6,18 +6,20 @@ tags: [platform]
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
-![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
+![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard.png)
 
-### Sites Tab
+## Sites Tab
 Here you can add a new site, see every site you're a team member of, and see the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-### Organizations Tab
+Each site displays a screenshot of the Dev environment's home page. The default image is shown for sites that have not yet begun development. These thumbnails are updated after clearing caches, deploying code, and cloning or importing database or files to Dev.
+
+## Organizations Tab
 If you belong to an organization, you will see it listed here and can click it to go to that organization's Dashboard.
 
-### Support Tab
+## Support Tab
 View details for open support tickets or create a new one.
 
-### Account Tab
+## Account Tab
 This is where you can update and manage your personal account details. Use the options on the left navigation menu to:
 
 - Update your user profile details

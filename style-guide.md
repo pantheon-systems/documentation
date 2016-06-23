@@ -424,7 +424,7 @@ The final step is to deploy your code and plugin settings to the live environmen
 ### User Dashboard
 It's always referred to as User Dashboard in order to reduce confusion between the Org Dashboard and Site Dashboard.
 
-![User Dashboard](/source/assets/images/pantheon-user-dashboard1.png)
+![User Dashboard](/source/assets/images/pantheon-user-dashboard.png)
 
 #### Tabs on the User Dashboard
 Organizations Tab
