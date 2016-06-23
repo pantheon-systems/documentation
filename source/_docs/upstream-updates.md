@@ -104,6 +104,10 @@ Select the appropriate framework below for your web application, then execute th
   </div>
 </div>
 
+<div class="alert alert-warning" role="alert">
+<h4>Note</h4>
+For sites using a distribution other than the core ones listed above, please see *Settings -> About site -> Upstream* to find your upstream url.</div>
+
 ## Troubleshooting
 
 ### Manually Resolving Conflicts
