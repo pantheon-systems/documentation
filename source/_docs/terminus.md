@@ -20,6 +20,9 @@ A list of available commands is maintained at the [project wiki](https://github.
 ## Support
 Support is maintained at [https://github.com/pantheon-systems/cli/issues](https://github.com/pantheon-systems/cli/issues).
 
+## Plugins
+Terminus now supports third-party plugins. Check the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Plugins) for details and a list of known plugins. 
+
 ## Further Reading
 We've included CLI instructions in many of our articles and guides.
 
