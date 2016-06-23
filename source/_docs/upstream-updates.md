@@ -108,7 +108,7 @@ Select the appropriate framework below for your web application, then execute th
 
 <div class="alert alert-warning" role="alert">
 <h4>Note</h4>
-For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> to find your upstream URL.</div>
+For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your site dashboard to find your upstream URL.</div>
 
 ## Troubleshooting
 
