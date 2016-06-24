@@ -10,6 +10,8 @@ We love helping developers succeed! We also have limits to the support we can pr
 - We don't touch client code.
 Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) with Git.
 
+- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version. 
+
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
 - Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](https://pantheon.io/docs/tags/debug/) to get you underway.
@@ -24,4 +26,4 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
-If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust. 
+If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
