@@ -8,21 +8,18 @@ keywords: going live, getting started, create account, create site, import, faqs
 <img src="/source/docs/assets/images/icon-launch-k.svg" alt="Launch Icon" style="float:left;margin-left:0px;margin-right:20px;margin-top:15px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:20px;margin-right:0px;">Welcome to Pantheon, the world’s fastest hosting for Drupal and WordPress. In a few simple steps, your site will be up and running on our distributed infrastructure with no single points of failure.</p>
 ## Create Your Free Account
 If you haven't already done so, create your [free Pantheon account](https://pantheon.io/register). Agencies (even freelancers) who build websites for third parties can [sign up for Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies).
-## Create a Site
-<img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="float:right;margin:5px;border:0;max-height:80px;"><p style="padding-top:0px;">From your Dashboard, click <strong>Create a Site</strong> or visit <a href="https://dashboard.pantheon.io/sites/create" target="blank">https://dashboard.pantheon.io/sites/create</a>. We allocate two free Sandbox sites for all user accounts. If you have reached your limit of Sandbox sites, delete an unused site or take a site live. Pantheon for Agencies Organizations do not have the two-sandbox restriction for sites associated with their organization.</p>
+## Create a New Site
+<img src="/source/docs/assets/images/icon-developer-dashboard.svg" alt="Launch Icon" style="float:right;margin:5px;border:0;max-height:80px;"><p style="padding-top:0px;">From your Dashboard, click <strong>Create a New Site</strong> or visit <a href="https://dashboard.pantheon.io/sites/create" target="blank">https://dashboard.pantheon.io/sites/create</a>. We allocate two free Sandbox sites for all user accounts. If you have reached your limit of Sandbox sites, delete an unused site or take a site live. Pantheon for Agencies Organizations do not have the two-sandbox restriction for sites associated with their organization.</p>
 
-
-### Start From Scratch
-
-1. **Choose a distribution**.  
+1. **Choose your site type**.  
 To start development directly on Pantheon, select a start state from our available distributions. For details, see [Choosing Your Start State](/docs/start-state).
 
 2. **Visit the Dev installation**.  
 On the Site Dashboard, click **Visit Development Site** to complete the Drupal or WordPress installation process.
 
-### Import an Existing Site
+## Migrate an Existing Site to Pantheon
 
-If you have an existing Drupal or WordPress site that you want to import, choose <strong>Archive Importer</strong>. For details, see <a href="/docs/migrate">Migrate Sites to Pantheon</a>.</p>
+If you have an existing Drupal or WordPress site that you want to migrate to Pantheon, choose <strong>Migrate existing site</strong>. For details, see <a href="/docs/migrate">Migrate Sites to Pantheon</a>.</p>
 
 ## Interact With Your Code
 <img src="/source/docs/assets/images/icon-tools.png" alt="Tools Icon" style="float:left;margin-right:15px;margin-top:10px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:5px;padding-bottom:0px;">

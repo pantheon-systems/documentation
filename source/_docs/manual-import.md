@@ -1,17 +1,16 @@
 ---
 title: Migrate to Pantheon: Manual Site Import
-description: Learn how to import a Drupal or WordPress site into Pantheon outside of the Importer Tool.
-keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
+description: Learn how to manually import a Drupal or WordPress site into Pantheon
+keywords: migrate, import, importing site, pantheon, new site, large site, distro, upstream, git history
 categories: [developing]
 tags: [migrate]
 ---
 
-Manually import your site to Pantheon outside of the provided [Importer tool](/docs/migrate/#plan-the-import) when any of the following apply:
+Manually migrate your site to Pantheon when any of the following apply:
 
 * **Large Site Archives**: Site archive is greater than the automated import limits (100MB for direct file upload or 500MB for URL upload).
 * **Custom Upstream**: Site should receive updates based on an upstream other than vanilla Drupal or WordPress (e.g Panopoly or your agency's customized WordPress).
 * **Preserve Git History**: Site's existing Git commit history should be retained.
-* **Sites running Drupal 8**
 * **[WordPress Site Networks](/docs/wordpress-site-networks/)**
 
 ## Requirements
@@ -20,15 +19,14 @@ Manually import your site to Pantheon outside of the provided [Importer tool](/d
 * [Rsync or SFTP Client](/docs/rsync-and-sftp/)
 * [MySQL Client](/docs/mysql-access/)
 
-## Create a New Pantheon Site and Start from Scratch
+## Create a New Pantheon Site
 
 From your Pantheon Dashboard:
 
-* Choose **Create a new site**.
-* Name your site.
-* Select **Start from Scratch**, and choose your starting codebase.
-
-Starting from scratch allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click.
+* Choose **Create a new site**
+* Name your site
+* Choose your site type or choose a site distribution (this allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click)
+* Wait for the CMS deployment to be complete and **Visit your Site Dashboard**
 
 ## Import the Codebase
 

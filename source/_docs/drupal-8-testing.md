@@ -9,7 +9,7 @@ The Drupal 8 testing organization "owns" all Drupal 8 sites created on the platf
 1. [Update Drupal to the latest release](/docs/upstream-updates). This is only possible for sites running Drupal 8 Beta 14 or later, and may not work in all cases.
 2. [Create and download backups](/docs/backups).
 3. To use the same development URLs for the site, [delete the site](/docs/delete-site/).
-4. [Create a new Drupal 8 site](https://dashboard.pantheon.io/sites/create) and select **Start from scratch**. The importer does not work with Drupal 8 sites.
+4. [Create a new Drupal 8 site](https://dashboard.pantheon.io/sites/create) 
 5. [Manually import code, database, and files](/docs/manual-import).
 
 <div class="alert alert-info" role="alert">

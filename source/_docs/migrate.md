@@ -12,7 +12,7 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 
 ## Create Archives
 
-In this phase, you will create an archive of your site. Archives can be stored in a single file or as three separate files.
+In this phase, you will create an archive of your site.
 
 Are you running another application in addition to WordPress or Drupal? You need to remove it. See [Platform Considerations](/docs/platform-considerations/#one-application-per-site).
 
@@ -53,9 +53,8 @@ Using our importer during the site creation process has the following effects on
 <div class="alert alert-info" role="alert">
 <h4>Reminder</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
 
-The importer accepts either single file site archives or separate archives of the code, database, and files. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include `.tar`, `.zip`, `.gzip`, and `.sql`.
+The importer accepts single file site archives. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include `.tar`, `.zip`, `.gzip`, and `.sql`.
 
-File size limits are per archive. Providing three files instead of one effectively increases the entire site import size limit to 1.5GB (500MB code, 500MB database, 500MB files).
 
 **Manual Site Import**
 
@@ -64,16 +63,13 @@ Manually import the site outside of our importer tool if any of the following ap
 - Your site exceeds file size limit for uploads.
 - Your site requires an upstream to an organizational or public distribution.
 - You would like to preserve the site's existing Git history.
-- Your site is running Drupal 8.
 
 Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for detailed instructions.
 
 ### Create Single File Archives
- Sites that can be packaged with a total archived size less than 500MB are able to use single file archives during the import process. You can create these archives with [Drush](/docs/drupal-export#create-archive-using-drush) or [Backup and Migrate](/docs/drupal-export#create-archive-using-backup-and-migrate) for Drupal sites, and [Plugins](/docs/wordpress-export#export-wordpress-via-plugins) for WordPress.
 
-### Create Separate Archives of Code, Database, and Files
+You can create these archives with [Drush](/docs/drupal-export#create-archive-using-drush) or [Backup and Migrate](/docs/drupal-export#create-archive-using-backup-and-migrate) for Drupal sites, and [Plugins](/docs/wordpress-export#export-wordpress-via-plugins) for WordPress.
 
-If your site cannot be packaged as a single archive less than 500MB, you'll need to create separate archives of each part of your site. For step-by-step instructions, see [Exporting an Existing WordPress Site](/docs/wordpress-export#manually-create-separate-site-archives) or [Exporting an Existing Drupal Site](/docs/drupal-export#manually-create-archive).
 
 ## Import Your Site
 
@@ -86,25 +82,16 @@ terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<ur
 
 ### Create and Name the Site
 
-Click the [**Create New Site**](https://dashboard.pantheon.io/sites/create) button at either the user or Organization Dashboard. Enter a name and click **Create Site**.
-
-### Choose a Start State
-To use our site importer, select **Archive Importer**.
-To import after creation, select the intended upstream and install it, and skip ahead to [import after creation](#import-after-creation).
+Click the [**Migrate Existing Site**](https://dashboard.pantheon.io/sites/migrate) button at either the user or Organization Dashboard. Enter a name and click **Create Site**.
 
 ### Import Archives
 
-If your site is in a single file archive, upload the file or provide the publicly-accessible URL for the importer to download, and click **Import Site**. <div class="alert alert-info" role="alert">
+Upload the file or provide the publicly-accessible URL for the importer to download, and click **Import Site**. <div class="alert alert-info" role="alert">
 
 <h4>Note</h4>
 Modify Dropbox URLs so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
  ![Single Archive Import](/source/docs/assets/images/single-archive-import.png)
 
-If you prepared separate code, database, and files archives:
-
- 1. Click **Provide separate code, database, and files archives**.
- 2. Import each archive via the corresponding file upload or URL field.
- 3. Click **Import Site** and wait for your site to complete.
 
 When it completes, proceed to [test your site](#test-your-site).
 

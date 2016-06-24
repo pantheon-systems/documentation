@@ -13,9 +13,8 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 2. From within the WordPress Dashboard on your existing site, navigate to the Duplicator plugin page and create a new package by selecting **Next** and then **Build**.
 3. Click **Archive** to download the .zip file.
 4. Create and a new site on Pantheon and import your archive:
- - Choose **Create New Site** from your Pantheon Dashboard.
+ - Choose **Migrate Existing Site** from your Pantheon Dashboard.
  - Name your site.
- - Select **Archive Importer**.
  - Select the **File** option, and upload the .zip file.
  - Click **Import Site**.
 

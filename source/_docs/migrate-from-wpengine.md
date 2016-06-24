@@ -14,7 +14,8 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 2. Create and install a new WordPress site on Pantheon:
  - Choose **Create a new site** from your Pantheon Dashboard.
  - Name your site.
- - Select **Start from Scratch**, and choose **WordPress**.
+ - Choose **WordPress** as your site type
+ - Wait for WordPress to be deployed and **Visit your Pantheon Dashboard**
  - Click **Visit Development Site** and complete the installation process.
 3. Create a [Pantheon machine token](https://pantheon.io/docs/machine-tokens/). Make sure the token has a descriptive name, including the name of your site on Pantheon. Save this machine token somewhere safe!
   ![Create a machine token](/source/docs/assets/images/pantheon-create-machine-token.png)
