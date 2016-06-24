@@ -82,7 +82,7 @@ terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<ur
 
 ### Create and Name the Site
 
-Click the [**Migrate Existing Site**](https://dashboard.pantheon.io/sites/migrate) button at either the user or Organization Dashboard. Enter a name and click **Create Site**.
+Click the [**Migrate Existing Site**](https://dashboard.pantheon.io/sites/migrate) button on either the User or Organization Dashboard. Enter a name and click **Create Site**.
 
 ### Import Archives
 
