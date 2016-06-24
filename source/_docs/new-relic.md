@@ -10,9 +10,22 @@ keywords: new relic, new relic pro, performance analysis, enable new relic, what
 ## Enable New Relic Pro
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/rvtraveller/terminus-omniscient) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus sites omniscient`.
 
-New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments. Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+
+New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments. 
+
+### Troubleshoot New Relic Access
+
+- Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
+- Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
+- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again. 
+
+#### Who is the New Relic account associated with?
+- If site owner is a user, the site owner's info is used to create the New Relic account.
+- If site owner is an organization, the user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
 
 To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
+
 
 ## Only Log Authenticated Users
 
@@ -117,7 +130,8 @@ Because Pantheon's runtime matrix runs your application across many containers s
 ##See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
 - [New Relic Documentation](https://newrelic.com/docs/)
-- [New Relic Videos and Tutorials](http://newrelic.com/resources/videos)
+- [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm)
+- [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced)
 - [Case Studies](http://newrelic.com/resources/case-studies)
 - [What is Real User Monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
