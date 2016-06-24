@@ -23,10 +23,10 @@ Manually migrate your site to Pantheon when any of the following apply:
 
 From your Pantheon Dashboard:
 
-* Choose **Create a new site**
-* Name your site
-* Choose your site type or choose a site distribution (this allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click)
-* Wait for the CMS deployment to be complete and **Visit your Site Dashboard**
+* Choose **Create a new site**.
+* Name your site.
+* Choose your site type or choose a site distribution (this allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click).
+* Wait for the CMS deployment to be complete and **Visit your Site Dashboard**.
 
 ## Import the Codebase
 
