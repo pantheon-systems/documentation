@@ -5,7 +5,7 @@ categories: [wordpress]
 tags: [create]
 ---
 
-You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, you can import an existing network or start from scratch and begin developing your project on the platform.
+You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
 
 ## Migrating Site Networks to Pantheon
 
