@@ -5,7 +5,7 @@ categories: [developing]
 tags: [database, debug, code]
 keywords: mysql, mysql query, mysql queries, kill query, kill queries, kill mysql, kill mysql queries, queries, query, debug mysql, debug, mysql error, kill all queries, kill all mysql queries, kill all mysql
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [Access the appropriate environment's MySQL Database](/docs/mysql-access).
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL Database](/docs/mysql-access).
 
 ## Identify Long-Running Queries
 After successfully creating a local MySQL connection to the site's database, run the following command to show a list of active threads:
