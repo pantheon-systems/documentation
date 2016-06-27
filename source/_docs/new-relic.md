@@ -7,7 +7,7 @@ keywords: new relic, new relic pro, performance analysis, enable new relic, what
 ---
 [New Relic Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
-## Enable New Relic Pro
+## Activate New Relic Pro
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/rvtraveller/terminus-omniscient) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus sites omniscient`.
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
