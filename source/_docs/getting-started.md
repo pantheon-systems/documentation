@@ -19,7 +19,7 @@ On the Site Dashboard, click **Visit Development Site** to complete the Drupal o
 
 ## Migrate an Existing Site to Pantheon
 
-If you have an existing Drupal or WordPress site that you want to migrate to Pantheon, choose <strong>Migrate existing site</strong>. For details, see <a href="/docs/migrate">Migrate Sites to Pantheon</a>.</p>
+If you have an existing Drupal or WordPress site that you want to migrate to Pantheon, choose <strong>Migrate Existing Site</strong>. For details, see <a href="/docs/migrate">Migrate Sites to Pantheon</a>.</p>
 
 ## Interact With Your Code
 <img src="/source/docs/assets/images/icon-tools.png" alt="Tools Icon" style="float:left;margin-right:15px;margin-top:10px;margin-bottom:0px;border:0;max-height:80px;"><p style="padding-top:5px;padding-bottom:0px;">
