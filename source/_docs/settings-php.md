@@ -6,19 +6,18 @@ tags: [code, drupal-8]
 keywords: drupal, settings.php, database configuration, configuration
 contributors: mmenavas
 ---
-The Drupal system configuration in code is set in:
-`sites/default/settings.php`
+The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
-Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file which includes the necessary `settings.pantheon.inc`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
+Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.inc`. If the stock `settings.php` file is used in place of the bundled file, the site will stop working on Pantheon.
 
-For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing settings.php. Permissions are handled automatically by Pantheon, so you can customize settings.php like any other site code.
+For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-You should NEVER put the database connection information for a Pantheon database within your settings.php. These credentials will change. If you are having connection errors, please ensure you are running Pressflow core. This is a requirement and is not optional.</div>
+You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make you are running Pressflow core. This is a requirement.</div>
 
 ## Pantheon Articles on settings.php
 
-The following articles include techniques and configurations for settings.php on Pantheon:
+The following articles include techniques and configurations for `settings.php` on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain\_access)
 - [Redis as a Caching Backend](/docs/redis)
@@ -180,7 +179,7 @@ As an example, here's how you can hard-code your Drupal 7 caching configuration 
       }
     }
 
-Drupal 8's [configuration override system](https://www.drupal.org/node/1928898) uses the global `$config` variable:
+The Drupal 8 [configuration override system](https://www.drupal.org/node/1928898) uses the global `$config` variable:
 
     // All Pantheon Environments.
     if (defined('PANTHEON_ENVIRONMENT')) {
@@ -210,17 +209,17 @@ Drupal 8's [configuration override system](https://www.drupal.org/node/1928898) 
 
 See [Reading the Pantheon Environment Configuration](/docs/read-environment-config).
 
-#### Why does Drupal report that settings.php is not protected? I can't change the permissions on settings.php.
+#### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
-If you do not have a settings.php file in your codebase, the following message on `/admin/reports/status` is shown:
+If you do not have a `settings.php` file in your codebase, you'll see the following message on `/admin/reports/status`:
 
 Configuration file: Not protected. The file `sites/default/settings.php` is not protected from modifications and poses a security risk. You must change the file's permissions to be non-writable.
 
-Technically, it's possible to have a functioning Drupal site without settings.php on Pantheon, but this breaks compatibility with many modules and tools. Therefore, it's strongly recommended to either copy the default.settings.php file to settings.php or create an empty settings.php file.
+Technically, it's possible to have a functioning Drupal site without `settings.php` on Pantheon, but this breaks compatibility with many modules and tools. Therefore, it's strongly recommended to either copy the `default.settings.php` file to `settings.php` or create an empty `settings.php` file.
 
 #### Should I include settings.php in my site import?
 
-It depends on your site configuration. Stripping commented-out or non-functional code from your existing settings.php file, leaving only known good functional configurations is a best practice and makes it easier to troubleshoot.
+It depends on your site configuration. Stripping commented-out or non-functional code from your existing `settings.php` file, leaving only known good functional configurations is a best practice and makes it easier to troubleshoot.
 
 #### Where do I specify database credentials?
 
@@ -232,16 +231,16 @@ Pantheon automatically injects database credentials into the site environment; i
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
-####Where can I find examples of Pantheon settings.php?
+#### Where can I find examples of Pantheon settings.php?
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
 #### Are table prefixes supported?
 
 For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/drupal-export#export-the-database).
 
-#### Status is showing that my configuration file is not protected and that I need to create a settings.php file.
+#### Why is the Status tab is showing that my configuration file is not protected and that I need to create a settings.php file?
 
-Drupal doesn’t ship with a settings.php in place; as the error suggests, you should make a copy of the default.settings.php and rename it settings.php. Once you have created a settings.php file, the settings.php area of the report should resolve to green.
+Drupal doesn’t ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
 #### Can I edit settings.pantheon.php?
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
