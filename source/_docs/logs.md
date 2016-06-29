@@ -33,13 +33,15 @@ You now have a local copy of the logs directory, which contains the following:
 ```
 To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
 ### Log Directory Contents
-- **`newrelic.log`**: New Relic log; check if an environment is not logging.
-- **`nginx-access.log`**: Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).
-- **`nginx-error.log`**: Webserver error log.
-- **`php-error.log`**: PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.
-- **`php-fpm-error.log`** and **`php-slow.log`**: PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log).
-- **`pyinotify.log`**: Linux filesystem events monitoring.
-- **`watcher.log`**: Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.
+|Log File Name| Retention Policy|Comments|
+|-------------|-----------------|--------|
+| **`newrelic.log`**| |New Relic log; check if an environment is not logging.|
+| **`nginx-access.log`**|60 days of logs | Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).|
+| **`nginx-error.log`**| 1MB of log data |Webserver error log.|
+| **`php-error.log`**| 1MB of log data |PHP [fatal error log](http://php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Errors from this log are also shown in the Dashboard.|
+| **`php-fpm-error.log`** and **`php-slow.log`**| 1MB of log data |PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log).|
+| **`pyinotify.log`**| |Linux filesystem events monitoring.|
+| **`watcher.log`**| |Log of service that checks for files changed in `code` directory while in SFTP Connection Mode.|
 
 ## Download MySQL Slow Query Log
 1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
