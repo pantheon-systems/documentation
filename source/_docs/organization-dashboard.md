@@ -5,7 +5,7 @@ categories: [managing]
 tags: [platform, organizations]
 keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
 ---
-The Organization Dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove team members, and manage new or existing sites.
+The Organization Dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove organizational team members, and manage new or existing sites.
 
 ## Add Sites to Your Organization
 
@@ -34,7 +34,7 @@ If you need to add developers as full team members to a site, or outside contrac
 
 The user will receive an email notification with a link to the Site Dashboard.
 
-Removing team members follows the same process.
+Removing site team members follows the same process.
 
 
 ## Filter Sites
