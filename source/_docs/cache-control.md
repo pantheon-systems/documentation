@@ -31,6 +31,7 @@ $build['#cache']['max-age'] = 0;
   <pre><code class="php hljs">
   // Set or replace $regex_path_match accordingly.
   if ((preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+    $GLOBALS['conf']['cache'] = FALSE; // <- Added this
     $conf['page_cache_maximum_age'] = 0;
   }
   </code></pre>
