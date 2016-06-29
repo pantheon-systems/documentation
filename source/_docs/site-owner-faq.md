@@ -12,7 +12,7 @@ When you become a site owner, you receive administrator permissions to manage th
 ### Administrative Tasks
 
 
-####How do I add and remove team members?
+####How do I add and remove site team members?
 
 **Add a Team Member**
 
@@ -20,7 +20,7 @@ In the Team modal, enter the email address of the user, and click **Add Team Mem
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
 
-**Remove a Team Member**
+**Remove a Site Team Member**
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>All users can be removed except the site owner.</div>
@@ -87,7 +87,7 @@ We do not recommend entering credit card information on behalf of a new owner. I
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
-For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
+For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the site team member who should receive ownership of the site.
 
 Resellers should contact Pantheon Support directly if you need to transfer ownership.
 
