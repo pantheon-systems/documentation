@@ -1,5 +1,5 @@
 ---
-title: Team Management
+title: Site Team Management
 description: Working with the Pantheon Website Management Platform deployment tools in a team driven environment.
 categories: [managing]
 tags: [platform]
@@ -7,28 +7,28 @@ keywords: team management, roles, permissions, team members, developer, privileg
 ---
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 
-## Team Management
-You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Dashboard.
+## Site Team Management
+You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
 ![Team Management Window](/source/docs/assets/images/team-modal.png)
-## Add a Team Member
+## Add a Site Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
 
-## Invite a Team Member
+## Invite a Site Team Member
 
 Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent an email with an invite to become a team member on the site.
 
 Once they have successfully created an account, they will be automatically added to the team. As an added bonus if the user signs up, you'll get an extra free Dev site!
 
-## Remove a Team Member
+## Remove a Site Team Member
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>All users can be removed except the site owner.</div>
 
-In the Team modal, click the X next to the user you want to delete.
+In the Team modal in the Site Dashboard, click the X next to the user you want to delete.
 
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
@@ -38,10 +38,10 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-Within the Team modal, the site owner can click **Make Owner** next to the team member that should receive ownership of the site. This link is only visible when the Sandbox site does not have a credit card associated with the site. To disassociate a credit card, go to **Settings** and click the Billing tab.
+Within the Team modal of the Site Dashboard, the site owner can click **Make Owner** next to the site team member that should receive ownership of the site. This link is only visible when the Sandbox site does not have a credit card associated with the site. To disassociate a credit card, go to **Settings** and click the Billing tab.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Only the current site owner has the ability to assign a new owner; team members will not see this option.</div>
+<h4>Note</h4>Only the current site owner has the ability to assign a new owner; site team members will not see this option.</div>
 ![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
 
 #### Paid Sites
