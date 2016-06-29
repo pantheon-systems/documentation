@@ -60,6 +60,9 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
 
 <div class="alert alert-info"><h4>Note</h4>The <code>wp-content/uploads</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</div>
 
+## Managing Permissions
+Pantheon automatically configures default permissions within the site's respective upstream; directories are set to 755 and files are set to 644. Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
+
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/getting-started/#interact-with-your-code) and access [connection information](/docs/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/interface-dev-code-sftp-commit.png)
