@@ -238,7 +238,7 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/drupal-export#export-the-database).
 
-#### Why is the Status tab is showing that my configuration file is not protected and that I need to create a settings.php file?
+#### Why is the Status tab showing that my configuration file is not protected and that I need to create a settings.php file?
 
 Drupal doesn’t ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
