@@ -15,7 +15,7 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 ## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL slow log, use the [method outlined here](/docs/logs/#download-mysql-slow-query-log).
+To download the environment's MySQL slow log, use the [method outlined here](/docs/logs/#download-database-log-files).
 
 ```sql
 $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
@@ -69,7 +69,7 @@ There are several different tools you can use to analyze a MySQL slow log:
 
 - <a href="https://www.percona.com/doc/percona-toolkit/2.2/index.html">Percona Toolkit</a> (Recommended. Actively maintained. Includes slow query log analyzer: <a href="https://www.percona.com/doc/percona-toolkit/2.1/pt-query-digest.html">pt-query-digest</a>.)   
 - <a href="http://www.hackmysql.com/mysqlsla">Mysqlsla</a> (No longer maintained by the author. <a href="https://github.com/daniel-nichter/hackmysql.com/tree/master/mysqlsla">Legacy GitHub repo</a>.)  
-- <a href="https://code.google.com/p/mysql-log-filter/">Mysql Log Filter</a> (Not updated since 2007.) 
+- <a href="https://code.google.com/p/mysql-log-filter/">Mysql Log Filter</a> (Not updated since 2007.)
 
 These tools allow you to see summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. Here is an example usage of MySQL log filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 

@@ -21,47 +21,47 @@ Each environment (Multidev, Dev, Test, and Live) has their own respective log fi
     </thead>
     <tbody>
       <tr>
-        <th scope="row" class="thead-inverse"><code>newrelic.log</code></th>
+        <th>newrelic.log</th>
         <td></td>
         <td>New Relic log; check if an environment is not logging.</td>
       </tr>
       <tr>
-        <th><code>nginx-access.log</code></th>
+        <th>nginx-access.log</th>
         <td>60 days of logs</td>
         <td>Webserver access log. Do not consider canonical, as this will be wiped if the application server is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
       </tr>
       <tr>
-        <th><code>nginx-error.log</code></th>
+        <th>nginx-error.log</th>
         <td>1MB of log data</td>
         <td>Webserver error log.</td>
       </tr>
       <tr>
-        <th><code>php-error.log</code></th>
+        <th>php-error.log</th>
         <td>1MB of log data</td>
         <td>PHP <a href="http://php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Errors from this log are also shown in the Dashboard.</td>
       </tr>
       <tr>
-        <th><code>php-fpm-error.log</code></th>
+        <th>php-fpm-error.log</th>
         <td>1MB of log data</td>
         <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See <a href="/docs/php-slow-log">PHP Slow Log</a></td>
       </tr>
       <tr>
-        <th><code>pyinotify.log</code></th>
+        <th>pyinotify.log</th>
         <td></td>
         <td>Linux filesystem events monitoring.</td>
       </tr>
       <tr>
-        <th><code>watcher.log</code></th>
+        <th>watcher.log</th>
         <td></td>
         <td>Log of service that checks for files changed in <code>code</code> directory while in SFTP Connection Mode.</td>
       </tr>
       <tr>
-        <th><code>mysqld-slow-query.log</code></th>
+        <th>mysqld-slow-query.log</th>
         <td>10MB of log data</td>
         <td>Log of MySQL queries that took more than 120 seconds to execute.</td>
       </tr>
       <tr>
-        <th><code>mysqld.log</code></th>
+        <th>mysqld.log</th>
         <td>1 MB of log data</td>
         <td>Log of established MySQL client connections and statements received from clients.</td>
       </tr>
