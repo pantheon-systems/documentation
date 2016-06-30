@@ -37,7 +37,7 @@ When you or the administrators, team members, or developers in your agency [crea
 ## Support
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
-Only team members and administrators of an Supporting Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by upgrading to a Business or Elite plan. Team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
+Only organizational team members and administrators of an Supporting Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by upgrading to a Business or Elite plan. Site Team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency Organization own a site?
 Pantheon Enterprise Organizations are able to own sites; Pantheon Partner Organizations cannot. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. See our [Change Management](/docs/change-management/#managing-people-in-an-organization) doc for more details.
@@ -49,7 +49,7 @@ No. Only the owner of the site can add an agency as a Supporting Organization. T
 ### What privileges and roles are granted when adding a Supporting Organization?
 All organization members have access to the site, with permissions determined by their roles at the organization level.
 
-### Can the site owner override privileges and access for team members of a Supporting Organization?
+### Can the site owner override privileges and access for orgnizational team members of a Supporting Organization?
 Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
 
 ### Do you have a status page?
