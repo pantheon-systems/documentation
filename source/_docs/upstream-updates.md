@@ -18,7 +18,6 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 6. Click **Visit Testing Environment** to test the update against your Live site’s content base.
 7. Deploy the upstream updates to your Live environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
 8. Click **Visit Live Site**, and verify the update is live.
-![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/visit-live-site.png)
 
 ## Apply Upstream Updates via Terminus
 
