@@ -16,7 +16,7 @@ Users added to the organization can access all sites associated with the organiz
 * All users in an organization can see other users and their roles.
 
 ## Managing People in an Organization
-When a organizational Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
+When an organizational Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
 
 ### Add a User
 
