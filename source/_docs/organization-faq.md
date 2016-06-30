@@ -37,7 +37,7 @@ When you or the administrators, team members, or developers in your agency [crea
 ## Support
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
-Only organizational team members and administrators of an Supporting Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by upgrading to a Business or Elite plan. Site Team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
+Only organizational team members and administrators of an Supporting Organization with Multidev will be able to use this feature. If you would like to add Multidev at the site level, you can do so by upgrading to a Business or Elite plan. Site team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency Organization own a site?
 Pantheon Enterprise Organizations are able to own sites; Pantheon Partner Organizations cannot. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. See our [Change Management](/docs/change-management/#managing-people-in-an-organization) doc for more details.
