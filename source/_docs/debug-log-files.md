@@ -26,14 +26,14 @@ terminus drush "watchdog-show --tail"
 
 ### WordPress
 
-Set the WP_DEBUG variable to "true" within your wp-config.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
+Set the `WP_DEBUG` variable to "true" within your wp-config.php file to display all PHP errors, notices, and warnings. Reference the [WordPress codex](http://codex.wordpress.org/Debugging_in_WordPress) for additional information on debugging in WordPress.
 
 ```php
 define('WP_DEBUG', true);
 ```
 
 ## Raw Webserver Log Files
-When developing a site, it can be useful to directly access the server logs for the site environment. For instructions on how to download, see [Log Files on Pantheon](/docs/logs/#download-raw-webserver-log-files).
+When developing a site, it can be useful to directly access the server logs for the site environment. For instructions on how to download, see [Log Files on Pantheon](/docs/logs).
 
 ## Frequently Asked Questions
 
@@ -83,3 +83,5 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 !
 done
 ```
+
+To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
