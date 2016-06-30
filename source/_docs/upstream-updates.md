@@ -12,14 +12,12 @@ Only use the one-click updates on the Dashboard to update your site's core. Do n
 
 1. Check the options you want to run after pulling the update.
 2. Click **Apply Updates**.
-![A Pantheon site dashboard with upstream updates available.](/source/docs/assets/images/upstream-updates.png)
 3. Click **Visit Development Site** in the Development Environment to test it, or run your automatic user acceptance tests.
 4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/undo-commits) using Git.
 5. Deploy the upstream updates to your Test Environment by clicking **Pull (Content from Live and) Code from Development** in the Code workspace in the Test Environment.
 6. Click **Visit Testing Environment** to test the update against your Live site’s content base.
-7. Deploy the upstream updates to your Live Environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
-8. Click **Visit Live Site**, then verify the update is live.
-![The Code tab in the Pantheon site's dashboard's Live Environment, showing the upstream commits in the log as deployed.](/source/docs/assets/images/visit-live-site.png)
+7. Deploy the upstream updates to your Live environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
+8. Click **Visit Live Site**, and verify the update is live.
 
 ## Apply Upstream Updates via Terminus
 
@@ -56,11 +54,7 @@ If the automated core update doesn't appear to be working, it's possible there a
 
 In the event that the update fails, you may see an error indicating a conflict with some files in core. Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository. This does not solve all problems that may arise, but it should take care of most situations.
 
-If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site.
-
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-This does not solve all problems that may arise, but it should take care of most situations.</div>
+If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site. This does not solve all problems that may arise, but it should take care of most situations.
 
 
 ### Resolve Conflicts Locally
@@ -168,8 +162,8 @@ For example:
 
 ### 503 Errors When Running Update.php and Installing Modules
 
-There are multiple reasons that 503s might occur when updating:
+There are multiple reasons that 503 errors might occur when updating:
 
-- PHP segfault: these are tricky to troubleshoot because very little debugging information is present, though Pantheon engineering is currently working on a fix. A temporary fix is available. Contact Pantheon Support if you think you have been affected.
+- PHP segfault: These are tricky to troubleshoot because very little debugging information is present. A temporary fix is available. Contact Pantheon Customer Support if you think you have been affected.
 
-- Timeouts are another cause of 503s, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than sixty seconds, you might see a timeout occur.
+- Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
