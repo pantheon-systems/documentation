@@ -57,13 +57,13 @@ Each environment (Multidev, Dev, Test, and Live) has their own respective log fi
       </tr>
       <tr>
         <th><code>mysqld-slow-query.log</code></th>
-        <td></td>
-        <td></td>
+        <td>10MB of log data</td>
+        <td>Log of MySQL queries that took more than 120 seconds to execute.</td>
       </tr>
       <tr>
         <th><code>mysqld.log</code></th>
-        <td></td>
-        <td></td>
+        <td>1 MB of log data</td>
+        <td>Log of established MySQL client connections and statements received from clients.</td>
       </tr>
     </tbody>
   </table>
