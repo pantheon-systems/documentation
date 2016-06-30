@@ -18,7 +18,7 @@ After a user leaves, we recommend you:
 ## Remove a Team Member from a Site
 When you delete a user from a site, they lose the ability to perform any site operations via the Dashboard or Terminus.
 
-To remove a site team member from a site, [follow these steps](/docs/team-management/#remove-a-team-member).
+To remove a team member from a site, [follow these steps](/docs/team-management/#remove-a-team-member).
 
 ## Remove a Person from an Organization
 When you delete a user from an organization, they lose the ability to perform any operations on the sites within the organization. Only admin roles can remove people from organizations.
