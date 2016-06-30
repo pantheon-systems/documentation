@@ -10,13 +10,13 @@ Change Management is an [organization](/docs/organizations/) feature that enable
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
 ## Features
-* Enterprise Administrators can add Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or Team Member roles.
+* Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles.
 * Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
 * When a site owner adds an organization to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
 * All users in an organization can see other users and their roles.
 
 ## Managing People in an Organization
-When a Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
+When a organizational Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
 
 ### Add a User
 
@@ -37,7 +37,7 @@ To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need t
 
 Enterprise Organizations can assume ownership of a site by opening a support ticket; however, Partner Organizations cannot own sites directly.
 
-For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the team member who should receive ownership of the site.
+For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 
 ## Managing an Enterprise Site's Team
 
