@@ -7,23 +7,23 @@ keywords: team management, roles, permissions, team members, developer, privileg
 ---
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 
-## Site Team Management
+## Manage Site Team Members
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
 ![Team Management Window](/source/docs/assets/images/team-modal.png)
-## Add a Site Team Member
+## Add a Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
 
 Once the user has been added to the project, they will receive a welcome email notifying them that they are now a member of the site's team. This will allow them to access the site's codebase, create backups, mark the site as private, clear your sites' caches, sync content, and perform updates.
 
-## Invite a Site Team Member
+## Invite a Team Member
 
 Sometimes you need to invite a user to a team or project who does not have a Pantheon account. You can still add them to the project and they will be sent an email with an invite to become a team member on the site.
 
 Once they have successfully created an account, they will be automatically added to the team. As an added bonus if the user signs up, you'll get an extra free Dev site!
 
-## Remove a Site Team Member
+## Remove a Team Member
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>All users can be removed except the site owner.</div>
