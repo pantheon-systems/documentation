@@ -53,7 +53,9 @@ Two methods can be used to integrate SendGrid with your Drupal site: SMTP or API
  For more details, see [Unsupported/Problematic Modules and Plugins](/docs/unsupported-modules-plugins/#composer-manager).
 
 ### SendGrid SMTP Integration
-<div class="alert alert-info" role="alert"> The Sendgrid API module currently needs a patch to work with Drupal 7, see [The issue report for more information](https://www.drupal.org/node/2759433#comment-11359957).
+
+<div class="alert alert-info" role="alert"> The Sendgrid API module currently needs a patch to work with Drupal 7, see [The issue report for more information](https://www.drupal.org/node/2759433#comment-11359957).</div>
+
 Support for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the pre-release version.
 
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
