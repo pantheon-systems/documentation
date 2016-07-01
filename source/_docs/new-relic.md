@@ -97,6 +97,9 @@ if (extension_loaded('newrelic')) {
 }
 ```
 
+## New Relic Availability Monitoring Alerts Show SSL Error
+When your Pantheon site uses HTTPS and your site uses a proxy like CloudFlare or CloudProxy and the proxy uses SNI (Server name indication), regular New Relic Alerts cannot be used to monitor your site. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits). You must instead create your alerts using [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
+
 ## Frequently Asked Questions
 
 #### How do I change the New Relic site owner now that our Pantheon site has a new site owner?
