@@ -12,13 +12,13 @@ Select the **New Relic** tab on your Site Dashboard, and click **Activate New Re
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
-New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments. 
+New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
 ### Troubleshoot New Relic Access
 
 - Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
 - Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
-- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again. 
+- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
 
 #### Who is the New Relic account associated with?
 - If site owner is a user, the site owner's info is used to create the New Relic account.
@@ -96,6 +96,17 @@ if (extension_loaded('newrelic')) {
   }
 }
 ```
+
+## New Relic APM Availability Monitoring Alerts and Downtime Events
+Site's configured with third-party proxy services that use SNI (Server Name Indication) to serve HTTPS requests (e.g. CloudFlare, CloudProxy, etc.) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
+
+As an alternative, you can use the bundled New Relic Synthetic Lite service to monitor HTTPS pages served with SNI:
+
+1. Click **New Relic** from the target environment within the Site Dashboard on Pantheon.
+2. Select **Synthetics** from within New Relic.
+3. Click the **Create new monitor** button and enter details for the environment you wish to monitor.
+
+The ping monitor is provided for free, however other monitors require upgrading to a paid plan. For more details, see [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
 
 ## Frequently Asked Questions
 
