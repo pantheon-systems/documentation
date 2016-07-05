@@ -3,12 +3,14 @@ title: Drupal 8 and Composer
 description: Understand how to use Composer to manage modules and other dependencies for Drupal 8
 categories: [Drupal 8]
 tags: [code, local]
+contributors:
+  - stevector
 ---
 
 Composer is a dependency management tool that allows for PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
 
 ## Installing Composer on your local machine
-
+For details, see Composer's documentation on [Installation - Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
 ## Generic Composer usage
 
