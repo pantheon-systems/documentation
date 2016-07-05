@@ -21,7 +21,7 @@ Composer's purpose is managing dependencies. To perform this task, Composer need
 - A list of dependencies
 - A place to put the dependencies
 
-### List Dependencies with	composer.json and composer.lock
+### List Dependencies with composer.json and composer.lock
 
 Composer lists dependencies with its `composer.json` file. A very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
 
@@ -81,7 +81,7 @@ If Pantheon is your site's only repository, then you do have to commit the `vend
 
 Sometimes running Composer commands like `install`, `update`, or `require` result in the downloading of `.git` directories for the dependencies being downloaded. Downloading the Git source of a dependency may be helpful for editing and contributing back to a dependency, but it is unlikely to be needed for most site building. Use `--prefer-dist` when running `composer require` so that Composer will download a distribution of the dependency that does not include the Git history of that dependency. When you `git add` the dependency, Git will not attempt to add the dependency as [a git submodule, which is not supported on Pantheon](https://pantheon.io/docs/git-faq/#does-pantheon-support-git-submodules%3F).
 
-### Using Continuous integration
+### Using Continuous Integration
 
 As the Drupal community comes to a clearer consensus on how to manage build steps, Pantheon will add more documentation and examples for how to integrate common build processes with Pantheon tools.
 
