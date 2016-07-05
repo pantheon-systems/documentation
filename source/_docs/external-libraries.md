@@ -64,7 +64,7 @@ Once you have downloaded and enabled the PhantomJS Capture module, you'll need t
 
 ## Apache Tika
 
-The {Apache Tika](http://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
+The [Apache Tika](http://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.  
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
