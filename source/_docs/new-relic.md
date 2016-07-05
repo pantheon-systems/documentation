@@ -93,6 +93,7 @@ if (extension_loaded('newrelic')) {
   // set variable $amp to TRUE or FALSE. If $amp is true, disable new relic
   if ($amp) {
     newrelic_disable_autorum (FALSE);
+    newrelic_ignore_transaction();
   }
 }
 ```
