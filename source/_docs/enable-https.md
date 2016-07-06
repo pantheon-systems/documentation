@@ -11,7 +11,7 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</div>
+Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</div>
 
 ## Steps to Enable HTTPS
 
@@ -42,10 +42,10 @@ The output of `openssl` should be two files:
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.</div>
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</div>
+<ul>
+<li>Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.
+<li> You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</div>
+
 
 ## Get SSL Certificate
 
