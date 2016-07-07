@@ -226,6 +226,10 @@ img.noborder {
   font-size: 13px;
   font-weight: normal;
 }
+.popover-content {
+  font-family: pan-docs !important;
+  font-size: smaller;
+}
 
 /* Pantheon "B" icon */
 .pio-docs-booticon {
