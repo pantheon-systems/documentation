@@ -19,11 +19,11 @@ This is useful if you are starting a new project, or if you have sophisticated G
 We base our repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured wp-config.php.
 
 - [WordPress](https://github.com/pantheon-systems/WordPress)
-- [Drupal 8](https://github.com/pantheon-systems/drops-8)
+- [Drupal 8](https://github.com/pantheon-systems/drops-8) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Install Requires SFTP Mode"><em class="fa fa-info-circle"></em></a>
 - [Drupal 7](https://github.com/pantheon-systems/drops-7)
 
 ## Start with a Distribution
-We include a growing number of "Drupal products" as available start-states on Pantheon. These are also known as "installation profiles" or "distributions" and contain much more functionality than a Drupal core installation.
+We include a growing number of "Drupal products" as available start-states on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
 
 Drupal distributions offer a much richer out of the box experience, but are more complex under the hood. You still have access to 100% of the code with a Drupal product, but the increased complexity means it can be more challenging to customize and extend.
 
@@ -33,7 +33,7 @@ Public distributions are not maintained by Pantheon. If the upstream is out of d
 </div>
 
 
-- [CiviCRM Starter Kit](https://github.com/kreynen/civicrm-starterkit-drops-7)
+- [CiviCRM Starter Kit](https://github.com/kreynen/civicrm-starterkit-drops-7) <a rel="popover" data-toggle="tooltip" data-proofer-ignore data-html="true" data-content="Install Requires SFTP Mode"><em class="fa fa-info-circle"></em></a>
 - [DKAN](https://github.com/NuCivic/dkan-drops-7)
 - [Commerce Kickstart](https://github.com/commerceguys/kickstart-drops-7)
 - [OpenAid](https://bitbucket.org/joelsteidl/openaid-drops-7)
@@ -56,3 +56,6 @@ $ terminus upstreams list
 ## Importing an Existing Site
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/docs/migrate).
+
+
+\* Requires SFTP mode
