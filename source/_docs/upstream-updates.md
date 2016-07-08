@@ -36,7 +36,7 @@ Learn more about this command by running `terminus help site upstream-updates`.
 ```
 terminus sites mass-update
 ```
-Learn more about this command by running `terminus help site mass-updates`.
+Learn more about this command by running `terminus help sites mass-update`.
 
 ### Further Considerations
 - ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/undo-commits).
