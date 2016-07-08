@@ -43,8 +43,10 @@ The output of `openssl` should be two files:
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 <ul>
-<li>Do not add a password to your key. It is important to keep your .key file private and secure. You'll use the .key file later when loading your cert into a Pantheon environment.
-<li> You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</div>
+<li>Do not add a password to your key. It is important to keep your <code>.key</code> file private and secure. You'll use this file later when loading your cert into a Pantheon environment.</li>
+<li> You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</li>
+</ul>
+</div>
 
 
 ## Get SSL Certificate
