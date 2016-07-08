@@ -54,8 +54,6 @@ Two methods can be used to integrate SendGrid with your Drupal site: SMTP or API
 
 ### SendGrid SMTP Integration
 
-<div class="alert alert-info" role="alert"> The Sendgrid API module currently needs a patch to work with Drupal 7, see <a href ="https://www.drupal.org/node/2759433#comment-11359957">this issue</a> for more information.</div>
-
 Support for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the pre-release version.
 
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
@@ -76,7 +74,8 @@ Support for Drupal 8 is not yet available for the [SMTP Authentication Support](
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
 
 ### SendGrid API Integration
-The SendGrid Integration module is not supported on Drupal 8 sites at this time. This method can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)).
+The SendGrid Integration module is not supported on Drupal 8 sites at this time. This method can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)). This module currently needs a patch to work with Drupal 7, see [this issue](https://www.drupal.org/node/2759433#comment-11359957) for more information.
+
 
 1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
