@@ -28,7 +28,7 @@ From your Pantheon Dashboard:
 3. Name your new Pantheon site.
 4. Select an organization for the site (optional).
 5. Select **Migrate Manually**.
-6. Import your code, database, and files.
+6. Import your [code](/docs/manual-import/#import-the-codebase), [database](/docs/manual-import/#add-your-database), and [files](/docs/manual-import/#upload-your-files).
 7. Once the site has been imported, click **I've Successfully Migrated Manually**.
 
 You will now be taken to your Pantheon Site Dashboard.
