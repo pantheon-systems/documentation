@@ -32,7 +32,7 @@ web_docroot: true
 In your code root, create a directory named `web`. This will be the directory where your site is served from when `web_docroot: true` is defined in `pantheon.yml`. The directory name is not configurable. If you absolutely need a different directory name, you can create a symlink.
 
 ## Move Site Files to the Web Directory
-This can be done manually for each file/directory with the `git mv` command or automated with one of the example commands below. Once all files have been moved to the `web` subdirectory, commit and push your changes to Pantheon:
+This can be done manually for each file/directory with the `git mv` command or automated with one of the example commands below. Once all files have been moved to the `web` subdirectory, navigate to the root directory of your site's Git repository then commit and push your changes to Pantheon:
 ```
 git commit -am "Serve site from alternate docroot"
 git push origin master
