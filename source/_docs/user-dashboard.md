@@ -25,7 +25,7 @@ This is where you can update and manage your personal account details. Use the o
 - Update your user profile details
 - Connect and disconnect your Google account (used for logging in to Pantheon with your Google identity)
 - Change your password  
-- Set your login destination (if you're a member of an organization or agency)  
+- Set your [login destination](https://dashboard.pantheon.io/users/#account/login-destination) (if you're a member of an organization or agency)  
 - Add and manage [SSH keys](/docs/ssh-keys/)  
 - View billing details  
 - Add [machine tokens](/docs/machine-tokens/)  
