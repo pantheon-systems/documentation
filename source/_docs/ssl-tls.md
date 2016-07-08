@@ -19,8 +19,8 @@ We only support TLS 1.1 and TLS 1.2. We have ended support for all versions of S
 #### After you end support for TLS 1.0, do I need to do anything?
 Very few sites will need to take action to support TLS 1.0. However, if you need to support [older browsers and devices](https://en.wikipedia.org/wiki/Template:TLS/SSL_support_history_of_web_browsers), you'll need to enable TLS 1.0 via [CloudFlare](https://pantheon.io/docs/cloudflare/). For details, see [CloudFlare's documentation](https://support.cloudflare.com/hc/en-us/articles/205043158-PCI-3-1-and-TLS-1-2).
 
-#####Terminus
-Terminus users will need to ensure that their version of OpenSSL supports TLSv1.2 (recent versions of 1.0.1 and greater), this includes any integration that connects to the platform, e.g. CircleCI and other build automation tools.</div>
+#### Terminus Authentication
+Terminus users will need to ensure that their version of OpenSSL supports TLS 1.2 (recent versions of OpenSSL 1.0.1 and greater), this includes any integration that connects to the platform, e.g. CircleCI and other build automation tools.
 
 
 #### Where is SSL/TLS being used in your environment?  
