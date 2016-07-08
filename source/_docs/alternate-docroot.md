@@ -6,7 +6,7 @@ tags: [platform,code]
 keywords: Composer, docroot
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying an alternate docroot allows you to serve site files from a subdirectory of your site's code repository (e.g. `web`).
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying an alternate docroot allows you to serve site files from the `web` subdirectory of your site's code repository.
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using an alternate docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
@@ -29,11 +29,14 @@ web_docroot: true
 ```
 
 ## Create the Web Directory
-In your code root, create a directory named `web`. This will be the directory where your site is served from when `web_docroot: true` is defined in `pantheon.yml`.
- The directory name is not configurable. If you absolutely need a different directory name, you can create a symlink with Git.
+In your code root, create a directory named `web`. This will be the directory where your site is served from when `web_docroot: true` is defined in `pantheon.yml`. The directory name is not configurable. If you absolutely need a different directory name, you can create a symlink.
 
 ## Move Site Files to the Web Directory
-This can be done manually for each file/directory with the `git mv` command or automated with one of the example commands below. After the files are moved, run `git add -A` to add and commit the moved files and deploy them to Pantheon.
+This can be done manually for each file/directory with the `git mv` command or automated with one of the example commands below. Once all files have been moved to the `web` subdirectory, commit and push your changes to Pantheon:
+```
+git commit -am "Serve site from alternate docroot"
+git push origin master
+```
 
 ### Examples
 The idea here is that `find . -type f -maxdepth` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files the user has added. Please verify file relocation after using one of these commands.
