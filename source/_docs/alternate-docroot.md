@@ -64,7 +64,7 @@ The idea here is that `find . -type f -maxdepth` finds all files at the document
 </div>
 
 ## Alternate Docroot and Quicksilver
-If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the doctroot `web` and not the project root.
+If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the docroot `web` and not the project root.
 
 For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file would need to be located at `web/private/scripts/my_quicksilver_script.php`.
 
