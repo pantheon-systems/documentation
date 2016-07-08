@@ -1,22 +1,19 @@
 ---
-title: Create an Alternate Docroot
+title: Serving Sites from an Alternate Docroot
 description: Learn how to create an alternate docroot to serve your Pantheon site from.
 categories: [developing,sites]
 tags: [platform,code]
 keywords: Composer, docroot
 ---
 
-## Introduction
-
-### What is an alternate docroot?
-The docroot is the directory where your website files are served. On Pantheon this defaults to the root directory of your Git repository. Specifying an alternate docroot allows you to serve site files from the `web` subdirectory of the Git root.
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying an alternate docroot allows you to serve site files from a subdirectory of your site's code repository (e.g. `web`).
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using an alternate docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed with [Composer](https://getcomposer.org/).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
 
-Any non-web scripts, such as [Pantheon Quicksilver scripts](https://github.com/pantheon-systems/quicksilver-examples), should be kept outside of the docroot as well. 
+Any non-web scripts, such as [Pantheon Quicksilver scripts](https://github.com/pantheon-systems/quicksilver-examples), should be kept outside of the docroot as well.
 
 ## Define Alternate Docroot in pantheon.yml
 - Clone your website locally with Git. For details, see [Starting with Git article](https://pantheon.io/docs/git/).
