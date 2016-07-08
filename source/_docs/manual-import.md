@@ -23,10 +23,15 @@ Manually migrate your site to Pantheon when any of the following apply:
 
 From your Pantheon Dashboard:
 
-* Choose **Create a new site**.
-* Name your site.
-* Choose your site type or choose a site distribution (this allows your site to connect to that upstream so you can later [apply upstream updates](/docs/upstream-updates/) from your Dashboard with one click).
-* Wait for the CMS deployment to be complete and **Visit your Site Dashboard**.
+1. Choose **Migrate Existing Site**.
+2. Enter your current website URL.
+3. Name your new Pantheon site.
+4. Select an organization for the site (optional).
+5. Select **Migrate Manually**.
+6. Import your [code](/docs/manual-import/#import-the-codebase), [database](/docs/manual-import/#add-your-database), and [files](/docs/manual-import/#upload-your-files).
+7. Once the site has been imported, click **I've Successfully Migrated Manually**.
+
+You will now be taken to your Pantheon Site Dashboard.
 
 ## Import the Codebase
 
@@ -93,7 +98,28 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
 
 10. Go to the Code tab of your Dev environment on the Site Dashboard. You will see your site's pre-existing code commit history and the most recent commit adding Pantheon's core files.
 
-## Files
+## Add Your Database  
+
+**Database** - a single .sql dump that contains the content and active state of the site's configurations.
+
+You'll need an .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your .sql file much smaller and your import that much quicker.
+
+
+1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
+
+ ```
+ mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
+ ```
+2. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
+`< database.sql`
+Your command will now look like:
+
+ ```
+ mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
+ ```
+3. After you run the command, the .sql file is imported into your Pantheon Dev database.
+
+## Upload Your Files
 
 **Files** - anything in `sites/default/files` for Drupal or `wp-content/uploads` for WordPress. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
 
@@ -124,26 +150,5 @@ done
 This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.  
 
 If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `/code/sites/default/files/`. You can now start your file upload.  
-
-## Database  
-
-**Database** - a single .sql dump that contains the content and active state of the site's configurations.
-
-You'll need an .sql file containing the data from the site you want to import. If you haven't done so already, make sure you remove any data from the cache tables. That will make your .sql file much smaller and your import that much quicker.
-
-
-1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
-
- ```
- mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
- ```
-2. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
-`< database.sql`
-Your command will now look like:
-
- ```
- mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
- ```
-3. After you run the command, the .sql file is imported into your Pantheon Dev database.  
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches via the Pantheon Dashboard, and you are good to go.
