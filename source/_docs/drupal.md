@@ -17,8 +17,8 @@ Pantheon runs an optimized version of Drupal, based on [Pressflow](https://githu
 ## Get Started
 [Migrate an existing Drupal site](/docs/migrate) or [launch a new one](/docs/getting-started/) using the Pantheon Dashboard.
 
-## Clone a Drupal Site From a Backup
-See [Cloning an Existing Site from a Dashboard Backup](/docs/clone-new-site-backups/).
+## Clone an Existing Drupal Site
+See [Migrate to Pantheon: Manual Site Import](/docs/manual-import).
 
 ## Major Version Upgrades
 The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
