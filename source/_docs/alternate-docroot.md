@@ -16,7 +16,7 @@ This is especially useful for third party dependencies, such as those installed 
 Any non-web scripts, such as [Pantheon Quicksilver scripts](https://github.com/pantheon-systems/quicksilver-examples), should be kept outside of the docroot as well.
 
 ## Define Alternate Docroot in pantheon.yml
-- Clone your website locally with Git. For details, see [Starting with Git article](https://pantheon.io/docs/git/).
+- Clone your website locally with Git. For details, see [Starting with Git](https://pantheon.io/docs/git/).
 - Create a `pantheon.yml file` if it doesn't already exist.
 - Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`.
 - Add, commit, and push the `pantheon.yml` file with Git.
@@ -69,6 +69,4 @@ The idea here is that `find . -type f -maxdepth` finds all files at the document
 ## Alternate Docroot and Quicksilver
 If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the docroot `web` and not the project root.
 
-For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file would need to be located at `web/private/scripts/my_quicksilver_script.php`.
-
-This is because `webphp` scripts are run with Nginx, which is serving from the alternate docroot.
+For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file needs to be located at `web/private/scripts/my_quicksilver_script.php`. This is because `webphp` scripts are run with Nginx, which is serving from the alternate docroot.
