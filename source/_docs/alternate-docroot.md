@@ -37,21 +37,34 @@ This can be done manually for each file/directory with the `git mv` command or a
 
 ### Examples
 The idea here is that `find . -type f -maxdepth` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files the user has added. Please verify file relocation after using one of these commands.
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
 
-#### Drupal 7:
-
-`mkdir -p web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ web
-`
-#### Drupal 8:
-
-`mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor web`
-
-#### WordPress:
-
-`mkdir web && git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin web`
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre><code class="bash hljs">
+  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor web
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre><code class="bash hljs">
+  mkdir -p web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ web
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <pre><code class="bash hljs">
+  mkdir web && git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin web
+  </code></pre>
+  </div>
+</div>
 
 ## Alternate Docroot and Quicksilver
-If you are using a Quicksilver platform hook with the type `webphp` make sure that the path to the script is relative to the doctroot `web`, and not the project root.
+If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the doctroot `web` and not the project root.
 
 For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file would need to be located at `web/private/scripts/my_quicksilver_script.php`.
 
