@@ -56,6 +56,3 @@ $ terminus upstreams list
 ## Importing an Existing Site
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/docs/migrate).
-
-
-\* Requires SFTP mode
