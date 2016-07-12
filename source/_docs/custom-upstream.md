@@ -130,7 +130,6 @@ After you have a distribution that works on Pantheon, open a ticket titled "Prod
 - Logo (70x80)
 - Default connection mode (SFTP or Git)
 - Product author name and URL
-- Author name and URL
 - Supporting information (< 200 characters, basic HTML allowed) i.e. drupal.org issue queue, support contacts, website
 - Links to evidence of testing on Pantheon. This should include the testing site, test files within the repository, and test reports.
 
