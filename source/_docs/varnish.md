@@ -29,6 +29,9 @@ If you have checked your HTTP headers and found that the cache is not working, m
 
 If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
 
+### Convert HEAD Requests to GET 
+To optimize performance, Varnish will convert HEAD requests to GET when serving cacheable requests.
+
 ### Theme Images Not Refreshing
 If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
