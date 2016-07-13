@@ -24,12 +24,15 @@ Manually migrate your site to Pantheon when any of the following apply:
 From your Pantheon Dashboard:
 
 1. Choose **Migrate Existing Site**.
-2. Enter your current website URL.
+2. Enter your current website URL 
+3. Select whether the site you are importing is based on Drupal, Drupal 8 or WordPress
+4. Click **Continue**
 3. Name your new Pantheon site.
 4. Select an organization for the site (optional).
-5. Select **Migrate Manually**.
-6. Import your [code](/docs/manual-import/#import-the-codebase), [database](/docs/manual-import/#add-your-database), and [files](/docs/manual-import/#upload-your-files).
-7. Once the site has been imported, click **I've Successfully Migrated Manually**.
+5. Click **Create Site** 
+6. Click **Migrate Manually** and click to confirm **Yes** within the dialog box that appears
+7. Import your [code](/docs/manual-import/#import-the-codebase), [database](/docs/manual-import/#add-your-database), and [files](/docs/manual-import/#upload-your-files).
+8. Once the site has been imported, click **I've Successfully Migrated Manually**.
 
 You will now be taken to your Pantheon Site Dashboard.
 
