@@ -1,8 +1,8 @@
 ---
 title: Using Drupal 8 and Composer
 description: Understand how to use Composer to manage modules and other dependencies for Drupal 8.
-categories: [Drupal 8]
-tags: [code, local]
+categories: [drupal]
+tags: [code, local, drupal-8]
 contributors:
   - stevector
 ---

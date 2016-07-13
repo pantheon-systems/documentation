@@ -10,6 +10,9 @@ generator: docs_tag_index
 {% elseif taxon == "drupal-8" %}
   <title>Drupal 8 | {{ site.title }}</title>
   <h1 class="pio-docs-title">Drupal 8</h1>
+{% elseif taxon == "wordpress-site-networks" %}
+  <title>WordPress Site Networks | {{ site.title }}</title>
+  <h1 class="pio-docs-title">WordPress Site Networks</h1>
 {% else %}
   <title>{{ taxon|capitalize }} | {{ site.title }}</title>
   <h1 class="pio-docs-title">{{ taxon|capitalize }}</h1>
