@@ -28,7 +28,8 @@ For detailed instructions on how to configure and optimize caching, see [Drupal'
 If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 
 If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
-### Transmutation of HEAD to GET Requests
+
+### Convert HEAD Requests to GET 
 To optimize performance, Varnish will convert HEAD requests to GET when serving cacheable requests.
 
 ### Theme Images Not Refreshing
