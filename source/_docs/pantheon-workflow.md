@@ -35,7 +35,11 @@ After running this operation, be sure that:
 * Your exported configuration is in place  
 * The site is functioning as expected
 
-It's also a good idea to review the Status tab and run [**Launch Check**](/docs/drupal-launch-check/), and make sure everything looks good.  If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
+It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
+- [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/)
+- [Launch Check - WordPress Performance and Configuration Analysis](/docs/wordpress-launch-check/)
+
+If there are additional manual "go live" instructions, now is a good time to review them and make sure they work and are properly documented.
 
 This may be a good time to run regression or smoke tests by stepping through your main workflows manually, or by running an automated test suite. Use Test to make sure that everything is working correctly before deploying to Live.
 
