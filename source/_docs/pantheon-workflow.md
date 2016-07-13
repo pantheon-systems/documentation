@@ -36,6 +36,7 @@ After running this operation, be sure that:
 * The site is functioning as expected
 
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
+
 - [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/)
 - [Launch Check - WordPress Performance and Configuration Analysis](/docs/wordpress-launch-check/)
 
