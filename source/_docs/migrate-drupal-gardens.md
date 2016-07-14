@@ -16,6 +16,9 @@ Drupal Gardens is ending support on August 1, 2016. This article walks you throu
 5. Click **Export**. This may take some time depending on the size of your site.
 6. Once it's finished exporting, save the file (.tar.gz archive) to your computer.
 
+## Import Your Site to Pantheon
+There are two ways to import your site: using our importer tool in the Dashboard or manually importing the site. 
+
 ### Use the Importer Tool
 Using our importer during the site creation process has the following effects on the codebase:
 
