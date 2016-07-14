@@ -11,7 +11,7 @@ Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cac
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.</div>
+Pantheon does not support manually editing and updating the Varnish Cache Language (VCL). We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.</div>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
@@ -21,7 +21,7 @@ For the purpose of optimizing cache hits for identical content, Varnish ignores 
 
 For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> are considered distinct pages.
 
-The query parameters are still passed to the application server, however the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+The query parameters are still passed to the application server; however, the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
 
 For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheon_stripped).
 
@@ -56,7 +56,7 @@ We do not recommend using cookies that are passed to the backend for mobile them
 
 #### Best Practice Recommendations
 
-We recommend handling mobile detection using Responsive Web Design (RWD) techniques with HTML5, CSS3, and JavaScript. This will avoid the need to compromise potential scalability in order to scale traffic. HTML5 and CSS3 is the high performance route, as you save on the backend load and browsers.
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques with HTML5, CSS3, and JavaScript. This will avoid the need to compromise potential scalability in order to scale traffic. HTML5 and CSS3 is the high performance route, as you save on the back-end load and browsers.
 
 **Issue**
 Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
