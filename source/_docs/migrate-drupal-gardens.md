@@ -23,7 +23,7 @@ There are two ways to import your site: using our importer tool in the Dashboard
 Using our importer during the site creation process has the following effects on the codebase:
 
  - New Git history
- - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), [Drops-6](https://github.com/pantheon-systems/drops-6), or [wordpress](https://github.com/pantheon-systems/wordpress) repository
+ - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), or [Drops-6](https://github.com/pantheon-systems/drops-6) repository
  - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
 
 <div class="alert alert-info" role="alert">
