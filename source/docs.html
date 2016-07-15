@@ -6,46 +6,72 @@ use:
 - docs_categories
 - docs_tags
 ---
-      <div class="col-md-9" style="text-align:center;width:100%;margin-bottom:50px;">
-
-      <div class="jumbotron" style="padding:0px;">
-      <h1 style="text-align:center;font-size:48px;">Pantheon Documentation</h1>
+<div class="container-fluid">
+  <div class="article">
+    <div class="jumbotron" style="padding:0px;">
+      <h1 style="margin-top:20px;margin-bottom:10px;text-align:center;font-size:48px;">Pantheon Documentation</h1>
     </div>
-    <div class="col-md-3" style="background-color:#dde5e7;margin:20px;border: 1px solid #fff;text-align:center;float:none;display:inline-block;">
-      <h2>Getting Started</h2>
-        <i class="fa fa-lightbulb-o " style="color:#44525e;margin-top:20px;font-size:8em" aria-hidden="true"></i>
-        <br>
-        <a href="/docs/tags/getting-started" class="btn btn-primary">Browse Docs</a>
-    </div>
-    <div class="col-md-3" style="background-color:#dde5e7;margin:20px;border: 1px solid #fff;text-align:center;float:none;display:inline-block;">
-      <h2>WordPress</h2>
-        <i class="fa fa-wordpress" style="color:#44525e;margin-top:20px;font-size:8em;" aria-hidden="true"></i>
-        <br>
-        <a href="/docs/tags/getting-started" class="btn btn-primary">Browse Docs</a>
-    </div>
-    <div class="col-md-3" style="background-color:#dde5e7;margin:20px;border: 1px solid #fff;text-align:center;float:none;display:inline-block;">
-      <h2>Drupal</h2>
-        <i class="fa fa-drupal " style="color:#44525e;margin-top:20px;font-size:8em" aria-hidden="true"></i>
-        <br>
-        <a href="/docs/tags/getting-started" class="btn btn-primary">Browse Docs</a>
-    </div>
-    </div>
-    <div class="col-md-12" style="text-align:center;width:100%;">
-      <div class="col-md-9" style="padding-bottom:15px;text-align:left;float:none;display:inline-block;margin-top:50px;margin-bottom:50px;">
-      <h2 style="margin:0;font-size:32px;padding-left:15px;">Top Articles</h2>
-        <div class="col-md-4" style="float: left;display:inline-block;text-align:left;width: auto;left: 0;">
-          <a href="/docs/migrate"><h4>Migrate Sites to Pantheon</h4></a>
-          <a href="/docs/domains"><h4>Domains and DNS</h4></a>
-          <a href="/docs/settings-php"><h4>Configuring Settings.php</h4></a>
-          <a href="/docs/git-faq"><h4>Git FAQs</h4></a>
-          <a href="/docs/redis"><h4>Redis as a Caching Backend</h4></a>
+      <div class="col-md-4 pio-category-container" style="text-align:center;margin-top:20px;">
+        <a href="/docs/tags/getting-started">
+        <div class="pio-category-container-inner">
+          <h2 style="margin:10px">Getting Started</h2>
+          <i class="fa fa-lightbulb-o " style="font-size:4em" aria-hidden="true"></i>
+          <p>Learn the Pantheon workflow</p>
         </div>
-        <div class="col-md-4" style="float: right;display:inline-block;text-align:left;width: auto;">
-          <a href="/docs/drush"><h4>Drupal Drush Command-Line Utility</h4></a>
-          <a href="/docs/redirects"><h4>Redirect Incoming Requests</h4></a>
-          <a href="/docs/terminus"><h4>Terminus, the Pantheon Command-Line Interface (CLI)</h4></a>
-          <a href="/docs/pantheon-workflow"><h4>Using the Pantheon Workflow</h4></a>
-          <a href="/docs/ssh-keys"><h4>Generating and Adding SSH Keys</h4></a>
+      </a>
+      </div>
+      <div class="col-md-4 pio-category-container">
+        <a href="/docs/categories/developing">
+        <div class="pio-category-container-inner">
+          <h2 style="margin:10px">Developing</h2>
+          <i class="fa fa-code-fork " style="font-size:4em" aria-hidden="true"></i>
+          <p>Build and launch sites</p>
         </div>
+      </a>
+      </div>
+      <div class="col-md-4 pio-category-container">
+        <a href="/docs/categories/managing">
+        <div class="pio-category-container-inner">
+          <h2 style="margin:10px">Managing</h2>
+          <i class="fa fa-cogs " style="font-size:4em" aria-hidden="true"></i>
+          <p>Administer sites and teams</p>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-6 pio-category-container">
+        <a href="/docs/categories/wordpress">
+        <div class="pio-category-container-inner">
+          <h2 style="margin:10px">WordPress</h2>
+          <i class="fa fa-wordpress" style="font-size:4em;margin-bottom:20px;" aria-hidden="true"></i>
+          <p>View all WordPress Docs</p>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-6 pio-category-container">
+        <a href="/docs/categories/drupal">
+        <div class="pio-category-container-inner">
+          <h2 style="margin:10px">Drupal</h2>
+          <i class="fa fa-drupal" style="font-size:4em;margin-bottom:20px;" aria-hidden="true"></i>
+          <p>View all Drupal Docs</p>
+        </div>
+      </a>
+      </div>
+  <div class="col-md-12" style="text-align:left;margin:0px;margin-bottom:20px;">
+    <h2 style="padding-left:15px;margin-top:20px;">Top Articles</h2>
+    <div class="col-md-6">
+      <a href="/docs/migrate">Migrate Sites to Pantheon</a><br>
+      <a href="/docs/domains">Domains and DNS</a><br>
+      <a href="/docs/settings-php">Configuring Settings.php</a><br>
+      <a href="/docs/git-faq">Git FAQs</a><br>
+      <a href="/docs/redis">Redis as a Caching Backend</a><br>
+    </div>
+    <div class="col-md-6">
+      <a href="/docs/drush">Drupal Drush Command-Line Utility</a><br>
+      <a href="/docs/redirects">Redirect Incoming Requests</a><br>
+      <a href="/docs/terminus">Terminus, the Pantheon Command-Line Interface (CLI)</a><br>
+      <a href="/docs/pantheon-workflow">Using the Pantheon Workflow</a><br>
+      <a href="/docs/ssh-keys">Generating and Adding SSH Keys</a><br>
     </div>
   </div>
+</div>
+</div>
