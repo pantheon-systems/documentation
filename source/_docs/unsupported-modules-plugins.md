@@ -135,7 +135,7 @@ You are welcome to modify this patch according to your needs, such as performing
 **Issue**: Conflicts with Varnish. See [https://www.drupal.org/node/1976162#comment-7411366](https://www.drupal.org/node/1976162#comment-7411366).
 <hr>
 ### Node Gallery
-**Issue**: Using Node Gallery with Plupload (common configuration) attaches cookies to image uploads for authentication purposes. This conflicts with our Varnish configuration as we strip all cookies for images, CSS, and JS files for improved performance.
+**Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our Varnish configuration as we strip all cookies for images, CSS, and JS files to improve performance.
 <hr>
 ### Pathologic  
  **Issue**: The path of the base URL is changed and cached by the module itself.  
