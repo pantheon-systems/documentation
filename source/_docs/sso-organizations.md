@@ -33,9 +33,9 @@ You will need to enter the following:
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append SSO. 
-
+<br>
 The connection name must start with an alphanumeric character, and can only contain alphanumeric characters and '-'. 
-
+<br>
 The max length for a connection name is 35 characters, including the appended 'SSO'.</div>
 
 3. **Add an Attribute Statement** to map `mail` to `email`.
