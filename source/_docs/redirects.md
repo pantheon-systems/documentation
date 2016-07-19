@@ -227,13 +227,3 @@ When transitioning from a system that used a tilde to indicate a home directory,
       // Your custom logic.
     }
 
-## Redirect to Force Lowercase Letters
-
-
-    if (preg_match('/[A-Z]+/', $_SERVER['REQUEST_URI'])) {
-      $request_uri = strtolower($_SERVER['REQUEST_URI']);
-      header('Location: http://www.yoursite.com' . $request_uri, TRUE, 301);
-      exit;
-    }
-
-Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
