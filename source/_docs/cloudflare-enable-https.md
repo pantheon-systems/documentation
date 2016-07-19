@@ -15,7 +15,7 @@ More and more, it's expected that websites run under HTTPS to appear professiona
 
 Historically, running HTTPS required additional cost and complexity due to the need to obtain a certificate. However, thanks to a concerted effort by many providers, these barriers are being eliminated, and it is now possible for anyone to offer secure encrypted transport as the default for their website.
 
-This guide will show you how to take advantage of CloudFlare's _free_ HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
+This guide will show you how to take advantage of CloudFlare's free HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
 
 ## Sign up for CloudFlare
 
