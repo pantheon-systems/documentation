@@ -15,12 +15,13 @@ Drupal Gardens is ending support on August 1, 2016. This article walks you throu
 4. Select "Want to host it on a 3rd party hosting company" as the reason for exporting, and enter an explanation.
 5. Click **Export**. This may take some time depending on the size of your site.
 6. Once it's finished exporting, save the file (.tar.gz archive) to your computer.
+7. Verify that all files are included in the site archive. If any files are missing, download them from Drupal Gardens as instructed in their [export documentation](https://www.drupalgardens.com/documentation/site-export).
 
 ## Import Your Site to Pantheon
-There are two ways to import your site: using our importer tool in the Dashboard or manually importing the site. 
+There are two ways to import your site: using our Importer tool in the Dashboard or manually importing the site. 
 
 ### Use the Importer Tool
-Using our importer during the site creation process has the following effects on the codebase:
+Using our Importer during the site creation process has the following effects on the codebase:
 
  - New Git history
  - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), or [Drops-6](https://github.com/pantheon-systems/drops-6) repository
