@@ -15,7 +15,7 @@ More and more, it's expected that websites run under HTTPS to appear professiona
 
 Historically, running HTTPS required additional cost and complexity due to the need to obtain a certificate. However, thanks to a concerted effort by many providers, these barriers are being eliminated, and it is now possible for anyone to offer secure encrypted transport as the default for their website.
 
-This guide will show you how to take advantage of CloudFlare's _free_ HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
+This guide will show you how to take advantage of CloudFlare's free HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
 
 ## Sign up for CloudFlare
 
@@ -37,19 +37,19 @@ As this example shows, you can set additional CNAME records for your Dev and Tes
 
 ## CloudFlare Security Settings
 
-The next step is to go to the "Crypto" page and enable the "SSL with SPDY" option and set it to **Full** protection mode:
+The next step is to go to the **Crypto** page and set the SSL option to **Full** protection mode:
 
 ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
 
 It takes a few minutes to go into effect as CloudFlare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
 
-It's important to use __Full__ protection mode. Because Pantheon provides HTTPS service out of the box you can encrypt end-to-end, but because the certificate provided by Pantheon is for the sandbox domain you cannot use the "strict" mode:
+It's important to use __Full__ protection mode.  Pantheon provides HTTPS service out of the box so you can encrypt end-to-end, but because the certificate provided by Pantheon is for the default domain (e.g. `live-yoursite.pantheonsite.io`) you cannot use the __Full (strict)__ mode:
 
 ![SSL Details](/source/docs/assets/images/cloudflare-ssl-types.png)
 
-While "full" mode is not the highest security setting, it is available for free, and provides much better security for your website compared to "flexible" as the traffic is fully encrypted end-to-end.
+While __Full__ mode is not the highest security setting, it is available for free, and provides much better security for your website compared to __Flexible__ as the traffic is fully encrypted end-to-end.
 
-Customers wanting to use CloudFlare in "strict" mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
+Customers wanting to use CloudFlare in __Full (strict)__ mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
 
 ## Testing Under HTTPS
 
@@ -66,6 +66,8 @@ Another common issue is to have the site load incorrectly due to the presence of
 ## CMS Settings
 
 There are a few CMS-specific settings and techniques you'll want to be aware of when transitioning a site to run securely under HTTPS. As a best-practice, we recommend that you standardize on your production domain in addition to HTTPS to prevent confusion.
+
+Pantheon's www-redirection service does not apply to sites using HTTPS. You'll need to add logic within the site's `settings.php` or `wp-config.php` file in order to standardize on a domain.
 
 ### Drupal
 
@@ -135,11 +137,11 @@ You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp
 
 The final step is to standardize all traffic under HTTPS. This is a much better option than running the site in a "mixed mode". It is less complex and more secure, and thanks to modern crypto technologies, there is no performance penalty.
 
-In order to go all-in, you will need to configure your site to redirect any requests that are unencrypted over to HTTPS. One way to do this is via CloudFlare's "Page Rules" feature:
+In order to go all-in, you will need to configure your site to redirect any requests that are unencrypted over to HTTPS. One way to do this is via CloudFlare's __Page Rules__ feature:
 
 ![CloudFlare Page Rules](/source/docs/assets/images/cloudflare-always-https.png)
 
-By setting up a blanket page rule to match all URLs and apply the "Always HTTPS" parameter, CloudFlare redirect browsers making HTTP requests to HTTPS.
+By setting up a blanket page rule to match all URLs and apply the __Always HTTPS__ parameter, CloudFlare redirect browsers making HTTP requests to HTTPS.
 
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
