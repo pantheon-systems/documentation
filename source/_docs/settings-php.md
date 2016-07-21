@@ -4,7 +4,7 @@ description: Detailed information about configuring your Drupal database setting
 categories: [drupal]
 tags: [code, drupal-8]
 keywords: drupal, settings.php, database configuration, configuration
-contributors: mmenavas
+contributors: [mmenavas, andrewmallis]
 ---
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
