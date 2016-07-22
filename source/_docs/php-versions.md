@@ -10,8 +10,6 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Verify Current PHP Versions
 Verify current PHP versions for site environments from the Site Dashboard by clicking **Settings** > **PHP version**. The site default PHP version is applied to every environment unless a PHP version for that environment is explicitly selected.
 
-The available PHP versions are 5.3, 5.5, 5.6, and 7.0.
-
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
@@ -24,7 +22,8 @@ You can configure the PHP version in the `pantheon.yml` file so that it's manage
 ```
 php_version: 5.6
 ```
-For more information on configuring the `pantheon.yml` file, see [this article](/docs/pantheon-yml/).
+
+The available PHP versions are 5.3, 5.5, 5.6, and 7.0. For more information on configuring the `pantheon.yml` file, see [this article](/docs/pantheon-yml/).
 
 ## Resolve PHP Version Compatibility Issues
 
