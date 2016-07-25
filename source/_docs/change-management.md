@@ -64,78 +64,118 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
 </style>
 <table class="tg">
-
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Manage settings<br>
-        &#8226; Remove members    <br>
-        &#8226; Change member roles <br>
-        &#8226; Create and delete sites  <br>
-        &#8226; Remove sites from the Organization</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
-         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets
-         <br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Unprivileged</td>
-        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge
-        <br> &#8226; Cannot access the Org Dashboard or any sites in the Org</td>
-    </tr>
+  <tr>
+    <th class="tg-9hbo">Permissions</th>
+    <th class="tg-9hbo">Administrator</th>
+    <th class="tg-9hbo">Team Member </th>
+    <th class="tg-9hbo">Developer </th>
+    <th class="tg-9hbo">Unprivileged</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Create sites within an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Access the org Dashboard</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Work in Dev/Multidev environments</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Deploy to Test and Live</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Manage site-level team</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Delete sites or remove users from an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
 </table>
 
 
 ###Partners: Organization-Level Roles/Permissions
 
-<style>
-    .data-table {
-        border-collapse: collapse;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #000;
-    }
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
 </style>
-
 <table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Remove members<br>
-        &#8226; Change member roles<br>
-        &#8226; Create and delete sites<br>
-        &#8226; Remove sites from the Organization<br>
-        &#8226; Manage settings</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
-         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets
-         <br> &#8226; Create sites<br> </td>
-    </tr>
+  <tr>
+    <th class="tg-9hbo">Permissions</th>
+    <th class="tg-9hbo">Administrator</th>
+    <th class="tg-9hbo">Team Member </th>
+    <th class="tg-9hbo">Developer </th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Create sites within an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Access the org Dashboard</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Work in Dev/Multidev environments</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Deploy to Test and Live</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Manage site-level team</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Delete sites or remove users from an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
 </table>
 
 ##Site-Level Roles/Permissions
@@ -156,35 +196,35 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <tr>
         <td>Administrator</td>
         <td>&#8226; Create and delete sites</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
+        <td><center>✓</center></td>
+        <td><center>✓</center></td>
     </tr>
     <tr>
         <td>Team Member</td>
         <td>&#8226; Deploy code to Test and Live<br/>&#8226; Access the Database / Files page<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
+        <td><center>✓</center></td>
+        <td><center>✓</center></td>
     </tr>
     <tr>
         <td>Developer</td>
         <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites.<br>
         <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
+        <td><center>✓</center></td>
+        <td><center>✓</center></td>
     </tr>
     <tr>
         <td>Owner</td>
         <td>&#8226; Functionally is the same as an Organization Administrator<br>
         &#8226; Only role that can delete a site after it is live</td>
         <td></td>
-        <td><center>X</center></td>
+        <td><center>✓</center></td>
     </tr>
 </table>
 
 ## Frequently Asked Questions (FAQs)
 
 #### Which role should I assign a user to give them the lowest level of access?
-The Developer role has the least amount of permissions and is only able to create a site, view the Organization Dashboard, and work in the Development and Multidev environments.
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the organization level, the Unprivileged role has the least amount of permissions and can only create sites.
 
 #### Which environments can a user with the Developer role deploy to?
 The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
