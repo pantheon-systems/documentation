@@ -23,7 +23,11 @@ You can configure the PHP version in the `pantheon.yml` file so that it's manage
 php_version: 5.6
 ```
 
-The available PHP versions are 5.3, 5.5, 5.6, and 7.0. For more information on configuring the `pantheon.yml` file, see [this article](/docs/pantheon-yml/).
+The available PHP versions are 5.3, 5.5, 5.6, and 7.0. **Note:** Drupal 6 sites are only compatible with PHP 5.4 and below.
+
+For more information on configuring the `pantheon.yml` file, see [this article](/docs/pantheon-yml/).
+
+
 
 ## Resolve PHP Version Compatibility Issues
 
