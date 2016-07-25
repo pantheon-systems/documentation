@@ -39,7 +39,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>256</td>
         <td>256</td>
         <td>512</td>
-        <td>1024</td>
+        <td>up to 1024</td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">MySQL Buffer Pool</th>
