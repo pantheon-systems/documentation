@@ -192,10 +192,10 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 <table class="tg">
   <tr>
     <th class="tg-9hbo">Permissions</th>
+    <th class="tg-amwm">Owner<br>Partner Org</th>
     <th class="tg-amwm">Administrator<br>Enterprise and Partner Orgs</th>
     <th class="tg-amwm">Team Member<br>Enterprise and Partner Orgs </th>
     <th class="tg-amwm">Developer <br>Enterprise and Partner Orgs</th>
-    <th class="tg-amwm">Owner<br>Partner Org</th>
   </tr>
   <tr>
     <td class="tg-yw4l">Create sites within an org</td>
@@ -222,22 +222,22 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <td class="tg-yw4l">Deploy to Test and Live</td>
     <td class="tg-baqh">✓</td>
     <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
     <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Manage site-level team</td>
     <td class="tg-baqh">✓</td>
     <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
     <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Delete sites or remove users from an org</td>
     <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
     <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
   </tr>
 </table>
 
