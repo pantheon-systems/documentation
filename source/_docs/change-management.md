@@ -161,13 +161,13 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </tr>
     <tr>
         <td>Team Member</td>
-        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Use the Workflow tool on Test and Live<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
+        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Access the Database / Files page<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
     </tr>
     <tr>
         <td>Developer</td>
-        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
+        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites.<br>
         <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
         <td><center>X</center></td>
         <td><center>X</center></td>
@@ -180,3 +180,11 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td><center>X</center></td>
     </tr>
 </table>
+
+## Frequently Asked Questions (FAQs)
+
+#### Which role should I assign a user to give them the lowest level of access?
+The Developer role has the least amount of permissions and is only able to create a site, view the Organization Dashboard, and work in the Development and Multidev environments.
+
+#### Which environments can a user with the Developer role deploy to?
+The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
