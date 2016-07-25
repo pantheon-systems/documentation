@@ -103,7 +103,7 @@ The amount of time between users clicking (i.e. how frequently they need a new p
 Example:  
 If you're running an interactive user forum on a Business plan, you've tuned your site and know that your average backend response time is around 1500ms. You also know that broadly speaking the average user clicks a new link once every 20 seconds. Using this formula tells you that your Business plan should max out at around 200 concurrent users:
 
-`20 / .75 * 2 * 8 = 213`
+`20 / 1.5 * 2 * 8 = 213`
 
 ## Frequently Asked Questions (FAQs)
 
