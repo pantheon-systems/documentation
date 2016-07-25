@@ -17,7 +17,7 @@ Drupal Gardens is ending support on August 1, 2016. This article walks you throu
 6. Once it's finished exporting, save the file (.tar.gz archive) to your computer.
 7. Verify that all files are included in the site archive. If any files are missing, download them from Drupal Gardens as instructed in their [export documentation](https://www.drupalgardens.com/documentation/site-export).
 
-Drupal Gardens may include one or more copies of the file `settings.php` in the archive. Pantheon does not need the `settings.php` file to import the site; to prevent import problems, it is best to simply remove `settings.php` using the following steps:
+Drupal Gardens may include one or more copies of the `settings.php` file in the archive. Pantheon does not need the `settings.php` file to import the site, but to prevent import problems, it's best to simply remove `settings.php` by running the following commands:
 
 ```bash
 tar xzvf gardenssite.tar.gz 
