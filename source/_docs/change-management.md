@@ -182,43 +182,63 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
 </style>
 <table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-        <th><strong>Enterprise Organization</strong></th>
-        <th><strong>Partner Organization</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Create and delete sites</td>
-        <td><center>✓</center></td>
-        <td><center>✓</center></td>
-    </tr>
-    <tr>
-        <td>Team Member</td>
-        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Access the Database / Files page<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
-        <td><center>✓</center></td>
-        <td><center>✓</center></td>
-    </tr>
-    <tr>
-        <td>Developer</td>
-        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites.<br>
-        <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
-        <td><center>✓</center></td>
-        <td><center>✓</center></td>
-    </tr>
-    <tr>
-        <td>Owner</td>
-        <td>&#8226; Functionally is the same as an Organization Administrator<br>
-        &#8226; Only role that can delete a site after it is live</td>
-        <td></td>
-        <td><center>✓</center></td>
-    </tr>
+  <tr>
+    <th class="tg-9hbo">Permissions</th>
+    <th class="tg-amwm">Administrator<br>Enterprise and Partner Orgs</th>
+    <th class="tg-amwm">Team Member<br>Enterprise and Partner Orgs </th>
+    <th class="tg-amwm">Developer <br>Enterprise and Partner Orgs</th>
+    <th class="tg-amwm">Owner<br>Partner Org</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Create sites within an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Access the org Dashboard</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Work in Dev/Multidev environments</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Deploy to Test and Live</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Manage site-level team</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh">✓</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Delete sites or remove users from an org</td>
+    <td class="tg-baqh">✓</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh">✓</td>
+  </tr>
 </table>
 
 ## Frequently Asked Questions (FAQs)
