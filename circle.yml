@@ -13,6 +13,7 @@ dependencies:
     - grunt
     # Build the static site.
     - bin/sculpin generate
+    - for file in output_dev/docs/changelog/page/*html; do name="$(basename "$file" .html)"; mkdir -p output_dev/docs/changelog/page/"$name"; mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"; done
     - cd output_dev && ln -s ./ source
     # Deploy Multidev environment
     - bash scripts/deploy-multidev.sh
