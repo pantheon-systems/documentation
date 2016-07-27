@@ -461,6 +461,15 @@ span#drop-rsaquo {
   transform:rotate(90deg);
   color: #efd01b;
 }
+span#changelog-rsaquo {
+  font-weight:bold;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+
 .dropdown:hover span#drop-rsaquo {
   margin-top: 5px !important;
   transition: 500ms all;
@@ -542,9 +551,6 @@ span#drop-rsaquo {
   margin-top: 7px;
 }
 
-.changelog-resp {
-  margin-top: 50px;
-}
 
 @media (max-width: 767px){
     .pio-docs-nav .navbar-nav > li > a {

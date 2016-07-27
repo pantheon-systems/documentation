@@ -22,6 +22,13 @@ else
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
 
   bin/sculpin generate --env=prod
+  # Migrate paginated files to avoid .html within the URLs
+  for file in output_prod/docs/changelog/page/*html
+  do
+    name="$(basename "$file" .html)"
+    mkdir -p output_prod/docs/changelog/page/"$name"
+    mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
+  done
 
   #rsync docs to target env and site
   mkdir docs-rsync-logs
