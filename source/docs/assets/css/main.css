@@ -553,6 +553,14 @@ span#changelog-rsaquo {
 
 
 @media (max-width: 767px){
+  .float-foot {
+    height:110px !important;
+  }
+  .pio-category-container#powerusers {
+    border-right: none !important;
+    border-bottom: solid 1px #bdbdbd !important;
+  }
+
     .pio-docs-nav .navbar-nav > li > a {
         font-size: 12px !important;
     }
