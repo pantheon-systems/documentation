@@ -58,6 +58,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
 
   # Update CTA edit link so that the current branch is used
   sed -i '14s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html

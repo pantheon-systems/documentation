@@ -20,6 +20,7 @@ else
   export avoid_redirect="window.location.hostname == '$ENV-$SITE_NAME.pantheonsite.io' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
 
   bin/sculpin generate --env=prod
   # Migrate paginated files to avoid .html within the URLs
