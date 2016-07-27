@@ -117,7 +117,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
         then
           grep -- '\<'guides/"$guide"'\>' comment.txt || echo -n "-\u0020[docs/guides/"$guide"]("$url"/docs/guides/"$guide")\n" >> comment.txt
         else
-          grep -- '\<'docs/"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+          grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
         fi
       elif [[ $doc =~ $changelog_path ]]
       then
