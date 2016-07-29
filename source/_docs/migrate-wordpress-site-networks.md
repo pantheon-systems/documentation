@@ -17,7 +17,7 @@ tags: [migrate, wordpress-site-networks]
 
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.
 
-Move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replaced the original directories with symlinks to their new homes. In more recent versions of WordPress multisite, blog-specific uploads are stored in `wp-content/uploads/sites/<id>`.
+Move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replace the original directories with symlinks to their new homes. In more recent versions of WordPress multisite, blog-specific uploads are stored in `wp-content/uploads/sites/<id>`.
 
 Import your existing code and commit history via Git. If you don’t have a Git version controlled codebase, the following will walk you through the initialization process.
 

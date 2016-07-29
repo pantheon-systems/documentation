@@ -12,6 +12,8 @@ The following scenarios are exceptions to the recommended process and require [m
 - Your site requires a custom upstream.
 - You would like to preserve the site's existing Git history.
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
+- You can't install a plugin on your existing site (e.g. WordPress.com).
+
 
 ## Migrate Your Site to Pantheon
 

@@ -6,12 +6,6 @@ tags: [migrate, getting-started]
 keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
 ---
 
-Your site migration has four phases. You’ll package your site, import it, test it out, and then [go live](/docs/going-live) by adding your domain and changing DNS.
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
-</div>
 ## Migrating WordPress Sites
 Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
 
@@ -20,6 +14,7 @@ The following scenarios are exceptions to the recommended process and require [m
 - Your site requires a custom upstream.
 - You would like to preserve the site's existing Git history.
 - [WordPress Site Networks](/docs/wordpress-site-networks)
+- You can't install a plugin on your existing site (e.g. WordPress.com).
 
 ## Migrating Drupal Sites
 ### Prepare Your Site For Export
@@ -63,8 +58,6 @@ The following scenarios are exceptions to this process and require [manually mig
 - Your site requires an upstream to an organizational or public distribution.
 - You would like to preserve the site's existing Git history.
 
-
-
 ## Test Your Site
 When the site's code, database, and files are all in place, verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for initial verification.
 
@@ -76,6 +69,9 @@ We recommend:
  - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
  - Manual [user acceptance testing](https://en.wikipedia.org/wiki/Acceptance_testing#User_acceptance_testing)
 
-
 ## Go Live
 Follow the [Going Live](/docs/going-live) checklist for a successful launch.
+
+## Troubleshooting
+### One Application per Site
+Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
