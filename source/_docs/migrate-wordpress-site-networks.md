@@ -12,13 +12,12 @@ tags: [migrate, wordpress-site-networks]
 * [Rsync or SFTP Client](/docs/rsync-and-sftp/)
 * [MySQL Client](/docs/mysql-access/)
 * A Pantheon employee must create a [WordPress Site Network](/docs/wordpress-site-networks/) for you.
-* You have [created a compatible site archive](/docs/wordpress-export#manually-create-separate-site-archives)
 
 ## Import the Codebase
 
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.
 
-When you [created a compatible site archive](/docs/wordpress-export#manually-create-separate-site-archives), you may have needed to move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replaced the original directories with symlinks to their new homes. If you haven't, please do so now. In more recent versions of WordPress multisite, blog-specific uploads are stored in `wp-content/uploads/sites/<id>`.
+Move blog-specific uploads directories located outside of `wp-content/uploads` into `wp-content/uploads`, and replace the original directories with symlinks to their new homes. In more recent versions of WordPress multisite, blog-specific uploads are stored in `wp-content/uploads/sites/<id>`.
 
 Import your existing code and commit history via Git. If you don’t have a Git version controlled codebase, the following will walk you through the initialization process.
 

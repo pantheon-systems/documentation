@@ -39,7 +39,7 @@ This method requires one of the following organization service levels with custo
 
 1. Create a [custom upstream](/docs/custom-upstream) based on the multisite configuration.
 
-2. [Archive](/docs/migrate#create-archives) each of your sites.
+2. [Archive](/docs/migrate#create-archive) each of your sites.
 
 3. [Create a new site](https://dashboard.pantheon.io/sites/create) based on the upstream.
 
