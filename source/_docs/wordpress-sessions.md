@@ -42,7 +42,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 4. Execute the installation script on your site:
 
  ```
- add-php-sessions-plugin.php <site>
+ php add-php-sessions-plugin.php <site>
  ```
 
 <div class="alert alert-info" role="alert">
