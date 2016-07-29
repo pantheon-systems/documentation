@@ -9,10 +9,10 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/manual-import) the site:
 
-- Your site requires a custom upstream.
-- You would like to preserve the site's existing Git history.
+- Your site requires a custom upstream
+- You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com).
+- You can't install a plugin on your existing site (e.g. WordPress.com)
 
 
 ## Migrate Your Site to Pantheon
@@ -40,7 +40,7 @@ From your Pantheon Dashboard:
 
 10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
 
-11. Click **Migrate**. You will receive an email when the migration completes. Once the migration is complete select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete select, **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
  ![Successful Migration BlogVault](/source/docs/assets/images/successful-site-migration-complete-blogvault.png)
 

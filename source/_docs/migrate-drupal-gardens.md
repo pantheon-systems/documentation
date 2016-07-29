@@ -20,13 +20,13 @@ Drupal Gardens is ending support on August 1, 2016. This article walks you throu
 Drupal Gardens may include one or more copies of the `settings.php` file in the archive. Pantheon does not need the `settings.php` file to import the site, but to prevent import problems, it's best to simply remove `settings.php` by running the following commands:
 
 ```bash
-tar xzvf gardenssite.tar.gz 
-rm docroot/sites/default/settings.php 
+tar xzvf gardenssite.tar.gz
+rm docroot/sites/default/settings.php
 tar cvzf gardenssite-for-pantheon.tar.gz docroot/
 ```
 
 ## Import Your Site to Pantheon
-There are two ways to import your site: using our Importer tool in the Dashboard or manually importing the site. 
+There are two ways to import your site: using our Importer tool in the Dashboard or manually importing the site.
 
 ### Use the Importer Tool
 Using our Importer during the site creation process has the following effects on the codebase:
@@ -46,8 +46,8 @@ See [Migrate to Pantheon](/docs/migrate/) for detailed instructions.
 
 Manually import the site outside of our importer tool if any of the following apply:
 
-- Your site exceeds file size limit for uploads.
-- Your site requires an upstream to an organizational or public distribution.
-- You would like to preserve the site's existing Git history.
+- Your site exceeds file size limit for uploads
+- Your site requires an upstream to an organizational or public distribution
+- You want to preserve the site's existing Git history
 
 Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for detailed instructions.

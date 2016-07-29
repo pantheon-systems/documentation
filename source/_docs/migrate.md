@@ -11,10 +11,10 @@ Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/mig
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
 
-- Your site requires a custom upstream.
-- You would like to preserve the site's existing Git history.
+- Your site requires a custom upstream
+- You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com).
+- You can't install a plugin on your existing site (e.g. WordPress.com)
 
 ## Migrating Drupal Sites
 ### Prepare Your Site For Export
@@ -54,9 +54,9 @@ Modify Dropbox URLs so they end in <code>dl=1</code> instead of the default <cod
 
 The following scenarios are exceptions to this process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
 
-- Your site exceeds file size limit for uploads.
-- Your site requires an upstream to an organizational or public distribution.
-- You would like to preserve the site's existing Git history.
+- Your site exceeds file size limit for uploads
+- Your site requires an upstream to an organizational or public distribution
+- You want to preserve the site's existing Git history
 
 ## Test Your Site
 When the site's code, database, and files are all in place, verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for initial verification.
