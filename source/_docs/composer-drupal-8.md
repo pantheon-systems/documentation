@@ -53,7 +53,7 @@ Both of the commands mentioned above, `composer install` and `composer update`, 
 
 Composer assumes that packages use semantic versioning where releases have three numbers signifying `MAJOR.MINOR.PATCH` releases. Drupal modules however have release numbers like `8.x-1.2`. This pattern indicates that the release is the third official release (`8.x-1.0` and `8.x-1.1` being the first two) made from the `8.x-1.x` branch. The `8.x` indicates that the release is compatible with Drupal 8. Drupal needs an alternative to packagist.org in order to map Drupal release numbers to Composer-compatible semantic versions.
 
-The first step to installing Drupal modules with Composer is to ensure that the `composer.json` in your Drupal site knows about an alternative to packagist.org where Drupal modules can be found. Around the time of Drupal 8's release, primary Drupal Packagist site was packagist.drupal-composer.org. [You can now use Drupal.org itself.](https://www.drupal.org/node/2718229).
+The first step to installing Drupal modules with Composer is to ensure that the `composer.json` in your Drupal site knows about an alternative to packagist.org where Drupal modules can be found. Around the time Drupal 8 was released, the primary Drupal Packagist site was packagist.drupal-composer.org. You can now use [Drupal.org](https://www.drupal.org/node/2718229).
 
 ```
 composer config repositories.drupal composer https://packages.drupal.org/8
