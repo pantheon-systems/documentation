@@ -88,6 +88,5 @@ You can clear the caches from your site's Pantheon Dashboard. This will take car
 
 ## Further Reading
 
-- [Export an Existing WordPress Site](/docs/wordpress-export)
 - [Migrate Sites to Pantheon](/docs/migrate)
 - [Launching a WordPress Site](/docs/launch-wordpress/)

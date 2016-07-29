@@ -6,7 +6,13 @@ tags: [code, migrate]
 keywords: import, importing site, new site, WordPress, export, export wordpress, wordpress archive, archive
 ---
 
-We highly recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/). For details, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress). However, you can migrate using alternative methods described here if needed.
+Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
+
+The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
+
+- Your site requires a custom upstream.
+- You would like to preserve the site's existing Git history.
+- [WordPress Site Networks](/docs/wordpress-site-networks)
 
 There are three major components of a WordPress site:
 
@@ -16,23 +22,13 @@ There are three major components of a WordPress site:
 
 3. **Files** - anything under `wp-content/uploads`. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
 
-In order to successfully migrate your WordPress site to Pantheon, you must provide all major components in an archive. You can create a site archive via [plugins](#export-wordpress-via-plugins) or [manually](#manually-create-separate-site-archives) by following the instructions below.
+In order to successfully migrate your WordPress site to Pantheon outside of the recommended migration process, you must provide all major components.
 
+## Codebase
 
-## Export WordPress via Plugins
+Your codebase is required to import your site into Pantheon, as it is used to create the initial code repository. This includes your entire WordPress codebase, including plugins, themes, configuration files, etc.
 
-Popular plugins like [Duplicator](/docs/migrate-wordpress-duplicator/) and [BackupBuddy](http://ithemes.com/codex/page/BackupBuddy) allow you to create single file archives quickly. For larger imports, pasting in a web-readable URL (e.g. Dropbox secret link) is much faster than manually uploading. Make sure a link goes directly to the file and not a landing page.
-
-You can simply upload the archive file produced and Pantheon will do the rest.  If you cannot package your site as a single archive less than 500MB, create the archives [manually](#manually-create-separate-site-archives) and import the files separately.
-<div class="alert alert-danger" role="alert">
-<strong>Warning</strong>:  Archives cannot contain multiple <code>.sql</code> files, otherwise the import will fail.</div>
-For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/migrate#import-your-site).
-
-## Manually Create Separate Site Archives
-
-Your codebase is required to import your site into Pantheon, as it is used to create the initial code repository. This archive should include your entire WordPress codebase, including plugins, themes, configuration files, etc.
-
-The code archive must include the following files and directories:
+The codebase is comprised of the following files and directories:
 ```nohighlight
 ├── index.php
 ├── wp-activate.php
@@ -100,6 +96,6 @@ You can upload each of your archive files separately, or package the archives wi
 Only provide one `.sql` file; if multiple are present the import will fail.
 
 ## Next Steps
-- [Migrate Sites to Pantheon](/docs/migrate#import-your-site)
+- [Migrate Sites to Pantheon](/docs/migrate)
 - [Migrate to Pantheon: Manual Site Import Outside of the Pantheon Dashboard](/docs/manual-import/)
 - [Migrate to Pantheon: WordPress Site Networks](/docs/wordpress-site-networks/)

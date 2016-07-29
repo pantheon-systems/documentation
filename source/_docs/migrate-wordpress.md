@@ -26,7 +26,7 @@ From your Pantheon Dashboard:
 5. Name your new Pantheon site.
 6. Select an organization for the site (optional).
 7. Click **Create Site**.
-8. Select **Generate Machine Token** and login when prompted:
+8. Select **Generate Machine Token** and re-authenticate if prompted:
 
  ![Authentication BlogVault migration](/source/docs/assets/images/migration-authentication-prompt.png)
 
@@ -34,13 +34,13 @@ From your Pantheon Dashboard:
 
  ![Migration Authentication Error](/source/docs/assets/images/migration-authentication-error.png)
 
- For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/#troubleshootin).
+ For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/#troubleshooting).
 
 9. Select **Install on /wp-admin** to install and activate the plugin on your existing site. Keep the Pantheon Dashboard tab open in your browser.
 
 10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
 
-11. Click **Migrate**. You will receive an email to the email address associated with your Pantheon account when the migration completes. Once the migration is complete select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+11. Click **Migrate**. You will receive an email when the migration completes. Once the migration is complete select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
  ![Successful Migration BlogVault](/source/docs/assets/images/successful-site-migration-complete-blogvault.png)
 
