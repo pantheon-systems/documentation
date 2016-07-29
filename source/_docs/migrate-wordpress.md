@@ -11,10 +11,10 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/manual-import) the site:
 
-- Your site requires a custom upstream.
-- You would like to preserve the site's existing Git history.
+- Your site requires a custom upstream
+- You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com).
+- You can't install a plugin on your existing site (e.g. WordPress.com)
 
 ## Migrate Your Site to Pantheon
 
@@ -35,7 +35,7 @@ From your Pantheon Dashboard:
 
 10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
 
-11. Click **Migrate**. You will receive an email when the migration completes. Once the migration is complete select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
  ![Successful Migration BlogVault](/source/docs/assets/images/successful-site-migration-complete-blogvault.png)
 
@@ -52,14 +52,14 @@ Attempts to login with Google will fail if your organization uses Single Sign-On
 
 ![Migration Authentication Error](/source/docs/assets/images/migration-authentication-error.png)
 
-Simply press your browser's back button to re-authenticate by entering your email address and complete sign-on with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
+Click your browser's back button to re-authenticate by entering your email address and sign in with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
 
 ### Destination Site Not Found Error
-If you are logged in with one identity and re-authenticate a different account then the site created will be associated with one account and the machine token with another, resulting in the following error:
+If you are logged in with one identity and re-authenticate a different account, the site created will be associated with one account and the machine token with another, resulting in the following error:
 
 ![Destination site not found](/source/docs/assets/images/bv-destination-not-found-error.png)
 
-Press your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
+Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
 ## See Also
 
