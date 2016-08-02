@@ -31,6 +31,10 @@ This is where you can update and manage your personal account details. Use the o
 - Add [machine tokens](/docs/machine-tokens/)  
 - [Delete your account](/docs/delete-account/)
 
+### Gravatar
+To associate an image with your Pantheon account, you'll need to [create a Gravatar](http://en.gravatar.com/) for the email address you use with your Pantheon account. If you already have a Gravatar set up for another email address, update your Gravatar profile to add the email address you use on Pantheon. For help, visit the [Gravatar Support](https://en.gravatar.com/support/) page.
+
+
 ## See Also
 - [Role-Based Permissions & Change Management](/docs/change-management/)
 - [New Site Owner FAQs](/docs/site-owner-faq/)
