@@ -34,7 +34,7 @@ If you cannot sign in to your Pantheon Dashboard:
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
 
 ###Paid and Free Sites
-**Standard support ticket**: 2 hours.
+**Standard support ticket**: 2 hours during normal support hours.  Please note that while the platform is monitored 24/7/365, Customer Success support hours are 9-5 PST, Monday through Friday.
 
 ## Phone Support
 
