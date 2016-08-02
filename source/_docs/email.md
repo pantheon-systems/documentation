@@ -24,6 +24,11 @@ Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail,
 
 Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](http://drupal.org/project/smtp) module.
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.
+</div>
+
 ## Troubleshooting
 
 #### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
