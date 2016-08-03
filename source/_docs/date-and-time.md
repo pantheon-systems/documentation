@@ -1,6 +1,6 @@
 ---
 title: Date and Time
-description: Confirgure your Pantheon Drupal or WordPress site with UTC time zone information.
+description: Configure your Pantheon Drupal or WordPress site with UTC time zone information.
 categories: [developing]
 tags: [code]
 keywords: date, time, wordpress, drupal, coordinated universal time, UTC

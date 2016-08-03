@@ -1,6 +1,6 @@
 ---
 title: Major Version Drupal Upgrades
-description: Detailed instructions on how to upgrade your site to the next major version of Drupal.
+description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
 categories: [drupal]
 tags: [code]
 keywords: drupal, upgrade, upgrading, revision upgrade, update, updating

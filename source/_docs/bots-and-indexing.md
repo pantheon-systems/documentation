@@ -1,6 +1,6 @@
 ---
 title: Bots and Indexing on Pantheon
-description: Detailed information on how to manage bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
+description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
 categories: [developing]
 tags: [code, platform]
 keywords: bot, bots, index, indexing, indexes, bots and indexing, bots and indexes, duplicate request, rapid fire, rapid fire requests, bot error, bots converging on error pages, bots on erroring pages

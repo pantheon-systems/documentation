@@ -1,6 +1,6 @@
 ---
 title: Replace Links Referencing IP:PORT in Drupal
-description: Learn how to update links so the URL references the correct file path and domain name.
+description: Learn how to update Drupal site links so the URL references the correct file path and domain name.
 categories: [drupal]
 tags: [code]
 keywords: drupal, IP, settings.php, IP:PORT, fixing links

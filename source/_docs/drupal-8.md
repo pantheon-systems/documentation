@@ -1,5 +1,6 @@
 ---
 title: Drupal 8 on Pantheon
+description: Information about running Drupal 8 sites on Pantheon.
 categories: [drupal]
 tags: [drupal-8, code]
 ---
@@ -23,6 +24,7 @@ The following platform features are not yet available on Pantheon for sites runn
  - [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
 For more details on Pantheon's platform support for Drupal 8, follow the [Pantheon D8 issue on GitHub](https://github.com/pantheon-systems/drops-8/issues?q=is%3Aopen).
+
 ### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/docs/settings-php/#trusted-host-setting).
 ## Additional Resources

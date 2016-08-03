@@ -1,6 +1,6 @@
 ---
 title: Using Drupal 8 and Composer
-description: Understand how to use Composer to manage modules and other dependencies for Drupal 8.
+description: Use Composer to manage modules and other dependencies for Drupal 8 sites on Pantheon.
 categories: [drupal]
 tags: [code, local, drupal-8]
 contributors:

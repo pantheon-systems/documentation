@@ -1,6 +1,6 @@
 ---
 title: Access Management for Site Owners and Administrators
-description: Learn how to remove a team member or outside resource from a site.
+description: Learn how to remove a team member or outside resource from a Pantheon site.
 keywords: remove team member, delete team member, delete user
 categories: [managing]
 tags: [platform]

@@ -1,6 +1,6 @@
 ---
 title: Configuration Workflow for Drupal 8 Sites
-description: Configure Drupal's performance and caching settings to make significant improvements.
+description: Configure your Drupal site's performance and caching settings to make significant improvements.
 categories: [drupal]
 tags: [drupal-8, code]
 keywords: drupal, configuration, drupal 8
