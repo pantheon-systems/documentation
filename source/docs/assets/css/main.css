@@ -130,6 +130,7 @@ body.row.main {
 }
 .pio-action-container-inner {
   width:100%;
+  padding: 20px;
   display: inline-block;
   float: none;
   color: #0093c9;
@@ -146,6 +147,7 @@ body.row.main {
 }
 .pio-cat-container-inner {
   width:100%;
+  padding: 20px;
   display: inline-block;
   float: none;
   border: #0093c9 solid 2px;
@@ -560,6 +562,9 @@ span#changelog-rsaquo {
     border-right: none !important;
     border-bottom: solid 1px #bdbdbd !important;
   }
+  #cta-changelog-powerusers {
+margin-bottom: 40px !important;  }
+
 
     .pio-docs-nav .navbar-nav > li > a {
         font-size: 12px !important;
