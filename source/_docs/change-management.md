@@ -17,130 +17,120 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 ###Enterprise and Partner Organizations: Roles and Permissions
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-9hbo{font-weight:bold;vertical-align:top}
-.tg .tg-yw4l{vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-9hbo">Permissions</th>
-    <th class="tg-9hbo">Administrator</th>
-    <th class="tg-9hbo">Team Member </th>
-    <th class="tg-9hbo">Developer </th>
-    <th class="tg-9hbo">Unprivileged
-    <br> (Enterprise org only)</th>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Create sites within an org</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Access the org Dashboard</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Work in Dev/Multidev environments</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Deploy to Test and Live</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Manage site-level team</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Delete sites or remove users from an org</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
-  </tr>
-</table>
-
-
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Administrator</th>
+        <th>Team Member</th>
+        <th>Developer</th>
+        <th>Unprivileged (Enterprise org only)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Create sites within an org</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <th>Access the org Dashboard</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Work in Dev/Multidev environments</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Deploy to Test and Live</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Manage site-level team</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Delete sites or remove users from an org</th>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 ###Site-Level: Roles and Permissions
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-9hbo{font-weight:bold;vertical-align:top}
-.tg .tg-yw4l{vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-9hbo">Permissions</th>
-    <th class="tg-9hbo">Owner<br>Partner orgs only</th>
-    <th class="tg-9hbo">Administrator</th>
-    <th class="tg-9hbo">Team Member</th>
-    <th class="tg-9hbo">Developer</th>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Create sites within an org</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Access the org Dashboard</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Work in Dev/Multidev environments</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Deploy to Test and Live</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Manage site-level team</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Delete sites or remove users from an org</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh">✓</td>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
-  </tr>
-</table>
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Owner<br>Partner orgs only </th>
+        <th>Administrator </th>
+        <th>Team Member </th>
+        <th>Developer </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Create sites within an org</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <th>Access the org Dashboard</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <th>Work in Dev/Multidev environments</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <th>Deploy to Test and Live</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Manage site-level team</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Delete sites or remove users from an org</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
 
 ## Manage People in an Organization
 
