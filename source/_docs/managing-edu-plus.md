@@ -1,6 +1,6 @@
 ---
 title: Managing Site Plan Changes and Chargeback for EDU+ Sites
-description: Learn how to manage site plan changes and chargebacks for EDU+ sites.
+description: Learn how to manage site plan changes and chargebacks for Pantheon EDU+ sites.
 categories: [managing]
 tags: [platform, organizations]
 keywords: pantheon, pantheon for agencies, org, organization, edu, edu+

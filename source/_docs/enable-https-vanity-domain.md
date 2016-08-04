@@ -1,6 +1,6 @@
 ---
 title: Enable HTTPS for Sites Using a Custom Vanity Domain
-description: Learn how to enable HTTPS for all sites using your Organization's custom Vanity domain.
+description: Enable HTTPS for all Drupal and WordPress sites using your organization's custom vanity domain.
 keywords: https development domain, vanity domain, change dev url, change development domain, change vanity domain, dev url, wildcard, cname, edge, dns, https
 categories: [developing]
 tags: [domains, organizations]

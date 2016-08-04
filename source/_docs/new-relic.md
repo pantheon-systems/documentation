@@ -1,6 +1,6 @@
 ---
 title: New Relic Pro
-description: Learn how to enable and use New Relic performance metrics and reports for your Pantheon site.
+description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site.
 categories: [developing]
 tags: [debug]
 keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance

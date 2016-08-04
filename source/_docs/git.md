@@ -1,6 +1,6 @@
 ---
 title: Starting With Git
-description: Use Git version control to deploy code into your Pantheon development environment.
+description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
 categories: [developing]
 tags: [code, local, getting-started]
 keywords: git, git commands, clone, commit, push

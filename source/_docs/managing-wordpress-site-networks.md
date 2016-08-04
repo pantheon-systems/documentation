@@ -1,6 +1,6 @@
 ---
 title: Managing WordPress Site Networks
-description: Learn how to use the Pantheon Workflow on Site Networks.
+description: Learn how to use the Pantheon Workflow on WordPress Site Networks.
 categories: [wordpress]
 tags: [code, wordpress-site-networks]
 ---

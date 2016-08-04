@@ -1,6 +1,6 @@
 ---
 title: Securely Working with phpinfo
-description: Important security considerations when working with phpinfo on your Pantheon site.
+description: Important security considerations when working with phpinfo on your Pantheon Drupal site.
 categories: [developing]
 tags: [code, debug]
 keywords: security, phpinfo, php.ini, can i configure php.ini, php,

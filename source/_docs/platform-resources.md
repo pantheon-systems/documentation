@@ -1,6 +1,6 @@
 ---
 title: Platform Resources by Plan
-description: Get detailed information about platform resources by plan level.
+description: Get detailed information about platform resources for your Drupal or WordPress site.
 keywords: site, RAM, pantheon, backup, plane
 categories: [developing]
 tags: [code, debug, platform]
