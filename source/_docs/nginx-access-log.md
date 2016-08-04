@@ -29,9 +29,9 @@ To parse the Pantheon `nginx-access.log` file with GoAccess, you'll need to spec
 Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method:
 
 ```
-time_format %H:%M:%S %z
-date_format %d/%b/%Y
-log_format %^ %^ %^ [%d:%t]  "%r" %s %b "%R" "%u" %T "%h"
+log-format %h %^[%d:%t %^]%^"%r"  %s   %b %^"%R" %^"%u"
+date-format %d/%b/%Y
+time-format %H:%M:%S
 ```
 ## Generate Report
 Run the following command, which will parse the log file and open a dashboard in your terminal so you can view the results:
