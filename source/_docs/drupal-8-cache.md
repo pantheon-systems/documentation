@@ -1,6 +1,6 @@
 ---
 title: Drupal 8 Performance and Varnish Caching Settings
-description: Optimize Drupal 8 and Varnish caching to maximize your site's performance.  
+description: Optimize Drupal 8 and Varnish caching to maximize your Pantheon site's performance.  
 categories: [drupal]
 tags: [drupal-8, code]
 keywords: drupal, drupal 8, performance, cache, caching, varnish, varnish caching

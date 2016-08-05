@@ -1,6 +1,6 @@
 ---
 title: Drupal Drush Command-Line Utility
-description: Administer and maintain your site from your local Drupal Drush installation.
+description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
 categories: [drupal]
 tags: [terminus, code, local]
 keywords: Drupal drush, command line, drupal, terminus drush, cli

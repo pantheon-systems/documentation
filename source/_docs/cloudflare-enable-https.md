@@ -2,7 +2,7 @@
 title: Adding HTTPS For Free With CloudFlare
 type: guide
 permalink: docs/guides/:basename/
-description: Enjoy the protection of HTTPS and other security features using CloudFlare's free DNS service
+description: Add HTTPS and other security features to your Pantheon Drupal or WordPress site using CloudFlare's free DNS service.
 categories: [sites]
 tags: [code, domains]
 contributors:

@@ -1,6 +1,6 @@
 ---
 title: The Pantheon Deploy Log
-description: Learn how to use the Deploy Log to manage updates, feature releases and more.
+description: Use the Deploy Log to manage Pantheon site updates, feature releases, and more.
 categories: [managing]
 tags: [platform]
 keywords: deploy, deploy log, how to deploy, deploying

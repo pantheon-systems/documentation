@@ -1,6 +1,6 @@
 ---
 title: Caching in Drupal Modules
-description: Configure Drupal's performance and caching settings to make significant improvements.
+description: Configure your Drupal site's performance and caching settings to make significant improvements.
 categories: [drupal]
 tags: [varnish, code]
 keywords: drupal modules, performance, cache, caching, views, redis, views caching,

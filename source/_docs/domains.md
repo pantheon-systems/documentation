@@ -1,6 +1,6 @@
 ---
 title: Domains and DNS
-description: Detailed information on adding a domain to your Pantheon Drupal or WordPress site.
+description: Information on adding a domain to your Pantheon Drupal or WordPress site.
 categories: [developing]
 tags: [domains, featured]
 ---

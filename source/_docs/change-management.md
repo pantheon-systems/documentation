@@ -1,6 +1,6 @@
 ---
 title: Role-Based Permissions & Change Management
-description: Learn about the features and benefits of role-based permissions for Pantheon sites.
+description: Features and benefits of role-based permissions for Pantheon Drupal and WordPress sites.
 categories: [managing]
 tags: [platform, organizations]
 keywords: roles, role, permissions, permission, access, privileges, privilege, team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access  

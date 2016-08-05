@@ -1,6 +1,6 @@
 ---
 title: Working with Cookies on Pantheon
-description: Learn tips and tricks for working with cookies.
+description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
 categories: [developing]
 tags: [varnish]
 keywords: varnish, cache, clear cache, caching, drupal, wordpress, cookies, cookie, setcookie, set-cookie

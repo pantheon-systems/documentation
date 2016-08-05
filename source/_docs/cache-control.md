@@ -1,6 +1,6 @@
 ---
 title: Bypassing Cache with HTTP Headers
-description: Learn how to set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
+description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
 categories: [developing]
 tags: [varnish, code]
 keywords: cache, caching, varnish, cookies, wordpress, drupal
