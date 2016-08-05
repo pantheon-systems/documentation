@@ -1,6 +1,6 @@
 ---
 title: Enable Secure HTTPS Communication
-description: Learn how to implement secure HTTPS communication and utilize a static IP address.
+description: Learn how to implement secure HTTPS communication and utilize a static IP address on your Drupal and WordPress site.
 categories: [developing]
 tags: [domains, featured]
 keywords: secure https, https, security, encryption, add ssl cert, add https, add encryption, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types,  ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate

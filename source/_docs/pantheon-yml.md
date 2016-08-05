@@ -1,6 +1,6 @@
 ---
 title: The pantheon.yml Configuration File
-description: Developers can set project configuration in a pantheon.yml file stored in the root of their code repository.  
+description: Set project configuration in a pantheon.yml file stored in the root of the Drupal or Wordpress site's code repository.  
 categories: [developing]
 tags: [code, platform]
 ---

@@ -1,6 +1,6 @@
 ---
 title: Platform Considerations
-description: A list of the Pantheon platform considerations.
+description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
 keywords: known limitations, multisite, applications, use more than one application, large directories, inodes, streaming media, large file, ip based, ip based security, ip based security systems, pantheon limitations, php short tags, short tags, nginx.conf
 categories: [developing]
 tags: [platform, files, getting-started]

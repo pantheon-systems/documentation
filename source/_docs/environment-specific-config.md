@@ -1,6 +1,6 @@
 ---
 title: Environment-Specific Configuration for WordPress Sites
-description: Learn how to turn plugins on and off conditionally, based on the environment they are running on.
+description: Learn how to turn WordPress site plugins on and off based on the environment they are running on.
 categories: [wordpress]
 tags: [code, platform]
 ---
