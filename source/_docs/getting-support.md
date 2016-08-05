@@ -25,7 +25,7 @@ If you cannot sign in to your Pantheon Dashboard:
 
 - Use the [Password Reset](https://dashboard.pantheon.io/reset-password) form for Pantheon Dashboard access
 - Visit our [Contact form](https://pantheon.io/contact-us) and choose **I can't login and I need support**
-- Email Support directly at helpdesk@pantheon.io or cse-support@pantheon.io
+- Email Support directly at helpdesk@pantheon.io
 
 ## Customer Support Response Times
 
