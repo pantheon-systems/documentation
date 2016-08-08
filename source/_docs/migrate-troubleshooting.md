@@ -39,7 +39,10 @@ No. If any of your database tables are using the MyISAM engine please conver the
 
 ## Single sql file per site archive
 
-If multiple sql files are present the import will fail. Only provide one `.sql` file per site archive. 
+If multiple sql files are present the import will fail. Only provide one `.sql` file per site archive.
+
+## Single settings.php file per site archive
+If multiple `settings.php` files are present the import will fail. Pantheon does not need the `settings.php` file to import the site. To prevent import problems, it's best to simply remove `settings.php`.
 
 ## See Also
  * [Migrate Sites to Pantheon](/docs/migrate)
