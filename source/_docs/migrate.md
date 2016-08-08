@@ -23,11 +23,11 @@ For more information see: [Migrate to Pantheon: WordPress](/docs/migrate-wordpre
 
 After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**, you'll create a new Pantheon site and we'll walk you through steps to run `drush ard` to prepare a site archive in the standard format we use to import your site. You can use either Terminus, the Pantheon Command Line Interface, or the Dashboard, to import the site archive.
 
-We'll guide you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a publicly accessible URL.
+We'll guide you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
 
 ## Manual Migration
 
-First select **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)** you can exit the [guided migration](migrate#guided-migration) and choose to **Manually migrate** your site.
+First select **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**. After creating a new Pantheon site you can exit [guided migration](migrate#guided-migration) and choose to **Manually migrate** your site.
 
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -56,6 +56,6 @@ For more details see: [Manually migrating your site to Pantheon](/docs/manual-im
 For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
 
 ## See Also
+* [Getting Started](/docs/getting-started)
 * [Going Live](/docs/going-live)
 * [Clone an Existing Pantheon Site](/docs/clone-site)
-* [Getting Started](/docs/getting-started)

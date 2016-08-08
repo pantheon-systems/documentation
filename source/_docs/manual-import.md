@@ -82,7 +82,7 @@ Your command will now look like:
 
 **Files** - anything in `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
 
-Files are not under version control and are stored separately from the site's code.
+Files are not under Git version control and are stored separately from the site's code.
 
 ### Use the Pantheon Dashboard, SFTP, or Rsync
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
@@ -98,7 +98,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 **rsync**
 
-Rsync is a great method for transferring a large number and size of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
+Rsync is an excellent method for transferring a large number and size of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
 
 The rsync script below will retry and is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.  
 
@@ -128,7 +128,10 @@ done
 
 ## Wrapping Up
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches  the Pantheon Dashboard, and you are good to go!
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go!
+
+If something didn't go quite right and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration, so you can restore to a known-good state of your site.
+
 
 
 ## See Also
@@ -136,6 +139,5 @@ You should now have all three of the major components of your site imported into
 * [Starting with Git](/docs/git/)
 * [Accessing MySQL Databases](/docs/mysql-access/)
 * [rsync and SFTP](/docs/rsync-and-sftp/)
-
-Using the Pantheon Workflow
-Going Live
+* [Using the Pantheon Workflow](/docs/pantheon-workflow)
+* [Going Live](/docs/going-live)
