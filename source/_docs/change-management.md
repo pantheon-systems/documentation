@@ -13,7 +13,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations.
 
 ###Enterprise and Partner Organizations: Roles and Permissions
 
