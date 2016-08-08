@@ -9,16 +9,132 @@ Change Management is an [organization](/docs/organizations/) feature that enable
 
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
-## Features
-* Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles.
-* Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
-* When a site owner adds an organization to a site as a Supporting Organization (e.g. an Agency Organization), the members and roles of the organization are inherited for working on the site. If the site is owned by an Enterprise Organization with Change Management enabled, the site Administrators can cap the permission level of all Supporting Organization users to "Developer". For example, Supporting Organization Administrators will only have the permissions of a Developer when working on that site, despite being Organization Administrators.
-* All users in an organization can see other users and their roles.
+## Roles and Permissions
 
-## Managing People in an Organization
-When an organizational Team Member or Administrator adds a user to an organization, they must assign a role to the new member. Roles have predefined permissions that vary depending on which Dashboard you are in (Site or Organization). Administrators of the organization assign roles on the **People** tab of the [Organization Dashboard](/docs/organization-dashboard/).
+These tables detail the actions each role can execute on each Dashboard.
 
-### Add a User
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+
+###Enterprise and Partner Organizations: Roles and Permissions
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Administrator</th>
+        <th>Team Member</th>
+        <th>Developer</th>
+        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise org only"><em class="fa fa-info-circle"></em></a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Create sites within an org</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Access the org Dashboard</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Work in Dev/Multidev environments</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Deploy to Test and Live</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage site-level team</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Delete sites or remove users from an org</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+###Site-Level: Roles and Permissions
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
+        <th>Administrator </th>
+        <th>Team Member </th>
+        <th>Developer </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Create sites within an org</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Access the org Dashboard</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Work in Dev/Multidev environments</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Deploy to Test and Live</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage site-level team</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Delete sites or remove users from an org</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+## Manage People in an Organization
+
+### Add a User to the Organization
 
 1. In the People tab, click **Add User**.
 2. Enter the email address of the new user, select a role, and click **Add user**.
@@ -39,144 +155,26 @@ Enterprise Organizations can assume ownership of a site by opening a support tic
 
 For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 
-## Managing an Enterprise Site's Team
+## Manage a Site's Team
 
-Elite site Team Members can add users as either Team Members or Developers to the site.
-
-### Add a User to the Site
+### Add a User to a Site
 1. At the Site Dashboard, click **Team**.
 2. Enter the user's email address, select a role, and click **Add Team Member**.
 
-### Add a Supporting Organization to the Site
+### Add a Supporting Organization to a Site
 1. At the Site Dashboard, click **Team**.
 2. Click **Add a Supporting Organization**, enter the organization's name in the search box, and click **Search**.
 3. Select a role, and click **Add**.
 
 All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
-## Roles and Permissions
+## Frequently Asked Questions (FAQs)
 
-These tables detail the actions each role can execute on each Dashboard.
+#### Which role should I assign a user to give them the lowest level of access?
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the organization level, the Unprivileged role has the least amount of permissions and can only create sites.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+#### Which environments can a user with the Developer role deploy to?
+The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
 
-###Enterprise: Organization-Level Roles/Permissions
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
-</style>
-<table class="tg">
-
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Manage settings<br>
-        &#8226; Remove members    <br>
-        &#8226; Change member roles <br>
-        &#8226; Create and delete sites  <br>
-        &#8226; Remove sites from the Organization</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
-         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets
-         <br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Unprivileged</td>
-        <td class="border-bottom">&#8226; Create sites, for which they automatically become the User in Charge
-        <br> &#8226; Cannot access the Org Dashboard or any sites in the Org</td>
-    </tr>
-</table>
-
-
-###Partners: Organization-Level Roles/Permissions
-
-<style>
-    .data-table {
-        border-collapse: collapse;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #000;
-    }
-</style>
-
-<table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Remove members<br>
-        &#8226; Change member roles<br>
-        &#8226; Create and delete sites<br>
-        &#8226; Remove sites from the Organization<br>
-        &#8226; Manage settings</td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Team Member</td>
-        <td class="border-bottom">&#8226; Add Developers and Team Members to the Organization<br>
-         &#8226; Add users as Team Members to sites<br> &#8226; Create sites<br></td>
-    </tr>
-    <tr>
-        <td class="border-bottom">Developer</td>
-        <td class="border-bottom">&#8226; Tag sites<br>
-         &#8226; View people<br> &#8226; View tickets
-         <br> &#8226; Create sites<br> </td>
-    </tr>
-</table>
-
-##Site-Level Roles/Permissions
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
-</style>
-<table class="tg">
-    <tr>
-        <th><strong>Role</strong></th>
-        <th><strong>Permissions</strong></th>
-        <th><strong>Enterprise Organization</strong></th>
-        <th><strong>Partner Organization</strong></th>
-    </tr>
-    <tr>
-        <td>Administrator</td>
-        <td>&#8226; Create and delete sites</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
-    </tr>
-    <tr>
-        <td>Team Member</td>
-        <td>&#8226; Deploy code to Test and Live<br/>&#8226; Use the Workflow tool on Test and Live<br/>&#8226; Change the PHP versions for all site environments<br/>&#8226; Add Team Members and Supporting Organizations</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
-    </tr>
-    <tr>
-        <td>Developer</td>
-        <td>&#8226; Can only commit code to Dev and Multidev environments<br/>&#8226; Add and remove add-ons to sites. New Relic cannot be removed once added.<br>
-        <strong>Note</strong>: You can promote a Developer to Team Member for a single site by adding the user to the site's team.</td>
-        <td><center>X</center></td>
-        <td><center>X</center></td>
-    </tr>
-    <tr>
-        <td>Owner</td>
-        <td>&#8226; Functionally is the same as an Organization Administrator<br>
-        &#8226; Only role that can delete a site after it is live</td>
-        <td></td>
-        <td><center>X</center></td>
-    </tr>
-</table>
+#### Who can add users to Organizations?
+Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
