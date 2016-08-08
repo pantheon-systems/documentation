@@ -54,9 +54,9 @@ For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-m
 
 ## Troubleshooting
 
-For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
+For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting).
 
 ## See Also
-* [Getting Started](/docs/getting-started)
 * [Going Live](/docs/going-live)
-* [Clone an Existing Pantheon Site](/docs/clone-site)
+* [Getting Started](/docs/getting-started)
+* [Using the Pantheon Workflow](/docs/pantheon-workflow)
