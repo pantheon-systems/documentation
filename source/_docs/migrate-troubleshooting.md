@@ -47,4 +47,4 @@ If multiple `settings.php` files are present the import will fail. Pantheon does
 ## See Also
  * [Migrate Sites to Pantheon](/docs/migrate)
  * [Log Files on Pantheon](/docs/logs/)
- * [Using the Pantheon Workflow][/docs/pantheon-workflow]
+ * [Using the Pantheon Workflow](/docs/pantheon-workflow)
