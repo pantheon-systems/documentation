@@ -49,7 +49,7 @@ Then for each site:
 
 5. If there are customizations on the individual sites that are not incorporated into the upstream repository, commit those changes from your archives into the local repo.
 
-6. <a data-proofer-ignore href="/docs/migrate-manual/#step-2-add-database"> Import the database.</a>
+6. <a data-proofer-ignore href="/docs/migrate-manual/#step-3-add-database"> Import the database.</a>
 
 7. Run `drush sar --dry-run sites/sitename1 sites/default` to test the search and replace. You can run `terminus drush` or run `terminus sites aliases`, and then run local Drush.
 

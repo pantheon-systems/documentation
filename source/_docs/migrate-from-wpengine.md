@@ -7,12 +7,14 @@ keywords: wordpress, pantheon, wpengine
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/migrate-manual) the site:
+Manually migrate your site to Pantheon when any of the following apply:
 
-- Your site requires a custom upstream
-- You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com)
+* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+* **[WordPress Site Networks](/docs/wordpress-site-networks/)**
+* **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+
+For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual/).
 
 
 ## Migrate Your Site to Pantheon

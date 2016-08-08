@@ -5,9 +5,6 @@ keywords: migrate, import, importing site, pantheon, new site, large site, distr
 categories: [developing]
 tags: [migrate]
 ---
-For guided migration see [Migrate Sites to Pantheon](/docs/migrate).
-
-
 Manually migrate your site to Pantheon when any of the following apply:
 
 * **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
@@ -16,7 +13,9 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
-## Create a New Pantheon Site
+For guided migration see [Migrate Sites to Pantheon](/docs/migrate).
+
+## Step 1: Create a New Pantheon Site
 
 From your Pantheon Dashboard:
 
@@ -28,11 +27,9 @@ From your Pantheon Dashboard:
 4. Select an organization for the site (optional).
 5. Click **Create Site**.
 6. Click **Migrate Manually** and select **Yes** in the confirmation box.
-7. Follow the instructions below to import your <a data-proofer-ignore href="#step-1-import-your-code">code</a>, <a data-proofer-ignore href="#step-2-add-database"> database</a>, and <a data-proofer-ignore href="#step-3-upload-your-files">files</a>.
-8. Once everything looks good, click **I've Successfully Migrated Manually**.
 
 
-## Step 1: Import your Code
+## Step 2: Import your Code
 
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. Code **does not** include files not under version control, like images uploaded to `sites/default/files` or `wp-uploads`.
 
@@ -48,7 +45,7 @@ Clone the Pantheon site repository and copy your site's plugins, modules and the
 If you'd like to retain existing Git History, then please see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
 
 
-## Step 2: Add Database
+## Step 3: Add Database
 
 Your site's database is a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, you may want to remove data from cache tables to make the `.sql` file much smaller, and your import that much quicker.
 
@@ -79,7 +76,7 @@ Your command will now look like:
  ```
 3. After you run the command, the `.sql` file is imported into your Pantheon Dev environment database container.
 
-## Step 3: Upload Your Files
+## Step 4: Upload Your Files
 
 Files refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
 
@@ -130,7 +127,7 @@ done
 
 ## Wrapping Up
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go!
+You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**.
 
 If something didn't go quite right and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration, so you can restore to a known-good state of your site.
 

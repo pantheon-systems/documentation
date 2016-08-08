@@ -10,6 +10,7 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 
 Ready to move your site to Pantheon? Start with the **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate)** button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](https://pantheon.io/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/going-live).
 
+![Migrate Existing Site](/source/docs/assets/images/migrate-existing-site.png)
 
 ### WordPress
 After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**, you'll create a new Pantheon site and install the Pantheon Migrations plugin on your existing site. Visit the plugin settings and paste in your new Pantheon site name, as well as the machine token we generate for you, which gives the plugin access to move data to your new Pantheon site.
@@ -37,7 +38,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
-For more details see: [Manually migrating your site to Pantheon](/docs/migrate-manual/)
+For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual/).
 
 ## Tips for a Successful Migration
 
