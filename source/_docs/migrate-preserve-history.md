@@ -1,20 +1,21 @@
 ---
 title: Migrating Sites to Pantheon: Preserve Existing Git History
-description: Learn how to preserve your site's existing Git history when migrating to Pantheon
+description: Learn how to preserve your Drupal or WordPress site's existing Git history when migrating to Pantheon.
 keywords: migrate, import, importing site, pantheon, new site, large site, distro, upstream, git history
 categories: [developing]
 tags: [migrate]
 ---
-Preserving your site's git history requires migrating manually and importing the codebase via Git.
+Preserving your site's Git history requires migrating manually and importing the codebase via Git.
 
-## Before You Begin
+## Migrate Your Existing Site
+
 From your Pantheon Dashboard:
 
 1. Choose **Migrate Existing Site**.
 2. Enter your existing website URL.
 3. Select the CMS your site uses: Drupal 7, Drupal 8, or WordPress.
 4. Click **Continue**.
-3. Name your new Pantheon site and optionally select an organization
+3. Name your new Pantheon site and optionally select an organization.
 5. Click **Create Site**.
 6. Click **Migrate Manually** and select **Yes** in the confirmation box.
 
@@ -67,7 +68,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  ```bash
  git commit -m "Adding Pantheon core files"
  ```
-8. Align your local branch with it's remote counterpart on Pantheon:
+8. Align your local branch with its remote counterpart on Pantheon:
 
  ```bash
  git pull pantheon master
