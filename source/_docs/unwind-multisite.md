@@ -39,7 +39,7 @@ This method requires one of the following organization service levels with custo
 
 1. Create a [custom upstream](/docs/custom-upstream) based on the multisite configuration.
 
-2. [Archive](/docs/migrate#create-archive) each of your sites.
+2. [Archive](/docs/migrate#drupal) each of your sites.
 
 3. [Create a new site](https://dashboard.pantheon.io/sites/create) based on the upstream.
 
@@ -49,7 +49,7 @@ Then for each site:
 
 5. If there are customizations on the individual sites that are not incorporated into the upstream repository, commit those changes from your archives into the local repo.
 
-6. [Import the database](/docs/manual-import//#add-your-database).
+6. <a data-proofer-ignore href="/docs/migrate-manual/#step-3-add-database"> Import the database.</a>
 
 7. Run `drush sar --dry-run sites/sitename1 sites/default` to test the search and replace. You can run `terminus drush` or run `terminus sites aliases`, and then run local Drush.
 

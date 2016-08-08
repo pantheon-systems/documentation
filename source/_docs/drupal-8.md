@@ -32,4 +32,4 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 [Applying Upstream Updates](/docs/upstream-updates)  
 [Drupal Drush Command-Line Utility](/docs/drush)  
 [Major Version Drupal Upgrades](/docs/drupal-updates#upgrade-to-drupal-8)  
-[Migrate to Pantheon: Manual Site Import](/docs/manual-import)  
+[Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)  

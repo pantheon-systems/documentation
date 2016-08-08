@@ -3,75 +3,60 @@ title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
 categories: [developing]
 tags: [migrate, getting-started]
-keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon
+keywords: migrate, migrating site, migrate from remote host, migrate existing site, migrate from other host, migrate from another host, how to migrate an existing site, alternate host, another host, migration, migrations, migrates, move site to pantheon, move from remote host, move from current host, move hosts, changing hosting providers, how to move hosting to pantheon, import site
 ---
 
-## Migrating WordPress Sites
-Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
+## Guided Migration
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
+Ready to move your site to Pantheon? Start with the **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate)** button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](https://pantheon.io/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/going-live).
 
-- Your site requires a custom upstream
-- You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com)
+![Migrate Existing Site](/source/docs/assets/images/migrate-existing-site.png)
 
-## Migrating Drupal Sites
-### Prepare Your Site For Export
+### WordPress
+After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**, you'll create a new Pantheon site and install the Pantheon Migrations plugin on your existing site. Visit the plugin settings and paste in your new Pantheon site name, as well as the machine token we generate for you, which gives the plugin access to move data to your new Pantheon site.
 
-Follow these best practices before exporting your site:
+See exactly how it works in the following video:
+<iframe width="420" height="315" src="https://www.youtube.com/embed/3_DjdIueKM4" frameborder="0" allowfullscreen></iframe>
 
-* **Put the source site into maintenance mode** by going to Configuration > Development > Maintenance in Drupal.  This will prevent the contents of your database from getting out of sync while you’re exporting.
-* **Upgrade to the latest version of core**. If your site runs an old version of core, our import process forces you to upgrade. Doing it before importing can avoid problems stemming from an out-of-sync database and codebase, and can expose incompatibilities that should be fixed.
+For more information see: [Migrate to Pantheon: WordPress](/docs/migrate-wordpress)
+
+### Drupal
+
+After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**, you'll create a new Pantheon site and we'll walk you through steps to run `drush ard` to prepare a site archive in the standard format we use to import your site. You can use either Terminus, the Pantheon Command Line Interface, or the Dashboard, to import the site archive.
+
+We'll guide you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+
+## Manual Migration
+
+First select **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**. After creating a new Pantheon site you can exit [guided migration](/docs/migrate/#guided-migration) and choose to **Manually migrate** your site.
+
+Manually migrate your site to Pantheon when any of the following apply:
+
+* **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
+* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+* **[WordPress Site Networks](/docs/wordpress-site-networks/)**
+* **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+
+For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual/).
+
+## Tips for a Successful Migration
+
+* **Upgrade to the latest version of core**. Your site will automatically be upgraded to the latest version of WordPress or Drupal core during migration. Upgrading before migrating can help prevent your site's code and database from getting out-of-sync.
+
+* **Put the Drupal source site into maintenance mode** by going to Configuration > Development > Maintenance in Drupal.  This will prevent the contents of your database from getting out of sync while you’re exporting.
+
 * **Clear all caches**. This removes unnecessary and out-of-date files from both the database and your filesystem, which will save time and valuable space.
-* Take a look at your codebase and **remove any non-core code from your site** that you aren’t planning on running on Pantheon.
-* If you’ve been using the database for things other than Drupal, you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
-### Create Archive
-You can create archives with [Drush](/docs/drupal-export#create-archive-using-drush) or the [Backup and Migrate](/docs/drupal-export#create-archive-using-backup-and-migrate) module. Alternatively, you can [manually create an archive](/docs/drupal-export#manually-create-archive) that includes each of the following:
+* **Remove unneeded coce, data, and files before migration**. Moving is always a good opportunity to do some housekeeping and a smaller footprint will migrate faster.
 
-- **Codebase** - All executable code, including core, custom and contrib modules or plugins, themes, and libraries. For the suggested directory listing of your site’s codebase, see [Export an Existing Drupal Site](/docs/drupal-export#manually-create-archive).
-
-- **Database** - A single `.sql` dump, contains the content and active state of the site's configurations.
-
-- **Files** - Anything in `sites/default/files`. This houses a combination of uploaded content from site users, along with generated stylesheets, aggregated scripts, image styles, etc.
-
-
-### Import the Site Archive  
-Click the [**Migrate Existing Site**](https://dashboard.pantheon.io/sites/migrate) button on either the User or Organization Dashboard. Enter a name and click **Create Site**. Import your site archive using the direct file upload (up to 100MB) or URL upload (up to 500MB). Acceptable file types include `.tar`, `.zip`, and `.gzip`.
-
-Alternatively, you can create the site and import the archive from the  command line using [Terminus](/docs/terminus/) for archives less than 500MB, downloadable from a publicly accessible URL:
-
-```
-terminus sites import [--site=<name>] [--label=<label>] [--org=<org>] [--url=<url>]
-```
-
-
-<div class="alert alert-info">
-<h4>Note</h4>
-Modify Dropbox URLs so they end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
-
-
-The following scenarios are exceptions to this process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
-
-- Your site exceeds file size limit for uploads
-- Your site requires an upstream to an organizational or public distribution
-- You want to preserve the site's existing Git history
-
-## Test Your Site
-When the site's code, database, and files are all in place, verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for initial verification.
-
-We recommend:
-
- - Using the Status tool in the Site Dashboard
- - Enabling [New Relic Pro](/docs/new-relic)
- - [Automated user acceptance testing](/docs/guides/wordpress-automated-testing) with Behat, Selenium, or Casper.js
- - Load testing using tools like [Blazemeter](/docs/guides/load-testing-with-blazemeter/)
- - Manual [user acceptance testing](https://en.wikipedia.org/wiki/Acceptance_testing#User_acceptance_testing)
-
-## Go Live
-Follow the [Going Live](/docs/going-live) checklist for a successful launch.
+* If you’ve been using the database for things other than Drupal or WordPress you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
 ## Troubleshooting
-### One Application per Site
-Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
+
+For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting).
+
+## See Also
+* [Going Live](/docs/going-live)
+* [Getting Started](/docs/getting-started)
+* [Using the Pantheon Workflow](/docs/pantheon-workflow)

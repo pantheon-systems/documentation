@@ -26,28 +26,12 @@ tar cvzf gardenssite-for-pantheon.tar.gz docroot/
 ```
 
 ## Import Your Site to Pantheon
-There are two ways to import your site: using our Importer tool in the Dashboard or manually importing the site.
+Import the site archive to Pantheon using either the [Guided](/docs/migrate) or [Manual Migration](/docs/migrate-manual/) method.
 
-### Use the Importer Tool
-Using our Importer during the site creation process has the following effects on the codebase:
+Manually migrate your site to Pantheon when any of the following apply:
 
- - New Git history
- - Replacement and upgrade to the latest core version from our [Drops-8](https://github.com/pantheon-systems/drops-8), [Drops-7](https://github.com/pantheon-systems/drops-7), or [Drops-6](https://github.com/pantheon-systems/drops-6) repository
- - Assignment of the appropriate site framework (listed above) as the code upstream, used for core updates
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for <a href="https://www.drupal.org/troubleshooting"> Drupal sites</a>.</div>
-
-The importer accepts single file site archives. It accepts file uploads up to 100MB, and can download publicly-accessible archives up to 500MB. Acceptable file types include `.tar`, `.zip`, `.gzip`, and `.sql`.
-
-See [Migrate to Pantheon](/docs/migrate/) for detailed instructions.
-
-### Manual Site Import
-
-Manually import the site outside of our importer tool if any of the following apply:
-
-- Your site exceeds file size limit for uploads
-- Your site requires an upstream to an organizational or public distribution
-- You want to preserve the site's existing Git history
-
-Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for detailed instructions.
+* **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
+* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+* **[WordPress Site Networks](/docs/wordpress-site-networks/)**
+* **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.

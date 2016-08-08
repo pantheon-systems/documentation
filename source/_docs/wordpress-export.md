@@ -8,7 +8,7 @@ keywords: import, importing site, new site, WordPress, export, export wordpress,
 
 Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/manual-import/) the site:
+The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
 
 - Your site requires a custom upstream
 - You want to preserve the site's existing Git history
@@ -98,5 +98,5 @@ Only provide one `.sql` file; if multiple are present the import will fail.
 
 ## Next Steps
 - [Migrate Sites to Pantheon](/docs/migrate)
-- [Migrate to Pantheon: Manual Site Import Outside of the Pantheon Dashboard](/docs/manual-import/)
+- [Migrate Sites to Pantheon: Manual Method Outside of the Pantheon Dashboard](/docs/migrate-manual/)
 - [Migrate to Pantheon: WordPress Site Networks](/docs/wordpress-site-networks/)

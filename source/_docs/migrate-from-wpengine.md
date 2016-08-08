@@ -7,12 +7,14 @@ keywords: wordpress, pantheon, wpengine
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/manual-import) the site:
+Manually migrate your site to Pantheon when any of the following apply:
 
-- Your site requires a custom upstream
-- You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com)
+* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+* **[WordPress Site Networks](/docs/wordpress-site-networks/)**
+* **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+
+For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual/).
 
 
 ## Migrate Your Site to Pantheon
@@ -61,7 +63,7 @@ The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Na
   - If object caching is enabled, the `object-cache.php` file located in `/wp-content`
 4. Replace existing `wp-config.php` with [Pantheon's `wp-config.php`](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php) file. Preserve necessary logic from your existing file.
 5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
-6. Manually import the site following the process covered in [Migrate to Pantheon: Manual Site Import](/docs/manual-import).
+6. Manually import the site following the process covered in [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
 8. Test your site once the code, database, and files are all in place. Verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for verification.
 
 ## Considerations

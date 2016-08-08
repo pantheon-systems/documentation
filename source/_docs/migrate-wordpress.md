@@ -9,7 +9,7 @@ keywords: wordpress, pantheon
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/manual-import) the site:
+The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/migrate-manual) the site:
 
 - Your site requires a custom upstream
 - You want to preserve the site's existing Git history
@@ -64,5 +64,5 @@ Click your browser's back button from the Pantheon Dashboard and re-authenticate
 ## See Also
 
 - [Migrate to Pantheon: WordPress Site Networks](/docs/migrate-wordpress-site-networks)
-- [Migrate to Pantheon: Manual Site Import](/docs/manual-import)
+- [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Platform Considerations](/docs/platform-considerations)
