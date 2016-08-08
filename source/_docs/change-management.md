@@ -13,7 +13,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations with unprivileged users (e.g. Universities).
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations.
 
 ###Enterprise and Partner Organizations: Roles and Permissions
 
@@ -24,7 +24,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <th>Administrator</th>
         <th>Team Member</th>
         <th>Developer</th>
-        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise org only"><em class="fa fa-info-circle"></em></a></th>
+        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ orgs only"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
@@ -79,23 +79,14 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     <thead>
       <tr>
         <th>Permissions</th>
-        <th>Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
-        <th>Administrator </th>
+        <th>User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
         <th>Team Member </th>
         <th>Developer </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Create sites within an org</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Access the org Dashboard</td>
-        <td>✓</td>
+        <td>Access the site Dashboard</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
@@ -105,11 +96,9 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
-        <td>✓</td>
       </tr>
       <tr>
         <td>Deploy to Test and Live</td>
-        <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
@@ -118,12 +107,10 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td>Manage site-level team</td>
         <td>✓</td>
         <td>✓</td>
-        <td>✓</td>
         <td></td>
       </tr>
       <tr>
         <td>Delete sites or remove users from an org</td>
-        <td>✓</td>
         <td>✓</td>
         <td></td>
         <td></td>
