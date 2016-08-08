@@ -35,27 +35,26 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 You can use either SFTP or Git to import your code. If you'd like to retain existing Git History, then please see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
 
-
 ### Import Code via SFTP
 Find the **Connection Info** from the Dev environment and use an SFTP client to add your code. You'll want to only add plugins, modules, and themes and not overwrite WordPress or Drupal core. For more information, see [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/).
 
 ### Import Code via Git
 Clone the Pantheon site repository and copy your site's plugins, modules and themes, commit, and push. Do not overwrite WordPress or Drupal core. For more information, see [Starting with Git](/docs/git/).
 
-If you'd like to retain existing Git History, then please see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
+If you'd like to retain existing Git History, see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
 
 
 ## Step 3: Add Database
 
-Your site's database is a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, you may want to remove data from cache tables to make the `.sql` file much smaller, and your import that much quicker.
+Your site's database is a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, you may want to remove data from cache tables to make the `.sql` file much smaller and your import that much quicker.
 
 You can use either the Pantheon Dashboard or a MySQL Client to add your site's database.
 
 ### Import Database using the Pantheon Dashboard
 
-1. Select the **Dev** environment
-2. Select **Database / Files**
-3. Click **Import**
+1. Select the **Dev** environment.
+2. Select **Database / Files**.
+3. Click **Import**.
 4. In the **MySQL database** field, paste the URL of the `sql` file or upload a local `sql` file, and press **Import**.
 
 ### Import Database using a MySQL Client
@@ -69,7 +68,7 @@ The following instructions are for the command line MySQL client, but you can al
  ```
 2. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with:
 `< database.sql`
-Your command will now look like:
+Your command will look like:
 
  ```
  mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
@@ -86,20 +85,20 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 ### Import Files using the Pantheon Dashboard
 
-1. Select the **Dev** environment
-2. Select **Database / Files**
-3. Click **Import**
-4. In the **Archive of site files** field, paste an URL of your `zip` or `tar.gz` archive, or upload a local file and press **Import**.
+1. Select the **Dev** environment.
+2. Select **Database / Files**.
+3. Click **Import**.
+4. In the **Archive of site files** field, paste the URL of your `zip` or `tar.gz` archive, or upload a local file and press **Import**.
 
 ### Import Files using SFTP
 
-Use a FTP client that supports SFTP, such as FileZilla. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `files/` and start your file upload.
+Use an FTP client that supports SFTP, such as FileZilla. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `files/` and start your file upload.
 
 ### Import Files using Rsync
 
-Rsync is an excellent method for transferring a large number and size of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
+Rsync is an excellent method for transferring a large number of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
 
-The rsync script below will retry and is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.  
+The rsync script below is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.  
 
 
 ```bash
@@ -125,11 +124,9 @@ fi
 done
 ```
 
-## Wrapping Up
-
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**.
 
-If something didn't go quite right and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration, so you can restore to a known-good state of your site.
+If something didn't work and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration so you can restore to a known good state of your site.
 
 
 
