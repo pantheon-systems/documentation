@@ -137,6 +137,7 @@ If something didn't go quite right and you'd like to start over, you can cancel 
 
 
 ## See Also
+* [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
 * [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/)
 * [Starting with Git](/docs/git/)
 * [Accessing MySQL Databases](/docs/mysql-access/)
