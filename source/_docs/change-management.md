@@ -29,42 +29,42 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </thead>
     <tbody>
       <tr>
-        <th>Create sites within an org</th>
+        <td>Create sites within an org</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th>Access the org Dashboard</th>
+        <td>Access the org Dashboard</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
       </tr>
       <tr>
-        <th>Work in Dev/Multidev environments</th>
+        <td>Work in Dev/Multidev environments</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
       </tr>
       <tr>
-        <th>Deploy to Test and Live</th>
+        <td>Deploy to Test and Live</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <th>Manage site-level team</th>
+        <td>Manage site-level team</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <th>Delete sites or remove users from an org</th>
+        <td>Delete sites or remove users from an org</td>
         <td>✓</td>
         <td></td>
         <td></td>
@@ -87,42 +87,42 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
     </thead>
     <tbody>
       <tr>
-        <th>Create sites within an org</th>
+        <td>Create sites within an org</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th>Access the org Dashboard</th>
+        <td>Access the org Dashboard</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th>Work in Dev/Multidev environments</th>
+        <td>Work in Dev/Multidev environments</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th>Deploy to Test and Live</th>
+        <td>Deploy to Test and Live</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
       </tr>
       <tr>
-        <th>Manage site-level team</th>
+        <td>Manage site-level team</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
       </tr>
       <tr>
-        <th>Delete sites or remove users from an org</th>
+        <td>Delete sites or remove users from an org</td>
         <td>✓</td>
         <td>✓</td>
         <td></td>
