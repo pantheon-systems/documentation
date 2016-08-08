@@ -9,4 +9,4 @@ See the following documentation to copy your existing Pantheon site to a second 
 
 For WordPress, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress/).
 
-For Drupal, see [Migrate to Pantheon: Manual Site Import](/docs/manual-import).
+For Drupal, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).

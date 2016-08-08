@@ -50,4 +50,4 @@ Manually import the site outside of our importer tool if any of the following ap
 - Your site requires an upstream to an organizational or public distribution
 - You want to preserve the site's existing Git history
 
-Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate to Pantheon: Manual Site Import](/docs/manual-import) for detailed instructions.
+Import code, database, and files after creating the site using a combination of command line tools (Git, mysql-cli, and rsync) or with Git and the Site Dashboard's Workflow tool. See [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual) for detailed instructions.

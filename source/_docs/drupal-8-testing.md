@@ -10,7 +10,7 @@ The Drupal 8 testing organization "owns" all Drupal 8 sites created on the platf
 2. [Create and download backups](/docs/backups).
 3. To use the same development URLs for the site, [delete the site](/docs/delete-site/).
 4. [Create a new Drupal 8 site](https://dashboard.pantheon.io/sites/create).
-5. [Manually import code, database, and files](/docs/manual-import).
+5. [Manually import code, database, and files](/docs/migrate-manual).
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

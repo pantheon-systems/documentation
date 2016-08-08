@@ -7,7 +7,7 @@ keywords: wordpress, pantheon, wpengine
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/manual-import) the site:
+The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/migrate-manual) the site:
 
 - Your site requires a custom upstream
 - You want to preserve the site's existing Git history
@@ -61,7 +61,7 @@ The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Na
   - If object caching is enabled, the `object-cache.php` file located in `/wp-content`
 4. Replace existing `wp-config.php` with [Pantheon's `wp-config.php`](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php) file. Preserve necessary logic from your existing file.
 5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
-6. Manually import the site following the process covered in [Migrate to Pantheon: Manual Site Import](/docs/manual-import).
+6. Manually import the site following the process covered in [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
 8. Test your site once the code, database, and files are all in place. Verify everything is working as expected. At the Site Dashboard, click **Visit Development Site** for verification.
 
 ## Considerations

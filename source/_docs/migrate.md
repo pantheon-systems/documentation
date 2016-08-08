@@ -8,7 +8,7 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 
 ## Guided Migration
 
-Ready to move your site to Pantheon? Start with the <a href="https://dashboard.pantheon.io/sites/migrate"><img src="https://www.dropbox.com/s/hrm31bu82rjztz3/Screenshot%202016-08-06%2022.06.33.png?dl=1" height="30px" style="margin:0" alt="Migrate Existing Site"></a> button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/going-live).
+Ready to move your site to Pantheon? Start with the **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate)** button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](https://pantheon.io/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/going-live).
 
 
 ### WordPress
@@ -27,7 +27,7 @@ We'll guide you to put the archive on your existing website, but you can put the
 
 ## Manual Migration
 
-First select **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**. After creating a new Pantheon site you can exit [guided migration](migrate#guided-migration) and choose to **Manually migrate** your site.
+First select **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**. After creating a new Pantheon site you can exit [guided migration](/docs/migrate/#guided-migration) and choose to **Manually migrate** your site.
 
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -37,7 +37,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
-For more details see: [Manually migrating your site to Pantheon](/docs/manual-import/)
+For more details see: [Manually migrating your site to Pantheon](/docs/migrate-manual/)
 
 ## Tips for a Successful Migration
 
