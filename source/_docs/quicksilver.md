@@ -1,13 +1,13 @@
 ---
-title: Automate your Workflow with Quicksilver Platform Integration Hooks
+title: Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks
 description: Pantheon's Quicksilver Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
 categories: [developing]
 tags: [platform]
 ---
 
-Hook into platform workflows to automate your Pantheon workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the corresponding workflow. Find (and contribute!) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
+Hook into platform workflows to automate your Pantheon workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
-For example, committing a `pantheon.yml` file with the following contents to the root of your site's code repository, along with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) would post to Slack every time you deploy:
+For example, committing a `pantheon.yml` file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
 
 ```yaml
 api_version: 1
@@ -20,7 +20,7 @@ workflows:
         script: private/scripts/slack_deploy_notification.php
 ```
 
-If you added the following after the previous snippet, then we'll also run that script to automatically log the deployment to New Relic:
+If you add the following after the previous snippet, we'll also run that script to automatically log the deployment to New Relic:
 
 ```yaml
         type: webphp
@@ -30,9 +30,9 @@ If you added the following after the previous snippet, then we'll also run that 
 
 ## Workflow and Stage
 
-Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script, relative to root of your site's DOCROOT.
+Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's DOCROOT.
 
-## Type
+## Type of Scripts
 
 `webphp`: Runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/), and cannot be batched.
 
@@ -51,21 +51,21 @@ You can hook into the following workflows:
   </tr>
   <tr>
     <td><code>clear_cache</code></td>
-    <td><strong>Clear CMS and Edge Cache<strong></td>
+    <td>Clear CMS and Edge Cache</td>
   </tr>
   <tr>
     <td><code>clone_database</code></td>
-    <td><strong>Clone database between environments</strong></td>
+    <td>Clone database between environments</td>
     <td>target (to_env)</td>
   </tr>
   <tr>
     <td><code>deploy</code></td>
-    <td><strong>Deploy code to Test or Live</strong></td>
+    <td>Deploy code to Test or Live</td>
     <td>target</td>
   </tr>
   <tr>
     <td><code>deploy_product</code></td>
-    <td><strong>Create site</strong></td>
+    <td>Create site</td>
     </td><td>Dev</td>
     <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
   </tr>
@@ -89,11 +89,11 @@ You can hook into the following workflows:
 
 Use [Terminus](/docs/terminus) for debugging Quicksilver.
 
-### Stream new workflow to the console
+### Stream New Workflows to the Console
 
-Follow the workflow activity of your site with `terminus workflows watch`
+Follow the workflow activity of your site with `terminus workflows watch`.
 
-### Explore previous workflows
+### Explore Previous Workflows
 
 List and show previous workflows and their corresponding Quicksilver operations with the following commands:
 
@@ -103,11 +103,9 @@ List and show previous workflows and their corresponding Quicksilver operations 
 
 ## Troubleshooting
 
-Note that if you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy which contains those adjustments to pantheon.yml will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
-
-
+If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
 
 ## See Also
 
-- [The Pantheon.yml configuration file](/docs/pantheon.yml)
-- [Quicksilver Examples]((https://github.com/pantheon-systems/quicksilver-examples/))
+- [The Pantheon.yml Configuration File](/docs/pantheon-yml)
+- [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples/)
