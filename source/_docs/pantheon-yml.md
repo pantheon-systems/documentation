@@ -8,16 +8,6 @@ tags: [code, platform]
 Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, copy [`example.pantheon.yml`](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) to `pantheon.yml` in the root of your site's code repository.
 
 
-## Pantheon.yml Usage
-
-You can use the `pantheon.yml` file for:
-
-* [Advanced Site Configuration](#advanced-site-configuration)
-  - [Nested Docroot](#nested-docroot)
-  - [PHP Version](#php-version)
-  - [Protected paths](#protected-web-paths)
-* [Quicksilver Platform Integration Hooks](#quicksilver-platform-integration-hooks)
-
 ## Advanced Site Configuration
 
 ### Protected Web Paths
