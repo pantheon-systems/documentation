@@ -1,6 +1,6 @@
 ---
 title: Terminus, the Pantheon Command-Line Interface (CLI)
-description: Learn how to use Pantheon's CLI, Terminus, to develop your sites from the command line.
+description: Learn how to use Pantheon's CLI, Terminus, to develop your Drupal sites from the command line.
 categories: [developing]
 tags: [terminus, local]
 keywords: pantheon, terminus, command line, cli
@@ -21,7 +21,7 @@ A list of available commands is maintained at the [project wiki](https://github.
 Support is maintained at [https://github.com/pantheon-systems/terminus/issues](https://github.com/pantheon-systems/terminus/issues).
 
 ## Plugins
-Terminus now supports third-party plugins. Check the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Plugins) for details and a list of known plugins. 
+Terminus now supports third-party plugins. Check the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Plugins) for details and a list of known plugins.
 
 ## Further Reading
 We've included CLI instructions in many of our articles and guides.

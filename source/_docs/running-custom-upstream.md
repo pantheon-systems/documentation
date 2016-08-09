@@ -1,6 +1,6 @@
 ---
 title: Running a Custom Upstream on Pantheon
-description: Detailed information about running custom distributions.
+description: Detailed information about running custom distributions on Pantheon.
 categories: [managing]
 tags: [code, organizations, platform]
 keywords: p4a, pantheon for agencies, p4e, pantheon for enterprise, enterprise, organization, agency, products, custom upstream, custom upstreams, add product, add custom upstream, distribution, public distribution, private distribution, custom repo, custom repository, custom repos, custom repositories, organization distribution, organization upstream

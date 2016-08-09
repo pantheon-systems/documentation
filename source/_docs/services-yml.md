@@ -1,6 +1,6 @@
 ---
 title: Creating a services.yml File for Drupal 8
-description: Learn how to add a services.yml file for Drupal 8.
+description: Learn how to add a services.yml file for your Drupal 8 site.
 categories: [drupal]
 tags: [drupal-8, code]
 keywords: drupal, services.yml, yml file

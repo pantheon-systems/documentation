@@ -1,6 +1,6 @@
 ---
 title: Redis as a Caching Backend
-description: Understand how to use Redis as a caching mechanism for your Pantheon Drupal or WordPress ite.
+description: Understand how to use Redis as a caching mechanism for your Pantheon Drupal or WordPress site.
 categories: [developing]
 tags: [code, getting-started]
 keywords: redis, caching, what is redis, enable redis, redis command line, redis wordpress, how to use redis with drupal, redis drupal, how to use redis with drupal

@@ -1,6 +1,6 @@
 ---
 title: WordPress Known Issues
-description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress.
+description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
 categories: [wordpress]
 tags: [code, debug]
 keywords: wordpress, issues, table prefixes, updates, php, site, plugins
