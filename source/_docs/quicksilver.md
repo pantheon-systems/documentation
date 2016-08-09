@@ -30,7 +30,7 @@ If you add the following after the previous snippet, we'll also run that script 
 
 ## Workflow and Stage
 
-Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's DOCROOT.
+Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's docroot.
 
 ## Type of Scripts
 
