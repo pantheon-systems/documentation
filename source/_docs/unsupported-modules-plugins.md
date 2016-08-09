@@ -7,6 +7,11 @@ tags: [code, debug]
 This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform.
 We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support.
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+This is not a comprehensive list.  We add to it as problems are reported or fail internal testing, but it should not be assumed that all module and plugins *not* on this list work as expected.
+</div>
+
 ## Drupal Modules
 <hr>
 ### APC
