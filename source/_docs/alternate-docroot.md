@@ -1,5 +1,5 @@
 ---
-title: Serving Sites from an Alternate Docroot (Beta)
+title: Serving Sites from an Alternate Docroot
 description: Learn how to create an alternate docroot to serve your Pantheon site from.
 categories: [developing,sites]
 tags: [platform,code]
@@ -7,10 +7,6 @@ keywords: Composer, docroot
 contributors:
  - ataylorme
 ---
-<div class="alert alert-danger">
-<h4>Warning</h4>
-Serving sites from an alternate docroot is currently a beta feature and is not officially supported.
-</div>
 
 The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying an alternate docroot allows you to serve site files from the `web` subdirectory of your site's code repository.
 
