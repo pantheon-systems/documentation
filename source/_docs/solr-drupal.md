@@ -15,7 +15,7 @@ Use [one-click updates](/docs/upstream-updates) to make sure you are running the
 
 ### 2. Add Either the Apache Solr Search or Search API Solr Search Module
 
-Two contributed modules are supported by Pantheon that interface with Pantheon's Apache Solr service (you will need to install only one of these modules):
+Two contributed modules are supported by Pantheon that interface with Pantheon's Apache Solr service (you only need to install one of these modules):
 
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
@@ -35,7 +35,7 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
 
-**The Pantheon Apache Solr module requires the core Search module to be enabled** to have administrator permission granted for "Administer search". You will not be able to post `schema.xml` if the core Search module is disabled.
+**The Pantheon Apache Solr module requires that you enable the core Search module** to have administrator permission granted for "Administer search". You will not be able to post `schema.xml` if the core Search module is disabled.
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
@@ -62,7 +62,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-You must post the <code>schema.xml</code> in each environment (Dev, Test, Live) and also separately on any multidev environment(s) that you want to use Pantheon's Solr Service in.</div>
+You must post the <code>schema.xml</code> in each environment (Dev, Test, Live) and also separately on any Multidev environment that you want to use Pantheon's Solr Service in.</div>
 
 ### 5. Enable and Configure Your Solr Module
 
@@ -138,7 +138,7 @@ Exception: SolrPhpClient library not found! Please follow the instructions in se
 
 #### Did you post the schema into all your environments?
 
-It needs to be done for Dev, Test and Live individually. You can do this at `admin/config/search/pantheon`.
+It needs to be done for Dev, Test, and Live individually. You can do this at `admin/config/search/pantheon`.
 
 #### Re-Index Content
 
