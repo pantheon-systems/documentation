@@ -4,13 +4,9 @@ description: An up-to-date list of Drupal modules and WordPress plugins Pantheon
 categories: [developing]
 tags: [code, debug]
 ---
-This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform.
-We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support.
+This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform. This is not a comprehensive list, as we continually update it as problems are reported. If you are aware of any modules or plugins that do not work as expected, please contact our Support team.
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-This is not a comprehensive list.  We add to it as problems are reported or fail internal testing, but it should not be assumed that all module and plugins *not* on this list work as expected.
-</div>
+We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support.
 
 ## Drupal Modules
 <hr>
