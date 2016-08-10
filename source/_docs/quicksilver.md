@@ -79,7 +79,7 @@ You can hook into the following workflows:
       <tr>
       <td><code>sync_code</code></td>
       <td>Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard
-      <td>dev or Multidev </td>
+      <td>Dev or Multidev </td>
       <td></td>
       </tr>
       <tr>
