@@ -22,5 +22,3 @@ You are not able to switch upstreams after creating a site. You will need to exp
 Organizational and Partner upstreams are available under contractual terms. Please [create your agency organization](/docs/organizations/#create-an-organization) to start the process.
 
 When you are ready to start, please follow the instructions at [Adding Your Custom Upstream](/docs/custom-upstream).  
-
-If you already have an upstream on the platform, see our guidance for   [Managing Upstreams](/docs/running-custom-upstream).
