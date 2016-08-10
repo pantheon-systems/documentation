@@ -42,47 +42,54 @@ In the future we may add additional types.
 
 You can hook into the following workflows:
 
-<table class="tg">
-  <tr>
-    <th><strong>Workflow</strong></th>
-    <td><strong>Description</strong></th>
-    <th><strong>Location of webphp script runtime</strong></th>
-    <th><strong>Note</strong>
-  </tr>
-  <tr>
-    <td><code>clear_cache</code></td>
-    <td>Clear CMS and Edge Cache</td>
-  </tr>
-  <tr>
-    <td><code>clone_database</code></td>
-    <td>Clone database between environments</td>
-    <td>target (to_env)</td>
-  </tr>
-  <tr>
-    <td><code>deploy</code></td>
-    <td>Deploy code to Test or Live</td>
-    <td>target</td>
-  </tr>
-  <tr>
-    <td><code>deploy_product</code></td>
-    <td>Create site</td>
-    </td><td>Dev</td>
-    <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
-  </tr>
-  <tr>
-    <td><code>sync_code</code></td>
-    <td>Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard
-    <td>dev or Multidev</td>
-  </tr>
-
-  <tr>
-    <td><code>create_cloud_development_environment</code></td>
-    <td>Create Multidev environment</td>
-    <td>Multidev</td>
-    <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
-  </tr>
-
-</table>
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Workflow</th>
+        <th>Description</th>
+        <th>Location of webphp script runtime</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><code>clear_cache</code></td>
+      <td>Clear CMS and Edge Cache</td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>clone_database</code></td>
+      <td>Clone database between environments</td>
+      <td>target (to_env)</td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>deploy</code></td>
+      <td>Deploy code to Test or Live</td>
+      <td>target</td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>deploy_product</code></td>
+      <td>Create site</td>
+      <td>Dev</td>
+      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      </tr>
+      <tr>
+      <td><code>sync_code</code></td>
+      <td>Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard
+      <td>dev or Multidev </td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>create_cloud_development_environment</code>
+      <td>Create Multidev environment</td>
+      <td>Multidev</td>
+      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      </tr>
+    </tbody>
+  </table>
 
 
 ## Debugging via Terminus
