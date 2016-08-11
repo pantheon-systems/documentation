@@ -5,7 +5,7 @@ categories: [developing]
 tags: [code, platform]
 ---
 
-Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, copy [`example.pantheon.yml`](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) to `pantheon.yml` in the root of your site's code repository.
+Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, copy [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) to `pantheon.yml` in the root of your site's code repository.
 
 
 ## Advanced Site Configuration
@@ -42,7 +42,7 @@ api_version: 1
 web_root: true
 ```
 
-The name of the nested directory is not configurable. 
+The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from an Alternate Docroot](/docs/alternate-docroot).
 
