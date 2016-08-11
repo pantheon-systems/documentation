@@ -39,7 +39,7 @@ If you'd like to nest your docroot one level beneath your code repository in a d
 ```yaml
 api_version: 1
 
-web_root: true
+web_docroot: true
 ```
 
 The name of the nested directory is not configurable.
