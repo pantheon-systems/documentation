@@ -13,7 +13,7 @@ Verify current PHP settings from the Site Dashboard by clicking **Settings** > *
 ## Configure PHP Version
 PHP versions are managed in version control via the `pantheon.yml` configuration file in the root directory of your code repository. Configure the PHP version by including a line like:
 
-```php
+```yaml
 php_version: 5.6
 ```
 
