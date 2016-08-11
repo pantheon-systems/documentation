@@ -94,7 +94,7 @@ You can hook into the following workflows:
 
 ## Debugging via Terminus
 
-Use [Terminus](/docs/terminus) for debugging Quicksilver.
+Use the following [Terminus](/docs/terminus) for debugging Quicksilver.
 
 ### Stream New Workflows to the Console
 

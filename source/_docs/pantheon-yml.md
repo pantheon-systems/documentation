@@ -5,7 +5,7 @@ categories: [developing]
 tags: [code, platform]
 ---
 
-Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, copy [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) to `pantheon.yml` in the root of your site's code repository.
+Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, create a new file named `pantheon.yml` in the root of your site's code repository. Refer to [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) for example configurations. Refer to the [Pantheon Cloud Integration Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for example scripts for use with Quicksilver Platform Hooks.
 
 
 ## Advanced Site Configuration
@@ -49,7 +49,7 @@ For more information, see [Serving Sites from an Alternate Docroot](/docs/nested
 
 ### PHP Version
 
-Include `php_version` in your `pantheon.yml` to set the PHP version. Your PHP version will be managed in version control and deployed along with the rest of your site's code. This encourages a good best practice of testing before making a change on your Live site.
+Add `php_version` to the top level of the `pantheon.yml` file to configure the PHP version. Your PHP version will be managed in version control and deployed along with the rest of your site's code. This encourages a good best practice of testing before making a change on your Live site.
 
 ```yaml
 php_version: 7.0
@@ -79,5 +79,5 @@ remote: Valid versions are: 1
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Please refer to the examples above for exact syntax.
 
 ### See Also
-[Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver)  
-[Upgrade PHP Versions](/docs/php-versions)
+- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver)  
+- [Upgrade PHP Versions](/docs/php-versions)
