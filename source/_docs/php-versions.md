@@ -11,18 +11,19 @@ Upgrading your site's PHP version will improve the security, performance, and su
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 ## Configure PHP Version
-PHP versions are managed in version control via the `pantheon.yml` configuration file in the root directory of your code repository. Configure the PHP version by including a line like:
+Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. Your `pantheon.yml` file will look like the following:
 
 ```yaml
-php_version: 5.6
+api_version: 1
+
+php_version: 7.0
 ```
 
-Configuration changes take effect once modifications to the `pantheon.yml` file have been committed and deployed to an environment.
+Now your site’s PHP version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
 
-For more information, see [The pantheon.yml Configuration File](/docs/pantheon-yml/).
 
 ### Available PHP Versions
-Available PHP versions are 5.3, 5.5 (default), 5.6, and 7.0.
+Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -39,4 +40,5 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
 * [Debugging Sites with Log Files](/docs/debug-log-files/)
 * [PHP Errors and Exceptions](/docs/php-errors/)
+* [The pantheon.yml Configuration File](/docs/pantheon-yml/)
 * [Securely Working with phpinfo](/docs/phpinfo/)
