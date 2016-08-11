@@ -44,7 +44,7 @@ web_root: true
 
 The name of the nested directory is not configurable.
 
-For more information, see [Serving Sites from an Alternate Docroot](/docs/alternate-docroot).
+For more information, see [Serving Sites from an Alternate Docroot](/docs/nested-docroot).
 
 
 ### PHP Version
