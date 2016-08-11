@@ -15,8 +15,6 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
 
-Any non-web scripts, such as [Pantheon Quicksilver scripts](https://github.com/pantheon-systems/quicksilver-examples), should be kept outside of the docroot as well.
-
 ## One-time setup
 
 Below we recommend using Git, but you can also use SFTP to set your site up for nested docroot.
