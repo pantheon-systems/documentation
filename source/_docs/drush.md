@@ -183,6 +183,13 @@ While we have the full spectrum of Drush core already available for your use, yo
 If you have successfully set up [Terminus](/docs/terminus/), you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
 
 ## Drush Alias Strict Control
+
+### For Drush 8
+
+From your Pantheon home, correct the URI in the .drush/drushrc.php file like so: `$options['l'] = "http://www.the-correct-uri.com";`
+
+### Before Drush 8
+
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
 If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.in` to change the URI for your specific Pantheon site:
