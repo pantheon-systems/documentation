@@ -20,21 +20,25 @@ This is especially useful for third party dependencies, such as those installed 
 Below we recommend using Git, but you can also use SFTP to set your site up for nested docroot.
 
 ### Define Nested Docroot in pantheon.yml
+1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
-1. Clone your website locally with Git. For details, see [Starting with Git](https://pantheon.io/docs/git/).
-2. Create a `pantheon.yml` file if it doesn't already exist.
-3. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
+ ```
+ $ terminus site set-connection-mode --mode=git
+ ```
+
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
+3. Create a `pantheon.yml` file if it doesn't already exist.
+4. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
   ```
     api_version: 1
 
     web_docroot: true
   ```
 
-4. Add, commit, and push the `pantheon.yml` file with Git.
+5. Add, commit, and push the `pantheon.yml` file with Git.
 
 ### Create a New Site with a Nested Docroot
-
-If your [custom upstream](/docs/custom-upstream/) has a `pantheon.yml` that enables nested docroot and the CMS code is in a `web` subdirectory, you are good to go!
+If your site utilizes a [custom upstream](/docs/custom-upstream/) with a `pantheon.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site to Use a Nested Docroot
 
