@@ -8,7 +8,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_root: true` in your [pantheon.yml](/docs/pantheon-yml) file allows you to serve site files from the `web` subdirectory of your site's code repository.
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml) file allows you to serve site files from the `web` subdirectory of your site's code repository.
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
@@ -27,7 +27,7 @@ Below we recommend using Git, but you can also use SFTP to set your site up for 
   ```
     api_version: 1
 
-    web_root: true
+    web_docroot: true
   ```
 
 4. Add, commit, and push the `pantheon.yml` file with Git.
