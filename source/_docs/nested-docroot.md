@@ -1,5 +1,5 @@
 ---
-title: Serving Sites from the `web` Subdirectory
+title: Serving Sites from the Web Subdirectory
 description: Learn how to create an nested docroot to serve your Pantheon site from.
 categories: [developing,sites]
 tags: [platform,code]
@@ -15,31 +15,31 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
 
-## One-time setup
+## One-Time Setup
 
 Below we recommend using Git, but you can also use SFTP to set your site up for nested docroot.
 
 ### Define Nested Docroot in pantheon.yml
 
-- Clone your website locally with Git. For details, see [Starting with Git](https://pantheon.io/docs/git/).
-- Create a `pantheon.yml` file if it doesn't already exist.
-- Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`, for example:
+1. Clone your website locally with Git. For details, see [Starting with Git](https://pantheon.io/docs/git/).
+2. Create a `pantheon.yml` file if it doesn't already exist.
+3. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
   ```
     api_version: 1
 
     web_root: true
   ```
 
-- Add, commit, and push the `pantheon.yml` file with Git.
+4. Add, commit, and push the `pantheon.yml` file with Git.
 
-### Create a new site with a nested docroot
+### Create a New Site with a Nested Docroot
 
-If your custom upstream has a `pantheon.yml` that enables nested docroot and the CMS code is in a `web` subdirectory then you should be good to go!
+If your [custom upstream](/docs/custom-upstream/) has a `pantheon.yml` that enables nested docroot and the CMS code is in a `web` subdirectory, you are good to go!
 
-### Converting an existing site to use a nested docroot
+### Convert an Existing Site to Use a Nested Docroot
 
 
-You'll need to move CMS code into the `web` subdirectory. Get started with the one-liners below:
+You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below:
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -67,19 +67,15 @@ You'll need to move CMS code into the `web` subdirectory. Get started with the o
   </div>
 </div>
 
-Of course, if you'd prefer to move the CMS code manually instead of using the one-liners above, you may do so.
-
 The idea here is that `find . -type f -maxdepth` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
-
-
 
 ## Troubleshooting
 
-## Quicksilver Script Location
+#### Quicksilver Script Location
 If you are using a Quicksilver platform hook with the type `webphp`, make sure that the path to the script is relative to the `web` docroot and not the project root.
 
-For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php` the file needs to be located at `web/private/scripts/my_quicksilver_script.php`. This is because `webphp` scripts are run with Nginx, which is serving from the nested docroot.
+For example, if your `pantheon.yml` has a script location definition of `private/scripts/my_quicksilver_script.php`, the file needs to be located at `web/private/scripts/my_quicksilver_script.php`. This is because `webphp` scripts are run with Nginx, which is serving from the nested docroot.
 
-## Can I specify a subdirectory other than `web`?
+#### Can I specify a subdirectory other than web?
 
-The directory name is not configurable, but, you can [create a symlink](/docs/assuming-write-access/#create-a-symbolic-link) from some other directory to `web`.
+The directory name is not configurable, but you can [create a symlink](/docs/assuming-write-access/#create-a-symbolic-link) from some other directory to `web`.
