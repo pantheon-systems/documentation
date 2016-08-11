@@ -8,26 +8,26 @@ keywords: php, php version, php versions, how to change php version,  change php
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 20% performance gains after upgrading](https://pantheon.io/blog/choose-your-own-php-adventure-php-55-now-available-20-performance-gains).
 
 ## Verify Current PHP Versions
-Verify current PHP versions for site environments from the Site Dashboard by clicking **Settings** > **PHP version**. The site default PHP version is applied to every environment unless a PHP version for that environment is explicitly selected.
+Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Running different versions of PHP per environment is risky and should only be done while you resolve compatibility issues. If you are not working on PHP version compatibility specifically, you should restore all environments to the default value.
-</div>
+## Configure PHP Version
+PHP versions are managed in version control via the `pantheon.yml` configuration file in the root directory of your code repository. Configure the PHP version by including a line like:
 
-## Configure the PHP Version via pantheon.yml
-
-You can configure the PHP version in the `pantheon.yml` file so that it's managed in version control by adding a `pantheon.yml` file to the root of your codebase that includes a line like:
-
-```
+```php
 php_version: 5.6
 ```
 
-The available PHP versions are 5.3, 5.5, 5.6, and 7.0. **Note:** Drupal 6 sites are only compatible with PHP 5.4 and below.
+Configuration changes take effect once modifications to the `pantheon.yml` file have been committed and deployed to an environment.
 
-For more information on configuring the `pantheon.yml` file, see [this article](/docs/pantheon-yml/).
+For more information, see [The pantheon.yml Configuration File](/docs/pantheon-yml/).
 
+### Available PHP Versions
+Available PHP versions are 5.3, 5.5 (default), 5.6, and 7.0.
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+Drupal 6 sites are only compatible with PHP 5.4 and below.
+</div>
 
 ## Resolve PHP Version Compatibility Issues
 
