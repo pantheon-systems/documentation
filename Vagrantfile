@@ -32,6 +32,12 @@ Vagrant.configure("2") do |config|
   su vagrant -c 'cd #{path} && composer install && bundle && npm install;
   grunt
   bin/sculpin generate && ln -sf #{path}/source #{path}/output_dev
+  for file in output_dev/docs/changelog/page/*html
+  do
+    name="$(basename "$file" .html)"
+    mkdir -p output_dev/docs/changelog/page/"$name"
+    mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"
+  done
   bin/sculpin serve &
   disown'
 SCRIPT

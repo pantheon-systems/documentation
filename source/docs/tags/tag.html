@@ -23,4 +23,5 @@ generator: docs_tag_index
 </header>
   {% for doc in page.tag_docs %}
     <a href="{{ doc.url }}">{{ doc.title }}</a><br>
+    <p>{{ doc.description }}</p>
   {% endfor %}

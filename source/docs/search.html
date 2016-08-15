@@ -4,16 +4,15 @@ title: Search
 layout: default
 ---
   <div class="col-md-8 search-results" style="margin-left: 50px;">
-  <script>
-    function() {
-      var cx = '016844496173863628783:moj1j4obfwm';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = '//cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    }();
-  </script>
+    <script>
+    function parseParamsFromUrl() {
+      var queryString = window.location.search;
+      queryString = queryString.substring(6);
+      queryString = queryString.split("+").join(" ");
+      return queryString;
+    }
+    var urlParams = parseParamsFromUrl();
+    document.getElementById('piodocsearch').setAttribute('value', urlParams);
+</script>
   <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
 </div>
