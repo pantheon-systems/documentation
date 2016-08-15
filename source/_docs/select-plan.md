@@ -32,4 +32,4 @@ If you downgrade from a paid plan to sandbox, the <a href="/docs/">domains</a> y
 
 ## Manage Site Settings
 
-After you get to your site's Dashboard, click the **Settings** link in the upper-right corner. This is where you can select add ons and PHP versions.
+After you get to your site's Dashboard, click the **Settings** link in the upper-right corner. This is where you can select add ons and see your current PHP version.
