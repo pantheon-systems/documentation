@@ -1,6 +1,6 @@
 ---
 title: Installing Redis on WordPress
-description: A walkthrough of how to enable WP-Redis on your Pantheon Drupal or WordPress site.
+description: A walkthrough of how to enable WP-Redis on your Pantheon WordPress site.
 categories: [wordpress]
 tags: [code]
 keywords: enable redis, add redis, redis on wordpress, redis for wordpress, using redis on wordpress, configure redis on wordpress, configure redis

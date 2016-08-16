@@ -5,78 +5,114 @@ categories: [developing]
 tags: [platform]
 ---
 
-Pantheon's Quicksilver Platform Hooks system allows users to encode reactions to specific platform workflows, enabling the functionality professionals expect, including chat-ops, database sanitization, deployment logging, and initiating automated testing operations with a CI server.
+Hook into platform workflows to automate your Pantheon workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
-The current release of Quicksilver supports one utility operation: `webphp`. This invokes a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/#timeouts-that-are-not-configurable), and cannot be batched.
+For example, committing a `pantheon.yml` file with the following contents to the root of your site's code repository with the script adapted from [slack_notification](https://github.com/pantheon-systems/quicksilver-examples/tree/master/slack_notification) will post to Slack every time you deploy:
 
-## How Quicksilver Platform Hooks Works
+```yaml
+api_version: 1
 
-1. You trigger a Quicksilver-enabled workflow.
-2. The platform runs Quicksilver operations identified in a `pantheon.yml` file stored in your codebase.
-3. You can get debugging output via [Terminus, the Pantheon CLI](/docs/terminus/).
-
-## Add a Valid pantheon.yml File
-Create a `pantheon.yml` file in the root of your code repository. Whether you commit this file locally or create it via an SFTP connection, the platform will validate the YAML prior to receiving the commit. Uncommitted `pantheon.yml` files on the Development environment have no effect.
-
-Quicksilver scripts can respond automatically to a handful of workflows on the Pantheon platform. Check back for more Quicksilver-enabled Workflows.
-
-## Quicksilver-Enabled Workflows
-Initiating the following workflows will trigger the scripts identified in your `pantheon.yml` file:
-
-`deploy`: code is deployed to Test or Live. webphp scripts run on the target environment.
-
-`sync_code`: code is pushed via Git or committed in the Pantheon Dashboard. webphp scripts run on the committed-to environment (dev or multidev).
-
-`clone_database`: data is cloned between environments. webphp scripts run on the target (to_env) environment.
-
-`clear_cache`: the most popular workflow of them all! webphp scripts run on the cleared environment.
-
-### Pantheon YAML
-Let's explore a valid `pantheon.yml` file to learn more:
-
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml?footer=minimal"></script>
-
-Note that if you want to hook onto deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy which contains those adjustments to pantheon.yml will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
-
-**When Updating:**  
-**pantheon.yml**: Updates will initiate on the next sequential workflow, not post-deploy.  
-**scripts**:  Updates will initiate post-deploy.  
-**script location**: Updates will initiate on next sequential workflow, not post-deploy.
-
-**When Adding:**  
-**pantheon.yml**: Updates will initiate on the next sequential workflow, not post-deploy.  
-**scripts**: Updates will initiate on the next sequential workflow.  
-
-## Terminus Commands
-
-To use Quicksilver Platform Hooks, it's recommended that you are familiar with Terminus. Get the latest [release](https://github.com/pantheon-systems/cli/releases), and a few new commands are included:
-
-```bash
-$ terminus help workflows
-##NAME
-    terminus workflows
-
-##DESCRIPTION
-    Actions to be taken on an individual site
-
-##SYNOPSIS
-    <command>
-
-##SUBCOMMANDS
-    list
-        List workflows for a site
-    show
-        Show operation details for a workflow
-    watch
-        Streams new and finished workflows to the console
+workflows:
+  deploy:
+    after:
+        type: webphp
+        description: Post deployment notification to Slack
+        script: private/scripts/slack_deploy_notification.php
 ```
 
-The `list` and `show` commands allow you to explore previous workflows and their Quicksilver operations. The `watch` command is a developers best friend; it will set up Terminus to automatically "follow" the workflow activity of your site, dumping back any Quicksilver output along with them.
+If you add the following after the previous snippet, we'll also run that script to automatically log the deployment to New Relic:
 
-## Example Scripts
+```yaml
+        type: webphp
+        description: Log to New Relic
+        script: private/scripts/new_relic_deploy.php
+```
 
-We have a few example `webphp` scripts you can start with at [pantheon-systems/quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples):
+## Workflow and Stage
 
-- [Post to Slack](https://github.com/pantheon-systems/quicksilver-examples/blob/master/slack_notification)
-- [Post Deployment Markers to New Relic](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy)
-- [Sanitize Database After Clone](https://github.com/pantheon-systems/quicksilver-examples/blob/master/db_sanitization)
+Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's docroot.
+
+## Type of Scripts
+
+`webphp`: Runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/), and cannot be batched.
+
+In the future we may add additional types.
+
+## Hooks
+
+You can hook into the following workflows:
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Workflow</th>
+        <th>Description</th>
+        <th>Location of webphp script runtime</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><code>clear_cache</code></td>
+      <td>Clear CMS and Edge Cache</td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>clone_database</code></td>
+      <td>Clone database between environments</td>
+      <td>target (to_env)</td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>deploy</code></td>
+      <td>Deploy code to Test or Live</td>
+      <td>target</td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>deploy_product</code></td>
+      <td>Create site</td>
+      <td>Dev</td>
+      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      </tr>
+      <tr>
+      <td><code>sync_code</code></td>
+      <td>Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard
+      <td>Dev or Multidev </td>
+      <td></td>
+      </tr>
+      <tr>
+      <td><code>create_cloud_development_environment</code>
+      <td>Create Multidev environment</td>
+      <td>Multidev</td>
+      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+## Debugging via Terminus
+
+Use the following [Terminus](/docs/terminus) for debugging Quicksilver.
+
+### Stream New Workflows to the Console
+
+Follow the workflow activity of your site with `terminus workflows watch`.
+
+### Explore Previous Workflows
+
+List and show previous workflows and their corresponding Quicksilver operations with the following commands:
+
+* `terminus workflows list`
+* `terminus workflow show`
+
+
+## Troubleshooting
+
+If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
+
+## See Also
+
+- [The Pantheon.yml Configuration File](/docs/pantheon-yml)
+- [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples/)

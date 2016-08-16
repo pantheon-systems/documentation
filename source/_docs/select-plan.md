@@ -1,6 +1,6 @@
 ---
 title: Selecting a Plan
-description: Learn the various Pantheon plans offered and understand which plan meets your unique needs.
+description: Learn the various Pantheon plans offered for your Drupal or WordPress sites.
 categories: [managing]
 tags: [platform]
 keywords: plan, how to select a plan, how to select a paid plan, what plans are available, how to view site plan, how to see plan, how to change plan, changing plans, change plan, select plan, selecting a plan
@@ -32,4 +32,4 @@ If you downgrade from a paid plan to sandbox, the <a href="/docs/">domains</a> y
 
 ## Manage Site Settings
 
-After you get to your site's Dashboard, click the **Settings** link in the upper-right corner. This is where you can select add ons and PHP versions.
+After you get to your site's Dashboard, click the **Settings** link in the upper-right corner. This is where you can select add ons and see your current PHP version.

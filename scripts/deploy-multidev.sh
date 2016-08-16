@@ -58,6 +58,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
 
   # Update CTA edit link so that the current branch is used
   sed -i '14s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
@@ -66,6 +67,14 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
   # Regenerate sculpin to reflect new redirect logic
   bin/sculpin generate --env=prod
+
+  # Migrate paginated files to avoid .html within the URLs
+  for file in output_prod/docs/changelog/page/*html
+  do
+    name="$(basename "$file" .html)"
+    mkdir -p output_prod/docs/changelog/page/"$name"
+    mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
+  done
 
   # rsync output_prod/* to Valhalla
   rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/

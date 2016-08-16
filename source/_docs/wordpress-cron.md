@@ -1,6 +1,6 @@
 ---
 title: Cron for WordPress
-description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress Site.
+description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress site.
 categories: [wordpress]
 tags: [code]
 keywords: wordpress, cron, wp-cron

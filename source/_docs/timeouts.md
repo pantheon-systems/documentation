@@ -1,6 +1,6 @@
 ---
 title: Timeouts on Pantheon
-description: Detailed information about timeout errors.
+description: Detailed information about timeout errors on your Drupal site.
 categories: [developing]
 tags: [code, debug]
 keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr timeout, user-configurable timeouts
