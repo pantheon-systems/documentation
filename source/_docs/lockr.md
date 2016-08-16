@@ -158,4 +158,4 @@ Lockr manages keys on a “per environment" basis, which helps eliminate the pot
 If you're encrypting sensitive information in your production environment, that data should not be decrypted anywhere but in production. With Lockr, data is encrypted in production with a production key that is not retrievable outside that environment. When a database is cloned to development, the keys that Drupal has access to cannot decrypt the data.
 
 #### Who do I contact for Lockr support?
-You can email the Lockr Support Team at [support@lockr.io](support@lockr.io) or get real-time support on Lockr's [Slack channel](http://slack.lockr.io).
+You can email the Lockr Support Team at support@lockr.io or get real-time support on Lockr's [Slack channel](http://slack.lockr.io).
