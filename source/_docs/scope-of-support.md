@@ -1,6 +1,6 @@
 ---
 title: Scope of Support
-description: Understand how Pantheon Website Management Platform's support team can help you.
+description: Understand how Pantheon's support team can help you.
 categories: [managing]
 tags: [code, debug, featured]
 keywords: support, scope, customer support, getting started
@@ -10,7 +10,7 @@ We love helping developers succeed! We also have limits to the support we can pr
 - We don't touch client code.
 Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) with Git.
 
-- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version. 
+- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version.
 
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 

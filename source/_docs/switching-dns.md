@@ -1,6 +1,6 @@
 ---
 title: Switching DNS From One Pantheon Site to Another
-description: Learn how to change DNS details between Pantheon sites.
+description: Learn how to change DNS details between Pantheon Drupal or WordPress sites.
 categories: [developing]
 tags: [create, domains]
 ---

@@ -1,6 +1,6 @@
 ---
 title: The Site Dashboard
-description: Learn how to use the Pantheon Site Dashboard to build and manage your sites.
+description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
 categories: [managing]
 tags: [platform, getting-started]
 keywords: sites, dashboard, pantheon, get started, settings, new site

@@ -1,6 +1,6 @@
 ---
 title: Managing Drupal and WordPress Subsites Under a Single Domain
-description: Best practices for having subsites on one domain.
+description: Best practices for having Drupal or WordPress subsites on one domain.
 categories: [managing]
 tags: [code, platform]
 keywords: drupal, multisite, domains, wordpress, single domain

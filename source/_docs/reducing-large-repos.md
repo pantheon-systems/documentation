@@ -1,6 +1,6 @@
 ---
 title: Reducing Large Repositories
-description: Learn how to reduce the size of large site repositories for optimized performance and reliability on Pantheon.
+description: Learn how to reduce the size of large Drupal or WordPress site repositories for optimized performance and reliability on Pantheon.
 categories: [developing]
 contributors: curmudgeon
 tags: [code, local]
@@ -64,12 +64,12 @@ You can output the size of your repository by running [`git count-objects -vH`](
  This may take hours to complete.
 
 8. Push your local changes to Pantheon:
- 
+
  ```
  git push origin --force --all
  git push origin --force --tags
  ```
- 
+
  In some scenarios, `git push origin --force --tags` may throw an error. The current workaroud is to delete the tags remotely using `git push origin :refs/tags/[tag]`
 
 
