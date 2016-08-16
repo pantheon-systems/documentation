@@ -13,7 +13,7 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
-You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make you are running Pressflow core. This is a requirement.</div>
+You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</div>
 
 ## Pantheon Articles on settings.php
 
