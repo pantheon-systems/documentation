@@ -15,7 +15,24 @@ Site administrators have the ability to control how and where their sensitive ke
 
 ## Benefits of Lockr
 
-By combining a simple-to-use developer interface with a managed scalable cloud key management system, Lockr allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite modules and plugins. Offsite API and encryption key management delivers best-practice security to help sites comply with HIPAA, FERPA, and FISMA. Development use of Lockr in the Dev, Test, and Multidev environments is always free.  
+By combining a simple-to-use developer interface with a managed scalable cloud key management system, Lockr allows applications of all sizes to meet industry standards for key management. Unlike other key managers, Lockr offers additional layers of security and system monitoring, no ongoing maintenance, and continuous development for integration with your favorite modules and plugins. Offsite API and encryption key management delivers best-practice security to help sites comply with HIPAA, FERPA, and FISMA. Development use of Lockr in the Dev, Test, and Multidev environments is always free.
+
+## Install Lockr via the Lockr Terminus Plugin
+
+[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/docs/terminus/) command. To enable the Terminus plugin, complete these steps in your local environment:
+
+1. Clone [the Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) into the `~/terminus/plugins` directory on your local environment.
+2. Log in with Terminus.
+```nohighlight
+terminus auth login [<email>] [--password=<value>] [--machine-token=<value>]
+```
+3. Run the following command:
+```nohighlight
+terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
+```
+4. Select the site for the install. It will now detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
+
+It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr. 
 
 ## WordPress Installation
 Lockr is automatically configured to secure API keys for numerous third-party plugins for seamless integration and securing of your keys.
@@ -26,7 +43,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
  ```nohighlight
  terminus site set-connection-mode --mode=sftp
  ```
-2. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with [Terminus](/docs/terminus):
+2. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/docs/terminus):
 
  ```nohighlight
  terminus wp 'plugin install lockr --activate'
@@ -113,23 +130,6 @@ This command registers the site with Lockr to the email address provided. The pa
 terminus drush 'lockr-lockdown'
 ```
 Run this command and Lockr will go to a [patch library](https://github.com/lockr/lockr-patches/tree/drupal7) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
-
-## Install the Lockr Terminus Plugin
-
-Lockr has a plugin for [Terminus](/docs/terminus/) that you can install with a single command. To enable the Terminus plugin, complete these steps in your local environment:
-
-1. Clone the Terminus plugin into the `~/terminus/plugins` directory on your local environment.
-2. Log in with Terminus.
-```nohighlight
-terminus auth login [<email>] [--password=<value>] [--machine-token=<value>]
-```
-3. Run the following command:
-```nohighlight
-terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
-```
-4. Select the site for the install. It will now detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
-
-It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered.
 
 ## Frequently Asked Questions (FAQs)
 
