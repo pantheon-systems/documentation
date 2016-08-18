@@ -16,12 +16,15 @@ Priority Enterprise Support is great for:
 
 If you're interested in adding the Priority Enterprise Support feature, contact [Sales](https://pantheon.io/contact-us).
 
+## Pantheon On-Call Support Feature
+Pantheon On-Call is our highest level of support. It is our commitment to responding rapidly to any team emergency, 24/7/365. Pantheon On-Call should be used for critical business issues and emergencies like site downtime, problems with a launch, or workflow issues that are blocking your team. Once triggered, the issue enters our highest tier of support, paging our team if necessary, to receive an immediate response and escalated attention.
+
+Pantheon On-Call is included in your site’s Elite plan or as part of your organization’s Priority Enterprise Support package.
+
 ## Support Ticket Options
 On the Support page, you'll have two options for submitting tickets: "Open support ticket" and "On-Call Support".
 
 ![Priority Enterprise Support Options](/source/docs/assets/images/pes-options.png)
-
-
 
 ### Submit a Regular Support Ticket
 You should submit this type of ticket for issues or questions that do not involve site downtime. Your ticket will be prioritized higher in the queue and Support will typically respond within two hours during regular business hours.
@@ -53,18 +56,3 @@ You should only open an emergency ticket when your site is down or there is a bu
  - The error message, if applicable.
  - Links to screenshots or screencasts of the behavior, if necessary.
 7. Click **Submit On-call Ticket**.
-
-## On-Call Support for Elite Plans
-If you have an Elite plan, on-call support is available at the site level.
-
-1. From your Site Dashboard, click **Support**.
-2. Click **Trigger On-Call Support**.
-3. Enter a subject (summary of your issue).
-4. Enter the phone number you'd like the on-call engineer to call.
-5. Provide important details in your request:
- - Give the steps to reproduce the issue, including URLs or paths to files.
- - The environment being affected (Dev/Test/Live), if applicable.
- - When the issue began.
- - The error message, if applicable.
- - Links to screenshots or screencasts of the behavior, if necessary.
-6. Click **Submit On-call Ticket**.
