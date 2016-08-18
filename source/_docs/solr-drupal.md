@@ -13,9 +13,9 @@ This will provision Apache Solr containers for every environment for your site. 
 ### 1. Apply Upstream Updates
 Use [one-click updates](/docs/upstream-updates) to make sure you are running the latest version of Drupal core.
 
-### 2. Add Apache Solr Search or Search API Solr Search Module
+### 2. Add Either the Apache Solr Search or Search API Solr Search Module
 
-Two contributed modules are supported by Pantheon:
+Two contributed modules are supported by Pantheon that interface with Pantheon's Apache Solr service (you only need to install one of these modules):
 
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
@@ -35,7 +35,7 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
 
-The Pantheon Apache Solr module requires the core Search module to have administrator permission granted for "Administer search". You will not be able to post `schema.xml` if the core Search module is disabled.
+**The Pantheon Apache Solr module requires that you enable the core Search module** to have administrator permission granted for "Administer search". You will not be able to post `schema.xml` if the core Search module is disabled.
 
 Once enabled, click **Configure**, or navigate to **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**.
 
@@ -46,34 +46,39 @@ The next step is to post the `schema.xml`, which describes Drupal fields to the 
 
 ![Solr configuration schema](/source/docs/assets/images/solr-config-schema.png)  
 
-Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr) and Solr version (3.5.0). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
+Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
 
 Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
 ```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
- // set schema
- $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
- //or if you have a contrib folder for modules use
- //$conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
+ // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
+ // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
+ // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/search_api_solr/solr-conf/solr-3.x/schema.xml';
+ // or if you have a contrib folder for modules use
+ // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
+ // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/search_api_solr/solr-conf/solr-3.x/schema.xml';
 }
 ```
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-You must post the <code>schema.xml</code> in each environment (Dev, Test, and Live) that you want to use Pantheon's Solr Service in.</div>
+You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.</div>
 
 ### 5. Enable and Configure Your Solr Module
 
-#### Apache Solr Search (apachesolr)
+You should have installed only one of these modules and will need to enable only one. 
+
+#### Enabling Apache Solr Search (apachesolr)
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
  ![Enable Solr module](/source/docs/assets/images/enable-solr-module.png)
+ 
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
  ![Configure Solr Settings](/source/docs/assets/images/apache-solr-module-config.png)
 
 Note that the default connection parameters are correct and do not need changing. After this point, your configuration and settings will be the same as any generic Apache Solr use case.
 
-#### Search API Solr Search (search\_api\_solr)
+#### Enabling Search API Solr Search (search\_api\_solr)
 
 Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.  
  ![Enable Solr Search required modules](/source/docs/assets/images/enable-solr-required.png)
@@ -91,7 +96,8 @@ The Pantheon Solr module provides several interfaces for troubleshooting the hea
 This interface reports what the last schema that was posted to the service and whether the service itself responds to a ping.  
 
 **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**
- ![Pantheon Apache Solr status](/source/docs/assets/images/solr-status.png)
+
+![Pantheon Apache Solr status](/source/docs/assets/images/solr-status.png)
 
 ### Execute Query
 
@@ -132,7 +138,7 @@ Exception: SolrPhpClient library not found! Please follow the instructions in se
 
 #### Did you post the schema into all your environments?
 
-It needs to be done for Dev, Test and Live individually. You can do this at `admin/config/search/pantheon`.
+It needs to be done for Dev, Test, and Live individually. You can do this at `admin/config/search/pantheon`.
 
 #### Re-Index Content
 
