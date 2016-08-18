@@ -62,7 +62,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-You must post the <code>schema.xml</code> in each environment (Dev, Test, Live) and also separately on any Multidev environment that you want to use Pantheon's Solr Service in.</div>
+You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.</div>
 
 ### 5. Enable and Configure Your Solr Module
 
