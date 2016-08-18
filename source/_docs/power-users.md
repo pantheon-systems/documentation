@@ -25,4 +25,4 @@ The Power Users community is an excellent way to bounce ideas off other expert d
 
 If you have a Google account you can join via the [group page](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users), which also allows you to browse and interact via the web.
 
-You can also subscribe with any email address by sending an message to [power-users+subscribe@pantheon.io](mailto:power-users+subscribe@pantheon.io).
+You can also subscribe with any email address by sending a message to [power-users+subscribe@pantheon.io](mailto:power-users+subscribe@pantheon.io).
