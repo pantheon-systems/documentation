@@ -54,7 +54,7 @@ Add `php_version` to the top level of the `pantheon.yml` file to configure the P
 ```yaml
 php_version: 7.0
 ```
-For more information, see [Upgrade PHP Versions](/docs/php-versions). Note if you are upgrading to PHP 7 you may need to make changes to your sites codebase for compatibility. Drupal users will also need to [switch to Drush version 7 or higher](https://pantheon.io/docs/drush-versions/#modifying-default-drush-version). 
+If you are upgrading to PHP 7, you may need to make changes to your site's codebase for compatibility. If you use Drupal, you need to [switch to Drush version 7 or higher](https://pantheon.io/docs/drush-versions/#modifying-default-drush-version). For more information, see [Upgrade PHP Versions](/docs/php-versions).
 
 ## Quicksilver Platform Integration Hooks
 
