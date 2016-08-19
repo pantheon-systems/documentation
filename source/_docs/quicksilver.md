@@ -113,7 +113,7 @@ List and show previous workflows and their corresponding Quicksilver operations 
 If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
 
 ### Deploying Configuration Changes to Multidev
-If a `pantheon.yml` file **does not** exist on the Dev environment, configuration changes will not be detected upon initial commit to a Multidev environment.
+If a `pantheon.yml` file **does not** exist on the Dev environment, configuration changes will not be detected when creating a Multidev environment from an existing git branch that includes a `pantheon.yml` file.
 
 As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
