@@ -41,7 +41,7 @@ You should submit this type of ticket for issues or questions that do not involv
  - Links to screenshots or screencasts of the behavior, if necessary.
 6. Click **Open Ticket**.
 
-### Submit an On-Call Ticket
+### Submit a Pantheon On-Call Ticket
 You should only open an emergency ticket when your site is down or there is a business critical issue (e.g. development team blockers and urgent deadline-driven questions) that you need immediate help with. On-call support is available 24/7/365 and we guarantee escalation in 60 minutes.
 
 1. From anywhere in your Organization Dashboard, click **Support**.
