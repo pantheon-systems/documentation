@@ -66,7 +66,7 @@ For more information, see [Automate your Workflow with Quicksilver Platform Inte
 ## Troubleshooting
 
 We will reject a commit that includes a `pantheon.yml` error, with a message like:
-```
+```nohighlight
 remote: PANTHEON ERROR:
 remote:
 remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
@@ -78,6 +78,21 @@ remote: Valid versions are: 1
 
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Please refer to the examples above for exact syntax.
 
-### See Also
+### Deploying Configuration Changes to Multidev
+If a `pantheon.yml` file **does not** exist on the Dev environment, configuration changes will not be detected when creating a Multidev environment. As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+
+```nohighlight
+remote:
+remote: PANTHEON NOTICE:
+remote:
+remote: Changes to `pantheon.yml` detected.
+remote:
+remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
+remote:
+remote:
+```
+
+
+## See Also
 - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver)  
 - [Upgrade PHP Versions](/docs/php-versions)
