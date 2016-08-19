@@ -15,6 +15,14 @@ Next, check [log files](https://pantheon.io/docs/logs/) to help identify and fix
 ## One Application per Site
 Each site supports a single Drupal or WordPress application. Placing a WordPress application inside a Drupal site, for example, is unsupported. Drupal multisite is also not supported. If your existing Drupal site is a multisite installation, see [Extracting Sites from a Drupal Multisite](https://pantheon.io/docs/unwind-multisite/).
 
+## Multiple File Directories Found within the Import Archive
+The import will fail if Drupal's private files directory is not placed within the public directory, resulting in the following error message:
+<div class="alert alert-danger">
+Multiple file directories found within the import archive. sites/default/private sites/default/files
+</div>
+To resolve this issue, move the `private` sub-directory under the public directory: `sites/default/files/private`. Create a site new archive and select **Migrate Existing Site** from your User Dashboard.
+
+
 ## Frequently Asked Questions (FAQs)
 
 #### Why doesn't my site archive import correctly from Dropbox?
