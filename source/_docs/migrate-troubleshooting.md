@@ -17,9 +17,9 @@ Each site supports a single Drupal or WordPress application. Placing a WordPress
 
 ## Multiple File Directories Found within the Import Archive
 The import will fail if Drupal's private files directory is not placed within the public directory, resulting in the following error message:
-
-![Multiple file directories found within the import archive](/source/docs/assets/images/multiple-files-dir-import-failure.png)
-
+<div class="alert alert-danger">
+Multiple file directories found within the import archive. sites/default/private sites/default/files
+</div>
 To resolve this issue, move the `private` sub-directory under the public directory: `sites/default/files/private`. Create a site new archive and select **Migrate Existing Site** from your User Dashboard.
 
 
