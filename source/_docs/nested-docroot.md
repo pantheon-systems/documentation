@@ -17,7 +17,7 @@ This is especially useful for third party dependencies, such as those installed 
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="docs/custom-upstream">custom upstream</a>.
+One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">custom upstream</a>.
 </div>
 
 ## One-Time Setup
