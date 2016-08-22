@@ -29,7 +29,7 @@ If you cannot sign in to your Pantheon Dashboard:
 ## Customer Support Response Times
 
 ###Elite Plans and Priority Enterprise Support Customers    
-* **On-call ticket**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
+* **Pantheon On-call**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
 
 ###Paid and Free Sites
