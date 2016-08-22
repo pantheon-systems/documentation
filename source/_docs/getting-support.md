@@ -9,16 +9,15 @@ Submit a ticket with our Support Team to request assistance on issues within our
 
 ## File a Ticket Through the Dashboard
 1. Create a support ticket from within the site's Dashboard by clicking **Support > Open Ticket**. This will automatically include the site and user information.
-2. Select the appropriate scenario:
- -  **User Account Support**: Select the **Non-site related issue** checkbox. These tickets are user-account specific.
- -  **Site Support**: Select the appropriate site from the drop-down list. These tickets will appear for all team members.
- - **Pantheon for Agencies**: Select the **Non-site related issue** checkbox. These tickets will appear for administrative Org members.
-3. Provide important details:
+2. Choose the **ticket type**.
+3. Enter a subject (summary of your issue).
+3. Provide important details in your request:
  - Give the steps to reproduce the issue, including URLs or paths to files.
  - The environment being affected (Dev/Test/Live), if applicable.
  - When the issue began.
  - The error message, if applicable.
  - Links to screenshots or screencasts of the behavior, if necessary.
+ 4. Click **Open Ticket**.
 
 ## Other Ways to Contact Support
 If you cannot sign in to your Pantheon Dashboard:  
@@ -30,7 +29,7 @@ If you cannot sign in to your Pantheon Dashboard:
 ## Customer Support Response Times
 
 ###Elite Plans and Priority Enterprise Support Customers    
-* **On-call ticket**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
+* **Pantheon On-call**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
 
 ###Paid and Free Sites
@@ -81,4 +80,4 @@ You can file a downtime ticket for outages on our Support page, and we provide 2
 No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
 
 #### What is Priority Enterprise Support?
-For organizations that want the highest level of support for their whole team, [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support) provides the assurance of SLA-backed 24/7/365 emergency support, expedited responses to standard tickets, and expert onboarding and training. Contact [Sales](https://pantheon.io/contact-us) for more information.
+For organizations that want the highest level of support for their whole team, [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support) provides the assurance of SLA-backed 24/7/365 emergency support, expedited responses to standard tickets, and expert onboarding and training. To learn more, see [Using Priority Enterprise Support](/docs/priority-enterprise-support) or [contact Sales](https://pantheon.io/contact-us) for more information.
