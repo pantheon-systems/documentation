@@ -15,6 +15,11 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
 
+<div class="alert alert-info" role="alert">
+<h4>Note</h4>
+One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="docs/custom-upstream">custom upstream</a>.
+</div>
+
 ## One-Time Setup
 
 Below we recommend using Git, but you can also use SFTP to set your site up for nested docroot.
@@ -73,8 +78,6 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 The idea here is that `find . -type f -maxdepth 1` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
 
-## 1-Click Updates
-Pantheon 1-Click dashboard updates are **not** compatible with the nested `web` docroot and core updates will need to be maintained manually. A [custom upstream](https://pantheon.io/docs/custom-upstream/) is reccomended.
 
 ## Troubleshooting
 
