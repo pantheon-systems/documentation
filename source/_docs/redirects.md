@@ -228,12 +228,7 @@ When transitioning from a system that used a tilde to indicate a home directory,
     }
 
 ## Redirect to Force Lowercase Letters
+WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core. Drupal sites can force lowercase letters using the following:
 
-
-    if (preg_match('/[A-Z]+/', $_SERVER['REQUEST_URI'])) {
-      $request_uri = strtolower($_SERVER['REQUEST_URI']);
-      header('Location: http://www.yoursite.com' . $request_uri, TRUE, 301);
-      exit;
-    }
-
-Alternatively, Drupal users can enforce lowercase URLs with the [Global Redirect](https://www.drupal.org/project/globalredirect) module.
+1. Set general automatic alias settings  to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto) module configuration (`/admin/build/path/pathauto`).
+2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect) module configuration (`/admin/settings/globalredirect`).
