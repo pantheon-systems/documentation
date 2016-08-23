@@ -2613,3 +2613,71 @@ display: block;
 .gs-result .gs-title, .gs-result .gs-title {
   font-size: 20px !important;
 }
+#manual-toc a {
+  background: #EEF2F3;
+  border-top: solid #222 1px;
+  border-right: solid #222 2px;
+  border-left: solid #222 1px;
+  border-bottom: solid #222 1px;
+  color: #222;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+.invisible-manual-toc {
+  background: #fff !important;
+  border-top:none !important;
+  border-left:none !important;
+  border-bottom: none !important;
+  border-right:solid 2px #222  !important;
+  height:10px;
+
+}
+#manual-toc .active-trail {
+  font-weight:bold;
+  background: #fff;
+  border-top: solid #222 1px !important;
+  border-left: solid #222 1px !important;
+  border-bottom: solid #222 1px !important;
+  border-right: none !important;
+
+
+}
+
+.manual-toc a {
+  padding:10px;
+  display: block;
+}
+
+.manual-toc {
+  width: 20%;
+  background: #fff;
+  padding-top: 30px;
+
+}
+.manual-body {
+  width: 70%;
+  float: right;
+  margin-right: 80px;
+}
+.terminus-plugin {
+  background-color: #ddd;
+  margin: 10px;
+}
+
+.pantheon-official {
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #1794C7;
+  width: 50%;
+  float: right;
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+}
+.pantheon-official p {
+  margin: 0px;
+  padding: 0px;
+}
