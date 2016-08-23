@@ -89,7 +89,8 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 - [DigiCert](http://www.digicert.com/ "DigiCert")
 - [Entrust](http://www.entrust.com/ "Entrust")
 - [GeoTrust](http://www.geotrust.com/ "GeoTrust")
-- [Go Daddy](http://www.godaddy.com/ "Go Daddy") 
+- [Go Daddy](http://www.godaddy.com/ "Go Daddy")
+- [Let's Encrypt](https://letsencrypt.org/ "Let's Encrypt")
 - [SSLMate](http://sslmate.com/ "SSLMate")
 - [Thawte](http://www.thawte.com/ "Thawte")
 - [TrustWave](https://ssl.trustwave.com/support/install-certificate-cpanel.php "TrustWave")
