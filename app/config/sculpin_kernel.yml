@@ -8,6 +8,12 @@ sculpin_content_types:
         path: _changelog
         enabled: true
 
+    terminuspages:
+        singular_name: terminuspage
+        permalink: docs/terminus/:basename/
+        path: docs/_terminuspages
+        layout: terminuspage
+
     docs:
         type: path
         path: _docs

@@ -1,0 +1,23 @@
+{% extends "default" %}
+{% block content_wrapper %}
+<div class="col-md-12">
+  <div class="col-md-4 manual-toc hidden-s">
+    <ul id="manual-toc">
+      <div style="height:30px!important;" class="invisible-manual-toc"></div>
+      {% for terminuspage in site.terminuspages %}
+        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="{{ terminuspage.url }}">
+          {{ terminuspage.name }}
+        </a>
+        <div class="invisible-manual-toc"></div>
+      {% endfor %}
+      <div style="height:30px!important;" class="invisible-manual-toc"></div>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-md-9">
+    <header>
+      <h1>{{ page.title }} <small>Terminus</small></h1>
+    </header>
+      {{ page.blocks.content|raw }}
+  </div>
+</div>
+{% endblock %}
