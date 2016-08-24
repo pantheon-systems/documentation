@@ -46,7 +46,7 @@ Because Pantheon does not restrict or limit free sandbox or dev instances, you s
 Live environments on sites with a service level of Business and above can have multiple application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling). If a site has multiple application containers, the load will be distributed among them.
 
 ### Expected Behavior
-Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/download-logs).
+Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/logs#automate-downloading-logs).
 
 ### Failover Application Containers
 All paid service levels have failover application containers which are <strong>not</strong> used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
