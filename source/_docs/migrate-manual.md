@@ -13,7 +13,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
-For guided migration see [Migrate Sites to Pantheon](/docs/migrate).
+For guided migration, see [Migrate Sites to Pantheon](/docs/migrate).
 
 ## Step 1: Create a New Pantheon Site
 
@@ -46,9 +46,9 @@ If you'd like to retain existing Git History, see [Migrating Sites to Pantheon: 
 
 ## Step 3: Add Database
 
-Your site's database is a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, you may want to remove data from cache tables to make the `.sql` file much smaller and your import that much quicker.
+Your site's database is a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, we recommend that you remove data from cache tables to make the `.sql` file smaller, which helps ensure a quick and successful import.   
 
-You can use either the Pantheon Dashboard or a MySQL Client to add your site's database.
+You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
 ### Import Database using the Pantheon Dashboard
 
@@ -88,7 +88,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 1. Select the **Dev** environment.
 2. Select **Database / Files**.
 3. Click **Import**.
-4. In the **Archive of site files** field, paste the URL of your `zip` or `tar.gz` archive, or upload a local file and press **Import**.
+4. In the **Archive of site files** field, paste the URL of your `zip` or `tar.gz` archive, or upload a local file and click **Import**.
 
 ### Import Files using SFTP
 
