@@ -5,9 +5,7 @@ keywords: log, access log, nginx access log, nginx log, nginx access, nginx erro
 categories: [developing]
 tags: [logs]
 ---
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site.
-
-Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
 
 ## Available Logs
 
@@ -70,6 +68,9 @@ Each environment (Multidev, Dev, Test, and Live) has their own respective log fi
 
 Rotated log files are archived within the `/logs` directory on application servers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
+## Enable Passwordless Access
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
 ### Download Application Log Files
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
@@ -117,17 +118,14 @@ You now have a local copy of the logs directory, which contains the following:
 
 You can automate the process of accessing and maintaining these logs with a simple script.
 
-### Enable Passwordless Access
-Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
-
 ### Create Script
 Open terminal and run the following commands to create and access a new local directory:
-```
+```bash
 mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and save the following:
-```
+```bash
 # Replace SITE with value from Dashboard URL
 SITE=xxxxxxxxxxx
 ENV=live
