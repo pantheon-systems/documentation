@@ -31,7 +31,7 @@ Alternatively, you can store sensitive data in a JSON or ini-style text file wit
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
-  $stripe_data = json_load($json_text, 1);
+  $stripe_data = json_decode($json_text, TRUE);
   $conf['stripe_key'] = $stripe_data['key'];
 }
 else {
