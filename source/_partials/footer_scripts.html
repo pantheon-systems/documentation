@@ -35,23 +35,23 @@
 
       }
     }
-    aObj = document.getElementById('manual-toc').getElementsByTagName('a');
-    for(i=0;i<aObj.length;i++) {
-      if(document.location.href.indexOf(aObj[i].href)>=0 ){
-        aObj[i].className='active-trail';
-        if(/\/install.*/.test(aObj[i].href)>=1) {
+    aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
+    for(i=0;i<aaObj.length;i++) {
+      if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+        aaObj[i].className='active-trail';
+        if(/\/install.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
-        if(/\/examples.*/.test(aObj[i].href)>=1) {
+        if(/\/examples.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
-        if(/\/extend.*/.test(aObj[i].href)>=1) {
+        if(/\/extend.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
-        if(/\/commands.*/.test(aObj[i].href)>=1) {
+        if(/\/commands.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
-        if(/\/versions.*/.test(aObj[i].href)>=1) {
+        if(/\/versions.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
       }

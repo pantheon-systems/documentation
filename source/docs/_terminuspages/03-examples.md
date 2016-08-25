@@ -1,5 +1,6 @@
 ---
 title: Examples
+permalink: /docs/terminus/examples/
 ---
 <ul class="nav nav-tabs nav-justified" role="tablist">
   <li role="presentation" class="active"><a href="#s1" aria-controls="s1" role="tab" data-toggle="tab">Scenario 1</a></li>

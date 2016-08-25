@@ -1,5 +1,6 @@
 ---
 title: Version Updates
+permalink: /docs/terminus/versions/
 ---
 ## Terminus 0.11.4
 <div class="zero-clipboard">
