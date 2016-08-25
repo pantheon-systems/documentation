@@ -30,7 +30,7 @@ Add the following lines to the `goaccess.conf` file, located in either `/etc/`, 
 ```
 time-format %H:%M:%S
 date-format %d/%b/%Y
-log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %D "%^"
+log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 ```
 ## Generate Report
 Run the following command, which will parse the log file and open a dashboard in your terminal so you can view the results:
