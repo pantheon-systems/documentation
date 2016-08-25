@@ -15,7 +15,7 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 ## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL slow log, use the [method outlined here](/docs/logs/#download-database-log-files).
+To download the environment's MySQL slow log, use the [method outlined here](/docs/logs/#database-log-files).
 
 ```sql
 $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
