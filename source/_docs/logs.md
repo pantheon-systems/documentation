@@ -5,9 +5,7 @@ keywords: log, access log, nginx access log, nginx log, nginx access, nginx erro
 categories: [developing]
 tags: [logs]
 ---
-Log files track and record your site's activity which help you find, debug, and isolate current or potential problems on your site.
-
-Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
 
 ## Available Logs
 
@@ -70,8 +68,11 @@ Each environment (Multidev, Dev, Test, and Live) has their own respective log fi
 
 Rotated log files are archived within the `/logs` directory on application servers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
+## Enable Passwordless Access
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
 ### Download Application Log Files
-1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
+1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Open a terminal window and paste the SFTP connection command.
 4. Run the following SFTP command in terminal:
@@ -94,9 +95,9 @@ You now have a local copy of the logs directory, which contains the following:
 ```
 
 ### Download Database Log Files
-1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).
+1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
-3. Edit and execute the command by replacing `appserver` with `dbserver`, like so:
+3. Edit and execute the command by replacing `appserver` with `dbserver`:
 
  ```nohighlight
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
@@ -112,7 +113,38 @@ You now have a local copy of the logs directory, which contains the following:
     └──mysqld-slow-query.log
     └──mysqld.log
 ```
-To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
+
+## Automate Downloading Logs
+
+You can automate the process of accessing and maintaining these logs with a simple script.
+
+### Create Script
+Open terminal and run the following commands to create and access a new local directory:
+```bash
+mkdir $HOME/site-logs
+cd $HOME/site-logs
+```
+Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and save the following:
+```bash
+# Replace SITE with value from Dashboard URL
+SITE=xxxxxxxxxxx
+ENV=live
+for app_server in `dig +short appserver.$ENV.$SITE.drush.in`;
+do
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs app_server_$app_server
+done
+
+# Include MySQL logs
+db_server=`dig dbserver.$ENV.$SITE.drush.in +short`
+rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@dbserver.$ENV.$SITE.drush.in:logs db_server_$db_server
+```
+### Collect Logs
+Download logs by executing the script from within the `site-logs` directory:
+```
+sh collect-logs.sh
+```
+You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
+
 
 ## See Also
 - [Debugging Sites with Log Files](/docs/debug-log-files)

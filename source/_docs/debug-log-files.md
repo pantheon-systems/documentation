@@ -84,4 +84,4 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 done
 ```
 
-To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/download-logs/).
+To automate this process, see [Automate Downloading Logs from the Live Environment](/docs/logs#automate-downloading-logs).
