@@ -13,9 +13,7 @@ documentation improvements.
 Read [style-guide.md](<style-guide.md>) for our guidelines on how to write
 documentation.
 
-Usage
------
-## Get the code:
+### Get the Code
 Fork and clone this repository. Issue pull requests one document at a time.
 
 ## Local Setup (Optional)
