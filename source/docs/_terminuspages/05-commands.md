@@ -1,5 +1,6 @@
 ---
 title: Command Ref
+permalink: /docs/terminus/commands/
 ---
 ## Basics
 ```bash

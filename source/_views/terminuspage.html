@@ -5,7 +5,7 @@
     <ul id="manual-toc">
       <div style="height:30px!important;" class="invisible-manual-toc"></div>
       {% for terminuspage in site.terminuspages %}
-        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="{{ terminuspage.url }}">
+        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="/{{ terminuspage.url |trim('/') }}">
           {{ terminuspage.name }}
         </a>
         <div class="invisible-manual-toc"></div>
@@ -20,4 +20,16 @@
       {{ page.blocks.content|raw }}
   </div>
 </div>
+{% if page.previous_terminuspage or page.next_terminuspage %}
+<nav aria-label="pager">
+  <ul class="pager">
+    {% if page.next_terminuspage %}
+    <li><a href="{{ page.next_terminuspage.url }}">Previous</a></li>
+    {% endif %}
+    {% if page.previous_terminuspage %}
+    <li><a href="{{ page.previous_terminuspage.url }}">Next</a></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
 {% endblock %}
