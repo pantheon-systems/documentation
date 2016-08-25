@@ -12,7 +12,7 @@ Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
     - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
-    - Ensure that your local stack PHP version matches the target site on the platform.
+    - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/docs/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](/docs/terminus/)
