@@ -26,7 +26,7 @@ Be sure that you have:
 
 To parse the Pantheon `nginx-access.log` file with GoAccess, you'll need to specify the unique log formats.
 
-Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method: 
+Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method:
 ```
 time-format %H:%M:%S
 date-format %d/%b/%Y
@@ -42,7 +42,7 @@ If you would like to generate an HTML report, execute the following commands:
 goaccess -f nginx-access.log -a -o report.html
 open report.html
 ```
-## Troubleshooting 
+## Troubleshooting
 
 ### Configuration File Not Detected
 If the configuration file is not detected at `/etc/goaccess.conf`, use the `-p` option.
@@ -57,4 +57,3 @@ goaccess -f nginx-access.log -p /etc/goaccess.conf -a -o report.html
 - [PHP Slow Log](/docs/php-slow-log/)
 - [PHP Errors and Exceptions](/docs/php-errors/)
 - [Bots and Indexing](/docs/bots-and-indexing/)
-- [Automate downloading of logs](/docs/download-logs/)
