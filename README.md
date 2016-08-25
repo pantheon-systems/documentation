@@ -19,6 +19,7 @@ Fork and clone this repository. Issue pull requests one document at a time.
 ## Local Setup (Optional)
 1. Install requirements:
  * [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.x
+ * [vagrant](https://www.vagrantup.com/downloads.html)
  * [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager)
  * [vagrant-auto_network](https://github.com/oscar-stack/vagrant-auto_network)
 2. From inside the project root, run `vagrant up`
