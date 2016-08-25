@@ -42,8 +42,10 @@ If you would like to generate an HTML report, execute the following commands:
 goaccess -f nginx-access.log -a -o report.html
 open report.html
 ```
-## Troubleshooting Guide
-Configuration file not detected yet located at `/etc/goaccess.conf`, then use -p option.
+## Troubleshooting 
+
+### Configuration File Not Detected
+If the configuration file is not detected at `/etc/goaccess.conf`, use the `-p` option.
 ```
 goaccess -f nginx-access.log -p /etc/goaccess.conf -a -o report.html
 ```
