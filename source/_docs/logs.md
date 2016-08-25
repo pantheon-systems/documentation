@@ -71,7 +71,9 @@ Rotated log files are archived within the `/logs` directory on application serve
 ## Enable Passwordless Access
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
-### Download Application Log Files
+## Downloading Logs
+### Application Log Files
+
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Open a terminal window and paste the SFTP connection command.
@@ -94,7 +96,7 @@ You now have a local copy of the logs directory, which contains the following:
     └──watcher.log
 ```
 
-### Download Database Log Files
+### Database Log Files
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Edit and execute the command by replacing `appserver` with `dbserver`:
