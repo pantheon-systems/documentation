@@ -1,9 +1,6 @@
 [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
 Pantheon Documentation
 ======================
-
-Pantheon Documentation Site
-------------------
 https://pantheon.io/docs/
 
 ### Contributing
