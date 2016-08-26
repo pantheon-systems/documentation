@@ -60,6 +60,13 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
     ```
 You are now ready to start work based on the state of the live site.
 
+3. Create new branch and start working:
+
+    git checkout -b hotfix
+
+    git commit -a -m "Hotfix issue xyz"
+
+
 ## Generate a New Hotfix Test Tag
 
 Make your hotfixes and commit them locally, then tag and push them to test by creating a _new_ test tag with a higher number value:
