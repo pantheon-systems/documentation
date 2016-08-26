@@ -38,14 +38,14 @@ If your database and code compressed are less than 256MB you can exclude the fil
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
 4. Once the migration is complete, click **Visit the Site Dashboard**.
-5. Open a new tab and navigate to the Site Dashboard for your existing Pantheon site.
+5. Open a new tab and go to the Site Dashboard for your existing Pantheon site.
 6. Within the target environment (typically Live), select the **Backups** tab and click **Create New Backup**.
-7. Click the down arrow next to Files and copy the provided link to your offsite backup.
-8. Switch back to the Site Dashboard for your new Pantheon site and navigate to **Database / Files** > **Import**.
+7. Click the down arrow next to Files and copy the link to your offsite backup.
+8. Switch back to the Site Dashboard for your new Pantheon site and go to **Database / Files** > **Import**.
 <ol start="9"><li>Paste the URL to your file archive and click <b>Import</b>.
  <div class="alert alert-info">
  <h4>Note</h4>
- URL Imports have a file size limit of 500MB. If attempts to import your archive fail, download the backup and decompress contents locally. You can then upload your files directly using SFTP or rsync. For details, refer to <a href="/docs/rsync-and-sftp">rsync and SFTP</a>.
+ URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and upload your files directly using SFTP or rsync. For details, see <a href="/docs/rsync-and-sftp">rsync and SFTP</a>.
  </div>
 </li></ol>
 ## See Also
