@@ -45,7 +45,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
 <ol start="9"><li>Paste the URL to your file archive and click <b>Import</b>.
  <div class="alert alert-info">
  <h4>Note</h4>
- URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and upload your files directly using SFTP or rsync. For details, see <a href="/docs/rsync-and-sftp">rsync and SFTP</a>.
+ URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.
  </div>
 </li></ol>
 ## See Also
