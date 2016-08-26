@@ -38,13 +38,11 @@ If your database and code compressed are less than 256MB you can exclude the fil
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
 4. Once the migration is complete, click **Visit the Site Dashboard**.
-5. Create an archive of your site's files directory if you have not done so already:
-
- ```bash
- cd $SOURCE/sites/default/files
- tar -czf $TARGET/files.tar.gz .
- ```
-6. Navigate to **Database / Files** > **Import** and upload the archive of your files directory.
+5. Open a new tab and navigate to the Site Dashboard for your existing Pantheon site.
+6. Within the target environment (typically Live), select the **Backups** tab and click **Create New Backup**.
+7. Click the down arrow next to Files and copy the provided link to your offsite backup.
+8. Switch back to the Site Dashboard for your new Pantheon site and navigate to **Database / Files** > **Import**.
+9. Paste the URL to your file archive and click **Import**.
 
 ## See Also
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
