@@ -33,7 +33,7 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the following steps, otherwise [manually migrate](/docs/migrate-manual) the site.
 
 <ol><li>Use <a href="/docs/terminus">Terminus</a> and the <code>--tar-options</code> flag:<br><br>
-<pre><code class="bash hljs">terminus drush <span class="hljs-string">'ard <b>--tar-options="--exclude=sites/default/files"</b> --destination=sites/default/files/<RANDOM_HASH>.tgz'</span></code></pre></li></ol>
+<pre><code class="bash hljs">terminus drush <span class="hljs-string">'ard <b>--tar-options="--exclude=sites/default/files"</b> --destination=sites/default/files/&lt;RANDOM_HASH&gt;.tgz'</span></code></pre></li></ol>
 
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
@@ -42,8 +42,12 @@ If your database and code compressed are less than 256MB you can exclude the fil
 6. Within the target environment (typically Live), select the **Backups** tab and click **Create New Backup**.
 7. Click the down arrow next to Files and copy the provided link to your offsite backup.
 8. Switch back to the Site Dashboard for your new Pantheon site and navigate to **Database / Files** > **Import**.
-9. Paste the URL to your file archive and click **Import**.
-
+<ol start="9"><li>Paste the URL to your file archive and click <b>Import</b>.
+ <div class="alert alert-info">
+ <h4>Note</h4>
+ URL Imports have a file size limit of 500MB. If attempts to import your archive fail, download the backup and decompress contents locally. You can then upload your files directly using SFTP or rsync. For details, refer to <a href="/docs/rsync-and-sftp">rsync and SFTP</a>.
+ </div>
+</li></ol>
 ## See Also
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
