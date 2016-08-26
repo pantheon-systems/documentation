@@ -18,10 +18,10 @@ For more information see: [Migrate to Pantheon: WordPress](/docs/migrate-wordpre
 After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate/)**, you'll create a new Pantheon site. During the **Create Site Archive** step of the migration process, use [Terminus](/docs/terminus) to create an archive of your existing Pantheon site:
 
 ```bash
-terminus drush 'ard --destination=sites/default/files/cC1j4cP0GWaMWrD.tgz'
+terminus drush 'ard --destination=sites/default/files/<RANDOM_HASH>.tgz'
 ```
 
-This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/cC1j4cP0GWaMWrD.tgz`). Click **Continue Migration** and follow all remaining instructions within the guided migration process.
+This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). Click **Continue Migration** and follow all remaining instructions within the guided migration process.
 
 ### Troubleshooting
 If your archive is larger than 256MB the operation will fail, resulting in the following error:
@@ -33,10 +33,10 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the following steps, otherwise [manually migrate](/docs/migrate-manual) the site.
 
 <ol><li>Use <a href="/docs/terminus">Terminus</a> and the <code>--tar-options</code> flag:<br><br>
-<pre><code class="bash hljs">terminus drush <span class="hljs-string">'ard <b>--tar-options="--exclude=sites/default/files"</b> --destination=sites/default/files/cC1j4cP0GWaMWrD.tgz'</span></code></pre></li></ol>
+<pre><code class="bash hljs">terminus drush <span class="hljs-string">'ard <b>--tar-options="--exclude=sites/default/files"</b> --destination=sites/default/files/<RANDOM_HASH>.tgz'</span></code></pre></li></ol>
 
 2. Click **Continue Migration**.
-3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/cC1j4cP0GWaMWrD.tgz`) and select **Import Archive**.
+3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
 4. Once the migration is complete, click **Visit the Site Dashboard**.
 5. Create an archive of your site's files directory if you have not done so already:
 
