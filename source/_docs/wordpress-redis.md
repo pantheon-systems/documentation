@@ -73,7 +73,7 @@ terminus wp 'plugin update wp-redis'
    },
    "extra": {
      "installer-paths": {
-       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
        },
      "dropin-paths": {
         "wp-content": [
