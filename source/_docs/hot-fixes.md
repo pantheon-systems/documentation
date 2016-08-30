@@ -1,5 +1,5 @@
 ---
-title: Hot Fixes
+title: Hotfixes
 description: Learn how to deploy and test hot fixes and preserve orphan commits on your Pantheon Drupal or WordPress site.
 categories: [developing]
 tags: [code, local]
