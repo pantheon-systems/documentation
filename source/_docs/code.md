@@ -95,7 +95,7 @@ There are a lot of tools at your disposal when it comes to fine tuning dynamic s
 Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that does not negatively impact performance. You can also incorporate external Solr services with [IndexDepot](/docs/indexdepot/).
 
 ##See Also
-- [Hot Fixes](/docs/hot-fixes/)
+- [Hot Fixes](/docs/hotfixes/)
 - [What is the "pantheon_api.module"](/docs/pantheon_api-module)
 - [Email on Pantheon](/docs/email/)
 - [Redirect Incoming Requests](/docs/redirects/)
