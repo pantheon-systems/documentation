@@ -15,7 +15,7 @@ api_version: 1
 workflows:
   deploy:
     after:
-        type: webphp
+        - type: webphp
         description: Post deployment notification to Slack
         script: private/scripts/slack_deploy_notification.php
 ```
