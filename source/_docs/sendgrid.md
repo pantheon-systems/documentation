@@ -65,7 +65,7 @@ Support for Drupal 8 is not yet available for the [SMTP Authentication Support](
 3. From within Install Options, select **On**.
 4. Use the following within SMTP Server Settings:
 
- **SMTP server**: smtp.sendgrid.com <br>
+ **SMTP server**: smtp.sendgrid.net <br>
  **SMTP port**: 465<br>
  **Use encrypted protocol**: Use SSL<br>
 
