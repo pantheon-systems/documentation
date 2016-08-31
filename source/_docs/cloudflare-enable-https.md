@@ -29,7 +29,7 @@ In addition to gratis HTTPS service, content distribution, and many nifty securi
 
 We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. In addition, using CNAME Flattening is the only way to standardize on HTTPS with a root domain. Here are some example DNS settings:
 
-![Example DNS Settings](/source/docs/assets/images/cloudflare-dns.png)
+![Example DNS Settings](/source/docs/assets/images/cloudflare-dns1.png)
 
 In this example we used the `@` symbol to set up the "root" CNAME and are using the Pantheon-provided `env-site-sitename.pantheonsite.io` domain as the target. In the case of legacy gotpantheon.com sites, use `edge.live.getpantheon.com` for the CNAME target of the root record.
 
