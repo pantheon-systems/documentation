@@ -15,7 +15,7 @@ api_version: 1
 workflows:
   deploy:
     after:
-        type: webphp
+      - type: webphp
         description: Post deployment notification to Slack
         script: private/scripts/slack_deploy_notification.php
 ```
@@ -23,7 +23,7 @@ workflows:
 If you add the following after the previous snippet, we'll also run that script to automatically log the deployment to New Relic:
 
 ```yaml
-        type: webphp
+      - type: webphp
         description: Log to New Relic
         script: private/scripts/new_relic_deploy.php
 ```
