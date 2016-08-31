@@ -25,7 +25,7 @@ While this fix does correct symptoms such as undesirable URLs, we recommended re
 The following is as an example of how to successfully assign a port value for nginx:
 ```php
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-  if (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON') {
+  if (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] === 'ON') {
     $_SERVER['SERVER_PORT'] = 443;
   }
   else {
