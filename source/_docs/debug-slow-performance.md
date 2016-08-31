@@ -77,7 +77,7 @@ Don’t shoot the messenger—disabling dblog will not fix bad code.
 
 As an example, if your slowest database operation is an INSERT to watchdog, then you should fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking 70.6% of the execution time.  
  ![Example of INSERT consuming execution time](/source/docs/assets/images/example-insert-consuming-execution-time.png)  
-Learn more about [debugging sites with log files](/docs/debug-log-files).
+Learn more about [Log Files on Pantheon](/docs/logs).
 
 ## Too Many Database Queries
 The next performance killer is an excessive number of database queries per request. You can see that in your [New Relic Pro dashboard](/docs/new-relic) by going to the Map tab, which shows you how the various low-level components in your application are performing together.  
