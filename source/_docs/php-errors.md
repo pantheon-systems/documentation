@@ -87,7 +87,7 @@ Here's a breakdown of what errors are shown and where:
 </table>
 
 
-To learn more about PHP error logs, see [debugging sites with log files](/docs/debug-log-files/).
+To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
 
 ## PHP Errors Slow Down a Site
 

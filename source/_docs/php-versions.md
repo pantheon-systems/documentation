@@ -46,7 +46,7 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 
 * [PHP Supported Versions](http://php.net/supported-versions.php)
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
-* [Debugging Sites with Log Files](/docs/debug-log-files/)
+* [Log Files on Pantheon](/docs/logs)
 * [PHP Errors and Exceptions](/docs/php-errors/)
 * [The pantheon.yml Configuration File](/docs/pantheon-yml/)
 * [Securely Working with phpinfo](/docs/phpinfo/)
