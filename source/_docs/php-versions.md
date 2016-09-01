@@ -50,3 +50,4 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 * [PHP Errors and Exceptions](/docs/php-errors/)
 * [The pantheon.yml Configuration File](/docs/pantheon-yml/)
 * [Securely Working with phpinfo](/docs/phpinfo/)
+* [php.net - Backward Incompatible Changes](http://php.net/manual/en/migration70.incompatible.php)
