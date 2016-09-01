@@ -1,0 +1,51 @@
+---
+title: Examples
+permalink: /docs/terminus/examples/
+---
+<div class="col-md-12">
+  <div id="doc" class="article col-md-9">
+    <!--Scenario 1-->
+    <h2>Steps to Deploy to Live</h2>
+    <h3>Create a Backup</h3>
+    <p>A backup contains three separate archives: a database backup, a files backup, and a code backup.</p>
+    <div class="zero-clipboard">
+      <span class="btn-clipboard" id="scenario1button_create-backup" data-clipboard-target="scenario1_create-backup">Copy</span>
+        <figure class="highlight"><pre id="scenario1_create-backup"><code class="bash" data-lang="bash">terminus site backup create --env=dev</code></pre></figure>
+    </div>
+    <h3>Deploy from Dev to Test</h3>
+    <p>Take your code from Dev, your content from Live, and combine them in Test to be absolutely certain that your deployment to Live will go as planned.</p>
+    <div class="zero-clipboard">
+      <span class="btn-clipboard" id="scenario1button_deploydev" data-clipboard-target="scenario1_deploydev">Copy</span>
+        <figure class="highlight"><pre id="scenario1_deploydev"><code class="bash" data-lang="bash">terminus site deploy --env=test --sync-content --cc</code></pre></figure>
+    </div>
+    <h3>Deploy from Test to Live</h3>
+    <p>After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website.</p>
+    <div class="zero-clipboard">
+      <span class="btn-clipboard" id="scenario1button_deploytest" data-clipboard-target="scenario1_deploytest">Copy</span>
+        <figure class="highlight"><pre id="scenario1_deploytest"><code class="bash" data-lang="bash">terminus site deploy --env=live --cc</code></pre></figure>
+    </div>
+
+    <!--Scenario 2-->
+    <h2>Debug and Troubleshoot Site Issues</h2>
+    <h3>Clear Caches</h3>
+    <p>Clear all site caches.</p>
+    <div class="zero-clipboard">
+      <span class="btn-clipboard" id="scenario2button_clear-cache" data-clipboard-target="scenario2_clear-cache">Copy</span>
+        <figure class="highlight"><pre id="scenario2_clear-cache"><code class="bash" data-lang="bash">terminus site clear-cache</code></pre></figure>
+    </div>
+
+    <!--Scenario 3-->
+    <h2>Scenario 3</h2>
+    <h3>Scenario 3</h3>
+    <p>Scenario 3.</p>
+    <div class="zero-clipboard">
+      <span class="btn-clipboard" id="scenario3button_scenario3" data-clipboard-target="scenario3_scenario3">Copy</span>
+        <figure class="highlight"><pre id="scenario3_scenario3"><code class="bash" data-lang="bash">terminus site scenario-3</code></pre></figure>
+    </div>
+
+  <!--Close main container-->
+  </div>
+  <div class="article col-md-3">
+      {% include ("sidebarnav.html") %}
+  </div>
+</div>
