@@ -7,7 +7,9 @@ module.exports = function(grunt) {
           {expand: true, src: ['node_modules/bootstrap/dist/css/bootstrap'], dest: 'source/docs/assets/compiled/'},
           {expand: true, src: ['node_modules/highlight.js/styles/tomorrow-night-eighties.css'], dest: 'source/docs/assets/'},
           {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/css/font-awesome.min.css'], dest: 'source/docs/assets/'},
-          {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/fonts/**'], dest: 'source/docs/assets/'}
+          {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/fonts/**'], dest: 'source/docs/assets/'},
+          {expand: true, src: ['vendor/zeroclipboard/zeroclipboard/dist/ZeroClipboard.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['vendor/zeroclipboard/zeroclipboard/dist/ZeroClipboard.swf'], dest: 'source/docs/assets/js/'}
         ],
       },
     },

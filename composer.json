@@ -1,25 +1,25 @@
 {
-    "name": "pantheon-systems/documentation",
-    "description": "Documentation for Pantheon",
-    "keywords": ["pantheon", "drupal", "wordpress"],
-    "homepage": "https://pantheon.io/docs/",
-    "type": "project",
-    "license": "CC-BY-4.0",
-    "minimum-stability": "dev",
-    "require-dev": {
-        "drush/drush": "6.2.0",
-        "sculpin/sculpin": "2.*@dev",
-        "behat/behat": "3.0.*@stable",
-        "behat/mink": "1.6.*@stable",
-        "behat/mink-extension": "2.0.*@stable",
-        "behat/mink-goutte-driver": "1.1.*@stable",
-        "behat/mink-selenium2-driver": "1.2",
-        "composer/composer": "^1.0@alpha",
-        "guzzlehttp/guzzle": "6.1.*@stable",
-        "pantheon-systems/terminus": "0.11.*@stable",
-        "dflydev/embedded-composer": "^1.0@dev"
-    },
-    "config": {
-        "bin-dir": "bin"
-    }
+  "name": "pantheon-systems/documentation",
+  "description": "Documentation for Pantheon",
+  "keywords": ["pantheon", "drupal", "wordpress"],
+  "homepage": "https://pantheon.io/docs/",
+  "type": "project",
+  "license": "CC-BY-4.0",
+  "minimum-stability": "dev",
+  "require-dev": {
+      "drush/drush": "6.2.0",
+      "sculpin/sculpin": "2.*@dev",
+      "behat/behat": "3.0.*@stable",
+      "behat/mink": "1.6.*@stable",
+      "behat/mink-extension": "2.0.*@stable",
+      "behat/mink-goutte-driver": "1.1.*@stable",
+      "behat/mink-selenium2-driver": "1.2",
+      "composer/composer": "^1.0@alpha",
+      "pantheon-systems/terminus": "^0.12.0",
+      "dflydev/embedded-composer": "^1.0@dev",
+      "zeroclipboard/zeroclipboard": "^2.2"
+  },
+  "config": {
+      "bin-dir": "bin"
+  }
 }
