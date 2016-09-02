@@ -5,7 +5,7 @@ keywords: log, access log, nginx access log, nginx log, nginx access, nginx erro
 categories: [developing]
 tags: [logs]
 ---
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/docs/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
 ## Available Logs
 
@@ -68,7 +68,7 @@ Log files track and record your site's activity to help you find, debug, and iso
 
 Rotated log files are archived within the `/logs` directory on application servers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
-## Enable Passwordless Access
+## Access Logs Via SFTP
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Downloading Logs
@@ -164,7 +164,7 @@ The client IP for the following example is `122.248.101.126`:
 
 #### Can I log to the system logger and access syslog?
 
-The short answer is no, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 #### Can I access Apache Solr logs?
 
