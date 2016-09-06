@@ -1,13 +1,13 @@
 ---
-permalink: /docs/terminus/extend/
-title: Extend
+permalink: /docs/terminus/extend/plugins/
+title: Plugins
+terminuschild: true
 ---
 <ul>
   <li>What are plugins and why they're awesome</li>
   <li>We love our community. Create your own plugin - why and how</li>
   <li>List and link to existing plugins</li>
 </ul>
-<div class="col-md-12" style="text-align:center;">
   <div class="col-md-5 col-xs-4" style="width:50%;text-align:left;">
     <div class="col-md-12 terminus-plugin">
       <h2>Mass Contrib Update</h2>
@@ -43,4 +43,6 @@ title: Extend
       <a href="https://github.com/uberhacker/backup-all" class="btn-primary btn">Learn More</a>
     </div>
   </div>
-</div>
+  <div class="container-fluid">
+  <hr>
+  </div>

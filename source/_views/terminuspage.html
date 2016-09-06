@@ -1,35 +1,90 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <div class="col-md-12">
-  <div class="col-md-4 manual-toc hidden-s">
+  <div class="col-md-2 manual-toc hidden-s">
     <ul id="manual-toc">
-      <div style="height:30px!important;" class="invisible-manual-toc"></div>
+
       {% for terminuspage in site.terminuspages %}
-        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="/{{ terminuspage.url |trim('/') }}">
-          {{ terminuspage.name }}
-        </a>
-        <div class="invisible-manual-toc"></div>
+        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="/{{ terminuspage.url |trim('/') }}"><li>{{ terminuspage.name }}</li></a>
       {% endfor %}
-      <div style="height:30px!important;" class="invisible-manual-toc"></div>
     </ul>
   </div>
-  <div class="col-xs-12 col-md-9">
+  {% if page.terminustoc %}
+  <div class="col-xs-12 col-md-7 manual-doc">
+      {% else %}
+  <div class="col-xs-12 col-md-9 manual-doc">
+  {% endif %}
     <header>
       <h1>{{ page.title }} <small>Terminus</small></h1>
+      {% set fullpath = page.url|replace({'/terminus': '/_terminuspages'}) %}
+      <div class="dropdown">
+      <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="icon-github"></span>
+          Contribute
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ fullpath }}.md" target="blank">Edit This Page</a></li>
+        <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title={{page.title}}%20Doc%20Update%20&body=Re%3A%20%5B{{page.title}}%5D(https%3A%2F%2Fpantheon.io{{page.url}})%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=type%3A%20fix%20doc" target="blank">Report Doc Issue</a></li>
+        <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20content" target="blank">Suggest New Content</a></li>
+        </ul>
+      </div>
+      <a data-proofer-ignore class="twitter-share-button" data-count="vertical" data-url="https://pantheon.io{{ page.url }}"></a>
+      <script data-proofer-ignore  type="IN/Share" data-counter="none" data-url="https://pantheon.io{{ page.url }}"></script><br>
+      {% if page.categories %}
+      <small><i class="fa fa-folder"></i> Categories:</small>
+      {% for category in page.categories %}
+        {% if category == "wordpress" %}
+          <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>WordPress</small></a>
+        {% else %}
+          <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}"><small>{{ category|capitalize }}</small></a>
+        {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% if page.tags %}
+      <small><i class="docs-fm-resp fa fa-tags"></i> Tags:</small>
+        {% for tag in page.tags %}
+          {% if tag == "getting-started" %}
+            <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Getting Started</small></a>{% if not loop.last %}<small>, </small>{% endif %}
+          {% elseif tag == "drupal-8" %}
+            <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>Drupal 8</small></a>{% if not loop.last %}<small>, </small>{% endif %}
+          {% elseif tag == "wordpress-site-networks" %}
+            <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>WordPress Site Networks</small></a>{% if not loop.last %}<small>, </small>{% endif %}
+          {% else %}
+            <a href="{{ site.url }}/tags/{{ tag|url_encode(true) }}"><small>{{ tag|capitalize }}</small></a>{% if not loop.last %}<small>, </small>{% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if page.contributors %}
+      {% set contributor_list = page.contributors %}
+      <small><i class="docs-fm-resp fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
+      {% endif %}
+      <hr style="margin-top:10px;margin-bottom:10px;">
     </header>
       {{ page.blocks.content|raw }}
+      <div class="terminus-pager">
+        <hr>
+        {% if page.previous_terminuspage or page.next_terminuspage %}
+            {% if page.next_terminuspage %}
+            <a style="float:left;" href="{{ page.next_terminuspage.url }}"><span class="terminus-pager-lsaquo">&lsaquo;</span>{{ page.next_terminuspage.title }}</a>
+            {% endif %}
+            {% if page.previous_terminuspage %}
+            <a style="float:right;" href="{{ page.previous_terminuspage.url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span>{{ page.previous_terminuspage.title }}</a>
+            {% endif %}
+        {% endif %}
+      </div>
   </div>
+  {% if page.terminustoc %}
+  <div class="col-md-2">
+    <div style="" class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+        <div id="toc">
+            <h3>Contents</h3>
+        </div>
+    </div>
+  </div>
+  {% endif %}
+
 </div>
-{% if page.previous_terminuspage or page.next_terminuspage %}
-<nav aria-label="pager">
-  <ul class="pager">
-    {% if page.next_terminuspage %}
-    <li><a href="{{ page.next_terminuspage.url }}">Previous</a></li>
-    {% endif %}
-    {% if page.previous_terminuspage %}
-    <li><a href="{{ page.previous_terminuspage.url }}">Next</a></li>
-    {% endif %}
-  </ul>
-</nav>
-{% endif %}
+
+
 {% endblock %}
