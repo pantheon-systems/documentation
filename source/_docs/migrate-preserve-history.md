@@ -71,7 +71,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
 8. Align your local branch with its remote counterpart on Pantheon:
 
  ```bash
- git pull pantheon master
+ git pull pantheon master --no-rebase
  ```
 9. Push your newly merged codebase up to your Pantheon site repository:
 
