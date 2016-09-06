@@ -271,6 +271,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue** #2: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
 <hr>
 
+### WPML
+**Issue**: Locking an environment returns prevents WPML from opertaing and returns `It looks like languages per directories will not function` error.
+
+**Solution**: Disable environment locking.
+
 ## Dynamic Outbound IPs
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
 
