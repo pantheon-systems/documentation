@@ -52,7 +52,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
  // Use Redis for caching.
  $conf['redis_client_interface'] = 'PhpRedis';
  $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
- //or if you have a contrib sub folder for modules use
+ //or if you have a contrib subfolder for modules use
  // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
  $conf['cache_default_class'] = 'Redis_Cache';
  $conf['cache_prefix'] = array('default' => 'pantheon-redis');
@@ -60,7 +60,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
  $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
  // Use Redis for Drupal locks (semaphore).
  $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
- //or if you have a contrib sub folder for modules use
+ //or if you have a contrib subfolder for modules use
  // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
 
  }
