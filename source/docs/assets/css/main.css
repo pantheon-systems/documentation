@@ -2614,33 +2614,25 @@ display: block;
   font-size: 20px !important;
 }
 #manual-toc a {
-  background: #EEF2F3;
-  border-top: solid #222 1px;
-  border-right: solid #222 2px;
-  border-left: solid #222 1px;
-  border-bottom: solid #222 1px;
-  color: #222;
+  background: #fff;
+  color: #44525E;
   text-decoration: none;
   list-style-type: none;
+
 
 }
 
 .invisible-manual-toc {
   background: #fff !important;
-  border-top:none !important;
-  border-left:none !important;
-  border-bottom: none !important;
-  border-right:solid 2px #222  !important;
   height:10px;
 
 }
 #manual-toc .active-trail {
   font-weight:bold;
-  background: #fff;
-  border-top: solid #222 1px !important;
-  border-left: solid #222 1px !important;
-  border-bottom: solid #222 1px !important;
-  border-right: none !important;
+  background-color: #EEF2F3;
+  color: #44525E;
+  border-left: 4px solid #DDE5E7;
+
 
 
 }
@@ -2649,17 +2641,39 @@ display: block;
   padding:10px;
   display: block;
 }
-
+.manual-doc {
+  border-left: solid 2px #eef2f3;
+  margin-left:20px;
+}
 .manual-toc {
-  width: 20%;
   background: #fff;
-  padding-top: 30px;
-
 }
 .manual-body {
   width: 70%;
   float: right;
   margin-right: 80px;
+
+
+}
+.terminus-pager-lsaquo {
+  font-size: 30px;
+  margin-right:10px;
+  float:left;
+  color:#EFD01B;
+  line-height: .7;
+  font-weight: bold;
+}
+.terminus-pager-rsaquo {
+  font-size: 30px;
+  margin-left:10px;
+  float:right;
+  color:#EFD01B;
+  line-height: .7;
+  font-weight: bold;
+}
+
+.terminus-pager a {
+  text-decoration: none;
 }
 .terminus-plugin {
   background-color: #ddd;
