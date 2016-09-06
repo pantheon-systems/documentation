@@ -51,28 +51,50 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  ```
  Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
 
-6. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase:
+<ol start="6"><li> Select the appropriate version of Git running on your local machine, then pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase:
+ <!-- Nav tabs -->
+ <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#28-step6" aria-controls="28-step6" role="tab" data-toggle="tab">Git 2.8 and Below</a></li>
+  <li role="presentation"><a href="#29-step6" aria-controls="29-step6" role="tab" data-toggle="tab">Git 2.9 and Above</a></li>
+ </ul>
+ <!-- Tab panes -->
+ <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="28-step6">
+  <pre><code class="bash hljs">git pull --no-rebase --squash -Xtheirs pantheon master</code></pre>
+ </div>
+  <div role="tabpanel" class="tab-pane" id="29-step6">
+   <pre><code class="bash hljs">git pull --no-rebase --squash -Xtheirs pantheon master --allow-unrelated-histories</code></pre>
+  </div>
+ </div>
 
- ```bash
- git pull --no-rebase --squash -Xtheirs pantheon master
- ```  
-
- Will yield:  
- ```bash
- Squash commit -- not updating HEAD  
- Automatic merge went well; stopped before committing as requested
- ```
- Authenticate using your Pantheon Dashboard credentials when prompted for a password. We recommend enabling passwordless access to the site's codebase for Git by [loading an SSH key](/docs/ssh-keys/) into the User Dashboard.
+ <p>Will yield:</p>
+ <pre><code class="bash hljs">Squash commit -- not updating HEAD
+Automatic merge went well; stopped before committing as requested</code></pre>
+ <p>Authenticate using your Pantheon Dashboard credentials when prompted for a password. We recommend enabling passwordless access to the site's codebase for Git by <a href="/docs/ssh-keys/">loading an SSH key</a> into the User Dashboard.</p>
+ </li></ol>
 
 7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
+ 
  ```bash
  git commit -m "Adding Pantheon core files"
  ```
-8. Align your local branch with its remote counterpart on Pantheon:
+<ol start="8"><li> Align your local branch with its remote counterpart on Pantheon:
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+   <li role="presentation" class="active"><a href="#28-step8" aria-controls="28-step8" role="tab" data-toggle="tab">Git 2.8 and Below</a></li>
+   <li role="presentation"><a href="#29-step8" aria-controls="29-step8" role="tab" data-toggle="tab">Git 2.9 and Above</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+   <div role="tabpanel" class="tab-pane active" id="28-step8">
+   <pre><code class="bash hljs">git pull pantheon master --no-rebase</code></pre>
+  </div>
+   <div role="tabpanel" class="tab-pane" id="29-step8">
+    <pre><code class="bash hljs">git pull pantheon master --no-rebase --allow-unrelated-histories</code></pre>
+   </div>
+  </div>
+  </li></ol>
 
- ```bash
- git pull pantheon master
- ```
 9. Push your newly merged codebase up to your Pantheon site repository:
 
  ```bash
