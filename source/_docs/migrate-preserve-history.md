@@ -74,6 +74,7 @@ Automatic merge went well; stopped before committing as requested</code></pre>
  </li></ol>
 
 7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
+ 
  ```bash
  git commit -m "Adding Pantheon core files"
  ```
