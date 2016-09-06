@@ -84,7 +84,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### Fast 404  
 **Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
 
-**Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"]`. 
+**Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"]`.
 
 <hr>
 ### Global Redirect  
@@ -274,7 +274,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### WPML
 **Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
-**Solution**: Disable environment locking.
+**Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
 ## Dynamic Outbound IPs
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request.
