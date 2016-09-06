@@ -272,7 +272,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### WPML
-**Issue**: Locking an environment returns prevents WPML from opertaing and returns `It looks like languages per directories will not function` error.
+**Issue**: Locking an environment prevents WPML from opertaing and returns `It looks like languages per directories will not function` error.
 
 **Solution**: Disable environment locking.
 
