@@ -207,7 +207,7 @@ Additionally, the variable can be set using drush:
 ````
 drush vset views_data_export_directory 'public://'
 ````
-Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733)
+Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
 <hr>
 
 ### Webform export<br>
@@ -272,7 +272,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### WPML
-**Issue**: Locking an environment prevents WPML from opertaing and returns `It looks like languages per directories will not function` error.
+**Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Disable environment locking.
 
