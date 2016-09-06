@@ -34,5 +34,5 @@ You can set a different username and password for each environment. This is impo
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 ## Unlock a Site's Environment
-When you are ready to make your environment public again, click **Public** on your Site Dashboard. Next to Environment Access, click **Public**.
-This will clear the credentials you entered and make and web accessible resources available without a basic authentication prompt.
+When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.
+This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
