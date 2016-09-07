@@ -30,3 +30,9 @@ You can generate a machine token here. (You can manage this later through your *
 <span class="btn-clipboard">Copy</span>
 <figure class="highlight"><pre><code class="bash" data-lang="bash">terminus auth login --machine-token<machine-token></code></pre></figure>
 </div>
+
+<div class="terminus-pager">
+  <hr>
+      <a style="float:left;" href="/docs/terminus"><span class="terminus-pager-lsaquo">&lsaquo;</span>Getting Started</a>
+      <a style="float:right;" href="/docs/terminus/commands"><span class="terminus-pager-rsaquo">&rsaquo;</span>Commands</a>
+</div>

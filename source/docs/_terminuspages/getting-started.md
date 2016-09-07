@@ -14,3 +14,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna.
 
 **Scenario**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna. In et sodales magna. Sed tellus ante, efficitur at vestibulum in, lacinia at quam. Aliquam elit justo, bibendum vitae interdum et, varius id tellus. Suspendisse gravida vestibulum odio, id gravida tortor laoreet eget.
+
+<div class="terminus-pager">
+  <hr>
+      <a style="float:right;" href="/docs/terminus/install"><span class="terminus-pager-rsaquo">&rsaquo;</span>Install & Setup</a>
+</div>

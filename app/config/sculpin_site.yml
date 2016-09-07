@@ -16,7 +16,11 @@ terminuspages:
           url: /docs/terminus/install/
           slug: /docs/terminus/install/
       -
-          name: Examples
+          name: Commands
+          url: /docs/terminus/commands/
+          slug: /docs/terminus/commands/
+      -
+          name: Example Usage
           url: /docs/terminus/examples/
           slug: /docs/terminus/examples/
       -
@@ -24,9 +28,21 @@ terminuspages:
           url: /docs/terminus/extend/
           slug: /docs/terminus/extend/
       -
-          name: Command Ref
-          url: /docs/terminus/commands/
-          slug: /docs/terminus/commands/
+          name: Plugins
+          url: /docs/terminus/extend/plugins/
+          slug: /docs/terminus/extend/plugins/
+      -
+          name: Create Plugins
+          url: /docs/terminus/extend/create-plugins/
+          slug: /docs/terminus/extend/create-plugins/
+      -
+          name: Contribute
+          url: /docs/terminus/contribute/
+          slug: /docs/terminus/contribute/
+      -
+          name: Style Guide
+          url: /docs/terminus/contribute/style-guide
+          slug: /docs/terminus/contribute/style-guide
       -
           name: Version Updates
           url: /docs/terminus/versions/

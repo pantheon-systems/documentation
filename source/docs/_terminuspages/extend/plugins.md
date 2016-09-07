@@ -46,3 +46,8 @@ terminuschild: true
   <div class="container-fluid">
   <hr>
   </div>
+  <div class="terminus-pager">
+    <hr>
+        <a style="float:left;" href="/docs/terminus/extend"><span class="terminus-pager-lsaquo">&lsaquo;</span>Extend</a>
+        <a style="float:right;" href="/docs/terminus/extend/create-plugins"><span class="terminus-pager-rsaquo">&rsaquo;</span>Create Plugins</a>
+  </div>

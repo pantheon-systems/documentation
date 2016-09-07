@@ -1,14 +1,7 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <div class="col-md-12">
-  <div class="col-md-2 manual-toc hidden-s">
-    <ul id="manual-toc">
-
-      {% for terminuspage in site.terminuspages %}
-        <a id="{{terminuspage.slug |trim('/')|replace('/','-')}}" href="/{{ terminuspage.url |trim('/') }}"><li>{{ terminuspage.name }}</li></a>
-      {% endfor %}
-    </ul>
-  </div>
+  {% include("terminus_navbar.html") %}
   {% if page.terminustoc %}
   <div class="col-xs-12 col-md-7 manual-doc">
       {% else %}
@@ -62,17 +55,6 @@
       <hr style="margin-top:10px;margin-bottom:10px;">
     </header>
       {{ page.blocks.content|raw }}
-      <div class="terminus-pager">
-        <hr>
-        {% if page.previous_terminuspage or page.next_terminuspage %}
-            {% if page.next_terminuspage %}
-            <a style="float:left;" href="{{ page.next_terminuspage.url }}"><span class="terminus-pager-lsaquo">&lsaquo;</span>{{ page.next_terminuspage.title }}</a>
-            {% endif %}
-            {% if page.previous_terminuspage %}
-            <a style="float:right;" href="{{ page.previous_terminuspage.url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span>{{ page.previous_terminuspage.title }}</a>
-            {% endif %}
-        {% endif %}
-      </div>
   </div>
   {% if page.terminustoc %}
   <div class="col-md-2">
