@@ -9,7 +9,7 @@
   {% endif %}
     <header>
       <h1>{{ page.title[17:] }}</h1>
-      {% set fullpath = page.url %}
+      {% set fullpath = page.url|replace({'/docs': '/_docs'}) %}
       <div class="dropdown">
       <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           <span class="icon-github"></span>
