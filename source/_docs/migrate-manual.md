@@ -10,8 +10,9 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/wordpress-site-networks/)**
-* **Plugin install unavailable on existing WordPress site** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 
 For guided migration, see [Migrate Sites to Pantheon](/docs/migrate).
 
