@@ -14,6 +14,23 @@
       $("[rel=popover]").popover({'trigger':'hover'});
   });
   </script>
+  <!--DocSearch JS Configuration-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+  <script type="text/javascript">
+  docsearch({
+    apiKey: '68209e7d940c2210c9a045c08838b691',
+    indexName: 'pantheon-io',
+    inputSelector: '#docsearch',
+    debug: false, // Set debug to true if you want to inspect the dropdown
+    algoliaOptions: {
+      hitsPerPage: 7
+    },
+    autocompleteOptions: {
+      autoselect: false,
+    }
+  });
+  </script>
+
   <script type="text/javascript">
   function setActive() {
     aObj = document.getElementById('dropmenu').getElementsByTagName('a');
@@ -35,6 +52,13 @@
 
       }
     }
+  }
+  window.onload = setActive;
+  </script>
+  {% if page.terminuspage %}
+
+  <script type="text/javascript">
+  function setActivetrail() {
     aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
     for(i=0;i<aaObj.length;i++) {
       if(document.location.href.indexOf(aaObj[i].href)>=0 ){
@@ -43,9 +67,6 @@
           $('#docs-terminus').removeClass('active-trail');
         }
         if(/\/examples.*/.test(aaObj[i].href)>=1) {
-          $('#docs-terminus').removeClass('active-trail');
-        }
-        if(/\/extend.*/.test(aaObj[i].href)>=1) {
           $('#docs-terminus').removeClass('active-trail');
         }
         if(/\/commands.*/.test(aaObj[i].href)>=1) {
@@ -57,10 +78,11 @@
       }
     }
   }
-  window.onload = setActive;
+  window.onload = setActivetrail;
   </script>
-  <!-- Marketo Script All Pages -->
+  {% endif %}
 
+  <!-- Marketo Munchkin -->
   <script type="text/javascript">
 
   (function() {

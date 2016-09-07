@@ -11,3 +11,7 @@ services:
         class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
         arguments:
              - title
+    twig.extension.text:
+            class: Twig_Extensions_Extension_Text
+            tags:
+                - { name: twig.extension }
