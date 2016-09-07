@@ -1,48 +1,27 @@
 ---
-title: Terminus, the Pantheon Command-Line Interface (CLI)
-description: Learn how to use Pantheon's CLI, Terminus, to develop your Drupal sites from the command line.
-categories: [developing]
-tags: [terminus, local]
-keywords: pantheon, terminus, command line, cli
+title:  Terminus Manual: Getting Started
+terminuspage: true
+type: terminuspage
+contributors: ari
+tags: [terminus]
+categories: [managing]
+layout: terminuspage
+permalink: docs/:basename/
 ---
-Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.
+Prefer the command prompt? We love it too. Terminus, our CLI utility, can make Pantheon work better for you by enabling you to execute Pantheon activities through the CLI and script recurring tasks. These should mention drush/wp-cli.
 
-Terminus is developed and supported at [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus "Pantheon's Terminus -CLI- Project on Github").
+Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus), where you can contribute, file issues, and note feature ideas.
 
-## Installation
-Installation instructions can be found in the [project readme](https://github.com/pantheon-systems/terminus#installation "Pantheon CLI readme, installation page on Github").
+For help: when to file a ticket vs. opening an issue?
 
-## Use
-Usage instructions are maintained at the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Usage "Pantheon CLI wiki, usage page on Github").
+### What you can do with terminus:
+**Scenario**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna. In et sodales magna. Sed tellus ante, efficitur at vestibulum in, lacinia at quam. Aliquam elit justo, bibendum vitae interdum et, varius id tellus. Suspendisse gravida vestibulum odio, id gravida tortor laoreet eget.
 
-A list of available commands is maintained at the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Available-Commands "Pantheon CLI wiki, commands page on Github").
+**Scenario**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna. In et sodales magna. Sed tellus ante, efficitur at vestibulum in, lacinia at quam. Aliquam elit justo, bibendum vitae interdum et, varius id tellus. Suspendisse gravida vestibulum odio, id gravida tortor laoreet eget.
 
-## Support
-Support is maintained at [https://github.com/pantheon-systems/terminus/issues](https://github.com/pantheon-systems/terminus/issues).
-
-## Plugins
-Terminus now supports third-party plugins. Check the [project wiki](https://github.com/pantheon-systems/terminus/wiki/Plugins) for details and a list of known plugins.
-
-## Further Reading
-We've included CLI instructions in many of our articles and guides.
-
-- [Creating and Revoking Machine Tokens](/docs/machine-tokens/)
-- [Automated Testing WordPress with Behat](/docs/guides/wordpress-automated-testing/)
-- [Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI](/docs/guides/wordpress-commandline/)
-- [Prevent Spamming During Drupal Debugging and Testing](/docs/guides/rerouting-outbound-email/)
-- [Using Terminus to Create and Update Drupal Sites on Pantheon](/docs/guides/terminus-drupal-site-management/)
-- [Drush Command-Line Utility](/docs/drush)
-- [Cron for WordPress](/docs/wordpress-cron/)
-- [Cron for Drupal](/docs/drupal-cron/)
-- [CloudFront CDN Setup for WordPress](/docs/wordpress-cloudfront/)
-- [More Ways of Managing Code in SFTP Mode](/docs/more-sftp/)
-- [Migrate Sites to Pantheon](/docs/migrate)
-- [Timeouts](/docs/timeouts/)
-- [Resetting Passwords](/docs/resetting-passwords/)
-- [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
-- [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/)
-- [Apache Solr on Pantheon](/docs/solr)
-- [Email on Pantheon](/docs/email)
-- [LDAP and LDAPS](/docs/ldap-and-ldaps)
-- [Private Files with Drupal](/docs/private-paths)
-- [Log Files on Pantheon](/docs/logs)
+<div class="terminus-pager">
+  <hr>
+      <a style="float:right;" href="/docs/terminus/install"><span class="terminus-pager-rsaquo">&rsaquo;</span>Installation</a>
+</div>

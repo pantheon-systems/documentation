@@ -9,10 +9,12 @@ sculpin_content_types:
         enabled: true
 
     terminuspages:
-        singular_name: terminuspage
+        type: meta
+        taxonomies:
+            - categories
+            - tags
+            - contributors
         permalink: docs/terminus/:basename/
-        path: docs/_terminuspages
-        layout: terminuspage
 
     docs:
         type: path

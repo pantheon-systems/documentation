@@ -1,6 +1,10 @@
 ---
-title: Install & Setup
-permalink: /docs/terminus/install/
+title:  Terminus Manual: Installation
+terminuspage: true
+contributors: ari
+type: terminuspage
+tags: [terminus]
+categories: [managing]
 ---
 ## 1. Install Terminus
 Mac OS: Install with [Composer](https://getcomposer.org/) by running this in your terminal:

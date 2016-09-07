@@ -1,7 +1,11 @@
 ---
-title: Examples
+title: Terminus Manual: Example Usage
+terminuspage: true
 terminustoc: true
-permalink: /docs/terminus/examples/
+type: terminuspage
+contributors: ari
+tags: [terminus]
+categories: [managing]
 ---
 ## Steps to Deploy to Live
 ### Create a Backup
@@ -23,25 +27,8 @@ After testing your changes you can take them live. Deploying code from Test to L
   <figure class="highlight"><pre id="scenario1_deploytest"><code class="bash" data-lang="bash">terminus site deploy --env=live --cc</code></pre></figure>
 </div>
 
-## Debug and Troubleshoot Site Issues
-### Clear Caches
-Clear all site caches.
-<div class="zero-clipboard">
-  <span class="btn-clipboard" id="scenario2button_clear-cache" data-clipboard-target="scenario2_clear-cache">Copy</span>
-  <figure class="highlight"><pre id="scenario2_clear-cache"><code class="bash" data-lang="bash">terminus site clear-cache</code></pre></figure>
-</div>
-
-## Scenario 3
-### Scenario 3
-Scenario 3.
-<div class="zero-clipboard">
-  <span class="btn-clipboard" id="scenario3button_scenario3" data-clipboard-target="scenario3_scenario3">Copy</span>
-  <figure class="highlight"><pre id="scenario3_scenario3"><code class="bash" data-lang="bash">terminus site scenario-3</code></pre></figure>
-</div>
-
 
 <div class="terminus-pager">
   <hr>
       <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
-      <a style="float:right;" href="/docs/terminus/extend"><span class="terminus-pager-rsaquo">&rsaquo;</span>Extend</a>
 </div>
