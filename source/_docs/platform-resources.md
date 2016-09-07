@@ -209,8 +209,8 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td class="features">Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Access to website experts to help with launch and ongoing site performance."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Included</td>
       <td>Included</td>
-      <td>Unlimited tickets Priority treatment</td>
-      <td>Unlimited tickets 2 hour response SLA-guaranteed</td>
+      <td>Unlimited tickets</td>
+      <td>Unlimited tickets; 2 hour response time</td>
     </tr>
     <tr>
       <td class="features">Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="One-on-one conversation to guide you through unresolved tickets or complicated website issues."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
@@ -220,7 +220,7 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td>Included</td>
     </tr>
     <tr>
-      <td class="features">24x7 On-call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="The Elite customer bat-phone—emergency support anytime, anywhere for your website."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
+      <td class="features">Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="The Elite customer emergency support anytime, anywhere for your website."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Not available</td>
       <td>Not available</td>
       <td>Not available</td>
