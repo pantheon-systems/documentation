@@ -38,3 +38,10 @@ Scenario 3.
   <span class="btn-clipboard" id="scenario3button_scenario3" data-clipboard-target="scenario3_scenario3">Copy</span>
   <figure class="highlight"><pre id="scenario3_scenario3"><code class="bash" data-lang="bash">terminus site scenario-3</code></pre></figure>
 </div>
+
+
+<div class="terminus-pager">
+  <hr>
+      <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
+      <a style="float:right;" href="/docs/terminus/extend"><span class="terminus-pager-rsaquo">&rsaquo;</span>Extend</a>
+</div>

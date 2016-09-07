@@ -2613,12 +2613,19 @@ display: block;
 .gs-result .gs-title, .gs-result .gs-title {
   font-size: 20px !important;
 }
-#manual-toc a {
+.manual-toc a {
   background: #fff;
   color: #44525E;
   text-decoration: none;
   list-style-type: none;
 
+
+}
+.manual-toc ul {
+
+}
+.manual-toc li {
+  list-style-type:none;
 
 }
 
@@ -2627,7 +2634,7 @@ display: block;
   height:10px;
 
 }
-#manual-toc .active-trail {
+.manual-toc .active-trail {
   font-weight:bold;
   background-color: #EEF2F3;
   color: #44525E;

@@ -1,6 +1,7 @@
 ---
-permalink: /docs/terminus/extend/
-title: Extend
+permalink: /docs/terminus/extend/create-plugins/
+title: Create Plugins
+terminuschild: true
 ---
 <ul>
   <li>What are plugins and why they're awesome</li>
@@ -44,4 +45,9 @@ title: Extend
   </div>
   <div class="container-fluid">
   <hr>
+  </div>
+  <div class="terminus-pager">
+    <hr>
+        <a style="float:left;" href="/docs/terminus/extend/plugins"><span class="terminus-pager-lsaquo">&lsaquo;</span>Plugins</a>
+        <a style="float:right;" href="/docs/terminus/contribute"><span class="terminus-pager-rsaquo">&rsaquo;</span>Contribute</a>
   </div>

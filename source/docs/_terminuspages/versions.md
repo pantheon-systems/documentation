@@ -26,3 +26,9 @@ permalink: /docs/terminus/versions/
 
 - Added 5.6 and 7.0 as version options in site set-php-version. ([#1109](https://github.com/pantheon-systems/terminus/pull/1109))
 - New command site import to import site archives. ([#1099](https://github.com/pantheon-systems/terminus/pull/1099))
+
+
+<div class="terminus-pager">
+  <hr>
+      <a style="float:left;" href="/docs/terminus/contribute/style-guide"><span class="terminus-pager-lsaquo">&lsaquo;</span>Style Guide</a>
+</div>
