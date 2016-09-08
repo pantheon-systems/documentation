@@ -65,4 +65,4 @@ curl -Is https://www.getpantheon.com|grep PHPSESS|wc -l
 
 You should substitute your site URL in there, but the desired output is "0" (zero).
 
-If your site is overly agressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on wordpress.org to alert the author to the problem and share your solution.
+If your site is overly agressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
