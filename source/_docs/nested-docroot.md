@@ -59,12 +59,12 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane" id="d7">
+  <div role="tabpanel" class="tab-pane active" id="d7">
   <pre><code class="bash hljs">
   mkdir -p web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ web
   </code></pre>
   </div>
-  <div role="tabpanel" class="tab-pane active" id="d8">
+  <div role="tabpanel" class="tab-pane" id="d8">
   <pre><code class="bash hljs">
   mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor web
   </code></pre>
