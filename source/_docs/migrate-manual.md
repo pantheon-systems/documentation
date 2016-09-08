@@ -12,7 +12,6 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **[WordPress Site Networks](/docs/wordpress-site-networks/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
-* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 
 For guided migration, see [Migrate Sites to Pantheon](/docs/migrate).
 
@@ -129,6 +128,11 @@ You should now have all three of the major components of your site imported into
 
 If something didn't work and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration so you can restore to a known good state of your site.
 
+## Frequently Asked Questions (FAQs)
+
+#### How do I migrate a local site to Pantheon?
+You can import a WordPress site archive via URL (within file size limits) using Terminus:
+`terminus sites import —url=<url>`
 
 
 ## See Also
