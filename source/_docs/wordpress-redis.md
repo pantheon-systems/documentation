@@ -120,4 +120,4 @@ redis>
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
 ### Redis Server is Gone
-Enabled Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.

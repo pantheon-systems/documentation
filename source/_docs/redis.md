@@ -36,16 +36,17 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 For detailed information, see [Installing Redis on WordPress](/docs/wordpress-redis).
 
 ### Drupal 7.x and 6.x Sites
+1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-1. Add the [Redis](http://drupal.org/project/redis) module from Drupal.org.
+2. Add the [Redis](http://drupal.org/project/redis) module from Drupal.org.
 
  As there is no Redis module for Drupal 6.x, you need to install the [Cache Backport](https://drupal.org/project/cache_backport) module to use Redis with Drupal 6.x. See [more information](/docs/redis/#drupal-6-cache-backport) in the Troubleshooting section below.
 
-2. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
+3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
  - `redis_client_host`
  - `redis_client_port`
  - `redis_client_password`  
-3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.  
+4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.  
  ```php
  // All Pantheon Environments.
  if (defined('PANTHEON_ENVIRONMENT')) {
@@ -69,7 +70,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
       <div class="alert alert-info">
       <h4>Note</h4>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
-4. Optional configurations for `sites/default/settings.php` (only choose one as they will conflict):
+5. Optional configurations for `sites/default/settings.php` (only choose one as they will conflict):
  - Option A: Higher performance for smaller page counts.<br>
  This technique does not execute full Drupal bootstrapping and does not invoke the database, which ignores database checks such as Drupal's IP blacklist.
  ```
@@ -94,11 +95,11 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
  }
  ```
 
-5. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
+6. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
 
-6. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+7. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
 
-7. Connect to test that it's working:
+8. Connect to test that it's working:
 
   - For Drupal 7, visit `/admin/config/development/performance/redis` and open **Connection Information**.
 
@@ -167,6 +168,13 @@ redis> DBSIZE
 :0
 ```
 ## Troubleshooting
+### RedisException: Redis server went away
+The following error occurs when Redis has not been enabled within the Site Dashboard:
+```php
+RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
+```
+Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+
 
 ### Redis is enabled but there is no data
 
@@ -254,14 +262,14 @@ cat redis.conf
 port 11455
 timeout 300
 loglevel notice
-logfile /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/logs/redis.log
+logfile /srv/bindings/xxxxxxxxx/logs/redis.log
 databases 16
 save 900 1
 save 300 10
 save 60 10000
 rdbcompression yes
 dbfilename dump.rdb
-dir /srv/bindings/0ba27ab152ab480a9ba54a40c472e837/data/
+dir /srv/bindings/xxxxxxxxx/data/
 requirepass 278801a71e2c4264b7d7b155def62bea
 maxclients 1024
 maxmemory 964689920
