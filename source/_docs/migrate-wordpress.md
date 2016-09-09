@@ -39,12 +39,6 @@ From your Pantheon Dashboard:
 
  ![Successful Migration BlogVault](/source/docs/assets/images/successful-site-migration-complete-blogvault.png)
 
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>  
-The migration process may take several hours to complete, this is normal. You will be alerted via email once the migration process is complete.
-</div>
-
 If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
 <div class="alert alert-info" role="alert">
@@ -77,6 +71,10 @@ terminus site import —url=<url>
 ```
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
+
+**How long does the migration process take?**
+
+The migration process may take several hours to complete, this is normal. You will be alerted via email once the migration process is complete.
 
 ## See Also
 
