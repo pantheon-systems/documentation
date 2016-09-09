@@ -72,9 +72,9 @@ terminus site import —url=<url>
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
 
-**How long does the migration process take?**
+#### How long does the migration process take?
 
-The migration process may take several hours to complete, this is normal. You will be alerted via email once the migration process is complete.
+The migration process can take several hours to complete. You will receive an email confirmation after the migration process is complete.
 
 ## See Also
 
