@@ -17,7 +17,7 @@ Redis provides an alternative caching backend, taking that work off the database
 
 Enable Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+Currently, all plans can use Redis except for Personal plans as it will cause unexpected behavior. Redis is available to Sandbox plans for developmental purposes. 
 
 
 | Plans        | Supported
