@@ -6,22 +6,35 @@ type: terminuspage
 tags: [terminus]
 categories: [managing]
 ---
-## Basics
-```bash
-terminus command
-```
-```bash
-terminus command
-```
-## Maitaining: Update all your sites at once
-```bash
-terminus command
-```
-```bash
-terminus command
-```
-<div class="terminus-pager">
-  <hr>
-      <a style="float:left;" href="/docs/terminus/install"><span class="terminus-pager-lsaquo">&lsaquo;</span>Installation</a>
-      <a style="float:right;" href="/docs/terminus/examples"><span class="terminus-pager-rsaquo">&rsaquo;</span>Example Usage</a>
+
+<div class="container" ng-app="terminusCommandsApp" ng-controller="mainController">
+
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search Terminus Commands" ng-model="searchCommand">
+      </div>      
+    </div>
+  </form>
+
+  <table class="table table-responsive table-bordered table-striped">
+
+    <thead>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>Subcommands</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="subcommand in commands.subcommands | filter:searchCommand">
+        <td>{[{ subcommand.name }]}</td>
+        <td>{[{ subcommand.description }]}</td>
+        <td>{[{ subcommand.subcommands }]}</td>
+      </tr>
+    </tbody>
+
+  </table>
 </div>
