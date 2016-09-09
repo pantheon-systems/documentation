@@ -30,3 +30,20 @@
   var client = new ZeroClipboard( $("span#scenario1button_deploytest") );
   var client = new ZeroClipboard( $("span#scenario2button_clear-cache") );
   var client = new ZeroClipboard( $("span#scenario3button_scenario3") );
+
+
+
+  var terminusCommandsApp = angular.module('terminusCommandsApp', []);
+
+  terminusCommandsApp.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{[{');
+    $interpolateProvider.endSymbol('}]}');
+  });
+
+  terminusCommandsApp.controller('mainController', function($scope, $http) {
+    $scope.searchCommand   = '';
+    $scope.commands = [];
+    $http.get("/docs/assets/terminuscommands.json").success(function(response){
+      $scope.commands = response;
+    });
+  });
