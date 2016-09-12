@@ -97,7 +97,7 @@ drush @pantheon.SITENAME.dev cc all
 ## S3 Files System
 
 [S3 File System](https://www.drupal.org/project/s3fs) provides an additional file system to your Drupal site
-alongside the public and private file systems, which stores files in Amazon's Simple Storage Service (S3), or any S3-compatible storage service. This is a supported alternative to Amazon S3 CORS.
+alongside the public and private file systems, which stores files in Amazon's Simple Storage Service (S3), or any S3-compatible storage service. This is a supported alternative to Amazon S3 CORS. For details, see [AWS S3 Setup for Drupal](/docs/drupal-s3).
 
 ## Known Limitations
 
