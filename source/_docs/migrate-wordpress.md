@@ -61,6 +61,17 @@ If you are logged in with one identity and re-authenticate a different account, 
 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
+## Frequently Asked Questions (FAQs)
+
+#### How do I migrate a local site to Pantheon?
+You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
+
+```bash
+terminus site import —url=<url>
+```
+
+Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
+
 ## See Also
 
 - [Migrate to Pantheon: WordPress Site Networks](/docs/migrate-wordpress-site-networks)
