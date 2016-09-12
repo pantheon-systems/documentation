@@ -179,11 +179,10 @@ You may want to enhance your Drupal media handling in conjunction with using AWS
  terminus drush 'en ctools file_entity views entity_view_mode -y'
  </code></pre>
 
- Then install: Media 2.x  module (e.g. 7.x-2.0-beta2)
+ Then install the Media module 2.x (e.g. 7.x-2.x-dev)
  <pre><code class="bash hljs">
- terminus drush 'dl --select media'
+ terminus drush 'en media-7.x-2.x-dev -y'
  </code></pre>
- The output of the above command will allow you to select the latest, stable 2.x version.
 </div>
  <div role="tabpanel" class="tab-pane" id="d8media">
   <br/>
