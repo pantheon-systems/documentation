@@ -131,8 +131,13 @@ If something didn't work and you'd like to start over, you can cancel the site m
 ## Frequently Asked Questions (FAQs)
 
 #### How do I migrate a local site to Pantheon?
-You can import a WordPress site archive via URL (within file size limits) using Terminus:
-`terminus sites import —url=<url>`
+You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
+
+```bash
+terminus sites import —url=<url>
+```
+
+Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
 
 
 ## See Also
