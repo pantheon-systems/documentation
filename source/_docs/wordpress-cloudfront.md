@@ -59,9 +59,6 @@ Execute the following [Terminus](/docs/terminus/) command to install and activat
 terminus wp 'plugin install amazon-s3-and-cloudfront --activate'
 ```
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>your-awesome-site</code> with your specific site name. To see a list of all your Pantheon hosted sites, run <code>terminus sites list</code>. </div>
 
 In order for the Amazon S3 and CloudFront plugin to function, you also need to install the Amazon Web Services plugin:
 
