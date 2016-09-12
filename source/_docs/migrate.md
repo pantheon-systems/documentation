@@ -56,6 +56,17 @@ For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-m
 
 For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting).
 
+## Frequently Asked Questions (FAQs)
+
+#### How do I migrate a local site to Pantheon?
+You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
+
+```bash
+terminus site import —url=<url>
+```
+
+Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
+
 ## See Also
 * [Going Live](/docs/going-live)
 * [Getting Started](/docs/getting-started)
