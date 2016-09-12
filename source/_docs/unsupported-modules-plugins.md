@@ -256,7 +256,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### Sucuri Scanner
-**Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the binding ID of the file path will change with routine platform maintenance.
+**Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the container ID of the file path will change with routine platform maintenance.
 <hr>
 
 ### Timthumb
