@@ -134,7 +134,7 @@ If something didn't work and you'd like to start over, you can cancel the site m
 You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus sites import —url=<url>
+terminus site import —url=<url>
 ```
 
 Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
