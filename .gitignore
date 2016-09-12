@@ -15,4 +15,3 @@ node_modules
 .vagrant
 bin/*
 shots/
-.idea
