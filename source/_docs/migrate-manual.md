@@ -137,8 +137,6 @@ You can import a WordPress or Drupal site archive via URL (within file size limi
 terminus site import —url=<url>
 ```
 
-Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
-
 
 ## See Also
 * [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
