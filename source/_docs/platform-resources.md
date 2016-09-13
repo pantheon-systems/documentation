@@ -1,5 +1,5 @@
 ---
-title: Platform Resources and Features by Plan
+title: Site Resources and Features by Plan
 plancomparison: true
 description: Get detailed information about platform resources for your Drupal or WordPress site.
 keywords: site, RAM, pantheon, backup, plane
@@ -43,7 +43,7 @@ The platform resources and features provided to your website depend on your curr
       <td>100GB+</td>
     </tr>
     <tr>
-      <td class="features">Application Memory Limit <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="The amount of memory any single request can utilize. Sites that handle complex data, or with very large codebases will need more."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
+      <td class="features">PHP Memory Limit <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="The amount of memory any single request can utilize. Sites that handle complex data, or with very large codebases will need more."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>256MB</td>
       <td>256MB</td>
       <td>512MB</td>
@@ -54,13 +54,6 @@ The platform resources and features provided to your website depend on your curr
       <td>Not available	</td>
       <td>Not available	</td>
       <td>Not available	</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">New Relic APM Pro <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Performance monitoring lets you monitor the performance of your entire web stack."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
       <td>Included</td>
     </tr>
     <tr>
@@ -78,44 +71,7 @@ The platform resources and features provided to your website depend on your curr
       <td>Years</td>
     </tr>
     <tr>
-      <td class="features">Load Balancing <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="All requests on Pantheon are load balanced, allowing you to scale at will and improving your site's uptime."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">Website Firewall <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Platform-wide protection ensures only website traffic reaches your site."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">End-to-end Encryption for
-Web Traffic <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="All traffic routed through Pantheon is encrypted, allowing customers using HTTPS to guarantee encryption from a user's browser to the PHP worker."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">Encrypted End-Point
-Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="All development work can be done via secure, encrypted channels (e.g. SFTP or SSH tunnels)."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">Edge Cache <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Our edge-cache uses Varnish to accelerates content and pages on every Pantheon-powered site."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <td class="features">Application Cache <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Our application cache uses Redis to significantly accelerate sites that make heavy use of the database."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
+      <td class="features">Redis Cache <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Our application cache uses Redis to significantly accelerate sites that make heavy use of the database."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Not available</td>
       <td>128MB</td>
       <td>256MB</td>
@@ -127,13 +83,6 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td>8</td>
       <td>16</td>
       <td>Managed scaling</td>
-    </tr>
-    <tr>
-      <td class="features">One-Click Core Updates <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Update WordPress and Drupal core with a single click."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
     </tr>
     <tr>
       <td class="features">Dedicated IP <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="For advanced DNS routing or network integration."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
@@ -150,7 +99,7 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td>Included with on-call alerting</td>
     </tr>
     <tr>
-      <td class="features">Full-text Search <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Pantheon provides a full Solr stack as a service, enabling performant, faceted full-text search of content and documents."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
+      <td class="features">Apache Solr Search Indexing <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Pantheon provides a full Solr stack as a service, enabling performant, faceted full-text search of content and documents."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Not available</td>
       <td>Included</td>
       <td>Included</td>
@@ -185,13 +134,6 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td>Up to 10</td>
     </tr>
     <tr>
-      <td class="features">Secure Runtime Access <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Force all developer access to site resources through SSH tunnel."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
-      <td>Not available</td>
-      <td>Not available</td>
-      <td>Not available</td>
-      <td>Included</td>
-    </tr>
-    <tr>
       <td class="features">Roles and Permissions <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Feature Change Management allows you to restrict access to deploying in test and live environments to only trusted users."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Not available</td>
       <td>Not available</td>
@@ -199,7 +141,7 @@ Connections <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html
       <td>Included</td>
     </tr>
     <tr>
-      <td class="features">Secure Integration <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Pantheon Enterprise Gateway allows you to securely connect to resources that reside behind a firewall."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
+      <td class="features">Pantheon Enterprise Gateway <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Pantheon Enterprise Gateway allows you to securely connect to resources that reside behind a firewall."><em class="fa fa-info-circle" style="color:#aab3b9;" ></em></a></td>
       <td>Not available</td>
       <td>Not available</td>
       <td>Not available</td>
