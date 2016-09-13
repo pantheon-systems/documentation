@@ -70,7 +70,7 @@ You can import a WordPress site archive via URL (within file size limits) using 
 terminus site import —url=<url>
 ```
 
-Site archives exceeding 500MB will need to be [migrated manually](/docs/migrate-manual).
+You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
 
 ## See Also
 
