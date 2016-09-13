@@ -21,7 +21,7 @@ You can change a site's Drush version via the [pantheon.yml file](/docs/pantheon
 ```yaml
 api_version: 1
 
-drush_version: 7
+drush_version: 8
 ```
 Now your site’s Drush version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
 

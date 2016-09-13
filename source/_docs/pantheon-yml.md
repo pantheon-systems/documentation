@@ -60,7 +60,7 @@ If you are upgrading to PHP 7, you may need to make changes to your site's codeb
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
 
 ```yaml
-drush_version: 7.0
+drush_version: 8
 ```
 For more information, see [Managing Drush Versions on Pantheon](/docs/drush-versions).
 ## Quicksilver Platform Integration Hooks
