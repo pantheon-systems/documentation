@@ -15,7 +15,6 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 Be sure that you:
 
 - Have an existing Drupal site or [create](https://dashboard.pantheon.io/sites/create) one.
-- Set the site's [connection mode](/docs/sftp#sftp-mode) to SFTP.
 - Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
@@ -51,6 +50,7 @@ If you do not have an existing bucket for your Drupal site, create one:
 5. Edit the policy name and description (optional).
 6. Click **Create Policy**.
 
+For details, see [Example Policies for Administering AWS Resources](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
 ### Create an Identity and Access Management Group
 It is suggested that you does not access an S3 bucket using your AWS root user credentials. Instead, we recommend creating an IAM group and user:
 
@@ -81,12 +81,13 @@ These steps require Drush 8, which is run by default on Pantheon for newly creat
 Before you begin:
 
 - [Modify the default Drush version](/docs/drush-versions#modifying-default-drush-version) to Drush 8 if needed.
-- Create a `sites/default/settings.php` file if you have not done so already.
+- Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
 - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/docs/terminus):
 
  ```bash
  terminus site set-connection-mode --mode=sftp
  ```
+
 
 #### Drupal 8
 Before you begin:
@@ -110,27 +111,21 @@ Before you begin:
   <div role="tabpanel" class="tab-pane active" id="d7s3fs">
   <br/>
   Install the <a href="https://www.drupal.org/project/libraries">Libraries API</a> and <a href="https://www.drupal.org/project/s3fs">S3 File System</a> modules:
-  <pre><code class="bash hljs">
-  terminus drush 'en libraries s3fs -y'
-  </code></pre>
+  <pre><code class="bash hljs">terminus drush 'en libraries s3fs -y'</code></pre>
 
   Get the <a href="https://github.com/aws/aws-sdk-php/releases">AWS SDK Library 2.x</a>:
-  <pre><code class="bash hljs">
-  terminus drush 'make --no-core sites/all/modules/contrib/s3fs/s3fs.make'
-  </code></pre>
-  The above command will add the AWS SDK version 2.x into the <code>sites/all/modules/contrib/s3fs</code> directory.
+  <pre><code class="php hljs">terminus drush 'make --no-core ~/code/sites/all/modules/s3fs/s3fs.make ~/code/'
+  //or if you have a contrib subfolder for modules use:
+  //terminus drush 'make --no-core ~/code/sites/all/modules/contrib/s3fs/s3fs.make ~/code/'</code></pre>
+  The above command will add the AWS SDK version 2.x library into the <code>sites/all/libraries/awssdk2</code> directory.
  </div>
   <div role="tabpanel" class="tab-pane" id="d8s3fs">
    <br/>
    <p>Install the <a href="https://www.drupal.org/project/s3fs">S3 File System</a> module and AWS SDK version 3.x library using Composer.</p>   
    First, ensure that the Composer for your site will first look to Drupal's preferred package source to find modules:
-   <pre><code class="bash hljs">
-   composer config repositories.drupal composer https://packages.drupal.org/8
-   </code></pre>
+   <pre><code class="bash hljs">composer config repositories.drupal composer https://packages.drupal.org/8</code></pre>
    Install s3fs module from the preferred package source:
-   <pre><code class="bash hljs">
-   composer require drupal/s3fs --prefer-dist
-   </code></pre>
+   <pre><code class="bash hljs">composer require drupal/s3fs --prefer-dist</code></pre>
   </div>
  </div>
 
@@ -147,17 +142,12 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
   <div role="tabpanel" class="tab-pane active" id="d7s3fscors">
   <br/>
   Install s3fs_cors module using Drush:
-  <pre><code class="bash hljs">
-  terminus drush 'en jquery_update s3fs_cors -y'
-  </code></pre>
-  The output of the above command will allow you to select the latest, stable 2.x version.
+  <pre><code class="bash hljs">terminus drush 'en jquery_update s3fs_cors -y'</code></pre>
  </div>
   <div role="tabpanel" class="tab-pane" id="d8s3fscors">
    <br/>
    Install s3fs_cors module using Composer:
-   <pre><code class="bash hljs">
-   composer require drupal/s3fs_cors --prefer-dist
-   </code></pre>
+   <pre><code class="bash hljs">composer require drupal/s3fs_cors --prefer-dist</code></pre>
   </div>
  </div>
 
@@ -175,14 +165,10 @@ You may want to enhance your Drupal media handling in conjunction with using AWS
  <br/>
  To have solid, viewable, manageable Drupal 7 file handling (See: <a href="https://www.drupal.org/node/1699054">Media 2.x Quick Start Guide</a>), install:<br />   
  Ctools, File Entity, Views, and Entity View Modes
- <pre><code class="bash hljs">
- terminus drush 'en ctools file_entity views entity_view_mode -y'
- </code></pre>
+ <pre><code class="bash hljs">terminus drush 'en ctools file_entity views entity_view_mode -y'</code></pre>
 
  Then install the Media module 2.x (e.g. 7.x-2.x-dev)
- <pre><code class="bash hljs">
- terminus drush 'en media-7.x-2.x-dev -y'
- </code></pre>
+ <pre><code class="bash hljs">terminus drush 'en media-7.x-2.x-dev -y'</code></pre>
 </div>
  <div role="tabpanel" class="tab-pane" id="d8media">
   <br/>
@@ -199,14 +185,12 @@ Enter credentials created for the user in the previous section](#create-an-ident
 You can optionally use a CNAME to serve files from a custom domain if desired. However, you will need to create a corresponding CNAME record with your DNS host.
 
 #### Configure Download and Upload Destinations
-Navigate to `admin/config/media/file-system` and set **Default download method** for Amazon Simple Storage Service. Set the **Upload destination** to "mazon Simple Storage Service and select a file type in the **Field Settings** tab.
+Navigate to `admin/config/media/file-system` and set **Default download method** to **Amazon Simple Storage Service**. You can set the **Upload destination** to **S3 File System** within the **Field Settings** tab.
 
 
 ####S3 File System CORS Upload (s3fs_cors)
 
-From `/admin/config/media/s3fs/cors`, set **CORS Origin** to your domain.
-
-Note: An individual file path max length = 250 chars
+From `/admin/config/media/s3fs/cors`, set **CORS Origin** to your domain. There's an individual max file path length of 250 characters.
 
 ### Synchronizing the S3 Bucket and Drupal Files
 Periodically, you'll need to run Actions provided by the S3 File System module either via the admin or Terminus to sync Drupal with your S3 bucket.
@@ -218,4 +202,4 @@ terminus drush 's3fs-refresh-cache'
 ####If you have files in Drupal that need inclusion with S3 run:
 terminus drush 's3fs-copy-local'
 
-If you receive an Access Denied error message from Amazon, check the permissions on your bucket. Check that all your configuration settings in Drupal are complete and accurate.
+If you receive an Access Denied error message from Amazon, check the permissions on your bucket and policies. Check that all your configuration settings in Drupal are complete and accurate.
