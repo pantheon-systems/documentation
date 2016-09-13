@@ -23,11 +23,11 @@ Kalabox uses [Machine Tokens](/docs/machine-tokens) to authenticate access to yo
 3. Name your site and pick the environment you'd like to pull from, then click **Submit**.
 
 ## Pulling Changes from Pantheon into a Local Environment
-1. Click the <em class="fa fa-cog"></em> icon and select **Pull** from the actions menu on the target application.
+1. Click <em class="fa fa-cog"></em> and select **Pull** on the target application.
 2. Choose whether to pull database and files, then click **Submit**.
 
 ## Pushing Changes to Pantheon
-1. Click the <em class="fa fa-cog"></em> icon and select **Push** from the actions menu on the target application.
+1. Click <em class="fa fa-cog"></em> and select **Push** on the target application.
 2. Enter a commit message.
 3. Choose whether to pull database and files, then click **Submit**.
 
