@@ -72,6 +72,10 @@ terminus site import —url=<url>
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
 
+#### How long does the migration process take?
+
+Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.
+
 ## See Also
 
 - [Migrate to Pantheon: WordPress Site Networks](/docs/migrate-wordpress-site-networks)
