@@ -23,16 +23,14 @@ categories: [managing]
     <thead>
       <tr>
         <th>Command</th>
-        <th>Description</th>
         <th>Subcommands</th>
       </tr>
     </thead>
 
     <tbody>
       <tr ng-repeat="subcommand in commands.subcommands | filter:searchCommand">
-        <td>{[{ subcommand.name }]}</td>
-        <td>{[{ subcommand.description }]}</td>
-        <td><li class="terminus-subcommand-list" ng-repeat="subcommand in subcommand.subcommands">{[{ subcommand.name }]}</li></td>
+        <td><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small></td>
+        <td><li class="terminus-subcommand-list" ng-repeat="subcommand in subcommand.subcommands | filter:searchCommand"><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small><br><small>{[{ subcommand.synopsis}]}</small><hr></li></td>
       </tr>
     </tbody>
 

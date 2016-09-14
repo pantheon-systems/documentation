@@ -1,11 +1,11 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<div class="col-md-12">
+<div class="col-md-12" style="padding:0px;">
   {% include("terminus_navbar.html") %}
   {% if page.terminustoc %}
   <div class="col-xs-12 col-md-7 manual-doc">
       {% else %}
-  <div class="col-xs-12 col-md-9 manual-doc">
+  <div class="col-xs-12 col-md-10 manual-doc">
   {% endif %}
     <header>
       <h1>{{ page.title[17:] }}</h1>
