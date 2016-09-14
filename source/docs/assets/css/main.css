@@ -2662,6 +2662,9 @@ display: block;
 
 
 }
+li.terminus-subcommand-list.ng-binding.ng-scope{
+  list-style:none !important;
+}
 .terminus-pager-lsaquo {
   font-size: 30px;
   margin-right:10px;
