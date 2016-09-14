@@ -107,4 +107,4 @@ For example uses, see the following:
 
 - [Port 2222 Blocked Workaround](/docs/port-2222#set-up-the-tunnel)
 - [rsync and sftp](/docs/rsync-and-sftp/#sftp)
-- [SSH Tunnels for Secure Connections to Pantheon Services](/docs/ssh-tunnels/#prerequisites)
+- [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/docs/ssh-tunnels/#prerequisites)

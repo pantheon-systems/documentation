@@ -1,9 +1,10 @@
 ---
-title: SSH Tunnels for Secure Connections to Pantheon Services
+title: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
 categories: [developing]
 tags: [local]
 keywords: ssh, ssh tunnel, security, database, encryption, mysql database, redis cache server
+contributors: bwood
 ---
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 
@@ -20,6 +21,43 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [Redis command-line client](/docs/redis/#use-the-redis-command-line-client)
 - Add an [SSH key](/docs/ssh-keys) to your Pantheon User Dashboard
 
+## Create Secure Connection to MySQL using TLS
+
+Later versions of the MySQL client support the `--ssl` option.  Using this command line option will encrypt your connection to the database server with TLS.  To determine if your MySQL client supports TLS run `man mysql` and search for the `--ssl` option. If you add the `--ssl` option to your command there is no need to setup an SSH tunnel as described below.
+
+Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/docs/terminus):
+
+```
+terminus-sql-cli() {
+  SITE=$1
+  if [ x$SITE = x ]; then
+    echo "USAGE:
+
+terminus-sql-cli site-shortname environment
+
+Open a mysql connection to a site.
+
+  site-shortname: REQUIRED: If your site is dev-example.pantheon.io
+                  this would be \"example\" .
+
+  environment:    Defaults to \"dev\".
+"
+    return
+  fi
+
+  ENV=$2
+  if [ -z "$ENV" ]; then
+    ENV="dev"
+  fi
+
+  if [ "$ENV" != "live" ]; then
+    terminus site wake --site=$SITE --env=$ENV
+  fi
+
+  $(terminus site connection-info --site=$SITE --env=$ENV --field=mysql_command) -A --ssl
+}
+alias tsqlc=terminus-sql-cli
+```
 ## Manually Create an SSH Tunnel to Connect to a MySQL Database
 
 From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
