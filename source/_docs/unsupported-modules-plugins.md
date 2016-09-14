@@ -264,7 +264,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 
 <hr>
 
-### [Sucuri Scanner](https://wordpress.org/plugins/sucuri-scanner/)
+### [Sucuri Security](https://wordpress.org/plugins/sucuri-scanner/)
 **Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the container ID of the file path will change with routine platform maintenance.
 <hr>
 
