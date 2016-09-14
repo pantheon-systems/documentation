@@ -117,7 +117,7 @@ A branch with no environment associated with it can be deleted by going to Multi
 Branches can be deleted locally and the commit can be pushed to Pantheon, but this may have unintended consequences if an environment is associated with it; use the interface instead.
 
 ## Rename a Branch
-Branch names must be lowercased and have at most 11 characters. If you push a branch to Pantheon that exceeds the character limit or include uppercased letters, it cannot become a Multidev environment. The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
+Branch names must be lowercase and no more than 11 characters. If you push a branch to Pantheon that exceeds the character limit or has uppercase letters, it cannot become a Multidev environment. The solution is to rename the branch. This is only recommended if you don't have any other users working on this branch, or if you have already coordinated with them.
 
 From the command line, rename the branch:
 
