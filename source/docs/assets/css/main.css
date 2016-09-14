@@ -2622,6 +2622,7 @@ display: block;
 
 }
 .manual-toc ul {
+  padding-left:10px;
 
 }
 .manual-toc li {
@@ -2645,15 +2646,17 @@ display: block;
 }
 
 .manual-toc a {
-  padding:10px;
+  padding:10px 10px 10px 20px;
   display: block;
 }
 .manual-doc {
   border-left: solid 2px #eef2f3;
-  margin-left:20px;
+  padding-left:50px;
+
 }
 .manual-toc {
   background: #fff;
+  padding:0px;
 }
 .manual-body {
   width: 70%;
