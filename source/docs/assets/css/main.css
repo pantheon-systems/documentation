@@ -2622,7 +2622,6 @@ display: block;
 
 }
 .manual-toc ul {
-  padding-left:10px;
 
 }
 .manual-toc li {
@@ -2640,13 +2639,13 @@ display: block;
   background-color: #EEF2F3;
   color: #44525E;
   border-left: 4px solid #DDE5E7;
-
+  padding: 10px 10px 10px 24px;
 
 
 }
 
 .manual-toc a {
-  padding:10px 10px 10px 20px;
+  padding:10px 10px 10px 30px;
   display: block;
 }
 .manual-doc {
@@ -2665,7 +2664,7 @@ display: block;
 
 
 }
-li.terminus-subcommand-list.ng-binding.ng-scope{
+li.terminus-subcommand-list {
   list-style:none !important;
 }
 .terminus-pager-lsaquo {
