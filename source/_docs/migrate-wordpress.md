@@ -74,7 +74,7 @@ You'll need to [manually migrate](/docs/migrate-manual) site archives that excee
 
 #### How long does the migration process take?
 
-The migration process can take several hours to complete. You will receive an email confirmation after the migration process is complete.
+Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.
 
 ## See Also
 
