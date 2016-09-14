@@ -4,6 +4,7 @@ description: Detailed information on securely connecting to your database and ca
 categories: [developing]
 tags: [local]
 keywords: ssh, ssh tunnel, security, database, encryption, mysql database, redis cache server
+contributors: bwood
 ---
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
 
@@ -20,11 +21,12 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [Redis command-line client](/docs/redis/#use-the-redis-command-line-client)
 - Add an [SSH key](/docs/ssh-keys) to your Pantheon User Dashboard
 
-## Simplest option for securing MySQL client connections: use --ssl
+## Create Secure Connection to MySQL using TLS
 
-Later versions of the mysql client support the `--ssl` option.  Simply using this commandline option will encrypt your connection to the database server with TLS.  To determin if your mysql client supports TLS type `man mysql` and search for the `--ssl` option. If you add the `--ssl` option to your command there is no need to setup an SSH tunnel as described below. 
+Later versions of the MySQL client support the `--ssl` option.  Using this command line option will encrypt your connection to the database server with TLS.  To determine if your MySQL client supports TLS run `man mysql` and search for the `--ssl` option. If you add the `--ssl` option to your command there is no need to setup an SSH tunnel as described below.
 
-### Bash function for opening mysql connections using --ssl
+Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/docs/terminus):
+
 ```
 terminus-sql-cli() {
   SITE=$1
@@ -46,7 +48,7 @@ Open a mysql connection to a site.
   ENV=$2
   if [ -z "$ENV" ]; then
     ENV="dev"
-  fi 
+  fi
 
   if [ "$ENV" != "live" ]; then
     terminus site wake --site=$SITE --env=$ENV

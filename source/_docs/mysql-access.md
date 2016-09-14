@@ -80,7 +80,7 @@ open $TMP_SPF
 Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c)!
 ## SSH Tunneling
 
-Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to set up tunnels for databases, see [SSH Tunnels for Secure Connections to Pantheon Services](/docs/ssh-tunnels/).
+Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/docs/ssh-tunnels/).
 
 ## Troubleshooting MySQL Connections
 
