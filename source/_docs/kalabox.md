@@ -23,12 +23,20 @@ Your Pantheon account is now authenticated with Kalabox and will appear in the s
 2. Select a site.
 3. Name your site, pick the environment you'd like to pull from, and click **Submit**.
 
+ ![Kalabox add new site](/source/docs/assets/images/kalabox-add-site.png)
+
 ## Pull Changes from Pantheon into a Local Environment
 1. Click <em class="fa fa-cog"></em> and select **Pull** on the target application.
+
+ ![Kalabox add new site](/source/docs/assets/images/kalabox-action-pull.png)
+
 2. Choose whether to pull database and files, and click **Submit**.
 
 ## Push Changes to Pantheon
 1. Click <em class="fa fa-cog"></em> and select **Push** on the target application.
+
+ ![Kalabox add new site](/source/docs/assets/images/kalabox-action-push.png)
+
 2. Enter a commit message.
 3. Choose whether to pull database and files, and click **Submit**.
 
