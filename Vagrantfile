@@ -38,6 +38,7 @@ Vagrant.configure("2") do |config|
     mkdir -p output_dev/docs/changelog/page/"$name"
     mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"
   done
+  bin/terminus cli cmd-dump > source/docs/assets/terminuscommands.json --format=json
   bin/sculpin serve &
   disown'
 SCRIPT
