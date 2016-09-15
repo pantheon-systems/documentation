@@ -15,6 +15,13 @@ do
 done
 
 #===============================================================#
+# Authenticate Terminus  and create json dump of help output    #
+#===============================================================#
+~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
+~/documentation/bin/terminus cli cmd-dump > source/docs/assets/terminuscommands.json --format=json
+
+
+#===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
 rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
@@ -27,11 +34,6 @@ else
     exit 1
 fi
 
-
-#===============================================================#
-# Authenticate Terminus and clear caches on panther Live env    #
-#===============================================================#
-~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
