@@ -47,4 +47,7 @@
     $http.get("/docs/assets/terminuscommands.json").success(function(response){
       $scope.commands = response;
     });
+    $scope.clearFilters = function(){
+        $scope.searchCommand =  undefined;
+    };
   });

@@ -14,10 +14,12 @@ categories: [managing]
       <div class="input-group">
         <div class="input-group-addon"><i class="fa fa-search"></i></div>
         <input type="text" class="form-control" placeholder="Search Terminus Commands" ng-model="searchCommand">
+        <div style="background:#fff;cursor:pointer;" ng-click="clearFilters()" class="input-group-addon">
+        <span class="fa fa-times"></span>
+        </div>
       </div>      
     </div>
   </form>
-
   <table class="table table-responsive table-bordered table-striped">
 
     <thead>
@@ -37,7 +39,7 @@ categories: [managing]
   </table>
 </div>
 
-<div class="terminus-pager">
+<div class="terminus-pager col-md-12">
   <hr>
       <a style="float:left;" href="/docs/terminus/install"><span class="terminus-pager-lsaquo">&lsaquo;</span>Installation</a>
       <a style="float:right;" href="/docs/terminus/examples"><span class="terminus-pager-rsaquo">&rsaquo;</span>Example Usage</a>
