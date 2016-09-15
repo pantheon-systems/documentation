@@ -285,6 +285,12 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
+## PHP Libraries
+Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
+
+###MSSQL###
+The MSSQL PHP library used to interface with Microsoft SQLServer databases is not available or supported on the platform.
+
 ## Dynamic Outbound IPs
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
 
