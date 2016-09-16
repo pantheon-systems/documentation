@@ -10,15 +10,27 @@ By default, Pantheon runs Drush 8.x on newly created Drupal sites and 5.x on sit
 ## Terminus Drush and Local Drush
 [Terminus](/docs/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
-## Modifying Default Drush Version
-You can change a site's Drush version on Pantheon via [Terminus](/docs/terminus/):
+## Verify Current Drush Version
+Verify the current version of Drush running remotely on Pantheon using [Terminus](/docs/terminus):
+```bash
+terminus drush 'status' | grep "Drush version"
+```
 
+## Configure Drush Version
+You can change a site's Drush version via the [pantheon.yml file](/docs/pantheon-yml):
+```yaml
+api_version: 1
+
+drush_version: 8
 ```
-$ terminus site set-drush-version --version=[5|7|8]
-```
+Now your site’s Drush version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
+
+### Available Drush Versions
+Available Drush versions are 5, 7, and 8.
 
 ## See Also
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)  
 - [Drupal Drush Command-Line Utility](/docs/drush)
+- [The pantheon.yml Configuration File](/docs/pantheon-yml)
