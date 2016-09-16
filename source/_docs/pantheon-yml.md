@@ -54,15 +54,8 @@ Add `php_version` to the top level of the `pantheon.yml` file to configure the P
 ```yaml
 php_version: 7.0
 ```
-If you are upgrading to PHP 7, you may need to make changes to your site's codebase for compatibility. If you use Drupal, you need to [switch to Drush version 7 or higher](https://pantheon.io/docs/drush-versions/#configure-drush-version). For more information, see [Upgrade PHP Versions](/docs/php-versions).
+If you are upgrading to PHP 7, you may need to make changes to your site's codebase for compatibility. If you use Drupal, you need to [switch to Drush version 7 or higher](https://pantheon.io/docs/drush-versions/#modifying-default-drush-version). For more information, see [Upgrade PHP Versions](/docs/php-versions).
 
-### Drush Version
-Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
-
-```yaml
-drush_version: 8
-```
-For more information, see [Managing Drush Versions on Pantheon](/docs/drush-versions).
 ## Quicksilver Platform Integration Hooks
 
 Quicksilver lets you hook into platform workflows to automate your Pantheon workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the workflow operation. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
