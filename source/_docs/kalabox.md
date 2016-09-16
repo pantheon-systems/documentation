@@ -6,6 +6,8 @@ tags: [local, code]
 ---
 Kalabox allows you to create local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Support is maintained at [https://github.com/kalabox/kalabox/issues](https://github.com/kalabox/kalabox).
 
+Visit the [Kalabox documentation site](http://pantheon.kalabox.io/en/stable/) for more detailed information on the [Kalabox GUI](http://pantheon.kalabox.io/en/stable/users/gui/) and [development tools](http://pantheon.kalabox.io/en/stable/users/tooling/).
+
 ## Installation
 Refer to the [Kalabox Documentation](http://docs.kalabox.io/en/stable/users/install/) for instructions.
 
