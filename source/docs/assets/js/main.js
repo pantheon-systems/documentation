@@ -51,3 +51,22 @@
         $scope.searchCommand =  undefined;
     };
   });
+
+  //Sort subcommands by relevance based on Regex matches from search query
+  terminusCommandsApp.filter('search', function() {
+  return function(items, str) {
+    if(str == '') return items;
+
+    var filtered = [];
+    var rgx = new RegExp(str, 'gi');
+
+    angular.forEach(items, function(item) {
+      item.points = (JSON.stringify(item).match(rgx) || []).length;
+
+      filtered.push(item);
+
+    });
+
+    return filtered;
+  }
+});
