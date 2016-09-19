@@ -4,19 +4,21 @@ description: Work locally and deploy to Pantheon using Kalabox.
 categories: [developing]
 tags: [local, code]
 ---
-Kalabox allows you to create local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Support is maintained at [https://github.com/kalabox/kalabox/issues](https://github.com/kalabox/kalabox).
+Kalabox is a Free and Open Source project allows you to quickly create and manage local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Kalabox includes both an intuitive GUI and  command-line interface, and is powered by Docker under the hood.
+
+Support for Kalabox is provided via their [GitHub issue queue](https://github.com/kalabox/kalabox).
 
 Visit the [Kalabox documentation site](http://pantheon.kalabox.io/en/stable/) for more detailed information on the [Kalabox GUI](http://pantheon.kalabox.io/en/stable/users/gui/) and [development tools](http://pantheon.kalabox.io/en/stable/users/tooling/).
 
 ## Installation
-Refer to the [Kalabox Documentation](http://docs.kalabox.io/en/stable/users/install/) for instructions.
+Installation is as simple as grabbing the latest release from [kalabox.io](http://www.kalabox.io/) and installing it. There are OS specific details in the [Kalabox Documentation](http://docs.kalabox.io/en/stable/users/install/) if necessary. 
 
 ## Authenticate Your Account
-Kalabox uses [Machine Tokens](/docs/machine-tokens) to authenticate access to your sites on Pantheon:
+Kalabox uses [Machine Tokens](/docs/machine-tokens) to authenticate access to your sites on Pantheon. If you already have a working Terminus installation, it will automatically detect and use that token. However, if this is your first time using a token-based integration, setting it up is very quick:
 
 1. Click the **+** icon to open the sidebar.
 2. Select **Pantheon** in the **Add Account** section.
-3. Provide an existing machine token or generate a [new one](https://dashboard.pantheon.io/machine-token/create/Kalabox), and click **Submit**.
+3. Generate a [new machine token](https://dashboard.pantheon.io/machine-token/create/Kalabox), copy/paste it into Kalabox GUI click **Submit**.
 
 Your Pantheon account is now authenticated with Kalabox and will appear in the sidebar.
 
