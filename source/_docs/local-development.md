@@ -5,7 +5,9 @@ categories: [developing]
 tags: [code, local]
 keywords: local development, pantheon, develop locally, developing
 ---
-While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
+While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
+
+Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
 
 ## Before You Begin
 Be sure you have:
