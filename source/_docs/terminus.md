@@ -8,18 +8,23 @@ categories: [managing]
 layout: terminuspage
 permalink: docs/:basename/
 ---
-Prefer the command prompt? We love it too. Terminus, our CLI utility, can make Pantheon work better for you by enabling you to execute Pantheon activities through the CLI and script recurring tasks. These should mention drush/wp-cli.
 
-Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus), where you can contribute, file issues, and note feature ideas.
+Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It’s useful for scripting, automation, and integration with other services and tools.
 
-For help: when to file a ticket vs. opening an issue?
+Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
-### What you can do with terminus:
-**Scenario**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna. In et sodales magna. Sed tellus ante, efficitur at vestibulum in, lacinia at quam. Aliquam elit justo, bibendum vitae interdum et, varius id tellus. Suspendisse gravida vestibulum odio, id gravida tortor laoreet eget.
+## Using Terminus
 
-**Scenario**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus magna. In et sodales magna. Sed tellus ante, efficitur at vestibulum in, lacinia at quam. Aliquam elit justo, bibendum vitae interdum et, varius id tellus. Suspendisse gravida vestibulum odio, id gravida tortor laoreet eget.
+You can use Terminus to perform most of the operations you do on the Dashboard, including:  
+- Creating a new site
+- Creating and deleting Multidev environments 
+- Cloning one environment to another
+- Checking for upstream updates
+- Pushing code
+
+## Support
+Need help with Terminus? Open a support ticket from your Site Dashboard.
+
 
 <div class="terminus-pager">
   <hr>
