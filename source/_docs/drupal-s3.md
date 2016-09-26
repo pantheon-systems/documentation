@@ -12,19 +12,19 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 
 ## Before You Begin
 
-Be sure that you:
+Be sure that you have:
 
-- Have an existing Drupal site or [create](https://dashboard.pantheon.io/sites/create) one.
-- Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- An existing Drupal site or [create](https://dashboard.pantheon.io/sites/create) one
+- Set up an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
 
-## Configuring S3 within the AWS Console
+## Configure S3 within the AWS Console
 Before integrating S3 with Drupal, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com).
 
-###Create a New AWS S3 Bucket
+### Create a New AWS S3 Bucket
 If you do not have an existing bucket for your Drupal site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **S3**.
@@ -33,7 +33,7 @@ If you do not have an existing bucket for your Drupal site, create one:
 
  <div class="alert alert-info" role="alert">
  <h4>Note</h4>
- After you create a bucket, you cannot change its name. In addition, the bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.
+ After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.
  </div></li></ol>
 
 4. Select a region and click **Create**.
@@ -41,25 +41,26 @@ If you do not have an existing bucket for your Drupal site, create one:
 6. Assign **Any Authenticated AWS User** for the **Grantee** and tick the box for **Upload/Delete**, then click **Save**.
 
 ### Create an Identity and Access Management Policy
-[Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long term flexibility for organizing and managing user(s) and their privileges.
+[Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
-2. Navigate to **Policies** and click **Create Policy**.
+2. Go to **Policies** and click **Create Policy**.
 3. Click **Select** within the Policy Generator section.
-4. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket (e.g. `arn:aws:s3:::bucket_name`), then click **Next Step**.
+4. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket (e.g. `arn:aws:s3:::bucket_name`), and click **Next Step**.
 5. Edit the policy name and description (optional).
 6. Click **Create Policy**.
 
 For details, see [Example Policies for Administering AWS Resources](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
+
 ### Create an Identity and Access Management Group
-It is suggested that you does not access an S3 bucket using your AWS root user credentials. Instead, we recommend creating an IAM group and user:
+We recommend that you do not access an S3 bucket using your AWS root user credentials. Instead, create an IAM group and user:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
 2. Click **Groups**, then **Create New Group**.
 3. Enter a descriptive group name and click **Next Step**.
 4. Filter policies by **Customer Managed Policies** and select your recently created policy.
 5. Click **Next Step**, then **Create Group**.
-6. Navigate to **Users** and click **Create New Users**.
+6. Go to **Users** and click **Create New Users**.
 <ol start="7"><li>Provide a user name and click <strong>Create</strong>, then view the new user security credentials by clicking <strong>Show User Security Credentials</strong>.
 
 <div class="alert alert-info" role="alert">
@@ -67,14 +68,14 @@ It is suggested that you does not access an S3 bucket using your AWS root user c
 You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time. You will need the access keys when configuring the S3 File System module</div></li></ol>
 
 8. Click **Download Credentials**. Make sure you save the credentials in a secure location before leaving this page.
-9. Navigate to the group created in step 5 and select **Add Users to Group**.
+9. Go to the group created in step 5 and select **Add Users to Group**.
 10. Select your newly created user and click **Add Users**.
 
-##Integrating S3 with Drupal
+## Integrate S3 with Drupal
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
 #### Drupal 7
-The following instructions utilize [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
+The following instructions use [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
 These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
 
@@ -130,8 +131,8 @@ Before you begin:
  </div>
 
 
-####S3 File System CORS
-Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling amd interface with your S3 bucket by having you file uploads go directly to you S3 bucket.
+#### S3 File System CORS
+Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling amd interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
  <!-- Nav tabs -->
  <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#d7s3fscors" aria-controls="d7s3fscors" role="tab" data-toggle="tab">Drupal 7</a></li>
@@ -178,17 +179,17 @@ You may want to enhance your Drupal media handling in conjunction with using AWS
 
 ### Drupal Module Configuration
 #### S3 File System User Credentials
-Settings for the S3 File System module can be configured via the Drupal admin after module installation (`admin/config/media/s3fs/settings`).
+You can configure the settings for the S3 File System module via the Drupal admin after the installation (`admin/config/media/s3fs/settings`).
 
-Enter credentials created for the user in the previous section](#create-an-identity-and-access-management-group) and your bucket name.
+Enter credentials created for the user in the [previous section](#create-an-identity-and-access-management-group) and your bucket name.
 
 You can optionally use a CNAME to serve files from a custom domain if desired. However, you will need to create a corresponding CNAME record with your DNS host.
 
 #### Configure Download and Upload Destinations
-Navigate to `admin/config/media/file-system` and set **Default download method** to **Amazon Simple Storage Service**. You can set the **Upload destination** to **S3 File System** within the **Field Settings** tab.
+Go to `admin/config/media/file-system` and set **Default download method** to **Amazon Simple Storage Service**. You can set the **Upload destination** to **S3 File System** within the **Field Settings** tab.
 
 
-####S3 File System CORS Upload (s3fs_cors)
+#### S3 File System CORS Upload (s3fs_cors)
 
 From `/admin/config/media/s3fs/cors`, set **CORS Origin** to your domain. There's an individual max file path length of 250 characters.
 
@@ -202,4 +203,4 @@ terminus drush 's3fs-refresh-cache'
 ####If you have files in Drupal that need inclusion with S3 run:
 terminus drush 's3fs-copy-local'
 
-If you receive an Access Denied error message from Amazon, check the permissions on your bucket and policies. Check that all your configuration settings in Drupal are complete and accurate.
+If you receive an access denied error message from Amazon, check the permissions on your bucket and policies. Verify all your configuration settings in Drupal are complete and accurate.
