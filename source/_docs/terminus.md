@@ -16,6 +16,7 @@ Terminus is open source! View the project on [GitHub](https://github.com/pantheo
 ## Using Terminus
 
 You can use Terminus to perform most of the operations you do on the Dashboard, including:  
+
 - Creating a new site
 - Creating and deleting Multidev environments 
 - Cloning one environment to another
