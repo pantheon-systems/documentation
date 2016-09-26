@@ -10,10 +10,12 @@ categories: [managing]
 ## Create Backups in Bulk
 Create backups for a specific environment on all sites within an organization containing a designated tag.
 
-Replace placeholder values for `ORG_UUID`, `TAG`, `ENV`, and `USER` within the following script:
-<div class="zero-clipboard">
-<span class="btn-clipboard" id="scenario1button_create-backup" data-clipboard-target="scenario1_create-backup">Copy</span>
-<figure class="highlight"><pre id="scenario1_create-backup"><code class="bash" data-lang="bash">#!/bin/bash
+Replace placeholder values for `ORG_UUID`, `TAG`, `ENV`, and `USER` within the
+following script:
+
+<div>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#bulk-backups"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure class="highlight"><pre id="bulk-backups"><code class="bash" data-lang="bash">#!/bin/bash
 
 #-----------------------------------------------------#
 # Replace ORG_UUID, TAG, ENG, and USER values         #
@@ -62,9 +64,9 @@ Automate WordPress core, plugin and theme updates on [Pantheon](https://pantheon
 This workflow assumes the `master` branch (dev) and test environments on Pantheon are always in a shippable state as the script will automatically deploy changes from dev to test and live.
 
 All incomplete work should be kept in a [Pantheon multidev environment](https://pantheon.io/docs/multidev/), on a separate Git branch.
-<div class="zero-clipboard">
-  <span class="btn-clipboard" id="scenario1_core" data-clipboard-target="scenario1_core">Copy</span>
-  <figure class="highlight"><pre id="scenario1_core"><code class="bash" data-lang="bash">#!/bin/bash
+<div>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#core-updates"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure class="highlight"><pre id="core-updates"><code class="bash" data-lang="bash">#!/bin/bash
 
 MULTIDEV="update-wp"
 

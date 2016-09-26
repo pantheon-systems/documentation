@@ -25,11 +25,38 @@
       }, 300);
   });
 
-  var client = new ZeroClipboard( $("span#scenario1button_create-backup") );
-  var client = new ZeroClipboard( $("span#scenario1button_auth") );
-  var client = new ZeroClipboard( $("span#scenario1_core") );
-  var client = new ZeroClipboard( $("span#installbutton-composer") );
-  var client = new ZeroClipboard( $("span#installbutton-auth") );
+  // Tooltip
+
+  $('button').tooltip({
+    trigger: 'click',
+    placement: 'top'
+  });
+
+  function setTooltip(btn, message) {
+    $(btn).tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip(btn) {
+    setTimeout(function() {
+      $(btn).tooltip('hide');
+    }, 3000);
+  }
+
+  // Clipboard
+
+  var clipboard = new Clipboard('button');
+
+  clipboard.on('success', function(e) {
+    setTooltip(e.trigger, 'Copied!');
+    hideTooltip(e.trigger);
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip(e.trigger, 'Failed! Press Ctrl+C to copy');
+    hideTooltip(e.trigger);
+  });
 
   var terminusCommandsApp = angular.module('terminusCommandsApp', []);
 
