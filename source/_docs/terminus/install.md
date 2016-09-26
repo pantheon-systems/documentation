@@ -8,9 +8,9 @@ categories: [managing]
 ---
 ## 1. Install Terminus
 Mac OS: Install with [Composer](https://getcomposer.org/) by running this in your terminal:
-<div class="zero-clipboard">
-  <span class="btn-clipboard" id="installbutton-composer" data-clipboard-target="install-composer">Copy</span>
-  <figure class="highlight"><pre id="install-composer"><code class="bash" data-lang="bash">composer require pantheon-systems/terminus</code></pre></figure>
+<div>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure class="highlight"><pre id="install-composer"><code class="bash" data-lang="bash">composer require pantheon-systems/terminus</code></pre></figure>
 </div>
 
 Or visit the [GitHub repo](https://github.com/pantheon-systems/terminus) for other installation options.
@@ -30,9 +30,9 @@ Authenticate Terminus with a [machine token (view doc)](/docs/machine-tokens), w
 You can generate a machine token here. (You can manage this later through your **User Dashboard** > **Account** > **Machine Tokens**)
 
 <a href="https://dashboard.pantheon.io/machine-token/create" class="btn-primary btn">Create Token</a>
-<div class="zero-clipboard">
-  <span class="btn-clipboard" id="installbutton-auth" data-clipboard-target="install-auth">Copy</span>
-  <figure class="highlight"><pre id="install-auth"><code class="bash" data-lang="bash">terminus auth login --machine-token<machine-token></code></pre></figure>
+<div>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure class="highlight"><pre id="mt-auth"><code class="bash" data-lang="bash">terminus auth login --machine-token<machine-token></code></pre></figure>
 </div>
 
 <div class="terminus-pager">

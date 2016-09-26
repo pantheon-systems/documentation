@@ -1806,6 +1806,15 @@ a.btn-primary-inverse:hover:after  {
     color: #222 !important;
 }
 
+
+.btn-clippy {
+  position:absolute;
+  right:15px;
+}
+img.clippy {
+  margin:0px;
+  border:none;
+}
 /* Forms */
 .pio-example-control-sizing select,
 .pio-example-control-sizing input[type="text"] + input[type="text"] {

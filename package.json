@@ -14,7 +14,9 @@
     "grunt-replace": "^0.11.0",
     "highlight.js": "^9.3.0",
     "node-font-awesome": "^1.0.2",
-    "sitespeed.io": "4.0.0-alpha.5"
+    "sitespeed.io": "4.0.0-alpha.5",
+    "clipboard": "^1.5.12"
+
   },
   "scripts": {
     "test": "grunt && rake && scripts/merge_conflicts.sh"
