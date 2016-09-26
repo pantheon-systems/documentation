@@ -218,7 +218,8 @@ fi</code></pre></figure>
 </div>
 
 
-<div class="terminus-pager">
+<div class="terminus-pager col-md-12">
   <hr>
-      <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
+      <a style="float:left;" href="/docs/terminus/install"><span class="terminus-pager-lsaquo">&lsaquo;</span>Installation</a>
+      <a style="float:right;" href="/docs/terminus/commands"><span class="terminus-pager-rsaquo">&rsaquo;</span>Commands</a>
 </div>
