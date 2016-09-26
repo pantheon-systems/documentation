@@ -41,6 +41,5 @@ categories: [managing]
 
 <div class="terminus-pager col-md-12">
   <hr>
-      <a style="float:left;" href="/docs/terminus/install"><span class="terminus-pager-lsaquo">&lsaquo;</span>Installation</a>
-      <a style="float:right;" href="/docs/terminus/examples"><span class="terminus-pager-rsaquo">&rsaquo;</span>Example Usage</a>
+      <a style="float:left;" href="/docs/terminus/examples"><span class="terminus-pager-lsaquo">&lsaquo;</span>Example Usage</a>
 </div>
