@@ -26,13 +26,10 @@
   });
 
   var client = new ZeroClipboard( $("span#scenario1button_create-backup") );
-  var client = new ZeroClipboard( $("span#scenario1button_deploydev") );
-  var client = new ZeroClipboard( $("span#scenario1button_deploytest") );
-  var client = new ZeroClipboard( $("span#scenario2button_clear-cache") );
-  var client = new ZeroClipboard( $("span#scenario3button_scenario3") );
+  var client = new ZeroClipboard( $("span#scenario1button_auth") );
+  var client = new ZeroClipboard( $("span#scenario1_core") );
   var client = new ZeroClipboard( $("span#installbutton-composer") );
   var client = new ZeroClipboard( $("span#installbutton-auth") );
-
 
   var terminusCommandsApp = angular.module('terminusCommandsApp', []);
 

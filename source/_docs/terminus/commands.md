@@ -32,7 +32,7 @@ categories: [managing]
     <tbody>
       <tr ng-repeat="subcommand in commands.subcommands | filter:searchCommand">
         <td><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small></td>
-        <td><li class="terminus-subcommand-list" ng-repeat="subcommand in subcommand.subcommands | search:searchCommand | orderBy: 'points': true""><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small><br><small>{[{ subcommand.synopsis}]}<hr></li></td>
+        <td><li class="terminus-subcommand-list" ng-repeat="subcommand in subcommand.subcommands | search:searchCommand | orderBy: 'points': true"><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small><br><small>{[{ subcommand.synopsis}]}<hr></li></td>
       </tr>
     </tbody>
 
