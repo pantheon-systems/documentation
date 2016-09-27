@@ -1,5 +1,5 @@
 ---
-title: The Pantheon Power Users Group
+title: The Pantheon Community and Power Users Group
 description: Share best practices with other experienced and active users of Pantheon's platform.
 categories: [managing]
 tags: [platform, community]
@@ -7,7 +7,7 @@ contributors:
   - joshkoenig
 date: 7/27/2015
 ---
-Pantheon fosters a community for developers who are actively making use of the platform as professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Slack community](https://pantheon-community-slackin.herokuapp.com/) or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users).
+Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Slack community](http://slackin.pantheon.io/) or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users).
 
 ## Power User Topics
 
@@ -31,4 +31,4 @@ You can also subscribe with any email address by sending a message to [power-use
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct/) for details, including how to report abuse.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct/) for details, including how to report absue.
