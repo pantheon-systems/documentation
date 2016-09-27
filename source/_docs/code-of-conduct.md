@@ -9,7 +9,7 @@ date: 9/27/2016
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as community members, contributors, and maintainers pledge to making participation in Pantheon and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+In the interest of fostering an open and welcoming environment, we as community members, contributors, and maintainers pledge to making participation in Pantheon and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, sexual identity and orientation, socioeconomic status, or technical ability.
 
 ## Our Standards
 
