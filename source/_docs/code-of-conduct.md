@@ -3,8 +3,7 @@ title: Pantheon Community Code of Conduct
 description: Pantheon is dedicated to a positive and harassment-free community experience for everyone.
 categories: [managing]
 tags: [community]
-contributors:
-  - joshkoenig, rachelwhitton
+contributors: [joshkoenig, rachelwhitton]
 date: 9/27/2016
 ---
 
@@ -58,8 +57,7 @@ Community maintainers who do not follow or enforce the Code of Conduct in good f
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version], [and from the Open Source Bridge Code of Conduct][opensourcebrige].
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], [version 1.4][version], and from the [Open Source Bridge Code of Conduct][opensourcebridge].
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
