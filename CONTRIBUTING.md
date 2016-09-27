@@ -6,7 +6,7 @@ Help us create relevant and useful content for developers like yourself. See som
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](source/_docs/code-of-conduct.md) for details, including how to report absue.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](source/_docs/code-of-conduct.md) for details, including how to report abuse.
 
 
 ## Issues - Searching and Creating

@@ -1,8 +1,5 @@
 ---
 title: Contributing to Pantheon Docs
-layout: doc
-use:
-    - docs_contributors
 ---
 Become one of our [contributors](/docs/contributors)! Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
@@ -37,3 +34,7 @@ Fork and clone the [documentation](https://github.com/pantheon-systems/documenta
  ```
  vagrant ssh -- -t 'cd /vagrant; fuser -k -n tcp 8000;grunt watch & ./bin/sculpin generate --server --watch'
  ```
+
+## Code of Conduct
+
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct.md) for details, including how to report abuse.
