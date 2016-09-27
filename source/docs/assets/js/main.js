@@ -94,3 +94,9 @@
     return filtered;
   }
 });
+
+
+  //Terminus Install Form Selector & Toggle
+  $('#osSelect').on('change', function (e) {
+    $('#myOS li a').eq($(this).val()).tab('show');
+});
