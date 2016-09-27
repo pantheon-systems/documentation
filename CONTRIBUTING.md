@@ -6,7 +6,8 @@ Help us create relevant and useful content for developers like yourself. See som
 
 ## Code of Conduct
 
-This project adheres to the [Contributor Covenant](CODE_OF_CONDUCT.md) code of conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to docs@pantheon.io.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](source/_docs/code-of-conduct.md) for details, including how to report absue.
+
 
 ## Issues - Searching and Creating
 
