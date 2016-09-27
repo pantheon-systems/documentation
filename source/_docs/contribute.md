@@ -37,4 +37,4 @@ Fork and clone the [documentation](https://github.com/pantheon-systems/documenta
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct.md) for details, including how to report abuse.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct) for details, including how to report abuse.
