@@ -2716,3 +2716,6 @@ li.terminus-subcommand-list {
   margin: 0px;
   padding: 0px;
 }
+.hidden-terminus-install {
+  display: none;
+}
