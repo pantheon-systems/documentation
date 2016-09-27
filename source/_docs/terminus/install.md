@@ -29,7 +29,7 @@ categories: [managing]
       <figure class="highlight"><pre id="install-composer"><code class="bash" data-lang="bash">composer require pantheon-systems/terminus</code></pre></figure>
     </div>
     <p>Or visit the <a href="https://github.com/pantheon-systems/terminus">GitHub repo</a> for other installation options.</p>
-    <h3>Authenticate</h3>
+    <h2>Authenticate</h2>
     <p>Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see <a href="/docs/machine-tokens">Machine Tokens</a>.</p>
     <p>First, <a href="https://dashboard.pantheon.io/machine-token/create">generate a Machine Token</a> from <strong>User Dashboard</strong> &rsaquo; <strong>Account</strong> &rsaquo; <strong>Machine Tokens</strong>.</p>
     <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
@@ -46,7 +46,27 @@ categories: [managing]
 
   <!-- Windows Instructions -->
   <div role="tabpanel" class="tab-pane" id="win">
-    Windows Instructions
+  <h2>Install Terminus for Windows</h2>
+  <p>You will need a terminal emulator, such as <a href="/docs/cygwin-windows/#using-cygwin">Cygwin</a>. Once Cygwin is setup, install Terminus by running the following command:</p>
+  <div>
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+    <figure class="highlight"><pre id="install-composer"><code class="bash" data-lang="bash">composer require pantheon-systems/terminus</code></pre></figure>
+  </div>
+  <p>Or visit the <a href="https://github.com/pantheon-systems/terminus">GitHub repo</a> for other installation options.</p>
+
+  <h2>Authenticate</h2>
+  <p>Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see <a href="/docs/machine-tokens">Machine Tokens</a>.</p>
+  <p>First, <a href="https://dashboard.pantheon.io/machine-token/create">generate a Machine Token</a> from <strong>User Dashboard</strong> &rsaquo; <strong>Account</strong> &rsaquo; <strong>Machine Tokens</strong>.</p>
+  <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
+  <div>
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+    <figure class="highlight"><pre id="mt-auth"><code class="bash" data-lang="bash">terminus auth login --machine-token&lsaquo;machine-token&rsaquo;</code></pre></figure>
+  </div>
+  <p>After a token has been used, future sessions can be established by email:</p>
+  <div>
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+    <figure class="highlight"><pre id="mt-auth"><code class="bash" data-lang="bash">terminus auth login dev@example.com</code></pre></figure>
+  </div>
   </div>
 </div>
 
