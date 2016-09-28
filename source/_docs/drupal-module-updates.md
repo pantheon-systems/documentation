@@ -12,7 +12,7 @@ Drupal has a very good, built-in system for updating contributed modules through
 1. Log in to Pantheon, and choose the site you want to update.
 2. Select the **Code** tool in the Dev environment.
 3. Set the Connection Mode to  **SFTP**.
-4. Click **Visit Development Site**, and go to the Modules administration page (`/admin/modules/update`).
+4. Click **Visit Development Site**, go to the Modules administration page (`/admin/modules/update`), and verify the Update Manager module is enabled.
 5. Select the **Update** tab, and click **Check Manually**.
 6. If there are updates available, select the ones you want and click **Download These Updates**.  
 7. Once the updates are downloaded successfully, select **Perform updates in site maintenance mode** and click **Continue**.  
