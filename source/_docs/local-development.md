@@ -78,8 +78,8 @@ Replace <code>database.sql.gz</code> with the name of the database archive downl
 Create and export the database by running the following Terminus commands:
 
 ```nohighlight
-terminus site backups create --element=database --site=[site] --env=[env]
-terminus site backups get --element=database --to=$HOME/Desktop/ --latest --site=[site] --env=[env]
+terminus site backups create --element=database --site=<site> --env=<env>
+terminus site backups get --element=database --to=$HOME/Desktop/ --latest --site=<site> --env=<env>
 ```
 
 
