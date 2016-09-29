@@ -67,30 +67,26 @@
 
   terminusCommandsApp.controller('mainController', function($scope, $http) {
     $scope.searchCommand   = '';
-    $scope.commands = [];
-    $http.get("/docs/assets/terminuscommands.json").success(function(response){
-      $scope.commands = response;
+    $scope.terminus = [];
+    $http.get("/docs/assets/t1commands.json").success(function(response){
+      $scope.terminus = response;
     });
     $scope.clearFilters = function(){
         $scope.searchCommand =  undefined;
     };
   });
 
-  //Sort subcommands by relevance based on Regex matches from search query
+  //Sort usage array by relevance based on Regex matches from search query
   terminusCommandsApp.filter('search', function() {
-  return function(items, str) {
-    if(str == '') return items;
+    return function (items, str) {
+      if(str == '') return items;
+      var filtered = [];
+      var rgx = new RegExp(str, 'gi');
 
-    var filtered = [];
-    var rgx = new RegExp(str, 'gi');
-
-    angular.forEach(items, function(item) {
-      item.points = (JSON.stringify(item).match(rgx) || []).length;
-
-      filtered.push(item);
-
-    });
-
+      angular.forEach(items, function(item) {
+        item.points = (JSON.stringify(item).match(rgx) || []).length;
+        filtered.push(item);
+      });
     return filtered;
   }
 });
