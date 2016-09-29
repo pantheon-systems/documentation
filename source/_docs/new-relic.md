@@ -98,23 +98,23 @@ if (extension_loaded('newrelic')) {
 }
 ```
 
-## New Relic APM Availability Monitoring Alerts and False Positive Downtime Events
+## APM Availability Monitoring Alerts and False Positive Downtime Events
 When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false postive Downtime events for your site.
 
-### SNI
-Site's configured with third-party proxy services that use SNI (Server Name Indication) to serve HTTPS requests (e.g. CloudFlare, CloudProxy, etc.) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
+### Server Name Indication (SNI)
+Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. CloudFlare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
 
-### TLS 1.1 or higher
-When your site is using HTTPS on Pantheon the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts only can access sites using up TLS 1.0. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
+### TLS 1.1 or Higher
+When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
 
-### Solution: Use New Relic Synthetics
-As an alternative in both situations decribed above, you can use the bundled New Relic Synthetic Lite service to monitor HTTPS pages served with SNI:
+#### Solution: Use New Relic Synthetics
+As an alternative to both situations, you can use the bundled New Relic Synthetic Lite service to monitor HTTPS pages served with SNI:
 
 1. Click **New Relic** from the target environment within the Site Dashboard on Pantheon.
-2. Select **Synthetics** from within New Relic.
-3. Click the **Create new monitor** button and enter details for the environment you wish to monitor.
+2. Select **Synthetics**.
+3. Click **Create new monitor**, and enter the details for the environment you want to monitor.
 
-The ping monitor is provided for free, however other monitors require upgrading to a paid plan. For more details, see [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
+The ping monitor is provided for free; however, other monitors require upgrading to a paid plan. For more details, see [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
 
 ## Frequently Asked Questions
 
