@@ -24,15 +24,20 @@ categories: [managing]
 
     <thead>
       <tr>
-        <th>Command</th>
-        <th>Subcommands</th>
+        <th>Commands</th>
+        <th>Usage</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr ng-repeat="subcommand in commands.subcommands | filter:searchCommand">
-        <td><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small></td>
-        <td><li class="terminus-subcommand-list" ng-repeat="subcommand in subcommand.subcommands | search:searchCommand | orderBy: 'points': true"><strong>{[{ subcommand.name }]}</strong><br><small>{[{ subcommand.description }]}</small><br><small>{[{ subcommand.synopsis}]}<hr></li></td>
+      <tr ng-repeat="command in terminus.commands | filter:searchCommand">
+        <td><strong>{[{ command.name }]}</strong><br><small>{[{ command.description }]}</small></td>
+        <td>
+            <li class="terminus-usage" ng-repeat="use in command.usage | search:searchCommand | orderBy: 'points': true">
+              {[{ use }]}
+            </li>
+        </td>
+        </td>
       </tr>
     </tbody>
 
