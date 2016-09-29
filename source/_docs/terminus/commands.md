@@ -31,10 +31,10 @@ categories: [managing]
 
     <tbody>
       <tr ng-repeat="command in terminus.commands | filter:searchCommand">
-        <td><strong>{[{ command.name }]}</strong><br><small>{[{ command.description }]}</small></td>
+        <td><strong md-highlight-text="searchCommand">{[{ command.name }]}</strong><br><small md-highlight-text="searchCommand">{[{ command.description }]}</small></td>
         <td>
-            <li class="terminus-usage" ng-repeat="use in command.usage | search:searchCommand | orderBy: 'points': true">
-              {[{ use }]}
+            <li class="terminus-usage" ng-repeat="use in command.usage">
+              <small md-highlight-text="searchCommand">{[{ use }]}</small>
             </li>
         </td>
         </td>
