@@ -2724,3 +2724,6 @@ margin-bottom: 10px;
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   font-weight: bold;
 }
+.highlight {
+  background: yellow;
+}

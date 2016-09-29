@@ -58,7 +58,7 @@
     hideTooltip(e.trigger);
   });
 
-  var terminusCommandsApp = angular.module('terminusCommandsApp', []);
+  var terminusCommandsApp = angular.module('terminusCommandsApp', ['ngMaterial']);
 
   terminusCommandsApp.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{[{');
