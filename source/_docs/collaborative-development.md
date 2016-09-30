@@ -115,7 +115,7 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
 2. Click **Settings**, then select **About Site**.
 3. Copy the Upstream URL and modify it by replacing `https` with `git` and appending `.git master` to the end of the string.
  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
- ![Pantheon Dashboard about site tab](/source/docs/assets/images/pantheon-dashboard-settings-about-site-upstream.png)
+ ![Pantheon Dashboard about site tab](/source/docs/assets/images/dashboard/pantheon-dashboard-settings-about-site-upstream.png)
 4. At the root of your local clone of the site repository, run
 `git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master`, replacing the upstream URL with the one you copied from the Site Dashboard and modified, if you need something other than Drupal 7.
 
@@ -126,7 +126,7 @@ Squash commit -- not updating HEAD
 Automatic merge went well; stopped before committing as requested
 ```
 
-![Git Connection Info](/source/docs/assets/images/pantheon-dashboard-git-connection-info.png)
+![Git Connection Info](/source/docs/assets/images/dashboard/pantheon-dashboard-git-connection-info.png)
 
 ### Add the Pantheon Site as a Git Remote
 
@@ -144,7 +144,7 @@ Automatic merge went well; stopped before committing as requested
 6. Push the repo with the newly updated core files to GitHub.
   `$ git push origin master`
 
-![Pantheon Dashboard with Commit Messages](/source/docs/assets/images/pantheon-dashboard-git-commit-messages.png)
+![Pantheon Dashboard with Commit Messages](/source/docs/assets/images/dashboard/pantheon-dashboard-git-commit-messages.png)
 
 ## Developing in Sync
 
@@ -218,7 +218,7 @@ error: failed to push some refs to 'ssh://codeserver.dev.59b2dd69-2305-4ca2-a745
 
 This push to Pantheon failed, because the Development environment was in SFTP mode.
 
-![Connection Mode set to SFTP](/source/docs/assets/images/connection-mode-sftp.png)
+![Connection Mode set to SFTP](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
 
 Switch the connection mode to Git by clicking on the toggle, or via the command line:
 
@@ -226,7 +226,7 @@ Switch the connection mode to Git by clicking on the toggle, or via the command 
 $ terminus site set-connection-mode --mode=git
 ```
 
-![Connection Mode set to Git](/source/docs/assets/images/connection-mode-git.png)
+![Connection Mode set to Git](/source/docs/assets/images/dashboard/connection-mode-git.png)
 
 Push to Pantheon:
 
@@ -241,7 +241,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
    fe267cb..b802550  master -> master
 ```
 
-![Commit deployed to Pantheon Dashboard](/source/docs/assets/images/commit-deployed-pantheon-dashboard.png)
+![Commit deployed to Pantheon Dashboard](/source/docs/assets/images/dashboard/commit-deployed-pantheon-dashboard.png)
 
 The GitHub repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
@@ -307,7 +307,7 @@ The platform is telling me that no Multidev environments were found associated w
 ```nohighlight
 $ terminus site create-env --to-env=configs --from-env=dev
 ```
-![New environment named configs](/source/docs/assets/images/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
+![New environment named configs](/source/docs/assets/images/dashboard/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
 The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my GitHub pull request.
 
 ![New environment configuration admin url](/source/docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
@@ -329,7 +329,7 @@ $ git checkout master
 $ git pull github master
 $ git push pantheon master
 ```
-![Merged PR commit in the Pantheon dashboard](/source/docs/assets/images/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github")
+![Merged PR commit in the Pantheon dashboard](/source/docs/assets/images/dashboard/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github")
 
 ## Optional Tools to Optimize Workflows
 

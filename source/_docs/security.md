@@ -23,10 +23,10 @@ You have the ability to password protect any of the available environments.
 - Choose a username and password.
 - Click **Lock Environment**.
 
-![Lock environment](/source/docs/assets/images/lock-environment.png)
+![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
-![Credentials](/source/docs/assets/images/environment-access.png)
+![Credentials](/source/docs/assets/images/dashboard/environment-access.png)
 Now when your page refreshes you will notice that the environment is now "Private". You will also be able to see the credentials needed to access that environment.
 
 You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.

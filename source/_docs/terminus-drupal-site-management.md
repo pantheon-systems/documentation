@@ -164,7 +164,7 @@ $ terminus site dashboard
 Do you want to open your dashboard link in a web browser? [y/n] y
 ```
 
-![Dashboard in browser](/source/docs/assets/images/terminus-cli-open-dash.png)
+![Dashboard in browser](/source/docs/assets/images/dashboard/terminus-cli-open-dash.png)
 
 Also, the status of each of the environments within the site can be seen using a `terminus site environments` command.
 
@@ -200,7 +200,7 @@ admin_menu_toolbar was enabled successfully.                                [ok]
 
 Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/terminus-cli-code-to-commit-dashboard.png)
+![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 Let's commit it all into the Git repo with the `terminus site code commit` command:
 
@@ -217,7 +217,7 @@ Success: Successfully committed.
 
 Open the Pantheon Dashboard, and you'll see the new files are shown in the Git commit log.
 
-![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/terminus-cli-code-committed-dashboard.png)
+![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/dashboard/terminus-cli-code-committed-dashboard.png)
 
 To see what a commit message looks like, let's download Bootstrap and then commit it as well.
 
@@ -239,7 +239,7 @@ Success: Successfully commited.
 +---------------------+---------+-----------+------------------------------------------+-------------------+
 ```
 
-![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/terminus-commit-with-message.png)
+![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/dashboard/terminus-commit-with-message.png)
 
 And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using `init-env`.
 

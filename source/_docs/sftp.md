@@ -26,13 +26,13 @@ Every Development environment has a toggle to switch between SFTP and Git modes;
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your changes and you'll see all the pending changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
- ![Enable SFTP mode](/source/docs/assets/images/sftp-enabled.png)
+ ![Enable SFTP mode](/source/docs/assets/images/dashboard/sftp-enabled.png)
 
 ## SFTP Connection Information
 
 To get your SFTP login credentials, click **SFTP Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
 
- ![SFTP Connection Data](/source/docs/assets/images/sftp-connection-info.png)<br />
+ ![SFTP Connection Data](/source/docs/assets/images/dashboard/sftp-connection-info.png)<br />
 
 The connection information is a bit different than what you might be used to, and it's based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
 

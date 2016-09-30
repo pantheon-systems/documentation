@@ -308,7 +308,7 @@ $ terminus wp 'theme install pinboard --activate'
 
 Watch your Dashboard. It recognizes your uncommitted changes.
 
-![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/pantheon-dashboard-uncommitted-changes.png)
+![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything update in the browser.
 

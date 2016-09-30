@@ -31,7 +31,7 @@ Access the [Organization Dashboard](/docs/organization-dashboard) in the followi
 - From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click  the Organization name.
 
 All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings.
- ![The Organization dashboard, site tab](/source/docs/assets/images/organization-dashboard-tour.png)
+ ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-tour.png)
 
 ### Sites
 

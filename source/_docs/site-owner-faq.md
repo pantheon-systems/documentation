@@ -82,7 +82,7 @@ Once the new owner receives the invitation, they will be directed to provide pay
 <h4>Note</h4>
 We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
 
- ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
+ ![Invite a business owner to pay](/source/docs/assets/images/dashboard/invite-business-owner.png)
 
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.

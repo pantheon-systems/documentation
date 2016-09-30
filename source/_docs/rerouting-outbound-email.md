@@ -54,7 +54,7 @@ $ git push origin master
 ```
 Now check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
 
-![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/verify-reroute-email-dashboard-commits1.png)
+![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/dashboard/verify-reroute-email-dashboard-commits1.png)
 
 
 
@@ -138,7 +138,7 @@ Now the Dev environment’s settings page for reroute_email (/admin/config/devel
 
 If you don’t see what you’re expecting, review your settings.php and ensure the commit is showing on your Dashboard:
 
-![The dashboard showing the code was deployed to the Dev environment](/source/docs/assets/images/verify-reroute-email-dashboard-commits2.png)
+![The dashboard showing the code was deployed to the Dev environment](/source/docs/assets/images/dashboard/verify-reroute-email-dashboard-commits2.png)
 
 ##Go Forth and Test
 

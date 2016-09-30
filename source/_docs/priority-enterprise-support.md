@@ -24,7 +24,7 @@ Pantheon On-Call is included in your site’s Elite plan or as part of your orga
 ## Support Ticket Options
 On the Support page, you'll have two options for submitting tickets: "Open support ticket" and "On-Call Support".
 
-![Priority Enterprise Support Options](/source/docs/assets/images/pes-options.png)
+![Priority Enterprise Support Options](/source/docs/assets/images/dashboard/pes-options.png)
 
 ### Submit a Regular Support Ticket
 You should submit this type of ticket for issues or questions that do not involve site downtime. Your ticket will be prioritized higher in the queue and Support will typically respond within two hours during regular business hours.
