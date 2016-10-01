@@ -1,12 +1,12 @@
 ---
-title: Unsupported/Problematic Modules and Plugins
-description: An up-to-date list of Drupal modules and WordPress plugins Pantheon does not support.
+title: Modules and Plugins with Known Issues
+description: A list of Drupal modules and WordPress plugins that require workarounds or that Pantheon does not support.
 categories: [developing]
 tags: [code, debug]
 ---
-This article lists modules and plugins that do not work with or are currently unsupported on the Pantheon platform. This is not a comprehensive list, as we continually update it as problems are reported. If you are aware of any modules or plugins that do not work as expected, please contact our Support team.
+This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/getting-support/).
 
-We do not prevent you from installing and using these plugins/modules; however, they will not work as expected and we cannot provide troubleshooting support.
+We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
 ## Drupal Modules
 <hr>
@@ -284,6 +284,8 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
+
+**Issue** #2: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin. 
 
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
