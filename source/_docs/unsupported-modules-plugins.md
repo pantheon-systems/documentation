@@ -1,5 +1,5 @@
 ---
-title: Unsupported/Problematic Modules and Plugins
+title: Modules and Plugins with Known Issues
 description: A list of Drupal modules and WordPress plugins that require workarounds or are unsupported.
 categories: [developing]
 tags: [code, debug]
