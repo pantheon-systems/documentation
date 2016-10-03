@@ -41,7 +41,7 @@ Download your Pantheon site aliases to manually update your local aliases file:
  drush cc cache
  ```
 
-![Link to Pantheon Drush Aliases](/source/docs/assets/images/drush-aliases.png)
+![Link to Pantheon Drush Aliases](/source/docs/assets/images/dashboard/drush-aliases.png)
 If you add a site to your account, you will have to download a new copy of your Drush aliases.
 
 ### List Available Site Aliases

@@ -25,7 +25,7 @@ Update code in the Dev environment via [SFTP](/docs/sftp/) or [Git](/docs/git/).
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and combine them in Test to be absolutely certain that your deployment to Live will go as planned.
 
-![Site dashboard, test environment, code section](/source/docs/assets/images/test-env.png)
+![Site dashboard, test environment, code section](/source/docs/assets/images/dashboard/test-env.png)
 
 While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).
 
@@ -49,7 +49,7 @@ This may be a good time to run regression or smoke tests by stepping through you
 
 After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-caches/).
 
-![Site dashboard, live environment, workflow section](/source/docs/assets/images/deploy-live.png)
+![Site dashboard, live environment, workflow section](/source/docs/assets/images/dashboard/deploy-live.png)
 
 ## Configuration Management
 

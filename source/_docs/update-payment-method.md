@@ -25,7 +25,7 @@ Update multiple sites from a single location to avoid individually changing each
 2. Click **Billing** and then **Update**.
 3. Enter the new information, and click **Update Billing**.
 
-![Update payment for multiple sites](/source/docs/assets/images/billing_update.jpg)
+![Update payment for multiple sites](/source/docs/assets/images/dashboard/billing_update.jpg)
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

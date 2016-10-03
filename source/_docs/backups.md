@@ -1,6 +1,6 @@
 ---
 title: Backups Tool
-description: Learn how to backup your Drupal or WordPress site on Pantheon. 
+description: Learn how to backup your Drupal or WordPress site on Pantheon.
 categories: [managing]
 tags: [backups, platform]
 keywords: backups, backing up, archive, archives, create backup
@@ -9,7 +9,7 @@ The Backups tab is where you manage all the details for your site's backup. A ba
 
 We strongly urge you to backup your site regularly.
 
-![Backups tab](/source/docs/assets/images/backup-tool.png)
+![Backups tab](/source/docs/assets/images/dashboard/backup-tool.png)
 
 ##Create a Backup
 You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live). For detailed instructions creating a backup, see [Backup Creation](/docs/create-backups).

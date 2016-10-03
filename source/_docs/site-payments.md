@@ -17,14 +17,14 @@ Depending on the plan you choose, you'll get access to additional features like 
 <h4>Note</h4>
 We do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
 
- ![Invite a business owner to pay](/source/docs/assets/images/invite-business-owner.png)
+ ![Invite a business owner to pay](/source/docs/assets/images/dashboard/invite-business-owner.png)
 
 ## Accessing Premium Features
 
 Developing your site and enjoying the advanced features like Workflow, Team Management, and [New Relic Pro](/docs/new-relic) can all be accessed for free; however, there are also premium features that require you to have a payment method associated with your site.
 
 For example, when enabling HTTPS you are prompted to update your site's plan:
- ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/update-plan-prompt-https.png)
+ ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/dashboard/update-plan-prompt-https.png)
 Clicking the message takes you to the Billing page to either select a plan or to enter your payment information.
 
 

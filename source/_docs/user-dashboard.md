@@ -6,7 +6,7 @@ tags: [platform]
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
-![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard.png)
+![Site Dashboard](/source/docs/assets/images/dashboard/pantheon-user-dashboard.png)
 
 ## Sites Tab
 Here you can add a new site, see every site you're a team member of, and see the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
