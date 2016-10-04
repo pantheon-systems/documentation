@@ -12,6 +12,9 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 - Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version.
 
+- We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we can’t be responsible for the code and configuration that gets deployed. We also can't take any responsibility for any files uploaded to the site . We strongly encourage all developers and site owners to always follow best security practicesand keep core code, contributed modules and plugins up-to-date, especially with security-related releases.
+
+- We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed, we fully stand behind the platform and support that but we can’t be responsible for the code and configuration that gets deployed. We encourage all developers and site owners to always follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
 - Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](https://pantheon.io/docs/tags/debug/) to get you underway.
