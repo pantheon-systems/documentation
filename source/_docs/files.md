@@ -26,6 +26,3 @@ When you are logged in to your application server, you may notice some files tha
 
 **htpasswd**: is used when you want to lock your environment with a username and password. There is a Public button on each environment Dashboard that you can click to add a username and password to your site. This will keep your site hidden while you're working on it.
 
-## Troubleshooting
-
-- [Drupal Filesystem Writeable Error](/docs/filesystem-faq/)
