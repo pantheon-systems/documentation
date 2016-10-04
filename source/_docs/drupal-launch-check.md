@@ -7,7 +7,7 @@ keywords: launch check, drupal, analysis, database, status, report
 ---
 Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
-![status tab on live environment](/source/docs/assets/images/status-tab.png)
+![status tab on live environment](/source/docs/assets/images/dashboard/status-tab.png)
 
 Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.  
 

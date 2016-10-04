@@ -7,7 +7,7 @@ keywords: sites, dashboard, pantheon, get started, settings, new site
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
 
-![Site Dashboard](/source/docs/assets/images/site-dashboard-image.png)
+![Site Dashboard](/source/docs/assets/images/dashboard/site-dashboard-image.png)
 
 At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/docs/multidev/).
 
@@ -34,7 +34,7 @@ This tab shows general information about your site, such as the framework, upstr
 #### View your Site's Upstream
 To find a link to your site's upstream, click **Settings**, then **About Site**.
 
-![Upstream link](/docs/assets/images/upstream-link.png)
+![Upstream link](/docs/assets/images/dashboard/upstream-link.png)
 
 
 ### PHP Version

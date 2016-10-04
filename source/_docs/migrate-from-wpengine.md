@@ -30,11 +30,11 @@ From your Pantheon Dashboard:
 7. Click **Create Site**.
 8. Select **Generate Machine Token** and re-authenticate if prompted:
 
- ![Authentication BlogVault migration](/source/docs/assets/images/migration-authentication-prompt.png)
+ ![Authentication BlogVault migration](/source/docs/assets/images/dashboard/migration-authentication-prompt.png)
 
   Attempts to login with Google will fail if your organization uses Single Sign-On, resulting in the following error:
 
- ![Migration Authentication Error](/source/docs/assets/images/migration-authentication-error.png)
+ ![Migration Authentication Error](/source/docs/assets/images/dashboard/migration-authentication-error.png)
 
  For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/#troubleshooting).
 
@@ -44,7 +44,7 @@ From your Pantheon Dashboard:
 
 11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete select, **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
- ![Successful Migration BlogVault](/source/docs/assets/images/successful-site-migration-complete-blogvault.png)
+ ![Successful Migration BlogVault](/source/docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
 
 If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 

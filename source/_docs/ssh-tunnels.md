@@ -62,7 +62,7 @@ alias tsqlc=terminus-sql-cli
 
 From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
 
-![Connection info](/source/docs/assets/images/connection-info.png)
+![Connection info](/source/docs/assets/images/dashboard/connection-info.png)
 
 Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](//docs/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```

@@ -24,7 +24,7 @@ Now that you have selected a plan, continue the process of going live by [settin
 
 Identifying your site's service level is quick and easy. You can find this in the green label next your site's name.
 
-![confirm new plan](/source/docs/assets/images/confirm-plan-dashboard.png)
+![confirm new plan](/source/docs/assets/images/dashboard/confirm-plan-dashboard.png)
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>

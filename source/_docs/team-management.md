@@ -10,7 +10,7 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 ## Manage Site Team Members
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
-![Team Management Window](/source/docs/assets/images/team-modal.png)
+![Team Management Window](/source/docs/assets/images/dashboard/team-modal.png)
 ## Add a Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
@@ -42,12 +42,12 @@ Within the Team modal of the Site Dashboard, the site owner can click **Make Own
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>Only the current site owner has the ability to assign a new owner; site team members will not see this option.</div>
-![Make Owner](/source/docs/assets/images/sandbox-make-owner.png)
+![Make Owner](/source/docs/assets/images/dashboard/sandbox-make-owner.png)
 
 #### Paid Sites
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-![Invite a business owner to pay for this site](/source/docs/assets/images/payment-invite.png)<br />
+![Invite a business owner to pay for this site](/source/docs/assets/images/dashboard/payment-invite.png)<br />
 Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.
 
 ### Pantheon Partners
@@ -65,8 +65,8 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</div>
- ![Add a supporting organization button](/source/docs/assets/images/multi_org1.png)
- ![Confirm supporting organization](/source/docs/assets/images/multi_org2.png)
+ ![Add a supporting organization button](/source/docs/assets/images/dashboard/multi_org1.png)
+ ![Confirm supporting organization](/source/docs/assets/images/dashboard/multi_org2.png)
 
 ## See Also
 [Role-Based Permissions & Change Management](/docs/change-management/)
