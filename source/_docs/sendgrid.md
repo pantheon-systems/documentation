@@ -50,7 +50,7 @@ Two methods can be used to integrate SendGrid with your Drupal site: SMTP or API
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
 - API integration can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)).
- For more details, see [Unsupported/Problematic Modules and Plugins](/docs/unsupported-modules-plugins/#composer-manager).
+ For more details, see [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins/#composer-manager).
 
 ### SendGrid SMTP Integration
 
