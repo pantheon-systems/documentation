@@ -21,7 +21,7 @@ Pantheon runs an optimized version of Drupal, based on [Pressflow](https://githu
 See [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
 
 ## Major Version Upgrades
-The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
+The best practice for doing a major Drupal version upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
 
 Also, Pantheon needs to track the proper upstream for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates are available via the Dashboard. For more details, see [Major Version Drupal Upgrades](/docs/drupal-updates/).
 
