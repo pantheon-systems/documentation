@@ -14,14 +14,27 @@ terminus site backups create [--element=<code|files|db|all>] [--keep-for]
 
 A backup contains three separate archives: a database backup, a files backup, and a code backup.
 
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
-
 ## Create a Backup
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
+
 ![Create site backup Pantheon Dashboard](/source/docs/assets/images/dashboard/manual-site-backup.png)
+
+
+## Backup Schedule and Retention
+**Paid sites:** You can enable or disable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day the weekly backup is run.
+
+**All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
+
+Backups created on Pantheon are stored offsite on Amazon EC2 instances for redundancy, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to validate and send backups to your own Amazon instance:
+
+```
+todo: work on script w/mike and tine
+```
+
 
 ## Access Backups  
 ### Via the Dashboard
