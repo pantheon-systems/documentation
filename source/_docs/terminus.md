@@ -2,7 +2,6 @@
 title:  Terminus Manual: Getting Started
 terminuspage: true
 type: terminuspage
-contributors: ari
 tags: [terminus]
 categories: [managing]
 layout: terminuspage
@@ -11,7 +10,7 @@ permalink: docs/:basename/
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do everything in a terminal that you can do in the Dashboard, and more. Use it to script recurring tasks, bulk operations on sites, and integrate with other services.
 
-<a href="/docs/terminus/install">Install Terminus</a> for Mac OS/Linus or Windows.
+<a href="/docs/terminus/install">Install Terminus</a> for Linux / Mac OSX or Windows.
 
 ## Using Terminus
 

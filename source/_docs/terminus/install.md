@@ -2,7 +2,6 @@
 title:  Terminus Manual: Installation
 terminuspage: true
 terminusinstall: true
-contributors: ari
 type: terminuspage
 tags: [terminus]
 categories: [managing]
@@ -17,7 +16,7 @@ categories: [managing]
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="unix">
     <!-- Unix: Mac or Linux Instructions -->
-    <h2>Install Terminus for Mac or Linux</h2>
+    <h2>Install Terminus for Linux / Mac OSX</h2>
     <h3>Requirements</h3>
     <ul>
       <li>PHP Version 5.5.9 or later</li>

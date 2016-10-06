@@ -3,7 +3,6 @@ title: Terminus Manual: Example Usage
 terminuspage: true
 terminustoc: true
 type: terminuspage
-contributors: ari
 tags: [terminus]
 categories: [managing]
 ---
