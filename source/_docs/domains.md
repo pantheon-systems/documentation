@@ -21,7 +21,7 @@ You must have a paid plan to add a domain to a site environment. For more inform
 You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Add all domains you want to resolve to Pantheon within the desired environments. Automatic resolution of domains and wildcards are not supported.</div>
+<h4>Note</h4>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</div>
 
 ### Develop Using a Domain Without Changing DNS
 Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
@@ -46,15 +46,22 @@ Use the following workaround to allow your local workstation to access your Pant
  192.123.456.789 example.com  
  ```
 ## Step 3: Configure Your DNS
-From the Live environment's Domains/HTTPS tool, click **Show recommended DNS records** to the right of the domains you've added.
+From the target environment's Domains/HTTPS tool, click **Show DNS Recommendations** next to each of the domains you've added:
+
+![Show recommended DNS](/source/docs/assets/images/dashboard/show-dns-recommendations.png)
 
 <div class="alert alert-danger" role="alert">
 <h4>Important</h4><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</div>
 
-Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider. Pantheon's www-redirection service will automatically redirect requests to the www subdomain.
+### Serving Sites from WWW
+Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider.
 
-### Serving Sites from Bare Domains with HTTP
-To serve your site from the bare domain, you must:
+Pantheon's www-redirection service will automatically redirect requests to the www subdomain for sites served with HTTP. To serve the site from the `www` subdomain with HTTPS, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain) after you have [enabled HTTPS](/docs/enable-https), then properly configured DNS.
+
+### Serving Sites from Bare Domains
+To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then create the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain).
+
+As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or use [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
 
 1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/), [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
@@ -67,7 +74,7 @@ To serve your site from the bare domain, you must:
  ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
 3. [Redirect incoming requests](/docs/redirects/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
-One alternative to CNAME flattening is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
+Another alternative is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
 
 Learn more about ANAME records:
 
