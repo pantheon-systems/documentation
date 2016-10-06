@@ -59,7 +59,7 @@ Using the provided destinations in the Site Dashboard, create the recommended DN
 Pantheon's www-redirection service will automatically redirect requests to the www subdomain for sites served with HTTP. To serve the site from the `www` subdomain with HTTPS, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain).
 
 ### Serving Sites from Bare Domains
-To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then create the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, [redirect incoming requests](/docs/redirects#redirect-from-www-to-the-bare-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
+To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then add the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, [redirect incoming requests](/docs/redirects#redirect-from-www-to-the-bare-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
 As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or configure [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
 
@@ -84,15 +84,15 @@ Learn more about ANAME records:
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
 
 ## Troubleshooting
-Sites pointed directly to Pantheon using the values recommended within the target environment's Domains/HTTPS tool can use `dig` to verify DNS configurations. This does not apply to sites utilizing a Content Delivery Network (CDN), such as CloudFlare.
+Sites using the values recommended within the target environment's Domains/HTTPS tool for their DNS settings can use `dig` to verify DNS configurations. If you are using a Content Delivery Network (CDN) in front of your Pantheon site, you will need to use its recommended DNS settings.
 
-To verify the DNS has been properly configured, run the following command:
+To verify that DNS has been properly configured to direct traffic directly to your Pantheon site, run the following command:
 
 ```bash
 $ dig www.example.com cname +short && dig example.com a +short && dig example.com aaaa +short
 ```
 
-The results should match the exact values recommended within the Site Dashboard:
+The results should match the values recommended within the Site Dashboard:
 ```bash
 live-example.pantheonsite.io.
 192.237.224.60
