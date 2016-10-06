@@ -1,6 +1,7 @@
 ---
 title:  Terminus Manual: Installation
 terminuspage: true
+terminusinstall: true
 contributors: ari
 type: terminuspage
 tags: [terminus]
@@ -8,8 +9,8 @@ categories: [managing]
 ---
 <!-- Tab Nav -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#unix" aria-controls="unix" role="tab" data-toggle="tab">Linux / Mac OSX</a></li>
-  <li role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows</a></li>
+  <li id="unixtab" role="presentation" class="active"><a href="#unix" aria-controls="unix" role="tab" data-toggle="tab">Linux / Mac OSX</a></li>
+  <li id="wintab" role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows</a></li>
 </ul>
 
 <!-- Tab Panes -->
