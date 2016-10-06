@@ -1,7 +1,6 @@
 ---
 title: Terminus Manual: Command Reference
 terminuspage: true
-contributors: ari
 type: terminuspage
 tags: [terminus]
 categories: [managing]
