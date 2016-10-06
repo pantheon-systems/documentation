@@ -113,7 +113,9 @@ The www-redirection service listens for requests and issues 301 redirects with w
 
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
+
 ![Extra www example](/source/docs/assets/images/extra-www-example.png)
+
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
 ### Why does my bare domain resolve to "www." in Safari and Firefox, but fails to resolve in Chrome?
