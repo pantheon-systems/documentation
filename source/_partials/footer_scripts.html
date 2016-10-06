@@ -63,6 +63,18 @@
   </script>
   {% endif %}
 
+  {% if page.terminusinstall %}
+  <script type="text/javascript">
+  if (navigator.appVersion.indexOf("Win")!=-1) {
+    $('#unix').removeClass('active');
+    $('#unixtab').removeClass('active');
+    $('#win').addClass('active');
+    $('#wintab').addClass('active');
+  }
+  </script>
+  {% endif %}
+
+
   <script type="text/javascript">
   function setActive() {
     aObj = document.getElementById('dropmenu').getElementsByTagName('a');
