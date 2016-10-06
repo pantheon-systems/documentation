@@ -56,12 +56,12 @@ From the target environment's Domains/HTTPS tool, click **Show DNS Recommendatio
 ### Serving Sites from WWW
 Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider.
 
-Pantheon's www-redirection service will automatically redirect requests to the www subdomain for sites served with HTTP. To serve the site from the `www` subdomain with HTTPS, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain) after you have [enabled HTTPS](/docs/enable-https), then properly configured DNS.
+Pantheon's www-redirection service will automatically redirect requests to the www subdomain for sites served with HTTP. To serve the site from the `www` subdomain with HTTPS, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain).
 
 ### Serving Sites from Bare Domains
-To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then create the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, we recommend [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain).
+To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then create the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, [redirect incoming requests](/docs/redirects#redirect-from-www-to-the-bare-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
-As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or use [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
+As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or configure [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
 
 1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/), [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
@@ -72,7 +72,7 @@ As an alternative to enabling HTTPS, you can use CNAME flattening to serve the s
  ```
  The @ value will show the bare domain once created in CloudFlare:
  ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
-3. [Redirect incoming requests](/docs/redirects/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
+3. [Redirect incoming requests](/docs/redirects/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php`.
 
 Another alternative is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
 
@@ -83,6 +83,23 @@ Learn more about ANAME records:
 *   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
 *   [EasyDNS](http://docs.easydns.com/aname-records/)
 
+## Troubleshooting
+Sites pointed directly to Pantheon using the values recommended within the target environment's Domains/HTTPS tool can use `dig` to verify DNS configurations. This does not apply to sites utilizing a Content Delivery Network (CDN), such as CloudFlare.
+
+To verify the DNS has been properly configured, run the following command:
+
+```bash
+$ dig www.example.com cname +short && dig example.com a +short && dig example.com aaaa +short
+```
+
+The results should match the exact values recommended within the Site Dashboard:
+```bash
+live-example.pantheonsite.io.
+192.237.224.60
+2001:4801:7901::c5ce:526c:0:1a
+```
+
+![custom domains](/source/docs/assets/images/dashboard/custom-domains.png)
 
 ## Frequently Asked Questions (FAQs)
 
