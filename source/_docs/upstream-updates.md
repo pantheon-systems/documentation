@@ -5,7 +5,7 @@ categories: [developing]
 tags: [code]
 keywords: upstream, update upstream, apply updates, apply update, update core, update plugin, update module, update theme, update distribution, distribution, deploy update, deploy updates, update, updates, security update, apply security update, patch
 ---
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Applying Upstream Updates](/docs/upstream-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/scope-of-support).
 
 ## Apply Upstream Updates via the Dashboard
 
