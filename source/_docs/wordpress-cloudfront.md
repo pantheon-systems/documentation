@@ -11,16 +11,16 @@ Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incomin
 
 Be sure that you:
 
-- Have an existing WordPress site or [create](/docs/launch-wordpress/) one
-- Set the site's [connection mode](/docs/sftp#sftp-mode) to SFTP
-- Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/free/). Amazon offers free access to most of their services for the first year.
+- Have an existing WordPress site or [create](https://dashboard.pantheon.io/sites/create) one.
+- Set the site's [connection mode](/docs/sftp#sftp-mode) to SFTP.
+- Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
 
 ## Create an Identity and Access Management (IAM) User
-[Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Before you can use CloudFront, you need to create an IAM user.
+[Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Before you can use S3, you need to create an IAM user.
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
 2. Click **Users**, then **Create New Users**.
