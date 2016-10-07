@@ -6,7 +6,7 @@ title: September 2016
 **Dashboard design updates**
 These include improvements to selected states for environment tabs and menus to help keep you better oriented when moving through the UI, added white space to give everything some breathing room, and nested secondary menu items on the left side to streamline navigation.
 
-![Dashboard design updates](/source/docs/assets/images/dashobard/interface-workflow-tool.png)
+![Dashboard design updates](/source/docs/assets/images/dashboard/interface-workflow-tool.png)
 
 **Kalabox 2.0 is available**
 Kalabox 2.0 has been released and can be integrated with Pantheon. [Learn more](https://pantheon.io/blog/announcing-kalabox-2-0-local-development).
