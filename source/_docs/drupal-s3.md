@@ -132,7 +132,7 @@ Before you begin:
 
 
 #### S3 File System CORS
-Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling amd interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
+Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
  <!-- Nav tabs -->
  <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#d7s3fscors" aria-controls="d7s3fscors" role="tab" data-toggle="tab">Drupal 7</a></li>
@@ -151,31 +151,6 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
    <pre><code class="bash hljs">composer require drupal/s3fs_cors --prefer-dist</code></pre>
   </div>
  </div>
-
-#### Media Modules (Optional)
-
-You may want to enhance your Drupal media handling in conjunction with using AWS S3.
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
- <li role="presentation" class="active"><a href="#d7media" aria-controls="d7media" role="tab" data-toggle="tab">Drupal 7</a></li>
- <li role="presentation"><a href="#d8media" aria-controls="d8media" role="tab" data-toggle="tab">Drupal 8</a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
- <div role="tabpanel" class="tab-pane active" id="d7media">
- <br/>
- To have solid, viewable, manageable Drupal 7 file handling (See: <a href="https://www.drupal.org/node/1699054">Media 2.x Quick Start Guide</a>), install:<br />   
- Ctools, File Entity, Views, and Entity View Modes
- <pre><code class="bash hljs">terminus drush 'en ctools file_entity views entity_view_mode -y'</code></pre>
-
- Then install the Media module 2.x (e.g. 7.x-2.x-dev)
- <pre><code class="bash hljs">terminus drush 'en media-7.x-2.x-dev -y'</code></pre>
-</div>
- <div role="tabpanel" class="tab-pane" id="d8media">
-  <br/>
-  The state of the Media module in D8 is still in flux, see: <a href="https://www.drupal.org/node/2595163">Media</a>.
- </div>
-</div>
 
 ### Drupal Module Configuration
 #### S3 File System User Credentials
