@@ -7,24 +7,24 @@ keywords: drupal, services.yml, yml file
 ---
 Drupal 8 allows users to easily define core services and environment-specific settings within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal 8 site.
 
-<div class="alert alert-danger">
-<h4>Warning</h4>
-Due to environment-specific settings (e.g. Twig debug mode), <code>sites/default/services.yml</code> should only be created or modified via SFTP. This file should <strong>not</strong> be managed via Git, so that settings are not migrated between environments when pushing code.
-</div>
+Drupal `services.yml` files may contain environment-specific settings, such as debug-mode settings, or they may be used to configure settings that are applicable to all environments, such as configuring cache contexts, or setting the cookie domain.  To avoid the potential for inadvertantly deploying debug configuration to production, prior to Drupal 8.2.0, Pantheon placed `sites/default/services.yml` in the `.gitignore` file, to discourage users from committing this file to the repository.
 
-## Change Permissions
-Access your site's codebase via SFTP and temporarily make the `sites/default` directory writeable (read + write + execute). Change writable files, such as `default.services.yml`, to 666 (read + write). Depending on your SFTP client, change permissions using the 'get info' or 'file attribute' options.
+As of Drupal 8.2.0, however, `services.yml` was removed from `.gitignore`, and a new mechanism was introduced to control production vs. pre-production configuration changes. Now, in your `sites/default` folder, you may use `services.pantheon.production.yml` and `services.pantheon.preproduction.yml` to configure your on-Pantheon service configuration parameters for production and pre-production environments.  
 
-For general SFTP instructions, see [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/).
+The table below illustrates which services file is used in which Pantheon environments:
+
+Pantheon Environment                   | Settings Filename
+---------------------------------------|------------------------------------
+Production: ‘test’ or ‘live’           | services.pantheon.production.yml
+Pre-production: ‘dev’ or any ‘mutidev’ | services.pantheon.preproduction.yml
+
 ## Create and Modify services.yml
-From within the `sites/default` directory, create a new file named `services.yml` by duplicating the existing `default.services.yml` file. Use your typical SFTP workflow to modify `services.yml` accordingly.
+Before you begin, make sure that you have updated your Drupal site to version 8.2.0. From within the `sites/default` directory, create a new file named `services.yml`, `services.pantheon.production.yml`, or `services.pantheon.preproduction.yml`, depending on whether you wish to configure settings for all envrionments, production environments or pre-production environments. Consult the existing `default.services.yml` and `default.services.pantheon.preproduction.yml` files for example parameters that you may wish to customize for your site.
+
 <div class="alert alert-info">
 <h4>Note</h4>
 Module specific services should be defined in a separate <code>.yml</code> file, located in the root directory of the respective module (e.g. <code>sites/all/modules/module_name/module_name.services.yml</code>).
 </div>
-
-## Restore Default Permissions
-You will need to set the permissions back to default (555 for directories, 444 for files) once edits are complete. This file should remain non-writable for security concerns.
 
 ## See Also
 
