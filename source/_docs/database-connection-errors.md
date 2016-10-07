@@ -25,7 +25,7 @@ To see if this is the case, examine your `includes/bootstrap.inc` file, and veri
 If you don't see that, look in to recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
-Only use the one-click updates provided within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Other methods of applying upstream updates are not supported. Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Applying Upstream Updates](/docs/upstream-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Applying Upstream Updates](/docs/upstream-updates).
 
 ## Drupal Non-Standard Bootstraps
 Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
