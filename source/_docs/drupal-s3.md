@@ -81,7 +81,7 @@ These steps require Drush 8, which is run by default on Pantheon for newly creat
 
 Before you begin:
 
-- [Modify the default Drush version](/docs/drush-versions#modifying-default-drush-version) to Drush 8 if needed.
+- [Set your site’s Drush version](/docs/drush-versions/#configure-drush-version) to Drush 8 if needed.
 - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
 - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/docs/terminus):
 
