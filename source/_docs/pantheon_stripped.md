@@ -62,7 +62,7 @@ Please note that this behavior only holds for HTTP redirects with a status code 
 ## Resolution
 We always recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects.
 
-Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://support.google.com/analytics/answer/1033867) tool.
+Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) tool.
 
 For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
