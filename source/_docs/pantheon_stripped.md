@@ -60,9 +60,9 @@ nginx-access.log:10.223.193.24 - - [26/Jun/2015:17:12:52 +0000]  "GET /utm_campa
 Please note that this behavior only holds for HTTP redirects with a status code of 301 or 302, and only if the resulting redirect URLs parameters remain the same as on the way in. It is possible for your PHP code or CMS to pick up `PANTHEON_STRIPPED` and place it in a link that users are invited to click, or to issue a redirect that re-formulates the structure of the url to the point that we cannot restore the original parameters.
 
 ## Resolution
-We always recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects.
+We recommend distributing campaign URLs that are in their final, non-redirectable form and avoid using PHP redirects.
 
-Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or preceded by double underscores will instead act as query keys and be served as distinct pages, not from the same cache. You can build campaign links in the correct format using [Google’s URL builder](https://support.google.com/analytics/answer/1033867) tool.
+Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or are preceded by double underscores will instead act as query keys and be served and cached as distinct pages. You can build campaign links in the correct format using [Google’s URL builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) tool.
 
 For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
