@@ -16,8 +16,26 @@
                   <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20content" target="blank">Suggest New Content</a></li>
                   </ul>
                 </div>
-                <a data-proofer-ignore class="twitter-share-button" data-count="vertical" data-url="https://pantheon.io{{ page.url }}"></a>
-                <script data-proofer-ignore  type="IN/Share" data-counter="none" data-url="https://pantheon.io{{ page.url }}"></script><br>
+                  <script>
+                    window.twttr = (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                      if (d.getElementById(id)) return t;
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = "https://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                     
+                      t._e = [];
+                      t.ready = function(f) {
+                        t._e.push(f);
+                      };
+                     
+                      return t;
+                  }(document, "script", "twitter-wjs"));
+                </script>
+                <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
+                <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
                 {% if page.categories %}
                 <small><i class="fa fa-folder"></i> Categories:</small>
                 {% for category in page.categories %}
