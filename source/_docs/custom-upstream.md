@@ -127,7 +127,7 @@ When testing is complete, merge any outstanding pull requests into the master br
 After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
-- Upstream URL: Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git` -  Do not use an email address in place of the username. Public repository URLs do not require the `username:password@` portion of the above example URL
+- Upstream URL: Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git` -  Do not use an email address in place of the username. Public repository URLs do not require the `username:password@` portion of the above example URL. If your private repository is on GitHub, you may create a [personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/); replace `username:password@host.tld` with `personal_access_token@github.com`.
 - Upstream Branch (usually master)
 - If the upstream repository is public or private
 - Description (< 200 characters, basic HTML allowed)
