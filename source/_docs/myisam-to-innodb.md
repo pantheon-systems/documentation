@@ -12,6 +12,14 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
  This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</div>
 
+## MySQL Command
+
+Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
+
+```
+ALTER TABLE table_name ENGINE=InnoDB;
+```
+
 ##Simple Script
 
 <div class="alert alert-info" role="alert">
