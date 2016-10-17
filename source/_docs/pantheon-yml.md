@@ -99,6 +99,10 @@ remote:
 remote:
 ```
 
+### Required Properties
+
+A `pantheon.yml` file must have the `api_version` property defined.
+
 
 ## See Also
 - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver)  
