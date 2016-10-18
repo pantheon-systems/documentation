@@ -8,7 +8,7 @@ layout: terminuspage
 permalink: docs/:basename/
 ---
 
-Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do everything in a terminal that you can do in the Dashboard, and more. Use it to script recurring tasks, bulk operations on sites, and integrate with other services.
+Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do everything in a terminal that you can do in the Dashboard, and more.
 
 <a href="/docs/terminus/install">Install Terminus</a> for Linux / Mac OSX or Windows.
 
@@ -20,13 +20,13 @@ You can use Terminus to perform all of the operations you do on the Dashboard, i
 - Creating and deleting Multidev environments
 - Cloning one environment to another
 - Checking for upstream updates
-- Pushing code
+- Deploying code
 
 ## Contribute
 Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
-## Support
-Need help with Terminus? [Open a support ticket](https://dashboard.pantheon.io/#support/open-ticket).
+## Alpha Support
+Need help with Terminus Alpha? [Open an issue on Github](https://github.com/pantheon-systems/terminus/issues/new) to submit Alpha feedback/bugs. For non-feedback/bugs and questions around general Alpha usage, email terminus.alpha@pantheon.io
 
 
 <div class="terminus-pager">
