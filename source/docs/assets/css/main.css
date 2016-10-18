@@ -2727,3 +2727,10 @@ margin-bottom: 10px;
 .highlight {
   background: yellow;
 }
+
+.devbar {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  margin-bottom: 0px !important;
+}
