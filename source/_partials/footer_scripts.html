@@ -34,11 +34,51 @@
   }
   window.onload = setActive;
   </script>
-  <!-- Marketo Munchkin -->
+  <!-- Marketo Script All Pages -->
+
   <script type="text/javascript">
-  document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+
+  (function() {
+
+  var didInit = false;
+
+  function initMunchkin() {
+
+  if(didInit === false) {
+
+  didInit = true;
+
+  Munchkin.init('316-GSV-089',{"domainLevel":2});
+
+  }
+
+  }
+
+  var s = document.createElement('script');
+
+  s.type = 'text/javascript';
+
+  s.async = true;
+
+  s.src = '//munchkin.marketo.net/munchkin.js';
+
+  s.onreadystatechange = function() {
+
+  if (this.readyState == 'complete' || this.readyState == 'loaded') {
+
+  initMunchkin();
+
+  }
+
+  };
+
+  s.onload = initMunchkin;
+
+  document.getElementsByTagName('head')[0].appendChild(s);
+
+  })();
+
   </script>
-  <script>Munchkin.init('{{ site.marketo_munchkin_id}}');</script>
 
   <script src="//pantheon.io/sites/all/themes/zeus/js/pantheon-js-tracking.min.js"></script>
   <script type="text/javascript">
