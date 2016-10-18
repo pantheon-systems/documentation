@@ -65,7 +65,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
   # Update CTA edit link on terminus manual pages so that the current branch is used
   sed -i '20s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
-  sed -i '23i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
 
 
   # Regenerate sculpin to reflect new redirect logic
