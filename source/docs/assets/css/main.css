@@ -2734,3 +2734,9 @@ margin-bottom: 10px;
   border-color: #faebcc;
   margin-bottom: 0px !important;
 }
+
+
+.label {
+  display: inline-block !important;
+  vertical-align: top !important;
+}
