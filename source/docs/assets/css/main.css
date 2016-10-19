@@ -1330,6 +1330,8 @@ margin-right: 20px;
     position: fixed; /* Undo the static from mobile first approach */
   }
   .pio-docs-sidebar.affix-top {
+    position: fixed;
+    width: 250px !important;
   }
   .pio-docs-sidebar.affix-bottom {
   }
