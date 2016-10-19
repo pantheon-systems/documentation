@@ -7,37 +7,41 @@ tags: [terminus]
 categories: [managing]
 ---
 ## Applying Updates
-
+Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
 ### Upstream Updates (Core)
-List all upstream updates:
+Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7]((https://github.com/pantheon-systems/drops-7)). Updates can be applied once they have been merged into the upstream and become available for a site.
+
+List available upstream updates:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#updates-list"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="updates-list"><code class="bash" data-lang="bash">terminus upstream:updates:list my-site</code></pre></figure>
 </div>
 
-In order to apply upstream updates, the Dev environment's connection mode must be set to Git. If the Dev environment has uncommitted SFTP changes, commit them with the following command:
+If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#commit-sftp"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="commit-sftp"><code class="bash" data-lang="bash">terminus env:commit my-site.dev --message="My code changes"</code></pre></figure>
 </div>
-Then toggle the environment's connection mode to Git:
 <div class="alert alert-danger">
 <h4>Warning</h4>
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
 </div>
+Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#toggle-git"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="toggle-git"><code class="nohighlight" data-lang="bash">terminus connection:set my-site.dev git</code></pre></figure>
 </div>
 
 
-Apply all available updates to WordPress or Drupal core:
+Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#updates-apply"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="updates-apply"><code class="bash" data-lang="bash">terminus upstream:updates:apply my-site</code></pre></figure>
 </div>
 
-### Theme, Module, and Plugin Updates
+### Module, Theme, and Plugin Updates
+Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/docs/drush) (Drupal) or [WP-CLI](/docs/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
+
 <ul class="nav nav-tabs" role="tablist">
   <li id="wptab" role="presentation" class="active"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal</a></li>
   <li id="drupaltab" role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
@@ -85,12 +89,18 @@ Apply all available updates to WordPress or Drupal core:
     </div>
   </div>
 </div>
-## Deploying Changes
-Deploy changes from Dev to Test, sync content from Live into Test, and clear caches on Test:
+## Deploying Code
+When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database contents from Live:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="deploy-test"><code class="bash" data-lang="bash">terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" --cc</code></pre></figure>
 </div>
+After testing changes, use Terminus to deploy code from Test up to Live:
+<div>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-test"><code class="bash" data-lang="bash">terminus env:deploy my-site.live --sync-content --note="Deploy core and contrib updates" --cc</code></pre></figure>
+</div>
+
 
 
 <div class="terminus-pager col-md-12">
