@@ -34,12 +34,12 @@ categories: [managing]
     <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
     <div>
       <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="mt-auth"><code class="bash" data-lang="bash">terminus1x auth login --machine-token&lsaquo;machine-token&rsaquo;</code></pre></figure>
+      <figure><pre id="mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
     </div>
     <p>After a token has been used, future sessions can be established by email:</p>
     <div>
       <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="mt-login"><code class="bash" data-lang="bash">terminus1x auth login dev@example.com</code></pre></figure>
+      <figure><pre id="mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  dev@example.com</code></pre></figure>
     </div>
   </div>
 
@@ -66,12 +66,12 @@ categories: [managing]
   <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
   <div>
     <button class="btn btn-default btn-clippy" data-clipboard-target="#win-mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-    <figure><pre id="win-mt-auth"><code class="bash" data-lang="bash">terminus1x auth login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+    <figure><pre id="win-mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
   </div>
   <p>After a token has been used, future sessions can be established by email:</p>
   <div>
     <button class="btn btn-default btn-clippy" data-clipboard-target="#win-mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-    <figure><pre id="win-mt-login"><code class="bash" data-lang="bash">terminus1x auth login dev@example.com</code></pre></figure>
+    <figure><pre id="win-mt-login"><code class="bash" data-lang="bash">terminus1x auth:login dev@example.com</code></pre></figure>
   </div>
   </div>
 </div>
