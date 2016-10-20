@@ -12,7 +12,7 @@ categories: [managing]
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-addon"><i class="fa fa-search"></i></div>
-        <input type="text" class="form-control" placeholder="Search Terminus Commands" ng-model="searchCommand">
+        <input type="text" class="form-control" placeholder="Search Terminus Alpha Commands" ng-model="searchCommand">
         <div style="background:#fff;cursor:pointer;" ng-click="clearFilters()" class="input-group-addon">
         <span class="fa fa-times"></span>
         </div>
