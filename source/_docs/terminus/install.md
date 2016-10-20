@@ -21,12 +21,12 @@ categories: [managing]
     <ul>
       <li>PHP Version 5.5.9 or later</li>
       <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
-      <li><a href="http://php.net/manual/en/curl.setup.php">PHP-CURL</a></li>
+      <li><a href="https://getcomposer.org/">Composer</a></li>
     </ul>
-    <p>The easiest way to get up and running with Terminus Alpha is with Composer, which will install and manage updates for these requirements. First, install <a href="https://getcomposer.org/">Composer</a> then run the following command in your terminal:</p>
+    <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with Composer:</p>
     <div>
       <button class="btn btn-default btn-clippy" data-clipboard-target="#install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/pantheon-systems/terminus/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
+      <figure><pre id="install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
     </div>
     <h2>Authenticate</h2>
     <p>Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see <a href="/docs/machine-tokens">Machine Tokens</a>.</p>
@@ -46,10 +46,17 @@ categories: [managing]
   <!-- Windows Instructions -->
   <div role="tabpanel" class="tab-pane" id="win">
   <h2>Install Terminus for Windows</h2>
-  <p>You will need a terminal emulator, such as <a href="/docs/cygwin-windows/#using-cygwin">Cygwin</a>. Once Cygwin is setup, install Terminus by running the following command:</p>
+  <h3>Requirements</h3>
+  <ul>
+    <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu on Windows</a></li>
+    <li><a href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
+    <li>PHP Version 5.5.9 or later</li>
+    <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
+  </ul>
+  <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with Composer:</p>
   <div>
     <button class="btn btn-default btn-clippy" data-clipboard-target="#win-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-    <figure><pre id="win-install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/pantheon-systems/terminus/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
+    <figure><pre id="win-install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; php composer.phar require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
   </div>
 
   <h2>Authenticate</h2>
