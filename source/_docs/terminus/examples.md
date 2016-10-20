@@ -97,8 +97,8 @@ When you're ready to test a new set of changes, use Terminus to deploy code from
 </div>
 After testing changes, use Terminus to deploy code from Test up to Live:
 <div>
-<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-<figure><pre id="deploy-test"><code class="bash" data-lang="bash">terminus1x env:deploy my-site.live --note="Deploy core and contrib updates" --cc</code></pre></figure>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-live"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-live"><code class="bash" data-lang="bash">terminus1x env:deploy my-site.live --note="Deploy core and contrib updates" --cc</code></pre></figure>
 </div>
 
 
