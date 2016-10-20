@@ -21,9 +21,9 @@ categories: [managing]
     <ul>
       <li>PHP Version 5.5.9 or later</li>
       <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
-      <li><a href="https://getcomposer.org/">Composer</a></li>
+      <li><a href="https://getcomposer.org/download">Composer</a></li>
     </ul>
-    <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with Composer:</p>
+    <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
     <div>
       <button class="btn btn-default btn-clippy" data-clipboard-target="#install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
       <figure><pre id="install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
@@ -49,11 +49,12 @@ categories: [managing]
   <h3>Requirements</h3>
   <ul>
     <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu on Windows</a></li>
-    <li><a href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
     <li>PHP Version 5.5.9 or later</li>
     <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
+    <li>Composer (<a href="https://getcomposer.org/Composer-Setup.exe">Direct Download</a>)</li>
+
   </ul>
-  <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with Composer:</p>
+  <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
   <div>
     <button class="btn btn-default btn-clippy" data-clipboard-target="#win-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
     <figure><pre id="win-install-composer"><code class="bash" data-lang="bash">cd $HOME ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; php composer.phar require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
