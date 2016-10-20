@@ -90,7 +90,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
   </div>
 </div>
 ## Deploying Code
-When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database contents from Live:
+When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:
 <div>
 <button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="deploy-test"><code class="bash" data-lang="bash">terminus1x env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" --cc</code></pre></figure>
