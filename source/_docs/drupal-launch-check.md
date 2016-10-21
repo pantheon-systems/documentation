@@ -64,6 +64,10 @@ If you want to permanently opt-out of a check, you can use the [$conf array in s
 ```php
 $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 ```
+The specific key you'll use in the $conf array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks](http://cgit.drupalcode.org/site_audit/tree/Check).
+
+Keep in mind that the site audit is executed via drush so it is best to use the $_ENV superglobal for doing things like limiting the exclusions to one environment.  
+
 #### I want to contribute/I found a mistake. How should I proceed?
 
 Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) to add and request features, or to report inaccuracies.
