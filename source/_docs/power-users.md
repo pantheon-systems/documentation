@@ -7,7 +7,7 @@ contributors:
   - joshkoenig
 date: 7/27/2015
 ---
-Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Slack community](https://slackin.pantheon.io/) or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users).
+Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Power Users Slack channel](https://slackin.pantheon.io/) or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users).
 
 ## Power User Topics
 
