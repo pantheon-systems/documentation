@@ -20,7 +20,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. In 
   - Packages: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - Extensions: APC, New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support <? ?> syntax; use <?php /> instead)
-  - Maximum PHP execution time is 90 seconds
+  - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](https://pantheon.io/docs/timeouts/).
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the`WP_MAX_MEMORY_LIMIT` constant](http://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
   - Each PHP process can have either 256MB or 512MB of memory ([depends on the plan](https://www.pantheon.io/pricing)).
