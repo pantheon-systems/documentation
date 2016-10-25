@@ -31,9 +31,11 @@ See [the email documentation](/docs/email) for more details and suggestions.
 
 ## Streaming Media
 
-Streaming media on Pantheon is not supported. Pantheon does not provide FFMPEG or other media libraries, and our edge caching system is currently not optimized for streaming files.
+Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform. However, you can run a great streaming media website.
 
-However, you can run a great streaming media website. It's recommended that you find a more suitable host for the actual streaming, whether that's YouTube, Brightcove, or another provider.
+Pantheon recommendeds that you find a more suitable host for the actual streaming, whether that's [YouTube](https://www.youtube.com/), [Brightcove](https://www.brightcove.com/), [Vimeo](https://vimeo.com/), [Soundcloud](https://soundcloud.com/), or another provider. These services provide all the necessary components for great streaming media.
+
+It is, however, possible to deliver smaller media files from Pantheon using [progressive download](https://en.wikipedia.org/wiki/Progressive_download), but the media will not automatically adapt to the bandwidth and capabilities of the device browsing the site. Pantheon does not restrict the media formats sites on the platform can use.
 
 ## Large Files
 
