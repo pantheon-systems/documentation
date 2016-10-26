@@ -21,8 +21,8 @@ New Relic monitoring is automatically enabled for all application servers added 
 - If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
 
 #### Who is the New Relic account associated with?
-- If site owner is a user, the site owner's info is used to create the New Relic account.
-- If site owner is an organization, the user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
+- If site owner is a user, the site owner's name and email address is used to create the New Relic account.
+- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization. 
 
 To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
 
