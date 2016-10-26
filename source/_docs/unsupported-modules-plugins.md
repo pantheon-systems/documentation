@@ -255,6 +255,12 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
 
+### [JetPack](https://wordpress.org/plugins/jetpack/)
+**Issue**: JetPack installs successsfully, but throws a 503 error. See https://github.com/Automattic/jetpack/issues/3546
+
+**Solution**: Reload the page and you'll see that the plugin was activated successfully.
+<hr>
+
 ### [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/)
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 <hr>
