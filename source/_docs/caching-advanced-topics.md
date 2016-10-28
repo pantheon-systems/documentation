@@ -148,7 +148,6 @@ The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Var
 S+ESS[a-z0-9]+
 fbs[a-z0-9_]+
 SimpleSAML[A-Za-z]+
-SimpleSAML[A-Za-z]+
 PHPSESSID
 wordpress[A-Za-z0-9_]*
 wp-[A-Za-z0-9_]+
