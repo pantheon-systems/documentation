@@ -20,7 +20,7 @@ Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
 ALTER TABLE table_name ENGINE=InnoDB;
 ```
 
-##Simple Script
+##Simple PHP Script
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -37,7 +37,7 @@ Here's the browser version of the script:
 
 <script src="//gist.github.com/calevans/9944410.js"></script>
 
-##Advanced Method
+##Advanced Method via Command Line
 
 If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
