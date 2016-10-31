@@ -256,7 +256,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### [JetPack](https://wordpress.org/plugins/jetpack/)
-**Issue**: JetPack installs successsfully, but throws a 503 error. See https://github.com/Automattic/jetpack/issues/3546
+**Issue**: JetPack installs successsfully, but throws a 503 error. For details, see [https://github.com/Automattic/jetpack/issues/3546](https://github.com/Automattic/jetpack/issues/3546).
 
 **Solution**: Reload the page and you'll see that the plugin was activated successfully.
 <hr>
