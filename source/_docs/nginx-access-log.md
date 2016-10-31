@@ -52,7 +52,6 @@ goaccess -f nginx-access.log -p /etc/goaccess.conf -a -o report.html
 
 ## See Also
 - [Log Files on Pantheon](/docs/logs)
-- [Log Files on Pantheon](/docs/logs)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
 - [PHP Errors and Exceptions](/docs/php-errors/)
