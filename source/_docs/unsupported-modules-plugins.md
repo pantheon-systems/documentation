@@ -140,7 +140,7 @@ You can modify this patch according to your needs, such as performing an operati
 <hr>
 
 ### [Mobile Tools](https://www.drupal.org/project/mobile_tools)
-**Issue**: Conflicts with Varnish. See [this thread](https://www.drupal.org/node/1976162#comment-7411366] for details.
+**Issue**: Conflicts with Varnish. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
 <hr>
 
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
@@ -158,7 +158,13 @@ Customers have also reported success by making the export path [configurable](ht
  **Issue**: The path of the base URL is changed and cached by the module itself.  
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
-<hr>
+
+### [Persistent Login](https://www.drupal.org/project/persistent_login)  
+**Issue**: This module attaches per-user cookies that conflict with our Varnish configuration.
+
+
+**Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
+ <hr>
 ### [Plupload](https://www.drupal.org/project/plupload)
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
