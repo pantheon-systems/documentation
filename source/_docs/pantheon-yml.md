@@ -9,14 +9,17 @@ Hook into platform workflows and add advanced site configuration via the `panthe
 
 
 ## Advanced Site Configuration
+### Required Properties
+You must define the `api_version` property for the `pantheon.yml` configuration file to be valid:
+```yaml
+api_version: 1
+```
 
 ### Protected Web Paths
 
 If you have files or directories inside of your docroot that you'd like to protect from public web access, use `protected_web_paths`. For example, if you add the following `pantheon.yml` to the root of your site's codebase:
 
 ```yaml
-api_version: 1
-
 protected_web_paths:
   - /example.txt
   - /example_directory
@@ -37,8 +40,6 @@ That will ensure that if someone visits `https://example.com/example.txt` or `ht
 If you'd like to nest your docroot one level beneath your code repository in a directory named `web`, you may do so with the following `pantheon.yml`:
 
 ```yaml
-api_version: 1
-
 web_docroot: true
 ```
 
@@ -98,11 +99,6 @@ remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
 remote:
 remote:
 ```
-
-### Required Properties
-
-A `pantheon.yml` file must have the `api_version` property defined.
-
 
 ## See Also
 - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver)  
