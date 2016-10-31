@@ -12,7 +12,15 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
  This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</div>
 
-##Simple Script
+## MySQL Command
+
+Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
+
+```
+ALTER TABLE table_name ENGINE=InnoDB;
+```
+
+##Simple PHP Script
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
@@ -29,7 +37,7 @@ Here's the browser version of the script:
 
 <script src="//gist.github.com/calevans/9944410.js"></script>
 
-##Advanced Method
+##Advanced Method via Command Line
 
 If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
