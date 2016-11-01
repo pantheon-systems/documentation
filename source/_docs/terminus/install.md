@@ -8,14 +8,14 @@ categories: [managing]
 ---
 <!-- Tab Nav -->
 <ul class="nav nav-tabs" role="tablist">
-  <li id="unixtab" role="presentation" class="active"><a href="#mac" aria-controls="mac" role="tab" data-toggle="tab">Mac OS X</a></li>
-  <li id="linuxtab" role="presentation"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab">Linux</a></li>
+  <li id="mactab" role="presentation"><a href="#mac" aria-controls="mac" role="tab" data-toggle="tab">Mac OS X</a></li>
+  <li id="linuxtab" role="presentation" class="active"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab">Linux</a></li>
   <li id="wintab" role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows</a></li>
 </ul>
 
 <!-- Tab Panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="mac">
+  <div role="tabpanel" class="tab-pane" id="mac">
     <!-- Unix: Mac Instructions -->
     <h2>Install Terminus for Mac OS X</h2>
     <h3>Requirements</h3>
@@ -43,7 +43,7 @@ categories: [managing]
       <figure><pre id="mac-mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  --email=dev@example.com</code></pre></figure>
     </div>
   </div>
-    <div role="tabpanel" class="tab-pane" id="linux">
+    <div role="tabpanel" class="tab-pane active" id="linux">
       <!-- Unix: Linux Instructions -->
       <h2>Install Terminus for Linux</h2>
       <h3>Requirements</h3>
