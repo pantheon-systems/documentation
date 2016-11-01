@@ -8,15 +8,16 @@ categories: [managing]
 ---
 <!-- Tab Nav -->
 <ul class="nav nav-tabs" role="tablist">
-  <li id="unixtab" role="presentation" class="active"><a href="#unix" aria-controls="unix" role="tab" data-toggle="tab">Linux / Mac OSX</a></li>
+  <li id="unixtab" role="presentation" class="active"><a href="#mac" aria-controls="mac" role="tab" data-toggle="tab">Mac OS X</a></li>
+  <li id="linuxtab" role="presentation"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab">Linux</a></li>
   <li id="wintab" role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows</a></li>
 </ul>
 
 <!-- Tab Panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="unix">
-    <!-- Unix: Mac or Linux Instructions -->
-    <h2>Install Terminus for Linux / Mac OSX</h2>
+  <div role="tabpanel" class="tab-pane active" id="mac">
+    <!-- Unix: Mac Instructions -->
+    <h2>Install Terminus for Mac OS X</h2>
     <h3>Requirements</h3>
     <ul>
       <li>PHP Version 5.5.9 or later</li>
@@ -25,24 +26,51 @@ categories: [managing]
     </ul>
     <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
     <div>
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="mac-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
     </div>
     <h2>Authenticate</h2>
     <p>Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see <a href="/docs/machine-tokens">Machine Tokens</a>.</p>
     <p>First, <a href="https://dashboard.pantheon.io/machine-token/create">generate a Machine Token</a> from <strong>User Dashboard</strong> &rsaquo; <strong>Account</strong> &rsaquo; <strong>Machine Tokens</strong>.</p>
     <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
     <div>
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="mac-mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
     </div>
     <p>After a token has been used, future sessions can be established by email:</p>
     <div>
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  --email=dev@example.com</code></pre></figure>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="mac-mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  --email=dev@example.com</code></pre></figure>
     </div>
   </div>
-
+    <div role="tabpanel" class="tab-pane" id="linux">
+      <!-- Unix: Linux Instructions -->
+      <h2>Install Terminus for Linux</h2>
+      <h3>Requirements</h3>
+      <ul>
+        <li>PHP Version 5.5.9 or later</li>
+        <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
+        <li><a href="https://getcomposer.org/download">Composer</a></li>
+      </ul>
+      <p>Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
+      <div>
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#linux-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+        <figure><pre id="linux-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bashrc ; source $HOME/.bashrc</code></pre></figure>
+      </div>
+      <h2>Authenticate</h2>
+      <p>Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see <a href="/docs/machine-tokens">Machine Tokens</a>.</p>
+      <p>First, <a href="https://dashboard.pantheon.io/machine-token/create">generate a Machine Token</a> from <strong>User Dashboard</strong> &rsaquo; <strong>Account</strong> &rsaquo; <strong>Machine Tokens</strong>.</p>
+      <p>Once the token has been created, use it to authenticate Terminus by running the following command:</p>
+      <div>
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#linux-mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+        <figure><pre id="linux-mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+      </div>
+      <p>After a token has been used, future sessions can be established by email:</p>
+      <div>
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#linux-mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+        <figure><pre id="linux-mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  --email=dev@example.com</code></pre></figure>
+      </div>
+    </div>
   <!-- Windows Instructions -->
   <div role="tabpanel" class="tab-pane" id="win">
   <h2>Install Terminus for Windows</h2>
