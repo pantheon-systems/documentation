@@ -24,6 +24,13 @@ If you still can’t get access to your site using password reset, for example i
 $ terminus drush "user-login"
 ```
 
+You can also user Terminus and Drush to update the password:
+
+```bash
+$ terminus drush "user-password admin --password='HelloFriend'" --site='my-site' --env='dev'
+```
+Note the placement of quotation marks, any commands passed to drush that include spaces *must* be wrapped in quotes and any option flags will need to be quoted carefully.
+
 ## WordPress User Login
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](/docs/terminus/).
 
