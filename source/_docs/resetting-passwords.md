@@ -24,10 +24,10 @@ If you still can’t get access to your site using password reset, for example i
 $ terminus drush "user-login"
 ```
 
-You can also user Terminus and Drush to update the password:
+Or you can reset any user's password from the command line with Terminus:
 
 ```bash
-$ terminus drush "user-password admin --password='HelloFriend'" --site='my-site' --env='dev'
+$ terminus drush "user-password user_name --password='Astr0nGP455w0rD'" --site='my-site' --env='dev'
 ```
 Note the placement of quotation marks, any commands passed to drush that include spaces *must* be wrapped in quotes and any option flags will need to be quoted carefully.
 
@@ -39,7 +39,7 @@ If your site is powered by WordPress you have two options. The first is to reque
 
 You will receive an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
 
-If you have access to the site view Terminus, you can also reset any user's password from the command line.
+Or you can reset any user's password from the command line with Terminus:
 
 ```nohighlight
 $ terminus wp 'user update' \
