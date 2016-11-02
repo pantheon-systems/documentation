@@ -24,6 +24,12 @@ If you still can’t get access to your site using password reset, for example i
 $ terminus drush "user-login"
 ```
 
+Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/docs/terminus):
+
+```bash
+$ terminus drush "user-password user_name --password='Astr0nGP455w0rD'" --site='my-site' --env='dev'
+```
+
 ## WordPress User Login
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](/docs/terminus/).
 
@@ -32,11 +38,10 @@ If your site is powered by WordPress you have two options. The first is to reque
 
 You will receive an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
 
-If you have access to the site view Terminus, you can also reset any user's password from the command line.
+Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/docs/terminus):
 
 ```nohighlight
-$ terminus wp 'user update' \
-           --user_pass=NEWPASSWORD \
+$ terminus wp 'user update 1234 --user_pass=NEWPASSWORD' --site=my-site --env=dev
 ```
 
 As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.
