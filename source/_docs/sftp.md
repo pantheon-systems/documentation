@@ -154,3 +154,6 @@ Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lo
     source:         APNIC
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+### I registered my Pantheon account via Google. How do I connect to SFTP?
+We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
