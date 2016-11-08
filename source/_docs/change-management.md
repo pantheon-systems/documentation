@@ -81,7 +81,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <th>Permissions</th>
         <th>User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
         <th>Team Member </th>
-        <th>Developer </th>
+        <th>Developer  <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise orgs only"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
