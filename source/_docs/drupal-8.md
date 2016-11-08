@@ -5,7 +5,7 @@ categories: [drupal]
 tags: [drupal-8, code]
 ---
 
-[Drupal 8](https://www.drupal.org/drupal-8.0) is now available on Pantheon! New Drupal 8 sites will use the [drops-8](https://github.com/pantheon-systems/drops-8) upstream repository and can be created via [Terminus](/docs/terminus) or the [Dashboard](https://dashboard.pantheon.io/products/drupal8/spinup). However, things may break and our support is limited at this time.
+[Drupal 8](https://www.drupal.org/drupal-8.0) is now available on Pantheon! New Drupal 8 sites will use the [drops-8](https://github.com/pantheon-systems/drops-8) upstream repository and can be created via [Terminus](/docs/terminus) or the [Dashboard](https://dashboard.pantheon.io/products/drupal8/spinup).
 
 ## Docs Progress
 Planned and in-progress work for Drupal 8 documentation on Pantheon can be tracked in our <a href="https://github.com/pantheon-systems/documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3AD8">D8 Milestone</a>. Pull requests are always welcome.
