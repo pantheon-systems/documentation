@@ -5,15 +5,13 @@ categories: [drupal]
 tags: [code]
 keywords: drupal, upgrade, upgrading, revision upgrade, update, updating, Drupal 6
 ---
-To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site - that is to say, you cannot do a major version upgrade from within the original site. 
-If you have a Drupal 6 site that you want to upgrade to Drupal 7, you'll need to create a new Drupal 7 site, and work on your upgrade process there, rather than on the existing Drupal 6 site. Likewise if you are going from Drupal 6 or Drupal 7 to Drupal 8, you will want to create a new Drupal 8 site and work there.
+To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. You cannot do a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and migrate the database, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and migrate the old site there.
 
-This will provide you with the QA and Deployment processes you need to test your upgrade and ensure everything works properly. 
-It also ensures that your site will recieve [Upstream Updates](https://pantheon.io/docs/upstream-updates/) once the upgrade is complete.
+Migrating to a new site on the platform will provide you with the QA and Deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will recieve [Upstream Updates](https://pantheon.io/docs/upstream-updates/) once the upgrade is complete.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-You must create a site on the new Drupal version to upgrade your site. We do not support upgrading from within an existing site.</div>
+If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.</div>
 
 ## Upgrade from Drupal 6 to Drupal 7
 
