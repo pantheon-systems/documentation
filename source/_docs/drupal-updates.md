@@ -3,15 +3,15 @@ title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
 categories: [drupal]
 tags: [code]
-keywords: drupal, upgrade, upgrading, revision upgrade, update, updating
+keywords: drupal, upgrade, upgrading, revision upgrade, update, updating, Drupal 6
 ---
-To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Even the simplest of upgrades requires its own QA and deployment process.
+To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and add content, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site there.
 
-Also, Pantheon needs to track the proper upstream Git history for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates will be available via the Dashboard.
+Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will recieve [upstream updates](https://pantheon.io/docs/upstream-updates/) once the upgrade is complete.
 
 <div class="alert alert-danger" role="alert">
 <h4>Warning</h4>
-Do not attempt the upgrades on the platform. This is not supported.</div>
+If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.</div>
 
 ## Upgrade from Drupal 6 to Drupal 7
 
@@ -24,7 +24,7 @@ Do not attempt the upgrades on the platform. This is not supported.</div>
 
 While you can try to get Drupal to handle all the data architecture changes between major revisions (importing the old database and running update.php), this is often not a complete solution. Depending on the specific module stack and configuration of your current site, it may be faster and more direct to plan and execute a content migration to the new site rather than trying to use the built-in update tools.
 
-If you are not having much luck with update.php, consider setting up the new site and using tools like the migrate.module to import your existing content. While this might initially seem like more work, it can often lead to a cleaner result more quickly, especially if your new site includes major architectural changes, features, or a redesign.
+If you are not having much luck with update.php, consider setting up the new site and using tools like the [migrate module](https://www.drupal.org/project/migrate) to import your existing content. While this might initially seem like more work, it can often lead to a cleaner result more quickly, especially if your new site includes major architectural changes, features, or a redesign.
 
 ## Upgrade to Drupal 8
 
