@@ -90,7 +90,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### [Global Redirect](https://www.drupal.org/project/globalredirect)  
  **Issue**: Too many redirects error when site is in maintenance mode.  
 
- **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page.
+ **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, apply a patch to the module to correct the issue: https://www.drupal.org/node/1399024
 <hr>
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
