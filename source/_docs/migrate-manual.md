@@ -137,6 +137,8 @@ You can import a WordPress or Drupal site archive via URL (within file size limi
 terminus site import —url=<url>
 ```
 
+#### How do I migrate a Drupal 6 site to Pantheon?
+Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](http://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
 
 ## See Also
 * [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
