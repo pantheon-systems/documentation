@@ -14,7 +14,7 @@ Our command line interface, Terminus, provides advanced interaction with Pantheo
 
 ## Using Terminus
 
-You can use Terminus to perform all of the operations you do on the Dashboard, including:  
+Use Terminus to perform these and other operations:  
 
 - Creating a new site
 - Creating and deleting Multidev environments
