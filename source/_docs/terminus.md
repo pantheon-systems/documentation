@@ -29,7 +29,7 @@ Terminus is open source! View the project on [GitHub](https://github.com/pantheo
 Need help with Terminus Alpha? [Open an issue on Github](https://github.com/pantheon-systems/terminus/issues/new) to submit Alpha feedback/bugs. For non-feedback/bugs and questions around general Alpha usage, email terminus.alpha@pantheon.io
 
 ## Clearing Redis Cache
-Terminus 1.0 does not include the clear option available in earlier versions. To clear your Redis cache, use the dashboard or [the Redis command-line client](https://pantheon.io/docs/redis/#clear-cache).
+Terminus 1.x does not provide a command for clearing the Redis cache. To clear the Redis cache, use the dashboard or the [Redis command-line client](https://pantheon.io/docs/redis/#clear-cache).
 
 <div class="terminus-pager">
   <hr>
