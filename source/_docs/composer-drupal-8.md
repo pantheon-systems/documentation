@@ -99,7 +99,7 @@ Add our version of Drupal core as an upstream to your local checkout of your Pan
 
 ```
 git remote add drops-8 git@github.com:pantheon-systems/drops-8.git
-git fetch drops-8.
+git fetch drops-8
 ```
 
 Merge from Drops-8:
