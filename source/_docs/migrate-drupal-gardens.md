@@ -4,6 +4,7 @@ description: Get all the details you need to know to successfully migrate your s
 categories: [drupal]
 tags: [migrate]
 keywords: drupal, pantheon, drupal gardens, import
+draft: true
 ---
 Drupal Gardens is ending support on August 1, 2016. This article walks you through exporting and migrating your site from Drupal Gardens to Pantheon.
 
