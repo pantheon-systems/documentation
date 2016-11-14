@@ -56,8 +56,7 @@ Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
 
 ## Authenticating
-
-There are two ways to get access to your Pantheon site via SFTP. One method is by using your Pantheon Dashboard password. Alternatively, you can connect via SFTP using the public SSH key you uploaded to your account. This allows password-less authentication. Learn how to [generate a SSH key](/docs/ssh-keys).
+Follow development best practice workflows by [authenticating via SSH key for password-less access](/docs/ssh-keys). Alternatively, you may use your Pantheon Dashboard password when prompted, however larger agencies with multiple developers who login frequently may cause access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
 
 ## Committing SFTP Changes
 
