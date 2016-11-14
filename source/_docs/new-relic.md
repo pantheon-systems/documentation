@@ -19,10 +19,15 @@ New Relic monitoring is automatically enabled for all application servers added 
 - Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
 - Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
 - If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
+- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tool on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension: 
+
+ - dashboard.pantheon.io
+ - rpm.newrelic.com
+
 
 #### Who is the New Relic account associated with?
 - If site owner is a user, the site owner's name and email address is used to create the New Relic account.
-- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization. 
+- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
 
 To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
 
