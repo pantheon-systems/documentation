@@ -41,11 +41,13 @@ You're now ready to perform command-line operations with Pantheon! For instance,
 
 Start an interactive import:
 ```nohighlight
-terminus sites import
-Provide a name for the site. This will be part of the default URL: my-drush-import
+terminus site import
+1. my-drush-import
+Choose site: 1
 URL of archive to import: http://mysite.com/drush-archive.tar.gz
-Site is now building.
-The new site's UUID is xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+Are you sure you want to import this archive? The dev environment of drupal-8-aws-test will be overwritten. [y/n]
+y
+.....
 ```
 At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 
@@ -53,7 +55,7 @@ At that point the script will poll as the site containers are spun up and the ar
 
 Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
 ```bash
-terminus sites import --site=<sitename> --label=<label> --url=<archive/url.tar.gz> --org=<id>
+terminus site import --site=<sitename> --url=<archive/url.tar.gz> --yes
 ```
 You can script out imports like this to run several concurrently (or in serial).
 
