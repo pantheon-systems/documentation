@@ -1,13 +1,13 @@
 ---
-title: New Relic Pro
+title: New Relic APM Pro
 description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site.
 categories: [developing]
 tags: [debug]
 keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance
 ---
-[New Relic Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
+[New Relic APM Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
-## Activate New Relic Pro
+## Activate New Relic APM Pro
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/rvtraveller/terminus-omniscient) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus sites omniscient`.
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
@@ -19,7 +19,7 @@ New Relic monitoring is automatically enabled for all application servers added 
 - Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
 - Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
 - If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
-- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tool on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension: 
+- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension: 
 
  - dashboard.pantheon.io
  - rpm.newrelic.com
@@ -29,7 +29,7 @@ New Relic monitoring is automatically enabled for all application servers added 
 - If site owner is a user, the site owner's name and email address is used to create the New Relic account.
 - If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
 
-To learn how to use New Relic Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
+To learn how to use New Relic APM Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
 
 
 ## Only Log Authenticated Users
@@ -130,11 +130,11 @@ A New Relic account can have only one owner at any time. You must be the current
 
 At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
 
-#### How much is New Relic Pro?
+#### How much is New Relic APM Pro?
 
-Pantheon provides New Relic Pro for all sites at no cost.
+Pantheon provides New Relic APM Pro for all sites at no cost.
 
-#### Will turning on New Relic Pro slow my site down?
+#### Will turning on New Relic APM Pro slow my site down?
 
 Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
