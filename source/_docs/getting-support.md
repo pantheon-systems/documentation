@@ -21,7 +21,6 @@ Chat with our Support Team to request assistance on issues within our [scope of 
 ###Elite Plans and Priority Enterprise Support Customers
 * **Pantheon On-call**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
-
 * **Chat**: You can contact our support team 24 hours a day via our new live chat service, this puts you in contact instantly with someone who can help with any issues you may be having, from billing to …, real time answers for real time problems etc
 
 ###Sites with Priority Enterprise Support
@@ -29,32 +28,15 @@ Chat with our Support Team to request assistance on issues within our [scope of 
 
 ## Phone Support
 
-<style>
-    .data-table {
-        border-collapse: collapse;
-    }
-    .border-top {
-        border-top: 1px solid #000;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #000;
-    }
-    .border-left {
-        border-left: 1px solid #000;
-    }
-    .border-right {
-        border-right: 1px solid #000;
-    }
-</style>
 
-<table class="data-table">
+<table class="table table-bordered table-responsive">
     <tr>
-        <th style="padding-left: 10px;" class="border-top border-bottom border-left border-right">Business Plan</th>
-        <th style="padding-left: 10px;" class="border-top border-bottom border-right">Elite Plan/Priority Enterprise Support </th>
+        <th>Business Plan</th>
+        <th>Elite Plan/Priority Enterprise Support </th>
 
     <tr>
-        <td style="padding-left: 10px;" class="border-bottom border-left border-right">Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via a support ticket).</td>
-        <td style="padding-left: 10px;"class="border-bottom border-right">Unlimited phone support with a Senior Customer Success Engineer (scheduled in advance via a support ticket) and 24/7 emergency support.</td>
+        <td>Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via a support ticket).</td>
+        <td>Unlimited phone support with a Senior Customer Success Engineer (scheduled in advance via a support ticket) and 24/7 emergency support.</td>
 
     </tr>
 </table>
