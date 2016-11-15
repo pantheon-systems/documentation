@@ -5,34 +5,27 @@ keywords: support, scope, customer support, help
 categories: [managing]
 tags: [platform]
 ---
-Submit a ticket with our Support Team to request assistance on issues within our [scope of support](/docs/scope-of-support/).
+Chat with our Support Team to request assistance on issues within our [scope of support](/docs/scope-of-support/).
 
 ## File a Ticket Through the Dashboard
-1. Create a support ticket from within the site's Dashboard by clicking **Support > Open Ticket**. This will automatically include the site and user information.
-2. Choose the **ticket type**.
-3. Enter a subject (summary of your issue).
-3. Provide important details in your request:
+1. Open a chat session from within the site's Dashboard by clicking **Support > Launch Chat**.
+2. Provide important details in your request:
  - Give the steps to reproduce the issue, including URLs or paths to files.
  - The environment being affected (Dev/Test/Live), if applicable.
  - When the issue began.
  - The error message, if applicable.
  - Links to screenshots or screencasts of the behavior, if necessary.
- 4. Click **Open Ticket**.
-
-## Other Ways to Contact Support
-If you cannot sign in to your Pantheon Dashboard:  
-
-- Use the [Password Reset](https://dashboard.pantheon.io/reset-password) form for Pantheon Dashboard access
-- Email Support directly at helpdesk@pantheon.io
 
 ## Customer Support Response Times
 
-###Elite Plans and Priority Enterprise Support Customers    
+###Elite Plans and Priority Enterprise Support Customers
 * **Pantheon On-call**: Available 24/7/365 with a guaranteed response time for business critical issues that include downtime, development team blockers, and urgent deadline-driven questions. For issues requiring an on-call engineer, we guarantee escalation in 60 minutes.
 * **Standard support ticket**: Your general support questions are routed through our support queue ahead of other users. Expedited support is accessed through our Dashboard and email.
 
-###Paid and Free Sites
-**Standard support ticket**: 2 hours during normal support hours.  Please note that while the platform is monitored 24/7/365, Customer Success support hours are 9-5 PST, Monday through Friday.
+* **Chat**: You can contact our support team 24 hours a day via our new live chat service, this puts you in contact instantly with someone who can help with any issues you may be having, from billing to …, real time answers for real time problems etc
+
+###Sites with Priority Enterprise Support
+**Standard support ticket**: 2 hours during normal support hours. Please note that while the platform is monitored 24/7/365, Customer Success support hours are 9-5 PST, Monday through Friday.
 
 ## Phone Support
 
