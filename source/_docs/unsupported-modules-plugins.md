@@ -92,6 +92,14 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
  **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, [apply a patch to the module](https://www.drupal.org/node/1399024) to correct the issue.
 <hr>
+
+<hr>
+### HTTP Basic Auth - Drupal 8 only
+ **Issue**: Pantheon dashboard lock conflicts with Drupal HTTP Basic Auth module when enabled.  
+
+ **Solution**: Ensure that only the dashboard lock or HTTP Basic Auth is enabled, not both.
+<hr>
+
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
