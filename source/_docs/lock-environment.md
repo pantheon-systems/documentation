@@ -7,9 +7,7 @@ keywords: lock, password protect, lock site, password protect site, locked, lock
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the your Sites page.</div>
+
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is private, the requesting client will have to supply the authentication credentials you set in order to access the site.
 
@@ -28,6 +26,11 @@ You can set a different username and password for each environment. This is impo
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
  ![Example of locked site](/source/docs/assets/images/auth-required.png)
+ 
+ <div class="alert alert-info" role="alert">
+<h4>Note</h4>
+If you have a Drupal 8 site with the http_basic_auth module enabled and then lock the site you will see 403 errors. The solution is to disable http_basic_auth and restart your browser to clear the authentication header cache. You should use the dashboard lock or the http_basic_auth module, not both.</div>
+
 ## Unlock a Site's Environment
 
 When you are ready to make your environment public again, click **Public** on the Security page. This will clear the credentials you entered and make web accessible resources available without a basic authentication prompt.
