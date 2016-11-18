@@ -10,7 +10,7 @@ tags: [platform]
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Pay-per-site</a></li>
-  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Orgs</a></li>
+  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -39,7 +39,7 @@ tags: [platform]
         </td>
         <td>
           Chat Support<br>
-          Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via a support ticket)."><em class="fa fa-info-circle"></em></a>
+          Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a>
         </td>
         <td>
           Chat Support<br>
@@ -111,7 +111,7 @@ The ticket support feature is available to certain plans and account types. For 
   - When the issue began.
   - Error messages received, if applicable.
   - Links to screenshots or screencasts of the behavior, if necessary.
-5. Click **Open Ticket**.
+5. Click **Open Ticket**
 
 
 
