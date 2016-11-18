@@ -8,7 +8,6 @@ tags: [platform]
 
 For organizations that want the highest level of support for their whole team, Priority Enterprise Support provides the assurance of SLA-backed 24/7/365 emergency support for downtime and business critical issues, expedited responses to standard support tickets, and expert onboarding and training.
 
-
 Priority Enterprise Support is great for:
 
 - **Enterprise Organizations** who want the best support for developers across their organization
