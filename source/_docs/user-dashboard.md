@@ -17,7 +17,7 @@ Each site displays a screenshot of the Dev environment's home page. The default 
 If you belong to an organization, you will see it listed here and can click it to go to that organization's Dashboard.
 
 ## Support Tab
-View details for open support tickets or create a new one.
+View details for open support requests or create a new one.
 
 ## Account Tab
 This is where you can update and manage your personal account details. Use the options on the left navigation menu to:

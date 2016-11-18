@@ -32,8 +32,8 @@ You will need to enter the following:
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-<li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'. 
-<li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-). 
+<li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.
+<li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).
 <li> The max length for a connection name is 35 characters, including the appended 'SSO'.</div>
 
 3. **Add an Attribute Statement** to map `mail` to `email`.
@@ -48,7 +48,7 @@ You will need to enter the following:
 
 ## Enable SAML on Pantheon
 
-Open a support ticket with Pantheon with the following:
+[Contact support](/docs/getting-support) and provide the following:
 
 1. **Email Domain(s)**: The email domain(s) your organization controls. Only users with email addresses in this domain will use the Organization's IdP.
 

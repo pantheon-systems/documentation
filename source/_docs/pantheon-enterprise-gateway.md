@@ -10,8 +10,7 @@ keywords: pantheon enterprise gateway, enterprise gateway, peg, gateway, firewal
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
 ### How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
-
-We'll create a ticket to guide you through the one-time setup and request the following for each of your remote services:
+[Contact support](/docs/getting-support) and follow the one-time setup, then provide the following for each of your remote services:
 
 * IP address
 * Port number

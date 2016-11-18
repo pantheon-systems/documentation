@@ -3,7 +3,7 @@ title: Pantheon Organizations FAQs
 description: Commonly asked questions and answers about Agency Partner Organizations using the Pantheon Platform.
 categories: [developing]
 tags: [platform, organizations, getting-started]
-keywords: agency, p4a, multidev, change management, elite, site owner, ownership, supporting organization, organizations, team, roles, privileges, support, partner support, ticket
+keywords: agency, p4a, multidev, change management, elite, site owner, ownership, supporting organization, organizations, team, roles, privileges, support, partner support
 ---
 ## Multidev
 
@@ -61,12 +61,12 @@ Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designa
 ### Do you have a status page?
 Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](http://status.getpantheon.com).
 
-### How do I submit a ticket when the Dashboard is down?
-If you need to submit a ticket and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
+### How do I submit a support request when the Dashboard is down?
+If you need to submit a support request and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
 
 ### As a Partner, do I get enhanced support?
 
-No. However, opening tickets from your **Organization Dashboard Support tab** and checking the box for "Non-site related issue" will direct your request to a specific agent ready to respond to your questions.
+No. However, opening support requests from your **Organization Dashboard Support tab** and checking the box for "Non-site related issue" will direct your request to a specific agent ready to respond to your questions.
 
 Support is prioritized based on site service levels as follows:
 

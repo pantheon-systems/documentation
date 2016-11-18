@@ -35,7 +35,7 @@ We recommend enabling passwordless access to the site's codebase for Git by [loa
 You can develop directly on the server using [SFTP mode](/docs/sftp/).
 
 ## Pantheon Credentials
-Your [Pantheon Dashboard](https://dashboard.pantheon.io) credentials are used to manage sites, organizations, and support tickets. Users on your Pantheon hosted sites will be distinct and are not managed by Pantheon; there is no single sign-on between the Dashboard and Drupal or WordPress site.
+Your [Pantheon Dashboard](https://dashboard.pantheon.io) credentials are used to manage sites, organizations, and support requests. Users on your Pantheon hosted sites will be distinct and are not managed by Pantheon; there is no single sign-on between the Dashboard and Drupal or WordPress site.
 
 Find more Pantheon provided credentials in the site Dashboard's connection information. For more details, see:
 

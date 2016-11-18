@@ -112,9 +112,7 @@ We're currently testing out integration strategies for Solr with our next-genera
 
 ### What support is available for Pantheon?
 
-For paid customers, we provide 24x7 platform-wide monitoring for Pantheon sites and technical support via priority support tickets. We also have Elite plans available that offer Service Level Agreements and 24x7 on-call support.
-
-Read more about [getting support](/docs/getting-support/) and our support offerings on [our pricing page](https://pantheon.io/pricing).
+Read more about [getting support](/docs/getting-support/) and our support offerings on [support features](https://pantheon.io/support).
 
 
 ## Security

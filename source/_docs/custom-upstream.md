@@ -124,7 +124,7 @@ When testing is complete, merge any outstanding pull requests into the master br
 
 ## Submit Product Information
 
-After you have a distribution that works on Pantheon, open a ticket titled "Product submission for [organization]" and include the following information about the distribution:
+After you have a distribution that works on Pantheon, [contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
 - Name
 - Upstream URL:
