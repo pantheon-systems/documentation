@@ -99,7 +99,7 @@ When creating a new preset, if the "Division by Zero" warning appears, add the [
 
 ## Troubleshooting and FAQs
 #### What if I need a library not listed here?
-If you need a library not listed on this page, submit a support ticket including a description of your use case and a link to the library's webpage.
+If you need a library not listed on this page, [contact support](/docs/getting-support) and include a description of your use case and a link to the library's webpage.
 
 All libraries will evaluated by Pantheon's Operations Team on a case-by-case basis.
 

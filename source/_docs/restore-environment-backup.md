@@ -17,7 +17,7 @@ Restore a manual or automatic backup (Code, Database, and Files) by clicking the
 
 This is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in at that time.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, submit a support ticket.
+When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, [contact support](/docs/getting-support).
 
 <div class="alert alert-danger" role="alert"><h4>Warning</h4>
 We do not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test and pull the code change and clone the content to Live. This will minimize user-facing downtime.</div>

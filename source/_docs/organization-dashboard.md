@@ -5,7 +5,7 @@ categories: [managing]
 tags: [platform, organizations]
 keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
 ---
-The Organization Dashboard is where you manage all your sites in a single location. You can access support tickets, add or remove organizational team members, and manage new or existing sites.
+The Organization Dashboard is where you manage all your sites in a single location. You can access support requests, add or remove organizational team members, and manage new or existing sites.
 
 ## Add Sites to Your Organization
 

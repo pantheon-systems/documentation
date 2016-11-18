@@ -17,7 +17,7 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Support and open a ticket with "Request for custom Vanity domain" as the subject. The body of the ticket must state the Vanity domain required on the site, like `sites.example.com`.
+From your Organization Dashboard, go to Dashboard and [submit a support request](/docs/getting-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
 
 ## Create a Wildcard CNAME Record
 

@@ -41,7 +41,7 @@ To find a link to your site's upstream, click **Settings**, then **About Site**.
 The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/docs/php-versions/).
 
 ## Support
-If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can contact Support by opening a ticket from your Dashboard. Learn more about our [scope of support](/docs/scope-of-support/).
+If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/docs/getting-support) from your Dashboard. Learn more about our [scope of support](/docs/scope-of-support/).
 
 ##Security Indicator
 This indicates if your site is public or locked. You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Locking Your Site](/docs/lock-environment/).

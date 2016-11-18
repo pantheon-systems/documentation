@@ -138,7 +138,7 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 
 To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-Enterprise Organizations can assume ownership of a site by opening a support ticket; however, Partner Organizations cannot own sites directly.
+Enterprise Organizations can assume ownership of a site by [contacting support](/docs/getting-support); however, Partner Organizations cannot own sites directly.
 
 For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 

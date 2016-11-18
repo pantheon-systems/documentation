@@ -6,7 +6,7 @@ tags: [platform, organizations]
 keywords: pantheon, pantheon for agencies, org, organization, org dashboard, change management
 ---
 
-Pantheon Organizations bring together users, sites, custom upstreams, and support tickets; and provide administrators with the tools needed to effectively manage a large number of sites.
+Pantheon Organizations bring together users, sites, custom upstreams, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
 ## Create an Organization
 Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
 
@@ -50,7 +50,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 Ally Partners and Pantheon EDU customers do not qualify for custom upstreams.
 
 ### Support
-Review, open, or reply to support tickets associated with your organization and its sites on the Support tab. [Learn about our Scope of Support](/docs/scope-of-support).
+Review, open, or reply to support requests associated with your organization and its sites on the Support tab. [Learn about our Scope of Support](/docs/scope-of-support) and [how to get support](/docs/getting-support).
 
 If you need expedited, on-call support, and are an Enterprise customer, Pantheon for EDU+ organization, or Agency Reseller, consider upgrading to [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).   
 
