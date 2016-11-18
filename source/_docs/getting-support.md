@@ -100,7 +100,7 @@ Start a chat with our Support Team to request assistance on issues within our [s
  - Links to screenshots or screencasts of the behavior, if necessary.
 
 ## Ticket Support
-The ticket support feature is available to certain plans and account types. For details, refer the [support feature table above](/#support-features-and-response-times).
+The ticket support feature is available to certain plans and account types. For details, refer the [support feature table above](#support-features-and-response-times).
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 2. Choose the **ticket type**.
