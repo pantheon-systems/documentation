@@ -54,6 +54,69 @@ If multiple SQL files are present the import will fail. Only provide one `.sql` 
 #### Can I use multiple settings.php files per site archive?
 If multiple `settings.php` files are present the import will fail. Pantheon does not need the `settings.php` file to import the site. To prevent import problems, it's best to remove `settings.php`.
 
+## Troubleshooting ##
+
+This section describes the causes of, and solution to the error messages that are displayed on the dashboard if the migration fails to complete.
+
+### Could not import code, the import file does not appear to contain a valid code directory. ###
+
+**Cause:** The migration tool could not find the core Drupal or WordPress files. This prevents the migration from completing because the site modules and themes cannot be imported.
+
+**Solution:** Check that the archive includes a code root with the core files.
+
+For Drupal 8 sites the archive should include index.php and associated files at the code root level, and the following directories:
+
+`  core
+  modules
+  profiles
+  sites
+  themes`
+		
+For Drupal 7 sites the archive should include index.php and associated files at the code root level, and the following directories:
+
+`  misc
+  modules
+  profiles
+  scripts
+  sites
+  themes`
+
+### Could not import database, unable to locate a database dump. ###
+
+**Cause:** The migration tool could not locate a MySQL database dump within the archive.
+
+**Solution:** Ensure that the archive contains a valid MySQL database dump.
+
+### Multiple file directories found within the import archive. ###
+	
+**Cause:** The migration tool found more than one potential sites/default/files directories found in the archive.
+
+**Solution:** Ensure that the archive only contains one file directory by removing the unnecessary folders.
+
+### Multiple site directories found within the import archive. ###
+
+**Cause:** The migration tool found a multisite installation which is not supported on the platform.
+
+**Solution:** Extract the sites froma Druapl multisite using [these steps](/docs/unwind-multisite/).
+
+### Multiple database dumps found within the import archive. ###
+
+**Cause:** The migration tool detected muliple MySQL database dumps within the archive.
+
+**Solution:** Ensure that only the MySQL dump to be imported is included in the archive by removing the unnecessary files.
+
+### Multiple code roots found within the import archive. ###
+
+**Cause:**  The migration tool detected multiple potential code root directories in the archive.
+
+**Solution:** Ensure that only the code root to be imported is included in the archive by removing the uneeded additional code root sirectories.
+
+### Multiple file directories found within the import archive. ###
+
+**Cause:** The migration tool detected multiple files directories within the archive.
+
+**Solution:** Ensure that only the file directory to be imported is included in the archive. If there is a separate directory for private files outside of sites/default/files (e.g. `sites/default/private/`) it will need to be moved into sites/default/files (e.g. `sites/default/files/private`).
+
 ## See Also
  * [Migrate Sites to Pantheon](/docs/migrate)
  * [Log Files on Pantheon](/docs/logs/)
