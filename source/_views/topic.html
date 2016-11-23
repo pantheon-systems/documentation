@@ -1,0 +1,26 @@
+{% extends "default" %}
+{% block content_wrapper %}
+<div class="container">
+  <div class="row mb-70">
+    <div class="col-md-12">
+      <div class="hero-video clearfix">
+        <div class="col-md-8 hero-video__video">
+          <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+        </div>
+        <div class="col-md-4 hero-video__text">
+          <h1 class="hero-video__title">{{ page.title }}</h1>
+          <p class="hero-video__subtitle">{{ page.description }}</p>
+          <ul class="hero-video__bullets">
+            <li>{{ page.bullet1 }} </li>
+            <li>{{ page.bullet2 }} </li>
+            <li>{{ page.bullet3 }} </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {{ page.blocks.content|raw }}
+  </div>
+</div>
+{% endblock %}

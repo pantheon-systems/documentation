@@ -1,0 +1,9 @@
+{% set contributorhandle = page.contributor %}
+{% set contributor = site.contributors[contributorhandle] %}
+<div class="author-info">
+  <div class="author-info__img">
+    <a href="{{ site.url }}/contributors/{{ contributorhandle }}"><img typeof="foaf:Image" src="{{ contributor.avatar }}" width="540" height="540" alt=""></a>
+  </div>
+  <h3 class="author-info__name">{{ contributor.name }}</h3>
+  <p class="author-info__title">{{ contributor.bio }}</p>
+</div>
