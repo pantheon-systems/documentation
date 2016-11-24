@@ -1,8 +1,8 @@
 ---
-title: Command Line Tools
+title: On-Server Development
 description: Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration.
 videoid: j38ihh83m5
-tags: [integrate]
+tags: [develop]
 bullet1: Keffiyeh biodiesel post-ironic offal
 bullet2: Leggings meh hella biodiesel four loko.
 bullet3: Poke tumblr yr, polaroid distillery health goth

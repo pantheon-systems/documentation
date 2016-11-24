@@ -1,10 +1,18 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="pio-breadcrumb">
-      <li><a href="/docs">Home</a></li>
-      <li><a href="/docs/automating">Automating & Integrating</a></li>
-      <li><a href="/docs/automating/cli">Command Line Tools</a></li>
-      <li><a href="/docs/cygwin-windows">Installing Cygwin on Windows</a></li>
+      <li><a href="/docs">Docs</a></li>
+      {% if page.tags %}
+        {% for tag in page.tags %}
+          {% if tag == "automate" %}
+            <li><a href="{{ site.url }}/integrate">Automate & Integrate</a></li>
+          {% endif %}
+          {% if tag == "cli" %}
+            <li><a href="{{ site.url }}/integrate/cli">Command Line Tools</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <li>{{page.title}}</li>
     </ul>
   </div>
 </div>

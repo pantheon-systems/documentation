@@ -1,9 +1,7 @@
 ---
-title: Automating & Integrating
-description: Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration.
+title: Manage and Understand Infrastructure
+description: Dive into the foundation of our platform.
 keywords: wordpress, cli
-categories: [managing]
-tags: [platform]
 videoid: j38ihh83m5
 bullet1: Keffiyeh biodiesel post-ironic offal
 bullet2: Leggings meh hella biodiesel four loko.
@@ -13,7 +11,7 @@ use: [docs_tags, guides_tags, videos_tags]
 ---
   <div class="col-md-8">
 
-    <a class="topic-info-link" href="/docs/automating/cli">
+    <a class="topic-info-link" href="/docs/integrate/cli">
       <div class="topic-info mb-70">
         <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/topic-thumb-developing.png)"></div>
         <div class="topic-info__text">
@@ -26,10 +24,10 @@ use: [docs_tags, guides_tags, videos_tags]
     <div class="row">
     <h4 style="margin-top:0;">More Training</h4>
       <ul class="top-docs top-docs-2col">
-      {% for video in data.videos_tags.automate %}
+      {% for video in data.videos_tags.integrate %}
         <li><a href="{{ video.url }}"><i class="fa fa-video-camera"></i>   {{ video.title }}</a></li>
       {% endfor %}
-          {% for guide in data.guides_tags.automate %}
+          {% for guide in data.guides_tags.integrate %}
           <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
           {% endfor %}
       </ul>
@@ -41,7 +39,7 @@ use: [docs_tags, guides_tags, videos_tags]
     <h4 style="margin-top:0;">Reference Docs</h4>
 
     <ul class="related">
-    {% for doc in data.docs_tags.automate %}
+    {% for doc in data.docs_tags.integrate %}
       <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
     {% endfor %}
 

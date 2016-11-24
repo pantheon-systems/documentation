@@ -1,7 +1,7 @@
 ---
 title: Configuration Management in WordPress
 description: Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration.
-tags: [automate]
+tags: [integrate]
 videoid: j38ihh83m5
 contributor: davidneedham
 ---

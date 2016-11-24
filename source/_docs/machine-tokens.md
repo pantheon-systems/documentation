@@ -2,7 +2,7 @@
 title: Creating and Revoking Machine Tokens
 description: Learn how to create a machine token in order to use Terminus on your Drupal or WordPress site.
 categories: [managing]
-tags: [automate]
+tags: [integrate]
 clis: true
 automates: true
 ---

@@ -3,11 +3,10 @@ title: Using Lockr to Secure and Manage API and Encryption Keys with WordPress a
 type: guide
 permalink: docs/guides/:basename/
 description: Detailed information on how to set up and use Lockr in your WordPress and Drupal site.
-tags: [automate]
+tags: [integrate]
 contributors:
   - cteitzel
 date: 8/11/2016
-type: automate
 ---
 [Lockr](https://lockr.io) is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure offsite hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
 

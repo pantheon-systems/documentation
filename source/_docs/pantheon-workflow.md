@@ -2,7 +2,7 @@
 title: Use the Pantheon Workflow
 description: Understand the Pantheon workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
 categories: [managing]
-tags: [platform, getting-started, featured]
+tags: [platform, get-started, featured]
 keywords: pantheon workflow, workflow, dev, test, live, environment, pantheon environments, multidev, how to deploy, deploy, what is a commit, commit, write permission, write to live, why cant i write to live, write access, commits, separate environment, environment, environments
 ---
 
