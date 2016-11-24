@@ -8,6 +8,7 @@ permalink: docs/guides/:basename/
 contributors:
   - kate
 date: 5/29/2015
+automates: true
 ---
 
 Theme changes, particularly CSS changes, can have unexpected consequences that make visual mistakes hard to spot. Visual regression testing uses screenshot comparisons to automatically detect changes and report them back to you. This guide will show you how to use [Wraith](https://github.com/BBC-News/wraith/) to test CSS, layout, graphical and other visual changes on your Pantheon websites using visual regression.

@@ -216,3 +216,30 @@ contributors:
     twitter: greg_1_anderson
     github: //github.com/greg-1-anderson
     drupal: //www.drupal.org/u/greg1anderson
+  scottmassey:
+    name: Scott Massey
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/ScottNew.jpg
+    bio: Master of Customer Success
+    linkedin: //www.linkedin.com/in/scottlmassey
+    github: //github.com/sukottokun
+    twitter: sukottokun
+    url: //www.astrocolossal.com
+  davidneedham:
+    name: David Needham
+    bio: Agency and Community Training Manager
+    linkedin: //www.linkedin.com/in/davidaneedham
+    twitter: davidneedham
+    drupal: //www.drupal.org/u/davidneedham
+    gplus: //plus.google.com/u/0/+DavidNeedham
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David_Needham540x540.png
+  dwayne:
+    name: Dwayne McDaniel
+    url: //www.mcdwayne.com
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Dwayne%20McDaniel.jpg
+    twitter: mcdwayne
+    gplus: https://plus.google.com/u/0/116638905183908020634
+    github: https://github.com/1dwaynemcdaniel/
+    linkedin: https://www.linkedin.com/in/dwaynemcdaniel
+    drupal: https://www.drupal.org/u/mcdwayne
+    wordpress: https://profiles.wordpress.org/mcdwayne
+    bio: Agency and Community Success Manager

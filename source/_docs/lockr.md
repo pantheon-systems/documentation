@@ -3,11 +3,11 @@ title: Using Lockr to Secure and Manage API and Encryption Keys with WordPress a
 type: guide
 permalink: docs/guides/:basename/
 description: Detailed information on how to set up and use Lockr in your WordPress and Drupal site.
-categories: [sites]
-tags: [code]
+tags: [automate]
 contributors:
   - cteitzel
 date: 8/11/2016
+type: automate
 ---
 [Lockr](https://lockr.io) is an easy-to-use plugin for WordPress or Drupal to manage your site’s API and encryption keys in a secure offsite hosted environment. Lockr removes the key from your site code and database and stores it in a secure and certified key manager. When your site needs the key for an encryption/decryption or API request, Lockr uses the Pantheon server’s certificate to authenticate on your behalf and release the key.
 
@@ -32,7 +32,7 @@ terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
 ```
 4. Select the site for the install. It will now detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
 
-It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr. 
+It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr.
 
 ## WordPress Installation
 Lockr is automatically configured to secure API keys for numerous third-party plugins for seamless integration and securing of your keys.
