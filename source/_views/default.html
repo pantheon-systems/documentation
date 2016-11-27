@@ -94,9 +94,16 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
+
+
     <!-- container -->
-    <div class="container-fluid">
+    <div class="container content">
+      {% if page.home is not defined %}
         <div class="row">
+          <div class="col-md-12 mb-20">
+            {% include("breadcrumb.html") %}
+          </div>
+        {% endif %}
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
         <!-- /container -->

@@ -1,9 +1,8 @@
 ---
 title: Enabling Solr with Drupal
 description: Detailed information on using Apache Solr with Drupal.
-categories: [drupal]
-tags: [code]
-keywords: apche, apache solr, index, indexing, searching, index and search, indexing and searching, solr, how to enable solr, enable solr, solr api, indexserver solr, solr indexserver, solr api, enable solr search, apachesolr, apache solor search module, solr modules, configure solr,
+tags: [develop]
+categories: [develop]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 
@@ -66,13 +65,13 @@ You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, 
 
 ### 5. Enable and Configure Your Solr Module
 
-You should have installed only one of these modules and will need to enable only one. 
+You should have installed only one of these modules and will need to enable only one.
 
 #### Enabling Apache Solr Search (apachesolr)
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
  ![Enable Solr module](/source/docs/assets/images/enable-solr-module.png)
- 
+
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
  ![Configure Solr Settings](/source/docs/assets/images/apache-solr-module-config.png)
 

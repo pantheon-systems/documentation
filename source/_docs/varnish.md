@@ -1,9 +1,8 @@
 ---
 title: Varnish Caching for High Performance with Drupal and WordPress
 description: Configure and verify Varnish is working on your WordPress or Drupal sites.
-categories: [developing]
-tags: [code, varnish]
-keywords: wordpress varnish, drupal varnish, cache, caching, pantheon, performance
+tags: [performance, cache]
+categories: [performance, cache]
 ---
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees application container workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second, much faster than a site's framework alone.  
 
@@ -29,7 +28,7 @@ If you have checked your HTTP headers and found that the cache is not working, m
 
 If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
 
-### Convert HEAD Requests to GET 
+### Convert HEAD Requests to GET
 To optimize performance, Varnish will convert HEAD requests to GET when serving cacheable requests.
 
 ### Theme Images Not Refreshing

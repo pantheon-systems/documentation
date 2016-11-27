@@ -66,9 +66,7 @@ All of our documentation is generated from markdown files, found at [`source/_do
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
-categories: [developing]
-tags: [code, local]
-keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
+tags: [performance, cache]
 contributors: mrfelton
 ---
 ```

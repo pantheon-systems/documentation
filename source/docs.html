@@ -5,6 +5,7 @@ title: Home
 use:
 - docs_categories
 - docs_tags
+- posts
 ---
 <style>
 ul.pio-breadcrumb {
@@ -57,7 +58,7 @@ ul.pio-breadcrumb {
     </div>
       <div class="row row-topics-list">
       <div class="col-md-4">
-        <a class="topic-info-link" href="/docs/infrastructure">
+        <a class="topic-info-link" href="/docs/platform">
           <div class="topic-info">
             <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-platform.svg)"></div>
             <div class="topic-info__text">
@@ -68,7 +69,7 @@ ul.pio-breadcrumb {
         </a>
       </div>
       <div class="col-md-4">
-        <a class="topic-info-link" href="/docs/integrate">
+        <a class="topic-info-link" href="/docs/automate">
           <div class="topic-info">
             <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-automate.svg)"></div>
             <div class="topic-info__text">
@@ -80,7 +81,7 @@ ul.pio-breadcrumb {
       </div>
 
       <div class="col-md-4">
-        <a class="topic-info-link" href="/docs/optimize">
+        <a class="topic-info-link" href="/docs/performance">
           <div class="topic-info">
             <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-performance.svg)"></div>
             <div class="topic-info__text">
@@ -137,53 +138,30 @@ ul.pio-breadcrumb {
 
   <div class="row">
     <div class="col-md-12">
-      <h2 class="subtitle">Top Docs</h2>
+      <h2 class="subtitle">Popular Docs</h2>
     </div>
   </div>
   <div class="row mb-70">
     <ul class="top-docs">
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
+      <li><a href="/docs/kill-mysql-queries">Identify and Kill MySQL Queries</a></li>
+      <li><a href="/docs/domains">Domains and DNS</a></li>
+      <li><a href="/docs/settings-php">Configuring settings.php</a></li>
+      <li><a href="/docs/guides/cloudflare-enable-https">Adding HTTPS For Free With Cloudflare</a></li>
+      <li><a href="/docs/pantheon-workflow">Using the Pantheon Workflow</a></li>
+      <li><a href="/docs/git-faq">Git FAQs</a></li>
+      <li><a href="/docs/terminus">Terminus,the Pantheon Command-Line Interface (CLI)</a></li>
+      <li><a href="/docs/ssh-keys">Generating and Adding SSH Keys</a></li>
+      <li><a href="/docs/redis">Redis as a Caching Backend</a></li>
       <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
-      <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
-      <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
-      <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
-      <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
-      <li><a href="/docs/drush">Installing Cygwin on Windows</a></li>
-      <li><a href="/docs/drush">Drupal Drush Command-Line Utility</a></li>
+      <li><a href="/docs/sftp">Developing on Pantheon Directly with SFTP Mode</a></li>
+      <li><a href="/docs/migrate">Migrate Sites to Pantheon</a></li>
     </ul>
   </div>
 
 
 
   <div class="row mb-70">
-    <div class="col-md-8">
-
-      <div class="changelog-wrapper mb-70">
-        <h2 class="subtitle">Changelog</h2>
-        <h3 class="changelog">Platform Improvements</h3>
-        <p><strong>Dashboard design updates</strong> These include improvements to selected states for environment tabs and menus to help keep you better oriented when moving through the UI, added white space to give everything some breathing room, and nested secondary menu items on the left side to streamline navigation.</p>
-
-        <a href="/docs/changelog" class="cta">More</a>
-      </div>
-
-    </div>
-
-    <div class="col-md-4">
-      <ul class="changelog-sidebar">
-        <li><a href="/docs/changelog">September 2016</a></li>
-        <li><a href="/docs/changelog">October 2016</a></li>
-        <li><a href="/docs/changelog">November 2016</a></li>
-        <li><a href="/docs/changelog">December 2016</a></li>
-      </ul>
-    </div>
+    {% include "changelog_preview.twig" %}
   </div>
 
-
-
-
-</div>
 </div>

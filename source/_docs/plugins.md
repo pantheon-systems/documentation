@@ -1,9 +1,8 @@
 ---
 title: Pantheon Plugins
 description: Details on specific WordPress plugins developed and maintained for the Pantheon Website Management Platform workflow.
-categories: [wordpress]
-tags: [code]
-keywords: plugins, wordpress, pantheon
+tags: [manage]
+categories: [manage]
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. Please feel free to contact us if you have any concerns with these plugins.
 

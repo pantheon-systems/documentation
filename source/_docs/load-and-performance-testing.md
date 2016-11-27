@@ -1,9 +1,8 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
-categories: [developing]
-tags: [code]
-keywords: going live, testing, performance, new relic pro, varnish
+tags: [performance, cache]
+categories: [platform, cache]
 ---
 We highly recommend load testing a site both prior and post launch to ensure your site is optimally configured.
 

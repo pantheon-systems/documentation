@@ -1,9 +1,8 @@
 ---
 title: Creating Sites
 description:  Create a new Drupal or WordPress site on Pantheon.
-categories: [managing]
-tags: [create, code]
-keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
+tags: [getstarted]
+categories: [getstarted]
 ---
 The Pantheon Dashboard provides a quick "click to install" method of creating new sites. In less than five minutes, you'll have a new site up and running on the platform.
 

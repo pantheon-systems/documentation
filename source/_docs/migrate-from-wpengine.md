@@ -1,9 +1,9 @@
 ---
 title: Migrating Sites from WP Engine to Pantheon
 description: Get all the details you need to know to successfully migrate your site away from WP Engine.
-categories: [wordpress]
 tags: [migrate]
-keywords: wordpress, pantheon, wpengine
+categories: [golive, migrate]
+
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 

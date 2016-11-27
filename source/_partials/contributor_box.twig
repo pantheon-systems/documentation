@@ -21,9 +21,14 @@
             </div>
             <p>{{ contributor.bio }}</p>
             <ul>
-            {% for doc in page.contributor_docs %}
-                <li><a href="{{ doc.url }}">{{ doc.title }}</a><br>
-                </li>
+            {% for doc in page.contributor_docs if doc.meta.type == "video"  %}
+                <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i>  {{ doc.title }}</a><br></li>
+            {% endfor %}
+            {% for doc in page.contributor_docs if doc.meta.type == "guide"  %}
+                <li><a href="{{ doc.url }}">{{ doc.title }}</a><br></li>
+            {% endfor %}
+            {% for doc in page.contributor_docs if (doc.meta.type != "video") and (doc.meta.type != "guide")  %}
+                <li><a href="{{ doc.url }}">{{ doc.title }}</a><br></li>
             {% endfor %}
             </ul>
         </div>

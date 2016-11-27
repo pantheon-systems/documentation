@@ -1,9 +1,8 @@
 ---
 title: Replace Links Referencing IP:PORT in Drupal
 description: Learn how to update Drupal site links so the URL references the correct file path and domain name.
-categories: [drupal]
-tags: [code]
-keywords: drupal, IP, settings.php, IP:PORT, fixing links
+tags: [troubleshoot]
+categories: [troubleshoot]
 ---
 When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as http://192.237.142.203:5555/files/cernettes.gif instead of http://www.example.com/files/cernettes.gif.
 

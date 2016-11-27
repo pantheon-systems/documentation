@@ -1,8 +1,8 @@
 ---
 title: Getting Started with WordPress Site Networks
 description: Learn about the Pantheon WordPress Site Network support, start developing, or import existing networks.
-categories: [wordpress]
-tags: [create, wordpress-site-networks]
+tags: [develop]
+categories: [develop]
 ---
 
 You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.

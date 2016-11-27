@@ -1,9 +1,8 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-categories: [developing]
-tags: [code]
-keywords: drupal, IP, client IP address, geolocation
+tags: [develop]
+categories: [develop]
 ---
 There are two ways to get the client IP address if you are running Drupal on Pantheon:
 

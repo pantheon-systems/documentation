@@ -1,9 +1,8 @@
 ---
 title: Obtain Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
-keywords: support, scope, customer support, help
-categories: [managing]
-tags: [platform]
+tags: [getstarted, platform, considerations]
+categories: [getstarted]
 ---
 
 ## Support Features and Response Times

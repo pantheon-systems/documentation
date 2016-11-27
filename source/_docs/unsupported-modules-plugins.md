@@ -1,8 +1,8 @@
 ---
 title: Modules and Plugins with Known Issues
 description: A list of Drupal modules and WordPress plugins that require workarounds or are unsupported.
-categories: [developing]
-tags: [code, debug]
+tags: [troubleshoot, considerations]
+categories: [troubleshoot]
 ---
 This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/getting-support/).
 

@@ -1,9 +1,8 @@
 ---
 title: FileZilla on Pantheon
 description: Information about using the FileZilla FTP client for your Pantheon Drupal or Wordpress site.
-categories: [developing]
-tags: [files, local]
-keywords: filezilla, pantheon, sftp
+tags: [sftp]
+categories: [develop, sftp]
 ---
 [FileZilla](https://FileZilla-project.org/) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 

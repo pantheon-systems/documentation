@@ -1,9 +1,8 @@
 ---
 title: Security on the Pantheon Dashboard
 description: Learn how to keep your work hidden from the public for Drupal or WordPress site development or updates.
-categories: [managing]
-tags: [platform]
-keywords: security, lock environment, lock site, password protect, password protection, unlock site
+tags: [develop]
+categories: [develop]
 ---
 There are occasions while you are working on your Drupal site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 

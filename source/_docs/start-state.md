@@ -1,9 +1,8 @@
 ---
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
-categories: [managing]
-tags: [create, getting-started]
-keyword: start state, new site, site, pantheon, wordpress, drupal, distribution
+tags: [getstarted]
+categories: [getstarted]
 ---
 The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/running-custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
 

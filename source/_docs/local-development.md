@@ -1,9 +1,8 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [developing]
-tags: [code, local]
-keywords: local development, pantheon, develop locally, developing
+tags: [local]
+categories: [develop, local]
 ---
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
 

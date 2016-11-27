@@ -1,9 +1,8 @@
 ---
 title: Multidev
 description: Detailed information on using Pantheon's Multidev environment for your Drupal or WordPress site.
-categories: [managing]
-tags: [platform]
-keywords: multidev, organization, multidev environment, team management, developing with teams, what is multidev
+tags: [platform, develop, manage, git, considerations]
+categories: [manage]
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 <img src="/source/docs/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">

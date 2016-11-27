@@ -1,9 +1,8 @@
 ---
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
-categories: [developing]
-tags: [code]
-keywords: external libraries, external library, library, libraries, webkit html, wkhtmltopdf, phantomjs, apachetika, imagemagick, wordpress libraries, drupal libraries
+tags: [platform, considerations, troubleshoot]
+categories: [platform, considerations]
 ---
 There are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available on the platform.
 

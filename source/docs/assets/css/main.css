@@ -235,6 +235,12 @@ h4 {
   display: block;
   text-align: ;
 }
+.article-subhead {
+  font-family: Avenir-Heavy;
+  font-size: 16px;
+  color: #44525E;
+  line-height: 24px;
+}
 
 .start {
   display: block;
@@ -260,7 +266,7 @@ body {
   background-color: #fff;
   color: #333;
   min-height: 100%;
-  margin: 0 0 280px; /* bottom = footer height */
+  margin: 0 0 650px; /* bottom = footer height */
 }
 body.row.main {
   position: relative;
@@ -527,7 +533,6 @@ img.noborder {
 }
 
 .docs svg{
-  margin-top: 7px;
 }
 
 #navbar {
@@ -802,9 +807,6 @@ margin-bottom: 40px !important;  }
     }
 
 }
-.docs-fm-resp {
-  margin-left: 10px;
-}
 
 @media (max-width: 810px){
 .pio-docs-nav .navbar-nav > li > a {
@@ -813,7 +815,7 @@ margin-bottom: 40px !important;  }
 }
 
 .docs svg{
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /*
@@ -850,7 +852,7 @@ margin-bottom: 40px !important;  }
     position: absolute;
     left: 0;
     bottom: 0px;
-    height: 200px;
+    height: 600px;
     width: 100%;
 }
 #footer-icon p {
@@ -1917,6 +1919,85 @@ h1[id] {
 #doc-head {
   background-color: #fff;
 }
+.btn-breadcrumb .btn:not(:last-child):after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: 100%;
+  z-index: 3;
+}
+.btn-breadcrumb .btn:not(:last-child):before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid rgb(173, 173, 173);
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 3;
+}
+
+/** The Spacing **/
+.btn-breadcrumb .btn {
+  padding:6px 12px 6px 24px;
+}
+.btn-breadcrumb .btn:first-child {
+  padding:6px 6px 6px 10px;
+}
+.btn-breadcrumb .btn:last-child {
+  padding:6px 18px 6px 24px;
+}
+.btn-default {
+    color: #0A6BB5;
+    background-color: #fff;
+    border-color: #0A6BB5;
+    font-family: Avenir-Heavy;
+
+}
+/** Default button **/
+a.btn.btn-default.disabled {
+  background-color: #EEF2F3;
+  border-color: #0A6BB5;
+  color: #0A6BB5;
+  font-family: Avenir-Light;
+  font-weight: 200;
+opacity: inherit;
+}
+.btn-breadcrumb .btn.btn-default:not(:last-child):after {
+  border-left: 10px solid #fff;
+
+}
+.btn-breadcrumb .btn.btn-default:not(:last-child):before {
+  border-left: 10px solid #0A6BB5;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after, .btn-breadcrumb .btn.btn-default:focus:not(:last-child):after, .btn-breadcrumb .btn.btn-default:active:not(:last-child):after, .btn-breadcrumb .btn.btn-default:focus:not(:last-child):after {
+  border-left: 10px solid #0A6BB5;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before, .btn-breadcrumb .btn.btn-default:focus:not(:last-child):before, .btn-breadcrumb .btn.btn-default:active:not(:last-child):before {
+  border-left: 10px solid #fff;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active  {
+    color: #fff;
+    background-color: #0A6BB5;
+    border-color: #0A6BB5;
+    font-weight: bold;
+}
+.btn-contribute .fa {
+  font-size: 15px;
+  line-height: .9;
+}
 .btn-contribute {
     height: 20px;
     color: #222;
@@ -1927,10 +2008,8 @@ h1[id] {
     padding: 0px 8px 0px 0px;
     margin-right: 5px;
     font-size: 75%;
-    font-weight: bold;
-    vertical-align: baseline;
-    top: -2px !important;
-}
+    padding: 2px 5px 2px 5px;
+    }
 .dropdown-menu {
   font-size: 75%;
   top: 20px;
@@ -3117,6 +3196,7 @@ margin-bottom: 10px;
       width: 100%;
       float: right;
       margin-right: 0;
+      margin-top: 65px;
     }
   }
   @media (min-width: 64.0625em) {
@@ -3393,6 +3473,39 @@ margin-bottom: 10px;
   #footer img {
     border: none;
   }
+  .office-hours {
+    background: #EFD01B;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    color: #222;
+    font-family: 'Avenir-Light';
+    bottom: 400px;
+    display: inherit;
+    padding-top:10px;
+
+  }
+  .office-hours a:hover {
+    color: #222;
+    text-decoration: none;
+  }
+  .cta a:hover {
+    text-decoration: underline;
+  }
+  .office-hours a{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Avenir-Roman;
+    margin-bottom: 26px;
+  }
+  .office-hours h4{
+    font-size: 20px;
+    font-family: Avenir-Light;
+    line-height: 30px;
+    margin-bottom: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+  }
   /* Adjustments*/
   .mktoForm .mktoFormRow {
     clear: none !important;
@@ -3429,7 +3542,7 @@ margin-bottom: 10px;
     padding-right: 20px;
   }
   #footer {
-    height: 400px;
+    height: 600px;
   }
   #footer .copyright {
     clear: both;

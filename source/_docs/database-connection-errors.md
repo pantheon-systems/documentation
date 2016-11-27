@@ -1,9 +1,8 @@
 ---
 title: Database Connection Errors
 description: Drupal Pressflow core, WordPress core, and the causes and solutions for database connection errors.
-categories: [developing]
-tags: [database, debug]
-keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php
+tags: [troubleshoot]
+categories: [troubleshoot]
 ---
 There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)

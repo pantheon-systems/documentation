@@ -1,9 +1,8 @@
 ---
 title: Caching: Advanced Topics
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
-categories: [developing]
-tags: [varnish, code]
-keywords: cache, caching, varnish, pantheon_stripped, cookies, wordpress,drupal, authentication, Pantheon
+tags: [performance, cache]
+categories: [performance, considerations]
 ---
 ## Allow a User to Bypass the Cache
 

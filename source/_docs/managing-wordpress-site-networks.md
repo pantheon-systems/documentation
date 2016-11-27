@@ -1,8 +1,8 @@
 ---
 title: Managing WordPress Site Networks
 description: Learn how to use the Pantheon Workflow on WordPress Site Networks.
-categories: [wordpress]
-tags: [code, wordpress-site-networks]
+tags: [develop]
+categories: [develop]
 ---
 WordPress Site Networks require additional care when deploying code and cloning databases between Dev, Test, and Live environments. Refer to this document for procedures that will help you manage the environments effectively.
 

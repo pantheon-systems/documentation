@@ -1,9 +1,8 @@
 ---
 title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
-categories: [developing]
-tags: [files, code]
-keywords: drupal, wordpress, private files, files, private keys, private
+tags: [platform, considerations]
+categories: [platform, considerations]
 ---
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
