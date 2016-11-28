@@ -1,27 +1,47 @@
 <div style="row">
-  <ul class="pio-breadcrumb" style="margin-top:30px;">
-      <a href="/docs">Home</a> /
-        {% if page.categories %}
-          {% for category in page.categories %}
-            {% if category == "getstarted" %}
-            <a href="{{ site.url }}/get-started">Get Started</a> /
-            {% elseif category == "golive" %}
-            <a href="{{ site.url }}/go-live">Go Live</a> /
-            {% elseif category == "platform" %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}">Platform & Inftrastructure</a> /
-            {% elseif category == "automate" %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}" >Automate & Integrate</a> /
-            {% elseif category == "performance" %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}" >Optimize Performance</a> /
-            {% elseif category == "manage" %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}">Manage Users & Orgs</a> /
-            {% elseif category == "cli" %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}">Command Line Tools</a> /
-            {% else %}
-            <a href="{{ site.url }}/{{ category|url_encode(true) }}" >{{ category | capitalize }}</a> /
+      <ul class="pio-breadcrumb" style="margin-top:30px;">
+          <a href="/docs">Home</a> /
+          {% if page.changelog is defined %}
+          <a href="{{ site.url }}/changelog/">Changelog</a> /
+          {% endif %}
+            {% if page.categories %}
+              {% for category in page.categories %}
+                {% if category == "getstarted" %}
+                <a href="{{ site.url }}/get-started">Get Started</a> /
+                {% elseif category == "migrate" %}
+                <a href="{{ site.url }}/get-started/migrate">Migrate</a> /
+                {% elseif category == "golive" %}
+                <a href="{{ site.url }}/go-live">Go Live</a> /
+                {% elseif category == "domains" %}
+                <a href="{{ site.url }}/go-live/domains">Domains</a> /
+                {% elseif category == "develop" %}
+                <a href="{{ site.url }}/develop">Develop</a> /
+                {% elseif category == "git" %}
+                <a href="{{ site.url }}/develop/git">Git</a> /
+                {% elseif category == "sftp" %}
+                <a href="{{ site.url }}/develop/sftp">On-Server Development</a> /
+                {% elseif category == "local" %}
+                <a href="{{ site.url }}/develop/local">Local</a> /
+                {% elseif category == "platform" %}
+                <a href="{{ site.url }}/{{ category|url_encode(true) }}">Platform & Inftrastructure</a> /
+                {% elseif category == "considerations" %}
+                <a href="{{ site.url }}/platform/considerations">Considerations</a> /
+                {% elseif category == "pantheonyml" %}
+                <a href="{{ site.url }}/platform/pantheon-yml">Pantheon.yml</a> /
+                {% elseif category == "automate" %}
+                <a href="{{ site.url }}/{{ category|url_encode(true) }}" >Automate & Integrate</a> /
+                {% elseif category == "performance" %}
+                <a href="{{ site.url }}/{{ category|url_encode(true) }}" >Optimize Performance</a> /
+                {% elseif category == "manage" %}
+                <a href="{{ site.url }}/{{ category|url_encode(true) }}">Manage Users & Orgs</a> /
+                {% elseif category == "cli" %}
+                <a href="{{ site.url }}/automate/cli">Command Line Tools</a> /
+                {% elseif category == "cache" %}
+                <a href="{{ site.url }}/performance/cache">Cache</a> /
+                {% else %}
+                <a href="{{ site.url }}/{{ category|url_encode(true) }}" >{{ category | capitalize }}</a> /
+                {% endif %}
+              {% endfor %}
             {% endif %}
-          {% endfor %}
-        {% endif %}
-      <a data-proofer-ignore>{{ page.title }}</a>
-  </ul>
-</div>
+          <a data-proofer-ignore class="not-allowed">{{ page.title }}</a>
+      </div>
