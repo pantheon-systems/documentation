@@ -43,4 +43,4 @@ If you need to get back to your site's root directory, reconnect using the site 
 ## Known Issues
 
 ### Uploading to the Files Directory
-Filezilla does not correctly upload files when the target directory on Pantheon is `/files`. This is due to the symlink that is in place from `sites/default/files`. You will need to use an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS), to complete the task.  
+Filezilla does not correctly upload files when the target directory on Pantheon is `/files`. We recommend setting the target directory to `sites/default/files`, which is a symlink to `/files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
