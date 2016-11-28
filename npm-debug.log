@@ -1,0 +1,220 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose readDependencies loading dependencies from /vagrant/package.json
+5 verbose install where, deps [ '/vagrant',
+5 verbose install   [ 'a11y',
+5 verbose install     'bootstrap',
+5 verbose install     'grunt',
+5 verbose install     'grunt-a11y',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-css-url-replace',
+5 verbose install     'grunt-replace',
+5 verbose install     'highlight.js',
+5 verbose install     'node-font-awesome',
+5 verbose install     'sitespeed.io',
+5 verbose install     'clipboard',
+5 verbose install     'angular',
+5 verbose install     'angular-animate',
+5 verbose install     'angular-aria',
+5 verbose install     'angular-material',
+5 verbose install     'angular-md',
+5 verbose install     'marked' ] ]
+6 verbose install where, peers [ '/vagrant', [] ]
+7 verbose installManyTop reading for lifecycle /vagrant/package.json
+8 info preinstall documentation@1.0.0
+9 verbose installManyTop reading scoped package data from /vagrant/node_modules/a11y/package.json
+10 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular/package.json
+11 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-animate/package.json
+12 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-aria/package.json
+13 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-marked/package.json
+14 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-material/package.json
+15 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-md/package.json
+16 verbose installManyTop reading scoped package data from /vagrant/node_modules/angular-sanitize/package.json
+17 verbose installManyTop reading scoped package data from /vagrant/node_modules/bootstrap/package.json
+18 verbose installManyTop reading scoped package data from /vagrant/node_modules/clipboard/package.json
+19 verbose installManyTop reading scoped package data from /vagrant/node_modules/forever/package.json
+20 verbose installManyTop reading scoped package data from /vagrant/node_modules/fsevents/package.json
+21 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt/package.json
+22 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-a11y/package.json
+23 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-cli/package.json
+24 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-contrib-copy/package.json
+25 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-contrib-watch/package.json
+26 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-css-url-replace/package.json
+27 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-hub/package.json
+28 verbose installManyTop reading scoped package data from /vagrant/node_modules/grunt-replace/package.json
+29 verbose installManyTop reading scoped package data from /vagrant/node_modules/highlight.js/package.json
+30 verbose installManyTop reading scoped package data from /vagrant/node_modules/jquery/package.json
+31 verbose installManyTop reading scoped package data from /vagrant/node_modules/jquery-ui/package.json
+32 verbose installManyTop reading scoped package data from /vagrant/node_modules/jquery-ui-dist/package.json
+33 verbose installManyTop reading scoped package data from /vagrant/node_modules/marked/package.json
+34 verbose installManyTop reading scoped package data from /vagrant/node_modules/nan/package.json
+35 verbose installManyTop reading scoped package data from /vagrant/node_modules/node-font-awesome/package.json
+36 verbose installManyTop reading scoped package data from /vagrant/node_modules/sitespeed.io/package.json
+37 info package.json angular-material@1.1.1 No license field.
+38 info package.json grunt@0.4.5 No license field.
+39 info package.json grunt-a11y@0.1.4 No license field.
+40 info package.json grunt-cli@0.1.13 No license field.
+41 info package.json grunt-css-url-replace@0.2.7 No license field.
+42 info package.json grunt-hub@0.7.0 No license field.
+43 verbose readDependencies loading dependencies from /vagrant/package.json
+44 verbose targetResolver reading package data from /vagrant/node_modules/a11y/package.json
+45 verbose targetResolver reading package data from /vagrant/node_modules/angular/package.json
+46 verbose targetResolver reading package data from /vagrant/node_modules/angular-animate/package.json
+47 verbose targetResolver reading package data from /vagrant/node_modules/angular-aria/package.json
+48 verbose targetResolver reading package data from /vagrant/node_modules/angular-marked/package.json
+49 verbose targetResolver reading package data from /vagrant/node_modules/angular-material/package.json
+50 verbose targetResolver reading package data from /vagrant/node_modules/angular-md/package.json
+51 verbose targetResolver reading package data from /vagrant/node_modules/angular-sanitize/package.json
+52 verbose targetResolver reading package data from /vagrant/node_modules/bootstrap/package.json
+53 verbose targetResolver reading package data from /vagrant/node_modules/clipboard/package.json
+54 verbose targetResolver reading package data from /vagrant/node_modules/forever/package.json
+55 verbose targetResolver reading package data from /vagrant/node_modules/fsevents/package.json
+56 verbose targetResolver reading package data from /vagrant/node_modules/grunt/package.json
+57 verbose targetResolver reading package data from /vagrant/node_modules/grunt-a11y/package.json
+58 verbose targetResolver reading package data from /vagrant/node_modules/grunt-cli/package.json
+59 verbose targetResolver reading package data from /vagrant/node_modules/grunt-contrib-copy/package.json
+60 verbose targetResolver reading package data from /vagrant/node_modules/grunt-contrib-watch/package.json
+61 verbose targetResolver reading package data from /vagrant/node_modules/grunt-css-url-replace/package.json
+62 verbose targetResolver reading package data from /vagrant/node_modules/grunt-hub/package.json
+63 verbose targetResolver reading package data from /vagrant/node_modules/grunt-replace/package.json
+64 verbose targetResolver reading package data from /vagrant/node_modules/highlight.js/package.json
+65 verbose targetResolver reading package data from /vagrant/node_modules/jquery/package.json
+66 verbose targetResolver reading package data from /vagrant/node_modules/jquery-ui/package.json
+67 verbose targetResolver reading package data from /vagrant/node_modules/jquery-ui-dist/package.json
+68 verbose targetResolver reading package data from /vagrant/node_modules/marked/package.json
+69 verbose targetResolver reading package data from /vagrant/node_modules/nan/package.json
+70 verbose targetResolver reading package data from /vagrant/node_modules/node-font-awesome/package.json
+71 verbose targetResolver reading package data from /vagrant/node_modules/sitespeed.io/package.json
+72 verbose targetResolver reading package data from /vagrant/node_modules/.bin/a11y/package.json
+73 verbose targetResolver reading package data from /vagrant/node_modules/.bin/forever/package.json
+74 verbose targetResolver reading package data from /vagrant/node_modules/.bin/grunt/package.json
+75 verbose targetResolver reading package data from /vagrant/node_modules/.bin/marked/package.json
+76 verbose already installed skipping clipboard@^1.5.12 /vagrant
+77 verbose already installed skipping angular@^1.5.8 /vagrant
+78 verbose already installed skipping angular-animate@^1.5.8 /vagrant
+79 verbose already installed skipping angular-aria@^1.5.8 /vagrant
+80 verbose already installed skipping angular-material@^1.1.1 /vagrant
+81 verbose already installed skipping angular-md@^1.0.0 /vagrant
+82 verbose already installed skipping marked@^0.3.6 /vagrant
+83 verbose already installed skipping a11y@^0.4.0 /vagrant
+84 verbose already installed skipping bootstrap@^3.3.6 /vagrant
+85 verbose already installed skipping grunt@^0.4.5 /vagrant
+86 verbose already installed skipping grunt-a11y@^0.1.4 /vagrant
+87 verbose already installed skipping grunt-contrib-copy@^1.0.0 /vagrant
+88 verbose already installed skipping grunt-contrib-watch@^1.0.0 /vagrant
+89 verbose already installed skipping grunt-css-url-replace@^0.2.7 /vagrant
+90 verbose already installed skipping grunt-replace@^0.11.0 /vagrant
+91 verbose already installed skipping highlight.js@^9.3.0 /vagrant
+92 verbose already installed skipping node-font-awesome@^1.0.2 /vagrant
+93 verbose already installed skipping sitespeed.io@4.0.0-alpha.5 /vagrant
+94 silly install resolved []
+95 info build /vagrant
+96 info linkStuff documentation@1.0.0
+97 silly linkStuff documentation@1.0.0 has / as its parent node_modules
+98 verbose linkBins documentation@1.0.0
+99 verbose linkMans documentation@1.0.0
+100 verbose rebuildBundles documentation@1.0.0
+101 verbose rebuildBundles [ '.bin',
+101 verbose rebuildBundles   'a11y',
+101 verbose rebuildBundles   'angular',
+101 verbose rebuildBundles   'angular-animate',
+101 verbose rebuildBundles   'angular-aria',
+101 verbose rebuildBundles   'angular-marked',
+101 verbose rebuildBundles   'angular-material',
+101 verbose rebuildBundles   'angular-md',
+101 verbose rebuildBundles   'angular-sanitize',
+101 verbose rebuildBundles   'bootstrap',
+101 verbose rebuildBundles   'clipboard',
+101 verbose rebuildBundles   'forever',
+101 verbose rebuildBundles   'fsevents',
+101 verbose rebuildBundles   'grunt',
+101 verbose rebuildBundles   'grunt-a11y',
+101 verbose rebuildBundles   'grunt-cli',
+101 verbose rebuildBundles   'grunt-contrib-copy',
+101 verbose rebuildBundles   'grunt-contrib-watch',
+101 verbose rebuildBundles   'grunt-css-url-replace',
+101 verbose rebuildBundles   'grunt-hub',
+101 verbose rebuildBundles   'grunt-replace',
+101 verbose rebuildBundles   'highlight.js',
+101 verbose rebuildBundles   'jquery',
+101 verbose rebuildBundles   'jquery-ui',
+101 verbose rebuildBundles   'jquery-ui-dist',
+101 verbose rebuildBundles   'marked',
+101 verbose rebuildBundles   'nan',
+101 verbose rebuildBundles   'node-font-awesome',
+101 verbose rebuildBundles   'sitespeed.io' ]
+102 verbose rebuild bundle /vagrant/node_modules/angular-marked
+103 info build /vagrant/node_modules/angular-marked
+104 info preinstall angular-marked@1.2.2
+105 info linkStuff angular-marked@1.2.2
+106 silly linkStuff angular-marked@1.2.2 has /vagrant/node_modules as its parent node_modules
+107 verbose linkBins angular-marked@1.2.2
+108 verbose linkMans angular-marked@1.2.2
+109 verbose rebuildBundles angular-marked@1.2.2
+110 verbose rebuildBundles [ '.bin', 'marked' ]
+111 info install angular-marked@1.2.2
+112 info postinstall angular-marked@1.2.2
+113 verbose rebuild bundle /vagrant/node_modules/angular-sanitize
+114 info build /vagrant/node_modules/angular-sanitize
+115 info preinstall angular-sanitize@1.5.8
+116 info linkStuff angular-sanitize@1.5.8
+117 silly linkStuff angular-sanitize@1.5.8 has /vagrant/node_modules as its parent node_modules
+118 verbose linkBins angular-sanitize@1.5.8
+119 verbose linkMans angular-sanitize@1.5.8
+120 verbose rebuildBundles angular-sanitize@1.5.8
+121 info install angular-sanitize@1.5.8
+122 info postinstall angular-sanitize@1.5.8
+123 verbose rebuild bundle /vagrant/node_modules/forever
+124 info build /vagrant/node_modules/forever
+125 info preinstall forever@0.15.1
+126 info linkStuff forever@0.15.1
+127 silly linkStuff forever@0.15.1 has /vagrant/node_modules as its parent node_modules
+128 warn prefer global forever@0.15.1 should be installed with -g
+129 verbose linkBins forever@0.15.1
+130 verbose link bins [ { forever: './bin/forever' },
+130 verbose link bins   '/vagrant/node_modules/.bin',
+130 verbose link bins   false ]
+131 verbose linkMans forever@0.15.1
+132 verbose rebuildBundles forever@0.15.1
+133 verbose rebuildBundles [ '.bin',
+133 verbose rebuildBundles   'cliff',
+133 verbose rebuildBundles   'clone',
+133 verbose rebuildBundles   'colors',
+133 verbose rebuildBundles   'flatiron',
+133 verbose rebuildBundles   'forever-monitor',
+133 verbose rebuildBundles   'nconf',
+133 verbose rebuildBundles   'nssocket',
+133 verbose rebuildBundles   'object-assign',
+133 verbose rebuildBundles   'optimist',
+133 verbose rebuildBundles   'path-is-absolute',
+133 verbose rebuildBundles   'prettyjson',
+133 verbose rebuildBundles   'shush',
+133 verbose rebuildBundles   'timespan',
+133 verbose rebuildBundles   'utile',
+133 verbose rebuildBundles   'winston' ]
+134 silly gentlyRm /vagrant/node_modules/.bin/forever is being purged
+135 verbose gentlyRm don't care about contents; nuking /vagrant/node_modules/.bin/forever
+136 silly vacuum-fs purging /vagrant/node_modules/.bin/forever
+137 verbose stack Error: EACCES: permission denied, unlink '/vagrant/node_modules/.bin/forever'
+137 verbose stack     at Error (native)
+138 verbose cwd /vagrant
+139 error Linux 3.13.0-65-generic
+140 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+141 error node v4.2.3
+142 error npm  v2.14.7
+143 error path /vagrant/node_modules/.bin/forever
+144 error code EACCES
+145 error errno -13
+146 error syscall unlink
+147 error Error: EACCES: permission denied, unlink '/vagrant/node_modules/.bin/forever'
+147 error     at Error (native)
+147 error  { [Error: EACCES: permission denied, unlink '/vagrant/node_modules/.bin/forever']
+147 error   errno: -13,
+147 error   code: 'EACCES',
+147 error   syscall: 'unlink',
+147 error   path: '/vagrant/node_modules/.bin/forever' }
+148 error Please try running this command again as root/Administrator.
+149 verbose exit [ -13, true ]
