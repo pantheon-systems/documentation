@@ -1,6 +1,7 @@
 ---
 title: Backup Creation
 description: Detailed information on how to create a backup of any Drupal or WordPress site environment.
+createbackups: true
 categories: [managing]
 tags: [backups]
 keywords: backup, backup creation, create a backup, create backup, create backups, backups, code, database, files, access backups, where are backups stored, backups stored, backup archive, access archives, access archive
@@ -14,14 +15,81 @@ terminus site backups create [--element=<code|files|db|all>] [--keep-for]
 
 A backup contains three separate archives: a database backup, a files backup, and a code backup.
 
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
-
 ## Create a Backup
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
+<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
+
 ![Create site backup Pantheon Dashboard](/source/docs/assets/images/dashboard/manual-site-backup.png)
+
+
+## Backup Schedule and Retention
+**Paid sites:** You can enable or disable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day the weekly backup is run.
+
+**All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
+
+Backups created on Pantheon are stored offsite on Amazon EC2 instances for redundancy, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon instance:
+<div class="script-file-header">
+pantheon-backup-to-s3.sh
+<a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
+</button></a>
+</div>
+<pre><code class="hljs bash" id="pantheon-backup-to-s3">#!/bin/sh
+
+# pantheon-backup-to-s3.sh
+# Script to backup Pantheon sites and copy to Amazon s3 bucket
+#
+# Requirements:
+#   - Pantheon terminus cli
+#   - Valid terminus machine token
+#   - Amazon aws cli
+#   - s3 cli access and user configured
+
+
+# The amazon S3 bucket to save the backups to (must already exist)
+S3BUCKET=""
+# Optionally specify bucket region
+S3BUCKETREGION=""
+# The Pantheon terminus user
+TERMINUSUSER=""
+# Site names to backup (e.g. 'site-one site-two')
+SITENAMES=""
+# Site environments to backup (any combination of dev, test and live)
+SITEENVS="live"
+# Site elements to backup (any combination of files, database and code)
+SITEELEMENTS="database files"
+# Local backup directory (must exist, requires trailing slash)
+BACKUPDIR=""
+
+# connect to terminus
+terminus auth login $TERMINUS_USER
+
+# iterate through sites to backup
+for thissite in $SITENAMES; do
+
+	# iterate through current site environments
+	for thisenv in $SITEENVS; do
+
+		# iterate through current site elements
+		for thiselement in $SITEELEMENTS; do
+			terminus site backups create --site=$thissite --env=$thisenv --element=$thiselement
+
+			# download current site backups
+		terminus site backups get --latest --site=$thissite --env=$thisenv --element=$thiselement --to=$BACKUPDIR
+		done
+
+	done
+done
+
+# sync the local backup directory to aws s3
+if [ -z "${S3BUCKETREGION}" ]; then
+	aws s3 sync $BACKUPDIR s3://$S3BUCKET
+else
+  aws s3 sync $BACKUPDIR s3://$S3BUCKET --region $S3BUCKETREGION
+fi</code></pre>
+
 
 ## Access Backups  
 ### Via the Dashboard

@@ -87,3 +87,21 @@
               'utm_campaign': 'docs (organic)'}
   pantheon_track(defaults)
   </script>
+
+  <!--Script for terminus/examples page to download reset script-->
+  {% if page.createbackups %}
+      <script type="text/javascript">
+            function downloadInnerHtml(filename, elId, mimeType) {
+                var elHtml = document.getElementById(elId).innerText;
+                var link = document.createElement('a');
+                mimeType = mimeType || 'text/x-shellscript';
+                link.setAttribute('download', filename);
+                link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                link.click();
+            }
+            var fileName =  'pantheon-backup-to-s3.sh'; // You can use the .txt extension if you want
+            $('#downloadLink').click(function(){
+                downloadInnerHtml(fileName, 'pantheon-backup-to-s3','text/x-shellscript');
+            });
+         </script>
+   {% endif %}
