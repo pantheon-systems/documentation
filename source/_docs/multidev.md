@@ -162,7 +162,7 @@ There is no limit on the number of branches you can have in your Git repository.
 
 #### Can I associate a domain with a branch environment?
 
-At this time, custom domains cannot be associated with branch environments.
+Yes, you can assign custom domains to each Mutudev environment.
 
 #### What Git clients are supported?
 
