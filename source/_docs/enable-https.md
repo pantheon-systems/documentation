@@ -31,7 +31,9 @@ Run `openssl` from the command line to generate an [RSA private key](https://en.
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr -keyout www_example_com.key
 ```
 
-You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain.
+You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain. For a Wildcard SSL cert, the *Common Name* must start with an arterisk "*" symbol. The arterisk represents all possible subdomains.
+
+`Ex.  *.example.com`
 
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
 
