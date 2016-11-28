@@ -133,6 +133,11 @@ $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
 $settings['trusted_host_patterns'][] = '^yoursite\.com$';
 ```
 For more details, see [Configuring Settings.php](/docs/settings-php#trusted-host-setting).
+
+### Why does my site is returning 404 : Unknown Site error after adding a custom domain and configuring DNS?
+
+The error indicates internal routing problem. Check if the URL is correct and matches to your Dashboard's custom domain settings. If you've configured DNS to use Pantheon's www-redirect service, ensure that both the bare domain and www subdomain have been added to the target environment.
+
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
 Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheonsite.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
