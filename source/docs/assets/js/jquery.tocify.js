@@ -49,7 +49,7 @@
 
             // **ignoreSelector**: Accepts String: Any jQuery selector
             // A selector to any element that would be matched by selectors that you wish to be ignored
-            ignoreSelector: null,
+            ignoreSelector: ".block__title, .info",
 
             // **selectors**: Accepts an Array of Strings: Any jQuery selectors
             // The element's used to generate the table of contents.  The order is very important since it will determine the table of content's nesting structure
@@ -85,7 +85,7 @@
 
             // **scrollTo**: Accepts Number (pixels)
             // The amount of space between the top of page and the selected table of contents item after the page has been scrolled
-            scrollTo: 50,
+            scrollTo: 125,
 
             // **showAndHideOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be shown and hidden while scrolling

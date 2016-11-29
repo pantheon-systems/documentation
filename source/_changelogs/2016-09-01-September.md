@@ -1,5 +1,6 @@
 ---
 title: September 2016
+changelog: true
 ---
 ##Platform Improvements
 

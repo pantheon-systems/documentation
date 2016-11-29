@@ -4,7 +4,7 @@
 
 
 <div id="video" class="article col-md-9">
-  <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
+  <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
 
   <p class="article-subhead">{{ page.description }}</p>
       <div class="share-buttons">
@@ -22,20 +22,20 @@
         </div>
           <script>
             window.twttr = (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-              if (d.getElementById(id)) return t;
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "https://platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js, fjs);
-             
-              t._e = [];
-              t.ready = function(f) {
-                t._e.push(f);
-              };
-             
-              return t;
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
+
+              return t;
           }(document, "script", "twitter-wjs"));
         </script>
         <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
@@ -53,10 +53,10 @@
         {{ page.blocks.content|raw }}
     </div>
 
-    <div class="helpful mb-70">
+    <div class="helpful">
       <span class="helpful__text">Was this helpful?</span>
-      <a href="" class="helpful__button helpful__button--yes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Yes</a>
-      <a href="" class="helpful__button helpful__button--no"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No</a>
+      <button class="helpful__button helpful__button--yes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Yes</button>
+      <button class="helpful__button helpful__button--no"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No</button>
     </div>
 
 
