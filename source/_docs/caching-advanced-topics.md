@@ -115,7 +115,7 @@ STYXKEY is not a replacement for responsive design.</div>
 
 Pantheon uses a rotating pool of Varnish servers. Varnish does not have a shared pool or cache, so that means there is a distinct cache for each server. While local DNS typically picks a route and keeps using it, it is possible to access a different Varnish server and experience a cache miss.
 
-The Max-Age returned in the header may vary depending on which cache server is hit. The main concern when examining Age is whether or not it is increasing, as this indicates that Varnish is indeed working.
+The Age returned in the header may vary depending on which cache server is hit. The main concern when examining Age is whether or not it is increasing, as this indicates that Varnish is indeed working.
 
 ## Varnish, Public Files, and Cookies
 
