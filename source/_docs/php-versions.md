@@ -10,6 +10,9 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
+## Upgrade Your Site
+Before you change your PHP version, ensure that your CMS and all of your themes, modules and plugins are up-to-date. Older software is more likely to contain code that is incompatible with recent PHP versions.
+
 ## Configure PHP Version
 Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. Your `pantheon.yml` file will look like the following:
 
