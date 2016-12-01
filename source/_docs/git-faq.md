@@ -1,6 +1,6 @@
 ---
 title: Git FAQs
-description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
+description: Answers to commonly asked questions about Git, Drupal 8, Drupal 7, Drupal 6 and Pantheon.
 categories: [developing]
 tags: [code, local]
 keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
@@ -13,7 +13,7 @@ contributors: mrfelton
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
-" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.3/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
+" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.9.5/user-manual.html#resolving-a-merge">Git Manual</a></em><br /></p>
 
 ### How do I resolve conflicts when updating Core?
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the <code>-Xtheirs</code> flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with <code>.gitignore</code>).</p>
@@ -170,9 +170,9 @@ We are updating our infrastructure so that code repositories do not have a singl
 
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
-If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings. Before you can push updates, you must update your remote URL:  
+If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):  
 ```
-git remote set-url origin ssh://codeserver.dev.{site}@codeserver.dev.{site}.drush.in:2222/~/repository.git
+git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
 ```  
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream, you will have to change origin in the command above.
