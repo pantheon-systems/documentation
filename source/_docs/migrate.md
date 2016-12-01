@@ -48,7 +48,7 @@ For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-m
 
 * **Clear all caches**. This removes unnecessary and out-of-date files from both the database and your filesystem, which will save time and valuable space.
 
-* **Remove unneeded coce, data, and files before migration**. Moving is always a good opportunity to do some housekeeping and a smaller footprint will migrate faster.
+* **Remove unneeded code, data, and files before migration**. Moving is always a good opportunity to do some housekeeping and a smaller footprint will migrate faster.
 
 * If you’ve been using the database for things other than Drupal or WordPress you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
