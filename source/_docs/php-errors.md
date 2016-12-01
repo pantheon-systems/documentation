@@ -134,3 +134,7 @@ When this error surfaces, it simply means that the file in question is not where
 Fatal error: require_once(): Failed opening required ‘/srv/bindings/xxxxx/code/sites/all/modules/redis/redis.autoload.inc’ (include_path=‘.:/usr/share/pear:/usr/share/php’) in /srv/bindings/xxxxxx/code/includes/bootstrap.inc on line 2394
 ```
 To fix this error, look for the correct path to the file and update the require\_once().
+
+## Intermittent Notices
+
+If you are encountering intermittent notices that are not behaving as described on this page, see [Deprecated Constructor Notices](/docs/deprecated_constructor_notices) for additional information. This is not common.
