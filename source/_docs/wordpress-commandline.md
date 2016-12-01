@@ -120,7 +120,7 @@ For my test site, I used the following:
 **Label** = Command Line Test
 
 ```nohighlight
-$ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4b \  
+$ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4bf \  
                         --site=cli-test \  
                         --label="Command Line Test" \  
                         --org=YOUR-ORG-ID \  
