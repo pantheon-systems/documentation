@@ -6,6 +6,69 @@
 <script src="/docs/assets/js/node_modules/angular-aria/angular-aria.min.js"></script>
 <script>
 var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
+var terminusLatestRelease = angular.module("terminusLatestReleaseApp", ['yaru22.md']);
+terminusLatestRelease.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+
+terminusLatestRelease.controller("terminusLatestReleaseCtrl", function($scope, $http) {
+    $scope.latestRelease = {};
+    $http.get("/docs/assets/terminus/releases/latest.json").success(function(response){
+      $scope.latestRelease = response;
+    });
+});
+
+var terminusRelease = angular.module('terminusReleaseApp', ['yaru22.md']);
+terminusRelease.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+
+terminusRelease.controller('terminusReleaseCtrl', function($scope, $http) {
+  $scope.releases = [];
+  $http.get('/docs/assets/terminus/releases.json').success(function(data) {
+      $scope.releases = data;
+    });
+  }
+);
+angular.bootstrap(document.getElementById("terminusRelease"), ['terminusReleaseApp']);
+
+
+var terminusCommandsApp = angular.module('terminusCommandsApp', ['ngMaterial']);
+
+
+terminusCommandsApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+
+terminusCommandsApp.controller('mainController', function($scope, $http) {
+  $scope.searchCommand   = '';
+  $scope.terminus = [];
+  $http.get("/docs/assets/terminus/commands.json").success(function(response){
+    $scope.terminus = response;
+  });
+  $scope.clearFilters = function(){
+      $scope.searchCommand =  undefined;
+  };
+});
+
+//Sort usage array by relevance based on Regex matches from search query
+terminusCommandsApp.filter('search', function() {
+  return function (items, str) {
+    if(str == '') return items;
+    var filtered = [];
+    var rgx = new RegExp(str, 'gi');
+
+    angular.forEach(items, function(item) {
+      item.points = (JSON.stringify(item).match(rgx) || []).length;
+      filtered.push(item);
+    });
+  return filtered;
+}
+});
+
 
 terminusCompareApp.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('{[{');
