@@ -32,7 +32,7 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
     ini_set("opcache.enable", 0);
 }
 ```
-*IMPORTANT:* Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
+**IMPORTANT:** Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
 
 Note that you may also search for deprecated constructors using the PHP linter on the command line. First, create a local copy of your site as described in [Local Development](/docs/local-development); then, run:
 ```nohighlight
@@ -49,4 +49,4 @@ find -E . -iregex ".*\.(inc|php|module)$" -exec php -l {} \; | grep -v 'No synta
 ```
 Adjust the regular expression as needed to scan other file extensions that may contain php code.
 
-*Note:* The deprecation notices used in the examples on this page appeared in an old version of the Drupal [views](https://www.drupal.org/project/views) module for Drupal 7.x. This was fixed in issue [#2579819|https://www.drupal.org/node/2579819], and included in the [7.x-3.12|https://www.drupal.org/project/views/releases/7.x-3.12] release.
+**Note:** The deprecation notices used in the examples on this page appeared in an old version of the Drupal [views](https://www.drupal.org/project/views) module for Drupal 7.x. This was fixed in issue [#2579819](https://www.drupal.org/node/2579819), and included in the [7.x-3.12](https://www.drupal.org/project/views/releases/7.x-3.12) release.
