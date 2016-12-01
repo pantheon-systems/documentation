@@ -25,7 +25,7 @@ This error is caused by a combination of two factors:
 
 To fix these errors, convert your class constructor to `__construct()`. See [deprecation notice for PHP-4-style constructors](http://php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) for more information.
 
-## Finding PHP Files Containing 
+## Finding PHP Files Containing Parse-Time Notices
 
 To make it easier to find and debug intermittent notices, **temporarily** disable the opcache in your settings.php file:
 ```php
