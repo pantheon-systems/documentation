@@ -58,7 +58,7 @@ You can output the size of your repository by running [`git count-objects -vH`](
 7. Filter out files and directories according to problematic patterns:
 
  ```
- git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch my_directory\/*.sql myfile.txt' --prune-empty --tag-name-filter cat -- —all
+ git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch my_directory\/*.sql myfile.txt' --prune-empty --tag-name-filter cat -- --all
  ```
 
  This may take hours to complete.
