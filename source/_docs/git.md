@@ -114,6 +114,8 @@ For further learning, we recommend the following resources:
 - [Git Immersion](http://gitimmersion.com/)
 - [Code School - Try Git](http://try.github.io/levels/1/challenges/1)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
-- [SourceTree - Git GUI client](http://www.sourcetreeapp.com/)
+- [SourceTree - Git GUI Client](http://www.sourcetreeapp.com/)
+- [GitKraken - Git GUI Client](https://www.gitkraken.com/)
+- [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
 
 For Pantheon-specific Git questions, see the [Git FAQs](/docs/git-faq/).
