@@ -11,7 +11,10 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 
 <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-SSH keys include the user and hostname of the account/computer that it was generated on as a comment (in the form of "==user@usercomputer") at the end of the file. If you experience errors, see the Troubleshooting section at the end of the document.</div>
+<p>
+Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> tips at the end of the document.
+</p>
+</div>
 
 ## Generate an SSH Key
 
@@ -72,7 +75,7 @@ If you have no keys remaining but still have active sites, you will still have a
 ## Troubleshooting
 
 #### Invalid SSH Keys
-Spaces and non-standard alphanumeric characters in the user or hostname can cause an SSH key to appear invalid to Pantheon. To fix this, edit the user or hostname and remove spaces and/or odd characters. This will not affect the key itself, as the user/hostname are simply appended as a comment for reference.
+Spaces or non-standard alphanumeric characters in the SSH key's comments (such as your user or system hostname) may cause the SSH key to not be accepted on Pantheon. To fix this, simply edit the user or hostname and remove spaces and any non-standard characters. This will not affect the key itself as the user and hostname are simply appended as a comment for reference.
 
 #### Control Path Error
 
@@ -80,22 +83,24 @@ You may receive the following error:
 ```nohighlight
 ControlPath too long fatal: Could not read from remote repository.
 ```
-Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh\_config`) for a declaration like this:
+Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:
 ```bash
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%l.%r@%h:%p
 ```
 
-There are two steps to take to fix this error. First, enter the following command:
+There are two ways to fix this. First, try adjusting the `Controlpath` line as shown below:
 ```bash
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%r
 ```
-If this does not fix the problem, go a step further and add individual hosts entries, remove ControlMaster auto, and simplify the switches:
+
+If this doesn't fix the issue try creating an entry in your SSH configuration for your site specifically by its hostname.  Also, don't use the `ControlMaster` option but do use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):
+
 ```bash
-Host myapp-myname.blahblah.com
+Host *.SITE_UUID.drush.in
 ControlPath ~/.ssh/control-%r
 ```
 #### Server Refused to Allocate pty
