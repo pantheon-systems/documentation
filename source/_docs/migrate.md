@@ -52,6 +52,12 @@ For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-m
 
 * If you’ve been using the database for things other than Drupal or WordPress you should **drop or skip any unnecessary or unrelated database tables** that your site doesn’t need.
 
+* Audit your content and code for **hard coded links** pointing to your legacy site.
+
+* **Review and archive your legacy site's logs.** The root causes for errors or slow transactions occurring on your legacy site will probably be migrated over, so it would be a good time to resolve them prior to the migration. Slow MySQL queries should be targeted for optimization, as a distributed infrastructure adds a small amount of latency on each transaction.
+
+* **Review your configuration files** (my.conf, php.ini, .htaccess, etc). Any custom settings will need to be reviewed, as Pantheon provides platform-wide configuration. If, for example, the site allows very long timeouts, hides PHP errors, or changes how mySQL transactions are handled; these changes may not exist after migration, and may lead to unexpected results. Also, NGINX doesn't process the Apache-specific .htaccess file, so any redirects or custom logic within those files will need to be reconsidered.
+
 ## Troubleshooting
 
 For information on troubleshooting failed migrations, please see [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting).
