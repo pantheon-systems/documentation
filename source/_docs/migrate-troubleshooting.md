@@ -7,21 +7,120 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 ---
 
 ## Migrated Site Not Working as Expected
+This section describes the causes of, and solution to the error messages that are displayed on the Site Dashboard if the migration fails to complete.
 
 If your code, database, and files have completed migrating, but your site is not working as you'd expect, please review [Pantheon Platform Considerations](/docs/platform-considerations/). For example, if your site uses PHP short tags, you'll need to convert them to standard PHP tags.
 
 Next, check [log files](https://pantheon.io/docs/logs/) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
 
-## One Application per Site
-Each site supports a single Drupal or WordPress application. Placing a WordPress application inside a Drupal site, for example, is unsupported. Drupal multisite is also not supported. If your existing Drupal site is a multisite installation, see [Extracting Sites from a Drupal Multisite](https://pantheon.io/docs/unwind-multisite/).
 
-## Multiple File Directories Found within the Import Archive
-The import will fail if Drupal's private files directory is not placed within the public directory, resulting in the following error message:
-<div class="alert alert-danger">
-Multiple file directories found within the import archive. sites/default/private sites/default/files
+### Could not import code, the import file does not appear to contain a valid code directory. ###
+
+**Cause:** The migration tool could not find Drupal or WordPress core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
+
+**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive.
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <p>Archives for Drupal 8 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <pre><code class="nohighlight">
+  ├── core
+  ├── index.php
+  ├── modules
+  ├── profiles
+  ├── sites
+      └── all
+         ├── modules
+         └── themes
+      └── default
+         └── settings.php
+  └── themes
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <p>Archives for Drupal 7 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <pre><code class="nohighlight">
+  ├── includes
+  ├── index.php
+  ├── misc
+  ├── modules
+  ├── profiles
+  ├── scripts
+  ├── sites
+      └── all
+         ├── modules
+         └── themes
+      └── default
+         └── settings.php
+  └── themes
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <p>Archives for WordPress sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <pre><code class="nohighlight">
+  ├── index.php
+  ├── wp-activate.php
+  ├── wp-config.php
+  ├── wp-comments-post.php
+  ├── wp-blog-header.php
+  ├── wp-admin
+  ├── wp-cron.php
+  ├── wp-load.php
+  ├── wp-links-opml.php
+  ├── wp-includes
+  ├── xmlrpc.php
+  ├── wp-trackback.php
+  ├── wp-signup.php
+  ├── wp-settings.php
+  ├── wp-mail.php
+  ├── wp-login.php
+  ├── wp-content
+      ├── index.php
+      ├── mu-plugins
+      ├── themes
+      ├── plugins
+
+  </code></pre>
+  </div>
 </div>
-To resolve this issue, move the `private` sub-directory under the public directory: `sites/default/files/private`. Create a site new archive and select **Migrate Existing Site** from your User Dashboard.
 
+
+### Could not import database, unable to locate a database dump. ###
+
+**Cause:** The migration tool could not locate a MySQL database dump within the archive.
+
+**Solution:** Ensure that the archive contains a valid MySQL database dump.
+
+### Multiple file directories found within the import archive. ###
+
+**Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory (`sites/default/files/private`).
+
+**Solution:** All files must be moved into the standard location for your site's CMS (`/sites/default/files` for Drupal, and `/wp-content/uploads` for WordPress). For more details, see [Non-Standard Files Locations](/docs/non-standard-file-paths).
+
+### Multiple site directories found within the import archive. ###
+
+**Cause:** The migration tool found a multisite installation, which is not supported on the platform.
+
+**Solution:** Refer to [Extracting Sites from a Drupal Multisite](/docs/unwind-multisite/).
+
+### Multiple database dumps found within the import archive. ###
+
+**Cause:** The migration tool detected multiple MySQL database dumps within the archive.
+
+**Solution:** Ensure that a single MySQL dump is included within the archive.
+
+### Multiple code roots found within the import archive. ###
+
+**Cause:**  The migration tool detected more than one potential location for the code root in the archive.
+
+**Solution:** Ensure that a single code root is included within the archive.
 
 ## Frequently Asked Questions (FAQs)
 
