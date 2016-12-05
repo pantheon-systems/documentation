@@ -7,7 +7,14 @@ module.exports = function(grunt) {
           {expand: true, src: ['node_modules/bootstrap/dist/css/bootstrap'], dest: 'source/docs/assets/compiled/'},
           {expand: true, src: ['node_modules/highlight.js/styles/tomorrow-night-eighties.css'], dest: 'source/docs/assets/'},
           {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/css/font-awesome.min.css'], dest: 'source/docs/assets/'},
-          {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/fonts/**'], dest: 'source/docs/assets/'}
+          {expand: true, src: ['node_modules/node-font-awesome/node_modules/font-awesome/fonts/**'], dest: 'source/docs/assets/'},
+          {expand: true, src: ['node_modules/clipboard/dist/clipboard.min.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/angular/angular.min.js'], dest: 'source/docs/assets/js'},
+          {expand: true, src: ['node_modules/angular-material/angular-material.min.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/angular-animate/angular-animate.min.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/angular-aria/angular-aria.min.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/marked/lib/marked.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/angular-md/dist/angular-md.js'], dest: 'source/docs/assets/js/'}
         ],
       },
     },

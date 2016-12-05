@@ -24,3 +24,34 @@
           }
       }, 300);
   });
+  var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
+
+  terminusCompareApp.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{[{');
+    $interpolateProvider.endSymbol('}]}');
+  });
+
+  terminusCompareApp.controller('mainController', function($scope, $http) {
+    $scope.searchCommand   = '';
+    $scope.terminus = [];
+    $http.get("/docs/assets/terminus/compare.json").success(function(response){
+      $scope.terminus = response;
+    });
+    $scope.clearFilters = function(){
+          $scope.searchCommand =  undefined;
+      };
+  });
+  //Sort usage array by relevance based on Regex matches from search query
+  terminusCompareApp.filter('search', function() {
+    return function (items, str) {
+      if(str == '') return items;
+      var filtered = [];
+      var rgx = new RegExp(str, 'gi');
+
+      angular.forEach(items, function(item) {
+        item.points = (JSON.stringify(item).match(rgx) || []).length;
+        filtered.push(item);
+      });
+    return filtered;
+  }
+  });
