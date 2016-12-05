@@ -137,4 +137,4 @@ To fix this error, look for the correct path to the file and update the require\
 
 ## Intermittent Notices
 
-If you are encountering intermittent notices that are not behaving as described on this page, see [Deprecated Constructor Notices](/docs/deprecated-constructor-notices) for additional information. This is not common.
+If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/docs/deprecated-constructor-notices) for additional information. This is not common.
