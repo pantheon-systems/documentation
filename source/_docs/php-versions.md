@@ -54,4 +54,4 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 * [The pantheon.yml Configuration File](/docs/pantheon-yml/)
 * [Securely Working with phpinfo](/docs/phpinfo/)
 * [php.net - Backward Incompatible Changes](http://php.net/manual/en/migration70.incompatible.php)
-* [Deprecated Constructor Notices in PHP](/docs/deprecated-constructor-notices)
+* [Debug Intermittent PHP 7 Notices](/docs/deprecated-constructor-notices)

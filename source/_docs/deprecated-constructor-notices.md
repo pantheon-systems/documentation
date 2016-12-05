@@ -1,5 +1,5 @@
 ---
-title: Deprecated Constructor Notices in PHP
+title: Debug Intermittent PHP 7 Notices
 description: Debug and fix "Deprecated Constructor" notices in your Pantheon site.
 categories: [developing]
 tags: [code, php]
@@ -15,7 +15,7 @@ Deprecated: Methods with the same name as their class will not be constructors i
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in /srv/bindings/46027a30ca4c4980a7188036eb2fcea5/code/sites/all/modules/views/includes/handlers.inc on line 753
 ```
 
-When an error like this is encountered, it will usually only appear intermitantly; most page loads will come up correctly until, after a period of inactivity on the site, the same message will appear again.
+When an error like this is encountered, it will usually only appear intermittently; most page loads will come up correctly until, after a period of inactivity on the site, the same message will appear again.
 
 ## Cause and Remediation
 
@@ -62,7 +62,7 @@ Adjust the regular expression as needed to scan other file extensions that may c
 
 Opcache is always enabled on Pantheon. When opcache is in use, PHP will print any notice emitted during source code processing directly to the standard output, ignoring any error handler that may be set. These notices may still be disabled by setting `error_reporting` to ignore E_DEPRECATED; however, Drupal always enables E_DEPRECATED in `error_reporting` early in its bootstrap process, so these notices will be printed if `display_errors` is set to `on`.
 
-Opcache also influences when this error is displayed. Since opcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the opcache. This is what leads to the intermittant nature of this problem.
+Opcache also influences when this error is displayed. Since opcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the opcache. This is what leads to the intermittent nature of this problem.
 
 <div class="alert alert-info">
 <h4>Note</h4>
