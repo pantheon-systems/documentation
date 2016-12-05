@@ -188,7 +188,7 @@ contributors:
     github: //github.com/cellar-door
     twitter: technerdteitzel
     linkedin: //www.linkedin.com/in/christeitzel
-    drupal: https://www.drupal.org/user/658076
+    drupal: //www.drupal.org/user/658076
     wordpress: https://profiles.wordpress.org/cteitzel
     bio: Seattle based developer and entrepreneur | Founder of @keylockr and Cellar Door Media
   bwood:
@@ -209,3 +209,10 @@ contributors:
     avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
     bio: Senior Customer Success Engineer
     github: //github.com/peter-pantheon
+  greg-1-anderson:
+    name: Greg Anderson
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Greg_Anderson.jpg
+    bio: Open Source Contribution Engineer
+    twitter: greg_1_anderson
+    github: //github.com/greg-1-anderson
+    drupal: //www.drupal.org/u/greg1anderson
