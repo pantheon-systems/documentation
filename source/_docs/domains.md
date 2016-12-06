@@ -149,6 +149,9 @@ Yes, see [above](/docs/domains/#develop-using-a-domain-without-changing-dns) for
 ### Why isn't my site loaded when I ping the provided Pantheon IP?
 The provided IP address resolves to our load balancers. When a request comes in, it is automatically routed to the proper site.
 
+### Why don't the DNS values for my previously configured domain match the recommended values currently shown on the Site Dashboard? Did something change?
+Domains configured before March 2016 may be using our legacy DNS values. While these values do not match the current recommendations shown within the target environment of the Site Dashboard, they will continue to work and route requests accordingly.  
+
 ### A contrib module that I use for my Drupal site does not support IPv6; how should I proceed?
 [Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
 
