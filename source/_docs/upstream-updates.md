@@ -105,6 +105,9 @@ For sites using a distribution other than the ones listed above, go to <strong>S
 
 ## Troubleshooting
 
+### One-Click Updates Do Not Appear After Rewriting Git History
+Squashing and rewritting history may cause one-click updates to break, meaning updates will no longer appear on your Site Dashboard once available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashbord, and prevents conflicts with our one-click updates. 
+
 ### Manually Resolving Conflicts
 
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
