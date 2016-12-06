@@ -105,6 +105,9 @@ For sites using a distribution other than the ones listed above, go to <strong>S
 
 ## Troubleshooting
 
+## Rewriting Git History by Squashing Core Commits for a Cleaner History Breaks One-click Updates
+Instead of squashing and rewriting git history, use git log --first-parent locally when reviewing history to ignore individual commits from merges.
+
 ### Manually Resolving Conflicts
 
 Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
