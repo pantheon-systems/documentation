@@ -377,7 +377,7 @@
     },
     {
       "zerox" : "site redis clear --site=<site> --env=<env>",
-      "onex" : "There is currently no equivalent command in 1.0. Instead, click **Clear Caches** within the target environment on the Site Dashboard or use the [Redis command-line client](/docs/redis/#clear-cache) to clear Redis cache.",
+      "onex" : "There is currently no equivalent command in 1.0. Instead, click Clear Caches within the target environment on the Site Dashboard or use the Redis command-line client.",
       "reason" : "We will not add redis:clear because it is a CSE-only task and we suggest it is done via the Dashboard or Redis CLI. "
     },
     {
