@@ -29,7 +29,11 @@ To verify that everything is working correctly, visit the URL of the environment
  
  <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-If you have a Drupal 8 site with the http_basic_auth module enabled and then lock the site you will see 403 errors. The solution is to disable http_basic_auth and restart your browser to clear the authentication header cache. You should use the dashboard lock or the http_basic_auth module, not both.</div>
+If you have a Drupal 8 site with the core HTTP Basic Authentication (http_basic_auth) module enabled and then lock the site you will see 403 errors. The solution is to disable http_basic_auth and restart your browser to clear the authentication header cache. You should use the dashboard lock or the http_basic_auth module, not both.
+
+In Drupal 7 the Basic HTTP Authentication (basic_auth) contrib module will pose incompatabilites if enabled and used while the site is locked. The solution is to disable the dasboard lock, then disable the module. Then you can lock the site using the dashboard.
+
+</div>
 
 ## Unlock a Site's Environment
 
