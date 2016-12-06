@@ -127,7 +127,7 @@
     },
     {
       "zerox" : "site backups load  --site=<site> --env=<env> --latest --username=<mysql_username> --password=<mysql_password> --database=<mysql_database>",
-      "onex" : "There is currently no equivalent command in 1.0 since it relies on an outside application (MySQL-CLI).",
+      "onex" : "There is currently no equivalent command in 1.0. Since it relies on an outside application (MySQL-CLI) we plan to move the command to a plugin.",
       "reason" : "It was determined early on that this functionality - which is to copy the MySQL DB from the server and to add it to a local DB - was to be made into plugin because it relies on an outside application, MySQL(-CLI)."
     },
     {
@@ -327,7 +327,7 @@
     },
     {
       "zerox" : "site mount --site=<site> --env=<env> --destination=<path>",
-      "onex" : "There is currently no equivalent command in 1.0 since it has external requirements.",
+      "onex" : "There is currently no equivalent command in 1.0 since it has external requirements we plan to move the command to a plugin.",
       "reason" : "This will be a plugin because it has an external requirements. The plugin has not yet been written."
     },
     {
