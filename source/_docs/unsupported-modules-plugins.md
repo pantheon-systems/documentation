@@ -39,6 +39,14 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 **Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the Dashboard for each environment.
+
+
+<hr>
+### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
+ **Issue**: Pantheon dashboard Security lock conflicts with Drupal Basic HTTP Authentication module when enabled.  
+
+ **Solution**: Ensure that only the dashboard Security lock or Basic HTTP Authentication is enabled, not both.
+ 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
@@ -94,10 +102,10 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 <hr>
 
 <hr>
-### HTTP Basic Auth - Drupal 8 only
- **Issue**: Pantheon dashboard lock conflicts with Drupal HTTP Basic Auth module when enabled.  
+### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
+ **Issue**: Pantheon dashboard Security lock conflicts with Drupal HTTP Basic Auth module when enabled.  
 
- **Solution**: Ensure that only the dashboard lock or HTTP Basic Auth is enabled, not both.
+ **Solution**: Ensure that only the dashboard Security lock or HTTP Basic Authentication (included with core) is enabled, not both.
 <hr>
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
