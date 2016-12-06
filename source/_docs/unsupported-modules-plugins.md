@@ -39,6 +39,14 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 **Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the Dashboard for each environment.
+
+
+<hr>
+### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
+**Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
+
+ **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
@@ -92,6 +100,14 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
  **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, [apply a patch to the module](https://www.drupal.org/node/1399024) to correct the issue.
 <hr>
+
+<hr>
+### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
+ **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
+
+ **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+<hr>
+
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
@@ -297,7 +313,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
-**Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin. 
+**Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
 
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
