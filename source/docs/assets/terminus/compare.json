@@ -1,0 +1,554 @@
+{
+  "commands" : [
+    {
+      "zerox" : "art <artwork>",
+      "onex" : "art <artwork>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "auth login <email> --password=<password> --machine-token=<machine_token>",
+      "onex" : "auth:login --email=<email> --machine-token=<machine_token>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "auth logout",
+      "onex" : "auth:logout",
+      "reason" : ""
+    },
+    {
+      "zerox" : "auth whoami",
+      "onex" : "auth:whoami",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli completions --line=<line> --point=<point>",
+      "onex" : "There is currently no equivalent command in 1.0 since completion generation was a function specific to the WP-CLI base which 0.x had.",
+      "reason" : "Completion generation was a function specific to the WP-CLI base which 0.x had."
+    },
+    {
+      "zerox" : "cli console --site=<site>",
+      "onex" : "self:console <site>, self:console, self:console <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli info",
+      "onex" : "self:info",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli param-dump",
+      "onex" : "help <command>, * --help",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli session-clear",
+      "onex" : "self:clear-cache",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli session-dump",
+      "onex" : "auth:whoami --format=table",
+      "reason" : ""
+    },
+    {
+      "zerox" : "cli version",
+      "onex" : "self:info --field=terminus_version",
+      "reason" : ""
+    },
+    {
+      "zerox" : "drush <Drush command>",
+      "onex" : "drush -- <Drush command>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "help <command> --recursive",
+      "onex" : "help <command>, * --help",
+      "reason" : ""
+    },
+    {
+      "zerox" : "instruments list",
+      "onex" : "payment-method:list",
+      "reason" : ""
+    },
+    {
+      "zerox" : "machine-token delete --machine-token-id=<token>",
+      "onex" : "machine-token:delete <token>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "machine-token list",
+      "onex" : "machine-token:list",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations sites add --org=<org> --site=<site>",
+      "onex" : "There is currently no equivalent command in 1.0",
+      "reason" : "Removed because it is only available to Pantheors and not all customers. They should not see the command."
+    },
+    {
+      "zerox" : "organizations sites remove  --org=<org> --site=<site>",
+      "onex" : "org:site:remove <org> <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations sites list  --org=<org>",
+      "onex" : "org:site:list <org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations team list --org=<org>",
+      "onex" : "org:team:list <org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations team add-member  --org=<org> --member=<user> --role=<role>",
+      "onex" : "org:team:add <org> <user> <role>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations team remove-member  --org=<org> --member=<user>",
+      "onex" : "org:team:remove <org> <user>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations team change-role  --org=<org> --member=<user> --role=<role>",
+      "onex" : "org:team:role <org> <user> <role>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "organizations list",
+      "onex" : "org:list",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups get --site=<site> --env=<env> --latest --element=<element> --to=<location>",
+      "onex" : "backup:get <site>.<env> --file=<filename> --element=<element>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups load  --site=<site> --env=<env> --latest --username=<mysql_username> --password=<mysql_password> --database=<mysql_database>",
+      "onex" : "There is currently no equivalent command in 1.0. Since it relies on an outside application (MySQL-CLI) we plan to move the command to a plugin.",
+      "reason" : "It was determined early on that this functionality - which is to copy the MySQL DB from the server and to add it to a local DB - was to be made into plugin because it relies on an outside application, MySQL(-CLI)."
+    },
+    {
+      "zerox" : "site backups create  --site=<site> --env=<env> --element=<element> --keep-for=<days>",
+      "onex" : "backup:create <site>.<env> --element=<element> --keep-for=<days>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups list  --site=<site> --env=<env> --element=<element>",
+      "onex" : "backup:list <site>.<env> --element=<element>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "",
+      "onex" : "backup:restore <site>.<env> --file=<filename> --element=<element>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups get-schedule  --site=<site> --env=<env>",
+      "onex" : "backup:schedule:get <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups set-shedule  --site=<site> --env=<env> --day=<day>",
+      "onex" : "backup:schedule:set <site>.<env> --day=<day>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site backups cancel-schedule --site=<site> --env=<env>",
+      "onex" : "backup:schedule:cancel <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site clear-cache --site=<site> --env=<env>",
+      "onex" : "env:clear-cache",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site clone-content --site=<site> --to-env=<to_env> --from-env=<from_env>  --db-only --files-only",
+      "onex" : "env:clone <site>.<from_env> <to_env> --db-only --files-only",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site code log  --site=<site> --env=<env>",
+      "onex" : "env:code-log <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site code branches --site=<site>",
+      "onex" : "branch:list <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site code diffstat --site=<site> --env=<env>",
+      "onex" : "env:diffstat <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site code commit --site=<site> --env=<env> --message=<message>",
+      "onex" : "env:commit <site>.<env> --message=<message>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site complete-migraiton --site=<site>",
+      "onex" : "import:complete <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site connection-info --site=<site> --env=<env>",
+      "onex" : "connection:info <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site create-env --site=<site> --to-env=<to_env> --from-env=<from_env>",
+      "onex" : "multidev:create <site>.<from_env> <to_env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site dashboard --site=<site> --env=<env> --print",
+      "onex" : "dashboard <site>.<env> --print",
+      "reason" : ""
+    },
+    {
+      "zerox" : "",
+      "onex" : "env:view <site>.<env> --print",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site delete --site=<site>",
+      "onex" : "site:delete <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site delete-branch --site=<site> --branch=<branch>",
+      "onex" : "There is currently no equivalent command in 1.0",
+      "reason" : "Multi-dev should not be deleted this way nor should a branch. if a customer wants to manually manage their git branches, they can use a git client."
+    },
+    {
+      "zerox" : "site delete-env --site=<site> --env=<env> --remove-branch",
+      "onex" : "multidev:delete <site>.<env> --delete-branch",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site deploy --site=<site> --env=<env> --sync-content --cc --updatedb --note=<note>",
+      "onex" : "env:deploy <site>.<env> --sync-content --cc --updatedb --note=<note>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site drush-version --site=<site> --env=<env>",
+      "onex" : "There is currently no equivalent command in 1.0 since Drush versions are now managed via the pantheon.yml file.",
+      "reason" : "Drush version information was deliberately axed by product in favor of pantheon.yml use. "
+    },
+    {
+      "zerox" : "site environment-info --site=<site> --env=<env>",
+      "onex" : "env:info <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site environments --site=<site>",
+      "onex" : "env:list <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site hostnames list --site=<site> --env=<env>",
+      "onex" : "domain:list <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site hostnames add --site=<site> --env=<env> --hostname=<hostname>",
+      "onex" : "domain:add <site>.<env> <hostname>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site hostnames remove --site=<site> --env=<env> --hostname=<hostname>",
+      "onex" : "domain.remove <site>.<env> <hostname>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site hostnames lookup --hostname=<hostname>",
+      "onex" : "domain:lookup <hostname>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site hostnames get-recommendations --site=<site> --env=<env>",
+      "onex" : "domain:dns <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site import --site=<site> --url=<url>",
+      "onex" : "import <site> <url>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site import-content --site=<site> --env=<env> --url=<url> --element=<element>",
+      "onex" : "import:<element> <site>.<env> <url>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site info --site=<site>",
+      "onex" : "site:info <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site init-env --site=<site> --env=<env>",
+      "onex" : "env:deploy <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site lock info --site=<site> --env=<env>",
+      "onex" : "lock:info <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site lock add --site=<site> --env=<env> --username=<username> --password=<password>",
+      "onex" : "lock:add <site>.<env> <username> <password>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site lock remove --site=<site> --env=<env>",
+      "onex" : "lock:remove <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site lookup --site=<site>",
+      "onex" : "site:lookup <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site merge-from-dev --site=<site> --env=<env>",
+      "onex" : "multidev:merge-from-dev <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site merge-to-dev --site=<site> --env=<env>",
+      "onex" : "multidev:merge-to-dev <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site mount --site=<site> --env=<env> --destination=<path>",
+      "onex" : "There is currently no equivalent command in 1.0 since it has external requirements we plan to move the command to a plugin.",
+      "reason" : "This will be a plugin because it has an external requirements. The plugin has not yet been written."
+    },
+    {
+      "zerox" : "site new-relic enable --site=<site>",
+      "onex" : "new-relic:enable <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site new-relic disable --site=<site>",
+      "onex" : "new-relic:disable <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site new-relic status --site=<site>",
+      "onex" : "new-relic:status <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site organizations list --site=<site>",
+      "onex" : "site:org:list <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site organizations add --site=<site> --org=<org> --role=<role>",
+      "onex" : "site:org:add <site> <org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site organizations remove --site=<site> --org=<org>",
+      "onex" : "site:org:remove <site> <org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site owner --site=<site> --owner=<new_owner>",
+      "onex" : "site:info --field=owner",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site redis enable --site=<site> --env=<env>",
+      "onex" : "redis:enable <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site redis disable --site=<site> --env=<env>",
+      "onex" : "redis:disable <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site redis clear --site=<site> --env=<env>",
+      "onex" : "There is currently no equivalent command in 1.0. Instead, click Clear Caches within the target environment on the Site Dashboard or use the Redis command-line client.",
+      "reason" : "We will not add redis:clear because it is a CSE-only task and we suggest it is done via the Dashboard or Redis CLI. "
+    },
+    {
+      "zerox" : "site set-conneciton-mode --site=<site> --env=<env> --mode=<mode>",
+      "onex" : "connection:set <site>.<env> <mode>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site set-https-certificate --site=<site> --env=<env> --certificate=<cert> --private-key=<key> --intermediate-certificate=<intermed_cert>",
+      "onex" : "https:set <site>.<env> <cert> <key> --intermediate-certificate=<intermed_cert>, https:remove <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site set-insturment  --site=<site> --instrument=<payment_method>",
+      "onex" : "payment-method:set <site> <payment_method>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "",
+      "onex" : "payment-method:remove <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "",
+      "onex" : "https:info <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site set-owner --site=<site> --member=<user>",
+      "onex" : "owner:set <site> <user>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site set-service-level --site=<site> --level=<level>",
+      "onex" : "service-level:set <site> <level>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site solr enable --site=<site>",
+      "onex" : "solr:enable <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site solr disable --site=<site>",
+      "onex" : "solr:disable <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site tags add --site=<site> --org=<org> --tag=<tag>",
+      "onex" : "tag:add <site> <org> <tag>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site tags remove --site=<site> --org=<org> --tag=<tag>",
+      "onex" : "tag:remove <site> <org> <tag>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site tags list --site=<site> --org=<org>",
+      "onex" : "tag:list <site> <org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site team list --site=<site>",
+      "onex" : "site:team:list <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site team add-member --site=<site> --member=<user> --role=<role>",
+      "onex" : "site:team:add <site> <user> <role>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site team remove-member --site=<site> --member=<user>",
+      "onex" : "site:team:remove <site> <user>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site team change-role --site=<site> --member=<user> --role=<role>",
+      "onex" : "site:team:role <site> <user> <role>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site upstream-info --site=<site>",
+      "onex" : "site:info <site> --field=upstream",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site upstream-updates list --site=<site> --env=<env>",
+      "onex" : "upstream:updates:list <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site upstream-updates apply --site=<site> --env=<env> --updatedb --accept-upstream",
+      "onex" : "upstream:updates:apply <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site wake --site=<site> --env=<env>",
+      "onex" : "env:wake <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "site wipe --site=<site> --env=<env>",
+      "onex" : "env:wipe <site>.<env>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "sites aliases --print --location=<location>",
+      "onex" : "aliases --print --location=<location>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "sites create --site=<site> --label=<label> --upstream=<upstream> --org=<org>",
+      "onex" : "site:create <site> <label> <upstream> --org=<org>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "sites list --team --owner=<user> --org=<org> --name=<regex>",
+      "onex" : "site:list --owner=<user> --org=<org> --team --name=<regex>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "sites mass-update --report --upstream=<upstream> --no-updatedb --xoptions=<xoption> --tag=<tag> --org=<org>",
+      "onex" : "There is currently no equivalent command in 1.0",
+      "reason" : "Just a low priority to get into Terminus 1.0 - AL-682"
+    },
+    {
+      "zerox" : "ssh-keys add --file=<file>",
+      "onex" : "ssh-key:add",
+      "reason" : ""
+    },
+    {
+      "zerox" : "ssh-keys delete --fingerprint=<fingerprint> --all",
+      "onex" : "ssh-key:remove",
+      "reason" : ""
+    },
+    {
+      "zerox" : "ssh-keys list",
+      "onex" : "ssh-key:list",
+      "reason" : ""
+    },
+    {
+      "zerox" : "upstreams list --categorhy=<category> --type=<type< --framework=<framework>",
+      "onex" : "upstream:list",
+      "reason" : ""
+    },
+    {
+      "zerox" : "",
+      "onex" : "upstream:info <upstream>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "workflows list --site=<site>",
+      "onex" : "workflow:list <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "workflows show --site=<site> --workflow-id=<workflow> --latest-with-logs",
+      "onex" : "workflow:info:logs <site> --id=<workflow>, workflow:info:operations <site> --id=<workflow>, workflow:info:status <site> --id=<workflow>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "workflows watch --site=<site>",
+      "onex" : "workflow:watch <site>",
+      "reason" : ""
+    },
+    {
+      "zerox" : "wp <WP-CLI command>",
+      "onex" : "wp -- <WP-CLI command>",
+      "reason" : ""
+    }
+  ]
+}

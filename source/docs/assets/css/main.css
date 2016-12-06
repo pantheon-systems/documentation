@@ -2630,3 +2630,7 @@ display: block;
 .gs-result .gs-title, .gs-result .gs-title {
   font-size: 20px !important;
 }
+
+.highlight {
+  background: yellow;
+}
