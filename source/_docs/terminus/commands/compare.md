@@ -24,7 +24,6 @@ permalink: docs/terminus/commands/:basename/
       <tr>
         <th>1.x Command Structure</th>
         <th>0.x Command Structure</th>
-        <th>Note</th>
       </tr>
     </thead>
 
@@ -35,9 +34,6 @@ permalink: docs/terminus/commands/:basename/
         </td>
         <td md-highlight-text="searchCommand">
           {[{ command.zerox }]}
-        </td>
-        <td md-highlight-text="searchCommand">
-          {[{ command.reason }]}
         </td>
       </tr>
     </tbody>
