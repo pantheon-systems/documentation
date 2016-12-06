@@ -7,9 +7,7 @@ keywords: lock, password protect, lock site, password protect site, locked, lock
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
 
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When a Dev environment is locked, a lock icon will be added to the thumbnail of the site on the your Sites page.</div>
+
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is private, the requesting client will have to supply the authentication credentials you set in order to access the site.
 
@@ -28,6 +26,12 @@ You can set a different username and password for each environment. This is impo
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
  ![Example of locked site](/source/docs/assets/images/auth-required.png)
+
+ <div class="alert alert-info" role="alert">
+<h4>Note</h4>
+<p>The <a href="https://www.drupal.org/docs/8/core/modules/basic_auth">HTTP Basic Authentication</a> core module (Drupal 8) and <a href="https://www.drupal.org/project/basic_auth">Basic HTTP Authentication</a> contrib module (Drupal 7) conflict with <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> when both are enabled. We recommend using <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> or the module to restrict access to Pantheon environment URLs, not both. </p>
+</div>
+
 ## Unlock a Site's Environment
 
 When you are ready to make your environment public again, click **Public** on the Security page. This will clear the credentials you entered and make web accessible resources available without a basic authentication prompt.
