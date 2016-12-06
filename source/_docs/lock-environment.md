@@ -26,13 +26,10 @@ You can set a different username and password for each environment. This is impo
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
  ![Example of locked site](/source/docs/assets/images/auth-required.png)
- 
+
  <div class="alert alert-info" role="alert">
 <h4>Note</h4>
-If you have a Drupal 8 site with the core HTTP Basic Authentication (http_basic_auth) module enabled and then lock the site you will see 403 errors. The solution is to disable http_basic_auth and restart your browser to clear the authentication header cache. You should use the dashboard lock or the http_basic_auth module, not both.
-
-In Drupal 7 the Basic HTTP Authentication (basic_auth) contrib module will pose incompatabilites if enabled and used while the site is locked. The solution is to disable the dasboard lock, then disable the module. Then you can lock the site using the dashboard.
-
+<p>The <a href="https://www.drupal.org/docs/8/core/modules/basic_auth">HTTP Basic Authentication</a> core module (Drupal 8) and <a href="https://www.drupal.org/project/basic_auth">Basic HTTP Authentication</a> contrib module (Drupal 7) conflict with <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> when both are enabled. We recommend using <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> or the module to restrict access to Pantheon environment URLs, not both. </p>
 </div>
 
 ## Unlock a Site's Environment
