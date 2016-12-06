@@ -43,9 +43,9 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 
 <hr>
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
-**Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site's-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
+**Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site's-environments) or via the module, not both.
+ **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
@@ -103,9 +103,9 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 <hr>
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
- **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site's-environments) when both are enabled, resulting in 403 errors.
+ **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site's-environments) or via the module, not both.
+ **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
 <hr>
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
