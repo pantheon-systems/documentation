@@ -507,6 +507,17 @@ a.not-allowed:hover {
   transition: 200ms all;
 
 }
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
+  color: #EFD01B !important;
+  background-color: #181d21;
+  box-shadow: inset 0 -2px 0 #EFD01B !important;
+}
+.nav .dropdown:focus >a, .nav .dropdown:hover>a{
+  color: #EFD01B !important;
+  box-shadow: inset 0 -4px 0 #EFD01B !important;
+  background-color: #181d21;
+}
+
 
 input[type="search"] {
   width: 100%;
@@ -745,14 +756,29 @@ pre code {
 
   box-shadow: inset 0 -2px 0 #EFD01B;
 }
-
+a.cta:hover {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 2px solid #000;
+}
 #navbar .active-trail {
   color:#fff;
 }
-#navbar .active-trail:hover {
-  color: #efd01b !important;
+.pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover, #navbar .active-trail:hover {
+  color: #EFD01B;
+  box-shadow: inset 0 -4px 0 #EFD01B;
+}
+a.cta.cta-yellow:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
+#dropmenu .active-trail:hover {
+
   box-shadow: inset 0 -2px 0 #EFD01B;
 }
+
 li.create-account {
   padding-right: 20px !important;
   padding-left: 20px !important;
@@ -813,16 +839,6 @@ li.create-account {
 }
 .pantheon-logo {
   max-width: 215px;
-}
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
-  color: #EFD01B !important;
-  background-color: #181d21;
-  box-shadow: inset 0 -2px 0 #EFD01B !important;
-}
-.nav .dropdown:focus >a, .nav .dropdown:hover>a{
-  color: #EFD01B !important;
-  box-shadow: inset 0 -4px 0 #EFD01B !important;
-  background-color: #181d21;
 }
 
 .pio-docs-nav .navbar-nav > li.dropdown > a:hover {
@@ -3062,7 +3078,7 @@ border-radius: 0px;
 }
 .has-feedback .form-control-feedback {
   margin-top: 5px;
-  left:7px;
+  left: 7px;
 }
 /* Google Custom Search Engine button */
 input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
@@ -4121,6 +4137,7 @@ a.cta {
   text-transform: uppercase;
   background: #000 !important;
   color: #fff !important;
+  border: 2px solid #000;
   letter-spacing: 1px !important;
   display: inline-block;
 }
@@ -4614,6 +4631,9 @@ a:focus {
     font-size: 16px !important;
 
   }
+  a.cta {
+    border: none !important;
+  }
   .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
     color: #EFD01B !important;
     background-color: #44525e;
@@ -4645,7 +4665,6 @@ a:focus {
   input[type="search"], input[type="search"]:focus {
     padding: 10px 0px 0px 20px;
     background-color: #283239;
-    border-bottom: 1px solid #fff;
     margin-bottom: 10px;
   }
   .has-feedback .form-control-feedback {
@@ -4654,6 +4673,9 @@ a:focus {
 }
 .navsearch-container {
     background: #283239;
+    padding: 8px;
+    z-index: 10001;
+    padding-top:15px;
   }
 div.navsearch-container {
     right: 0;
@@ -4669,12 +4691,18 @@ div.navsearch-container {
     padding:0!important;
   }
   .pio-docs-nav li.create-account a.cta.cta-yellow {
-    background:none!important;
-    color:#EFD01B !important;
+    background:none !important;
+    color: #fff !important;
     font-size: 16px !important;
-  }
-  .pio-docs-nav li.create-account a.cta.cta-yellow {
-    background:none!important;
+    padding-left: 40px !important;
+    padding-bottom: 0px !important;
+}
+  .pio-docs-nav li.create-account a.cta.cta-yellow:hover {
+    color: #EFD01B !important;
+}
+  .pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover {
+    color: #EFD01B !important;
+    box-shadow: none !important;
   }
   .navbar-nav .dropdown .dropdown-menu {
     display: none;
@@ -4683,36 +4711,34 @@ div.navsearch-container {
     display: inline-block;
   }
   ul.nav.navbar-nav {
-    width:110%;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    margin-top: -1px;
+    display: block;
+
   }
   .navbar-nav .dropdown:hover .dropdown-menu {
     width: 100%;
     top: 20px;
-    margin-bottom: 20px;
   }
   .navbar-collapse.in {
     overflow-y: visible;
   }
   .navbar-nav {
-    margin: 0 -15px;
   }
   .navbar-nav > li:last-child{
     padding-bottom: 20px;
   }
   #navbar > ul > li {
-    padding: 10px 0;
+    padding: 10px 0px 0px 10px;
   }
   #navbar .create-account a {
     padding-top: 20px !important;
-  }
-  .pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover {
-    color: #EFD01B;
   }
   .navbar-nav .dropdown > a:after {
     top:10px;
   }
   .navbar-nav .dropdown {
-    padding-bottom: 20px !important;
   }
 }
 

@@ -82,16 +82,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     exit 1
   fi
 
-  # rsync output_prod/favicon.ico to Valhalla
-  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/favicon.ico --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:code/
-  if [ "$?" -eq "0" ]
-  then
-    echo "Success: Deployed to $url"
-  else
-    echo "Error: Deploy failed, review rsync status"
-    exit 1
-  fi
-
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))
   export previous_commit="${previous_commit[1]}"
