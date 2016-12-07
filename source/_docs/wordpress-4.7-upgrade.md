@@ -1,8 +1,9 @@
 ---
 title: Page Caching Changes with WordPress 4.7 and Above
 description: Starting with 4.7 Pantheon is moving advanced page caching behavior to a standalone plugin
-categories: [wordpress]
-tags: [code]
+categories: [performance]
+tags: [performance]
+contributors: [ari]
 keywords: WordPress, performance, cache, caching, varnish, varnish caching
 ---
 WordPress 4.7 is a jam-packed release including content endpoints for REST-API and a number of other awesome changes. See WordPress.org [release notes](https://wordpress.org/news/2016/12/vaughan/) for a full list of changes in core. This release also includes separate changes made by Pantheon to improve site performance and scalability.
