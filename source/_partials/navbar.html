@@ -1,3 +1,42 @@
+<script src="/docs/assets/js/node_modules/angular/angular.min.js"></script>
+<script src="/docs/assets/js/node_modules/angular-md/dist/angular-md.js"></script>
+<script src="/docs/assets/js/node_modules/marked/lib/marked.js"></script>
+<script src="/docs/assets/js/node_modules/angular-material/angular-material.min.js"></script>
+<script src="/docs/assets/js/node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="/docs/assets/js/node_modules/angular-aria/angular-aria.min.js"></script>
+<script>
+var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
+
+terminusCompareApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+
+terminusCompareApp.controller('mainController', function($scope, $http) {
+  $scope.searchCommand   = '';
+  $scope.terminus = [];
+  $http.get("/docs/assets/terminus/compare.json").success(function(response){
+    $scope.terminus = response;
+  });
+  $scope.clearFilters = function(){
+        $scope.searchCommand =  undefined;
+    };
+});
+//Sort usage array by relevance based on Regex matches from search query
+terminusCompareApp.filter('search', function() {
+  return function (items, str) {
+    if(str == '') return items;
+    var filtered = [];
+    var rgx = new RegExp(str, 'gi');
+
+    angular.forEach(items, function(item) {
+      item.points = (JSON.stringify(item).match(rgx) || []).length;
+      filtered.push(item);
+    });
+  return filtered;
+}
+});
+</script>
 <div class="navbar navbar-fixed-top pio-docs-nav" role="navigation">
         <div class="navbar-header">
             <!-- Nav Collapse button -->

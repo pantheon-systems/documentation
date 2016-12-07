@@ -22,18 +22,18 @@ permalink: docs/terminus/commands/:basename/
 
     <thead>
       <tr>
-        <th>1.x Command Structure</th>
         <th>0.x Command Structure</th>
+        <th>1.x Command Structure</th>
       </tr>
     </thead>
 
     <tbody>
       <tr ng-repeat="command in terminus.commands | filter:searchCommand">
         <td md-highlight-text="searchCommand">
-          {[{ command.onex }]}
+          {[{ command.zerox }]}
         </td>
         <td md-highlight-text="searchCommand">
-          {[{ command.zerox }]}
+          {[{ command.onex }]}
         </td>
       </tr>
     </tbody>
