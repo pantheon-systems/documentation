@@ -716,6 +716,7 @@ pre code {
 #navbar {
   height:87px;
   background: #181D21;
+  color: #fff;
 }
 #navbar > ul > li{
   float: right;
@@ -726,9 +727,6 @@ pre code {
   #navbar > ul > li{
     height: 87px;
   }
-}
-#navbar ul li:focus{
-  background: #222;
 }
 
 #navbar .create-account a{
@@ -744,11 +742,16 @@ pre code {
   box-shadow: none !important;
 }
 #dropmenu .active-trail:hover {
+
   box-shadow: inset 0 -2px 0 #EFD01B;
 }
 
 #navbar .active-trail {
-  color:#EFD01B;
+  color:#fff;
+}
+#navbar .active-trail:hover {
+  color: #efd01b !important;
+  box-shadow: inset 0 -2px 0 #EFD01B;
 }
 li.create-account {
   padding-right: 20px !important;
@@ -811,13 +814,17 @@ li.create-account {
 .pantheon-logo {
   max-width: 215px;
 }
-.pio-docs-nav .navbar-nav > li > a:hover,
-.pio-docs-nav .navbar-nav > .active > a,
-.pio-docs-nav .navbar-nav > .active > a:hover {
-  box-shadow: inset 0 -4px 0 #EFD01B;
-/*  padding-bottom: 19px;
-*/
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
+  color: #EFD01B !important;
+  background-color: #181d21;
+  box-shadow: inset 0 -2px 0 #EFD01B !important;
 }
+.nav .dropdown:focus >a, .nav .dropdown:hover>a{
+  color: #EFD01B !important;
+  box-shadow: inset 0 -4px 0 #EFD01B !important;
+  background-color: #181d21;
+}
+
 .pio-docs-nav .navbar-nav > li.dropdown > a:hover {
   box-shadow:none;
 }
@@ -860,7 +867,6 @@ li.create-account {
     background-color: #dde5e7 !important;
     z-index: 1001;
     color: #222;
-    transition: 200ms all;
     padding: 0px;
 }
 #subnav ul li {
@@ -871,7 +877,6 @@ li.create-account {
  color:#222;
  background-color: #EFEFEF !important;
  font-weight: bold;
- transition: 200ms all;
  text-transform: capitalize;
  background-color:transparent;
  padding-left:0px;
@@ -887,7 +892,6 @@ li.create-account {
     min-width: 100%;
     list-style-type: none;
     text-align: left;
-    transition: 500ms all;
 }
 span#drop-rsaquo {
   float:right;
@@ -964,7 +968,7 @@ span#changelog-rsaquo {
 .navbar-nav .dropdown:hover .dropdown-menu li > a {
   font-family: Avenir-Heavy;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #fff;
   letter-spacing: 0px;
   line-height: 16px;
   text-transform: initial;
@@ -989,15 +993,6 @@ span#changelog-rsaquo {
 .sub-menu-bottom {
   background:#313945;
   padding: 15px 20px;
-}
-
-.navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
-  color: #EFD01B !important;
-  transition: 500ms all;
-  box-shadow: inset 0 -2px 0 #EFD01B !important;
-}
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-  background: #222 !important;
 }
 
 .navbar-fixed-top>.col-md-8>.active-trail {
@@ -1277,7 +1272,6 @@ margin-bottom: 40px !important;  }
     max-width:90%;
   }
   .container.container-navsearch-box {
-    max-width:90%;
   }
 }
 @media (min-width: 430px) and (max-width: 1199px) {
@@ -4593,7 +4587,6 @@ a:focus {
   }
 
   body {
-    padding-top: 160px;
   }
 }
 
@@ -4613,18 +4606,64 @@ a:focus {
 }
 
 @media screen and (max-width : 767px) {
+  .navbar-nav .dropdown:hover .dropdown-menu li > a {
+    color: #fff;
+  }
+  #changelogs {
+    color: #fff;
+    font-size: 16px !important;
+
+  }
+  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
+    color: #EFD01B !important;
+    background-color: #44525e;
+    box-shadow: none !important;
+  }
+  .nav .dropdown:focus >a, .nav .dropdown:hover>a{
+    color: #EFD01B;
+    background-color: #44525e;
+    box-shadow: none !important;
+  }
+  #dropmenu .active-trail {
+    color:#EFD01B !important;
+  }
   .navbar-nav {
     background:#44525E;
   }
   .sub-menu-bottom {
-    background: #78868E;
+    background: #283239;
+    color: #fff;
+  }
+  .sub-menu-top {
+    background: #313945;
+    color: #fff;
   }
   .sub-menu-bottom,
   .sub-menu-top {
     padding: 15px 30px;
   }
+  input[type="search"], input[type="search"]:focus {
+    padding: 10px 0px 0px 20px;
+    background-color: #283239;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+  }
+  .has-feedback .form-control-feedback {
+    margin-top: 5px;
+    font-size: 80%;
+}
+.navsearch-container {
+    background: #283239;
+  }
+div.navsearch-container {
+    right: 0;
+      left: 0;
+      position: absolute !important;
+      top: inherit !important;
+  }
   .pio-docs-nav .navbar-nav > li > a {
     padding: 13px 30px 10px !important;
+    font-size: 16px !important;
   }
   .pio-docs-nav li.create-account {
     padding:0!important;
@@ -4643,9 +4682,13 @@ a:focus {
   .navbar-nav .dropdown > a {
     display: inline-block;
   }
+  ul.nav.navbar-nav {
+    width:110%;
+  }
   .navbar-nav .dropdown:hover .dropdown-menu {
     width: 100%;
     top: 20px;
+    margin-bottom: 20px;
   }
   .navbar-collapse.in {
     overflow-y: visible;
@@ -4663,7 +4706,6 @@ a:focus {
     padding-top: 20px !important;
   }
   .pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover {
-    box-shadow: none;
     color: #EFD01B;
   }
   .navbar-nav .dropdown > a:after {

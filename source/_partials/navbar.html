@@ -175,7 +175,7 @@ terminusCompareApp.filter('search', function() {
                 <li class=""><a href="https://dashboard.pantheon.io" target="_blank">Log In</a></li>
                 <li class=""><a href="https://dashboard.pantheon.io/#support/support/all" target="_blank">Support</a></li>
                 <li class="dropdown">
-                  <a href="/docs" class="dropdown-toggle active-trail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Documentation</a>
+                  <a href="/docs" class="dropdown-toggle active-trail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left:15px;padding-right:25px;">Documentation</a>
 
                   <ul id="dropmenu" class="dropdown-menu">
                   <div class="row sub-menu-top">
@@ -204,14 +204,14 @@ terminusCompareApp.filter('search', function() {
 
                 </li>
             </ul>
+            <div class="navsearch-container">
+              <div class="navsearch form-group has-feedback">
+                <div class="container container-navsearch-box">
+                  {% include("search_box.html") %}
+                  <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+                  <span class="sr-only">(search)</span>
+                </div>
+              </div>
+            </div>
     </div>
-</div>
-<div class="navsearch-container">
-  <div class="navsearch form-group has-feedback">
-    <div class="container container-navsearch-box">
-      {% include("search_box.html") %}
-      <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-      <span class="sr-only">(search)</span>
-    </div>
-  </div>
 </div>
