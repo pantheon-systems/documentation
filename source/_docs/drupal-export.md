@@ -24,7 +24,7 @@ When preparing a site for export, there are a few best practices to follow:
 
 To log back into your imported site that is in maintenance mode, just go to /user/login and login as UID 1 (the first administrative user).
 
-<div class="alert alert-danger" role="alert"><strong>Warning: </strong>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</div>
+<div class="alert alert-danger" role="alert"><h3 class="info">Warning </h3><p>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</p></div>
 
 ## Create Archive Using Backup and Migrate
 Create single-file archives for sites hosted elsewhere or locally with the [Backup and Migrate](https://www.drupal.org/project/backup_migrate) module. When creating the archive, choose to backup your **entire site (code, files, & DB)**. Download the archive and/or send it to NodeSquirrel for a publicly accessible URL.
@@ -49,9 +49,9 @@ drush archive-dump --destination=drush-archive.tar.gz
 ```
 Executing it from the site root creates a file called drush-archive.tar.gz that's available via the public internet. If you have the file locally, you can put it on Dropbox, S3, or any number of other places. The important thing is that you have a Drush archive that can be downloaded via a URL.
 
-<div class="alert alert-info" role="alert"><strong>Note: </strong>
-If you cannot package your site as a single archive less than 500MB, you will need to create the archives <strong><a href="#manually-create-archive">manually</a></strong> and import the files separately.
-</div>
+<div class="alert alert-info" role="alert"><h3 class="info">Note</h3>
+<p>If you cannot package your site as a single archive less than 500MB, you will need to create the archives <strong><a href="#manually-create-archive">manually</a></strong> and import the files separately.
+</p></div>
 For detailed instructions on importing your site archive, see [Migrate Sites to Pantheon](/docs/migrate).
 
 
@@ -78,7 +78,9 @@ The code archive should include the following directories:
     └── themes
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>:  The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</div>
+  <h3 class="info">Note</h3>
+  <p>The <code>files</code> directory has been omitted. Remember not to include it in your codebase.</p>
+</div>
 
 ### Create a Code Archive
 
@@ -124,8 +126,12 @@ You now have three individual files that make one complete archive of your Drupa
 
 You can upload each of your archive files separately, or package the archives within a single file. The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 s
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
+<div class="alert alert-danger" role="alert">
+  <h3 class="info">Warning</h3>
+  <p>
+    Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.
+  </p>
+</div>
 
 Only provide one `.sql` file; if multiple are present the import will fail.
 

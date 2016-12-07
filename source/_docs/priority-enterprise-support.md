@@ -1,8 +1,8 @@
 ---
 title: Using Priority Enterprise Support
 description: Details on using the Pantheon Enterprise Support Feature on your Drupal and WordPress sites.
-tags: [platform, considerations]
-categories: [platform, considerations]
+tags: [platform]
+categories: [platform]
 ---
 
 For organizations that want the highest level of support for their whole team, Priority Enterprise Support provides the assurance of SLA-backed 24/7/365 emergency support for downtime and business critical issues, expedited responses to standard support tickets, and expert onboarding and training.

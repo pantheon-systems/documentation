@@ -6,8 +6,8 @@ categories: [golive, domains]
 ---
 It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
+<h3 class="info">Warning</h3>
+<p>When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.</p>
 </div>
 
 
@@ -16,8 +16,8 @@ When using multiple snippets, be sure to step through the logic. This is particu
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.  
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Drupal 7 sites on Pantheon do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information, see <a href="/docs/settings-php">Configuring settings.php</a>.</div>
+<h3 class="info">Note</h3>
+<p>Drupal 7 sites on Pantheon do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information, see <a href="/docs/settings-php">Configuring settings.php</a>.</p></div>
 
 
 Some advantages of redirecting via PHP instead of `.htaccess` include:
@@ -27,8 +27,8 @@ Some advantages of redirecting via PHP instead of `.htaccess` include:
 - Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, Varnish will cache it as well.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</div>
+<h3 class="info">Note</h3>
+<p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</p></div>
 
 
 ## Redirect to a Common Domain
@@ -58,8 +58,8 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 If you prefer to use the bare domain, use the following code block and run your DNS settings through a service that supports CNAME flattening. For details, see <a href="/docs/domains/#step-3-configure-your-dns" data-proofer-ignore>Domains and DNS</a>.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-If you are running the site on a Pro plan or above with an SSL certificate, use the snippet below without configuring a CNAME flattening service. </div>
+<h3 class="info">Note</h3>
+<p>If you are running the site on a Pro plan or above with an SSL certificate, use the snippet below without configuring a CNAME flattening service. </p></div>
 
 To direct all traffic to the bare domain using CloudFlare:
 

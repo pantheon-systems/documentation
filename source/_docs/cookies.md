@@ -22,9 +22,9 @@ Respond to a request with cached content depending on the presence and value of 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a <code>Set-Cookie:</code> header.
-</div>
+<h3 class="info">Note</h3>
+<p>If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a <code>Set-Cookie:</code> header.
+</p></div>
 
 If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.
 

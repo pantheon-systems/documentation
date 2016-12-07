@@ -16,8 +16,8 @@ Every site on Pantheon is given multiple environments (Dev, Test, and Live), eac
 DNS configurations for paid sites that use the `gotpantheon.com` or `pantheon.io` legacy platform domain will continue to work, as requests will be permanently redirected to `pantheonsite.io`.  However, we recommend switching the CNAME value from `gotpantheon.com` or `pantheon.io` to `pantheonsite.io` within the domain's DNS provider to prevent unnecessary redirects and take advantage of uptime and reliability improvements.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Sandbox sites that are converged will lose their legacy <code> pantheon.io </code> domain. We suggest you update your DNS configuration to <code> pantheonsite.io </code> immediately.
+<h3 class="info">Note</h3>
+<p>Sandbox sites that are converged will lose their legacy <code> pantheon.io </code> domain. We suggest you update your DNS configuration to <code> pantheonsite.io </code> immediately.</p>
 </div>
 
 ## Platform Domains as CDN Origin

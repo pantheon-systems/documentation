@@ -70,8 +70,8 @@ From within the Site Dashboard:
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
+<h3 class="info">Note</h3>
+<p>Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</p></div>
 
 ### Via Terminus
 Create and export the database by running the following Terminus commands:

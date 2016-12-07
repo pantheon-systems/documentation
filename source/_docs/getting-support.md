@@ -1,7 +1,7 @@
 ---
-title: Obtain Support
+title: Get Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
-tags: [getstarted, platform, considerations]
+tags: [getstarted, platform]
 categories: [getstarted]
 ---
 

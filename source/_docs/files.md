@@ -1,8 +1,8 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-tags: [platform, considerations]
-categories: [platform, considerations]
+tags: [platform]
+categories: [platform]
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
 

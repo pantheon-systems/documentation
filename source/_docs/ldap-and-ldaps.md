@@ -9,16 +9,16 @@ categories: [automate]
 ## LDAP as a Consumer  
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
-</div>
+<h3 class="info">Note</h3>
+<p>We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
+</p></div>
 LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported. For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.  
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</div>
+<h3 class="info">Note</h3>
+<p>Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</p></div>
 
 ### Drupal
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.

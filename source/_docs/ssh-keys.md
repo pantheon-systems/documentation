@@ -9,7 +9,7 @@ To take full advantage of Pantheon, you should load your public SSH key into you
 Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3 class="info">Note</h3>
 <p>
 Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> tips at the end of the document.
 </p>

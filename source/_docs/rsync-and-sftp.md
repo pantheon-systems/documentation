@@ -5,8 +5,8 @@ tags: [sftp]
 categories: [develop, sftp]
 ---
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the Dashboard periodically or when you are unable to connect.</div>
+<h3 class="info">Warning</h3>
+<p>Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this with the Dashboard periodically or when you are unable to connect.</p></div>
 
 If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use a SFTP client or rsync to transfer.
 
@@ -15,8 +15,8 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 There are two mechanisms for transferring files: SFTP and rsync.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</div>
+<h3 class="info">Note</h3>
+<p>You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</p></div>
 
 ## SFTP
 
@@ -66,8 +66,8 @@ rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.
 # (-a, -p, -o, -g, -D, etc are not).
 ```
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</div>
+<h3 class="info">Note</h3>
+<p>Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</p></div>
 
 ## Examples
 
@@ -115,8 +115,8 @@ $: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserv
 If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</div>
+<h3 class="info">Warning</h3>
+<p>Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</p></div>
 
 ```nohighlight
 $: export ENV=test

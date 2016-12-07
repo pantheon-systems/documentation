@@ -43,8 +43,8 @@ If your database and code compressed are less than 256MB you can exclude the fil
 8. Switch back to the Site Dashboard for your new Pantheon site and go to **Database / Files** > **Import**.
 <ol start="9"><li>Paste the URL to your file archive and click <b>Import</b>.
  <div class="alert alert-info">
- <h4>Note</h4>
- URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.
+ <h3 class="info">Note</h3>
+ <p>URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.</p>
  </div>
 </li></ol>
 ## See Also

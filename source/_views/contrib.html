@@ -35,7 +35,7 @@
     <meta name="google-site-verification" content="n49gHyRyl90KIyeI1VgmjAMLIEchW4TCX8NsY8gmTI8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block title %}{{ site.title }}{% endblock %}</title>
+    <title>{% block title %}{{ page.contributor }} | {{ site.title }}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,7 +96,6 @@
     <!-- container -->
     <div class="container content mb-70">
         <div class="row">
-          <h1 style="margin-bottom:30px;" class="pio-docs-title">{{page.title}}</h1>
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>
 

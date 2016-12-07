@@ -9,8 +9,8 @@ To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will recieve [upstream updates](https://pantheon.io/docs/upstream-updates/) once the upgrade is complete.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.</div>
+<h3 class="info">Warning</h3>
+<p>If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.</p></div>
 
 ## Upgrade from Drupal 6 to Drupal 7
 

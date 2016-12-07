@@ -22,9 +22,3 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
-    videos:
-        type: meta
-        taxonomies:
-            - categories
-            - tags
-            - contributors

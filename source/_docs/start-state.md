@@ -7,8 +7,8 @@ categories: [getstarted]
 The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/running-custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-It is not possible to change the upstream of an existing site. Instead, you must create a new site with the desired upstream.</div>
+<h3 class="info">Note</h3>
+<p>It is not possible to change the upstream of an existing site. Instead, you must create a new site with the desired upstream.</p></div>
 
 ## Start with Core
 Starting with core gives you a blank site with the code pulled from the [Pantheon repository on GitHub](https://github.com/pantheon-systems). It's up to you to build from there.
@@ -27,9 +27,9 @@ We include a growing number of "Drupal products" as available start-states on Pa
 Drupal distributions offer a much richer out of the box experience, but are more complex under the hood. You still have access to 100% of the code with a Drupal product, but the increased complexity means it can be more challenging to customize and extend.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Public distributions are not maintained by Pantheon. If the upstream is out of date, contact the maintainer through <a href="https://www.drupal.org">Drupal.org</a> or the distribution's GitHub issue queue.
-</div>
+<h3 class="info">Note</h3>
+<p>Public distributions are not maintained by Pantheon. If the upstream is out of date, contact the maintainer through <a href="https://www.drupal.org">Drupal.org</a> or the distribution's GitHub issue queue.
+</p></div>
 
 
 - [CiviCRM Starter Kit](https://github.com/kreynen/civicrm-starterkit-drops-7) <a rel="popover" data-toggle="tooltip" data-proofer-ignore data-html="true" data-content="Install Requires SFTP Mode"><em class="fa fa-info-circle"></em></a>

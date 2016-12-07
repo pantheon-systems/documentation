@@ -34,9 +34,9 @@ www 10800 IN CNAME webredir.vip.gandi.net.
 www 300 IN CNAME live-example.pantheonsite.io.
 ```
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-Be sure to include the trailing "."</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>Be sure to include the trailing "."</p></div>
 
 ## Add Your Domain to Pantheon
 

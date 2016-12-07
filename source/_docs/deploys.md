@@ -25,8 +25,8 @@ From [Terminus](/docs/terminus/), run the following command to deploy code from 
 terminus site deploy [--site=<site>] [--env=<test>] [--from=<dev>] [--cc] [--updatedb] [--note=<note>]
 ```
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h3 class="info">Note</h3>
+<p>Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></p></div>
 
 
 Select the environment you wish to deploy from and summarize the deployment:

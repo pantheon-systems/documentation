@@ -30,12 +30,12 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 ## Add Custom Hostnames to Dev, Test, and Live
 
 <div class="alert alert-info" role="alert">
-<h4>Subdomains Note</h4>
+<h3 class="info">Subdomains Note</h3>
 <p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
 <p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
-<h4>Subdirectory Note</h4>
-Custom primary hostnames are not necessary for plain subdirectory-configured networks.</div>
+<h3 class="info">Subdirectory Note</h3>
+<p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p><div>
 
 If you will run a subdomain-style site network with the primary site that will exist using the `www.` subdomain (recommended), you must add custom hostnames with the `www.` subdomain to all environments. Likewise, if you will run the site network with the primary site at the bare domain, `example-network.com`, Dev and Test environment primary hostnames must not have the `www.` subdomain. For the site, `www.example-network.com`, use the following Terminus commands to add the hostnames:
 ### Add www. Hostnames
@@ -83,7 +83,7 @@ For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` t
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php?footer=minimal"></script>
 
-For subdirectory based site networks using the default Pantheon domains, 
+For subdirectory based site networks using the default Pantheon domains,
 ```php
 if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
   if( $_ENV['PANTHEON_ENVIRONMENT'] == 'live' ) {

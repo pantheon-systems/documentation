@@ -8,8 +8,8 @@ The Pantheon platform provides each site environment with a dedicated MySQL cont
 
 Using the tools in the Database / Files tab, you can overwrite the databases on your site's Dev or Test environment with the database on your Live environment, allowing you to pull content from Live in to other environments.
 ![Workflow Tool](/source/docs/assets/images/dashboard/interface-workflow-tool.png)
-<div class="alert alert-danger"><h4>Warning</h4>
-Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See <a href="/docs/pantheon-workflow/">Using the Pantheon Workflow</a>. </div>
+<div class="alert alert-danger"><h3 class="info">Warning</h3>
+<p>Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See <a href="/docs/pantheon-workflow/">Using the Pantheon Workflow</a>. </p></div>
 
 ## MySQL Clients
 You can use any number of MySQL clients such as [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/), [Sequel Pro](http://www.sequelpro.com/download), [Navicat](http://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others to  administer your site's database

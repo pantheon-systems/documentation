@@ -7,8 +7,8 @@ categories: [troubleshoot]
 For Experts only. You should not need to attempt this if you use [Multidev](/docs/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.
+<h3 class="info">Warning</h3>
+<p>We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.</p>
 </div>
 
 
@@ -74,14 +74,14 @@ Make your hotfixes and commit them locally, then tag and push them to test by cr
     git push origin pantheon_test_5
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Your tag numbers will vary. We are showing 5 because in the list of tags above the highest number was 4. Be sure you have the right number before pushing.</div>
+<h3 class="info">Note</h3><p>
+Your tag numbers will vary. We are showing 5 because in the list of tags above the highest number was 4. Be sure you have the right number before pushing.</p></div>
 
 ## Test and Deploy
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>Because we use caching on our Git logs, you may not see your hotfix commit listed in the test commit log. However, if you've pushed it up, you should be able to test your changes. Once you've verified that your code hotfix is there, you should pull the database back from Live to Test to be sure you're looking at a good test case before finally pulling it into the Live environment.</p></div>
 
 If your tests pass, you will need to repeat the process to deploy your changes to the Live environment. Currently, the deploys interface does not enable hotfix tags on test to be deployed directly to live.
 

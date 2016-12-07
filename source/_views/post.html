@@ -1,6 +1,6 @@
 {% extends "default" %}
 {% block content_wrapper %}
-  <div class="col-md-9" style="margin-top:-20px;">
+  <div class="col-md-9 mb-70" style="margin-top:-20px;">
     <h1>Pantheon Changelog<br />{% if page.changelogmain is not defined %}<small>{{page.title}}</small></h1>{% endif %}
     {{ page.blocks.content|raw }}
     {% if page.changelogmain is not defined %}

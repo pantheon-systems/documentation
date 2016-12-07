@@ -2,7 +2,7 @@
   <div class="changelog-wrapper mb-70">
     <h2 class="subtitle">Changelog</h2>
     {% for post in data.posts | slice(0,1) %}
-      {{ post.blocks.content| replace({"h2": "h3"})  |slice(0,500)| raw  }}
+      {{ post.blocks.content| replace({"h2": "h3"})  |slice(0,556)| raw  }}
       <br><br>
       <a href="/docs/changelog" class="cta">More</a>
     {% endfor %}
@@ -11,7 +11,7 @@
 <div style="margin-top:70px;" class="col-md-4">
   <ul class="changelog-sidebar">
   {% for post in data.posts | slice(0,4) %}
-    <li style="list-style:none;"><a href="{{post.url}}">{{ post.title }}</a</li>
+    <li style="list-style:none;"><a href="{{post.url}}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>

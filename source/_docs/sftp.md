@@ -9,7 +9,7 @@ In some cases, working via Git is not the best option. You may not like local de
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to [use your website framework's built-in update systems](/docs/more-sftp/) (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first.
 
 <div class="alert alert-danger" role="alert">
-  <h4>SFTP Mode Considerations</h4>
+  <h3 class="info">SFTP Mode Considerations</h3>
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
@@ -44,8 +44,8 @@ Your connection data is as follows:
 **port:** `2222`
  
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</div>
+<h3 class="info">Note</h3>
+<p>When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</p></div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
@@ -69,8 +69,8 @@ Once your message is ready, click **Commit**.
 
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
+<h3 class="info">Note</h3>
+<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p></div>
 
 ## SFTP Clients
 

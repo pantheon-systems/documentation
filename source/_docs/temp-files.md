@@ -1,8 +1,8 @@
 ---
 title: Temporary File Management with Multiple Application Containers
 description: Learn how to work with temporary files in distributed environments.
-tags: [platform, considerations, troubleshoot]
-categories: [platform, considerations]
+tags: [platform, troubleshoot]
+categories: [platform]
 ---
 Live sites on Business and Elite plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `/tmp` directory on one instance is not able to access the `/tmp` contents on another application server.
 
@@ -28,8 +28,8 @@ Replace `'some_tmp_settings'` with the applicable plugin or theme option used to
 update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
 ```
 ## Using Valhalla, Pantheon's Networked Filesystem
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-While this technique can work, it comes with a strong caution. Using the filesystem for <code>/tmp</code> requests is not a fail-safe alternative.</div>
+<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<p>While this technique can work, it comes with a strong caution. Using the filesystem for <code>/tmp</code> requests is not a fail-safe alternative.</p></div>
 
 ### WordPress
 Create a `tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:  

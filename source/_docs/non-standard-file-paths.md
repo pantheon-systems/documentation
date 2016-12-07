@@ -1,8 +1,8 @@
 ---
 title: Non-Standard Files Locations
 description: Learn how to address non-standard file locations from within the Pantheon filesystem.
-tags: [platform, considerations]
-categories: [platform, considerations]
+tags: [platform]
+categories: [platform]
 ---
 Pantheon provides one location for files that are part of your sites content, those that are managed through Drupal upload forms, e.g. user profile pictures: `/sites/default/files`. For Drupal sites, this is the _only_ location you can use for files that are uploaded as part of your application. For WordPress sites, `/wp-content/uploads` is the only acceptable location for files. All other locations will be in your codebase.
 
@@ -28,5 +28,5 @@ Your legacy file paths should now work, and your files are now stored in our clo
 As long as the path you've chosen for your symlink does not conflict with a future core update to your application, this link will persist indefinitely.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Adding a symlink for a legacy directory path will not work with private files. If you have a private files use case, migrate the file paths and drop references to the legacy location.</div>
+<h3 class="info">Note</h3>
+<p>Adding a symlink for a legacy directory path will not work with private files. If you have a private files use case, migrate the file paths and drop references to the legacy location.</p></div>

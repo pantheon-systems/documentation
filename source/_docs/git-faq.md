@@ -78,8 +78,8 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git checkout <commit ID> -- <file>
  ```
   <div class="alert alert-info" role="alert">
-  <h4>Note</h4>
-  When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
+  <h3 class="info">Note</h3>
+  <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
 

@@ -42,9 +42,9 @@ If you are using a common CMS framework, the code you need to load this configur
 
 ## Drupal 7 and Drupal 8
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/settings-php">configuring settings.php</a> for details.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/settings-php">configuring settings.php</a> for details.</p></div>
 
 Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in settings.php.
 
@@ -83,9 +83,9 @@ Place [Domain Access setup routine](http://drupal.org/node/1096962) at the **en
     }
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Adding this snippet may cause the Status tab to show that Fast 404 pages are not enabled, when if configured properly, they actually are.
-</div>
+<h3 class="info">Note</h3>
+<p>Adding this snippet may cause the Status tab to show that Fast 404 pages are not enabled, when if configured properly, they actually are.
+</p></div>
 
 ## WordPress
 
@@ -100,8 +100,8 @@ When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/docs/server_name-and-server_port/).   
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The <code>$_SERVER</code> variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of <code>phpinfo();</code> displayed on a site, don't leave this open to public viewing. </div>
+<h3 class="info">Note</h3>
+<p>The <code>$_SERVER</code> variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of <code>phpinfo();</code> displayed on a site, don't leave this open to public viewing. </p></div>
 
 
 This is a partial example from a WordPress site homepage:

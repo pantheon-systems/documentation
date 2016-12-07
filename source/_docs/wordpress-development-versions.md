@@ -7,8 +7,8 @@ categories: [develop]
 Pantheon provides [one-click updates](/docs/upstream-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <div class="alert alert-danger">
-<h4>Warning</h4>
-Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a <a href="/docs/multidev/">Multidev</a> environment or within an isolated local environment on a branch other than master.
+<h3 class="info">Warning</h3>
+<p>Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a <a href="/docs/multidev/">Multidev</a> environment or within an isolated local environment on a branch other than master.</p>
 </div>
 
 ## Update Core within WordPress Dashboard

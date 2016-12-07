@@ -29,8 +29,8 @@ terminus site clear-cache --env=test
 ```
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends. </div>
+<h3 class="info">Note</h3>
+<p>Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends. </p></div>
 
 
 ## Deploy Code to Test

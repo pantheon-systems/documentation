@@ -90,8 +90,8 @@ You now have three individual files that make one complete archive of your WordP
 You can upload each of your archive files separately, or package the archives within a single file. The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
 
 
-<div class="alert alert-warning" role="alert">
-<strong>Note</strong>: Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.  </div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3><p>Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</p></div>
 
 Only provide one `.sql` file; if multiple are present the import will fail.
 

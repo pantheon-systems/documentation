@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
 
   config.vm.provision :shell, inline: <<SCRIPT
+  sed -i 's/^mesg n$/tty -s \&\& mesg n/g' /root/.profile
   set -ex
   phantomjs --webdriver=8643 &> /dev/null &
   su vagrant -c 'cd #{path} && composer install && bundle && npm install;

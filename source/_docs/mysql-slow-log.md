@@ -59,8 +59,8 @@ $
 ```
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</div>
+<h3 class="info">Note</h3>
+<p>The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</p></div>
 
 ## Analyze The Mysql Slow Log
 

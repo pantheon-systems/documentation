@@ -16,8 +16,8 @@ Review the `Time` field to identify the longest running query and run the follow
 kill <thread_id>;
 ```
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;thread_id&gt;</code> with the ID of the query you want to terminate.
+<h3 class="info">Note</h3>
+<p>Replace <code>&lt;thread_id&gt;</code> with the ID of the query you want to terminate.</p>
 </div>
 
 ## Kill All Queries

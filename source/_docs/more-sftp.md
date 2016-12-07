@@ -22,8 +22,8 @@ And for themes:<br />
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
+<h3 class="info">Warning</h3>
+<p>You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
 
 ## Install Modules and Themes with Update Manager
 
@@ -36,8 +36,8 @@ Paste the URL into Drupal's update manager. You can also upload a tarball or zip
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
-<h4>Note</h4>
-You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
+<h3 class="info">Note</h3>
+<p>You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
 
 ## Install Code with Terminus: the Pantheon CLI
 

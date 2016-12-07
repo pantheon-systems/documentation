@@ -1,7 +1,7 @@
 ---
 title: Multidev
 description: Detailed information on using Pantheon's Multidev environment for your Drupal or WordPress site.
-tags: [platform, develop, manage, git, considerations]
+tags: [platform, develop, manage, git]
 categories: [manage]
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
@@ -50,8 +50,8 @@ It will take a few minutes to create the environment and clone the content from 
 You can create cloned Multidev environments from Dev, Test, or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
 <div class="alert alert-info">
-<h4>Note</h4>
-The cache tables can contain entries that exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.
+<h3 class="info">Note</h3>
+<p>The cache tables can contain entries that exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.</p>
 </div>
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
@@ -60,8 +60,8 @@ You can also create an environment for an existing Git branch. Content can be cl
 First, create a branch locally and push it to Pantheon. Then create a Multidev environment for the branch:
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Multidev branch names must be all lowercase and less than 11 characters. Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</div>
+<h3 class="info">Warning</h3>
+<p>Multidev branch names must be all lowercase and less than 11 characters. Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p></div>
 
 1. From your Site Dashboard, select **Multidev**.  
 2. Click **Git Branches**, and select **Create Environment** next to the branch name.

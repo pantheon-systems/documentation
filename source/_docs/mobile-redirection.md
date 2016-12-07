@@ -16,8 +16,8 @@ Be sure that you have:
 - Configured mobile-ready pages; some themes already provide mobile stylesheets.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on CloudFlare with the provided DNS records.</div>
+<h3 class="info">Note</h3>
+<p>The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on CloudFlare with the provided DNS records.</p></div>
 
 ### Considerations
 We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics#device-detection).

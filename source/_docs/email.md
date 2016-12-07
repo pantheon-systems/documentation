@@ -1,16 +1,16 @@
 ---
 title: Email on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
-tags: [platform, considerations]
-categories: [platform, considerations]
+tags: [platform]
+categories: [platform]
 ---
 Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
 
 ## Outgoing Email
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Pantheon recommends using a third-party email provider.  Failure to do so will result in significant delays and deleted messages.
+<h3 class="info">Note</h3>
+<p>Pantheon recommends using a third-party email provider.  Failure to do so will result in significant delays and deleted messages.</p>
 </div>
 
 For outgoing email, your site can send mail immediately using the local MTA (postfix) with few restrictions. However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
@@ -24,8 +24,8 @@ Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail,
 Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](http://drupal.org/project/smtp) module.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.
+<h3 class="info">Note</h3>
+<p>Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.</p>
 </div>
 
 ## Troubleshooting

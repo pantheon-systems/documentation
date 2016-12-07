@@ -98,14 +98,14 @@ Select the appropriate framework below for your web application, then execute th
   </div>
 </div>
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your Site Dashboard to find your upstream URL.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your Site Dashboard to find your upstream URL.</p></div>
 
 ## Troubleshooting
 
 ### One-Click Updates Do Not Appear After Rewriting Git History
-Squashing and rewritting history may cause one-click updates to break, meaning updates will no longer appear on your Site Dashboard once available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashbord, and prevents conflicts with our one-click updates. 
+Squashing and rewritting history may cause one-click updates to break, meaning updates will no longer appear on your Site Dashboard once available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashbord, and prevents conflicts with our one-click updates.
 
 ### Manually Resolving Conflicts
 

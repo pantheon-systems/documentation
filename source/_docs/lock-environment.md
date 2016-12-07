@@ -1,8 +1,8 @@
 ---
 title: Locking Your Site
 description: Learn how to keep your Drupal or WordPress site hidden from the public for development or updates.
-tags: [platform, considerations]
-categories: [platform, considerations]
+tags: [platform]
+categories: [platform]
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
 
@@ -27,7 +27,7 @@ To verify that everything is working correctly, visit the URL of the environment
  ![Example of locked site](/source/docs/assets/images/auth-required.png)
 
  <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3 class="info">Note</h3>
 <p>The <a href="https://www.drupal.org/docs/8/core/modules/basic_auth">HTTP Basic Authentication</a> core module (Drupal 8) and <a href="https://www.drupal.org/project/basic_auth">Basic HTTP Authentication</a> contrib module (Drupal 7) conflict with <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> when both are enabled. We recommend using <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> or the module to restrict access to Pantheon environment URLs, not both. </p>
 </div>
 
