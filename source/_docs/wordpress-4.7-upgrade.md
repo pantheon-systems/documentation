@@ -8,9 +8,9 @@ keywords: WordPress, performance, cache, caching, varnish, varnish caching
 WordPress 4.7 is a jam-packed release including content endpoints for REST-API and a number of other awesome changes. See WordPress.org [release notes](https://wordpress.org/news/2016/12/vaughan/) for a full list of changes in core. This release also includes separate changes made by Pantheon to improve site performance and scalability.
 
 ## What's Changed and Why
-Previous to 4.7, [Pantheon's WordPress upstream](https://github.com/pantheon-systems/wordpress) included a must use plugin (mu-plugin) that integrates with our edge caching layer. This mu-plugin had aggressive cache clearing behavior that would, for example, clear the home page whenever you added or updated a post, even posts in draft status. This is less than ideal, because it meant that the home page would be cleared from cache even if there was no new content to show.
+[Pantheon's WordPress upstream](https://github.com/pantheon-systems/wordpress) includes a must use plugin (mu-plugin) that integrates the platform's edge caching layer. Prior to the 4.7 update, this mu-plugin had aggressive cache clearing behavior that would, for example, clear the home page whenever you added or updated a post, even posts in draft status. This is less than ideal, because it meant that the home page would be cleared from cache even if there was no new content to show.
 
-We removed the aggressive cache clearing behavior from the mu-plugin in the 4.7 update and released the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin for improved cache clearing capabilities.
+We removed the aggressive cache clearing behavior from the mu-plugin within the 4.7 update and released the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin for improved cache clearing capabilities.
 
 We think it's important to move this functionality from our mu-plugin included by default in our upstream to the WordPress.org repository because it will allow us to more rapidly iterate on this functionality and be more transparent and accessible to the open source community.
 
