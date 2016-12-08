@@ -109,7 +109,7 @@
     },
     {
       "zerox" : "site backups load  --site=<site> --env=<env> --latest --username=<mysql_username> --password=<mysql_password> --database=<mysql_database>",
-      "onex" : "There is currently no equivalent command in 1.0. Since it relies on an outside application (MySQL-CLI) we plan to move the command to a plugin."
+      "onex" : "There is currently no equivalent command in 1.0. Since it relies on an external application (MySQL-CLI) we plan to move the command to a plugin."
     },
     {
       "zerox" : "site backups create  --site=<site> --env=<env> --element=<element> --keep-for=<days>",
@@ -203,7 +203,7 @@
     },
     {
       "zerox" : "site delete-branch --site=<site> --branch=<branch>",
-      "onex" : "There is currently no equivalent command in 1.0"
+      "onex" : "There is currently no equivalent command in 1.0. Instead, you can delete branches using a git client. "
     },
     {
       "zerox" : "site delete-env --site=<site> --env=<env> --remove-branch",
@@ -478,7 +478,7 @@
     },
     {
       "zerox" : "sites mass-update --report --upstream=<upstream> --no-updatedb --xoptions=<xoption> --tag=<tag> --org=<org>",
-      "onex" : "There is currently no equivalent command in 1.0"
+      "onex" : "There is currently no equivalent command in 1.0. We plan to move this functionality to a plugin."
     },
     {
       "zerox" : "ssh-keys add --file=<file>",
@@ -493,7 +493,7 @@
       "onex" : "ssh-key:list"
     },
     {
-      "zerox" : "upstreams list --categorhy=<category> --type=<type< --framework=<framework>",
+      "zerox" : "upstreams list --category=<category> --type=<type> --framework=<framework>",
       "onex" : "upstream:list"
     },
     {
