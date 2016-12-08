@@ -15,16 +15,20 @@ This Drupal 8 debugging setup takes into account that verbose debugging output i
 1. Enable twig debugging.
   * Rename the provided default.services.pantheon.preproduction.yml to services.pantheon.preproduction.yml 
  
-    Twig debugging will output HTML comments in the web page source showing every twig template used and the path to the template. (In order to prevent verbose debugging from accidentally displaying on Test or Live, this preproduction services file will only get loaded on Dev by the settings.pantheon.php file.)
+    The needed yaml settings are already included in this file. Twig debugging will output HTML comments in the web page source showing every twig template used and the path to the template. (In order to prevent verbose debugging from accidentally displaying on Test or Live, this preproduction services file will only get loaded on Dev by the settings.pantheon.php file.)
 
-2. Set logging to verbose, disable CSS/ JS aggregation.
+2. Set verbose logging. Disable CSS/JS aggregation.
   * Rename the provided example.settings.local.php to settings.local.php
- 
-3. Update cache settings in settings.local.php (optional, only change these cache settings if you understand the consequences):
+  
+   The needed settings are already included and uncommented.
+   
+3. Modify cache settings.
   * Uncomment: # $settings['cache']['bins']['render'] = 'cache.backend.null';
   * Uncomment: # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+
+    These additional settings are found in settings.local.php. This is optional, only change these cache settings if you understand the consequences. Review the comments found in the example.settings.local.php file.
  
-3. Get more debugging depth from the Devel module (optional).
+4. Devel module (optional).
   * Download and install Devel module:
  ```
  drush en devel -y
