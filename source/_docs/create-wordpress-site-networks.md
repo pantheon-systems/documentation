@@ -31,7 +31,7 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 
 <div class="alert alert-info" role="alert">
 <h4>Subdomains Note</h4>
-<p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment. Custom hostnames cannot be added to Multidev environments.</p>
+<p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
 <p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h4>Subdirectory Note</h4>
@@ -79,10 +79,23 @@ For subdomain-style networks, it is also useful to add the following wildcard DN
 
 ### Modify DOMAIN_CURRENT_SITE
 
-For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Use the hostnames added above for each environment's network's primary site. Here is an example:
+For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Use the hostnames added above for each environment's network's primary site. Here is an example for subdomain based site networks:
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php?footer=minimal"></script>
 
+For subdirectory based site networks, 
+```php
+if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  if( $_ENV['PANTHEON_ENVIRONMENT'] == 'live' ) {
+  // If you have your custom domain registered on Pantheon
+    define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
+   // otherwise use the pantheon defaults
+   // define( 'DOMAIN_CURRENT_SITE', $_ENV["PANTHEON_ENVIRONMENT"] . '-' . $_ENV["PANTHEON_SITE_NAME"] . '.pantheonsite.io' );
+  } else {
+    define( 'DOMAIN_CURRENT_SITE', $_ENV["PANTHEON_ENVIRONMENT"] . '-' . $_ENV["PANTHEON_SITE_NAME"] . '.pantheonsite.io' );
+  }
+}
+```
 ### Caveats for Creating a Network through WordPress Dashboard
 
 WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](http://codex.wordpress.org/Create_A_Network).
