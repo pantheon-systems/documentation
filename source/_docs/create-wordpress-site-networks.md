@@ -83,14 +83,14 @@ For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` t
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php?footer=minimal"></script>
 
-For subdirectory based site networks, 
+For subdirectory based site networks using the default Pantheon domains, 
 ```php
 if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
   if( $_ENV['PANTHEON_ENVIRONMENT'] == 'live' ) {
-  // If you have your custom domain registered on Pantheon
-    define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
+   // If you have your custom domain registered on Pantheon
+   // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
    // otherwise use the pantheon defaults
-   // define( 'DOMAIN_CURRENT_SITE', $_ENV["PANTHEON_ENVIRONMENT"] . '-' . $_ENV["PANTHEON_SITE_NAME"] . '.pantheonsite.io' );
+    define( 'DOMAIN_CURRENT_SITE', $_ENV["PANTHEON_ENVIRONMENT"] . '-' . $_ENV["PANTHEON_SITE_NAME"] . '.pantheonsite.io' );
   } else {
     define( 'DOMAIN_CURRENT_SITE', $_ENV["PANTHEON_ENVIRONMENT"] . '-' . $_ENV["PANTHEON_SITE_NAME"] . '.pantheonsite.io' );
   }
