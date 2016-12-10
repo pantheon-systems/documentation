@@ -29,7 +29,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
  git push origin master
  ```
 
-4. Clear caches on Dev within the Site Dashboard or via [Terminus](/docs/cli):
+4. Clear caches on Dev within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```
  terminus site clear-cache  --site=[site_name] --env=dev
