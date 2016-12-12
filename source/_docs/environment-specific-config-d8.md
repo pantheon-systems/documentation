@@ -5,10 +5,10 @@ tags: [troubleshoot]
 categories: [troubleshoot]
 contributors: [peter-pantheon, rachelwhitton]
 ---
-The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev and any Multidev). This approach prevents debugging output and potentially harmful performance settings from being deployed to production environments (Test and Live).
+The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev and any Multidev). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev and any Multidev
-Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything we need, so enabling Twig debug is simple:
+Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debug is simple:
 
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/docs/git/#clone-your-site-codebase) or via [Terminus](/docs/terminus):
 
@@ -126,14 +126,14 @@ terminus drush 'config-get views.settings --include-overidden'
   <tbody>
     <tr>
       <td>settings.php</td>
-      <td>services.yml <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments."><em class="fa fa-info-circle"></em></a><br>settings.pantheon.php<br>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment, but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
+      <td>services.yml <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments."><em class="fa fa-info-circle"></em></a><br>settings.pantheon.php<br>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
     </tr>
     <tr>
       <td>settings.pantheon.php</td>
       <td>services.pantheon.preproduction.yml<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments."><em class="fa fa-info-circle"></em></a></br>services.pantheon.production.yml<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments."><em class="fa fa-info-circle"></em></a><br>
     </tr>
     <tr>
-      <td>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment, but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
+      <td>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
       <td>development.services.yml <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment."><em class="fa fa-info-circle"></em></a></td>
     </tr>
   </tbody>
