@@ -60,7 +60,7 @@ For more information on Pantheon's service configuration files for Drupal, refer
 1. Use the `PANTHEON_ENVIRONMENT` constant and Drupal 8's override system within `settings.php` to enforce performance configurations based on the current Pantheon server environment:
 
   ```php
-  if (defined('PANTHEON_ENVIRONMENT')) {
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   	 switch($_ENV['PANTHEON_ENVIRONMENT']) {
   		case 'live':
   		case 'test':
@@ -113,8 +113,6 @@ terminus drush 'config-get views.settings --include-overidden'
 
 4. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
 
-
-Local environments can achieve the same configuration via [Drupal Console](https://drupalconsole.com/). The settings suggested on this page mirror settings applied by [`drupal site:mode dev` and `drupal site:mode prod`](https://hechoendrupal.gitbooks.io/drupal-console/content/en/commands/site-mode.html).
 
 ## Inclusions and Loading Order of Settings and Services Files
 
