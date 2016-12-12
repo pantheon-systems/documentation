@@ -13,7 +13,7 @@ Both Drupal core and many contributed modules have tasks that need to be perfor
 
 ## Pantheon Cron Execution
 
-For every site environment, Pantheon executes cron at half past each hour to allow Drupal to perform any scheduled tasks. To do that, Pantheon internally invokes `drush cron`.
+For every site environment, Pantheon executes cron at half past each hour to allow Drupal to perform any scheduled tasks. To do that, Pantheon internally invokes `drush pantheon_cron 3600`.
 
 This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
 
@@ -44,7 +44,7 @@ If cron has run recently, entries will appear in the log. The two entries in the
 
 ### How Can I Schedule Cron to Run More Often?
 
-While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush cron` once an hour, usually within 5 to 10 minutes of the top of the hour.
+While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush pantheon_cron 3600` once an hour, usually within 5 to 10 minutes of the top of the hour.
 
 If the site has not been accessed through the web by a visitor for at least two hours, the platform suspends the associated services until it's accessed again and cron will not run.
 
