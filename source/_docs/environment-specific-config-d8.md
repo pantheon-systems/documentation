@@ -8,7 +8,7 @@ contributors: [peter-pantheon, rachelwhitton]
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev and any Multidev). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev and any Multidev
-Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debug is simple:
+Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debugging is simple:
 
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/docs/git/#clone-your-site-codebase) or via [Terminus](/docs/terminus):
 
