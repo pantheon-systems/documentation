@@ -1,11 +1,10 @@
 ---
 title: Pantheon.yml
-description: Understand and solve common problems.
-videoid: j38ihh83m5
+description: Configure our platform for your needs.
+videoid: jlklwnyt81
 categories: [platform]
-bullet1: Keffiyeh biodiesel post-ironic offal
-bullet2: Leggings meh hella biodiesel four loko.
-bullet3: Poke tumblr yr, polaroid distillery health goth
+bullet1: Introduction
+bullet2: PHP Example
 layout: topic
 use: [docs_tags, guides_tags, videos_tags]
 pantheonyml: true

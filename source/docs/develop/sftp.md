@@ -1,11 +1,10 @@
 ---
 title: On-Server Development
-description: Understand and solve common problems.
-videoid: j38ihh83m5
+description: Develop on Pantheon directly via SFTP.
+videoid: 6r4y1zf97c
 categories: [develop]
-bullet1: Keffiyeh biodiesel post-ironic offal
-bullet2: Leggings meh hella biodiesel four loko.
-bullet3: Poke tumblr yr, polaroid distillery health goth
+bullet1: SFTP Configuration
+bullet2: Workflow
 layout: topic
 use: [docs_tags, guides_tags, videos_tags]
 sftp: true
