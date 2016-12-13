@@ -87,12 +87,12 @@ $helpfulButton.each(function(){
     localStorage.setItem('wasThisHelpful ' + currentPath,'no');
   })
 
-  if ( localStorage.getItem('wasThisHelpful ' + currentPath).length > 0 && localStorage.getItem('wasThisHelpful ' + currentPath) == 'yes') {
+  if ( localStorage.getItem('wasThisHelpful ' + currentPath) != null && localStorage.getItem('wasThisHelpful ' + currentPath) == 'yes') {
     $helpfulButton.removeClass('already-rated');
     $helpfulButtonYes.addClass('already-rated');
   }
 
-  if ( localStorage.getItem('wasThisHelpful ' + currentPath).length > 0 && localStorage.getItem('wasThisHelpful ' + currentPath) == 'no') {
+  if ( localStorage.getItem('wasThisHelpful ' + currentPath) != null && localStorage.getItem('wasThisHelpful ' + currentPath) == 'no') {
     $helpfulButton.removeClass('already-rated');
     $helpfulButtonNo.addClass('already-rated');
   }
