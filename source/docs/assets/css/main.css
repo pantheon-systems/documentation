@@ -136,6 +136,28 @@ body.row.main {
   color: #0093c9;
   border: #EEF2F3 solid 2px;
 }
+.plan-comparison {
+  border-top: none;
+}
+.plan-comparison .subscription {
+  border-color: #44525E;
+  background-color: #44525E;
+  color: #fff;
+
+}
+.plan-comparison .elite {
+  border-color: #EFD018;
+  background-color: #EFD018;
+  color: #222;
+}
+td.features {
+  background-color: #59879f;
+color: white;
+
+}
+.popover {
+  color: #222 !important;
+}
 .pio-category-container {
   text-align:center;
   margin-top:20px;

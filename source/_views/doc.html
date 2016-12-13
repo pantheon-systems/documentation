@@ -2,6 +2,9 @@
 {% block content_wrapper %}
 <div class="col-md-12">
         <div id="doc" class="article col-md-9">
+          {% if page.plancomparison is defined %}
+          <a style="text-decoration:none;" href="https://pantheon.io/pricing"><span style="font-size:20px;">&#171;</span> Back to Pricing</a>
+        {% endif %}
           <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
                 {% set fullpath = page.url|replace({'/docs': '/_docs', '/guides': ''}) %}
                 <div class="dropdown">
