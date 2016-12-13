@@ -11,7 +11,9 @@
         <p class="hero-video__subtitle">{{ page.description }}</p>
         <ul class="hero-video__bullets">
           <li>{{ page.bullet1 }} </li>
+          {% if page.bullet2 is defined %}
           <li>{{ page.bullet2 }} </li>
+          {% endif %}
           {% if page.bullet3 is defined %}
           <li>{{ page.bullet3 }} </li>
           {% endif %}
@@ -31,7 +33,7 @@
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-migrate.svg)"></div>
           <div class="topic-info__text">
-            <h3 class="topic-info__title">Migrating to Pantheon</h3>
+            <h3 class="topic-info__title">Migrate to Pantheon</h3>
             <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
           </div>
         </div>
