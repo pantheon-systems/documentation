@@ -26,7 +26,7 @@
     </div>
   </div>
   {% if page.getstarted %}
-  <div class="col-md-6 mb-70">
+  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/get-started/migrate">
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-migrate.svg)"></div>
@@ -54,6 +54,8 @@
     </ul>
   </div>
   {% elseif page.develop %}
+</div><!--close row-->
+<div class="row">
   <div class="col-md-6">
     <a class="topic-info-link" href="/docs/automate/cli">
       <div class="topic-info">
@@ -76,6 +78,8 @@
       </div>
     </a>
   </div>
+</div>
+<div class="row">
   <div class="col-md-6 mb-70">
     <a class="topic-info-link" href="/docs/develop/sftp">
       <div class="topic-info">
@@ -87,6 +91,8 @@
       </div>
     </a>
   </div>
+</div>
+<div class="row">
   <div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
@@ -104,7 +110,7 @@
   </ul>
 </div>
   {% elseif page.golive %}
-  <div class="col-md-6 mb-70">
+  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/go-live/domains">
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-domains.svg)"></div>
@@ -132,7 +138,7 @@
   </ul>
 </div>
   {% elseif page.platform %}
-  <div class="col-md-6 mb-70">
+  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/platform/pantheon-yml">
       <div class="topic-info mb-70">
         <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-yml.svg)"></div>
@@ -161,13 +167,13 @@
 </div>
 
   {% elseif page.automate %}
-  <div class="col-md-6 mb-70">
+  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/automate/cli">
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-develop.svg)"></div>
           <div class="topic-info__text">
             <h3 class="topic-info__title">Command Line Tool</h3>
-            <p class="topic-info__description">Beard tote bag blog, bicycle rights iPhone williamsburg gentrify pabst.</p>
+            <p class="topic-info__description">Run WP-CLI and Drush commands, script repetitive tasks, and unlock advanced interactions on the Site Dashboard using our CLI, Terminus.</p>
           </div>
       </div>
     </a>
@@ -190,7 +196,7 @@
 </div>
 
   {% elseif page.performance %}
-  <div class="col-md-6 mb-70">
+  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/performance/cache">
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-caching.svg)"></div>
