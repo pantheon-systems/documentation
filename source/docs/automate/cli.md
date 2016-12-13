@@ -9,5 +9,6 @@ bullet3: Poke tumblr yr, polaroid distillery health goth
 layout: topic
 permalink: docs/automate/:basename/
 use: [docs_tags, guides_tags, videos_tags]
+draft: true
 cli: true
 ---

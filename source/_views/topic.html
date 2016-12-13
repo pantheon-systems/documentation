@@ -59,17 +59,6 @@
 </div><!--close row-->
 <div class="row">
   <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/automate/cli">
-      <div class="topic-info">
-        <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-commandline.svg)"></div>
-        <div class="topic-info__text">
-          <h3 class="topic-info__title">Command Line Tools</h3>
-          <p class="topic-info__description">Run WP-CLI and Drush commands, script repetitive tasks, and unlock advanced interactions on the Site Dashboard using our CLI, Terminus.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-6">
     <a class="topic-info-link" href="/docs/develop/git">
       <div class="topic-info">
         <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-git.svg)"></div>
@@ -80,8 +69,6 @@
       </div>
     </a>
   </div>
-</div>
-<div class="row">
   <div class="col-md-6 mb-70">
     <a class="topic-info-link" href="/docs/develop/sftp">
       <div class="topic-info">
@@ -169,7 +156,7 @@
 </div>
 
   {% elseif page.automate %}
-  <div class="col-md-6">
+  <!--div class="col-md-6">
     <a class="topic-info-link" href="/docs/automate/cli">
         <div class="topic-info mb-70">
           <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-develop.svg)"></div>
@@ -179,7 +166,7 @@
           </div>
       </div>
     </a>
-  </div>
+  </div-->
   <div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
@@ -361,7 +348,7 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.cli %}
+  <!--{% elseif page.cli %}
   <div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
@@ -377,6 +364,6 @@
     <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
     {% endfor %}
   </ul>
-</div>
+</div>-->
   {% endif %}
 {% endblock %}
