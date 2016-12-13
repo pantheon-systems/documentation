@@ -4466,7 +4466,7 @@ a:focus {
 .top-docs li {
   flex-basis: 33.3%;
   max-width:33.3%;
-  min-height: 55px;
+  /* min-height: 55px; */
   display: flex;
   margin-bottom: 20px;
   padding-right: 15px;
