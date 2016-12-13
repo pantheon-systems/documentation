@@ -106,7 +106,7 @@ terminus drush 'config-get system.logging --include-overidden'
 terminus drush 'config-get views.settings --include-overidden'
 </code></pre>
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3 class="info">Note</h3>
 <p>Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see <a href="https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system">Configuration override system</a>.</p>
 </div>
 </li></ol>
