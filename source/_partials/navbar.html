@@ -78,7 +78,7 @@ terminusCompareApp.config(function($interpolateProvider) {
 terminusCompareApp.controller('mainController', function($scope, $http) {
   $scope.searchCommand   = '';
   $scope.terminus = [];
-  $http.get("/docs/assets/terminus/compare.json").success(function(response){
+  $http.get("/_docs/terminus/commands/compare.json").success(function(response){
     $scope.terminus = response;
   });
   $scope.clearFilters = function(){
@@ -99,6 +99,40 @@ terminusCompareApp.filter('search', function() {
   return filtered;
 }
 });
+
+var terminusCommandsApp = angular.module('terminusCommandsApp', ['ngMaterial']);
+
+terminusCommandsApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+
+terminusCommandsApp.controller('mainController', function($scope, $http) {
+  $scope.searchCommand   = '';
+  $scope.terminus = [];
+  $http.get("/_docs/terminus/commands.json").success(function(response){
+    $scope.terminus = response;
+  });
+  $scope.clearFilters = function(){
+      $scope.searchCommand =  undefined;
+  };
+});
+
+//Sort usage array by relevance based on Regex matches from search query
+terminusCommandsApp.filter('search', function() {
+  return function (items, str) {
+    if(str == '') return items;
+    var filtered = [];
+    var rgx = new RegExp(str, 'gi');
+
+    angular.forEach(items, function(item) {
+      item.points = (JSON.stringify(item).match(rgx) || []).length;
+      filtered.push(item);
+    });
+  return filtered;
+}
+});
+
 </script>
 <div class="navbar navbar-fixed-top pio-docs-nav" role="navigation">
         <div class="navbar-header">

@@ -1,5 +1,5 @@
 ---
-title: Terminus Version Comparison
+title: Legacy Terminus Versions
 tags: [automate, develop]
 categories: [automate]
 layout: taxon

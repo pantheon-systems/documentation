@@ -1,6 +1,8 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<div class="col-md-12 mb-70" style="padding-right:50px;padding-left:0px;">
+</div><!--close main container-->
+</div><!--close row-->
+<div class="col-md-12 mb-70" style="margin-top:-50px;padding-right:50px;padding-left:0px;">
   {% include("terminus_navbar.html") %}
   {% if page.terminustoc %}
   <div class="col-xs-12 col-md-7 manual-doc">
@@ -8,7 +10,7 @@
   <div class="col-xs-12 col-md-10 manual-doc">
   {% endif %}
     <header>
-      <h1>{{ page.subtitle }}</h1>
+      <h1>{{ page.title[9:] }}</h1>
       {% if page.contributors %}
       {% set contributor_list = page.contributors %}
       <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
@@ -51,15 +53,17 @@
       {{ page.blocks.content|raw }}
   </div>
   {% if page.terminustoc %}
-  <div class="col-md-2">
+  <div class="col-md-3">
     <div style="" class="pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
         <div id="toc">
-            <h3>Contents</h3>
+            <h4>Contents</h4>
         </div>
     </div>
   </div>
   {% endif %}
 
 </div>
-
+</div>
+<div class="container content">
+  <div class="row">
 {% endblock %}
