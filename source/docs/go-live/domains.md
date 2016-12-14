@@ -1,11 +1,11 @@
 ---
-title: Pointing Domains to Pantheon
-description: Understand and solve common problems.
-videoid: j38ihh83m5
+title: Point Domains to Pantheon
+description: Add a domain and configure DNS on Pantheon.
+videoid: h840dbemsi
 categories: [golive]
-bullet1: Keffiyeh biodiesel post-ironic offal
-bullet2: Leggings meh hella biodiesel four loko.
-bullet3: Poke tumblr yr, polaroid distillery health goth
+bullet1: Add Domains
+bullet2: Configure Incoming Requests
+bullet3: Configure DNS Records
 layout: topic
 use: [docs_tags, guides_tags, videos_tags]
 domains: true
