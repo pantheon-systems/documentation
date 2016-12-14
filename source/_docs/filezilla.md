@@ -1,9 +1,8 @@
 ---
 title: FileZilla on Pantheon
 description: Information about using the FileZilla FTP client for your Pantheon Drupal or Wordpress site.
-categories: [developing]
-tags: [files, local]
-keywords: filezilla, pantheon, sftp
+tags: [sftp]
+categories: [develop, sftp]
 ---
 [FileZilla](https://FileZilla-project.org/) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
@@ -24,8 +23,8 @@ Open the FileZilla application and enter in the connection information. Be sure 
 Select to accept the server's host key for the current session so it is stored in cache. This allows you to connect to the server and manage your files for the current session.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Under the Advanced Tab, leave the Remote Directory blank.  </div>
+<h3 class="info">Note</h3>
+<p>Under the Advanced Tab, leave the Remote Directory blank.  </p></div>
 
 ## Authentication
 

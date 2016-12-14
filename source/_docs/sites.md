@@ -1,9 +1,8 @@
 ---
 title: The Site Dashboard
 description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
-categories: [managing]
-tags: [platform, getting-started]
-keywords: sites, dashboard, pantheon, get started, settings, new site
+tags: [getstarted, develop]
+categories: [getstarted]
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
 
@@ -25,8 +24,8 @@ Pantheon offers several add-ons to help you build dynamic sites. These include [
 ### Delete Site
 If you no longer need your site, you can remove it here.
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-This is a permanent change and once you delete it your site cannot be restored.</div>
+<h3 class="info">Warning</h3>
+<p>This is a permanent change and once you delete it your site cannot be restored.</p></div>
 
 ### About Site
 This tab shows general information about your site, such as the framework, upstream, date it was created, and your current plan.

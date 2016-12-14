@@ -1,9 +1,8 @@
 ---
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your Drupal site.
-categories: [drupal]
-tags: [code]
-keywords: drupal, cron, cron execution, run cron,
+tags: [develop]
+categories: [develop]
 ---
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
@@ -20,8 +19,8 @@ This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org
 Pantheon's system cron cannot be disabled and will run Drupal cron every hour, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>		
-In Drupal, setting the value to "Never" will be ignored; system cron will always run at least hourly.		
+<h3 class="info">Note</h3>		
+<p>In Drupal, setting the value to "Never" will be ignored; system cron will always run at least hourly.		</p>
 </div>
 
 ## Managing Cron

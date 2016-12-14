@@ -1,9 +1,8 @@
 ---
 title: Using MySQL Workbench to Access a Database
 description: Detailed information on using MySQL Workbench for creating, executing, and optimizing SQL queries.
-categories: [developing]
-tags: [database, local]
-keywords: mysql workbench, database, mysql connection
+tags: [troubleshoot, sftp]
+categories: [troubleshoot]
 ---
 [MySQL Workbench](http://dev.mysql.com/downloads/tools/workbench/) provides DBAs and developers an integrated tools environment for: database design & modeling; SQL development; database administration; and support for Windows, Mac OS X, and Linux.
 
@@ -25,8 +24,8 @@ Now that you have the credentials for the database handy, you can start MySQL Wo
 Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Ensure you have the correct database username and password for your environment.
+<h3 class="info">Note</h3>
+<p>Ensure you have the correct database username and password for your environment.</p>
 </div>
 ## Test the Database Connection
 

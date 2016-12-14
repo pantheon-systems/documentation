@@ -1,9 +1,8 @@
 ---
 title: Adding a Credit Card to a Site
 description: Learn how to add a credit card as a payment method for your Drupal or WordPress site.
-categories: [managing]
-tags: [platform]
-keywords: add payment method, add card, add credit card, access more features, access new relic, access workflow, add payment method, select a plan, how to update payment method, how to add a card
+tags: [golive]
+categories: [golive]
 ---
 ##Select a Plan and Add a Credit Card
 
@@ -13,9 +12,9 @@ keywords: add payment method, add card, add credit card, access more features, a
 Depending on the plan you choose, you'll get access to additional features like adding a custom domain name to your site, or for Pro accounts and higher, adding SSL and more. For more information on plans and features, see [Pricing](https://pantheon.io/pricing).
 4. Invite someone to pay for the site or enter the credit card information, and click **Update Billing**.
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-We do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>We do not recommend entering your client's credit card information on their behalf. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</p></div>
 
  ![Invite a business owner to pay](/source/docs/assets/images/dashboard/invite-business-owner.png)
 

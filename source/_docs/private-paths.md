@@ -1,9 +1,8 @@
 ---
 title: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
-categories: [developing]
-tags: [files, code]
-keywords: drupal, wordpress, private files, files, private keys, private
+tags: [platform]
+categories: [platform]
 ---
 The Pantheon platform recognizes two distinct private directories for storing non-web accessible data.
 
@@ -17,8 +16,8 @@ WordPress: `wp-content/uploads/private`
 Drupal and WordPress: `/private`   
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.
+<h3 class="info">Note</h3>
+<p>If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</p>
 </div>
 
 ## Private Path for Code
@@ -83,6 +82,6 @@ uc_credit_encryption_path: 'private'"
 ```
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
-</div>
+<h3 class="info">Note</h3>
+<p>We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
+</p></div>

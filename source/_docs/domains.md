@@ -1,8 +1,8 @@
 ---
 title: Domains and DNS
 description: Information on adding a domain to your Pantheon Drupal or WordPress site.
-categories: [developing]
-tags: [domains, featured]
+tags: [golive]
+categories: [golive]
 ---
 Routing traffic to sites on Pantheon requires modifying the DNS configuration at the domain's DNS hosting provider.
 
@@ -21,13 +21,13 @@ You must have a paid plan to add a domain to a site environment. For more inform
 You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</div>
+<h3 class="info">Note</h3><p>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</p></div>
 
 ### Develop Using a Domain Without Changing DNS
 Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</div>
+<h3 class="info">Warning</h3><p>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</p></div>
 
 1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 
@@ -51,7 +51,7 @@ From the target environment's Domains/HTTPS tool, click **Show DNS Recommendatio
 ![Show recommended DNS](/source/docs/assets/images/dashboard/show-dns-recommendations.png)
 
 <div class="alert alert-danger" role="alert">
-<h4>Important</h4><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</div>
+<h3 class="info">Warning</h3><p><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</p></div>
 
 ### Serving Sites from WWW
 Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider.

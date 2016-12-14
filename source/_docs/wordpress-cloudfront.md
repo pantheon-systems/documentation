@@ -1,9 +1,8 @@
 ---
 title: CloudFront CDN Setup for WordPress
 description: Learn to set up and configure CloudFront CDN on your Pantheon WordPress site.
-categories: [wordpress]
-tags: [code]
-keywords: wordpress, cloudfront, cloudfront cdn, cdn
+tags: [automate]
+categories: [automate]
 ---
 Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy is pulled from the the origin site directly.
 
@@ -16,8 +15,8 @@ Be sure that you:
 - Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</div>
+<h3 class="info">Note</h3>
+<p>When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</p></div>
 
 ## Create an Identity and Access Management (IAM) User
 [Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Before you can use S3, you need to create an IAM user.
@@ -28,8 +27,8 @@ When creating an AWS account, you will have to enter credit card information. Th
 4. View the new user security credentials by clicking **Show User Security Credentials**.
 
  <div class="alert alert-info" role="alert">
- <h4>Note</h4>
- You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time.</div>
+ <h3 class="info">Note</h3>
+ <p>You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time.</p><div>
 
 5. Click **Download Credentials**.
 
@@ -85,8 +84,8 @@ From within your WordPress Dashboard:
 1. Click **AWS** and select **Settings**.
 
   <div class="alert alert-info" role="alert">
-  <h4>Note</h4>
-  You already have your AWS user credentials, as they were generated in the steps above. For security reasons, you should not provide user credentials within the Settings page of this plugin as it will not be stored securely in the site's database.</div>
+  <h3 class="info">Note</h3>
+  <p>You already have your AWS user credentials, as they were generated in the steps above. For security reasons, you should not provide user credentials within the Settings page of this plugin as it will not be stored securely in the site's database.</p></div>
 
 2. Add the provided code to the `wp-config.php` file located at the web root of your WordPress site using [SFTP](/docs/sftp/) (replace the stars with your user credentials):
 

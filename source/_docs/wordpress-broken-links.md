@@ -1,9 +1,8 @@
 ---
 title: Fix Broken Links in WordPress
 description: Learn how to update broken links on your Pantheon WordPress site so that the URL references the correct file path and domain name.
-categories: [wordpress]
-tags: [code]
-keywords: wordpress, broken links
+tags: [troubleshoot]
+categories: [troubleshoot]
 ---
 ## Update Links Referencing IP:Port
 Whether by accident or by virtue of "web rot", links in your content may eventually stop working. This happens when links are placed into your site's code that use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
@@ -15,8 +14,8 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 You can install the plugin from your [WordPress dashboard](/docs/more-sftp#manage-plugins-and-themes-with-wp-admin) by following these steps:
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.</div>
+<h3 class="info">Note</h3>
+<p>Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.</p></div>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".

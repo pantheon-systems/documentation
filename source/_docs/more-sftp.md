@@ -1,9 +1,8 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
 description: Understand alternative code management options when using SFTP Mode, such as WP-cli, Drupal Drush, and other command line tools.
-categories: [developing]
-tags: [code, local]
-keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, wp-cli, drush, terminus, command line tools, cli, comand line tool
+tags: [sftp]
+categories: [develop, sftp]
 ---
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.
 
@@ -23,8 +22,8 @@ And for themes:<br />
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
+<h3 class="info">Warning</h3>
+<p>You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
 
 ## Install Modules and Themes with Update Manager
 
@@ -37,8 +36,8 @@ Paste the URL into Drupal's update manager. You can also upload a tarball or zip
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
 
 <div class="alert alert-danger" role="alert">
-<h4>Note</h4>
-You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</div>
+<h3 class="info">Note</h3>
+<p>You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
 
 ## Install Code with Terminus: the Pantheon CLI
 

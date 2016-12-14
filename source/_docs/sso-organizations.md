@@ -1,8 +1,8 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-categories: [managing]
-tags: [platform, organizations]
+tags: [manage]
+categories: [manage]
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/).
 
@@ -31,10 +31,11 @@ You will need to enter the following:
 2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-<li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.
-<li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).
-<li> The max length for a connection name is 35 characters, including the appended 'SSO'.</div>
+<h3 class="info">Note</h3>
+<ul>
+<li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.</li>
+<li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).</li>
+<li> The max length for a connection name is 35 characters, including the appended 'SSO'.</li></ul></div>
 
 3. **Add an Attribute Statement** to map `mail` to `email`.
 

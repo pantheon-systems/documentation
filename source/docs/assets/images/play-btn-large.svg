@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="105px" height="105px" viewBox="0 0 105 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>play-btn-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.401890851 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Docs-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-Inventroy" transform="translate(-502.000000, -1660.000000)">
+            <g id="Video-Box-Styles" transform="translate(167.000000, 1584.000000)"></g>
+            <g id="video-Intro" transform="translate(163.000000, 1660.000000)">
+                <g id="lare-play-btn" transform="translate(352.000000, 13.000000)">
+                    <g id="Play-btn" filter="url(#filter-1)">
+                        <g>
+                            <ellipse id="Oval-4" stroke="#FFFFFF" stroke-width="4" fill-opacity="0.616564764" fill="#313945" cx="39.272803" cy="39.3080748" rx="39.272803" ry="39.3080748"></ellipse>
+                            <polygon id="Triangle-1" fill="#FFFFFF" points="29.0909652 57.2636152 29.0909652 21.3525345 58.1819304 39.3080748"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

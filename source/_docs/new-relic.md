@@ -1,9 +1,8 @@
 ---
 title: New Relic APM Pro
 description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site.
-categories: [developing]
-tags: [debug]
-keywords: new relic, new relic pro, performance analysis, enable new relic, what is new relic, add new relic, mysql performance, performance, authenticated users, how to log authenticated users, how to use new relic, using new relic, sql performance
+tags: [performance, trobleshoot]
+categories: [performance]
 ---
 [New Relic APM Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
@@ -19,7 +18,7 @@ New Relic monitoring is automatically enabled for all application servers added 
 - Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
 - Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
 - If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
-- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension: 
+- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension:
 
  - dashboard.pantheon.io
  - rpm.newrelic.com

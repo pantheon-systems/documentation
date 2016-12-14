@@ -1,9 +1,8 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your Drupal site.
-categories: [developing]
-tags: [code, debug]
-keywords: timeout, errors, timeout error, timeout errors, cron timeout, solr timeout, user-configurable timeouts
+tags: [troubleshoot]
+categories: [troubleshoot]
 ---
 Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code, or when attempting to run a long-running job that would be better suited for [Terminus](/docs/terminus/).
 

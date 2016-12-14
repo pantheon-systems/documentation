@@ -1,9 +1,8 @@
 ---
 title: The Pantheon Deploy Log
 description: Use the Deploy Log to manage Pantheon site updates, feature releases, and more.
-categories: [managing]
-tags: [platform]
-keywords: deploy, deploy log, how to deploy, deploying
+tags: [getstarted, git]
+categories: [getstarted]
 ---
 Whether you're working on a new feature or fixing up bugs, the Deploy Log helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
@@ -26,8 +25,8 @@ From [Terminus](/docs/terminus/), run the following command to deploy code from 
 terminus site deploy [--site=<site>] [--env=<test>] [--from=<dev>] [--cc] [--updatedb] [--note=<note>]
 ```
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></div>
+<h3 class="info">Note</h3>
+<p>Replace <code>&lt;site&gt;</code> with your site's machine name (in the environment URL). You can see a list of all your sites by running <code>terminus sites list</code></p></div>
 
 
 Select the environment you wish to deploy from and summarize the deployment:

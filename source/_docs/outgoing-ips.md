@@ -1,15 +1,14 @@
 ---
 title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
-categories: [developing]
-tags: [code]
-keywords: outgoing, outgoing requests, outgoing request, static ip, static ip outgoing, dynamic ip, dynamic outgoing ip, dynamic ip outgoing, outbound requests, dynamic outgoing ip addresses, payment gateway, gateway
+tags: [platform, troubleshoot]
+categories: [troubleshoot]
 ---
 Outgoing requests sent by Drupal and WordPress applications facilitate tasks between your site and external services, such as authentication and payment gateways.
 
 <div class="alert alert-info" role="alert">
-<strong>Note</strong>:
-Due to Pantheon's cloud-based infrastructure, these outbound requests are sent via dynamic IP addresses. There is no way to predict what IP address your code will be executed from.
+<h3 class="info">Note</h3>
+<p>Due to Pantheon's cloud-based infrastructure, these outbound requests are sent via dynamic IP addresses. There is no way to predict what IP address your code will be executed from.</p>
 </div>
 
 ## Pantheon Enterprise Gateway

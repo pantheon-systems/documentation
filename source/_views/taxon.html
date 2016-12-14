@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<html itemscope itemtype="http://schema.org/Article" class="no-js">
+<html itemscope itemtype="http://schema.org/Article">
 <head>
     <!-- Quickie redirection to https and pantheon.io -->
     <script type="text/javascript">
@@ -31,14 +31,15 @@
         "url" : "https://pantheon.io"
      }
      </script>
-
     <!--Meta Tags -->
-
+    <meta name="google-site-verification" content="n49gHyRyl90KIyeI1VgmjAMLIEchW4TCX8NsY8gmTI8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}{{ site.title }}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ page.title}}">
     <meta itemprop="description" content="{{ page.description }}">
@@ -49,19 +50,9 @@
     <meta name="twitter:site" content="@getpantheon">
     <meta name="twitter:title" content="{{ page.title}}">
     <meta name="twitter:description" content="{{ page.description }}">
-    {% if page.contributors %}
-        {% set contributor_list = page.contributors %}
-        {% if contributor_list %}
-            {% for contributorhandle in contributor_list %}
-                {% if site.contributors[contributorhandle] %}
-                    {% set contributor = site.contributors[contributorhandle] %}
-    <meta name="twitter:creator" content="@{{ contributor.twitter }}">
-                {% endif %}
-              {% if not loop.last %},
-              {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endif %}
+    {% if page.contributors %}{% set contributor_list = page.contributors %}{% if contributor_list %}{% for contributorhandle in contributor_list %}{% if site.contributors[contributorhandle] %}{% set contributor = site.contributors[contributorhandle] %}<meta name="twitter:creator" content="@{{ contributor.twitter }}">
+    {% endif %}{% endfor %}{% endif %}{% endif %}
+
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="{{ page.image }}">
     <!-- Open Graph data -->
@@ -75,18 +66,16 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/docs/assets/compiled/compiled.css?v={{ site.assets_version }}">
     <script src="//www.google-analytics.com/analytics.js"></script>
-    <script src="/docs/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', '{{ site.google_analytics_tracking_id }}', 'auto');
     ga('send', 'pageview');
-
     </script>
+
   </head>
 <body>
         <!-- Google Tag Manager -->
@@ -102,20 +91,18 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
+
+
     <!-- container -->
-    <div class="container-fluid">
-      <article>
-          <div class="article container-fluid">
-              <div class="col-md-9">
-                  <div style="margin-top:25px;">
-                      {{ page.blocks.content|raw }}
-                  </div>
-              </div>
-          </div>
-      </article>
-        <!-- /container -->
+    <div class="container content mb-70">
+        <div class="row">
+          <h1 style="margin-bottom:30px;" class="pio-docs-title">{{page.title}}</h1>
+            {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+        </div>
+
+    </div>
+    <!-- /container -->
         {% include("footer_content.html") %}
         {% include("footer_scripts.html") %}
-    </div>
 </body>
 </html>

@@ -1,9 +1,9 @@
 ---
 title: Serving Sites from the Web Subdirectory
 description: Learn how to create an nested docroot to serve your Pantheon site from.
-categories: [developing,sites]
-tags: [platform,code]
+tags: [platform, pantheonyml]
 keywords: Composer, docroot
+categories: [platform, pantheonyml]
 contributors:
  - ataylorme
 ---
@@ -16,8 +16,8 @@ While URLs are limited to the web docroot, PHP is not. Using a nested docroot al
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">custom upstream</a>.
+<h3 class="info">Note</h3>
+<p>One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">custom upstream</a>.</p>
 </div>
 
 ## One-Time Setup

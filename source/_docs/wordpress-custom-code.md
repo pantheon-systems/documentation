@@ -1,8 +1,8 @@
 ---
 title: Managing Custom Code for WordPress with Plugins
 description: Learn how to manage custom plugins or themes for WordPress sites using GitHub Updater or WP Pusher.
-categories: [wordpress]
-tags: [terminus, code]
+tags: [develop]
+categories: [develop]
 contributors:
   - afragen
   - petersuhm
@@ -12,8 +12,8 @@ Extending WordPress with custom code is a common part of the development lifecyc
 Instead, manage custom code separate from your projects within site-specific [plugins](https://codex.wordpress.org/Writing_a_Plugin). Then scope out an update strategy to easily distribute changes, such as [GitHub Updater](https://github.com/afragen/github-updater) or [WP Pusher](https://wppusher.com/).
 
 <div class="alert alert-info">
-<h4>Note</h4>
-Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).
+<h3 class="info">Note</h3>
+<p>Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).</p>
 </div>
 ## Before You Begin
 

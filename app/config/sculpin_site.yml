@@ -5,12 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 4.0
-
-managing: Learn how to manage sites, users, teams, and organizations on Pantheon.
-developing: Learn how to build and launch your site on Pantheon.
-featured: Get answers to common questions by browsing our most frequently used docs.
-
+assets_version: 4.1
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -47,8 +42,9 @@ contributors:
       url: //calevans.com
       avatar: //2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
       twitter: calevans
+      linkedin: //www.linkedin.com/in/calevans
       github: //github.com/calevans
-      bio: For the past 13 years Cal has worked with PHP and MySQL on Linux, OSX, and Windows. He has built a variety of projects ranging in size from simple web pages to multi-million dollar web applications. When not banging his head on his monitor, attempting a blood sacrifice to get a particular piece of code working, he enjoys building and managing development teams using his widely imitated but never patented management style of “management by wandering around”.These days, when not working with PHP, Cal can be found working on a variety of projects like CoderFaire. He speaks at conferences around the world on topics ranging from technical talks to motivational talks for developers. If you happen to meet him at a conference, don’t be afraid to buy him a shot of Bourbon.Cal is based in Nashville TN where he is happily married to wife 1.31, the lovely and talented Kathy. Together they have 2 wonderful kids. From blog.calevans.com/epk
+      bio: Technical Manager, Training and Certification @zend
   ari:
       name: Ari Gold
       avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg  twitter: http://twitter.com/AriAtPantheon
@@ -216,3 +212,30 @@ contributors:
     twitter: greg_1_anderson
     github: //github.com/greg-1-anderson
     drupal: //www.drupal.org/u/greg1anderson
+  scottmassey:
+    name: Scott Massey
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/ScottNew.jpg
+    bio: Master of Customer Success
+    linkedin: //www.linkedin.com/in/scottlmassey
+    github: //github.com/sukottokun
+    twitter: sukottokun
+    url: //www.astrocolossal.com
+  davidneedham:
+    name: David Needham
+    bio: Agency and Community Training Manager
+    linkedin: //www.linkedin.com/in/davidaneedham
+    twitter: davidneedham
+    drupal: //www.drupal.org/u/davidneedham
+    gplus: //plus.google.com/u/0/+DavidNeedham
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David_Needham540x540.png
+  dwayne:
+    name: Dwayne McDaniel
+    url: //www.mcdwayne.com
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Dwayne%20McDaniel.jpg
+    twitter: mcdwayne
+    gplus: https://plus.google.com/u/0/116638905183908020634
+    github: https://github.com/1dwaynemcdaniel/
+    linkedin: https://www.linkedin.com/in/dwaynemcdaniel
+    drupal: https://www.drupal.org/u/mcdwayne
+    wordpress: https://profiles.wordpress.org/mcdwayne
+    bio: Agency and Community Success Manager

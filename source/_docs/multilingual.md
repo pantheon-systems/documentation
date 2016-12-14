@@ -1,9 +1,8 @@
 ---
 title: Multilingual Best Practices on Pantheon
 description: Detailed instructions on how to configure a multilingual Drupal site on Pantheon.
-categories: [developing]
-tags: [code]
-keywords: drupal, multilingual, pantheon, language, multi-language
+tags: [troubleshoot, develop]
+categories: [develop]
 ---
 Pantheon is home to many polylingual and non-English sites, and hosting a multi-language site on Pantheon requires no additional platform configuration.  
 

@@ -1,13 +1,13 @@
 ---
 title: Terminus, the Pantheon Command-Line Interface (CLI)
 description: Learn how to use Pantheon's CLI, Terminus, to develop your Drupal sites from the command line.
-categories: [developing]
-tags: [terminus, local]
+tags: [automate, develop]
+categories: [automate]
 keywords: pantheon, terminus, command line, cli
 ---
 Terminus is Pantheon's command line interface. It allows you to do everything in a terminal that you can do in the Dashboard. It is useful for scripting, automation, and integration with other services and tools.
 
-Terminus is developed and supported at [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus "Pantheon's Terminus -CLI- Project on Github"). Terminus' master branch now represents our Terminus 1.0 work in progress. For the current 0.x version, check out the [0.13.x branch](https://github.com/pantheon-systems/terminus/tree/0.13.x). 
+Terminus is developed and supported at [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus "Pantheon's Terminus -CLI- Project on Github"). Terminus' master branch now represents our Terminus 1.0 work in progress. For the current 0.x version, check out the [0.13.x branch](https://github.com/pantheon-systems/terminus/tree/0.13.x).
 
 
 

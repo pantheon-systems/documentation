@@ -1,9 +1,8 @@
 ---
 title: Creating a services.yml File for Drupal 8
 description: Learn how to add a services.yml file for your Drupal 8 site.
-categories: [drupal]
-tags: [drupal-8, code]
-keywords: drupal, services.yml, yml file
+tags: [develop]
+categories: [develop]
 ---
 Drupal 8 allows users to easily define core services and environment-specific settings within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal 8 site.
 
@@ -42,8 +41,8 @@ The table below illustrates which services file is used in which Pantheon enviro
 Before you begin, make sure that you have updated your Drupal site to version 8.2.0. From within the `sites/default` directory, create a new file named `services.yml`, `services.pantheon.production.yml`, or `services.pantheon.preproduction.yml`, depending on whether you wish to configure settings for all environments, production environments or pre-production environments. Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
 
 <div class="alert alert-info">
-<h4>Note</h4>
-Module specific services should be defined in a separate <code>.yml</code> file, located in the root directory of the respective module (e.g. <code>sites/all/modules/module_name/module_name.services.yml</code>).
+<h3 class="info">Note</h3>
+<p>Module specific services should be defined in a separate <code>.yml</code> file, located in the root directory of the respective module (e.g. <code>sites/all/modules/module_name/module_name.services.yml</code>).</p>
 </div>
 
 ## See Also

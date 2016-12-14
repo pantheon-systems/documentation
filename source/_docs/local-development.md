@@ -1,9 +1,8 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [developing]
-tags: [code, local]
-keywords: local development, pantheon, develop locally, developing
+tags: [develop]
+categories: [develop]
 ---
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
 
@@ -71,8 +70,8 @@ From within the Site Dashboard:
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
+<h3 class="info">Note</h3>
+<p>Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</p></div>
 
 ### Via Terminus
 Create and export the database by running the following Terminus commands:

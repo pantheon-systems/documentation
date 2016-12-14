@@ -1,9 +1,8 @@
 ---
 title: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
-categories: [managing]
-tags: [platform, organizations]
-keywords: team members, developer role, developer, organization management, manage organization, change management, team management, manage team, manage team access, add user, add site, organization, p4a, agency, agencies, agency dashboard
+tags: [manage]
+categories: [manage]
 ---
 The Organization Dashboard is where you manage all your sites in a single location. You can access support requests, add or remove organizational team members, and manage new or existing sites.
 
@@ -42,9 +41,9 @@ Removing site team members follows the same process.
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters. You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Tags are case-sensitve.
-</div>
+<h3 class="info">Note</h3>
+<p>Tags are case-sensitve.
+</p></div>
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
 ## Add Users to Your Organization

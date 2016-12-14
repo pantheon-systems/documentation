@@ -1,9 +1,8 @@
 ---
 title: Updating Payment Methods
 description: Learn how to update a credit card as a payment method for your Pantheon Drupal or WordPress site.
-categories: [managing]
-tags: [platform]
-keywords: payment, payment method, credit card, add card, update card
+tags: [manage]
+categories: [manage]
 ---
 Easily add a new credit card or edit the existing payment method of a site from within the Dashboard.
 
@@ -28,8 +27,8 @@ Update multiple sites from a single location to avoid individually changing each
 ![Update payment for multiple sites](/source/docs/assets/images/dashboard/billing_update.jpg)
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The Site Owner (shown under Team in the Dashboard) is the only person who can update an existing credit card or add a new one. If you want to assume site and billing ownership, the Site Owner needs to transfer ownership to you by going to <strong>Settings > Plan > Transfer ownership and billing of this site</strong>.</div>
+<h3 class="info">Note</h3>
+<p>The Site Owner (shown under Team in the Dashboard) is the only person who can update an existing credit card or add a new one. If you want to assume site and billing ownership, the Site Owner needs to transfer ownership to you by going to <strong>Settings > Plan > Transfer ownership and billing of this site</strong>.</p></div>
 
 ### Additional Resources
 

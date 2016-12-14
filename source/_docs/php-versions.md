@@ -1,9 +1,8 @@
 ---
 title: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
-categories: [managing]
-tags: [code, platform]
-keywords: php, php version, php versions, how to change php version,  change php version, update php version, downgrade php version, switch php version
+tags: [performance, platform, pantheonyml]
+categories: [performance]
 ---
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
@@ -29,9 +28,9 @@ Now your site’s PHP version is managed via `pantheon.yml`, so it’s in versio
 Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Drupal 6 sites are only compatible with PHP 5.4 and below.
-</div>
+<h3 class="info">Note</h3>
+<p>Drupal 6 sites are only compatible with PHP 5.4 and below.
+</p></div>
 
 ## Resolve PHP Version Compatibility Issues
 

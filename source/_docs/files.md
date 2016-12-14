@@ -1,9 +1,8 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-keywords: code, commit, sftp, files, filesystem, file location, directory location, directory, codebase
-categories: [developing]
-tags: [files, platform]
+tags: [platform]
+categories: [platform]
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
 
@@ -25,4 +24,3 @@ When you are logged in to your application server, you may notice some files tha
 **fusedav.conf**: is the client configuration file for fusedav. fusedav is software used to mount shared storage (the folder */files*) to the application server. This folder is where your content-related files (images, attachments, and other things not stored in version control) are kept. For Drupal sites, there is a symlink to it from `sites/default/files`. For WordPress sites, there is a symlink from `wp-content/uploads`.
 
 **htpasswd**: is used when you want to lock your environment with a username and password. There is a Public button on each environment Dashboard that you can click to add a username and password to your site. This will keep your site hidden while you're working on it.
-

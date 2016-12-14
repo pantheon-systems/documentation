@@ -1,9 +1,8 @@
 ---
 title: Enabling Solr with Drupal
 description: Detailed information on using Apache Solr with Drupal.
-categories: [drupal]
-tags: [code]
-keywords: apche, apache solr, index, indexing, searching, index and search, indexing and searching, solr, how to enable solr, enable solr, solr api, indexserver solr, solr indexserver, solr api, enable solr search, apachesolr, apache solor search module, solr modules, configure solr,
+tags: [develop]
+categories: [develop]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 
@@ -31,7 +30,7 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 ### 3. Enable the Pantheon Apache Solr Module
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4> If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.</div>
+<h3 class="info">Note</h3><p>If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.</p></div>
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
 
@@ -61,18 +60,18 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.</div>
+<h3 class="info">Note</h3>
+<p>You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.</p></div>
 
 ### 5. Enable and Configure Your Solr Module
 
-You should have installed only one of these modules and will need to enable only one. 
+You should have installed only one of these modules and will need to enable only one.
 
 #### Enabling Apache Solr Search (apachesolr)
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
  ![Enable Solr module](/source/docs/assets/images/enable-solr-module.png)
- 
+
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
  ![Configure Solr Settings](/source/docs/assets/images/apache-solr-module-config.png)
 

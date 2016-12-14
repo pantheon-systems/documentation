@@ -58,11 +58,15 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
+  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '14s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
+  sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+  sed -i '24s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
+  sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
+  sed -i '20i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
+  sed -i '16i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
+  sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
 
 
   # Regenerate sculpin to reflect new redirect logic

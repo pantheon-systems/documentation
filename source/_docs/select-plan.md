@@ -1,9 +1,8 @@
 ---
 title: Selecting a Plan
 description: Learn the various Pantheon plans offered for your Drupal or WordPress sites.
-categories: [managing]
-tags: [platform]
-keywords: plan, how to select a plan, how to select a paid plan, what plans are available, how to view site plan, how to see plan, how to change plan, changing plans, change plan, select plan, selecting a plan
+tags: [getstarted]
+categories: [getstarted]
 ---
 Pantheon offers multiple service levels, called [Plans](https://www.pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Basic Plan. Then once you start to grow and have more specific requirements, take a look at the Pro Plan, which can be part of the recipe to get your site or application to scale and perform better.
 
@@ -27,8 +26,8 @@ Identifying your site's service level is quick and easy. You can find this in th
 ![confirm new plan](/source/docs/assets/images/dashboard/confirm-plan-dashboard.png)
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-If you downgrade from a paid plan to sandbox, the <a href="/docs/">domains</a> you've added in your Live environment will be removed. You will need to re-add domains if you decide to return to a paid plan.</div>
+<h3 class="info">Note</h3>
+<p>If you downgrade from a paid plan to sandbox, the <a href="/docs/">domains</a> you've added in your Live environment will be removed. You will need to re-add domains if you decide to return to a paid plan.</p></div>
 
 ## Manage Site Settings
 

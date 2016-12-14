@@ -1,9 +1,8 @@
 ---
 title: Creating Sites
 description:  Create a new Drupal or WordPress site on Pantheon.
-categories: [managing]
-tags: [create, code]
-keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
+tags: [getstarted]
+categories: [getstarted]
 ---
 The Pantheon Dashboard provides a quick "click to install" method of creating new sites. In less than five minutes, you'll have a new site up and running on the platform.
 
@@ -12,9 +11,9 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. From your User Dashboard, click **Create New Site**.
 2. Name your site. 
   <div class="alert alert-info">
-  <h4>Note</h4>
-  The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>. Site names and Platform URLs are permanent and cannot be changed.
-  </div>
+  <h3 class="info">Note</h3>
+  <p>The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>. Site names and Platform URLs are permanent and cannot be changed.
+  </p></div>
 3. If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
 4. Click **Create Site**.
 5. Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [private distributions](/docs/custom-upstream) available on the platform.

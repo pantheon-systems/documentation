@@ -1,10 +1,9 @@
 ---
 title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
-categories: [drupal]
-tags: [code, drupal-8]
-keywords: drupal, settings.php, database configuration, configuration
+tags: [golive, develop, domains]
 contributors: [mmenavas, andrewmallis]
+categories: [golive, domains]
 ---
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
@@ -12,8 +11,8 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
-You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</div>
+<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<p>You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</p></div>
 
 ## Pantheon Articles on settings.php
 
@@ -56,8 +55,8 @@ terminus drush "ev 'return getenv("DRUPAL_HASH_SALT")'"
 ### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
-<h4>Note</h4>
-Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.
+<h3 class="info">Note</h3>
+<p>Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {

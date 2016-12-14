@@ -1,9 +1,8 @@
 ---
 title: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
-categories: [developing]
-tags: [local]
-keywords: ssh, ssh tunnel, security, database, encryption, mysql database, redis cache server
+tags: [sftp]
+categories: [develop, sftp]
 contributors: bwood
 ---
 For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.  
@@ -73,8 +72,8 @@ Replace `PORT` with the database port specified in the **Connection Info** tab. 
 mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
 ```
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</div>
+<h3 class="info">Note</h3>
+<p>Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</p></div>
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill

@@ -1,9 +1,8 @@
 ---
 title: New Site Owner FAQs
 description: Learn about common billing and administrative tasks performed by a Pantheon Drupal or WordPress site owner.
-categories: [managing]
-tags: [platform, featured]
-keywords: own, ownership, site owner, site ownership, add team members, how to add a team member, how to remove a team member, supporting organization, supporting agency
+tags: [manage]
+categories: [manage]
 ---
 When you become a site owner, you receive administrator permissions to manage the billing information, team members, and site settings.
 
@@ -23,7 +22,7 @@ Once the user has been added to the project, they will receive a welcome email n
 **Remove a Team Member**
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>All users can be removed except the site owner.</div>
+<h3 class="info">Note</h3><p>All users can be removed except the site owner.</p></div>
 
 In the Team modal, click the X next to the user you want to delete.
 
@@ -49,9 +48,9 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 [HTTPS](/docs/enable-https/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-Only enable HTTPS for your Live environment. It is not needed in Dev or Test.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>Only enable HTTPS for your Live environment. It is not needed in Dev or Test.</p></div>
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.
@@ -78,9 +77,9 @@ The site owner is the person who pays for the site. You'll need to update the pa
 2. Enter the email address for the new site owner, and click **Send Invite**.
 Once the new owner receives the invitation, they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>We do not recommend entering credit card information on behalf of a new owner. Instead, go to <strong>Settings</strong>, select <strong>Plan</strong>, and choose <strong>Invite a business owner to pay for this site</strong>. Enter the business owner's email address, select the correct plan level, and click <strong>Send invitation</strong>. Site ownership and billing will be transferred to the business owner once their credit card information and payment has been verified.</p></div>
 
  ![Invite a business owner to pay](/source/docs/assets/images/dashboard/invite-business-owner.png)
 

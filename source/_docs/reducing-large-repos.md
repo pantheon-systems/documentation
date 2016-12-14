@@ -1,19 +1,18 @@
 ---
 title: Reducing Large Repositories
 description: Learn how to reduce the size of large Drupal or WordPress site repositories for optimized performance and reliability on Pantheon.
+tags: [git]
+categories: [develop, git]
 draft: true
-categories: [developing]
 contributors: curmudgeon
-tags: [code, local]
-keywords: git, git commands, drupal, wordpress
 ---
 Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend reducing the repository size by removing objects that are no longer referenced using [`git prune`](https://git-scm.com/docs/git-prune) in addition to optimizing via [`git gc`](https://git-scm.com/docs/git-gc). You may also want to review the repository for large files, then exclude them as needed.
 
 
 <div class="alert alert-info">
-<h4>Note</h4>
-Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
-</div>
+<h3 class="info">Note</h3>
+<p>Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
+</p></div>
 
 ## Determine Repository File Size
 You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.

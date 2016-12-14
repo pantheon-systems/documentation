@@ -1,16 +1,15 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop your Drupal or WordPress site on Pantheon.
-categories: [developing]
-tags: [code, local, getting-started, featured]
-keywords: sftp, sftp mode, wp-admin, apps.module, administrator, admin, connection info, connection information, sftp connection info, sftp connection information, authenticate sftp, access denied sftp, forbidden, authentication, commit sftp changes, commit changes, develop using sftp, make changes using sftp, how to use admin
+tags: [getstarted, sftp]
+categories: [develop, sftp]
 ---
 In some cases, working via Git is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to [use your website framework's built-in update systems](/docs/more-sftp/) (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first.
 
 <div class="alert alert-danger" role="alert">
-  <h4>SFTP Mode Considerations</h4>
+  <h3 class="info">SFTP Mode Considerations</h3>
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
@@ -45,8 +44,8 @@ Your connection data is as follows:
 **port:** `2222`
  
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</div>
+<h3 class="info">Note</h3>
+<p>When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</p></div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
@@ -70,8 +69,8 @@ Once your message is ready, click **Commit**.
 
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
+<h3 class="info">Note</h3>
+<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p></div>
 
 ## SFTP Clients
 

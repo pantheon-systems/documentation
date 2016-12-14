@@ -1,9 +1,8 @@
 ---
 title: WordPress Configuration Management (WP-CFM)
 description: Learn how to install and use the WordPress Configuration Management plugin on your Pantheon WordPress site.
-categories: [wordpress]
-tags: [code, database]
-keywords: wordpress, configuration, plugin
+tags: [develop, sftp, git]
+categories: [develop, git]
 ---
 
 Version-controlling site configuration within the codebase is a best practice. Since WordPress site configuration is stored in the database alongside content, developer workflows must account for migrating configuration from development and testing environments into production without affecting the content. The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant mechanism for enabling developers to practice configuration in code. The plugin exports WordPress site configuration from the mysql database's `wp_options` table to a `.json` file stored in `wp-content/config`.  After deploying the file to a new environment for the same site, it can then import the configuration from the `.json` file into the second `wp_options` table.
@@ -44,8 +43,8 @@ WP-CFM refers to a group of settings to track as a **bundle**. There are two app
 - **Site-Wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
 - **Feature Specific Bundling**: Track plugin, theme, and site-wide settings (e.g. permalinks) separately by creating multiple bundles.
 <div class="alert alert-info">
-<h4>Note</h4>
-To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM alerts you when it happens, but the plugin does not restrict you from doing so.
+<h3 class="info">Note</h3>
+<p>To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM alerts you when it happens, but the plugin does not restrict you from doing so.</p>
 </div>
 
 To create a bundle:

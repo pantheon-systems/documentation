@@ -1,9 +1,8 @@
 ---
 title: Gandi & Pantheon: Pointing your DNS
 description: Learn how to point your domain's DNS to your Pantheon Drupal or WordPress site using Gandi.
-categories: [developing]
 tags: [domains]
-keywords: dns, dns records, point your domain, point domain to pantheon, pointing your domain to your pantheon site, dns host, dns configuration, add domain to a site, gandi, point gandi domain to pantheon, redirect gandi domain to pantheon, gandi domain dns
+categories: [golive, domains]
 ---
 [Gandi](https://www.gandi.net/) provides you with a nice, clean list of your domains. Click on the domain that you are interested in pointing to Pantheon.
 
@@ -35,9 +34,9 @@ www 10800 IN CNAME webredir.vip.gandi.net.
 www 300 IN CNAME live-example.pantheonsite.io.
 ```
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-Be sure to include the trailing "."</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>Be sure to include the trailing "."</p></div>
 
 ## Add Your Domain to Pantheon
 

@@ -2,12 +2,10 @@ sculpin:
 sculpin_theme:
     theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
-
     posts:
         permalink: docs/changelog/:year/:month/
         path: _changelog
         enabled: true
-
     docs:
         type: path
         path: _docs
@@ -18,11 +16,9 @@ sculpin_content_types:
             - tags
             - contributors
         permalink: docs/:basename/
-
     guides:
         type: meta
         taxonomies:
             - categories
             - tags
             - contributors
-        permalink: docs/guides/:basename/

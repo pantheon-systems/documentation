@@ -1,9 +1,8 @@
 ---
 title: Setting up a Domain with GoDaddy
 description: Learn how to point a new GoDaddy domain name to your Pantheon Drupal or WordPress site.
-categories: [developing]
 tags: [domains]
-keywords: godaddy dns, dns records, point your domain, point godaddy domain to pantheon, pointing your godaddy domain to your pantheon site, godaddy dns host, godaddy dns configuration, add domain to a site, godaddy, point godaddy domain to pantheon, redirect godaddy domain to pantheon, godaddy domain dns
+categories: [golive, domains]
 ---
 
 Visit GoDaddy.com to search for the domain name you want and add it to your cart. If you have more than one domain, you will be required to configure the A records or CNAME for each one.
@@ -28,6 +27,6 @@ After you've purchased your domain name, follow the instructions below.
 3. Edit the existing **A record** for the bare domain (non-www) with the IP address provided in the Pantheon Dashboard.
 4. Create a **CNAME** record for the www subdomain using the destination provided by Pantheon. For more information, see [Domains and DNS](/docs/domains). 
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-If you have HTTPS enabled on your site, you have been given a unique IP address. Point the A record to this IP address.</div>  
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>If you have HTTPS enabled on your site, you have been given a unique IP address. Point the A record to this IP address.</p></div>  

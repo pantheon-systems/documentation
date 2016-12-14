@@ -1,17 +1,16 @@
 ---
 title: Enable Secure HTTPS Communication
 description: Learn how to implement secure HTTPS communication and utilize a static IP address on your Drupal and WordPress site.
-categories: [developing]
-tags: [domains, featured]
-keywords: secure https, https, security, encryption, add ssl cert, add https, add encryption, dns, csr, generate csr, generate key, update dns for ssl, ssl certificate types, ssl cert types,  ssl provider, intermediary ssl, intermediary ssl cert, intermediary ssl certificate
+tags: [golive]
+categories: [golive]
 ---
 HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g. www.example.com, if you are transmitting any sensitive data. Google takes this a step further, and recommends [protecting all of your websites with HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https?hl=en). Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
 Adding HTTPS to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</div>
+<h3 class="info">Warning</h3>
+<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</p></div>
 
 ## Steps to Enable HTTPS
 
@@ -43,7 +42,7 @@ The output of `openssl` should be two files:
 `www_example_com.key`
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3 class="info">Note</h3>
 <ul>
 <li>Do not add a password to your key. It is important to keep your <code>.key</code> file private and secure. You'll use this file later when loading your cert into a Pantheon environment.</li>
 <li> You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</li>
@@ -110,8 +109,8 @@ After submitting your certificates, you'll see a confirmation message:
 "HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</div>
+<h3 class="info">Note</h3>
+<p>It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</p></div>
 
 ## DNS
 
@@ -124,8 +123,8 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 Before you point your DNS to the custom IP address you received after enabling HTTPS, you can verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</div>
+<h3 class="info">Warning</h3>
+<p>You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</p></div>
 
 ### Test with Chrome
 

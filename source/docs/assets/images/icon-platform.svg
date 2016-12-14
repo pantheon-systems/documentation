@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="63px" viewBox="0 0 65 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-platform</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Updated-HOME" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-updated" transform="translate(-140.000000, -637.000000)" fill="#0093C9">
+            <g id="Platform" transform="translate(120.000000, 600.000000)">
+                <g id="icon-platform" transform="translate(20.000000, 37.000000)">
+                    <polygon id="Fill-1" points="0 12.5120556 18.66375 12.5120556 18.66375 0.202981481 0 0.202981481"></polygon>
+                    <polygon id="Fill-2" points="22.97125 12.5120556 41.63 12.5120556 41.63 0.202981481 22.97125 0.202981481"></polygon>
+                    <polygon id="Fill-3" points="0 29.1412222 18.66375 29.1412222 18.66375 16.828537 0 16.828537"></polygon>
+                    <path d="M25.1225,27.066037 L39.47875,27.066037 L39.47875,18.9049259 L25.1225,18.9049259 L25.1225,27.066037 Z M22.97125,29.1412222 L41.63,29.1412222 L41.63,16.828537 L22.97125,16.828537 L22.97125,29.1412222 Z" id="Fill-4"></path>
+                    <polygon id="Fill-5" points="0 46.3072407 18.66375 46.3072407 18.66375 33.9945556 0 33.9945556"></polygon>
+                    <path d="M25.1225,44.2308519 L39.47875,44.2308519 L39.47875,36.0673333 L25.1225,36.0673333 L25.1225,44.2308519 Z M22.97125,46.3072407 L41.63,46.3072407 L41.63,33.9945556 L22.97125,33.9945556 L22.97125,46.3072407 Z" id="Fill-6"></path>
+                    <polygon id="Fill-7" points="45.93875 29.0629815 64.60125 29.0629815 64.60125 16.7539074 45.93875 16.7539074"></polygon>
+                    <polygon id="Fill-8" points="45.93875 45.6897407 64.60125 45.6897407 64.60125 33.3806667 45.93875 33.3806667"></polygon>
+                    <polygon id="Fill-9" points="22.97125 62.8545556 41.63 62.8545556 41.63 50.5454815 22.97125 50.5454815"></polygon>
+                    <polygon id="Fill-10" points="45.93875 62.8545556 64.60125 62.8545556 64.60125 50.5454815 45.93875 50.5454815"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,9 +1,8 @@
 ---
 title: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
-categories: [wordpress]
-tags: [code]
-keywords: apche, apache solr, index, indexing, searching, index and search, indexing and searching, solr, how to enable solr, enable solr, solr api, indexserver solr, solr indexserver, solr api, enable solr search, apachesolr, apache solor search module, solr modules, configure solr,
+tags: [develop]
+categories: [develop]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Personal plan can use Solr.
 
@@ -26,7 +25,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.
 4. Select the **Indexing** tab and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
  <div class="alert alert-info">
- <h4>Note</h4> You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).
+ <h3 class="info">Note</h3><p>You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).</p>
  </div>
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to "Index Searchable Post Types", or via Terminus:
 

@@ -1,9 +1,8 @@
 ---
 title: MySQL Slow Log
 description: Use a Drupal or WordPress site's MySQL Slow Log to troubleshoot MySQL and identify serious performance issues.
-categories: [developing]
-tags: [database, debug, logs]
-keywords: mysql slow log, logs, sql slow logs, sql log, mysql slow logs, mysql log, mysql performance, mysql troubleshooting, troubleshoot mysql, performance, slow queries, sql performance, mysql error log
+tags: [performance, troubleshoot, sftp]
+categories: [troubleshoot]
 ---
 Analyzing the MySQL slow log is an important part of troubleshooting client issues before and after launch. Below are various methods for retrieving and examining them.
 
@@ -60,8 +59,8 @@ $
 ```
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</div>
+<h3 class="info">Note</h3>
+<p>The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</p></div>
 
 ## Analyze The Mysql Slow Log
 

@@ -1,9 +1,8 @@
 ---
 title: Going Live
 description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
-categories: [developing]
-tags: [domains, code, getting-started, featured]
-keywords: site launch, launch, pantheon, new site, best practices, going live
+tags: [golive]
+categories: [golive]
 ---
 For clients with an Elite plan, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
 
@@ -45,8 +44,8 @@ Consider enabling [New Relic Pro](/docs/new-relic) monitoring to non-intrusively
 
 Set up redirects for possible URL changes as a result of going live. Have a plan to monitor and mitigate 404 Page Not Found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/redirects/).
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</div>
+<h3 class="info">Warning</h3>
+<p>nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</p></div>
 
 ## Get DNS Record and Update Your DNS
 

@@ -1,16 +1,16 @@
 ---
 title: Managing Custom Code with Composer
 description: Understand how to manage custom plugins and themes for WordPress sites using Composer.
-categories: [wordpress]
-tags: [code, local]
+tags: [automate]
+categories: [automate]
 ---
 Extending WordPress or Drupal with custom code is a common part of the development lifecycle. In order to optimize workflows, it's essential that custom plugins, modules, and themes are maintained independently from your sites and projects so they're easily reused.
 
 We recommend managing custom code as plugins or modules within individual repositories and hosting each one remotely on a service such as [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/). You can then use Composer to manage and organize the software needed for your project to run, including custom plugins or modules.
 
 <div class="alert alert-info">
-<h4>Note</h4>
-Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).
+<h3 class="info">Note</h3>
+<p>Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).</p>
 </div>
 ## Before You Begin
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md).

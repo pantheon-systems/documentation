@@ -1,9 +1,8 @@
 ---
 title: Migrate to Pantheon: WordPress Site Networks
 description: Learn how to import a WordPress Site Network into Pantheon.
-keywords: import, importing site, pantheon, new site, large site, distro, upstream, git history
-categories: [wordpress]
-tags: [migrate, wordpress-site-networks]
+tags: [migrate]
+categories: [getstarted, migrate]
 ---
 
 ## Requirements
@@ -69,8 +68,8 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git push pantheon master --force
  ```
  <div class="alert alert-info">
- <h4>Note</h4>
- The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.
+ <h3 class="info">Note</h3>
+ <p>The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.</p>
  </div>
 8. Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
 

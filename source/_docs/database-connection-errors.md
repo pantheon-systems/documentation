@@ -1,9 +1,8 @@
 ---
 title: Database Connection Errors
 description: Drupal Pressflow core, WordPress core, and the causes and solutions for database connection errors.
-categories: [developing]
-tags: [database, debug]
-keywords: db error, db connection, database, database connection error, can't connect to local mysql server, connect to database, database connection errors, mysql error, sql error, cannot connect sql, install.php, reverted to install.php
+tags: [troubleshoot]
+categories: [troubleshoot]
 ---
 There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)
@@ -55,9 +54,9 @@ $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 
 You can also use the above to develop Drupal 8 on Pantheon.
 
-<div class="alert alert-warning" role="alert">
-<h4>Note</h4>
-If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</div>
+<div class="alert alert-danger" role="alert">
+<h3 class="info">Warning</h3>
+<p>If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</p></div>
 
 ## Base Table or View Not Found
 This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the "semaphore does not exist" error.

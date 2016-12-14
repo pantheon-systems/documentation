@@ -1,9 +1,8 @@
 ---
 title: Required Reading: Essential Pantheon Documentation
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
-categories: [managing]
-tags: [platform, getting-started]
-keywords: getting started, get started, pantheon, best practices,
+tags: [getstarted]
+categories: [getstarted]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
@@ -17,8 +16,8 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Platform Considerations](/docs/platform-considerations/)  
 - [Enable Secure HTTPS Communication](/docs/enable-https)
 <div class="alert alert-info">
-<h4>Note</h4>
-Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the database, you may experience an error. Load the home page, and you can connect.
+<h3 class="info">Note</h3>
+<p>Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the database, you may experience an error. Load the home page, and you can connect.</p>
 </div>
 ## Build
 - [Migrate Sites to Pantheon](/docs/migrate)  

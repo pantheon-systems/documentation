@@ -1,9 +1,8 @@
 ---
 title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
-categories: [developing]
-tags: [varnish, code]
-keywords: cache, caching, varnish, cookies, wordpress, drupal
+tags: [cache]
+categories: [performance, cache]
 ---
 ## Exclude Specific Pages from Caching
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser. Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or the `wp-config.php` file of WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
@@ -54,8 +53,8 @@ $build['#cache']['max-age'] = 0;
 As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/docs/cookies).
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
+<h3 class="info">Warning</h3>
+<p>Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</p></div>
 
 ## Test Pages Excluded from Cache
 To test whether or not a page is being served from Pantheon's edge caching layer, examine the headers output (`Age`, `Cache-Control`, `Set-Cookie`) via the following curl command:

@@ -1,0 +1,17 @@
+{% set contributor_list = page.contributors %}
+  {% if contributor_list %}
+    {% for contributorhandle in contributor_list %}
+        {% if site.contributors[contributorhandle] %}
+            {% set contributor = site.contributors[contributorhandle] %}
+        {% endif %}
+        {% if contributor %}
+        <div class="author-info">
+          <div class="author-info__img">
+            <a href="{{ site.url }}/contributors/{{ contributorhandle }}"><img alt="Author photo" typeof="foaf:Image" src="{{ contributor.avatar }}" width="540" height="540" alt=""></a>
+          </div>
+          <h3 class="author-info__name">{{ contributor.name }}</h3>
+          <p class="author-info__title">{{ contributor.bio }}</p>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}

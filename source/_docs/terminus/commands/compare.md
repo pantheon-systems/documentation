@@ -1,6 +1,8 @@
 ---
 title: Terminus Version Comparison
-tags: [terminus]
+tags: [automate, develop]
+categories: [automate]
+layout: taxon
 permalink: docs/terminus/commands/:basename/
 ---
 

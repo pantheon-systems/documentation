@@ -1,9 +1,8 @@
 ---
 title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal 8, Drupal 7, Drupal 6 and Pantheon.
-categories: [developing]
-tags: [code, local]
-keywords: git, git commands, conflicts, resolve conflicts, core, drupal, wordpress
+tags: [git]
+categories: [develop, git]
 contributors: mrfelton
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
@@ -79,8 +78,8 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git checkout <commit ID> -- <file>
  ```
   <div class="alert alert-info" role="alert">
-  <h4>Note</h4>
-  When looking for a commit ID, you can find the last instance where the missing file was in the repository. </div>
+  <h3 class="info">Note</h3>
+  <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
 

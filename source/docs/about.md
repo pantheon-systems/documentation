@@ -2,8 +2,6 @@
 layout: taxon
 title: About Pantheon Docs
 ---
-<title>About Pantheon Docs</title>
-<h1 class="pio-docs-title">About Pantheon Docs</h1>
 
 ## We Have a New Docs Site!
 

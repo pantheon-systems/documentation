@@ -1,15 +1,14 @@
 ---
 title: Deleting a Site on Pantheon
 description: Information on removing a Drupal or WordPress site from Pantheon.
-categories: [managing]
-tags: [platform]
-keywords: delete site, deleting a site, how to delete a pantheon site, how to remove a pantheon site, delete pantheon site, delete my site, delete sites
+tags: [manage]
+categories: [manage]
 ---
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
-This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
+<h3 class="info">Warning</h3>
+<p>This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.</p>
 </div>
 
 ## Delete a Site Using the Pantheon Site Dashboard
@@ -23,8 +22,8 @@ Run the following [Terminus](/docs/terminus/) command:
 `terminus site delete`
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus sites list</code>.</div>
+<h3 class="info">Note</h3>
+<p>Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus sites list</code>.</p></div>
 
 ## Delete a Site From the Organization Dashboard
 
