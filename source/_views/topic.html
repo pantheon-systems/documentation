@@ -1,88 +1,84 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <!-- container -->
-  <div class="col-md-12 mb-70">
-    <div class="hero-video clearfix">
-      <div class="col-md-8 hero-video__video">
-        <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-      </div>
-      <div class="col-md-4 hero-video__text">
-        <h1 class="hero-video__title">{{ page.title }}</h1>
-        <p class="hero-video__subtitle">{{ page.description }}</p>
-        <ul class="hero-video__bullets">
-          <li>{{ page.bullet1 }} </li>
-          {% if page.bullet2 is defined %}
-          <li>{{ page.bullet2 }} </li>
-          {% endif %}
-          {% if page.bullet3 is defined %}
-          <li>{{ page.bullet3 }} </li>
-          {% endif %}
-          {% if page.bullet4 is defined %}
-          <li>{{ page.bullet4 }} </li>
-          {% endif %}
-          {% if page.bullet5 is defined %}
-          <li>{{ page.bullet5 }} </li>
-          {% endif %}
-        </ul>
-      </div>
+<div class="col-md-12 mb-70">
+  <div class="hero-video clearfix">
+    <div class="col-md-8 hero-video__video">
+      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+    </div>
+    <div class="col-md-4 hero-video__text">
+      <h1 class="hero-video__title">{{ page.title }}</h1>
+      <p class="hero-video__subtitle">{{ page.description }}</p>
+      <ul class="hero-video__bullets">
+        <li>{{ page.bullet1 }} </li>
+        {% if page.bullet2 is defined %}
+        <li>{{ page.bullet2 }} </li>
+        {% endif %}
+        {% if page.bullet3 is defined %}
+        <li>{{ page.bullet3 }} </li>
+        {% endif %}
+        {% if page.bullet4 is defined %}
+        <li>{{ page.bullet4 }} </li>
+        {% endif %}
+        {% if page.bullet5 is defined %}
+        <li>{{ page.bullet5 }} </li>
+        {% endif %}
+      </ul>
     </div>
   </div>
-  {% if page.getstarted %}
-  <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/get-started/migrate">
-        <div class="topic-info mb-70">
-          <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-migrate.svg)"></div>
-          <div class="topic-info__text">
-            <h3 class="topic-info__title">Migrate to Pantheon</h3>
-            <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
-          </div>
-        </div>
-    </a>
-  </div>
-    <div class="col-md-12 mb-70">
-    <h4 style="margin-top:0;">More on this topic</h4>
-    <ul class="top-docs top-docs-2col">
-      {% for doc in data.docs_tags.getstarted if doc.meta.type == "video"%}
-      <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-      {% endfor %}
-      {% for doc in data.docs_tags.getstarted %}
-      {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
-      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-      {% endif %}
-      {% endfor %}
-      {% for doc in data.docs_tags.getstarted if doc.meta.type == "guide"%}
-      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% elseif page.develop %}
-</div><!--close row-->
-<div class="row">
-  <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/develop/git">
-      <div class="topic-info">
-        <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-git.svg)"></div>
-        <div class="topic-info__text">
-          <h3 class="topic-info__title">Git</h3>
-          <p class="topic-info__description">Push code changes to the platform using Git mode.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-6 mb-70">
-    <a class="topic-info-link" href="/docs/develop/sftp">
-      <div class="topic-info">
-        <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-serverdev.svg)"></div>
-        <div class="topic-info__text">
-          <h3 class="topic-info__title">On-Server Development (SFTP)</h3>
-          <p class="topic-info__description">Manage plugins, modules, and themes within the WordPress Dashboard or Drupal Admin using SFTP mode.</p>
-        </div>
-      </div>
-    </a>
-  </div>
 </div>
-<div class="row">
-  <div class="col-md-12 mb-70">
+{% if page.getstarted %}
+<div class="col-md-6">
+  <a class="topic-info-link" href="/docs/get-started/migrate">
+    <div class="topic-info mb-70">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-migrate.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">Migrate to Pantheon</h3>
+        <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-md-12 mb-70">
+  <h4 style="margin-top:0;">More on this topic</h4>
+  <ul class="top-docs top-docs-2col">
+    {% for doc in data.docs_tags.getstarted if doc.meta.type == "video"%}
+    <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+    {% endfor %}
+    {% for doc in data.docs_tags.getstarted %}
+    {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% for doc in data.docs_tags.getstarted if doc.meta.type == "guide"%}
+    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% elseif page.develop %}
+<div class="col-md-6">
+  <a class="topic-info-link" href="/docs/develop/git">
+    <div class="topic-info">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-git.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">Git</h3>
+        <p class="topic-info__description">Push code changes to the platform using Git mode.</p>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-md-6 mb-70">
+  <a class="topic-info-link" href="/docs/develop/sftp">
+    <div class="topic-info">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-serverdev.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">On-Server Development (SFTP)</h3>
+        <p class="topic-info__description">Manage plugins, modules, and themes within the WordPress Dashboard or Drupal Admin using SFTP mode.</p>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.develop if doc.meta.type == "video"%}
@@ -98,19 +94,19 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.golive %}
-  <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/go-live/domains">
-        <div class="topic-info mb-70">
-          <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-domains.svg)"></div>
-          <div class="topic-info__text">
-            <h3 class="topic-info__title">Point Domains to Pantheon</h3>
-            <p class="topic-info__description">Add custom domains to environments, configure DNS, and use PHP for redirecting to a common domain.</p>
-          </div>
+{% elseif page.golive %}
+<div class="col-md-6">
+  <a class="topic-info-link" href="/docs/go-live/domains">
+    <div class="topic-info mb-70">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-domains.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">Point Domains to Pantheon</h3>
+        <p class="topic-info__description">Add custom domains to environments, configure DNS, and use PHP for redirecting to a common domain.</p>
       </div>
-    </a>
-  </div>
-  <div class="col-md-12 mb-70">
+    </div>
+  </a>
+</div>
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.golive if doc.meta.type == "video"%}
@@ -126,19 +122,19 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.platform %}
-  <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/platform/pantheon-yml">
-      <div class="topic-info mb-70">
-        <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-yml.svg)"></div>
-        <div class="topic-info__text">
-          <h3 class="topic-info__title">Pantheon.yml</h3>
-          <p class="topic-info__description">Hook into platform workflows and manage advanced site configurations like PHP versions and Drush versions.</p>
-        </div>
+{% elseif page.platform %}
+<div class="col-md-6">
+  <a class="topic-info-link" href="/docs/platform/pantheon-yml">
+    <div class="topic-info mb-70">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-yml.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">Pantheon.yml</h3>
+        <p class="topic-info__description">Hook into platform workflows and manage advanced site configurations like PHP versions and Drush versions.</p>
       </div>
-    </a>
-  </div>
-  <div class="col-md-12 mb-70">
+    </div>
+  </a>
+</div>
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.platform if doc.meta.type == "video"%}
@@ -154,20 +150,8 @@
     {% endfor %}
   </ul>
 </div>
-
-  {% elseif page.automate %}
-  <!--div class="col-md-6">
-    <a class="topic-info-link" href="/docs/automate/cli">
-        <div class="topic-info mb-70">
-          <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-develop.svg)"></div>
-          <div class="topic-info__text">
-            <h3 class="topic-info__title">Command Line Tool</h3>
-            <p class="topic-info__description">Run WP-CLI and Drush commands, script repetitive tasks, and unlock advanced interactions on the Site Dashboard using our CLI, Terminus.</p>
-          </div>
-      </div>
-    </a>
-  </div-->
-  <div class="col-md-12 mb-70">
+{% elseif page.automate %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.automate if doc.meta.type == "video"%}
@@ -184,19 +168,19 @@
   </ul>
 </div>
 
-  {% elseif page.performance %}
-  <div class="col-md-6">
-    <a class="topic-info-link" href="/docs/performance/cache">
-        <div class="topic-info mb-70">
-          <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-caching.svg)"></div>
-          <div class="topic-info__text">
-            <h3 class="topic-info__title">Caching</h3>
-            <p class="topic-info__description">Interact with the edge layer of our platform and use advanced caching techniques to improve overall website performance.</p>
-          </div>
+{% elseif page.performance %}
+<div class="col-md-6">
+  <a class="topic-info-link" href="/docs/performance/cache">
+    <div class="topic-info mb-70">
+      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-caching.svg)"></div>
+      <div class="topic-info__text">
+        <h3 class="topic-info__title">Caching</h3>
+        <p class="topic-info__description">Interact with the edge layer of our platform and use advanced caching techniques to improve overall website performance.</p>
       </div>
-    </a>
-  </div>
-  <div class="col-md-12 mb-70">
+    </div>
+  </a>
+</div>
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.performance if doc.meta.type == "video"%}
@@ -212,8 +196,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.manage %}
-  <div class="col-md-12 mb-70">
+{% elseif page.manage %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.manage if doc.meta.type == "video"%}
@@ -229,8 +213,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.troubleshoot %}
-  <div class="col-md-12 mb-70">
+{% elseif page.troubleshoot %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.troubleshoot if doc.meta.type == "video"%}
@@ -246,8 +230,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.pantheonyml %}
-  <div class="col-md-12 mb-70">
+{% elseif page.pantheonyml %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "video"%}
@@ -263,8 +247,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.cache %}
-  <div class="col-md-12 mb-70">
+{% elseif page.cache %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.cache if doc.meta.type == "video"%}
@@ -280,8 +264,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.domains %}
-  <div class="col-md-12 mb-70">
+{% elseif page.domains %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.domains if doc.meta.type == "video"%}
@@ -297,8 +281,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.migrate %}
-  <div class="col-md-12 mb-70">
+{% elseif page.migrate %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.migrate if doc.meta.type == "video"%}
@@ -314,8 +298,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.sftp %}
-  <div class="col-md-12 mb-70">
+{% elseif page.sftp %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.sftp if doc.meta.type == "video"%}
@@ -331,8 +315,8 @@
     {% endfor %}
   </ul>
 </div>
-  {% elseif page.git %}
-  <div class="col-md-12 mb-70">
+{% elseif page.git %}
+<div class="col-md-12 mb-70">
   <h4 style="margin-top:0;">More on this topic</h4>
   <ul class="top-docs top-docs-2col">
     {% for doc in data.docs_tags.git if doc.meta.type == "video"%}
@@ -348,22 +332,5 @@
     {% endfor %}
   </ul>
 </div>
-  <!--{% elseif page.cli %}
-  <div class="col-md-12 mb-70">
-  <h4 style="margin-top:0;">More on this topic</h4>
-  <ul class="top-docs top-docs-2col">
-    {% for doc in data.docs_tags.cli if doc.meta.type == "video"%}
-    <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-    {% endfor %}
-    {% for doc in data.docs_tags.cli %}
-    {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endif %}
-    {% endfor %}
-    {% for doc in data.docs_tags.cli if doc.meta.type == "guide"%}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>-->
-  {% endif %}
+{% endif %}
 {% endblock %}
