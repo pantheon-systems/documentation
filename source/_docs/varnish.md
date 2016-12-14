@@ -7,7 +7,7 @@ keywords: wordpress varnish, drupal varnish, cache, caching, pantheon, performan
 ---
 Varnish is an HTTP accelerator that quickly serves both static content and anonymous pages for sites on Pantheon. By serving data from virtual memory, a response is returned without needing to access the application server, which in turns frees application container workers to build more dynamic requests. Each Varnish server can handle thousands of requests per second, much faster than a site's framework alone.  
 
-Every site on Pantheon already uses Varnish; each HTTP request first goes to the pool of Varnish servers to seamlessly cache your site content. If a current cache isn't found, the request will continue to the application container worker, then the response will be cached on the way back to the browser.  
+Every site on Pantheon already uses Varnish; each HTTP request first goes to our Varnish servers to seamlessly cache your site content. If a current cache isn't found, the request will continue to the application container worker, then the response will be cached on the way back to the browser.  
 
 ![Varnish Diagram](/source/docs/assets/images/varnish.png)
 
@@ -51,23 +51,8 @@ To test whether or not a cookie is preventing Varnish from caching, you can exam
 ```nohighlight
 $ curl -I dev.mysite.com
 HTTP/1.1 301 Moved Permanently
-X-Pantheon-Styx-Hostname: styx2a
-server: nginx/1.0.15
-content-type: text/html; charset=utf-8
-location: http://dev.mysite.com/
 cache-control: public, max-age=300
-last-modified: Tue, 27 Nov 2012 20:05:53 +0000
-expires: Sun, 11 Mar 1984 12:00:00 GMT
-etag: "1354046753"
-x-pantheon-endpoint: 6ce63bba-4d26-49ed-af03-29c925c3b5ee
-Content-Length: 20826
-Accept-Ranges: bytes
-Date: Tue, 27 Nov 2012 20:05:54 GMT
-X-Varnish: 1420557910
 Age: 23
-Via: 1.1 varnish
-Connection: keep-alive
-X-Pantheon-Edge-Server: 10.183.69.95
 Vary: Cookie, Cookie
 ```
 You will notice a max-age of 300, and if you run the command again, the "Age" field will continue to increase until it reaches the TTL set by the max-age.
@@ -77,25 +62,8 @@ If your output looks like the following with an Age of 0 after multiple requests
 ```nohighlight
 $ curl -I dev.mysite.com
 HTTP/1.1 200 OK
-X-Pantheon-Styx-Hostname: styx1a
-server: nginx/1.0.15
-content-type: text/html; charset=utf-8
-x-drupal-cache: MISS
-set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
-etag: “1353954690-0”
-content-language: en
-link: ; rel=“shortlink”,; rel=“canonical”
-x-generator: Drupal 7 (http://drupal.org)
 cache-control: public, max-age=900
-last-modified: Mon, 26 Nov 2012 18:31:30 +0000
-expires: Sun, 19 Nov 1978 05:00:00 GMT
-x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
-Date: Mon, 26 Nov 2012 18:31:38 GMT
-X-Varnish: 486741958
 Age: 0
-Via: 1.1 varnish
-Connection: keep-alive
-X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 ```
 In the event that a cookie is being set and you are unsure of what's setting it, disable modules one by one and test for the cookie via 'curl' after each one. When the cookie is no longer being set, the last module disabled before the test is the culprit.
