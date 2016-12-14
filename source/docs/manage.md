@@ -6,7 +6,7 @@ bullet1: Sites
 bullet2: People
 bullet3: Upstreams
 bullet4: Support
-bullet5: Parners
+bullet5: Partners
 layout: topic
 use: [docs_tags, guides_tags, videos_tags]
 manage: true
