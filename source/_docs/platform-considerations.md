@@ -23,7 +23,7 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
       <th>Versions Supported</th>
       <td colspan="4">Evergreen Browsers - Last 4</td>
       <td>Current + Last Year</td>
-      <td>Internet Explorer 11 <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Minimum Support" data-content="Feature support only, allows for visual regression."><em class="fa fa-info-circle"></em></a></td>
+      <td>Internet Explorer 11 <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Minimum Support" data-content="Feature support only, allows for visual inconsistencies."><em class="fa fa-info-circle"></em></a></td>
     </tr>
   </thead>
 </table>
