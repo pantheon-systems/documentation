@@ -20,7 +20,7 @@ else
   export avoid_redirect="window.location.hostname == '$ENV-$SITE_NAME.pantheonsite.io' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
+  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   bin/sculpin generate --env=prod
   # Migrate paginated files to avoid .html within the URLs
@@ -31,28 +31,14 @@ else
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
 
-  #rsync docs to target env and site
-  mkdir docs-rsync-logs
-  mkdir docs-rsync-logs/`date +%F-%I%p`
-  echo "rsync log - deploy to Live environment on `date +%F-%I%p`" > ./docs-rsync-logs/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log
 
-
-  rsync --log-file=./docs-rsync-logs/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log --human-readable --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/docs/
+  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/docs/
   if [ "$?" -eq "0" ]
   then
       echo "Success: Deployed to http://"$ENV"-$SITE_NAME.pantheonsite.io/docs"
   else
       echo "Error: Deploy failed, review rsync status"
   fi
-  rsync -rlvz --temp-dir=../../../tmp/ --size-only --progress -e 'ssh -p 2222' ./docs-rsync-logs/`date +%F-%I%p`/rsync-`date +%F-%I%p`.log $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/docs-rsync-logs/
-  if [ "$?" -eq "0" ]
-  then
-      echo "Success: Deployed log file to the $ENV environment: files/docs-rsync-logs"
-  else
-      echo "Error: Log deploy failed, review rsync status"
-  fi
-  # Delete the log dir made on vagrant vm
-  rm -rf docs-rsync-logs
   # Discard redirect modifications in source/_views/default.html and source/_views/taxon.html
   git reset --hard
 fi

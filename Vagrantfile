@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   phantomjs --webdriver=8643 &> /dev/null &
   su vagrant -c 'cd #{path} && composer install && bundle && npm install;
   grunt
-  bin/terminus list > source/_docs/terminus/commands.json --format=json
+  bin/terminus list > source/docs/assets/terminus/commands.json --format=json
   bin/sculpin generate && ln -sf #{path}/source #{path}/output_dev
   for file in output_dev/docs/changelog/page/*html
   do

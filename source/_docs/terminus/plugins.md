@@ -52,5 +52,5 @@ permalink: docs/terminus/:basename/
 
   <div class="terminus-pager">
     <hr>
-        <a style="float:left;" href="/docs/terminus/commands/compare"><span class="terminus-pager-lsaquo">&lsaquo;</span>Version Comparison</a>
+        <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
   </div>
