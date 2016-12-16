@@ -28,7 +28,7 @@ composer.json
 </button></a>
 </div>
 <pre><code id="composer">{
-    "name": "terminus-hello-world",
+    "name": "my-username/terminus-hello-world",
     "description": "An Hello, World Terminus command",
     "type": "terminus-plugin",
     "extra": {
@@ -38,7 +38,9 @@ composer.json
     }
 }</code></pre>
 
-
+<div class="alert alert-info">
+<h3 class="info">Note</h3>
+<p>The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). </p></div>
 ### 3. Add Commands
 Each command in Terminus is defined by it’s own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
@@ -119,11 +121,11 @@ Update the `composer.json` file with an autoload section to indicate how to load
     "description": "An Hello, World Terminus command",
     "type": "terminus-plugin",
     "autoload": {
-        "psr-4": { "Pantheon\\TerminusHello": "src" }
+        "psr-4": { "Pantheon\\TerminusHello\\": "src" }
     },
     "extra": {
         "terminus": {
-            "compatible-version": "1.*"
+            "compatible-version": "^1"
         }
     }
 }
@@ -140,7 +142,16 @@ More information on Terminus standards can be found at:
 [https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
 
 ## Plugin Versioning
-Terminus follows semantic versioning. That means there should not be any plugin-breaking changes within a major version of Terminus but plugins will not be compatible between major versions of Terminus. If distribute your plugin, please make sure that the major version of your plugin matches the major version of Terminus that it is compatible with. This may force you to make backwards-incompatible changes in a minor release, but it will reduce confusion among plugin users (who will be assured that a 1.x version of a plugin will work with a 1.x version of Terminus). If your plugin has a minimum required version of Terminus, you can specify that in the `compatible-version` section of `composer.json`. You can use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). If you do change `compatible-version`, please make sure that your constraint expression does not accidentally include the next major version of Terminus. In other words, `>=1.3 <2.0.0` is fine but `>=1.3` is not.
+Terminus follows semantic versioning. We recommend adopting `TERMINUS.MAJOR.MINOR` for plugin versioning.
+
+Given a version number `TERMINUS.MAJOR.MINOR`, increment the:
+- TERMINUS version when is compatible with a new MAJOR version of Terminus,
+- MAJOR version when you break functionality in a backwards-compatible manner, and
+- MINOR version when you make backwards-compatible bug fixes.
+
+The first digit of a plugin version should always the Terminus MAJOR version the plugin is compatible with.
+
+If your plugin has a minimum required version of Terminus, you can specify that in the `compatible-version` section of `composer.json`. You can use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). If you do change `compatible-version`, please make sure that your constraint expression does not accidentally include the next major version of Terminus. In other words, `>=1.3 <2.0.0` is fine but `>=1.3` is not.
 
 ## More Resources
 There is no published Plugin API documentation yet, so the best way to learn how to write commands is to look through the internal commands in the Terminus source code: [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus)

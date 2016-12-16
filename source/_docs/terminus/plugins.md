@@ -17,8 +17,7 @@ Add plugins within the `$HOME/.terminus/plugins` directory on your local worksta
 <p>Plugins published on Packagist are available to install via the Composer package manager. From a terminal window on your computer, use the following commands:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-<figure><pre id="terminus-plugin-install-composer"><code class="bash" data-lang="bash">$HOME/.terminus/plugins/terminus-plugin-example
-composer create-project pantheon-systems/terminus-plugin-example
+<figure><pre id="terminus-plugin-install-composer"><code class="bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-plugin-example:~1
 </code></pre></figure>
 </div>
 <h3>Install via Git</h3>

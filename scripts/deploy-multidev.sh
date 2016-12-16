@@ -41,7 +41,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Get the environment hostname and identify deployment URL
     export url=`bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
-    export hostname=${url:8: -1}
+    export hostname=${url:8}
     export docs_url=${url}/docs
 
   fi
@@ -55,10 +55,10 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
   # Update CTA edit link so that the current branch is used
   sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '24s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
+  sed -i '26s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
   sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
   sed -i '20i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
-  sed -i '16i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
+  sed -i '28i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
   sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
 
 

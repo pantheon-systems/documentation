@@ -27,7 +27,7 @@ permalink: docs/terminus/:basename/
     <p class="instruction">Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="mac-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
+      <figure><pre id="mac-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; composer init -n ; composer config minimum-stability dev ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
     </div>
   </div>
   <!-- Unix: Linux Instructions -->
@@ -42,7 +42,7 @@ permalink: docs/terminus/:basename/
     <p class="instruction">Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#linux-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="linux-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bashrc ; source $HOME/.bashrc</code></pre></figure>
+      <figure><pre id="linux-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; composer init -n ; composer config minimum-stability dev ; composer require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bashrc ; source $HOME/.bashrc</code></pre></figure>
     </div>
   </div>
   <!-- Windows Instructions -->
@@ -58,7 +58,7 @@ permalink: docs/terminus/:basename/
     <p class="instruction">Run the following command to install Terminus Alpha (<code>terminus1x</code>) with <a href="https://getcomposer.org/doc/00-intro.md">Composer</a>:</p>
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#win-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-      <figure><pre id="win-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; echo '{"minimum-stability": "dev", "prefer-stable": true}' > composer.json ; php composer.phar require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
+      <figure><pre id="win-install-composer"><code class="bash" data-lang="bash">cd $HOME ; mkdir terminus1x ; cd terminus1x ; composer init -n ; composer config minimum-stability dev ; php composer.phar require pantheon-systems/terminus dev-master ; echo 'alias terminus1x=$HOME/terminus1x/vendor/bin/terminus'>>$HOME/.bash_profile ; source $HOME/.bash_profile</code></pre></figure>
     </div>
     </div>
 </div>
