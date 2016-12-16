@@ -14,7 +14,7 @@ Add plugins within the `$HOME/.terminus/plugins` directory on your local worksta
   </div>
 <div id="advance-installs" class="collapse" style="padding:10px;">
 <h3>Install via Composer</h3>
-<p>Plugins published on Packagist are available to install via the Composer package manager. In a terminal window on your computer:</p>
+<p>Plugins published on Packagist are available to install via the Composer package manager. From a terminal window on your computer, use the following commands:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-install-composer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="terminus-plugin-install-composer"><code class="bash" data-lang="bash">$HOME/.terminus/plugins/terminus-plugin-example
@@ -22,9 +22,9 @@ composer create-project pantheon-systems/terminus-plugin-example
 </code></pre></figure>
 </div>
 <h3>Install via Git</h3>
-<p>Most plugins are published online on as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (<code>$HOME/.terminus/plugins</code>). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On Github you can find it by clicking <strong>Clone or download</strong> on the repository home page:</p>
+<p>Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (<code>$HOME/.terminus/plugins</code>). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On Github you can find it by clicking <strong>Clone or download</strong> on the repository home page:</p>
 <img src="/source/docs/assets/images/terminus-plugin-install-git.png" alt="GitHub clone URL">
-<p>Then in a terminal window on your computer:</p>
+<p>Then in a terminal window on your computer, use the following commands:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-install-git"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="terminus-plugin-install-git"><code class="bash" data-lang="bash">cd $HOME/.terminus/plugins
@@ -34,7 +34,7 @@ git clone https://github.com/pantheon-systems/terminus-plugin-example.git</code>
 </div>
 
 ## Update Plugins
-Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the latest version of the plugin, and move the plugin directory into the `$HOME/.terminus/plugins` directory.
+Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the latest version of the plugin and move the plugin directory into the `$HOME/.terminus/plugins` directory.
 ## Uninstall Plugins
 Delete the plugin from the `$HOME/.terminus/plugins` directory.
 
