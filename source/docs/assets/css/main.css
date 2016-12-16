@@ -3333,7 +3333,7 @@ display: block;
 }
 .panel-default>.panel-heading {
   background-color: #fff !important;
-  
+
 }
 .manual-toc a {
   padding:10px 10px 10px 30px;
@@ -4670,6 +4670,10 @@ a:focus {
 }
 
 @media screen and (max-width : 767px) {
+  .manual-doc {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .navbar-nav .dropdown:hover .dropdown-menu li > a {
     color: #fff;
   }
