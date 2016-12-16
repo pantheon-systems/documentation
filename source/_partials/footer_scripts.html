@@ -118,12 +118,6 @@
          if(/\/install.*/.test(aaObj[i].href)>=1) {
            $('#docs-terminus').removeClass('active-trail');
          }
-         if(/\/compare.*/.test(aaObj[i].href)>=1) {
-           $('#docs-terminus').removeClass('active-trail');
-         }
-         if(/\/compare.*/.test(aaObj[i].href)>=1) {
-           $('#docs-terminus-commands').removeClass('active-trail');
-         }
          if(/\/examples.*/.test(aaObj[i].href)>=1) {
            $('#docs-terminus').removeClass('active-trail');
          }
@@ -135,6 +129,12 @@
          }
          if(/\/plugins.*/.test(aaObj[i].href)>=1) {
            $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/directory.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus-plugins').removeClass('active-trail');
+         }
+         if(/\/create.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus-plugins').removeClass('active-trail');
          }
        }
      }
@@ -176,3 +176,32 @@
              });
           </script>
     {% endif %}
+
+    {% if page.terminuscreate %}
+        <script type="text/javascript">
+              function downloadInnerHtml(filename, elId, mimeType) {
+                  var elHtml = document.getElementById(elId).innerText;
+                  var link = document.createElement('a');
+                  mimeType = mimeType || 'application/json';
+                  link.setAttribute('download', filename);
+                  link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                  link.click();
+              }
+              var fileName =  'composer.json'; // You can use the .txt extension if you want
+              $('#downloadLink').click(function(){
+                  downloadInnerHtml(fileName, 'composer','application/json');
+              });
+              function downloadInnerHtml(filename, elId, mimeType) {
+                  var elHtml = document.getElementById(elId).innerText;
+                  var link = document.createElement('a');
+                  mimeType = mimeType || 'application/php';
+                  link.setAttribute('download', filename);
+                  link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                  link.click();
+              }
+              var fileName =  'HelloCommand.php'; // You can use the .txt extension if you want
+              $('#downloadLinkb').click(function(){
+                  downloadInnerHtml(fileName, 'HelloCommand','application/php');
+              });
+           </script>
+     {% endif %}

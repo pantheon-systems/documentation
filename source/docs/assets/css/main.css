@@ -3331,10 +3331,17 @@ display: block;
 
 
 }
-
+.panel-default>.panel-heading {
+  background-color: #fff !important;
+  
+}
 .manual-toc a {
   padding:10px 10px 10px 30px;
   display: block;
+}
+.manual-toc .child a {
+  padding:10px 10px 10px 40px;
+
 }
 .manual-doc {
   border-left: solid 2px #eef2f3;
@@ -3376,24 +3383,22 @@ li.terminus-usage {
   text-decoration: none;
 }
 .terminus-plugin {
-  background-color: #ddd;
   margin: 10px;
 }
 
 .pantheon-official {
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
   background-color: #1794C7;
-  width: 50%;
   float: right;
-  position: absolute;
-  right: 0px;
-  z-index: 100;
+  position: relative;
+  margin-top: -5px;
+  margin-right: -5px;
 }
 .pantheon-official p {
   margin: 0px;
-  padding: 0px;
+  padding: 0px 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: small;
 }
 
 .nav-tabs {
