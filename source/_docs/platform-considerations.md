@@ -6,6 +6,29 @@ categories: [platform]
 ---
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 
+## Browser Support for Pantheon's Dashboard
+In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
+<table class="table  table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Chrome</th>
+      <th>Firefox</th>
+      <th>Opera</th>
+      <th>Edge</th>
+      <th>Safari</th>
+      <th>Internet Explorer</th>
+    </tr>
+    <tr>
+      <th>Versions Supported</th>
+      <td colspan="4">Evergreen Browsers - Last 4</td>
+      <td>Current + Last Year</td>
+      <td>Internet Explorer 11 <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Minimum Support" data-content="Feature support only, allows for visual inconsistencies."><em class="fa fa-info-circle"></em></a></td>
+    </tr>
+  </thead>
+</table>
+
+
 ## Multisite
 
 Pantheon supports designated use cases for [WordPress Site Networks](/docs/wordpress-site-networks) created by WordPress' Multisite feature.
