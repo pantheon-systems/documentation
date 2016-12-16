@@ -152,6 +152,6 @@ A slightly more complete version of the plugin created in this guide can be foun
 
 <div class="terminus-pager">
   <hr>
-  <a style="float:left;" href="/docs/terminus/plugins"/directory><span class="terminus-pager-lsaquo">&lsaquo;</span>Plugin Directory</a>
+  <a style="float:left;" href="/docs/terminus/plugins/directory"><span class="terminus-pager-lsaquo">&lsaquo;</span>Plugin Directory</a>
 
 </div>
