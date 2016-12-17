@@ -34,12 +34,12 @@ First, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/cr
 <p class="instruction">Once the token has been created, use it to authenticate Terminus by running the following command:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="mac-mt-auth"><code class="bash" data-lang="bash">terminus1x auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+  <figure><pre id="mac-mt-auth"><code class="bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
 </div>
 <p class="instruction">After a token has been used, future sessions can be established by email:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="mac-mt-login"><code class="bash" data-lang="bash">terminus1x auth:login  --email=dev@example.com</code></pre></figure>
+  <figure><pre id="mac-mt-login"><code class="bash" data-lang="bash">terminus auth:login  --email=dev@example.com</code></pre></figure>
 </div>
 
 <div class="terminus-pager">
