@@ -106,16 +106,14 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 Rewrite history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus.
 
-Clone the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):
-
+<p class="instruction">Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="git-clone"><code class="bash" data-lang="bash">`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`</code></pre></figure>
 </div>
 
 
-Automate the procedure for resetting Dev to Live by downloading the following bash script:
-
+<p class="instruction">Automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
 <div class="script-file-header">
 reset-dev-to-live.sh
 <a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
@@ -148,8 +146,7 @@ terminus env:clone-content $SITE.live dev
 #Open the Dev environment on the Site Dashboard
 terminus dashboard:view $SITE.dev</code></pre>
 
-Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
-
+<p class="instruction">Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#run-reset-script"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="run-reset-script"><code class="bash" data-lang="bash">sh /PATH/TO/SCRIPT/reset-dev-to-live.sh</code></pre></figure>

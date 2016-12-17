@@ -14,7 +14,7 @@ This example provides the structural requirements for plugins to be recognized a
 ### 1. Create Plugin Directory
 A plugin is a specific set of files bundled together in a directory. The first step in creating a new plugin is to create that directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must live within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
-Create a directory for your new plugin (e.g. `hello-world`):
+<p class="instruction">Create a directory for your new plugin (e.g. <code>hello-world</code>):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#create-plugin-dir"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="create-plugin-dir"><code class="bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world</code></pre></figure>
@@ -44,7 +44,7 @@ composer.json
 ### 3. Add Commands
 Each command in Terminus is defined by it’s own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
-Create a `src` directory within your plugin directory:
+<p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#create-src-dir"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="create-src-dir"><code class="bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world/src</code></pre></figure>
@@ -75,7 +75,7 @@ class HelloCommand extends TerminusCommand
 
 You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that it’s name is `hello`.
 
-The command should now be recognized and loaded by Terminus:
+<p class="instruction">The command should now be recognized and loaded by Terminus:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="terminus-hello"><code class="bash" data-lang="bash">terminus hello</code></pre></figure>
@@ -87,7 +87,7 @@ The provided example command should display the following when run:
 ```
 
 ## Debug
-Run the command with the verbose option if it does not work as expected:
+<p class="instruction">Run the command with the verbose option if it does not work as expected:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello-vvv"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="terminus-hello-vvv"><code class="bash" data-lang="bash">terminus hello -vvv</code></pre></figure>
@@ -98,14 +98,14 @@ If Terminus had trouble loading your plugin then there should be a debug notice 
 While the plugin you’ve created is good enough for local development, if you create something that you’re proud of, share it with the world! There are a few more things you’ll need to do to make your plugin distributable:
 
 ### Vendor Name
-Add a vendor name to the plugin name within `composer.json` so that your plugin may be distinguished from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: ‘pantheon-systems’) we would change the name field to:
+Add a vendor name to the plugin name within `composer.json` so that your plugin may be distinguished from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
 ```
 {
     "name": "pantheon-systems\terminus-hello-world",
 }
 ```
 ### PSR-4 Namespacing
-Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a `namespace` declaration to the top of your php file (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
+<p class="instruction">Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-namespace"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="terminus-plugin-namespace"><code class="bash" data-lang="bash">namespace Pantheon\TerminusHelloWorld\Commands;</code></pre></figure>
@@ -114,10 +114,10 @@ The `Commands` part of the namespace is not strictly necessary but it can help k
 
 You will also need to make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file  from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:
+<p class="instruction">Update the <code>composer.json</code> file with an autoload section to indicate how to load your namespace. Your composer file should now look like:</p>
 ```
 {
-    "name": "pantheon-systems\terminus-hello-world",
+    "name": "my-username/terminus-hello-world",
     "description": "An Hello, World Terminus command",
     "type": "terminus-plugin",
     "autoload": {
@@ -130,7 +130,7 @@ Update the `composer.json` file with an autoload section to indicate how to load
     }
 }
 ```
-Remember to change `pantheon-systems` and `Pantheon` in the above to your vendor name.
+Remember to change `my-username` and `Pantheon` in the above to your vendor name.
 
 ## Coding Standards
 While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source licence and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:
@@ -142,9 +142,10 @@ More information on Terminus standards can be found at:
 [https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
 
 ## Plugin Versioning
-Terminus follows semantic versioning. We recommend adopting `TERMINUS.MAJOR.MINOR` for plugin versioning.
+Terminus follows semantic versioning. We recommend adopting TERMINUS.MAJOR.MINOR for plugin versioning.
 
-Given a version number `TERMINUS.MAJOR.MINOR`, increment the:
+Given a version number TERMINUS.MAJOR.MINOR, increment the:
+
 - TERMINUS version when is compatible with a new MAJOR version of Terminus,
 - MAJOR version when you break functionality in a backwards-compatible manner, and
 - MINOR version when you make backwards-compatible bug fixes.
