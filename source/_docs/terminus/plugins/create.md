@@ -142,11 +142,11 @@ More information on Terminus standards can be found at:
 [https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
 
 ## Plugin Versioning
-Terminus follows semantic versioning. We recommend adopting TERMINUS.MAJOR.MINOR for plugin versioning.
+Terminus follows [semantic versioning](http://semver.org/). We recommend adopting TERMINUS.MAJOR.MINOR for plugin versioning.
 
 Given a version number TERMINUS.MAJOR.MINOR, increment the:
 
-- TERMINUS version when is compatible with a new MAJOR version of Terminus,
+- TERMINUS version when the plugin is compatible with a new MAJOR version of Terminus,
 - MAJOR version when you break functionality in a backwards-compatible manner, and
 - MINOR version when you make backwards-compatible bug fixes.
 

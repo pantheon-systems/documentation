@@ -97,7 +97,9 @@
     <div class="container content mb-70">
         <div class="row">
           {% if page.terminuslegacy %}
-          {% include("breadcrumb.html") %}
+          <div style="row">
+                <ul class="pio-breadcrumb" style="margin-top:30px;">
+                    <a href="/docs">Home</a> / <a href="/docs/terminus">Terminus Manual</a> / <a data-proofer-ignore class="not-allowed">{{ page.title }}</a>
           {% endif %}
           <h1 style="margin-bottom:30px;" class="pio-docs-title">{{page.title}}</h1>
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
