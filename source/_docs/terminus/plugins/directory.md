@@ -14,7 +14,7 @@ The following plugins are supported for Terminus 1.0:
       </div>
       <div class="terminus-plugin">
         <h3>Quicksilver</h3>
-        <p class="topic-info__description">Install example Quicksilver, or a personal collection.</p>
+        <p class="topic-info__description">Install webhooks from <a href="https://github.com/pantheon-systems/quicksilver-examples">Quicksilver examples</a>, or from a personal collection.</p>
         <p class="topic-info__description">By <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
         <a href="https://github.com/pantheon-systems/terminus-quicksilver-plugin" class="btn-primary btn">Learn More</a>
       </div>
