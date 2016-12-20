@@ -48,6 +48,19 @@ The following plugins are supported for Terminus 1.0:
       </div>
     </div>
   </div>
+  <div style="margin-bottom:30px;" class="col-md-6">
+    <div class="topic-info">
+      <div class="pantheon-official">
+        <p>Pantheon Official</p>
+      </div>
+      <div class="terminus-plugin">
+        <h3>Terminus Composer</h3>
+        <p class="topic-info__description">Run Composer commands on a Pantheon sites.</p>
+        <p class="topic-info__description">By <a href="https://github.com/rvtraveller">Brian Thompson</a></p>
+        <a href="https://github.com/pantheon-systems/terminus-composer-plugin" class="btn-primary btn">Learn More</a>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="terminus-pager">
   <hr>
