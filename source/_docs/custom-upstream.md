@@ -73,7 +73,7 @@ git push origin master
 Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
 
 ```bash
-terminus sites create
+terminus site:create <site> <label> <upstream> --org=<org>
 ```
 
 [Clone the Pantheon repository](/docs/git/#clone-your-site-codebase):
@@ -102,7 +102,7 @@ Visit the Development site URL and complete the site installation process to mak
 
 Testers might find it helpful to use the wipe functionality in the Database / Files tab to easily run through the install process multiple times:
 ```bash
-terminus site wipe
+terminus env:wipe <site>.<env>
 ```
 
 

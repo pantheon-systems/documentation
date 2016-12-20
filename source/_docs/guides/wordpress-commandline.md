@@ -39,14 +39,10 @@ If you see the Pantheon lightning fist, you'll know that terminus is installed p
 
 ## Log In to Pantheon
 
-Now we need to tell terminus who you are. You can do that with the `auth` command:
+Now we need to tell terminus who you are. You can do that with the `auth:login` command:
 
 ```nohighlight
-$ terminus auth login your@email.tld
-Your dashboard password (input will not be shown):
-Logging in as brian@pantheon.io
-Saving session data
-
+$ terminus auth:login --email=<email> --machine-token=<machine_token>
 ```
 
 You'll need to enter your password. If you are scripting a process, create a [machine token](/docs/machine-tokens/). You'll know you have successfully authenticated when you see the Pantheon logo.

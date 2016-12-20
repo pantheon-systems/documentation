@@ -123,14 +123,14 @@ Next, push the code to Pantheon.
 $ git push origin master
 ```
 Push the code to Test and Live and enable the module in all environments.
-You can do this through the Site Dashboard and the Drupal Admin UI (/admin/modules) or by using terminus and drush:
+You can do this through the Site Dashboard and the Drupal Admin UI (/admin/modules) or by using [Terminus](/docs/terminus) and drush:
 ```
-$ terminus auth login  # See https://github.com/pantheon-systems/cli
-$ terminus --env=dev drush "en reroute_email -y"
-$ terminus site deploy --from=dev --env=test --note="Intial deploy. Reroute Email demo"
-$ terminus site deploy --from=test --env=live --note="Intial deploy. Reroute Email demo"
-$ terminus --env=test drush "en reroute_email -y"
-$ terminus --env=live drush "en reroute_email -y"
+$ terminus auth:login
+$ terminus drush <site>.test "en reroute_email -y"
+$ terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Intial deploy. Reroute Email demo"
+$ terminus env:deploy <site>.live --cc --updatedb --note="Intial deploy. Reroute Email demo"
+$ terminus drush <site>.test "en reroute_email -y"
+$ terminus drush <site>.live "en reroute_email -y"
 ```
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 

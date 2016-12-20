@@ -223,7 +223,7 @@ This push to Pantheon failed, because the Development environment was in SFTP mo
 Switch the connection mode to Git by clicking on the toggle, or via the command line:
 
 ```nohighlight
-$ terminus site set-connection-mode --mode=git
+$ terminus connection:set <site>.<env> git
 ```
 
 ![Connection Mode set to Git](/source/docs/assets/images/dashboard/connection-mode-git.png)
@@ -305,7 +305,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 The platform is telling me that no Multidev environments were found associated with the Git branch. I can stay on the command-line and quickly create one with Terminus.
 
 ```nohighlight
-$ terminus site create-env --to-env=configs --from-env=dev
+$ terminus multidev:create <site>.dev <to_env>
 ```
 ![New environment named configs](/source/docs/assets/images/dashboard/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
 The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my GitHub pull request.

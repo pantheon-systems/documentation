@@ -19,24 +19,17 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 7. Import the configuration from code into the live environment database: `drush cim -y`
 8. Profit.
 
-Using Terminus, you can complete the above process from the command line. Before you begin, it helps to create a `.env` file inside of any directory. We tend to use the base of the cloned site repository, and cd to that directory.
-Our `.env` file contains a single line:
-```
-TERMINUS_SITE="book-blog"
-```
-[Read an example .env file](https://github.com/pantheon-systems/cli/blob/0.9.0/.env.example)
-
-This keeps us from needing to use `--site=book-blog` with all of our terminus commands. You'll also be able to copy and paste these commands.
+Using Terminus, you can complete the above process from the command line.
 
 ### Workflow Example
 
-1. `terminus drush 'cex -y'
-2. `terminus site code commit --env=dev --message="Export configuration to code"`
-3. `terminus site deploy --env=test --sync-content --cc --note="Deploy configuration to test"`
-4. `terminus drush 'cim -y'
+1. `terminus drush <site>.dev 'cex -y'
+2. `terminus env:commit <site>.dev --message="Export configuration to code"`
+3. `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
+4. `terminus drush <site>.<env> 'cim -y'
 5. `open http://test-mysite.pantheonsite.io`
-6. `terminus site deploy --env=live --cc --note="Deploy configuration to live"`
-7. `terminus drush 'cim -y'
+6. `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
+7. `terminus drush <site>.live 'cim -y'
 8. `open live-mysite.pantheonsite.io`
 
 ## Configuration Tools for Drupal 8
