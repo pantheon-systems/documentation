@@ -33,7 +33,7 @@ permalink: docs/terminus/:basename/
         <td><strong md-highlight-text="searchCommand">{[{ command.name }]}</strong><br><small md-highlight-text="searchCommand">{[{ command.description }]}</small></td>
         <td>
             <li class="terminus-usage">
-            <small md-highlight-text="searchCommand">{[{ command.usage[0] }]}</small>
+            <small md-highlight-text="searchCommand">{[{ command.usage }]}</small>
             </li>
         </td>
         </td>
