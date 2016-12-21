@@ -22,7 +22,7 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus site clear-cache
+terminus env:clear-cache <env>
 ```
 
 There are three parts to any dynamic website:
@@ -74,11 +74,11 @@ $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 <p>Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</p></div>
 
 ### Via Terminus
-Create and export the database by running the following Terminus commands:
+Create and get the database by running the following Terminus commands:
 
 ```nohighlight
-terminus site backups create --element=database --site=<site> --env=<env>
-terminus site backups get --element=database --to=$HOME/Desktop/ --latest --site=<site> --env=<env>
+terminus backup:create <site>.<env> --element=db
+terminus backup:get <site>.<env> --element=db
 ```
 
 
@@ -95,10 +95,10 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 
 Run the following Terminus commands:
 ```nohighlight
-terminus site backups create --element=files
-terminus site backups get --element=files --to=$HOME/Desktop/ --latest
+terminus backup:create <site>.<env> --element=files
+terminus backup:get <site>.<env> --element=files
 ```
-This will create and download a backup of the site's files to your desktop.
+This will create and get a backup of the site's files.
 
 ### Via SFTP CLI
 

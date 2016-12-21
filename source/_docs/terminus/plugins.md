@@ -6,6 +6,10 @@ layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
 Extend the functionality of Terminus and add commands by installing third party plugins.
+<div class="alert alert-info">
+<h3 class="info">Note</h3>
+<p>If you are a plugin author, you will need to update your plugin to the Terminus 1.0 syntax. See <a href="/docs/terminus/commands/compare">Legacy Terminus Versions</a> to compare the difference in command syntax.</p>
+</div>
 ## Install Plugins
 <p class="instruction">Add plugins within the <code>$HOME/.terminus/plugins</code> directory on your local workstation. You may need to create the <code>$HOME/.terminus/plugins</code> directory if it does not already exist:</p>
 <div class="copy-snippet">
