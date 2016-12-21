@@ -478,7 +478,7 @@
     },
     {
       "zerox" : "sites mass-update --report --upstream=<upstream> --no-updatedb --xoptions=<xoption> --tag=<tag> --org=<org>",
-      "onex" : "There is currently no equivalent command in 1.0. We plan to move this functionality to a plugin."
+      "onex" : "There is currently no equivalent command in 1.0. We have moved this functionality to a plugin: https://github.com/pantheon-systems/terminus-mass-update"
     },
     {
       "zerox" : "ssh-keys add --file=<file>",
