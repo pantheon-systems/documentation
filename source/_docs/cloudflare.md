@@ -73,3 +73,28 @@ X-Cf-Cache-Status: EXPIRED
 Content-Type: text/html; charset=UTF-8
 X-Cf-Error: true
 ```
+
+## Advanced Settings
+
+The following settings address Page Rule creation in the Cloudflare dashboard. They are intended to extend the performance and security of your site. You can use these settings or create new ones from the list of options Cloudflare has available.
+
+Page Rules let you control which Cloudflare settings trigger on a given URL. Only one Page Rule will trigger per URL, so it is helpful if you sort Page Rules in priority order, and make your URL patterns as specific as possible.
+
+**Always use HTTPS**
+
+If you choose to enable Cloudflare's HTTPS certificate as described in 
+[Adding HTTPS For Free With CloudFlare](https://pantheon.io/docs/guides/cloudflare-enable-https/), you can create a page rule to redirect all your traffic to HTTPS.
+
+![Example Always HTTPS](/source/docs/assets/images/cloudflare-always-https2.png)
+
+**Increase security level for a section of the site**
+
+The site's /admin, /wp-admin or /user section may require an increased level of security against potential attackers. This can be achieved using a Page Rule as well. In the example below, everything under /user (notice the wildcard which includes anything after /user; e.g. /user/1 or /user/1/edit will also match) has an increased security level. You can also decide to bypass the Cloudflare cache although this won't impact Pantheon's edge cache.
+
+![Example Increased Security](/source/docs/assets/images/cloudflare-secure-url.png)
+
+**Always Online**
+
+In the unlikely event of a backend failure, you can configure Cloudflare to continue serving pages from its local cache. The Page Rule settings are found below. As an added security feature, you can add an option to obfuscate email addresses. You and your users will be able to see the email address but the robots/bots will not.
+
+![Example Always online](/source/docs/assets/images/cloudflare-always-online.png)
