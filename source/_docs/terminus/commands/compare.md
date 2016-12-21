@@ -6,7 +6,7 @@ terminuslegacy: true
 layout: taxon
 permalink: docs/terminus/commands/:basename/
 ---
-<p class="instruction">Install legacy version 0.13.x of Terminus using the following command:</p>
+<p class="instruction">Install [legacy version 0.13.6](https://github.com/pantheon-systems/terminus/releases/tag/0.13.6) of Terminus using the following command:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
   <figure><pre id="terminus-installer"><code class="bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar --install-version=0.13.6</code></pre></figure>
