@@ -6,18 +6,36 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
-## Requirements for Linux & Mac OS X
-- PHP version 5.5.9 or later
-- [PHP-CLI](http://www.php-cli.com/)
-- [PHP-CURL](http://php.net/manual/en/curl.setup.php)
-- [Composer](https://getcomposer.org/doc/00-intro.md)
+<!-- Tab Nav -->
+<ul class="nav nav-tabs" role="tablist">
+  <li id="mactab" role="presentation" class="active"><a href="#mac-linux" aria-controls="mac" role="tab" data-toggle="tab">Linux & Mac OS X </a></li>
+  <li id="wintab" role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows 10</a></li>
+</ul>
 
-## Requirements for Windows 10
-- [Bash on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
-- PHP version 5.5.9 or later
-- [PHP-CLI](http://www.php-cli.com/)
-- [PHP-CURL](http://php.net/manual/en/curl.setup.php)
-- [Composer](https://getcomposer.org/doc/00-intro.md)
+<!-- Tab Panes -->
+<div class="tab-content">
+  <!-- Unix: Mac Instructions -->
+  <div role="tabpanel" class="tab-pane active" id="mac-linux">
+    <h3>Requirements</h3>
+    <ul>
+      <li>PHP Version 5.5.9 or later</li>
+      <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
+      <li><a href="http://php.net/manual/en/curl.setup.php">PHP-CURL</a></li>
+      <li><a href="https://getcomposer.org/download">Composer</a></li>
+    </ul>
+  </div>
+  <!-- Windows Instructions -->
+  <div role="tabpanel" class="tab-pane" id="win">
+    <h3>Requirements</h3>
+    <ul>
+      <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu on Windows</a></li>
+      <li>PHP Version 5.5.9 or later</li>
+      <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
+      <li><a href="http://php.net/manual/en/curl.setup.php">PHP-CURL</a></li>
+      <li>Composer (<a href="https://getcomposer.org/Composer-Setup.exe">Direct Download</a>)</li>
+    </ul>
+  </div>
+</div>
 
 ## Install
 <p class="instruction">Install the most recent release of Terminus with the following command:</p>
