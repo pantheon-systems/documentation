@@ -72,7 +72,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 # Compare existing environments and merged branches, delete only if the environment exists
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
-  if [[ $merged_branch =~ " $env " ]] ; then
+  if [[ $merged_branch =~ " $env " ]] && [ "$env" != "terminusma" ] ; then
     ~/documentation/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
   fi
 done
@@ -88,6 +88,8 @@ getMergedBranch() {
 getMergedBranch "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
-for branch in ${merged_branch_array[@]}; do
-  git push origin --delete "$branch"
-done
+  for branch in ${merged_branch_array[@]}; do
+    if [ "$branch" != "terminus-manual" ] ; then
+    git push origin --delete "$branch"
+    fi
+  done
