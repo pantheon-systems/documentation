@@ -146,16 +146,10 @@
    {% if page.terminusinstall %}
    <script type="text/javascript">
    if (navigator.appVersion.indexOf("Win")!=-1) {
-     $('#mac').removeClass('active');
+     $('#mac-linux').removeClass('active');
      $('#mactab').removeClass('active');
      $('#win').addClass('active');
      $('#wintab').addClass('active');
-   }
-   if (navigator.appVersion.indexOf("Linux")!=-1) {
-     $('#mac').removeClass('active');
-     $('#mactab').removeClass('active');
-     $('#linux').addClass('active');
-     $('#linuxtab').addClass('active');
    }
    </script>
    {% endif %}
