@@ -42,24 +42,9 @@ It is important to note that each of your site environments have a robots.txt as
 User-agent: *
 Disallow: /
 ```
-The pantheonsite.io domains are ONLY intended for development use and cannot be used for production. Robots.txt is only visible on Live with a domain, and is not available on Dev or Test. If you're testing links or SEO prior to launch, a workaround is to assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
+The pantheonsite.io domains are ONLY intended for development use and cannot be used for production. Robots.txt is only visible on Live with a custom domain, and is not available on Dev or Test. If you're testing links or SEO prior to launch, a workaround is to assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
 
 You can index your site under your production domain. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/) plugin or the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/), which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
-
-Sitemap.xml is only visible on Live with a custom domain. The following code snippet will redirect any bots trying index using the sitemap of a Pantheon domain and redirect it to your custom domain. Please replace the URLs to reflect your domain and place this in `settings.php`.
-
-```php
-// Redirect to force indexing with custom domain sitemap
-$subject = $_SERVER['HTTP_HOST'];
-$pattern = '#/pantheonsite.io/sitemap.xml$/#';
-preg_match($pattern, $subject, $matches);
-$counted = count($matches);
-if (($counted > 0 ) && (php_sapi_name() != "cli")) {
-    header('HTTP/1.0 301 Moved Permanently');
-    header('Location: http://yoursite.com/sitemap.xml'. $_SERVER['REQUEST_URI']);
-    exit();
-}
-```
 
 ### Troubleshooting
 
