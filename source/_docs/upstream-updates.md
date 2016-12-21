@@ -24,10 +24,10 @@ If you prefer using the command line, you can apply updates with [Terminus](/doc
 ### Update a Specific Site
 
 ```
-terminus site upstream-updates apply --updatedb
+terminus upstream:updates:apply <site>.<env> --updatedb
 ```
 
-Learn more about this command by running `terminus help site upstream-updates`.
+Learn more about this command by running `terminus help upstream:updates:apply`.
 
 ### Update Multiple Sites
 
@@ -35,6 +35,12 @@ Learn more about this command by running `terminus help site upstream-updates`.
 terminus sites mass-update
 ```
 Learn more about this command by running `terminus help sites mass-update`.
+
+<div class="alert alert-info">
+<h3 class="info">Note</h3>
+<p>At this time, the <code>sites mass-update</code> command is supported in <a href="/docs/terminus/commands/compare">0.13.x versions</a> and below, and is not planned to be supported in 1.0. Instead, we plan to move functionality of this command to a plugin.</p>
+</div>
+
 
 ### Further Considerations
 - ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/undo-commits).

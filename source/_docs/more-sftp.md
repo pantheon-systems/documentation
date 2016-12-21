@@ -46,7 +46,7 @@ Perhaps the most powerful way to leverage the capabilities of on-server developm
 Assuming you've already set up and authenticated with [Terminus](/docs/terminus/), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus sites show
+joshk@steppinrazor ~$ terminus site:list
 +-----------------------+-----------+---------------+---------------------------+
 | Site | Framework | Service Level | UUID |
 +-----------------------+-----------+---------------+---------------------------+
@@ -57,7 +57,7 @@ joshk@steppinrazor ~$ terminus sites show
 ### Drush Example
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus drush "dl pathauto devel admin_menu zen search_api search_api_solr"
+joshk@steppinrazor ~$ terminus drush <site>.<env> "dl pathauto devel admin_menu zen search_api search_api_solr"
 Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
 Project pathauto (7.x-1.2) downloaded to [success]
 /srv/bindings/.../code/sites/all/modules/pathauto.
@@ -82,7 +82,7 @@ That just downloaded five modules and a theme in under a minute. Pretty cool.
 WordPress has a similar capability:
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus wp "plugin install akismet wordpress-seo jetpack google-sitemap-generator"
+joshk@steppinrazor ~$ terminus wp <site>.<env> "plugin install akismet wordpress-seo jetpack google-sitemap-generator"
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:
 Installing Akismet (3.0.0)

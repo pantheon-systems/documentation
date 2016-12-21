@@ -28,7 +28,7 @@ Below we recommend using Git, but you can also use SFTP to set your site up for 
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```
- $ terminus site set-connection-mode --mode=git
+ $ terminus connection:set <site>.<env> git
  ```
 
 2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.

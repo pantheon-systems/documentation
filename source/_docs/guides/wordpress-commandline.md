@@ -85,7 +85,7 @@ $ terminus site:create YOUR-ORG-ID cli-test "Terminus CLI Create" e8fe8550-1ab9-
 
 Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-From Terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
+From Terminus, you can get to your Site Dashboard with `$ terminus dashboard <site>.<env>`
 
 ## Clone the Codebase and Dotenv
 Run the following command within backticks to [create a local repository of your site's codebase](/docs/git):

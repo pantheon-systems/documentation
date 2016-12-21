@@ -74,10 +74,10 @@ for thissite in $SITENAMES; do
 
 		# iterate through current site elements
 		for thiselement in $SITEELEMENTS; do
-			terminus site backups create --site=$thissite --env=$thisenv --element=$thiselement
+			terminus backup:create $thissite.$thisenv --element=$thiselement
 
 			# download current site backups
-		terminus site backups get --latest --site=$thissite --env=$thisenv --element=$thiselement --to=$BACKUPDIR
+		terminus backup:get $thissite.$thisenv --element=$thiselement --to=$BACKUPDIR
 		done
 
 	done

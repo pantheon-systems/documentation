@@ -35,7 +35,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 3. Login with [Terminus](/docs/terminus/):
 
  ```
- terminus auth login <email address>
+ terminus auth:login --email <email address>
  ```
 
 4. Execute the installation script on your site:

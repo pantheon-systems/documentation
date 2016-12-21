@@ -23,9 +23,9 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 6. [Backup the site](/docs/create-backups/#create-a-backup) in the Dashboard, just in case.
 
-7. Run `terminus drush "sar --dry-run sites/sitename1 sites/default"` to test the search and replace. This exact command can change depending on the name of your site, and broken assets in step 3.
+7. Run `terminus drush <site>.<env> "sar --dry-run sites/sitename1 sites/default"` to test the search and replace. This exact command can change depending on the name of your site, and broken assets in step 3.
 
-8. Once the dry run looks good, do it for real, e.g. `terminus drush "sar sites/sitename1 sites/default"`.
+8. Once the dry run looks good, do it for real, e.g. `terminus drush <site>.<env> "sar sites/sitename1 sites/default"`.
 
 9. Check your site again for broken links and images. We recommend using a link checker.
 
@@ -50,7 +50,7 @@ Then for each site:
 
 6. <a data-proofer-ignore href="/docs/migrate-manual/#step-3-add-database"> Import the database.</a>
 
-7. Run `drush sar --dry-run sites/sitename1 sites/default` to test the search and replace. You can run `terminus drush` or run `terminus sites aliases`, and then run local Drush.
+7. Run `drush sar --dry-run sites/sitename1 sites/default` to test the search and replace. You can run `terminus drush` or run `terminus aliases`, and then run local Drush.
 
 8. Run `drush sar sites/sitename1 sites/default`.
 

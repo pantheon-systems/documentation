@@ -15,12 +15,12 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 ## Install and Configure Plugin
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus/):
  ```bash
- terminus site set-connection-mode --mode=sftp
+ terminus connection:set <site>.<env> sftp
  ```
 
 2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp 'plugin install --activate solr-power --activate'
+ terminus wp <site>.<env> 'plugin install --activate solr-power --activate'
  ```
 3. From the WordPress Dashboard, navigate to **Settings** > **Solr Options**. You should see your site's Solr Server details within the **Info** tab.
 4. Select the **Indexing** tab and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
@@ -30,7 +30,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to "Index Searchable Post Types", or via Terminus:
 
  ```bash
- terminus wp 'solr index'
+ terminus wp <site>.<env> 'solr index'
  ```
 
 6. Use the **Query** tab to quickly validate Solr's indexing configuration. You can also install and activate the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to debug and validate Solr queries (optional):
