@@ -30,32 +30,19 @@ If you haven't already, set up Terminus, the Pantheon CLI, using Composer as des
 
 Importing a Drush site archive as we've prepared it above is easy. First you'll authenticate into Pantheon with Terminus:
 ```bash
-terminus auth login
-Pantheon account email address: you@yourdomain.com
-Pantheon dashboard password for you@yourdomain.com: xxxxxx
-Authenticating as you@yourdomain.com
-Success!
+terminus auth:login --email=<email> --machine-token=<machine_token>
 ```
-You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus sites show` to get a list of your existing sites.
+You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus site:list` to get a list of your existing sites.
 
-Start an interactive import:
+Start an import:
 ```nohighlight
-terminus site import
-1. my-drush-import
-Choose site: 1
-URL of archive to import: http://mysite.com/drush-archive.tar.gz
-Are you sure you want to import this archive? The dev environment of drupal-8-aws-test will be overwritten. [y/n]
-y
-.....
+terminus import <site> <url>
 ```
+
 At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 
 ## Automate Imports
 
-Every aspect of the Terminus process is designed to support automation. You can kick off an import non-interactively using the following options:
-```bash
-terminus site import --site=<sitename> --url=<archive/url.tar.gz> --yes
-```
-You can script out imports like this to run several concurrently (or in serial).
+Every aspect of the Terminus process is designed to support automation. You can script out imports like this to run several concurrently (or in serial).
 
 Terminus is a rapidly evolving project, so stay tuned. Let us know what you would like to see, and forks and pull requests are always welcome!

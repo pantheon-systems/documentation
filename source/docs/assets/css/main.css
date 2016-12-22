@@ -284,6 +284,10 @@ p{
   line-height: 29px;
 }
 
+.instruction {  /*smaller margin-bottom on paragraphs preceeding code snippets*/
+  margin-bottom: 5px;
+}
+
 h1{
   font-size: 36px;
   line-height: 1.3em;
@@ -329,6 +333,11 @@ h3.changelog {
 .share-buttons {
   margin-bottom: 20px;
 }
+
+.tab-content-heading {
+  margin-top: 15px; /*decrease top margin for headings located in tab switchers*/
+}
+
 .featured > li > a {
   text-transform: capitalize;
   margin-bottom: 10px;
@@ -384,11 +393,17 @@ body {
   min-height: 100%;
   margin: 0;
 }
+
 body.row.main {
   position: relative;
   top:50px;
   /* For scrollspy */
 }
+
+header {
+  margin-bottom: 20px;
+}
+
 .main{
   margin-bottom: 40px;
 }
@@ -1016,6 +1031,14 @@ span#changelog-rsaquo {
   cursor: not-allowed;
 }
 #subnav .subnav-search {
+}
+
+.tab-content {
+  border: 1px solid #ddd;
+  padding: 10px 20px 5px 20px;
+  border-top: 0;
+  margin-top: -10px;
+  border-radius: 4px;
 }
 
 /*Responsive layout*/
@@ -2376,11 +2399,17 @@ a.btn-primary-inverse:hover:after  {
   border-radius: 0 0 4px 4px !important;
 }
 
+.copy-snippet {
+  position: relative;
+  margin-bottom: 20px;
+}
 
 .btn-clippy {
-  float: right;
-  margin-left: -1px;
-  border-radius: 0px 4px 4px 0px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border-radius: 0 4px 4px 0;
   line-height: normal;
 }
 
@@ -2611,14 +2640,23 @@ img.clippy {
 */
 pre {
   display: block;
+  width: 100%;
   padding: 0px;
   margin: 0 0 0px;
   word-break: break-all;
   word-wrap: break-word;
-  border-radius: 4px 0px 0px 4px;
+  background-color: #fff;
+  border-radius: 4px;
   margin-bottom: 14px;
   word-break: break-word;
 }
+
+pre code,
+pre code .hljs,
+.hljs {
+  padding: 0.75em 5em 0.75em 0.75em !important;
+}
+
 /**.hljs {
   padding: 9px 14px;
   background-color: #f7f7f9;
@@ -3293,10 +3331,17 @@ display: block;
 
 
 }
+.panel-default>.panel-heading {
+  background-color: #fff !important;
 
+}
 .manual-toc a {
   padding:10px 10px 10px 30px;
   display: block;
+}
+.manual-toc .child a {
+  padding:10px 10px 10px 40px;
+
 }
 .manual-doc {
   border-left: solid 2px #eef2f3;
@@ -3338,29 +3383,27 @@ li.terminus-usage {
   text-decoration: none;
 }
 .terminus-plugin {
-  background-color: #ddd;
   margin: 10px;
 }
 
 .pantheon-official {
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
   background-color: #1794C7;
-  width: 50%;
   float: right;
-  position: absolute;
-  right: 0px;
-  z-index: 100;
+  position: relative;
+  margin-top: -5px;
+  margin-right: -5px;
 }
 .pantheon-official p {
   margin: 0px;
-  padding: 0px;
+  padding: 0px 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: small;
 }
 
 .nav-tabs {
   padding-left: 20px;
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   font-weight: bold;
@@ -4627,6 +4670,10 @@ a:focus {
 }
 
 @media screen and (max-width : 767px) {
+  .manual-doc {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .navbar-nav .dropdown:hover .dropdown-menu li > a {
     color: #fff;
   }

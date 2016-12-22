@@ -50,10 +50,10 @@ Open a mysql connection to a site.
   fi
 
   if [ "$ENV" != "live" ]; then
-    terminus site wake --site=$SITE --env=$ENV
+    terminus env:wake $SITE.$ENV
   fi
 
-  $(terminus site connection-info --site=$SITE --env=$ENV --field=mysql_command) -A --ssl
+  $(terminus connection:info $SITE.$ENV --fields=mysql_command) -A --ssl
 }
 alias tsqlc=terminus-sql-cli
 ```

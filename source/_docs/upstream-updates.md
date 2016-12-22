@@ -24,17 +24,18 @@ If you prefer using the command line, you can apply updates with [Terminus](/doc
 ### Update a Specific Site
 
 ```
-terminus site upstream-updates apply --updatedb
+terminus upstream:updates:apply <site>.<env> --updatedb
 ```
 
-Learn more about this command by running `terminus help site upstream-updates`.
+Learn more about this command by running `terminus help upstream:updates:apply`.
 
 ### Update Multiple Sites
 
 ```
-terminus sites mass-update
+terminus sites:mass-update:apply
 ```
-Learn more about this command by running `terminus help sites mass-update`.
+
+For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
 
 ### Further Considerations
 - ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/undo-commits).

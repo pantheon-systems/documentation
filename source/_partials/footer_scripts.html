@@ -107,3 +107,95 @@
             });
          </script>
    {% endif %}
+   {% if page.terminuspage %}
+
+   <script type="text/javascript">
+   function setActivetrail() {
+     aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
+     for(i=0;i<aaObj.length;i++) {
+       if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+         aaObj[i].className='active-trail';
+         if(/\/install.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/examples.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/commands.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/releases.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/plugins.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus').removeClass('active-trail');
+         }
+         if(/\/directory.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus-plugins').removeClass('active-trail');
+         }
+         if(/\/create.*/.test(aaObj[i].href)>=1) {
+           $('#docs-terminus-plugins').removeClass('active-trail');
+         }
+       }
+     }
+   }
+   window.addEventListener("load", setActivetrail);
+   </script>
+   {% endif %}
+
+   {% if page.terminusinstall %}
+   <script type="text/javascript">
+   if (navigator.appVersion.indexOf("Win")!=-1) {
+     $('#mac-linux').removeClass('active');
+     $('#mactab').removeClass('active');
+     $('#win').addClass('active');
+     $('#wintab').addClass('active');
+   }
+   </script>
+   {% endif %}
+   <!--Script for terminus/examples page to download reset script-->
+   {% if page.terminusexample %}
+       <script type="text/javascript">
+             function downloadInnerHtml(filename, elId, mimeType) {
+                 var elHtml = document.getElementById(elId).innerText;
+                 var link = document.createElement('a');
+                 mimeType = mimeType || 'text/x-shellscript';
+                 link.setAttribute('download', filename);
+                 link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                 link.click();
+             }
+             var fileName =  'reset-dev-to-live.sh'; // You can use the .txt extension if you want
+             $('#downloadLink').click(function(){
+                 downloadInnerHtml(fileName, 'reset-dev-to-live','text/x-shellscript');
+             });
+          </script>
+    {% endif %}
+
+    {% if page.terminuscreate %}
+        <script type="text/javascript">
+              function downloadInnerHtml(filename, elId, mimeType) {
+                  var elHtml = document.getElementById(elId).innerText;
+                  var link = document.createElement('a');
+                  mimeType = mimeType || 'application/json';
+                  link.setAttribute('download', filename);
+                  link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                  link.click();
+              }
+              var fileName =  'composer.json'; // You can use the .txt extension if you want
+              $('#downloadLink').click(function(){
+                  downloadInnerHtml(fileName, 'composer','application/json');
+              });
+              function downloadInnerHtml(filename, elId, mimeType) {
+                  var elHtml = document.getElementById(elId).innerText;
+                  var link = document.createElement('a');
+                  mimeType = mimeType || 'application/php';
+                  link.setAttribute('download', filename);
+                  link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                  link.click();
+              }
+              var fileName =  'HelloCommand.php'; // You can use the .txt extension if you want
+              $('#downloadLinkb').click(function(){
+                  downloadInnerHtml(fileName, 'HelloCommand','application/php');
+              });
+           </script>
+     {% endif %}

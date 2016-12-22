@@ -13,7 +13,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/docs/git/#clone-your-site-codebase) or via [Terminus](/docs/terminus):
 
  ```bash
- `terminus site connection-info  --site=[site_name] --env=dev --field='git_command'`
+ `terminus connection:info <site>.dev --fields='Git Command' --format=string`
  ```
 
 2. Navigate to the site's docroot and rename the existing default service file for pre-production environments:
@@ -32,7 +32,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
 4. Clear caches on Dev within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```
- terminus site clear-cache  --site=[site_name] --env=dev
+ terminus env:clear-cache <site>.<env>
  ```
 
 5. Verify configuration by inspecting the page source on the Dev environment's URL. You should see markup similar to the following:
@@ -101,9 +101,9 @@ For more information on Pantheon's service configuration files for Drupal, refer
 
 
 <ol start="3"><li>Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (<code>/admin/config/development/configuration/single/export</code>) or via <a href="/docs/terminus">Terminus</a>:
-<pre><code>terminus drush 'config-get system.performance --include-overidden'
-terminus drush 'config-get system.logging --include-overidden'
-terminus drush 'config-get views.settings --include-overidden'
+<pre><code>terminus drush &lt;site&gt;.&lt;env&gt; 'config-get system.performance --include-overidden'
+terminus drush &lt;site&gt;.&lt;env&gt; 'config-get system.logging --include-overidden'
+terminus drush &lt;site&gt;.&lt;env&gt; 'config-get views.settings --include-overidden'
 </code></pre>
 <div class="alert alert-info">
 <h3 class="info">Note</h3>

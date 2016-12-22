@@ -49,7 +49,7 @@ Drupal distributions offer a much richer out of the box experience, but are more
 ## Product UUID
 There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/docs/terminus/) command:
 ```
-$ terminus upstreams list
+$ terminus upstream:list
 ```
 
 ## Importing an Existing Site

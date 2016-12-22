@@ -26,8 +26,7 @@ There are two ways to obtain the aliases, either with Terminus or through the Da
 ### Download with Terminus, the Pantheon CLI
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 ```nohighlight
-$ terminus sites aliases
-[info] Pantheon aliases updated
+$ terminus aliases --print --location=<location>
 ```
 ### Download Using the Dashboard
 Download your Pantheon site aliases to manually update your local aliases file:

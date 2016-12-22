@@ -15,13 +15,13 @@ Pantheon provides [one-click updates](/docs/upstream-updates/) for WordPress cor
 1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/docs/sftp/) or with [Terminus](/docs/terminus):
 
  ```
- terminus site set-connection-mode --mode=sftp
+ terminus connection:set <site>.<env> sftp
  ```
 
 2. Install and activate the [WordPress Beta Tester](https://wordpress.org/plugins/wordpress-beta-tester/) plugin within the WordPress Dashboard or with Terminus:
 
  ```
- terminus wp 'plugin install wordpress-beta-tester --activate' --yes
+ terminus wp <site>.<env> 'plugin install wordpress-beta-tester --activate' --yes
  ```
 
 3. Go to **Tools** > **WordPress Beta Tester** and select the update stream you want to use, then click **Save**:
@@ -41,7 +41,7 @@ Pantheon provides [one-click updates](/docs/upstream-updates/) for WordPress cor
 1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/docs/terminus):
 
  ```
- terminus site set-connection-mode --mode=git
+ terminus connection:set <site>.<env> git
  ```
 
 2. From within the [local clone of your site's code repository](/docs/git/#clone-your-site-codebase):
@@ -78,4 +78,4 @@ Create the Multidev from within the Site Dashboard by selecting **Multidev** > *
 ## Troubleshooting
 
 ### Database Update Required
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus 'wp core update-db'](/docs/terminus).
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus <site>.<env> 'wp core update-db'](/docs/terminus).

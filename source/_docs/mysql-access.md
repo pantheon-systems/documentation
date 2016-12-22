@@ -44,9 +44,8 @@ fi
 DRUSH='/usr/local/bin/drush'
 
 # Authenticate with Terminus
-PANTHEON_USER='XXXX'
-PANTHEON_PASS='XXXX'
-terminus auth login $PANTHEON_USER --password=$PANTHEON_PASS
+terminus auth:login --email <email>
+
 
 # see the following file:
 TEMPLATE='spf-template.spf'
@@ -55,7 +54,7 @@ TEMPLATE='spf-template.spf'
 TMP_SPF='/tmp/tmp.spf'
 
 # Update aliases
-terminus sites aliases
+terminus aliases
 
 echo "fetching connection string"
 CONNECTION_STRING=`$DRUSH $1 sql-connect`
@@ -95,7 +94,7 @@ ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.
 This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 second of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
 ```nohighlight
-terminus site wake
+terminus env:wake <site>.<env>
 ```
 ### Can't Connect to Local MySQL Server Through Socket
 See [Database Connection Errors](/docs/database-connection-errors/) to troubleshoot

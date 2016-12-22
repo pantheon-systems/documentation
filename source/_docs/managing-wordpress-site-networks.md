@@ -12,7 +12,7 @@ Code development and deployment will use the same [Pantheon Workflow](/docs/pant
 
 As long as the primary site on Dev, Test, and Live have the same subdomain pattern (`www.` or bare), the only operation necessary to view all sites with hostnames present on the target environment is, where `DOMAIN=example.com` and `TESTDOMAIN=test.example.com`:
 ```bash
-terminus wp 'search-replace $DOMAIN $TESTDOMAIN --network' --env=test
+terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --network'
 ```
 ## Flushing Cache Globally After Search and Replace
 
@@ -21,11 +21,11 @@ If you use Redis as a persistent storage backend for your object cache, you’ll
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
-terminus wp 'cache flush' --env=test
+terminus wp <site>.test 'cache flush'
 ```
 The Terminus command to clear all caches for an environment is:
 ```bash
-terminus site clear-cache --env=test
+terminus env:clear-cache test
 ```
 
 <div class="alert alert-info" role="alert">
@@ -37,24 +37,24 @@ terminus site clear-cache --env=test
 
 Code that has been committed to master and is running on the Dev environment:
 ```bash
-terminus site deploy --test --sync-content --yes
-terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
-terminus site clear-cache --env=test
+terminus env:deploy <site>.test --sync-content --cc --updatedb --note=<note>
+terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network'
+terminus env:clear-cache test
 ```
 ## Clone Content from Live to Test
 Restore the Test database and files to the state of the Live environment.
 ```bash
-terminus site clone-content --from-env=live --to-env=test --yes
-terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
-terminus site clear-cache --env=test
+env:clone <site>.live test
+terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
+terminus env:cc test
 ```
 
 ## Clone Content from Live to Dev
 Catch up Dev to Live before you start development. The first command will overwrite the DB in Dev.
 ```bash
-terminus site clone-content --from-env=live --to-env=dev --yes
-terminus wp 'search-replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network' --env=dev
-terminus site clear-cache --env=dev
+env:clone <site>.live dev
+terminus wp <site>.dev 'search-replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network'
+terminus env:cc dev
 ```
 
 ## Subdomain Networks
@@ -62,22 +62,22 @@ terminus site clear-cache --env=dev
 Subdomain-style networks require custom hostnames added to all environments for all sub-sites they will be used on. Add hostnames to live for all subdomain sites.
 
 ```bash
-terminus wp 'site create --slug=$SLUG' --env=live
-terminus site hostnames add --hostname=$SLUG.$DOMAIN --env=live
+terminus wp <site>.live 'site create --slug=$SLUG'
+terminus domain:add <site>.live $SLUG.$DOMAIN
 ```
 Add hostnames to Dev and Test environments for all subdomain sites necessary for development and testing.  
 ```bash
-terminus wp 'site create --slug=$SLUG' --env=live
-terminus site hostnames add --hostname=$SLUG.$DOMAIN --env=live
-terminus site hostnames add --hostname=$SLUG.$TESTDOMAIN --env=test
-terminus site hostnames add --hostname=$SLUG.$DEVDOMAIN --env=dev
+terminus wp <site>.live 'site create --slug=$SLUG'
+terminus domain:add <site>.live $SLUG.$DOMAIN
+terminus domain:add <site>.test $SLUG.$TESTDOMAIN
+terminus domain:add <site>.dev $SLUG.$DEVDOMAIN
 ```
 The next time you clone content from Live to Test or Dev, this sub-site will be accessible in each environment after a simple `wp search-replace`.
 
 ```bash
-terminus site clone-content --from-env=live --to-env=test --yes
-terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network' --env=test
-terminus site clear-cache --env=test
+terminus env:clone <site>.live test
+terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network'
+terminus env:cc test
 ```
 
 ## Search and Replace for Domain-Mapped Sites in a Network
@@ -107,7 +107,7 @@ You can handle the mapping above in three operations. There are two very importa
 The first operation will map the primary site and all of its subsites:
 given `DOMAIN=example-network.com`, `TESTDOMAIN=test.example-network.com`, and `DEVDOMAIN=dev.example-network.com`
 ```bash
-terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network' --env=test
+terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network'
 ```
 - `www.$DOMAIN` -> `www.$TESTDOMAIN`
 - `second-site.$DOMAIN` -> `second-site.$TESTDOMAIN`
@@ -116,25 +116,26 @@ terminus wp 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network' --e
 The site URL will become `www.$TESTDOMAIN`.
 Then we can to replace the aliases in the database with their test-environment URLs.
 ```bash
-terminus wp 'search-replace second-site.com  second-site.$TESTDOMAIN' --url=www.$TESTDOMAIN --network --env=test
-terminus wp 'search-replace third-site.com third-site.$TESTDOMAIN' --url=twww.$TESTDOMAIN --network --env=test
+terminus wp <site>.test 'search-replace second-site.com  second-site.$TESTDOMAIN'
+terminus wp <site>.test 'search-replace third-site.com third-site.$TESTDOMAIN'
 ```
 ### Preserve Domain-Mapped URLs
 
 If you want to use unique domain-mapped hostnames, like `www.test.second-site.com` and `www.dev.third-site.com` as aliases for the sites on the Dev and Test environments instead of the default environment URLs, add them to the Test environment and at your DNS host.
 ```bash
-terminus site hostnames add --hostname=www.dev.$DOMAIN2 --env=test
-terminus site hostnames add --hostname=www.test.$DOMAIN2 --env=test
-terminus site hostnames add --hostname=www.dev.$DOMAIN3 --env=test
-terminus site hostnames add --hostname=www.test.$DOMAIN3 --env=test
+terminus domain:add <site>.test www.dev.$DOMAIN2
+terminus domain:add <site>.test www.test.$DOMAIN2
+terminus domain:add <site>.test www.dev.$DOMAIN3
+terminus domain:add <site>.test www.test.$DOMAIN3
 ```
+
 After each clone from Live to Test, performing the first search and replace, map the new aliases.
 - `second-site.com` -> `test.second-site.com`
 - `third-site.com` -> `test.third-site.com`
 ```bash
-terminus wp 'search-replace $DOMAIN test.$DOMAIN --url=www.$DOMAIN' --env=test
-terminus wp 'search-replace $DOMAIN2 test.$DOMAIN2 --url=www.$TESTDOMAIN' --env=test
-terminus wp 'search-replace $DOMAIN3 test.$DOMAIN3 --url=www.$TESTDOMAIN' --env=test
+terminus wp <site>.test 'search-replace $DOMAIN test.$DOMAIN --url=www.$DOMAIN'
+terminus wp <site>.test 'search-replace $DOMAIN2 test.$DOMAIN2 --url=www.$TESTDOMAIN'
+terminus wp  <site>.test 'search-replace $DOMAIN3 test.$DOMAIN3 --url=www.$TESTDOMAIN'
 ```
 
 ## Network Tips and Tricks with WP-CLI

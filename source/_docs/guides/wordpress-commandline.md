@@ -39,14 +39,10 @@ If you see the Pantheon lightning fist, you'll know that terminus is installed p
 
 ## Log In to Pantheon
 
-Now we need to tell terminus who you are. You can do that with the `auth` command:
+Now we need to tell terminus who you are. You can do that with the `auth:login` command:
 
 ```nohighlight
-$ terminus auth login your@email.tld
-Your dashboard password (input will not be shown):
-Logging in as brian@pantheon.io
-Saving session data
-
+$ terminus auth:login --email=<email> --machine-token=<machine_token>
 ```
 
 You'll need to enter your password. If you are scripting a process, create a [machine token](/docs/machine-tokens/). You'll know you have successfully authenticated when you see the Pantheon logo.
@@ -58,60 +54,23 @@ Open a browser and log in to your Pantheon Dashboard so you can see the progress
 Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us.
 
 ```nohighlight
-$ terminus sites create
-Human readable label for the site: WP Elevation Webinar
-Machine name of the site; used as part of the default URL [ if left blank will be wpelevationwebinar]: wpe-webinar
 
-1. None
+$ terminus upstream:list | grep "WordPress"
+  e8fe8550-1ab9-4964-8838-2b9abdccf4bf   WordPress                                                                 vanilla      core          wordpress
+$ terminus site:create cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
 
-Choose organization: 1
+[notice] Creating a new site...
 
-1. Awesome Codebase
-2. Backdrop
-3. Community Media Starter Kit
-4. CiviCRM Starter Kit
-5. Commerce Kickstart
-6. DKAN
-7. Drupal 6
-8. Drupal 7
-9. Drupal 8 Beta
-10. Introduction to Theming Basics for Drupal 7
-11. FreakPress
-12. Mukurtu CMS
-13. Open Academy
-14. Open Atrium 2
-15. Open Outreach
-16. OpenAid
-17. OpenIdeaL
-18. OpenPublic
-19. OpenPublish
-20. OpenScholar
-21. Panopoly
-22. Plato Típico
-23. Pushtape
-24. Restaurant
-25. University of Texas at Austin Distribution
-26. WordPress
-
-Select one: 26
-Creating new WordPress installation ...
-working .............................
-Success: Pow! You created a new site!
-$
 ```
 To create a site with one command, you'll need:
-- **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstreams list`.
-- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `--site=cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
+- **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstream:list`.
+- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
 - **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
-- **Organization ID:** The UUID of the organization that will own the site.
 
 The format for creating a site with a single command is:
 
 ```nohighlight
-$ terminus sites create [--upstream=<upstreamid>] \  
-                        [--site=<name>] \  
-                        [--label=<label>] \  
-                        [--org=<id>] \    
+site:create [--org [ORG]] [--] <site_name> <label> <upstream_id>
 ```
 
 For my test site, I used the following:  
@@ -120,81 +79,29 @@ For my test site, I used the following:
 **Label** = Command Line Test
 
 ```nohighlight
-$ terminus sites create --upstream=e8fe8550-1ab9-4964-8838-2b9abdccf4bf \  
-                        --site=cli-test \  
-                        --label="Command Line Test" \  
-                        --org=YOUR-ORG-ID \  
+$ terminus site:create YOUR-ORG-ID cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
 ```
 **Note:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
 Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-From Terminus, you can get to your Site Dashboard with `$ terminus site dashboard --site=<site-name>`
+From Terminus, you can get to your Site Dashboard with `$ terminus dashboard <site>.<env>`
 
 ## Clone the Codebase and Dotenv
 Run the following command within backticks to [create a local repository of your site's codebase](/docs/git):
 
-    `terminus site connection-info --site=<site-name> --env=dev --field=git_command`
-
-Terminus has built-in support for [PHP Dotenv](https://github.com/vlucas/phpdotenv), which provides an alternative to manually setting `--site` and `--env` within each command. Navigate to the site's local repository and create a `.env` file within the project's root directory:
-
 ```
-TERMINUS_SITE='cli-test'
-TERMINUS_ENV='dev'
-TERMINUS_USER='brian@pantheon.io'
+terminus dashboard:view <site>.<env>
 ```
-
-Add `.env` to `.gitignore` so that this file is not tracked within version control. Terminus commands invoked from within this directory will now automatically use the environment variables defined in `.env`.
 
 ## Install WordPress
 
 Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish. There's even a `wp-config.php` already created and ready to use.
 
-All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the `wp core install` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. The format is:
+All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the `wp core install` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command:
 
 ```nohighlight
-$ terminus wp 'core install --url=the.url.of.your.dev.site \
-                           --title="Command Line Test Site" \
-                           --admin_user=admin --admin_password=something_incredibly_secure \  
-                           --admin_email=your@emailaddress.tld'
-```
-
-Before this command will work though, you need one critical piece of information: the URL for your new site. Lucky for us, that is not difficult to find if you understand a little about Terminus.
-
-Terminus has many great commands that allow you to manage all aspects of the sites built on Pantheon, and one of those commands is the `site` command.
-
-```nohighlight
-$ terminus site
-```
-
-If you execute the `site` command by itself it will list all of the sub-commands you can issue to control a specific site. One of those subcommands is `hostname`, which lists the hostname for a given site and environment. To specify the site you want a hostname for, use the `--site` option. Throughout Terminus, when a command needs to be executed on a single site, you specify that site with `--site` and then the name of your site. This is the same name that you created using `sites create` two steps above.
-
-As you know, every website built on Pantheon has a minimum of three environment, Dev, Test, and Live. Most sub-commands of `site` require that you let Terminus know which environment you want the command run in. If you fail to specify it, Terminus will ask you to select one before it executes. You can specify which environment you want to work on with the `--env` option.
-
-Now armed with this knowledge, you can see that with a little bash magic you can use Terminus to get the URL of your site:
-
-```bash
-$ echo "`terminus site hostnames list | awk '{if (NR!=1) print "http://" $1}'`"
-```
-
-With the URL for your site, you can execute the `wp core install` command and complete the example above.
-
-To populate the database of the site you created, use the following command:
-
-```nohighlight
-$ terminus wp 'core install
-                           --url=http://dev-cli-test.pantheonsite.io \
-                           --title="WP-CLI Test" \
-                           --admin_user=admin \
-                           --admin_password=pantheon.rocks \
-                           --admin_email="cal@pantheon.io"'
-```
-The same command shown on a single line:
-```nohighlight
-terminus wp 'core install --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=pantheon.rocks --admin_email=cal@pantheon.io'
-```
-If everything goes as planned you'll see this message:
-```bash
+terminus wp 'core install --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=something_incredibly_secure --admin_email=your@emailaddress.tld'
 Success: WordPress installed successfully.
 ```
 
@@ -212,7 +119,7 @@ Return to the terminal, we don't need no stinking mouse.
 
 I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/wp-cfm).
 ```nohighlight
-$ terminus wp 'plugin install wp-cfm --activate'
+$ terminus wp <site>.<env> 'plugin install wp-cfm --activate'
 ```
 Results in
 ```bash
@@ -229,10 +136,10 @@ Success: Plugin 'wp-cfm' activated.
 
 Now I can [use WP-CFM](/docs/wp-cfm) to create a bundle that will track my configurations and export them to code.
 
-If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus site code diffstat` and `$ terminus site code commit`
+If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus env:diffstat` and `$ terminus env:commit [--message [MESSAGE]] [--] <site_env>`
 
 ```nohighlight
-$ terminus site code diffstat
+$ terminus env:diffstat <site>.<env>
 +---------------------------------------------------------------------------------+-----------+--------+-----------+
 | File                                                                            | Deletions | Status | Additions |
 +---------------------------------------------------------------------------------+-----------+--------+-----------+
@@ -259,7 +166,8 @@ $ terminus site code diffstat
 ```
 Only the expected changes are reported. Let's commit.
 ```nohighlight
-$ terminus site code commit --message="Install wp-cfm plugin"
+$ terminus env:commit --message "Install wp-cfm plugin" dev
+"Install wp-cfm plugin"
                             Commit 1 changes? [y/n] y
                             Success: Successfully commited.
                             +---------------------+-----------------+-----------+------------------------------------------+---------------------------------------------------+
@@ -277,7 +185,7 @@ Using WP-CLI gives us the ability to upload images and modify posts. In this cas
 
 You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import.` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
 ```
-$ terminus wp 'media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
+$ terminus wp <site>.<env> 'media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
            --post_id=\"1\" \  
            --featured_image'  \  
 ```
@@ -303,7 +211,7 @@ Position your Pantheon Dashboard window where you can see it while working in th
 
 
 ```nohighlight
-$ terminus wp 'theme install pinboard --activate'
+$ terminus wp <site>.<env> 'theme install pinboard --activate'
 ```
 
 Watch your Dashboard. It recognizes your uncommitted changes.
@@ -313,7 +221,7 @@ Watch your Dashboard. It recognizes your uncommitted changes.
 We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything update in the browser.
 
 ```nohighlight
-$ terminus site code commit --message="Install Pinboard theme" --yes  
+$ terminus env:commit --message "Install wp-cfm plugin" dev
 ```
 
 Terminus connects to Pantheon's API, which makes real-time updates to any Dashboard you have open. What you do in Terminus is immediately represented in your Dashboard, so it is always up to date.
@@ -325,12 +233,12 @@ Now that we've committed our changes, go back to your test site in the browser a
 No WordPress site is ready for development without a child theme. Let's create one:
 
 ```nohighlight
-$ terminus wp 'scaffold child-theme --parent-theme=pinboard --theme-name=cli-test-theme'
+$ terminus wp <site>.<env> 'scaffold child-theme --parent-theme=pinboard --theme-name=cli-test-theme'
 ```
 Next, we'll commit it.
 
 ```nohighlight
-$ terminus site code commit --message="Create cli-test-theme child of pinboard theme" --yes
+$ terminus $ terminus env:commit --message "Create cli-test-theme child of pinboard theme" dev
 ```
 
 Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.

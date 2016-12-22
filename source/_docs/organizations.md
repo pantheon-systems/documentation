@@ -86,7 +86,7 @@ de305d54-75b4-431b-adb2-eb6b9e546014
 You can also use [Terminus](/docs/terminus/) to find the UUID of your organizations:
 
 ```
-$ terminus organizations list
+$ terminus org:list
 ```
 
 

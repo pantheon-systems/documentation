@@ -64,7 +64,7 @@ Click your browser's back button from the Pantheon Dashboard and re-authenticate
 You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus site import —url=<url>
+terminus import <site> <url>
 ```
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
