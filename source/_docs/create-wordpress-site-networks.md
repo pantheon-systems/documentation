@@ -35,7 +35,7 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 <p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h3 class="info">Subdirectory Note</h3>
-<p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p><div>
+<p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p></div>
 
 If you will run a subdomain-style site network with the primary site that will exist using the `www.` subdomain (recommended), you must add custom hostnames with the `www.` subdomain to all environments. Likewise, if you will run the site network with the primary site at the bare domain, `example-network.com`, Dev and Test environment primary hostnames must not have the `www.` subdomain. For the site, `www.example-network.com`, use the following Terminus commands to add the hostnames:
 ### Add www. Hostnames
