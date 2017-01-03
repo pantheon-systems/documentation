@@ -22,32 +22,31 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
-While some certificate providers instruct you to create these on your server, they can be created from any system. We recommend generating them on your local system using OpenSSL. If for some reason you cannot use OpenSSL, there are other tools available, such as [Online CSR Generator](https://www.gogetssl.com/online-csr-generator) or [Certificatetools](https://certificatetools.com/) for SANs certificates.
+While some certificate providers instruct you to create these on your server, they can be created from any system. We recommend generating them on your local system using OpenSSL. If for some reason you cannot use OpenSSL, there are other tools available, such as [Online CSR and Key Generator](https://www.ssl.com/online-csr-and-key-generator/) or [Certificatetools](https://certificatetools.com/) for SANs certificates.
 
 Run `openssl` from the command line to generate an [RSA private key](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) (.key file) and [certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request) (.csr) file:
 
 ```bash
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr -keyout www_example_com.key
 ```
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.
+</div>
 
-You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain. For a Wildcard SSL cert, the *Common Name* must start with an arterisk "*" symbol. The arterisk represents all possible subdomains. Do not add a password to your key: leave this blank. 
-`Ex.  *.example.com`
+You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain. For a Wildcard SSL cert, the *Common Name* must start with an arterisk "*" symbol. The arterisk represents all possible subdomains. `Ex.  *.example.com` 
 
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
+
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+Do not add a password to your key. Adding a password will cause an error later when loading your cert into your Pantheon environment. If you did enter a password, repeat the above openssl command, leaving the password blank.
+</div>
 
 The output of `openssl` should be two files:
 
 `www_example_com.csr`  
 `www_example_com.key`
-
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<ul>
-<li>Do not add a password to your key. It is important to keep your <code>.key</code> file private and secure. You'll use this file later when loading your cert into a Pantheon environment. If you did enter a password, do the above again except leaving the password blank.</li>
-<li> You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.</li>
-</ul>
-</div>
-
 
 ## Get SSL Certificate
 
