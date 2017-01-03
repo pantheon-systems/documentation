@@ -10,7 +10,7 @@ Routing traffic to sites on Pantheon requires modifying the DNS configuration at
 
 We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
 
-If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/), set up DNS as described here first.
+If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [Cloudflare's free Universal SSL service](/docs/guides/cloudflare-enable-https/), set up DNS as described here first.
 ## Step 2: Add Domains to the Site Environment
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/select-plan/).
@@ -61,17 +61,17 @@ Pantheon's www-redirection service will automatically redirect requests to the w
 ### Serving Sites from Bare Domains
 To serve your site from the bare domain, [enable HTTPS](/docs/enable-https/) then add the recommended DNS entries at the domain's DNS provider using the provided destinations from the Site Dashboard. Once configured, [redirect incoming requests](/docs/redirects#redirect-from-www-to-the-bare-domain) to the bare domain via `settings.php` or `wp-config.php` to prevent problematic session handling and improve SEO.
 
-As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or configure [CloudFlare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
+As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or configure [Cloudflare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
 
-1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/), [CloudFlare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
+1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/), [Cloudflare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
 
  ```bash
  CNAME @ live-yoursite.pantheonsite.io
  CNAME www live-yoursite.pantheonsite.io
  ```
- The @ value will show the bare domain once created in CloudFlare:
- ![CloudFlare example records](/source/docs/assets/images/cloudflare-cnames.png)
+ The @ value will show the bare domain once created in Cloudflare:
+ ![Cloudflare example records](/source/docs/assets/images/cloudflare-cnames.png)
 3. [Redirect incoming requests](/docs/redirects/#redirect-to-a-common-domain) to the bare domain via `settings.php` or `wp-config.php`.
 
 Another alternative is to use **[ALIAS/ANAME records](http://help.dnsmadeeasy.com/spry_menu/aname-records/)**. These records constantly monitor all resolving IPs of the destination (e.g. `live-yoursite.pantheonsite.io`), and creates corresponding A records.
@@ -140,7 +140,7 @@ The error indicates internal routing problem. Check if the URL is correct and ma
 
 ### Can a site on Pantheon be used with a third-party reverse proxy?
 
-Yes, many Pantheon customers use third party reverse proxies, such as [CloudFlare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheonsite.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
+Yes, many Pantheon customers use third party reverse proxies, such as [Cloudflare](https://www.cloudflare.com/). If you'd like to do this, do not direct traffic to a *.pantheonsite.io domain. Instead, associate an intermediate domain with the Live environment and create the appropriate DNS entries, then point your reverse proxy to the intermediate domain.
 
 ### Can I test my domain name without making DNS changes?
 

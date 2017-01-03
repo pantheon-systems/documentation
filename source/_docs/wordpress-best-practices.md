@@ -15,7 +15,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Automate testing with [Behat](/docs/guides/wordpress-automated-testing/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
-* We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/enable-https/) into Pantheon. On Personal plans (or others), you can use [CloudFlare Free SSL](/docs/guides/cloudflare-enable-https/).
+* We recommend using HTTPS. Pro plans and above can [load a certificate](/docs/enable-https/) into Pantheon. On Personal plans (or others), you can use [Cloudflare Free SSL](/docs/guides/cloudflare-enable-https/).
 
 * Run [Launch Check](/docs/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
