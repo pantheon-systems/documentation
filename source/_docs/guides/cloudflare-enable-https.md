@@ -49,7 +49,7 @@ It's important to use __Full__ protection mode.  Pantheon provides HTTPS service
 
 While __Full__ mode is not the highest security setting, it is available for free, and provides much better security for your website compared to __Flexible__ as the traffic is fully encrypted end-to-end.
 
-Customers wanting to use Cloudflare in __Full (strict)__ mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
+Customers wanting to use Cloudflare in __Full (strict)__ mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level. When using __Full (strict)__, follow the regular directions on [adding HTTPS to the platform](https://pantheon.io/docs/enable-https/), particularly important is that you must use A records to the load balancer IP rather than the CNAME flattening discussed in the rest of this article.
 
 ## Testing Under HTTPS
 
@@ -128,7 +128,7 @@ Also, you may have a number of stored references to `http` links stored in your 
 
 
 ```bash
-terminus wp <site>.<env> 'search-replace http://www.mysite.com https://www.mysite.com' 
+terminus wp <site>.<env> 'search-replace http://www.mysite.com https://www.mysite.com'
 ```
 
 You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp-cli.org/).
