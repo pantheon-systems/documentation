@@ -9,6 +9,11 @@ categories: [performance]
 ## Activate New Relic APM Pro
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/rvtraveller/terminus-omniscient) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus sites omniscient`.
 
+<div class="alert alert-info">
+<h3 class="info">Note</h3>
+<p>At this time, the <a href="https://github.com/rvtraveller/terminus-omniscient">Terminus Omniscient</a> plugin supports <a href="/docs/terminus/commands/compare">0.13.x versions</a> and below, and has not yet been ported over to Terminus 1.x.</p>
+</div>
+
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.

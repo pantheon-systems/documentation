@@ -18,7 +18,7 @@ We recommend managing custom code as plugins or modules within individual reposi
 3. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```nohighlight
- $ terminus site set-connection-mode --mode=git
+ $ terminus connection:set <site>.<env> git
  ```
 
 4. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.

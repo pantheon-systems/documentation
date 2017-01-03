@@ -43,7 +43,7 @@ For more details on separating custom code, see this related [blog post](https:/
 
   As an alternative to adding declarations within the headers of plugins and themes, you can use the [GitHub Updater Additions](https://github.com/afragen/github-updater-additions) plugin, which will add the appropriate data via hooks in GitHub Updater.
 
-2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus site set-connection-mode --mode=sftp`
+2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus connection:set <site>.<env> sftp`
 3. Download the [latest release](https://github.com/afragen/github-updater/releases) of the GitHub Updater plugin (select the **zip** option).
 4. Unzip the archive and rename the folder to `github-updater`, then re-zip the file.
 5. Install the plugin by uploading the renamed zip file within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
@@ -57,7 +57,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 [WP Pusher](https://wppusher.com/) provides a similar method for managing your custom code, but with some key differences. WP Pusher is free for open source code hosted in public repositories. Supporting private repositories requires you to purchase a license. Currently, update notifications are not displayed within the WordPress dashboard, but you can configure the plugin to automatically install updates on Pantheon following a push to the remote repository (e.g. GitHub, Bitbucket, or GitLab). There are no declarations required within your plugin or theme, so modifications to existing custom extensions are not required.
 
 1. [Download WP Pusher](https://wppusher.com/). WP Pusher is free for open source code hosted in public repositories.
-2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus site set-connection-mode --mode=sftp`
+2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus connection:set <site>.<env> sftp`
 3. Install the plugin by uploading the archive within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
 4. Activate WP Pusher from the Plugin page (`/wp-admin/plugins.php`).
 5. Navigate to **WP Pusher** > **Install Plugin**/**Install Theme** to install your custom extensions.

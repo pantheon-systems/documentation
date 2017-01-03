@@ -25,7 +25,7 @@ Each of these global parameters define the **context** under which the command i
 
 Now that we've covered the most important basics, let's run a command:
 
-    $ terminus wp 'option get home' --site=pantheon-demo --env=dev
+    $ terminus wp pantheon-demo.dev 'option get home'
     [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
         cmd: 'option get home'
         flags: ''
@@ -37,7 +37,7 @@ From the example above:
 
 * `terminus wp` tells Terminus we'd like to execute a WP-CLI command.
 * `option get` is the command itself ([docs](http://wp-cli.org/commands/option/get/)). `home` is the key for the option we're requesting.
-* `--site=pantheon-demo` and `--env=dev` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
+* `<site>` and `<env>` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
 The first part of the output is Terminus telling you which command it's running, and where. The last line, "http://pantheon-demo.pantheonsite.io", is the response of `wp option get`.
 

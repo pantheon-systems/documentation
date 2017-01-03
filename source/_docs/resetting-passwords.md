@@ -20,13 +20,13 @@ Please keep in mind that your site password is stored in a database, so whatever
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/terminus/) command for generating one-time login links:
 
 ```bash
-$ terminus drush "user-login"
+$ terminus drush <site>.<env> "user-login"
 ```
 
 Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/docs/terminus):
 
 ```bash
-$ terminus drush "user-password user_name --password='Astr0nGP455w0rD'" --site='my-site' --env='dev'
+$ terminus drush <site>.<env> "user-password user_name --password='Astr0nGP455w0rD'"
 ```
 
 ## WordPress User Login
@@ -40,7 +40,7 @@ You will receive an email that contains a link you can use one time to reset you
 Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/docs/terminus):
 
 ```nohighlight
-$ terminus wp 'user update 1234 --user_pass=NEWPASSWORD' --site=my-site --env=dev
+$ terminus wp <site>.<env> 'user update 1234 --user_pass=NEWPASSWORD'
 ```
 
 As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.

@@ -23,7 +23,7 @@ Install WordPress and enable the Multisite feature with the [`wp core multisite-
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
 ```bash
-terminus wp 'core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>'
+terminus wp <site>.<env> 'core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>'
 ```
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
@@ -35,28 +35,31 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 <p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h3 class="info">Subdirectory Note</h3>
-<p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p><div>
+<p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p></div>
 
 If you will run a subdomain-style site network with the primary site that will exist using the `www.` subdomain (recommended), you must add custom hostnames with the `www.` subdomain to all environments. Likewise, if you will run the site network with the primary site at the bare domain, `example-network.com`, Dev and Test environment primary hostnames must not have the `www.` subdomain. For the site, `www.example-network.com`, use the following Terminus commands to add the hostnames:
 ### Add www. Hostnames
+
 ```bash
-terminus site hostnames add www.dev.example-network.com --env=dev
-terminus site hostnames add www.test.example-network.com --env=test
+terminus domain:add <site>.dev www.dev.example-network.com
+terminus domain:add <site>.test www.test.example-network.com
 ```
+
 Until you actually go live, you'll likely want to use a subdomain like beta.example-network.com. Run:
 ```bash
-terminus site hostnames add beta.example-network.com  --env=live
+terminus domain:add <site>.live beta.example-network.com
 ```
 For launch, run:
 ```bash
-terminus site hostnames add www.example-network.com --env=live
-terminus site hostnames add example-network.com  --env=live
+terminus domain:add <site>.live www.example-network.com
+terminus domain:add <site>.live example-network.com
 ```
+
 ### Add Bare Domain Hostnames
 For live sites at a bare domain, `example-network.com`, use:
 ```bash
-terminus site hostnames add dev.example-network.com --env=dev
-terminus site hostnames add test.example-network.com  --env=test
+terminus domain:add <site>.dev dev.example-network.com
+terminus domain:add <site>.test test.example-network.com
 ```
 Until you actually go live, you'll likely want to use a different hostname like `beta-example-network.com`, for the live environment. This should be a bare domain. If using `beta.example-network.com` instead, you will need to perform a regex search and replace when going live.  Run:
 ```bash
@@ -64,8 +67,8 @@ terminus site hostnames add beta-example-network.com  --env=live
 ```
 For launch, run:
 ```bash
-terminus site hostnames add www.example-network.com  --env=live
-terminus site hostnames add example-network.com  --env=live
+terminus domain:add <site>.live www.example-network.com
+terminus domain:add <site>.live example-network.com
 ```
 Bare domains on live require a [redirect to remove `www.`](/docs/redirects/#redirect-to-a-common-domain) added to `wp-config.php`, and [special DNS configuration](/docs/domains/#serving-sites-from-bare-domains).
 
@@ -125,13 +128,13 @@ When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu 
 You will have one site. To add another, use [`wp site create`](http://wp-cli.org/commands/site/create/).
 ```bash
 # Create the site on dev.
-terminus wp 'site create --slug=$SLUG' --env=dev
+terminus wp <site>.dev 'site create --slug=$SLUG'
 ```
 For subdomain networks, add hostnames to Dev, Test, and Live.
 ```bash
-terminus site hostnames add --hostname=$SLUG.$DEVDOMAIN --env=dev
-terminus site hostnames add --hostname=$SLUG.$TESTDOMAIN --env=test
-terminus site hostnames add --hostname=$SLUG.$DOMAIN --env=live
+terminus domain:add <site>.dev $SLUG.$DEVDOMAIN
+terminus domain:add <site>.test $SLUG.$TESTDOMAIN
+terminus domain:add <site>.live $SLUG.$DOMAIN
 # Open the site.
 open http://$SLUG.$DEVDOMAIN
 ```
@@ -173,7 +176,7 @@ On WordPress Networks, Co-Authors Plus’ guest authors feature permits site-spe
 
 If you find you need to start over and reinstall WordPress, you can:
 
-1. Wipe the Development environment’s database and files. This operation leaves the codebase in tact. Visit the Pantheon Site Dashboard’s Development environment, and select the Workflow tool's “Wipe” function. From the command line: `terminus site wipe --env=dev`
+1. Wipe the Development environment’s database and files. This operation leaves the codebase in tact. Visit the Pantheon Site Dashboard’s Development environment, and select the Workflow tool's “Wipe” function. From the command line: `terminus env:wipe <site>.dev`
 
 2. Remove the Multisite constant definitions block you added from `wp-config.php`.
 
@@ -184,13 +187,13 @@ If you find you need to start over and reinstall WordPress, you can:
 When your site network is ready to deploy to the Test environment, you will either navigate to Test in the Site Dashboard and click **Create Test Environment**, or use Terminus. This operation will deploy the code, the database, and files to the Test environment.
 
 ```bash
-terminus site init-env  --env=test
+terminus env:deploy <site>.test
 ```
 If you visit the Test environment at this point, it will show a database connection error. From the command line, perform a `wp search-replace` on the database.
 
 ```bash
 ## NOTE: the www. is necessary if the Dev, Test, and Live environments use it.
-terminus wp 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network' --env=test
+terminus wp <site>.test 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network'
 ```
 ### wp search-replace Fundamentals
 **Pro tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
@@ -211,7 +214,7 @@ WP-CLI interprets them as:
 
 `--network` is a flag to perform the search and replace across the entire network.
 
-`--site=<example-network> --env=test` are associative arguments interpreted by Terminus to know which site and which environment to run the WP-CLI command on. The `--site` and `--env` arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
+`<site>.<env>` are associative arguments interpreted by Terminus to know which site and which environment to run the WP-CLI command on. The `<site>` and `<env>` arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
 Ready to move forward? Run the command! When you do, you’ll see output similar to this:
 
@@ -300,8 +303,8 @@ Now that you’ve performed the search and replace on your database, WordPress w
 ## Initialize the Live Environment
 
 ```bash
-terminus site init-env --env=live --yes
+terminus env:deploy <site>.live
 # NOTE: delete "www." if using the bare domain.
-terminus wp 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network'
+terminus wp <site>.<env> 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network'
 ```
 Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/managing-wordpress-site-networks/), and pick up a few additional [tips and tricks](/docs/managing-wordpress-site-networks#network-tips-and-tricks-with-wp-cli).

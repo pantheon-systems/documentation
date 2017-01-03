@@ -29,7 +29,7 @@ This method will store object cache values persistently in Redis while preservin
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/terminus) command:
 
  ```
- terminus wp 'plugin install wp-redis'
+ terminus wp <site>.<env> 'plugin install wp-redis'
  ```
 2. Using SFTP or Git, create a new file named `wp-content/object-cache.php` that contains the following:
 
@@ -43,7 +43,7 @@ This method will store object cache values persistently in Redis while preservin
 When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
 ```
-terminus wp 'plugin update wp-redis'
+terminus wp <site>.<env> 'plugin update wp-redis'
 ```
 
 ### Install via Composer
@@ -51,7 +51,7 @@ terminus wp 'plugin update wp-redis'
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
  ```
- terminus site set-connection-mode --mode=git
+ terminus connection:set <site>.<env> git
  ```
 
 2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and initialize Composer with `composer init`, if you have not done so already.

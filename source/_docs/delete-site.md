@@ -19,11 +19,11 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 
 ## Delete a Site with Terminus
 Run the following [Terminus](/docs/terminus/) command:
-`terminus site delete`
+`terminus site:delete <site>`
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus sites list</code>.</p></div>
+<p>Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus site:list</code>.</p></div>
 
 ## Delete a Site From the Organization Dashboard
 

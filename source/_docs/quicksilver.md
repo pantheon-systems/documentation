@@ -97,14 +97,16 @@ Use the following [Terminus](/docs/terminus) for debugging Quicksilver.
 
 ### Stream New Workflows to the Console
 
-Follow the workflow activity of your site with `terminus workflows watch`.
+Follow the workflow activity of your site with `terminus workflow:watch <site>`.
 
 ### Explore Previous Workflows
 
 List and show previous workflows and their corresponding Quicksilver operations with the following commands:
 
-* `terminus workflows list`
-* `terminus workflow show`
+* `terminus workflow:list <site>`
+* `terminus workflow:info:logs <site> --id=<workflow>`
+* `terminus workflow:info:operations <site> --id=<workflow>`
+* `terminus workflow:info:status <site> --id=<workflow>`
 
 
 ## Troubleshooting

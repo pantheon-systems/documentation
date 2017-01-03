@@ -1,10 +1,21 @@
 ---
-title: Terminus Version Comparison
+title: Legacy Terminus Versions
 tags: [automate, develop]
 categories: [automate]
+terminuslegacy: true
 layout: taxon
 permalink: docs/terminus/commands/:basename/
 ---
+<p class="instruction">Install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="terminus-installer"><code class="bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install --install-version=0.13.6</code></pre></figure>
+</div>
+
+## Compare Legacy Commands with Terminus 1.0
+
+
+
 
 <div class="col-md-12" ng-app="terminusCompareApp" ng-controller="mainController">
 

@@ -10,10 +10,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export normalize_branch="${normalize_branch:0:11}"
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"
-  ~/documentation/bin/terminus site hostnames list --site=static-docs --env=$normalize_branch > ./env_hostnames.txt
-  tail -n +2 env_hostnames.txt | cut -f1 | tee filtered_env_hostnames.txt
-  export url=`head -1 filtered_env_hostnames.txt`
-  export url=https://$url/docs
+  export url=`bin/terminus env:view static-docs.$normalize_branch --print`docs
+  export url=https${url:4}
 
   # sitespeed expects the input file to contain full urls to s file with
   # production urls is used as a source, the production domain is then replaced
