@@ -1,6 +1,6 @@
 ---
-title: Adding HTTPS For Free With CloudFlare
-description: Add HTTPS and other security features to your Pantheon Drupal or WordPress site using CloudFlare's free DNS service.
+title: Adding HTTPS For Free With Cloudflare
+description: Add HTTPS and other security features to your Pantheon Drupal or WordPress site using Cloudflare's free DNS service.
 tags: [golive, automate]
 categories: [golive]
 type: guide
@@ -15,17 +15,17 @@ More and more, it's expected that websites run under HTTPS to appear professiona
 
 Historically, running HTTPS required additional cost and complexity due to the need to obtain a certificate. However, thanks to a concerted effort by many providers, these barriers are being eliminated, and it is now possible for anyone to offer secure encrypted transport as the default for their website.
 
-This guide will show you how to take advantage of CloudFlare's free HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
+This guide will show you how to take advantage of Cloudflare's free HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
 
-## Sign up for CloudFlare
+## Sign up for Cloudflare
 
 For the purposes of this guide, we assume you have a site that is already live on Pantheon, or one that is ready to be launched.
 
-When you first register, CloudFlare will direct you immediately towards migrating your domain name. It's best to go ahead with this and to take the time to use CloudFlare as your DNS provider. Their handy wizard will help you port over your existing settings.
+When you first register, Cloudflare will direct you immediately towards migrating your domain name. It's best to go ahead with this and to take the time to use Cloudflare as your DNS provider. Their handy wizard will help you port over your existing settings.
 
 ## DNS Configuration
 
-In addition to gratis HTTPS service, content distribution, and many nifty security features, CloudFlare also offers the ability to use a CNAME for the "root" domain for your site through something they call [CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
+In addition to gratis HTTPS service, content distribution, and many nifty security features, Cloudflare also offers the ability to use a CNAME for the "root" domain for your site through something they call [CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
 
 We recommend you take advantage of this feature as it frees you up from being tied to a single IP address, which is inherently risky. In addition, using CNAME Flattening is the only way to standardize on HTTPS with a root domain. Here are some example DNS settings:
 
@@ -35,13 +35,13 @@ In this example we used the `@` symbol to set up the "root" CNAME and are using 
 
 As this example shows, you can set additional CNAME records for your Dev and Test environments, then add them to your Pantheon Dashboard using the [Domains Tab](/docs/domains). That is optional, but you will see references to these additional domains later on in the CMS configuration instructions.
 
-## CloudFlare Security Settings
+## Cloudflare Security Settings
 
 The next step is to go to the **Crypto** page and set the SSL option to **Full** protection mode:
 
 ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
 
-It takes a few minutes to go into effect as CloudFlare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
+It takes a few minutes to go into effect as Cloudflare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
 
 It's important to use __Full__ protection mode.  Pantheon provides HTTPS service out of the box so you can encrypt end-to-end, but because the certificate provided by Pantheon is for the default domain (e.g. `live-yoursite.pantheonsite.io`) you cannot use the __Full (strict)__ mode:
 
@@ -49,7 +49,7 @@ It's important to use __Full__ protection mode.  Pantheon provides HTTPS service
 
 While __Full__ mode is not the highest security setting, it is available for free, and provides much better security for your website compared to __Flexible__ as the traffic is fully encrypted end-to-end.
 
-Customers wanting to use CloudFlare in __Full (strict)__ mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
+Customers wanting to use Cloudflare in __Full (strict)__ mode can do so, but incurs additional costs: they must purchase their own certificate and upgrade their Pantheon site to the Professional service level.
 
 ## Testing Under HTTPS
 
@@ -59,7 +59,7 @@ To start testing, open your website normally, and manually change the "Location"
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for CloudFlare's free certificate provisioning.</p></div>
+<p>If your browser does not give any response back at all, or you get a "connection terminated" error, you probably need to allow a little more time for Cloudflare's free certificate provisioning.</p></div>
 
 Another common issue is to have the site load incorrectly due to the presence of insecure content on the page. Most modern browsers won't load CSS or JS files that are included via HTTP on a page that was requested over HTTPS. Getting fully switched to HTTPS usually requires some changes to your CMS settings in order to complete the transition.
 
@@ -137,11 +137,11 @@ You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp
 
 The final step is to standardize all traffic under HTTPS. This is a much better option than running the site in a "mixed mode". It is less complex and more secure, and thanks to modern crypto technologies, there is no performance penalty.
 
-In order to go all-in, you will need to configure your site to redirect any requests that are unencrypted over to HTTPS. One way to do this is via CloudFlare's __Page Rules__ feature:
+In order to go all-in, you will need to configure your site to redirect any requests that are unencrypted over to HTTPS. One way to do this is via Cloudflare's __Page Rules__ feature:
 
-![CloudFlare Page Rules](/source/docs/assets/images/cloudflare-always-https.png)
+![Cloudflare Page Rules](/source/docs/assets/images/cloudflare-always-https.png)
 
-By setting up a blanket page rule to match all URLs and apply the __Always HTTPS__ parameter, CloudFlare redirect browsers making HTTP requests to HTTPS.
+By setting up a blanket page rule to match all URLs and apply the __Always HTTPS__ parameter, Cloudflare redirect browsers making HTTP requests to HTTPS.
 
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
@@ -160,15 +160,15 @@ There are a few things worth noting in the above example:
 1. This technique has the added benefit of insuring that any visitor who somehow gets a link to the `env-sitename.pantheonsite.io` domain will be immediately bounced to your proper production hostname.
 2. Checking `isset($_SERVER['PANTHEON_ENVIRONMENT'])` is important because this will only be `TRUE` if the request is running as a result of a web request through Pantheon's PHP container matrix. This prevents redirects from interrupting command-line operations.
 3. `$_SERVER['HTTP_X_FORWARDED_PROTO']` is PHP's way of exposing the `X-Forwarded-Proto` HTTP header, an internet standard for communicating when another "upstream" service has terminated HTTPS.
-4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and CloudFlare, further upstream) to cache the redirect, which is always nice.
+4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and Cloudflare, further upstream) to cache the redirect, which is always nice.
 
-Depending on whether you like to control these things directly with code or prefer to use a tool like CloudFlare, as well as how concerned you are with `pantheonsite.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
+Depending on whether you like to control these things directly with code or prefer to use a tool like Cloudflare, as well as how concerned you are with `pantheonsite.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
 
 ## Compatibility and Limitations
 
-CloudFlare's free HTTPS service is compatible with browsers and clients that support server name indication (SNI), an extension of the TLS protocol. Whereas traditionally, a single IP address is bound to a single certificate, SNI allows a server to present multiple certificates across multiple domains from the same IP address.
+Cloudflare's free HTTPS service is compatible with browsers and clients that support server name indication (SNI), an extension of the TLS protocol. Whereas traditionally, a single IP address is bound to a single certificate, SNI allows a server to present multiple certificates across multiple domains from the same IP address.
 
-Although SNI allows services like CloudFlare to economically offer HTTPS for free at scale, its support is not universal. Below are some notable incompatibilities:
+Although SNI allows services like Cloudflare to economically offer HTTPS for free at scale, its support is not universal. Below are some notable incompatibilities:
 
 * Any version of Internet Explorer or Safari on Windows XP
 * Versions of Chrome prior to 6
@@ -181,7 +181,7 @@ Or check this [more complete compatibility list](http://en.wikipedia.org/wiki/Se
 
 ## Alternative Methods For HTTPS
 
-Because of the structure of our network, we won't be able to offer reduced-cost HTTPS service any time soon, so for Personal sites this is the best way to get HTTPS service. However, for developers who want to run their site securely but don't want to (or can't) make use of CloudFlare, there are options.
+Because of the structure of our network, we won't be able to offer reduced-cost HTTPS service any time soon, so for Personal sites this is the best way to get HTTPS service. However, for developers who want to run their site securely but don't want to (or can't) make use of Cloudflare, there are options.
 
 This basic technique — terminating your HTTPS elsewhere and then "backending" to Pantheon's provided certificate — can be used with other services, including your own infrastructure. Here's an example of [an nginx config that does essentially the same thing](https://gist.github.com/caktux/00a2161b5d849335e644).
 

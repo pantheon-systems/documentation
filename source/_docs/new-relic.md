@@ -111,7 +111,7 @@ if (extension_loaded('newrelic')) {
 When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false postive Downtime events for your site.
 
 ### Server Name Indication (SNI)
-Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. CloudFlare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
+Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
 
 ### TLS 1.1 or Higher
 When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
