@@ -22,7 +22,7 @@ Be sure you have:
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash
-terminus env:clear-cache <site.env>
+terminus env:clear-cache <site>.<env>
 ```
 
 There are three parts to any dynamic website:
