@@ -13,6 +13,8 @@ The following scenarios are exceptions to the recommended process and require [m
 - You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/wordpress-site-networks)
 - You can't install a plugin on your existing site (e.g. WordPress.com)
+- [Your site doesn't have a public URL (e.g. a local installation) and it's archive exceeds 500MB.](/docs/migrate-wordpress/#frequently-asked-questions)
+
 
 There are three major components of a WordPress site:
 
