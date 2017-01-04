@@ -362,7 +362,7 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
 
 ## Known Limitations
 - Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
-- The following Drush commands are not supported and will not work on Pantheon sites:`sql-sync-pipe`, `sql-cli` (`sqlc`), `php-eval` (`eval`, `ev`). An alternative to `drush sql-sync` is to use `drush sql-dump` instead. We recommend writing a script and executing via `php-script` (`scr`) as an alternative to `php-eval`.
+- The following Drush commands are not supported and will not work on Pantheon sites: `sql-sync-pipe`, `sql-cli` (`sqlc`), `sql-query` (`sqlq`), `php-eval` (`eval`, `ev`). An alternative to `drush sql-sync` is to use `drush sql-dump` instead. We recommend writing a script and executing via `php-script` (`scr`) as an alternative to `php-eval`.
 - Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
