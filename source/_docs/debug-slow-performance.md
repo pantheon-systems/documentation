@@ -111,7 +111,7 @@ There is no built-in caching in WordPress. Pantheon offers Varnish in front of a
 ## Not Enough Traffic
 The next problem is when a site doesn't have enough traffic, which may seem paradoxical.
 
-Cache misses are by nature slow - whatever something needs to be cached it's performed and the cache is populated, which is slower than just returning the value from cache.  
+Cache misses are by nature slow - if something needs to be cached it's performed and the cache is populated, which is slower than just returning the value from cache.  
 
 There are a large number of caches involved in every single request, including:
 
@@ -127,16 +127,16 @@ If your site is already optimized to the best of your knowledge, including elimi
 
 If you've reached this point, it's probably time to consider upgrading your [Pantheon plan](/docs/select-plan/). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
 
-## Running cron over web traffic
+## Running Cron Over Web Traffic
 
-Both Drupal and Wordpress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before he can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine this is not desirable. 
+Both Drupal and WordPress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before they can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine, this is not desirable.
 
-For Drupal sites, Pantheon executes the cron every hour via drush regardless of the site's cron settings. There are various other configuration schemes you can use, describere in [Cron for Drupal](/docs/drupal-cron/)
+For Drupal sites, Pantheon executes the cron every hour via drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/docs/drupal-cron/).
 
-This functionality doesn't however exist for Wordpress sites but there are a multitude of different configuration options available that allow more flexibility when configuring cron. The entire list of options can be found here: [Cron for WordPress](/docs/wordpress-cron/)
+This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/docs/wordpress-cron/).
 
-## External call timeouts
+## External Call Timeouts
 
-Calling external services during regular requests can be a performance problem. The time it takes to initiate the request, send and receive  data is time during which the user needs to wait. Since php executes instructions sequentially, no other operation can be executed while the external connection is active. Also, if the external service goes down, your site will go down along with it.
+Calling external services during regular requests can be a performance problem. The time it takes to initiate the request then send and receive data is time spent waiting by visitors. Since PHP executes instructions sequentially, no other operation can be executed while the external connection is active. Also, if the external service goes down, your site will go down along with it.
 
-Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
+Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
