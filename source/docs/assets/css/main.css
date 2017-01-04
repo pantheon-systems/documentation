@@ -684,6 +684,9 @@ img.noborder {
 pre code {
   font-size: 14px;
 }
+code.command::before {
+    content: "$ ";
+}
 
 /* Keep code small in tables on account of limited space */
 .table code {
@@ -2319,18 +2322,13 @@ h1[id] {
 .btn-primary, .btn-primary:visited, .btn-primary:focus {
   border-radius: 0;
   border: none;
-  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: .04em;
   transition: 200ms all;
-  margin-bottom: 16px;
-  margin-top: 16px;
   background: #EFD01B !important;
   color: #222 !important;
   font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 900;
-  padding: 15px;
+  font-weight: 600;
 }
 .col-md-3 i.fa {
   display:block !important;
@@ -2342,10 +2340,9 @@ h1[id] {
 }
 
 a.btn-primary:after {
-    content: '\203a';
-    color: #222;
-    margin: 0 0 0 10px;
-    height: 100%;
+  font-family: "FontAwesome" !important;
+  content: '\f105';
+  padding: 0px 0px 0px 12px;
 }
 a.btn-primary:hover:after  {
     color: #EFD01B !important;
@@ -3322,12 +3319,23 @@ display: block;
   height:10px;
 
 }
+.manual-toc > li > a:hover {
+  color: #44525E;
+  text-decoration: none;
+  border-left: 4px solid #DDE5E7;
+  padding:10px 10px 10px 26px;
+
+}
+.manual-toc .active-trail > li > a:hover {
+  background-color: #EEF2F3 !important;
+
+}
 .manual-toc .active-trail {
   font-weight:bold;
   background-color: #EEF2F3;
   color: #44525E;
   border-left: 4px solid #DDE5E7;
-  padding: 10px 10px 10px 24px;
+  padding:10px 10px 10px 26px;
 
 
 }
@@ -3343,6 +3351,15 @@ display: block;
   padding:10px 10px 10px 40px;
 
 }
+.manual-toc .child a:hover {
+  padding:10px 10px 10px 36px;
+
+}
+.manual-toc .child .active-trail {
+  padding:10px 10px 10px 36px !important;
+
+}
+
 .manual-doc {
   border-left: solid 2px #eef2f3;
   padding-left:50px;
@@ -3385,20 +3402,15 @@ li.terminus-usage {
 .terminus-plugin {
   margin: 10px;
 }
-
 .pantheon-official {
-  background-color: #1794C7;
   float: right;
   position: relative;
-  margin-top: -5px;
-  margin-right: -5px;
 }
 .pantheon-official p {
   margin: 0px;
   padding: 0px 10px;
-  color: #fff;
-  font-weight: bold;
-  font-size: small;
+  font-size: 11px;
+  color: #78868e;
 }
 
 .nav-tabs {
@@ -4268,6 +4280,14 @@ a.cta.cta-black-on-yellow:after:hover {
   border: 1px solid #A4BBC1;
   min-height: 136px;
 }
+.plugin-dir {
+  background-image: none !important;
+  min-height: 230px !important;
+}
+.get-plugin {
+  position: absolute;
+  bottom: 15px;
+}
 .row-topics-list .topic-info {
   margin: 0 15px 30px;
 }
@@ -4288,6 +4308,13 @@ a.cta.cta-black-on-yellow:after:hover {
   background-repeat: no-repeat;
   background-position: center;
   margin-top:25px;
+}
+.main-topic-info__plugin-image {
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top:15px;
 }
 .topic-info__image {
   float:left;
