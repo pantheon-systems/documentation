@@ -36,7 +36,7 @@ Download your Pantheon site aliases to manually update your local aliases file:
 3. Clear Drush cache:
 
  ```
- drush cc cache
+ drush cc drush
  ```
 
 ![Link to Pantheon Drush Aliases](/source/docs/assets/images/dashboard/drush-aliases.png)
@@ -149,11 +149,33 @@ drush sql-dump --gzip --result-file=$HOME/Desktop/db_$(date +"%Y-%m-%d").sql
 The `drush sql-sync` command works on Pantheon with Drush 8 as of version 8.0.4. An alternative would be to use `drush sql-dump` and `drush sql-connect` to transfer the database over a pipe:
 
 ```bash
-drush @pantheon.mysite.dev sql-dump | $(drush @pantheon.mysite.multidev sql-connect)
+drush @pantheon.SITENAME.FROM_ENV sql-dump | $(drush @pantheon.SITENAME.TO_ENV sql-connect)
 ```
 If that option doesn't appeal to you, download a copy of the database from a backup and save it to your local disk, then use `gunzip` and `mysql` to decompress and import the dump.
 ```sql
 gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
+```
+
+## Run SQL Queries Using Drush on Pantheon
+
+The `drush sql-cli` command is not supported on Pantheon. You can open the mysql CLI on Pantheon via the following command:
+```bash
+$(drush @pantheon.SITENAME.ENV sql-connect)
+```
+Alternately, to run a single SQL query:
+```bash
+echo 'show tables;' | $(drush @pantheon.SITENAME.ENV sql-connect)
+```
+
+## Execute PHP Code Using Drush on Pantheon
+
+The `drush php-eval` command is not supported on Pantheon. You can run PHP commands after bootstrapping Drupal on Pantheon via the following workaround:
+```bash
+echo 'print "hello world";' | drush @pantheon.SITENAME.ENV php-script -
+```
+Also, the interactive PHP shell works as well:
+```bash
+terminus drush SITENAME.ENV core-cli
 ```
 
 ## Drush Commands That Alter Site Code
@@ -175,10 +197,10 @@ While we have the full spectrum of Drush core already available for your use, yo
 9. Clear your Drush cache on each environment. Example:
 
  ```
- drush @pantheon.<site-name>.dev cc drush
+ drush @pantheon.SITENAME.dev cc drush
  ```
 
-If you have successfully set up [Terminus](/docs/terminus/), you can get your Drush aliases by using `terminus sites aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
+If you have successfully set up [Terminus](/docs/terminus/), you can get your Drush aliases by using `terminus aliases`. At this point, you are able to start using the Drush command you added.  Drush 8 is the default version for newly created sites on Pantheon.
 
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
@@ -193,24 +215,6 @@ function policy_drush_sitealias_alter(&$alias_record) {
 }
 ```
 Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
-
-For the next example, we will write a policy file that changes all remote aliases to use Drush 7 instead of the default version of Drush, but only if the target is the Pantheon platform.  Our `hook_drush_sitealias_alter` function looks like this:
-
-```
-function policy_drush_sitealias_alter(&$alias_record) {
-  // Fix pantheon aliases!
-  if ( isset($alias_record['remote-host']) &&
-      (substr($alias_record['remote-host'],0,10) == 'appserver.') ) {
-    $alias_record['path-aliases']['%drush-script'] = 'drush7';
-  }
-}
-```
-With this policy file in place, you are able to use the latest version of Drush on Pantheon:
-
-    $ drush @pantheon.my-great-site.dev version
-    Drush Version   :  7.0.0-rc1
-
-For more information, see [Fix Up Drush Site Aliases with a Policy File](https://pantheon.io/blog/fix-drush-site-aliases-policy-file).
 
 ## Use Drush to Update Modules on Pantheon
 
@@ -297,6 +301,16 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
+### Unable to Connect to mysql Server
+
+Sometimes, you may encounter the following error when running Drush mysql commands:
+```nohighlight
+ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
+```
+This can happen when an inactive site has spun down. To get the mysql server back up, use Terminus to wake up the environment:
+```nohighlight
+terminus env:wake SITENAME.ENV
+```
 ### Unable to Connect to drush.in Hostnames (DNS)
 
 Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
@@ -362,7 +376,10 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
 
 ## Known Limitations
 - Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
-- The following Drush commands are not supported and will not work on Pantheon sites: `sql-sync-pipe`, `sql-cli` (`sqlc`), `sql-query` (`sqlq`), `php-eval` (`eval`, `ev`). An alternative to `drush sql-sync` is to use `drush sql-dump` instead. We recommend writing a script and executing via `php-script` (`scr`) as an alternative to `php-eval`.
+- The following Drush commands are not supported and will not work on Pantheon sites: 
+  - `sql-sync-pipe` See: [Transfer Database Content Using Drush on Pantheon](#transfer-database-content-using-drush-on-pantheon)
+  - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
+  - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
 - Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
