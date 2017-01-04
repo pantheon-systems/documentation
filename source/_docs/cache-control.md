@@ -5,7 +5,7 @@ tags: [cache]
 categories: [performance, cache]
 ---
 ## Exclude Specific Pages from Caching
-You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser. Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or the `wp-config.php` file of WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
+You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser. Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
 
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
@@ -41,7 +41,7 @@ $build['#cache']['max-age'] = 0;
   <pre><code class="php hljs">
   //Set or replace $regex_path_match accordingly
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
-  	add_action( 'send_headers', 'add_header_nocache' );
+  	add_action( 'send_headers', 'add_header_nocache', 15 );
   }
   function add_header_nocache() {
   	header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
