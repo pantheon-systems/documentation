@@ -25,7 +25,7 @@ terminus wp <site>.test 'cache flush'
 ```
 The Terminus command to clear all caches for an environment is:
 ```bash
-terminus env:clear-cache test
+terminus env:clear-cache <site>.test
 ```
 
 <div class="alert alert-info" role="alert">
@@ -39,14 +39,14 @@ Code that has been committed to master and is running on the Dev environment:
 ```bash
 terminus env:deploy <site>.test --sync-content --cc --updatedb --note=<note>
 terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network'
-terminus env:clear-cache test
+terminus env:clear-cache <site>.test
 ```
 ## Clone Content from Live to Test
 Restore the Test database and files to the state of the Live environment.
 ```bash
 env:clone <site>.live test
 terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=$DOMAIN --network' --env=test
-terminus env:cc test
+terminus env:cc <site>.test
 ```
 
 ## Clone Content from Live to Dev
@@ -54,7 +54,7 @@ Catch up Dev to Live before you start development. The first command will overwr
 ```bash
 env:clone <site>.live dev
 terminus wp <site>.dev 'search-replace $DOMAIN $DEVDOMAIN --url=$DOMAIN --network'
-terminus env:cc dev
+terminus env:cc <site>.dev
 ```
 
 ## Subdomain Networks
@@ -77,7 +77,7 @@ The next time you clone content from Live to Test or Dev, this sub-site will be 
 ```bash
 terminus env:clone <site>.live test
 terminus wp <site>.test 'search-replace $DOMAIN $TESTDOMAIN --url=www.$DOMAIN --network'
-terminus env:cc test
+terminus env:cc <site>.test
 ```
 
 ## Search and Replace for Domain-Mapped Sites in a Network
