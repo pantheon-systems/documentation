@@ -22,7 +22,7 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
-While some certificate providers instruct you to create these on your server, they can be created from any system. We recommend generating them on your local system using OpenSSL. If for some reason you cannot use OpenSSL, there are other tools available, such as [Online CSR Generator](https://www.gogetssl.com/online-csr-generator) or [Certificatetools](https://certificatetools.com/) for SANs certificates.
+While some certificate providers instruct you to create these on your server, they can be created from any system. We recommend generating them on your local system using OpenSSL. If for some reason you cannot use OpenSSL, there are other tools available, such as [SSL.com](https://www.ssl.com/online-csr-and-key-generator/) or [Certificatetools](https://certificatetools.com/) for SANs certificates.
 
 Run `openssl` from the command line to generate an [RSA private key](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) (.key file) and [certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request) (.csr) file:
 
