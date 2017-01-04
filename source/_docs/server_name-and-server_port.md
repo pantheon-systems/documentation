@@ -39,3 +39,4 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 - [Easy Digital Downloads](https://wordpress.org/plugins/easy-digital-downloads/)
 - [Give](https://wordpress.org/plugins/give/)
 - [Gravity Forms](http://www.gravityforms.com/)
+- [Restrict Content Pro](https://restrictcontentpro.com/)
