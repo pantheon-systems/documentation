@@ -12,7 +12,7 @@ The following scenarios are exceptions to the recommended process and require [m
 - You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
 - You can't install a plugin on your existing site (e.g. WordPress.com)
-- Your site doesn't have a public URL (e.g. a local installation)
+- [Your site doesn't have a public URL (e.g. a local installation) and it's archive exceeds 500MB.](#frequently-asked-questions)
 
 ## Migrate Your Site to Pantheon
 
@@ -59,7 +59,7 @@ If you are logged in with one identity and re-authenticate a different account, 
 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
-## Frequently Asked Questions (FAQs)
+## Frequently Asked Questions
 
 #### How do I migrate a local site to Pantheon?
 You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
