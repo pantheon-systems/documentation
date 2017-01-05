@@ -1,5 +1,5 @@
 ---
-title:  Terminus Getting Started
+title:  Terminus Get Started
 terminuspage: true
 type: terminuspage
 layout: terminuspage

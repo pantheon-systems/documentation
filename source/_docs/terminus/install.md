@@ -6,42 +6,20 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
-<!-- Tab Nav -->
-<ul class="nav nav-tabs" role="tablist">
-  <li id="mactab" role="presentation" class="active"><a href="#mac-linux" aria-controls="mac" role="tab" data-toggle="tab">Linux & Mac OS X </a></li>
-  <li id="wintab" role="presentation"><a href="#win" aria-controls="win" role="tab" data-toggle="tab">Windows 10</a></li>
-</ul>
+Terminus is available for Mac OS X, Linux, and Windows 10.
+## Requirements
 
-<!-- Tab Panes -->
-<div class="tab-content">
-  <!-- Unix: Mac Instructions -->
-  <div role="tabpanel" class="tab-pane active" id="mac-linux">
-    <h3>Requirements</h3>
-    <ul>
-      <li>PHP Version 5.5.9 or later</li>
-      <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
-      <li><a href="http://php.net/manual/en/curl.setup.php">PHP-CURL</a></li>
-      <li><a href="https://getcomposer.org/download">Composer</a></li>
-    </ul>
-  </div>
-  <!-- Windows Instructions -->
-  <div role="tabpanel" class="tab-pane" id="win">
-    <h3>Requirements</h3>
-    <ul>
-      <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu on Windows</a></li>
-      <li>PHP Version 5.5.9 or later</li>
-      <li><a href="http://www.php-cli.com/">PHP-CLI</a></li>
-      <li><a href="http://php.net/manual/en/curl.setup.php">PHP-CURL</a></li>
-      <li>Composer (<a href="https://getcomposer.org/Composer-Setup.exe">Direct Download</a>)</li>
-    </ul>
-  </div>
-</div>
+* PHP Version 5.5.9 or later
+* [PHP-CLI](http://www.php-cli.com/)
+* [PHP-CURL](http://php.net/manual/en/curl.setup.php)
+* [Composer](https://getcomposer.org/download/)
+* Windows 10 Only: [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
 ## Install
 <p class="instruction">Install the most recent release of Terminus with the following command:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="terminus-installer"><code class="bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+  <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
 
 ## Authenticate
@@ -52,12 +30,12 @@ First, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/cr
 <p class="instruction">Once the token has been created, use it to authenticate Terminus by running the following command:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="mac-mt-auth"><code class="bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+  <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
 </div>
 <p class="instruction">After a token has been used, future sessions can be established by email:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-login"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="mac-mt-login"><code class="bash" data-lang="bash">terminus auth:login --email=dev@example.com</code></pre></figure>
+  <figure><pre id="mac-mt-login"><code class="command bash" data-lang="bash">terminus auth:login --email=dev@example.com</code></pre></figure>
 </div>
 ## Troubleshooting
 ### Permission Denied
@@ -71,7 +49,7 @@ curl: (23) Failed writing body (0 != 1928)
 <p class="instruction">Run the installation command with <code>sudo</code>:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer-sudo"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="terminus-installer-sudo"><code class="bash" data-lang="bash">sudo curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+  <figure><pre id="terminus-installer-sudo"><code class="bash command" data-lang="bash">sudo curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
 
 <div class="terminus-pager">
