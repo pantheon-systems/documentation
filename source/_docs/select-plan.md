@@ -64,7 +64,7 @@ Any <a href="/docs/enable-https">SSL Certificates</a> that you may have uploaded
 <h3 class="info">Warning</h3>
 <p>You <b>MUST</b> update your DNS records after downgrading to Professional or Personal plans.</p>
 <p>Your DNS recommendations are available on the Site Dashboard, under Domains.</p></div>
-You will also no longer have the ability to [create new support tickets for your site](docs/getting-support/). 
+You will also no longer have the ability to [create new support tickets for your site](/docs/getting-support/). 
 You will retain access to your past tickets and will be able to [contact Support](/docs/getting-support/) via Chat.
 
 
