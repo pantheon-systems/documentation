@@ -18,25 +18,24 @@ Visit your site in the browser a couple of times to generate data in New Relic. 
 
 New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
-### Troubleshoot New Relic Access
+## Monitoring and Improving Performance
 
-- Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
-- Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
-- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
-- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension:
+New Relic's Dashboard starts with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
 
- - dashboard.pantheon.io
- - rpm.newrelic.com
+1. PHP Execution
+2. Database Queries (MySQL or Redis)
+3. External Requests (e.g. calls to third pary APIs)
 
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall. 
 
-#### Who is the New Relic account associated with?
-- If site owner is a user, the site owner's name and email address is used to create the New Relic account.
-- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
+You can find more information on using New Relic to investigate specific areas of performance below:
 
-To learn how to use New Relic APM Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
+- [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
+- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
+- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-
-## Only Log Authenticated Users
+## Focusing on Authenticated Users Only
 
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
 
@@ -83,7 +82,27 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
-## Remove Multidev Environments in New Relic
+## Troubleshooting
+
+### New Relic Access
+
+- Users without an active session for the site's New Relic account should click the **Go to New Relic** button in the Pantheon Dashboard and they'll be prompted to log in. Only users with an active New Relic session for the account that owns the site can use the links inside the data table - going directly to an environment's New Relic overview.
+- Users with an active session for a different New Relic account than the one that "owns" the site account will be denied access. Log out of New Relic, and click the **Go to New Relic** button in the Site Dashboard.
+- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic. Visit one of your sites, close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard, and try again.
+- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension or add the following sites as trusted within the extension:
+
+ - dashboard.pantheon.io
+ - rpm.newrelic.com
+
+
+#### Who is the New Relic account associated with?
+- If site owner is a user, the site owner's name and email address is used to create the New Relic account.
+- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
+
+To learn how to use New Relic APM Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
+
+
+### Removing Multidev Environments in New Relic
 After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).  
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.  
@@ -91,7 +110,7 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 3. Wait until the color-coded health status turns gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
-## AMP Validation Errors
+### AMP Validation Errors
 New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
 
 Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:  
@@ -107,13 +126,13 @@ if (extension_loaded('newrelic')) {
 }
 ```
 
-## APM Availability Monitoring Alerts and False Positive Downtime Events
+### APM Availability Monitoring Alerts and False Positive Downtime Events
 When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false postive Downtime events for your site.
 
-### Server Name Indication (SNI)
+#### Server Name Indication (SNI)
 Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
 
-### TLS 1.1 or Higher
+#### TLS 1.1 or Higher
 When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
 
 #### Solution: Use New Relic Synthetics
@@ -155,12 +174,12 @@ New Relic Pro is automatically provisioned for your site. Unfortunately, you can
 Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
 
 
-##See Also
+## See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
-- [New Relic Documentation](https://newrelic.com/docs/)
+- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm)
 - [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced)
-- [Case Studies](http://newrelic.com/resources/case-studies)
-- [What is Real User Monitoring?](https://newrelic.com/docs/features/real-user-monitoring)
-- [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
+- [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
+
