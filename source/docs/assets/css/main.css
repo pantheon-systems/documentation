@@ -3362,6 +3362,7 @@ display: block;
 
 .manual-doc {
   padding-left:50px;
+  border-left: solid 2px #eef2f3;
 
 }
 .manual-toc {
