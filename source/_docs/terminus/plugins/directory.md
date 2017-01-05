@@ -10,7 +10,7 @@ Extend the functionality of Terminus and add commands by installing third party 
 The following plugins are supported for Terminus 1.0:
 <div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
-    <div class="topic-info plugin-dir">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -24,7 +24,7 @@ The following plugins are supported for Terminus 1.0:
     </div>
   </div>
   <div style="margin-bottom:30px;" class="col-md-4">
-    <div class="topic-info plugin-dir">
+  <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -38,7 +38,7 @@ The following plugins are supported for Terminus 1.0:
     </div>
   </div>
   <div style="margin-bottom:30px;" class="col-md-4">
-    <div class="topic-info plugin-dir">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -54,7 +54,7 @@ The following plugins are supported for Terminus 1.0:
 </div>
 <div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
-    <div class="topic-info plugin-dir">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -68,7 +68,7 @@ The following plugins are supported for Terminus 1.0:
     </div>
   </div>
   <div style="margin-bottom:30px;" class="col-md-4">
-    <div class="topic-info plugin-dir">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>

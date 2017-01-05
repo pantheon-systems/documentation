@@ -3322,8 +3322,8 @@ display: block;
 .manual-toc > li > a:hover {
   color: #44525E;
   text-decoration: none;
-  border-left: 4px solid #DDE5E7;
-  padding:10px 10px 10px 26px;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
 
 }
 .manual-toc .active-trail > li > a:hover {
@@ -3334,8 +3334,8 @@ display: block;
   font-weight:bold;
   background-color: #EEF2F3;
   color: #44525E;
-  border-left: 4px solid #DDE5E7;
-  padding:10px 10px 10px 26px;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
 
 
 }
@@ -3352,16 +3352,15 @@ display: block;
 
 }
 .manual-toc .child a:hover {
-  padding:10px 10px 10px 36px;
+  padding:10px 10px 10px 40px;
 
 }
 .manual-toc .child .active-trail {
-  padding:10px 10px 10px 36px !important;
+  padding:10px 10px 10px 40px !important;
 
 }
 
 .manual-doc {
-  border-left: solid 2px #eef2f3;
   padding-left:50px;
 
 }
@@ -4282,7 +4281,9 @@ a.cta.cta-black-on-yellow:after:hover {
 }
 .plugin-dir {
   background-image: none !important;
+  border: 1px solid #A4BBC1;
   min-height: 230px !important;
+  padding: 0px 8px 0px 8px;
 }
 .get-plugin {
   position: absolute;
@@ -4374,7 +4375,6 @@ a.topic-info-link {
   border: 1px solid #A4BBC1;
   box-shadow: 0px 0px 11px 0px rgba(120,134,142,0.62);
 }
-
 .topic-info__text {
   padding: 15px;
   float:left;
