@@ -158,7 +158,7 @@ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 
 ## Run SQL Queries Using Drush on Pantheon
 
-The `drush sql-cli` command is not supported on Pantheon. You can open the mysql CLI on Pantheon via the following command:
+The `drush sql-cli` command is not supported on Pantheon. You can open the MySQL CLI on Pantheon via the following command:
 ```bash
 $(drush @pantheon.SITENAME.ENV sql-connect)
 ```
@@ -301,13 +301,13 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
 
-### Unable to Connect to mysql Server
+### Unable to Connect to MySQL Server
 
-Sometimes, you may encounter the following error when running Drush mysql commands:
+Sometimes, you may encounter the following error when running Drush MySQL commands:
 ```nohighlight
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
-This can happen when an inactive site has spun down. To get the mysql server back up, use Terminus to wake up the environment:
+This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/docs/terminus) command:
 ```nohighlight
 terminus env:wake SITENAME.ENV
 ```
@@ -376,7 +376,7 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
 
 ## Known Limitations
 - Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
-- The following Drush commands are not supported and will not work on Pantheon sites: 
+- The following Drush commands are not supported and will not work on Pantheon sites:
   - `sql-sync-pipe` See: [Transfer Database Content Using Drush on Pantheon](#transfer-database-content-using-drush-on-pantheon)
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
   - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
