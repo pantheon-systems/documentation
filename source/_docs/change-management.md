@@ -69,6 +69,13 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td></td>
         <td></td>
       </tr>
+      <tr>
+        <td>Manage a site's plan</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 
@@ -110,6 +117,12 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
       </tr>
       <tr>
         <td>Delete sites or remove users from an org</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage a site's plan</td>
         <td>✓</td>
         <td></td>
         <td></td>
