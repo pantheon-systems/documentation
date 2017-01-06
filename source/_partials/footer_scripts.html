@@ -107,6 +107,23 @@
             });
          </script>
    {% endif %}
+   {% if page.goaccess %}
+       <script type="text/javascript">
+             function downloadInnerHtml(filename, elId, mimeType) {
+                 var elHtml = document.getElementById(elId).innerText;
+                 var link = document.createElement('a');
+                 mimeType = mimeType || 'text/x-shellscript';
+                 link.setAttribute('download', filename);
+                 link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                 link.click();
+             }
+             var fileName =  'access_getlogs.sh'; // You can use the .txt extension if you want
+             $('#downloadLinkgoaccess').click(function(){
+                 downloadInnerHtml(fileName, 'access_getlogs','text/x-shellscript');
+             });
+          </script>
+    {% endif %}
+
 
    {% if page.terminusinstall %}
    <script type="text/javascript">
