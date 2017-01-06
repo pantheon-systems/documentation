@@ -1,73 +1,48 @@
 ---
-title: Selecting a Plan
+title: Select a Plan
 description: Learn the various Pantheon plans offered for your Drupal or WordPress sites.
 tags: [getstarted]
 categories: [getstarted]
 ---
-Pantheon offers multiple service levels, called [Plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Personal Plan. Then once you start to grow and have more specific requirements, take a look at the Professional Plan, which can be part of the recipe to get your site or application to scale and perform better.
+Pantheon offers multiple service levels, called [plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Personal Plan. Then once you start to grow and have more specific requirements, take a look at the Professional Plan, which can be part of the recipe to get your site or application to scale and perform better.
+
+To get started, navigate to the Site Dashboard.
+
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Only the Site Owner, or if the site is owned by an Organization - the Organization's Administrators, can change the Site's Plan. If you are not the owner, you will not see the options discussed below.</p></div>
+<p>Only the Site Owner, or for sites owned by an Organization - the Organization's Administrators, can manage a site's plan. Users without the permission to manage a site's plan will not see the options discussed below. For additional details, see <a href="/docs/change-management">Role-Based Permissions & Change Management</a>.</p></div>
 
-To get started, select the site you would like to associate with a plan.
 
-## Choose a Plan and Add a Payment Method
-<ol>
-<li>From the Site Dashboard, select <b>Settings</b>, and click to add a credit card to the site. <br\>
-<ul><li>You may add a new card or, if you have cards already associated with your account, you an select an existing card.</li>
-<li>Be certain the Credit Card option you would like is selected, and click Update Payment Method </li></ul></li>
-<li>Once this is done, in <b>Settings</b> go back to the <b>Plan</b> tab and select the plan level of your choice, confirming your choice by clicking <b>Update Plan</b>.</li>
-<li>As the site owner, you will receive an email confirming the change to the site.</li>
-<li>Once the inital site billing is processed, you will receive an updated invoice.</li>
-</ol>
-
-<!--![Select a plan from dashboard](/source/docs/assets/images/select-a-plan-and-billing.png)-->  
-
-## Go Live
-Now that you have selected a plan, continue the process of going live by [setting up a domain on your site](/docs/going-live).
-
-## View Your Site's Plan
-
-Identifying your site's service level is quick and easy. You can find this in the green label next your site's name.
+## View Current Plan
+The site's current service level is shown within a green label on the Site Dashboard:
 
 ![confirm new plan](/source/docs/assets/images/dashboard/confirm-plan-dashboard.png)
 
-## Adjusting Your Site's Plan
+## Select Payment Method and Plan
+1. Select a payment method within **Settings** > **Billing**, then click **Update Payment Method**. You can choose from existing cards, add a new card or invite the site owner to pay.
+2. Select the desired plan from **Settings** > **Plan**, then click **Update Plan**.
+3. As the site owner, you will receive an email confirming the change to the site.
+4. After the site billing is processed, you will receive an updated invoice.
 
-You can upgrade _or downgrade_ your Pantheon site at any time from the Site Dashboard, under **Settings**.
-The changes are immediate, and will not affect your site's availability. 
+## Upgrade or Downgrade Plan
+Manage a site's plan from the Site Dashboard within **Settings** > **Plan**. Select the desired plan and click **Update Plan**. Plan changes take immediate effect.
 
-If you are the site owner, select the new site plan level and click Update Plan for the change to take effect.
+### Downgrade to Sandbox
+The following should be considered before downgrading your site from a paid plan to Sandbox:
 
-![update site plan](/source/docs/assets/images/owner-update-site-plan.png)
+* All domains added to Pantheon environments will be removed. If you decide to return to a paid plan in the future, you will need to add the domains again in desired environments.
+* HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
+* A prorated credit will be issued to your billing account.
 
-If the site is owned by your Organization, select the new site plan from the dropdown and click the Update Plan button for the change to take effect.
+### Downgrade or Upgrade to Personal
+The following should be considered before downgrading or upgrading to a Personal plan:
 
-![update site plan for Org Site](/source/docs/assets/images/org-update-site-plan.png)
+* Redis and Solr will be disabled.
 
-You, or if the site is owned by an Organization, the Organization Administrators, will receive an email confirming the change.
+### Downgrade from Business
+The following should be considered before downgrading your site from a Business plan:
 
-### Downgrading to Sandbox 
-Downgrading your site back to Sandbox takes the site offline and prevents any future billing on the site.
-
-If you downgrade from a paid plan to Sandbox: <ul>
-<li><p>the <a href="/docs/domains">domains</a> you've added in your Live environment will be removed. You will need to re-add domains if you decide to return to a paid plan.</p></li>
-<li><p>any <a href="/docs/enable-https">SSL Certificates</a> that you may have uploaded will be removed. You will need to re-upload your certificate, intermediary certs, and your key if you decide to upgrade and enable HTTPS again.</p></li>
-<li><p>a prorated credit will be issued to your billing account.</p></li>
-</ul>
-
-### Downgrading from Business
-If you have HTTPS enabled on your site, it will be disabled. 
-Any <a href="/docs/enable-https">SSL Certificates</a> that you may have uploaded will be removed. You will need to re-upload your certificate, intermediary certs, and your key if you decide to upgrade and enable HTTPS again.
-<div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>You <b>MUST</b> update your DNS records after downgrading to Professional or Personal plans.</p>
-<p>Your DNS recommendations are available on the Site Dashboard, under Domains.</p></div>
-You will also no longer have the ability to [create new support tickets for your site](/docs/getting-support/). 
-You will retain access to your past tickets and will be able to [contact Support](/docs/getting-support/) via Chat.
-
-
-## Manage Site Settings
-
-After you get to your site's Dashboard, click the **Settings** link in the upper-right corner. This is where you can select add-ons and see your current PHP version. For more information, read more about [The Site Dashboard](/docs/sites/#settings).
+* HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
+* You must update your DNS records after downgrading to a Professional or Personal plan. Follow updated DNS recommendations found within the **Domains** tool on the Site Dashboard.
+* You will no longer be able to create support tickets for your site, however you will retain access to past tickets and you can still [contact support](/docs/getting-support/) via chat.
