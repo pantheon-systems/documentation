@@ -114,6 +114,14 @@ The following plugins are supported for Terminus 1.0:
         <a href="https://github.com/terminus-plugin-project/terminus-filer-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
       </div>
     </div>
+    <div class="plugin-dir">
+      <div class="terminus-plugin">
+        <h3>Site Status</h3>
+        <p class="topic-info__description">Author: <a href="https://github.com/uberhacker">Ed Reel</a></p>
+        <p class="topic-info__description">Displays the status of all available Pantheon site environments.</p>
+        <a href="https://github.com/terminus-plugin-project/terminus-site-status-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+      </div>
+    </div>
   </div>
 </div>
 <div class="terminus-pager">
