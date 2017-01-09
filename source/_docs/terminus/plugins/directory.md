@@ -90,7 +90,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="terminus-plugin">
         <h3>Rsync</h3>
         <p class="topic-info__description">Author: <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
-        <p class="topic-info__description">Terminus Plugin that provides a quick shortcut for rsync-ing files to and from a Pantheon site.</p>
+        <p class="topic-info__description">Quickly copy files to and from a Pantheon site.</p>
         <a href="https://github.com/pantheon-systems/terminus-rsync-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
       </div>
     </div>
