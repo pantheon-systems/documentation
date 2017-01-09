@@ -16,11 +16,11 @@ Our command line interface, Terminus, provides advanced interaction with Pantheo
 
 Use Terminus to perform these and other operations:  
 
-- Creating a new site
-- Creating and deleting Multidev environments
-- Cloning one environment to another
-- Checking for upstream updates
-- Deploying code
+- Create a new site
+- Create and delete Multidev environments
+- Clone one environment to another
+- Check for and apply upstream updates
+- Deploy code from one environment to another
 
 ## Contribute
 
