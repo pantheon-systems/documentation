@@ -45,7 +45,7 @@ If cron has run recently, entries will appear in the log. The two entries in the
 
 ### How Can I Schedule Cron to Run More Often?
 
-While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush pantheon_cron 3600` once an hour, usually within 5 to 10 minutes of the half hour (4:30pm, 5:30pm, 6:30pm, etc).
+While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush pantheon_cron 3600` once an hour, usually within 5 to 10 minutes of half past each hour (4:30pm, 5:30pm, 6:30pm, etc).
 
 If the site has not been accessed through the web by a visitor for at least two hours, the platform suspends the associated services until it's accessed again and cron will not run.
 
