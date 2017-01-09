@@ -26,23 +26,29 @@ The site's current service level is shown within a green label on the Site Dashb
 4. After the site billing is processed, you will receive an updated invoice.
 
 ## Upgrade or Downgrade Plan
-Manage a site's plan from the Site Dashboard within **Settings** > **Plan**. Select the desired plan and click **Update Plan**. Plan changes take immediate effect.
+Manage a site's plan from the Site Dashboard within **Settings** > **Plan**. Select the desired plan and click **Update Plan**. 
+Plan changes take immediate effect.
+A plan upgrade will result in a prorated charge to your account; A prorated credit will be issued for any downgrades.
 
 ### Downgrade to Sandbox
 The following should be considered before downgrading your site from a paid plan to Sandbox:
 
 * All domains added to Pantheon environments will be removed. If you decide to return to a paid plan in the future, you will need to add the domains again in desired environments.
 * HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
-* A prorated credit will be issued to your billing account.
 
-### Downgrade or Upgrade to Personal
-The following should be considered before downgrading or upgrading to a Personal plan:
+### Downgrade to Personal
+The following should be considered before downgrading to a Personal plan: Redis, Solr, and HTTPS are only offered at Professional plans and higher.
 
-* Redis and Solr will be disabled.
+#### Redis
+* Drupal sites will need to disable the Redis module as well as remove the Redis configuration scheme from settings.php.
+* WordPress sites will need to disable the WP Redis plugin.
 
-### Downgrade from Business
-The following should be considered before downgrading your site from a Business plan:
+#### Solr
+* WordPress sites will need to disable the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin and ensure the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) is functioning.
+* Drupal sites will need to disable their Apache Solr plugin, as well as the Pantheon Apache Solr module in each environment and remove the apachesolr schema from settings.php.
+
+#### HTTPS
 
 * HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
-* You must update your DNS records after downgrading to a Professional or Personal plan. Follow updated DNS recommendations found within the **Domains** tool on the Site Dashboard.
+* You must update your DNS records after disabling HTTPS. Follow the updated DNS recommendations found within the **Domains** tool on the Site Dashboard.
 * You will no longer be able to create support tickets for your site, however you will retain access to past tickets and you can still [contact support](/docs/getting-support/) via chat.
