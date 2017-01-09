@@ -40,8 +40,8 @@ The following should be considered before downgrading your site from a paid plan
 ### Downgrade to Personal
 The following should be considered before switching to a Personal plan:
 
-* Redis addon service will be disabled.
-* Solr addon service will be disabled.
+* [Redis](/docs/redis) addon service will be disabled.
+* [Solr](/docs/solr) addon service will be disabled.
 * HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
 * You must update your DNS records after HTTPS is disabled. Follow the updated DNS recommendations found within the **Domains** tool on the Site Dashboard.
 
