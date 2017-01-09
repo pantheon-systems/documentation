@@ -1653,6 +1653,7 @@ margin-bottom: 40px !important;  }
 
 /* By default it's not affixed in mobile views, so undo that */
 .pio-docs-sidebar.affix {
+  overflow: scroll;
   position: static;
   max-height: 90%;
 }
