@@ -108,7 +108,7 @@ You can implement a secure domain for a specific set of page with Drupal modules
     // Require HTTPS for admin pages.
     // Check if Drupal is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['HTTPS'] === 'ON') &&
+      ($_SERVER['HTTPS'] === 'on') &&
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         // If admin, redirect to secure.
@@ -148,12 +148,12 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
       // Do not require HTTPS for specific pages.
       if (in_array($_SERVER['REQUEST_URI'], array('/rss.xml'))) {
         // Check if HTTPS is enabled.
-        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'ON') {
+        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
           $redirect_location = 'http://' . $redirect_domain . $_SERVER['REQUEST_URI'];
         }
       }
       // Require HTTPS for everything else.
-      else if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] != 'ON') {
+      else if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] != 'on') {
         $redirect_location = 'https://' . $redirect_domain . $_SERVER['REQUEST_URI'];
       }
       // Perform redirect.
