@@ -226,9 +226,9 @@ It depends on your site configuration. Stripping commented-out or non-functional
 
 Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
 
-#### Where do I set or modify the drupal_hash_salt value in Drupal 7?
+#### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
-There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a drupal_hash_salt value for you, but if you want to use a different one, you can edit settings.php before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings. 
+There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings. 
 ```   
    // All Pantheon Environments.
    if (defined('PANTHEON_ENVIRONMENT')) {
