@@ -83,7 +83,7 @@ git push origin master
 ```
 
 
-### Reset Dev Environment to Live
+## Reset Dev Environment to Live
 If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/docs/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques.
 
 Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
