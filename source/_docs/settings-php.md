@@ -52,6 +52,11 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 terminus drush <site>.<env> "ev 'return getenv("DRUPAL_HASH_SALT")'"
 ```
 
+Drupal 8 sites have reportedly solved local development errors by adding the following within `settings.local.php` :
+```
+$settings['hash_salt'] = '$HASH_SALT';"
+```
+
 ### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
