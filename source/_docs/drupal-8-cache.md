@@ -12,14 +12,7 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 ## Caching
 ![caching settings](/source/docs/assets/images/drupal-8-performance-settings.png)
 
-In Drupal 8, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching** (see Page Cache Maximum Age below).
-
-![block cache](/source/docs/assets/images/drupal-8-block-cache.png)
-
-Drupal 8 removed the "Cache Blocks" and "Minimum Cache Lifetime" settings. Block caching is now set through each individual block's configuration. The master listing of blocks is found at `/admin/structure/block`.
-
-### Page Cache Maximum Age
-![max age cache](/source/docs/assets/images/drupal-8-max-age-cache.png)
+In Drupal 8, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching**.
 
 Page cache maximum age sets the max-age value in the Cache-Control headers that are output by Drupal 8. The only value that will disable Drupal's caching is "no caching". For an in-depth explanation of the max-age header, see the [W3.org official documentation](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3).
 
