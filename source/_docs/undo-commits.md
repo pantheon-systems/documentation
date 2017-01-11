@@ -4,19 +4,13 @@ description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, an
 tags: [troubleshoot, git]
 categories: [develop, git]
 ---
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem for Drupal users is overwriting Drupal core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to execute a Drush update on a local environment and push to Pantheon. This example is Drupal specific but the following steps can be applied to undo a commit on any framework, including WordPress.
-
-<div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>Do NOT update core via <code>drush up</code>.  But presumably you are here because that has already happened.</p></div>
-
-To facilitate our high-performance, high-availability environment, Pantheon uses a 100% API compatible variant of Drupal known as Pressflow, along with some additional changes specific to our platform. If you overwrite this version with regular, unmodified Drupal, your site will not work on Pantheon. Fortunately, this is reversible, but will require a little work.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
 ## Getting Started
 
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
 
-In order to get back to a version of Pressflow, you can run a Git log on a core file. In this case we choose the `/includes/bootstrap.inc`. file as this has some references to Pressflow when everything is working correctly.
+In order to get back to a version of core, you can run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
 
 ```nohighlight
 $ git log bootstrap.inc
@@ -31,13 +25,13 @@ At this point you will have to revert your code back to the commit before core w
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
-### Undo the Last Commit That Hasn't Been Sent to Pantheon
+## Delete the Last Commit That Hasn't Been Sent to Pantheon
 
 If you made the change locally but have not sent it to Pantheon, you locally delete that last commit. This is destructive and will undo all the changes.
 ```nohighlight
 git reset --hard HEAD~1
 ```
-### Undo the Last Commit on Dev
+## Delete the Last Commit on Dev
 
 If you just made the erroneous change and pushed it to Pantheon and realized that there's a problem, you can overwrite history and pretend it never happened. Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques below.
 
@@ -45,14 +39,14 @@ If you just made the erroneous change and pushed it to Pantheon and realized tha
 git reset --hard HEAD~1
 git push --force origin master
 ```
-### Undo the Last Commit on Pantheon That Has Been Deployed
+## Revert the Last Commit on Pantheon That Has Been Deployed
 
 It is important to test changes before deploying them to Test or Live. This technique will reverse the last commit and leave the history.
 ```nohighlight
 git revert HEAD --no-edit
 git push origin master
 ```
-### Undo a Prior Commit on Pantheon That Has Been Deployed
+## Revert a Prior Commit on Pantheon That Has Been Deployed
 
 This one is a bit trickier, but you can do it. This will selectively undo a particular commit and leave the history.
 
@@ -86,4 +80,14 @@ Then push the change to Pantheon.
 
 ```bash
 git push origin master
+```
+
+
+## Reset Dev Environment to Live
+If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/docs/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques.
+
+Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
+```
+git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
+git push origin master -f
 ```
