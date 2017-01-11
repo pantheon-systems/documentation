@@ -40,7 +40,17 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
 ### WordPress Sites
-WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install [Pantheon-sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin"). It is designed to handle the naming properly.
+WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin. It is designed to handle the naming properly.
+
+### Session and Cookie Lifetime
+Pantheon allows developers to control the length of sessions. There are two pieces; the lifetime of the cookie and the lifetime of the session itself.  
+
+The cookie lifetime is configured using the PHP setting [session.cookie\_lifetime](http://www.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime). If set to 0, the cookie is deleted when the user closes their browser. Set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+
+Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7) uses the PHP setting [session.gc\_maxlifetime](http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime) when deleting expired sessions from the sessions database table. Set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+
+For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
+
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
