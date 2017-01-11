@@ -52,7 +52,7 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 terminus drush <site>.<env> "ev 'return getenv("DRUPAL_HASH_SALT")'"
 ```
 
-Users have also solved local development errors by adding this line to `settings.local.php` :
+Drupal 8 sites have reportedly solved local development errors by adding the following within `settings.local.php` :
 ```
 $settings['hash_salt'] = '$HASH_SALT';"
 ```
