@@ -58,6 +58,9 @@ else{
 }
 ```
 
+## Setting Cookies on Platform Domains
+Setting cookies on the `pantheonsite.io` bare domain is not supported, as this would force all sites on the platform to read cookies from all other sites. However, you can set cookies on platform domains (e.g. `dev-site-name.pantheonsite.io`) and custom domains (e.g. `example.com`, `xyz.example.com`).
+
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
 * [Bypassing Cache with HTTP Headers](/docs/cache-control)
