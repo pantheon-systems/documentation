@@ -40,7 +40,7 @@ You will receive an email that contains a link you can use one time to reset you
 Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/docs/terminus):
 
 ```nohighlight
-$ terminus wp <site>.<env> 'user update 1234 --user_pass=NEWPASSWORD'
+$ terminus wp <site>.<env> -- user update 1234 --user_pass=NEWPASSWORD
 ```
 
 As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.

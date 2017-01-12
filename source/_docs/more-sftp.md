@@ -82,7 +82,7 @@ That just downloaded five modules and a theme in under a minute. Pretty cool.
 WordPress has a similar capability:
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus wp <site>.<env> "plugin install akismet wordpress-seo jetpack google-sitemap-generator"
+joshk@steppinrazor ~$ terminus wp <site>.<env> -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:
 Installing Akismet (3.0.0)

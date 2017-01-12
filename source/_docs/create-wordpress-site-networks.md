@@ -23,7 +23,7 @@ Install WordPress and enable the Multisite feature with the [`wp core multisite-
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
 ```bash
-terminus wp <site>.<env> 'core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>'
+terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
 ```
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
@@ -128,7 +128,7 @@ When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu 
 You will have one site. To add another, use [`wp site create`](http://wp-cli.org/commands/site/create/).
 ```bash
 # Create the site on dev.
-terminus wp <site>.dev 'site create --slug=$SLUG'
+terminus wp <site>.dev -- site create --slug=$SLUG
 ```
 For subdomain networks, add hostnames to Dev, Test, and Live.
 ```bash
