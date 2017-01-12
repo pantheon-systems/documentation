@@ -9,7 +9,6 @@ Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/mig
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
 
-- Your site requires a custom upstream
 - You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/wordpress-site-networks)
 - You can't install a plugin on your existing site (e.g. WordPress.com)

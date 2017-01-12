@@ -8,7 +8,6 @@ We recommend migrating WordPress sites from another host using the [Pantheon Mig
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](/docs/migrate-manual) the site:
 
-- Your site requires a custom upstream
 - You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
 - You can't install a plugin on your existing site (e.g. WordPress.com)
@@ -43,6 +42,10 @@ If the migration is not successful, contact <migrations@pantheon.io> and include
 <h3 class="info">Note</h3>  
 <p>The <a href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.</p>
 </div>
+
+### Migrate Site that Requires a Custom Upstream
+If you'd like your existing WordPress site to get one-click updates from your [custom upstream](/docs/running-custom-upstream/), then the migration process will be slightly different. The general process will be the same as outlined above, but start with **Create New Site** instead of **Migrate existing site** then select your custom upstream as the site type. You'll need to manually generate a [machine token](/docs/machine-tokens/) to use with the [Pantheon Migrations plugin](https://wordpress.org/plugins/bv-pantheon-migration/).
+
 
 ## Troubleshooting
 ### Cannot Login Using a Google Account
