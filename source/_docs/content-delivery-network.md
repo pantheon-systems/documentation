@@ -102,6 +102,15 @@ alongside the public and private file systems, which stores files in Amazon's Si
 
 File Conveyer is not available on Pantheon.
 
+CDN configurations that connect directly to platform domains (e.g. `live-site-name.pantheonsite.io`) may pass the `X-Robots-Tag: noindex` HTTP header, instructing bots/crawlers not to index the page and preventing it from being returned in search results. A known workaround to this problem is to remove the header from your CDN configuration, for example:
+
+```
+# Header rewrite Squash X-Robots-Tag : 10
+
+
+					unset beresp.http.X-Robots-Tag;
+```
+
 ## Resources
 
 - [CDN module](http://drupal.org/project/cdn)
