@@ -112,12 +112,12 @@ Before you begin:
   <div role="tabpanel" class="tab-pane active" id="d7s3fs">
   <br/>
   Install the <a href="https://www.drupal.org/project/libraries">Libraries API</a> and <a href="https://www.drupal.org/project/s3fs">S3 File System</a> modules:
-  <pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; 'en libraries s3fs -y'</code></pre>
+  <pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- en libraries s3fs -y</code></pre>
 
   Get the <a href="https://github.com/aws/aws-sdk-php/releases">AWS SDK Library 2.x</a>:
-  <pre><code class="php hljs">terminus drush &lt;site&gt;.&lt;env&gt; 'make --no-core ~/code/sites/all/modules/s3fs/s3fs.make ~/code/'
+  <pre><code class="php hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core ~/code/sites/all/modules/s3fs/s3fs.make ~/code/
   //or if you have a contrib subfolder for modules use:
-  //terminus drush &lt;site&gt;.&lt;env&gt; 'make --no-core ~/code/sites/all/modules/contrib/s3fs/s3fs.make ~/code/'</code></pre>
+  //terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core ~/code/sites/all/modules/contrib/s3fs/s3fs.make ~/code/</code></pre>
   The above command will add the AWS SDK version 2.x library into the <code>sites/all/libraries/awssdk2</code> directory.
  </div>
   <div role="tabpanel" class="tab-pane" id="d8s3fs">
@@ -143,7 +143,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
   <div role="tabpanel" class="tab-pane active" id="d7s3fscors">
   <br/>
   Install s3fs_cors module using Drush:
-  <pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; 'en jquery_update s3fs_cors -y'</code></pre>
+  <pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- en jquery_update s3fs_cors -y</code></pre>
  </div>
   <div role="tabpanel" class="tab-pane" id="d8s3fscors">
    <br/>
@@ -174,14 +174,14 @@ Periodically, you'll need to run Actions provided by the S3 File System module e
 ####If you have files on S3 already that are not known to Drupal, refresh the files metadata cache:
 
 ```
-terminus drush <site>.<env> 's3fs-refresh-cache'
+terminus drush <site>.<env> -- s3fs-refresh-cache
 ```
 
 
 ####If you have files in Drupal that need inclusion with S3 run:
 
 ```
-terminus drush drush <site>.<env> 's3fs-copy-local'
+terminus drush drush <site>.<env> -- s3fs-copy-local
 ```
 
 If you receive an access denied error message from Amazon, check the permissions on your bucket and policies. Verify all your configuration settings in Drupal are complete and accurate.

@@ -49,7 +49,7 @@ The `HASH_SALT` value should also be set within `settings.local.php`. See Drush 
 
 To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/terminus):
 ```
-terminus drush <site>.<env> "ev 'return getenv("DRUPAL_HASH_SALT")'"
+terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
 Drupal 8 sites have reportedly solved local development errors by adding the following within `settings.local.php` :
@@ -232,7 +232,7 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
-There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings. 
+There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 ```   
    // All Pantheon Environments.
    if (defined('PANTHEON_ENVIRONMENT')) {
@@ -240,7 +240,7 @@ There can be an occassion when you may need to set the hash salt to a specific v
      $custom_hash_salt = '';
      // Extract Pressflow settings into a php object.
      $pressflow_settings = extract(json_decode($_SERVER['PRESSFLOW_SETTINGS']));
-     $pressflow_settings->drupal_hash_salt = $custom_hash_salt; 
+     $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
      $SERVER['PRESSFLOW_SETTINGS'] = jsonencode($pf);
     }
 ```

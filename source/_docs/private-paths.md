@@ -75,10 +75,10 @@ This can be done via [Terminus](/docs/terminus/):
 
 ```nohighlight
 # Set this to Test/Live
-$: terminus drush <site>.<env> "vset uc_credit_encryption_path 'private'"
+$: terminus drush <site>.<env> -- vset uc_credit_encryption_path 'private'
 # verify the path is set on Test/Live
-$: terminus drush <site>.<env> "vget uc_credit_encryption_path
-uc_credit_encryption_path: 'private'"
+$: terminus drush <site>.<env> -- vget uc_credit_encryption_path
+uc_credit_encryption_path: 'private'
 ```
 
 <div class="alert alert-info" role="alert">

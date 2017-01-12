@@ -101,9 +101,9 @@ For more information on Pantheon's service configuration files for Drupal, refer
 
 
 <ol start="3"><li>Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (<code>/admin/config/development/configuration/single/export</code>) or via <a href="/docs/terminus">Terminus</a>:
-<pre><code>terminus drush &lt;site&gt;.&lt;env&gt; 'config-get system.performance --include-overidden'
-terminus drush &lt;site&gt;.&lt;env&gt; 'config-get system.logging --include-overidden'
-terminus drush &lt;site&gt;.&lt;env&gt; 'config-get views.settings --include-overidden'
+<pre><code>terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.performance --include-overidden
+terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.logging --include-overidden
+terminus drush &lt;site&gt;.&lt;env&gt; -- config-get views.settings --include-overidden
 </code></pre>
 <div class="alert alert-info">
 <h3 class="info">Note</h3>

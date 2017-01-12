@@ -18,7 +18,7 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 
 2. Install the [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin on the Dev Environment using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp <site>.<env> 'plugin install --activate wp-cfm'
+ terminus wp <site>.<env> -- plugin install --activate wp-cfm
  ```
 
 3. Commit this change using the Site Dashboard or with Terminus:
@@ -35,8 +35,8 @@ Each of the following steps can be done using the Pantheon and WordPress Dashboa
 
 5. Activate the plugin on the Test and Live environments using the WordPress Dashboard or with Terminus:
  ```bash
- terminus wp <site>.test 'plugin activate wp-cfm'
- terminus wp <site>.live 'plugin activate wp-cfm'
+ terminus wp <site>.test -- plugin activate wp-cfm
+ terminus wp <site>.live -- plugin activate wp-cfm
  ```
 
 ## Configuration Bundling
@@ -64,7 +64,7 @@ To create a bundle:
  This creates a new file (e.g. `wp-content/config/bundle_name.json`) where configurations are stored for the bundle. Once the file exists, you can run the **Push** operation with Terminus, if preferred:
 
  ```bash
- terminus wp <site>.dev 'config push <bundle_name>'
+ terminus wp <site>.dev -- config push <bundle_name>
  ```
 
 3. Commit your configuration to the codebase (`.json` bundle file) using the Site Dashboard or Terminus:
@@ -86,7 +86,7 @@ To create a bundle:
 2. Import configuration from the codebase into the database by clicking **Pull** for your bundle(s) within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
  ```
- terminus wp <site>.test 'config pull <bundle_name>'
+ terminus wp <site>.test -- config pull <bundle_name>
  ```
 3. Test configuration on the Test environment URL with the content copied from Live.
 
@@ -100,7 +100,7 @@ To create a bundle:
 2. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
  ```
- terminus wp <site>.live 'config pull <bundle_name>'
+ terminus wp <site>.live -- config pull <bundle_name>
  ```
 3. Test the configuration on Live.
 

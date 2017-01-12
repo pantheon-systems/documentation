@@ -46,7 +46,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 2. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/docs/terminus):
 
  ```nohighlight
- terminus wp <site>.<env> 'plugin install lockr --activate'
+ terminus wp <site>.<env> -- plugin install lockr --activate
  ```
 3. Click **Lockr** from within the WordPress Dashboard to visit the Lockr Configuration page  (`/wp-admin/admin.php?page=lockr-site-config`):
 
@@ -57,7 +57,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 6. Visit the [Lockr patch library](https://github.com/lockr/lockr-patches/tree/wp) for the latest patches to your favorite plugins or apply patches with [Terminus](/docs/terminus):
 
  ```
- terminus wp <site>.<env> 'lockr lockdown'
+ terminus wp <site>.<env> -- lockr lockdown
  ```
 
 ### WP-CLI Commands
@@ -65,25 +65,25 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 The Lockr plugin contains a number of WP-CLI commands to quickly register a site and get a key through the command line.
 
 ```nohighlight
-terminus wp <site>.<env> 'lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]'
+terminus wp <site>.<env> -- lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]
 ```
 This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a custom upstream using [Quicksilver](/docs/quicksilver).
 
 
 ```nohighlight
-terminus wp <site>.<env> 'lockr lockdown'
+terminus wp <site>.<env> -- lockr lockdown
 ```
 Run this command and Lockr will go to the [patch library](https://github.com/lockr/lockr-patches/tree/wp) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
 
 
 ```nohighlight
-terminus wp <site>.<env> 'lockr get-key [key name]'
+terminus wp <site>.<env> -- lockr get-key [key name]
 ```
 Run this command to get and decrypt a key from Lockr. This is a useful command to program in automated functionality in Quicksilver.
 
 
 ```nohighlight
-terminus wp <site>.<env> 'lockr set-key --name=[key name] --label=[key label] --value=[key value]'
+terminus wp <site>.<env> -- lockr set-key --name=[key name] --label=[key label] --value=[key value]
 ```
 This command encrypts a key and sends it to Lockr. This is useful during site migrations or automated deployments of new sites through Quicksilver.
 
@@ -116,18 +116,18 @@ Lockr is currently available for Drupal 7 and Drupal 8 (development release). Se
 Use Drush to download and install Lockr in a few simple commands.
 
 ```nohighlight
-terminus drush <site>.<env> 'dl lockr'
+terminus drush <site>.<env> -- dl lockr
 ```
 ```nohighlight
-terminus drush <site>.<env> 'en lockr'
+terminus drush <site>.<env> -- en lockr
 ```
 ```nohighlight
-terminus drush <site>.<env> 'lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]'
+terminus drush <site>.<env> -- lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]
 ```
 This command registers the site with Lockr to the email address provided. The password is only necessary for email addresses already with a Lockr account. This is useful for automated deployment from a custom upstream using Quicksilver.
 
 ```nohighlight
-terminus drush <site>.<env> 'lockr-lockdown'
+terminus drush <site>.<env> -- lockr-lockdown
 ```
 Run this command and Lockr will go to a [patch library](https://github.com/lockr/lockr-patches/tree/drupal7) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
 

@@ -20,7 +20,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 2. Install and activate [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=pantheon+hud`) or with Terminus:
 
  ```nohighlight
- terminus wp <site>.<env> 'plugin install pantheon-hud --activate'
+ terminus wp <site>.<env> -- plugin install pantheon-hud --activate
  ```
 
 3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
@@ -32,7 +32,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
- terminus wp <site>.test 'plugin activate pantheon-hud'
+ terminus wp <site>.test -- plugin activate pantheon-hud
  ```
 
 5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
@@ -44,7 +44,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```nohighlight
- terminus wp <site>.live 'plugin activate pantheon-hud'
+ terminus wp <site>.live -- plugin activate pantheon-hud
  ```
 
 All environments will now show the following indicator for logged-in users with the `manage_options` capability:
@@ -76,7 +76,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 2. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
  ```nohighlight
- terminus drush <site>.dev 'en environment_indicator'
+ terminus drush <site>.dev -- en environment_indicator
  ```
 
 3. Add the following within `settings.php`:
