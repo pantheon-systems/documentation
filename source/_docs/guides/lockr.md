@@ -116,18 +116,18 @@ Lockr is currently available for Drupal 7 and Drupal 8 (development release). Se
 Use Drush to download and install Lockr in a few simple commands.
 
 ```nohighlight
-terminus drush <site>.<env> 'dl lockr'
+terminus drush <site>.<env> -- dl lockr
 ```
 ```nohighlight
-terminus drush <site>.<env> 'en lockr'
+terminus drush <site>.<env> -- en lockr
 ```
 ```nohighlight
-terminus drush <site>.<env> 'lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]'
+terminus drush <site>.<env> -- lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]
 ```
 This command registers the site with Lockr to the email address provided. The password is only necessary for email addresses already with a Lockr account. This is useful for automated deployment from a custom upstream using Quicksilver.
 
 ```nohighlight
-terminus drush <site>.<env> 'lockr-lockdown'
+terminus drush <site>.<env> -- lockr-lockdown
 ```
 Run this command and Lockr will go to a [patch library](https://github.com/lockr/lockr-patches/tree/drupal7) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
 

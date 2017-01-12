@@ -20,13 +20,13 @@ Please keep in mind that your site password is stored in a database, so whatever
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/terminus/) command for generating one-time login links:
 
 ```bash
-$ terminus drush <site>.<env> "user-login"
+$ terminus drush <site>.<env> -- user-login
 ```
 
 Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/docs/terminus):
 
 ```bash
-$ terminus drush <site>.<env> "user-password user_name --password='Astr0nGP455w0rD'"
+$ terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
 ```
 
 ## WordPress User Login

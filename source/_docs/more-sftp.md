@@ -57,7 +57,7 @@ joshk@steppinrazor ~$ terminus site:list
 ### Drush Example
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus drush <site>.<env> "dl pathauto devel admin_menu zen search_api search_api_solr"
+joshk@steppinrazor ~$ terminus drush <site>.<env> -- dl pathauto devel admin_menu zen search_api search_api_solr
 Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
 Project pathauto (7.x-1.2) downloaded to [success]
 /srv/bindings/.../code/sites/all/modules/pathauto.

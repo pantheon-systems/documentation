@@ -58,7 +58,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
     <p class="instruction">Apply updates to all contrib projects:</p>
     <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#drupal-update-contrib"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-    <figure><pre id="drupal-update-contrib"><code class="command bash" data-lang="bash">terminus drush my-site.dev 'pm-updatecode --no-core'</code></pre></figure>
+    <figure><pre id="drupal-update-contrib"><code class="command bash" data-lang="bash">terminus drush my-site.dev -- pm-updatecode --no-core</code></pre></figure>
     </div>
     <p class="instruction">Commit contrib updates to the Dev environment:</p>
     <div class="copy-snippet">

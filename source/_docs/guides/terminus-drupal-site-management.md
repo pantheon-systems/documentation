@@ -66,7 +66,7 @@ $ terminus site:list
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
 ```nohighlight
-$ terminus drush <site>.<env> "site-install"
+$ terminus drush <site>.<env> -- site-install
 Running drush site-install  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
 Could not find a Drupal settings.php file at ./sites/default/settings.php.
@@ -108,13 +108,13 @@ $ terminus env:list <site>
 While the site's Dev environment is still in SFTP mode, we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
 
 ```nohighlight
-$ terminus drush <site>.<env> "dl admin_menu"
+$ terminus drush <site>.<env> -- dl admin_menu
 Running drush dl admin_menu  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
 Project admin_menu (7.x-3.0-rc5) downloaded to                         [success]
 /srv/bindings/c183403f14224eac8471ec0000f9e653/code/sites/all/modules/admin_menu.
 Project admin_menu contains 3 modules: admin_devel, admin_menu_toolbar, admin_menu.
-tests-MacBook-Pro:~ erikmathy$ terminus drush <site>.<env> "en admin_menu,admin_menu_toolbar"
+tests-MacBook-Pro:~ erikmathy$ terminus drush <site>.<env> -- en admin_menu,admin_menu_toolbar
 Running drush en admin_menu,admin_menu_toolbar  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
 The following extensions will be enabled: admin_menu, admin_menu_toolbar
@@ -146,7 +146,7 @@ Open the Pantheon Dashboard, and you'll see the new files are shown in the Git c
 To see what a commit message looks like, let's download Bootstrap and then commit it as well.
 
 ```nohighlight
-$ terminus drush <site>.<env> "dl bootstrap"
+$ terminus drush <site>.<env> -- dl bootstrap
 Running drush dl bootstrap  on terminus-cli-create-dev
 dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
 Project bootstrap (7.x-3.0) downloaded to                              [success]

@@ -58,7 +58,7 @@ The SendGrid Integration module is not supported on Drupal 8 sites at this time.
 1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
  ```nohighlight
- terminus drush <site>.<env> 'en sendgrid_integration -y'
+ terminus drush <site>.<env> -- en sendgrid_integration -y
  ```
 
 2. From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
@@ -70,7 +70,7 @@ The SendGrid Integration module is not supported on Drupal 8 sites at this time.
 5. Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
 
  ```
- terminus drush <site>.<env> 'composer-manager install'
+ terminus drush <site>.<env> -- composer-manager install
  ```
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
@@ -81,7 +81,7 @@ Support for Drupal 8 is not yet available for the [SMTP Authentication Support](
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
  ```nohighlight
- terminus drush <site>.<env> 'en smtp -y'
+ terminus drush <site>.<env> -- en smtp -y
  ```
 2. Visit `/admin/config/system/smtp` once you've logged in as administrator.
 3. From within Install Options, select **On**.

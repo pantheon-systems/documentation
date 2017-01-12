@@ -175,7 +175,7 @@ echo 'print "hello world";' | drush @pantheon.SITENAME.ENV php-script -
 ```
 Also, the interactive PHP shell works as well:
 ```bash
-terminus drush SITENAME.ENV core-cli
+terminus drush <site>.<env> -- core-cli
 ```
 
 ## Drush Commands That Alter Site Code

@@ -76,7 +76,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 2. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
  ```nohighlight
- terminus drush <site>.dev 'en environment_indicator'
+ terminus drush <site>.dev -- en environment_indicator
  ```
 
 3. Add the following within `settings.php`:

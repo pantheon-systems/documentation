@@ -12,7 +12,7 @@ By default, Pantheon runs Drush 8.x on newly created Drupal sites and 5.x on sit
 ## Verify Current Drush Version
 Verify the current version of Drush running remotely on Pantheon using [Terminus](/docs/terminus):
 ```bash
-terminus drush <site>.<env> 'status' | grep "Drush version"
+terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
 ## Configure Drush Version
