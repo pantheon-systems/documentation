@@ -13,6 +13,11 @@ do
   mkdir -p output_prod/docs/changelog/page/"$name"
   mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
 done
+#===============================================================#
+# Authenticate Terminus  and create json dump of help output    #
+#===============================================================#
+~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+~/documentation/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
 
 #===============================================================#
 # Deploy modified files to production                           #
@@ -27,12 +32,6 @@ else
     exit 1
 fi
 
-
-#===============================================================#
-# Authenticate Terminus  and create json dump of help output    #
-#===============================================================#
-~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-~/documentation/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
