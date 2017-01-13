@@ -5,6 +5,7 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
+<!--Note: The contents of the command reference table cannot be edited in the docs project. This table is automatically generated using Terminus (terminus list --format=json). Submit feedback and report issues related to the contents of this table on the Terminus repo: https://github.com/pantheon-systems/terminus/issues -->
 
 <div class="container col-md-12" ng-app="terminusCommandsApp" ng-controller="mainController">
 
