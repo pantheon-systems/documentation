@@ -50,8 +50,10 @@ terminusLatestRelease.config(function($interpolateProvider) {
 
 terminusLatestRelease.controller("terminusLatestReleaseCtrl", function($scope, $http) {
     $scope.latestRelease = {};
-    $http.get("/docs/assets/terminus/releases/latest.json").success(function(response){
-      $scope.latestRelease = response;
+    $http.get('/docs/assets/terminus/releases/latest.json')
+      .then(function (response) {
+        var data = response.data;
+        $scope.latestRelease = data;
     });
 });
 
@@ -63,9 +65,11 @@ terminusRelease.config(function($interpolateProvider) {
 
 terminusRelease.controller('terminusReleaseCtrl', function($scope, $http) {
   $scope.releases = [];
-  $http.get('/docs/assets/terminus/releases.json').success(function(data) {
+  $http.get('/docs/assets/terminus/releases.json')
+    .then(function (response) {
+      var data = response.data;
       $scope.releases = data;
-    });
+  });
   }
 );
 angular.bootstrap(document.getElementById("terminusRelease"), ['terminusReleaseApp']);
@@ -82,8 +86,10 @@ terminusCommandsApp.config(function($interpolateProvider) {
 terminusCommandsApp.controller('mainController', function($scope, $http) {
   $scope.searchCommand   = '';
   $scope.terminus = [];
-  $http.get("/docs/assets/terminus/commands.json").success(function(response){
-    $scope.terminus = response;
+  $http.get('/docs/assets/terminus/commands.json')
+    .then(function (response) {
+      var data = response.data;
+      $scope.terminus = data;
   });
   $scope.clearFilters = function(){
       $scope.searchCommand =  undefined;
@@ -114,12 +120,14 @@ terminusCompareApp.config(function($interpolateProvider) {
 terminusCompareApp.controller('mainController', function($scope, $http) {
   $scope.searchCommand   = '';
   $scope.terminus = [];
-  $http.get("/docs/assets/terminus/compare.json").success(function(response){
-    $scope.terminus = response;
-  });
+  $http.get('/docs/assets/terminus/compare.json')
+    .then(function (response) {
+      var data = response.data;
+      $scope.terminus = data;
+    });
   $scope.clearFilters = function(){
-        $scope.searchCommand =  undefined;
-    };
+      $scope.searchCommand =  undefined;
+  };
 });
 //Sort usage array by relevance based on Regex matches from search query
 terminusCompareApp.filter('search', function() {
