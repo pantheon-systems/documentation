@@ -83,6 +83,18 @@ The following plugins are supported for Terminus 1.0:
   </div>
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
+      <div class="terminus-plugin">
+        <h3>Pancakes</h3>
+        <p class="topic-info__description">Author: <a href="https://github.com/derimagia">Dave Wikoff</a></p>
+        <p class="topic-info__description">Quickly copy files to and from a Pantheon site.</p>
+        <a href="https://github.com/terminus-plugin-project/terminus-pancakes-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div style="margin-bottom:30px;" class="col-md-4">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -95,8 +107,6 @@ The following plugins are supported for Terminus 1.0:
       </div>
     </div>
   </div>
-</div>
-<div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
       <div class="pantheon-official">
