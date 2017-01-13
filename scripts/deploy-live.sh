@@ -32,7 +32,7 @@ fi
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
 ~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-~/documentation/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
+~/documentation/bin/terminus list --format=json > ~/documentation/source/docs/assets/terminus/commands.json
 
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
