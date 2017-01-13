@@ -73,7 +73,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
   # Create json dump of terminus help for docs/terminus/commands
-  ~/documentation/bin/terminus list --format=json > ~/documentation/source/docs/assets/terminus/commands.json
+  ~/documentation/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
   # rsync output_prod/* to Valhalla
   rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
   if [ "$?" -eq "0" ]
