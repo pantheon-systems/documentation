@@ -41,7 +41,7 @@ The next step is to go to the **Crypto** page and set the SSL option to **Full**
 
 ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
 
-It takes a few minutes to go into effect as Cloudflare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
+SSL certificate issuance may take up to 24 hours as Cloudflare sets up a certificate for you. At the free level, the certificate they provide will be one that is also used for some other domains, but it will be a fully valid certificate.
 
 It's important to use __Full__ protection mode.  Pantheon provides HTTPS service out of the box so you can encrypt end-to-end, but because the certificate provided by Pantheon is for the default domain (e.g. `live-yoursite.pantheonsite.io`) you cannot use the __Full (strict)__ mode:
 
