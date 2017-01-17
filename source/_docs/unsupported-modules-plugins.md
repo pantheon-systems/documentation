@@ -273,6 +273,12 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
 <hr>
 
+### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
+**Issue**: EWWW Image Optimizer stores absolute file paths for the optimized images in the `wp_ewwwio_images` table and the container ID of the file path will change with routine platform maintenance.
+
+**Solution**: Rebuilding the optimized images will refresh absolutepath, but the problem will persist when container changes.
+<hr>
+
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
