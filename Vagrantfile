@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   path                  = "/vagrant"
 
   config.vm.synced_folder ".", "/vagrant", :disabled => true
-  config.vm.synced_folder ".", path, :nfs => true
+  config.vm.synced_folder ".", path, :rsync => true
   config.vm.network "private_network", :auto_network => true
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
