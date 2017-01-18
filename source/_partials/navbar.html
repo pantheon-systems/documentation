@@ -89,7 +89,9 @@ terminusCommandsApp.controller('mainController', function($scope, $http) {
   $http.get('/docs/assets/terminus/commands.json')
     .then(function (response) {
       var data = response.data;
-      $scope.terminus = data;
+      var old = JSON.stringify(data).replace(/(<site_env>)/g, "<site>.<env>").replace(/(<site_env_id>)/g, "<site>.<env>").replace(/(<site_id>)/g, "<site>").replace(/(<site_name>)/g, "<site>");
+      var newArray = JSON.parse(old); //convert back to array
+      $scope.terminus = newArray;
   });
   $scope.clearFilters = function(){
       $scope.searchCommand =  undefined;
