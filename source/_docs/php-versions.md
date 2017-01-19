@@ -9,6 +9,14 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
+### Available PHP Versions
+Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
+
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+<p>Drupal 6 sites are only compatible with PHP 5.4 and below.
+</p></div>
+
 ## Upgrade Your Site
 Before you change your PHP version, ensure that your CMS and all of your themes, modules and plugins are up-to-date. Older software is more likely to contain code that is incompatible with recent PHP versions.
 
@@ -21,22 +29,41 @@ api_version: 1
 php_version: 7.0
 ```
 
-Now your site’s PHP version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
+Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
 
+The next time you [push your changes](/docs/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
-### Available PHP Versions
-Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
+### Verify Changes
 
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>Drupal 6 sites are only compatible with PHP 5.4 and below.
-</p></div>
+The first place to determine if your changes have been successful is the output from your `git push` command. A correct implementation will return:
 
-## Resolve PHP Version Compatibility Issues
+```
+remote: PANTHEON NOTICE:
+remote:
+remote: Changes to `pantheon.yml` detected.
+remote:
+remote: Successfully applied `pantheon.yml` to the 'dev' environment.
+```
+<br>
+If you have an invalid `pantheon.yml`file the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
 
-We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the Backward Incompatible Changes documentation in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
+```
+remote: PANTHEON ERROR:
+remote:
+remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
+remote:
+remote:
+remote: Validation failed with error:
+remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
+```
 
-## Troubleshooting
+Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
+
+## Troubleshoot Post-Upgrade Errors
+
+### Resolve PHP Version Compatibility Issues
+
+We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the corresponding Backward Incompatible Changes documentation in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
