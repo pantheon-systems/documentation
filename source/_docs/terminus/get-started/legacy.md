@@ -1,10 +1,12 @@
 ---
-title: Legacy Terminus Versions
+title: Terminus Legacy Terminus Versions
 tags: [automate, develop]
 categories: [automate]
 terminuslegacy: true
-layout: taxon
-permalink: docs/terminus/commands/:basename/
+terminuspage: true
+type: terminuspage
+layout: terminuspage
+permalink: docs/terminus/get-started/:basename/
 ---
 <p class="instruction">Install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
 <div class="copy-snippet">
