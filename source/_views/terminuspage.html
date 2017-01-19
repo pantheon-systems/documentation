@@ -10,6 +10,13 @@
   <div class="col-xs-12 col-md-10 manual-doc">
   {% endif %}
     <header>
+      {% if page.terminuslegacy %}
+      <div style="row">
+            <ul class="pio-breadcrumb" style="margin-top:30px;">
+                <a id="back" href="/docs/terminus"> Back</a>
+              </ul>
+      </div>
+      {% endif %}
       <h1>{{ page.title[9:] }}</h1>
       {% if page.contributors %}
       {% set contributor_list = page.contributors %}
