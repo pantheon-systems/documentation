@@ -55,6 +55,16 @@ The following plugins are supported for Terminus 1.0:
 <div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
+      <div class="terminus-plugin">
+        <h3>Filer</h3>
+        <p class="topic-info__description">Author: <a href="https://github.com/sean-e-dietrich">Sean Dietrich</a></p>
+        <p class="topic-info__description">Open SFTP Connections to your Pantheon Sites.</p>
+        <a href="https://github.com/terminus-plugin-project/terminus-filer-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom:30px;" class="col-md-4">
+    <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/official-plugin.svg)"></div>
         <p>Pantheon Official</p>
@@ -77,6 +87,8 @@ The following plugins are supported for Terminus 1.0:
       </div>
     </div>
   </div>
+</div>
+<div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
       <div class="pantheon-official">
@@ -91,8 +103,6 @@ The following plugins are supported for Terminus 1.0:
       </div>
     </div>
   </div>
-</div>
-<div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
       <div class="pantheon-official">
@@ -118,6 +128,18 @@ The following plugins are supported for Terminus 1.0:
         <p class="topic-info__description">Author: <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
         <p class="topic-info__description">Manage the <code>secrets.json</code> file for use with Quicksilver.</p>
         <a href="https://github.com/pantheon-systems/terminus-secrets-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div style="margin-bottom:30px;" class="col-md-4">
+    <div class="plugin-dir">
+      <div class="terminus-plugin">
+        <h3>Site Status</h3>
+        <p class="topic-info__description">Author: <a href="https://github.com/uberhacker">Ed Reel</a></p>
+        <p class="topic-info__description">Displays the status of all available Pantheon site environments.</p>
+        <a href="https://github.com/terminus-plugin-project/terminus-site-status-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
       </div>
     </div>
   </div>
