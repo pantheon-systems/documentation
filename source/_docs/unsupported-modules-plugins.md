@@ -277,6 +277,14 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
 
+### [TubePress](https://wordpress.org/plugins/tubepress/)
+**Issue**: TubePress will not work if you are using PHP 5. The server requirements for TubePress state that the PHP APC extension should be disabled. Pantheon provides APC by default across all plans and it is not possible to disable.
+
+**Solution**: Upgrade your site's PHP version to PHP 7 by enabling that option in a pantheon.yml file.
+
+See [Upgrade PHP Versions](https://pantheon.io/docs/php-versions/) and [The pantheon.yml Configuration File](https://pantheon.io/docs/pantheon-yml/) for more information.
+<hr>
+
 ### [JetPack](https://wordpress.org/plugins/jetpack/)
 **Issue**: JetPack installs successsfully, but throws a 503 error. For details, see [https://github.com/Automattic/jetpack/issues/3546](https://github.com/Automattic/jetpack/issues/3546).
 
