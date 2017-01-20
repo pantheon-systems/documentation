@@ -15,10 +15,10 @@ If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/d
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/select-plan/).
 
-1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains/HTTPS**.
-2. On the Domain Setup tab, enter the domain name you want associated with that environment, and click **Add New Domain to the Live Environment**.
+1. From your Site Dashboard, select the environment to serve from the domain (typically Live), and click **Domains**.
+2. On the Domain Setup tab, enter the domain name you want associated with that environment, and click **Add**.
 
-You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
+You can simultaneously add both the bare domain name and the `www` subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3><p>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</p></div>
@@ -46,7 +46,7 @@ Use the following workaround to allow your local workstation to access your Pant
  192.123.456.789 example.com  
  ```
 ## Step 3: Configure Your DNS
-From the target environment's Domains/HTTPS tool, click **Show DNS Recommendations** next to each of the domains you've added:
+From the target environment's Domains tool, click **Show DNS Recommendations** next to each of the domains you've added:
 
 ![Show recommended DNS](/source/docs/assets/images/dashboard/show-dns-recommendations.png)
 

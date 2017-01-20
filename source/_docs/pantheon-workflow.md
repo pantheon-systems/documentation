@@ -5,7 +5,7 @@ tags: [getstarted]
 categories: [getstarted]
 ---
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site that's available to the world. Additional development environments are available with [Multidev](/docs/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
 
 ## Code Moves Up, Content Moves Down
@@ -16,13 +16,15 @@ The core of the Pantheon workflow is to move code up from Dev to Test to Live an
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
 - **Content** includes files not under Git version control, like images, PDFs, and the database.
 
-### 1. Commit code in Dev.
+### Commit code in Dev.
 
 Update code in the Dev environment via [SFTP](/docs/sftp/) or [Git](/docs/git/).
 
-### 2. Combine code from Dev and content from Live in the Test environment.
+### Combine code from Dev and content from Live in the Test environment.
 
 When you're ready to test a new set of changes, take your code from Dev, your content from Live, and combine them in Test to be absolutely certain that your deployment to Live will go as planned.
+
+Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
 ![Site dashboard, test environment, code section](/source/docs/assets/images/dashboard/test-env.png)
 
@@ -32,7 +34,7 @@ After running this operation, be sure that:
 
 * Your database updates succeed  
 * Your exported configuration is in place  
-* The site is functioning as expected
+* The site is functioning as expected in the Test environment
 
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 

@@ -34,9 +34,9 @@ openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr -keyout www_ex
 You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.
 </div>
 
-You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain. For a Wildcard SSL cert, the *Common Name* must start with an arterisk "*" symbol. The arterisk represents all possible subdomains. 
+You'll be prompted interactively to enter the information needed to request your certificate. The most important part of this information is the *Common Name*, which is the domain. For a Wildcard SSL cert, the *Common Name* must start with an arterisk "*" symbol. The arterisk represents all possible subdomains.
 
-`Ex.  *.example.com` 
+`Ex.  *.example.com`
 
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
 
@@ -100,9 +100,9 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 ## Load Certificate into Pantheon
 
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
-2. Select **Domains/HTTPS**.
-2. Click **HTTPS**.
-3. Paste in the certificate information, including the header and footer, and click **Add Cert**.
+2. Select **HTTPS**.
+3. Next to **Environment HTTPS:**, click **Enabled**.
+4. Paste in the certificates and private key in to the appropriate fields, including the header and footer, and click **Add Cert**.
 
 After submitting your certificates, you'll see a confirmation message:
 
