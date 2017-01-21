@@ -5,7 +5,7 @@ tags: [getstarted]
 categories: [getstarted]
 ---
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
 
 ## Code Moves Up, Content Moves Down
