@@ -6,13 +6,14 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
-Terminus is available for Mac OS X and Linux.
+Terminus is available for Mac OS X, Linux, and Windows (Beta).
 ## Requirements
 
 * PHP Version 5.5.9 or later
 * [PHP-CLI](http://www.php-cli.com/)
 * [PHP-CURL](http://php.net/manual/en/curl.setup.php)
 * [Composer](https://getcomposer.org/download/)
+* Windows 10 Only: [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
 ## Install
 <p class="instruction">Install the most recent release of Terminus with the following command:</p>
