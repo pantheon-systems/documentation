@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline: <<SCRIPT
   set -ex
   phantomjs --webdriver=8643 &> /dev/null &
-  su vagrant -c 'cd #{path} && composer install && bundle && npm install;
+  su vagrant -c 'cd #{path} && composer install && bundler && npm install;
   grunt
   bin/terminus list > source/docs/assets/terminus/commands.json --format=json
   bin/sculpin generate && ln -sf #{path}/source #{path}/output_dev
