@@ -37,6 +37,9 @@ Terminus is open source! View the project on [GitHub](https://github.com/pantheo
 ## Support
 Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' Github page](https://github.com/pantheon-systems/terminus/issues/new).
 
+Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
+
+
 <div class="terminus-pager">
   <hr>
       <a style="float:right;" href="/docs/terminus/install"><span class="terminus-pager-rsaquo">&rsaquo;</span>Installation</a>
