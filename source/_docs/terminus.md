@@ -35,7 +35,7 @@ Use Terminus to perform these and other operations:
 Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
 ## Support
-Terminus is open source. Review existing bugs and feature requests or report new issues on [GitHub](https://github.com/pantheon-systems/terminus/issues). You can also request assistance with Terminus by [contacting support](/docs/getting-support). Include steps to reproduce the issue, outputs, pertinent information about your system, and what you believe the correct reaction of the system ought to be.
+Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' Github page](https://github.com/pantheon-systems/terminus/issues/new).
 
 <div class="terminus-pager">
   <hr>
