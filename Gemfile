@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 gem 'html-proofer'
-gem 'bundle'
+gem 'bundler'
 gem 'rake'
