@@ -239,9 +239,9 @@ There can be an occassion when you may need to set the hash salt to a specific v
      // Set your custom hash salt value.
      $custom_hash_salt = '';
      // Extract Pressflow settings into a php object.
-     $pressflow_settings = extract(json_decode($_SERVER['PRESSFLOW_SETTINGS']));
+     $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
      $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
-     $SERVER['PRESSFLOW_SETTINGS'] = jsonencode($pf);
+     $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
     }
 ```
 
