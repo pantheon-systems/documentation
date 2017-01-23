@@ -35,7 +35,7 @@ test:
     # Look for merge conflicts.
     - scripts/merge_conflicts.sh
     # Run htmlproofer.
-    - bundle exec rake
+    - bundler exec rake
 
 deployment:
   production:
