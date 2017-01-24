@@ -13,7 +13,7 @@ Our command line interface, Terminus, provides advanced interaction with Pantheo
 <a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows (Beta). For details on legacy versions of terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
 <div class="alert alert-info">
 <h3 class="info">Note</h3>
-<p>Terminus for Windows is still in beta. Please <a href="https://github.com/pantheon-systems/terminus/issues/new">submit an issue on Github</a> for bug reports or feature requests.</p>
+<p>Terminus for Windows is still in beta. Please <a href="https://github.com/pantheon-systems/terminus/issues/new">submit an issue on GitHub</a> for bug reports or feature requests.</p>
 </div>
 ## Usage
 
@@ -35,7 +35,7 @@ Use Terminus to perform these and other operations:
 Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
 ## Support
-Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' Github page](https://github.com/pantheon-systems/terminus/issues/new).
+Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
 
 Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
 

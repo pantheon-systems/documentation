@@ -92,7 +92,7 @@ This command encrypts a key and sends it to Lockr. This is useful during site mi
 
 Pairing together the [Lockr](https://www.drupal.org/project/lockr), [Encrypt](https://www.drupal.org/project/encrypt), and [Key](https://www.drupal.org/project/key) modules allow Drupal to take advantage of best security practices of separating the keys away from the data they protect.
 
-Lockr is currently available for Drupal 7 and Drupal 8 (development release). See the project's [Github page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
+Lockr is currently available for Drupal 7 and Drupal 8 (development release). See the project's [GitHub page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
 
 1. [Set the connection mode to SFTP](/docs/sftp/) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
 

@@ -37,7 +37,7 @@ Extend the functionality of Terminus and add commands by installing third party 
 </code></pre></figure>
 </div>
 <h3>Install via Git</h3>
-<p>Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (<code>$HOME/.terminus/plugins</code>). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On Github you can find it by clicking <strong>Clone or download</strong> on the repository home page:</p>
+<p>Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (<code>$HOME/.terminus/plugins</code>). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking <strong>Clone or download</strong> on the repository home page:</p>
 <img src="/source/docs/assets/images/terminus-plugin-install-git.png" alt="GitHub clone URL">
 <p class="instruction">Then in a terminal window on your computer, use the following commands:</p>
 <div class="copy-snippet">
