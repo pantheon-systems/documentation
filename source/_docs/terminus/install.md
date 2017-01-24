@@ -39,6 +39,14 @@ First, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/cr
 </div>
 ## Troubleshooting
 ### Permission Denied
+If the installer throws an IOException at the end:
+
+```
+  [Symfony\Component\Filesystem\Exception\IOException]
+  Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
+```
+You may need to remove an old installation from terminus from `/usr/local/bin/terminus`.
+
 If you run into permission problems such as:
 ```
 file installer.phar: Permission denied
@@ -46,10 +54,12 @@ file installer.phar: Permission denied
 curl: (23) Failed writing body (0 != 1928)
 ```
 
-<p class="instruction">Run the installation command with <code>sudo</code>:</p>
+<p class="instruction">You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer-sudo"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-  <figure><pre id="terminus-installer-sudo"><code class="bash command" data-lang="bash">sudo curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+  <figure><pre id="terminus-installer-sudo"><code class="bash command" data-lang="bash">mkdir ~/terminus
+  cd ~/terminus
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
 
 <div class="terminus-pager">
