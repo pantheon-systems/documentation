@@ -4,197 +4,80 @@ description: Learn how to monitor internal execution performance of your Pantheo
 tags: [performance, cache]
 categories: [platform, cache]
 ---
-We highly recommend load testing a site both prior and post launch to ensure your site is optimally configured.
 
-## Before You Begin
+## Load vs Performance Testing
 
-You should:
+Before getting started testing your site its important to understand the difference between load and performance testing and know when to use each.
 
-- [Enable New Relic Pro](/docs/new-relic) to monitor internal execution performance without needing any additional modules or tools.
-- Have access to a command-line environment, preferably with administrative privileges.
-
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p><strong>Load testing should only be performed on the Live environment</strong>. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</p></div>
-
-## Performance vs. Scalability
-
-There are two things to test for:
-
-1. **Performance**: the response time for an individual request
-2. **Scalability**: the ability to deliver with optimal response time to a larger number of concurrent requests
-
-High-performance is the ability to deliver a page in under a second; scalability is the ability to deliver that page in under a second for many requests. It's important to understand the difference between these two dimensions and that there are trade-offs between performance and scalability.
-
-## Verify Varnish is Working
-
-To verify that the [Varnish](/docs/varnish) cache is working, the `curl` command can be run with the `-I` flag to gather and display header information. Header information can also be obtained via [Firebug](http://en.wikipedia.org/wiki/Firebug_(software)) or [Inspect](http://en.wikipedia.org/wiki/Google_Chrome) in the browser. The results should be something like this:
-
-```nohighlight
-curl -I http://live-yoursite.pantheonsite.io
-HTTP/1.1 200 OK
-Server: nginx/1.0.10
-Date: Fri, 17 Aug 2012 23:47:36 GMT
-Content-Type: text/html; charset=utf-8
-Connection: keep-alive
-cache-control: public, max-age=300
-last-modified: Fri, 17 Aug 2012 23:44:40 +0000
-expires: Sun, 11 Mar 1984 12:00:00 GMT
-etag: "1345247080"
-X-Varnish: 1082592805 1082586928
-Age: 176
-Via: 1.1 varnish
-X-Pantheon-Edge-Server: 108.166.96.132
-Vary: Accept-Encoding, Cookie
-```
-The "Age" field should be greater than 0. If the max age is not greater than 0, please review  [Drupal's Performance and Caching Settings](/docs/drupal-cache#drupal-7-performance-configuration) and [Varnish Caching for High Performance](/docs/varnish) documentation.
+Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch.
 
 <div class="alert alert-danger" role="alert">
 <h3 class="info">Warning</h3>
-<p>Until Varnish has been correctly configured, don't worry about further testing.</p></div>
+<p>You should not perform load testing on your live environment if the site is actually open to the public.  <strong>Load testing should be done on your live environment before you go live</strong>.  If your site is already live then you should run load tests on your test evironment.  Keep in mind that your test environment only has one container so try to run a proportionate amount of traffic based on how many containers you currently have on your live environment<p></div>
 
-## Timing an Uncached Page Request
-
-Passing the curl command with `time` before it, as well as sending a `NO_CACHE` cookie, which prevents Varnish from caching the response, will test the actual response of the application containers backend:
-
-    time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheonsite.io
-
-The command returns the following results. Note the appended timestamp at the bottom. The "real" time is the one to pay attention to:
-```nohighlight
-time curl -I -H "Cookie: NO_CACHE=1;" http://live-yoursite.pantheonsite.io
-HTTP/1.1 200 OK
-Server: nginx/1.0.10
-Date: Fri, 17 Aug 2012 23:57:39 GMT
-Content-Type: text/html; charset=utf-8
-Connection: keep-alive
-cache-control: public, max-age=300
-last-modified: Fri, 17 Aug 2012 23:57:38 +0000
-expires: Sun, 11 Mar 1984 12:00:00 GMT
-etag: "1345247858"
-Accept-Ranges: bytes
-X-Varnish: 1082615375
-Age: 0
-Via: 1.1 varnish
-X-Pantheon-Edge-Server: 108.166.96.132
-Vary: Accept-Encoding, Cookie
-
-real 0m0.874s
-user 0m0.036s
-sys 0m0.004s
-```
-Test specific-pages of a site by passing a specific URL, as well as the experience of a logged-in user by passing a PHP-Session ID.
-
-To get the PHP-Session ID, log in to your site and check the browsers cookie setting and value. The Session ID can be passed in the following way:
-
-    time curl -I -H "Cookie: SESSe6c673379860780ffbc45bdd6d9c1ab4=dKanNfIMe_0CnOMF7v1Qb5SpDN7UDvyQE8um-1Rpkcg;;" http://live-yoursite.pantheonsite.io
-
-If you're not satisfied with the response time, focus should be shifted to optimizing the performance of the site.
-
-## Testing Scale and Throughput
-
-In order to test scale and throughput, we use AB, a simple tool made available by the Apache Project.
-
-<div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>Do not raise the concurrency or total number of request values drastically. Small, measured tests should yield the proper results.</p></div>
-
-Run the following command:
-```nohighlight
-ab -n 100 -c 5 http://live-yoursite.pantheonsite.io/
-```
-Varnish should now be properly configured, and what you've tested should generate good response times and a high requests per second.
-
-As with `curl`, you can run `ab` with the following parameters: `-C NO_CACHE=1` parameter to stop Varnish from caching the response. `ab` returns the following output:
-```nohighlight
-ab -n 100 -c 5 -C NO_CACHE=1 http://live-yoursite.pantheonsite.io/
-This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-Licensed to The Apache Software Foundation, http://www.apache.org/
-
-Benchmarking http://live-yoursite.pantheonsite.io (be patient).....done
-
-Server Software: 10.176.69.43
-Server Hostname: http://live-yoursite.pantheonsite.io
-Server Port: 80
-
-Document Path: /
-Document Length: 30649 bytes
-
-Concurrency Level: 5
-Time taken for tests: 12.854 seconds
-Complete requests: 100
-Failed requests: 0
-Write errors: 0
-Total transferred: 3118447 bytes
-HTML transferred: 3064900 bytes
-Requests per second: 7.78 [#/sec] (mean)
-Time per request: 642.705 [ms] (mean)
-Time per request: 128.541 [ms] (mean, across all concurrent requests)
-Transfer rate: 236.92 [Kbytes/sec] received
-
-Connection Times (ms)
-              min mean[+#sd] median max
-Connect: 60 81 32.5 73 258
-Processing: 411 554 150.2 496 1213
-Waiting: 82 131 100.5 109 794
-Total: 471 635 162.9 574 1280
-
-Percentage of the requests served within a certain time (ms)
-  50% 574
-  66% 614
-  75% 646
-  80% 696
-  90% 899
-  95% 1010
-  98% 1170
-  99% 1280
- 100% 1280 (longest request)
-```
-The output provides insight into the requests per second, the most critical element in regards to the scalability of a site. Pay attention to the 90/95% response time as well, as this gives an idea of how the site is actually performing. Check that the number of failed requests is 0; if it's not, this should be investigated.
+Performance testing is the process in which you test your application for performance bottlenecks proactively.  Performance testing should be done often and should always be done prior to a load test.  If your application is not performing well then you can be assured that the load test will not go well.  Performance testing scope should be limited to the application itself without any caching.  This will give you an honest look into your application and show exactly how uncached requests will perform.  Performance testing should be done on the dev environment or (if available on you site's service level) a [multidev](/docs/multidev) environment would be preferrable.
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Testing with a session cookie to emulate the experience of a logged-in user is extremely important, as the contrast between an anonymous user and a logged-in user may be drastically different.</p></div>
+<p><strong>Performance testing environments should be uncached</strong>. Where possible, try to ensure that no-cache headers are applied to the response.
+</p></div>
+See [Bypassing Cache with HTTP Headers](/docs/cache-control)
 
-## Performance Goals
+## How to Load/Performance Test your Site
+How to Load/Performance Test your Site
+The procedure for running a load test and a performance test are similar.
 
-Response times vary from site to site depending on the size of your modules stack, database queries, etc. Generally, anything under 1 second is considered excellent, but this is up to you.
+###Setup New Relic
+First, [enable new relic pro](/docs/new-relic) to ensure that you have clear reporting on specific bottlenecks.  Set your <a target ="_blank" href="https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score">apdex</a> threshold according to your business rules (.5 is the default).  Be careful not to set this too high otherwise you will not get as many transaction traces in New Relic.  If you have any transactions that you want to ensure transaction trace is on be sure to set them up as <a target="_blank" href="https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events">key transactions</a>.
 
-Emulating a logged in user's experience with `ab` is a key metric, as it provides the number of pages per second your site can generate on Pantheon. This number may determine whether or not you need to add additional application containers.
+###Use a load testing tool
+There are many tools that will accomplish both goals of load and performance testing.  Tools like:
 
-## Testing Tools
+* SaaS Solutions
+ * <a target="_blank" href="https://www.blazemeter.com/">Blazemeter</a>
+ * <a target="_blank" href="https://loadimpact.com/">Load Impact</a>
+* Open Source tools
+ * <a target="_blank" href="http://jmeter.apache.org/">Jmeter</a>
+ * <a target="_blank" href="http://locust.io/">Locust.io</a>
 
-There are a number of other tools to consider when you are planning your load testing strategy. This can vary by the need for detail, nature of your site, or requirements for quality analysis.
+The Pantheon onboarding team uses Locust.io for load testing.  The benefit of locust is that is open source, it is fairly easy to build out test scripts and it allows you to crawl the site instead of using predefined urls for the load test.  Crawling the site has the added benefit of hitting every page that is linked to anywhere on the site.  This means that a lot of edge case performance bottlenecks can be found where other more rigid tests would have not.
 
-<table class="table">
-<tbody>
-		<tr>
-			<th>Testing Tool</th>
-			<th>Documentation</th>
-			<th>Acquisition</th>
-		</tr>
-		<tr>
-			<td>Apache AB</td>
-			<td><a href="http://httpd.apache.org/docs/2.2/programs/ab.html">Documentation</a></td>
-			<td><a href="http://httpd.apache.org/download.cgi">Download</a></td>
-		</tr>
-		<tr class="tr_class1">
-			<td>J-Meter</td>
-			<td><a href="http://jmeter.apache.org/usermanual/index.html">Documentation</a></td>
-			<td><a href="http://jmeter.apache.org/download_jmeter.cgi">Download</a></td>
-		</tr>
-		<tr>
-			<td>The Grinder</td>
-			<td><a href="http://grinder.sourceforge.net">Documentation</a></td>
-			<td><a href="http://grinder.sourceforge.net/download.html">Download</a></td>
-		</tr>
-		<tr>
-			<td>Blitz.io</td>
-			<td><a href="http://blitz.io/docs/">Documentation</a></td>
-			<td><a href="https://www.blitz.io/pricing#/subscriptions">Pricing</a></td>
-		</tr>
-	</tbody>
-</table>
+Ultimately, is doesn't matter what tool you decide to use as long as it allows you to test your site properly.  Be sure to allow for any authenticated traffic as well as anonymous.  Which brings the next step, how to determine how much load to apply.  
 
-## See Also
-- [Going Live](/docs/going-live)
+For performance tests a smaller load should suffice as you should be able to see transactional bottlenecks with 10-20 concurrent users.
+
+For load tests, to determine how many concurrent users you must start with looking at your historical analytics of your site.  Try to find the peak hourly sessions of your site and the average session duration. 
+
+Next do some math: hourly_sessions / (60 / average_duration) = Concurrent Users 
+
+###Run the tests
+If this is a performance test be sure to run the test in the dev environment or if your service level allows it run the test in a multidev environment.  If the test is a load test and the site is not public yet run the test in the live environment.
+
+Before starting the test be sure to write down the time you started the test.  As you run the tests its a good idea to keep a close eye on the [logs](/docs/logs).  Make note of any errors and warnings that pop up during test to fix.  
+
+Once the test is up and running try to do common things that editors/administrators would do and make note of what time you triggered these events
+
+Examples:
+* Clear the drupal cache
+* Clear the edge cache (if this is a load test, performance tests should not be cached)
+* Run Drupal cron
+* Run any scripts that could be triggered while users are on the site.
+
+##Assess the results of the test
+Now that the test is complete take a look at New Relic.  The overview will give you an average response time for the duration of the test.  A good response time would be 750ms or less. 
+
+Next, review the transactions tab in new relic, sort by slowest average response time.  Click on the slowest transaction to pull up the transaction trace.  Review the transaction trace to determine where the performance bottleneck is occuring.
+
+Finally, review the logs and the errors tab in new relic.  PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
+
+
+
+
+
+
+
+
+
+
+
+
