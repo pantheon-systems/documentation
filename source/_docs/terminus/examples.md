@@ -1,5 +1,6 @@
 ---
-title: Terminus Example Usage
+title: Terminus Manual
+subtitle: Example Usage
 terminusexample: true
 terminuspage: true
 terminustoc: true

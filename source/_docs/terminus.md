@@ -1,10 +1,10 @@
 ---
-title:  Terminus Get Started
+title:  Terminus Manual
+subtitle: Get Started
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-tags: [terminus]
-categories: [managing]
+tags: [automate, develop, local]
 permalink: docs/:basename/
 ---
 
