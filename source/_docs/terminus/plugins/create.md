@@ -1,5 +1,6 @@
 ---
-title: Terminus Create Plugins
+title:  Terminus Manual
+subtitle: Create Plugins
 terminuspage: true
 terminuscreate: true
 terminustoc: true

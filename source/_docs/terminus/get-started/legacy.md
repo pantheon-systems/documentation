@@ -1,7 +1,6 @@
 ---
-title: Terminus Legacy Terminus Versions
-tags: [automate, develop]
-categories: [automate]
+title:  Terminus Manual
+subtitle: Legacy Terminus Versions
 terminuslegacy: true
 terminuspage: true
 type: terminuspage

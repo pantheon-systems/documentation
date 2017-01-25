@@ -17,7 +17,7 @@
               </ul>
       </div>
       {% endif %}
-      <h1>{{ page.title[9:] }}</h1>
+      <h1>{{ page.subtitle }}</h1>
       {% if page.contributors %}
       {% set contributor_list = page.contributors %}
       <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>

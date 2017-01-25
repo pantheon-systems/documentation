@@ -1,5 +1,6 @@
 ---
-title: Terminus Extend with Plugins
+title: Terminus Manual
+subtitle: Extend with Plugins
 terminuspage: true
 type: terminuspage
 layout: terminuspage

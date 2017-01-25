@@ -1,5 +1,6 @@
 ---
-title: Terminus Plugin Directory
+title: Terminus Manual
+subtitle: Plugin Directory
 terminuspage: true
 type: terminuspage
 layout: terminuspage

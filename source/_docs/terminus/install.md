@@ -1,5 +1,6 @@
 ---
-title: Terminus Install
+title: Terminus Manual
+subtitle: Install
 terminusinstall: true
 terminuspage: true
 type: terminuspage

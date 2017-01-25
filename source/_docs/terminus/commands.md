@@ -1,5 +1,6 @@
 ---
-title: Terminus Command Reference
+title: Terminus Manual
+subtitle: Command Reference
 terminuspage: true
 type: terminuspage
 layout: terminuspage
