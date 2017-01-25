@@ -62,7 +62,7 @@ If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup
 ### Via Dashboard
 From within the Site Dashboard:
 
-1. Create an on-demand backup by selecting **Workflow** > **Export** > **Export Database**.
+1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
 2. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
 3. Import the database into your local environment using a MySQL client:
 
