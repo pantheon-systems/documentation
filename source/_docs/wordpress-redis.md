@@ -9,12 +9,12 @@ Currently, all plans except for Personal can use Redis. Redis is available to Sa
 
 
  | Plans        | Supported
- | ------------- |:-------------:|
- | Sandbox      | **Yes** |
- | Personal      | No      |
- | Professional | **Yes**      |
- | Business | **Yes**      |
- | Elite | **Yes**      |
+ | -------------|:-------------:|
+ | Sandbox      | **Yes**       |
+ | Personal     | No            |
+ | Professional | **Yes**       |
+ | Business     | **Yes**       |
+ | Elite        | **Yes**       |
 
 ---
 
@@ -26,7 +26,7 @@ First enable Redis from your Pantheon Site Dashboard by going to **Settings** > 
 ### Install via Symlink Drop-in
 This method will store object cache values persistently in Redis while preserving the standard procedures for applying plugin updates.
 
-1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP, Git, or the following [Terminus](/docs/terminus) command:
+1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
 
  ```
  terminus wp <site>.<env> -- plugin install wp-redis
@@ -38,14 +38,18 @@ This method will store object cache values persistently in Redis while preservin
  terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
  ```
  
-2. Using SFTP or Git, create a new file named `wp-content/object-cache.php` that contains the following:
+2. Create a new file named `wp-content/object-cache.php` that contains the following:
 
  ```
  <?php
  # This is a Windows-friendly symlink
  require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
  ```
-3. Verify installation by selecting **Drop-ins** from the Plugins section of the WordPress Dashboard.
+This file is a symlink to the `object-cache.php` file installed in step 1. Using SFTP or Git, push the new file to the Dev environment.
+
+3. In the Dev environment's WordPress Admin Panel, verify installation by selecting **Drop-ins** from the Plugins section:
+
+![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
 When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
@@ -61,7 +65,7 @@ terminus wp <site>.<env> -- plugin update wp-redis
  terminus connection:set <site>.<env> git
  ```
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and initialize Composer with `composer init`, if you have not done so already.
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and [initialize Composer](/docs/composer/#initialize-composer) with `composer init`, if you have not done so already.
 
 3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
@@ -75,7 +79,7 @@ terminus wp <site>.<env> -- plugin update wp-redis
  "require": {
    "composer/installers": "^1.0.21",
    "koodimonni/composer-dropin-installer": "*",
-   "wpackagist-plugin/wp-redis": "0.4.0"
+   "wpackagist-plugin/wp-redis": "0.6.0"
    },
    "extra": {
      "installer-paths": {
@@ -94,7 +98,7 @@ terminus wp <site>.<env> -- plugin update wp-redis
 
  ```
  git status
- git commit -Am "Initiate composer, require custom code"
+ git commit --all -m "Initiate composer, require custom code"
  git push origin master
  ```
 
@@ -106,19 +110,19 @@ terminus wp <site>.<env> -- plugin update wp-redis
 
 Execute the following command to return existing Redis keys:
 ```bash
-redis> keys *
+> keys *
 ```
-If Redis is configured properly, it will show the appropriate keys. If nothing is returned, proceed to the troubleshooting section below.
+If Redis is configured properly, it will show all existing keys. If nothing is returned, proceed to the troubleshooting section below.
 
 To check if a specific key exists, you can pass the exists command:
 ```bash
-redis> SET key1 "Hello"
+> SET key1 "Hello"
 OK
-redis> EXISTS key1
+> EXISTS key1
 (integer) 1
-redis> EXISTS key2
+> EXISTS key2
 (integer) 0
-redis>
+>
 ```
 ## Troubleshooting
 
