@@ -61,12 +61,14 @@ Once the test is up and running, execute common tasks done by editors and admini
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess Results
-Now that the test is complete, examine data collected in New Relic. The overview will give you an average response time for the duration of the test.  A good response time would be 750ms or less.
+Now that the test is complete, examine data collected in New Relic. The **Overview** tab will give you an average response time for the duration of the test.  A good response time would be 750ms or less.
 
-Next, review the transactions tab in New Relic and sort by slowest average response time. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to determine where the performance bottleneck is occurring.
+Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to determine where the performance bottleneck is occurring.
 
-Finally, review the logs and the errors tab in New Relic. PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
+Finally, review the **Error analytics** tab in New Relic. PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
 
+### Calculating Load Capacity After Launch
+After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
 
 ## See Also
 
