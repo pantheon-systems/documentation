@@ -299,6 +299,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### [Timthumb](https://code.google.com/p/timthumb/)
 **Issue**: TimThumb is no longer supported or maintained.
 <hr>
+### [TubePress Pro](http://tubepress.com/)
+**Issue**: Sites running PHP version 5.3 produce a WSOD after activating this plugin.
+
+**Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
+<hr>
 
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
 **Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
