@@ -132,7 +132,7 @@ Create an archive using the MySQL utility mysqldump:
 ```sql
 mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
 ```
-Upload and import the file by going to your Pantheon Dashboard and selecting **Workflow** > **Import**.
+Upload and import the file by going to your Pantheon Dashboard and selecting **Database / Files** > **Import**.
 
 ### Send the Files
 
