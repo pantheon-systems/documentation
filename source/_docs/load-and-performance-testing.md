@@ -45,7 +45,7 @@ The procedure for executing a load test and a performance test are similar:
   * **Load Tests**: Determine how many concurrent users the site is expected to serve based on historical analytics for the site. Identify the peak hourly sessions and average session duration, then do some math: `hourly_sessions / (60 / average_duration) = Concurrent Users`
 
 
-###Running the Tests
+##Running the Tests
 If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/docs/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
 <div markdown="1" class="alert alert-danger" role="alert">
 ###Warning {.info}
@@ -60,7 +60,7 @@ Once the test is up and running, execute common tasks done by editors and admini
 * Run Drupal cron
 * Run any scripts that could be triggered while users are on the site.
 
-##Assess the results of the test
+##Assess Results
 Now that the test is complete, examine data collected in New Relic. The overview will give you an average response time for the duration of the test.  A good response time would be 750ms or less.
 
 Next, review the transactions tab in New Relic and sort by slowest average response time. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to determine where the performance bottleneck is occurring.
