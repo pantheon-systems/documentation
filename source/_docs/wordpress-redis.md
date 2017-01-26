@@ -31,13 +31,13 @@ This method will store object cache values persistently in Redis while preservin
  ```
  terminus wp <site>.<env> -- plugin install wp-redis
  ```
- 
+
  For site networks, you will need to specify the site URL by adding that to the command:
- 
+
   ```
  terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
  ```
- 
+
 2. Create a new file named `wp-content/object-cache.php` that contains the following:
 
  ```
@@ -45,9 +45,9 @@ This method will store object cache values persistently in Redis while preservin
  # This is a Windows-friendly symlink
  require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
  ```
-This file is a symlink to the `object-cache.php` file installed in step 1. Using SFTP or Git, push the new file to the Dev environment.
+This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using SFTP or Git, commit the new file to the Dev environment.
 
-3. In the Dev environment's WordPress Admin Panel, verify installation by selecting **Drop-ins** from the Plugins section:
+3. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
 
 ![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
