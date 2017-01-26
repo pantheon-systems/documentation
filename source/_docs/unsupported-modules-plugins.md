@@ -274,9 +274,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
-**Issue**: EWWW Image Optimizer stores absolute file paths for the optimized images in the `wp_ewwwio_images` table and the container ID of the file path will change with routine platform maintenance.
-
-**Solution**: Rebuilding the optimized images will refresh absolutepath, but the problem will persist when container changes.
+**Issue**: EWWW Image Optimizer stores the absolute file paths for optimized images in the `wp_ewwwio_images` table, which includes the application container's ID. These paths will change from time to time due to routine platform maintenance. You can rebuild the optimized images to refresh the absolute path, however the problem will persist next time there are container changes. Additionally, sites served by [multiple application containers](/docs/application-containers/#multiple-application-containers) may experience unexpected behavior as the absolute path may differ from one request to another.
 <hr>
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
