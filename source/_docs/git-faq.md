@@ -184,28 +184,37 @@ If you're having problems cloning your Git repository, verify your SSH key in yo
 
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
-Use [Terminus](/docs/terminus) to identify the Git host:
-```
-terminus connection:info <site>.dev --fields=git_host
-```
+1.  Use [Terminus](/docs/terminus) to identify the Git host:
+    ```
+    terminus connection:info <site>.dev --fields=git_host
+    ```
 
-Then find out which SSH keys your Git client is using with the following command (replace `codeserver.dev.<SITE_ID>.drush.in` with the Git host value returned by Terminus):
-```
-ssh -vT codeserver.dev.<SITE_ID>.drush.in
-```
+    Which will return:
+    ```bash
+     Git Host   codeserver.dev.1887c5fa-...-8fe90727d85b.drush.in
+    ```
 
-The output should be similar to this:
-<pre><code>OpenSSH_7.3p1, LibreSSL 2.4.1
-debug1: Reading configuration data /etc/ssh/ssh_config
-debug1: /etc/ssh/ssh_config line 20: Applying options for *
-debug1: Connecting to codeserver.dev.<SITE_ID>.drush.in port 2222.
-debug1: Connection established.
-<strong>debug1: Offering RSA public key: /Users/username/.ssh/id_rsa</strong>
-debug1: Server accepts key: pkalg ssh-rsa blen 279
-debug1: Authentication succeeded (publickey).
-Authenticated to appserver.dev.<SITE_ID>.drush.in:2222.</code></pre>
+    Copy the URL.
 
-You should now be able to configure Git with the matching SSH key and clone your repository.
+2.  Find out which SSH keys your Git client is using with the following command, replacing `codeserver.dev.<SITE_UUID>.drush.in` with the URL copied in step 2:
+    ```
+    ssh -vT codeserver.dev.<SITE_UUID>.drush.in
+    ```
+
+    The output should be similar to this:
+    ```bash
+    OpenSSH_7.3p1, LibreSSL 2.4.1
+    debug1: Reading configuration data /etc/ssh/ssh_config
+    debug1: /etc/ssh/ssh_config line 20: Applying options for *
+    debug1: Connecting to codeserver.dev.<SITE_ID>.drush.in port 2222.
+    debug1: Connection established.
+    debug1: Offering RSA public key: /Users/username/.ssh/id_rsa
+    debug1: Server accepts key: pkalg ssh-rsa blen 279
+    debug1: Authentication succeeded (publickey).
+    Authenticated to appserver.dev.<SITE_ID>.drush.in:2222.
+    ```
+
+    Line six in our example output (`Offering RSA public key...`) is the information we're looking for. This is the RSA key being used to initiate the connection. You should now be able to configure Git with the matching SSH public key, and clone your repository.
 
 ### How do I fix fast forward errors?
 
