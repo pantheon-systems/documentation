@@ -1,83 +1,73 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
-tags: [performance, cache]
-categories: [platform, cache]
+tags: [performance]
+categories: [performance]
 ---
+Load and performance tests are critical steps in going live procedures, as they help expose and identify potential performance killers. These tests provide insight for how a site will perform in the wild under peak traffic spikes.
 
 ## Load vs Performance Testing
+Before you start, it's important to understand the difference between load and performance testing and know when to use each.
+### Performance Testing
+Performance testing is the process in which you measure an application's response time to proactively expose bottlenecks. These tests should be regularly executed as part of routine maintenance. Additionally, you should run these test before any load testing. If your application is not performing well, then you can be assured that the load test will not go well.  
 
-Before getting started testing your site its important to understand the difference between load and performance testing and know when to use each.
+The scope of performance tests should be limited to the application itself on a development environment (Dev or [Multidev](/docs/multidev)) without caching. This will give you an honest look into your application and show exactly how uncached requests will perform. You can bypass cache by [setting the `no-cache` HTTP headers](/docs/cache-control) in responses.
 
-Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch.
+### Load Testing
+Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch. This test should be done on the Live environment before the site has launched, after performance testing.
 
-<div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>You should not perform load testing on your live environment if the site is actually open to the public.  <strong>Load testing should be done on your live environment before you go live</strong>.  If your site is already live then you should run load tests on your test evironment.  Keep in mind that your test environment only has one container so try to run a proportionate amount of traffic based on how many containers you currently have on your live environment<p></div>
+If your site is already live, then you should run load tests on the Test environment. Keep in mind that the Test environment has one application container, while Live environments on sites with a service level of Business and above can have multiple application containers serving the site. So try to run a proportionate amount of traffic based on how many containers you currently have on your Live environment.
 
-Performance testing is the process in which you test your application for performance bottlenecks proactively.  Performance testing should be done often and should always be done prior to a load test.  If your application is not performing well then you can be assured that the load test will not go well.  Performance testing scope should be limited to the application itself without any caching.  This will give you an honest look into your application and show exactly how uncached requests will perform.  Performance testing should be done on the dev environment or (if available on you site's service level) a [multidev](/docs/multidev) environment would be preferrable.
+## Preparing for Tests
+The procedure for executing a load test and a performance test are similar:
 
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p><strong>Performance testing environments should be uncached</strong>. Where possible, try to ensure that no-cache headers are applied to the response.
-</p></div>
-See [Bypassing Cache with HTTP Headers](/docs/cache-control)
+1. Enable [New Relic Pro](/docs/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
 
-## How to Load/Performance Test your Site
-How to Load/Performance Test your Site
-The procedure for running a load test and a performance test are similar.
+   * Set your [apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score) threshold according to your business rules (.5 is the default).  Be careful not to set this too high otherwise you will not get as many transaction traces in New Relic.  
+   * If you have any transactions that you want to ensure transaction trace is on be sure to set them up as [key transactions](https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events).
 
-###Setup New Relic
-First, [enable new relic pro](/docs/new-relic) to ensure that you have clear reporting on specific bottlenecks.  Set your <a target ="_blank" href="https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score">apdex</a> threshold according to your business rules (.5 is the default).  Be careful not to set this too high otherwise you will not get as many transaction traces in New Relic.  If you have any transactions that you want to ensure transaction trace is on be sure to set them up as <a target="_blank" href="https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events">key transactions</a>.
+2. Select a load testing tool:
 
-###Use a load testing tool
-There are many tools that will accomplish both goals of load and performance testing.  Tools like:
+ * SaaS Solutions
+  * [Blazemeter](https://www.blazemeter.com)
+  * [Load Impact](https://loadimpact.com)
+ * Open Source tools
+  * [Jmeter](http://jmeter.apache.org)
+  * [Locust](http://locust.io/)
 
-* SaaS Solutions
- * <a target="_blank" href="https://www.blazemeter.com/">Blazemeter</a>
- * <a target="_blank" href="https://loadimpact.com/">Load Impact</a>
-* Open Source tools
- * <a target="_blank" href="http://jmeter.apache.org/">Jmeter</a>
- * <a target="_blank" href="http://locust.io/">Locust.io</a>
+  The Pantheon onboarding team uses Locust, an open source load testing tool, because it's fairly easy to build out test scripts and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of hitting every page that is linked to anywhere on the site.  This exposes edge case performance bottlenecks that would have gone undetected under more rigid tests.
 
-The Pantheon onboarding team uses Locust.io for load testing.  The benefit of locust is that is open source, it is fairly easy to build out test scripts and it allows you to crawl the site instead of using predefined urls for the load test.  Crawling the site has the added benefit of hitting every page that is linked to anywhere on the site.  This means that a lot of edge case performance bottlenecks can be found where other more rigid tests would have not.
+  Ultimately, is doesn't matter what tool you decide to use as long as it allows you to test your site properly.  Be sure to allow for any authenticated traffic as well as anonymous.  
 
-Ultimately, is doesn't matter what tool you decide to use as long as it allows you to test your site properly.  Be sure to allow for any authenticated traffic as well as anonymous.  Which brings the next step, how to determine how much load to apply.  
+3. Determine how much load to apply for your test.
 
-For performance tests a smaller load should suffice as you should be able to see transactional bottlenecks with 10-20 concurrent users.
+  * **Performance Tests**: Smaller loads should suffice, as you should be able to see transactional bottlenecks with 10-20 concurrent users.
+  * **Load Tests**: Determine how many concurrent users the site is expected to serve based on historical analytics for the site. Identify the peak hourly sessions and average session duration, then do some math: `hourly_sessions / (60 / average_duration) = Concurrent Users`
 
-For load tests, to determine how many concurrent users you must start with looking at your historical analytics of your site.  Try to find the peak hourly sessions of your site and the average session duration. 
 
-Next do some math: hourly_sessions / (60 / average_duration) = Concurrent Users 
+###Running the Tests
+If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/docs/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
+<div markdown="1" class="alert alert-danger" role="alert">
+###Warning {.info}
+We do not recommend load testing on the Live environment if the site has already launched because you risk overwhelming your live site and causing downtime.
+</div>
+Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/docs/logs). Make note of any errors and warnings that pop up during test to fix.
 
-###Run the tests
-If this is a performance test be sure to run the test in the dev environment or if your service level allows it run the test in a multidev environment.  If the test is a load test and the site is not public yet run the test in the live environment.
+Once the test is up and running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
-Before starting the test be sure to write down the time you started the test.  As you run the tests its a good idea to keep a close eye on the [logs](/docs/logs).  Make note of any errors and warnings that pop up during test to fix.  
-
-Once the test is up and running try to do common things that editors/administrators would do and make note of what time you triggered these events
-
-Examples:
 * Clear the drupal cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
 * Run Drupal cron
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess the results of the test
-Now that the test is complete take a look at New Relic.  The overview will give you an average response time for the duration of the test.  A good response time would be 750ms or less. 
+Now that the test is complete, examine data collected in New Relic. The overview will give you an average response time for the duration of the test.  A good response time would be 750ms or less.
 
-Next, review the transactions tab in new relic, sort by slowest average response time.  Click on the slowest transaction to pull up the transaction trace.  Review the transaction trace to determine where the performance bottleneck is occuring.
+Next, review the transactions tab in New Relic and sort by slowest average response time. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to determine where the performance bottleneck is occurring.
 
-Finally, review the logs and the errors tab in new relic.  PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
-
-
+Finally, review the logs and the errors tab in New Relic. PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
 
 
+## See Also
 
-
-
-
-
-
-
-
+* [Load Testing Drupal and WordPress with BlazeMeter](/docs/guides/load-testing-with-blazemeter/)
