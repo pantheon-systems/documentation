@@ -62,7 +62,7 @@ categories: [getstarted]
         <tr>
           <td>
             Chat Support<br>
-            Support Tickets
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Available for sites on Business plans and above."><em class="fa fa-info-circle">
           </td>
           <td>
             Chat support<br>
