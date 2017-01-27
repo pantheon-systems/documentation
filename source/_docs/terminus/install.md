@@ -55,7 +55,7 @@ file installer.phar: Permission denied
 curl: (23) Failed writing body (0 != 1928)
 ```
 
-<p class="instruction">You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:</p>
+<p markdown="1" class="instruction">You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer-sudo"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
   <figure><pre id="terminus-installer-sudo"><code class="bash command" data-lang="bash">mkdir ~/terminus
