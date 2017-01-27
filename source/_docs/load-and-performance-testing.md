@@ -23,8 +23,8 @@ The procedure for executing a load test and a performance test are similar:
 
 1. Enable [New Relic Pro](/docs/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
 
-   * Set your [apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score) threshold according to your business rules (.5 is the default).  Be careful not to set this too high otherwise you will not get as many transaction traces in New Relic.  
-   * If you have any transactions that you want to ensure transaction trace is on be sure to set them up as [key transactions](https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events).
+   * Set your [apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score) threshold according to your business rules (.5 is the default). Be careful not to set this too high, otherwise you will not get as many transaction traces in New Relic.  
+   * If you have particular transactions that you want to ensure are traced, set them up as [key transactions](https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events).
 
 2. Select a load testing tool:
 
@@ -35,11 +35,11 @@ The procedure for executing a load test and a performance test are similar:
   * [Jmeter](http://jmeter.apache.org)
   * [Locust](http://locust.io/)
 
-  The Pantheon onboarding team uses Locust, an open source load testing tool, because it's fairly easy to build out test scripts and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of hitting every page that is linked to anywhere on the site.  This exposes edge case performance bottlenecks that would have gone undetected under more rigid tests.
+  The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predifined URLs.
 
-  Ultimately, is doesn't matter what tool you decide to use as long as it allows you to test your site properly.  Be sure to allow for any authenticated traffic as well as anonymous.  
+  Ultimately, it doesn't matter what tool you use as long as you to test your site properly. Be sure to allow for any authenticated traffic as well as anonymous.  
 
-3. Determine how much load to apply for your test.
+3. Determine how much load to apply.
 
   * **Performance Tests**: Smaller loads should suffice, as you should be able to see transactional bottlenecks with 10-20 concurrent users.
   * **Load Tests**: Determine how many concurrent users the site is expected to serve based on historical analytics for the site. Identify the peak hourly sessions and average session duration, then do some math: `hourly_sessions / (60 / average_duration) = Concurrent Users`
@@ -51,9 +51,9 @@ If this is a performance test, be sure to run the test on a development environm
 ###Warning {.info}
 We do not recommend load testing on the Live environment if the site has already launched because you risk overwhelming your live site and causing downtime.
 </div>
-Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/docs/logs). Make note of any errors and warnings that pop up during test to fix.
+Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/docs/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
 
-Once the test is up and running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
+Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
 * Clear the drupal cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
@@ -61,11 +61,11 @@ Once the test is up and running, execute common tasks done by editors and admini
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess Results
-Now that the test is complete, examine data collected in New Relic. The **Overview** tab will give you an average response time for the duration of the test.  A good response time would be 750ms or less.
+Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunites.
 
-Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to determine where the performance bottleneck is occurring.
+Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.
 
-Finally, review the **Error analytics** tab in New Relic. PHP errors are a huge performance bottleneck.  If you have errors fix them first, then move on to optimizing any other slow transactions.
+Finally, review the **Error analytics** tab in New Relic. PHP errors often indicate huge performance bottlenecks. If you have errors, fix them.
 
 ### Calculating Load Capacity After Launch
 After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
