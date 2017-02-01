@@ -80,8 +80,8 @@ Learn more about ANAME records:
 
 *   [Dyn](http://dyn.com/managed-dns/alias/)
 *   [DNSimple](http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
-*   [DNS Made Easy](http://www.dnsmadeeasy.com/services/aname-records/)
-*   [EasyDNS](http://docs.easydns.com/aname-records/)
+*   [DNS Made Easy](http://help.dnsmadeeasy.com/managed-dns/records/aname-records/)
+*   [EasyDNS](https://fusion.easydns.com/index.php?/Knowledgebase/Article/View/190/7/aname-records/)
 
 ## Troubleshooting
 Sites using the values recommended within the target environment's Domains/HTTPS tool for their DNS settings can use `dig` to verify DNS configurations. If you are using a Content Delivery Network (CDN) in front of your Pantheon site, you will need to use its recommended DNS settings.
