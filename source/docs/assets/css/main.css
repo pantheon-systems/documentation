@@ -289,32 +289,22 @@ p{
 }
 
 h1{
-  font-size: 36px;
-  line-height: 1.3em;
+  font-family: Avenir-Heavy;
+  color: #313945;
   }
 
 h2 {
-  font-size:24px;
-  line-height: 1.3em;
-  margin: 40px 0 10px 0;
   font-family: Avenir-Heavy;
   color: #313945;
   }
 
 h3 {
-  margin: 30px 0 5px 0;
   font-family: Avenir-Heavy;
-  font-size: 18px;
   color: #44525E;
   }
 h4 {
-  margin: 20px 0 20px 0;
   font-family: Avenir-Heavy;
-  font-size: 14px;
-  text-transform: uppercase;
   color: #313945;
-  letter-spacing: 2px;
-  line-height: 24px;
 }
 h3.changelog {
   font-family: Avenir-Heavy;
