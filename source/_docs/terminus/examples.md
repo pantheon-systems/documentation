@@ -105,7 +105,17 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ## Reset Dev Environment to Live
 
-Rewrite history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus.
+There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live.
+
+* If significant development work that is not ready to be deployed was committed directly your Dev instance instead of properly using a [multidev](/docs/multidev) site this may cause a roadblock to other works in progress that are ready to be deployed. After recommitting the development work to its own multidev site it would be useful to reset Dev back to the state of Live.
+
+* If you have force-pushed or incorrectly merged in a very large or complex Git history to your Dev site that you would like revert to the state of Live.
+
+* If the Dev site is stale or otherwise massively out of date from the Live site with many unneeded changes to code, files, or database and needs to be reset to the state of Live.
+
+* If your Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
+
+You can reset the Git history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus by doing the following:
 
 <p class="instruction">Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
 <div class="copy-snippet">
