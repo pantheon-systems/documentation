@@ -64,7 +64,7 @@ terminus drush my-drupal-8-site.dev -- migrate-status
 
 The following command runs the migration configured via `drush migrate-upgrade --configure-only`:
 ```
-terminus drush $SITE_ENV -- migrate-import --all
+terminus drush my-drupal-8-site.dev -- migrate-import --all
 ```
 
 ## Updating DNS
