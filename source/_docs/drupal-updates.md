@@ -67,6 +67,10 @@ terminus drush $SITE_ENV -- migrate-import --all
 ```
 This command runs on of the migration that were configured with `drush migrate-upgrade`
 
+## Updating DNS
+
+If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. See our documentation on [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/)
+
 
 ## See Also
 View the following [Drupal.org](https://drupal.org) resources for more information:
