@@ -76,9 +76,10 @@ Follow conventions for using the `/profiles` directory in Drupal. With WordPress
 
 Push the repository to your upstream's remote location.
 
-```bash
-git push origin master
-```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-upstream-origin-master"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="push-upstream-origin-master"><code class="command nohighlight" data-lang="bash">git push origin master</code></pre></figure>
+</div>
 
 ## Test Your Upstream
 
@@ -86,27 +87,31 @@ git push origin master
 
 Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
 
-```bash
-terminus site:create <site> <label> <upstream> --org=<org>
-```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#site-create-upstream"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="site-create-upstream"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;site&gt; &lt;label&gt; &lt;upstream&gt; --org=&lt;org&gt;</code></pre></figure>
+</div>
 
 [Clone the Pantheon repository](/docs/git/#clone-your-site-codebase):
 
-```bash
-git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git machine-name
-```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#clone-pantheon-repository"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="clone-pantheon-repository"><code class="command nohighlight" data-lang="bash">git clone ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git site-name</code></pre></figure>
+</div>
 
 Add code from your remote upstream repository:
 
-```bash
-git pull git://github.com/organization/upstream.git master
-```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#pull-upstream"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="pull-upstream"><code class="command nohighlight" data-lang="bash">git pull git://github.com/organization/upstream.git master</code></pre></figure>
+</div>
 
 Push back to Pantheon:
 
-```bash
-git push origin master
-```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-origin-master"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="push-origin-master"><code class="command nohighlight" data-lang="bash">git push origin master</code></pre></figure>
+</div>
 
 ### Testing
 
@@ -115,10 +120,11 @@ git push origin master
 Visit the Development site URL and complete the site installation process to make sure your distribution installs cleanly.
 
 Testers might find it helpful to use the wipe functionality in the Database / Files tab to easily run through the install process multiple times:
-```bash
-terminus env:wipe <site>.<env>
-```
 
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-env-wipe"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="terminus-env-wipe"><code class="command nohighlight" data-lang="bash">terminus env:wipe &lt;site&gt;.&lt;env&gt;</code></pre></figure>
+</div>
 
 #### Acceptance Tests
 
