@@ -4,6 +4,8 @@ Help us create relevant and useful content for developers like yourself. See som
 
 **NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
 
+If you're looking for a place to start, try copying our [Doc Template](/source/_docs/doc-template.md) file and using it to outline your new doc.
+
 ## Code of Conduct
 
 Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](source/_docs/code-of-conduct.md) for details, including how to report abuse.
