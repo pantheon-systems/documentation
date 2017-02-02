@@ -105,26 +105,24 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ## Reset Dev Environment to Live
 
-There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live.
+There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
 
-* If significant development work that is not ready to be deployed was committed directly your Dev instance instead of properly using a [multidev](/docs/multidev) site this may cause a roadblock to other works in progress that are ready to be deployed. After recommitting the development work to its own multidev site it would be useful to reset Dev back to the state of Live.
+* Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/docs/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
 
-* If you have force-pushed or incorrectly merged in a very large or complex Git history to your Dev site that you would like revert to the state of Live.
+* Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
 
-* If the Dev site is stale or otherwise massively out of date from the Live site with many unneeded changes to code, files, or database and needs to be reset to the state of Live.
+* The state of the Dev environment is stale or otherwise massively out of date with the Live environment with many unneeded changes you wish to abandon.
 
-* If your Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
+* The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
-You can reset the Git history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus by doing the following:
-
-<p class="instruction">Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
+<p class="instruction">Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="git-clone"><code class="command bash" data-lang="bash">`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`</code></pre></figure>
 </div>
 
 
-<p class="instruction">Automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
+<p class="instruction">Then automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
 <div class="script-file-header">
 reset-dev-to-live.sh
 <a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
