@@ -30,14 +30,14 @@ If you are not having much luck with update.php, consider setting up the new sit
 
 The details of executing an upgrade/migration to Drupal 8 have continued to shift since Drupal 8.0.0 was released. As such, this documentation will focus on the Pantheon-specific aspects. Read the [drupal.org documentation the migration process](https://www.drupal.org/docs/8/upgrade/brief-overview-and-history-of-automated-upgrading-to-drupal-8) before starting on your own migration on Pantheon. The basic steps you will follow to migrate to a Drupal 8 site on Pantheon are:
 
-1. Create a new Drupal 8 site from your Pantheon dashboard.
+1. Create a new Drupal 8 site on Pantheon from your User Dashboard.
 2. Add the 8.x version of your contrib modules. Some of these modules will have built-in migrating functionality that will help move their data from Drupal 7 to Drupal 8.
-3. Use Migrate module to move over data and configuration from Drupal 6 or 7.
+3. Use the [Migrate](https://www.drupal.org/project/migrate) module to move over data and configuration from Drupal 6 or 7.
 4. Depending on the complexity of your site, you will likely want to review, revise, and rerun your migration.
 
 ### Content and configuration
 
-Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](https://pantheon.io/docs/drupal-8-configuration-management/)).
+Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](/docs/drupal-8-configuration-management/)).
 
 ### Customizing migrations
 
@@ -57,19 +57,19 @@ terminus drush my-drupal-8-site.dev -- migrate-upgrade --legacy-db-key=drupal_7 
 ```
 This command configures (but does not run) the migrations from Drupal 6 or 7 to Drupal 8. In this example, the Drupal 8 site is named `my-drupal-8-site` and the command is running on the `dev` environment. The `--legacy-db-key` parameter indicates how to get the login credentials to the source Drupal 6 or 7 database. In our example, we use the [Terminus secrets](https://github.com/pantheon-systems/terminus-secrets-plugin) plugin to supply the connection info. [See our blog post for more information on how this flag is used](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush). The `--legacy-root` flag lets Drupal 8 know from where it can grab images and other uploaded media assets.
 
+The following command generates a report on how many items have been imported by each migration:
 ```
 terminus drush my-drupal-8-site.dev -- migrate-status
 ```
-This command gives a report on how many items have been imported by each migration.
 
+The following command runs the migration configured via `drush migrate-upgrade`:
 ```
 terminus drush $SITE_ENV -- migrate-import --all
 ```
-This command runs on of the migration that were configured with `drush migrate-upgrade`
 
 ## Updating DNS
 
-If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. See our documentation on [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/)
+If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/docs/domains).
 
 
 ## See Also
