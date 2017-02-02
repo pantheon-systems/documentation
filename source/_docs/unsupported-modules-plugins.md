@@ -220,8 +220,13 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
 
 <hr>
-### [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)  
+### [Taxonomy CSV](https://www.drupal.org/project/twig_extensions)  
+**Issue**:  This module uses `php-intl`, which is not currently supported by Pantheon.
+
+<hr>
+### [Twig Extensions](https://www.drupal.org/project/taxonomy_csv)  
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+
 <hr>
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
