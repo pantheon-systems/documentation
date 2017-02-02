@@ -25,7 +25,7 @@ Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-
 <figure><pre id="commit-sftp"><code class="command bash" data-lang="bash">terminus env:commit my-site.dev --message="My code changes"</code></pre></figure>
 </div>
 <div class="alert alert-danger">
-<h4>Warning</h4>
+<h3 class="info">Warning</h3>
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
 </div>
 <p class="instruction">Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:</p>
@@ -91,6 +91,42 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
     </div>
   </div>
 </div>
+
+### Mass Update
+Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/docs/terminus/plugins).
+
+<p markdown="1" class="instruction">Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#dry-run"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="dry-run"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run</code></pre></figure>
+</div>
+
+<p markdown="1" class="instruction">The output should be similar to this:</p>
+```
+ [notice] Found 3 sites.
+ [notice] Fetching the list of available updates for each site...
+ [notice] 3 sites need updates.
+ [warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
+ [DRY RUN] Applying 2 updates to jessiem-drupal7
+ [DRY RUN] Applying 10 updates to superb-central
+```
+<p markdown="1" class="instruction">Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:</p>
+<div class="alert alert-danger">
+<h3 class="info">Warning</h3>
+The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
+</div>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#mass-update-git"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="mass-update-git"><code class="command bash" data-lang="bash">terminus connection:set my-site.dev git</code></pre></figure>
+</div>
+
+<p markdown="1" class="instruction">Review output then apply the mass update by removing the `--dry-run` option:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#mass-update-apply"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="mass-update-apply"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb</code></pre></figure>
+</div>
+
+
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
 <div class="copy-snippet">
