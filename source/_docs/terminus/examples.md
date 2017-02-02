@@ -95,7 +95,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 ### Mass Update Dev Sites
 The [Terminus Mass Update plugin](https://github.com/pantheon-systems/terminus-mass-update) can be installed to allow you to easily update all dev sites with an available upstream update.
 
-<p class="instruction">After installing the plugin, any site in [SFTP mode](/docs/sftp/#sftp-mode) will need to be changed to Git Mode before it can be updated:</b>
+After installing the plugin, any site in [SFTP mode](/docs/sftp/#sftp-mode) will need to be changed to Git Mode before it can be updated:
 
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
@@ -106,7 +106,7 @@ The [Terminus Mass Update plugin](https://github.com/pantheon-systems/terminus-m
 <p class="instruction">Show what updates would be applied but do not apply them:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --dry-run --accept-upstream</code></pre></figure>
+<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run</code></pre></figure>
 </div>
 
 Sample output for the dry run is:
