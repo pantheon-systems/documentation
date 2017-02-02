@@ -15,43 +15,57 @@ Create a custom distribution of WordPress or Drupal and add it to the Pantheon p
 Create a remote repository and clone it locally, then pull the applicable Pantheon compatible upstream:
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-  <li role="presentation"><a href="#distribution" aria-controls="distribution" role="tab" data-toggle="tab">Public Drupal Distribution Examples</a></li>
+  <li id="d8tab" role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li id="d7tab" role="presentation" class="active"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li id="d6tab" role="presentation" class="active"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li id="wptab" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+  <li id="distributiontab" role="presentation"><a href="#distribution" aria-controls="distribution" role="tab" data-toggle="tab">Public Drupal Distribution Examples</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
+
+  <!-- Drupal Content -->
   <div role="tabpanel" class="tab-pane active" id="d8">
-  <pre><code class="bash hljs">
-  git pull git://github.com/pantheon-systems/drops-8.git master
-  </code></pre>
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-8"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-drops-8"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-8.git master</code></pre></figure>
+    </div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
-  <pre><code class="bash hljs">
-  git pull git://github.com/pantheon-systems/drops-7.git master
-  </code></pre>
+  
+  <div role="tabpanel" class="tab-pane active" id="d7">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-7"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-drops-7"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-7.git master</code></pre></figure>
+    </div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="d6">
-  <pre><code class="bash hljs">
-  git pull git://github.com/pantheon-systems/drops-6.git master
-  </code></pre>
+  
+  <div role="tabpanel" class="tab-pane active" id="d6">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-6"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-drops-6"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-6.git master</code></pre></figure>
+    </div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-  <pre><code class="bash hljs">
-  git pull git://github.com/pantheon-systems/WordPress.git master
-  </code></pre>
+
+  <div role="tabpanel" class="tab-pane active" id="wp">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-wp"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-wp"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/WordPress.git master</code></pre></figure>
+    </div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="distribution">
-  <pre><code class="bash hljs">
-  git pull git://github.com/phase2/openatrium-drops-7.git master
-  </code></pre>
-  <pre><code class="bash hljs">
-  git pull git://github.com/populist/panopoly-drops-7.git master
-  </code></pre>
+  
+  <div role="tabpanel" class="tab-pane active" id="distribution">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-openatrium"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-distribution-openatrium"><code class="command nohighlight" data-lang="bash">git pull git://github.com/phase2/openatrium-drops-7.git master</code></pre></figure>
+    </div>
+    <p>Or:</p>
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-panopoly"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <figure><pre id="git-pull-distribution-panopoly"><code class="command nohighlight" data-lang="bash">git pull git://github.com/populist/panopoly-drops-7.git master</code></pre></figure>
+    </div>
   </div>
+<!-- end tab-content -->
 </div>
 
 ## Add Your Code
