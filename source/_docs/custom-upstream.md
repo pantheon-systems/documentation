@@ -33,28 +33,28 @@ Create a remote repository and clone it locally, then pull the applicable Panthe
     </div>
   </div>
   
-  <div role="tabpanel" class="tab-pane active" id="d7">
+  <div role="tabpanel" class="tab-pane" id="d7">
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-7"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
       <figure><pre id="git-pull-drops-7"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-7.git master</code></pre></figure>
     </div>
   </div>
   
-  <div role="tabpanel" class="tab-pane active" id="d6">
+  <div role="tabpanel" class="tab-pane" id="d6">
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-6"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
       <figure><pre id="git-pull-drops-6"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-6.git master</code></pre></figure>
     </div>
   </div>
 
-  <div role="tabpanel" class="tab-pane active" id="wp">
+  <div role="tabpanel" class="tab-pane" id="wp">
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-wp"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
       <figure><pre id="git-pull-wp"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/WordPress.git master</code></pre></figure>
     </div>
   </div>
   
-  <div role="tabpanel" class="tab-pane active" id="distribution">
+  <div role="tabpanel" class="tab-pane" id="distribution">
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-openatrium"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
       <figure><pre id="git-pull-distribution-openatrium"><code class="command nohighlight" data-lang="bash">git pull git://github.com/phase2/openatrium-drops-7.git master</code></pre></figure>
