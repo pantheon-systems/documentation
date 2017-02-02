@@ -95,23 +95,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 ### Mass Update Dev Sites
 The [Terminus Mass Update plugin](https://github.com/pantheon-systems/terminus-mass-update) can be installed to allow you to easily update all dev sites with an available upstream update.
 
-<p class="instruction">After installing the plugin, checking the mass update report to determine which of your sites are in need of updates:a</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus sites mass-update --report</code></pre></figure>
-</div>
-
-This will show output similar to the following:
-```
-+------------------+-----------------------------------+
-| Site             | Status                            |
-+------------------+-----------------------------------+
-| superb-central   | Needs update                      |
-| jessiem-drupal7  | Needs update                      |
-| novasoft-drupal  | Needs update - switch to Git mode |
-+------------------+-----------------------------------+
-```
-<b>Note: Any site in [SFTP mode](/docs/sftp/#sftp-mode) will need to be changed to Git Mode before it can be updated:</b>
+<p class="instruction">After installing the plugin, any site in [SFTP mode](/docs/sftp/#sftp-mode) will need to be changed to Git Mode before it can be updated:</b>
 
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
