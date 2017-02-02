@@ -62,7 +62,7 @@ The following command generates a report on how many items have been imported by
 terminus drush my-drupal-8-site.dev -- migrate-status
 ```
 
-The following command runs the migration configured via `drush migrate-upgrade`:
+The following command runs the migration configured via `drush migrate-upgrade --configure-only`:
 ```
 terminus drush $SITE_ENV -- migrate-import --all
 ```
