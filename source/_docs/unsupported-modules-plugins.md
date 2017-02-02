@@ -181,6 +181,7 @@ Customers have also reported success by making the export path [configurable](ht
 
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
  <hr>
+ 
 ### [Plupload](https://www.drupal.org/project/plupload)
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
@@ -195,10 +196,9 @@ $temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filena
 ```  
 
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
-
 <hr>
-### [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 
+### [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 **Issue**: If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
 **Solution**: Override the default arg_separator.output value in `settings.php` by adding the following line:
@@ -208,9 +208,11 @@ ini_set('arg_separator.output', '&');
 ```
 
 <hr>
+
 ### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)  
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
 <hr>
+
 ### [Schema](https://www.drupal.org/project/schema)  
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
 
@@ -220,14 +222,14 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
 
 <hr>
-### [Taxonomy CSV](https://www.drupal.org/project/twig_extensions)  
-**Issue**:  This module uses `php-intl`, which is not currently supported by Pantheon.
-
-<hr>
-### [Twig Extensions](https://www.drupal.org/project/taxonomy_csv)  
+### [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
-
 <hr>
+
+### [Twig Extensions](https://www.drupal.org/project/twig_extensions)  
+**Issue**:  This module uses `php-intl`, which is not currently supported by Pantheon.
+<hr>
+
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
 
