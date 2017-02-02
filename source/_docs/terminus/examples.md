@@ -141,16 +141,24 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 
 ## Reset Dev Environment to Live
 
-Rewrite history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus.
+There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
 
-<p class="instruction">Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
+* Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/docs/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
+
+* Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
+
+* The state of the Dev environment is stale or otherwise massively out of date with the Live environment with many unneeded changes you wish to abandon.
+
+* The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
+
+<p class="instruction">Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
 <figure><pre id="git-clone"><code class="command bash" data-lang="bash">`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`</code></pre></figure>
 </div>
 
 
-<p class="instruction">Automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
+<p class="instruction">Then automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
 <div class="script-file-header">
 reset-dev-to-live.sh
 <a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
