@@ -91,6 +91,59 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
     </div>
   </div>
 </div>
+
+### Mass Update Dev Sites
+The [Terminus Mass Update plugin](https://github.com/pantheon-systems/terminus-mass-update) can be installed to allow you to easily update all dev sites with an available upstream update.
+
+<p class="instruction">After installing the plugin, checking the mass update report to determine which of your sites are in need of updates:a</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus sites mass-update --report</code></pre></figure>
+</div>
+
+This will show output similar to the following:
+```
++------------------+-----------------------------------+
+| Site             | Status                            |
++------------------+-----------------------------------+
+| superb-central   | Needs update                      |
+| jessiem-drupal7  | Needs update                      |
+| novasoft-drupal  | Needs update - switch to Git mode |
++------------------+-----------------------------------+
+```
+<b>Note: Any site in [SFTP mode](/docs/sftp/#sftp-mode) will need to be changed to Git Mode before it can be updated:</b>
+
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus connection:set site-name.dev git</code></pre></figure>
+</div>
+
+<p class="instruction">Dry run the Mass Update</p>
+<p class="instruction">Show what updates would be applied but do not apply them:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --dry-run --accept-upstream</code></pre></figure>
+</div>
+
+Sample output for the dry run is:
+
+```
+ [notice] Found 3 sites.
+ [notice] Fetching the list of available updates for each site...
+ [notice] 3 sites need updates.
+ [warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
+ [DRY RUN] Applying 2 updates to jessiem-drupal7
+ [DRY RUN] Applying 10 updates to superb-central
+```
+
+<p class="instruction">Apply Mass Update.</p>
+<p class="instruction">If the dry run looks good you can apply the mass update by removing the `--dry-run` parameter:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb</code></pre></figure>
+</div>
+
+
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
 <div class="copy-snippet">
