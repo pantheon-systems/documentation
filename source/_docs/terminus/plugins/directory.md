@@ -89,6 +89,17 @@ The following plugins are supported for Terminus 1.0:
     </div>
   </div>
 </div>
+ <div style="margin-bottom:30px;" class="col-md-4">
+    <div class="plugin-dir">
+      <div class="terminus-plugin">
+        <h3>Push Code</h3>
+        <p class="topic-info__description">Author: <a href="https://github.com/pbuyle">Pierre Buyle</a></p>
+        <p class="topic-info__description">Push code from current working directory to Pantheon.</p>
+        <a href="https://github.com/FloeDesignTechnologies/terminus-pushcode" class="btn-primary btn get-plugin">Get Plugin</a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
     <div class="plugin-dir">
