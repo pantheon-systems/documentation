@@ -33,7 +33,11 @@ Secure integration with Pantheon Enterprise Gateway:
 127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
 ```
 
-For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
+**Developer Note:**
+
+It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway because the normal PHP timeouts do not count time spent in external requests.  Failure to set reasonable timeouts can cause failing gateway connection requests to use up and block all of your site's your PHP worker processes and lead to an outage.  
+
+This can be done in cURL, for example, by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
