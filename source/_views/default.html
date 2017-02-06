@@ -92,10 +92,15 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
-
-
     <!-- container -->
     <div class="container content">
+      {% if page.earlyaccess %}
+      <div class="alert devbar alert-dismissible" role="alert">
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h3 class="devbar">Alpha, Beta, and Early Release Docs</h3>
+         <p class="devbar">The documentation on this page discusses features and options that have not yet been released and are not yet officially supported.</p>
+       </div>
+      {% endif %}
       {% if page.home is not defined %}
         <div class="row">
           <div class="col-md-12 mb-20">

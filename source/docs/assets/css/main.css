@@ -3414,13 +3414,12 @@ li.terminus-usage {
 }
 
 .devbar {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  margin-bottom: 0px !important;
-  text-align: center;
+  background-color: #0a6bb5;
+  border-radius: 0px;
 }
-
+.devbar h3, .devbar p {
+  color: #fff;
+}
 
 .label {
   display: inline-block !important;
