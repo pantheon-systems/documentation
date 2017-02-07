@@ -145,22 +145,21 @@ By setting up a blanket page rule to match all URLs and apply the __Always HTTPS
 
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-         ($_SERVER['HTTP_X_FORWARDED_PROTO'] != 'https' ||
-         $_SERVER['HTTP_HOST'] != $domain) &&
-         (php_sapi_name() != "cli")) {
-      header('HTTP/1.0 301 Moved Permanently');
-      header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
-      header('Cache-Control: public, max-age=3600');
-      exit();
-    }
+     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() != "cli")) {
+       if ($_SERVER['HTTP_HOST'] != $domain || 
+       !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+         header('HTTP/1.0 301 Moved Permanently');
+         header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
+         header('Cache-Control: public, max-age=3600');
+         exit();
+       }
+     }
 
 There are a few things worth noting in the above example:
 
 1. This technique has the added benefit of insuring that any visitor who somehow gets a link to the `env-sitename.pantheonsite.io` domain will be immediately bounced to your proper production hostname.
 2. Checking `isset($_SERVER['PANTHEON_ENVIRONMENT'])` is important because this will only be `TRUE` if the request is running as a result of a web request through Pantheon's PHP container matrix. This prevents redirects from interrupting command-line operations.
-3. `$_SERVER['HTTP_X_FORWARDED_PROTO']` is PHP's way of exposing the `X-Forwarded-Proto` HTTP header, an internet standard for communicating when another "upstream" service has terminated HTTPS.
-4. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and Cloudflare, further upstream) to cache the redirect, which is always nice.
+3. Adding the `header('Cache-Control: public, max-age=3600')` allows Pantheon's Edge (and Cloudflare, further upstream) to cache the redirect, which is always nice.
 
 Depending on whether you like to control these things directly with code or prefer to use a tool like Cloudflare, as well as how concerned you are with `pantheonsite.io` domains potentially "leaking", you can choose your implementation. It's probably wisest to pick one route to avoid future confusion.
 
