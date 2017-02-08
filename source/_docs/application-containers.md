@@ -49,3 +49,12 @@ Requests can be served from any of the available containers on Live. As a result
 
 ### Failover Application Containers
 All paid service levels have failover application containers which are <strong>not</strong> used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
+
+## Idle Containers
+Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
+
+Attempts to remotely access services, such as MySQL or SFTP connections, will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/docs/terminus) command:
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#wake"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="wake"><code class="command nohighlight" data-lang="bash">terminus env:wake &lt;site&gt;.&lt;env&gt;</code></pre></figure>
+</div>
