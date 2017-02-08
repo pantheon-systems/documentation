@@ -2398,7 +2398,6 @@ a.btn-primary-inverse:hover:after  {
   top: 3px;
   bottom: 3px;
   border-radius: 0 4px 4px 0;
-  line-height: normal;
 }
 
 img.clippy {
@@ -2426,12 +2425,6 @@ img.clippy {
 
 
 
-.btn-clippy {
-  float: right;
-  margin-left: -1px;
-  border-radius: 0px 4px 4px 0px;
-  line-height: normal;
-}
 
 img.clippy {
   margin:0px;

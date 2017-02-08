@@ -17,7 +17,7 @@ A plugin is a specific set of files bundled together in a directory. The first s
 
 <p class="instruction">Create a directory for your new plugin (e.g. <code>hello-world</code>):</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#create-plugin-dir"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#create-plugin-dir">Copy</button>
 <figure><pre id="create-plugin-dir"><code class="command bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world</code></pre></figure>
 </div>
 
@@ -47,7 +47,7 @@ Each command in Terminus is defined by it’s own class which contains a functio
 
 <p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#create-src-dir"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#create-src-dir">Copy</button>
 <figure><pre id="create-src-dir"><code class="command bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world/src</code></pre></figure>
 </div>
 
@@ -78,7 +78,7 @@ You can name the command function anything you like, but it must be a public met
 
 <p class="instruction">The command should now be recognized and loaded by Terminus:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello">Copy</button>
 <figure><pre id="terminus-hello"><code class="command bash" data-lang="bash">terminus hello</code></pre></figure>
 </div>
 
@@ -90,7 +90,7 @@ The provided example command should display the following when run:
 ## Debug
 <p class="instruction">Run the command with the verbose option if it does not work as expected:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello-vvv"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello-vvv">Copy</button>
 <figure><pre id="terminus-hello-vvv"><code class="command bash" data-lang="bash">terminus hello -vvv</code></pre></figure>
 </div>
 If Terminus had trouble loading your plugin then there should be a debug notice logged. You may also be able to get more info by looking in your PHP error logs.
@@ -108,7 +108,7 @@ Add a vendor name to the plugin name within `composer.json` so that your plugin 
 ### PSR-4 Namespacing
 <p class="instruction">Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-namespace"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-namespace">Copy</button>
 <figure><pre id="terminus-plugin-namespace"><code class="command bash" data-lang="bash">namespace Pantheon\TerminusHelloWorld\Commands;</code></pre></figure>
 </div>
 The `Commands` part of the namespace is not strictly necessary but it can help keep things organized if you need to add supporting classes to your plugin.
