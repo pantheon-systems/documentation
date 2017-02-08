@@ -15,11 +15,16 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [All About Application Containers](/docs/application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)  
 - [Enable Secure HTTPS Communication](/docs/enable-https)
-<div class="alert alert-info">
+<div markdown="1" class="alert alert-info">
 <h3 class="info">Note</h3>
-<p>Pantheon containers spin down after ~1 hour of idle time.  Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds.<br>
-<br>
-If you try to remotely connect to your MySQL database or SFTP into the site you may experience an error. Simply visit the site's home page in your browser, wait for it to spin up, and then you can connect.</p>
+Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
+<br><br>
+Attempts to remotely access services, such as MySQL or SFTP connections, will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/docs/terminus) command:
+
+```
+terminus env:wake <site>.<env>
+```
+
 </div>
 ## Build
 - [Migrate Sites to Pantheon](/docs/migrate)  
