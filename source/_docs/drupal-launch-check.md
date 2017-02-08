@@ -44,12 +44,12 @@ The Dashboard integration is intended to provide developers with the most action
 
 You can get a list of all available site audit reports using [Terminus](/docs/terminus/):
 ```nohighlight
-terminus drush <site>.<env> -- help --filter=site_audit
+terminus remote:drush <site>.<env> -- help --filter=site_audit
 ```
 
 You can also execute a full report in HTML format.
 ```bash
-terminus drush <site>.<env> -- aa --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
+terminus remote:drush <site>.<env> -- aa --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 ```
 #### Is Launch Check available for Drupal 8 sites?
 Launch Check for Drupal 8 is currently in development and will be available at a later date.
