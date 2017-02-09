@@ -37,7 +37,7 @@ Secure integration with Pantheon Enterprise Gateway:
 ###Note {.info}
 It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway since [normal PHP timeouts](http://php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set due to failing gateway connection requests that build up and consume resources.
 </div>
-Set timeouts for requests sent via the Pantheon Enterprise Gateway with cURL by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
+Set reasonable timeouts using [PHP's cURL functions](http://php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
