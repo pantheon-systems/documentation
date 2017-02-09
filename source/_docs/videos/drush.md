@@ -4,7 +4,7 @@ description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
 videoid: w0iyypcydc
 permalink:  docs/videos/:basename/
-tags: [local]
+tags: [local, cli]
 type: video
 categories: [develop, local]
 layout: video
