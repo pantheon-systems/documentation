@@ -4,7 +4,7 @@ description: Interact with WordPress from a command line interface.
 contributors:  [scottmassey]
 videoid: zv7y9eczjb
 permalink:  docs/videos/:basename/
-tags: [cli]
+tags: [cli, local]
 type: video
 categories: [develop, cli]
 layout: video
