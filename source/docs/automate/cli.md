@@ -2,7 +2,7 @@
 title: Command Line Interface (CLI)
 description: Introduction to Terminus.
 videoid: muv7vxu6vi
-categories: [automate]
+categories: [develop]
 bullet1: Work faster and more efficiently
 bullet2: Automate repetitive tasks
 bullet3: Access extra data and functionality
