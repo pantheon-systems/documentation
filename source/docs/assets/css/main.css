@@ -3977,6 +3977,16 @@ li.terminus-usage {
     letter-spacing: 0px;
     font-weight: normal;
   }
+  h4.block__title {
+    margin: 0 0 22px 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-family: Avenir-Heavy;
+    text-transform: uppercase;
+  }
   @media (max-width: 25em) {
     #footer-subscribe h4, #footer-subscribe .region-content .block-block h2.block__title, .region-content .block-block #footer-subscribe h2.block__title, #footer-subscribe .view-resources .view-filters .views-exposed-widget>label, .view-resources .view-filters #footer-subscribe .views-exposed-widget>label {
       font-size: 18px;
