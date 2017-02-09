@@ -134,20 +134,20 @@ echo "[+] DONE, LAUNCHING: "</code></pre>
 
 <p class="instruction">Make the script executable:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-install"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#script-install">Copy</button>
 <figure><pre id="script-install"><code class="command bash" data-lang="bash">chmod +x ~/Downloads/access_getlogs.sh</code></pre></figure>
 </div>
 
 <p class="instruction">Move the script to <code>/usr/local/bin/</code>:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-move"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#script-move">Copy</button>
 <figure><pre id="script-move"><code class="command bash" data-lang="bash">sudo mv ~/Downloads/access_getlogs.sh /usr/local/bin/access_getlogs
 </code></pre></figure>
 </div>
 
 <p class="instruction">Generate a report for a given site and environment:</p>
 <div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-run"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<button class="btn btn-default btn-clippy" data-clipboard-target="#script-run">Copy</button>
 <figure><pre id="script-run"><code class="command bash" data-lang="bash">access_getlogs --site=&lt;site&gt; --env=&lt;env&gt;</code></pre></figure>
 </div>
 

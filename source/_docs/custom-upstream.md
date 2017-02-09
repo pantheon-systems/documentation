@@ -28,40 +28,40 @@ Create a remote repository and clone it locally, then pull the applicable Panthe
   <!-- Drupal Content -->
   <div role="tabpanel" class="tab-pane active" id="d8">
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-8"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-8">Copy</button>
       <figure><pre id="git-pull-drops-8"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-8.git master</code></pre></figure>
     </div>
   </div>
 
   <div role="tabpanel" class="tab-pane" id="d7">
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-7"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-7">Copy</button>
       <figure><pre id="git-pull-drops-7"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-7.git master</code></pre></figure>
     </div>
   </div>
 
   <div role="tabpanel" class="tab-pane" id="d6">
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-6"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-drops-6">Copy</button>
       <figure><pre id="git-pull-drops-6"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/drops-6.git master</code></pre></figure>
     </div>
   </div>
 
   <div role="tabpanel" class="tab-pane" id="wp">
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-wp"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-wp">Copy</button>
       <figure><pre id="git-pull-wp"><code class="command nohighlight" data-lang="bash">git pull git://github.com/pantheon-systems/WordPress.git master</code></pre></figure>
     </div>
   </div>
 
   <div role="tabpanel" class="tab-pane" id="distribution">
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-openatrium"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-openatrium">Copy</button>
       <figure><pre id="git-pull-distribution-openatrium"><code class="command nohighlight" data-lang="bash">git pull git://github.com/phase2/openatrium-drops-7.git master</code></pre></figure>
     </div>
     <p>Or:</p>
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-panopoly"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull-distribution-panopoly">Copy</button>
       <figure><pre id="git-pull-distribution-panopoly"><code class="command nohighlight" data-lang="bash">git pull git://github.com/populist/panopoly-drops-7.git master</code></pre></figure>
     </div>
   </div>
@@ -77,7 +77,7 @@ Follow conventions for using the `/profiles` directory in Drupal. With WordPress
 Push the repository to your upstream's remote location.
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-upstream-origin-master"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-upstream-origin-master">Copy</button>
   <figure><pre id="push-upstream-origin-master"><code class="command nohighlight" data-lang="bash">git push origin master</code></pre></figure>
 </div>
 
@@ -88,28 +88,28 @@ Push the repository to your upstream's remote location.
 Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#site-create-upstream"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#site-create-upstream">Copy</button>
   <figure><pre id="site-create-upstream"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;site&gt; &lt;label&gt; &lt;upstream&gt; --org=&lt;org&gt;</code></pre></figure>
 </div>
 
 [Clone the Pantheon repository](/docs/git/#clone-your-site-codebase):
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#clone-pantheon-repository"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#clone-pantheon-repository">Copy</button>
   <figure><pre id="clone-pantheon-repository"><code class="command nohighlight" data-lang="bash">`terminus connection:info &lt;site&gt;.dev --fields='Git Command' --format=string`</code></pre></figure>
 </div>
 
 Add code from your remote upstream repository:
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#pull-upstream"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#pull-upstream">Copy</button>
   <figure><pre id="pull-upstream"><code class="command nohighlight" data-lang="bash">git pull git://github.com/organization/upstream.git master</code></pre></figure>
 </div>
 
 Push back to Pantheon:
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-origin-master"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#push-origin-master">Copy</button>
   <figure><pre id="push-origin-master"><code class="command nohighlight" data-lang="bash">git push origin master</code></pre></figure>
 </div>
 
@@ -122,7 +122,7 @@ Visit the Development site URL and complete the site installation process to mak
 Testers might find it helpful to use the wipe functionality in the Database / Files tab to easily run through the install process multiple times:
 
 <div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-env-wipe"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-env-wipe">Copy</button>
   <figure><pre id="terminus-env-wipe"><code class="command nohighlight" data-lang="bash">terminus env:wipe &lt;site&gt;.&lt;env&gt;</code></pre></figure>
 </div>
 
