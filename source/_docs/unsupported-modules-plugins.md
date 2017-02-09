@@ -227,7 +227,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Twig Extensions](https://www.drupal.org/project/twig_extensions)  
-**Issue**:  This module uses `php-intl`, which is not currently supported by Pantheon.
+**Issue**:  This module uses [`php-intl`]( http://php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr>
 
 ### [Varnish](https://www.drupal.org/project/varnish)
