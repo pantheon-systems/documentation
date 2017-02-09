@@ -6,7 +6,7 @@ categories: [getstarted]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
@@ -15,10 +15,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [All About Application Containers](/docs/application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)  
 - [Enable Secure HTTPS Communication](/docs/enable-https)
-<div class="alert alert-info">
-<h3 class="info">Note</h3>
-<p>Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. On receiving a web request, they are spun up, usually within 30 seconds. If you try to connect to the database, you may experience an error. Load the home page, and you can connect.</p>
-</div>
+
 ## Build
 - [Migrate Sites to Pantheon](/docs/migrate)  
 - [rsync and SFTP](/docs/rsync-and-sftp)
@@ -29,6 +26,7 @@ Our tech includes nginx, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 ## Launch
 - [Going Live](/docs/going-live)
 - [Domains and DNS](/docs/domains)
+
 ## Run
 - [Optimization for Pantheon and the Cloud](/docs/cloud-optimization)
 - [New Relic Pro](/docs/new-relic)

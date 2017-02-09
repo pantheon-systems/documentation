@@ -11,6 +11,14 @@ Pantheon's infrastructure includes a number of layers. Our edge layer provides r
 Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux containers with an optimized PHP stack in place. Each container includes its own Nginx, APC cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) to learn more about Pantheon's infrastructure.
 
 Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Business level and above you can have [multiple containers](#multiple-application-containers) serving your site.
+### Idle Containers
+Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
+
+Attempts to remotely access services, such as MySQL or SFTP connections, will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/docs/terminus) command:
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#wake"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+  <figure><pre id="wake"><code class="command nohighlight" data-lang="bash">terminus env:wake &lt;site&gt;.&lt;env&gt;</code></pre></figure>
+</div>
 
 ## What's In an Application Container?
 
