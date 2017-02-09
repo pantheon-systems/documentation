@@ -6,7 +6,7 @@ categories: [troubleshoot]
 ---
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/docs/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
-Note: The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
+The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
 
 ## Available Logs
 
