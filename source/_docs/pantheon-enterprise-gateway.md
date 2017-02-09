@@ -8,7 +8,7 @@ categories: [platform]
 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
-## How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
+## Configure Your Pantheon Site to Use the Pantheon Enterprise Gateway
 [Contact support](/docs/getting-support) and follow the one-time setup, then provide the following for each of your remote services:
 
 * IP address
@@ -20,6 +20,8 @@ categories: [platform]
 Once setup is complete on our end, we'll provide you with the information you need to use the Pantheon Enterprise Gateway.
 
 Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose LDAP_STAFF and LDAP_STUDENTS as names to identify the connections.
+
+## Example
 
 Direct connection, no Pantheon Enterprise Gateway:
 ```nohighlight
@@ -34,17 +36,20 @@ Secure integration with Pantheon Enterprise Gateway:
 ```
 
 <div class="alert alert-info" markdown="1">
-###Note {.info}
+### Note {.info}
 It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway since [normal PHP timeouts](http://php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set due to failing gateway connection requests that build up and consume resources.
 </div>
+
 Set reasonable timeouts using [PHP's cURL functions](http://php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
-## Does the Pantheon Enterprise Gateway work from all site environments?
+## FAQ
+
+### Does the Pantheon Enterprise Gateway work from all site environments?
 
 Yes, it's configured on a site-by-site basis and works from all environments (Dev, Test, Live, and Multidev).
 
-## Is Pantheon Enterprise Gateway a replacement for authentication?
+### Is Pantheon Enterprise Gateway a replacement for authentication?
 
 No, Pantheon Enterprise Gateway is not a replacement for authentication, but rather is a [defense-in-depth](http://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
