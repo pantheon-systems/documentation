@@ -8,7 +8,7 @@ categories: [platform]
 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
-### How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
+## How do I configure my Pantheon site to use the Pantheon Enterprise Gateway?
 [Contact support](/docs/getting-support) and follow the one-time setup, then provide the following for each of your remote services:
 
 * IP address
@@ -41,10 +41,10 @@ Set reasonable timeouts using [PHP's cURL functions](http://php.net/manual/en/fu
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
-### Does the Pantheon Enterprise Gateway work from all site environments?
+## Does the Pantheon Enterprise Gateway work from all site environments?
 
 Yes, it's configured on a site-by-site basis and works from all environments (Dev, Test, Live, and Multidev).
 
-### Is Pantheon Enterprise Gateway a replacement for authentication?
+## Is Pantheon Enterprise Gateway a replacement for authentication?
 
 No, Pantheon Enterprise Gateway is not a replacement for authentication, but rather is a [defense-in-depth](http://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
