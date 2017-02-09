@@ -4,9 +4,9 @@ description: Interact with WordPress from a command line interface.
 contributors:  [scottmassey]
 videoid: zv7y9eczjb
 permalink:  docs/videos/:basename/
-tags: [local]
+tags: [cli, local]
 type: video
-categories: [develop, local]
+categories: [develop, cli]
 layout: video
 ---
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.

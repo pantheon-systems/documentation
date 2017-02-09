@@ -4,9 +4,9 @@ description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
 videoid: w0iyypcydc
 permalink:  docs/videos/:basename/
-tags: [local]
+tags: [cli, local]
 type: video
-categories: [develop, local]
+categories: [develop, cli]
 layout: video
 ---
 [Drush](http://www.drush.org/en/master/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
