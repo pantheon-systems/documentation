@@ -8,94 +8,81 @@ contributors: [davidneedham]
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please contribute using the GitHub link at the top of this article.
 
 ## Supporting Organizations
-When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](https://pantheon.io/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
+When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
-## Pantheon Docs
-Pantheon has a great internal documentation team and our docs are always a great way to get the latest information. Some [docs](https://pantheon.io/docs/) worth noting, and good for new members of your team, are:
-- [Pantheon platform consideration](https://pantheon.io/docs/platform-considerations/)
-- [Advanced caching](https://pantheon.io/docs/caching-advanced-topics/)
-- [Required reading](https://pantheon.io/docs/required-reading/) (aka Pantheon 101)
-- [Non-standard file locations](https://pantheon.io/docs/non-standard-file-paths/)
-- [Unsupported modules and plugins](https://pantheon.io/docs/unsupported-modules-plugins/)
-- [Pantheon FAQs](https://pantheon.io/docs/faq/)
+## Training Resources for New Team Members
+Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
+
+- [Pantheon platform consideration](/docs/platform-considerations/)
+- [Advanced caching](/docs/caching-advanced-topics/)
+- [Required reading](/docs/required-reading/) (aka Pantheon 101)
+- [Non-standard file locations](/docs/non-standard-file-paths/)
+- [Unsupported modules and plugins](/docs/unsupported-modules-plugins/)
+- [Pantheon FAQs](/docs/faq/)
 - [Pricing comparison](https://pantheon.io/pricing-comparison)
 
 ##Power Users Group
-
-Pantheon has a power user group with a forum on [Google Groups](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users). This is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments. The power users group also has a [Slack channel](http://slackin.pantheon.io/).
+The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
 
 ##Pantheon For Agencies Webinar Series
-
-The Agency and Community team at Pantheon recorded a [Pantheon for Agencies webinar series](https://pantheon.io/agency-training-series-part-1). This six part series starts with an introduction and moves into power tools and advanced workflows on Pantheon.
+The Agency and Community team at Pantheon produced a [six part training series](https://pantheon.io/agency-training-series-part-1) that starts with an introduction and moves into power tools and advanced workflows.
 
 ##HTTPS
-
-There are currently two ways to enable HTTPS for a site on Pantheon. The first is to obtain a static IP address for the site and upload an SSL certificate. See the [doc on enabling HTTPS](https://pantheon.io/docs/enable-https/) for details. The second is to enable HTTPS with a third-party, such as a CDN. See the [HTTPS for free with CloudFlare doc](https://pantheon.io/docs/guides/cloudflare-enable-https/) for an example.
+There are currently two ways to enable HTTPS for a site on Pantheon. The first is to obtain a static IP address for the site and upload an SSL certificate. For details, see the [Enable Secure HTTPS Communication](/docs/enable-https/). The second is to terminate HTTPS with a third-party service, such as a CDN. For details, see [Adding HTTPS For Free With Cloudflare](/docs/guides/cloudflare-enable-https/).
 
 
 ##Solr
-
-Sites at the Professional plan level and above can have Solr enabled for search indexing. See our docs on [Solr](https://pantheon.io/docs/solr/), [Solr with WordPress](https://pantheon.io/docs/wordpress-solr/) and [Solr with Drupal](https://pantheon.io/docs/solr-drupal/) for details.
+All plans except for a Personal plan can enable [Solr](/docs/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal](/docs/solr-drupal) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
 ##Redis
-
-Sites at the Professional plan level and above can have Redis enabled for object caching. See our docs on [Redis](https://pantheon.io/docs/redis/) and [Redis with WordPress](https://pantheon.io/docs/wordpress-redis/) for details.
+All plans except for a Personal plan can enable [Redis](/docs/redis) for object caching. For installation instructions and additional details, see [Redis with WordPress](/docs/wordpress-redis/).
 
 ##WordPress
 
 ###PHP Sessions
-
-In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). See the [doc on PHP Sessions with WordPress](https://pantheon.io/docs/wordpress-sessions/) for details.
+In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
 
 ###WordPress Multisite
-
-Running a WordPress Site Network requires a special configuration that is only available on Elite plans, and only Pantheon employees have the ability to create the sites and add you to the team. See the [doc on WordPress site networks](https://pantheon.io/docs/wordpress-site-networks/) for details.
+Running a WordPress Site Network requires a special configuration that is only available on Elite plans. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/docs/wordpress-site-networks/).
 
 ###Migration
-
-Pantheon has a great WordPress plugin to help migrate sites to Pantheon. WordPress migrations are baked into the Pantheon dashboard - simply click _Migrate Existing Site_ and select WordPress to get started.
+Use the guided migration process for WordPress which is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress).
 
 ##Drupal 8 and Composer
-
-Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. We have a dedicated documentation page for [Composer usage with Drupal 8](https://pantheon.io/docs/composer-drupal-8/).
+Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Using Drupal 8 and Composer](/docs/composer-drupal-8/).
 
 ##Pantheon Power Tools
 
 ###Terminus
+[Terminus](/docs/terminus), the Pantheon command-line interface, has a near 1:1 parity with the Pantheon Dashboard. After installing this tool locally, login using a [machine token](/docs/machine-tokens). This allows for passwordless authentication, which is often necessary for bots, scripts and continuous integration.
 
-[Terminus](https://github.com/pantheon-systems/terminus) is Pantheon&#39;s command line tool and almost has a 1:1 parity with the Pantheon dashboard. When working with Terminus it is recommended to use a [Terminus machine token](https://pantheon.io/docs/machine-tokens/). This allows for passwordless authentication, which is often necessary for bots, scripts and continuous integration.
-
-Terminus is extendable and has many plugins available. A complete list is on the [Terminus plugins wiki page](https://github.com/pantheon-systems/terminus/wiki/Plugins#known-plugins). Two favorites are [Filer](https://github.com/sean-e-dietrich/terminus-filer), which assists with opening Pantheon sites in many popular SFTP GUI clients, and [Pancakes](https://github.com/derimagia/terminus-pancakes), which open any Pantheon site database using a SQL GUI client. These two plugins eliminate logging into the Pantheon dashboard and copy/pasting SFTP/SQL credentials into your client.
+You can [extend Terminus and add new commands](docs/terminus/plugins/) by installing or creating third-party plugins. For a complete list of supported plugins, see our [Plugin Directory](/docs/terminus/plugins/directory). Two favorites are [Filer](https://github.com/sean-e-dietrich/terminus-filer), which assists with opening Pantheon sites in many popular SFTP GUI clients, and [Pancakes](https://github.com/derimagia/terminus-pancakes), which open any Pantheon site database using a SQL GUI client. These two plugins eliminate logging into the Pantheon dashboard and copying/pasting credentials into your client.
 
 ###Quicksilver
+Quicksilver Platform Hooks allow you to automate actions in response to activity on the Dashboard. You can hook into various workflows and execute PHP scripts before or after the workflow's been triggered. For details, see [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver).
 
-Quicksilver is the name of Pantheon&#39;s platform hooks. You can hook into multiple platform actions on Pantheon and run a custom PHP script. See the [Quicksilver doc](https://pantheon.io/docs/quicksilver/) and [Quicksilver examples repository](https://github.com/pantheon-systems/quicksilver-examples) to get started.
+### Pantheon Configuration File
+Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, nested docroot and more. For details, see [The pantheon.yml Configuration File](/docs/pantheon-yml/).
 
-###pantheon.yml
+###New Relic AMP Pro
 
-Used to configure PHP version, nested docroot and more. See more details on [the doc page](https://pantheon.io/docs/pantheon-yml/).
-
-###New Relic
-
-New Relic is an advanced tool for application monitoring and troubleshooting. Every site on Pantheon has access to New Relic APM Pro. See the [New Relic Pro doc](https://pantheon.io/docs/new-relic/) for details and how to get started. The following blog articles are also a great reference:
+New Relic AMP Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/docs/new-relic/). The following blog posts are also a great reference:
 
 - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - [New Relic &amp; Drupal: Find Your Site&#39;s Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
 ##Cron
-
-Due to the container infrastructure cron on Pantheon is not reliable. See the docs on [cron with WordPress](https://pantheon.io/docs/wordpress-cron/) and [cron with Drupal](https://pantheon.io/docs/drupal-cron/) for details.
+Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/docs/drupal-cron) and [Cron for WordPress](/docs/wordpress-cron).
 
 ##Kalabox
 
-[Kalabox](http://www.kalabox.io/) is a local development tool that closely matches the Pantheon setup and has integration to push/pull databases and files from Pantheon.
+[Kalabox](/docs/kalabox) is a local development tool that mirrors Pantheon environments with slick integration to sync work back and forth.
 
 ##Advanced Workflows
 
-###Upstreams
-
-By default Pantheon has upstreams for vanilla WordPress and Drupal as well as a few community projects, like Open Atrium. In addition to these new sites can be created from a custom upstream. A custom upstream is a Github or BitBucket repository that your agency hosts and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. See our [doc on creating a custom upstream](https://pantheon.io/docs/custom-upstream/). You can see an example WordPress Upstream workflow in [this blog](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
+###Custom Upstreams
+In addition to the [frameworks offered by Pantheon during the site creation process](/docs/start-state), custom upstreams add a private installation option for all team members of an organization. A custom upstream is a Github or BitBucket repository that your agency hosts and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Create a Custom Upstream](/docs/custom-upstream/). You can see an example WordPress Upstream workflow in [this blog](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ###Build Steps
 
@@ -108,5 +95,4 @@ If a project needs a build step the recommended method is a two repository model
 - Host a repository on GitHub and manage the build step and deployment with a continuous integration server. An example repository with GitHub, WordPress and CircleCI can be found [here](https://github.com/ataylorme/Advanced-WordPress-on-Pantheon/).
 
 ###Advanced Git Workflows
-
-Pantheon provides a git repository for every site. If you wish to use GitHub&#39;s pull requests or other external tooling you can automate pushes from outside systems to Pantheon. The recommended method is a two repository model. Details can be found in the Build Steps section above.
+Pantheon provides a git repository for every site. If you wish to use GitHub's pull requests or other external tooling you can automate pushes from outside systems to Pantheon. The recommended method is a two repository model. Details can be found in the Build Steps section above.
