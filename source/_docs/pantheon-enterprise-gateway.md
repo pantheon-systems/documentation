@@ -8,7 +8,7 @@ categories: [platform]
 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
-## Configure Your Pantheon Site to Use the Pantheon Enterprise Gateway
+## Configure
 [Contact support](/docs/getting-support) and follow the one-time setup, then provide the following for each of your remote services:
 
 * IP address
@@ -19,9 +19,9 @@ categories: [platform]
 
 Once setup is complete on our end, we'll provide you with the information you need to use the Pantheon Enterprise Gateway.
 
-Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose LDAP_STAFF and LDAP_STUDENTS as names to identify the connections.
+###  Example Connections with PHP Constants
 
-## Example
+Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose `LDAP_STAFF` and `LDAP_STUDENTS` as names to identify the connections.
 
 Direct connection, no Pantheon Enterprise Gateway:
 ```nohighlight
@@ -34,6 +34,8 @@ Secure integration with Pantheon Enterprise Gateway:
 127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
 127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
 ```
+
+## Considerations
 
 <div class="alert alert-info" markdown="1">
 ### Note {.info}
