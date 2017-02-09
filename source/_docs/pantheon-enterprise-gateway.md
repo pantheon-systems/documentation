@@ -37,7 +37,7 @@ Secure integration with Pantheon Enterprise Gateway:
 
 <div class="alert alert-info" markdown="1">
 ### Note {.info}
-It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway since [normal PHP timeouts](http://php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set due to failing gateway connection requests that build up and consume resources.
+It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway, since [normal PHP timeouts](http://php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
 </div>
 
 Set reasonable timeouts using [PHP's cURL functions](http://php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
