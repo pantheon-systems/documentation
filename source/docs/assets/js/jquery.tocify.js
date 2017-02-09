@@ -376,7 +376,7 @@
 
             }
 
-            hashValue = this._generateHashValue(arr, self, index);
+            hashValue = this._generateHashValue(arr, self, index).replace(/\?/g, "");
 
             // Appends a list item HTML element to the last unordered list HTML element found within the HTML element calling the plugin
             item = $("<li/>", {
