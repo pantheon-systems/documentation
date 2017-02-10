@@ -44,16 +44,11 @@
     <div style="margin-top:15px;margin-bottom:45px;">
         {{ page.blocks.content|raw }}
 
-        <div class="helpful">
-          <span class="helpful__text">Was this helpful?</span>
-          <button class="helpful__button helpful__button--yes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Yes</button>
-          <button class="helpful__button helpful__button--no"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No</button>
-        </div>
 
     </div>
 </div>
 <div class="article col-md-3">
     {% include ("sidebarnav.html") %}
 </div>
-
+<iframe frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
 {% endblock %}
