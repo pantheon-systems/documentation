@@ -46,7 +46,7 @@
             return (this.top = offsetTop - navOuterHeight - sideBarMargin)
           },
           bottom: function () {
-            return (this.bottom = $('.pio-docs-footer').outerHeight(true))
+            return (this.bottom = $('.pio-docs-footer').outerHeight(true)+300)
           }
         }
       })
