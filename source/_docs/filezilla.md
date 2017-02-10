@@ -16,11 +16,13 @@ If you do not have FileZilla installed, [download the latest version](https://Fi
 
 ## Start FileZilla
 
-Open the FileZilla application and enter in the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP and **protocol** needs to be SFTP, not FTP.<br />
+Open the FileZilla application and launch the Site Manager by clicking the icon in the menu bar or by going to the **File Menu > Site Manager** option. From the Site Manager screen, click the **New Site** button.
 
-## Create a New Site
+Enter your SFTP connection details.
 
-Select to accept the server's host key for the current session so it is stored in cache. This allows you to connect to the server and manage your files for the current session.
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+<p>Be sure to set the **Protocol:** to `SFTP` (_not FTP_) and the server port to `2222`.</p></div>
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
@@ -28,16 +30,25 @@ Select to accept the server's host key for the current session so it is stored i
 
 ## Authentication
 
-**SSH Key-Based:** Select the private key (likely id_rsa) associated with the public key loaded into your User Dashboard.
+Select from one of the following **Login Type:** options in the General tab:
 
-**Password-Based:** Enter your Pantheon account email address and password.
+For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named "id_rsa") associated with the public key loaded into your User Dashboard.
 
-After logging in, you can access your application in the `/code` directory, Drupal's `/sites/default/files` in `/files`, and your application's logs in `/logs`.
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+<p>The "Browse..." button may not show hidden files or directories and that can make it difficult to navigate to your ".ssh" directory.  If you cannot navigate to your ".ssh" folder you can just enter the full path to the file in the **Key file:** box or simply copy your SSH Key file to another accessible location, such as your Documents or Desktop folder.</p></div>
 
-You may be prompted to accept the server's host key for the current session and store it in cache. This allows you to connect to the server and manage your files for the current session.
+For **Password-Based** authentication set the **Logon Type:** dropdown to "Normal" and then enter your Pantheon account email address and your password. (You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.)
 
-When you disconnect and then use the quick reconnect icon, you will be taken back to your most recent location.
-If you need to get back to your site's root directory, reconnect using the site manager and not the quick reconnect option.
+## Connection Prompt
+
+When you first connect via SFTP you may be prompted to accept the server's host key and store it in cache for future connections. This allows you to connect to the server and manage your files for the current session.
+
+## Access Code and Files
+
+After logging in, you can access your application code in the `/code` directory.
+
+Your file uploads (Drupal's `/sites/default/files` and WordPress's `wp-content/uploads`) can be found in the `/files` directory.  Your log files can be found in the `/logs` directory.
 
 ## Known Issues
 
