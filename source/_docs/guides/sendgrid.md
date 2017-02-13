@@ -67,10 +67,21 @@ The SendGrid Integration module is not supported on Drupal 8 sites at this time.
 
 4. Add the provided [code block](/docs/unsupported-modules-plugins/#composer-manager) within `settings.php` to address issues with the required Composer Manager module.
 
+Note: You will need to create a `composer` directory and a subfolder in it for the `PANTHEON_ENVIRONMENT` that matches the
+
+```nohighlight
+$conf['composer_manager_file_dir'] = 'private://composer/'.$_ENV['PANTHEON_ENVIRONMENT'];
+```
+
+For example, on your Dev environment the directories you will need to create via SFTP or via Git command-line are:
+
+* `files/private/composer`
+* `files/private/composer/dev`
+
 5. Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
 
  ```
- terminus drush <site>.<env> -- composer-manager install
+ terminus drush <site>.<env> -- composer-manager install -y
  ```
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
