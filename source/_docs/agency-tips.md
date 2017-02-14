@@ -53,7 +53,7 @@ The guided migration process for WordPress is baked into the Pantheon User Dashb
 ## Drupal 8 and Composer
 Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Using Drupal 8 and Composer](/docs/composer-drupal-8/).
 
-## Pantheon Power Tools
+## Advanced Tools
 
 ### Terminus
 [Terminus](/docs/terminus), the Pantheon command-line interface, has a near 1:1 parity with the Pantheon Dashboard. After installing this tool locally, login using a [machine token](/docs/machine-tokens). This allows for passwordless authentication, which is often necessary for bots, scripts and continuous integration.
