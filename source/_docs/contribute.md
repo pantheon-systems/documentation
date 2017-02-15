@@ -14,7 +14,7 @@ Get involved by:
 
 - See an issue with a doc? Click **Contribute** within the doc and select **Report Doc Issue**.
 - Want to improve a doc? Click **Contribute** within the doc and select **Edit this page**.
-- Have an idea for a new doc? [Suggest new content](https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=Priority%20(1%20-%2010)%3A%0A%0A%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=new%20doc) by opening an issue.
+- Have an idea for a new doc? [Suggest new content](https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=Priority%20(Low‚%20Medium‚%20High)%3A%0A%0A%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=new%20doc) by opening an issue.
 - Want to provide more insight to an [existing PR](https://github.com/pantheon-systems/documentation/pulls)? Add your comments.
 
 ## Edit and Build Locally
