@@ -1,256 +1,313 @@
 ---
-title: Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI
-description: Learn how to install and use Terminus and WP-CLI to control a WordPress site on Pantheon.
+title: Use the Command Line to complete Drupal Site Building Tasks with Using Terminus and Drush
+description: Learn how to add modules, and manage configuration between Pantheon environments.
 tags: [cli]
 categories: [develop, cli]
 type: guide
 permalink: docs/guides/:basename/
 contributors:
-  - bmackinney
-  - calevans
-date: 2/25/2015
+  - stevector
+date: 2/15/2017
 ---
-Many developers feel more at home at the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
 
-Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
+This guide will walk through using the command line to perform operations creating a new Drupal 8 site. With that site, we will add modules, create content, and move configuration between Pantheon environments. The tasks covered in this guide can all be done in the browser, without using the command line. For instance, seeing a list of all of your sites on Pantheon is easy in the browser. It is the first thing you see when signing into the Dashboard.
 
-WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's own CLI, called Terminus.
+@TODO, add image.
 
-## Before You Begin
+You can see the same list on the command line by running:
 
-Be sure that you:
+`terminus site:list`
 
-- Are familiar with your operating system's command line.
-- Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
-- Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
+In essence, Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. Once you are comfortable with Terminus, you may find it faster to use than the browser. Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
 
-## Install Terminus
-To use WP-CLI to manage your WordPress powered site hosted on Pantheon, you first need to install Pantheon's command line tool, Terminus. Terminus gives you access to your Pantheon account and sites, and allows you to execute WP-CLI commands on those sites. To install terminus, follow the [basic installation instructions](https://github.com/pantheon-systems/cli/wiki/Installation).
 
-Once installed, test it using the following command:
+## Installing and authenticating with Terminus
 
-```
-$ terminus art
-```
+The most reliable way to install Terminus is with our dedicated installer:
 
-![The Pantheon logo represented in ASCII art](/source/docs/assets/images/command-line-terminus-art.png)
+`curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install`
 
-If you see the Pantheon lightning fist, you'll know that terminus is installed properly.
 
-## Log In to Pantheon
+Once Terminus is installed, you can sign in with a [machine token generated in the Dashboard](https://dashboard.pantheon.io/machine-token/create).
 
-Now we need to tell terminus who you are. You can do that with the `auth:login` command:
+`terminus auth:login --machine-token=‹machine-token›`
 
-```nohighlight
-$ terminus auth:login --email=<email> --machine-token=<machine_token>
-```
+If you have trouble with these steps, [see our full installation documentation](https://pantheon.io/docs/terminus/install/).
 
-You'll need to enter your password. If you are scripting a process, create a [machine token](/docs/machine-tokens/). You'll know you have successfully authenticated when you see the Pantheon logo.
 
-## Create Your Site
+## Create your site with Dev, Test, and Live environments
 
-Open a browser and log in to your Pantheon Dashboard so you can see the progress being made on some of the commands.
+#### See your options for creating new sites
 
-Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus handles both for us.
+Pantheon offers a few choices for spinning up new sites. You can see them all with.
 
-```nohighlight
+`terminus upstream:list`
 
-$ terminus upstream:list | grep "WordPress"
-  e8fe8550-1ab9-4964-8838-2b9abdccf4bf   WordPress                                                                 vanilla      core          wordpress
-$ terminus site:create cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
+The one we want is `Drupal 8`.
 
-[notice] Creating a new site...
+`terminus upstream:list | grep "Drupal 8"`
 
-```
-To create a site with one command, you'll need:
-- **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstream:list`.
-- **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
-- **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
+That command shows us the unique ID for our Drupal 8 source repository. We will copy that ID (8a129104-9d37-4082-aaf8-e6f31154644e) into the next command for creating a new site.
 
-The format for creating a site with a single command is:
+#### Creating the Drupal 8 site.
 
-```nohighlight
-site:create [--org [ORG]] [--] <site_name> <label> <upstream_id>
-```
+In this command you will need to pick both a machine name and a label for your site.
 
-For my test site, I used the following:  
-**Upstream** = WordPress
-**Site Name** = cli-test  
-**Label** = Command Line Test
+In my case, I'm picking `steve-site-d8` as my site's machine name and "Steve's Site D8" as the label. Finally, I'm adding that unique ID for the Drupal 8 source.
 
-```nohighlight
-$ terminus site:create YOUR-ORG-ID cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
-```
-**Note:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
+So the command I am running is:
 
-Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
+`terminus site:create steve-site-d8 "My Site D8" 8a129104-9d37-4082-aaf8-e6f31154644e`
 
-From Terminus, you can get to your Site Dashboard with `$ terminus dashboard <site>.<env>`
+There's an additional option you can put on this command for organization ID `--org`. If you are walking through this guide as part of an in person training or if you work as part of a team that uses Pantheon, you might want to associate this site with your organization. To get your organization's ID, run `terminus org:list`. So your command might look like
 
-## Clone the Codebase and Dotenv
-Run the following command within backticks to [create a local repository of your site's codebase](/docs/git):
+`terminus site:create steve-site-d8 "My Site D8" 8a129104-9d37-4082-aaf8-e6f31154644e --org=123456-abcd-1234--abcd-1234567890`
 
-```
-terminus dashboard:view <site>.<env>
-```
+#### Getting a link to your site's dashboard
 
-## Install WordPress
+Even though we are using the command line as much as possible, you may find it helpful to open the Pantheon Dashboard in your browser and leave it open as you walk through this guide. The dashboard will respond as you run later commands for operations like deploying code.
 
-Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish. There's even a `wp-config.php` already created and ready to use.
+`terminus dashboard:view perschd8  --print`
 
-All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the `wp core install` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command:
+#### Connection information
 
-```nohighlight
-terminus wp -- core install --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=something_incredibly_secure --admin_email=your@emailaddress.tld
-Success: WordPress installed successfully.
-```
+In your browser dashboard you can easily get connection information.
 
-Now go to your Dev environment
-```bash
-$ open http://dev-cli-test.pantheonsite.io/wp-admin
-```
-Log in using the username and password you set in the `wp core install` command. You've got a speedy WordPress admin ready to start developing!
+@todo, add image.
 
-There's not much to see at this point since we've only just created the site. However, click **Visit Development Site**, and you'll see a WordPress install ready for you to start creating your site.
-
-Return to the terminal, we don't need no stinking mouse.
-
-## Prepare for Development
-
-I use a few plugins on every site, but  [WP-CFM](https://github.com/forumone/wp-cfm) is the most important. It allows me to track configuration changes, export them to code, deploy them as code, and import the config to my database without disrupting the content coming into the **Live Environment**. For more information on using WP-CFM on Pantheon, please see our article on [WordPress Configuration Management](/docs/wp-cfm).
-```nohighlight
-$ terminus wp <site>.<env> -- plugin install wp-cfm --activate
-```
-Results in
-```bash
-Running wp plugin install wp-cfm --activate=1  on cli-test-dev
-Installing WP-CFM (1.3.1)
-Downloading install package from https://downloads.wordpress.org/plugin/wp-cfm.zip...
-Using cached file '/srv/bindings/17e08f1b8e1e465faae9927bb3e20730/.wp-cli/cache/plugin/wp-cfm-1.3.1.zip'...
-Unpacking the package...
-Installing the plugin...
-Plugin installed successfully.
-Activating 'wp-cfm'...
-Success: Plugin 'wp-cfm' activated.
-```
-
-Now I can [use WP-CFM](/docs/wp-cfm) to create a bundle that will track my configurations and export them to code.
-
-If you have the **Site Dashboard** open, you'll see the 19 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or use `$ terminus env:diffstat` and `$ terminus env:commit [--message [MESSAGE]] [--] <site_env>`
-
-```nohighlight
-$ terminus env:diffstat <site>.<env>
-+---------------------------------------------------------------------------------+-----------+--------+-----------+
-| File                                                                            | Deletions | Status | Additions |
-+---------------------------------------------------------------------------------+-----------+--------+-----------+
-| wp-content/plugins/wp-cfm/languages/wpcfm.po                                    | 0         | A      | 79        |
-| wp-content/plugins/wp-cfm/includes/class-wp-cli.php                             | 0         | A      | 79        |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/jquery.multiple.select.js   | 0         | A      | 484       |
-| wp-content/plugins/wp-cfm/README.md                                             | 0         | A      | 70        |
-| wp-content/plugins/wp-cfm/assets/css/admin.css                                  | 0         | A      | 186       |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.png         | -         | A      | -         |
-| wp-content/plugins/wp-cfm/includes/class-readwrite.php                          | 0         | A      | 294       |
-| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/diff_match_patch.js        | 0         | A      | 49        |
-| wp-content/plugins/wp-cfm/includes/class-helper.php                             | 0         | A      | 133       |
-| wp-content/plugins/wp-cfm/assets/js/multiple-select/multiple-select.css         | 0         | A      | 190       |
-| wp-content/plugins/wp-cfm/readme.txt                                            | 0         | A      | 132       |
-| wp-content/plugins/wp-cfm/assets/js/pretty-text-diff/jquery.pretty-text-diff.js | 0         | A      | 71        |
-| wp-content/plugins/wp-cfm/assets/js/admin.js                                    | 0         | A      | 189       |
-| wp-content/plugins/wp-cfm/templates/page-settings.php                           | 0         | A      | 122       |
-| wp-content/plugins/wp-cfm/includes/integrations/custom-field-suite.php          | 0         | A      | 170       |
-| wp-content/plugins/wp-cfm/wp-cfm.php                                            | 0         | A      | 182       |
-| wp-content/plugins/wp-cfm/includes/class-options.php                            | 0         | A      | 42        |
-| wp-content/plugins/wp-cfm/includes/class-ajax.php                               | 0         | A      | 86        |
-| wp-content/plugins/wp-cfm/includes/class-registry.php                           | 0         | A      | 111       |
-+---------------------------------------------------------------------------------+-----------+--------+-----------+
-```
-Only the expected changes are reported. Let's commit.
-```nohighlight
-$ terminus env:commit --message "Install wp-cfm plugin" dev
-"Install wp-cfm plugin"
-                            Commit 1 changes? [y/n] y
-                            Success: Successfully commited.
-                            +---------------------+-----------------+-----------+------------------------------------------+---------------------------------------------------+
-                            | Time                | Author          | Labels    | Hash                                     | Message                                           |
-                            +---------------------+-----------------+-----------+------------------------------------------+---------------------------------------------------+
-                            | 2015-02-12T22:22:45 | Brian MacKinney | dev       | a6ea17f55d6022bb4d9ad4c9deacc79c1b4e29c7 | Install wp-cfm plugin
-```
+That same information is available in Terminus. Run this command replacing `steve-site-d8` with the name of the site you selected.
 
+`terminus connection:info steve-site-d8.dev`
 
-## Customize Your Site
-Now that you have a stock WordPress install, let's make it look a little better. WP-CLI can do a number of things to manipulate a WordPress site. The best sites are the ones with images, but sadly the stock WordPress installation doesn't come with any. Let's add some.
+That command will show you some of the connection info. If you want to see all of the options available to you, run
 
-### Add Images
-Using WP-CLI gives us the ability to upload images and modify posts. In this case, you can do both at once. The following command will add a featured image to the Hello Word post that WordPress installs automatically.
+`terminus connection:info --help`
 
-You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import.` Understand that in this case, "local" means it's already uploaded to your site. Our command to upload an image and set it as the featured image of post #1 looks like this:
-```
-$ terminus wp <site>.<env> -- media import https://farm8.staticflickr.com/7355/16204225167_1e1bb198e5_b.jpg \
-           --post_id=\"1\" \  
-           --featured_image  \  
-```
+Adding `--help` to any command will give you information about the options and parameters the command can use. In this case the `help` let's us know that we can specify different fields. So we can use the `--fields` to say that we want just the MySQL connection information.
 
-After a successful upload you'll see this message:
+`terminus connection:info steve-site-d8.dev --fields=mysql_username,mysql_host,mysql_password,mysql_url,mysql_port,mysql_database`
 
-```
-Success: Imported file https://farm8.staticflickr.com/7552/15827270506_ce62e709c9_o_d.jpg
-as attachment ID 3 and attached to post 1 as featured image.
-```
-You can see the full documentation for `media import` on the [wp-cli media import documentation page](http://wp-cli.org/commands/media/import/). Since you're using the `--featured_image` flag, you also need to pass the `post_id`. You can pass in either the URL of an image or a local filename to `media import`. In this case, "local" means it's already uploaded to your site.
+Or we could add the `--format` flag to specify a different format like csv or json.
 
-Go to your browser and refresh your WordPress website's front page to see the new image.
+`terminus connection:info steve-site-d8.dev --fields=mysql_username,mysql_host,mysql_password,mysql_url,mysql_port,mysql_database --format=json`
 
-### Install and Add a New Theme
+A more machine-processable format like json could be useful if we were writing a script that chained together multiple commands.
 
-So far, so good. Many will stop there and start updating the content. There is one more thing we need to do to make this site more appealing, and that is to add a better looking theme. Once again, you can do this all without touching WordPress or your Pantheon Dashboard.
+#### Installing Drupal
 
-WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the [WordPress.org Themes Repository](https://WordPress.org/themes/) named [Pinboard](https://WordPress.org/themes/pinboard).
-**Note:** There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
+So far we have spun up the Pantheon infrastructure to hold a Drupal site. But we still haven't installed Drupal itself. If you were to go do the Dev environment in your browser, you would be prompted to install Drupal. This command will give you the URL to the Dev site. Visit it, but don't walk through the browser installation steps.
 
-Position your Pantheon Dashboard window where you can see it while working in the terminal. To install and activate the new theme on your site, use the following command:
+`terminus env:info steve-site-d8.dev --field=domain`
 
+Instead, we will install Drupal using Drush, the Drupal command line utility. In this command you will see a few parameters to change.
 
-```nohighlight
-$ terminus wp <site>.<env> -- theme install pinboard --activate
-```
+`terminus drush  steve-site-d8.dev  -- site-install  --account-mail=my.email.address@example.com --account-name=admin397 --site-name="My Cool Site"`
 
-Watch your Dashboard. It recognizes your uncommitted changes.
+Congratulations! You've installed Drupal! Use the password included in the output of that command to sign into the site with your browser. Or use this command to get a one-time login link:
 
-![Screenshot of the pantheon dashboard showing uncommitted changes](/source/docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+`terminus drush  steve-site-d8.dev  -- user-login`
 
-We can commit the changes to your site's repo with Terminus. First, make sure that you position your browser so that you can see it while in your terminal. As soon as you issue the command, you'll see everything update in the browser.
+#### Using a variable for the site name
 
-```nohighlight
-$ terminus env:commit --message "Install wp-cfm plugin" dev
-```
+At this point you are probably tired of replacing `steve-site-d8` in every command. So let's set a variable instead. 
 
-Terminus connects to Pantheon's API, which makes real-time updates to any Dashboard you have open. What you do in Terminus is immediately represented in your Dashboard, so it is always up to date.
+`export TERMINUS_SITE=steve-site-d8`
 
-Now that we've committed our changes, go back to your test site in the browser and refresh it to see what you've created.
+To see the variable you set run:
 
-### Theming Best Practices
+`echo $TERMINUS_SITE`
 
-No WordPress site is ready for development without a child theme. Let's create one:
+Now you should be able to copy the rest of the commands in the guide without editing them. For example, let's run that `connection:info` command again, this time using our `TERMINUS_SITE` variable.
 
-```nohighlight
-$ terminus wp <site>.<env> -- scaffold child-theme --parent-theme=pinboard --theme-name=cli-test-theme
-```
-Next, we'll commit it.
+`terminus connection:info $TERMINUS_SITE.dev`
 
-```nohighlight
-$ terminus $ terminus env:commit --message "Create cli-test-theme child of pinboard theme" dev
-```
+#### See the file that was changed during the installation process.
 
-Now you're ready to edit the cli-test theme, allowing for upstream theme improvements in the pinboard theme to happen without interfering with the functionality of your site.
+Installing Drupal results in a one-line change to `settings.php`. We have to commit that change to our git repository. First use Terminus to see the fact that we have one file with an uncommitted change.
 
-![Screenshot of the final website created following the steps in this guide](/source/docs/assets/images/pantheon-final-command-line-test-site.png)
+`terminus env:diffstat perschd8.dev` 
 
 
-## Importing Content from a WXR File
 
-With the `wp import` command, you can import content from another WordPress site that you've exported to a WXR file. It is important to note that the command runs on the app server, so place the file somewhere in the wp-content directory before running the command. You cannot import a file from your local machine. For more information, see the documentation for `wp import` on the [wp-cli import documentation page](http://wp-cli.org/commands/media/import/).
+`terminus env:info perschd8.dev --field=domain`
 
+`terminus env:commit  perschd8.dev --message="Installing Drupal"`
 
-## The Power of Terminus and WP-CLI
+`terminus env:deploy perschd8.test`
 
-If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
+`terminus env:deploy perschd8.live`
+
+## Add a module in the Dev Environment
+
+We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You may want to remove this module after your site has launch, or use more advanced configuration management techniques to keep the module on in the Dev environment and Off in Test and Live. For this exercise on a Sandbox site it is fine to have the module on in all three environments.
+
+#### Using Drush to download a module
+
+`terminus drush perschd8.dev -- pm-download devel`
+
+#### See a list of the code that was just downloaded
+
+`terminus env:diffstat perschd8.dev` 
+
+#### Commit the downloaded modules
+
+`terminus env:commit  perschd8.dev --message="Adding devel module"`
+
+This command commits the changed files to the master branch of the git repository for this site.
+
+#### Enable the modules
+
+`terminus drush perschd8.dev -- pm-enable devel devel_generate kint webprofiler -y`
+
+All of these modules are helpful during active development. We we use Devel Generate later in this walkthrough to make nodes on the Live environment.
+
+#### Sign into Drupal in the Dev environment to see the enabled modules.
+
+`terminus drush perschd8.dev -- user-login`
+
+
+## Deploying configuration changes from Dev to Test to Live
+
+We just enabled modules on the Dev environment that are not yet present or enabled on Test or Live. To get these modules out to those environments we will first use Drush to export the configuration on Dev. We will then deploy to Test and Live and import configuration there.
+
+
+#### Make sure the Dev environment is in SFTP mode
+
+`terminus connection:set perschd8.dev sftp`
+
+If you've been follow this walkthrough exactly, the Dev environment has remained in SFTP mode the whole time. Running the above command will flip it back in case you changed it to git mode. The file system needs to be writeable (SFTP mode) because we are about to use Drush to write a lot of configuration files to a location that is write-protected when in git mode (or on Test and Live which do not have SFTP mode)
+
+#### Export the configuration in the Dev environment
+
+`terminus drush perschd8.dev -- config-export -y`
+
+[Configuration management is a complex topic with its own detailed recommendations](/docs/drupal-8-configuration-management/). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
+
+#### Commit the changes
+
+`terminus env:commit  perschd8.dev --message="export of config files"`
+
+This command commits the changed files to the master branch of the git repository for this site.
+
+#### The the list of commits you have made so far
+
+`terminus env:code-log perschd8.dev`
+
+
+#### Deploy the changes to the Test environment
+
+`terminus env:deploy perschd8.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"`
+
+We are running the `env:deploy` command with the `--sync-content` flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added nodes/files in the Live environment. You would want those updates present on the Test environment with your deployed code. The `--updatedb` flag runs Drupal's database update script. And `--cc` clears caches. The `--note` flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag.
+
+#### Import the configuration on the Test environment
+
+`terminus drush perschd8.test -- config-import -y`
+
+#### Sign into Drupal in the Test environment to see the enabled modules.
+
+`terminus drush perschd8.test -- user-login`
+
+#### Sign into Drupal in the Live environment to see that the modules aren't there yet.
+
+`terminus drush perschd8.live -- user-login`
+
+You can also see the difference between the Test and Live environments with other Drush commands. The `print-module-list` command and `help` command when run on Test will show that Devel modules are enabled and have added even more Drush commands.
+
+`terminus drush perschd8.test -- pm-list`
+
+`terminus drush perschd8.test -- help`
+
+On Live you won't see those commands yet.
+
+`terminus drush perschd8.live -- pm-list`
+
+`terminus drush perschd8.live -- help`
+
+
+#### Deploy the changes to the Live environment
+
+`terminus env:deploy perschd8.live --updatedb --cc  --note="Deploying exported config to enable modules"`
+
+We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
+
+#### Import the configuration on the Live environment
+
+`terminus drush perschd8.live -- config-import -y`
+
+Once this command completes you will be able to refresh the live environment in your browser and see the changes. TODO, can we look at devel drush commands instead?
+
+## Pulling content changes down from the Live environment to the Dev environment
+
+#### Make content on the Live environment
+
+We can use a Drush command from `devel_generate` module to create 25 nodes.
+
+`terminus drush perschd8.live  -- generate-content 25`
+
+#### Bring down the database and media files from the Liv Environment to the Dev environment
+
+`terminus env:clone-content  perschd8.live dev`
+
+--Bring DB down from Live to dev.
+
+
+## Combining code changes and content changes in the Test Environment before deploying to Live
+
+#### Make another configuration change on the Dev environment
+
+`terminus drush  perschd8.dev -- views-enable archive`
+
+That command will enable the archive View that displays content by month. You can see it by pointing your browser to `/archive` on your dev site.
+
+#### Export the configuration change in the Dev environment
+
+`terminus drush  perschd8.dev -- config-export -y`
+
+#### Commit the configuration change in the Dev environment
+
+`terminus env:commit  perschd8.dev --message="Enabling archive View"`
+
+#### Check the Test environment
+
+Before we deploy our configuration change enabling the archive View to the Test environment, let's first see what the Test environment looks like. Visit `/archive` and `/admin/content` in your Test environment. You should see a 404 message for the archive page and the administrative content list should not contain the articles and pages that were made on live. Once we deploy our code in the next step, we should see something different on both URLs. 
+
+#### Deploy the configuration change to Test
+
+These are the same commands we ran above to deploy to Test and then import configuration from files to the database.
+
+`terminus env:deploy perschd8.test --sync-content --updatedb --cc  --note="Deploying archive View"`
+
+`terminus drush  perschd8.test  -- config-import -y`
+
+#### Check the Test environment again
+
+Sign into the Test site again. Copying down the Live database likely signed you out of the Test environment.
+
+`terminus drush perschd8.test -- user-login`
+
+Visit `/archive` and `/admin/content` again. You should see both the archive View and a full list of content on the administrative page.
+
+#### Deploy to the Live environment and import the changes
+
+`terminus env:deploy perschd8.live --updatedb --cc  --note="Deploying archive View"`
+
+`terminus drush  perschd8.test  -- config-import -y`
+
+With the change to the archive View deployed and imported on the Live environment you should be able to to the archive page (`/archive`) to see change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
