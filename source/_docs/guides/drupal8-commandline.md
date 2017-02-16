@@ -287,9 +287,9 @@ We are cloning content from `live` to `dev`.
 
 #### Make another configuration change on the Dev environment
 
-`terminus drush  $TERMINUS_SITE.dev -- views-enable archive`
+`terminus drush  $TERMINUS_SITE.dev -- views-enable glossary`
 
-That command will enable the archive View that displays content by month. You can see it by pointing your browser to `/archive` on your Dev site.
+That command will enable the glossary View that displays content by month. You can see it by pointing your browser to `/glossary` on your Dev site.
 
 #### Export the configuration change in the Dev environment
 
@@ -297,17 +297,17 @@ That command will enable the archive View that displays content by month. You ca
 
 #### Commit the configuration change in the Dev environment
 
-`terminus env:commit  $TERMINUS_SITE.dev --message="Enabling archive View"`
+`terminus env:commit  $TERMINUS_SITE.dev --message="Enabling glossary View"`
 
 #### Check the Test environment
 
-Before we deploy our configuration change enabling the archive View to the Test environment, let's first see what the Test environment looks like. Visit `/archive` and `/admin/content` in your Test environment. You should see a 404 message for the archive page and the administrative content list should not contain the articles and pages that were made on live. Once we deploy our code in the next step, we should see something different on both URLs. 
+Before we deploy our configuration change enabling the glossary View to the Test environment, let's first see what the Test environment looks like. Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on live. Once we deploy our code in the next step, we should see something different on both URLs.
 
 #### Deploy the configuration change to Test
 
 These are the same commands we ran above to deploy to Test and then import configuration from files to the database.
 
-`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying archive View"`
+`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying glossary View"`
 
 `terminus drush  $TERMINUS_SITE.test  -- config-import -y`
 
@@ -317,28 +317,13 @@ Sign into the Test site again. Copying down the Live database likely signed you 
 
 `terminus drush $TERMINUS_SITE.test -- user-login`
 
-Visit `/archive` and `/admin/content` again. You should see both the archive View and a full list of content on the administrative page.
+Visit `/glossary` and `/admin/content` again. You should see both the glossary View and a full list of content on the administrative page.
 
 #### Deploy to the Live environment and import the changes
 
-`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying archive View"`
+`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying glossary View"`
 
 `terminus drush  $TERMINUS_SITE.test  -- config-import -y`
 
-With the change to the archive View deployed and imported on the Live environment you should be able to see the archive page (`/archive`).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).
 
