@@ -67,7 +67,7 @@ There's an additional option you can put on this command for organization ID `--
 
 Even though we are using the command line as much as possible, you may find it helpful to open the Pantheon Dashboard in your browser and leave it open as you walk through this guide. The dashboard will respond as you run later commands for operations like deploying code.
 
-`terminus dashboard:view perschd8  --print`
+`terminus dashboard:view steve-site-d8  --print`
 
 #### Connection information
 
@@ -125,148 +125,179 @@ Now you should be able to copy the rest of the commands in the guide without edi
 
 Installing Drupal results in a one-line change to `settings.php`. We have to commit that change to our git repository. First use Terminus to see the fact that we have one file with an uncommitted change.
 
-`terminus env:diffstat perschd8.dev` 
+`terminus env:diffstat $TERMINUS_SITE.dev`
 
+#### Commit the file
 
+`terminus env:commit $TERMINUS_SITE.dev --message="Installing Drupal"`
 
-`terminus env:info perschd8.dev --field=domain`
+This command will commit change to `settings.php` to the master branch of the git repository for this site. The master branch is permanently tied to the Dev environment on Pantheon. The `--message flag` is the git commit message.
 
-`terminus env:commit  perschd8.dev --message="Installing Drupal"`
+#### Create the Test environment
 
-`terminus env:deploy perschd8.test`
+Now that we have Drupal installed in the Dev environment an our code fully committed to the master branch, we can deploy our site to the Test environment.
 
-`terminus env:deploy perschd8.live`
+`terminus env:deploy $TERMINUS_SITE.test`
+
+#### Create the Live environment
+
+`terminus env:deploy $TERMINUS_SITE.live`
 
 ## Add a module in the Dev Environment
 
-We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You may want to remove this module after your site has launch, or use more advanced configuration management techniques to keep the module on in the Dev environment and Off in Test and Live. For this exercise on a Sandbox site it is fine to have the module on in all three environments.
+We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel). You may want to remove these modules after your site has launch, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
 
 #### Using Drush to download a module
 
-`terminus drush perschd8.dev -- pm-download devel`
+We can use a Drush command to download the latest stable release of the `devel` package from drupal.org.
+
+`terminus drush $TERMINUS_SITE.dev -- pm-download devel`
+
+You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer-drupal-8/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
 
 #### See a list of the code that was just downloaded
 
-`terminus env:diffstat perschd8.dev` 
+`terminus env:diffstat $TERMINUS_SITE.dev` 
 
 #### Commit the downloaded modules
 
-`terminus env:commit  perschd8.dev --message="Adding devel module"`
-
-This command commits the changed files to the master branch of the git repository for this site.
+`terminus env:commit  $TERMINUS_SITE.dev --message="Adding devel module"`
 
 #### Enable the modules
 
-`terminus drush perschd8.dev -- pm-enable devel devel_generate kint webprofiler -y`
+`terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate kint webprofiler -y`
 
 All of these modules are helpful during active development. We we use Devel Generate later in this walkthrough to make nodes on the Live environment.
 
 #### Sign into Drupal in the Dev environment to see the enabled modules.
 
-`terminus drush perschd8.dev -- user-login`
+If you haven't done so yet, sign into your Dev environment where you will see a footer of helpful development information provided by the `webprofiler` module we just installed.
 
+`terminus drush $TERMINUS_SITE.dev -- user-login`
 
 ## Deploying configuration changes from Dev to Test to Live
 
-We just enabled modules on the Dev environment that are not yet present or enabled on Test or Live. To get these modules out to those environments we will first use Drush to export the configuration on Dev. We will then deploy to Test and Live and import configuration there.
-
+We just enabled modules on the Dev environment that are not yet present or enabled on Test or Live. To get these modules out to those environments we will first use Drush to export the configuration on Dev from the database to the file system. We will then deploy code to Test and Live and import configuration to the databases in those environments.
 
 #### Make sure the Dev environment is in SFTP mode
 
-`terminus connection:set perschd8.dev sftp`
+`terminus connection:set $TERMINUS_SITE.dev sftp`
 
-If you've been follow this walkthrough exactly, the Dev environment has remained in SFTP mode the whole time. Running the above command will flip it back in case you changed it to git mode. The file system needs to be writeable (SFTP mode) because we are about to use Drush to write a lot of configuration files to a location that is write-protected when in git mode (or on Test and Live which do not have SFTP mode)
+If you've been following this walkthrough exactly, the Dev environment has remained in SFTP mode. Running the above command will flip it back in case you changed it to git mode. The file system needs to be writeable (SFTP mode) because we are about to use Drush to write a lot of configuration files to a location that is write-protected when in git mode (or on Test and Live which do not have SFTP mode).
 
 #### Export the configuration in the Dev environment
 
-`terminus drush perschd8.dev -- config-export -y`
+`terminus drush $TERMINUS_SITE.dev -- config-export -y`
 
 [Configuration management is a complex topic with its own detailed recommendations](/docs/drupal-8-configuration-management/). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
 
 #### Commit the changes
 
-`terminus env:commit  perschd8.dev --message="export of config files"`
+`terminus env:commit  $TERMINUS_SITE.dev --message="export of config files"`
 
-This command commits the changed files to the master branch of the git repository for this site.
+#### See the code commits made so far
 
-#### The the list of commits you have made so far
+`terminus env:code-log $TERMINUS_SITE.dev`
 
-`terminus env:code-log perschd8.dev`
+If you want to have a local copy of the git repository, you can run the `git clone` command suggested by
 
+`terminus connection:info perschd8.dev --fields=git_command`
+
+You can then see your list of commits locally by changing into that directory you just cloned
+
+`cd $TERMINUS_SITE`
+
+and running
+
+`git log`
 
 #### Deploy the changes to the Test environment
 
-`terminus env:deploy perschd8.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"`
+`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"`
 
-We are running the `env:deploy` command with the `--sync-content` flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added nodes/files in the Live environment. You would want those updates present on the Test environment with your deployed code. The `--updatedb` flag runs Drupal's database update script. And `--cc` clears caches. The `--note` flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag.
+We are running the `env:deploy` command with the `--sync-content` flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added nodes and files in the Live environment. You would want those updates present on the Test environment with your deployed code. The `--updatedb` flag runs Drupal's database update script. And `--cc` clears caches. The `--note` flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag. To see the tag that was just created pull latest information down to your local git repository
+
+`git fetch`
+
+`git tag`
+
+Deployments to the Test and Live environments start with `pantheon_test_` or `pantheon_live_` followed by integers to count the number of deployments.
+
 
 #### Import the configuration on the Test environment
 
-`terminus drush perschd8.test -- config-import -y`
+With the `yml` configuration files now present on the Test environment, they can be imported to the database there:
+
+`terminus drush $TERMINUS_SITE.test -- config-import -y`
 
 #### Sign into Drupal in the Test environment to see the enabled modules.
 
-`terminus drush perschd8.test -- user-login`
+`terminus drush $TERMINUS_SITE.test -- user-login`
 
 #### Sign into Drupal in the Live environment to see that the modules aren't there yet.
 
-`terminus drush perschd8.live -- user-login`
+`terminus drush $TERMINUS_SITE.live -- user-login`
 
-You can also see the difference between the Test and Live environments with other Drush commands. The `print-module-list` command and `help` command when run on Test will show that Devel modules are enabled and have added even more Drush commands.
+Now that you are signed into all three environments you should be seeing the development footer in Dev and Test but not Live.
 
-`terminus drush perschd8.test -- pm-list`
+You can also see the difference between the environments with other Drush commands. The `print-module-list` command and `help` command when run on Test will show that Devel modules are enabled and have added even more Drush commands.
 
-`terminus drush perschd8.test -- help`
+`terminus drush $TERMINUS_SITE.test -- pm-list`
 
-On Live you won't see those commands yet.
+`terminus drush $TERMINUS_SITE.test -- help`
 
-`terminus drush perschd8.live -- pm-list`
+On Live you won't see those modules or commands yet.
 
-`terminus drush perschd8.live -- help`
+`terminus drush $TERMINUS_SITE.live -- pm-list`
+
+`terminus drush $TERMINUS_SITE.live -- help`
 
 
 #### Deploy the changes to the Live environment
 
-`terminus env:deploy perschd8.live --updatedb --cc  --note="Deploying exported config to enable modules"`
+`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying exported config to enable modules"`
 
 We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
 
 #### Import the configuration on the Live environment
 
-`terminus drush perschd8.live -- config-import -y`
+`terminus drush $TERMINUS_SITE.live -- config-import -y`
 
-Once this command completes you will be able to refresh the live environment in your browser and see the changes. TODO, can we look at devel drush commands instead?
+Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
 
 ## Pulling content changes down from the Live environment to the Dev environment
 
+In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. You may need this fresh command in your Development environment.
+
 #### Make content on the Live environment
 
-We can use a Drush command from `devel_generate` module to create 25 nodes.
+Since you are signed into the Live environment, you can manually make content by browsing to `/node/add`. We can also use a Drush command from `devel_generate` module to create some number of nodes.
 
-`terminus drush perschd8.live  -- generate-content 25`
+`terminus drush $TERMINUS_SITE.live  -- generate-content 25`
+
+Including "25" at the end of that command gives us 25 nodes.
 
 #### Bring down the database and media files from the Liv Environment to the Dev environment
 
-`terminus env:clone-content  perschd8.live dev`
+`terminus env:clone-content  $TERMINUS_SITE.live dev`
 
---Bring DB down from Live to dev.
-
+We are cloning content from `live` to `dev`.
 
 ## Combining code changes and content changes in the Test Environment before deploying to Live
 
 #### Make another configuration change on the Dev environment
 
-`terminus drush  perschd8.dev -- views-enable archive`
+`terminus drush  $TERMINUS_SITE.dev -- views-enable archive`
 
-That command will enable the archive View that displays content by month. You can see it by pointing your browser to `/archive` on your dev site.
+That command will enable the archive View that displays content by month. You can see it by pointing your browser to `/archive` on your Dev site.
 
 #### Export the configuration change in the Dev environment
 
-`terminus drush  perschd8.dev -- config-export -y`
+`terminus drush  $TERMINUS_SITE.dev -- config-export -y`
 
 #### Commit the configuration change in the Dev environment
 
-`terminus env:commit  perschd8.dev --message="Enabling archive View"`
+`terminus env:commit  $TERMINUS_SITE.dev --message="Enabling archive View"`
 
 #### Check the Test environment
 
@@ -276,25 +307,25 @@ Before we deploy our configuration change enabling the archive View to the Test 
 
 These are the same commands we ran above to deploy to Test and then import configuration from files to the database.
 
-`terminus env:deploy perschd8.test --sync-content --updatedb --cc  --note="Deploying archive View"`
+`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying archive View"`
 
-`terminus drush  perschd8.test  -- config-import -y`
+`terminus drush  $TERMINUS_SITE.test  -- config-import -y`
 
 #### Check the Test environment again
 
 Sign into the Test site again. Copying down the Live database likely signed you out of the Test environment.
 
-`terminus drush perschd8.test -- user-login`
+`terminus drush $TERMINUS_SITE.test -- user-login`
 
 Visit `/archive` and `/admin/content` again. You should see both the archive View and a full list of content on the administrative page.
 
 #### Deploy to the Live environment and import the changes
 
-`terminus env:deploy perschd8.live --updatedb --cc  --note="Deploying archive View"`
+`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying archive View"`
 
-`terminus drush  perschd8.test  -- config-import -y`
+`terminus drush  $TERMINUS_SITE.test  -- config-import -y`
 
-With the change to the archive View deployed and imported on the Live environment you should be able to to the archive page (`/archive`) to see change.
+With the change to the archive View deployed and imported on the Live environment you should be able to see the archive page (`/archive`).
 
 
 
