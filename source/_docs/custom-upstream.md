@@ -89,9 +89,9 @@ Create a vanilla Drupal or WordPress site using a unique site name that is assoc
 
 
 <ul class="nav nav-tabs" role="tablist">
-  <li id="drupal8" role="presentation" class="active"><a href="#drupal8" aria-controls="drupal8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li id="drupal7" role="presentation"><a href="#drupal7" aria-controls="drupal7" role="tab" data-toggle="tab">Drupal 7</a></li>    
-  <li id="wp" role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+  <li id="drupal8tab" role="presentation" class="active"><a href="#drupal8" aria-controls="drupal8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li id="drupal7tab" role="presentation"><a href="#drupal7" aria-controls="drupal7" role="tab" data-toggle="tab">Drupal 7</a></li>    
+  <li id="wp-newtab" role="presentation"><a href="#wp-new" aria-controls="wp-new" role="tab" data-toggle="tab">WordPress</a></li>
 </ul>
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="drupal8">
@@ -110,7 +110,7 @@ Create a vanilla Drupal or WordPress site using a unique site name that is assoc
     <figure><pre id="vanilla-site-drupal-7"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;unique-site-name&gt; "Unique Site Label" "Drupal 7" --org="Org Name or UUID"</code></pre></figure>
     </div>
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
+  <div role="tabpanel" class="tab-pane" id="wp-new">
     <!-- WordPress Content -->
     <p class="instruction">Create a WordPress site associated with your organization:</p>
     <div class="copy-snippet">
