@@ -85,11 +85,30 @@ Push the repository to your upstream's remote location.
 
 ### Create the Testing Site
 
-Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
+Create a vanilla Drupal or WordPress site using a unique site name that is associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#site-create-upstream">Copy</button>
-  <figure><pre id="site-create-upstream"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;site&gt; &lt;label&gt; &lt;upstream&gt; --org=&lt;org&gt;</code></pre></figure>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li id="wptab" role="presentation" class="active"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal</a></li>
+  <li id="drupaltab" role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="drupal">
+    <!-- Drupal Content -->
+    <p class="instruction">Create a Drupal site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal">Copy</button>
+    <figure><pre id="vanilla-site-drupal"><code class="command nohighlight" data-lang="bash">terminus site:create unique-site-name "site label" Drupal --org="org name or UUID"</code></pre></figure>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+    <!-- WordPress Content -->
+    <p class="instruction">Create a WordPress site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-wordpress">Copy</button>
+    <figure><pre id="vanilla-site-wordpress"><code class="command nohighlight" data-lang="bash">terminus site:create unique-site-name "site label" WordPress --org="org name or UUID"</code></pre></figure>
+    </div>
+  </div>
 </div>
 
 [Clone the Pantheon repository](/docs/git/#clone-your-site-codebase):
