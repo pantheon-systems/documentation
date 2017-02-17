@@ -89,16 +89,25 @@ Create a vanilla Drupal or WordPress site using a unique site name that is assoc
 
 
 <ul class="nav nav-tabs" role="tablist">
-  <li id="wptab" role="presentation" class="active"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal</a></li>
-  <li id="drupaltab" role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+  <li id="drupal8" role="presentation" class="active"><a href="#drupal8" aria-controls="drupal8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li id="drupal7" role="presentation"><a href="#drupal7" aria-controls="drupal7" role="tab" data-toggle="tab">Drupal 7</a></li>    
+  <li id="wp" role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
 </ul>
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="drupal">
+    <div role="tabpanel" class="tab-pane active" id="drupal8">
     <!-- Drupal Content -->
-    <p class="instruction">Create a Drupal site associated with your organization:</p>
+    <p class="instruction">Create a Drupal 8 site associated with your organization:</p>
     <div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal">Copy</button>
-    <figure><pre id="vanilla-site-drupal"><code class="command nohighlight" data-lang="bash">terminus site:create unique-site-name "site label" Drupal --org="org name or UUID"</code></pre></figure>
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal-8">Copy</button>
+    <figure><pre id="vanilla-site-drupal-8"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;unique-site-name&gt; "Unique Site Label" "Drupal 8" --org="Org Name or UUID"</code></pre></figure>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="drupal7">
+    <!-- Drupal Content -->
+    <p class="instruction">Create a Drupal 7 site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal-7">Copy</button>
+    <figure><pre id="vanilla-site-drupal-7"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;unique-site-name&gt; "Unique Site Label" "Drupal 7" --org="Org Name or UUID"</code></pre></figure>
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
