@@ -4,19 +4,49 @@ earlyaccess: true
 description: Upgrade to Free HTTPS on the Pantheon Global Edge.
 ---
 
-Upgrade eligible sites to the new Pantheon Global Edge for access to free HTTPS across all domains and environments. This service allows for automatic certificate provisioning and renewal for domains routed to Pantheon using the recommended values provided in the Site Dashboard.
+Upgrade eligible sites to the new Pantheon Global Edge for access to free HTTPS across all domains and environments. This service allows for automatic certificate provisioning and renewal for all domains routed to Pantheon using the recommended DNS values provided in the Site Dashboard.
 
-Free HTTPS is currently invite only.
+Free HTTPS is currently invite only. The upgrade procedures do not cause downtown or HTTPS interruption.
 
-## Upgrade
-TODO
-1. From the Site Dashboard...
-2. Once the certs are ready..
-3. ...
+## Upgrade Your Site
+1. From the User or Organization Dashboard, select a site that shows **HTTPS Upgrade** as available.
+2. Click the **Start HTTPS Upgrade** button to begin the certificate provisioning and deployment process on the Live environment.
+
+    You will receive an email once this process is complete, which can take up to an hour.
+
+    The **HTTP Status** is automatically updated once the certificate is deployed to indicate additional action required.
+
+3. Click **Show DNS Recommendations** next to each of the domains indicating action required and configure DNS as recommended using the provided values.
+
+    <div markdown="1" class="alert alert-danger">
+    ### Warning
+    **Pantheon does not register domains or host/manage DNS.** You will need to make these changes yourself at the registrar and/or DNS host for the domain.
+    </div>
+
+    The **HTTPS Status** is automatically updated once all domains are correctly routed to Pantheon using the provided DNS values.
+
+4. Standardize traffic across a common URL (either `https://www.example.com` or `https://example.com`) using 301 redirects within `settings.php` or `wp-config.php`:
+
+    ```php
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+    	($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+    	(php_sapi_name() != "cli")) {
+    		/** Replace www.example.com with your domain */
+    	if ($_SERVER['HTTP_HOST'] != 'www.example.com' ||
+    			!isset($_SERVER['HTTP_X_SSL']) ||
+    			$_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    		header('HTTP/1.0 301 Moved Permanently');
+    		/** Replace www.example.com with your domain */
+    		header('Location: https://www.example.com'. $_SERVER['REQUEST_URI']);
+    		exit();
+    	}
+    }
+    ```
+
+    Redirecting www to non-www, or vice versa, optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
 
-<unique-site-name>
-<site-label>
+
 
 
 ## Frequently Asked Questions
