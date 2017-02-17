@@ -57,13 +57,14 @@ We will copy that ID (8a129104-9d37-4082-aaf8-e6f31154644e) into the next comman
 #### Creating the Drupal 8 site.
 
 In this command you will need to pick both a machine name and a label for your site.
-
 In my case, I'm picking `steve-site-d8` as my site's machine name and "Steve's Site D8" as the label.
 Finally, I'm adding that unique ID for the Drupal 8 source.
 
 So the command I am running is:
 
 `terminus site:create steve-site-d8 "My Site D8" 8a129104-9d37-4082-aaf8-e6f31154644e`
+
+If you are copy and pasting these examples, you will need to replace `steve-site-d8` in each one.
 
 There's an additional option you can put on this command for organization ID `--org`. If you are walking through this guide as part of an in person training or if you work as part of a team that uses Pantheon, you might want to associate this site with your organization. To get your organization's ID, run `terminus org:list`. So your command might look like
 
@@ -101,32 +102,29 @@ A more machine-processable format like json could be useful if we were writing a
 
 #### Installing Drupal
 
-So far we have spun up the Pantheon infrastructure to hold a Drupal site. But we still haven't installed Drupal itself. If you were to go do the Dev environment in your browser, you would be prompted to install Drupal. This command will give you the URL to the Dev site. Visit it, but don't walk through the browser installation steps.
-
-@todo, move this step after site-install
-
-`terminus env:info steve-site-d8.dev --field=domain`
-
-Instead, we will install Drupal using Drush, the Drupal command line utility. In this command you will see a few parameters to change.
+So far we have spun up the Pantheon infrastructure to hold a Drupal site. But we still haven't installed Drupal itself. We can do that with a Drush command. This command will take around 60 seconds to complete.
 
 `terminus drush steve-site-d8.dev -- site-install -y`
-
-This command will take around 60 seconds to complete.
 
 Congratulations! You've installed Drupal! Use the password included in the output of that command to sign into the site with your browser. Or use this command to get a one-time login link:
 
 `terminus drush  steve-site-d8.dev  -- user-login`
 
+#### Getting basic site information with Drush
+
+The last two commands we run were Drush commands. Drush is the command line utility for Drupal itself. Terminus is simply passing through the Drush commands to the container running your site. To get a full list of Drush commands run
+
+`terninus drush steve-site-d8.dev -- help`
+
+Anything after the `--` in `terminus drush steve-site-d8.dev --` gets passed straight to Drush.
+
 #### Using a variable for the site name
 
-At this point you are probably tired of replacing `steve-site-d8` in every command. So let's set a variable instead. 
+At this point you are probably tired of replacing `steve-site-d8` in every command. To make the copying and pasting easier for the remainder of this guide we can set a variable in your terminal window for the site name.
 
 `export TERMINUS_SITE=your-site-machine-name`
 
-@todo, explain this better
-
-
-To see the variable you set run:
+To see the variable you just set run:
 
 `echo $TERMINUS_SITE`
 
@@ -144,7 +142,7 @@ Installing Drupal results in a one-line change to `settings.php`. We have to com
 
 `terminus env:commit $TERMINUS_SITE.dev --message="Installing Drupal"`
 
-This command will commit change to `settings.php` to the master branch of the git repository for this site. The master branch is permanently tied to the Dev environment on Pantheon. The `--message flag` is the git commit message.
+This command will commit the change to `settings.php` to the master branch of the git repository for this site. The master branch is permanently tied to the Dev environment on Pantheon. The `--message flag` is the git commit message.
 
 #### Create the Test environment
 
@@ -157,8 +155,6 @@ Now that we have Drupal installed in the Dev environment an our code fully commi
 `terminus env:deploy $TERMINUS_SITE.live`
 
 ## Add a module in the Dev Environment
-
-@todo, explain Drush here. `help` and `--`
 
 We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel). You may want to remove these modules after your site has launch, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
 
