@@ -10,16 +10,22 @@ contributors:
 date: 2/15/2017
 ---
 
-This guide will walk through using the command line to perform operations creating a new Drupal 8 site. With that site, we will add modules, create content, and move configuration between Pantheon environments. The tasks covered in this guide can all be done in the browser, without using the command line. For instance, seeing a list of all of your sites on Pantheon is easy in the browser. It is the first thing you see when signing into the Dashboard.
+This guide will walk through using the command line to perform operations creating a new Drupal 8 site.
+With that site, we will add modules, create content, and move configuration between Pantheon environments.
+The tasks covered in this guide can all be done in the browser, without using the command line.
+For instance, seeing a list of all of your sites on Pantheon is easy in the browser.
+It is the first thing you see when signing into the Dashboard.
 
-@TODO, add image.
+![A list of websites in the Pantheon dashboard](/source/docs/assets/images/drupal8-commandline--dashboard-sites.png)
 
 You can see the same list on the command line by running:
 
 `terminus site:list`
 
-In essence, Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. Once you are comfortable with Terminus, you may find it faster to use than the browser. Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
-
+In essence, Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard.
+Once you are comfortable with Terminus, you may find it faster to use than the browser.
+Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have.
+For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
 
 ## Installing and authenticating with Terminus
 
@@ -27,13 +33,11 @@ The most reliable way to install Terminus is with our dedicated installer:
 
 `curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install`
 
-
 Once Terminus is installed, you can sign in with a [machine token generated in the Dashboard](https://dashboard.pantheon.io/machine-token/create).
 
 `terminus auth:login --machine-token=‹machine-token›`
 
 If you have trouble with these steps, [see our full installation documentation](https://pantheon.io/docs/terminus/install/).
-
 
 ## Create your site with Dev, Test, and Live environments
 
@@ -47,13 +51,15 @@ The one we want is `Drupal 8`.
 
 `terminus upstream:list | grep "Drupal 8"`
 
-That command shows us the unique ID for our Drupal 8 source repository. We will copy that ID (8a129104-9d37-4082-aaf8-e6f31154644e) into the next command for creating a new site.
+That command shows us the unique ID for our Drupal 8 source repository.
+We will copy that ID (8a129104-9d37-4082-aaf8-e6f31154644e) into the next command for creating a new site.
 
 #### Creating the Drupal 8 site.
 
 In this command you will need to pick both a machine name and a label for your site.
 
-In my case, I'm picking `steve-site-d8` as my site's machine name and "Steve's Site D8" as the label. Finally, I'm adding that unique ID for the Drupal 8 source.
+In my case, I'm picking `steve-site-d8` as my site's machine name and "Steve's Site D8" as the label.
+Finally, I'm adding that unique ID for the Drupal 8 source.
 
 So the command I am running is:
 
@@ -73,7 +79,7 @@ Even though we are using the command line as much as possible, you may find it h
 
 In your browser dashboard you can easily get connection information.
 
-@todo, add image.
+![Git and MySQL connection information from the Pantheon dashboard](/source/docs/assets/images/drupal8-commandline--connection-info.png)
 
 That same information is available in Terminus. Run this command replacing `steve-site-d8` with the name of the site you selected.
 
@@ -83,7 +89,7 @@ That command will show you some of the connection info. If you want to see all o
 
 `terminus connection:info --help`
 
-Adding `--help` to any command will give you information about the options and parameters the command can use. In this case the `help` let's us know that we can specify different fields. So we can use the `--fields` to say that we want just the MySQL connection information.
+Adding `--help` to any command will give you information about the options and parameters the command can use. In this case the `help` lets us know that we can specify different fields. So we can use the `--fields` to say that we want just the MySQL connection information.
 
 `terminus connection:info steve-site-d8.dev --fields=mysql_username,mysql_host,mysql_password,mysql_url,mysql_port,mysql_database`
 
@@ -97,11 +103,16 @@ A more machine-processable format like json could be useful if we were writing a
 
 So far we have spun up the Pantheon infrastructure to hold a Drupal site. But we still haven't installed Drupal itself. If you were to go do the Dev environment in your browser, you would be prompted to install Drupal. This command will give you the URL to the Dev site. Visit it, but don't walk through the browser installation steps.
 
+@todo, move this step after site-install
+
+
 `terminus env:info steve-site-d8.dev --field=domain`
 
 Instead, we will install Drupal using Drush, the Drupal command line utility. In this command you will see a few parameters to change.
 
-`terminus drush  steve-site-d8.dev  -- site-install  --account-mail=my.email.address@example.com --account-name=admin397 --site-name="My Cool Site"`
+`terminus drush steve-site-d8.dev -- site-install -y`
+
+This command will take around 60 seconds to complete.
 
 Congratulations! You've installed Drupal! Use the password included in the output of that command to sign into the site with your browser. Or use this command to get a one-time login link:
 
@@ -111,7 +122,10 @@ Congratulations! You've installed Drupal! Use the password included in the outpu
 
 At this point you are probably tired of replacing `steve-site-d8` in every command. So let's set a variable instead. 
 
-`export TERMINUS_SITE=steve-site-d8`
+`export TERMINUS_SITE=your-site-machine-name`
+
+@todo, explain this better
+
 
 To see the variable you set run:
 
@@ -145,6 +159,8 @@ Now that we have Drupal installed in the Dev environment an our code fully commi
 
 ## Add a module in the Dev Environment
 
+@todo, explain Drush here. `help` and `--`
+
 We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel). You may want to remove these modules after your site has launch, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
 
 #### Using Drush to download a module
@@ -167,13 +183,22 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
 `terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate kint webprofiler -y`
 
-All of these modules are helpful during active development. We we use Devel Generate later in this walkthrough to make nodes on the Live environment.
+All of these modules are helpful during active development. We use Devel Generate later in this walkthrough to make nodes on the Live environment.
 
 #### Sign into Drupal in the Dev environment to see the enabled modules.
 
 If you haven't done so yet, sign into your Dev environment where you will see a footer of helpful development information provided by the `webprofiler` module we just installed.
 
 `terminus drush $TERMINUS_SITE.dev -- user-login`
+
+
+![The webprofiler toolbar](/source/docs/assets/images/drupal8-commandline--dashboard-sites.png)
+
+
+
+
+
+
 
 ## Deploying configuration changes from Dev to Test to Live
 
@@ -199,30 +224,11 @@ If you've been following this walkthrough exactly, the Dev environment has remai
 
 `terminus env:code-log $TERMINUS_SITE.dev`
 
-If you want to have a local copy of the git repository, you can run the `git clone` command suggested by
-
-`terminus connection:info perschd8.dev --fields=git_command`
-
-You can then see your list of commits locally by changing into that directory you just cloned
-
-`cd $TERMINUS_SITE`
-
-and running
-
-`git log`
-
 #### Deploy the changes to the Test environment
 
 `terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"`
 
-We are running the `env:deploy` command with the `--sync-content` flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added nodes and files in the Live environment. You would want those updates present on the Test environment with your deployed code. The `--updatedb` flag runs Drupal's database update script. And `--cc` clears caches. The `--note` flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag. To see the tag that was just created pull latest information down to your local git repository
-
-`git fetch`
-
-`git tag`
-
-Deployments to the Test and Live environments start with `pantheon_test_` or `pantheon_live_` followed by integers to count the number of deployments.
-
+We are running the `env:deploy` command with the `--sync-content` flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added nodes and files in the Live environment. You would want those updates present on the Test environment with your deployed code. The `--updatedb` flag runs Drupal's database update script. And `--cc` clears caches. The `--note` flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag. To see the tag that was just created.
 
 #### Import the configuration on the Test environment
 
