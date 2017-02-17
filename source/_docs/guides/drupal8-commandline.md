@@ -105,7 +105,6 @@ So far we have spun up the Pantheon infrastructure to hold a Drupal site. But we
 
 @todo, move this step after site-install
 
-
 `terminus env:info steve-site-d8.dev --field=domain`
 
 Instead, we will install Drupal using Drush, the Drupal command line utility. In this command you will see a few parameters to change.
@@ -192,12 +191,7 @@ If you haven't done so yet, sign into your Dev environment where you will see a 
 `terminus drush $TERMINUS_SITE.dev -- user-login`
 
 
-![The webprofiler toolbar](/source/docs/assets/images/drupal8-commandline--dashboard-sites.png)
-
-
-
-
-
+![The webprofiler toolbar](/source/docs/assets/images/drupal8-commandline--webprofiler.png)
 
 
 ## Deploying configuration changes from Dev to Test to Live
