@@ -6,7 +6,7 @@ description: Upgrade to Free HTTPS on the Pantheon Global Edge.
 
 Upgrade eligible sites to the new Pantheon Global Edge for access to free HTTPS across all domains and environments. This service allows for automatic certificate provisioning and renewal for all domains routed to Pantheon using the recommended DNS values provided in the Site Dashboard.
 
-Free HTTPS is currently invite only. The upgrade procedures do not cause downtown or HTTPS interruption.
+Free HTTPS is currently invite only. The upgrade procedures do not cause downtime or HTTPS interruption.
 
 ## Upgrade Your Site
 1. From the User or Organization Dashboard, select a site that shows **HTTPS Upgrade** as available.
