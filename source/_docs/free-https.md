@@ -24,25 +24,37 @@ Free HTTPS is currently invite only. The upgrade procedures do not cause downtim
 
     The **HTTPS Status** is automatically updated once all domains are correctly routed to Pantheon using the provided DNS values.
 
-4. Standardize traffic across a common URL (either `https://www.example.com` or `https://example.com`) using 301 redirects within `settings.php` or `wp-config.php`:
+4. Standardize traffic across a common URL for the Live environment (either `https://www.example.com` or `https://example.com`) in addition to Dev, Test, and Multidev environments using 301 redirects. The best way to do this on Pantheon is to make use of our environment variables within `settings.php` or `wp-config.php`:
 
     ```php
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-    	($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
     	(php_sapi_name() != "cli")) {
-    		/** Replace www.example.com with your domain */
-    	if ($_SERVER['HTTP_HOST'] != 'www.example.com' ||
+        if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev'):
+          /** Replace dev.example.com with domain added to the dev environment */
+          $domain = 'dev.example.com';
+        elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'test'):
+          /** Replace test.example.com with domain added to the test environment */
+          $domain = 'test.example.com';
+        elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
+          /** Replace www.example.com with domain added to the live environment */
+          $domain = 'www.example.com';
+        else:
+          # Fallback value for multidev or other environments.
+          # This covers environment-sitename.pantheonsite.io domains
+          # that are generated per environment.
+          $domain = $_SERVER['HTTP_HOST'];
+        endif;
+    	if ($_SERVER['HTTP_HOST'] != $domain ||
     			!isset($_SERVER['HTTP_X_SSL']) ||
     			$_SERVER['HTTP_X_SSL'] != 'ON' ) {
     		header('HTTP/1.0 301 Moved Permanently');
-    		/** Replace www.example.com with your domain */
-    		header('Location: https://www.example.com'. $_SERVER['REQUEST_URI']);
+    		header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
     		exit();
     	}
     }
     ```
 
-    Redirecting www to non-www, or vice versa, optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
+    Redirecting www to non-www, or vice versa on Live, optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
 ## Frequently Asked Questions
 ### Which sites are eligible for upgrade?
