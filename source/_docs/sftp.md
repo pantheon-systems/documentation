@@ -82,6 +82,20 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ## Troubleshooting
 
+### I can't connect via SFTP to the server.
+
+Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). (Simply visit the site in your web browser and let it fully load then try connecting again.)
+
+If you site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-connection-information) (including SFTP mode and port 2222) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port 80 (HTTPS)  and 443 (HTTPS).  
+
+A simple way to test if you are experiencing outbound network restrictions is by trying to load a special web site that listens on all ports.  To test your access outbound on port 2222 try to load this web page in your web browser:
+
+* http://portquiz.net:2222/
+
+If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port 2222 outbound. You will need to contact your network administrators to allow access outbound on port 2222.  (Advanced users may also be comfortable [establishing an SSH tunnel through another server](/docs/port-2222/) instead.)
+
+If you **can** access that web page on port 2222 then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/docs/sftp/#sftp-connection-information) (including SFTP mode and port 2222).  Contact Pantheon Support if you still have trouble.
+
 ### I can't write to my codebase on Test or Live.
 
 This is by design. Please see [Using the Pantheon Workflow
@@ -102,7 +116,7 @@ Do not specify a default remote directory within your SFTP client. When applicat
 ### I can't move files from one folder to another.
 This is a known limitation of using SFTP for on-server development on the platform. You can work around the limitation by transferring the files from your local machine or using rsync.
 
-### Connection Issues
+### DNS Connection Issues
 
     Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
     Response:	fzSftp started
