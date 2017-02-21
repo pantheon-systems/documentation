@@ -18,7 +18,7 @@ Free HTTPS is currently invite only. The upgrade procedures do not cause downtim
 3. Click **Show DNS Recommendations** next to each of the domains indicating action required and configure DNS as recommended using the provided values.
 
     <div markdown="1" class="alert alert-danger">
-    ### Warning
+    ### Warning {.info}
     **Pantheon does not register domains or host/manage DNS.** You will need to make these changes yourself at the registrar and/or DNS host for the domain.
     </div>
 
