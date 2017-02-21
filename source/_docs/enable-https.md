@@ -132,12 +132,16 @@ Before you point your DNS to the custom IP address you received after enabling H
 
 ### Test with Chrome
 
-1. Point your browser to the custom IP address you received after enabling HTTPS: https://x.x.x.x
-2. Click the padlock in the address bar.
-3. Select **Certificate Information**.<br />
- ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-4. Verify certificate details match the domain(s) you'll point to the site.
- ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
+1.  Point your browser to the custom IP address you received after enabling HTTPS: `https://x.x.x.x`
+2.  Click the More menu (**⋮**), then **More Tools** --> **Developer Tools**.
+3.  Click **Security** (possibly hidden under **>>**).
+4.  Click **View Certificate**.
+
+    ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
+
+5.  Verify certificate details match the domain(s) you'll point to the site.
+
+    ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
 ### Test with cURL
 
