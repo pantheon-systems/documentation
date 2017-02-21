@@ -102,7 +102,14 @@ The newest backup will appear at the top of the list. When the retention period 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
 ### Via the Command Line
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
+
+```
+wget "https://pantheon-backups.s3.amazonaws.com..."
+```
+
 You can also use  [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading. Include the `--latest ` option to automatically download the most recently created backup. Select older archives by running `terminus site backups list`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+
 ```
 terminus backup:get <site>.<env> --file=<filename> --element=<element>
 ```
