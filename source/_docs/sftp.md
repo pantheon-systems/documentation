@@ -90,7 +90,7 @@ If you site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-co
 
 A simple way to test if you are experiencing outbound network restrictions is by trying to load a special web site that listens on all ports.  To test your access outbound on port 2222 try to load this web page in your web browser:
 
-* http://portquiz.net:2222/
+* [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
 If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port 2222 outbound. You will need to contact your network administrators to allow access outbound on port 2222.  (Advanced users may also be comfortable [establishing an SSH tunnel through another server](/docs/port-2222/) instead.)
 
