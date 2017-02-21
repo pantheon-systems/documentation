@@ -79,7 +79,7 @@ This module has been deprecated by its authors. The suggestions made below are n
 
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   # Set appropriate paths for Composer Manager
-  $conf['composer_manager_file_dir'] = 'private://composer/'.$_ENV['PANTHEON_ENVIRONMENT'];
+  $conf['composer_manager_file_dir'] = 'private://composer/';
   $conf['composer_manager_vendor_dir'] = $_SERVER['HOME'] . '/code/vendor';
   # Disable autobuild on Pantheon
   $conf['composer_manager_autobuild_file'] = 0;
