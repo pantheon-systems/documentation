@@ -93,9 +93,6 @@ All modern browsers and operating systems are supported. For details, see the [H
 * Java < JDK 8u101
 
 
-### Is caching behavior changing?
-All of the behavior you’d expect stays the same on the Global Edge. Install Pantheon Advanced Page Cache on your Drupal 7, Drupal 8, or WordPress site to take advantage of Surrogate Keys (aka Cache Tags).
-
 ### Is Extended Validation supported?
 No, please contact us if you require Extended Validation.
 
