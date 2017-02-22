@@ -10,7 +10,9 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 
 <div class="alert alert-danger" role="alert">
 <h3 class="info">Warning</h3>
-<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</p></div>
+<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.
+</p>
+</div>
 
 ## Steps to Enable HTTPS
 
@@ -124,16 +126,22 @@ Before you point your DNS to the custom IP address you received after enabling H
 
 <div class="alert alert-danger" role="alert">
 <h3 class="info">Warning</h3>
-<p>You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</p></div>
+<p>You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
+</p>
+</div>
 
 ### Test with Chrome
 
-1. Point your browser to the custom IP address you received after enabling HTTPS: https://x.x.x.x
-2. Click the padlock in the address bar.
-3. Select **Certificate Information**.<br />
- ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-4. Verify certificate details match the domain(s) you'll point to the site.
- ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
+1.  Point your browser to the custom IP address you received after enabling HTTPS: `https://x.x.x.x`
+2.  Click the More menu (**⋮**), then **More Tools** --> **Developer Tools**.
+3.  Click **Security** (possibly hidden under **>>**).
+4.  Click **View Certificate**.
+
+    ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
+
+5.  Verify certificate details match the domain(s) you'll point to the site.
+
+    ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
 ### Test with cURL
 
