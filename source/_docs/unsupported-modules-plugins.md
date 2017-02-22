@@ -322,6 +322,8 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 
 **Issue** #2: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
+
+**Issue** #3: Wordfence installs a file called `.user.ini` in the docroot which includes `wordfence-waf.php` from an hard-coded directory. This breaks when the container is migrated and when the code is deployed from the dev environment as the absolute path is no longer valid.
 <hr>
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
