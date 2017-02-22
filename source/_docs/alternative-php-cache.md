@@ -37,7 +37,7 @@ No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be chan
 
 ## Troubleshooting
 
-#### I got a fatal error about redeclaring a class in Drupal core; what should I do?
+### I got a fatal error about redeclaring a class in Drupal core; what should I do?
 
 In some rare cases, there is a [known issue with APC](http://drupal.org/node/838744 "Opcode (APC) and drupal autoloader") where it attempts to load a file that has already been cached. For example:
 
@@ -56,11 +56,11 @@ then closing the condition with the corresponding bracket at the bottom:
 ```
 
 
-#### How do I clear the APC opcode cache?
+### How do I clear the APC opcode cache?
 
 Sometimes, due to (very rare) corruption, the APC opcode cache will need to be cleared.
 
-##### Manual
+#### Manual
 
 To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in your root directory with the following contents:
 
@@ -68,16 +68,16 @@ To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in 
 <?php
 apc_clear_cache();
 ```
-Then browse to http://dev.YOURSITE.pantheon.io/apc_cache_clear.php to clear the opcode cache.</yoursite>
+Then browse to `http://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.</yoursite>
 
-##### Dashboard
+#### Dashboard
 
 Clearing the cache via the Dashboard will also clear the APC cache along with Varnish and Redis.
 
-#### APC related errors are happening on Dev, but not in Test or Live. Why?
+### APC related errors are happening on Dev, but not in Test or Live. Why?
 
 APC shared memory is separate and distinct for each environment. A corruption in one environment will not affect the other. However, if the environments are running the same code, they can potentially experience the same problem.
 
-#### The site has been online a while, what would trigger the error now?
+### The site has been online a while, what would trigger the error now?
 
 When the cache is cleared from the Dashboard, the APC cache is also flushed. As a result, the Drupal page load will repopulate the cache, which may in turn exceed the available shared memory. This circumstance is rare, but is possible.
