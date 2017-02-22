@@ -1,7 +1,7 @@
 ---
 title: Database Connection Errors
 description: Drupal Pressflow core, WordPress core, and the causes and solutions for database connection errors.
-tags: [troubleshoot]
+tags: [debugdb]
 categories: [troubleshoot]
 ---
 There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:

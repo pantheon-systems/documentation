@@ -1,8 +1,8 @@
 ---
 title: Cloudflare CDN and DNS on Pantheon
 description: Set up and test Cloudflare CDN on your Pantheon Drupal or WordPress site.
-tags: [golive, automate]
-categories: [golive]
+tags: [cacheedge, siteintegrations]
+categories: []
 ---
 [Cloudflare](https://www.cloudflare.com) is awesome and we highly recommend them. Here's a list of benefits:
 

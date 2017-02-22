@@ -1,8 +1,8 @@
 ---
 title: Domains and DNS
 description: Information on adding a domain to your Pantheon Drupal or WordPress site.
-tags: [golive]
-categories: [golive]
+tags: [dns]
+categories: []
 ---
 Routing traffic to sites on Pantheon requires modifying the DNS configuration at the domain's DNS hosting provider.
 

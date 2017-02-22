@@ -1,8 +1,8 @@
 ---
 title: Debug Intermittent PHP 7 Notices
 description: Debug and fix "Deprecated Constructor" notices in your Pantheon site.
-categories: [troubleshoot]
-tags: [troubleshoot]
+categories: []
+tags: [debugcode]
 contributors: greg-1-anderson
 keywords: debug, php 7, php error, php errors, php fpm error log, fpm error log, php log, php execution, execute php, caching, cache, php exception, exceptions, errors
 ---

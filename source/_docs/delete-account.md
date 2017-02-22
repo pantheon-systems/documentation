@@ -2,7 +2,7 @@
 title: Deleting Your Pantheon Account
 description: Learn how to completely remove your Pantheon account.
 tags: [manage]
-categories: [manage]
+categories: []
 ---
 Follow the steps below to completely delete your site(s).
 

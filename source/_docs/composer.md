@@ -1,8 +1,8 @@
 ---
 title: Managing Custom Code with Composer
 description: Understand how to manage custom plugins and themes for WordPress sites using Composer.
-tags: [automate]
-categories: [automate]
+tags: [workflow]
+categories: []
 ---
 Extending WordPress or Drupal with custom code is a common part of the development lifecycle. In order to optimize workflows, it's essential that custom plugins, modules, and themes are maintained independently from your sites and projects so they're easily reused.
 

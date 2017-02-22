@@ -1,8 +1,8 @@
 ---
 title: The Pantheon Deploy Log
 description: Use the Deploy Log to manage Pantheon site updates, feature releases, and more.
-tags: [getstarted, git]
-categories: [getstarted]
+tags: [workflow]
+categories: []
 ---
 Whether you're working on a new feature or fixing up bugs, the Deploy Log helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 

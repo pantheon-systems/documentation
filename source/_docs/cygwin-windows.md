@@ -1,8 +1,8 @@
 ---
 title: Install Cygwin on Windows
 description: Learn how to install and configure Cygwin on Windows computers for Pantheon sites.
-tags: [local, cli]
-categories: [develop, cli]
+tags: [devcli]
+categories: []
 ---
 If you do not have access to a Mac or Linux environment, you can install [Cygwin](http://cygwin.com) to perform tasks typically not possible in Windows, such as:
 
