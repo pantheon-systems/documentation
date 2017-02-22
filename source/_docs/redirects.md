@@ -86,7 +86,7 @@ To direct all traffic to the bare domain using Cloudflare:
 To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
-    // Check if Drupal or Wordpress is running via command line
+    // Check if Drupal or WordPress is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'OFF') &&
       (php_sapi_name() != "cli")) {
@@ -106,7 +106,7 @@ If you don't want to have your whole site under HTTPS, we recommend using a secu
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
-    // Check if Drupal or Wordpress is running via command line
+    // Check if Drupal or WordPress is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'on') &&
       (php_sapi_name() != "cli")) {
