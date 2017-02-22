@@ -68,11 +68,15 @@ No, upgrading existing domains already routed to Pantheon involves no downtime o
 If you add a new domain after upgrading, however, then it can take a few hours for certificates to be issued and deployed after you route DNS to your Pantheon site, so there will be no downtime, but there will be an interruption of HTTPS availability.
 
 ### What level of encryption is provided?
-Highest grade of TLS encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on sites using the Pantheon Global Edge, see this [SSL Report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
+TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on sites using the Pantheon Global Edge, see this [SSL Report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What browsers and operating systems are supported?
-All modern browsers and operating systems are supported. For details, see the [Handshake Simulation](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io) portion of an SSL Report.
+All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of an [SSL Report for a site running on the new Pantheon Global Edge](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
+
+<p class="ciu_embed" data-feature="tls1-2" data-periods="future_3,future_2,future_1,current,past_1,past_2,past_3">
+  <a href="http://caniuse.com/#feat=tls1-2">Can I Use tls1-2?</a> Data on support for the tls1-2 feature across the major browsers from caniuse.com.
+</p>
 
 #### Possibly Incompatible:
 
