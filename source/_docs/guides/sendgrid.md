@@ -65,7 +65,7 @@ The SendGrid Integration module is not supported on Drupal 8 sites at this time.
 
 3.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
-4.  Implement the [Composer Manager solution](/docs/unsupported-modules-plugins/#composer-manager) from our guide on unsupported modules to address issues with the required Composer Manager module.
+4.  Implement the suggested [Composer Manager solution](/docs/unsupported-modules-plugins/#composer-manager) to address known issues with the required Composer Manager module.
 
 
 5.  Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
