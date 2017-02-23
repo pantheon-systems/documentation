@@ -10,7 +10,7 @@ permalink: docs/terminus/:basename/
 Terminus is available for Mac OS X, Linux, and Windows (Beta).
 ## Requirements
 
-* PHP Version 5.5.9 or later
+* PHP Version 5.5.9 or later (must include the [php-xml extension](http://php.net/manual/en/dom.setup.php))
 * [PHP-CLI](http://www.php-cli.com/)
 * [PHP-CURL](http://php.net/manual/en/curl.setup.php)
 * [Composer](https://getcomposer.org/download/)
@@ -62,6 +62,23 @@ curl: (23) Failed writing body (0 != 1928)
   cd ~/terminus
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
+### PHP Fatal error: Uncaught exception 'ReflectionException'
+The `php-xml` extension is typically included and enabled by default when installing PHP. However, the following error indicates that the `php-xml` extension is missing:
+
+```php
+PHP Fatal error: Uncaught exception 'ReflectionException' with message 'Class DOMDocument does not exist' in /root/vendor/consolidation/output-formatters/src/Transformations/DomToArraySimplifier.php:24
+```
+
+To resolve this error, install the [`php-xml` extension](http://php.net/manual/en/dom.setup.php).
+### curl: (60) SSL certificate problem
+The following error occurs when curl is unable to verify the local issuer certificate:
+
+```
+curl: (60) SSL certificate problem: unable to get local issuer certificate
+```
+
+To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.perm` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
+
 
 <div class="terminus-pager">
   <hr>
