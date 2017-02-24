@@ -18,6 +18,7 @@ done
 #===============================================================#
 ~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 ~/documentation/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
+curl https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #

@@ -17,3 +17,4 @@ bin/*
 shots/
 npm-debug.log
 /source/docs/assets/terminus/commands.json
+/source/docs/assets/terminus/releases.json

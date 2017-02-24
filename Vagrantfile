@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
   su vagrant -c 'cd #{path} && composer install && bundler && npm install;
   grunt
   bin/terminus list > source/docs/assets/terminus/commands.json --format=json
+  curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
   bin/sculpin generate && ln -sf #{path}/source #{path}/output_dev
   for file in output_dev/docs/changelog/page/*html
   do
