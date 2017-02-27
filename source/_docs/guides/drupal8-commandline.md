@@ -89,9 +89,17 @@ So we can use the `--fields` to say that we want just the MySQL connection infor
 
 `terminus connection:info steve-site-d8.dev --fields=mysql_username,mysql_host,mysql_password,mysql_url,mysql_port,mysql_database`
 
-Or we could add the `--format` flag to specify a different format like csv or json.
+We could even use `*` as a wildcard to get the various mysql details:
 
-`terminus connection:info steve-site-d8.dev --fields=mysql_username,mysql_host,mysql_password,mysql_url,mysql_port,mysql_database --format=json`
+`terminus connection:info steve-site-d8.dev --fields="mysql*"`
+
+Or all available fields:
+
+`terminus connection:info steve-site-d8.dev --fields="*"`
+
+Additionally, the `--format` flag can specify a different format like csv or json.
+
+`terminus connection:info steve-site-d8.dev --fields="*" --format=json`
 
 A more machine-processable format like json could be useful if we were writing a script that chained together multiple commands.
 
