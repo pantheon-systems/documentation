@@ -310,7 +310,7 @@ Once this command completes you will be able to refresh the Live environment in 
 In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment.
 You may need this fresh command in your Development environment.
 
-#### Make content on the Live environment
+#### Create content on the Live environment
 
 Since you are signed into the Live environment, you can manually make content by browsing to `/node/add`.
 We can also use a Drush command from `devel_generate` module to create some number of nodes.
