@@ -71,30 +71,7 @@ If you add a new domain after upgrading, however, then it can take a few hours f
 TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on sites using the Pantheon Global Edge, see this [SSL Report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What browsers and operating systems are supported?
-All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of an [SSL Report for a site running on the new Pantheon Global Edge](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
-
-
-<p class="ciu_embed" data-feature="tls1-2" data-periods="future_3,future_2,future_1,current,past_1,past_2,past_3">
-  <a href="http://caniuse.com/#feat=tls1-2">Can I Use tls1-2?</a> Data on support for the tls1-2 feature across the major browsers from caniuse.com.
-</p>
-
-#### Possibly Incompatible:
-
-* Sony PS3 and PS4 Game Consoles
-
-#### Known Incompatible:
-
-* Chrome < v30
-* Firefox < v27
-* Blackberry OS v10, v7, & v6
-* Android < v5.0
-* Nintendo 3DS
-* IE < v11
-* Opera < v17
-* Safari < v11
-* Windows XP prior to SP3
-* Cannot handle SHA-2 signed certificates
-* Java < JDK 8u101
+All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of an [SSL Report for a site running on the new Pantheon Global Edge](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io) and the  [Certificate Compatibility](https://letsencrypt.org/docs/certificate-compatibility/) resource from Let’s Encrypt.
 
 
 ### Is Extended Validation supported?
