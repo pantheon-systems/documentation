@@ -41,6 +41,9 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 ### Pantheon - 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
 
+### 503 - Header Overflow
+"Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
+
 ### Pantheon - 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
