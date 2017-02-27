@@ -108,7 +108,7 @@ This error occurs when a user is attempting to make a direct connection to Panth
 
 #### Authentication Propmts
 
-Password requests will occur after adding an SSH key to your Pantheon account if the key is corresponding key is not found within your local ssh-agent. Resolve by adding your existing SSH key to the ssh-agent using the following command (replace `YOUR_PRIVATE_KEY` with the path to your existing SSH key):
+Password requests will occur after adding an SSH key to your Pantheon account if the corresponding key is not found within your local ssh-agent. Resolve by adding your existing SSH key to the ssh-agent using the following command (replace `YOUR_PRIVATE_KEY` with the path to your existing SSH key):
 
 ```bash
 $ ssh-add -K ~/.ssh/YOUR_PRIVATE_KEY
