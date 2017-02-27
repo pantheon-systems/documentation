@@ -319,7 +319,7 @@ We can also use a Drush command from `devel_generate` module to create some numb
 
 Including "25" at the end of that command gives us 25 nodes.
 
-#### Bring down the database and media files from the Liv Environment to the Dev environment
+#### Copy the database and media files from the Live Environment to the Dev environment
 
 `terminus env:clone-content  $TERMINUS_SITE.live dev`
 
