@@ -41,45 +41,31 @@ If you have trouble with these steps, [see our full installation documentation](
 
 ## Create your site with Dev, Test, and Live environments
 
-#### See your options for creating new sites
-
-Pantheon offers a few choices for spinning up new sites.
-You can see them all with.
-
-`terminus upstream:list`
-
-The one we want is `Drupal 8`.
-
-`terminus upstream:list | grep "Drupal 8"`
-
-That command shows us the unique ID for our Drupal 8 source repository.
-We will copy that ID (8a129104-9d37-4082-aaf8-e6f31154644e) into the next command for creating a new site.
-
 #### Creating the Drupal 8 site.
 
 In this command you will need to pick both a machine name and a label for your site.
 In my case, I'm picking `steve-site-d8` as my site's machine name and "Steve's Site D8" as the label.
-Finally, I'm adding that unique ID for the Drupal 8 source.
+Finally, using `"Drupal 8"` to indicate the type of site I am creating.
 
 So the command I am running is:
 
-`terminus site:create steve-site-d8 "My Site D8" 8a129104-9d37-4082-aaf8-e6f31154644e`
+`terminus site:create steve-site-d8 "My Site D8" "Drupal 8"`
 
 If you are copy and pasting these examples, you will need to replace `steve-site-d8` in each one.
 
 There's an additional option you can put on this command for organization ID `--org`.
 If you are walking through this guide as part of an in person training or if you work as part of a team that uses Pantheon, you might want to associate this site with your organization.
-To get your organization's ID, run `terminus org:list`.
-So your command might look like
+To get your organization's name, run `terminus org:list`.
+So your command might look like this:
 
-`terminus site:create steve-site-d8 "My Site D8" 8a129104-9d37-4082-aaf8-e6f31154644e --org=123456-abcd-1234--abcd-1234567890`
+`terminus site:create steve-site-d8 "My Site D8" "Drupal 8" --org="DrupalCamp training"`
 
 #### Getting a link to your site's dashboard
 
 Even though we are using the command line as much as possible, you may find it helpful to open the Pantheon Dashboard in your browser and leave it open as you walk through this guide.
 The dashboard will respond as you run later commands for operations like deploying code.
 
-`terminus dashboard:view steve-site-d8  --print`
+`terminus dashboard:view steve-site-d8 --print`
 
 #### Connection information
 
