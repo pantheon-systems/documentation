@@ -108,7 +108,7 @@ This error occurs when a user is attempting to make a direct connection to Panth
 
 #### It Keeps Asking for a Password when Running a Command Using Drush Alias
 
-This error occurs when a user is running a command using drush alias
+This error occurs when a user is running a command using drush alias.
 Add your SSH key to the ssh-agent. If you are using an existing SSH key rather than generating a new SSH key 
 you will need to replace YOUR_PRIVATE_KEY in the command with the name of your existing private key file.
 
