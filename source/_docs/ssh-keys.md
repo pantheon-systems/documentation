@@ -106,7 +106,7 @@ ControlPath ~/.ssh/control-%r
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support <a href="/docs/faq/#does-pantheon-have-ftp-or-shell-access?" data-proofer-ignore> direct SSH connections</a>.
 
-#### Authentication Propmts
+#### Authentication Prompts
 
 Password requests will occur after adding an SSH key to your Pantheon account if the corresponding key is not found within your local ssh-agent. Resolve by adding your existing SSH key to the ssh-agent using the following command (replace `YOUR_PRIVATE_KEY` with the path to your existing SSH key):
 
