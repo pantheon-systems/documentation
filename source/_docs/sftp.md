@@ -70,7 +70,8 @@ Once your message is ready, click **Commit**.
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p></div>
+<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
+</div>
 
 ## SFTP Clients
 
