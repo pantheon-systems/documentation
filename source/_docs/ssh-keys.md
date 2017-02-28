@@ -105,3 +105,11 @@ ControlPath ~/.ssh/control-%r
 #### Server Refused to Allocate pty
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support <a href="/docs/faq/#does-pantheon-have-ftp-or-shell-access?" data-proofer-ignore> direct SSH connections</a>.
+
+#### Authentication Prompts
+
+Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
+
+```bash
+ssh-add -K ~/.ssh/id_rsa
+```
