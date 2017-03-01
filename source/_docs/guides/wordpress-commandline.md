@@ -55,59 +55,45 @@ Creating a site is a function of the Pantheon API, not WP-CLI; however, Terminus
 
 ```nohighlight
 
-$ terminus upstream:list | grep "WordPress"
-  e8fe8550-1ab9-4964-8838-2b9abdccf4bf   WordPress                                                                 vanilla      core          wordpress
-$ terminus site:create cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
+$ terminus site:create cli-test "Terminus CLI Create" WordPress
 
 [notice] Creating a new site...
-
 ```
-To create a site with one command, you'll need:
-- **Upstream ID:** an internal Pantheon UUID for the different systems that you can install. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all products, `$ terminus upstream:list`.
+
+The above command uses the follow parameters:
+
 - **Site Name:** A machine-readable name, that will become a part of your environments' URLs. `cli-test` will yield a Pantheon development environment URL of `http://dev-cli-test.pantheonsite.io`. This name will also be used in all terminus commands against the site, so it's a good idea to keep it short. The site name must be unique on Pantheon.
 - **Label:** A human-readable name, used to label your site on the Pantheon Dashboard. Can contain capital letters and spaces.
+- **Upstream ID (or Name):** The unique ID or the Name of the Upstream being used. In this case it is just "WordPress." To see the full list of upstreams available to you, run `terminus upstream:list`
 
-The format for creating a site with a single command is:
-
-```nohighlight
-site:create [--org [ORG]] [--] <site_name> <label> <upstream_id>
-```
+Optionally you can also include **Organization ID (or Name)** at the end of the `site:create` command. This optional parameter lets you associate the created site with a Pantheon organization. If you do not work with a team of other developers, you might not belong to any organizations. To see the list of organizations associated with your user account, run `terminus org:list`
 
 For my test site, I used the following:  
 **Upstream** = WordPress
 **Site Name** = cli-test  
-**Label** = Command Line Test
+**Label** = Terminus CLI Create
 
-```nohighlight
-$ terminus site:create YOUR-ORG-ID cli-test "Terminus CLI Create" e8fe8550-1ab9-4964-8838-2b9abdccf4bf
-```
 **Note:** Copying this command will fail, because the site name is now taken. Choose a different name for your test.
 
 Just like when you create a site from your Dashboard, this will only take a few minutes. You will see a status bar as terminus creates your new WordPress installation. Once complete, you will be notified that you site is ready to go.
 
-From Terminus, you can get to your Site Dashboard with `$ terminus dashboard <site>.<env>`
-
-## Clone the Codebase and Dotenv
-Run the following command within backticks to [create a local repository of your site's codebase](/docs/git):
-
-```
-terminus dashboard:view <site>.<env>
-```
+From Terminus, you can get to your Site Dashboard with `$ terminus dashboard <site>.<env>`. You might also want to [clone your site's repository locally at this point](/docs/git)
 
 ## Install WordPress
 
 Now that WordPress code is there, it's time for step five of the "[Famous 5-minute  Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)". Steps 1-4 were completed for you by Pantheon, and you don't need anything but the command line to finish. There's even a `wp-config.php` already created and ready to use.
 
-All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the `wp core install` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command:
+All you need to do now is populate the database and your site will be ready to use. Using Terminus and WP-CLI running on the server, use the `wp core install` command. For this to work, it's necessary that you understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command. You will need to update a few parameters in this command before running it:`--title`, `--admin_user`, and `--admin_email`.
 
 ```nohighlight
-terminus wp -- core install --url=http://dev-cli-test.pantheion.io --title="WP-CLI-Test" --admin_user=admin --admin_password=something_incredibly_secure --admin_email=your@emailaddress.tld
+terminus wp <site>.<env> -- core install --title="WP-CLI-Test" --admin_user=admin --admin_email=your@emailaddress.tld
+Admin password: nb2kje3kl26jd
 Success: WordPress installed successfully.
 ```
 
 Now go to your Dev environment
 ```bash
-$ open http://dev-cli-test.pantheonsite.io/wp-admin
+$ terminus env:view <site>.<env>
 ```
 Log in using the username and password you set in the `wp core install` command. You've got a speedy WordPress admin ready to start developing!
 
