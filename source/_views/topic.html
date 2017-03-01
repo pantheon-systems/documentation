@@ -1,60 +1,9 @@
 {% extends "default" %}
 {% block content_wrapper %}
 <!-- container -->
-<div class="col-md-12 mb-70">
-  <div class="hero-video clearfix">
-    <div class="col-md-8 hero-video__video">
-      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    </div>
-    <div class="col-md-4 hero-video__text">
-      <h1 class="hero-video__title">{{ page.title }}</h1>
-      <p class="hero-video__subtitle">{{ page.description }}</p>
-      <ul class="hero-video__bullets">
-        <li>{{ page.bullet1 }} </li>
-        {% if page.bullet2 is defined %}
-        <li>{{ page.bullet2 }} </li>
-        {% endif %}
-        {% if page.bullet3 is defined %}
-        <li>{{ page.bullet3 }} </li>
-        {% endif %}
-        {% if page.bullet4 is defined %}
-        <li>{{ page.bullet4 }} </li>
-        {% endif %}
-        {% if page.bullet5 is defined %}
-        <li>{{ page.bullet5 }} </li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</div>
+<h1>{{ page.title }}</h1>
 {% if page.getstarted %}
-<div class="col-md-6">
-  <a class="topic-info-link" href="/docs/get-started/migrate">
-    <div class="topic-info mb-70">
-      <div class="topic-info__image" style="background-image:url(/source/docs/assets/images/icon-migrate.svg)"></div>
-      <div class="topic-info__text">
-        <h3 class="topic-info__title">Migrate to Pantheon</h3>
-        <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
-      </div>
-    </div>
-  </a>
-</div>
-<div class="col-md-12 mb-70">
-  <h4 style="margin-top:0;">More on this topic</h4>
-  <ul class="top-docs top-docs-2col">
-    {% for doc in data.docs_tags.getstarted if doc.meta.type == "video"%}
-    <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-    {% endfor %}
-    {% for doc in data.docs_tags.getstarted %}
-    {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endif %}
-    {% endfor %}
-    {% for doc in data.docs_tags.getstarted if doc.meta.type == "guide"%}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+  {% include("topics/get-started.html") %}
 {% elseif page.develop %}
 <div class="col-md-6">
   <a class="topic-info-link" href="/docs/develop/cli">
