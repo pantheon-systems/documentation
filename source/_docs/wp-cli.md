@@ -50,3 +50,30 @@ Feeling comfortable with WP-CLI? Here are a [few of many commands](http://wp-cli
 ### Extending WP-CLI With Subcommands
 
 WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy) to solve your thorny problems with WP-CLI.
+
+
+## Troubleshooting
+### Terminus WP-CLI Silent Failure
+The following silent failure occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to see if WordPress is running via the command line:
+
+```bash
+[notice] Command: <site>.<env> -- 'wp <command>' [Exit: 0]
+```
+
+Redirects kill the PHP process before WP-CLI is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `wp-config.php`:
+
+```php
+// Require HTTPS, www.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
+      !isset($_SERVER['HTTP_X_SSL']) ||
+      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+```

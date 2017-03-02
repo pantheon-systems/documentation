@@ -30,6 +30,13 @@ Some advantages of redirecting via PHP instead of `.htaccess` include:
 <h3 class="info">Note</h3>
 <p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</p></div>
 
+### Command Line Conditionals
+All redirect logic run on Pantheon environments should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Otherwise, redirects kill the PHP process before Drush and WP-CLI is executed resulting in a silent failure:
+
+```bash
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
 
 ## Redirect to a Common Domain
 
@@ -43,6 +50,7 @@ Pantheon's www-redirection service automatically redirects requests to the www s
 // Require www.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
       $_SERVER['HTTP_HOST'] == 'thatothersiteyouhad.com') {
@@ -71,6 +79,7 @@ To direct all traffic to the bare domain using Cloudflare:
     // Redirect all traffic to non-www. For example yoursite.com
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com') {
         header('HTTP/1.0 301 Moved Permanently');
@@ -86,9 +95,9 @@ To direct all traffic to the bare domain using Cloudflare:
 To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
-    // Check if Drupal or WordPress is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'OFF') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) ||
       (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
@@ -106,9 +115,9 @@ If you don't want to have your whole site under HTTPS, we recommend using a secu
 You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
-    // Check if Drupal or WordPress is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'on') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         // If admin, redirect to secure.
@@ -127,6 +136,7 @@ To use HTTPS everywhere and standardize on your domain (e.g. `www.yoursite.com`)
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
@@ -143,7 +153,9 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
 
     // HTTPS logic.
     $redirect_domain = 'www.yoursite.com';
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] == 'live') &&
+    // Check if Drupal or WordPress is running via command line
+    (php_sapi_name() != "cli")) {
       $redirect_location = '';
       // Do not require HTTPS for specific pages.
       if (in_array($_SERVER['REQUEST_URI'], array('/rss.xml'))) {
@@ -171,6 +183,7 @@ To redirect from a subdomain to a specific area of the site, use the following:
     // Redirect subdomain to a specific path.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
       header('HTTP/1.0 301 Moved Permanently');
@@ -186,6 +199,7 @@ The same technique works for single subdomain redirects. Just specify the path i
 
     // 301 Redirect from /old to /new.
     if (($_SERVER['REQUEST_URI'] == '/old') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       header('HTTP/1.0 301 Moved Permanently');
       header('Location: /new');
@@ -197,6 +211,7 @@ The same technique works for single subdomain redirects. Just specify the path i
     // Redirect multiple subdomains to a single domain.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (in_array($_SERVER['HTTP_HOST'], array(
         'sub1.youroldwebsite.com',
