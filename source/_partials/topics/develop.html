@@ -1,0 +1,355 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-6 mb-20" style="margin-top:20px;">
+      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+    </div>
+    <div class="col-md-6">
+      <h2>Unsorted/Orphan Docs (develop) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
+      <p class="topic-info__description">These need some plannings.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.develop if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.develop if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.develop %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-20">
+      <h3>Security</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.security if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.security if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.security %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 mb-20">
+        <h3>Workflows</h3>
+        <p class="topic-info__description">Placeholder text about this group of docs.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.workflow if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.workflow if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.workflow %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-20">
+      <h3>Add On Services</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.addons if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.addons if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.addons %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 subtopic-container mb-70">
+      <div class="subtopic-groups">
+        <h3>Command Line Inerface</h3>
+        <p class="topic-info__description">Use Terminus to interact with the platform from the command line.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="subtopic-lists col-md-6">
+            <h4>WP-CLI</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.devwpcli if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devwpcli if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devwpcli %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Drush</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.devdrush if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devdrush if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devdrush %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Terminus</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.devterminus if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devterminus if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.devterminus %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subtopic-lists col-md-6">
+        <h3>Unsorted/Orphan Docs (devcli) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
+        <p class="topic-info__description">These need some plannings.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.devcli if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.devcli if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.devcli %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+              <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 subtopic-container mb-70">
+      <div class="subtopic-groups">
+        <h3>Git</h3>
+        <p class="topic-info__description">Push code changes to the platform using Git mode.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="subtopic-lists col-md-6">
+            <h4>Remote</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.remote if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.remote if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.remote %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Local</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.gitlocal if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.gitlocal if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.gitlocal %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subtopic-lists col-md-6">
+        <h3>Unsorted/Orphan Docs (git) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
+        <p class="topic-info__description">These need some plannings.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.git if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.git if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.git %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+              <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 subtopic-container mb-70">
+      <div class="subtopic-groups">
+        <h3>On-Server Development (SFTP)</h3>
+        <p class="topic-info__description">Manage plugins, modules, and themes within the WordPress Dashboard or Drupal Admin using SFTP mode.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="subtopic-lists col-md-6">
+            <h4>Using the Admin Interface</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.admin if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.admin if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.admin %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Managing Files</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.sftpfiles if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.sftpfiles if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.sftpfiles %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Interacting with the Database</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.sftpdb if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.sftpdb if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.sftpdb %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subtopic-lists col-md-6">
+        <h3>Unsorted/Orphan Docs (sftp) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
+        <p class="topic-info__description">These need some plannings.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.sftp if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.sftp if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.sftp %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+              <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 subtopic-container mb-70">
+      <div class="subtopic-groups">
+        <h3>Local Development</h3>
+        <p class="topic-info__description">Sync your code, database, and files for local development.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="subtopic-lists col-md-6">
+            <h4>Kalabox</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.kalabox if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.kalabox if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.kalabox %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Manual Configuration</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.manuallocal if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.manuallocal if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.manuallocal %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subtopic-lists col-md-6">
+        <h3>Unsorted/Orphan Docs (localdev) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
+        <p class="topic-info__description">These need some plannings.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.localdev if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.localdev if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.localdev %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+              <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@ description: Pantheon sites and local tools at your fingertips.
 contributors:  [dwayne]
 videoid: vz8psmw3lv
 permalink:  docs/videos/:basename/
-tags: [local]
+tags: [kalabox]
 type: video
 categories: [develop, local]
 layout: video

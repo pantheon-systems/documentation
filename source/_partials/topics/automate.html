@@ -4,24 +4,16 @@
       <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
     </div>
     <div class="col-md-6">
-      <h2>Guides <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
-      <p class="topic-info__description">Create copy that clearly defines guides and why these are featured here.</p>
-      <ul style="list-style:none;padding-left:0px;">
-        {% for doc in data.docs_tags.getstarted if doc.meta.type == "guides"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
-        {% endfor %}
-        <li><a href="/docs/getting-started"><i class="fa fa-book"></i> Getting Started Training (Placeholder)</a></li>
-      </ul>
-      <h2>Unsorted/Orphan Docs (getstarted) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
+      <h2>Unsorted/Orphan Docs (automate) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
       <p class="topic-info__description">These need some plannings.</p>
       <ul class="topic-docs">
-        {% for doc in data.docs_tags.getstarted if doc.meta.type == "guide"%}
+        {% for doc in data.docs_tags.automate if doc.meta.type == "guide"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
         {% endfor %}
-        {% for doc in data.docs_tags.getstarted if doc.meta.type == "video"%}
+        {% for doc in data.docs_tags.automate if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
         {% endfor %}
-        {% for doc in data.docs_tags.getstarted %}
+        {% for doc in data.docs_tags.automate %}
           {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
             <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
           {% endif %}
@@ -31,16 +23,16 @@
   </div>
   <div class="row">
     <div class="col-md-6 mb-20">
-      <h3>Create Free Site</h3>
-      <p class="topic-info__description">We allocate two free Sandbox sites for all user accounts.</p>
+      <h3>Site-Level Integrations</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
       <ul class="topic-docs">
-        {% for doc in data.docs_tags.create if doc.meta.type == "guide"%}
+        {% for doc in data.docs_tags.siteintegrations if doc.meta.type == "guide"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
         {% endfor %}
-        {% for doc in data.docs_tags.create if doc.meta.type == "video"%}
+        {% for doc in data.docs_tags.siteintegrations if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
         {% endfor %}
-        {% for doc in data.docs_tags.create %}
+        {% for doc in data.docs_tags.siteintegrations %}
           {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
             <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
           {% endif %}
@@ -48,16 +40,16 @@
       </ul>
     </div>
     <div class="col-md-6 mb-20">
-        <h3>Explore the Site Dashboard</h3>
-        <p class="topic-info__description">Learn how to work within the Site Dashboard to manage and configure settings.</p>
+        <h3>Platform Hooks (Quicksilver)</h3>
+        <p class="topic-info__description">Placeholder text about this group of docs.</p>
         <ul class="topic-docs">
-          {% for doc in data.docs_tags.dashboard if doc.meta.type == "guide"%}
+          {% for doc in data.docs_tags.quicksilver if doc.meta.type == "guide"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
           {% endfor %}
-          {% for doc in data.docs_tags.dashboard if doc.meta.type == "video"%}
+          {% for doc in data.docs_tags.quicksilver if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
           {% endfor %}
-          {% for doc in data.docs_tags.dashboard %}
+          {% for doc in data.docs_tags.quicksilver %}
           {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
           <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
           {% endif %}
@@ -68,21 +60,21 @@
   <div class="row">
     <div class="col-md-12 subtopic-container mb-70">
       <div class="subtopic-groups">
-        <h3>Migrate to Pantheon</h3>
-        <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
+        <h3>Command Line Inerface</h3>
+        <p class="topic-info__description">Use Terminus to automate and script interactions with the platform from the command line.</p>
       </div>
       <div class="row">
         <div class="col-md-12">
           <div class="subtopic-lists col-md-6">
-            <h4>Guided Migrations</h4>
+            <h4>WP-CLI</h4>
             <ul class="topic-docs">
-            {% for doc in data.docs_tags.migrateguided if doc.meta.type == "guide"%}
+            {% for doc in data.docs_tags.automatewpcli if doc.meta.type == "guide"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
             {% endfor %}
-            {% for doc in data.docs_tags.migrateguided if doc.meta.type == "video"%}
+            {% for doc in data.docs_tags.automatewpcli if doc.meta.type == "video"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
             {% endfor %}
-            {% for doc in data.docs_tags.migrateguided %}
+            {% for doc in data.docs_tags.automatewpcli %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
             <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
             {% endif %}
@@ -90,15 +82,31 @@
             </ul>
           </div>
           <div class="subtopic-lists col-md-6">
-            <h4>Manual Migrations</h4>
+            <h4>Drush</h4>
             <ul class="topic-docs">
-            {% for doc in data.docs_tags.migratemanual if doc.meta.type == "guide"%}
+            {% for doc in data.docs_tags.automatedrush if doc.meta.type == "guide"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
             {% endfor %}
-            {% for doc in data.docs_tags.migratemanual if doc.meta.type == "video"%}
+            {% for doc in data.docs_tags.automatedrush if doc.meta.type == "video"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
             {% endfor %}
-            {% for doc in data.docs_tags.migratemanual %}
+            {% for doc in data.docs_tags.automatedrush %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="subtopic-lists col-md-6">
+            <h4>Terminus</h4>
+            <ul class="topic-docs">
+            {% for doc in data.docs_tags.automateterminus if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.automateterminus if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            {% endfor %}
+            {% for doc in data.docs_tags.automateterminus %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
             <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
             {% endif %}
@@ -108,22 +116,20 @@
         </div>
       </div>
       <div class="subtopic-lists col-md-6">
-        <h3>Unsorted/Orphan Docs (migrate) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
+        <h3>Unsorted/Orphan Docs (automatecli) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h3>
         <p class="topic-info__description">These need some plannings.</p>
         <ul class="topic-docs">
-          <ul class="topic-docs">
-            {% for doc in data.docs_tags.migrate if doc.meta.type == "guide"%}
-              <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
-            {% endfor %}
-            {% for doc in data.docs_tags.migrate if doc.meta.type == "video"%}
-              <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-            {% endfor %}
-            {% for doc in data.docs_tags.migrate %}
-              {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-                <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
+          {% for doc in data.docs_tags.automatecli if doc.meta.type == "guide"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.automatecli if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.automatecli %}
+            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+              <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>

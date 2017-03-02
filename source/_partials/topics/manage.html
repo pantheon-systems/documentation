@@ -1,0 +1,79 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-6 mb-20" style="margin-top:20px;">
+      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+    </div>
+    <div class="col-md-6">
+      <h2>Unsorted/Orphan Docs (manage) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
+      <p class="topic-info__description">These need some plannings.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.manage if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.manage if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.manage %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-20">
+      <h3>Edu and Edu+</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.edu if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.edu if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.edu %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 mb-20">
+      <h3>Agencies</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.agencies if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.agencies if doc.meta.type == "video"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.agencies %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-20">
+      <h3>Single-Site Management</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.singlesite if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.singlesite if doc.meta.type == "video"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.singlesite %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
