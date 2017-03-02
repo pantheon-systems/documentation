@@ -1,9 +1,9 @@
 ---
 title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
-tags: [golive, develop, domains]
+tags: [develop]
 contributors: [mmenavas, andrewmallis]
-categories: [golive, domains]
+categories: []
 ---
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
@@ -12,7 +12,8 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 <div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
-<p>You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</p></div>
+<p>You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</p>
+</div>
 
 ## Pantheon Articles on settings.php
 
@@ -69,7 +70,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.getpantheon.io";
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheonsite.io";
-    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";  
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";
 
     # Replace value with custom domain(s) added in the site Dashboard
     $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
@@ -99,7 +100,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
     // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
-      // Database.  
+      // Database.
       $db_url = 'mysql://username:password@localhost/databasename';
       $db_prefix = '';
     }
@@ -233,7 +234,7 @@ Pantheon automatically injects database credentials into the site environment; i
 #### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
 There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
-```   
+```
    // All Pantheon Environments.
    if (defined('PANTHEON_ENVIRONMENT')) {
      // Set your custom hash salt value.

@@ -1,8 +1,8 @@
 ---
 title: Updating Modules Through Drupal
 description: Learn how to update contributed Drupal modules through the administrative interface.
-tags: [getstarted, develop]
-categories: [getstarted]
+tags: [siteintegrations]
+categories: [drupal]
 ---
 Drupal has a very good, built-in system for updating contributed modules through the administrative interface.
 

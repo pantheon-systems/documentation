@@ -2,7 +2,7 @@
 title: Scope of Support
 description: Understand how Pantheon's support team can help you.
 tags: [getstarted, platform]
-categories: [getstarted]
+categories: []
 ---
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and review support features, visit [Getting Support](/docs/getting-support).
 

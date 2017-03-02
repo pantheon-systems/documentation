@@ -1,8 +1,8 @@
 ---
 title: Email on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
-tags: [platform]
-categories: [platform]
+tags: [siteintegrations]
+categories: []
 ---
 Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
 

@@ -1,8 +1,8 @@
 ---
 title: Migrating Sites to Pantheon: Preserve Existing Git History
 description: Learn how to preserve your Drupal or WordPress site's existing Git history when migrating to Pantheon.
-tags: [migrate]
-categories: [golive, migrate]
+tags: [migratemanual]
+categories: []
 ---
 Preserving your site's Git history requires migrating manually and importing the codebase via Git.
 

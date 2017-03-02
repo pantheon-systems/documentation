@@ -1,8 +1,8 @@
 ---
 title: Refreshing DNS Records on Your Local Machine
 description: Flush your DNS cache to clear and update the data on your Pantheon Drupal or WordPress site.
-tags: [develop, local]
-categories: [develop, local]
+tags: [localdev]
+categories: []
 ---
 DNS is the main naming system for the internet, allowing computers to exchange data over TCP/IP. It takes any domain name, such as "pantheon.io" and ties it to an IP address like 50.57.202.75. The numbers identify computers to each other, and the names are easier for humanoids to remember.  
 These numbers may change for many reasons. As a result, your laptop or PC may contain stale data. To fix this, flush your DNS cache, which will clear and begin to update the data.

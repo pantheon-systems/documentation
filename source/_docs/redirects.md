@@ -1,8 +1,8 @@
 ---
 title: Redirect Incoming Requests
 description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
-tags: [domains, migrate, golive]
-categories: [golive, domains]
+tags: [redirects]
+categories: []
 ---
 It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 <div class="alert alert-danger" role="alert">

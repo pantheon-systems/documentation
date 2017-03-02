@@ -1,8 +1,8 @@
 ---
 title: Adding HTTPS For Free With Cloudflare
 description: Add HTTPS and other security features to your Pantheon Drupal or WordPress site using Cloudflare's free DNS service.
-tags: [golive, automate]
-categories: [golive]
+tags: [domains]
+categories: []
 type: guide
 permalink: docs/guides/:basename/
 contributors:

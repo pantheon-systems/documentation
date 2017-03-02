@@ -2,7 +2,7 @@
 title: Organizations
 description: Detailed information on Pantheon organization types and the features available to them.
 tags: [manage]
-categories: [manage]
+categories: []
 ---
 
 Pantheon Organizations bring together users, sites, custom upstreams, and support; and provide administrators with the tools needed to effectively manage a large number of sites.

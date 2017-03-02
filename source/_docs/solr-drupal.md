@@ -1,8 +1,8 @@
 ---
 title: Enabling Solr with Drupal
 description: Detailed information on using Apache Solr with Drupal.
-tags: [develop]
-categories: [develop]
+tags: [siteintegrations]
+categories: [drupal]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 

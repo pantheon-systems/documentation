@@ -1,7 +1,7 @@
 ---
 title: Load and Performance Testing
 description: Learn how to monitor internal execution performance of your Pantheon Drupal or WordPress site.
-tags: [performance]
+tags: [status]
 categories: [performance]
 ---
 Load and performance tests are critical steps in going live procedures, as they help expose and identify potential performance killers. These tests provide insight for how a site will perform in the wild under peak traffic spikes.

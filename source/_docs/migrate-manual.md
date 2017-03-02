@@ -1,8 +1,8 @@
 ---
 title: Migrate Sites to Pantheon: Manual Method
 description: Learn how to manually migrate a Drupal or WordPress site to Pantheon
-tags: [migrate]
-categories: [golive, migrate]
+tags: [migratemanual]
+categories: []
 ---
 Manually migrate your site to Pantheon when any of the following apply:
 

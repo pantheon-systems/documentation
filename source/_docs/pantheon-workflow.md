@@ -1,8 +1,8 @@
 ---
 title: Use the Pantheon Workflow
 description: Understand the Pantheon workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
-tags: [getstarted]
-categories: [getstarted]
+tags: [getstarted, develop]
+categories: []
 ---
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).

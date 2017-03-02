@@ -2,7 +2,7 @@
 title: Get Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
 tags: [getstarted, platform]
-categories: [getstarted]
+categories: []
 ---
 
 ## Support Features and Response Times

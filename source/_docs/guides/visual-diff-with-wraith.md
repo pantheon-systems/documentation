@@ -1,8 +1,8 @@
 ---
 title: Using Wraith for Visual Regression Testing
 description: Learn how to use Wraith for visual regression testing with composite images.
-tags: [automate]
-categories: [automate]
+tags: [automatecli]
+categories: []
 type: guide
 permalink: docs/guides/:basename/
 contributors:

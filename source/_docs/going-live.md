@@ -1,8 +1,8 @@
 ---
 title: Going Live
 description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
-tags: [golive]
-categories: [golive]
+tags: [status]
+categories: []
 ---
 For clients with an Elite plan, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
 

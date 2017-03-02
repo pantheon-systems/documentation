@@ -1,8 +1,8 @@
 ---
 title: Migrate to Pantheon: WordPress Site Networks
 description: Learn how to import a WordPress Site Network into Pantheon.
-tags: [migrate]
-categories: [getstarted, migrate]
+tags: [migratemanual]
+categories: [wordpress]
 ---
 
 ## Requirements
@@ -20,58 +20,60 @@ Move blog-specific uploads directories located outside of `wp-content/uploads` i
 
 Import your existing code and commit history via Git. If you don’t have a Git version controlled codebase, the following will walk you through the initialization process.
 
-1. Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, run:
+1.  Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, run:
 
  ```bash
  git init
  git add .
  git commit -m "initial commit"
  ```
-2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
-3. Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+2.  From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
+3.  Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
  ```
 
-4. Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
+4.  Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git pull --no-rebase --squash -Xtheirs <ssh_url> master
- ```  
+ ```
 
- This will yield:  
+ This will yield:
  ```bash
- Squash commit -- not updating HEAD  
+ Squash commit -- not updating HEAD
  Automatic merge went well; stopped before committing as requested
  ```
  Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files. It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase.
 
- For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
+    For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
 
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
+    <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
 
-5. Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
+5.  Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git remote add pantheon <ssh_url>
  ```
 
-6. Run `git add` and `git commit` to prepare the Pantheon core merge for pushing to the repository:
+6.  Run `git add` and `git commit` to prepare the Pantheon core merge for pushing to the repository:
  ```bash
  git add -A
  git commit -m "Adding Pantheon core files"
  ```
-7. Push your newly merged codebase up to your Pantheon site repository:
+7.  Push your newly merged codebase up to your Pantheon site repository:
 
  ```bash
  git push pantheon master --force
  ```
- <div class="alert alert-info">
- <h4 class="info">Note</h4>
- <p>The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.</p>
- </div>
-8. Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p>The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.</p>
+    </div>
+
+8.  Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
 
 ## Files
 
@@ -106,9 +108,9 @@ done
 ```
 This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
-If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.  
+If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that supports SFTP, such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.
 
-## Database  
+## Database
 
 **Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
 
@@ -126,7 +128,7 @@ Your command will now look like:
  ```
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
-3. After you run the command, the .sql file is imported into your Pantheon Dev database.  
+3. After you run the command, the .sql file is imported into your Pantheon Dev database.
 
 You should now have all three of the major components of your site imported into Pantheon.
 

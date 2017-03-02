@@ -1,8 +1,8 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
 description: Use GitHib to collaborate with the team members on your Pantheon site.
-tags: [manage, develop]
-categories: [manage]
+tags: [git]
+categories: []
 type: guide
 permalink: docs/guides/:basename/
 contributors:

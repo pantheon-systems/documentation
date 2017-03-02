@@ -1,8 +1,8 @@
 ---
 title: Using Lockr to Secure and Manage API and Encryption Keys with WordPress and Drupal
 description: Detailed information on how to set up and use Lockr in your WordPress and Drupal site.
-tags: [automate]
-categories: [automate]
+tags: [siteintegrations]
+categories: []
 type: guide
 permalink: docs/guides/:basename/
 contributors:

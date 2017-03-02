@@ -1,8 +1,8 @@
 ---
 title: Platform Resources by Plan
 description: Get detailed information about platform resources for your Drupal or WordPress site.
-tags: [platform, troubleshoot]
-categories: [platform]
+tags: [infrastructure]
+categories: []
 ---
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
@@ -55,8 +55,8 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>1024</td>
       </tr>
     </tbody>
-  </table>
-  <tr> <p style="font-size:12px"> * All memory sizes shown in MB </p style>
+</table>
+<tr> <p style="font-size:12px"> * All memory sizes shown in MB</p style>
 
 ## Glossary
 
@@ -113,4 +113,4 @@ There are many "under the hood" configuration values not show here, but these ar
 No, your database and application container resources are not shared. They operate in their own Linux user space with their own memory.
 
 #### Are the specs the same for all three environments (Dev/Test/Live)?  
-Yes they have the same infrastructure; however, Business plans and above have multiple application containers, while Dev and Test environments have only one.
+Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.

@@ -1,8 +1,8 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
-tags: [performance, cache, automate]
-categories: [performance, cache]
+tags: [siteintegrations, cacheapp]
+categories: [drupal]
 ---
 CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 
