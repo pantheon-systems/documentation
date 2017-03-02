@@ -19,7 +19,7 @@ and [manage configurations](/docs/pantheon-workflow/#configuration-management) a
 Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend using the `--single-transaction` flag, which will use transactions to get a point-in-time snapshot without locking the DB. However, only the InnoDB database engine supports transactions. On MyISAM, the table needs to be locked. On small DBs this is not an issue, but could be for larger DBs. We also use the `--quick option`, which reduces the time it would take for large tables. For more information, see [Converting MySQL Tables From MyISAM to InnoDB](/docs/myisam-to-innodb/) and [Run MySQL Dump Without Locking Tables](http://stackoverflow.com/questions/104612/run-mysqldump-without-locking-tables).
 
 ## Wipe Database and Files
-Use this tool if you need to completely wipe your database and files for a single environment. Wiping completely resets the database and files and you will lose all content for that specific environment. For example, if you wipe the Dev environment, Test and Live are not affected. You will then need to import the database and files from a backup, clone them from another environment, or re-install Drupal or WordPress for that environment.
+Use this tool if you need to completely wipe your database and files for a single environment. Wiping completely resets the database and files, and you will lose all content for that specific environment. For example, if you wipe the Dev environment, Test and Live are not affected. You will then need to import the database and files from a backup, clone them from another environment, or re-install Drupal or WordPress for that environment.
 
 Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 
@@ -40,7 +40,7 @@ Additional
 PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;pantheon.variable&#039; doesn&#039;t exist: SELECT 1 AS expression FROM {variable} variable WHERE ( (name = :db_condition_placeholder_0) ); Array ( [:db_condition_placeholder_0] =&gt; drupal_css_cache_files ) in variable_set() (line 1265 of /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc).
 ```
 
-You can fix this issue by wrapping the configuration logic within a conditional statement:
+You can fix this issue by wrapping the configuration logic within a conditional statement in `settings.php`:
 
 ```php
 if (!function_exists('install_drupal')) {
