@@ -47,12 +47,13 @@ Feeling comfortable with WP-CLI? Here are a [few of many commands](http://wp-cli
 * `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([docs](http://wp-cli.org/commands/media/regenerate/)).
 * `wp rewrite flush` - Flush rewrite rules to ensure newly registered rules are stored in the database ([docs](http://wp-cli.org/commands/rewrite/flush/)).
 
-### Extending WP-CLI With Subcommands
+## Extending WP-CLI With Subcommands
 
 WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy) to solve your thorny problems with WP-CLI.
 
 
 ## Troubleshooting
+
 ### Terminus WP-CLI Silent Failure
 The following silent failure occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to see if WordPress is running via the command line:
 
