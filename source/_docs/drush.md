@@ -97,7 +97,8 @@ Project media contains 3 modules: media_internet, file_entity, media.
 <div class="alert alert-danger" role="alert">
 <h3 class="info">Warning</h3>
 <p><strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/upstream-updates">Core Updates</a>.
-</p></div>
+</p>
+</div>
 
 ## Use Registry Rebuild on Pantheon
 
