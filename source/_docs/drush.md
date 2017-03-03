@@ -97,7 +97,8 @@ Project media contains 3 modules: media_internet, file_entity, media.
 <div class="alert alert-danger" role="alert">
 <h3 class="info">Warning</h3>
 <p><strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/upstream-updates">Core Updates</a>.
-</p></div>
+</p>
+</div>
 
 ## Use Registry Rebuild on Pantheon
 
@@ -227,6 +228,32 @@ drush @pantheon.SITENAME.dev up --no-core
 ## Troubleshooting
 
 If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](http://drupal.stackexchange.com/questions/tagged/drush)
+
+### Terminus Drush Silent Failure
+The following silent failure occurs when executing `terminus remote:drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
+
+```bash
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
+
+Redirects kill the PHP process before Drush is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+
+```php
+// Require HTTPS, www.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
+      !isset($_SERVER['HTTP_X_SSL']) ||
+      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+```
 
 ### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
