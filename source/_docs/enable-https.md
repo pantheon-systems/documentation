@@ -104,7 +104,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
 2. Select **HTTPS**.
 3. Next to **Environment HTTPS:**, click **Enabled**.
-4. Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the header footer, click **Add Cert**. Your certificate should like like this: 
+4. Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
 
 ```bash
 -----BEGIN CERTIFICATE-----
