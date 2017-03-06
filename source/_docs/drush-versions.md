@@ -28,7 +28,7 @@ Now your site’s Drush version is managed via `pantheon.yml`, so it’s in vers
 Available Drush versions are 5, 7, and 8.
 
 ### Troubleshooting
-- Q: Updating the drush version in pantheon.yml does not result in the correct version being used.
+- Q: Updating the drush version in pantheon.yml does not result in the updated version being used.
 - A: Look for a policy.drush.inc file in your ~/.drush folder and comment out the code or delete the file. This old way of setting the drush version can interfere with the settings in pantheon.yml.
 
 ## See Also
