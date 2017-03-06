@@ -87,7 +87,7 @@ remote: Valid versions are: 1
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Please refer to the examples above for exact syntax.
 
 ### Deploying Configuration Changes to Multidev
-Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. It is necessary to create the multidev first, and then modify panthon.yml. As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. It is necessary to create the multidev first, and then modify pantheon.yml. As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```nohighlight
 remote:
