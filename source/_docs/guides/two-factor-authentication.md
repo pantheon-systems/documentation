@@ -17,16 +17,16 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 ## Set Up Two-Factor Authentication With WordPress (Single Site)
 
-For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. One of the most popular is the [Clef Two-Factor Authentication](https://wordpress.org/plugins/wpclef/) plugin, which makes it easy to set up two-factor authentication on your WordPress site.
+For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. A popular plugin is [Duo Two-Factor Authentication] (https://wordpress.org/plugins/duo-wordpress/), which makes it easy to set up two-factor authentication on your WordPress site.
 
-1. Install and activate the [Clef Two-Factor Authentication](https://wordpress.org/plugins/wpclef/) plugin on your WordPress site.
-2. Download and set up the [Clef mobile app](https://getclef.com/apps/) on either iOS or Android.
-3. Use the app on your mobile phone to scan the “wave” provided by Clef to connect your mobile phone to the website.
-![TFA Wave Setup](/source/docs/assets/images/tfa-wave-setup.png)
-4. Configure the [Clef security settings](http://support.getclef.com/article/60-recommended-password-settings-for-clef-wordpress-plugin) to **Disable passwords for Clef users** and create a private **Override URL**, which allows users to log in with their passwords if needed.
-5. Log in to your WordPress site by using the Clef mobile app to scan the “wave” provided on the WordPress login form.
-![TFA Wave Login](/source/docs/assets/images/tfa-wave-login.png)
-
+1. [Sign up for a Duo account.](https://signup.duo.com/)
+2. Log in to the [Duo Admin Panel](https://admin.duosecurity.com/) and navigate to **Applications**.
+3. Click **Protect an Application** and locate **WordPress** in the applications list. Click **Protect this Application** to get your **integration key**, **secret key**, and **API hostname**.
+4. Install and activate the [Duo Two-Factor Authentication] (https://wordpress.org/plugins/duo-wordpress/) plugin on your WordPress site.
+5. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com. 
+![TFA Duo Configuration](/source/docs/assets/images/settings2_2x.png)
+6. Open a new browser (or [incognito window](http://www.google.com/support/chrome/bin/answer.py?answer=95464)) and try to log in to your WordPress account at wp-login.php. You should be prompted to set up your Duo two-factor authentication. Complete the enrollment process.
+![TFA Duo Login Screen](/source/docs/assets/images/start-setup_2x.png)
 
 ## Set Up Two-Factor Authentication With WordPress (Organization)
 
