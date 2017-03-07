@@ -101,25 +101,26 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 
 ## Load Certificate into Pantheon
 
-1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
-2. Select **HTTPS**.
-3. Next to **Environment HTTPS:**, click **Enabled**.
-4. Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
+1.  From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
+2.  Select **HTTPS**.
+3.  Next to **Environment HTTPS:**, click **Enabled**.
+4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
 
-```bash
------BEGIN CERTIFICATE-----
-MIID8TCCA1oCAQAwgZMxHjAcBgNVBAMTFXd3dy50c2FjY2Vzc29yaWVzLmNvbTEe MBwGA1UECxMVd3d3LnRzYWNjZXNzb3JpZXMuY29tMR4wHAYDVQQKExV3d3cudHNh Y2Nlc3Nvcmllcy5jb20xETAPBgNVBAcTCExpdGhvbmlhMRAwDgYDVQQIEwdHZW9y Z2lhMQwwCgYDVQQGEwNVU0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALR+ Am6wBoa+Xjdwd6TrmsnHmYysO63Z9o+NBat/Aw3JKn7DIoKexgTsI32Phu9EQlUs oIZMRSxcrhlSronaM526XupaD2XfDohWEBi1tYFhLuZq/b/govfDpUiKFPPTfdW9 gW1WbNsRMuJohG4gGzNFKoXrPk3wGeImlR88m2bPAgMBAAGgggIbMBoGCisGAQQB gjcNAgMxDBYKNS4yLjM3OTAuMjBdBgkrBgEEAYI3FRQxUDBOAgEBDCRNQ0FQU1dF Qi5tb25zdGVyY29tbWVyY2Utc2VydmVycy5jb20MGUFEMTgxNzBcTUNBTExQVVJQ T1NFQURNSU4MCHczd3AuZXhlMIGbBgkqhkiG9w0BCQ4xgY0wgYowDgYDVR0PAQH/ BAQDAgTwMEQGCSqGSIb3DQEJDwQ3MDUwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3 DQMEAgIAgDAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNVHQ4EFgQUFtQue0vYw5c+ I2jqwWfRUmC4DUwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwgf8GCisGAQQBgjcNAgIx gfAwge0CAQEeXABNAGkAYwByAG8AcwBvAGYAdAAgAEUAbgBoAGEAbgBjAGUAZAAg AEMAcgB5AHAAdABvAGcAcgBhAHAAaABpAGMAIABQAHIAbwB2AGkAZABlAHIAIAB2 ggTAA8sJ5roKInve8uHNihohjvIgfLqBnXTZnDomyU7aXVLJHa4C2h2IiXReNNTC hWqcgTOK7g/DwMo5m/rBd/LIr1qYtiAwDkg2ZWQSLOflOk6NG1JCMbbFpQIozNtC
-kKlrDGw=
------END CERTIFICATE-----
-```
 
-After submitting your certificates, you'll see a confirmation message:
+        -----BEGIN CERTIFICATE-----
+        MIID8TCCA1oCAQAwgZMxHjAcBgNVBAMTFXd3dy50c2FjY2Vzc29yaWVzLmNvbTEe MBwGA1UECxMVd3d3LnRzYWNjZXNzb3JpZXMuY29tMR4wHAYDVQQKExV3d3cudHNh Y2Nlc3Nvcmllcy5jb20xETAPBgNVBAcTCExpdGhvbmlhMRAwDgYDVQQIEwdHZW9y Z2lhMQwwCgYDVQQGEwNVU0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALR+ Am6wBoa+Xjdwd6TrmsnHmYysO63Z9o+NBat/Aw3JKn7DIoKexgTsI32Phu9EQlUs oIZMRSxcrhlSronaM526XupaD2XfDohWEBi1tYFhLuZq/b/govfDpUiKFPPTfdW9 gW1WbNsRMuJohG4gGzNFKoXrPk3wGeImlR88m2bPAgMBAAGgggIbMBoGCisGAQQB gjcNAgMxDBYKNS4yLjM3OTAuMjBdBgkrBgEEAYI3FRQxUDBOAgEBDCRNQ0FQU1dF Qi5tb25zdGVyY29tbWVyY2Utc2VydmVycy5jb20MGUFEMTgxNzBcTUNBTExQVVJQ T1NFQURNSU4MCHczd3AuZXhlMIGbBgkqhkiG9w0BCQ4xgY0wgYowDgYDVR0PAQH/ BAQDAgTwMEQGCSqGSIb3DQEJDwQ3MDUwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3 DQMEAgIAgDAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNVHQ4EFgQUFtQue0vYw5c+ I2jqwWfRUmC4DUwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwgf8GCisGAQQBgjcNAgIx gfAwge0CAQEeXABNAGkAYwByAG8AcwBvAGYAdAAgAEUAbgBoAGEAbgBjAGUAZAAg AEMAcgB5AHAAdABvAGcAcgBhAHAAaABpAGMAIABQAHIAbwB2AGkAZABlAHIAIAB2 ggTAA8sJ5roKInve8uHNihohjvIgfLqBnXTZnDomyU7aXVLJHa4C2h2IiXReNNTC hWqcgTOK7g/DwMo5m/rBd/LIr1qYtiAwDkg2ZWQSLOflOk6NG1JCMbbFpQIozNtC
+        kKlrDGw=
+        -----END CERTIFICATE-----
 
-"HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
 
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</p></div>
+    After submitting your certificates, you'll see a confirmation message:
+
+    "HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
+
+    <div class="alert alert-info" role="alert">
+    <h3 class="info">Note</h3>
+    <p>It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</p>
+    </div>
 
 ## DNS
 
