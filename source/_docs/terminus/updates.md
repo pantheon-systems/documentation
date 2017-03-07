@@ -10,10 +10,10 @@ permalink: docs/terminus/:basename/
   <h2> Update to the Current Release: {[{releases[0].name}]}</h2>
   <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update">Copy</button>
-    <figure><pre id="terminus-update"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+    <figure><pre id="terminus-update"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update</code></pre></figure>
   </div>
   <h2>Changelog</h2>
-  <div ng-repeat="release in releases| filter: greaterThan('id', 4908925)">
+  <div ng-repeat="release in releases| filter: greaterThan('id', 5224487)">
     <h2>{[{release.name}]}</h2>
     <md ng-model="release.body"></md>
     <hr>

@@ -7,7 +7,7 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
-Terminus is available for Mac OS X, Linux, and Windows (Beta).
+Terminus is available for Mac OS X, Linux, and Windows.
 ## Requirements
 
 * PHP Version 5.5.9 or later (must include the [php-xml extension](http://php.net/manual/en/dom.setup.php))
