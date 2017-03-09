@@ -17,7 +17,7 @@ Terminus is available for Mac OS X, Linux, and Windows.
 * Windows 10 Only: [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
 ## Install
-<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and install there:</p>
+<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> diretory in your <code>$HOME</code> and install there:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
