@@ -15,12 +15,12 @@ permalink: docs/terminus/:basename/
   </div>
   <h2>Troubleshooting</h2>
   <h3>Nothing to install or update</h3>
-  <p class="instruction">If the update command above returns output indicating that no updates were found, delete the existing Terminus installation and re-run the install command:</p>
+  <p class="instruction">If the update command above returns output indicating that no updates were found, delete the existing Terminus (e.g. `$HOME/terminus`) and re-run the install command:</p>
   <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update-fail">Copy</button>
-    <figure><pre id="terminus-update-fail"><code class="command bash" data-lang="bash">rm -rf ~/terminus
-  mkdir ~/terminus
-  cd ~/terminus
+    <figure><pre id="terminus-update-fail"><code class="command bash" data-lang="bash">rm -rf $HOME/terminus
+  mkdir $HOME/terminus
+  cd $HOME/terminus
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
   </div>
   <h2>Changelog</h2>
