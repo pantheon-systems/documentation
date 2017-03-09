@@ -6,7 +6,7 @@ videoid: vz8psmw3lv
 permalink:  docs/videos/:basename/
 tags: [kalabox]
 type: video
-categories: [develop, local]
+categories: []
 layout: video
 ---
 We recommend [Kalabox](/docs/kalabox) as an easy-to-use local development solution. Let’s explore why, install Kalabox, and configure a basic workflow.

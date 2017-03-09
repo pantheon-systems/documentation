@@ -1,8 +1,8 @@
 ---
 title: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
-tags: [develop]
-categories: [develop]
+tags: [addons]
+categories: [wordpress]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Personal plan can use Solr.
 

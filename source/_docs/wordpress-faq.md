@@ -1,8 +1,8 @@
 ---
 title: WordPress FAQs
 description: Answers to frequently asked questions about WordPress on Pantheon.
-tags: [develop]
-categories: [develop]
+tags: [debug]
+categories: [wordpress]
 ---
 ## Getting Started
 

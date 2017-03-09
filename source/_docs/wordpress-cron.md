@@ -1,8 +1,8 @@
 ---
 title: Cron for WordPress
 description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress site.
-tags: [develop]
-categories: [develop]
+tags: [variables]
+categories: [wordpress]
 keywords: wordpress, cron, wp-cron
 ---
 ## WP-Cron Overview
@@ -24,7 +24,7 @@ Low traffic WordPress sites may experience skipped tasks when this feature is tr
 If your WordPress powered site is high traffic, you may run into problems with WP-Cron. The main issues that come up are **race conditions** and **long running processes**.
 
 - **Race condition**: When more than one user visits your site and triggers WP-Cron to execute the same task. WP-Cron works hard to eliminate race conditions, but they can still happen, especially on high traffic sites.
-- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between tasks, then you can end up with more than one copy of `wp-cron.php` executing.  
+- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between tasks, then you can end up with more than one copy of `wp-cron.php` executing.
 
 Both of these issues are addressed within WP-Cron's internal [ locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) and are not common problems; however, they can still occasionally happen.
 

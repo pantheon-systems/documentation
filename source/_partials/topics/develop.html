@@ -75,6 +75,23 @@
         {% endfor %}
       </ul>
     </div>
+    <div class="col-md-6 mb-20">
+      <h3>Environments and Variables</h3>
+      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.variables if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.variables if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.variables %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-12 subtopic-container mb-70">

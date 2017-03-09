@@ -1,8 +1,8 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-tags: [manage]
-categories: [manage]
+tags: [manage, security]
+categories: []
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/).
 
@@ -26,26 +26,27 @@ Refer to your IdP for general SAML 2.0 setup instructions.
 
 You will need to enter the following:
 
-1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Example-Org-Name-SSO`
+1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Example-Org-Name-SSO`
 
-2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
+2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<ul>
-<li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.</li>
-<li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).</li>
-<li> The max length for a connection name is 35 characters, including the appended 'SSO'.</li></ul></div>
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <ul>
+    <li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.</li>
+    <li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).</li>
+    <li> The max length for a connection name is 35 characters, including the appended 'SSO'.</li></ul>
+    </div>
 
-3. **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), the attribute is `email`, not `mail`.
+3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), the attribute is `email`, not `mail`.
 
-4. **Additional configuration details:**
-  * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
-  * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
-  * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
-  * The NameID format: `unspecified`
-  * The SAML assertion, and the SAML response can be individually or simultaneously signed.
-  * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
+4.  **Additional configuration details:**
+    * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
+    * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
+    * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
+    * The NameID format: `unspecified`
+    * The SAML assertion, and the SAML response can be individually or simultaneously signed.
+    * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
 ## Enable SAML on Pantheon
 

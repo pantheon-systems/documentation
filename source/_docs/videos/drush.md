@@ -6,7 +6,7 @@ videoid: w0iyypcydc
 permalink:  docs/videos/:basename/
 tags: [devdrush]
 type: video
-categories: [develop, cli]
+categories: [drupal]
 layout: video
 ---
 [Drush](http://www.drush.org/en/master/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.

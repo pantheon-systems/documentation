@@ -1,8 +1,8 @@
 ---
 title: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site.
-tags: [performance]
-categories: [performance]
+tags: [status]
+categories: [wordpress]
 ---
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.
 
@@ -34,7 +34,7 @@ This check verifies that Cron is enabled and what jobs are scheduled. It is enab
 
 This displays database stats such as the number of rows in the options table, options being auto-loaded, tables using InnoDB storage engine (suggests a query to run if not), transients, and expired transients.
 
-####What issues will I experience if I don't use InnoDB?  
+####What issues will I experience if I don't use InnoDB?
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
 To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/docs/myisam-to-innodb).
 
@@ -54,8 +54,8 @@ Cannot redeclare class WP_Object_Cache in
 ###Plugins
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.
 
-**Green:** All of your plugins are up-to-date  
-**Yellow:** Highlighted plugins need to be updated  
+**Green:** All of your plugins are up-to-date
+**Yellow:** Highlighted plugins need to be updated
 **Red:** Displays all vulnerabilities and unsupported plugins
 -->
 

@@ -1,8 +1,8 @@
 ---
 title: WordPress Configuration Management (WP-CFM)
 description: Learn how to install and use the WordPress Configuration Management plugin on your Pantheon WordPress site.
-tags: [develop, sftp, git]
-categories: [develop, git]
+tags: [addons]
+categories: [wordpress]
 ---
 
 Version-controlling site configuration within the codebase is a best practice. Since WordPress site configuration is stored in the database alongside content, developer workflows must account for migrating configuration from development and testing environments into production without affecting the content.
@@ -85,7 +85,7 @@ Deploy the `.json` file from Dev to Test.
 
  ```
  terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy code for <bundle_name> configuration"
- ```  
+ ```
 
 2. Import configuration from the codebase into the database by clicking **Pull** for your bundle(s) within the Test environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
@@ -99,7 +99,7 @@ Deploy the `.json` file from Dev to Test.
 
  ```
  terminus env:deploy <site>.live --cc --updatedb --note="Deploy code for <bundle_name> configuration"
- ```  
+ ```
 
 2. Import configuration from the codebase into the database by clicking **Pull** within the Live environment's WordPress Dashboard (`/wp-admin/options-general.php?page=wpcfm`) or with Terminus:
 
