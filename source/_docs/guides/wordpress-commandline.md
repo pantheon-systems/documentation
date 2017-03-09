@@ -62,9 +62,9 @@ Once you are comfortable with Terminus, you may find it faster to use than the b
 
 In this command, you will create a machine name as well as a label for your site. I used 'tessa-site-wp' for my machine name, 'Terminus Demo Site' for my label and 'WordPress' is indiciating the type of site I want to install.
 
-![Pantheon Dashboard: Create Site](/source/docs/assets/images/wordpress-commandline-create-site.png)
-
 `terminus site:create tessa-site-wp "Terminus Demo Site" WordPress`
+
+![Pantheon Dashboard: Create Site](/source/docs/assets/images/wordpress-commandline-create-site.png)
 
 NOTE: If you are copy and pasting these examples, you will need to replace `tessa-site-wp` in each command.
 
@@ -125,13 +125,13 @@ Let's get our connection info again, using our variable.
 
 ## Let's Write Some Code
 
-I use a few plugins on every site, but for this example we will install Contact Form 7.
+I use a few plugins on every site, but for this example we will install Contact Form 7. The following command is going to use WP-CLI to install a plugin from the WordPress plugin repository and then activate it automatically.
 
 `terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate`
 
 ![Pantheon Site Dashboard: Install CF7](/source/docs/assets/images/wordpress-commandline-install-cf7.png)
 
-If you have the Site Dashboard open, you'll see the 78 files with changes ready to commit in a yellow box. You can expand that to see which files changed and commit through the UI, or commit these changes with the following commands.
+If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can expand that to see which files changed and commit through the GUI, or commit these changes with the following commands.
 
 Check to see what has changed:
 
