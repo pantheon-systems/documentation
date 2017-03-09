@@ -133,6 +133,34 @@ You will also need to make sure your src directory and composer file reflect the
 ```
 Remember to change `my-username` and `Pantheon` in the above to your vendor name.
 
+### External Dependencies
+Starting with Terminus version 1.1.0, it is possible for plugins to depend on external libraries. This is done by adding your plugin requirements to the `require` section of your `composer.json` file, as usual. You should also update your plugin's Terminus `compatible-version` entry to `^1.1`, so that older versions of Terminus will not attempt to use it. If your plugin can still function without its external classes, then you may keep the `compatible-version` at `^1`.
+
+Update the `composer.json` file with a `require` section that lists all of the external projects you need, along with their version constraints. Your composer file should now look like this:
+
+```
+{
+    "name": "my-username/terminus-hello-world",
+    "description": "A Hello, World Terminus command",
+    "type": "terminus-plugin",
+    "autoload": {
+        "psr-4": { "Pantheon\\TerminusHello\\": "src" }
+    },
+    "require": {
+        "organization/project-name": "^1"
+    },
+    "extra": {
+        "terminus": {
+            "compatible-version": "^1.1"
+        }
+    }
+}
+```
+<div class="alert alert-info">
+<h3 class="info">Note</h3>
+<p>In order to avoid conflicts between the dependencies of different plugins, Terminus does not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor.</p>
+</div>
+
 ## Coding Standards
 While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source licence and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:
 
