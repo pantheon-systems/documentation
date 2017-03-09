@@ -8,6 +8,7 @@ permalink: docs/terminus/:basename/
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
   <h2> Update to the Current Release: {[{releases[0].name}]}</h2>
+  <p class="instruction">Navigate to the directory where Terminus was originally installed, then run:</p>
   <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update">Copy</button>
     <figure><pre id="terminus-update"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update</code></pre></figure>
