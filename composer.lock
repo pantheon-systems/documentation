@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c98dfb8619896e87addc6bccb75da055",
+    "content-hash": "b5327f3b2bb1d588f61fb38981216b55",
     "packages": [],
     "packages-dev": [
         {
@@ -2446,16 +2446,16 @@
         },
         {
             "name": "pantheon-systems/terminus",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/terminus.git",
-                "reference": "719a70bd4d2bd71bfd381586531eeb946f6a0a3d"
+                "reference": "e3b2deca0d1aed3725e1453f82ef355849b5a56f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/719a70bd4d2bd71bfd381586531eeb946f6a0a3d",
-                "reference": "719a70bd4d2bd71bfd381586531eeb946f6a0a3d",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/e3b2deca0d1aed3725e1453f82ef355849b5a56f",
+                "reference": "e3b2deca0d1aed3725e1453f82ef355849b5a56f",
                 "shasum": ""
             },
             "require": {
@@ -2477,6 +2477,9 @@
                 "sebastian/phpcpd": "^2.0",
                 "squizlabs/php_codesniffer": "^2.7"
             },
+            "bin": [
+                "bin/terminus"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2501,7 +2504,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2017-03-09T20:08:23+00:00"
+            "time": "2017-03-09T22:35:48+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
