@@ -16,7 +16,7 @@ Many developers feel more at home using the command line than they do using a GU
 
 Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
 
-WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site using WP-CLI and Pantheon's own CLI, called Terminus.
+WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site from the command line using Pantheon's own CLI, called Terminus, which allows you to call WP-CLI remotely without using a local installation.
 
 ## Before You Begin
 
@@ -26,106 +26,96 @@ Be sure that you:
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
-## Installing and authenticating with Terminus
+## Install and Authenticate Terminus
+1. Run the following commands to install Terminus within the `$HOME/terminus` directory:
 
-The most reliable way to install Terminus is with our dedicated installer:
+  ```
+  mkdir $HOME/terminus
+  cd $HOME/terminus
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+  ```
 
-`curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install`
+2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
-Once Terminus is installed, you can sign in with a [machine token generated in the Dashboard](https://dashboard.pantheon.io/machine-token/create).
+  ```
+  terminus auth:login --machine-token=‹machine-token›
+  ```
 
-`terminus auth:login --machine-token=‹machine-token›`
+  For details, see [Terminus Manual: Install](https://pantheon.io/docs/terminus/install/).
 
-If you have trouble with these steps, [see our full installation documentation](https://pantheon.io/docs/terminus/install/).
+3. Once installed, test it using the following command:
 
-Once installed, test it using the following command:
+  ```
+  terminus art
+  ```
 
-`terminus art`
+  If you see some sweet artwork, then it was installed successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
 
-![Patheon Terminus Artwork](/source/docs/assets/images/wordpress-commandline-art.png)
+Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have. For more information about Terminus itself, see our [Terminus Manual](https://pantheon.io/docs/terminus/).
 
-If you see some sweet artwork, then it was installed successfully!
+## Create Site and Initialize Environments
 
-#### Site List
+1. Replace `tesa-site-wp` with desired site name and `"Terminus Demo Site"` with desired site label within the following command then use it to create a new WordPress site:
 
-To start, let's take a look at a list of all your sites.
+  ```
+  terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
+  ```
 
-`terminus site:list`
+  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organiztion name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
 
-![Pantheon Dashboard Site List View](/source/docs/assets/images/wordpress-commandline-site-list.png)
+2. Open your new Site Dashboard in a browser using the following command (replace `tessa-site-wp`):
 
-Once you are comfortable with Terminus, you may find it faster to use than the browser. Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have. For more information about Terminus itself, see our [Terminus Manual](https://pantheon.io/docs/terminus/).
+ ```
+ terminus dashboard:view tessa-site-wp
+ ```
 
-## Create Site - Dev, Test & Live Environments
+ Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard. Cool huh?
 
-#### Create Your WordPress Site
+3. Create the Test and Live environments using the following commands (replace `tesa-site-wp`):
 
-In this command, you will create a machine name as well as a label for your site. I used 'tessa-site-wp' for my machine name, 'Terminus Demo Site' for my label and 'WordPress' is indiciating the type of site I want to install.
+  ```
+  terminus env:deploy tessa-site-wp.test --note="Initialize the Test environment"
+  terminus env:deploy tessa-site-wp.live --note="Initialize the Live environment"
+  ```
 
-`terminus site:create tessa-site-wp "Terminus Demo Site" WordPress`
+  You can now see deployments within each environment on the Site Dashboard.
 
-![Pantheon Dashboard: Create Site](/source/docs/assets/images/wordpress-commandline-create-site.png)
+## Install WordPress and Clone the Database
 
-NOTE: If you are copy and pasting these examples, you will need to replace `tessa-site-wp` in each command.
+1. Use the [wp-cli core install](http://wp-cli.org/commands/core/install/) command to install WordPress:
 
-![Pantheon Dashboard: Choose Site Type](/source/docs/assets/images/wordpress-commandline-create-site-upstream.png)
+  ```
+  terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com -yes
+  ```
 
-#### Adding your site to an organization
+2. Now that WordPress has been installed, clone the database from Dev to Test:
 
-There is an additional setting for assigning the Organization ID `--org` for your site. To get your organization's ID, run `terminus org:list`.
+  ```
+  terminus env:clone-content --db-only tess-site-wp.dev test
+  ```
 
-To add your site to an organization after creating your site, replace <site> and <orgid> and run the following command:
+## Export Site Name as Variable
+1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands (replace `tessa-site-wp`):
 
-`terminus site:org:add <site> <orgid>`
+  ```
+  export TERMINUS_SITE=tessa-site-wp
+  ```
 
-#### Opening your site dashboard in browser
+  This is basically stating that anytime we type `$TERMINUS_SITE` it's the same as typing `tessa-site-wp`.
 
-In case you want to see what you are doing in the site dashboard, you can obtain a link in command line to your site dashboard. Keep this window open while you are completing these commands, you will be able to see the changes you are making in Terminus almost immediately in your dashboard. Cool huh?
+2. We can test that this worked by echo-ing our variable:
 
-`terminus dashboard:view tessa-site-wp --print`
+  ```
+  echo $TERMINUS_SITE
+  ```
 
-OR you can have your computer open your browser for you to your site dashboard:
+  Since we have created this variable, you can now copy/paste the remainder of these commands without replacing the site name, as the remaining commands include the variable we just created instead.
 
-`terminus dashboard:view tessa-site-wp`
+4. Let's get our connection information from the Dev environment, using our variable:
 
-![Pantheon Dashboard: Site Dashboard](/source/docs/assets/images/wordpress-commandline-site-dashboard.png)
-
-#### Connection information
-
-In your browser dashboard you can easily get connection information. Let's grab our connection info for your new site.
-
-`terminus connection:info tessa-site-wp.dev`
-
-![Pantheon Site Dashboard: Connection Info](/source/docs/assets/images/wordpress-commandline-connection-info.png)
-
-## Install WordPress
-
-It's time to actually install WordPress now! This step you will want to understand the [wp-cli core install](http://wp-cli.org/commands/core/install/) command:
-
-`terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com -yes`
-
-![Pantheon Site Dashboard: Install WordPress, Choose Language](/source/docs/assets/images/wordpress-commandline-wp-lang-install.png)
-
-![Pantheon Site Dashboard: Install WordPress](/source/docs/assets/images/wordpress-commandline-wp-install.png)
-
-Clone the WordPress freshly installed DB to Test
-
-`terminus env:clone-content --db-only $TERMINUS_SITE.dev test`
-
-#### Using a variable for the site name
-Instead of having to type all of this out, let's change our site name to a variable so we can copy/paste the remainder of our commands.
-
-`export TERMINUS_SITE=tessa-site-wp`
-
-This is basically stating that anytime we type $TERMINUS_SITE it's the same as typing tessa-site-wp. We can test that this worked by echo-ing our variable.
-
-`echo $TERMINUS_SITE`
-
-Since we have created this variable, you can now copy/paste the remainder of these commands without replacing the site name, as the remaining commands include the variable we just created instead.
-
-Let's get our connection info again, using our variable.
-
-`terminus connection:info $TERMINUS_SITE.dev`
+  ```
+  terminus connection:info $TERMINUS_SITE.dev
+  ```
 
 ## Let's Write Some Code
 
