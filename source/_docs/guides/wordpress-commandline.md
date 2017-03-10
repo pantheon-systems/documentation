@@ -108,6 +108,10 @@ It's time to actually install WordPress now! This step you will want to understa
 
 ![Pantheon Site Dashboard: Install WordPress](/source/docs/assets/images/wordpress-commandline-wp-install.png)
 
+Clone the WordPress freshly installed DB to Test
+
+`terminus env:clone-content --db-only $TERMINUS_SITE.dev test`
+
 #### Using a variable for the site name
 Instead of having to type all of this out, let's change our site name to a variable so we can copy/paste the remainder of our commands.
 
