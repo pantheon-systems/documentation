@@ -71,28 +71,29 @@ Terminus also opens the door to writing scripts that combine multiple Terminus c
 
  Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard. Cool huh?
 
-3. Create the Test and Live environments using the following commands (replace `tesa-site-wp`):
+3. Create the Test environment using the following command (replace `tesa-site-wp`):
 
   ```
   terminus env:deploy tessa-site-wp.test --note="Initialize the Test environment"
-  terminus env:deploy tessa-site-wp.live --note="Initialize the Live environment"
   ```
 
-  You can now see deployments within each environment on the Site Dashboard.
-
-## Install WordPress and Clone the Database
-
-1. Use the [wp-cli core install](http://wp-cli.org/commands/core/install/) command to install WordPress:
+4. Use the [wp-cli core install](http://wp-cli.org/commands/core/install/) command to install WordPress:
 
   ```
   terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com -yes
   ```
 
-2. Now that WordPress has been installed, clone the database from Dev to Test:
+5. Now that WordPress has been installed, clone the database from Dev to Test:
 
   ```
   terminus env:clone-content --db-only tess-site-wp.dev test
   ```
+
+6. Create the Live environment using the following command (replace `tesa-site-wp`):
+
+    ```
+    terminus env:deploy tessa-site-wp.live --note="Initialize the Live environment"
+    ```
 
 ## Export Site Name as Variable
 1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands (replace `tessa-site-wp`):
