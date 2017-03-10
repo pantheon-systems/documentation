@@ -28,7 +28,7 @@ The following articles include techniques and configurations for `settings.php` 
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
 ### Drupal 8
-Configure environment-specific settings within the `settings.local.php` file, which is `.gitignored`. Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
     ​// Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
@@ -52,9 +52,9 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
-Drupal 8 sites have reportedly solved local development errors by adding the following within `settings.local.php` :
+Drupal 8 will not run locally without a hash salt, so make sure to set one in `settings.local.php` :
 ```
-$settings['hash_salt'] = '$HASH_SALT';"
+$settings['hash_salt'] = '$HASH_SALT';
 ```
 
 ### Trusted Host Setting
