@@ -1,94 +1,76 @@
 ---
 title: Early Access: Free HTTPS
 earlyaccess: true
-description: Upgrade to Free HTTPS on the Pantheon Global Edge.
+description: Upgrade to Free HTTPS
 ---
-Upgrade eligible sites to the new Pantheon Global Edge for access to free HTTPS across all domains and environments. This service allows for automatic certificate provisioning and renewal for all domains routed to any Pantheon environment using the recommended DNS values provided in the Site Dashboard.
+## Sites eligible for upgrade:
+* Professional sites with DNS for all domains pointed to $30/month Legacy HTTPS load balancer
+  - [Request invitation](http://learn.pantheon.io/201701-HTTPS-Reg.html)
 
-Free HTTPS is currently invite only. The upgrade procedures do not cause downtime or HTTPS interruption. There are a few known behavioral differences which include a [lower timeout configuration (60s instead of 120s)](/docs/timeouts#timeouts-that-are-not-configurable) and a [new error and server response code for heavy requests](/docs/errors-and-server-responses#503-header-overflow).
 
-## Upgrade Your Site
-1. From the User or Organization Dashboard, select a site that shows **HTTPS Upgrade** as available.
-2. Click the **Start HTTPS Upgrade** button to begin the certificate provisioning and deployment process across all environments, including Multidevs.
+## Upgrade your site
+1. Click the **Start HTTPS Upgrade** button from the site dashboard
+3. Wait 25 minutes to an hour for us to deploy the new certificate
+4. See when your action is required from the **Domains & HTTPS** tab
+5. Click **Show DNS Recommendations** next to each of the domains indicating action required to find the values required to update DNS.
+6. Update your DNS using your DNS provider. Pantheon is not a DNS provider. You can look up your DNS provider with this free web tool: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
+7. Wait for your DNS changes to fully propagate. DNS records are cached across the internet and can take up to 72 hours to propagate. You can check the current state of DNS propagation from  different parts of the world using this free web tool [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
+7. Confirm the upgrade is complete from the **Domains & HTTPS** tab, which will update once all domains are using the new DNS values
 
-    You will receive an email once this process is complete, which can take up to an hour.
+## Require HTTPS (optional)
 
-    The **HTTP Status** within the site's **Domains & HTTPS** tab is automatically updated once the certificate is deployed to indicate additional action required.
+### 301 redirects
 
-3. Click **Show DNS Recommendations** next to each of the domains indicating action required and configure DNS as recommended using the provided values.
+You're likely already issuing 301 redirects via the WordPress `wp-config.php` file or the Drupal `settings.php` file to require HTTPS and standardize on a primary domain. Standardizing on a primary domain (for example, `https://www.example.com` or `https://example.com`) is a best practice for SEO to prevent duplicate content, as well as session strangeness, where a user can be signed on one domain but logged out of other domains at the same time. See our [latest recommended code samples for redirects](/docs/redirects) to adapt for your specific use case.
 
-    <div markdown="1" class="alert alert-danger">
-    ### Warning {.info}
-    **Pantheon does not register domains or host/manage DNS.** You will need to make these changes yourself at the registrar and/or DNS host for the domain.
-    </div>
+### HSTS (HTTP Strict Transport Security) Header
 
-    The **HTTPS Status** is automatically updated once all domains are correctly routed to Pantheon using the provided DNS values.
-
-4. Standardize traffic across a common URL for the Live environment (either `https://www.example.com` or `https://example.com`) in addition to Dev, Test, and Multidev environments using 301 redirects. The best way to do this on Pantheon is to make use of our environment variables within `settings.php` or `wp-config.php`:
-
-    ```php
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-    	(php_sapi_name() != "cli")) {
-        if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev'):
-          /** Replace dev.example.com with domain added to the dev environment */
-          $domain = 'dev.example.com';
-        elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'test'):
-          /** Replace test.example.com with domain added to the test environment */
-          $domain = 'test.example.com';
-        elseif ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
-          /** Replace www.example.com with domain added to the live environment */
-          $domain = 'www.example.com';
-        else:
-          # Fallback value for multidev or other environments.
-          # This covers environment-sitename.pantheonsite.io domains
-          # that are generated per environment.
-          $domain = $_SERVER['HTTP_HOST'];
-        endif;
-    	if ($_SERVER['HTTP_HOST'] != $domain ||
-    			!isset($_SERVER['HTTP_X_SSL']) ||
-    			$_SERVER['HTTP_X_SSL'] != 'ON' ) {
-    		header('HTTP/1.0 301 Moved Permanently');
-    		header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
-    		exit();
-    	}
-    }
-    ```
-
-    Redirecting www to non-www, or vice versa on Live, optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
+We also recommend sending a HSTS header with a max age of `15552000`, which you can accomplish with the [Drupal HSTS module](https://drupal.org/project/hsts) or the <plugin for WordPress>. This is the final step to get an A+ SSL rating from (SSL Labs)[https://www.ssllabs.com/ssltest/] and helps to protect your website against protocol downgrade attacks and cookie hijacking.
 
 ## Frequently Asked Questions
-### Which sites are eligible for upgrade?
-Currently, Professional sites that have custom domains routed to a legacy HTTPS-terminating load balancer are eligible for upgrade.
 
-If you have HTTPS enabled on a site that does not show as eligible, ensure that DNS for custom domains is routed per the DNS recommendations shown on the environment's **Domains & HTTPS** tool within the Site Dashboard.
+### Does upgrading involve HTTPS interruption or downtime?
+DNS will gracefully switch over and involves no downtime or HTTPS interruption.
 
-### Does upgrading involve interruption in HTTPS availability or downtime?
-No, upgrading existing domains already routed to Pantheon involves no downtime or HTTPS interruption.
-
-If you add a new domain after upgrading, however, then it can take a few hours for certificates to be issued and deployed after you route DNS to your Pantheon site, so there will be no downtime, but there will be an interruption of HTTPS availability.
+**Caveat:** If after upgrading you add a new domain that is not already routed to Pantheon, then it will take 25 minutes to an hour for HTTPS to be ready for that new domain. Pre-provisioning HTTPS for new domains is planned after early access, with the full release.
 
 ### What level of encryption is provided?
-TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on sites using the Pantheon Global Edge, see this [SSL Report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
+High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
+
+### How can I obtain an A+ SSL Labs rating?
+Upgrade to free HTTPS and see the HSTS header section above.
 
 ### What browsers and operating systems are supported?
-All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of an [SSL Report for a site running on the new Pantheon Global Edge](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io) and the  [Certificate Compatibility](https://letsencrypt.org/docs/certificate-compatibility/) resource from Let’s Encrypt.
-
+All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### Is Extended Validation supported?
-No, please contact us if you require Extended Validation.
+No, please contact Pantheon support if you require Extended Validation.
 
 ### Are wildcard certificates supported?
-No, but you don’t need a wildcard certificate to secure communications for multiple domains because we will automatically deploy certificates for all domains on your site
+No, but you don’t need a wildcard certificate to secure communications for multiple domains because we will automatically deploy certificates for all domains on your site.
 
 ### Is the CDN configurable? Do I get access to hit rates or other statistics?
-We manage the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not currently available.
+Zero-config We manage the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not available.
+
+### Is edge caching changing?
 
 ### What is a shared certificate?
-Shared certificates use a Subject Alternative Name (SAN) certificate to host multiple hostnames or domains on one certificate. You provide your domain name list or one or more wildcard domain name entries. We add these domain names to our certificate SAN field and take care of certificate administration.
+Shared certificates use a Subject Alternative Name (SAN) certificate to host multiple hostnames or domains on one certificate. We ake care of certificate administration and renewal automatically for every domain on your site.
 
 ### What is TLS?
-TLS (Transport Layer Security) is a protocol for secure HTTP connections. This protocol replaces its less secure predecessor, the SSL (Secure Socket Layer) protocol, which we no longer support. Pantheon uses the term HTTPS to refer to secure HTTP connections.
+TLS (Transport Layer Security) is a protocol for secure HTTP connections. This protocol replaces its less secure predecessor, the **SSL (Secure Socket Layer)** protocol, which we no longer support. Pantheon uses the term HTTPS to refer to secure HTTP connections.
 
-### Does the Pantheon Global Edge use Server Name Indication (SNI)?
+### Does the TLS connection use Server Name Indication (SNI)?
+Yes, SNI is the technology replacing the expensive, legacy load balancers and allows multiple secure (HTTPS) websites to be served off the same IP address, without requiring all those sites to use the same certificate.
 
-### Can I downgrade back to the legacy HTTPS loadbalancer?
+### Can I downgrade back to the legacy HTTPS load balancer?
+If you want to downgrade, please contact Pantheon support.
+
+### When do I stopped being billed $30/month?
+Within 10 days of upgrading all domains connected to the site we will delete your legacy load balancer and stop charging you for it.
+
+## Troubleshooting
+
+### 503 due to 60 second time out [link]
+### 503 due to header overflow [link]
+### BUGS-1034 if applicable [needs testing to see if old recommended snippet works with RAX LB]
