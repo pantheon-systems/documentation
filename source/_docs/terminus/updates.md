@@ -19,9 +19,9 @@ permalink: docs/terminus/:basename/
   <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update-fail">Copy</button>
     <figure><pre id="terminus-update-fail"><code class="command bash" data-lang="bash">rm -rf $HOME/terminus
-  mkdir $HOME/terminus
-  cd $HOME/terminus
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+mkdir $HOME/terminus
+cd $HOME/terminus
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
   </div>
   <h2>Changelog</h2>
   <div ng-repeat="release in releases| filter: greaterThan('id', 5224487)">
