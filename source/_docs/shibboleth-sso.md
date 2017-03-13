@@ -44,7 +44,6 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
     ```
     $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
     $host = $_SERVER['HTTP_HOST'];
-    $drop_id = $ps['conf']['pantheon_binding'];
     $db = $ps['databases']['default']['default'];
     ```
 
@@ -52,7 +51,6 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
     ```
     $host = $_SERVER['HTTP_HOST'];
-    $drop_id = '';
     $db = array(
       'host'      => $_ENV['DB_HOST'],
       'database'  => $_ENV['DB_NAME'],
@@ -70,7 +68,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
       'certdir' => 'cert/',
       'loggingdir' => 'log/',
       'datadir' => 'data/',
-      'tempdir' => '/srv/bindings/'. $drop_id .'/tmp/simplesaml',
+      'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
       Your $config array continues for a while...
       until we get to the "store.type" value, where we put in DB config...
       'store.type' => 'sql',
