@@ -193,13 +193,6 @@ For this example, manually applying configuration changes is a simple and short 
 Now that you have a stock WordPress install, let's make it look a little better by adding a new theme. The [WordPress theme repository](https://wordpress.org/themes/) has a plethora of free and paid themes you can install to customize your site. For this example we will use the [Shapely](https://wordpress.org/themes/shapely/) theme.
 
 ### Install and Activate Theme
-<div class="alert alert-info">
-  <h3 class="info">Note</h3>
-  <p markdown="1">
-    There is no need to download the theme first, WP-CLI will install the files from the [WordPress theme repository](https://wordpress.org/themes/).
-  </p>
-</div>
-
 1. Install and activate the [Shapely](https://wordpress.org/themes/shapely/) theme:
 
   ```
@@ -214,7 +207,7 @@ Now that you have a stock WordPress install, let's make it look a little better 
   terminus env:commit $TERMINUS_SITE.dev --message="Install shapely theme"
   ```
 
-4. No WordPress site is ready for development without a child theme. Let's create one! Run the `scaffold child-theme` WP-CLI command (replace `tessa-site` and `shapely`):
+4. No WordPress site is ready for development without a child theme. Let's create one! Run [the `scaffold child-theme` WP-CLI command](http://wp-cli.org/commands/scaffold/child-theme/) (replace `tessa-site` and `shapely`):
 
   ```
   terminus wp $TERMINUS_SITE.dev -- scaffold child-theme tessa-site --parent_theme=shapely
@@ -225,6 +218,8 @@ Now that you have a stock WordPress install, let's make it look a little better 
   ![Pantheon Site Dashboard: Child Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-child-theme-wp.png)
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
+
+  Apply configuration changes, such as activating the child theme, then make sure everything looks good on the Dev environment's site URL.
 
 5. Commit your changes to the Dev environment:
 
