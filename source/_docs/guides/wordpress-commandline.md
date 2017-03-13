@@ -25,7 +25,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](https://pantheon.io/docs/terminus/).
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
 
 1. Run the following commands to install Terminus within the `$HOME/terminus` directory:
 
@@ -41,7 +41,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-  For details, see [Terminus Manual: Install](https://pantheon.io/docs/terminus/install/).
+  For details, see [Terminus Manual: Install](/docs/terminus/install/).
 
 3. Once installed, verify your session by running the following command:
 
@@ -53,7 +53,14 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 ## Create Site and Initialize Environments
 
-1. Create a new WordPress site on Pantheon using the following command (replace `tesa-site-wp` and `"Terminus Demo Site"` with desired values for the site name and label):
+<div class="alert alert-info">
+  <h3 class="info">Note</h3>
+  <p markdown="1">
+    The next few secions of this guide use the example variables `tesa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+  </p>
+</div>
+
+1. Create a new WordPress site on Pantheon:
 
   ```
   terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
@@ -61,15 +68,15 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organiztion name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
 
-2. Open your new Site Dashboard in a browser using the following command (replace `tessa-site-wp`):
+2. Open your new Site Dashboard in a browser:
 
  ```
  terminus dashboard:view tessa-site-wp
  ```
 
- Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard. Cool huh?
+ Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard.
 
-3. Get the platform domain for the Dev environment using the following Terminus command:
+3. Get the platform domain for the Dev environment:
 
   ```
   terminus env:info tessa-site-wp.dev --field=domain
@@ -77,26 +84,26 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   You'll need this to fill out the `--url` option in the next step.
 
-4. Use the [`wp-cli core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment (replace values such as `tessa-site-wp`, `"Terminus Demo Site"`, etc.):
+4. Use the [`wp-cli core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment:
 
   ```
   terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
 
-4. Create the Test environment using the following command (replace `tesa-site-wp`):
+4. Create the Test environment:
 
   ```
   terminus env:deploy tessa-site-wp.test --updatedb --note="Initialize the Test environment"
   ```
 
-5. Create the Live environment using the following command (replace `tesa-site-wp`):
+5. Create the Live environment:
 
     ```
     terminus env:deploy tessa-site-wp.live  --updatedb --note="Initialize the Live environment"
     ```
 
 ### Export Site Name as Variable
-1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands (replace `tessa-site-wp`):
+1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
   ```
   export TERMINUS_SITE=tessa-site-wp
@@ -104,13 +111,13 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   This is basically stating that anytime we type `$TERMINUS_SITE` it's the same as typing `tessa-site-wp`.
 
-2. We can test that this worked by echo-ing our variable:
+2. We can test that this worked by echoing our variable:
 
   ```
   echo $TERMINUS_SITE
   ```
 
-  Since we have created this variable, you can now copy/paste the remainder of these commands without replacing the site name, as the remaining commands include the variable we just created instead.
+  Since we've created this variable, you can now copy/paste the remainder of these commands without replacing the site name, as the remaining commands include the variable we just created instead.
 
 3. Let's see our new variable in action. Copy and paste the following command to get the connection information from the Dev environment:
 
