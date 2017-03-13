@@ -12,6 +12,15 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 </div>
 
 1. Download [SimpleSAMLphp version 1.14.x](https://simplesamlphp.org/) and add it to your Git repository as `/private/simplesamlphp-1.14.x`.
+
+    ```
+    wget https://simplesamlphp.org/download\?latest -O simplesamlphp-latest.tar.gz
+    mkdir private
+    tar -zxvf simplesamlphp-latest.tar.gz -C private
+    git add private
+    git commit -am "Adding SimpleSAML"
+    ```
+
 2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.14.x/www`:
 
     ```
