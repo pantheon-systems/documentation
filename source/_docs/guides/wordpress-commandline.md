@@ -12,9 +12,7 @@ contributors:
   - tessak22
 date: 3/7/2017
 ---
-Many developers feel more at home using the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting.
-
-Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
+Many developers feel more at home using the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting. Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
 
 WP-CLI is a tool used to manage a WordPress installation. However, don't think of it as a simple backup or search and replace tool. Yes, it can do those things, but it's so much more than that. This guide will walk you through creating and configuring a site from the command line using Pantheon's own CLI, called Terminus, which allows you to call WP-CLI remotely without using a local installation.
 
@@ -27,6 +25,8 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](https://pantheon.io/docs/terminus/).
+
 1. Run the following commands to install Terminus within the `$HOME/terminus` directory:
 
   ```
@@ -43,19 +43,17 @@ Be sure that you:
 
   For details, see [Terminus Manual: Install](https://pantheon.io/docs/terminus/install/).
 
-3. Once installed, test it using the following command:
+3. Once installed, verify your session by running the following command:
 
   ```
-  terminus art
+  terminus site:list
   ```
 
-  If you see some sweet artwork, then it was installed successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
-
-Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have. For more information about Terminus itself, see our [Terminus Manual](https://pantheon.io/docs/terminus/).
+  If you see your Pantheon sites, then it was installed and authenticated successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
 
 ## Create Site and Initialize Environments
 
-1. Replace `tesa-site-wp` with desired site name and `"Terminus Demo Site"` with desired site label within the following command then use it to create a new WordPress site:
+1. Create a new WordPress site on Pantheon using the following command (replace `tesa-site-wp` and `"Terminus Demo Site"` with desired values for the site name and label):
 
   ```
   terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
@@ -71,31 +69,33 @@ Terminus also opens the door to writing scripts that combine multiple Terminus c
 
  Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard. Cool huh?
 
-3. Create the Test environment using the following command (replace `tesa-site-wp`):
+3. Get the platform domain for the Dev environment using the following Terminus command:
 
   ```
-  terminus env:deploy tessa-site-wp.test --note="Initialize the Test environment"
+  terminus env:info tessa-site-wp.dev --field=domain
   ```
 
-4. Use the [wp-cli core install](http://wp-cli.org/commands/core/install/) command to install WordPress:
+  You'll need this to fill out the `--url` option in the next step.
+
+4. Use the [`wp-cli core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment (replace values such as `tessa-site-wp`, `"Terminus Demo Site"`, etc.):
 
   ```
-  terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com -yes
+  terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
 
-5. Now that WordPress has been installed, clone the database from Dev to Test:
+4. Create the Test environment using the following command (replace `tesa-site-wp`):
 
   ```
-  terminus env:clone-content --db-only tess-site-wp.dev test
+  terminus env:deploy tessa-site-wp.test --updatedb --note="Initialize the Test environment"
   ```
 
-6. Create the Live environment using the following command (replace `tesa-site-wp`):
+5. Create the Live environment using the following command (replace `tesa-site-wp`):
 
     ```
-    terminus env:deploy tessa-site-wp.live --note="Initialize the Live environment"
+    terminus env:deploy tessa-site-wp.live  --updatedb --note="Initialize the Live environment"
     ```
 
-## Export Site Name as Variable
+### Export Site Name as Variable
 1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands (replace `tessa-site-wp`):
 
   ```
@@ -112,110 +112,139 @@ Terminus also opens the door to writing scripts that combine multiple Terminus c
 
   Since we have created this variable, you can now copy/paste the remainder of these commands without replacing the site name, as the remaining commands include the variable we just created instead.
 
-4. Let's get our connection information from the Dev environment, using our variable:
+3. Let's see our new variable in action. Copy and paste the following command to get the connection information from the Dev environment:
 
   ```
   terminus connection:info $TERMINUS_SITE.dev
   ```
 
 ## Let's Write Some Code
+The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of free and paid plugins. For this example we will install and activate the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin.
 
-I use a few plugins on every site, but for this example we will install Contact Form 7. The following command is going to use WP-CLI to install a plugin from the WordPress plugin repository and then activate it automatically.
+### Install Plugins and Deploy Up to Live
+1. Install and activate the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin:
 
-`terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate`
+  ```
+  terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate
+  ```
 
-![Pantheon Site Dashboard: Install CF7](/source/docs/assets/images/wordpress-commandline-install-cf7.png)
+  If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit but we'll continue on the command line.
 
-If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can expand that to see which files changed and commit through the GUI, or commit these changes with the following commands.
+  ![Pantheon Site Dashboard: Install CF7](/source/docs/assets/images/wordpress-commandline-install-cf7.png)
 
-Check to see what has changed:
 
-`terminus env:diffstat $TERMINUS_SITE.dev`
+2. Review the file changes:
 
-Commit the files:
+  ```
+  terminus env:diffstat $TERMINUS_SITE.dev
+  ```
 
-`terminus env:commit $TERMINUS_SITE.dev --message="Install CF7"`
+3. Commit your changes to the Dev environment:
 
-![Pantheon Site Dashboard: Commit CF7](/source/docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
+  ```
+  terminus env:commit $TERMINUS_SITE.dev --message="Install CF7"
+  ```
 
-## Create test environment
+  If you refer back to the Site Dashboard, you'll see the commit on the Dev environment:
+  ![Pantheon Site Dashboard: Commit CF7](/source/docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
 
-Now that we have WordPress installed and we installed and activated Contact Form 7, let's deploy these code changes to test. Before we deploy, your dashboard will show commits that are available to deploy.
+4. Deploy the code to Test and pull content down from Live:
 
-![Pantheon Site Dashboard: Before Test Deployment](/source/docs/assets/images/wordpress-commandline-before-deploy-test.png)
+    <div class="alert alert-info">
+    <h3 class="info">Note</h3>
+    <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors may have added content and files in the Live environment. You would want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+    </p>
+    </div>
 
-`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploy after CF7 Install"`
+  ```
+  terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
+  ```
 
-We are running the env:deploy command with the --sync-content flag which will bring the database down from the Live environment before deploying the code. In a real-world scenario, your content editors may have added posts and files in the Live environment. You would want those updates present on the Test environment with your deployed code. The --updatedb flag runs WordPress's database update script. And --cc clears caches. The --note flag adds a message that is tied to the record of the deployment. Under the hood, Pantheon creates a git tag for each deployment. This note field is used as an annotation on the git tag. To see the tag that was just created.
+5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change using the following command:
 
-![Pantheon Site Dashboard: After Test Deployment](/source/docs/assets/images/wordpress-commandline-after-deploy-test.png)
+  ```
+  terminus wp $TERMINUS_SITE.test -- plugin activate contact-form-7
+  ```
 
-## Create live environment
+6. Verify everything is good to go on the Test environment, then deploy to Live:
 
-Test is ready to go and looking good! Let's deploy this to live. Before we deploy, if we peek in the site dashboard under Live, we can see there are 2 commits ready to be deployed.
+  ```
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"
+  ```
 
-![Pantheon Site Dashboard: Before Live Deployment](/source/docs/assets/images/wordpress-commandline-before-live-deploy.png)
+    <div class="alert alert-info">
+      <h3 class="info">Note</h3>
+      <p markdown="1">
+        We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
+      </p>
+    </div>
 
-`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"`
 
-We don't need the --sync-content flag when going to the Live environment because that environment already has our canonical database.
+7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change using the following command:
 
-![Pantheon Site Dashboard: After Live Deployment](/source/docs/assets/images/wordpress-commandline-after-live-deploy.png)
+  ```
+  terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
+  ```
+
+For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/docs/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
+
 
 ## Customize Your Site
-Now that you have a stock WordPress install, let's make it look a little better by adding a new theme.
+Now that you have a stock WordPress install, let's make it look a little better by adding a new theme. The [WordPress theme repository](https://wordpress.org/themes/) has a plethora of free and paid themes you can install to customize your site. For this example we will use the [Shapely](https://wordpress.org/themes/shapely/) theme.
 
-### Install and Add a New Theme
+### Install and Activate Theme
+<div class="alert alert-info">
+  <h3 class="info">Note</h3>
+  <p markdown="1">
+    There is no need to download the theme first, WP-CLI will install the files from the [WordPress theme repository](https://wordpress.org/themes/).
+  </p>
+</div>
 
-WordPress has a plethora of free and paid themes you can install to customize your site. We've chosen one from the WordPress.org Themes Repository named Shapely. Note: There is no need to download the theme first, WP-CLI will pull it for us from WordPress.org.
+1. Install and activate the [Shapely](https://wordpress.org/themes/shapely/) theme:
 
-Position your Pantheon Dashboard window where you can see it while working in the terminal. To install and activate the new theme on your site, use the following command:
+  ```
+  terminus wp $TERMINUS_SITE.dev -- theme install shapely --activate
+  ```
 
-`terminus wp $TERMINUS_SITE.dev -- theme install shapely --activate`
+2. Check out the Dev environment's site URL to see the new theme in action.
 
-Watch your Dashboard. It recognizes your uncommitted changes.
+3. Commit your changes to the Dev environment:
 
-![Pantheon Site Dashboard: Theme Ready to Commit](/source/docs/assets/images/wordpress-commandline-after-install-theme.png)
+  ```
+  terminus env:commit $TERMINUS_SITE.dev --message="Install shapely theme"
+  ```
 
-`terminus env:commit $TERMINUS_SITE.dev --message="Install Shapely Theme"`
+4. No WordPress site is ready for development without a child theme. Let's create one! Run the `scaffold child-theme` WP-CLI command (replace `tessa-site` and `shapely`):
 
-![Pantheon Site Dashboard: Commit Theme Files](/source/docs/assets/images/wordpress-commandline-commit-theme-files.png)
+  ```
+  terminus wp $TERMINUS_SITE.dev -- scaffold child-theme tessa-site --parent_theme=shapely
+  ```
 
-![Pantheon Site Dashboard: Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-theme-in-wordpress.png)
+  You should see the new theme within **Apperance** > **Themes** of the WordPress Dashboard:
 
-Terminus connects to Pantheon's API, which makes real-time updates to any Dashboard you have open. What you do in Terminus is immediately represented in your Dashboard, so it is always up to date.
+  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-child-theme-wp.png)
 
-Now that we've committed our changes, go back to your dev site in the browser and refresh it to see what you've created.
+  Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
-### Theming Best Practices
+5. Commit your changes to the Dev environment:
 
-No WordPress site is ready for development without a child theme. Let's create one:
+  ```
+  terminus env:commit $TERMINUS_SITE.dev --message="Create Child of Shapely Theme"
+  ```
 
-`terminus wp $TERMINUS_SITE.dev -- scaffold child-theme tessa-site --parent_theme=shapely`
+6. Deploy the themes to Test and pull content down from Live:
 
-![Pantheon Site Dashboard: Child Theme Files](/source/docs/assets/images/wordpress-commandline-child-theme-files.png)
+  ```
+  terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploy Themes"
+  ```
 
-![Pantheon Site Dashboard: Child Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-child-theme-wp.png)
+  Apply configuration changes and make sure everything looks good on the Test environment's site URL.
 
-Next, we'll commit it.
+7. Deploy code to Live, then apply configuration changes:
 
-`terminus env:commit $TERMINUS_SITE.dev --message="Create Child of Shapely Theme"`
-
-Now you're ready to edit your theme, allowing for upstream theme improvements in the shapely theme to happen without interfering with the functionality of your site.
-
-![Pantheon Site Dashboard: Child Theme Commit Log](/source/docs/assets/images/wordpress-commandline-child-theme-commit-log.png)
-
-#### Deploy to Test
-
-`terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploy Themes"`
-
-![Pantheon Site Dashboard: Final Deploy to Test](/source/docs/assets/images/wordpress-commandline-final-deploy-test.png)
-
-#### Deploy to Live
-
-`terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy Themes"`
-
-![Pantheon Site Dashboard: Final Deploy to Live](/source/docs/assets/images/wordpress-commandline-final-deploy-live.png)
+  ```
+  terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy Themes"
+  ```
 
 ## The Power of Terminus and WP-CLI
 
