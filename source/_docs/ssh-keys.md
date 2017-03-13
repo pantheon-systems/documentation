@@ -4,6 +4,7 @@ description: Understand how to generate SSH keys to configure Git, SFTP, or Drup
 tags: [getstarted, sftp, git, local]
 categories: [getstarted]
 ---
+
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
 
 Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
@@ -11,24 +12,24 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
 <p>
-Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> tips at the end of the document.
+Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
 </p>
 </div>
 
-## Generate a SSH Key
+## Generate SSH Key
 
-Instructions for generating SSH keys are different for every platform. Select your platform:
+1. Open your terminal and enter the following command to generate a key:
 
- - [Mac OS and Linux](/docs/ssh-keys#mac-os-and-linux)  
- - [Windows / Git GUI and OpenSSH](/docs/ssh-keys#windows-%2F-openssh)
+   ```nohighlight
+   ssh-keygen
+   ```
+     <div class="alert alert-info">
+        <h3 class="info">Note</h3>
+        <p markdown="1">
+          Windows users can use a command line emulator such as [Git Bash](https://git-for-windows.github.io/) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) (Windows 10 only) to generate SSH keys. This also sets you up to manage code locally with Git and interact with the Site Dashboard using [Terminus](/docs/terminus).
+        </p>
+      </div>
 
-### Mac OS and Linux
-
-1. Open your favorite terminal and enter the command to generate a key:
-
- ```nohighlight
- ssh-keygen
- ```
 2. Unless you're an advanced user, just press **enter** for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 3. Copy the content from `~/.ssh/id_rsa.pub` to your clipboard.
 
@@ -45,16 +46,6 @@ Instructions for generating SSH keys are different for every platform. Select yo
  pbcopy < ~/.ssh/id_rsa.pub
  ```
 
-### Windows / OpenSSH
-
-Before you can generate an SSH key, you'll need to [download](http://git-scm.com/downloads) and install Git. Follow these instructions once that is complete.
-
-1. Open the Git Gui.
-2. From the Help menu, click **Show SSH Key**. 
-3. Click **Generate Key**.
-4. Enter a passphrase (optional, but recommended). It doesn't have to be the same as your Pantheon password, and it will help protect your key.
-5. Ensure the whole key is selected and click **Copy to Clipboard**.  
-
 ## Add Your SSH Key to Pantheon
 
 1. Log in to Pantheon and go to the **Account** page.
@@ -65,7 +56,7 @@ Before you can generate an SSH key, you'll need to [download](http://git-scm.com
 4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
 5. If prompted, enter the password.
 
-## Delete a Key
+## Delete a Key from Pantheon
 To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
 ![Delete SSH Key](/source/docs/assets/images/dashboard/remove-ssh-key.png)
 
