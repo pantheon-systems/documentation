@@ -99,6 +99,24 @@ $conf['simplesamlphp_auth_installdir'] = '/srv/bindings/'. $ps['conf']['pantheon
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
 
+## WordPress Configuration
+
+To use SimpleSAMLphp with WordPress, first install and activate the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) plugin.
+
+Then, to configure the WP SAML Auth plugin to work with SimpleSAMLphp, add the following filter to your theme's `functions.php` file:
+
+```php
+add_filter( 'wp_saml_auth_option', function( $value, $option ){
+  if ( 'simplesamlphp_autoload' === $option ) {
+    // Note: Your path may differ, if you've installed a later SimpleSAMLphp version
+    $value = ABSPATH . '/private/simplesamlphp-1.14.11/lib/_autoload.php';
+  }
+  return $value;
+}, 10, 2 );
+```
+
+For more details, including additional plugin configuration options, [please see the README](https://github.com/pantheon-systems/wp-saml-auth/blob/master/README.md).
+
 ## Troubleshooting
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
