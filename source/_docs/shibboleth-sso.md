@@ -35,8 +35,8 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
     ```
     if (!ini_get('session.save_handler')) {
-  ini_set('session.save_handler', 'file');
-   }
+      ini_set('session.save_handler', 'file');
+    }
     ```
 
     Load necessary environmental data:
