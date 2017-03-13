@@ -1,13 +1,13 @@
 ---
 title: Using SimpleSAMLphp with Shibboleth SSO
-description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal site.
+description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
 tags: [automate]
 categories: [automate]
 ---
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.11/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.11/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from drupal.org.</p></div>
+<p>This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal site using the <a href="http://drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from Drupal.org, or with their WordPress site using the <a href="https://wordpress.org/plugins/wp-saml-auth/">WP SAML Auth</a> plugin from WordPress.org.</p></div>
 
 1. Download [SimpleSAMLphp version 1.11.x](http://simplesamlphp.org/) and add it to your Git repository as `/private/simplesamlphp-1.11.x`.
 2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.11.x/www`:
