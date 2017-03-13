@@ -39,7 +39,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
     }
     ```
 
-    Load necessary environmental data:
+    Load necessary environmental data. For a Drupal site, you can access `$_SERVER['PRESSFLOW_SETTINGS']`:
 
     ```
     $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
@@ -48,7 +48,21 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
     $db = $ps['databases']['default']['default'];
     ```
 
-    Set up base config:
+    For a WordPress site, you can access the Pantheon environment variables:
+
+    ```
+    $host = $_SERVER['HTTP_HOST'];
+    $drop_id = '';
+    $db = array(
+      'host'      => $_ENV['DB_HOST'],
+      'database'  => $_ENV['DB_NAME'],
+      'username'  => $_ENV['DB_USER'],
+      'password'  => $_ENV['DB_PASSWORD'],
+      'port'      => $_ENV['DB_PORT'],
+    );
+    ```
+
+    Then, with the basic variables defined, set up base config:
 
     ```
     $config = array (
