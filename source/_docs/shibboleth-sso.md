@@ -29,9 +29,9 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
     git commit -am "Adding SimpleSAML symlink"
     ```
 3. [Generate or install certs](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to Git in `/private/simplesamlphp-1.14.x/cert`.
-4. Set up your `config.php` as follows:
+4. Set up your SimpleSAMLphp `config.php` as follows:
 
-    Enable local sessions to ensure that SimpleSaml can keep a session when used in standalone mode:
+    Enable local sessions to ensure that SimpleSAMLphp can keep a session when used in standalone mode:
 
     ```
     if (!ini_get('session.save_handler')) {
