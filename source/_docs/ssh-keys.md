@@ -13,13 +13,6 @@ To take full advantage of Pantheon, you should load your public SSH key into you
 
 Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
 
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>
-Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
-</p>
-</div>
-
 ## Generate SSH Key
 
 1. Open your terminal and enter the following command to generate a key:
@@ -37,7 +30,7 @@ Generating SSH keys may add your username or the computer's hostname as a commen
 2. Unless you're an advanced user, just press **enter** for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 3. Copy the content from `~/.ssh/id_rsa.pub` to your clipboard.
 
- Linux users must output the SSH key to a file:
+ Windows (emulator required) and Linux users must output the SSH key to a file:
  ```nohighlight
  cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
  ```
@@ -50,6 +43,7 @@ Generating SSH keys may add your username or the computer's hostname as a commen
  pbcopy < ~/.ssh/id_rsa.pub
  ```
 
+
 ## Add Your SSH Key to Pantheon
 
 1. Log in to Pantheon and go to the **Account** page.
@@ -59,6 +53,13 @@ Generating SSH keys may add your username or the computer's hostname as a commen
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on your Pantheon Account page.
 4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
 5. If prompted, enter the password.
+
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+<p>
+Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
+</p>
+</div>
 
 ## Delete a Key from Pantheon
 To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
