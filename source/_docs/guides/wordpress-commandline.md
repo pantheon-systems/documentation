@@ -159,7 +159,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
     <div class="alert alert-info">
     <h3 class="info">Note</h3>
-    <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors may have added content and files in the Live environment. You would want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+    <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors may have added posts and files in the Live environment. You would want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
     </p>
     </div>
 
