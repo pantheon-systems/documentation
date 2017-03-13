@@ -77,7 +77,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
       'store.sql.password' => $db['password'],
     ```
 
-5. With configuration completed, add SimpleSaml files to your repository:
+5. With configuration completed, commit the changes to your SimpleSAMLphp files:
 
     ```
     git add private/simplesamlphp-1.14.x
