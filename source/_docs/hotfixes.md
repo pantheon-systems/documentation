@@ -105,3 +105,5 @@ If you do want to preserve the orphan commits, follow these Git commands to make
     git merge hotfix
 
 Make sure to cherry-pick the commits in chronological order to avoid issues with your integration and replace the hash code in the example above with the actual hash of the commit you are trying to preserve.
+
+This is a test on my branch
