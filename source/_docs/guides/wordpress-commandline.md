@@ -136,7 +136,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
   If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, but we'll continue on the command line.
 
-  ![Pantheon Site Dashboard: Install CF7](/docs/assets/images/wordpress-commandline-install-cf7.png)
+  ![Pantheon Site Dashboard: Install CF7](/source/docs/assets/images/wordpress-commandline-install-cf7.png)
 
 
 2. Review the file changes:
@@ -152,7 +152,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   ```
 
   If you refer back to the Site Dashboard, you'll see the commit on the Dev environment:
-  ![Pantheon Site Dashboard: Commit CF7](/docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
+  ![Pantheon Site Dashboard: Commit CF7](/source/docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
 
 4. Deploy the code to Test and pull content down from Live:
 
@@ -199,7 +199,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
 2. Check out the Dev environment's site URL to see the new theme in action:
 
-    ![WordPress with the Shapely theme](/docs/assets/images/wordpress-commandline-theme-example.png)
+    ![WordPress with the Shapely theme](/source/docs/assets/images/wordpress-commandline-theme-example.png)
 
 3. Commit your changes to the Dev environment:
 
@@ -215,7 +215,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
   You should see the new theme within **Apperance** > **Themes** of the WordPress Dashboard:
 
-  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](/docs/assets/images/wordpress-commandline-child-theme-wp.png)
+  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-child-theme-wp.png)
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
