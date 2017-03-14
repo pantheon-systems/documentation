@@ -209,7 +209,7 @@ Now that you have WordPress installed, let's make it look a little better by add
   terminus env:commit $TERMINUS_SITE.dev --message="Install shapely theme"
   ```
 
-4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](http://wp-cli.org/commands/scaffold/child-theme/) (replace `tessa-site` and `shapely`):
+4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](http://wp-cli.org/commands/scaffold/child-theme/) (replace `Tessa-child-theme` and `shapely`):
 
   ```
   terminus wp $TERMINUS_SITE.dev -- scaffold child-theme Tessa-child-theme --parent_theme=shapely
