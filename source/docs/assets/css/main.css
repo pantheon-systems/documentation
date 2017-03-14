@@ -2267,6 +2267,41 @@ h1[id] {
     background-color: #DDE5E7 !important;
     background-image: none !important;
 }
+.panel-video {
+  border-color: #ddd;
+  border-radius: 0px;
+}
+.panel-video-heading {
+  background-color: #eef2f3;
+  border-radius: 0px;
+  border-color: #eef2f3 !important;
+}
+h3.panel-video-title {
+  text-decoration: none;
+  color: #000 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Avenir-Heavy;
+  font-size: 14px;
+  line-height: 1;
+}
+a.panel-video-title {
+  text-decoration: none;
+}
+
+h3.panel-video-title::after {
+    font-family: "FontAwesome" !important;
+    content: '\f105';
+    margin: 0 !important;
+    padding: 12px !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+    background: none;
+    height: 100%;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
 #doc-head {
   background-color: #fff;
 }
