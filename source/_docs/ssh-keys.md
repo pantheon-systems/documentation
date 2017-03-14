@@ -5,8 +5,11 @@ tags: [getstarted, sftp, git, local]
 categories: [getstarted]
 ---
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
-<div class="row">
-  <div class="col-md-9 mb-20" style="margin-top:20px;">
+<div class="panel panel-video">
+  <div class="panel-heading panel-video-heading">
+    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#ssh-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+  </div>
+  <div id="ssh-video" class="collapse" style="padding:10px;">
     <script src="//fast.wistia.com/embed/medias/mnuxft90ya.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
   </div>
 </div>
