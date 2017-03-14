@@ -184,6 +184,12 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
         We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
       </p>
     </div>
+    
+7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change:
+
+  ```
+  terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
+  ```
 
 For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/docs/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
 
