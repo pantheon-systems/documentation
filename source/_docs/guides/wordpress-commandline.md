@@ -27,7 +27,7 @@ Be sure that you:
 ## Install and Authenticate Terminus
 Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
 
-1. Run the following commands to install Terminus within the `$HOME/terminus` directory:
+1. Install Terminus within the `$HOME/terminus` directory:
 
   ```
   mkdir $HOME/terminus
@@ -43,7 +43,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   For details, see [Terminus Manual: Install](/docs/terminus/install/).
 
-3. Once installed, verify your session by running the following command:
+3. Once installed, verify your session:
 
   ```
   terminus site:list
@@ -51,7 +51,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   If you see your Pantheon sites, then it was installed and authenticated successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
 
-## Create Site and Initialize Environments
+## Create Your Site and Initialize Environments
 
 <div class="alert alert-info">
   <h3 class="info">Note</h3>
@@ -84,7 +84,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   You'll need this to fill out the `--url` option in the next step.
 
-4. Use the [`wp-cli core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment:
+4. Use the [WP-CLI `core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment:
 
   ```
   terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
@@ -102,7 +102,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
     terminus env:deploy tessa-site-wp.live  --updatedb --note="Initialize the Live environment"
     ```
 
-### Export Site Name as Variable
+### Export the Site Name as a Variable
 1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
   ```
@@ -156,15 +156,15 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
 4. Deploy the code to Test and pull content down from Live:
 
-    <div class="alert alert-info">
-    <h3 class="info">Note</h3>
-    <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-    </p>
-    </div>
-
   ```
   terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
   ```
+
+   <div class="alert alert-info">
+   <h3 class="info">Note</h3>
+   <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+   </p>
+   </div>
 
 5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change:
 
@@ -184,7 +184,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
         We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
       </p>
     </div>
-    
+
 7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change:
 
   ```
