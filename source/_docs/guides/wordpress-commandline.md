@@ -197,9 +197,11 @@ Now that you have WordPress installed, let's make it look a little better by add
   terminus wp $TERMINUS_SITE.dev -- theme install shapely --activate
   ```
 
-2. Check out the Dev environment's site URL to see the new theme in action:
+2. Check out the Dev environment's site URL to see the new theme in action. The `terminus env:info` command from earlier gives us the URL. Here it is again with our environment variable:
 
-    ![WordPress with the Shapely theme](/source/docs/assets/images/wordpress-commandline-theme-example.png)
+   ```
+   terminus env:info $TERMINUS_SITE.dev --field=domain
+   ```
 
 3. Commit your changes to the Dev environment:
 
