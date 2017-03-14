@@ -10,7 +10,7 @@ permalink: docs/:basename/
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
-<a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows. For details on legacy versions of terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
+<a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows 7 and 10. For details on legacy versions of terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
 ## Usage
 
 Use Terminus to perform these and other operations:  
