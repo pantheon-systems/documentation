@@ -4,17 +4,27 @@ earlyaccess: true
 description: Upgrade to Free HTTPS
 ---
 ## Sites eligible for upgrade:
-* Professional sites with DNS for all domains pointed to $30/month Legacy HTTPS load balancer
-  - [Request invitation](http://learn.pantheon.io/201701-HTTPS-Reg.html)
+* Sites on a Professional plan with HTTPS enabled and DNS for all domains routed to $30/month load balancer
+  - [Request invite](http://learn.pantheon.io/201701-HTTPS-Reg.html)
 
 
 ## Upgrade your site
 1. Click the **Start HTTPS Upgrade** button from the site dashboard
-3. Wait 25 minutes to an hour for us to deploy the new certificate
+3. **Wait 25 minutes to an hour** for us to deploy the new certificate
 4. See when your action is required from the **Domains & HTTPS** tab
 5. Click **Show DNS Recommendations** next to each of the domains indicating action required to find the values required to update DNS.
-6. Update your DNS using your DNS provider. Pantheon is not a DNS provider. You can look up your DNS provider with this free web tool: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
-7. Wait for your DNS changes to fully propagate. DNS records are cached across the internet and can take up to 72 hours to propagate. You can check the current state of DNS propagation from  different parts of the world using this free web tool [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
+6. **Update your DNS** using your DNS provider. Pantheon is not a DNS provider.
+
+    <div class="alert alert-info">
+Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
+</div>
+
+7. **Wait for your DNS changes to fully propagate.** DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) that was configured for your records.
+
+      <div class="alert alert-info">
+Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
+</div>
+
 7. Confirm the upgrade is complete from the **Domains & HTTPS** tab, which will update once all domains are using the new DNS values
 
 ## Require HTTPS (optional)
@@ -25,7 +35,7 @@ You're likely already issuing 301 redirects via the WordPress `wp-config.php` fi
 
 ### HSTS (HTTP Strict Transport Security) Header
 
-We also recommend sending a HSTS header with a max age of `15552000`, which you can accomplish with the [Drupal HSTS module](https://drupal.org/project/hsts) or the <plugin for WordPress>. This is the final step to get an A+ SSL rating from (SSL Labs)[https://www.ssllabs.com/ssltest/] and helps to protect your website against protocol downgrade attacks and cookie hijacking.
+We also recommend sending a HSTS header with a max age of `15552000`, which you can accomplish with the [Drupal HSTS module](https://drupal.org/project/hsts) or the <plugin for WordPress>. This is the last step to get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/) and helps to protect your website against protocol downgrade attacks and cookie hijacking.
 
 ## Frequently Asked Questions
 
