@@ -1,5 +1,5 @@
 ---
-title: Use the Command Line to complete Drupal Site Building Tasks with Using Terminus and Drush
+title: Create a Drupal 8 Site From the Command Line Using Terminus and Drush
 description: Learn how to add modules, and manage configuration between Pantheon environments.
 tags: [cli]
 categories: [develop, cli]
@@ -10,13 +10,9 @@ contributors:
 date: 2/15/2017
 ---
 
+[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for using the command line to develop on Pantheon.
+
 This guide will walk through using the command line to create a new Drupal 8 site, add modules, create content, and move configurations between Pantheon environments.
-
-[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. Terminus is a way to do on the command line everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands direclty from Terminus, making it a single solution for using the command line to develop on Pantheon.
-
-Once you are comfortable with Terminus, you may find it faster to use than the browser. Terminus also opens the door to writing scripts that combine multiple Terminus commands to accommodate whatever workflow needs you have.
-
-For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
 
 ## Before You Begin
 
@@ -28,14 +24,15 @@ Be sure that you:
 
 
 ## Install and Authenticate Terminus
+Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus).
 
-1.  The most reliable way to install Terminus is with our dedicated installer:
+1.  Install Terminus within the `$HOME/terminus` directory:
 
         mkdir $HOME/terminus
         cd $HOME/terminus
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 
-2.  Once Terminus is installed, you can sign in with a [machine token generated in the Dashboard](https://dashboard.pantheon.io/machine-token/create).
+2.  [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
         terminus auth:login --machine-token=‹machine-token›
 
@@ -43,14 +40,14 @@ Be sure that you:
 
         terminus site:list
 
-If you have trouble with these steps, [see our full installation documentation](https://pantheon.io/docs/terminus/install/).
+If you see your Pantheon sites, then it was installed and authenticated successfully! Once you are comfortable with Terminus, you may find it faster to use than the browser.
 
 ## Create Your Site and Initialize Environments
 
 <div class="alert alert-info">
   <h3 class="info">Note</h3>
   <p markdown="1">
-    For this command you will need both a machine name and a label for your site. In our example we've used `steve-site-d8` as the site's machine name and ``"Steve's Site D8"`` as the label. If you are copying and pasting these examples, you will need to replace these variables. Finally, the variable `"Drupal 8"` indicates the type of site we're creating
+    The next few sections of this guide use the example variables `steve-site-d8` and `"Steve's Site D8"` as the site name and label. Make sure to replace each instance, as well as other variables, with your desired values.
   </p>
 </div>
 
@@ -58,7 +55,7 @@ If you have trouble with these steps, [see our full installation documentation](
 
         terminus site:create steve-site-d8 "My Site D8" "Drupal 8"
 
-  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organiztion name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
+  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
 
 2.  Open your new Site Dashboard in a browser:
 
@@ -66,11 +63,7 @@ If you have trouble with these steps, [see our full installation documentation](
 
     Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard.
 
-3.  Get the platform domain for the Dev environment:
-
-        terminus env:info steve-site-d8.dev --field=domain
-
-4.  Use th Drush [`site-install`](http://wp-cli.org/commands/core/install/) command to install Drupal 8 on the Dev environment:
+3.  Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 8 on the Dev environment:
 
         terminus drush steve-site-d8.dev -- site-install -y
 
@@ -79,21 +72,43 @@ If you have trouble with these steps, [see our full installation documentation](
 
         terminus drush  steve-site-d8.dev  -- user-login
 
-5.  Create the Test environment:
+    Installing Drupal results in a one-line change to `settings.php`, which we can then review and commit. As a reminder, Drush is the command line utility for Drupal itself.	Terminus is simply passing through the Drush commands to the site on Pantheon. To get a full list of Drush commands run:
+
+        terninus drush steve-site-d8.dev -- help
+
+    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.		
+
+4. Review the file changes:
+
+  ```
+  terminus env:diffstat steve-site-d8.dev
+  ```
+
+5. Commit `settings.php` changes to the Dev environment:
+
+  ```
+  terminus env:commit steve-site-d8.dev --message="Installing Drupal"
+  ```
+
+
+6.  Create the Test environment:
 
         terminus env:deploy steve-site-d8.test
 
-6.  Create the Live environment:
+7.  Create the Live environment:
 
         terminus env:deploy steve-site-d8.live
 
+
 ### Export the Site Name as a Variable
+
+At this point you are probably tired of replacing `steve-site-d8` in every command.		
 
 1.  Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
-        export TERMINUS_SITE=your-site-machine-name
+        export TERMINUS_SITE=steve-site-d8
 
-      This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `your-site-machine-name`. Anytime we use the variable name it's replaced in the executed command with the value.
+      This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` with the value `steve-site-d8`. Anytime we use the variable name it's replaced in the executed command with the value.
 
 2.  We can test this by echoing our variable:
 
@@ -126,7 +141,7 @@ You may want to remove these modules after you launch your site, or use more adv
 
         terminus env:diffstat $TERMINUS_SITE.dev
 
-3.  Commit the downloaded modules to the Dev environment:
+3.  Commit your changes to the Dev environment:
 
         terminus env:commit  $TERMINUS_SITE.dev --message="Adding devel module"
 
@@ -179,7 +194,7 @@ You may want to remove these modules after you launch your site, or use more adv
     Now that you are signed into all three environments you should be seeing the development footer in Dev and Test but not Live.
 
 
-12. Push your code changes to the live environment:
+12. Push your code changes to the Live environment:
 
         terminus env:deploy $TERMINUS_SITE.live --updatedb --cc  --note="Deploying exported config to enable modules"
 

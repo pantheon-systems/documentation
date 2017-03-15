@@ -1,5 +1,5 @@
 ---
-title: Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI
+title: Create a WordPress Site From the Command Line Using Terminus and WP-CLI
 description: Learn how to install and use Terminus and WP-CLI to control a WordPress site on Pantheon.
 tags: [cli]
 categories: [develop, cli]
@@ -66,7 +66,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
   ```
 
-  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organiztion name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
+  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. To associate an existing site with an Organization, use the `site:org:add` command.
 
 2. Open your new Site Dashboard in a browser:
 
@@ -89,6 +89,12 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   ```
   terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
+
+  As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
+
+      terninus wp steve-site-d8.dev -- help
+
+  The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to WP-CLI.		
 
 4. Create the Test environment:
 
@@ -172,7 +178,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus wp $TERMINUS_SITE.test -- plugin activate contact-form-7
   ```
 
-6. Once you've experimented in the Test environment and verifed that your new plugin is working, and everything else is still in working order, deploy to Live:
+6. Once you've experimented in the Test environment and verified that your new plugin is working, and everything else is still in working order, deploy to Live:
 
   ```
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"
@@ -221,7 +227,7 @@ Now that you have WordPress installed, let's make it look a little better by add
   terminus wp $TERMINUS_SITE.dev -- scaffold child-theme Tessa-child-theme --parent_theme=shapely
   ```
 
-  You should see the new theme within **Apperance** > **Themes** of the WordPress Dashboard:
+  You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:
 
   ![Pantheon Site Dashboard: Child Theme Installed in WordPress](/source/docs/assets/images/wordpress-commandline-child-theme-wp.png)
 
@@ -251,7 +257,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
 ## The Power of Terminus and WP-CLI
 
-If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
+If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
 
 Here are some suggestions on where to go from here:
 
