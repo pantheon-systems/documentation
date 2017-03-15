@@ -17,16 +17,19 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 ## Set Up Two-Factor Authentication With WordPress (Single Site)
 
-For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. A popular plugin is [Duo Two-Factor Authentication] (https://wordpress.org/plugins/duo-wordpress/), which makes it easy to set up two-factor authentication on your WordPress site.
+For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. A popular plugin is [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/), which makes it easy to set up two-factor authentication on your WordPress site.
 
 1. [Sign up for a Duo account.](https://signup.duo.com/)
 2. Log in to the [Duo Admin Panel](https://admin.duosecurity.com/) and navigate to **Applications**.
 3. Click **Protect an Application** and locate **WordPress** in the applications list. Click **Protect this Application** to get your **integration key**, **secret key**, and **API hostname**.
-4. Install and activate the [Duo Two-Factor Authentication] (https://wordpress.org/plugins/duo-wordpress/) plugin on your WordPress site.
-5. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com. 
-![TFA Duo Configuration](/source/docs/assets/images/settings2_2x.png)
-6. Open a new browser (or [incognito window](http://www.google.com/support/chrome/bin/answer.py?answer=95464)) and try to log in to your WordPress account at wp-login.php. You should be prompted to set up your Duo two-factor authentication. Complete the enrollment process.
-![TFA Duo Login Screen](/source/docs/assets/images/start-setup_2x.png)
+4. Install and activate the [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/) plugin on your WordPress site. You can do this through the WordPress admin panel, or with Terminus:
+
+        terminus remote:wp $SITENAME.dev -- plugin install duo-wordpress --activate
+
+5. Open the settings page for the Duo plugin. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
+    ![TFA Duo Configuration](/source/docs/assets/images/duo-settings.png)
+    Click **Save Changes**.
+6. The page will be automatically redirected to the Duo setup wizard. Follow the on-screen instructions to configure an authentication device to your site and test it. Once complete, your browser will be redirected back to the plugin settings page.
 
 ## Set Up Two-Factor Authentication With WordPress (Organization)
 
@@ -89,7 +92,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 ### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin SAML](https://github.com/onelogin/drupal-saml) module on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
-2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.   
+2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
 3. Configure the OneLogin SAML module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
 ![TFA OneLogin Options](/source/docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
