@@ -34,7 +34,8 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 ## Maintain a Single Codebase for Multiple Sites
 
-This method requires one of the following organization service levels with custom upstreams: Partner, Strategic Partner, EDU+, Enterprise, and Reseller.    
+This method uses a [custom upstream](/docs/custom-upstream), a feature available to EDUs, Enterprises, and agencies that sign up for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies).
+
 
 1. Create a [custom upstream](/docs/custom-upstream) based on the multisite configuration.
 
