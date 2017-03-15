@@ -92,7 +92,9 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
 
-      terninus wp steve-site-d8.dev -- help
+  ```
+  terminus wp tessa-site-wp.dev -- help
+  ```
 
   The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to WP-CLI.		
 
