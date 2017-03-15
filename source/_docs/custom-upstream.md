@@ -8,7 +8,7 @@ Create a custom distribution of WordPress or Drupal and add it to the Pantheon p
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Custom upstreams are available to the "Partner" and "Strategic Partner" tiers in Pantheon's Partner program. <a href="/docs/organizations/#create-an-organization">Create your agency organization</a> to get started and see our <a href="https://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf">Partner Program Guide</a> for information on how to advance to Partner tiers.</p></div>
+<p>Custom Upstreams are available to EDUs, Enterprises, and agencies that sign up for <a href="https://pantheon.io/agencies/pantheon-for-agencies">Pantheon for Agencies</a>.</p></div>
 
 ## Create a Remote Repository
 
