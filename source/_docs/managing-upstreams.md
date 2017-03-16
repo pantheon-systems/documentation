@@ -1,7 +1,7 @@
 ---
 title: Managing Upstreams
 description: Detailed information on how to merge updates to core, extensions, and themes running on Pantheon.
-tags: [edu, workflow]
+tags: [agencies, workflow]
 categories: []
 ---
 Upstream maintainers bear the responsibility of updating Drupal and WordPress core for their users each time the project releases a new version. Upstreams that are not kept up-to-date with core security updates of either framework are removed from the platform.
