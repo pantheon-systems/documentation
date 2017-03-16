@@ -1,7 +1,7 @@
 ---
 title: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
-tags: [sftpdb, performance]
+tags: [status]
 categories: []
 ---
 Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.

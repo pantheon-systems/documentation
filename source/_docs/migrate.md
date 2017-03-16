@@ -1,7 +1,7 @@
 ---
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
-tags: [migrate]
+tags: [migrateguided]
 categories: []
 ---
 

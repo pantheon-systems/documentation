@@ -1,7 +1,7 @@
 ---
 title: Extracting Sites from a Drupal Multisite
 description: Learn how to separate the codebases to import individual Drupal sites to Pantheon.
-tags: [migratemanual]
+tags: [export]
 categories: [drupal]
 ---
 

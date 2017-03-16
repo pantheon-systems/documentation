@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
-tags: [getstarted]
+tags: [services]
 categories: []
 ---
 ## Getting Started

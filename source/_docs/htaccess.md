@@ -1,7 +1,7 @@
 ---
 title: Using PHP as an htaccess Alternative
 description: Learn why htaccess files are ignored by NGINX and discover alternatives for modifying a site's configuration.
-tags: [infrastructure, redirects]
+tags: [services, redirects]
 categories: []
 ---
 Pantheon sites use [NGINX](https://www.nginx.com/resources/wiki/#) to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.

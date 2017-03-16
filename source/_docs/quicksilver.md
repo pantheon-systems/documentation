@@ -1,6 +1,6 @@
 ---
 title: Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks
-tags: [quicksilver, pantheonyml]
+tags: [pantheonyml, infrastructure]
 categories: []
 ---
 

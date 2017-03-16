@@ -1,7 +1,7 @@
 ---
 title: Export an Existing WordPress Site
 description: Detailed information on how to prepare and export your existing WordPress site for migration to Pantheon.
-tags: [migratemanual]
+tags: [export]
 categories: [wordpress]
 ---
 
