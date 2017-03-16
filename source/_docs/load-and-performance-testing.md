@@ -15,7 +15,7 @@ You should:
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p><strong>Load testing should only be performed on the Live environment</strong>. Dev has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test can only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</p></div>
+<p><strong>If you have not launched your site yet, you should perform your load tests on the Live environment</strong>. If your site is already live, you should perform your load tests in the Test environment so that you do not risk downtime on your live site as a result of the load test. When performing your load tests in the Test environment, you should scale down your test traffic to correspond to the number of containers in your live environment, so if you have two app servers in your Live environment and only one app server in your Test environment, reduce the number of users in your load test by 50%. The Dev environment has much lower default caching settings than other environments to facilitate iterative development. Test has the exact same configuration as Live, but Test may only have one appserver, while Live can have as many as your plan allows. If disruptive behavior occurs outside of the Live environment, the site may be temporarily disabled to prevent disruption to other customers.</p></div>
 
 ## Performance vs. Scalability
 
