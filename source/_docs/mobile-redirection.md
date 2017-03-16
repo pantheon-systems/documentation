@@ -1,7 +1,7 @@
 ---
 title: Enabling Mobile Redirection with Cloudflare
 description: Learn how to use Cloudflare to set up mobile redirection on your Drupal or WordPress site.
-tags: [siteintegrations]
+tags: [redirects]
 categories: []
 ---
 

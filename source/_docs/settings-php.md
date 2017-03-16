@@ -1,7 +1,7 @@
 ---
 title: Configuring Settings.php
 description: Detailed information about configuring your Drupal database settings.
-tags: [develop]
+tags: [variables]
 contributors: [mmenavas, andrewmallis]
 categories: []
 ---

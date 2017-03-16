@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
 description: Learn how to backup your Drupal or WordPress site on Pantheon.
-tags: [dashboard]
+tags: [getstarted]
 categories: []
 ---
 The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service.

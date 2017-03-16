@@ -1,7 +1,7 @@
 ---
 title: The pantheon.yml Configuration File
 description: Set site configuration in a pantheon.yml file stored in the root of their code repository.  
-tags: [pantheonyml]
+tags: [pantheonyml, infrastructure]
 categories: []
 ---
 

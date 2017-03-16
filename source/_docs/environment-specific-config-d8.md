@@ -1,7 +1,7 @@
 ---
 title: Environment-Specific Configurations for Drupal 8
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 8's configuration override system.
-tags: [debugcode]
+tags: [variables, workflow]
 categories: [drupal8]
 contributors: [peter-pantheon, rachelwhitton]
 ---

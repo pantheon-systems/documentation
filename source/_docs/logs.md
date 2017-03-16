@@ -1,7 +1,7 @@
 ---
 title: Log Files on Pantheon  
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
-tags: [logs]
+tags: [logs, services]
 categories: []
 ---
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/docs/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.

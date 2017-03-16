@@ -1,7 +1,7 @@
 ---
 title: Serving Sites from the Web Subdirectory
 description: Learn how to create an nested docroot to serve your Pantheon site from.
-tags: [pantheonyml]
+tags: [pantheonyml, workflow]
 keywords: Composer, docroot
 categories: []
 contributors:

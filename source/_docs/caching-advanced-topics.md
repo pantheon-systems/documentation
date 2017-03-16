@@ -1,7 +1,7 @@
 ---
 title: Caching: Advanced Topics
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
-tags: [cache]
+tags: [cacheedge]
 categories: []
 ---
 ## Allow a User to Bypass the Cache

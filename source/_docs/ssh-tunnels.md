@@ -1,7 +1,7 @@
 ---
 title: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
-tags: [sftpdb]
+tags: [sftpdb, services, security]
 categories: []
 contributors: bwood
 ---

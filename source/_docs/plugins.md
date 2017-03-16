@@ -1,7 +1,7 @@
 ---
 title: Pantheon Plugins
 description: Details on specific WordPress plugins developed and maintained for the Pantheon Website Management Platform workflow.
-tags: [siteintegrations, services]
+tags: [siteintegrations, infrastructure, cacheedge]
 categories: []
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. Please feel free to contact us if you have any concerns with these plugins.

@@ -2,7 +2,7 @@
 title: Page Caching Changes with WordPress 4.7 and Above
 description: Starting with 4.7 Pantheon is moving advanced page caching behavior to a standalone plugin
 categories: [wordpress]
-tags: [cacheapp]
+tags: [cacheedge]
 contributors: [ari]
 keywords: WordPress, performance, cache, caching, varnish, varnish caching
 ---

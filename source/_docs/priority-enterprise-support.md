@@ -1,7 +1,7 @@
 ---
 title: Using Priority Enterprise Support
 description: Details on using the Pantheon Enterprise Support Feature on your Drupal and WordPress sites.
-tags: [services]
+tags: [edu, agencies]
 categories: []
 ---
 

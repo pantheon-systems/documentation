@@ -1,7 +1,7 @@
 ---
 title: Adding HTTPS For Free With Cloudflare
 description: Add HTTPS and other security features to your Pantheon Drupal or WordPress site using Cloudflare's free DNS service.
-tags: [domains]
+tags: [siteintegrations, security, dns]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
@@ -146,7 +146,7 @@ By setting up a blanket page rule to match all URLs and apply the __Always HTTPS
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
      if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() != "cli")) {
-       if ($_SERVER['HTTP_HOST'] != $domain || 
+       if ($_SERVER['HTTP_HOST'] != $domain ||
        !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
          header('HTTP/1.0 301 Moved Permanently');
          header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);

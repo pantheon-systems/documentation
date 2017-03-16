@@ -1,7 +1,7 @@
 ---
 title: Pantheon SSL/TLS Support
 description: Pantheon's recommendation regarding HTTPS/TLS in light of PCI DSS v3.1.
-tags: [domains, security]
+tags: [services, security]
 categories: []
 ---
 There are several types of encryption methods that browsers use:

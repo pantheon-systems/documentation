@@ -1,7 +1,7 @@
 ---
 title: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon Drupal site.
-tags: [debugcode]
+tags: [debugcode, services]
 categories: []
 ---
 We serve our customers by provisioning isolated linux containers with an optimized PHP stack. The php.ini is part of a highly tuned configuration and is not user-configurable.

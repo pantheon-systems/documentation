@@ -1,7 +1,7 @@
 ---
 title: Select a Plan
 description: Learn the various Pantheon plans offered for your Drupal or WordPress sites.
-tags: [getstarted]
+tags: [billing]
 categories: []
 ---
 Pantheon offers multiple service levels, called [plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Personal Plan. Then once you start to grow and have more specific requirements, take a look at the Professional Plan, which can be part of the recipe to get your site or application to scale and perform better.

@@ -1,7 +1,7 @@
 ---
 title: WordPress Best Practices
 description: A list of suggestions for developing WordPress sites on Pantheon.
-tags: [develop]
+tags: [workflow]
 categories: [wordpress]
 ---
 

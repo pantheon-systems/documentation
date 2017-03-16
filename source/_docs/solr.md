@@ -1,7 +1,7 @@
 ---
 title: Apache Solr on Pantheon
 description: Detailed information on using Apache Solr on your Pantheon Drupal or WordPress site.
-tags: [siteintegrations]
+tags: [addons]
 categories: []
 ---
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the free Sandbox. No permission or action is required from Pantheon to use Solr.  
