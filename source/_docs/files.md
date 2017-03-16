@@ -1,7 +1,7 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-tags: [infrastructure]
+tags: [infrastructure, sftpfiles]
 categories: []
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:

@@ -1,7 +1,7 @@
 ---
 title: Accessing an Account After the Owner Leaves
 description: Learn how to access an account and set a new owner to a Drupal or WordPress site.
-tags: [agencies, edu, singlesite]
+tags: [agencies, singlesite]
 categories: []
 ---
 
