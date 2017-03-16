@@ -32,3 +32,4 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 [Drupal Drush Command-Line Utility](/docs/drush)  
 [Major Version Drupal Upgrades](/docs/drupal-updates#upgrade-to-drupal-8)  
 [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)  
+[Enabling Solr on Drupal](/docs/solr-drupal-8)
