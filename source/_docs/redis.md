@@ -103,7 +103,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
   - For Drupal 6, visit  `/admin/settings/performance/cache-backend` and you should see the available backends and their statuses.
 
 ### Drupal 8 Sites
-At this time, sites running Drupal 8 cannot use Redis as there isn't a Drupal 8 Redis module yet. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [Port Redis issue queue](https://www.drupal.org/node/2233413) for updates.
+You can try out the beta version of the [Redis](https://www.drupal.org/project/redis) module on Drupal 8, however it is not officially supported at this time.
 
 ## Use the Redis Command-Line Client
 
