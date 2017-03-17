@@ -205,6 +205,53 @@ You may want to remove these modules after you launch your site, or use more adv
 
     Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
 
+## Managing Content, Configuration, and Code Across Environments
+In the lifecycle of managing a site, you can expect content editors to add new material to the Live environment. That content needs to be brought down into the Test and Dev environments from time to time so you can build and test features with fresh material from Live.
+
+1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
+
+        terminus drush $TERMINUS_SITE.live -- generate-content 25
+
+2. Copy the database and media files from Live into the Dev environment:
+
+        terminus env:clone-content $TERMINUS_SITE.live dev
+
+3. Make some configuration change on the Dev environment, such as enabling the [Views Glossary](https://www.drupal.org/project/views_glossary) module:
+
+        terminus drush $TERMINUS_SITE.dev -- views-enable glossary
+
+4. Export the configuration change so it can be managed in code:
+
+        terminus drush $TERMINUS_SITE.dev -- config-export -y
+
+5. Commit your code changes to the Dev environment:
+
+        terminus env:commit $TERMINUS_SITE.dev --message="Enabling glossary View"
+
+6. Let's check the Test environment before we deploy to get a deeper understanding of this workflow.
+
+ Visit `/glossary` and `/admin/content` in your Test environment. You should see a 404 message for the glossary page and the administrative content list should not contain the articles and pages that were made on live. Once we deploy our code in the next step, we should see something different on both URLs.
+
+7. Deploy code and import configuration changes to Test:
+
+        terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploying glossary View"
+
+        terminus drush $TERMINUS_SITE.test -- config-import -y
+
+
+8. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary View and a full list of content on the administrative page.
+
+9. Deploy to the Live environment and import the changes:
+
+        terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
+
+        terminus drush $TERMINUS_SITE.test -- config-import -y
+
+  With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).
+
+
+
+
 ## The Power of Terminus and Drush
 
 If you're a developer who lives in the command line, you now see the power of Terminus and Drush. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
