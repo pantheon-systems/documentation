@@ -184,7 +184,7 @@ The first digit of a plugin version should always the Terminus MAJOR version the
 If your plugin has a minimum required version of Terminus, you can specify that in the `compatible-version` section of `composer.json`. You can use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). If you do change `compatible-version`, please make sure that your constraint expression does not accidentally include the next major version of Terminus. In other words, `>=1.3 <2.0.0` is fine but `>=1.3` is not.
 
 ## Testing Plugins
-Adding automated testing is an important step to take for distributed plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
+Adding automated testing is an important step to take before distributing plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
 
 The instructions in this section demonstrate how to set up simple functional tests for Terminus plugins using Bats, the [Bash Automated Testing System](https://github.com/sstephenson/bats). Bats allows tests to be written with simple Bash statements.
 
@@ -231,7 +231,7 @@ The instructions in this section demonstrate how to set up simple functional tes
 
         composer cs
 
-4. Fix any PRS-2 compliance errors in your plugin:
+4. `cbf` can fix most PRS-2 compliance errors in your plugin:
 
         composer cbf
 
