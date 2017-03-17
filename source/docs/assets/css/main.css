@@ -289,20 +289,24 @@ p{
 }
 
 h1{
+  margin-top: 35px;
   font-family: Avenir-Heavy;
   color: #313945;
   }
 
 h2 {
+  margin-top: 30px;
   font-family: Avenir-Heavy;
   color: #313945;
   }
 
 h3 {
+  margin-top: 25px;
   font-family: Avenir-Heavy;
   color: #44525E;
   }
 h4 {
+  margin-top: 20px;
   font-family: Avenir-Heavy;
   color: #313945;
 }
@@ -4327,6 +4331,9 @@ a.cta.cta-black-on-yellow:after:hover {
 .row-topics-list .topic-info {
   margin: 0 15px 30px;
 }
+.plugin-title {
+  margin-top: 20px;
+}
 
 /*.topic-info > a.topic-info-link {
   display:flex;
@@ -4363,7 +4370,7 @@ a.cta.cta-black-on-yellow:after:hover {
 .topic-info .topic-info__image {
   width: 30%;
   height: 136px;
-  background-size: 70%;
+  background-size: 75%;
   margin:0;
 }
 a.topic-info-link {
