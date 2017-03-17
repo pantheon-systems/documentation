@@ -4,20 +4,20 @@ description: Using SimpleSAMLphp to configure a single sign-on system for your D
 tags: [automate]
 categories: [automate]
 ---
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.11/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.14/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon.
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
 <p>This is only for advanced users working on integrating a Shibboleth single-sign on system with their Drupal sites on Pantheon using the <a href="http://drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from drupal.org.</p></div>
 
-1. Download [SimpleSAMLphp version 1.11.x](http://simplesamlphp.org/) and add it to your Git repository as `/private/simplesamlphp-1.11.x`.
-2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.11.x/www`:
+1. Download [SimpleSAMLphp version 1.14.x](https://simplesamlphp.org/archive) and add it to your Git repository as `/private/simplesamlphp-1.14.x`.
+2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.14.x/www`:
 
     ```
-    ln -s ./private/simplesamlphp-1.11.x/www ./simplesaml
+    ln -s ./private/simplesamlphp-1.14.x/www ./simplesaml
     git add simplesaml
     git commit -am "Adding SimpleSAML symlink"
     ```
-3. [Generate or install certs](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to Git in `/private/simplesamlphp-1.11.x/cert`.
+3. [Generate or install certs](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to Git in `/private/simplesamlphp-1.14.x/cert`.
 4. Set up your `config.php` as follows:
 
     Enable local sessions to ensure that SimpleSaml can keep a session when used in standalone mode:
@@ -57,7 +57,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 5. With configuration completed, add SimpleSaml files to your repository:
 
     ```
-    git add private/simplesamlphp-1.11.x
+    git add private/simplesamlphp-1.14.x
     git commit -am "Adding SimpleSaml config files."
     ```
 
@@ -71,7 +71,7 @@ Add the following lines to your `settings.php` so that the Drupal module can loc
 # Decode Pantheon Settings
 $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 # Provide universal absolute path to the installation.
-$conf['simplesamlphp_auth_installdir'] = '/srv/bindings/'. $ps['conf']['pantheon_binding'] .'/code/private/simplesamlphp-1.11.0';
+$conf['simplesamlphp_auth_installdir'] = '/srv/bindings/'. $ps['conf']['pantheon_binding'] .'/code/private/simplesamlphp-1.14.0';
 ```
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
