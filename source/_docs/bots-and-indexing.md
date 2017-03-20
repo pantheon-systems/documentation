@@ -50,13 +50,13 @@ You can index your site under your production domain once it's added to the Live
 
 ## Troubleshooting
 
-### Google Links to My Site over HTTPS with Pantheon's Certificate
+### Google Results for My Site Link to Pantheon's Platform Domain Using HTTPS
 
-Google's search engine will [index HTTPS pages by default](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Because Pantheon serves all environments at `pantheonsite.io` over HTTPS by using our own certificate, this can lead to certificate mismatch security warnings in Google search results when you don't use your own HTTPS certificates. There are several possible solutions, including:
+Google's search engine now [crawl the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
 
- - adding an `X-Robots-Tag: noindex` header to responses resulting from `https://` requests,
- - creating a sitemap that contains only `http` links,
- - enabling HTTPS for your domain, either [manually](/docs/enable-https) or with a service like [CloudFlare](/docs/guides/cloudflare-enable-https/).
+ - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests.
+ - Create a sitemap that contains only HTTP links.
+ - Enable HTTPS for your domain, either [using your own certificate](/docs/enable-https) or for [free using Cloudflare](/docs/guides/cloudflare-enable-https/).
 
 ### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
