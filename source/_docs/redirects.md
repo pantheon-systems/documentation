@@ -113,7 +113,7 @@ To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traff
 
 If you don't want to have your whole site under HTTPS, we recommend using a secure subdomain (e.g. secure.yoursite.com). Mixed-mode secure sessions are vulnerable. There are also edge cases with caching that can create bugs with mixed-mode HTTPS. Putting the secure pages on a secure domain prevents confusion in caching between secure/insecure content.
 
-You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
+You can implement a secure domain for a specific set of pages with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
