@@ -50,13 +50,13 @@ You can index your site under your production domain once it's added to the Live
 
 ## Troubleshooting
 
-### Google Results for My Site Link to Pantheon's Platform Domain Using HTTPS
+### Google Results for My Site Link to HTTPS using Pantheon's Shared Certificate
 
-Google's search engine now [crawl the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
+Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
 
- - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests.
  - Create a sitemap that contains only HTTP links.
  - Enable HTTPS for your domain, either [using your own certificate](/docs/enable-https) or for [free using Cloudflare](/docs/guides/cloudflare-enable-https/).
+ - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
 
 ### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.

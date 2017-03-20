@@ -13,8 +13,6 @@ date: 6/1/2015
 ---
 More and more, it's expected that websites run under HTTPS to appear professional, and for any site which uses a CMS, securing administrative login credentials should be a priority. Now that HTTPS is in the mix for search engine rankings, even sites that don't handle sensitive information have good reason to want HTTPS.
 
-Google's search engine will also [index HTTPS pages by default](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Because Pantheon serves all environments at `pantheonsite.io` over HTTPS by using our own certificate, this can lead to certificate mismatch security warnings in Google search results. We strongly reccomend serving your site over HTTPS to prevent these issues.
-
 Historically, running HTTPS required additional cost and complexity due to the need to obtain a certificate. However, thanks to a concerted effort by many providers, these barriers are being eliminated, and it is now possible for anyone to offer secure encrypted transport as the default for their website.
 
 This guide will show you how to take advantage of Cloudflare's free HTTPS service for any site on Pantheon, including those using the Personal plan. Best of all, you will be able to use __Full SSL__ mode, which insures that traffic is encrypted end-to-end, without any "air gap".
@@ -148,7 +146,7 @@ By setting up a blanket page rule to match all URLs and apply the __Always HTTPS
 You can also achieve this by writing your own redirection code into your `settings.php` or `wp-config.php`. Assuming you use one of the code blocks above which sets up a `$domain` parameter, the following should work for you:
 
      if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() != "cli")) {
-       if ($_SERVER['HTTP_HOST'] != $domain ||
+       if ($_SERVER['HTTP_HOST'] != $domain || 
        !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
          header('HTTP/1.0 301 Moved Permanently');
          header('Location: https://' . $domain . $_SERVER['REQUEST_URI']);
