@@ -50,14 +50,22 @@ You can index your site under your production domain once it's added to the Live
 
 ### Troubleshooting
 
-#### Sitemaps Produce a White Screen of Death (WSOD)
+### Google Links to My Site over HTTPS with Pantheon's Certificate
+
+Google's search engine will [index HTTPS pages by default](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Because Pantheon serves all environments at `pantheonsite.io` over HTTPS by using our own certificate, this can lead to certificate mismatch security warnings in Google search results when you don't use your own HTTPS certificates. There are several possible solutions, including:
+
+ - adding an `X-Robots-Tag: noindex` header to responses resulting from `https://` requests,
+ - createing a sitemap that contains only `http` links,
+ - enabling HTTPS for your domain, either [manually](/docs/enable-https) or with a service like [CloudFlare](/docs/guides/cloudflare-enable-https/).
+
+### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
 For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus env:clear-cache`
 
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
 
-#### Legacy Sitemap Submissions Generating 404s
+### Legacy Sitemap Submissions Generating 404s
 Sitemaps can (and should) be submitted directly to Google Webmaster Tools. However, if there are legacy submissions out there generating 404s, you'll need to redirect via PHP within `wp-config.php` or `settings.php`. For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin can use the following:
 
 ```php

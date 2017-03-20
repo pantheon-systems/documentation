@@ -4,7 +4,12 @@ description: Learn how to implement secure HTTPS communication and utilize a sta
 tags: [golive]
 categories: [golive]
 ---
-HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g. www.example.com, if you are transmitting any sensitive data. Google takes this a step further, and recommends [protecting all of your websites with HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https?hl=en). Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
+HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g. `www.example.com`, if you are transmitting any sensitive data. Google takes this a step further, and recommends [protecting all of your websites with HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https?hl=en).
+
+
+Google's search engine will also [index HTTPS pages by default](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Because Pantheon serves all environments at `pantheonsite.io` over HTTPS by using our own certificate, this can lead to certificate mismatch security warnings in Google search results. We strongly reccomend serving your site over HTTPS to prevent these issues.
+
+Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
 Adding HTTPS to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
@@ -49,12 +54,12 @@ Do not add a password to your key. Adding a password will cause an error later w
 
 The output of `openssl` should be two files:
 
-`www_example_com.csr`  
+`www_example_com.csr`
 `www_example_com.key`
 
 ## Get SSL Certificate
 
-Give the CSR to your SSL provider and they will supply you with one or more certificate (.crt or .pem) files. The CSR is not used after you get your certificates.  
+Give the CSR to your SSL provider and they will supply you with one or more certificate (.crt or .pem) files. The CSR is not used after you get your certificates.
 
 If the SSL provider asks you to select a web host server type, look for an option that supports OpenSSL, such as Apache with mod\_SSL support.
 
@@ -104,7 +109,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 1.  From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
 2.  Select **HTTPS**.
 3.  Next to **Environment HTTPS:**, click **Enabled**.
-4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
+4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this:
 
 
         -----BEGIN CERTIFICATE-----
@@ -193,7 +198,7 @@ Visit Comodo's support site to read about [SSL packs](https://support.comodo.com
 
 ### How do I fix a chain file signing key mismatch?
 
-`400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`  
+`400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`
 This indicates that some part of the chain is out of order. Check that you have the main and intermediary in the right places, and if you have multiple intermediaries check that they're in the right order. Also see [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 
 ### What if I receive SSL chain errors on a mobile device?
