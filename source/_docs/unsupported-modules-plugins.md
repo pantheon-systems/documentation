@@ -45,14 +45,17 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
- **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
+**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
+
+<hr>
+### [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
+**Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output.
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
 
 <hr>
-
 ### [Cache Expiration](https://www.drupal.org/project/expire)
 **Issue**: Unfortunately, there is no way to selectively purge the Varnish cache.
 

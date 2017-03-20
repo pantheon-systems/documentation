@@ -8,9 +8,9 @@ Pantheon provides static site analysis as a service for Drupal 7 sites to make b
 
 ![status tab on live environment](/source/docs/assets/images/dashboard/status-tab.png)
 
-Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.  
+Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.
 
-This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.  
+This mechanism does not actually perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results.
 
 In short, you get a fast, repeatable report that can help detect common problems and provide insights into your site.
 
@@ -35,6 +35,9 @@ In short, you get a fast, repeatable report that can help detect common problems
 To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/site_audit), an open-source collection of Drush commands. Site Audit is developed and maintained by Pantheon, but is not limited to the Pantheon platform. Any Pantheon specific support is wrapped in a vendor option.
 
 ## Frequently Asked Questions
+
+#### Trusted Host Setting for Drupal 8
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/docs/settings-php/#trusted-host-setting).
 
 #### Why does site audit have more reports than what's shown in the Dashboard?
 
@@ -65,7 +68,7 @@ $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 ```
 The specific key you'll use in the `$conf` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks](http://cgit.drupalcode.org/site_audit/tree/Check).
 
-Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/docs/read-environment-config/) for doing things like limiting the exclusions to one environment.  
+Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/docs/read-environment-config/) for doing things like limiting the exclusions to one environment.
 
 #### I want to contribute/I found a mistake. How should I proceed?
 
