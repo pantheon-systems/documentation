@@ -2,12 +2,13 @@
 title: Terminus Manual
 subtitle: Version Updates
 terminuspage: true
+terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
-  <h2>Update to the Current Release: {[{releases[0].name}]}</h2>
+  <h2>Update to the Current Release {[{releases[0].name}]}</h2>
   <p class="instruction">Navigate to the directory where Terminus was originally installed, then run:</p>
   <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update">Copy</button>
