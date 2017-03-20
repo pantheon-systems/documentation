@@ -18,22 +18,33 @@ The core of the Pantheon workflow is to move code up from Dev to Test to Live an
 
 ### Commit Code in Dev
 
-Update code in the Dev environment via [SFTP](/docs/sftp/) or [Git](/docs/git/).
+Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
 
 ### Combine Code from Dev and Content from Live in Test
 
-When you're ready to test a new set of changes, take your code from Dev, your content from Live, and combine them in Test to be absolutely certain that your deployment to Live will go as planned.
+When you're ready to test a new set of changes, deploy your code from Dev, pull your content from Live, and combine them in Test to be absolutely certain that your deployment to Live will go as planned. Deploys are performed by adding a git tag to the last commit on the Test environment.
+
+<div class="alert alert-info" role="alert">
+<h3 class="info">Note</h3>
+<p markdown="1">While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).</p>
+</div>
 
 Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
-![Site dashboard, test environment, code section](/source/docs/assets/images/dashboard/test-env.png)
+![Site dashboard, test environment, Deploys section](/source/docs/assets/images/dashboard/deploy-to-test-env.png)
 
-While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).
+ - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
+
+ - Check the **Pull files and the database from the Live environment?** Checkbox to pull the content from your Live site to the Test environment.
+
+ - Drupal site deploys come with the ability to run `update.php` after  code deploys. `hook update n` and any other necessary database updates will be made automatically on the Test environment.
+
+   On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
 After running this operation, be sure that:
 
-* Your database updates succeed  
-* Your exported configuration is in place  
+* Your database updates succeed
+* Your exported configuration is in place
 * The site is functioning as expected in the Test environment
 
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
