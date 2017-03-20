@@ -1,7 +1,7 @@
 ---
 title: Developing Locally with Kalabox
 description: Work locally and deploy to Pantheon using Kalabox.  
-tags: [kalabox]
+tags: [local]
 categories: []
 ---
 [Kalabox](http://www.kalabox.io/) is a Free and Open Source project allows you to quickly create and manage local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Kalabox includes both an intuitive GUI and  command-line interface, and is powered by [Docker](https://www.docker.com/) under the hood.

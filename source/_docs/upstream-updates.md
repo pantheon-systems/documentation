@@ -1,7 +1,7 @@
 ---
 title: Applying Upstream Updates
 description: Detailed information on applying and debugging upstream updates, such as Drupal and WordPress releases.
-tags: [dashboard, devterminus, remote]
+tags: [dashboard, devterminus, git]
 categories: []
 ---
 Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/scope-of-support).

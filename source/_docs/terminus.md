@@ -4,7 +4,7 @@ subtitle: Get Started
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-tags: [devterminus, automateterminus]
+tags: [devterminus]
 permalink: docs/:basename/
 ---
 

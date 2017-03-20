@@ -1,7 +1,7 @@
 ---
 title: Undo Git Commits
 description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, and Pantheon.
-tags: [debugcode, gitlocal]
+tags: [debugcode, git]
 categories: []
 ---
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
