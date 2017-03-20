@@ -81,8 +81,8 @@ If you want to downgrade, please contact Pantheon support.
 ### When do I stopped being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing within 10 days of upgrading.
 
-### Moz Pro
-https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni
+### Why does Moz Pro return an 804 HTTPS SSL error?
+Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
 
 
 ## Troubleshooting
