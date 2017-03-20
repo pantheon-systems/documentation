@@ -89,14 +89,15 @@ Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). 
 
 ### 503 Timeouts
 There are three potential 503 timeout errors you may encounter:
+
 - 503 connection timeout
 - 503 first byte timeout
 - 503 between bytes timeout
 
-These errors occur when a request exceeds the 60s timeout limit for above scenarios.
+These errors occur when a request exceeds the 60s timeout limit for the above scenarios. There is currently no way to exceed or override the 60s timeout limit.
 
 ### 503 Header Overflow
-The error occurs when a request exceeds the 10K size limit for Cookies (as sent in the request "Cookie: .." header). If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header "X-Cookies-Dropped: 1" will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
+This error occurs when a request exceeds the 10K size limit for Cookies (as sent in the request `"Cookie: .."` header). If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
 
 Previously, this error returned [502 - Upstream Header Too Big](/docs/errors-and-server-responses/#502-upstream-header-too-big).
 
