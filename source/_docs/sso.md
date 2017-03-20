@@ -1,7 +1,7 @@
 ---
 title: SSO and Identity Federation on Pantheon
 description: Use SSO to centrally manage user identities and provide seamless integration across multiple applications.
-tags: [security, agencies]
+tags: [security, tools]
 categories: []
 ---
 Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organization](/docs/sso-organizations/).
