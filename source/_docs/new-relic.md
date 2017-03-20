@@ -11,7 +11,21 @@ Select the **New Relic** tab on your Site Dashboard, and click **Activate New Re
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
-New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
+New Relic is automatically enabled for all application servers added to the site, including Multidev environments.
+
+## Configure Ping Monitors for Availability
+New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
+
+1. Click **New Relic** > **Go to New Relic**  from the target environment within the Site Dashboard on Pantheon.
+2. Select **Synthetics** from the menu bar at the top of the page.
+3. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor.
+4. Select the locations you wish to check the site from.
+5. Set the frequency for checks.
+6. Provide an email address for notifications.
+7. Click **Create my monitor**.  
+
+The ping monitor is provided for free; however, other monitors from the Synthetics tool suite require upgrading to a paid service level. For more details, see [New Relic Synthetics > Using Monitors](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors).
+
 
 ## Monitoring and Improving Performance
 
@@ -122,7 +136,7 @@ if (extension_loaded('newrelic')) {
 ```
 
 ### APM Availability Monitoring Alerts and False Positive Downtime Events
-When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false postive Downtime events for your site.
+When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false positive Downtime events for your site.
 
 #### Server Name Indication (SNI)
 Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
@@ -130,14 +144,8 @@ Sites configured with third-party proxy services that use SNI to serve HTTPS req
 #### TLS 1.1 or Higher
 When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
 
-#### Solution: Use New Relic Synthetics
-As an alternative to both situations, you can use the bundled New Relic Synthetic Lite service to monitor HTTPS pages served with SNI:
-
-1. Click **New Relic** from the target environment within the Site Dashboard on Pantheon.
-2. Select **Synthetics**.
-3. Click **Create new monitor**, and enter the details for the environment you want to monitor.
-
-The ping monitor is provided for free; however, other monitors require upgrading to a paid plan. For more details, see [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
+#### Solution: Use New Relic Synthetics Lite
+As an alternative to both situations, you can use the free New Relic Synthetic Lite service to monitor HTTPS pages served with SNI. Enable this service using the [steps provided above](#configure-ping-monitors-for-availability).
 
 ## Frequently Asked Questions
 
