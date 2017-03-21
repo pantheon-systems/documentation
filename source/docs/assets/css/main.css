@@ -3482,7 +3482,14 @@ li.terminus-usage {
 .devbar h3, .devbar p {
   color: #fff;
 }
-
+p.devbar>a{
+  color:#fff!important;
+  font-weight:bolder!important;
+  text-decoration: underline!important;
+}
+p.devbar>a:hover{
+  opacity: 0.65;
+}
 .label {
   display: inline-block !important;
   vertical-align: top !important;
