@@ -60,16 +60,9 @@ From the target environment's Domains tool, click **Show DNS Recommendations** n
 While it’s good for visitors and DNS to resolve both www and non-www domain, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
 
 ### Serving sites from www
+Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider.
 
-#### Method 1: Add redirect from WordPress or Drupal
-
-Add redirect logic to `settings.php` for Drupal or to `wp-config.php` for WordPress. For examples see [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain) and [require HTTPS and standardize domain](/docs/redirects/#require-https-and-standardize-domain).
-
-#### Method 2: Add DNS records to our www-service
-
-Pantheon's www-service redirects requests to the bare domain (example.com) to the www subdomain (www.example.com). **Caveat:** This method does not work for HTTPS. See method 1 above.
-
-![www-redirection service](/source/docs/assets/images/www-redirection-service.png)
+Then, add redirect logic to `settings.php` for Drupal or to `wp-config.php` for WordPress to serve requests using only your preferred domain. For examples see [redirecting to a common domain](/docs/redirects/#redirect-to-a-common-domain) and [require HTTPS and standardize domain](/docs/redirects/#require-https-and-standardize-domain).
 
 
 ### Serving Sites from Bare Domains
@@ -174,8 +167,6 @@ live-example.pantheonsite.io.
 ### Why does my domain have an extra "www."?
 If you find that `www.example.com` resolves to `www.www.example.com`, or `subdomain.example.com` resolves to `www.subdomain.example.com` - the domain's www entry has been improperly configured as an A record.
 
-![Extra www example](/source/docs/assets/images/extra-www-example.png)
-
 Correct this problem by setting the www entry as a CNAME record pointing to the recommended destination (e.g. `live-yoursite.pantheonsite.io`), found within the Site Dashboard on the target environment.
 
 ### Why does my bare domain resolve to "www." in Safari and Firefox, but fails to resolve in Chrome?
@@ -196,7 +187,7 @@ For more details, see [Configuring Settings.php](/docs/settings-php#trusted-host
 
 ### Why does my site is returning 404 : Unknown Site error after adding a custom domain and configuring DNS?
 
-The error indicates internal routing problem. Check if the URL is correct and matches to your Dashboard's custom domain settings. If you've configured DNS to use Pantheon's www-redirect service, ensure that both the bare domain and www subdomain have been added to the target environment.
+The error indicates internal routing problem. Check if the URL is correct and matches to your Dashboard's custom domain settings. Ensure that both the bare domain and www subdomain have been added to the target environment.
 
 
 
