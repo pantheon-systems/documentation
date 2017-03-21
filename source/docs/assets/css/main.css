@@ -3476,14 +3476,20 @@ li.terminus-usage {
 }
 
 .devbar {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  margin-bottom: 0px !important;
-  text-align: center;
+  background-color: #0a6bb5;
+  border-radius: 0px;
 }
-
-
+.devbar h3, .devbar p {
+  color: #fff;
+}
+p.devbar>a{
+  color:#fff!important;
+  font-weight:bolder!important;
+  text-decoration: underline!important;
+}
+p.devbar>a:hover{
+  opacity: 0.65;
+}
 .label {
   display: inline-block !important;
   vertical-align: top !important;

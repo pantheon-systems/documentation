@@ -42,6 +42,44 @@ function setActivetrail() {
 window.addEventListener("load", setActivetrail);
 </script>
 {% endif %}
+{% if page.guidepage %}
+<script type="text/javascript">
+function setActivetrail() {
+  aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
+  for(i=0;i<aaObj.length;i++) {
+    if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+      aaObj[i].className='active-trail';
+      if(/\/user-dashboard.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/create-site.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/site-dashboard.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/create-environments.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/pull-content.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/add-code.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/admin.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+      if(/\/conclusion.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-getting-started').removeClass('active-trail');
+      }
+
+    }
+  }
+}
+window.addEventListener("load", setActivetrail);
+</script>
+{% endif %}
 
 <script>
 var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
