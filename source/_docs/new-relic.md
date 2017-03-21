@@ -7,7 +7,7 @@ categories: [performance]
 [New Relic APM Pro](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Activate New Relic APM Pro
-Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus sites omniscient` for Terminus 0.13.x and `terminus omniscient` for Terminus 1.x.
+Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus omniscient`.
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
@@ -21,7 +21,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 2. Database Queries (MySQL or Redis)
 3. External Requests (e.g. calls to third pary APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall. 
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall.
 
 You can find more information on using New Relic to investigate specific areas of performance below:
 
@@ -177,4 +177,3 @@ Because Pantheon's runtime matrix runs your application across many containers s
 - [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced)
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
-
