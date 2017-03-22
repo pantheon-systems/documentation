@@ -2,17 +2,19 @@
 title: Domains and DNS
 description: Information on adding a domain to your Pantheon Drupal or WordPress site.
 tags: [dns]
-categories: []
 ---
-Routing traffic to sites on Pantheon requires modifying the DNS configuration at the domain's DNS hosting provider.
 
-## Step 1: Determine the URL to Serve From
+DNS is the main naming system for the internet. It takes any domain name, such as "pantheon.io" and ties it to an IP address like `203.0.113.75`.
+
+Associating your Pantheon site with a domain name requires modifying the DNS configuration at the domain's DNS hosting provider.
+
+## Determine the URL to Serve From
 
 We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
 
 If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [Cloudflare's free Universal SSL service](/docs/guides/cloudflare-enable-https/), set up DNS as described here first.
 
-## Step 2: Add Domains to the Site Environment
+## Add Domains to the Site Environment
 
 You must have a paid plan to add a domain to a site environment. For more information, see [Selecting a Plan](/docs/select-plan/).
 
@@ -22,13 +24,17 @@ You must have a paid plan to add a domain to a site environment. For more inform
 
 
 <div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>You must separately add both the www and non-www domains (e.g example.com and www.example.com) via the Pantheon Site Dashboard in order for both to resolve to your site. Automatic resolution of domains and wildcards are not supported.</p></div>
+<h4 class="info">Note</h4>
+<p>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</p>
+</div>
 
 ### Develop Using a Domain Without Changing DNS
-Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
+Use the following optional workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4><p>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</p></div>
+<h4 class="info">Warning</h4>
+<p>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</p>
+</div>
 
 1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 
@@ -41,19 +47,21 @@ Use the following workaround to allow your local workstation to access your Pant
  23.123.45.6
  ```
 2. Add the desired domain to the Live environment of the Site Dashboard on Pantheon.
-3. Add a line to your local <a href="https://en.wikipedia.org/wiki/Hosts_(file)">hosts file</a> which includes one of the IP addresses returned in the above dig command followed by the domain:
+
+3. Add a line to your local [hosts file](https://en.wikipedia.org/wiki/Hosts_(file)) which includes one of the IP addresses returned in the above dig command followed by the domain:
 
  ```
- 192.123.456.789 example.com  
+ 192.123.456.789 example.com
  ```
-## Step 3: Configure Your DNS
+## Configure Your DNS
 From the target environment's Domains tool, click **Show DNS Recommendations** next to each of the domains you've added:
 
 ![Show recommended DNS](/source/docs/assets/images/dashboard/show-dns-recommendations.png)
 
 <div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4><p><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</p></div>
-
+<h4 class="info">Warning</h4>
+<p><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</p>
+</div>
 
 ## Serve traffic from your preferred domain (www or non-www)
 
@@ -120,7 +128,7 @@ Domains configured before March 2016 may be using our legacy DNS values. Update 
 [Use the issue queue](https://drupal.org/node/317) of the module in question to communicate with the module maintainers.
 
 ### Does Pantheon do any HTML domain substitution?
-Yes, for WordPress sites (which are more likely to contain hard-coded links to other domains in their database), Pantheon will replace platform-assigned domains for that environment (e.g. `dev-mysite.pantheonsite.io` or `live-mysite.gotpantheon.com`) with custom domains in the HTML body when the HTML page is requested via the custom domain.  This prevents loading assets using different domain names representing the same site.  
+Yes, for WordPress sites (which are more likely to contain hard-coded links to other domains in their database), Pantheon will replace platform-assigned domains for that environment (e.g. `dev-mysite.pantheonsite.io` or `live-mysite.gotpantheon.com`) with custom domains in the HTML body when the HTML page is requested via the custom domain.  This prevents loading assets using different domain names representing the same site.
 
 For example, when requesting `http://mysite.com` in a browser, we replace any asset (images, CSS, JS) URL domains from `live-mysite.pantheonsite.io` to `mysite.com`.
 
@@ -133,7 +141,6 @@ This will not:
 ### My site is completely incompatible with IPv6 traffic; how can I force IPv4 traffic?
 Do not create an AAAA (IPv6) record as recommended in the Site Dashboard when configuring the domain's DNS. Only create the CNAME record for the www subdomain and the A record for the bare domain.
 
-
 ## Troubleshooting
 
 ### Verify DNS configuration
@@ -144,7 +151,7 @@ Verify DNS has been properly configured to direct traffic to your Pantheon site:
 
 Enter your domain name in the DNS record lookup tool provided by the following website: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
 
-The results should match the values recommended within the Site Dashboard.  
+The results should match the values recommended within the Site Dashboard.
 
 **Use a terminal command**
 
@@ -188,10 +195,6 @@ For more details, see [Configuring Settings.php](/docs/settings-php#trusted-host
 ### Why does my site is returning 404 : Unknown Site error after adding a custom domain and configuring DNS?
 
 The error indicates internal routing problem. Check if the URL is correct and matches to your Dashboard's custom domain settings. Ensure that both the bare domain and www subdomain have been added to the target environment.
-
-
-
-
 
 ## See Also
 
