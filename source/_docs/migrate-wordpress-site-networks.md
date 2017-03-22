@@ -27,7 +27,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git add .
  git commit -m "initial commit"
  ```
-2.  From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
+2.  From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/docs/git).
 3.  Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash

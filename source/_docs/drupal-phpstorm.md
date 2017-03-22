@@ -10,7 +10,7 @@ This article covers some best practices and recommendations for building a Drupa
 
 ## Initial Site Setup
 
-After you've [created your site on Pantheon](/docs/getting-started/), you'll need to set up your local environment.
+After you've [created your site on Pantheon](/docs/create-sites), you'll need to set up your local environment.
 
 ## Clone the Code Repository
 
@@ -34,7 +34,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 #### Drush Support
   We recommend [enabling Drush support](https://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm#DrupalDevelopmentusingPhpStorm-DrupalCommandLineToolDrushIntegration).
 
-1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **Plus**.  
+1. From Preferences > [Command Line Tool Support](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html), click **Plus**.
 2. Choose Tool > Drush, and specify the path.
 
 ## Configure On-Server Development

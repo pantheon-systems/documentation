@@ -65,7 +65,7 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
 
 ## Navigate the Code Tool
-You can set the site's [connection mode](/docs/getting-started/#interact-with-your-code) and access [connection information](/docs/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
+You can set the site's connection mode to [git](/docs/git/) or [SFTP](/docs/sftp/) and access [connection information](/docs/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](/source/docs/assets/images/dashboard/interface-dev-code-sftp-commit.png)
 
 You can also view the diff output for each individual file:

@@ -10,7 +10,7 @@ If your site reports a new version update is available and you don't see a [one-
 ## Prerequisites
 Core updates for [distributions](https://www.drupal.org/documentation/build/distributions) (Open Atrium, Commerce Kickstart, etc.) are serviced by the maintainer, but for the times in which those updates have not been pushed you can pull them into your site manually. To start, you'll need a local copy of your site's codebase:
 
-1. Access the site's Dashboard and change the [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
+1. Access the site's Dashboard and change the connection mode to [git](/docs/git).
 2. Copy the clone command.
  ![Git clone](/source/docs/assets/images/dashboard/git-string.png)
 3. In a local terminal, paste the command. Git will unpackage the code in a directory created using your site name.
@@ -55,7 +55,7 @@ Navigate to the directory of your site's code repository on your local machine, 
   <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
-  git push origin master  
+  git push origin master
   </code></pre>
   </div>
 </div>

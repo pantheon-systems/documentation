@@ -15,7 +15,6 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 
 - [Pantheon platform consideration](/docs/platform-considerations/)
 - [Advanced caching](/docs/caching-advanced-topics/)
-- [Required reading](/docs/required-reading/) (aka Pantheon 101)
 - [Non-standard file locations](/docs/non-standard-file-paths/)
 - [Unsupported modules and plugins](/docs/unsupported-modules-plugins/)
 - [Pantheon FAQs](/docs/faq/)
