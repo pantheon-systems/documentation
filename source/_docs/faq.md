@@ -46,6 +46,15 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/domains) and [Going Live](/docs/going-live).
 
+### What are the differences between the environments?
+
+- Dev has lower TTL on Varnish caching and shows errors to site users.
+- Test has the same caching configuration as Live and does not show errors to users, but only one application server.
+- Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
+
+To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
+
+
 ## Developing Sites
 
 #### Does Pantheon offer professional services?
