@@ -102,6 +102,10 @@ If you **can** access that web page on port `2222` then your issue does not appe
 This is by design. Please see [Using the Pantheon Workflow
 ](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
+
+### SFTP changes do not show up in the Site Dashboard.
+Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
+
 ### My SFTP client takes a long time to connect.
 
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
