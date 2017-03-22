@@ -118,6 +118,18 @@ Each of these configurations is possible with Drupal’s built-in language switc
 
 You can associate multiple domains with a single site environment. See [adding a domain to a site environment](/docs/domains) for details.
 
+### Can I use PHP Sessions with WordPress?
+
+If you need to use PHP's native session handling, please install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin, which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
+
+If you are seeing errors like this:
+
+```php
+Warning: session_start(): user session functions not defined
+```
+
+You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/).
+
 ## Caching and Performance
 
 ### What version of Apache Solr does Pantheon run?
