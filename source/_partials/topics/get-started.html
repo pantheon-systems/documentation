@@ -18,6 +18,23 @@
   </div>
   <div class="row">
     <div class="col-md-6 topic-groups">
+      <h2>Blockers (Delete/Consolidate) <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h2>
+      <p class="topic-info__description">These need some plannings.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.develop if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.develop if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.develop %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 topic-groups">
       <h3>Create Free Site</h3>
       <p class="topic-info__description">We allocate two free Sandbox sites for all user accounts.</p>
       <ul class="topic-docs">
