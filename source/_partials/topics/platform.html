@@ -13,9 +13,11 @@
       <h3>Platform Services & Resources</h3>
       <p class="topic-info__description">Placeholder text about this group of docs.</p>
       <ul class="topic-docs">
-
         {% for doc in data.docs_tags.services if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.services if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
         {% endfor %}
         {% for doc in data.docs_tags.services %}
           {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
@@ -28,9 +30,11 @@
       <h3>Platform Architecture</h3>
       <p class="topic-info__description">Placeholder text about this group of docs.</p>
       <ul class="topic-docs">
-
         {% for doc in data.docs_tags.infrastructure if doc.meta.type == "video"%}
-        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.infrastructure if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
         {% endfor %}
         {% for doc in data.docs_tags.infrastructure %}
         {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
@@ -50,7 +54,10 @@
         <div class="col-md-12" style="padding:40px;">
           <ul class="top-docs top-docs-2col">
           {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "video"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
           {% endfor %}
           {% for doc in data.docs_tags.pantheonyml %}
           {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
