@@ -47,9 +47,9 @@ View all of your collaborators, filter them by role, manage their roles, and add
 [Custom Upstreams](/docs/running-custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
 
 ### Support
-Review, open, or reply to support requests associated with your organization and its sites on the Support tab. [Learn about our Scope of Support](/docs/scope-of-support) and [how to get support](/docs/getting-support).
+Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/docs/getting-support).
 
-If you need expedited, on-call support, and are an Enterprise customer, Pantheon for EDU+ organization, or Agency Reseller, consider upgrading to [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).   
+If you need expedited, on-call support, and are an Enterprise customer, Pantheon for EDU+ organization, or Agency Reseller, consider upgrading to [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
 
 ### Settings
 

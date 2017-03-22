@@ -87,7 +87,7 @@ categories: []
 
 
 ## Chat Support
-Start a chat with our Support Team to request assistance on issues within our [scope of support](/docs/scope-of-support/). This support feature is available to all users and sites across all plans, including Sandbox.
+Start a chat with our Support Team to request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
 1. From your Site or User Dashboard, click **Support**.
 2. Click **Launch Chat**, then click **New Conversation**.

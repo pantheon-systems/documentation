@@ -32,7 +32,7 @@ Copy this plugin file to `wp-content/mu-plugins/mu-plugins/site-config.php` and 
   Description: Activating and deactivates plugins based on environment.
   Version: 0.1
   Author: Pantheon
-  Author URI: http://pantheon.io/docs/wordpress
+  Author URI: http://pantheon.io/docs/contributors
 */
 # Ensuring that this is on Pantheon
 if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :

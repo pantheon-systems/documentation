@@ -10,14 +10,14 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Get to Know Pantheon
 
-- [Getting Started](/docs/getting-started)  
+- [Getting Started](/docs/getting-started)
 - [Using the Pantheon Workflow](/docs/pantheon-workflow/)
 - [All About Application Containers](/docs/application-containers/)
-- [Platform Considerations](/docs/platform-considerations/)  
+- [Platform Considerations](/docs/platform-considerations/)
 - [Enable Secure HTTPS Communication](/docs/enable-https)
 
 ## Build
-- [Migrate Sites to Pantheon](/docs/migrate)  
+- [Migrate Sites to Pantheon](/docs/migrate)
 - [rsync and SFTP](/docs/rsync-and-sftp)
 - [Configuring settings.php](/docs/settings-php) or [Configuring wp-config.php](/docs/wp-config-php)
 - [Drupal Drush Command-Line Utility](/docs/drush)
@@ -36,7 +36,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
 - [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
-- [Backup Creation](/docs/create-backups)
+- [Backup Creation](/docs/backups)
 
 ## Debug
 
@@ -45,5 +45,4 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Support
 
-- [Scope of Support](/docs/scope-of-support/)
 - [Getting Support](/docs/getting-support)

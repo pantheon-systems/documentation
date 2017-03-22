@@ -76,6 +76,5 @@ You'll need to [manually migrate](/docs/migrate-manual) site archives that excee
 Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](http://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
 
 ## See Also
-* [Going Live](/docs/going-live)
 * [Getting Started](/docs/getting-started)
 * [Using the Pantheon Workflow](/docs/pantheon-workflow)

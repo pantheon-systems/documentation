@@ -110,5 +110,4 @@ Follow any remaining steps within [Migrate Sites to Pantheon: Manual Method](/do
 * [Accessing MySQL Databases](/docs/mysql-access/)
 * [rsync and SFTP](/docs/rsync-and-sftp/)
 * [Using the Pantheon Workflow](/docs/pantheon-workflow)
-* [Going Live](/docs/going-live)
 * [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)

@@ -49,7 +49,6 @@ You are probably familiar with cron jobs, but do you know how `wp-cron` works? L
 ## Launch Check
 Pantheon analyzes code to provide performance and configuration recommendations for your dynamic WordPress sites. Go live with confidence using [Launch Check for WordPress](/docs/wordpress-launch-check).
 ## Additional Resources
-- [WordPress FAQ](/docs/wordpress-faq)
 - [WordPress Known Issues](/docs/wordpress-known-issues)
 - [Adding HTTPS For Free with Cloudflare](/docs/guides/cloudflare-enable-https/)
 - [CloudFront CDN Setup for WordPress](/docs/wordpress-cloudfront)
