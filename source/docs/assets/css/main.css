@@ -4446,7 +4446,7 @@ a.topic-info-link {
 
 .topic-info__description {
   font-family: Avenir-Light;
-  font-size: 14px;
+  font-size: 16px;
   color: #313945;
   line-height: 1.5;
   font-weight:300;
@@ -4537,6 +4537,27 @@ a:focus {
 .subtopic-lists {
   padding:20px;
 }
+.subtopic-lists > h4 {
+  font-family: Avenir-Light;
+  font-size: 22px;
+}
+.guide-cta-landing {
+  background-color: #0a6bb5;
+  padding: 30px;
+}
+
+
+.subtopic-groups > h3 {
+  font-family: Avenir-Light;
+  font-size: 28px;
+}
+.topic-groups > h3 {
+  font-family: Avenir-Light;
+  font-size: 28px;
+}
+.topic-groups > h2 {
+  font-family: Avenir-Light;
+}
 .subtopic-groups {
   background-image: linear-gradient(0deg, #DBE4E6 0%, #FFFFFF 100%);
   padding-left: 15px;
@@ -4553,6 +4574,31 @@ a:focus {
   line-height: 43px;
   margin-bottom: 20px;
   margin-top: 0;
+}
+.hero-video__guide-cta-title {
+  font-family: Avenir-Light;
+  font-size: 32px;
+  color: #fff;
+  line-height: 43px;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+}
+.hero-video__guide-cta-subtitle {
+  font-family: AvenirLT-Medium;
+  color: #fff !important;
+  line-height: 20px;
+  margin-bottom: 35px;
+
+}
+.hero-video__guide-cta-subtitle > a {
+  color: #fff;
+}
+#guide-cta > a:hover {
+  text-decoration:none;
+  opacity: 0.65;
+  color:#fff !important;
+
 }
 .hero-video__subtitle {
   font-family: AvenirLT-Medium;
