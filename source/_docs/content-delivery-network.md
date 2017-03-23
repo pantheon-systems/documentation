@@ -106,9 +106,7 @@ CDN configurations that connect directly to platform domains (e.g. `live-site-na
 
 ```
 # Header rewrite Squash X-Robots-Tag : 10
-
-
-					unset beresp.http.X-Robots-Tag;
+unset beresp.http.X-Robots-Tag;
 ```
 
 ## Resources
