@@ -32,7 +32,7 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 <div class="alert alert-info" role="alert">
 <h3 class="info">Subdomains Note</h3>
 <p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
-<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
+<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.pantheonsite.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h3 class="info">Subdirectory Note</h3>
 <p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p></div>
