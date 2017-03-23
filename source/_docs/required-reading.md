@@ -24,7 +24,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/drupal-cron)
 
 ## Launch
-- [Going Live](/docs/going-live)
+- [Going Live](/docs/go-live)
 - [Domains and DNS](/docs/domains)
 
 ## Run
@@ -36,7 +36,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
 - [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
-- [Backup Creation](/docs/create-backups)
+- [Backup Creation](/docs/backups)
 
 ## Debug
 
