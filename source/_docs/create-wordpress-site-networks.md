@@ -25,6 +25,12 @@ This command installs and enables multisite by default with the subdirectory con
 ```bash
 terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
 ```
+
+For Terminus 1.x use
+```bash
+terminus remote:wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
+```
+
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
 ## Add Custom Hostnames to Dev, Test, and Live
