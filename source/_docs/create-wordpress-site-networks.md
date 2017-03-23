@@ -22,9 +22,11 @@ Before you begin, set the [connection mode to SFTP](/docs/sftp#sftp-mode) for th
 Install WordPress and enable the Multisite feature with the [`wp core multisite-install`](http://wp-cli.org/commands/core/multisite-install/) command.
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
+
 ```bash
-terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
+terminus remote:wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
 ```
+
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
 ## Add Custom Hostnames to Dev, Test, and Live
