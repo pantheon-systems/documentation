@@ -57,7 +57,7 @@ From the target environment's Domains tool, click **Show DNS Recommendations** n
 
 ## Serve traffic from your preferred domain (www or non-www)
 
-While it’s good for visitors and DNS to resolve both www and non-www domain, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
+While it’s good for visitors and DNS to resolve both www and non-www domain, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
 
 ### Serving sites from www
 Using the provided destinations in the Site Dashboard, create the recommended DNS entries at the domain's DNS provider.
