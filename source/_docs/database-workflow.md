@@ -29,11 +29,18 @@ WordPress sites with custom domains configured on multiple environments may see 
 
 The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically, however this operation is only run once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it will be used to replace the source environment's custom domain (e.g. `www.example.com`).
 
-This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`). To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning:
+This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`). To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning. The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
 
 ```
-terminus wp:remote <env>.<site> -- search-replace 'https://live-example.pantheonsite.io' 'https://test.example.com' --all-tables --verbose 
+terminus wp:remote <env>.<site> -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
 ```
+
+You can ignore the protocol by leaving it out if you do not wish to convert it:
+
+```
+terminus wp:remote <env>.<site> -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
+```
+
 
 ### Base table or view not found
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
