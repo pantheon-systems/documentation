@@ -11,7 +11,20 @@ Select the **New Relic** tab on your Site Dashboard, and click **Activate New Re
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
-New Relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
+New Relic is automatically enabled for all application servers added to the site, including Multidev environments.
+
+## Configure Ping Monitors for Availability
+New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
+
+1. Click **New Relic** > **Go to New Relic**  from the target environment within the Site Dashboard on Pantheon.
+2. Select **Synthetics** from the menu bar at the top of the page.
+3. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor.
+4. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking snafus.
+5. Set the frequency for checks. We suggest 5 minutes.
+6. Provide an email address for notifications.
+7. Click **Create my monitor**.
+
+Pantheon can provide New Relic ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — is only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
 
 ## Monitoring and Improving Performance
 
@@ -32,7 +45,7 @@ You can find more information on using New Relic to investigate specific areas o
 
 ## Focusing on Authenticated Users Only
 
-If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.  
+If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
 
 ### Drupal
 To disable New Relic for anonymous traffic on Drupal-based sites, add the following to your `sites/default/settings.php`:
@@ -98,21 +111,21 @@ To learn how to use New Relic APM Pro to monitor your site's performance, see [N
 
 
 ### Removing Multidev Environments in New Relic
-After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).  
+After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
 
-1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.  
-2. From the New Relic menu bar, select **APM** > **Applications**.  
+1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.
+2. From the New Relic menu bar, select **APM** > **Applications**.
 3. Wait until the color-coded health status turns gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
 ### AMP Validation Errors
 New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
 
-Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:  
+Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:
 
 ```php
 if (extension_loaded('newrelic')) {
-  // Add AMP page identifying logic here that would, for example,    
+  // Add AMP page identifying logic here that would, for example,
   // set variable $amp to TRUE or FALSE. If $amp is true, disable new relic
   if ($amp) {
     newrelic_disable_autorum (FALSE);
@@ -122,7 +135,7 @@ if (extension_loaded('newrelic')) {
 ```
 
 ### APM Availability Monitoring Alerts and False Positive Downtime Events
-When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false postive Downtime events for your site.
+When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false positive Downtime events for your site.
 
 #### Server Name Indication (SNI)
 Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
@@ -130,14 +143,8 @@ Sites configured with third-party proxy services that use SNI to serve HTTPS req
 #### TLS 1.1 or Higher
 When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
 
-#### Solution: Use New Relic Synthetics
-As an alternative to both situations, you can use the bundled New Relic Synthetic Lite service to monitor HTTPS pages served with SNI:
-
-1. Click **New Relic** from the target environment within the Site Dashboard on Pantheon.
-2. Select **Synthetics**.
-3. Click **Create new monitor**, and enter the details for the environment you want to monitor.
-
-The ping monitor is provided for free; however, other monitors require upgrading to a paid plan. For more details, see [New Relic Synthetics](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/new-relic-synthetics).
+#### Solution: Use New Relic Synthetics Lite
+As an alternative to both situations, you can use the free New Relic Synthetic Lite service to monitor HTTPS pages served with SNI. Enable this service using the [steps provided above](#configure-ping-monitors-for-availability).
 
 ## Frequently Asked Questions
 
@@ -146,7 +153,7 @@ A New Relic account can have only one owner at any time. You must be the current
 
 #### How can I share a link to a particular metric?
 
-At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.  
+At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.
 
 #### How much is New Relic APM Pro?
 
