@@ -74,7 +74,7 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
     Installing Drupal results in a one-line change to `settings.php`, which we can then review and commit. As a reminder, Drush is the command line utility for Drupal itself.	Terminus is simply passing through the Drush commands to the site on Pantheon. To get a full list of Drush commands run:
 
-        terninus drush steve-site-d8.dev -- help
+        terminus drush steve-site-d8.dev -- help
 
     The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.		
 
