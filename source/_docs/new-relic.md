@@ -19,13 +19,12 @@ New Relic provides a free availability monitoring service within their Synthetic
 1. Click **New Relic** > **Go to New Relic**  from the target environment within the Site Dashboard on Pantheon.
 2. Select **Synthetics** from the menu bar at the top of the page.
 3. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor.
-4. Select the locations you wish to check the site from.
-5. Set the frequency for checks.
+4. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking snafus.
+5. Set the frequency for checks. We suggest 5 minutes.
 6. Provide an email address for notifications.
 7. Click **Create my monitor**.
 
-The ping monitor is provided for free; however, other monitors from the Synthetics tool suite require upgrading to a paid service level. For more details, see [New Relic Synthetics > Using Monitors](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors).
-
+Pantheon can provide New Relic ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — is only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
 
 ## Monitoring and Improving Performance
 
