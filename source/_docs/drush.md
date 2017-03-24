@@ -413,18 +413,16 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
  drush @pantheon.example.live  st
  Drush command terminated abnormally due to an unrecoverable error.       [error]
  ```
- Setting the `--uri` option will not work. To resolve this error, use a [Drush policy file](#drush-alias-strict-control) or drop the following in `drush/drushrc.php`:
+ To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
 
  ```
-   $uri = 'http://usenix.dev';
-   if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-     $uri = 'https://' . $_SERVER['PANTHEON_ENVIRONMENT'] . '.usenix.dev';
-     if ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-       $uri = 'https://www.usenix.org';
+   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+     ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+       $uri = 'https://www.example.com';
      }
    }
+   $options['uri'] = $uri;
  ```
- `$options['uri'] = $uri;`
 
  The most reliable locations to put `drushrc.php` files are:
 
@@ -433,4 +431,3 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
  __ROOT__/../drush/drushrc.php
  __ROOT__/sites/all/drush/drushrc.php
  ```
- `sites/default/drushrc.php` is deprecated; by the time this location is selected, `'uri'` has already been set. It's not recommended to change it at this point.
