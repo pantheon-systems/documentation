@@ -301,9 +301,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)
 **Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
-**Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`:
-
-![NextGEN Gallery Location Setting](/source/docs/assets/images/nextgen-gallery-location-option.png)
+**Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`.
 
 An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 <hr>
