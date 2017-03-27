@@ -58,10 +58,10 @@ After you've added your domain to the Live environment, <a href="/docs/domains/#
 #### What are the differences between the environments?
 
 - Dev has lower TTL on Varnish caching and shows errors to site users.
-- Test has the same caching configuration as Live and does not show errors to users, but only one application server.
+- Test has the same caching configuration as Live and does not show errors to users. Business and Elite sites will have two application containers in Test. Otherwise, the environment has only one container.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
-To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
+To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/) and [All About Application Containers](/docs/application-containers).
 
 #### Why is robots.txt is disallowing crawlers to my Live environment?
 

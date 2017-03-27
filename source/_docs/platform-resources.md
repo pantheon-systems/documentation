@@ -60,7 +60,7 @@ The platform resources provided to your website depend on your current plan. Pan
 
 ## Glossary
 
-**Application Containers**: Each application container is a separate deployment of your site's code. All Dev and Test environments have one container, but at higher service levels, the Live environment may be scaled to multiple containers to handle more requests.
+**Application Containers**: Each application container is a separate deployment of your site's code. All Dev environments have one container, but at higher service levels, the Live environment may be scaled to multiple containers to handle more requests.
 <hr>   
 **PHP Concurrency**: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance (see below).
 <hr>

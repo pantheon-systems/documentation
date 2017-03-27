@@ -52,8 +52,7 @@ Because Pantheon does not restrict or limit free sandbox or dev instances, you s
 
 ## Multiple Application Containers
 
-Sites with a service level of Business and above can have multiple Live site application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling), and two application containers for the Test environment to ensure that code works properly when distributed to multiple containers.
-
+Sites with a service level of Business and above can have multiple application containers on the Live environment for [smooth scaling](https://pantheon.io/features/smooth-scaling), and two application containers in Test to ensure code changes won't break the site when distributed to multiple containers.
 
 ### Expected Behavior
 Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/logs#automate-downloading-logs).
