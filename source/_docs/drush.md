@@ -407,10 +407,27 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
   - `sql-sync-pipe` See: [Transfer Database Content Using Drush on Pantheon](#transfer-database-content-using-drush-on-pantheon)
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
   - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
-- Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
+- Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
  drush @pantheon.example.live  st
  Drush command terminated abnormally due to an unrecoverable error.       [error]
  ```
- Setting the `--uri` option will not work. To resolve this error, use a [Drush policy file](#drush-alias-strict-control).
+ To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
+
+ ```
+   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+     ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+       $uri = 'https://www.example.com';
+     }
+   }
+   $options['uri'] = $uri;
+ ```
+
+ The most reliable locations to put `drushrc.php` files are:
+
+ ```
+ __ROOT__/drush/drushrc.php
+ __ROOT__/../drush/drushrc.php
+ __ROOT__/sites/all/drush/drushrc.php
+ ```
