@@ -25,7 +25,7 @@ Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-
 <figure><pre id="commit-sftp"><code class="command bash" data-lang="bash">terminus env:commit my-site.dev --message="My code changes"</code></pre></figure>
 </div>
 <div class="alert alert-danger">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
 </div>
 <p class="instruction">Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:</p>
@@ -112,7 +112,7 @@ Terminus supports third-party plugins that extend it's functionality by adding n
 ```
 <p markdown="1" class="instruction">Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:</p>
 <div class="alert alert-danger">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
 </div>
 <div class="copy-snippet">

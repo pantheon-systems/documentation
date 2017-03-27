@@ -100,7 +100,7 @@ Select the appropriate framework below for your web application, then execute th
 </div>
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your Site Dashboard to find your upstream URL.</p></div>
 
 ## Troubleshooting

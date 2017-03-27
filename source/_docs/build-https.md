@@ -13,5 +13,5 @@ To make sure that HTTPS is used every time you visit a site, add logic to `setti
 Older sites with domain names like `dev.mysite.gotpantheon.com` (a dot rather than a dash in the prefix) can benefit from using the new style. This will prevent HTTPS warnings. Contact support if you have an older domain name and would like it to be reformatted.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.</p></div>

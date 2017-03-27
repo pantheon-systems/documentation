@@ -9,7 +9,7 @@ WordPress Core [does not use sessions](http://wordpress.org/support/topic/how-do
 However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin.
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</p>
 </div>
 
@@ -45,7 +45,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
  ```
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Replace <code>&lt;site&gt;</code> with your Pantheon site name.</p>
 </div>
 

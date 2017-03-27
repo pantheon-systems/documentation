@@ -13,7 +13,7 @@ Verify current PHP settings from the Site Dashboard by clicking **Settings** > *
 Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Drupal 6 sites are only compatible with PHP 5.4 and below.
 </p></div>
 

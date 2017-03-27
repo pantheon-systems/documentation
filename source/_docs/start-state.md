@@ -7,7 +7,7 @@ categories: [getstarted]
 The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/running-custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>It is not possible to change the upstream of an existing site. Instead, you must create a new site with the desired upstream.</p></div>
 
 ## Start with Core
@@ -27,7 +27,7 @@ We include a growing number of "Drupal products" as available start-states on Pa
 Drupal distributions offer a much richer out of the box experience, but are more complex under the hood. You still have access to 100% of the code with a Drupal product, but the increased complexity means it can be more challenging to customize and extend.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Public distributions are not maintained by Pantheon. If the upstream is out of date, contact the maintainer through <a href="https://www.drupal.org">Drupal.org</a> or the distribution's GitHub issue queue.
 </p></div>
 

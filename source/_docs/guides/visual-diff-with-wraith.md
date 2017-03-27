@@ -139,7 +139,7 @@ Next, update the global `before_capture:` hook and replace its value with the `j
 before_capture: 'javascript/wait--phantom.js'
 ```
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
  <p>YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.</p></div>
 Finally, execute Wraith:
 ```nohighlight
@@ -155,7 +155,7 @@ open shots/gallery.html
 
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</p></div>
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
