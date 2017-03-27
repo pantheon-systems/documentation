@@ -20,7 +20,7 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.  
+There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
 
 [Connection information](/docs/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
@@ -52,7 +52,7 @@ export SITE=[YOUR SITE UUID]
 # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
 # To Upload/Import
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
 # To Download
 rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
@@ -121,7 +121,7 @@ If you need to upload the files directory from a local installation called Foo i
 ```nohighlight
 $: export ENV=test
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/* --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 ### Upload a Single File to Pantheon
 This example shows how to upload the logo.png file into a Pantheon site's theme folder.
