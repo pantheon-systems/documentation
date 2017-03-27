@@ -3251,7 +3251,7 @@ display: block;
 .alert-warning h5 {
   color: #31708f;
 }
-.alert-info h3 {
+.alert-info h4 {
   margin-top: 15px;
   color: #31708f;
   font-size: 28px;
@@ -3271,13 +3271,13 @@ display: block;
   font-family: Avenir-Light;
 
 }
-.alert-danger h3 {
+.alert-danger h4 {
   margin-top: 15px;
   color: #d83f48;
   font-size: 28px;
 }
-.alert h3,
-#doc .alert h3 {
+.alert h4,
+#doc .alert h4 {
   margin-top: 0px;
 }
 .contributor {

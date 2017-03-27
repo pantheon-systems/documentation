@@ -15,7 +15,7 @@ Varnish can also improve the availability of your site. For example, if a PHP fa
 
 ## Configure Your Drupal or WordPress Site for Varnish
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish module.  </p></div>
 
 Varnish has been configured to respect any HTTP headers served by your site. If you set pages to expire in 5 minutes, Varnish will expire the content as requested. If your site sends headers that forbid caching, Varnish won't cache your content.  

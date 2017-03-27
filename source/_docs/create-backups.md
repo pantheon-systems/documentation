@@ -19,7 +19,7 @@ A backup contains three separate archives: a database backup, a files backup, an
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
-<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
 <p>Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</p></div>
 
 ![Create site backup Pantheon Dashboard](/source/docs/assets/images/dashboard/manual-site-backup.png)
@@ -117,7 +117,7 @@ terminus backup:get <site>.<env> --file=<filename> --element=<element>
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</p></div>
 
 ## About Your Code Archives

@@ -72,7 +72,7 @@ Replace `PORT` with the database port specified in the **Connection Info** tab. 
 mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
 ```
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</p></div>
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash

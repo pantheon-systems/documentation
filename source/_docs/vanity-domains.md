@@ -10,7 +10,7 @@ The Vanity domain can either be a subdomain of your primary site (`sites.mydomai
 
 If a subdomain of your primary site is configured, a newly created site named "supersite" will then have a Dev environment URL of `dev-supersite.sites.mydomain.com`. If a dedicated domain name is used, the site would instead have a Dev environment URL of `dev-supersite.mypantheonprojects.com`.
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p><strong>Pantheon Partners:</strong> Running your agency's primary site on Pantheon is <strong>free</strong>, as is the option to add an SSL. This means you can use your primary site as an HTTPS endpoint at no cost. This offer is available to Pantheon Partner organizations exclusively. For more information, see <a href="/docs/enable-https-vanity-domain">Enable HTTPS for Sites Using a Custom Vanity Domain</a>.</p>
 </div>
 

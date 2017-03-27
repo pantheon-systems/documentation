@@ -9,7 +9,7 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 ## Outgoing Email
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Pantheon recommends using a third-party email provider.  Failure to do so will result in significant delays and deleted messages.</p>
 </div>
 
@@ -24,7 +24,7 @@ Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail,
 Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](http://drupal.org/project/smtp) module.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.</p>
 </div>
 

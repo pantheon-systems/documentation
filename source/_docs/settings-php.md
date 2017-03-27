@@ -11,7 +11,7 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
-<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
 <p>You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</p></div>
 
 ## Pantheon Articles on settings.php
@@ -60,7 +60,7 @@ $settings['hash_salt'] = '$HASH_SALT';
 ### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
 </div>
 ```

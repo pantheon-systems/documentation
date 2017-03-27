@@ -14,7 +14,7 @@ Visit the [Kalabox documentation site](http://pantheon.kalabox.io/en/stable/) fo
 Installation is as simple as grabbing the latest release from [kalabox.io](http://www.kalabox.io/) and installing it. There are OS specific details in the [Kalabox Documentation](http://docs.kalabox.io/en/stable/users/install/) if necessary.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">Kalabox requires ports `80`, `443`, and `8160`. If you're running another local web server on those ports, it will interfere with Kalabox's ability to function.</p></div>
 
 ## Authenticate Your Account
@@ -47,7 +47,7 @@ Your Pantheon account is now authenticated with Kalabox and will appear in the s
 Click on your site in the Kalabox app. This will open a new browser window or tab, with the address `<YOURSITE>.kbox.site`. While it may appear that you're accessing a remote site, Kalabox is using a remote DNS server to redirect back to your local instance.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">If your site won't load, it may be due to local network restrictions on **DNS rebinding** (some open-source routing software like DD-WRT does this by default). If you can't or don't want to remove this restriction, follow the steps for working offline.</p></div>
 
 ## Make Changes to Your Site
@@ -78,7 +78,7 @@ The location of `hosts` differs between operating systems. On MacOS and Linux, t
         10.13.37.100   <yoursite>.kbox.site
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">Plugins that pull data from external sources may not load or display unpredictable behavior when working offline.</p></div>
 
 ## Troubleshooting

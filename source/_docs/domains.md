@@ -22,13 +22,13 @@ You must have a paid plan to add a domain to a site environment. For more inform
 
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>You must separately add both the www and non-www domains (e.g example.com and www.example.com) via the Pantheon Site Dashboard in order for both to resolve to your site. Automatic resolution of domains and wildcards are not supported.</p></div>
+<h4 class="info">Note</h4><p>You must separately add both the www and non-www domains (e.g example.com and www.example.com) via the Pantheon Site Dashboard in order for both to resolve to your site. Automatic resolution of domains and wildcards are not supported.</p></div>
 
 ### Develop Using a Domain Without Changing DNS
 Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3><p>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</p></div>
+<h4 class="info">Warning</h4><p>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</p></div>
 
 1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 
@@ -52,7 +52,7 @@ From the target environment's Domains tool, click **Show DNS Recommendations** n
 ![Show recommended DNS](/source/docs/assets/images/dashboard/show-dns-recommendations.png)
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3><p><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</p></div>
+<h4 class="info">Warning</h4><p><strong>Pantheon does not register domains or manage DNS.</strong> You will need to make these changes yourself at the registrar and/or DNS host for the domain.</p></div>
 
 
 ## Serve traffic from your preferred domain (www or non-www)

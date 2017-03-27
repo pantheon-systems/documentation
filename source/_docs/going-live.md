@@ -44,7 +44,7 @@ Consider enabling [New Relic Pro](/docs/new-relic) monitoring to non-intrusively
 
 Set up redirects for possible URL changes as a result of going live. Have a plan to monitor and mitigate 404 Page Not Found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/redirects/).
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</p></div>
 
 ## Get DNS Record and Update Your DNS

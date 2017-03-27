@@ -9,7 +9,7 @@ Some modules and plugins create files within hard-coded paths outside of the sta
 The best solution is to communicate with the maintainer of the module or plugin and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>The instructions for creating a symlink are supported on Mac and Linux machines only. Windows users should create symlinks within a virtual machine.</p>
 </div>
 ## Create a Symbolic Link

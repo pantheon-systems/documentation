@@ -24,7 +24,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
    ssh-keygen
    ```
      <div class="alert alert-info">
-        <h3 class="info">Note</h3>
+        <h4 class="info">Note</h4>
         <p markdown="1">
           Windows users can use a command line emulator such as [Git Bash](https://git-for-windows.github.io/) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) (Windows 10 only) to generate SSH keys. This also sets you up to manage code locally with Git and interact with the Site Dashboard using [Terminus](/docs/terminus).
         </p>
@@ -58,7 +58,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 5. If prompted, enter the password.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>
 Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
 </p>

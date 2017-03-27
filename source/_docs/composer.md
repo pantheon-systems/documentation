@@ -9,7 +9,7 @@ Extending WordPress or Drupal with custom code is a common part of the developme
 We recommend managing custom code as plugins or modules within individual repositories and hosting each one remotely on a service such as [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/). You can then use Composer to manage and organize the software needed for your project to run, including custom plugins or modules.
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).</p>
 </div>
 ## Before You Begin

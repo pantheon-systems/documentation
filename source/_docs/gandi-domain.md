@@ -35,7 +35,7 @@ www 300 IN CNAME live-example.pantheonsite.io.
 ```
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>Be sure to include the trailing "."</p></div>
 
 ## Add Your Domain to Pantheon

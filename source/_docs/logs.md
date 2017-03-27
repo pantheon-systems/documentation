@@ -207,7 +207,7 @@ terminus drush "watchdog-show --tail"
 ```
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in Terminus 1.x.</p>
 </div>
 

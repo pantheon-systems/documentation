@@ -277,12 +277,12 @@ Notes are helpful to call out information that the user needs to be aware of whi
 When adding an informational note to a document, use the info alert styling and wrap the word "Note" in H4 tags.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>You will need to download and install Git before you can begin.</p></div>
+<h4 class="info">Note</h4><p>You will need to download and install Git before you can begin.</p></div>
 
 If there is **critical** or detrimental information a user must read before starting, use the danger alert styling and wrap the word "Warning" in H4 tags:
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3><p>This is a permanent change and once you delete it your site cannot be restored.</p></div>
+<h4 class="info">Warning</h4><p>This is a permanent change and once you delete it your site cannot be restored.</p></div>
 
 ## Numbers
 

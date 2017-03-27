@@ -7,7 +7,7 @@ draft: true
 This self-referencing document can be used as a starting point to write your own new doc for Pantheon. Start with an overview of the topic, which may include a summary of what will be accomplished after following the instructions. 
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3><p markdown="1">For optimal use of this document, consider viewing the markdown file and rendered page in Sculpin side-by-side. Any important points the customer needs to be made aware of can be put in a note like this.
+<h4 class="info">Note</h4><p markdown="1">For optimal use of this document, consider viewing the markdown file and rendered page in Sculpin side-by-side. Any important points the customer needs to be made aware of can be put in a note like this.
 </p>
 </div>
 
@@ -87,7 +87,7 @@ Images are a great way to show what the user should be seeing in a graphic user 
 ![This is the alternate text, important for screen readers.](/docs/assets/images/WordPress_Pantheon-Cache-Settings.png "This is the image title text.")
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3><p markdown="1">Images of terminal output is frowned upon. When small changes are required to comply with software updates, replacing a few characters is much easier than generating a new screenshot.</p>
+<h4 class="info">Warning</h4><p markdown="1">Images of terminal output is frowned upon. When small changes are required to comply with software updates, replacing a few characters is much easier than generating a new screenshot.</p>
 </div>
 
 ## Other considerations

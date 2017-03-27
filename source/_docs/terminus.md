@@ -24,7 +24,7 @@ Use Terminus to perform these and other operations:
 ## Contribute
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>If you are a plugin author, you will need to update your plugin to the Terminus 1.0 syntax. See <a href="/docs/terminus/get-started/legacy">Legacy Terminus Versions</a> to compare the difference in command syntax.</p>
 </div>
 

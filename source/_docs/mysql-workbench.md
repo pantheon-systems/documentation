@@ -24,7 +24,7 @@ Now that you have the credentials for the database handy, you can start MySQL Wo
 Click the **Store in Keychain...** button and enter your MySQL password for the environment.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Ensure you have the correct database username and password for your environment.</p>
 </div>
 ## Test the Database Connection

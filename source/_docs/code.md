@@ -27,7 +27,7 @@ Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-
            └── settings.php
     └── themes
 
-<div class="alert alert-info"><h3 class="info">Note</h3>The <p><code>sites/default/files</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</p></div>
+<div class="alert alert-info"><h4 class="info">Note</h4>The <p><code>sites/default/files</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</p></div>
 
 ### WordPress Code Structure
 
@@ -57,7 +57,7 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
     ├── plugins
 ```
 
-<div class="alert alert-info"><h3 class="info">Note</h3>The <p><code>wp-content/uploads</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</p></div>
+<div class="alert alert-info"><h4 class="info">Note</h4>The <p><code>wp-content/uploads</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>~/files</code> directory.</p></div>
 
 ## Managing Permissions
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
@@ -80,7 +80,7 @@ The Dev environment provides [one-click updates](/docs/upstream-updates/) for yo
   </dl>
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>The Test and Live environments do not have write access to code outside of the deployment process.</p></div>
 
 ## Development

@@ -30,7 +30,7 @@ Choose one or the the other and add it to your codebase. Do not enable or config
 ### 3. Enable the Pantheon Apache Solr Module
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.</p></div>
+<h4 class="info">Note</h4><p>If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.</p></div>
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
 
@@ -60,7 +60,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>You must post the <code>schema.xml</code> in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.</p></div>
 
 ### 5. Enable and Configure Your Solr Module
