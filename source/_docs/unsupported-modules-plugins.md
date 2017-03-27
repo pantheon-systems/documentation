@@ -89,14 +89,14 @@ You also need to create the directory path `sites/default/files/private/composer
 
 This disables auto-building in all Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  While `composer.json` can be rebuilt via [Terminus](/docs/terminus) while the DEV site is in SFTP mode, `composer install` must be run locally, committed via Git, and pushed back to Pantheon.
 <hr>
-### [Fast 404](https://www.drupal.org/project/fast_404)  
+### [Fast 404](https://www.drupal.org/project/fast_404)
 **Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
 
 **Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"]`.
 
 <hr>
-### [Global Redirect](https://www.drupal.org/project/globalredirect)  
- **Issue**: Too many redirects error when site is in maintenance mode.  
+### [Global Redirect](https://www.drupal.org/project/globalredirect)
+ **Issue**: Too many redirects error when site is in maintenance mode.
 
  **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, [apply a patch to the module](https://www.drupal.org/node/1399024) to correct the issue.
 <hr>
@@ -108,7 +108,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
  **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
 <hr>
 
-### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
+### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 <hr>
@@ -170,12 +170,12 @@ Customers have also reported success by making the export path [configurable](ht
 ### [Node Gallery](https://www.drupal.org/project/node_gallery)
 **Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our Varnish configuration as we strip all cookies for images, CSS, and JS files to improve performance.
 <hr>
-### [Pathologic](https://www.drupal.org/project/pathologic)  
- **Issue**: The path of the base URL is changed and cached by the module itself.  
+### [Pathologic](https://www.drupal.org/project/pathologic)
+ **Issue**: The path of the base URL is changed and cached by the module itself.
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 
-### [Persistent Login](https://www.drupal.org/project/persistent_login)  
+### [Persistent Login](https://www.drupal.org/project/persistent_login)
 **Issue**: This module attaches per-user cookies that conflict with our Varnish configuration.
 
 
@@ -190,10 +190,10 @@ Customers have also reported success by making the export path [configurable](ht
 $conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
-You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
+You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:
 ```
 $temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);
-```  
+```
 
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
 <hr>
@@ -209,14 +209,14 @@ ini_set('arg_separator.output', '&');
 
 <hr>
 
-### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)  
+### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
 <hr>
 
-### [Schema](https://www.drupal.org/project/schema)  
+### [Schema](https://www.drupal.org/project/schema)
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
 
-**Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:  
+**Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:
 ```
 $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
@@ -226,7 +226,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 
-### [Twig Extensions](https://www.drupal.org/project/twig_extensions)  
+### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
 **Issue**:  This module uses [`php-intl`]( http://php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr>
 
@@ -301,7 +301,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)
 **Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
-**Solution**: This can be overridden from the plugin's configuration page (/wp-admin/admin.php?page=ngg_other_options) to use `/wp-content/uploads/gallery`.
+**Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`:
+
+![NextGEN Gallery Location Setting](/source/docs/assets/images/nextgen-gallery-location-option.png)
 
 An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 <hr>
