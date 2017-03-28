@@ -14,7 +14,7 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 You can install the plugin from your [WordPress dashboard](/docs/more-sftp#manage-plugins-and-themes-with-wp-admin) by following these steps:
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.</p></div>
 
 1. Click **Plugins**, then select **Add New**.

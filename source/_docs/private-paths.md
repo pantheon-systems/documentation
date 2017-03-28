@@ -16,7 +16,7 @@ WordPress: `wp-content/uploads/private`
 Drupal and WordPress: `/private`   
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</p>
 </div>
 
@@ -82,6 +82,6 @@ uc_credit_encryption_path: 'private'
 ```
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
 </p></div>

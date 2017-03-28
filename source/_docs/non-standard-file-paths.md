@@ -28,5 +28,5 @@ Your legacy file paths should now work, and your files are now stored in our clo
 As long as the path you've chosen for your symlink does not conflict with a future core update to your application, this link will persist indefinitely.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Adding a symlink for a legacy directory path will not work with private files. If you have a private files use case, migrate the file paths and drop references to the legacy location.</p></div>

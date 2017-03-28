@@ -15,7 +15,7 @@ Be sure that you:
 - Have an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</p></div>
 
 ## Create an Identity and Access Management (IAM) User
@@ -27,7 +27,7 @@ Be sure that you:
 4. View the new user security credentials by clicking **Show User Security Credentials**.
 
  <div class="alert alert-info" role="alert">
- <h3 class="info">Note</h3>
+ <h4 class="info">Note</h4>
  <p>You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time.</p><div>
 
 5. Click **Download Credentials**.
@@ -84,7 +84,7 @@ From within your WordPress Dashboard:
 1. Click **AWS** and select **Settings**.
 
   <div class="alert alert-info" role="alert">
-  <h3 class="info">Note</h3>
+  <h4 class="info">Note</h4>
   <p>You already have your AWS user credentials, as they were generated in the steps above. For security reasons, you should not provide user credentials within the Settings page of this plugin as it will not be stored securely in the site's database.</p></div>
 
 2. Add the provided code to the `wp-config.php` file located at the web root of your WordPress site using [SFTP](/docs/sftp/) (replace the stars with your user credentials):

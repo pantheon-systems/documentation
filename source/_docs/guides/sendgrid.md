@@ -55,23 +55,22 @@ Two methods can be used to integrate SendGrid with your Drupal site: API or SMTP
 ### SendGrid API Integration
 The SendGrid Integration module is not supported on Drupal 8 sites at this time. This method can be problematic on Pantheon due to [Composer Manager](https://www.drupal.org/project/composer_manager) (required by [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration)).
 
-1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
+1.  Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
  ```nohighlight
  terminus drush <site>.<env> -- en sendgrid_integration -y
  ```
 
-2. From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+2.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-3. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+3.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
-4. Add the provided [code block](/docs/unsupported-modules-plugins/#composer-manager) within `settings.php` to address issues with the required Composer Manager module.
+4.  Implement the suggested [Composer Manager solution](/docs/unsupported-modules-plugins/#composer-manager) to address known issues with the required Composer Manager module.
 
-5. Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
 
- ```
- terminus drush <site>.<env> -- composer-manager install
- ```
+5.  Run the following [Terminus](/docs/terminus) command to install SendGrid Integration dependencies with Composer Manager:
+
+        terminus drush <site>.<env> -- composer-manager install -y
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
@@ -109,6 +108,9 @@ You can explore the Statistics and Email Reports from within your site's account
 ## Congratulations!
 
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](http://resources.sendgrid.com/email-infrastructure-guide/) for advanced tips on how to create and publish DNS records for increased deliverability.
+
+## Troubleshooting
+In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.  One such plugin is called [iLightBox](https://codecanyon.net/item/ilightbox-revolutionary-lightbox-for-wordpress/3939523).
 
 ## See Also
 

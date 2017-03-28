@@ -92,7 +92,7 @@ You can upload each of your archive files separately, or package the archives wi
 
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3><p>Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</p></div>
+<h4 class="info">Warning</h4><p>Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</p></div>
 
 Only provide one `.sql` file; if multiple are present the import will fail.
 

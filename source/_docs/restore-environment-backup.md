@@ -19,7 +19,7 @@ This is a **destructive** process that will **wipe** your database and files, an
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. When in doubt, [contact support](/docs/getting-support).
 
-<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
 <p>We do not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test and pull the code change and clone the content to Live. This will minimize user-facing downtime.</p></div>
 
 ## Restore an Environment From Another Environment's Backup

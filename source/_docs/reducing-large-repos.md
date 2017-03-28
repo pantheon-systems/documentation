@@ -10,7 +10,7 @@ Repositories that exceed 2GB may experience failures or degraded performance whe
 
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
 </p></div>
 

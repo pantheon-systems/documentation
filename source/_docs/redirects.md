@@ -6,7 +6,7 @@ categories: [golive, domains]
 ---
 It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.</p>
 </div>
 
@@ -16,7 +16,7 @@ It's often useful to redirect requests to a different domain or path. While it's
 Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.  
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Drupal 7 sites on Pantheon do not require a <code>sites/default/settings.php</code> file to run, and depending on how your site was created it might not have one. If it's missing, just create an empty PHP file and proceed. For more information, see <a href="/docs/settings-php">Configuring settings.php</a>.</p></div>
 
 
@@ -27,15 +27,30 @@ Some advantages of redirecting via PHP instead of `.htaccess` include:
 - Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, Varnish will cache it as well.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</p></div>
+<h4 class="info">Note</h4>
+<p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</p>
+</div>
 
+### Command Line Conditionals
+All redirect logic run on Pantheon environments should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Otherwise, redirects kill the PHP process before Drush and WP-CLI is executed resulting in a silent failure:
+
+```bash
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
 
 ## Redirect to a Common Domain
 
-While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be signed on one domain but logged out of other domains at the same time.
+While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
 
-Pantheon's www-redirection service automatically redirects requests to the www subdomain as long as <a href="/docs/domains/#step-3-configure-your-dns" data-proofer-ignore>DNS has been configured</a> appropriately. However, this service does not apply to sites with HTTPS enabled.
+<div class="panel panel-video">
+  <div class="panel-heading panel-video-heading">
+    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+  </div>
+  <div id="redirects-video" class="collapse" style="padding:10px;">
+    <script src="//fast.wistia.com/embed/medias/fof9qie645.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_fof9qie645 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+  </div>
+</div>
 
 ### Redirect to www
 
@@ -43,6 +58,7 @@ Pantheon's www-redirection service automatically redirects requests to the www s
 // Require www.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] == 'yoursite.com' ||
       $_SERVER['HTTP_HOST'] == 'thatothersiteyouhad.com') {
@@ -58,7 +74,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 If you prefer to use the bare domain, use the following code block and run your DNS settings through a service that supports CNAME flattening. For details, see <a href="/docs/domains/#step-3-configure-your-dns" data-proofer-ignore>Domains and DNS</a>.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>If you are running the site on a Pro plan or above with an SSL certificate, use the snippet below without configuring a CNAME flattening service. </p></div>
 
 To direct all traffic to the bare domain using Cloudflare:
@@ -71,6 +87,7 @@ To direct all traffic to the bare domain using Cloudflare:
     // Redirect all traffic to non-www. For example yoursite.com
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] == 'www.yoursite.com') {
         header('HTTP/1.0 301 Moved Permanently');
@@ -86,9 +103,9 @@ To direct all traffic to the bare domain using Cloudflare:
 To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traffic on your site (a best practice if you have a certificate), check for the `HTTP_X_SSL` code:
 
     // Require HTTPS.
-    // Check if Drupal is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTPS'] === 'OFF') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) ||
       (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
@@ -103,12 +120,12 @@ To enable HTTPS across Pantheon's Dev, Test, and Live environments for all traff
 
 If you don't want to have your whole site under HTTPS, we recommend using a secure subdomain (e.g. secure.yoursite.com). Mixed-mode secure sessions are vulnerable. There are also edge cases with caching that can create bugs with mixed-mode HTTPS. Putting the secure pages on a secure domain prevents confusion in caching between secure/insecure content.
 
-You can implement a secure domain for a specific set of page with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
+You can implement a secure domain for a specific set of pages with Drupal modules or WordPress plugins, or in settings.php for Drupal or wp-config.php for WordPress. This example enforces a secure domain for any path that begins with `/admin`:
 
     // Require HTTPS for admin pages.
-    // Check if Drupal is running via command line
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['HTTPS'] === 'on') &&
+      ($_SERVER['HTTPS'] === 'OFF') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
         // If admin, redirect to secure.
@@ -127,6 +144,7 @@ To use HTTPS everywhere and standardize on your domain (e.g. `www.yoursite.com`)
     // Require HTTPS, www.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
           !isset($_SERVER['HTTP_X_SSL']) ||
@@ -143,7 +161,9 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
 
     // HTTPS logic.
     $redirect_domain = 'www.yoursite.com';
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] == 'live') &&
+    // Check if Drupal or WordPress is running via command line
+    (php_sapi_name() != "cli")) {
       $redirect_location = '';
       // Do not require HTTPS for specific pages.
       if (in_array($_SERVER['REQUEST_URI'], array('/rss.xml'))) {
@@ -171,6 +191,7 @@ To redirect from a subdomain to a specific area of the site, use the following:
     // Redirect subdomain to a specific path.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
       header('HTTP/1.0 301 Moved Permanently');
@@ -186,6 +207,7 @@ The same technique works for single subdomain redirects. Just specify the path i
 
     // 301 Redirect from /old to /new.
     if (($_SERVER['REQUEST_URI'] == '/old') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       header('HTTP/1.0 301 Moved Permanently');
       header('Location: /new');
@@ -197,6 +219,7 @@ The same technique works for single subdomain redirects. Just specify the path i
     // Redirect multiple subdomains to a single domain.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
       ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (in_array($_SERVER['HTTP_HOST'], array(
         'sub1.youroldwebsite.com',

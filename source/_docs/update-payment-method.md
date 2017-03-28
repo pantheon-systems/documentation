@@ -27,7 +27,7 @@ Update multiple sites from a single location to avoid individually changing each
 ![Update payment for multiple sites](/source/docs/assets/images/dashboard/billing_update.jpg)
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>The Site Owner (shown under Team in the Dashboard) is the only person who can update an existing credit card or add a new one. If you want to assume site and billing ownership, the Site Owner needs to transfer ownership to you by going to <strong>Settings > Plan > Transfer ownership and billing of this site</strong>.</p></div>
 
 ### Additional Resources

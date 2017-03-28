@@ -25,7 +25,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 3. From the WordPress Dashboard, navigate to **Solr Options** (previously under **Settings**). You should see your site's Solr Server details within the **Info** tab.
 4. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
  <div class="alert alert-info">
- <h3 class="info">Note</h3><p>You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).</p>
+ <h4 class="info">Note</h4><p>You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated).</p>
  </div>
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to "Index Searchable Post Types", or via Terminus:
 

@@ -22,19 +22,21 @@ Before you begin, set the [connection mode to SFTP](/docs/sftp#sftp-mode) for th
 Install WordPress and enable the Multisite feature with the [`wp core multisite-install`](http://wp-cli.org/commands/core/multisite-install/) command.
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
+
 ```bash
-terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
+terminus remote:wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
 ```
+
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
 
 ## Add Custom Hostnames to Dev, Test, and Live
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Subdomains Note</h3>
+<h4 class="info">Subdomains Note</h4>
 <p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
-<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.panthoen.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
+<p>You cannot add custom hostnames to an environment's automatically configured env-example-network.pantheonsite.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
-<h3 class="info">Subdirectory Note</h3>
+<h4 class="info">Subdirectory Note</h4>
 <p>Custom primary hostnames are not necessary for plain subdirectory-configured networks.</p></div>
 
 If you will run a subdomain-style site network with the primary site that will exist using the `www.` subdomain (recommended), you must add custom hostnames with the `www.` subdomain to all environments. Likewise, if you will run the site network with the primary site at the bare domain, `example-network.com`, Dev and Test environment primary hostnames must not have the `www.` subdomain. For the site, `www.example-network.com`, use the following Terminus commands to add the hostnames:

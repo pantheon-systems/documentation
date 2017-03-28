@@ -28,7 +28,7 @@ There will not be any files open within your project once you complete these ste
 Many WordPress plugin developers use the command line tool [WP-CLI](http://wp-cli.org/). This is useful if you have a local development environment and want to use WP-CLI to manage it.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>You must successfully create a project before adding WP-CLI as a Command Line Tool.</p></div>
 
 You can configure PHPStorm to recognize WP-CLI from within your project by following these steps:

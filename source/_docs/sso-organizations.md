@@ -31,7 +31,7 @@ You will need to enter the following:
 2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <ul>
 <li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.</li>
 <li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).</li>

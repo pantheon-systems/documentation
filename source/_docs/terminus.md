@@ -10,11 +10,7 @@ permalink: docs/:basename/
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
-<a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows (Beta). For details on legacy versions of terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
-<div class="alert alert-info">
-<h3 class="info">Note</h3>
-<p>Terminus for Windows is still in beta. Please <a href="https://github.com/pantheon-systems/terminus/issues/new">submit an issue on GitHub</a> for bug reports or feature requests.</p>
-</div>
+<a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows 7 and 10. For details on legacy versions of terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
 ## Usage
 
 Use Terminus to perform these and other operations:  
@@ -28,7 +24,7 @@ Use Terminus to perform these and other operations:
 ## Contribute
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>If you are a plugin author, you will need to update your plugin to the Terminus 1.0 syntax. See <a href="/docs/terminus/get-started/legacy">Legacy Terminus Versions</a> to compare the difference in command syntax.</p>
 </div>
 

@@ -48,3 +48,7 @@ experimental:
     branches:
       only:
         - master
+
+general: 
+  artifacts:
+    - sitespeed-result

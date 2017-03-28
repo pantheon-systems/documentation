@@ -65,7 +65,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
  ```
 
       <div class="alert alert-info">
-      <h3 class="info">Note</h3><p>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</p></div>
+      <h4 class="info">Note</h4><p>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</p></div>
 
 5. Optional configurations for `sites/default/settings.php` (only choose one as they will conflict):
  - Option A: Higher performance for smaller page counts.<br>
@@ -103,7 +103,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
   - For Drupal 6, visit  `/admin/settings/performance/cache-backend` and you should see the available backends and their statuses.
 
 ### Drupal 8 Sites
-At this time, sites running Drupal 8 cannot use Redis as there isn't a Drupal 8 Redis module yet. Check the status on the [Redis project page](https://www.drupal.org/project/redis), or view to the [Port Redis issue queue](https://www.drupal.org/node/2233413) for updates.
+You can try out the beta version of the [Redis](https://www.drupal.org/project/redis) module on Drupal 8, however it is not officially supported at this time.
 
 ## Use the Redis Command-Line Client
 

@@ -48,7 +48,7 @@ Once the Pantheon Drush aliases have been copied, verify that the site aliases a
 $ drush sa
 ```
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>You must be a <a href="/docs/team-management/#manage-site-team-members">site team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via <a href="/docs/terminus">Terminus</a> for sites in which you are not a direct site team member.
 </p></div>
 ## Execute a Drush Command on a Pantheon Site Environment
@@ -95,9 +95,10 @@ Project media contains 3 modules: media_internet, file_entity, media.
 ```
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p><strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/upstream-updates">Core Updates</a>.
-</p></div>
+</p>
+</div>
 
 ## Use Registry Rebuild on Pantheon
 
@@ -227,6 +228,32 @@ drush @pantheon.SITENAME.dev up --no-core
 ## Troubleshooting
 
 If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](http://drupal.stackexchange.com/questions/tagged/drush)
+
+### Terminus Drush Silent Failure
+The following silent failure occurs when executing `terminus remote:drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
+
+```bash
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
+
+Redirects kill the PHP process before Drush is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+
+```php
+// Require HTTPS, www.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
+      !isset($_SERVER['HTTP_X_SSL']) ||
+      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+```
 
 ### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
@@ -380,10 +407,27 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
   - `sql-sync-pipe` See: [Transfer Database Content Using Drush on Pantheon](#transfer-database-content-using-drush-on-pantheon)
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
   - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
-- Incorrect `['uri']` in `pantheon.aliases.drushrc.php` file. Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
+- Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
  drush @pantheon.example.live  st
  Drush command terminated abnormally due to an unrecoverable error.       [error]
  ```
- Setting the `--uri` option will not work. To resolve this error, use a [Drush policy file](#drush-alias-strict-control).
+ To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
+
+ ```
+   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+     ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+       $uri = 'https://www.example.com';
+     }
+   }
+   $options['uri'] = $uri;
+ ```
+
+ The most reliable locations to put `drushrc.php` files are:
+
+ ```
+ __ROOT__/drush/drushrc.php
+ __ROOT__/../drush/drushrc.php
+ __ROOT__/sites/all/drush/drushrc.php
+ ```

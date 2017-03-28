@@ -8,7 +8,7 @@ keywords: backup, backup creation, create a backup, create backup, create backup
 ---
 Pantheon makes creating a backup of an environment a simple one-click operation.
 
-If you prefer the command line, you can use [Terminus](/docs/terminus) to create backups:  
+If you prefer the command line, you can use [Terminus](/docs/terminus) to create backups:
 ```
 terminus backup:create <site>.<env> --element=<element> --keep-for=<days>
 ```
@@ -19,7 +19,7 @@ A backup contains three separate archives: a database backup, a files backup, an
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
-<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
+<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
 <p>Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</p></div>
 
 ![Create site backup Pantheon Dashboard](/source/docs/assets/images/dashboard/manual-site-backup.png)
@@ -91,26 +91,41 @@ else
 fi</code></pre>
 
 
-## Access Backups  
+## Access Backups
 ### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
 
 ![Access site backups Pantheon Dashboard](/source/docs/assets/images/dashboard/direct-download-backup.png)
 
-The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
+The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.
 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
 ### Via the Command Line
-You can also use  [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading. Include the `--latest ` option to automatically download the most recently created backup. Select older archives by running `terminus site backups list`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
+
 ```
-terminus backup:get <site>.<env> --file=<filename> --element=<element>
+wget "https://pantheon-backups.s3.amazonaws.com..."
 ```
+
+You can also use [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
+
+    terminus backup:get <site>.<env> --element=<code|files|db> --to=path/to/file.tar.gz
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
+</p>
+</div>
+
+Select an older archive by running `terminus backup:list <site>.<env>`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+
+    terminus backup:get <site>.<env> --file=<filename> --to=path/to/file.tar.gz
 
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</p></div>
 
 ## About Your Code Archives

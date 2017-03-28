@@ -10,7 +10,7 @@ To get started, navigate to the Site Dashboard.
 
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Only the Site Owner, or for sites owned by an Organization - the Organization's Administrators, can manage a site's plan. Users without the permission to manage a site's plan will not see the options discussed below. For additional details, see <a href="/docs/change-management">Role-Based Permissions & Change Management</a>.</p></div>
 
 

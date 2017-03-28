@@ -9,7 +9,7 @@ In some cases, working via Git is not the best option. You may not like local de
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to [use your website framework's built-in update systems](/docs/more-sftp/) (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first.
 
 <div class="alert alert-danger" role="alert">
-  <h3 class="info">SFTP Mode Considerations</h3>
+  <h4 class="info">SFTP Mode Considerations</h4>
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
@@ -44,7 +44,7 @@ Your connection data is as follows:
 **port:** `2222`
  
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</p></div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
@@ -69,8 +69,9 @@ Once your message is ready, click **Commit**.
 
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p></div>
+<h4 class="info">Note</h4>
+<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
+</div>
 
 ## SFTP Clients
 
@@ -82,10 +83,28 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ## Troubleshooting
 
+### I can't connect via SFTP to the site.
+
+Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Simply visit the site in your web browser and let it fully load then try connecting again.
+
+If your site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-connection-information) (including SFTP mode and port `2222`) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port `80` (HTTPS)  and `443` (HTTPS).
+
+A simple way to test for outbound network restrictions is to load a special web site that listens on all ports. To test your access outbound on port `2222`, try to load this web page in your web browser:
+
+* [http://portquiz.net:2222/](http://portquiz.net:2222/)
+
+If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/docs/port-2222/) instead.
+
+If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/docs/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
+
 ### I can't write to my codebase on Test or Live.
 
 This is by design. Please see [Using the Pantheon Workflow
 ](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+
+
+### SFTP changes do not show up in the Site Dashboard.
+Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
 ### My SFTP client takes a long time to connect.
 
@@ -102,7 +121,7 @@ Do not specify a default remote directory within your SFTP client. When applicat
 ### I can't move files from one folder to another.
 This is a known limitation of using SFTP for on-server development on the platform. You can work around the limitation by transferring the files from your local machine or using rsync.
 
-### Connection Issues
+### DNS Connection Issues
 
     Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
     Response:	fzSftp started
@@ -110,7 +129,7 @@ This is a known limitation of using SFTP for on-server development on the platfo
     Error:	ssh_init: Host does not exist
     Error:	Could not connect to server
 
-The vast majority of SFTP connection problems are DNS-related and can be resolved by using Google's Public DNS service in place of your ISP's name servers. See [Google's Public DNS](https://developers.google.com/speed/public-dns/) for instructions.
+Trouble resolving the server hostname or other DNS-related issues can generally be resolved by using Google's Public DNS service in place of your ISP's name servers. See [Google's Public DNS](https://developers.google.com/speed/public-dns/) for instructions.
 
 If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, Cyberduck (or another client) will. View a list of [SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
 

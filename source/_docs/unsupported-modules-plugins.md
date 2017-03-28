@@ -75,28 +75,28 @@ This module has been deprecated by its authors. The suggestions made below are n
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
 **Solution**: As suggested within the [module documentation](https://www.drupal.org/node/2405805), manage dependencies in Dev exclusively. Place the following configuration within `settings.php` to disable autobuild on Pantheon. This will also set appropriate file paths for Composer so that checks to see if the path is writable will not fail. Packages, however, are stored within the root directory of the site's codebase and version controlled:
-```
 
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  # Set appropriate paths for Composer Manager
-  $conf['composer_manager_file_dir'] = 'private://composer/'.$_ENV['PANTHEON_ENVIRONMENT'];
-  $conf['composer_manager_vendor_dir'] = $_SERVER['HOME'] . '/code/vendor';
-  # Disable autobuild on Pantheon
-  $conf['composer_manager_autobuild_file'] = 0;
-  $conf['composer_manager_autobuild_packages'] = 0;
-}
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+      # Set appropriate paths for Composer Manager
+      $conf['composer_manager_file_dir'] = 'private://composer';
+      $conf['composer_manager_vendor_dir'] = $_SERVER['HOME'] . '/code/vendor';
+      # Disable autobuild on Pantheon
+      $conf['composer_manager_autobuild_file'] = 0;
+      $conf['composer_manager_autobuild_packages'] = 0;
+    }
 
-```
+You also need to create the directory path `sites/default/files/private/composer`.
+
 This disables auto-building in all Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  While `composer.json` can be rebuilt via [Terminus](/docs/terminus) while the DEV site is in SFTP mode, `composer install` must be run locally, committed via Git, and pushed back to Pantheon.
 <hr>
-### [Fast 404](https://www.drupal.org/project/fast_404)  
+### [Fast 404](https://www.drupal.org/project/fast_404)
 **Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
 
 **Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"]`.
 
 <hr>
-### [Global Redirect](https://www.drupal.org/project/globalredirect)  
- **Issue**: Too many redirects error when site is in maintenance mode.  
+### [Global Redirect](https://www.drupal.org/project/globalredirect)
+ **Issue**: Too many redirects error when site is in maintenance mode.
 
  **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, [apply a patch to the module](https://www.drupal.org/node/1399024) to correct the issue.
 <hr>
@@ -108,7 +108,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
  **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
 <hr>
 
-### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)  
+### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 <hr>
@@ -170,18 +170,18 @@ Customers have also reported success by making the export path [configurable](ht
 ### [Node Gallery](https://www.drupal.org/project/node_gallery)
 **Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our Varnish configuration as we strip all cookies for images, CSS, and JS files to improve performance.
 <hr>
-### [Pathologic](https://www.drupal.org/project/pathologic)  
- **Issue**: The path of the base URL is changed and cached by the module itself.  
+### [Pathologic](https://www.drupal.org/project/pathologic)
+ **Issue**: The path of the base URL is changed and cached by the module itself.
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 
-### [Persistent Login](https://www.drupal.org/project/persistent_login)  
+### [Persistent Login](https://www.drupal.org/project/persistent_login)
 **Issue**: This module attaches per-user cookies that conflict with our Varnish configuration.
 
 
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
  <hr>
- 
+
 ### [Plupload](https://www.drupal.org/project/plupload)
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
@@ -190,10 +190,10 @@ Customers have also reported success by making the export path [configurable](ht
 $conf['plupload_temporary_uri'] ='private://tmp';
 ```
 
-You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:   
+You may also need to add this line within the `filefield_sources_plupload.module` file to run through `files/private/tmp` every few hours and delete old files to keep it from piling up:
 ```
 $temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filename);
-```  
+```
 
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
 <hr>
@@ -209,14 +209,14 @@ ini_set('arg_separator.output', '&');
 
 <hr>
 
-### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)  
+### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
 <hr>
 
-### [Schema](https://www.drupal.org/project/schema)  
+### [Schema](https://www.drupal.org/project/schema)
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
 
-**Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:  
+**Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:
 ```
 $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
@@ -226,7 +226,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 <hr>
 
-### [Twig Extensions](https://www.drupal.org/project/twig_extensions)  
+### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
 **Issue**:  This module uses [`php-intl`]( http://php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr>
 
@@ -298,6 +298,14 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 <hr>
 
+### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)
+**Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
+
+**Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`.
+
+An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
+<hr>
+
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 
@@ -321,7 +329,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 
-**Issue** #2: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
+**Issue #2**: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform. This has been [reported as an issue](https://wordpress.org/support/topic/write-logs-to-the-standard-file-path/) within the plugin support forum.
+
+**Issue #3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/) within the plugin support forum.
 <hr>
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)

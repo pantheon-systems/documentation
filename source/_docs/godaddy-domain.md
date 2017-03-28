@@ -28,5 +28,5 @@ After you've purchased your domain name, follow the instructions below.
 4. Create a **CNAME** record for the www subdomain using the destination provided by Pantheon. For more information, see [Domains and DNS](/docs/domains). 
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>If you have HTTPS enabled on your site, you have been given a unique IP address. Point the A record to this IP address.</p></div>  

@@ -49,13 +49,13 @@ This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using S
 
 3. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
 
-![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
+  ![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
-When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
+  When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
-```
-terminus wp <site>.<env> -- plugin update wp-redis
-```
+  ```
+  terminus wp <site>.<env> -- plugin update wp-redis
+  ```
 
 ### Install via Composer
 
@@ -69,29 +69,29 @@ terminus wp <site>.<env> -- plugin update wp-redis
 
 3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
- ```json
- "repositories": {
-   "wpackagist": {
-     "type": "composer",
-     "url": "https://wpackagist.org"
-   }
- },
- "require": {
-   "composer/installers": "^1.0.21",
-   "koodimonni/composer-dropin-installer": "*",
-   "wpackagist-plugin/wp-redis": "0.6.0"
+   ```json
+   "repositories": {
+     "wpackagist": {
+       "type": "composer",
+       "url": "https://wpackagist.org"
+     }
    },
-   "extra": {
-     "installer-paths": {
-       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
-       },
-     "dropin-paths": {
-        "wp-content": [
-        "package:wpackagist-plugin/wp-redis:object-cache.php"
-      ]
+   "require": {
+     "composer/installers": "^1.0.21",
+     "koodimonni/composer-dropin-installer": "*",
+     "wpackagist-plugin/wp-redis": "0.6.0"
+     },
+     "extra": {
+       "installer-paths": {
+         "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+         },
+       "dropin-paths": {
+          "wp-content": [
+          "package:wpackagist-plugin/wp-redis:object-cache.php"
+        ]
+      }
     }
-  }
- ```
+   ```
 
 4. Run `composer install` to install WP Redis into the `wp-content` directory.  
 5. Use git status to verify your local state, then commit and push your code to Pantheon:

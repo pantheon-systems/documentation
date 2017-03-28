@@ -289,20 +289,24 @@ p{
 }
 
 h1{
+  margin-top: 35px;
   font-family: Avenir-Heavy;
   color: #313945;
   }
 
 h2 {
+  margin-top: 30px;
   font-family: Avenir-Heavy;
   color: #313945;
   }
 
 h3 {
+  margin-top: 30px;
   font-family: Avenir-Heavy;
   color: #44525E;
   }
 h4 {
+  margin-top: 25px;
   font-family: Avenir-Heavy;
   color: #313945;
 }
@@ -2267,6 +2271,41 @@ h1[id] {
     background-color: #DDE5E7 !important;
     background-image: none !important;
 }
+.panel-video {
+  border-color: #ddd;
+  border-radius: 0px;
+}
+.panel-video-heading {
+  background-color: #eef2f3;
+  border-radius: 0px;
+  border-color: #eef2f3 !important;
+}
+h3.panel-video-title {
+  text-decoration: none;
+  color: #000 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Avenir-Heavy;
+  font-size: 14px;
+  line-height: 1;
+}
+a.panel-video-title {
+  text-decoration: none;
+}
+
+h3.panel-video-title::after {
+    font-family: "FontAwesome" !important;
+    content: '\f105';
+    margin: 0 !important;
+    padding: 12px !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+    background: none;
+    height: 100%;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
 #doc-head {
   background-color: #fff;
 }
@@ -3212,7 +3251,7 @@ display: block;
 .alert-warning h5 {
   color: #31708f;
 }
-.alert-info h3 {
+.alert-info h4 {
   margin-top: 15px;
   color: #31708f;
   font-size: 28px;
@@ -3232,13 +3271,13 @@ display: block;
   font-family: Avenir-Light;
 
 }
-.alert-danger h3 {
+.alert-danger h4 {
   margin-top: 15px;
   color: #d83f48;
   font-size: 28px;
 }
-.alert h3,
-#doc .alert h3 {
+.alert h4,
+#doc .alert h4 {
   margin-top: 0px;
 }
 .contributor {
@@ -4292,6 +4331,9 @@ a.cta.cta-black-on-yellow:after:hover {
 .row-topics-list .topic-info {
   margin: 0 15px 30px;
 }
+.plugin-title {
+  margin-top: 20px;
+}
 
 /*.topic-info > a.topic-info-link {
   display:flex;
@@ -4328,7 +4370,7 @@ a.cta.cta-black-on-yellow:after:hover {
 .topic-info .topic-info__image {
   width: 30%;
   height: 136px;
-  background-size: 70%;
+  background-size: 75%;
   margin:0;
 }
 a.topic-info-link {

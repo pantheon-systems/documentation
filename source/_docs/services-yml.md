@@ -41,7 +41,7 @@ The table below illustrates which services file is used in which Pantheon enviro
 Before you begin, make sure that you have updated your Drupal site to version 8.2.0. From within the `sites/default` directory, create a new file named `services.yml`, `services.pantheon.production.yml`, or `services.pantheon.preproduction.yml`, depending on whether you wish to configure settings for all environments, production environments or pre-production environments. Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
 
 <div class="alert alert-info">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Module specific services should be defined in a separate <code>.yml</code> file, located in the root directory of the respective module (e.g. <code>sites/all/modules/module_name/module_name.services.yml</code>).</p>
 </div>
 

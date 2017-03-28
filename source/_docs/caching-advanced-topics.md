@@ -9,7 +9,7 @@ categories: [performance]
 Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache or store the response from the user into the cache.
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
+<h4 class="info">Warning</h4>
 <p>Pantheon does not support manually editing and updating the Varnish Configuration Language (VCL). We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.</p></div>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
@@ -94,7 +94,7 @@ For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and 
 In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p><code>STYXKEY</code> is not a replacement for responsive design.</p></div>
 
 **Examples of `STYXKEY` cookie names:**

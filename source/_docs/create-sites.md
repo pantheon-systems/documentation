@@ -11,7 +11,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. From your User Dashboard, click **Create New Site**.
 2. Name your site. 
   <div class="alert alert-info">
-  <h3 class="info">Note</h3>
+  <h4 class="info">Note</h4>
   <p>The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>. Site names and Platform URLs are permanent and cannot be changed.
   </p></div>
 3. If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).

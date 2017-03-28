@@ -25,7 +25,7 @@ Once they have successfully created an account, they will be automatically added
 ## Remove a Team Member
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>All users can be removed except the site owner.</p></div>
+<h4 class="info">Note</h4><p>All users can be removed except the site owner.</p></div>
 
 In the Team modal in the Site Dashboard, click the X next to the user you want to delete.
 
@@ -40,7 +40,7 @@ Site ownership is assigned to the person who creates the site or pays for the si
 Within the Team modal of the Site Dashboard, the site owner can click **Make Owner** next to the site team member that should receive ownership of the site. This link is only visible when the Sandbox site does not have a credit card associated with the site. To disassociate a credit card, go to **Settings** and click the Billing tab.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>Only the current site owner has the ability to assign a new owner; site team members will not see this option.</p></div>
+<h4 class="info">Note</h4><p>Only the current site owner has the ability to assign a new owner; site team members will not see this option.</p></div>
 ![Make Owner](/source/docs/assets/images/dashboard/sandbox-make-owner.png)
 
 #### Paid Sites
@@ -63,7 +63,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 5. Click the **Add Agency** button to make them a supporting organization.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</p></div>
+<h4 class="info">Note</h4><p>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</p></div>
  ![Add a supporting organization button](/source/docs/assets/images/dashboard/multi_org1.png)
  ![Confirm supporting organization](/source/docs/assets/images/dashboard/multi_org2.png)
 

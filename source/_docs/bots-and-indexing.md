@@ -48,16 +48,24 @@ The `pantheonsite.io` domains are intended for development use and cannot be use
 
 You can index your site under your production domain once it's added to the Live environment. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](http://wpcrux.com/collectives/wordpress-xml-sitemap-plugins/) plugin or the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/), which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
-### Troubleshooting
+## Troubleshooting
 
-#### Sitemaps Produce a White Screen of Death (WSOD)
+### Google Results for My Site Link to HTTPS using Pantheon's Shared Certificate
+
+Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
+
+ - Create a sitemap that contains only HTTP links.
+ - Enable HTTPS for your domain, either [using your own certificate](/docs/enable-https) or for [free using Cloudflare](/docs/guides/cloudflare-enable-https/).
+ - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
+
+### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
 For example, if you have a Drupal site using the [XMLSiteMap](https://drupal.org/project/xmlsitemap) module, navigate to `admin/config/search/xmlsitemap/settings` and uncheck **Prefetch URL aliases during sitemap generation**. Save the configuration and clear caches for the Live environment on the Pantheon Dashboard or via [Terminus](/docs/terminus): `terminus env:clear-cache`
 
 Props to [Will Hall](https://twitter.com/HN_Will) for highlighting this solution in a related [blog post](http://www.willhallonline.co.uk/blog/get-xml-sitemaps-working-pantheon).
 
-#### Legacy Sitemap Submissions Generating 404s
+### Legacy Sitemap Submissions Generating 404s
 Sitemaps can (and should) be submitted directly to Google Webmaster Tools. However, if there are legacy submissions out there generating 404s, you'll need to redirect via PHP within `wp-config.php` or `settings.php`. For example, WordPress sites running the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin can use the following:
 
 ```php

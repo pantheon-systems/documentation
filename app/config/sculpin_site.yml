@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 6.3
+assets_version: 6.6
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -245,3 +245,12 @@ contributors:
     avatar: //avatars0.githubusercontent.com/u/17841145
     twitter: acausing
     drupal: https://www.drupal.org/u/acausing
+  tessak22:
+    name: Tessa Kriesel
+    bio: Agency & Community Engineer
+    twitter: tessak22
+    drupal: https://www.drupal.org/u/tessak22
+    url: http://tessakriesel.com/
+    github: https://github.com/tessak22
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JMP_9650-800x800.jpg
+    linkedin: http://linkedin.com/in/tessak22

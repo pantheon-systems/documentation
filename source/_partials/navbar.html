@@ -33,6 +33,9 @@ function setActivetrail() {
       if(/\/create.*/.test(aaObj[i].href)>=1) {
         $('#docs-terminus-plugins').removeClass('active-trail');
       }
+      if(/\/updates.*/.test(aaObj[i].href)>=1) {
+        $('#docs-terminus').removeClass('active-trail');
+      }
     }
   }
 }
@@ -69,6 +72,12 @@ terminusRelease.controller('terminusReleaseCtrl', function($scope, $http) {
     .then(function (response) {
       var data = response.data;
       $scope.releases = data;
+      $scope.greaterThan = function(prop, val){
+          return function(item){
+            return item[prop] > val;
+          }
+      }
+
   });
   }
 );
@@ -89,9 +98,11 @@ terminusCommandsApp.controller('mainController', function($scope, $http) {
   $http.get('/docs/assets/terminus/commands.json')
     .then(function (response) {
       var data = response.data;
-      var old = JSON.stringify(data).replace(/(<site_env>)/g, "<site>.<env>").replace(/(<site_env_id>)/g, "<site>.<env>").replace(/(<site_id>)/g, "<site>").replace(/(<site_name>)/g, "<site>").replace(/(\[<drush_command>\]\.\.\.)/g, "-- <drush_command>").replace(/(\[<wp_command>\]\.\.\.)/g, "-- <wp_command>");
+
+      var old = JSON.stringify(data).replace(/(<site_env>)/g, "<site>.<env>").replace(/(<site_env_id>)/g, "<site>.<env>").replace(/(<site_id>)/g, "<site>").replace(/(<site_name>)/g, "<site>").replace(/(\[<drush_command>\]\.\.\.)/g, "-- <drush_command>\\n\\nThe double-dash (--) signifies the end of the Terminus options. Everything that comes after the double-dash is interpreted as positional parameters (arguments) and passed to Drush.").replace(/(\[<wp_command>\]\.\.\.)/g, "-- <wp_command>\\n\\nThe double-dash (--) signifies the end of the Terminus options. Everything that comes after the double-dash is interpreted as positional parameters (arguments) and passed to WP-CLI.");
       var newArray = JSON.parse(old);
       $scope.terminus = newArray;
+
   });
   $scope.clearFilters = function(){
       $scope.searchCommand =  undefined;

@@ -63,7 +63,7 @@ $ terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
 All `terminus wp` commands require a site name and environment to operate.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>If you have protected your site using the Security setting on your Dashboard, Terminus will be unable to execute cron and you may see status report errors on the Dashboard.</p></div>
 
 
@@ -85,7 +85,7 @@ define('DISABLE_WP_CRON', true);
 ````
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.</p></div>
 
 ### Free Services
@@ -102,7 +102,7 @@ Any of the above services will get the job done. By disabling WP-Cron, you have 
 2. Set up a job that calls `http://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Replace <code>yourdomain.tld</code> with your domain.</p></div>
 
 Depending on what service you use, you may have the ability to set up multiple jobs at different times. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. If you create new schedules that need to be run more often than once every 15 minutes, you will need to adjust your job accordingly.

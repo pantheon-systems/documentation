@@ -18,7 +18,6 @@ Drupal 8 currently requires that the `settings.php` file be writeable in order t
 ### Unavailable Features
 The following platform features are not yet available on Pantheon for sites running Drupal 8:
 
- - [Solr](/docs/solr)
  - [Redis](/docs/redis/#drupal-8-sites)
  - The [Status tool's](/docs/drupal-launch-check) [Site Audit](https://www.drupal.org/project/site_audit) functionality
  - [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
@@ -33,3 +32,4 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 [Drupal Drush Command-Line Utility](/docs/drush)  
 [Major Version Drupal Upgrades](/docs/drupal-updates#upgrade-to-drupal-8)  
 [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)  
+[Enabling Solr on Drupal](/docs/solr-drupal-8)

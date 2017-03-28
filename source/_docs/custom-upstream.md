@@ -7,8 +7,8 @@ categories: [manage]
 Create a custom distribution of WordPress or Drupal and add it to the Pantheon platform. This will enable users of the affiliated organization to create sites using a specialized codebase as a starting point.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>Custom upstreams are available to the "Partner" and "Strategic Partner" tiers in Pantheon's Partner program. <a href="/docs/organizations/#create-an-organization">Create your agency organization</a> to get started and see our <a href="https://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf">Partner Program Guide</a> for information on how to advance to Partner tiers.</p></div>
+<h4 class="info">Note</h4>
+<p>Custom Upstreams are available to EDUs, Enterprises, and agencies that sign up for <a href="https://pantheon.io/agencies/pantheon-for-agencies">Pantheon for Agencies</a>.</p></div>
 
 ## Create a Remote Repository
 
@@ -72,7 +72,7 @@ Create a remote repository and clone it locally, then pull the applicable Panthe
 
 Follow conventions for using the `/profiles` directory in Drupal. With WordPress, you can add plugins and themes to their normal locations.
 
-<div class="alert alert-danger"><h3 class="info">Warning</h3><p>Your Upstream must not contain the tags <code>pantheon_test_n</code> or <code>pantheon_live_n</code>. Pantheon site repositories add these tags when you deploy code to Test and Live environments, and the platform will recognize and automatically deploy code at the tagged commit to those environments immediately, every time you create a site with the upstream.</p></div>
+<div class="alert alert-danger"><h4 class="info">Warning</h4><p>Your Upstream must not contain the tags <code>pantheon_test_n</code> or <code>pantheon_live_n</code>. Pantheon site repositories add these tags when you deploy code to Test and Live environments, and the platform will recognize and automatically deploy code at the tagged commit to those environments immediately, every time you create a site with the upstream.</p></div>
 
 Push the repository to your upstream's remote location.
 
@@ -85,11 +85,39 @@ Push the repository to your upstream's remote location.
 
 ### Create the Testing Site
 
-Create a vanilla Drupal or WordPress site associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
+Create a vanilla Drupal or WordPress site using a unique site name that is associated with your partner organization so you can test the upstream using [Terminus](/docs/terminus/):
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#site-create-upstream">Copy</button>
-  <figure><pre id="site-create-upstream"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;site&gt; &lt;label&gt; &lt;upstream&gt; --org=&lt;org&gt;</code></pre></figure>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li id="drupal8tab" role="presentation" class="active"><a href="#drupal8" aria-controls="drupal8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li id="drupal7tab" role="presentation"><a href="#drupal7" aria-controls="drupal7" role="tab" data-toggle="tab">Drupal 7</a></li>    
+  <li id="wp-newtab" role="presentation"><a href="#wp-new" aria-controls="wp-new" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="drupal8">
+    <!-- Drupal Content -->
+    <p class="instruction">Create a Drupal 8 site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal-8">Copy</button>
+    <figure><pre id="vanilla-site-drupal-8"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;unique-site-name&gt; "Unique Site Label" "Drupal 8" --org="Org Name or UUID"</code></pre></figure>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="drupal7">
+    <!-- Drupal Content -->
+    <p class="instruction">Create a Drupal 7 site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-drupal-7">Copy</button>
+    <figure><pre id="vanilla-site-drupal-7"><code class="command nohighlight" data-lang="bash">terminus site:create &lt;unique-site-name&gt; "Unique Site Label" "Drupal 7" --org="Org Name or UUID"</code></pre></figure>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp-new">
+    <!-- WordPress Content -->
+    <p class="instruction">Create a WordPress site associated with your organization:</p>
+    <div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#vanilla-site-wordpress">Copy</button>
+    <figure><pre id="vanilla-site-wordpress"><code class="command nohighlight" data-lang="bash">terminus site:create unique-site-name "site label" WordPress --org="org name or UUID"</code></pre></figure>
+    </div>
+  </div>
 </div>
 
 [Clone the Pantheon repository](/docs/git/#clone-your-site-codebase):
@@ -134,7 +162,7 @@ Run your automated acceptance tests, using behat, casper.js, or by manually exec
 
 When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
   <ul>
     <li>For private repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters.</li>
     <li>For private GitLab repositories, please ensure the user has the "reporter" permissions level.</li>
@@ -159,7 +187,7 @@ After you have a distribution that works on Pantheon, [contact support](/docs/ge
 - Links to evidence of testing on Pantheon. This should include the testing site, test files within the repository, and test reports.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</p></div>
 
 Public and Organizational distributions must also provide a promotional screenshot for the public installation page.

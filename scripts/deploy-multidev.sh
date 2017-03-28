@@ -20,26 +20,26 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
 
 
   # Authenticate Terminus
-  ~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 
 
   # Write existing environments for the static docs site to a text file
-  ~/documentation/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 
   # Check env_list.txt, create environment if one does not already exist
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
     echo "Existing environment found for $normalize_branch"
     # Get the environment hostname and URL
-    export url=`bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
   else
     # Create multidev
-    ~/documentation/bin/terminus multidev:create static-docs.dev $normalize_branch
+    ~/documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
-    export url=`bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -73,7 +73,8 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
   # Create json dump of terminus help for docs/terminus/commands
-  ~/documentation/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
+  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
+  curl https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
   rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
   if [ "$?" -eq "0" ]
@@ -143,5 +144,5 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
   # Clear cache on multidev env
-  ~/documentation/bin/terminus env:cc static-docs.$normalize_branch
+  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
 fi

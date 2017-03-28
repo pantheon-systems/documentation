@@ -9,8 +9,10 @@ HTTPS is a standard for establishing an encrypted link between your Pantheon sit
 Adding HTTPS to your site is a completely self-serve option; Pantheon does not provide private keys or certificate signing requests (CSRs), or any SSH login for you to generate these. The key and certificates are cryptographically sensitive elements that you should not send through email, as cleartext is very insecure.
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.</p></div>
+<h4 class="info">Warning</h4>
+<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.
+</p>
+</div>
 
 ## Steps to Enable HTTPS
 
@@ -30,7 +32,7 @@ Run `openssl` from the command line to generate an [RSA private key](https://en.
 openssl req -new -newkey rsa:2048 -nodes -out www_example_com.csr -keyout www_example_com.key
 ```
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 You'll need Cygwin to run <code>openssl</code> on Windows. See <a href="/docs/cygwin-windows">Installing Cygwin on Windows</a>.
 </div>
 
@@ -41,7 +43,7 @@ You'll be prompted interactively to enter the information needed to request your
 You can also use a tool like the [OpenSSL CSR Wizard](https://www.digicert.com/easy-csr/openssl.htm) to generate an `openssl` command that you can paste into the command line, so you won't be prompted for that information interactively.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 Do not add a password to your key. Adding a password will cause an error later when loading your cert into your Pantheon environment. If you did enter a password, repeat the above openssl command, leaving the password blank.
 </div>
 
@@ -99,18 +101,26 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 
 ## Load Certificate into Pantheon
 
-1. From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
-2. Select **HTTPS**.
-3. Next to **Environment HTTPS:**, click **Enabled**.
-4. Paste in the certificates and private key in to the appropriate fields, including the header and footer, and click **Add Cert**.
+1.  From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
+2.  Select **HTTPS**.
+3.  Next to **Environment HTTPS:**, click **Enabled**.
+4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
 
-After submitting your certificates, you'll see a confirmation message:
 
-"HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
+        -----BEGIN CERTIFICATE-----
+        MIID8TCCA1oCAQAwgZMxHjAcBgNVBAMTFXd3dy50c2FjY2Vzc29yaWVzLmNvbTEe MBwGA1UECxMVd3d3LnRzYWNjZXNzb3JpZXMuY29tMR4wHAYDVQQKExV3d3cudHNh Y2Nlc3Nvcmllcy5jb20xETAPBgNVBAcTCExpdGhvbmlhMRAwDgYDVQQIEwdHZW9y Z2lhMQwwCgYDVQQGEwNVU0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALR+ Am6wBoa+Xjdwd6TrmsnHmYysO63Z9o+NBat/Aw3JKn7DIoKexgTsI32Phu9EQlUs oIZMRSxcrhlSronaM526XupaD2XfDohWEBi1tYFhLuZq/b/govfDpUiKFPPTfdW9 gW1WbNsRMuJohG4gGzNFKoXrPk3wGeImlR88m2bPAgMBAAGgggIbMBoGCisGAQQB gjcNAgMxDBYKNS4yLjM3OTAuMjBdBgkrBgEEAYI3FRQxUDBOAgEBDCRNQ0FQU1dF Qi5tb25zdGVyY29tbWVyY2Utc2VydmVycy5jb20MGUFEMTgxNzBcTUNBTExQVVJQ T1NFQURNSU4MCHczd3AuZXhlMIGbBgkqhkiG9w0BCQ4xgY0wgYowDgYDVR0PAQH/ BAQDAgTwMEQGCSqGSIb3DQEJDwQ3MDUwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3 DQMEAgIAgDAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNVHQ4EFgQUFtQue0vYw5c+ I2jqwWfRUmC4DUwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwgf8GCisGAQQBgjcNAgIx gfAwge0CAQEeXABNAGkAYwByAG8AcwBvAGYAdAAgAEUAbgBoAGEAbgBjAGUAZAAg AEMAcgB5AHAAdABvAGcAcgBhAHAAaABpAGMAIABQAHIAbwB2AGkAZABlAHIAIAB2 ggTAA8sJ5roKInve8uHNihohjvIgfLqBnXTZnDomyU7aXVLJHa4C2h2IiXReNNTC hWqcgTOK7g/DwMo5m/rBd/LIr1qYtiAwDkg2ZWQSLOflOk6NG1JCMbbFpQIozNtC
+        kKlrDGw=
+        -----END CERTIFICATE-----
 
-<div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
-<p>It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</p></div>
+
+    After submitting your certificates, you'll see a confirmation message:
+
+    "HTTPS is enabled for the Live environment with loadbalancer IP: X.X.X.X" under the **HTTPS** tab. The **Domains/HTTPS** tab will be updated with new DNS recommendations.
+
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p>It may take up to 120 seconds to see the new IP address. If you're experiencing problems with the SSL load balancer provisioning with your new IP address, please contact support.</p>
+    </div>
 
 ## DNS
 
@@ -123,17 +133,23 @@ We recommend using an IPv4 address, unless you are familiar with and understand 
 Before you point your DNS to the custom IP address you received after enabling HTTPS, you can verify that the certificate is correct.
 
 <div class="alert alert-danger" role="alert">
-<h3 class="info">Warning</h3>
-<p>You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.</p></div>
+<h4 class="info">Warning</h4>
+<p>You may see that the SSL certificate matches your intended domain, but do not expect to view the contents of the site, as we use HTTP headers to route your domain correctly.
+</p>
+</div>
 
 ### Test with Chrome
 
-1. Point your browser to the custom IP address you received after enabling HTTPS: https://x.x.x.x
-2. Click the padlock in the address bar.
-3. Select **Certificate Information**.<br />
- ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
-4. Verify certificate details match the domain(s) you'll point to the site.
- ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
+1.  Point your browser to the custom IP address you received after enabling HTTPS: `https://x.x.x.x`
+2.  Click the More menu (**⋮**), then **More Tools** --> **Developer Tools**.
+3.  Click **Security** (possibly hidden under **>>**).
+4.  Click **View Certificate**.
+
+    ![Image showing to click padlock and Certificate Information](/source/docs/assets/images/verify-ssl-cert-valid-chrome-0.png)
+
+5.  Verify certificate details match the domain(s) you'll point to the site.
+
+    ![Certificate information](/source/docs/assets/images/verify-ssl-cert-valid-chrome.png)
 
 ### Test with cURL
 

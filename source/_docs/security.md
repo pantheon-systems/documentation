@@ -9,7 +9,7 @@ There are occasions while you are working on your Drupal site that you would li
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3><p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p></div>
+<h4 class="info">Note</h4><p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p></div>
 
 ## Password Protect Your Site's Environments
 
