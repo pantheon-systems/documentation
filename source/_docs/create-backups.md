@@ -8,7 +8,7 @@ keywords: backup, backup creation, create a backup, create backup, create backup
 ---
 Pantheon makes creating a backup of an environment a simple one-click operation.
 
-If you prefer the command line, you can use [Terminus](/docs/terminus) to create backups:  
+If you prefer the command line, you can use [Terminus](/docs/terminus) to create backups:
 ```
 terminus backup:create <site>.<env> --element=<element> --keep-for=<days>
 ```
@@ -91,13 +91,13 @@ else
 fi</code></pre>
 
 
-## Access Backups  
+## Access Backups
 ### Via the Dashboard
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
 
 ![Access site backups Pantheon Dashboard](/source/docs/assets/images/dashboard/direct-download-backup.png)
 
-The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.  
+The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.
 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
@@ -108,11 +108,19 @@ If you have the temporary URL provided via the Dashboard, you can download it fr
 wget "https://pantheon-backups.s3.amazonaws.com..."
 ```
 
-You can also use  [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading. Include the `--latest ` option to automatically download the most recently created backup. Select older archives by running `terminus site backups list`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+You can also use [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
 
-```
-terminus backup:get <site>.<env> --file=<filename> --element=<element>
-```
+    terminus backup:get <site>.<env> --element=<code|files|db> --to=path/to/file.tar.gz
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
+</p>
+</div>
+
+Select an older archive by running `terminus backup:list <site>.<env>`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
+
+    terminus backup:get <site>.<env> --file=<filename> --to=path/to/file.tar.gz
 
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
 
