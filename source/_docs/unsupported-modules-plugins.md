@@ -45,7 +45,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+ **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
