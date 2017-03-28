@@ -101,6 +101,11 @@ The newest backup will appear at the top of the list. When the retention period 
 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Some older versions of Google Chrome can cause database backups to be downloaded with an incorrect file extensions (e.g. `.sql` instead of `sql.gz`). You can resolve this problem by updating Google Chrome or by renaming the file using the correct extension so it's a usable archive.</p>
+</div>
+
 ### Via the Command Line
 If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
 
