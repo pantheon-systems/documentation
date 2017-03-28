@@ -124,7 +124,7 @@ You can implement a secure domain for a specific set of pages with Drupal module
 
     // Require HTTPS for admin pages.
     if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['HTTPS'] === 'on') &&
+      ($_SERVER['HTTPS'] === 'OFF') &&
       // Check if Drupal or WordPress is running via command line
       (php_sapi_name() != "cli")) {
       if (!isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON') {
