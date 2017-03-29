@@ -35,3 +35,6 @@ It's especially ill-advised to use Multisite to set up many distinct/separate si
 
 ## Unsupported Plugins
 See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
+
+## Image uploads
+See this [core issue](https://core.trac.wordpress.org/ticket/36534) that describes upload problems with images with large dimensions.
