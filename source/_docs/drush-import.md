@@ -36,7 +36,7 @@ You're now ready to perform command-line operations with Pantheon! For instance,
 
 Start an import:
 ```nohighlight
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
