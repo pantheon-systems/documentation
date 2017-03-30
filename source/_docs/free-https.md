@@ -7,7 +7,6 @@ description: Upgrade to Free HTTPS
 * Sites on a Professional plan with HTTPS enabled and DNS for all domains routed to $30/month load balancer
   - [Request invite](http://learn.pantheon.io/201701-HTTPS-Reg.html)
 
-
 ## Upgrade Your Site
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
 2. Wait 25 minutes to an hour for provisioning of the certificate.
@@ -64,7 +63,6 @@ No, but you don’t need a wildcard certificate to secure communications for mul
 ### Is the CDN configurable? Do I get access to hit rates or other statistics?
 No, we manage the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not available.
 
-### Is edge caching changing?
 
 ### What is a shared certificate?
 Shared certificates use a Subject Alternative Name (SAN) certificate to host multiple hostnames or domains on one certificate. We ake care of certificate administration and renewal automatically for every domain on your site.
@@ -79,7 +77,7 @@ Yes, SNI is the technology replacing the expensive, legacy load balancers and al
 If you want to downgrade, please contact Pantheon support.
 
 ### When do I stopped being billed $30/month?
-Pantheon will remove legacy load balancers and stop billing within 10 days of upgrading.
+Pantheon will remove legacy load balancers and stop billing within XXX days of upgrading.
 
 ### Why does Moz Pro return an 804 HTTPS SSL error?
 Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
