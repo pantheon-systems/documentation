@@ -105,7 +105,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+ **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
 <hr>
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
