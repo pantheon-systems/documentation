@@ -123,7 +123,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
       </tr>
       <tr>
         <td>Manage a site's plan</td>
-        <td>✓</td>
+        <td>✓<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an Org is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a></td>
         <td></td>
         <td></td>
       </tr>
