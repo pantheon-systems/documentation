@@ -1,7 +1,7 @@
 ---
-title: Early Access: Free HTTPS
+title: Early Access: Free and Automated HTTPS
 earlyaccess: true
-description: Upgrade to Free HTTPS
+description: Upgrade to Free and Automated HTTPS
 ---
 ## Eligible Sites
 * Sites on a Professional plan with HTTPS enabled and DNS for all domains routed to $30/month load balancer
@@ -79,10 +79,6 @@ If you want to downgrade, please contact Pantheon support.
 ### When do I stopped being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing within XXX days of upgrading.
 
-### Why does Moz Pro return an 804 HTTPS SSL error?
-Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
-
-
 ## Troubleshooting
 
 ### 503 Timeouts
@@ -116,3 +112,6 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
   }
 }
 ```
+
+### Moz Pro return an 804 HTTPS SSL error
+Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
