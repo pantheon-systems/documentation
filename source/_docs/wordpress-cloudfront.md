@@ -28,7 +28,8 @@ Be sure that you:
 
  <div class="alert alert-info" role="alert">
  <h4 class="info">Note</h4>
- <p>You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time.</p><div>
+ <p>You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time.</p>
+ </div>
 
 5. Click **Download Credentials**.
 
@@ -73,7 +74,7 @@ Access your WordPress Dashboard by appending `/wp-admin` to your [Development si
 1. Paste the name of the plugin in the **Search Plugins** box and press enter.
 1. Find Amazon S3 and CloudFront and click **Install Now**.
 1. Click **OK** to confirm the installation.
-1. Click **Activate Plugin**.  
+1. Click **Activate Plugin**.
   You are now directed to the Plugin page of your WordPress Dashboard to install and activate the plugin.
 1. Click **Install it**, then **Activate Plugin**.
 
@@ -94,8 +95,8 @@ From within your WordPress Dashboard:
   define( 'AWS_SECRET_ACCESS_KEY', '****************************************' );
   ```
 
-3. Click **AWS**, then **S3 and CloudFront** from within your WordPress Dashboard.  
-4. Create a new bucket by entering a unique name, and then click **Create**.  
+3. Click **AWS**, then **S3 and CloudFront** from within your WordPress Dashboard.
+4. Create a new bucket by entering a unique name, and then click **Create**.
 5. Ensure that "Copy Files to S3" and "Rewrite File URLs" are both set to **ON**.
 
 There are several other options available within this plugin for you to experiment with. Take a tour of the settings to find the best configuration for your particular use case.
@@ -118,7 +119,7 @@ Now for the final step: turning on Amazon CloudFront. These combined services wi
 2. Click **Create Distribution**.
 3. From within the Web section, click **Get Started**.
 4. In the **Origin Name** field, select your recently created S3 bucket. This will automatically populate the **Origin ID** field.
-5. You can use the default configurations for the other options or tweak them as you need.  
+5. You can use the default configurations for the other options or tweak them as you need.
 6. Click **Create Distribution**.
 
 You're now sent to the CloudFront Distributions page. You will notice that your distribution is enabled and the status is "In Progress". The amount of time this initial setup takes depends on the size of your media library. Once complete, Amazon CloudFront will serve all of your media.
