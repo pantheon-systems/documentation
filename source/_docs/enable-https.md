@@ -20,7 +20,7 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 2. Get a certificate
 3. Load the certificate into Pantheon environment
 4. Test HTTPS (optional, but recommended)
-5. Update DNS
+5. [Update DNS](/docs/domains)
 6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
