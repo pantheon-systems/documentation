@@ -123,10 +123,27 @@ git commit -Am "Initiate composer, require custom code"
 git push origin master
 ```
 
+## Remote Composer Operations
+
+Using [Terminus](/docs/terminus) and the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin), it is possible to run Composer commands on your Pantheon sites directly.
+
+1. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin).
+2. Set the Dev environment's connection mode to SFTP from within the Site Dashboard or via [Terminus](/docs/terminus):
+
+ ```nohighlight
+ $ terminus connection:set <site>.<env> sftp
+ ```
+3. Run Composer commands through Terminus:
+
+ ```nohighlight
+ $ terminus composer <site>.<env> -- update
+ ```
+ 
 ## Drupal Resources
 
-- [Drupal Packagist](https://packagist.drupal-composer.org/), a Composer repository for Drupal. It provides all projects from Drupal.org as packages for Composer.
-- [Drupal Composer](http://drupal-composer.org/)
+- [packages.drupal.org](https://www.drupal.org/docs/develop/using-composer/using-packagesdrupalorg), a Composer repository for Drupal. It provides all projects from Drupal.org as packages for Composer.
+- [Using Composer with a Relocated Document Root](https://pantheon.io/blog/using-composer-relocated-document-root-pantheon)
+- [Example drops-8 Composer site](https://github.com/pantheon-systems/example-drops-8-composer), the Pantheon version of [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
 - [Composer Tools & Frameworks for Drupal](http://www.slideshare.net/GetPantheon/composer-tools-and-frameworks-for-drupal-20-may)
 - Manage patches with [cweagans/composer-patches](https://github.com/cweagans/composer-patches)
 
