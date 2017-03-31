@@ -107,7 +107,9 @@ Next, add the [packagist.org](https://packagist.org/) repository and require [`c
     "wp-content/themes/{$name}/": ["type:wordpress-theme"]
   }
 ```
+
 Or modules for Drupal:
+
 ```json
 "extra": {
   "installer-paths": {
