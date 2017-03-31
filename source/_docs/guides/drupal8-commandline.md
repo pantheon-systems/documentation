@@ -1,7 +1,7 @@
 ---
 title: Create a Drupal 8 Site From the Command Line Using Terminus and Drush
 description: Learn how to add modules, and manage configuration between Pantheon environments.
-tags: [cli]
+tags: [devterminus, create]
 categories: [develop, cli]
 type: guide
 permalink: docs/guides/:basename/
