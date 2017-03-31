@@ -1,7 +1,44 @@
+<div class="row">
+  <div class="col-md-6 topic-groups">
+    <h3>Add On Services</h3>
+    <p class="topic-info__description">Use free services to improve search and enable robust application caching.</p>
+    <ul class="topic-docs">
+      {% for doc in data.docs_tags.addons if doc.meta.type == "video"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+      {% for doc in data.docs_tags.addons if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+      {% for doc in data.docs_tags.addons %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-6 topic-groups">
+    <h3>Environment Configuration Variables</h3>
+    <p class="topic-info__description">Manage configuration and site settings per environment.</p>
+    <ul class="topic-docs">
+      {% for doc in data.docs_tags.variables if doc.meta.type == "video"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+      {% for doc in data.docs_tags.variables if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+      {% for doc in data.docs_tags.variables %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
   <div class="row">
     <div class="col-md-6 topic-groups">
       <h3>Security</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <p class="topic-info__description">Enable HTTPS and learn about various authentication methods.</p>
       <ul class="topic-docs">
         {% for doc in data.docs_tags.security if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -18,7 +55,7 @@
     </div>
     <div class="col-md-6 topic-groups">
         <h3>Workflows</h3>
-        <p class="topic-info__description">Placeholder text about this group of docs.</p>
+        <p class="topic-info__description">Best practice workflow recommendations for streamlining development.</p>
         <ul class="topic-docs">
           {% for doc in data.docs_tags.workflow if doc.meta.type == "video"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -34,44 +71,8 @@
         </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6 topic-groups">
-      <h3>Add On Services</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
-      <ul class="topic-docs">
-        {% for doc in data.docs_tags.addons if doc.meta.type == "video"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-        {% endfor %}
-        {% for doc in data.docs_tags.addons if doc.meta.type == "guide"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
-        {% endfor %}
-        {% for doc in data.docs_tags.addons %}
-          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="col-md-6 topic-groups">
-      <h3>Environment Configuration Variables</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
-      <ul class="topic-docs">
-        {% for doc in data.docs_tags.variables if doc.meta.type == "video"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-        {% endfor %}
-        {% for doc in data.docs_tags.variables if doc.meta.type == "guide"%}
-          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
-        {% endfor %}
-        {% for doc in data.docs_tags.variables %}
-          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 subtopic-container mb-70">
+  <div style="padding:15px;" class="row">
+    <div class="col-md-12 subtopic-container mb-20">
       <div class="subtopic-groups">
         <h3>Command Line Inerface</h3>
         <p class="topic-info__description">Use Terminus to interact with the platform from the command line.</p>
@@ -134,8 +135,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12 subtopic-container mb-70">
+  <div style="padding:15px;" class="row">
+    <div class="col-md-12 subtopic-container mb-20">
       <div class="subtopic-groups">
         <h3>Git</h3>
         <p class="topic-info__description">Push code changes to the platform using Git mode.</p>
@@ -159,8 +160,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12 subtopic-container mb-70">
+  <div style="padding:15px;" class="row">
+    <div class="col-md-12 subtopic-container mb-20">
       <div class="subtopic-groups">
         <h3>On-Server Development (SFTP)</h3>
         <p class="topic-info__description">Manage plugins, modules, and themes within the WordPress Dashboard or Drupal Admin using SFTP mode.</p>
@@ -203,7 +204,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div style="padding:15px;" class="row">
     <div class="col-md-12 subtopic-container mb-70">
       <div class="subtopic-groups">
         <h3>Local Development</h3>

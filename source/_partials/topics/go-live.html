@@ -1,7 +1,7 @@
   <div class="row">
     <div class="col-md-6 topic-groups">
       <h3>New Relic</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <p class="topic-info__description">Use New Relic’s reporting to get end-to-end visibility into your website’s performance.</p>
       <ul class="topic-docs">
         {% for doc in data.docs_tags.newrelic if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -18,7 +18,7 @@
     </div>
     <div class="col-md-6 topic-groups">
       <h3>Launch-Checks and Site Status Reports</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <p class="topic-info__description">Get recommendations and discover site issues fast.</p>
       <ul class="topic-docs">
         {% for doc in data.docs_tags.status if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -37,7 +37,7 @@
   <div class="row">
     <div class="col-md-6 topic-groups">
         <h3>Billing</h3>
-        <p class="topic-info__description">Placeholder text about this group of docs.</p>
+        <p class="topic-info__description">Learn about common billing and administrative tasks.</p>
         <ul class="topic-docs">
           {% for doc in data.docs_tags.billing if doc.meta.type == "video"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -53,7 +53,7 @@
         </ul>
     </div>
   </div>
-  <div class="row">
+  <div style="padding:15px;" class="row">
     <div class="col-md-12 subtopic-container mb-70">
       <div class="subtopic-groups">
         <h3>Point Domains to Pantheon</h3>

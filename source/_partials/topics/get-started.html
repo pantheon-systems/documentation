@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6 topic-groups">
     <h3>Create Free Site</h3>
-    <p class="topic-info__description">We allocate two free Sandbox sites for all user accounts.</p>
+    <p class="topic-info__description">Spin up a Drupal or WordPress site for free in minutes.</p>
     <ul class="topic-docs">
       {% for doc in data.docs_tags.create if doc.meta.type == "video"%}
       <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -18,7 +18,7 @@
   </div>
   <div class="col-md-6 topic-groups">
     <h3>Explore the Site Dashboard</h3>
-    <p class="topic-info__description">Learn how to work within the Site Dashboard to manage and configure settings.</p>
+    <p class="topic-info__description">A developer console for all your sites.</p>
     <ul class="topic-docs">
       {% for doc in data.docs_tags.dashboard if doc.meta.type == "video"%}
       <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -34,10 +34,10 @@
     </ul>
   </div>
 </div>
-<div class="row">
+<div style="padding:15px;" class="row">
   <div class="col-md-12 subtopic-container mb-70">
     <div class="subtopic-groups">
-      <h3>Migrate to Pantheon</h3>
+      <h3>Migrate your Sites to Pantheon</h3>
       <p class="topic-info__description">Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.</p>
     </div>
     <div class="row">

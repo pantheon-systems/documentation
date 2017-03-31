@@ -4534,9 +4534,6 @@ a:focus {
   padding:0px;
   border: 1px solid #A4BBC1;
 }
-.subtopic-lists {
-  padding:20px;
-}
 .subtopic-lists > h4 {
   font-family: Avenir-Light;
   font-size: 22px;
@@ -4545,7 +4542,10 @@ a:focus {
   background-color: #0a6bb5;
   padding: 30px;
 }
-
+.guide-cta-landing:hover {
+box-shadow: 0px 0px 11px 0px rgba(120,134,142,0.62);
+opacity: 0.9;
+}
 
 .subtopic-groups > h3 {
   font-family: Avenir-Light;
@@ -4621,7 +4621,7 @@ a:focus {
 }
 .hero-video__video {
   padding-left: 0;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 .hero-video__text {
   padding: 40px;

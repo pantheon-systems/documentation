@@ -1,7 +1,7 @@
   <div class="row">
     <div class="col-md-6 topic-groups">
       <h3>Tools for Teams</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <p class="topic-info__description">Use our team workflows to launch faster and collaborate with ease.</p>
       <ul class="topic-docs">
         {% for doc in data.docs_tags.tools if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -18,7 +18,7 @@
     </div>
     <div class="col-md-6 topic-groups">
       <h3>Manage Sites & Users</h3>
-      <p class="topic-info__description">Placeholder text about this group of docs.</p>
+      <p class="topic-info__description">Control access and manage teams for a single site or an entire organization.</p>
       <ul class="topic-docs">
         {% for doc in data.docs_tags.manage if doc.meta.type == "video"%}
           <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
@@ -34,10 +34,10 @@
       </ul>
     </div>
   </div>
-  <div class="row">
+  <div class="row mb-70">
     <div class="col-md-6 topic-groups">
         <h3>Billing</h3>
-        <p class="topic-info__description">Placeholder text about this group of docs.</p>
+        <p class="topic-info__description">Learn about common billing and administrative tasks.</p>
         <ul class="topic-docs">
           {% for doc in data.docs_tags.billing if doc.meta.type == "video"%}
             <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
