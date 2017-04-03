@@ -137,46 +137,46 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ## Frequently Asked Questions (FAQs)
 
-#### How can I get Multidev and how much is does it cost?
+### How can I get Multidev and how much is does it cost?
 
-If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. Also, all organizations have [`Multidev for All Sites`](https://pantheon.io/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form from the Multidev tab in your Dashboard.
+If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. Additionally, all organizations have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites/). It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form in the Multidev tab in your Dashboard.
 
-#### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
+### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
 No; each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
-#### What access controls or permissions are available?
+### What access controls or permissions are available?
 
 At this time, there are no permissions or access controls for managing the deployment and development workflow beyond the existing team functionality. This is a known feature request and is scheduled for a future release.
 
-#### What are the naming conventions for branches?
+### What are the naming conventions for branches?
 
 Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`  and `billing`.
 
-#### Can I fork my code without using Multidev?
+### Can I fork my code without using Multidev?
 
 Yes, you can; your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
 
-#### Is there a limit on the number of branches or environments?
+### Is there a limit on the number of branches or environments?
 
 There is no limit on the number of branches you can have in your Git repository. The limit on forked environments is 5 for Business and 10 for Elite.
 
-#### Can I associate a domain with a branch environment?
+### Can I associate a domain with a branch environment?
 
 Yes, you can assign custom domains to each Multidev environment.
 
-#### What Git clients are supported?
+### What Git clients are supported?
 
 You can use any Git client with Multidev. Use of the command-line Git client is recommended for compatibility with Dashboard instructions.
 
-#### Does Multidev support remote repositories, such as GitHub?
+### Does Multidev support remote repositories, such as GitHub?
 
 At this time, Multidev on Pantheon will only work with the Pantheon hosted code repository. You can use remote repositories with your workflow, but Multidev on Pantheon will only recognize changes pushed to Pantheon.
 
-#### Is there a public API available for post-commit hooks or other integrations with external project management systems?
+### Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
 Not at this time, but it is on the development roadmap.
 
-#### Can I backup and restore a branch environment?
+### Can I backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
