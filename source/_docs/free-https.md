@@ -1,9 +1,9 @@
 ---
 title: Early Access: Free and Automated HTTPS
 earlyaccess: true
-description: Upgrade to Free and Automated HTTPS, powered by Fastly and Let's Encrypt
+description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
 ---
-Upgrade your sites's HTTPS and never manage a certificate again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our globally distributed content delivery network (CDN). Upgrade to take advantage of cost, performance, and security benefits.
+Upgrade your sites's HTTPS and never manage certificates again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our globally distributed content delivery network (CDN). Upgrade to take advantage of performance, security benefits, plus the time and cost of manually purchasing and maintaining certs.
 
 ## Eligibility
 Invite only. As of April 2017, sites on a Professional plan with HTTPS already enabled and all custom domains routing to Pantheon may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html).
@@ -11,7 +11,7 @@ Invite only. As of April 2017, sites on a Professional plan with HTTPS already e
 ## Upgrade Your Site
 
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
-2. Wait 25 minutes to an hour for HTTPS provisioning to complete.
+2. Wait 25 to 60 minutes for HTTPS provisioning to complete.
 3. Once HTTPS is ready, you will see action required on the **Domains & HTTTPS** tab for each environment, with instructions to configure DNS for each custom domain.  
 4. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required.
 5. Configure DNS using the provided destinations at the domain's DNS provider.
@@ -132,7 +132,7 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>Served from Chicago</td>
+      <td>ORD Datacenter</td>
       <td>Global CDN</td>
     </tr>
   </tbody>
