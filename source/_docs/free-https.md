@@ -5,24 +5,67 @@ description: Upgrade to Free and Automated HTTPS, powered by Fastly and Let's En
 ---
 Upgrade your sites's HTTPS and never manage a certificate again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our globally distributed content delivery network (CDN). Upgrade to take advantage of cost, performance, and security benefits.
 
-## Sites Eligible for Early Access (as of 4/1/2017)
-* Sites on a Professional plan with HTTPS already enabled
-  - [Request invite](http://learn.pantheon.io/201701-HTTPS-Reg.html)
+## Eligibility
+As of April 2017, sites on a Professional plan with HTTPS already enabled are eligible for early access to Free and Automated HTTPS. [Request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html) for sites that meet these requirements.
 
+## Compare to Legacy HTTPS
+<table class="table  table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Legacy</th>
+      <th>Free & Automated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Price</th>
+      <td>$30/mo per environment</td>
+      <td>Free for all environments</td>
+    </tr>
+    <tr>
+      <th>Certificate type</th>
+      <td>Bring your own</td>
+      <td>Shared</td>
+    </tr>
+    <tr>
+      <th>Renewal</th>
+      <td>Manual</td>
+      <td>Automatic</td>
+    </tr>
+    <tr>
+      <th>Unique inbound IP Address</th>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Client Support</th>
+      <td>??</td>
+      <td>Some very older browsers not supported</td>
+    </tr>
+    <tr>
+      <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
+      <td>A</td>
+      <td>A+</td>
+    </tr>
+    <tr>
+      <th>Protocol</th>
+      <td>Vulnerable TLS 1.1</td>
+      <td>TLS 1.2 only</td>
+    </tr>
+    <tr>
+      <th>Ciphers</th>
+      <td>Vulnerable 3DES cipher</td>
+      <td>No 3DES cipher</td>
+    </tr>
+    <tr>
+      <th>Delivery</th>
+      <td>Served from Chicago</td>
+      <td>Global CDN</td>
+    </tr>
+  </tbody>
+</table>
 
-## Comparison with Legacy HTTPS
-
-|    |     Legacy      |  Free & Automated  |
-|----------|:-------------:|------:|
-| Price | $30/mo per environment |  Free for all environments |
-| Certificate type | Bring your own| Shared |
-| Renewal | Manual | Automatic |
-| Unique inbound IP Address | Yes | No |
-| Client support | ?? | Some very older browsers not supported |
-| SSL Labs Rating | A  | A+ |
-| Protocol | vulnerable TLS 1.1 |    TLS 1.2 only   |
-| Ciphers | vulnerable 3DES cipher | no 3DES cipher |
-| Delivery | Served from Chicago | Global CDN |
 
 ## Upgrade Your Site
 
@@ -56,17 +99,14 @@ You're likely already issuing 301 redirects via the WordPress `wp-config.php` fi
 
 We also recommend sending a HTTP Strict Transport Security (HSTS) header with a max age of `15552000` (180 days). This is the last step to get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/) and helps to protect your website against protocol downgrade attacks and cookie hijacking.
 
-
 #### WordPress
-* Activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin
+* Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin.
 
 #### Drupal
 1. Install the
-[HTTP Strict Transport Security](https://drupal.org/project/hsts) module
-2. Visit module configuration page (/admin/config/security/hsts)
-3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to `15552000` and **Save Configuration**
-
-
+[HTTP Strict Transport Security](https://drupal.org/project/hsts) module.
+2. Visit the module configuration page (`/admin/config/security/hsts`).
+3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to `15552000` and click **Save Configuration**.
 
 ## Frequently Asked Questions
 
