@@ -2279,6 +2279,7 @@ h1[id] {
   background-color: #eef2f3;
   border-radius: 0px;
   border-color: #eef2f3 !important;
+  padding:20px;
 }
 h3.panel-video-title {
   text-decoration: none;
@@ -2293,18 +2294,20 @@ a.panel-video-title {
   text-decoration: none;
 }
 
-h3.panel-video-title::after {
-    font-family: "FontAwesome" !important;
-    content: '\f105';
-    margin: 0 !important;
-    padding: 12px !important;
-    display: inline-block !important;
-    line-height: 1 !important;
-    background: none;
-    height: 100%;
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
+.panel-heading .accordion-toggle:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: left;
+    line-height: .75;
+    padding-right: 10px;
+    color: #222;
+}
+.panel-heading .accordion-toggle.collapsed:before {
+    content: "\e080";
+    float: left;
+    line-height: .75;
+    padding-right: 10px;
+    color: #222;
 }
 #doc-head {
   background-color: #fff;
