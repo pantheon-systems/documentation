@@ -8,63 +8,7 @@ Upgrade your sites's HTTPS and never manage a certificate again. Pantheon automa
 ## Eligibility
 As of April 2017, sites on a Professional plan with HTTPS already enabled are eligible for early access to Free and Automated HTTPS. [Request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html) for sites that meet these requirements.
 
-## Compare to Legacy HTTPS
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Legacy</th>
-      <th>Free & Automated</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Price</th>
-      <td>$30/mo per environment</td>
-      <td>Free for all environments</td>
-    </tr>
-    <tr>
-      <th>Certificate type</th>
-      <td>Bring your own</td>
-      <td>Shared, issued by Let's Encrypt</td>
-    </tr>
-    <tr>
-      <th>Renewal</th>
-      <td>Manual</td>
-      <td>Automatic</td>
-    </tr>
-    <tr>
-      <th>Unique inbound IP Address</th>
-      <td>Yes</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Client Support</th>
-      <td>??</td>
-      <td>Some very older browsers not supported</td>
-    </tr>
-    <tr>
-      <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
-      <td>A</td>
-      <td>A+</td>
-    </tr>
-    <tr>
-      <th>Protocol</th>
-      <td>Vulnerable TLS 1.1</td>
-      <td>TLS 1.2 only</td>
-    </tr>
-    <tr>
-      <th>Ciphers</th>
-      <td>Vulnerable 3DES cipher</td>
-      <td>No 3DES cipher</td>
-    </tr>
-    <tr>
-      <th>Delivery</th>
-      <td>Served from Chicago</td>
-      <td>Global CDN</td>
-    </tr>
-  </tbody>
-</table>
+
 
 
 ## Upgrade Your Site
@@ -136,6 +80,65 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     <pre><code>strict-transport-security: max-age=31536000</code></pre>
   </div>
 </div>
+
+## Compare to Legacy HTTPS
+<table class="table  table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Legacy</th>
+      <th>Free & Automated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Price</th>
+      <td>$30/mo per environment</td>
+      <td>Free for all environments</td>
+    </tr>
+    <tr>
+      <th>Certificate type</th>
+      <td>Bring your own</td>
+      <td>Shared, issued by Let's Encrypt</td>
+    </tr>
+    <tr>
+      <th>Renewal</th>
+      <td>Manual</td>
+      <td>Automatic</td>
+    </tr>
+    <tr>
+      <th>Unique inbound IP Address</th>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Client Support</th>
+      <td>Some very old browsers not supported  <a href="http://caniuse.com/#search=TLS%201.1">1</a></td>
+      <td>Some very old browsers not supported <a href="http://caniuse.com/#search=TLS%201.2">1 <a href="http://caniuse.com/#search=SNI">2</a></sup></td>
+    </tr>
+    <tr>
+      <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
+      <td>A</td>
+      <td>A+ <a href="#http-strict-transport-security-header">with HSTS</a></td>
+    </tr>
+    <tr>
+      <th>Protocol</th>
+      <td>Vulnerable TLS 1.1</td>
+      <td>TLS 1.2 only</td>
+    </tr>
+    <tr>
+      <th>Ciphers</th>
+      <td>Vulnerable 3DES cipher</td>
+      <td>No 3DES cipher</td>
+    </tr>
+    <tr>
+      <th>Delivery</th>
+      <td>Served from Chicago</td>
+      <td>Global CDN</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Frequently Asked Questions
 
 ### Does upgrading involve HTTPS interruption or downtime?
@@ -147,13 +150,13 @@ No, after you update your DNS records, traffic will gracefully switch over and i
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### When do I stopped being billed $30/month?
-Pantheon will remove legacy load balancers and stop billing within XYZ days of upgrading.
+Pantheon will remove legacy load balancers and stop billing within 30 days of upgrading.
 
 ### Can I downgrade back to the legacy HTTPS?
 Yes, if you wish to downgrade, please contact Pantheon support.
 
-* If you request the upgrade before XYZ days after completing the upgrade, then your existing legacy load balancer will be available, with the same IP address and certificate.
-* If you request the upgrade after XYZ days, you will be able to load a new certificate to a new load balancer with a new IP address.
+* If you request the upgrade within 30 days after completing the upgrade, then your existing legacy load balancer will be available, with the same IP address and certificate.
+* If you request the upgrade after 30 days, you will be able to load a certificate and private key to a new load balancer with a new IP address.
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
@@ -183,14 +186,14 @@ TLS (Transport Layer Security) is a protocol for secure HTTP connections. This p
 Server name indication (SNI) is the technology replacing the expensive, legacy load balancers and allows multiple secure (HTTPS) websites to be served off the same IP address, without requiring all those sites to use the same certificate.
 
 ## Troubleshooting
-### 503 Timeouts
+### 503 60s Timeout
 If a web request exceed the 60 second timeout limit, you may encounter
 
 - 503 connection timeout
 - 503 first byte timeout
 - 503 between bytes timeout
 
-These errors occur when a request exceeds the 60 second timeout limit. There is currently no way to exceed or override the 60s timeout.
+These errors occur when a request exceeds the 60 second timeout limit. This timeout is not configurable.
 
 ### 503 Header Overflow
 If a request exceeds the 10K size limit for cookies, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page). Previously, with legacy HTTPS a [502 - Upstream Header Too Big](/docs/errors-and-server-responses/#502-upstream-header-too-big) error would be returned.
