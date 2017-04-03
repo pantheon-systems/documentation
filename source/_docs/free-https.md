@@ -101,7 +101,8 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
 
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-  <li role="presentation"><a href="#drops" aria-controls="drops" role="tab" data-toggle="tab">Drupal</a></li>
+  <li role="presentation"><a href="#drops7" aria-controls="drops7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#drops8" aria-controls="drops8" role="tab" data-toggle="tab">Drupal 8</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -112,7 +113,7 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     <p>Once enabled, the following header will be sent in responses:</p>
     <pre><code>Strict-Transport-Security: max-age=15984000; includeSubDomains; preload</code></pre>
   </div>
-  <div role="tabpanel" class="tab-pane" id="drops">
+  <div role="tabpanel" class="tab-pane" id="drops7">
     <ol>
       <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module using the <a href="https://www.drupal.org/docs/7/extending-drupal/installing-modules">Drupal interface</a> or with <a href="/docs/terminus">Terminus</a>:
       <pre><code>terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-enable hsts --yes</code></pre>
@@ -122,6 +123,17 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     </ol>
     <p>Once installed and configured, the following header will be sent in responses:</p>
     <pre><code>strict-transport-security: max-age=15552000</code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="drops8">
+    <ol>
+      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module using the <a href="https://www.drupal.org/docs/8/extending-drupal-8/installing-modules">Drupal interface</a> or with <a href="/docs/terminus">Terminus</a>:
+      <pre><code>terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-enable hsts --yes</code></pre>
+      </li>
+      <li>Visit the module configuration page (<code>/admin/config/system/hsts</code>).</li>
+      <li>Check the <strong>Enable HTTP Strict Transport Security</strong> checkbox, set <strong>Max Age</strong> to at least <strong>1 year</strong> and click <strong>Save Configuration</strong>.</li>
+    </ol>
+    <p>Once installed and configured, the following header will be sent in responses:</p>
+    <pre><code>strict-transport-security: max-age=31536000</code></pre>
   </div>
 </div>
 ## Frequently Asked Questions
