@@ -12,7 +12,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site in Enterprise Organizations.
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new sandboxes at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels. 
 
 ###Enterprise and Partner Organizations: Roles and Permissions
 
@@ -123,7 +123,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
       </tr>
       <tr>
         <td>Manage a site's plan</td>
-        <td>✓</td>
+        <td>✓<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an Org is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a></td>
         <td></td>
         <td></td>
       </tr>
