@@ -6,7 +6,7 @@ description: Upgrade to Free and Automated HTTPS, powered by Fastly and Let's En
 Upgrade your sites's HTTPS and never manage a certificate again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our globally distributed content delivery network (CDN). Upgrade to take advantage of cost, performance, and security benefits.
 
 ## Eligibility
-Invite only. As of April 2017, sites on a Professional plan with HTTPS already enabled may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html) for sites that meet these requirements.
+Invite only. As of April 2017, sites on a Professional plan with HTTPS already enabled and all custom domains routing to Pantheon may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html).
 
 ## Upgrade Your Site
 
@@ -110,8 +110,10 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     </tr>
     <tr>
       <th>Client Support</th>
-      <td>Some very old browsers not supported <a href="http://caniuse.com/#search=TLS%201.1">1</a></td>
-      <td>Some very old browsers not supported <a href="http://caniuse.com/#search=TLS%201.2">1 <a href="http://caniuse.com/#search=SNI">2</a></sup></td>
+      <td>94.58% of browsers<br />Some very old browsers not supported
+      <sup><a href="http://caniuse.com/#search=TLS%201.1">1</a></sup></td>
+      <td>94.33% of browsers<br />Some very old browsers not supported
+      <sup><a href="http://caniuse.com/#search=TLS%201.2">1 <a href="http://caniuse.com/#search=SNI">2</a></sup></td>
     </tr>
     <tr>
       <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
@@ -138,7 +140,7 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
 
 ## Frequently Asked Questions
 
-### Does upgrading involve HTTPS interruption or downtime?
+### Does upgrading involve HTTPS interruptions or downtime?
 No, after you update your DNS records, traffic will gracefully switch over and involves no downtime or HTTPS interruption.
 
 **Caveat:** If after upgrading you add a new domain that is not already routed to Pantheon, then it will take 25 minutes to an hour for HTTPS to be ready for that new domain. Pre-provisioning HTTPS for new domains is planned after early access, with the full release.
@@ -200,4 +202,4 @@ Errors referencing too many redirects may be a result of using the ` $_SERVER['H
 **Solution:**  Replace the offending redirect logic with a [recommended code sample](/docs/redirects/#require-https-and-standardize-domain) and adapt it for your specific use case.
 
 ### Moz Pro 804 HTTPS SSL error
-Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
+Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni). 
