@@ -30,7 +30,7 @@ Check the current state of DNS propagation from different parts of the world usi
 
 7. Confirm the upgrade is complete from the **Domains & HTTPS** tab. Once DNS has been configured and propagated, you will see confirmation on this tab.
 
-## Require HTTPS - Optional
+## Require HTTPS (Highly Recommended)
 
 ### 301 Redirects
 
@@ -202,4 +202,4 @@ Errors referencing too many redirects may be a result of using the ` $_SERVER['H
 **Solution:**  Replace the offending redirect logic with a [recommended code sample](/docs/redirects/#require-https-and-standardize-domain) and adapt it for your specific use case.
 
 ### Moz Pro 804 HTTPS SSL error
-Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni). 
+Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). While full support for SNI is not yet available, you may be eligible for beta access to SNI support. For details, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
