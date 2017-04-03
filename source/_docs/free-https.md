@@ -26,7 +26,7 @@ As of April 2017, sites on a Professional plan with HTTPS already enabled are el
     <tr>
       <th>Certificate type</th>
       <td>Bring your own</td>
-      <td>Shared</td>
+      <td>Shared, issued by Let's Encrypt</td>
     </tr>
     <tr>
       <th>Renewal</th>
