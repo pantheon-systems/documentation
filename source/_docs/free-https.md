@@ -97,17 +97,33 @@ You're likely already issuing 301 redirects via the WordPress `wp-config.php` fi
 
 ### HTTP Strict Transport Security Header
 
-We also recommend sending a HTTP Strict Transport Security (HSTS) header with a max age of `15552000` (180 days). This is the last step to get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/) and helps to protect your website against protocol downgrade attacks and cookie hijacking.
+We also recommend sending a HTTP Strict Transport Security (HSTS) header using the following module or plugin. This is the last step to get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/) and helps to protect your website against protocol downgrade attacks and cookie hijacking.
 
-#### WordPress
-* Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin.
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+  <li role="presentation"><a href="#drops" aria-controls="drops" role="tab" data-toggle="tab">Drupal</a></li>
+</ul>
 
-#### Drupal
-1. Install the
-[HTTP Strict Transport Security](https://drupal.org/project/hsts) module.
-2. Visit the module configuration page (`/admin/config/security/hsts`).
-3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to `15552000` and click **Save Configuration**.
-
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="wp">
+    <p>Install and activate the <a href="https://wordpress.org/plugins/lh-hsts/">LH HSTS</a> plugin using the WordPress Dashboard (<code>/wp-admin/plugin-install.php?tab=search&s=lh+hsts</code>) or with <a href="/docs/terminus">Terminus</a>:</p>
+    <pre><code>terminus remote:wp &lt;site&gt;.&lt;env&gt; -- plugin install lh-hsts --activate</code></pre>
+    <p>Once enabled, the following header will be sent in responses:</p>
+    <pre><code>Strict-Transport-Security: max-age=15984000; includeSubDomains; preload</code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="drops">
+    <ol>
+      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module using the <a href="https://www.drupal.org/docs/7/extending-drupal/installing-modules">Drupal interface</a> or with <a href="/docs/terminus">Terminus</a>:
+      <pre><code>terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-enable hsts --yes</code></pre>
+      </li>
+      <li>Visit the module configuration page (<code>/admin/config/security/hsts</code>).</li>
+      <li>Check the <strong>Enable HTTP Strict Transport Security</strong> checkbox, set <strong>Max Age</strong> to <code>15552000</code> and click <strong>Save Configuration</strong>.</li>
+    </ol>
+    <p>Once installed and configured, the following header will be sent in responses:</p>
+    <pre><code>strict-transport-security: max-age=15552000</code></pre>
+  </div>
+</div>
 ## Frequently Asked Questions
 
 ### Does upgrading involve HTTPS interruption or downtime?
