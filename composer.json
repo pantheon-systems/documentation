@@ -7,7 +7,7 @@
     "license": "CC-BY-4.0",
     "minimum-stability": "dev",
     "require-dev": {
-        "sculpin/sculpin": "2.*@dev",
+        "sculpin/sculpin": "v2.1.1",
         "symfony/console": "2.8.x-dev as 3.2",
         "behat/behat": "3.0.*@stable",
         "behat/mink": "1.6.*@stable",
@@ -16,7 +16,7 @@
         "behat/mink-selenium2-driver": "1.2",
         "composer/composer": "^1.0@alpha",
         "guzzlehttp/guzzle": "6.2.*@stable",
-        "pantheon-systems/terminus": "1.1.1",
+        "pantheon-systems/terminus": "1.1.2",
         "dflydev/embedded-composer": "^1.0@dev"
     },
     "config": {
