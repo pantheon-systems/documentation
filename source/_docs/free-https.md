@@ -6,10 +6,7 @@ description: Upgrade to Free and Automated HTTPS, powered by Fastly and Let's En
 Upgrade your sites's HTTPS and never manage a certificate again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our globally distributed content delivery network (CDN). Upgrade to take advantage of cost, performance, and security benefits.
 
 ## Eligibility
-As of April 2017, sites on a Professional plan with HTTPS already enabled are eligible for early access to Free and Automated HTTPS. [Request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html) for sites that meet these requirements.
-
-
-
+Invite only. As of April 2017, sites on a Professional plan with HTTPS already enabled may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html) for sites that meet these requirements.
 
 ## Upgrade Your Site
 
@@ -113,7 +110,7 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     </tr>
     <tr>
       <th>Client Support</th>
-      <td>Some very old browsers not supported  <a href="http://caniuse.com/#search=TLS%201.1">1</a></td>
+      <td>Some very old browsers not supported <a href="http://caniuse.com/#search=TLS%201.1">1</a></td>
       <td>Some very old browsers not supported <a href="http://caniuse.com/#search=TLS%201.2">1 <a href="http://caniuse.com/#search=SNI">2</a></sup></td>
     </tr>
     <tr>
