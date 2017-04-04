@@ -139,7 +139,7 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ### How can I get Multidev and how much is does it cost?
 
-If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. Additionally, all organizations have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites/). It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form in the Multidev tab in your Dashboard.
+If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. Additionally, all organizations have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans. If your project requires Multidev and you have questions, please use the contact form in the Multidev tab in your Dashboard.
 
 ### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
