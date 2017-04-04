@@ -3,7 +3,7 @@ title: Early Access: Free and Automated HTTPS
 earlyaccess: true
 description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
 ---
-Upgrade your sites' HTTPS and never manage certificates again. Pantheon automatically adds all of your sites' domains to a shared certificate and  serves it through our new globally distributed content delivery network (CDN). Upgrade to take advantage of performance, security benefits, plus the time and cost of manually purchasing and maintaining certs.
+Upgrade your site's HTTPS and never manage certificates again. Pantheon automatically adds all of your site's domains to a shared certificate and  serves it through our new globally distributed content delivery network (CDN). Upgrade to take advantage of performance, security benefits, plus the time and cost of manually purchasing and maintaining certs.
 
 ## Eligibility
 Invite only (per site). As of April 2017, sites on a Professional plan with HTTPS already enabled and all custom domains routing to Pantheon may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html).
