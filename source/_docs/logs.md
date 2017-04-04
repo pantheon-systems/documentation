@@ -73,11 +73,11 @@ Rotated log files are archived within the `/logs` directory on application serve
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Downloading Logs
-<div class="panel panel-video">
+<div class="panel panel-video" id="accordion">
   <div class="panel-heading panel-video-heading">
-    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#log-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#logs-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Show me how </h3></a>
   </div>
-  <div id="log-video" class="collapse" style="padding:10px;">
+  <div id="logs-video" class="collapse" style="padding:10px;">
     <script src="//fast.wistia.com/embed/medias/hqqq24z2iv.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hqqq24z2iv videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
   </div>
 </div>

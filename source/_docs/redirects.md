@@ -43,9 +43,9 @@ All redirect logic run on Pantheon environments should include the `php_sapi_nam
 
 While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
 
-<div class="panel panel-video">
+<div class="panel panel-video" id="accordion">
   <div class="panel-heading panel-video-heading">
-    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Show me how </h3></a>
   </div>
   <div id="redirects-video" class="collapse" style="padding:10px;">
     <script src="//fast.wistia.com/embed/medias/fof9qie645.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_fof9qie645 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
