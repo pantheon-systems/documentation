@@ -164,6 +164,11 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
       }
     }
 
+### Troubleshooting
+#### Infinite Redirect Loops
+Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/docs/redirects/#require-https-and-standardize-domain) and for your specific use case.
+
+
 ## Redirect to Subdirectories or Specific URLs
 
 To redirect from a subdomain to a specific area of the site, use the following:
