@@ -34,7 +34,7 @@ Check the current state of DNS propagation from different parts of the world usi
 
 ### 301 Redirects
 
-You're likely already issuing 301 redirects via the WordPress `wp-config.php` file or the Drupal `settings.php` file to require HTTPS and standardize on a common domain. Standardizing on a common domain (for example, `https://www.example.com` or `https://example.com`) is a best practice for SEO to prevent duplicate content, as well as session strangeness, where a user can be signed on one domain but logged out of other domains at the same time. See [recommended code samples for redirects](/docs/redirects/#require-https-and-standardize-domain) and adapt for your specific use case.
+You're likely already issuing 301 redirects via the WordPress `wp-config.php` file or the Drupal `settings.php` file to require HTTPS and standardize on a common domain. Standardizing on a common domain (for example, `https://www.example.com` or `https://example.com`) is a best practice for SEO to prevent duplicate content, as well as session strangeness, where a user can be logged in on one domain but logged out of other domains at the same time. See [recommended code samples for redirects](/docs/redirects/#require-https-and-standardize-domain) and adapt for your specific use case.
 
 ### HTTP Strict Transport Security Header
 
@@ -186,7 +186,7 @@ Server name indication (SNI) is the technology replacing the expensive, legacy l
 
 ## Troubleshooting
 ### 503 60s Timeout
-If a web request exceed the 60 second timeout limit, you may encounter
+If a web request exceeds the 60 second timeout limit, you may encounter
 
 - 503 connection timeout
 - 503 first byte timeout
