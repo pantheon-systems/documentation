@@ -12,7 +12,7 @@ Invite only. As of April 2017, sites on a Professional plan with HTTPS already e
 
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
 2. Wait 25 to 60 minutes for HTTPS provisioning to complete.
-3. Once HTTPS is ready, you will see action required on the **Domains & HTTTPS** tab for each environment, with instructions to configure DNS for each custom domain.  
+3. Once HTTPS is ready, you will see action required on the **Domains & HTTPS** tab for each environment, with instructions to configure DNS for each custom domain.  
 4. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required.
 5. Configure DNS using the provided destinations at the domain's DNS provider.
 
@@ -122,12 +122,12 @@ We also recommend sending a HTTP Strict Transport Security (HSTS) header using t
     </tr>
     <tr>
       <th>Protocol</th>
-      <td>Vulnerable TLS 1.1</td>
+      <td>TLS 1.1 & 1.2</td>
       <td>TLS 1.2 only</td>
     </tr>
     <tr>
       <th>Ciphers</th>
-      <td>Vulnerable 3DES cipher</td>
+      <td>Weak 3DES cipher</td>
       <td>No 3DES cipher</td>
     </tr>
     <tr>
