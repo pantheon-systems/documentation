@@ -1,4 +1,4 @@
-/*!
+0093c9/*!
 * Pantheon Docs (http://pantheon.io/docs)
 * Copyright 2014 Pantheon, Inc.
 * Licensed under the Creative Commons Attribution 3.0 Unported License. For
@@ -245,10 +245,30 @@ p, h1, h2, h3, h4, h5, h6, a, ol, ul {
 }
 .article a {
   text-decoration: underline;
-  color: #0A6BB5;
+  color: #0093c9;
+}
+.changelog-sidebar a {
+  color: #0093c9;
+  text-decoration: none;
+
+}
+.changelog-wrapper a {
+  color: #0093c9;
+  text-decoration: underline;
+}
+.changelog-sidebar a:hover{
+  opacity: 0.65;
+  color: #0093c9;
+  text-decoration: none;
+}
+.changelog-wrapper a:hover {
+  opacity: 0.65;
+  color: #0093c9;
+
 }
 .article a:hover {
   opacity: 0.65;
+  color: #0093c9;
 }
 .article a.helpful__button:hover {
   opacity: 1;
@@ -423,10 +443,10 @@ header {
 }
 .pio-breadcrumb li {
   display:inline;
-  color:#0A6BB5;
+  color:#0093c9;
 }
 .pio-breadcrumb a{
-  color:#0A6BB5;
+  color:#0093c9;
 }
 .pio-breadcrumb a:hover{
   text-decoration: none;
@@ -468,7 +488,7 @@ a.not-allowed:hover {
 .related li a{
   font-family: Avenir-Roman;
   font-size: 13px;
-  color: #0A6BB5;
+  color: #0093c9;
   line-height: 18px;
 }
 .related li a:hover{
@@ -1539,7 +1559,7 @@ margin-bottom: 40px !important;  }
   color: #333;
 }
 .pio-docs-featurette-img:hover {
-  color: #337ab7;
+  color: #0093c9;
   text-decoration: none;
 }
 .pio-docs-featurette-img img {
@@ -2008,7 +2028,7 @@ h1[id] {
 
 }
 .color-swatches .brand-primary {
-  background-color: #337ab7;
+  background-color: #0093c9;
 }
 .color-swatches .brand-success {
   background-color: #5cb85c;
@@ -4431,14 +4451,14 @@ a.topic-info-link {
 .topic-info__title {
   font-family: Avenir-Heavy;
   font-size: 20px;
-  color: #1794C7;
+  color: #0093c9;
   line-height: 25px;
   margin-top: 0;
 }
 .main-topic-info__title {
   font-family: Avenir-Light;
   font-size: 32px;
-  color: #1794C7;
+  color: #0093c9;
   line-height: 32px;
   margin-top: 30px;
   text-align:center;
@@ -4539,7 +4559,7 @@ a:focus {
   font-size: 22px;
 }
 .guide-cta-landing {
-  background-color: #0a6bb5;
+  background-color: #0093c9;
   padding: 30px;
 }
 .guide-cta-landing:hover {
@@ -4664,7 +4684,7 @@ opacity: 0.9;
   border-bottom:1px solid #A4BBC1;
   font-family: Avenir-Roman;
   font-size: 14px;
-  color: #0A6BB5;
+  color: #0093c9;
   line-height: 22px;
 }
 .topic-docs li a:hover{
@@ -4707,7 +4727,7 @@ opacity: 0.9;
   border-bottom:1px solid #A4BBC1;
   font-family: Avenir-Roman;
   font-size: 14px;
-  color: #0A6BB5;
+  color: #0093c9;
   line-height: 22px;
 }
 .top-docs li a:hover{
