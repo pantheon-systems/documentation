@@ -1,8 +1,8 @@
 ---
 title: Migrate Sites to Pantheon: Troubleshooting
 description: Troubleshooting for migrating remotely-hosted Drupal or WordPress sites to Pantheon.
-tags: [migrate]
-categories: [golive, migrate]
+tags: [migratemanual]
+categories: []
 ---
 
 ## Migrated Site Not Working as Expected

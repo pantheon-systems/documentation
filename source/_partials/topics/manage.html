@@ -1,0 +1,56 @@
+  <div class="row">
+    <div class="col-md-6 topic-groups">
+      <h3>Tools for Teams</h3>
+      <p class="topic-info__description">Use our team workflows to launch faster and collaborate with ease.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.tools if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.tools if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.tools %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 topic-groups">
+      <h3>Manage Sites & Users</h3>
+      <p class="topic-info__description">Control access and manage teams for a single site or an entire organization.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.manage if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.manage if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.manage %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row mb-70">
+    <div class="col-md-6 topic-groups">
+        <h3>Billing</h3>
+        <p class="topic-info__description">Learn about common billing and administrative tasks.</p>
+        <ul class="topic-docs">
+          {% for doc in data.docs_tags.billing if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.billing if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.billing %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>

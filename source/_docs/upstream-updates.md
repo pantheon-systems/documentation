@@ -1,10 +1,10 @@
 ---
 title: Applying Upstream Updates
 description: Detailed information on applying and debugging upstream updates, such as Drupal and WordPress releases.
-tags: [getstarted, develop, git]
-categories: [getstarted]
+tags: [dashboard, devterminus, git]
+categories: []
 ---
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/scope-of-support).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support).
 
 ## Apply Upstream Updates via the Dashboard
 
@@ -94,7 +94,7 @@ Select the appropriate framework below for your web application, then execute th
   <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
-  git push origin master  
+  git push origin master
   </code></pre>
   </div>
 </div>

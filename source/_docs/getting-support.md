@@ -1,8 +1,8 @@
 ---
 title: Get Support
 description: Information on how to work with the Pantheon support team and understand the levels of support.
-tags: [getstarted, platform]
-categories: [getstarted]
+tags: [dashboard]
+categories: []
 ---
 
 ## Support Features and Response Times
@@ -87,7 +87,7 @@ categories: [getstarted]
 
 
 ## Chat Support
-Start a chat with our Support Team to request assistance on issues within our [scope of support](/docs/scope-of-support/). This support feature is available to all users and sites across all plans, including Sandbox.
+Start a chat with our Support Team to request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
 1. From your Site or User Dashboard, click **Support**.
 2. Click **Launch Chat**, then click **New Conversation**.
@@ -112,10 +112,36 @@ The ticket support feature is available to certain plans and account types. For 
   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
 
+## Scope of Support
+
+We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and review support features, visit [Getting Support](/docs/getting-support).
+
+- We don't touch client code.
+Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) with Git.
+
+- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version.
+
+- We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
+
+- We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
+
+- Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](https://pantheon.io/docs/tags/debug/) to get you underway.
+
+- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](http://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
+
+- Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/docs/errors-and-server-responses/) in your Development environment. If you [contact support](/docs/getting-support), include your findings and attach screenshots whenever possible.
+
+- We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
+
+- Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
+
+- If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+
+If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
 
 
-##FAQs
-####Is there a support number we can call? If so, is this service available for every plan?
+## FAQs
+#### Is there a support number we can call? If so, is this service available for every plan?
 
 For **Elite plans** and customers with **Priority Enterprise Support** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more details, see the [Elite Plan Support Overview](https://pantheon.io/resources/pantheon-support-datasheet) or learn more about [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
 

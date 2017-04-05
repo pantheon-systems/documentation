@@ -1,8 +1,8 @@
 ---
 title: Migrate Sites to Pantheon: Manual Method
 description: Learn how to manually migrate a Drupal or WordPress site to Pantheon
-tags: [migrate]
-categories: [golive, migrate]
+tags: [migratemanual]
+categories: []
 ---
 Manually migrate your site to Pantheon when any of the following apply:
 
@@ -97,7 +97,7 @@ Use an FTP client that supports SFTP, such as FileZilla. Find your Dev environme
 
 Rsync is an excellent method for transferring a large number of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
 
-The rsync script below is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.  
+The rsync script below is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.
 
 
 ```bash
@@ -125,7 +125,7 @@ done
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**.
 
-If something didn't work and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/create-backups/)** tool periodically during migration so you can restore to a known good state of your site.
+If something didn't work and you'd like to start over, you can cancel the site migration, delete the site, and try again. We also recommend making use of our **[Backups](/docs/backups/)** tool periodically during migration so you can restore to a known good state of your site.
 
 ## Frequently Asked Questions (FAQs)
 
@@ -146,4 +146,3 @@ Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our L
 * [Accessing MySQL Databases](/docs/mysql-access/)
 * [rsync and SFTP](/docs/rsync-and-sftp/)
 * [Using the Pantheon Workflow](/docs/pantheon-workflow)
-* [Going Live](/docs/going-live)

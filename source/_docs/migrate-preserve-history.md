@@ -1,8 +1,8 @@
 ---
 title: Migrating Sites to Pantheon: Preserve Existing Git History
 description: Learn how to preserve your Drupal or WordPress site's existing Git history when migrating to Pantheon.
-tags: [migrate]
-categories: [golive, migrate]
+tags: [migratemanual]
+categories: []
 ---
 Preserving your site's Git history requires migrating manually and importing the codebase via Git.
 
@@ -28,7 +28,7 @@ As long as you've chosen the same codebase (Drupal 7, Commerce Kickstart, etc.) 
  git add .
  git commit -m "initial commit"
  ```
-2. From the Dev environment of the Site Dashboard, set the site's [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
+2. From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/docs/git).
 3. Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
@@ -110,5 +110,4 @@ Follow any remaining steps within [Migrate Sites to Pantheon: Manual Method](/do
 * [Accessing MySQL Databases](/docs/mysql-access/)
 * [rsync and SFTP](/docs/rsync-and-sftp/)
 * [Using the Pantheon Workflow](/docs/pantheon-workflow)
-* [Going Live](/docs/going-live)
 * [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)

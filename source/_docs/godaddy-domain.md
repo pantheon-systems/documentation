@@ -1,8 +1,8 @@
 ---
 title: Setting up a Domain with GoDaddy
 description: Learn how to point a new GoDaddy domain name to your Pantheon Drupal or WordPress site.
-tags: [domains]
-categories: [golive, domains]
+tags: [dns]
+categories: []
 ---
 
 Visit GoDaddy.com to search for the domain name you want and add it to your cart. If you have more than one domain, you will be required to configure the A records or CNAME for each one.

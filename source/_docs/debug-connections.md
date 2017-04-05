@@ -1,8 +1,8 @@
 ---
 title: Debugging Connectivity Issues
 description: Learn how to test and resolve connectivity issues affecting your Pantheon sites.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [debugfiles]
+categories: []
 ---
 
 ##Connectivity Error Message

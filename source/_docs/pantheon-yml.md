@@ -1,8 +1,8 @@
 ---
 title: The pantheon.yml Configuration File
 description: Set site configuration in a pantheon.yml file stored in the root of their code repository.  
-tags: [platform, automate, pantheonyml]
-categories: [platform, pantheonyml]
+tags: [pantheonyml, infrastructure]
+categories: []
 ---
 
 Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, create a new file named `pantheon.yml` in the root of your site's code repository. Refer to [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) for example configurations. Refer to the [Pantheon Cloud Integration Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for example scripts for use with Quicksilver Platform Hooks.

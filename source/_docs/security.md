@@ -1,15 +1,17 @@
 ---
 title: Security on the Pantheon Dashboard
 description: Learn how to keep your work hidden from the public for Drupal or WordPress site development or updates.
-tags: [develop]
-categories: [develop]
+tags: [security]
+categories: []
 ---
 There are occasions while you are working on your Drupal site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
 
 <div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p></div>
+<h4 class="info">Note</h4>
+<p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p>
+</div>
 
 ## Password Protect Your Site's Environments
 
@@ -30,7 +32,7 @@ Now when your page refreshes you will notice that the environment is now "Privat
 
 You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
-To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
+To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 ## Unlock a Site's Environment
 When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.

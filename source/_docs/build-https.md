@@ -1,7 +1,7 @@
 ---
 title: Developing with HTTPS
 description: Develop Drupal or WordPress sites using HTTPS on Pantheon environments.
-tags: [golive]
+tags: [security]
 categories: [golive]
 ---
 ## Switch to HTTPS

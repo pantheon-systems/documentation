@@ -1,8 +1,8 @@
 ---
 title: Working with Cookies on Pantheon
 description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
-tags: [performance, cache]
-categories: [performance, cache]
+tags: [cacheedge]
+categories: []
 ---
 
 ## Disable Caching for Specific Pages

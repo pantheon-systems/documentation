@@ -2,7 +2,7 @@
 title: Updating Core for Sites with Outdated Versions on Custom Distributions
 description: Learn to pull core updates when repository maintainers of alternate distributions are too slow.
 tags: [git]
-categories: [git]
+categories: []
 ---
 If your site reports a new version update is available and you don't see a [one-click update](/docs/upstream-updates) in your site's Dashboard, take a look at the upstream URL (**Settings** > **About Site**). If the recent commits are less than an hour or two old, wait and then access your Site Dashboard again to see if the one-click upstream update is available. If it's been more than an hour or two and you do see a recent commit in the upstream, [contact support](/docs/getting-support). Otherwise, pull the updates into your site manually.
 
@@ -10,7 +10,7 @@ If your site reports a new version update is available and you don't see a [one-
 ## Prerequisites
 Core updates for [distributions](https://www.drupal.org/documentation/build/distributions) (Open Atrium, Commerce Kickstart, etc.) are serviced by the maintainer, but for the times in which those updates have not been pushed you can pull them into your site manually. To start, you'll need a local copy of your site's codebase:
 
-1. Access the site's Dashboard and change the [connection mode](/docs/getting-started/#interact-with-your-code) to Git.
+1. Access the site's Dashboard and change the connection mode to [git](/docs/git).
 2. Copy the clone command.
  ![Git clone](/source/docs/assets/images/dashboard/git-string.png)
 3. In a local terminal, paste the command. Git will unpackage the code in a directory created using your site name.
@@ -55,7 +55,7 @@ Navigate to the directory of your site's code repository on your local machine, 
   <pre><code class="bash hljs">
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
-  git push origin master  
+  git push origin master
   </code></pre>
   </div>
 </div>

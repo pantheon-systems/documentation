@@ -1,14 +1,15 @@
 ---
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
-tags: [getstarted]
-categories: [getstarted]
+tags: [create]
+categories: []
 ---
 The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/running-custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>It is not possible to change the upstream of an existing site. Instead, you must create a new site with the desired upstream.</p></div>
+<p>It is not possible to change the upstream of an existing site. Instead, you must create a new site with the desired upstream.</p>
+</div>
 
 ## Start with Core
 Starting with core gives you a blank site with the code pulled from the [Pantheon repository on GitHub](https://github.com/pantheon-systems). It's up to you to build from there.

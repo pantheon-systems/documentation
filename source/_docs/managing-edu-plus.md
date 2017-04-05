@@ -2,7 +2,7 @@
 title: Managing Site Plan Changes and Chargeback for EDU+ Sites
 description: Learn how to manage site plan changes and chargebacks for Pantheon EDU+ sites.
 tags: [manage]
-categories: [manage]
+categories: []
 ---
 Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for sites within their [organization](/docs/organizations/). When a site is not associated with an organization, you can add a credit card to change the site's plan. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
 

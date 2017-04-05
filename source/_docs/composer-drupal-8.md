@@ -1,8 +1,8 @@
 ---
 title: Using Drupal 8 and Composer
 description: Use Composer to manage modules and other dependencies for Drupal 8 sites on Pantheon.
-tags: [automate]
-categories: [automate]
+tags: [workflow]
+categories: [drupal8]
 contributors:
   - stevector
 ---
@@ -43,7 +43,7 @@ composer require phpunit/php-timer
 
 ### Retrieve Dependencies from a Wider List of Packages
 
-For Composer to interpret `"monolog/monolog": "1.0.*"` into something that can actually be downloaded, it needs to ask an external system where `monolog/monolog` can be found. For most of the PHP world, [packagist.org](https://github.com/pantheon-systems/documentation/issues/1410) is the primary place Composer uses. Drupal is still evolving how it aggregates its packages.
+For Composer to interpret `"monolog/monolog": "1.0.*"` into something that can actually be downloaded, it needs to ask an external system where `monolog/monolog` can be found. For most of the PHP world, [packagist.org](https://packagist.org/) is the primary place Composer uses. Drupal is still evolving how it aggregates its packages.
 
 ### Place Dependencies in a Vendor Directory
 

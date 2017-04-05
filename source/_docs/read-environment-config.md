@@ -1,8 +1,8 @@
 ---
 title: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
-tags: [develop]
-categories: [develop]
+tags: [variables, infrastructure]
+categories: []
 ---
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your sites code.
 
@@ -44,9 +44,10 @@ If you are using a common CMS framework, the code you need to load this configur
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/settings-php">configuring settings.php</a> for details.</p></div>
+<p>Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See <a href="/docs/settings-php">configuring settings.php</a> for details.</p>
+</div>
 
-Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in settings.php.
+Pantheon uses Pressflow to automatically read the environmental configuration. If you're working with vanilla Drupal or want to pass the credentials and configuration such as the database credentials and temporary directory location to another application, you'll need to manually extract the configuration. In Drupal, this is done in `settings.php`.
 
     <?php
     extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
@@ -97,7 +98,7 @@ For more information, see [configuring wp-config.php](/docs/wp-config-php).
 ## Using $_SERVER
 When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/docs/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/docs/redirects/).
 
-For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/docs/server_name-and-server_port/).   
+For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/docs/server_name-and-server_port/).
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

@@ -1,8 +1,8 @@
 ---
 title: CloudFront CDN Setup for WordPress
 description: Learn to set up and configure CloudFront CDN on your Pantheon WordPress site.
-tags: [automate]
-categories: [automate]
+tags: [cacheedge, siteintegrations]
+categories: [wordpress]
 ---
 Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy is pulled from the the origin site directly.
 

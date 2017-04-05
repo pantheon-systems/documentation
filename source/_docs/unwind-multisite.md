@@ -1,8 +1,8 @@
 ---
 title: Extracting Sites from a Drupal Multisite
 description: Learn how to separate the codebases to import individual Drupal sites to Pantheon.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [export]
+categories: [drupal]
 ---
 
 Pantheon only supports one application codebase and one database per site. We do not recommend using database prefixes or offer support for Drupal Multisite implementations. If you are currently struggling with a Drupal Multisite and want to use Pantheon, you'll need to "unwind" the implementation, separating it into individual sites. You may also create a custom upstream if appropriate for your use-case.
@@ -21,7 +21,7 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 5. Install [Drush SAR 2.x](https://www.drupal.org/project/sar) as described in this [blog post](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands).
 
-6. [Backup the site](/docs/create-backups/#create-a-backup) in the Dashboard, just in case.
+6. [Backup the site](/docs/backups/#create-a-backup) in the Dashboard, just in case.
 
 7. Run `terminus drush <site>.<env> -- sar --dry-run sites/sitename1 sites/default` to test the search and replace. This exact command can change depending on the name of your site, and broken assets in step 3.
 
