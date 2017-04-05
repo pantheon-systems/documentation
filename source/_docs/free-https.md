@@ -142,8 +142,8 @@ We recommend standardizing on a common domain (for example, `https://www.example
     </tr>
     <tr>
       <th><a href="/docs/timeouts/#timeouts-that-are-not-configurable">Timeouts</a></th>
-      <td>120s</td>
-      <td>60s</td>
+      <td>120 seconds</td>
+      <td>60 seconds</td>
     </tr>
   </tbody>
 </table>
