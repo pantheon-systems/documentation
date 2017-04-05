@@ -10,21 +10,26 @@ Sites that require additional build steps for deployment should use a continuous
 DeployBot provides continuous integration services with a friendly user interface to manage configuration and build steps, as opposed to managing them in YML files like other service providers.
 
 ## Before You Begin
-1. If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
-2. Manage and store your site's code repository on a third party hosting service, such as GitHub.
-3. Build steps and their implementation should already be known and in-place before attempting to add continuous integration.
+- If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
+- Build steps and their implementation should already be known and in-place before attempting to add continuous integration.
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.
 
 ## Configure DeployBot for Deployments to Pantheon
-### Connect a GitHub Repository
-1. Click **Connect a repository** after creating a new DeployBot account.
-2. Click **Connect new account** or select the existing user if available, and select your site's repository from the drop-down menu.
-3. Enter a title for this repository and apply a color label, then click **Connect**.
-### Create an Environment
+### Connect Your Pantheon Repository
+1. Copy the Git repository URL for your Pantheon site from the Site Dashboard's **Connection Info** tool in the Dev environment or from the command line using [Terminus](/docs/terminus):
+
+ ```
+ terminus connection:info <site>.<env> --field=git_url
+ ```
+2. After creating a new DeployBot account or logging in to your existing DeployBot account, click **Connect a repository**.
+3. Click **Self-hosted** and paste your site's repository URL.
+4. Select desired authentication method. We suggest selecting SSH Key and downloading the key from DeployBot then [adding the key on Pantheon](/docs/ssh-keys/#add-your-ssh-key-to-pantheon).
+5. Enter a title for this repository and apply a color label, then click Connect
+### Create a Deployment Environment
 1. Click **Create an environment** and enter an environment name, such as Dev.
 2. Select a Deployment Mode: Manual or Automatic. We suggest deploying automatically to Pantheon's Dev environment and manually to Live.
-3. Choose a branch from the drop-down menu (typically master), and click **Save**.
+3. Choose the master branch from the drop-down menu, and click **Save**.
 4. Select the **SFTP** deployment option within the Files section. At this time, no other deployment methods are supported when deploying to Pantheon.
 5. Name the destination for these deployments, such as Pantheon Dev Environment.
 6. Retrieve the target environment's SFTP details within the Site Dashboard on Pantheon by clicking **Connection Info**:
