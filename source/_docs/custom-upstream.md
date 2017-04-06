@@ -165,7 +165,7 @@ When testing is complete, merge any outstanding pull requests into the master br
 <h4 class="info">Note</h4>
   <ul>
     <li>For private repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters.</li>
-    <li>For private GitLab repositories, please ensure the user has the "reporter" permissions level.</li>
+    <li>For private GitLab repositories, please ensure the user has the <a href="https://docs.gitlab.com/ce/user/permissions.html#permissions">"reporter" permissions level</a>.</li>
   </ul>
 </div>
 
@@ -173,23 +173,17 @@ When testing is complete, merge any outstanding pull requests into the master br
 
 After you have a distribution that works on Pantheon, [contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
-- Name
-- Upstream URL:
+- **Upstream Name**
+- **Description** <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Optional" data-content="If provided, this will display in the upstream listing when creating a site. Less than 200 characters, basic HTML allowed."><em class="fa fa-info-circle"></em></a> (optional)
+- **URL of Logo** <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Optional" data-content="If provided, this will display in the upstream listing when creating a site. Recommended size is 70x80"><em class="fa fa-info-circle"></em></a> (optional)
+- **URL of Upstream Repository**
  - Private repository URLs must follow the pattern `https://username:password@host.tld/organization/repository-name.git` (Do not use an email address in place of the username). Tokens may be used instead of a username and password if supported by your repository hosting provider. For example, private repositories hosted with GitHub can use [personal access tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) to replace `username:password@github.com` with `personal_access_token@github.com`.
  - Public repository URLs do not require the `username:password@` portion of the above example URL.
-- Upstream Branch (usually master)
-- If the upstream repository is public or private
-- Description (< 200 characters, basic HTML allowed)
-- Logo (70x80)
-- Default connection mode (SFTP or Git)
-- Product author name and URL
-- Supporting information (< 200 characters, basic HTML allowed) i.e. drupal.org issue queue, support contacts, website
-- Links to evidence of testing on Pantheon. This should include the testing site, test files within the repository, and test reports.
+- **Repository Branch** (usually master)
+- **Visibility**: Public <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Allow this upstream to be used by any Pantheon user."><em class="fa fa-info-circle"></em></a> or Private <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Restrict access to members of your organization for this upstream."><em class="fa fa-info-circle"></em></a>
+- **Connection Mode**  <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Initial connection mode for a new site using this upstream."><em class="fa fa-info-circle"></em></a>: Git or SFTP
+- **Framework**: Drupal 6, Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</p></div>
-
-Public and Organizational distributions must also provide a promotional screenshot for the public installation page.
-
-As part of a unified workflow, new Pantheon users will create an account, name their site, and then go to the installation page of the distribution.
