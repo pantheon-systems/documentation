@@ -178,7 +178,7 @@ echo "Making sure the environment's connection mode is set to Git...";
 terminus connection:set $SITE.dev git
 
 #Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live
-echo "Rewritting history on the Dev environment's codebase...";
+echo "Rewriting history on the Dev environment's codebase...";
 git reset --hard `terminus env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4`
 
 #Force push to Pantheon to rewrite history on Dev and reset codebase to Live
