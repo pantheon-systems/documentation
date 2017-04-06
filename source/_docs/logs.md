@@ -1,5 +1,5 @@
 ---
-title: Log Files on Pantheon  
+title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
 tags: [logs, services]
 categories: []
@@ -150,6 +150,12 @@ done
 db_server=`dig dbserver.$ENV.$SITE.drush.in +short`
 rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@dbserver.$ENV.$SITE.drush.in:logs db_server_$db_server
 ```
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.</p>
+</div>
+
 ### Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
 ```
@@ -189,18 +195,18 @@ Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
 Writing to `wp-content/debug.log` is not supported on Test or Live environments.
 
-#### How can I access the Drupal event log?  
+#### How can I access the Drupal event log?
 
-By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:  
+By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 1. Visit `/admin/reports/dblog` once you've logged in as administrator.
-2. Using [Terminus](/docs/terminus/):  
+2. Using [Terminus](/docs/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- watchdog-show
 ```
 
-Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
+Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).
 
 ```bash
 terminus drush "watchdog-show --tail"
@@ -213,7 +219,7 @@ terminus drush "watchdog-show --tail"
 
 #### My Drupal database logs are huge. Should I disable dblog?
 
-The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
+The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
 
 #### How do I access logs in environments with multiple containers?
 
