@@ -174,15 +174,17 @@ When testing is complete, merge any outstanding pull requests into the master br
 After you have a distribution that works on Pantheon, [contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
 - **Upstream Name**
-- **Description** <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Optional" data-content="If provided, this will display in the upstream listing when creating a site. Less than 200 characters, basic HTML allowed."><em class="fa fa-info-circle"></em></a>
-- **URL of Logo** <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Optional" data-content="If provided, this will display in the upstream listing when creating a site. Recommended size is 70x80px"><em class="fa fa-info-circle"></em></a>
-- **URL of Upstream Repository**
-- **Repository Authentication** <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Privately Hosted Repositories Only" data-content="Create a dedicated user with read-only access and provide username:password or a token if supported by your repository hosting provider."><em class="fa fa-info-circle"></em></a>
-- **Repository Branch**: master
-- **Visibility**: Public <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Allow this upstream to be used by any Pantheon user."><em class="fa fa-info-circle"></em></a> or Private <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Restrict access to members of your organization for this upstream."><em class="fa fa-info-circle"></em></a>
+- **Description** (Optional) Less than 200 characters, basic HTML allowed. If provided, this will display in the upstream listing when creating a site.
+- **URL of Logo** (Optional) Recommended size is 70x80px If provided, this will display in the upstream listing when creating a site.
+- **URL of Upstream Repository** Must end in `.git`
+- **Repository Authentication** (Only required if the repository is hosted privately)
+ - Create a dedicated user with read-only access and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider. The password should only contain alphanumeric characters.
+ - For private GitLab repositories, please ensure the user has the [reporter](https://docs.gitlab.com/ce/user/permissions.html#permissions) permissions level.
+- **Repository Branch**: Typically `master`
+- **Visibility**: Public (allow this upstream to be used by any Pantheon user) or Private (only allow members of your organization to use this upstream)
 - **Initial Connection Mode**: Git or SFTP
 - **Framework**: Drupal 6, Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</p></div>
+<p>You are not able to switch upstreams after creating a site. You will need to <a href="/docs/clone-site/">clone the site</a> to select a different upstream.</p></div>
