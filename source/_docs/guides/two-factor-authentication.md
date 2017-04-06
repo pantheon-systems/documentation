@@ -26,10 +26,21 @@ For a single site, there are many different [WordPress plugins for two-factor au
 
         terminus remote:wp $SITENAME.dev -- plugin install duo-wordpress --activate
 
+
 5. Open the settings page for the Duo plugin. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
     ![TFA Duo Configuration](/source/docs/assets/images/duo-settings.png)
     Click **Save Changes**.
 6. The page will be automatically redirected to the Duo setup wizard. Follow the on-screen instructions to configure an authentication device to your site and test it. Once complete, your browser will be redirected back to the plugin settings page.
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can: </p>
+
+<p markdown="1">
+ - synchronize and import your database<br>
+ - use a tool like [WP-CFM](/docs/wp-cfm/)<br>
+ - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.</p>
+</div>
 
 ## Set Up Two-Factor Authentication With WordPress (Organization)
 
