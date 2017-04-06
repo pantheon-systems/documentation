@@ -143,7 +143,7 @@ SITE=xxxxxxxxxxx
 ENV=live
 for app_server in `dig +short appserver.$ENV.$SITE.drush.in`;
 do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs app_server_$app_server
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs/* app_server_$app_server
 done
 
 # Include MySQL logs
