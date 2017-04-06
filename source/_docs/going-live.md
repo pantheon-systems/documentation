@@ -30,7 +30,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Schedule Backups
 
-Schedule daily and weekly backups in case you need to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For details, see [Backup Creation](/docs/create-backups).
+Schedule daily and weekly backups in case you need to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For details, see [Backups Tool](/docs/backups).
 
 ## Monitoring Services
 
