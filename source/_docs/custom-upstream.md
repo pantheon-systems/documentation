@@ -174,7 +174,7 @@ When testing is complete, merge any outstanding pull requests into the master br
 After you have a distribution that works on Pantheon, [contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
 - **Upstream Name**
-- **Description**: (Optional) Less than 200 characters, basic HTML allowed
+- **Description**: (Optional) Less than 200 characters, plain text
 - **URL of Logo**: (Optional) Recommended size is 70x80px
 - **URL of Upstream Repository**: Must end in `.git`
 - **Repository Authentication**: Only required if the repository is hosted privately
