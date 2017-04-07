@@ -174,10 +174,10 @@ When testing is complete, merge any outstanding pull requests into the master br
 After you have a distribution that works on Pantheon, [contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
 - **Upstream Name**
-- **Description** (Optional) Less than 200 characters, basic HTML allowed. If provided, this will display in the upstream listing when creating a site.
-- **URL of Logo** (Optional) Recommended size is 70x80px If provided, this will display in the upstream listing when creating a site.
-- **URL of Upstream Repository** Must end in `.git`
-- **Repository Authentication** (Only required if the repository is hosted privately)
+- **Description**: (Optional) Less than 200 characters, basic HTML allowed
+- **URL of Logo**: (Optional) Recommended size is 70x80px
+- **URL of Upstream Repository**: Must end in `.git`
+- **Repository Authentication**: Only required if the repository is hosted privately
  - Create a dedicated user with read-only access and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider. The password should only contain alphanumeric characters.
  - For private GitLab repositories, please ensure the user has the [reporter](https://docs.gitlab.com/ce/user/permissions.html#permissions) permissions level.
 - **Repository Branch**: Typically `master`
