@@ -1,9 +1,10 @@
 ---
-title:  Sync Your Site with an External Repository using DeployBot
-description: Learn how to set up and use DeployBot to keep Pantheon sites aligned with repositories hosted by external providers, like GitHub.
+title:  Deploy to Pantheon from an External Repository using DeployBot
+description: Learn how to set up and use DeployBot to deploy repositories hosted with a third party provider, like GitHub, to Pantheon.
 category:
   - developing
 tags: [siteintegrations, workflow]
+contributors: [ataylorme, rachelwhitton]
 ---
 You can manage a site's codebase with an external repository hosting service, such as GitHub, to can take advantage of additional peer review and issue management features. This requires a workflow to keep things in sync between the two repositories, which must be enforced as a repeatable process across your team. Once you have the workflow down for the site's specific requirements, you're ready to start thinking about continuous integration.
 
