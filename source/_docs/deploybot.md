@@ -1,19 +1,24 @@
 ---
-title: Automate Build Steps with DeployBot
-description: Learn how to set up and use DeployBot on Pantheon.
+title:  Sync Your Site with an External Repository using DeployBot
+description: Learn how to set up and use DeployBot to keep Pantheon sites aligned with repositories hosted by external providers, like GitHub.
 category:
   - developing
 keywords: deploybot, sites
 ---
-Sites that require additional build steps for deployment should use a continuous integration service so that each step is executed with machine precision. Avoiding human error, especially in a repeatable process such as compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
+Some teams choose to manage a site's codebase using an external repository hosting service, such as GitHub, so they can take advantage of additional peer review and issue management features. This configuration requires a workflow to keep things in sync between the two repositories, which must be enforced as a repeatable process across your team. Once you have the workflow down, you're ready to start thinking about continuous integration.
 
-DeployBot provides continuous integration services with a friendly user interface to manage configuration and build steps, as opposed to managing them in YML files like other service providers.
+DeployBot provides continuous integration services with a friendly user interface, as opposed to managing them in YML files like other service providers. You can also use this service for sites that require additional build steps for deployment. This makes sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
+
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
-- Build steps and their implementation should already be known and in-place before attempting to add continuous integration.
+- Manage and store your site's code repository on a third party hosting service, such as GitHub.
+- Your workflow and/or build steps should already be known and in-place before attempting to add continuous integration.
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.
+
+  It's imperative to have a step by step procedure defined before you start adding continuous integration to the mix. We recommend [Collaborative Development Using GitHub and Pantheon](/docs/guides/collaborative-development), which shows how to manually synchronize your GitHub repository with a Pantheon site.
+
 
 ## Configure DeployBot for Deployments to Pantheon
 ### Connect Your Pantheon Repository
