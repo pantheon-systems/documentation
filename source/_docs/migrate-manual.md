@@ -25,7 +25,7 @@ From your Pantheon Dashboard:
 3. Name your new Pantheon site.
 4. Select an organization for the site (optional).
 5. Click **Create Site**.
-6. Click **Migrate Manually** and select **Yes** in the confirmation box.
+6. Click **manually migrated** link and select **Yes** in the confirmation box.
 
 
 ## Step 2: Import your Code
