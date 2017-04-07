@@ -5,10 +5,9 @@ category:
   - developing
 keywords: deploybot, sites
 ---
-Some teams choose to manage a site's codebase using an external repository hosting service, such as GitHub, so they can take advantage of additional peer review and issue management features. This configuration requires a workflow to keep things in sync between the two repositories, which must be enforced as a repeatable process across your team. Once you have the workflow down, you're ready to start thinking about continuous integration.
+Some teams choose to manage a site's codebase with an external repository hosting service, such as GitHub, so they can take advantage of additional peer review and issue management features. This configuration requires a workflow to keep things in sync between the two repositories, which must be enforced as a repeatable process across your team. Once you have the workflow down, you're ready to start thinking about continuous integration.
 
-DeployBot provides continuous integration services with a friendly user interface, as opposed to managing them in YML files like other service providers. You can also use this service for sites that require additional build steps for deployment. This makes sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
-
+DeployBot provides continuous integration services with a friendly user interface, as opposed to managing them in YML files like other service providers. You can use this service for sites that require additional build steps for deployment. This makes sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
@@ -17,49 +16,112 @@ DeployBot provides continuous integration services with a friendly user interfac
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.
 
-  It's imperative to have a step by step procedure defined before you start adding continuous integration to the mix. We recommend [Collaborative Development Using GitHub and Pantheon](/docs/guides/collaborative-development), which shows how to manually synchronize your GitHub repository with a Pantheon site.
+  It's imperative to have a step by step workflow defined before you start adding continuous integration to the mix. We recommend starting with [Collaborative Development Using GitHub and Pantheon](/docs/guides/collaborative-development), which shows how to manually synchronize your GitHub repository with a Pantheon site.
 
+### Considerations
+There are a few known limitations to consider before proceeding:
 
-## Configure DeployBot for Deployments to Pantheon
+- DeployBot does not support installing third party software on server environments at this time. This limits the amount of automation you can achieve with regards to Pantheon's workflow. Being unable to install Terminus, for example, means you can't automatically commit changes after you deploy to Pantheon. You also won't be able to create a new Multidev automatically when working on feature branches.
+- The example workflow may result in committing compiled asset files or code on Pantheon that you might not commit in source repositories on hosts such as GitHub. The primary use case for this example is to keep a lean repo with fewer source files in GitHub and use DeployBot to compile and ship to Pantheon.
+
+### Example Workflow
+Let's say I use [Composer](https://getcomposer.org/doc/00-intro.md) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
+
+```
+{
+  "minimum-stability": "dev",
+  "config"      : {
+    "vendor-dir": "wp-content/vendor"
+  },
+  "repositories": {
+    "wpackagist": {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org/"
+    }
+  },
+  "require-dev": {
+    "wpackagist-plugin/debug-bar": "dev-trunk"
+  },
+  "require": {
+    "composer/installers": "^1.0.21",
+    "koodimonni/composer-dropin-installer": "*",
+    "wpackagist-plugin/wp-cfm": "1.*",
+    "wpackagist-plugin/debug-bar": "dev-trunk",
+    "wpackagist-plugin/lh-hsts": "1.*",
+    "wpackagist-plugin/solr-power": "*",
+    "wpackagist-plugin/pantheon-hud": "0.1.*",
+    "wpackagist-plugin/wp-native-php-sessions": "0.6",
+    "wpackagist-plugin/wp-redis": "*",
+    "wpackagist-plugin/wordpress-seo": "4.*",
+    "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.*",
+    "wpackagist-plugin/google-analytics-for-wordpress": "6.1.6",
+    "wpackagist-theme/twentyseventeen": "1.*"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "dropin-paths": {
+      "wp-content": [
+        "package:wpackagist-plugin/wp-redis:object-cache.php"
+      ]
+    }
+  }
+}
+```
+Then I would add the following to my `.gitignore` file to keep the plugins and theme out of version control in my source repository on GitHub:
+```
+/wp-content/plugins/*
+!/wp-content/plugins/index.php
+/wp-content/themes/*
+!/wp-content/themes/index.php
+```
+I'd use DeployBot to take my source code from GitHub, run the commands needed to install my plugins and theme, then deploy it all to Pantheon.
+
+## Deploy GitHub to Pantheon with DeployBot
+### Connect Your GitHub Repository
+1. After creating a new DeployBot account or logging in to your existing DeployBot account, click **Connect a repository**.
+2. Select the desired repository using the the drop-down menu. If this is your first time connecting, you'll need to authorize access to your repositories.
+3. Enter a title for this repository and apply a color label, then click **Connect**.
+
 ### Connect Your Pantheon Repository
-1. Copy the Git repository URL for your Pantheon site from the Site Dashboard's **Connection Info** tool in the Dev environment or from the command line using [Terminus](/docs/terminus):
-
- ```
- terminus connection:info <site>.<env> --field=git_url
- ```
-2. After creating a new DeployBot account or logging in to your existing DeployBot account, click **Connect a repository**.
-3. Click **Self-hosted** and paste your site's repository URL.
-4. Select desired authentication method. We suggest selecting SSH Key and downloading the key from DeployBot then [adding the key on Pantheon](/docs/ssh-keys/#add-your-ssh-key-to-pantheon).
-5. Enter a title for this repository and apply a color label, then click Connect
-### Create a Deployment Environment
 1. Click **Create an environment** and enter an environment name, such as Dev.
 2. Select a Deployment Mode: Manual or Automatic. We suggest deploying automatically to Pantheon's Dev environment and manually to Live.
 3. Choose the master branch from the drop-down menu, and click **Save**.
-4. Select the **SFTP** deployment option within the Files section. At this time, no other deployment methods are supported when deploying to Pantheon.
+4. Select the **SFTP** deployment option within the Files section.
 5. Name the destination for these deployments, such as Pantheon Dev Environment.
 6. Retrieve the target environment's SFTP details within the Site Dashboard on Pantheon by clicking **Connection Info**:
 
  ![Connection info dev dashboard](/source/docs/assets/images/dashboard/connection-info.png)
 
-7. Use the SFTP values gathered in the previous step to enter the host, port, and login (username). The destination path for the purposes of sending compiled CSS and JavaScript assets should be `~/files`. We recommend adding the SSH key provided by DeployBot to your user account on Pantheon to authenticate deployments.
+7. Use the SFTP values gathered in the previous step to enter the host, port, and login (username). The destination path should use `~/code`.
 
     <div class="alert alert-danger">
     <h4 class="info">Warning</h4>
     <p markdown="1">
       Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. Update values here with information from Pantheon's Site Dashboard periodically or when you are unable to connect.
+
+      In order to deploy to Pantheon using DeployBot, the Dev environment's connection mode must be set to SFTP.
     </p>
     </div>
 
-8. Configure build steps by clicking **Compile, compress, or minimize your code** then add specific commands for each step in the build process, such as:
+    We recommend using an SSH Key for the authentication method. Click **Show the commands to add our public key to your server.** then **download the public key itself** and [upload the key to your Pantheon account](/docs/ssh-keys).
 
- ```
- npm install
- grunt
- ```
+8. For the WordPress example above, scroll down and click **Advanced options** to define and cache my build steps:
+
+ ![DepoloyBot advanced options cached build steps](/source/docs/assets/images/deploybot-build-commands.png)
 
 9. Click **Save**. Once a connection can be made successfully using the information provided, DeployBot confirms that everything is ready to go.
 ### Deploy to Pantheon
-1. Deploy to Pantheon by clicking the **Deploy** button.
-2. Review the deployment and provide a message, then click **Start deployment**.  
+1. DeployBot will automatically deploy to Pantheon if you setup automatic deployments. Otherwise, use the **Deploy** button to manually trigger a build.
+2. Access the Dev environment of your Site Dashboard and review the uncomitted SFTP changes.
+3. Deploy up to the Test and Live environments using the [standard Pantheon workflow](/docs/pantheon-workflow).
 
-Compiled files should now exist on the Dev environment on Pantheon. You can repeat this process to configure deployments on other Pantheon environments as needed, such as Test and Live. For additional details, see [Building assets with Grunt or Gulp during deployment](https://deploybot.com/guides/building-assets-with-grunt-or-gulp-during-deployment).
+
+This process does not fully automate an entire deployment workflow but it's a great intermediate step for users looking to get their feet wet with continuous integration. As a next step, consider [building assets with Grunt or Gulp during deployment](https://deploybot.com/guides/building-assets-with-grunt-or-gulp-during-deployment).
