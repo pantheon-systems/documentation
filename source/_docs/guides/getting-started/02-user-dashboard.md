@@ -1,7 +1,6 @@
 ---
 title: Getting Started
-subtitle: Explore the User Dashboard
-contributors: [davidneedham]
+subtitle: User Dashboard
 anchorid: user-dashboard
 layout: guide
 guidepage: true
@@ -12,16 +11,44 @@ use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/user-dashboard/
 nexturl: getting-started/create-site
-nextpage: Create a New Site
+nextpage: Create New Site
 previousurl: getting-started
 previouspage: Introduction
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et semper erat. Etiam nisl enim, mattis vel libero eget, tristique aliquam lectus. Cras feugiat erat augue. Nulla egestas justo commodo, auctor arcu non, pharetra magna. Nam sed ante sapien. Integer non nulla ac nibh porttitor pellentesque. Aenean sagittis elit orci, vel rhoncus urna facilisis dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-Morbi et dui leo. Morbi et nulla quis sapien vehicula laoreet. Nunc nisi nulla, convallis et porttitor id, ultrices sit amet tellus. Integer accumsan pulvinar eros, a venenatis quam blandit at. In scelerisque lacus in neque malesuada, id lacinia velit dapibus. Morbi efficitur eu libero a bibendum. Morbi pharetra facilisis vestibulum.
+In this lesson, we’re going to explore the User Dashboard and add information to your account. If you don’t already have an account, you can [create a free one here](https://pantheon.io/register).
 
-Sed interdum tellus mi, quis ultrices nisi rutrum ut. Donec vel odio at urna vehicula dignissim. Suspendisse tincidunt pretium urna at varius. Pellentesque congue a arcu sed luctus. Proin et metus eget urna aliquam tempus. Donec vehicula et neque nec efficitur. Fusce semper gravida venenatis. In tincidunt viverra dui euismod placerat. Sed aliquet neque vitae ullamcorper tincidunt. Maecenas ut ornare eros, vitae bibendum nibh. Curabitur leo mauris, vehicula a urna ut, elementum pretium enim.
+1. Log in to your Pantheon account. By default you land on the **Sites** tab of your User Dashboard. Here you’ll see the sites you’ve created or the sites you’ve been added to. If you just created your account you may not see any sites.
 
-Maecenas quis iaculis tellus. In eu lacinia massa, nec fermentum est. Proin pellentesque ex et ante laoreet porttitor quis quis dolor. Ut erat quam, iaculis id gravida a, maximus in justo. Vivamus malesuada felis magna, sit amet interdum quam venenatis sit amet. Phasellus tempor vehicula nisi. Aenean convallis eget felis vel sagittis. Integer vitae sollicitudin lacus. Vivamus semper suscipit magna, quis interdum urna rutrum quis. Sed rhoncus, dolor et ullamcorper volutpat, tellus odio tristique lorem, sit amet rhoncus felis metus sed augue. Donec ultricies urna vel velit pretium, non consequat nisi elementum. Aenean sapien turpis, dignissim eget porttitor eu, posuere eget eros. Aliquam interdum vel lorem vel dapibus.
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p>If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.
+</p></div>
 
-Pellentesque vel iaculis tellus. Nam mauris sem, interdum lacinia volutpat ut, finibus sed ex. Aliquam et maximus lectus. Cras semper mollis nisi, et rutrum nulla dictum eget. Maecenas neque ante, consectetur vel sollicitudin auctor, cursus sit amet purus. Etiam aliquet auctor velit vel sollicitudin. Vivamus convallis, ex vitae dictum varius, purus dolor rhoncus erat, sed tincidunt nisl est id ipsum. Proin sagittis nibh sed neque ornare, id tempus nulla tincidunt. Curabitur ut placerat mauris, suscipit interdum mi. Duis porta diam non felis laoreet, quis cursus dolor pharetra. Donec vitae sapien massa. Praesent non tellus pellentesque, ornare risus sit amet, posuere lacus. Vestibulum tristique dui id ornare mollis. Nulla nec euismod turpis. Vestibulum feugiat commodo urna vel interdum. Sed finibus tincidunt urna ut facilisis.
+2. Navigate to the **Account** tab, and update your Profile by adding your Company / Organization and Job Function. Select **Update Profile** to save this information.
+
+3. Select **SSH Keys** from the sidebar.
+
+  SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience.
+
+  Are you ready to add a SSH key? Expand the task below:
+
+<div class="panel panel-video" id="accordion">
+  <div class="panel-heading panel-video-heading">
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Generate and Add SSH Keys</h3></a>
+  </div>
+  <div id="ssh-task" class="collapse" style="padding:10px;">
+    <script src="//fast.wistia.com/embed/medias/wwrjwsivwa.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+  </div>
+</div>
+
+4. Take a few minutes to familiarize yourself with the other tabs and links on your dashboard, or click below for a guided tour:
+
+<div class="panel panel-video" id="accordion">
+  <div class="panel-heading panel-video-heading">
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard</h3></a>
+  </div>
+  <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
+    <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+  </div>
+</div>

@@ -19,7 +19,7 @@ nextpage: User Dashboard
 
 Welcome! This guide is designed to get you started on Pantheon. It should take less than 1 hour to complete.
 
-**In this guide, you'll learn how to:**
+In this guide, you'll learn how to:
 
 - Create a free sandbox site on Pantheon
 - Configure and use our best-practice development workflow
