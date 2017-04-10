@@ -1,9 +1,8 @@
 ---
 title: Getting Started
 subtitle: Introduction
-description: Description for the entire guide - this page serves as our landing page.
+description: The Getting Started Guide is designed to get you started on Pantheon.
 tags: [getstarted]
-contributors: [davidneedham]
 layout: guide
 type: guide
 anchorid: getting-started
@@ -15,20 +14,20 @@ use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/
 nexturl: getting-started/user-dashboard
-nextpage: Explore the User Dashboard
+nextpage: User Dashboard
 ---
 
-- What can I expect to learn from this guide?
-  - What is Pantheon
-    - “Hosting that won’t quit”
-    - “A platform that tech leads love”
-    - “The turbo button for teams”
-  - Why Pantheon is awesome
-  - How to start using Pantheon
-- How long will it take me to complete this guide?
-  - We’ll need to calculate this somehow. - Perhaps via observations of our comprehension tests with new users.
-- Prerequisites for completing this guide?
-  - Sign up, if you haven’t already (Don’t teach this step-by-step; it’s intuitive.)
-    - Explain why someone would/should sign up as an agency
+Welcome! This guide is designed to get you started on Pantheon. It should take less than 1 hour to complete.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et semper erat. Etiam nisl enim, mattis vel libero eget, tristique aliquam lectus. Cras feugiat erat augue. Nulla egestas justo commodo, auctor arcu non, pharetra magna. Nam sed ante sapien. Integer non nulla ac nibh porttitor pellentesque. Aenean sagittis elit orci, vel rhoncus urna facilisis dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+**In this guide, you'll learn how to:**
+
+- Create a free sandbox site on Pantheon
+- Configure and use our best-practice development workflow
+- Perform on-server development
+
+All you need to get started is an account. If you don't have one, follow the link below to create a free account.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p>Are you an agency? Do you build sites for others? If so, check the box beside "Are you an agency?" to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of 1 or one-thousand.
+</p></div>
