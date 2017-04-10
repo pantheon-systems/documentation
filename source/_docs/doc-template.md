@@ -21,7 +21,7 @@ Here's a list of prerequisites or technical requirements a user must have or und
 
 The steps of your guide should be broken into sections. Particularly long sections should be broken further into subsections. Read on for examples.
 
-##First Major Step
+## First Major Step
 
 Because this section will have its own subsections, a line or two to briefly describe the goal of this main section should go here.
 
