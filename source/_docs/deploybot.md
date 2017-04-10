@@ -1,23 +1,24 @@
 ---
 title:  Deploy to Pantheon from an External Repository using DeployBot
-description: Learn how to set up and use DeployBot to deploy repositories hosted with a third party provider, like GitHub, to Pantheon.
+description: Learn how to set up and use DeployBot to deploy from repositories hosted with a third party provider, like GitHub, to Pantheon.
 category:
   - developing
 tags: [siteintegrations, workflow]
 contributors: [ataylorme, rachelwhitton]
 ---
-You can manage a site's codebase with an external repository hosting service, such as GitHub, to can take advantage of additional peer review and issue management features. This requires a workflow to keep things in sync between the two repositories, which must be enforced as a repeatable process across your team. Once you have the workflow down for the site's specific requirements, you're ready to start thinking about continuous integration.
 
-DeployBot provides continuous integration services with a friendly user interface, as opposed to managing them in YML files like other service providers. You can use this service for sites that require additional build steps for deployment. This makes sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as manage dependencies or compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
+DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
+
+Continuous integration solutions make sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as manage dependencies or compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
-- Manage and store your site's code repository on a third party hosting service, such as GitHub.
-- Your workflow and/or build steps should already be known and in-place before attempting to add continuous integration.
+- Manage and store your site's code repository on a third party hosting service, such as [GitHub](/docs/guides/collaborative-development/).
+- Your workflow and build steps should already be known and established before attempting to add continuous integration.
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.
 
-  It's imperative to have a step by step workflow defined before you start adding continuous integration to the mix.
+  It's **imperative** to have a step by step workflow defined before you start adding continuous integration to the mix.
 
 ### Considerations
 There are a few known limitations to consider before proceeding:
@@ -26,7 +27,7 @@ There are a few known limitations to consider before proceeding:
 - The example workflow may result in committing compiled asset files or code on Pantheon that you might not commit in the source repositories on hosts such as GitHub. The primary use case for this example is to keep a lean repo with fewer source files in GitHub and use DeployBot to compile and ship to Pantheon.
 
 ### Example Workflow
-Let's say I use [Composer](https://getcomposer.org/doc/00-intro.md) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
+Let's say I use [Composer](/docs/composer/) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
 
 ```
 {
@@ -104,15 +105,14 @@ Let's say I use [Composer](https://getcomposer.org/doc/00-intro.md) to manage my
     </p>
     </div>
 
-    We recommend using an SSH Key for the authentication method. Click **Show the commands to add our public key to your server.** then **download the public key itself** and [upload the key to your Pantheon account](/docs/ssh-keys).
+    We recommend using an SSH Key for the authentication method. Click **Show the commands to add our public key to your server.** then **download the public key itself** and [upload the key to your Pantheon account](/docs/ssh-keys/#add-your-ssh-key-to-pantheon).
 
 8. For the WordPress example above, click **Compile, compress, or minimize your code** to define build steps, like:
 
- ```
- composer install
- ```
+        composer install
 
 9. Click **Save**. Once a connection can be made successfully using the information provided, DeployBot confirms that everything is ready to go.
+
 ### Deploy to Pantheon
 1. DeployBot will automatically deploy to Pantheon after pushing to GitHub if you setup automatic deployments. Otherwise, use the **Deploy** button to manually trigger a build.
 2. Access the Dev environment of your Site Dashboard and review the uncomitted SFTP changes:
