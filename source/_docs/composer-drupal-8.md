@@ -17,7 +17,13 @@ If you're already familiar with Composer on Pantheon, you can move on to [Instal
 
 ### Workflow and Nested Docroot
 
-Before using Composer to manage your site development you should choose a workflow. By default, Pantheon controls and distributes core updates via git commits, which conflicts with updates processed by Composer. We suggest developers using Composer install their sites with the [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository, which moves Drupal to a "nested docroot". The repository README file covers the two common methods of deployment.
+Before using Composer to manage your site development you should choose a workflow. By default, Pantheon controls and distributes core updates via git commits, which can cause conflicts with files updated by Composer. Two common workflows around this issue are:
+
+ - Use Pantheon as a build environment, and managing development changes with an externally (or locally) hosted repository.
+
+ - Set a custom upstream (available to organizations), and manage core updates manually.
+
+We suggest developers using Composer install their sites with the [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository, which moves Drupal to a "nested docroot". The repository README file covers the two common methods of deployment.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4><p markdown="1">
