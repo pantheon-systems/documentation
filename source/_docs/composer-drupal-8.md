@@ -31,7 +31,7 @@ The methods described by the Example Drops 8 Composer repository replace the sta
 </p>
 </div>
 
-If you'd instead prefer to the default Drupal 8 installation provided by Pantheon, use a tool like the [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin), which parses multiple `composer.json` files into a single version when running updates. This method is the most likely to see merge conflicts, as core updates will also update Drupal's `composer.json`.
+If you'd instead prefer to the default Drupal 8 installation provided by Pantheon, the [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin), will parse multiple `composer.json` files into a single version when running updates. This method is the most likely to see merge conflicts, as core updates will overwrite `composer.lock` and the contents of `/vendor/`. This can be resolved at the command line by running `composer update` after a core update.
 
 ## Install Composer Locally
 For details, see Composer's documentation on [Installation - Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
