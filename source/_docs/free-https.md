@@ -79,9 +79,9 @@ We recommend sending a HTTP Strict Transport Security (HSTS) header using the fo
   </div>
 </div>
 
-### Redirect to a Single Domain
+### 301 Redirects
 
-We recommend standardizing on a common domain (for example, `https://www.example.com` or `https://example.com`) as it's best practice for SEO to prevent duplicate content, as well as session strangeness, where a user can be logged in on one domain but logged out of other domains at the same time. See [recommended code samples for redirects](/docs/redirects/#require-https-and-standardize-domain) and adapt for your specific use case.
+You're likely already issuing 301 redirects via the WordPress `wp-config.php` file or the Drupal `settings.php` file to require HTTPS and standardize on a common domain. Standardizing on a common domain (for example, `https://www.example.com` or `https://example.com`) is a best practice for SEO to prevent duplicate content, as well as session strangeness, where a user can be logged in on one domain but logged out of other domains at the same time. See [recommended code samples for redirects](/docs/redirects/#require-https-and-standardize-domain) and adapt for your specific use case.
 
 ## Compare to Legacy HTTPS
 <table class="table  table-bordered table-responsive">
