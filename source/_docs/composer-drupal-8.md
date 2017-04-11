@@ -7,7 +7,7 @@ contributors:
   - stevector
 ---
 
-[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages, using Composer. For example, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
+[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages, using Composer. For example, Drupal's function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
 
 ## Caveats
 
