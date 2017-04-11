@@ -22,7 +22,7 @@ Invite only (per site). As of April 2017, sites on a Professional plan with HTTP
       <div id="test-locally" class="collapse" style="padding:10px;">
       <p>If you would like to test locally before configuring your domain's DNS to use Pantheon's Free and Automated HTTPS:</p>
         <ol>
-          <li>Copy the A record value provided for the site's bare domain .</li>
+          <li>Copy the A record value provided for the site's bare domain.</li>
           <li>Add a line to your <a href="https://en.wikipedia.org/wiki/Hosts_(file)">local hosts</a> file which includes the IP address followed by the domain, for example:
           <pre><code>192.123.456.789 example.com</code></pre></li>
           <li>Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.</li>
