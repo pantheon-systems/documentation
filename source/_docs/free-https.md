@@ -177,7 +177,7 @@ Follow the steps to upgrade and send the [HSTS header](#http-strict-transport-se
 No, but you don’t need a wildcard certificate to secure communications for multiple domains because we will automatically deploy certificates for all domains on your site.
 
 ### Is Extended Validation supported?
-No, please take a moment to fill out the [HTTPS survey](/docs/getting-support) if you require Extended Validation.
+No, please take a moment to fill out the [HTTPS survey](https://www.getfeedback.com/r/LETtb3QV) if you require Extended Validation.
 
 ### Is the CDN configurable? Do I get access to hit rates or other statistics?
 No, we pre-configured the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not available.
