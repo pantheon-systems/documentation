@@ -2292,7 +2292,7 @@ h1[id] {
     background-image: none !important;
 }
 .panel-video {
-  border-color: #ddd;
+  border: solid 10px #eef2f3;
   border-radius: 0px;
 }
 .panel-video-heading {
@@ -4640,8 +4640,9 @@ opacity: 0.9;
   padding-left: 8px;
 }
 .hero-video__video {
-  padding-left: 0;
-  padding-right: 30px;
+  padding: 0;
+  border: solid 10px #eef2f3;
+  margin-bottom: 30px;
 }
 .hero-video__text {
   padding: 40px;
