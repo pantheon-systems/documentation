@@ -804,6 +804,7 @@ a.cta.cta-yellow:hover {
   background-color: #fff !important;
   color: #000 !important;
   box-shadow: none !important;
+  border: 1px solid #000 !important;
 }
 
 #dropmenu .active-trail:hover {
@@ -4286,6 +4287,7 @@ a.cta:after:hover {
 a.cta.cta-yellow {
   background: #EFD01B !important;
   color: #000 !important;
+  border: 1px solid #000 !important;
 }
 a.cta.cta-yellow:hover,
 a.cta.cta-yellow:after:hover {
