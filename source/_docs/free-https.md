@@ -158,7 +158,7 @@ No, after you update your DNS records, traffic will gracefully switch over and i
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
-### When do I stopped being billed $30/month?
+### When will I stop being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing 30-60 days after upgrading.
 
 ### Can I downgrade back to the legacy HTTPS?
