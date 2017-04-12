@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
-tags: [getstarted, platform]
-categories: [getstarted]
+tags: [services]
+categories: []
 ---
 ## Getting Started
 
@@ -44,7 +44,16 @@ Direct SSH access is not supported, but you are able to directly interface with 
 
 ### How does Pantheon work with DNS?
 
-Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/domains) and [Going Live](/docs/going-live).
+Pantheon can handle any domain name you point at it, however DNS configuration is still your responsibility. For more information, see [Domains](/docs/domains).
+
+### What are the differences between the environments?
+
+- Dev has lower TTL on Varnish caching and shows errors to site users.
+- Test has the same caching configuration as Live and does not show errors to users, but only one application server.
+- Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
+
+To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
+
 
 ## Developing Sites
 
@@ -99,6 +108,36 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 ### How do I increase the maximum execution time limit for a PHP script?
 
 The best way to do this by calling the PHP function [set\_time\_limit()](http://php.net/manual/en/function.set-time-limit.php) in your routine that takes more time.
+
+### Can I Host a Multilingual Site?
+
+Pantheon is home to many polylingual and non-English sites, and hosting a multi-language site on Pantheon requires no additional platform configuration.
+
+For detailed information on how to configure a multilingual Drupal site, see the [Multilingual Guide on Drupal.org](https://drupal.org/documentation/multilingual).
+
+Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](http://googlewebmastercentral.blogspot.com/2010/03/working-with-multi-regional-websites.html) from The Google Webmaster Central Blog has some fantastic recommendations.
+
+It’s possible to specify a site language given a particular domain or path. In order of preference:
+
+1. ccTLDs (country-code top level domain names)
+2. Subdomains with gTLDs eg: de.site.com, fr.site.com, etc.
+3. Subdirectories with gTLDs eg: site.com/de/, site.com/fr/, etc.
+
+Each of these configurations is possible with Drupal’s built-in language switching.
+
+You can associate multiple domains with a single site environment. See [adding a domain to a site environment](/docs/domains) for details.
+
+### Can I use PHP Sessions with WordPress?
+
+If you need to use PHP's native session handling, please install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin, which we maintain just for this purpose. This provides a horizontally scalable storage mechanism for sessions.
+
+If you are seeing errors like this:
+
+```php
+Warning: session_start(): user session functions not defined
+```
+
+You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/).
 
 ## Caching and Performance
 

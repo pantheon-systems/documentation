@@ -1,8 +1,8 @@
 ---
 title: Select a Plan
 description: Learn the various Pantheon plans offered for your Drupal or WordPress sites.
-tags: [getstarted]
-categories: [getstarted]
+tags: [billing]
+categories: []
 ---
 Pantheon offers multiple service levels, called [plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Personal Plan. Then once you start to grow and have more specific requirements, take a look at the Professional Plan, which can be part of the recipe to get your site or application to scale and perform better.
 
@@ -11,7 +11,8 @@ To get started, navigate to the Site Dashboard.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Only the Site Owner, or for sites owned by an Organization - the Organization's Administrators, can manage a site's plan. Users without the permission to manage a site's plan will not see the options discussed below. For additional details, see <a href="/docs/change-management">Role-Based Permissions & Change Management</a>.</p></div>
+<p>Only the Site Owner, or for sites owned by an Organization - the Organization's Administrators, can manage a site's plan. Users without the permission to manage a site's plan will not see the options discussed below. For additional details, see <a href="/docs/change-management">Role-Based Permissions & Change Management</a>.</p>
+</div>
 
 
 ## View Current Plan

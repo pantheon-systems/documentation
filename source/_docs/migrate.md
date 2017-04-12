@@ -1,13 +1,13 @@
 ---
 title: Migrate Sites to Pantheon
 description: General instructions for preparing and migrating remotely-hosted Drupal or WordPress sites to Pantheon.
-tags: [migrate]
-categories: [getstarted, migrate]
+tags: [migrateguided]
+categories: []
 ---
 
 ## Guided Migration
 
-Ready to move your site to Pantheon? Start with the **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate)** button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](https://pantheon.io/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/going-live).
+Ready to move your site to Pantheon? Start with the **[Migrate Existing Site](https://dashboard.pantheon.io/sites/migrate)** button and we'll help you move your Drupal or WordPress site to Pantheon. If you don’t already use Pantheon, you can [create a free account](https://pantheon.io/register) to start migrating a site immediately&mdash;you don’t pay until you’re ready to add your custom domain name as part of [going live](/docs/go-live).
 
 ![Migrate Existing Site](/source/docs/assets/images/dashboard/migrate-existing-site.png)
 
@@ -76,6 +76,4 @@ You'll need to [manually migrate](/docs/migrate-manual) site archives that excee
 Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](http://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
 
 ## See Also
-* [Going Live](/docs/going-live)
-* [Getting Started](/docs/getting-started)
 * [Using the Pantheon Workflow](/docs/pantheon-workflow)

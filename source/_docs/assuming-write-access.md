@@ -1,8 +1,8 @@
 ---
 title: Using Extensions That Assume Write Access
 description: Learn how to create symbolic links from the code directory to a file.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [debugfiles]
+categories: []
 ---
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon. WordPress stores files within `wp-content/uploads` and Drupal uses `/sites/default/files`. These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments. Extensions that create files within the codebase (e.g. `wp-content/plugins/plugin-name/some-other-directory` or `/sites/all/modules/module-name/some-other-directory`) incorrectly assume write access that is not granted on the Live and Test environments.
 

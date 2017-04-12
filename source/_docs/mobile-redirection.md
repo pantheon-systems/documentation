@@ -1,8 +1,8 @@
 ---
 title: Enabling Mobile Redirection with Cloudflare
 description: Learn how to use Cloudflare to set up mobile redirection on your Drupal or WordPress site.
-tags: [automate]
-categories: [automate]
+tags: [redirects]
+categories: []
 ---
 
 Cloudflare's mobile redirect service is available to domains hosting DNS on any of their plans. For details, see [About Cloudflare Mobile Redirect](https://support.cloudflare.com/hc/en-us/articles/200168336-About-Cloudflare-Mobile-Redirect).
@@ -17,7 +17,8 @@ Be sure that you have:
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on Cloudflare with the provided DNS records.</p></div>
+<p>The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on Cloudflare with the provided DNS records.</p>
+</div>
 
 ### Considerations
 We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics#device-detection).

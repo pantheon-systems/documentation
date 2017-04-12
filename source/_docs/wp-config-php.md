@@ -1,8 +1,8 @@
 ---
 title: Configuring wp-config.php
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
-tags: [golive, develop, domains]
-categories: [golive, domains]
+tags: [variables]
+categories: [wordpress]
 contributors: masonjames
 ---
 ## Overview
@@ -22,7 +22,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
 <div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</p></div>  
+<h4 class="info">Note</h4><p><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</p></div>
 
 ##Frequently Asked Questions
 

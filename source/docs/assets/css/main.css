@@ -1,4 +1,4 @@
-/*!
+0093c9/*!
 * Pantheon Docs (http://pantheon.io/docs)
 * Copyright 2014 Pantheon, Inc.
 * Licensed under the Creative Commons Attribution 3.0 Unported License. For
@@ -245,10 +245,30 @@ p, h1, h2, h3, h4, h5, h6, a, ol, ul {
 }
 .article a {
   text-decoration: underline;
-  color: #0A6BB5;
+  color: #0093c9;
+}
+.changelog-sidebar a {
+  color: #0093c9;
+  text-decoration: none;
+
+}
+.changelog-wrapper a {
+  color: #0093c9;
+  text-decoration: underline;
+}
+.changelog-sidebar a:hover{
+  opacity: 0.65;
+  color: #0093c9;
+  text-decoration: none;
+}
+.changelog-wrapper a:hover {
+  opacity: 0.65;
+  color: #0093c9;
+
 }
 .article a:hover {
   opacity: 0.65;
+  color: #0093c9;
 }
 .article a.helpful__button:hover {
   opacity: 1;
@@ -423,10 +443,10 @@ header {
 }
 .pio-breadcrumb li {
   display:inline;
-  color:#0A6BB5;
+  color:#0093c9;
 }
 .pio-breadcrumb a{
-  color:#0A6BB5;
+  color:#0093c9;
 }
 .pio-breadcrumb a:hover{
   text-decoration: none;
@@ -468,7 +488,7 @@ a.not-allowed:hover {
 .related li a{
   font-family: Avenir-Roman;
   font-size: 13px;
-  color: #0A6BB5;
+  color: #0093c9;
   line-height: 18px;
 }
 .related li a:hover{
@@ -1539,7 +1559,7 @@ margin-bottom: 40px !important;  }
   color: #333;
 }
 .pio-docs-featurette-img:hover {
-  color: #337ab7;
+  color: #0093c9;
   text-decoration: none;
 }
 .pio-docs-featurette-img img {
@@ -2008,7 +2028,7 @@ h1[id] {
 
 }
 .color-swatches .brand-primary {
-  background-color: #337ab7;
+  background-color: #0093c9;
 }
 .color-swatches .brand-success {
   background-color: #5cb85c;
@@ -2272,13 +2292,14 @@ h1[id] {
     background-image: none !important;
 }
 .panel-video {
-  border-color: #ddd;
+  border: solid 10px #eef2f3;
   border-radius: 0px;
 }
 .panel-video-heading {
   background-color: #eef2f3;
   border-radius: 0px;
   border-color: #eef2f3 !important;
+  padding:20px;
 }
 h3.panel-video-title {
   text-decoration: none;
@@ -2293,18 +2314,20 @@ a.panel-video-title {
   text-decoration: none;
 }
 
-h3.panel-video-title::after {
-    font-family: "FontAwesome" !important;
-    content: '\f105';
-    margin: 0 !important;
-    padding: 12px !important;
-    display: inline-block !important;
-    line-height: 1 !important;
-    background: none;
-    height: 100%;
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
+.panel-heading .accordion-toggle:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: left;
+    line-height: .75;
+    padding-right: 10px;
+    color: #222;
+}
+.panel-heading .accordion-toggle.collapsed:before {
+    content: "\e080";
+    float: left;
+    line-height: .75;
+    padding-right: 10px;
+    color: #222;
 }
 #doc-head {
   background-color: #fff;
@@ -3453,13 +3476,12 @@ li.terminus-usage {
 }
 
 .devbar {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  margin-bottom: 0px !important;
-  text-align: center;
+  background-color: #0a6bb5;
+  border-radius: 0px;
 }
-
+.devbar h3, .devbar p {
+  color: #fff;
+}
 
 .label {
   display: inline-block !important;
@@ -4428,14 +4450,14 @@ a.topic-info-link {
 .topic-info__title {
   font-family: Avenir-Heavy;
   font-size: 20px;
-  color: #1794C7;
+  color: #0093c9;
   line-height: 25px;
   margin-top: 0;
 }
 .main-topic-info__title {
   font-family: Avenir-Light;
   font-size: 32px;
-  color: #1794C7;
+  color: #0093c9;
   line-height: 32px;
   margin-top: 30px;
   text-align:center;
@@ -4527,6 +4549,39 @@ a:focus {
 }
 
 /* Video Hero */
+.subtopic-container {
+  padding:0px;
+  border: 1px solid #A4BBC1;
+}
+.subtopic-lists > h4 {
+  font-family: Avenir-Light;
+  font-size: 22px;
+}
+.guide-cta-landing {
+  background-color: #0093c9;
+  padding: 30px;
+}
+.guide-cta-landing:hover {
+box-shadow: 0px 0px 11px 0px rgba(120,134,142,0.62);
+opacity: 0.9;
+}
+
+.subtopic-groups > h3 {
+  font-family: Avenir-Light;
+  font-size: 28px;
+}
+.topic-groups > h3 {
+  font-family: Avenir-Light;
+  font-size: 28px;
+}
+.topic-groups > h2 {
+  font-family: Avenir-Light;
+}
+.subtopic-groups {
+  background-image: linear-gradient(0deg, #DBE4E6 0%, #FFFFFF 100%);
+  padding-left: 15px;
+  padding-bottom:10px;
+}
 .hero-video {
   background-image: linear-gradient(0deg, #DBE4E6 0%, #FFFFFF 100%);
   border: 1px solid #A4BBC1;
@@ -4538,6 +4593,31 @@ a:focus {
   line-height: 43px;
   margin-bottom: 20px;
   margin-top: 0;
+}
+.hero-video__guide-cta-title {
+  font-family: Avenir-Light;
+  font-size: 32px;
+  color: #fff;
+  line-height: 43px;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+}
+.hero-video__guide-cta-subtitle {
+  font-family: AvenirLT-Medium;
+  color: #fff !important;
+  line-height: 20px;
+  margin-bottom: 35px;
+
+}
+.hero-video__guide-cta-subtitle > a {
+  color: #fff;
+}
+#guide-cta > a:hover {
+  text-decoration:none;
+  opacity: 0.65;
+  color:#fff !important;
+
 }
 .hero-video__subtitle {
   font-family: AvenirLT-Medium;
@@ -4559,8 +4639,9 @@ a:focus {
   padding-left: 8px;
 }
 .hero-video__video {
-  padding-left: 0;
-  padding-right: 10px;
+  padding: 0;
+  border: solid 10px #eef2f3;
+  margin-bottom: 30px;
 }
 .hero-video__text {
   padding: 40px;
@@ -4575,6 +4656,42 @@ a:focus {
   flex-flow: row wrap;
   position: relative;
 }
+.topic-docs {
+
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+
+}
+.topic-docs li {
+  flex-basis: 100%;
+  max-width: 100%;
+  /* min-height: 55px; */
+  display: flex;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 0px;
+
+}
+.topic-docs li a{
+  width: 100%;
+  align-self: flex-end;
+
+  display:inline-block;
+  padding-bottom: 10px;
+  border-bottom:1px solid #A4BBC1;
+  font-family: Avenir-Roman;
+  font-size: 14px;
+  color: #0093c9;
+  line-height: 22px;
+}
+.topic-docs li a:hover{
+  text-decoration: none;
+  opacity: 0.65;
+}
+
 .top-docs li {
   flex-basis: 33.3%;
   max-width:33.3%;
@@ -4610,7 +4727,7 @@ a:focus {
   border-bottom:1px solid #A4BBC1;
   font-family: Avenir-Roman;
   font-size: 14px;
-  color: #0A6BB5;
+  color: #0093c9;
   line-height: 22px;
 }
 .top-docs li a:hover{

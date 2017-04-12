@@ -1,8 +1,8 @@
 ---
 title: Redirect Incoming Requests
 description: Learn to redirect requests to an alternate Drupal or WordPress domain name or path via PHP.
-tags: [domains, migrate, golive]
-categories: [golive, domains]
+tags: [redirects, variables]
+categories: []
 ---
 It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
 <div class="alert alert-danger" role="alert">
@@ -43,11 +43,11 @@ All redirect logic run on Pantheon environments should include the `php_sapi_nam
 
 While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
 
-<div class="panel panel-video">
+<div class="panel panel-video" id="accordion">
   <div class="panel-heading panel-video-heading">
-    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Show me how </h3></a>
   </div>
-  <div id="redirects-video" class="collapse" style="padding:10px;">
+  <div id="redirects-video" class="collapse">
     <script src="//fast.wistia.com/embed/medias/fof9qie645.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_fof9qie645 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
   </div>
 </div>
@@ -183,6 +183,11 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
         exit;
       }
     }
+
+### Troubleshooting
+#### Infinite Redirect Loops
+Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/docs/redirects/#require-https-and-standardize-domain) and for your specific use case.
+
 
 ## Redirect to Subdirectories or Specific URLs
 

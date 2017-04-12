@@ -1,8 +1,8 @@
 ---
 title: Migrate to Pantheon: WordPress
 description: Learn how to migrate WordPress sites to Pantheon using the Pantheon Migration plugin from BlogVault.
-tags: [migrate]
-categories: [getstarted, migrate]
+tags: [migrateguided]
+categories: [wordpress]
 ---
 We recommend migrating WordPress sites from another host using the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 

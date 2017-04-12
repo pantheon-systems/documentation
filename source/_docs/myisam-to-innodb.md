@@ -1,15 +1,16 @@
 ---
 title: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
-tags: [performance]
-categories: [performance]
+tags: [status]
+categories: []
 ---
 Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.
 
 Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
 <div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
- <p>This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</p></div>
+ <p>This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</p>
+</div>
 
 ## MySQL Command
 

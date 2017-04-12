@@ -1,8 +1,8 @@
 ---
-title: Log Files on Pantheon  
+title: Log Files on Pantheon
 description: Use log files to identify errors, track response times, analyze visitors and more on your WordPress or Drupal site.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [logs, services]
+categories: []
 ---
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/docs/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
@@ -73,11 +73,11 @@ Rotated log files are archived within the `/logs` directory on application serve
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Downloading Logs
-<div class="panel panel-video">
+<div class="panel panel-video" id="accordion">
   <div class="panel-heading panel-video-heading">
-    <a class="panel-video-title" data-proofer-ignore data-toggle="collapse" data-target="#log-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i style="margin-right:10px;" class="fa fa-video-camera"></i> Show me how </h3></a>
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#logs-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Show me how </h3></a>
   </div>
-  <div id="log-video" class="collapse" style="padding:10px;">
+  <div id="logs-video" class="collapse">
     <script src="//fast.wistia.com/embed/medias/hqqq24z2iv.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hqqq24z2iv videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
   </div>
 </div>
@@ -143,13 +143,19 @@ SITE=xxxxxxxxxxx
 ENV=live
 for app_server in `dig +short appserver.$ENV.$SITE.drush.in`;
 do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs app_server_$app_server
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs/* app_server_$app_server
 done
 
 # Include MySQL logs
 db_server=`dig dbserver.$ENV.$SITE.drush.in +short`
 rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@dbserver.$ENV.$SITE.drush.in:logs db_server_$db_server
 ```
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.</p>
+</div>
+
 ### Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
 ```
@@ -189,18 +195,18 @@ Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
 Writing to `wp-content/debug.log` is not supported on Test or Live environments.
 
-#### How can I access the Drupal event log?  
+#### How can I access the Drupal event log?
 
-By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:  
+By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 1. Visit `/admin/reports/dblog` once you've logged in as administrator.
-2. Using [Terminus](/docs/terminus/):  
+2. Using [Terminus](/docs/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- watchdog-show
 ```
 
-Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).  
+Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).
 
 ```bash
 terminus drush "watchdog-show --tail"
@@ -213,7 +219,7 @@ terminus drush "watchdog-show --tail"
 
 #### My Drupal database logs are huge. Should I disable dblog?
 
-The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.  
+The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
 
 #### How do I access logs in environments with multiple containers?
 

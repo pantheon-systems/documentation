@@ -1,8 +1,6 @@
 ---
 title: Going Live
 description: Best practices for preparing your Pantheon Drupal or WordPress site launch.
-tags: [golive]
-categories: [golive]
 ---
 For clients with an Elite plan, our dedicated launch team guides you through the following checklist during the onboarding process. However, self service clients on any plan can follow the same best practices for going live.
 
@@ -32,7 +30,7 @@ We recommend that you **prepare the Live environment at least 24 hours before yo
 
 ## Schedule Backups
 
-Schedule daily and weekly backups in case you need to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For details, see [Backup Creation](/docs/create-backups).
+Schedule daily and weekly backups in case you need to revert your site content. Backups need to be run separately for each environment (Dev, Test, and Live). For details, see [Backups Tool](/docs/backups).
 
 ## Monitoring Services
 
@@ -44,7 +42,7 @@ Consider enabling [New Relic Pro](/docs/new-relic) monitoring to non-intrusively
 
 Set up redirects for possible URL changes as a result of going live. Have a plan to monitor and mitigate 404 Page Not Found errors post-launch to retain search rankings. For more information, see [Redirecting Incoming Requests](/docs/redirects/).
 <div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
+<h3 class="info">Warning</h3>
 <p>nginx does not recognize or parse Apache's directory-level configuration files, known as .htaccess files.</p></div>
 
 ## Get DNS Record and Update Your DNS

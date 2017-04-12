@@ -1,12 +1,10 @@
 ---
 title: Locking Your Site
 description: Learn how to keep your Drupal or WordPress site hidden from the public for development or updates.
-tags: [platform]
-categories: [platform]
+tags: [security]
+categories: []
 ---
 There are occasions you are working on a site and want to keep your progress hidden from the world as you prepare to go live or make updates.
-
-
 
 This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is private, the requesting client will have to supply the authentication credentials you set in order to access the site.
 
@@ -23,12 +21,29 @@ When your page refreshes, you will notice that the environment is now private. Y
 
 You can set a different username and password for each environment. This is important if you only want the live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
-To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.  
+To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.
  ![Example of locked site](/source/docs/assets/images/auth-required.png)
 
- <div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>The <a href="https://www.drupal.org/docs/8/core/modules/basic_auth">HTTP Basic Authentication</a> core module (Drupal 8) and <a href="https://www.drupal.org/project/basic_auth">Basic HTTP Authentication</a> contrib module (Drupal 7) conflict with <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> when both are enabled. We recommend using <a href="/docs/security/#password-protect-your-site%27s-environments">Pantheon's Security tool</a> or the module to restrict access to Pantheon environment URLs, not both. </p>
+### Troubleshoot
+The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
+
+Sites that have the environment locked on Pantheon in addition to enabling the module will experience 403 errors. You can resolve these errors by unlocking the environment in the Site Dashboard, clearing cache, then disabling the module in Drupal's admin interface. Once you've disabled the module you can safely lock the environment on Pantheon.
+
+Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to disable the module:
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+    <pre><code class="bash hljs">terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-uninstall basic_auth -y</code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+    <pre><code class="bash hljs">terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-disable basic_auth -y</code></pre>
+  </div>
 </div>
 
 ## Unlock a Site's Environment

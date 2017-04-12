@@ -1,0 +1,62 @@
+  <div class="row">
+    <div class="col-md-6 topic-groups">
+      <h3>Platform Services & Resources</h3>
+      <p class="topic-info__description">Learn about the services and resources provided to your website.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.services if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.services if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.services %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+            <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 topic-groups">
+      <h3>Platform Architecture</h3>
+      <p class="topic-info__description">Learn how our container-based system gives you unmatched performance.</p>
+      <ul class="topic-docs">
+        {% for doc in data.docs_tags.infrastructure if doc.meta.type == "video"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.infrastructure if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+        {% endfor %}
+        {% for doc in data.docs_tags.infrastructure %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row" style="padding:15px;">
+    <div class="col-md-12 subtopic-container mb-70">
+      <div class="subtopic-groups">
+        <h3>The pantheon.yml Configuration File</h3>
+        <p class="topic-info__description">Automate your Pantheon workflows using platform hooks and manage advanced site configurations in YAML.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="padding:40px;">
+          <ul class="top-docs top-docs-2col">
+          {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "video"%}
+            <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "guide"%}
+          <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+          {% endfor %}
+          {% for doc in data.docs_tags.pantheonyml %}
+          {% if (doc.meta.type != "video") and (doc.meta.type != "guide") %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

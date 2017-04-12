@@ -1,20 +1,20 @@
 ---
 title: Optimization for Pantheon and the Cloud
-description: Learn how to optimize your Drupal or WordPress site to efficiently function on Pantheon's cloud.  
-tags: [performance]
+description: Learn how to optimize your Drupal or WordPress site to efficiently function on Pantheon's cloud.
+tags: [infrastructure]
 categories: [performance]
 ---
-Pantheon as a platform attempts to balance the tradeoff between high performance and high availability. It is important to reduce single points of failure and insure scalability, but this effort can introduce complexity and latency vs. a “one box” architecture.  
+Pantheon as a platform attempts to balance the tradeoff between high performance and high availability. It is important to reduce single points of failure and insure scalability, but this effort can introduce complexity and latency vs. a “one box” architecture.
 
-A traditional single server has a high risk of being impacted by any unexpected event because it is a single point of failure. If a single service becomes unavailable due to a webserver problem, database failure, network degradation, or even because of high traffic, the entire site goes down.  
+A traditional single server has a high risk of being impacted by any unexpected event because it is a single point of failure. If a single service becomes unavailable due to a webserver problem, database failure, network degradation, or even because of high traffic, the entire site goes down.
 
 
 ##Benefits and Concerns
 As distributed web architecture has evolved, best practices for high availability have emerged: application servers can be put behind load balancers, database servers can be replicated, backups can be hosted at remote locations.
 
-Cloud-based file systems, such as our Valhalla cluster, also reduce the impact of even the most severe outages. This evolution has other advantages: our cloud-based distributed architecture allows for smooth scaling in seconds via software, rather than through adding servers.  
+Cloud-based file systems, such as our Valhalla cluster, also reduce the impact of even the most severe outages. This evolution has other advantages: our cloud-based distributed architecture allows for smooth scaling in seconds via software, rather than through adding servers.
 
-However, there are tradeoffs to the cloud. On a single server, where the database is sharing an operating system with the webserver, there is no communication latency executing a MySQL query during a page load. In a distributed scenario, this same transaction may take one or two milliseconds to traverse servers. While this does not seem like a prohibitively long time, loading a single page may execute hundreds of mysql queries. The aggregate result will be that moving to the cloud can slow an inefficient site down.  
+However, there are tradeoffs to the cloud. On a single server, where the database is sharing an operating system with the webserver, there is no communication latency executing a MySQL query during a page load. In a distributed scenario, this same transaction may take one or two milliseconds to traverse servers. While this does not seem like a prohibitively long time, loading a single page may execute hundreds of mysql queries. The aggregate result will be that moving to the cloud can slow an inefficient site down.
 
 ##Solutions
 
@@ -27,5 +27,3 @@ There are a number of solutions for optimizing your site for the cloud. A site s
 - **Module Evaluation:** Lowering the number of enabled modules will reduce the overhead required by Drupal to perform any operation.
 
 By taking steps to optimize your site to take advantage of a cloud architecture, you’ll improve your users site experience and satisfaction.
-
-For additional tips for success on our platform, see [Required Reading: Essential Pantheon Documentation](/docs/required-reading).

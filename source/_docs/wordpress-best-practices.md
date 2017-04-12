@@ -1,8 +1,8 @@
 ---
 title: WordPress Best Practices
 description: A list of suggestions for developing WordPress sites on Pantheon.
-tags: [develop]
-categories: [develop]
+tags: [workflow]
+categories: [wordpress]
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
@@ -29,7 +29,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * In your theme, use a simple PHP `include()` instead of WordPress' [get_template_part()] (https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
 
-`<?php get_template_part('content', 'sidebar'); ?>`  
-`<?php include('content-sidebar.php'); ?>`
+        <?php get_template_part('content', 'sidebar'); ?>  
+        <?php include('content-sidebar.php'); ?>
 
 * If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post] (https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently.

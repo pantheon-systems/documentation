@@ -1,8 +1,8 @@
 ---
 title: rsync and SFTP
 description: Transfer large files using an SFTP client or rsync using Drupal 6, Drupal 7, or WordPress for Pantheon.
-tags: [sftp, local]
-categories: [develop, sftp]
+tags: [sftpfiles]
+categories: []
 ---
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
@@ -16,28 +16,28 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</p></div>
+<p>You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</p>
+</div>
 
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.  
+There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](http://winscp.net), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
 
 [Connection information](/docs/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/sites#site-uuid) to connect; copy/pasting this example exactly will not work.
 
-```nohighlight
-export ENV=dev
-# Usually dev, test, or live
-export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
-# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
+    export ENV=dev
+    # Usually dev, test, or live
+    export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
 
-sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
-Connected to appserver.$ENV.$SITE.drush.in
-sftp> cd files
-sftp> put [your file or files]
-```
+    sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
+    Connected to appserver.$ENV.$SITE.drush.in
+    sftp> cd files
+    sftp> put [your file or files]
+
 
 ## rsync
 
@@ -45,29 +45,29 @@ rsync is also available, but it is a more advanced tool that requires experience
 
 Substitute your target environment and site UUID to connect; copying/pasting this example exactly will not work.
 
-```nohighlight
-export ENV=dev
-# Usually dev, test, or live
-export SITE=[YOUR SITE UUID]
-# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
+    export ENV=dev
+    # Usually dev, test, or live
+    export SITE=[YOUR SITE UUID]
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
 
-# To Upload/Import
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+    # To Upload/Import
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
-# To Download
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+    # To Download
+    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
-# -r: Recurse into subdirectories
-# -l: Check links
-# -v: Verbose output
-# -z: Compress during transfer
-# Other rsync flags may or may not be supported
-# (-a, -p, -o, -g, -D, etc are not).
-```
+    # -r: Recurse into subdirectories
+    # -l: Check links
+    # -v: Verbose output
+    # -z: Compress during transfer
+    # Other rsync flags may or may not be supported
+    # (-a, -p, -o, -g, -D, etc are not).
+
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</p></div>
+<p>Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</p>
+</div>
 
 ## Examples
 
@@ -121,7 +121,7 @@ If you need to upload the files directory from a local installation called Foo i
 ```nohighlight
 $: export ENV=test
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 ### Upload a Single File to Pantheon
 This example shows how to upload the logo.png file into a Pantheon site's theme folder.
@@ -129,7 +129,7 @@ This example shows how to upload the logo.png file into a Pantheon site's theme 
 ```nohighlight
 $: export ENV=dev
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
+$: rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
 ## Known Issues
 

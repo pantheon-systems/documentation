@@ -1,8 +1,8 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your Drupal site.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [debugcode, services]
+categories: []
 ---
 Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code, or when attempting to run a long-running job that would be better suited for [Terminus](/docs/terminus/).
 
@@ -42,6 +42,22 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 			<th>Description</th>
 		</tr>
 	</thead><tbody>
+			<tr>
+				<td>Connection Timeout <a rel="popover" data-toggle="tooltip" data-proofer-ignore data-html="true" data-content="For sites upgraded to the new Pantheon Global Edge (invite only)."><em class="fa fa-info-circle"></em></a></td>
+				<td>60 seconds</td>
+				<td>Number of seconds to wait for a timeout.</td>
+			</tr>
+			<tr>
+				<td>First Byte Timeout <a rel="popover" data-toggle="tooltip" data-proofer-ignore data-html="true" data-content="For sites upgraded to the new Pantheon Global Edge (invite only)."><em class="fa fa-info-circle"></em></a></td>
+				<td>60 seconds</td>
+				<td>Number of seconds to wait for the first byte.</td>
+			</tr>
+			<tr>
+			<td>Between Bytes Timeout <a rel="popover" data-toggle="tooltip" data-proofer-ignore data-html="true" data-content="For sites upgraded to the new Pantheon Global Edge (invite only)."><em class="fa fa-info-circle"></em></a></td>
+			<td>60 seconds</td>
+			<td>Number of seconds to wait for between bytes.</td>
+			</tr>
+
 		<tr>
 			<td>Pantheon executed Drupal cron</td>
 			<td>180 seconds</td>

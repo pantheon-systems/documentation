@@ -1,8 +1,8 @@
 ---
 title: Hotfixes
 description: Learn how to deploy and test hot fixes and preserve orphan commits on your Pantheon Drupal or WordPress site.
-tags: [troubleshoot, git]
-categories: [troubleshoot]
+tags: [debugcode]
+categories: []
 ---
 For Experts only. You should not need to attempt this if you use [Multidev](/docs/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 

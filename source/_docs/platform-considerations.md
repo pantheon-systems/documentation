@@ -1,8 +1,8 @@
 ---
 title: Platform Considerations
 description: A list of the Pantheon platform considerations for your Drupal or WordPress sites.
-tags: [platform, troubleshoot]
-categories: [platform]
+tags: [infrastructure]
+categories: []
 ---
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 

@@ -1,8 +1,8 @@
 ---
 title: Pantheon Agency Tips
 description: Tips for agencies working on Pantheon.
-tags: [manage]
-categories: [manage]
+tags: [tools]
+categories: []
 contributors: [davidneedham]
 ---
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
@@ -15,7 +15,6 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 
 - [Pantheon platform consideration](/docs/platform-considerations/)
 - [Advanced caching](/docs/caching-advanced-topics/)
-- [Required reading](/docs/required-reading/) (aka Pantheon 101)
 - [Non-standard file locations](/docs/non-standard-file-paths/)
 - [Unsupported modules and plugins](/docs/unsupported-modules-plugins/)
 - [Pantheon FAQs](/docs/faq/)

@@ -1,8 +1,8 @@
 ---
 title: More Ways of Managing Code in SFTP Mode
 description: Understand alternative code management options when using SFTP Mode, such as WP-cli, Drupal Drush, and other command line tools.
-tags: [sftp]
-categories: [develop, sftp]
+tags: [admin]
+categories: []
 ---
 When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to itself, meaning built-in admin tools are open to function, as are some novel command-line capabilities.
 
@@ -23,7 +23,8 @@ You still need to turn these changes into commits in your Pantheon Site Dashboar
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
+<p>You should never have to enter SFTP credentials to WordPress's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p>
+</div>
 
 ## Install Modules and Themes with Update Manager
 
@@ -37,7 +38,8 @@ You still need to turn these changes into commits in your Pantheon Site Dashboar
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Note</h4>
-<p>You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p></div>
+<p>You should never have to enter SFTP credentials to Drupal's admin area itself. If you're prompted for a login and password, it's a sign that your Pantheon Dev environment is not in SFTP mode.</p>
+</div>
 
 ## Install Code with Terminus: the Pantheon CLI
 

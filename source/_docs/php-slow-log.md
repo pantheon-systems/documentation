@@ -1,8 +1,8 @@
 ---
 title: PHP Slow Log
 description: Improve the stability of your Drupal or WordPress site using PHP Slow Log and PHP FPM Error Log to identify serious performance issues.
-tags: [performance, troubleshoot]
-categories: [troubleshoot]
+tags: [logs]
+categories: []
 ---
 One of the key ways to find issues on your website is to check your PHP logs. This article instructs you on how to use your PHP slow log and PHP FPM error logs to find performance issues and PHP errors on Pantheon sites.
 
@@ -15,41 +15,42 @@ Make sure that you have:
 
 ## Download the PHP Slow Log and PHP FPM Error Log via SFTP
 
-1. Add yourself to the site's team membership.
-2. Get the SFTP connection information for the environment (Test, Dev, Live, or a Multidev) from the site's Dashboard.
-3. Open a command line prompt and paste the SFTP connection information.
-4. Navigate to the Logs directory, and use a `get` command to download the PHP slow log to your local machine for analysis.
-```php
-> $ sftp -o Port=2222 live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in
-> live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
-> live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
-> Connected to appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in.  
-> sftp> cd logs  
-> sftp> ls -l  
-> -rw-r--r--    1 16193    16193      153146 Dec 15 22:34 newrelic.log  
-> -rw-r--r--    1 16193    16193    55123460 Dec 15 22:59 nginx-access.log  
-> -rw-r--r--    1 16193    16193     3479688 Dec 09 08:07 nginx-access.log-20141209.gz  
-> -rw-r--r--    1 16193    16193     5524355 Dec 10 08:07 nginx-access.log-20141210.gz  
-> -rw-r--r--    1 16193    16193     5602638 Dec 11 08:06 nginx-access.log-20141211.gz  
-> -rw-r--r--    1 16193    16193     6033991 Dec 12 08:07 nginx-access.log-20141212.gz  
-> -rw-r--r--    1 16193    16193     5793730 Dec 13 08:07 nginx-access.log-20141213.gz  
-> -rw-r--r--    1 16193    16193     4688934 Dec 14 08:07 nginx-access.log-20141214.gz  
-> -rw-r--r--    1 16193    16193     5867636 Dec 15 08:07 nginx-access.log-20141215.gz  
-> -rw-r--r--    1 16193    16193        3499 Dec 15 22:46 nginx-error.log  
-> -rw-r--r--    1 16193    16193     1126685 Dec 14 08:07 nginx-error.log-20141214  
-> -rw-r--r--    1 16193    16193        5017 Dec 15 11:52 php-error.log  
-> -rw-------    1 16193    16193      642388 Dec 15 22:55 php-fpm-error.log  
-> -rw-------    1 16193    16193     1067358 Dec 12 20:07 php-fpm-error.log-20141212  
-> -rw-------    1 16193    16193     7209576 Dec 15 22:55 php-slow.log  
-> sftp> get php-slow.log  
-> Fetching /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log to php-slow.log  
-> /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log 100% 7041KB 370.6KB/s   00:19  
-> sftp> get php-fpm-error.log  
-> Fetching /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log to php-fpm-error.log  
-> /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log                                                                              100%  717KB 238.9KB/s   00:03  
-> sftp> exit  
-> $
-```
+1.  Add yourself to the site's team membership.
+2.  Get the SFTP connection information for the environment (Test, Dev, Live, or a Multidev) from the site's Dashboard.
+3.  Open a command line prompt and paste the SFTP connection information.
+4.  Navigate to the Logs directory, and use a `get` command to download the PHP slow log to your local machine for analysis.
+
+    ```php
+    > $ sftp -o Port=2222 live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in
+    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
+    > live.91fd3bea-d11b-401a-85e0-0@appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in's password:
+    > Connected to appserver.live.91f33beg-d11b-4020a-0005e0-07ca0f4ce7bz.drush.in.  
+    > sftp> cd logs  
+    > sftp> ls -l  
+    > -rw-r--r--    1 16193    16193      153146 Dec 15 22:34 newrelic.log  
+    > -rw-r--r--    1 16193    16193    55123460 Dec 15 22:59 nginx-access.log  
+    > -rw-r--r--    1 16193    16193     3479688 Dec 09 08:07 nginx-access.log-20141209.gz  
+    > -rw-r--r--    1 16193    16193     5524355 Dec 10 08:07 nginx-access.log-20141210.gz  
+    > -rw-r--r--    1 16193    16193     5602638 Dec 11 08:06 nginx-access.log-20141211.gz  
+    > -rw-r--r--    1 16193    16193     6033991 Dec 12 08:07 nginx-access.log-20141212.gz  
+    > -rw-r--r--    1 16193    16193     5793730 Dec 13 08:07 nginx-access.log-20141213.gz  
+    > -rw-r--r--    1 16193    16193     4688934 Dec 14 08:07 nginx-access.log-20141214.gz  
+    > -rw-r--r--    1 16193    16193     5867636 Dec 15 08:07 nginx-access.log-20141215.gz  
+    > -rw-r--r--    1 16193    16193        3499 Dec 15 22:46 nginx-error.log  
+    > -rw-r--r--    1 16193    16193     1126685 Dec 14 08:07 nginx-error.log-20141214  
+    > -rw-r--r--    1 16193    16193        5017 Dec 15 11:52 php-error.log  
+    > -rw-------    1 16193    16193      642388 Dec 15 22:55 php-fpm-error.log  
+    > -rw-------    1 16193    16193     1067358 Dec 12 20:07 php-fpm-error.log-20141212  
+    > -rw-------    1 16193    16193     7209576 Dec 15 22:55 php-slow.log  
+    > sftp> get php-slow.log  
+    > Fetching /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log to php-slow.log  
+    > /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/logs/php-slow.log 100% 7041KB 370.6KB/s   00:19  
+    > sftp> get php-fpm-error.log  
+    > Fetching /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log to php-fpm-error.log  
+    > /srv/bindings/b6126cf3069a4ba5983f3e9eaf35d627/logs/php-fpm-error.log                                                                              100%  717KB 238.9KB/s   00:03  
+    > sftp> exit  
+    > $
+    ```
 
 ## Analyze the PHP Slow Log
 

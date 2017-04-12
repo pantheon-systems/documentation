@@ -1,8 +1,8 @@
 ---
 title: Enabling Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
-tags: [develop]
-categories: [develop]
+tags: [addons, siteintegrations]
+categories: [drupal8]
 contributors: [peter-pantheon]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.

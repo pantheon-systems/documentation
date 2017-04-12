@@ -1,8 +1,8 @@
 ---
 title: Modules and Plugins with Known Issues
 description: A list of Drupal modules and WordPress plugins that require workarounds or are unsupported.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [debugcode, siteintegrations]
+categories: []
 ---
 This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/getting-support/).
 
@@ -36,7 +36,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 
 <hr>
 ### [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the Dashboard for each environment.
 
@@ -45,14 +45,17 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
+
+<hr>
+### [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
+**Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output.
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
 
 <hr>
-
 ### [Cache Expiration](https://www.drupal.org/project/expire)
 **Issue**: Unfortunately, there is no way to selectively purge the Varnish cache.
 
@@ -105,7 +108,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
- **Solution**: Lock the environment via [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) or via the module, not both.
+ **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
 <hr>
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)

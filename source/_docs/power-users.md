@@ -29,4 +29,4 @@ You can also subscribe with any email address by sending a message to [power-use
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct/) for details, including how to report absue.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct/) for details, including how to report abuse.

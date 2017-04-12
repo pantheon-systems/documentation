@@ -1,8 +1,8 @@
 ---
 title: SERVER_NAME and SERVER_PORT on Pantheon
 description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your Pantheon Website Management Platform environment configuration.
-tags: [troubleshoot, platform]
-categories: [troubleshoot]
+tags: [variables]
+categories: []
 ---
 Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
 
@@ -36,7 +36,5 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 ## Known Plugins/Modules Using SERVER_NAME
 - [Simple Share Buttons](https://simplesharebuttons.com/plus/)
 - [WP Super Cache](https://wordpress.org/support/plugin/wp-super-cache)
-- [Easy Digital Downloads](https://wordpress.org/plugins/easy-digital-downloads/)
 - [Give](https://wordpress.org/plugins/give/)
 - [Gravity Forms](http://www.gravityforms.com/)
-- [Restrict Content Pro](https://restrictcontentpro.com/)

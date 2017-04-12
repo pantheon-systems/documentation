@@ -1,8 +1,8 @@
 ---
 title: Launching a WordPress Site
 description: Detailed information on creating a new Pantheon WordPress site.  
-tags: [develop]
-categories: [develop]
+tags: [create]
+categories: []
 ---
 ## Create and Name Your Site
 

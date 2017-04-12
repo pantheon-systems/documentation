@@ -1,8 +1,8 @@
 ---
 title: Enable Secure HTTPS Communication
 description: Learn how to implement secure HTTPS communication and utilize a static IP address on your Drupal and WordPress site.
-tags: [golive]
-categories: [golive]
+tags: [security]
+categories: []
 ---
 HTTPS is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g. www.example.com, if you are transmitting any sensitive data. Google takes this a step further, and recommends [protecting all of your websites with HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https?hl=en). Loading a valid OpenSSL certificate into a Pantheon environment provisions an HTTPS load balancer with a dedicated IP address, allowing secure communication over HTTPS. All traffic within the Pantheon infrastructure, from Varnish to application containers, is encrypted.
 
@@ -20,7 +20,7 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 2. Get a certificate
 3. Load the certificate into Pantheon environment
 4. Test HTTPS (optional, but recommended)
-5. Update DNS
+5. [Update DNS](/docs/domains)
 6. Require HTTPS for all pages (optional, but recommended)
 
 ## Generate RSA Key and CSR
@@ -104,7 +104,7 @@ We don't specifically recommend one, but here are a few of many SSL providers:
 1.  From your Site Dashboard, select **Dev**, **Test**, or **Live** (most commonly **Live**).
 2.  Select **HTTPS**.
 3.  Next to **Environment HTTPS:**, click **Enabled**.
-4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this: 
+4.  Paste the certificates and private key in to the appropriate fields, including the header and footer. After you have confirmed that the certificate you have pasted in the dashboard includes only the certificate, header, and footer, click **Add Cert**. Your certificate should like like this:
 
 
         -----BEGIN CERTIFICATE-----

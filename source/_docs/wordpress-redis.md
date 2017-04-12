@@ -1,8 +1,8 @@
 ---
 title: Installing Redis on WordPress
 description: A walkthrough of how to enable WP-Redis on your Pantheon WordPress site.
-tags: [performance, cache]
-categories: [performance, cache]
+tags: [cacheapp, addons]
+categories: [wordpress]
 ---
 Currently, all plans except for Personal can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
@@ -93,7 +93,7 @@ This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using S
     }
    ```
 
-4. Run `composer install` to install WP Redis into the `wp-content` directory.  
+4. Run `composer install` to install WP Redis into the `wp-content` directory.
 5. Use git status to verify your local state, then commit and push your code to Pantheon:
 
  ```

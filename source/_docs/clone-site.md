@@ -1,8 +1,8 @@
 ---
 title: Cloning an Existing Pantheon Site
 description: Learn how to make a copy of your existing Drupal or WordPress site code, files, and database.
-tags: [migrate]
-categories: [getstarted, migrate]
+tags: [migrateguided]
+categories: []
 ---
 
 ## WordPress

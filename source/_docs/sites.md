@@ -1,7 +1,7 @@
 ---
 title: The Site Dashboard
 description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
-tags: [getstarted, develop]
+tags: [dashboard]
 categories: [getstarted]
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
@@ -40,7 +40,7 @@ To find a link to your site's upstream, click **Settings**, then **About Site**.
 The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/docs/php-versions/).
 
 ## Support
-If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/docs/getting-support) from your Dashboard. Learn more about our [scope of support](/docs/scope-of-support/).
+If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/docs/getting-support) from your Dashboard.
 
 ##Security Indicator
 This indicates if your site is public or locked. You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Locking Your Site](/docs/lock-environment/).
@@ -52,7 +52,7 @@ Here you can find the [SSH clone URL](/docs/git/), [Database Connection Informat
 The core of the Pantheon Workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 - **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
-- **Content** includes files not under Git version control, like images and pdfs, and the database.  
+- **Content** includes files not under Git version control, like images and pdfs, and the database.
 
 The [Code tool](/docs/code) on Dev/Multidev environments includes a Connection Mode toggle to switch between SFTP and Git. The Code tool on the Test and Live environments displays a Commit Log that displays all the commits that are on the environment.
 

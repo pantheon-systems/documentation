@@ -1,14 +1,14 @@
 ---
 title: Using IndexDepot With Pantheon Sites
 description: Learn how to create and configure IndexDepot with Solr for advanced indexing features for your Drupal or WordPress sites.
-tags: [automate]
-categories: [automate]
+tags: [siteintegrations]
+categories: []
 ---
 ## Overview
 
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
 
-However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.  
+However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.
 
 The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of features including:
 
@@ -32,12 +32,12 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 
 To create your index, you’ll need to supply some information about it:
 
-**Indexname:**  What you would like to call your index.  
-**Description:**  A brief description to be displayed in human language.  
-**Website:**  The URL of the website you are indexing.  
-**Environment:**  The environment to which the index applies.  
-**Server type:**  Apache Solr or Elasticsearch.  
-**Template:** Select the appropriate template.  
+**Indexname:**  What you would like to call your index.
+**Description:**  A brief description to be displayed in human language.
+**Website:**  The URL of the website you are indexing.
+**Environment:**  The environment to which the index applies.
+**Server type:**  Apache Solr or Elasticsearch.
+**Template:** Select the appropriate template.
 **\*Force SSL:** If your site uses HTTPS, you’ll need to force SSL.
 
 After filling out the appropriate fields, click **Save** to create your index. You will then receive an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI).
@@ -52,15 +52,16 @@ To get your index working with a Drupal site, set some configuration options in 
 admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/search/apachesolr/settings/solr
 ```
 
-Provide two items to the ApacheSolr configuration:  
-**ServerURL:** Paste the Index URI from IndexDepot here.  
+Provide two items to the ApacheSolr configuration:
+**ServerURL:** Paste the Index URI from IndexDepot here.
 **Description:** Briefly describe your index here.
 
 When you’ve finished, click **Save**.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>A schema must be pushed in each environment (Dev/Test/Live).</p></div>
+<p>A schema must be pushed in each environment (Dev/Test/Live).</p>
+</div>
 
 ## Test Your New Solr Connection
 

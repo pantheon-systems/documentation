@@ -1,8 +1,8 @@
 ---
 title: Errors and Server Responses
 description: Detailed information on your Pantheon site's server responses and error messages.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [services]
+categories: []
 ---
 Error messages in the cloud are served when Pantheon is unable to fulfill a request. Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.
 
@@ -23,41 +23,44 @@ In some circumstances, a 401 can be triggered inadvertently if a site environmen
 
 Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
-### Pantheon - 404 Unknown Site
+### Pantheon 404 Unknown Site
 "The hostname ... is unknown. Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
 
-### 502 - Upstream Header Too Big
+### 502 Upstream Header Too Big
 "Upstream sent too big header while reading response header from upstream."
 This error will occur when the payload or size of the request being sent is greater than the `fastcgi_buffer_size`. Removing additional images reduces the size of the payload being sent to the buffer for nginx to process, and will allow you to post the request. If this happens again, check to see if you are making heavy requests with a number of assets or data being passed.
 
-### 502 - Timeout/Segfault Error
+### 502 Timeout/Segfault Error
 This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't always send the authentication if it is performing an AJAX request.
 
 We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
-### Pantheon - 502 Bad Gateway
+### Pantheon 502 Bad Gateway
 "There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx, the web server will report this problem.
 
-### Pantheon - 502 Routing failure
+### Pantheon 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
 
-### Pantheon - 503 Target in Maintenance
+### 503 Header Overflow
+"Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
+
+### Pantheon 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
-### Pantheon - 503 Target Not Responding
+### Pantheon 503 Target Not Responding
 "The web page you were looking for could not be delivered." No application containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
 
 This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/select-plan/).
 
-### Pantheon - 503 Database not responding
+### Pantheon 503 Database not responding
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
 
-### Error 503 - Service Unavailable
+### Error 503 Service Unavailable
 This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
 
-### Pantheon - 504 Gateway Timeout
+### Pantheon 504 Gateway Timeout
 "Your request has timed out while waiting for PHP to execute." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.

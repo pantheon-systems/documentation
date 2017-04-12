@@ -1,8 +1,8 @@
 ---
 title: Parsing nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
-tags: [troubleshoot]
-categories: [troubleshoot]
+tags: [logs]
+categories: []
 goaccess: true
 contributors: [albertcausing]
 ---
@@ -10,8 +10,9 @@ Pantheon uses nginx web servers for optimal performance. Log files record the we
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
- <p>Requests served by <a href="/docs/varnish">Varnish</a> will not hit the nginx webserver and will not be logged in <code>nginx-access.log</code>.</p>
- </div>
+<p>Requests served by <a href="/docs/varnish">Varnish</a> will not hit the nginx webserver and will not be logged in <code>nginx-access.log</code>.</p>
+</div>
+
 [GoAccess](https://goaccess.io/) is a free, open source utility that creates on the fly server reports by parsing the `nginx-access.log` file. Use it to quickly identify the most used browsers and operating systems, or to debug failed requests—all from the command line.
 
 ## Before You Begin
