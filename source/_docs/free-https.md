@@ -8,6 +8,10 @@ Upgrade your site's HTTPS and never manage certificates again. Pantheon automati
 ## Eligibility
 Invite only (per site). As of April 2017, sites on a Professional plan with HTTPS already enabled and all custom domains routing to Pantheon may [request an invite](http://learn.pantheon.io/201701-HTTPS-Reg.html).
 
+### Find eligible sites
+- From **organization dashboard**: Use the "HTTPS Upgrade" search facet to see which sites have upgrade available.
+- From **user dashboard**, sites with upgrade available will indicate "HTTPS Upgrade Available" on the site thumbnail.
+
 ## Upgrade Your Site
 
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
