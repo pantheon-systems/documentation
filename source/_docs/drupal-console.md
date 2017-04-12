@@ -2,6 +2,9 @@
 title: Using The Drupal Console on Pantheon.
 description:
 draft: true
+contributors:
+  - alexfornuto
+  - greg-1-anderson
 ---
 
 The [Drupal Console](https://drupalconsole.com/) is a CLI for Drupal, from which you can interact directly with your Drupal site. Pantheon has integrated the Drupal Console for all Drupal 8 sites, accessible through [Terminus](/docs/terminus).
