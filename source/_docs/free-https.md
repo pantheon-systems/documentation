@@ -72,7 +72,7 @@ We recommend sending a HTTP Strict Transport Security (HSTS) header using the fo
   </div>
   <div role="tabpanel" class="tab-pane" id="drops8">
     <ol>
-      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module.</li>
+      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module. (The latest release is <code>8.x-1.x-dev</code>)</li>
       <li>Visit the module configuration page (<code>/admin/config/system/hsts</code>).</li>
       <li>Check the <strong>Enable HTTP Strict Transport Security</strong> checkbox, set <strong>Max Age</strong> to at least <strong>1 year</strong> and click <strong>Save Configuration</strong>.</li>
     </ol>
@@ -158,7 +158,7 @@ No, after you update your DNS records, traffic will gracefully switch over and i
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
-### When do I stopped being billed $30/month?
+### When will I stop being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing 30-60 days after upgrading.
 
 ### Can I downgrade back to the legacy HTTPS?
