@@ -11,7 +11,7 @@ contributors:
 
 ## Caveats
 
-As [discussed](#is-your-project-drupal-or-is-drupal-a-dependency-of-your-project) in our FAQ below, The use of Composer to manage dependancies for both Drupal core _and_ custom development has raised some issues. This section covers known issues between the Composer methodology and the expected workflow on Pantheon.
+As [discussed](#is-your-project-drupal-or-is-drupal-a-dependency-of-your-project%3F) in our FAQ below, The use of Composer to manage dependancies for both Drupal core _and_ custom development has raised some issues. This section covers known issues between the Composer methodology and the expected workflow on Pantheon.
 
 If you're already familiar with Composer on Pantheon, you can move on to [Install Composer Locally](#install-composer-locally). Otherwise, read on.
 
