@@ -92,10 +92,15 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
-
-
     <!-- container -->
     <div class="container content">
+      {% if page.earlyaccess %}
+      <div class="alert devbar alert-dismissible" role="alert">
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h3 class="devbar">Early Access Doc</h3>
+         <p class="devbar">The documentation on this page discusses features and options that are not available across the entire platform. Early access to Free and Automated HTTPS is currently invite only.<p>
+       </div>
+      {% endif %}
       {% if page.home is not defined %}
         <div class="row">
         {% endif %}
