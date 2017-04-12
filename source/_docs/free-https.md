@@ -72,7 +72,7 @@ We recommend sending a HTTP Strict Transport Security (HSTS) header using the fo
   </div>
   <div role="tabpanel" class="tab-pane" id="drops8">
     <ol>
-      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module.</li>
+      <li>Install the <a href="https://drupal.org/project/hsts">HTTP Strict Transport Security</a> module (only an 8.x Development release is available at this time).</li>
       <li>Visit the module configuration page (<code>/admin/config/system/hsts</code>).</li>
       <li>Check the <strong>Enable HTTP Strict Transport Security</strong> checkbox, set <strong>Max Age</strong> to at least <strong>1 year</strong> and click <strong>Save Configuration</strong>.</li>
     </ol>
