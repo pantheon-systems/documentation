@@ -162,7 +162,7 @@ All modern browsers and operating systems are supported. For details, see the **
 Pantheon will remove legacy load balancers and stop billing 30-60 days after upgrading.
 
 ### Can I downgrade back to the legacy HTTPS?
-Yes, if you wish to downgrade, please contact Pantheon support.
+Yes, if you wish to downgrade, please contact fill out this [HTTPS survey](https://www.getfeedback.com/r/LETtb3QV) and contact Pantheon support.
 
 * If you request the downgrade within 30 days of completing the upgrade, then your existing legacy load balancer will be available, with the same IP address and certificate.
 * If you request the downgrade after 30 days of completing the upgrade, you will be able to load a certificate and private key to a new load balancer with a new IP address.
