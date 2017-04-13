@@ -16,7 +16,7 @@ previousurl: getting-started
 previouspage: Introduction
 ---
 
-In this lesson, we’re going to explore the User Dashboard and add information to your account. If you don’t already have an account, you can [create a free one here](https://pantheon.io/register).
+In this lesson, we’re going to explore the User Dashboard and add information to your account. If you don’t already have an account, you can [create one for free here](https://pantheon.io/register).
 
 1. Log in to your Pantheon account. By default you land on the **Sites** tab of your User Dashboard. Here you’ll see the sites you’ve created or the sites you’ve been added to. If you just created your account you may not see any sites.
 
@@ -29,8 +29,8 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
 3. Select **SSH Keys** from the sidebar.
 
-  SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience.
-
+    SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience, and it makes life easier for people who prefer to use the command line.
+  
   Are you ready to add a SSH key? Expand the task below:
 
 <div class="panel panel-video" id="accordion">
