@@ -50,11 +50,11 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 <div class="alert alert-info">
      <h4 class="info">Task: Create a backup</h4>
-     <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. Let’s create a backup now:
+     <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. Let’s create a backup now:</p>
 
-    1. Click **Backups** on the Dev tab of your Site Dashboard.
-    2. Click **Create New Backup**.
-    
+<p>    1. Click **Backups** on the Dev tab of your Site Dashboard.</p>
+<p>    2. Click **Create New Backup**.</p>
+<p>    
 Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.</p>
      </div>
 
