@@ -30,7 +30,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 3. Select **SSH Keys** from the sidebar.
 
     SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience, and it makes life easier for people who prefer to use the command line.
-  
+
   Are you ready to add a SSH key? Expand the task below:
 
     <div class="panel panel-video" id="accordion">
@@ -54,9 +54,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
       </div>
     <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
       <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    <hr>
-    <div markdown="1">    
-    - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
+    <hr><div markdown="1">- **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
      - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.</li>
 
