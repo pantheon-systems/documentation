@@ -297,6 +297,11 @@ ol {
   font-size: 18px;
   line-height: 29px;
 }
+ul {
+  color: #44525E;
+  font-size: 18px;
+  line-height: 29px;
+}
 p{
   margin: 0 0 20px;
   color:#44525E;
