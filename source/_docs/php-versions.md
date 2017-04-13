@@ -45,7 +45,7 @@ remote:
 remote: Successfully applied `pantheon.yml` to the 'dev' environment.
 ```
 <br>
-If you have an invalid `pantheon.yml`file the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
+If you have an invalid `pantheon.yml`file, the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
 
 ```
 remote: PANTHEON ERROR:
