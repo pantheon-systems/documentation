@@ -34,6 +34,8 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
   2. Navigate to the **Test** tab. This environment is for...
 
+  ![Pantheon Workflow](/source/docs/assets/images/workflow.png)
+
   3. Navigate to the **Live** tab. This environment is for...
 
   4. Take a few minutes to familiarize yourself with the other tabs and links on the Site Dashboard, or click below for a guided tour:
