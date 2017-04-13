@@ -26,14 +26,34 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
     <p>Your WordPress or Drupal username and password are the same set you created when you configured your Dev site for the first time.
     </p></div>
 
-2. Now let’s create a new page! If you need help with this step, please reference the <a href="https://codex.wordpress.org/Posts/" target="_blank">WordPress Codex</a> or <a href="https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/" target="_blank">Drupal Documentation</a> on how to add a page to your site.
+2. Now let’s create a new page! If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Posts/) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a page to your site.
 
 3. When you’re done, navigate back to your Site Dashboard. Click the Dev tab, and open your **Dev** site by clicking **Visit Development Site**.
 
   Notice that the page you just created on your Live site doesn’t appear here on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
 
+  It’s important to develop on a recent copy of your site, so let’s clone your Live site—with your new page—to your Dev environment.
+
 4. Consider creating a backup before proceeding. Open the task below to learn how.
 
+    <div class="panel panel-video" id="accordion">
+      <div class="panel-heading panel-video-heading">
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
+      </div>
+      <div id="ssh-task" class="collapse" style="padding:10px;">
+        <hr>
+        <div markdown="1">
+     <p>  
+        The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup.  Let’s create a backup now: </p>
+
+<p>       1. Click **Backups** on the Dev tab of your Site Dashboard.</p>
+<p>       2. Click **Create New Backup**. </p>
+<p>
+Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.</p>
+        </div>
+      </div>
+    </div>
+    
 5. Click **Database / Files** on the Dev tab of your Site Dashboard.
 
 6. We’re going to clone the database and files from our Live site, so select Live from the dropdown menu.
