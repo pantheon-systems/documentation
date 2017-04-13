@@ -11,9 +11,9 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/create-test-live/
-nexturl: getting-started/clone-live-to-dev
+nexturl: getting-started/clone-live-to-dev/
 nextpage: Clone Live to Dev
-previousurl: getting-started/site-dashboard
+previousurl: getting-started/site-dashboard/
 previouspage: Site Dashboard
 editpath: 05-create-test-live.md
 ---
@@ -29,11 +29,11 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
   This takes a few moments. While you wait, let’s learn about what’s happening behind the scenes:
 
-  <div class="panel panel-video" id="accordion">
-    <div class="panel-heading panel-video-heading">
-      <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-test-environment"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Create Test Environment</h3></a>
-    </div>
-  </div>
+      <div class="panel panel-video" id="accordion">
+        <div class="panel-heading panel-video-heading">
+          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-test-environment"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Create Test Environment</h3></a>
+        </div>
+      </div>
 
 2. Now click **Visit Test Site**. This will open your Test site in a new browser tab with the URL    *test-YOURSITE.pantheonsite.io*.
 

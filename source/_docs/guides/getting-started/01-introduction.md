@@ -13,7 +13,7 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/
-nexturl: getting-started/user-dashboard
+nexturl: getting-started/user-dashboard/
 nextpage: User Dashboard
 editpath: 01-introduction.md
 ---

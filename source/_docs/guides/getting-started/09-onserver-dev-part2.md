@@ -10,9 +10,9 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/onserver-dev-part2/
-nexturl: getting-started/next-steps
+nexturl: getting-started/next-steps/
 nextpage: Next Steps
-previousurl: getting-started/onserver-dev-part1
+previousurl: getting-started/onserver-dev-part1/
 previouspage: On-Server Dev, Part 1
 editpath: 09-onserver-dev-part2.md
 ---
@@ -40,10 +40,10 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
 6. Return to the **Dev** tab of your Site Dashboard. The files you just changed will be highlighted in yellow.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Click the highlighted file changes in the Dev environment, and you can view the specific _diff_.  
-</p></div>
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">Click the highlighted file changes in the Dev environment, and you can view the specific _diff_.  
+    </p></div>
 
 7. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
