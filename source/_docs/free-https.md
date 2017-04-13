@@ -167,7 +167,7 @@ Pantheon will remove legacy load balancers and stop billing 30-60 days after upg
 ### Can I downgrade back to the legacy HTTPS?
 Yes, if you wish to downgrade, please:
 
-1. Fill out this [survey](https://www.getfeedback.com/r/LETtb3QV) to help us understand why you'd like to downgrade.
+1. Fill out this [survey](https://www.getfeedback.com/r/vQ6B9pVA) to help us understand why you'd like to downgrade.
 2. [Contact support](/docs/getting-support) with the confirmation number displayed after submitting the survey.
 
 <div class="alert alert-info">
