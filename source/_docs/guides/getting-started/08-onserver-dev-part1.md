@@ -14,7 +14,6 @@ nexturl: getting-started/onserver-dev-part2
 nextpage: On-Server Dev, Part 2
 previousurl: getting-started/connection-modes
 previouspage: Connection Modes
-editpath: 08-onserver-dev-part1.md
 ---
 
 In this lesson, we’ll make changes to our Dev site, review these changes on our Test site, then deploy them in Live.
@@ -23,13 +22,13 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 2. Now log in to your Dev site by clicking the **Visit Admin** button.
 
-3. Install a new theme (i.e., not a theme that came pre-packaged with your site).
+3. Install a _new_ theme (i.e., not a theme that came pre-packaged with your site).
 
-  If you need help with this step, please reference the WordPress Codex or Drupal Documentation for installing a new theme.
+   If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
 
 4. Activate/enable the new theme you just installed in Step 3.
 
-5. Return to the Dev tab of your Site Dashboard. The files you just added are highlighted in yellow.
+5. Return to the **Dev** tab of your Site Dashboard. The files you just added are highlighted in yellow.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -49,6 +48,16 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 9. Consider creating a backup before proceeding. Open the task below to learn how.
 
+<div class="alert alert-info">
+     <h4 class="info">Task: Create a backup</h4>
+     <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. Let’s create a backup now:
+
+    1. Click **Backups** on the Dev tab of your Site Dashboard.
+    2. Click **Create New Backup**.
+    
+Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.</p>
+     </div>
+
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
   <p>As intended, this action will overwrite your Test database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
@@ -56,9 +65,14 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
+<div class="alert alert-info">
+     <h4 class="info">Understand: Deploy Commits to Test</h4>
+     <p markdown="1">Test is separate environment from Dev, with its own codebase, database and media files.  When you deploy code from Dev, the platform leverages Git to pull code changes to your Test environment. At the same time, for testing, you can also pull files and the database from the Live environment.  It is best practice to write a deploy log message each time, but this is not mandatory.</p>
+     </div>
+
 11. When the deployment finishes, click **Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
-12. Activate/enable your theme now. Again, if you need help with this step, please reference the WordPress Codex or Drupal Documentation.
+12. Activate/enable your theme now. Again, if you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
 13. Review your Test site. Does everything look correct? If yes, navigate to **Deploys** on the Live tab of your Site Dashboard.
 
