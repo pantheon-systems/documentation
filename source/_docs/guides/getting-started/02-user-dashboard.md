@@ -33,8 +33,8 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
   Are you ready to add a SSH key? Expand the task below:
 
-<div class="panel panel-video-task" id="accordion">
-  <div class="panel-heading panel-video-heading-task">
+<div class="panel panel-video" id="accordion">
+  <div class="panel-heading panel-video-heading">
     <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Generate and Add SSH Keys</h3></a>
   </div>
   <div id="ssh-task" class="collapse" style="padding:10px;">
@@ -48,8 +48,8 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
 4. Take a few minutes to familiarize yourself with the other tabs and links on your dashboard, or click below for a guided tour:
 
-<div class="panel panel-video-tour" id="accordion">
-  <div class="panel-heading panel-video-heading-tour">
+<div class="panel panel-video" id="accordion">
+  <div class="panel-heading panel-video-heading">
     <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard</h3></a>
   </div>
   <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
