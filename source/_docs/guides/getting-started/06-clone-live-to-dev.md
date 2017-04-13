@@ -14,6 +14,7 @@ nexturl: getting-started/connection-modes
 nextpage: Connection Modes
 previousurl: getting-started/create-test-live
 previouspage: Create Test & Live
+editpath: 06-clone-live-to-dev.md
 ---
 
 In this lesson, we’ll explore your Live site and add a page to simulate work on a real production site. Then we’ll clone your Live site “down” to your Dev site.

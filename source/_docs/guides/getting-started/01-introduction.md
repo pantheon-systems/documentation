@@ -15,6 +15,7 @@ use:
 permalink: docs/guides/getting-started/
 nexturl: getting-started/user-dashboard
 nextpage: User Dashboard
+editpath: 01-introduction.md
 ---
 
 Welcome! This guide is designed to get you started on Pantheon. It should take less than 1 hour to complete.

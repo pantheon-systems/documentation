@@ -15,13 +15,14 @@ nexturl: getting-started/clone-live-to-dev
 nextpage: Clone Live to Dev
 previousurl: getting-started/site-dashboard
 previouspage: Site Dashboard
+editpath: 05-create-test-live.md
 ---
 In this lesson, we’re going to to create our Test site and our Live site, which we just learned about in the previous lesson.
 
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
   <p>If you haven’t completed the installation of your Dev site, return to <a href=
-  "/getting-started/create-new-site">Create New Site</a>, and do this now, before proceeding.</p>
+  "/docs/getting-started/create-new-site">Create New Site</a>, and do this now, before proceeding.</p>
 </div>
 
 1. Navigate to your Site Dashboard and click the **Test** tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.
