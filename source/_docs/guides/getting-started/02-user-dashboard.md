@@ -10,7 +10,7 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/user-dashboard/
-nexturl: getting-started/create-site
+nexturl: getting-started/create-new-site
 nextpage: Create New Site
 previousurl: getting-started
 previouspage: Introduction
