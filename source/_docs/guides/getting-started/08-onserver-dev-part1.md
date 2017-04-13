@@ -10,9 +10,9 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/onserver-dev-part1/
-nexturl: getting-started/onserver-dev-part2
+nexturl: getting-started/onserver-dev-part2/
 nextpage: On-Server Dev, Part 2
-previousurl: getting-started/connection-modes
+previousurl: getting-started/connection-modes/
 previouspage: Connection Modes
 ---
 
@@ -30,17 +30,17 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 5. Return to the **Dev** tab of your Site Dashboard. The files you just added are highlighted in yellow.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>You may need to refresh your dashboard to see these files in your Dev environment.
-</p></div>
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p>You may need to refresh your dashboard to see these files in your Dev environment.
+    </p></div>
 
 6. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>In the Dev environment, you can’t make a commit without first adding a commit message.
-</p></div>
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p>In the Dev environment, you can’t make a commit without first adding a commit message.
+    </p></div>
 
 7. Ok, now let’s review the new theme in your Test environment. Navigate to the **Test** tab and click **Deploys**. As you can see, 1 commit is ready to deploy from the Development environment.  
 
@@ -48,24 +48,25 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 9. Consider creating a backup before proceeding. Open the task below to learn how.
 
-<div class="alert alert-info">
+    <div class="alert alert-info">
      <h4 class="info">Task: Create a backup</h4>
-     <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. Let’s create a backup now:
+     <div markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. Let’s create a backup now:
 
-    1. Click **Backups** on the Dev tab of your Site Dashboard.
-    2. Click **Create New Backup**.
-    
-Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.</p>
+     1. Click **Backups** on the Dev tab of your Site Dashboard.
+     2. Click **Create New Backup**.
+
+    <br>Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.
      </div>
+   </div>
 
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p>As intended, this action will overwrite your Test database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
-</div>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="info">Warning</h4>
+      <p>As intended, this action will overwrite your Test database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
+    </div>
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-<div class="alert alert-info">
+    <div class="alert alert-info">
      <h4 class="info">Understand: Deploy Commits to Test</h4>
      <p markdown="1">Test is separate environment from Dev, with its own codebase, database and media files.  When you deploy code from Dev, the platform leverages Git to pull code changes to your Test environment. At the same time, for testing, you can also pull files and the database from the Live environment.  It is best practice to write a deploy log message each time, but this is not mandatory.</p>
      </div>

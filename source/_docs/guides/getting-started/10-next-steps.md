@@ -19,7 +19,7 @@ Congratulations! You created and made code changes to your Pantheon site. You sh
 
 But this is just the tip of the iceberg. Ready to learn more? Here are just some of the things you can do with Pantheon:
 
-- Set up a <a href="https://pantheon.io/docs/develop/local/" target="_blank">Local Development environment</a>. (We like <a href="https://pantheon.io/docs/kalabox/" target="_blank">Kalabox</a>, but you can use anything you want.)
-- If you’re on a team, start using <a href="https://pantheon.io/docs/multidev/" target="_blank">Multidev environments</a>.
-- Install <a href="http://pantheon.io/docs/terminus" target="_blank">Terminus</a>, and start interacting with Pantheon from the command line.
-- Take your site live! Just follow this <a href="https://pantheon.io/docs/going-live/" target="_blank">Going Live checklist</a>.
+- Set up a [Local Development](/docs/develop/local) environment (We like [Kalabox](/docs/kalabox/), but you can use anything you want).
+- If you’re on a team, start using [Multidev environments](/docs/multidev).
+- Install [Terminus](/docs/terminus), and start interacting with Pantheon from the command line.
+- Take your site live! Just follow this [Going Live checklist](/docs/going-live).

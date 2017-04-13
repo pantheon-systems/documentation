@@ -10,9 +10,9 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/clone-live-to-dev/
-nexturl: getting-started/connection-modes
+nexturl: getting-started/connection-modes/
 nextpage: Connection Modes
-previousurl: getting-started/create-test-live
+previousurl: getting-started/create-test-live/
 previouspage: Create Test & Live
 editpath: 06-clone-live-to-dev.md
 ---
@@ -21,10 +21,10 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 
 1. Click the **Site Admin** button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Your WordPress or Drupal username and password are the same set you created when you configured your Dev site for the first time.
-</p></div>
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p>Your WordPress or Drupal username and password are the same set you created when you configured your Dev site for the first time.
+    </p></div>
 
 2. Now let’s create a new page! If you need help with this step, please reference the <a href="https://codex.wordpress.org/Posts/" target="_blank">WordPress Codex</a> or <a href="https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/" target="_blank">Drupal Documentation</a> on how to add a page to your site.
 
@@ -38,10 +38,10 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 
 6. We’re going to clone the database and files from our Live site, so select Live from the dropdown menu.
 
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p>As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
-</div>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="info">Warning</h4>
+      <p>As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
+    </div>
 
 7. Click **Clone the Database & files from Live into the Development Environment**.
 
