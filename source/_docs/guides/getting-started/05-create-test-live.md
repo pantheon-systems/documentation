@@ -26,15 +26,9 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
 1. Navigate to your Site Dashboard and click the **Test** tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.
 
-  This takes a few moments. While you wait, let’s learn about what’s happening behind the scenes:
-
-      <div class="panel panel-video" id="accordion">
-        <div class="panel-heading panel-video-heading">
-          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-test-environment"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Create Test Environment</h3></a>
-        </div>
-      </div>
-
-2. Now click **Visit Test Site**. This will open your Test site in a new browser tab with the URL    *test-YOURSITE.pantheonsite.io*.
+  This takes a few moments. 
+  
+2. Now click **Visit Test Site**. This will open your Test site in a new browser tab with the URL *test-YOURSITE.pantheonsite.io*.
 
 3. Navigate back to your Site Dashboard, and click the **Live** tab. Here again you need to create the environment. Do this now by clicking **Create Live Environment**.
 
