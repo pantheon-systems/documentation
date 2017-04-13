@@ -11,10 +11,11 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/site-dashboard/
-nexturl: getting-started/create-environments
+nexturl: getting-started/create-test-live
 nextpage: Create Test & Live
 previousurl: getting-started/create-new-site
 previouspage: Create New Site
+editpath: 04-site-dashboard.md
 ---
 
 In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Test, Live workflow.

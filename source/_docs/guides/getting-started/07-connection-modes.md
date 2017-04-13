@@ -14,6 +14,7 @@ nexturl: getting-started/onserver-dev-part1
 nextpage: On-Server Dev, Part 1
 previousurl: getting-started/clone-live-to-dev
 previouspage: Clone Live to Dev
+editpath: 07-connection-modes.md
 ---
 
 In this lesson, we’ll learn how to connect to your Dev environment and change code.

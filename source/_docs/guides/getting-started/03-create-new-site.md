@@ -15,6 +15,7 @@ nexturl: getting-started/site-dashboard
 nextpage: Site Dashboard
 previousurl: getting-started/user-dashboard
 previouspage: User Dashboard
+editpath: 03-create-new-site.md
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 

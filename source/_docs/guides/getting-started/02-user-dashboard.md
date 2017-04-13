@@ -14,6 +14,7 @@ nexturl: getting-started/create-new-site
 nextpage: Create New Site
 previousurl: getting-started
 previouspage: Introduction
+editpath: 02-user-dashboard.md
 ---
 
 In this lesson, we’re going to explore the User Dashboard and add information to your account. If you don’t already have an account, you can [create one for free here](https://pantheon.io/register).

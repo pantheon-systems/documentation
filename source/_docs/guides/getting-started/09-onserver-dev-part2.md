@@ -14,6 +14,7 @@ nexturl: getting-started/next-steps
 nextpage: Next Steps
 previousurl: getting-started/onserver-dev-part1
 previouspage: On-Server Dev, Part 1
+editpath: 09-onserver-dev-part2.md
 ---
 
 In this lesson, we’re going to edit code directly. We’ll commit our edits to Dev, review in Test, and deploy to Live. Let’s get started!
@@ -23,7 +24,7 @@ In this lesson, we’re going to edit code directly. We’ll commit our edits to
 <p>To complete this lesson, you need a basic understanding of CSS. If necessary, ask a colleague for help, or feel free to skip this lesson altogether.  
 </p></div>
 
-If you haven’t added a new theme to your site, please return to the [previous lesson](getting-started/onserver-dev-part1) and do so now.
+If you haven’t added a new theme to your site, please return to the [previous lesson](/docs/guides/getting-started/onserver-dev-part1) and do so now.
 
 1. Navigate to **</> Code** in the Dev tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
@@ -31,7 +32,7 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](https://pantheon.io/docs/sftp/#sftp-connection-information).
+  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
 
 4. Now open the **code** folder in your SFTP client, and navigate to the theme you installed previously.
 
