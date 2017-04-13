@@ -2295,11 +2295,34 @@ h1[id] {
   border: solid 10px #eef2f3;
   border-radius: 0px;
 }
+.panel-video-task {
+  border: solid 10px #FFD1C7;
+  border-radius: 0px;
+}
+.panel-video-tour {
+  border: solid 10px #dff0d8;
+  border-radius: 0px;
+}
+
 .panel-video-heading {
   background-color: #eef2f3;
   border-radius: 0px;
   border-color: #eef2f3 !important;
   padding:20px;
+}
+.panel-video-heading-task {
+  background-color: #FFD1C7;
+  border-radius: 0px;
+  border-color: #FFD1C7 !important;
+  padding:20px;
+
+}
+.panel-video-heading-tour {
+  background-color: #dff0d8;
+  border-radius: 0px;
+  border-color: #dff0d8 !important;
+  padding:20px;
+
 }
 h3.panel-video-title {
   text-decoration: none;
