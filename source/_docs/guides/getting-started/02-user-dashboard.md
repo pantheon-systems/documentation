@@ -55,9 +55,11 @@ In this lesson, we’re going to explore the User Dashboard and add information 
       </div>
     <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
       <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    <hr><div markdown="1">- **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
+    <hr>
+    <div markdown="1">
+    - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-     - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.</li>
+     - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
      - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/docs/migrate-manual).
 
