@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 subtitle: Create Test & Live
-guidetoc: true
 guidepage: true
 anchorid: create-test-live
 generator: pagination
