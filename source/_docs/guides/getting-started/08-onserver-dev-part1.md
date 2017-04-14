@@ -77,7 +77,7 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
           <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy Commits to Test</h3></a>
         </div>
         <div id="understand-deploy" class="collapse" style="padding:10px;">
-          <p markdown="1">Test is separate environment from Dev, with its own codebase, database and media files.  When you deploy code from Dev, the platform leverages Git to pull code changes to your Test environment. At the same time, for testing, you can also pull files and the database from the Live environment.  It is best practice to write a deploy log message each time, but this is not mandatory.</p>
+          <p markdown="1">Test is a separate environment from Dev, with its own codebase, database, and media files.  When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.</p>
         </div>
       </div>
 
