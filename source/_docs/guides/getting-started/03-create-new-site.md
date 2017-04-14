@@ -40,13 +40,6 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 4. For the purpose of this Guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
 
-    <div class="panel panel-video" id="accordion">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy a Site on Pantheon</h3></a>
-    <hr><div markdown="1"> It can take 2 or more minutes to create a new site on Pantheon. This is because of all the processes running behind the scenes. Our platform first creates fresh containers, just for your site. We then install PHP, NginX, and MariaDB. Finally we pull the latest version of your content management system (CMS) from either our upstream repository or your Private Upstream.
-    </div>
-    </div>
-</div>
-
 5. Complete? Click **Visit your Pantheon Site Dashboard**.
 
 6. We’ll explore the Site Dashboard in the next lesson. For now, access your new site by clicking **Visit Development Site** and follow the prompts to complete the installation of your site.
