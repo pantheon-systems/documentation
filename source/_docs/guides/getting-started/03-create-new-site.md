@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 subtitle: Create New Site
-guidetoc: true
 guidepage: true
 anchorid: create-new-site
 generator: pagination
