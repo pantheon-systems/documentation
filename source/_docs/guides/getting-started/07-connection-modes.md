@@ -17,20 +17,20 @@ previouspage: Clone Live to Dev
 editpath: 07-connection-modes.md
 ---
 
-In this lesson, we’ll learn how to connect to your Dev environment and change code.
+In this lesson, we’ll learn how to connect to your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment and change code.
 
-1. Navigate to the **Dev** environment in your Site Dashboard, and click **</> Code**.
+1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code**.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
+    <p><span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
     </p></div>
 
 On Pantheon, you can connect and work via [Git](https://git-scm.com/), or you can connect and work via SFTP.
 
 ##Git Connection Mode
 
-You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
+You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.
 
 For more information, please see our [Local Development](/docs/local-development/) documentation.
 

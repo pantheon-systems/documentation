@@ -19,14 +19,14 @@ editpath: 02-user-dashboard.md
 
 In this lesson, we’re going to explore the User Dashboard and add information to your account. If you don’t already have an account, you can [create one for free here](https://pantheon.io/register).
 
-1. Log in to your Pantheon account. By default you land on the **Sites** tab of your User Dashboard. Here you’ll see the sites you’ve created or the sites you’ve been added to. If you just created your account you may not see any sites.
+1. Log in to your Pantheon account. By default you land on the **<span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Sites** tab of your User Dashboard. Here you’ll see the sites you’ve created or the sites you’ve been added to. If you just created your account you may not see any sites.
 
      <div class="alert alert-info">
      <h4 class="info">Note</h4>
      <p markdown="1">If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.</p>
      </div>
 
-2. Navigate to the **Account** tab, and update your Profile by adding your Company / Organization and Job Function. Select **Update Profile** to save this information.
+2. Navigate to the **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span> Account** tab, and update your Profile by adding your Company / Organization and Job Function. Select **Update Profile** to save this information.
 
 3. Select **SSH Keys** from the sidebar.
 
@@ -57,17 +57,17 @@ In this lesson, we’re going to explore the User Dashboard and add information 
       <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
     <hr>
     <div markdown="1">
-    - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
+    - **<span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
      - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
      - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/docs/migrate-manual).
 
-    - **Organizations:** If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
+    - **<span class="glyphicons glyphicons-group" aria-hidden="true"></span> Organizations:** If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
 
-    - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
+    - **<span class="glyphicons glyphicons-flag" aria-hidden="true"></span> Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
-    - **Account:** Update and manage your personal account information. Use the options in the left-hand navigation menu:
+    - **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span> Account:** Update and manage your personal account information. Use the options in the left-hand navigation menu:
 
      - **Profile:** Update your user profile information, or connect your Google account to Pantheon.
 
@@ -83,7 +83,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
      - **Delete Account:** Delete your Pantheon account. This is useful for consolidating multiple accounts under a single user account.
 
-    - **Advanced:** Find information about using our command line tool, [Terminus](/docs/terminus).
+    - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Advanced:** Find information about using our command line tool, [Terminus](/docs/terminus).
     </div>
     </div>
 </div>

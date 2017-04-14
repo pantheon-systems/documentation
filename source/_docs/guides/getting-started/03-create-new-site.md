@@ -27,7 +27,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
       </div>
     </div>
 
-1. Navigate to the **Sites** tab of your User Dashboard.
+1. Navigate to the **<span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Sites** tab of your User Dashboard.
 
 2. Select **+ Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
 
