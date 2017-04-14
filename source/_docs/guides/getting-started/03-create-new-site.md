@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 subtitle: Create New Site
-guidetoc: true
 guidepage: true
 anchorid: create-new-site
 generator: pagination
@@ -19,17 +18,14 @@ editpath: 03-create-new-site.md
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 
-#############NOTE THIS IS NOT THE RIGHT VIDEO!!!!!!!!!!  Needs to swap out for right video
-<div class="panel panel-video" id="accordion">
+ <div class="panel panel-video" id="accordion">
       <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard</h3></a>
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Watch: Create New Site</h3></a>
       </div>
-    <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
-      <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    <hr><div markdown="1">
+      <div id="ssh-task" class="collapse" style="padding:10px;">
+        <script src="//fast.wistia.com/embed/medias/6fvbeowg58.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+      </div>
     </div>
-    </div>
-</div>
 
 1. Navigate to the **Sites** tab of your User Dashboard.
 
