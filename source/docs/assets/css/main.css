@@ -1312,6 +1312,16 @@ margin-bottom: 40px !important;  }
     .hidden-s {
     display: none!important;
     }
+    .guide-nav {
+      margin-top:0px!important;
+      padding-right:10px!important;
+      padding-left:10px!important;
+    }
+    .guide-doc-body {
+      border-left:none!important;
+      padding-right:10px!important;
+      padding-left:10px!important;
+    }
 }
 @media (min-width: 995px) {
     .footer {
@@ -3424,6 +3434,14 @@ display: block;
 .manual-doc {
   padding-left:50px;
   border-left: solid 2px #eef2f3;
+
+}
+.guide-nav {
+  margin-top:-30px;padding-right:50px;padding-left:0px;
+}
+.guide-doc-body {
+padding-left:50px;
+border-left: solid 2px #eef2f3;
 
 }
 .manual-toc {

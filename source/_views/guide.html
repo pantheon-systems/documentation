@@ -2,12 +2,12 @@
 {% block content_wrapper %}
 </div><!--close main container-->
 </div><!--close row-->
-<div class="col-md-12 mb-70" style="margin-top:-30px;padding-right:50px;padding-left:0px;">
+<div class="col-md-12 mb-70 guide-nav">
   {% include("guide_navbar.html") %}
   {% if page.guidetoc %}
-    <div class="col-xs-12 col-md-7 manual-doc">
+    <div class="col-xs-12 col-md-7 guide-doc-body">
   {% else %}
-    <div class="col-xs-12 col-md-10 manual-doc">
+    <div class="col-xs-12 col-md-10 guide-doc-body">
   {% endif %}
     <header>
       <h1>{{ page.subtitle }}</h1>
