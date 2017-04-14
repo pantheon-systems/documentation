@@ -59,20 +59,20 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
       - **<span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev:** Access unlimited cloud development environments.
 
-      - **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+      - **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev:** Access the codebase, database, and files for your Dev environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
 
-      - **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+      - **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test:** Access the codebase, database, and files for your Test environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
 
-      - **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+      - **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live:** Access the codebase, database, and files for your Live environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
 
       - **<span class="glyphicons glyphicons-flag" aria-hidden="true"></span> Support:**  View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
     <hr>
-     The following links are located within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev, <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test, and <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment tabs:
+     The following links are located within your Dev, Test, and Live environment tabs:
 
-      - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.
+      - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment.
       - **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
       - **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys:** View a deploy log for the environment.
-      - **<span class="glyphicons glyphicons-git-branch" aria-hidden="true"></span> Merge:** If you have a <span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev environment, use this tab to merge branches into your master branch. (This tab is only accessible within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.)
+      - **<span class="glyphicons glyphicons-git-branch" aria-hidden="true"></span> Merge:** If you have a Multidev environment, use this tab to merge branches into your master branch. (This tab is only accessible within your Dev environment.)
       - **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span> Status:** Check this page on a regular basis (especially before you go live the first time) to catch common problems and follow best-practice recommendations for site configuration.
       - **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files:** Workflow tools are provided to clone your database and files between environments with the click of a button.
         - **Clone:** Clone the database and/or files from one environment to another.
@@ -83,6 +83,8 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
       - **<span class="glyphicons glyphicons-home" aria-hidden="true"></span> Domains:** Add custom domains to your site. (This feature is only available on paid plans.)
       - **<span class="glyphicons glyphicons-lock" aria-hidden="true"></span> HTTPS:** Enable SSL and manage a certificate. (This feature is only available on paid plans.)
       - **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups:** Create a back of the environment.
+        - **Backup Log:** View existing backups of the environment. Click the <span class="glyphicons glyphicons-download-alt" aria-hidden="true"></span> download icon to download individual archives within a backup.
+        - **Backup Schedule:** Schedule daily or weekly automatic backups of the environment. (This feature is only available on paid plans.)
       </div>
     </div>
   </div>
