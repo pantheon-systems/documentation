@@ -51,18 +51,13 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
     <div class="panel panel-video" id="accordion">
       <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#backup-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
-      </div>
-      <div id="backup-task" class="collapse" style="padding:10px;">
-        <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-      <hr>
-        <div markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup.  Let’s create a backup now:
+      
+        <div id="task-backup" class="collapse" style="padding:10px" markdown="1;">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-        1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev tab of your Site Dashboard.
+        1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
         2. Click **Create New Backup**.
 
        Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.
-       </div>
-     </div>
     </div>
 
     <div class="alert alert-danger" role="alert">
