@@ -18,7 +18,7 @@ editpath: 03-create-new-site.md
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 
-<div class="panel panel-video" id="accordion">
+<div class="panel panel-video panel-guide" id="accordion">
     <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Watch: Create New Site</h3></a>
       </div>
@@ -40,7 +40,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 4. For the purpose of this Guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
 
-    <div class="panel panel-video" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy a Site on Pantheon</h3></a>
        </div>

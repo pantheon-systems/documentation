@@ -2305,6 +2305,11 @@ h1[id] {
   border: solid 10px #eef2f3;
   border-radius: 0px;
 }
+.panel-guide {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
 .panel-video-heading {
   background-color: #eef2f3;
   border-radius: 0px;

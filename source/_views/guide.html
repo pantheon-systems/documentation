@@ -2,7 +2,7 @@
 {% block content_wrapper %}
 </div><!--close main container-->
 </div><!--close row-->
-<div class="col-md-12 mb-70" style="margin-top:-50px;padding-right:50px;padding-left:0px;">
+<div class="col-md-12 mb-70" style="margin-top:-30px;padding-right:50px;padding-left:0px;">
   {% include("guide_navbar.html") %}
   {% if page.guidetoc %}
     <div class="col-xs-12 col-md-7 manual-doc">
@@ -58,11 +58,12 @@
       <div class="terminus-pager">
         <hr>
         {% if page.nexturl %}
-          <a style="float:right;" href="/docs/guides/{{ page.nexturl }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> {{ page.nextpage }}</a>
+          <ul class="pagination" style="float:right;"><li><a href="/docs/guides/{{ page.nexturl }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Continue</a></li></ul>
         {% endif %}
         {% if page.previousurl %}
-          <a style="float:left;" href="/docs/guides/{{ page.previousurl }}"><span class="terminus-pager-lsaquo">&lsaquo;</span>{{ page.previouspage }}</a>
+          <ul class="pagination" style="float:left;"><li><a href="/docs/guides/{{ page.previousurl }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Back</a></li></ul>
         {% endif %}
+
       </div>
 
   </div>

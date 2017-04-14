@@ -48,7 +48,7 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 9. Consider creating a backup before proceeding. Open the task below to learn how.
 
-    <div class="panel panel-video" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#backup-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
       </div>
@@ -68,7 +68,7 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-     <div class="panel panel-video" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
        <div class="panel-heading panel-video-heading">
           <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy Commits to Test</h3></a>
         </div>

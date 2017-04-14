@@ -36,7 +36,7 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 
 4. Consider creating a backup before proceeding. Open the task below to learn how.
 
-    <div class="panel panel-video" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#backup-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
       </div>

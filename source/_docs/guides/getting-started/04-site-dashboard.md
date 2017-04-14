@@ -44,7 +44,7 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
 4. Take a few minutes to familiarize yourself with the other tabs and links on the Site Dashboard, or click below for a guided tour:
 
-    <div class="panel panel-video" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#site-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: Site Dashboard</h3></a>
       </div>
