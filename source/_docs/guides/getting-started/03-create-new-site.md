@@ -18,8 +18,8 @@ editpath: 03-create-new-site.md
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 
-      <div class="panel panel-video" id="accordion">
-      <div class="panel-heading panel-video-heading">
+<div class="panel panel-video" id="accordion">
+    <div class="panel-heading panel-video-heading">
         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Watch: Create New Site</h3></a>
       </div>
       <div id="ssh-task" class="collapse" style="padding:10px;">
