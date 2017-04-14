@@ -28,7 +28,7 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 
 2. Now let’s create a new page! If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Posts/) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a page to your site.
 
-3. When you’re done, navigate back to your Site Dashboard. Click the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev tab, and open your **Dev** site by clicking **Visit Development Site**.
+3. When you’re done, navigate back to your Site Dashboard. Click the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab, and open your Dev site by clicking **Visit Development Site**.
 
   Notice that the page you just created on your <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live site doesn’t appear here on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
 
