@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 subtitle: Site Dashboard
-guidetoc: true
 guidepage: true
 anchorid: site-dashboard
 generator: pagination
