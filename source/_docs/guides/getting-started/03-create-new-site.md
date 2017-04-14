@@ -19,6 +19,15 @@ editpath: 03-create-new-site.md
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 
+ <div class="panel panel-video" id="accordion">
+      <div class="panel-heading panel-video-heading">
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Watch: Create New Site</h3></a>
+      </div>
+      <div id="ssh-task" class="collapse" style="padding:10px;">
+        <script src="//fast.wistia.com/embed/medias/6fvbeowg58.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+      </div>
+    </div>
+
 1. Navigate to the **Sites** tab of your User Dashboard.
 
 2. Select **+ Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
