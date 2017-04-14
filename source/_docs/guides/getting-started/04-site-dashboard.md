@@ -21,7 +21,7 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
 1. Navigate to the **Site Dashboard**.
 
-  Every Pantheon site comes with 3 separate environments— <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev, <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test, <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live—which are represented by tabs on your dashboard.
+  Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
@@ -32,58 +32,57 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
   Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
 
-2. Navigate to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. This environment is for reviewing the changes made in your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment with the most recent content from your live site.
+2. Navigate to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
-To use the <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment for this purpose, you first push new code “up” from your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment and clone recent content “down” from your <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment.
+  To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
-![Pantheon Workflow](/source/docs/assets/images/workflow.png)
+  ![Pantheon Workflow](/source/docs/assets/images/workflow.png)
 
 3. Navigate to the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab. This environment is for your live site, where content creators actively post and upload media files.
 
-After passing review, you push your new code “up” from the <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment to this <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment.
+  After passing review, you push your new code “up” from the Test environment to this Live environment.
 
-4. Take a few minutes to familiarize yourself with the other tabs and links on the <span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Site Dashboard, or click below for a guided tour:
+4. Take a few minutes to familiarize yourself with the other tabs and links on the Site Dashboard, or click below for a guided tour:
 
     <div class="panel panel-video" id="accordion">
       <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard</h3></a>
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#site-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: Site Dashboard</h3></a>
       </div>
-    <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
-      <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+      <div id="site-dashboard-tour" class="collapse" style="padding:10px;">
+        <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+      <hr>
+      <div markdown="1">- **Workflows:** View workflows that are active or recently completed.
+
+      - **<span class="glyphicons glyphicons-group" aria-hidden="true"></span> Teams:** Add or remove Team Members, as well as Supporting Organizations.
+
+      - **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span> Settings:** Select or modify a plan. Invite a business owner to pay for this plan. Add billing information. Enable or disable add-ons, including Solr and Redis. Delete your site, or view basic information about site, including PHP version.
+
+      - **<span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev:** Access unlimited cloud development environments.
+
+      - **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+
+      - **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+
+      - **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
+
+      - **<span class="glyphicons glyphicons-flag" aria-hidden="true"></span> Support:**  View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
     <hr>
-    <div markdown="1">    
-    - **Workflows:** View workflows that are active or recently completed.
+     The following links are located within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev, <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test, and <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment tabs:
 
-    - **<span class="glyphicons glyphicons-groups" aria-hidden="true"></span> Teams:** Add or remove Team Members, as well as Supporting Organizations.
-
-    - **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span> Settings:** Select or modify a plan. Invite a business owner to pay for this plan. Add billing information. Enable or disable add-ons, including Solr and Redis. Delete your site, or view basic information about site, including PHP version.
-
-    - **<span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev:** Access unlimited cloud development environments.
-
-    - **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
-
-    - **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
-
-    - **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live:** Access the codebase, database, and files for your <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment. Link to the site or site admin dashboard. Modify security settings, access connection information, or clear caches.
-
-    - **<span class="glyphicons glyphicons-flag" aria-hidden="true"></span> Support:**  View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
-
-   The following links are located within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev, <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test, and <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live environment tabs:
-
-    - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.
-    - **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
-    - **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys:** View a deploy log for the environment.
-    - **<span class="glyphicons glyphicons-git-branch" aria-hidden="true"></span> Merge:** If you have a <span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev environment, use this tab to merge branches into your master branch. (This tab is only accessible within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.)
-    - **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span> Status:** Check this page on a regular basis (especially before you go live the first time) to catch common problems and follow best-practice recommendations for site configuration.
-    - **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files:** Workflow tools are provided to clone your database and files between environments with the click of a button.
-      - **Clone:** Clone the database and/or files from one environment to another.
-      - **Import:** Replace your current database and files with an archive.
-      - **Export:** Package and download your database and files in an archive.
-      - **Wipe:** Reset the database and files, and start fresh with your codebase.
-    - **<span class="glyphicons glyphicons-warning-sign" aria-hidden="true"></span> Errors:** Check this page to see if there are any critical PHP errors on your site. You can find more error logs by connecting via SFTP.
-    - **<span class="glyphicons glyphicons-home" aria-hidden="true"></span> Domains:** Add custom domains to your site. (This feature is only available on paid plans.)
-    - **<span class="glyphicons glyphicons-lock" aria-hidden="true"></span> HTTPS:** Enable SSL and manage a certificate. (This feature is only available on paid plans.)
-    - **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups:** Create a back of the environment.
+      - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.
+      - **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
+      - **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys:** View a deploy log for the environment.
+      - **<span class="glyphicons glyphicons-git-branch" aria-hidden="true"></span> Merge:** If you have a <span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev environment, use this tab to merge branches into your master branch. (This tab is only accessible within your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev environment.)
+      - **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span> Status:** Check this page on a regular basis (especially before you go live the first time) to catch common problems and follow best-practice recommendations for site configuration.
+      - **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files:** Workflow tools are provided to clone your database and files between environments with the click of a button.
+        - **Clone:** Clone the database and/or files from one environment to another.
+        - **Import:** Replace your current database and files with an archive.
+        - **Export:** Package and download your database and files in an archive.
+        - **Wipe:** Reset the database and files, and start fresh with your codebase.
+      - **<span class="glyphicons glyphicons-warning-sign" aria-hidden="true"></span> Errors:** Check this page to see if there are any critical PHP errors on your site. You can find more error logs by connecting via SFTP.
+      - **<span class="glyphicons glyphicons-home" aria-hidden="true"></span> Domains:** Add custom domains to your site. (This feature is only available on paid plans.)
+      - **<span class="glyphicons glyphicons-lock" aria-hidden="true"></span> HTTPS:** Enable SSL and manage a certificate. (This feature is only available on paid plans.)
+      - **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups:** Create a back of the environment.
+      </div>
     </div>
-    </div>
-</div>
+  </div>

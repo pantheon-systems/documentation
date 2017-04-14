@@ -16,15 +16,15 @@ previousurl: getting-started/site-dashboard/
 previouspage: Site Dashboard
 editpath: 05-create-test-live.md
 ---
-In this lesson, we’re going to to create our <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test site and our <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live site, which we just learned about in the previous lesson.
+In this lesson, we’re going to to create our Test site and our Live site, which we just learned about in the previous lesson.
 
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
-  <p>If you haven’t completed the installation of your <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev site, return to <a href=
+  <p>If you haven’t completed the installation of your Dev site, return to <a href=
   "/docs/guides/getting-started/create-new-site">Create New Site</a>, and do this now, before proceeding.</p>
 </div>
 
-1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. Here you’ll have access to your <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.
+1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.
 
   This takes a few moments.
 
