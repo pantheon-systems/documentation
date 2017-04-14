@@ -72,10 +72,14 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-    <div class="alert alert-info">
-     <h4 class="info">Understand: Deploy Commits to Test</h4>
-     <p markdown="1">Test is separate environment from Dev, with its own codebase, database and media files.  When you deploy code from Dev, the platform leverages Git to pull code changes to your Test environment. At the same time, for testing, you can also pull files and the database from the Live environment.  It is best practice to write a deploy log message each time, but this is not mandatory.</p>
-     </div>
+     <div class="panel panel-video" id="accordion">
+       <div class="panel-heading panel-video-heading">
+          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy Commits to Test</h3></a>
+        </div>
+        <div id="understand-deploy" class="collapse" style="padding:10px;">
+          <p markdown="1">Test is separate environment from Dev, with its own codebase, database and media files.  When you deploy code from Dev, the platform leverages Git to pull code changes to your Test environment. At the same time, for testing, you can also pull files and the database from the Live environment.  It is best practice to write a deploy log message each time, but this is not mandatory.</p>
+        </div>
+      </div>
 
 11. When the deployment finishes, click **Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
