@@ -55,7 +55,7 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
       </div>
       <div id="backup-task" class="collapse" style="padding:10px" markdown="1;">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-      1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+      1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test tab of your Site Dashboard.
       2. Click **Create New Backup**.
      </div>
    </div>
