@@ -18,7 +18,7 @@ nextpage: User Dashboard
 editpath: 01-introduction.md
 completiontime: 1 hour
 ---
-Welcome! This guide is designed to get you started on Pantheon. It should take less than an hour to complete.
+Welcome! This guide is designed to get you started on Pantheon.
 
 **In this guide, you'll learn how to:**
 
