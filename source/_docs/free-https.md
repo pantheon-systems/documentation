@@ -92,14 +92,19 @@ You're likely already issuing 301 redirects via the WordPress `wp-config.php` fi
     <tr>
       <th></th>
       <th>Legacy</th>
-      <th>Free & Automated</th>
+      <th>Next Generation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <th>Plans</th>
+      <td>Pro and Above</td>
+      <td>Pro and Above</td>
+    </tr>
+    <tr>
       <th>Price</th>
       <td>$30/mo per environment</td>
-      <td>Free for all environments</td>
+      <td>Free for Live Environments</td>
     </tr>
     <tr>
       <th>Certificate type</th>
@@ -144,7 +149,7 @@ You're likely already issuing 301 redirects via the WordPress `wp-config.php` fi
       <td>Global CDN</td>
     </tr>
     <tr>
-      <th><a href="/docs/timeouts/#timeouts-that-are-not-configurable">Timeouts</a></th>
+      <th><a href="/docs/timeouts/#timeouts-that-are-not-configurable">Request Timeouts</a></th>
       <td>120 seconds</td>
       <td>60 seconds</td>
     </tr>
