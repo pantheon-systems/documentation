@@ -31,8 +31,9 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the following steps, otherwise [manually migrate](/docs/migrate-manual) the site.
 
-<ol><li>Use <a href="/docs/terminus">Terminus</a> and the <code>--tar-options</code> flag:<br><br>
-<pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; <span class="hljs-string">ard <b>--tar-options="--exclude=code/sites/default/files"</b> --destination=code/sites/default/files/&lt;RANDOM_HASH&gt;.tgz</span></code></pre></li></ol>
+1. Use [Terminus](/docs/terminus) and the `--tar-options` flag:
+
+        terminus drush <site>.<env> ard --tar-options="--exclude=code/sites/default/files" --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
