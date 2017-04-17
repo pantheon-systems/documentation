@@ -10,7 +10,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Get to Know Pantheon
 
-- [Getting Started](/docs/get-started)
+- [Getting Started](/docs/guides/getting-started/)  
 - [Using the Pantheon Workflow](/docs/pantheon-workflow/)
 - [All About Application Containers](/docs/application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)

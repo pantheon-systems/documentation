@@ -28,3 +28,15 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+
+    gettingstartedpages:
+        type: path
+        path: docs/guides/getting-started
+        permalink: pretty
+        singular_name: gettingstartedpage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors
