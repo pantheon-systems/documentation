@@ -75,6 +75,10 @@ $ wraith
     wraith validate [config_name]             # checks your configuration and validates that all required properties exist
 ```
 
+### Install Wraith on Windows
+
+See Wraith's [installation guide](http://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
+
 ## Configure and Run Wraith
 
 Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
