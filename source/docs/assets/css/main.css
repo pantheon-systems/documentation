@@ -3483,6 +3483,15 @@ li.terminus-usage {
 .terminus-pager a {
   text-decoration: none;
 }
+.pager-guides > li > a {
+  background-color: #47738F!important;
+  color: #fff!important;
+  font-weight: bold!important;
+  border: none!important;
+}
+.pager-guides > li > a:hover {
+  opacity: 0.65;
+}
 .terminus-plugin {
   margin: 10px;
 }
