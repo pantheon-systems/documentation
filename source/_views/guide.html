@@ -11,9 +11,6 @@
   {% endif %}
     <header>
       <h1>{{ page.subtitle }}</h1>
-      {% if page.completiontime %}
-      <div style="float:right;"><small><strong><span style="line-height:1.65em;" class="glyphicons glyphicons-clock" aria-hidden="true"></span> Time to complete:</strong> {{ page.completiontime }}</small></div>
-      {% endif %}
       {% if page.contributors %}
       {% set contributor_list = page.contributors %}
       <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
@@ -55,6 +52,9 @@
             </script>
             <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
             <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
+            {% if page.completiontime %}
+            <div style="float:left;"><small><strong><span style="line-height:1.65em;" class="glyphicons glyphicons-clock" aria-hidden="true"></span> Time to complete:</strong> {{ page.completiontime }}</small></div><br>
+            {% endif %}
       <hr style="margin-top:10px;margin-bottom:10px;">
     </header>
       {{ page.blocks.content|raw }}
