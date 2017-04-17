@@ -38,10 +38,7 @@ For more information, please see our [Local Development](/docs/local-development
 
 You can develop directly on our servers with SFTP Connection Mode. It’s particularly useful for updating and adding plugins/modules directly from within your site.
 
-<div class="alert alert-info">
-     <h4 class="info">Note</h4>
-     <p markdown="1">Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures all changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.</p>
-     </div>
+Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures _all_ changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
