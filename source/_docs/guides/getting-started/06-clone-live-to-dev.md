@@ -59,3 +59,5 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 7. Click **Clone the Database & files from Live into the Development Environment**.
 
 8. When this is complete, click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Development Site** to confirm that the content you created on your Live site now appears on your Dev site.
+
+Nice work! You added a page to your Live site, then cloned this environment "down" to Dev. Your Dev environment is a safe place for editing code, and now it's up-to-date with your latest content.
