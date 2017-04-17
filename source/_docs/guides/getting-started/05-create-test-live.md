@@ -28,8 +28,8 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
   This takes a few moments.
 
-2. Now click **Visit Test Site**. This will open your Test site in a new browser tab with the URL *test-YOURSITE.pantheonsite.io*.
+2. Now click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
 3. Navigate back to your Site Dashboard, and click the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab. Here again you need to create the environment. Do this now by clicking **Create Live Environment**.
 
-4. This time, while we wait, let’s navigate to **Workflows** . In the dropdown you’ll find your active workflow as well as those workflows we’ve completed to this point.
+4. This time, while we wait, let’s click on **Workflows <span class="glyphicons glyphicons-chevron-down" aria-hidden="true"></span>** In the dropdown you’ll find your active workflow as well as those workflows we’ve completed to this point.

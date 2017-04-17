@@ -18,9 +18,9 @@ previouspage: Connection Modes
 
 In this lesson, we’ll make changes to our Dev site, review these changes on our Test site, then deploy them in Live.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
-2. Now log in to your Dev site by clicking the **Visit Admin** button.
+2. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Admin** button.
 
 3. Install a _new_ theme (i.e., not a theme that came pre-packaged with your site).
 
@@ -77,11 +77,11 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
         </div>
       </div>
 
-11. When the deployment finishes, click **Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
+11. When the deployment finishes, click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
 12. Activate/enable your theme now. Again, if you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
-13. Review your Test site. Does everything look correct? If yes, navigate to **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys** on the <span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live tab of your Site Dashboard.
+13. Review your Test site. Does everything look correct? If yes, navigate to **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys** on the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab of your Site Dashboard.
 
 14. Add a Deploy Log Message (optional), then click **Deploy Code from Test to Live Environment**.
 

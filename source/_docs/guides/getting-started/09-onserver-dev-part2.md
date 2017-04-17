@@ -17,7 +17,7 @@ previouspage: On-Server Dev, Part 1
 editpath: 09-onserver-dev-part2.md
 ---
 
-In this lesson, we’re going to edit code directly. We’ll commit our edits to **Dev**, review in **Test**, and deploy to **Live**. Let’s get started!
+In this lesson, we’re going to edit code directly. We’ll commit our edits to **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev**, review in **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test**, and deploy to **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live**. Let’s get started!
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -42,9 +42,9 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdown="1">Click the highlighted file changes in the **Dev** environment, and you can view the specific _diff_.  
+    <p markdown="1">Click the highlighted file changes in the Dev environment, and you can view the specific diff.  
     </p></div>
 
-7. Add a commit message, then click **Commit** to add these files to your **Dev** environment.
+7. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-8. Deploy your changes to the **Test** environment and review them. When you’re satisfied, deploy to the **Live** environment.
+8. Deploy your changes to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** environment and review them. When you’re satisfied, deploy to the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** environment.

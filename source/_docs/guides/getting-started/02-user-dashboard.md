@@ -59,7 +59,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
     <div markdown="1">
     - **<span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-     - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
+     - **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
      - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/docs/migrate-manual).
 

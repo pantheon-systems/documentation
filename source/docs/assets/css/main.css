@@ -813,7 +813,6 @@ a.cta.cta-yellow:hover {
   background-color: #fff !important;
   color: #000 !important;
   box-shadow: none !important;
-  border: 1px solid #000 !important;
 }
 
 #dropmenu .active-trail:hover {
@@ -3384,24 +3383,40 @@ display: block;
   list-style-type:none;
 
 }
+.manual-guide-toc a {
+  background: #fff;
+  color: #44525E;
+  text-decoration: none;
+  list-style-type: none;
+
+
+}
+.manual-guide-toc ul {
+
+}
+.manual-guide-toc li {
+  list-style-type:none;
+  font-size:16px !important;
+
+}
 
 .invisible-manual-toc {
   background: #fff !important;
   height:10px;
 
 }
-.manual-toc > li > a:hover {
+.manual-guide-toc > li > a:hover {
   color: #44525E;
   text-decoration: none;
   border-right: 4px solid #DDE5E7;
   padding:10px 10px 10px 30px;
 
 }
-.manual-toc .active-trail > li > a:hover {
+.manual-guide-toc .active-trail > li > a:hover {
   background-color: #EEF2F3 !important;
 
 }
-.manual-toc .active-trail {
+.manual-guide-toc .active-trail {
   font-weight:bold;
   background-color: #EEF2F3;
   color: #44525E;
@@ -3410,6 +3425,27 @@ display: block;
 
 
 }
+.manual-guide-toc > li > a:hover {
+  color: #44525E;
+  text-decoration: none;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
+
+}
+.manual-guide-toc .active-trail > li > a:hover {
+  background-color: #EEF2F3 !important;
+
+}
+.manual-guide-toc .active-trail {
+  font-weight:bold;
+  background-color: #EEF2F3;
+  color: #44525E;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
+
+
+}
+
 .panel-default>.panel-heading {
   background-color: #fff !important;
 
@@ -3427,6 +3463,22 @@ display: block;
 
 }
 .manual-toc .child .active-trail {
+  padding:10px 10px 10px 40px !important;
+
+}
+.manual-guide-toc a {
+  padding:10px 10px 10px 30px;
+  display: block;
+}
+.manual-guide-toc .child a {
+  padding:10px 10px 10px 40px;
+
+}
+.manual-guide-toc .child a:hover {
+  padding:10px 10px 10px 40px;
+
+}
+.manual-guide-toc .child .active-trail {
   padding:10px 10px 10px 40px !important;
 
 }
@@ -3448,6 +3500,11 @@ border-left: solid 2px #eef2f3;
   background: #fff;
   padding:0px;
 }
+.manual-guide-toc {
+  background: #fff;
+  padding:0px;
+}
+
 .manual-body {
   width: 70%;
   float: right;
@@ -4328,7 +4385,6 @@ a.cta:after:hover {
 a.cta.cta-yellow {
   background: #EFD01B !important;
   color: #000 !important;
-  border: 1px solid #000 !important;
 }
 a.cta.cta-yellow:hover,
 a.cta.cta-yellow:after:hover {

@@ -11,6 +11,9 @@
   {% endif %}
     <header>
       <h1>{{ page.subtitle }}</h1>
+      {% if page.completiontime %}
+      <div style="float:right;"><small><strong><span style="line-height:1.65em;" class="glyphicons glyphicons-clock" aria-hidden="true"></span> Time to complete:</strong> {{ page.completiontime }}</small></div>
+      {% endif %}
       {% if page.contributors %}
       {% set contributor_list = page.contributors %}
       <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>

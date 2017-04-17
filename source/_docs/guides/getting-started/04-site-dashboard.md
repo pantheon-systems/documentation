@@ -19,13 +19,13 @@ editpath: 04-site-dashboard.md
 
 In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Test, Live workflow.
 
-1. Navigate to the **Site Dashboard**.
+1. Navigate to the Site Dashboard.
 
   Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>Agencies have access to additional development environments under the <span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev tab.
+    <p>Agencies have access to additional development environments under the <strong><a href="/docs/multidev"><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</a></strong> tab.
     </p></div>
 
   By default, you’ll find yourself on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
@@ -36,7 +36,9 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
   To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
-  ![Pantheon Workflow](/source/docs/assets/images/workflow.png)
+    <p style="text-align:center;">
+    <img align="center" src="/source/docs/assets/images/workflow.png" style="max-width:650px;" alt="Pantheon Workflow">
+    </p>
 
 3. Navigate to the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab. This environment is for your live site, where content creators actively post and upload media files.
 
