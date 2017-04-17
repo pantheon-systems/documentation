@@ -21,7 +21,7 @@ Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 Before you change your PHP version, ensure that your CMS and all of your themes, modules and plugins are up-to-date. Older software is more likely to contain code that is incompatible with recent PHP versions.
 
 ## Configure PHP Version
-Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. Your `pantheon.yml` file will look like the following:
+Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. When using SFTP mode, navigate to the `code` directory. Your `pantheon.yml` file will look like the following:
 
 ```yaml
 api_version: 1
@@ -34,6 +34,8 @@ Now your site’s PHP version is determined via `pantheon.yml`, and managed in v
 The next time you [push your changes](/docs/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
 ### Verify Changes
+
+#### Git Mode
 
 The first place to determine if your changes have been successful is the output from your `git push` command. A correct implementation will return:
 
@@ -58,6 +60,16 @@ remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
 ```
 
 Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
+
+#### SFTP Mode
+
+When you upload a new or modified `pantheon.yml` file in SFTP mode, your side dashboard will detect the changes:
+
+![The Site Dashboard sees changes to pantheon.yml](/source/docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
+
+If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. In the example below we've attempted to set the PHP version to 12:
+
+![The Site Dashboard doesn't commit invalid changes](/source/docs/assets/images/dashboard/pantheon-yml-failure-sftp.png)
 
 ## Troubleshoot Post-Upgrade Errors
 
