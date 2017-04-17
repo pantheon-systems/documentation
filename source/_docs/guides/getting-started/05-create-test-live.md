@@ -33,3 +33,5 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 3. Navigate back to your Site Dashboard, and click the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab. Here again you need to create the environment. Do this now by clicking **Create Live Environment**.
 
 4. This time, while we wait, let’s click on **Workflows <span class="glyphicons glyphicons-chevron-down" aria-hidden="true"></span>** In the dropdown you’ll find your active workflow as well as those workflows we’ve completed to this point.
+
+Congratulations! You now have 3 copies of your site running in 3 separate environments: Dev, Test, and Live.
