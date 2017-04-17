@@ -14,8 +14,11 @@ Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dash
 ## Upgrade Your Site
 
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
-2. Wait for HTTPS provisioning to complete (may take up to an hour).
-3. Once HTTPS is ready, you will see action required on the **Domains & HTTPS** tab for each environment, with instructions to configure DNS for each custom domain.  
+2. Navigate to the **Domains and HTTPS** on the Live environment and wait for HTTPS provisioning to complete (may take up to an hour).
+3. Once HTTPS is ready, you will see action required with instructions to configure DNS for each custom domain:
+
+  ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
+
 4. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required.
 
     <div class="panel panel-default">
