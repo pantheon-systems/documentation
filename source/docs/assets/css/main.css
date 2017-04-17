@@ -775,9 +775,8 @@ code.command::before {
   text-transform: uppercase;
   padding: 25px 0;
 }
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 995px) {
   #navbar > ul > li{
-    height: 87px;
   }
 }
 
@@ -863,21 +862,46 @@ li.create-account {
     padding-right: 0;
   }
 }
-@media (max-width: 998px) {
-  .pio-docs-nav .navbar-nav > li > a {
-    padding: 13px 10px 10px;
+@media (max-width: 995px) {
+  .navbar-header {
+      float: none;
   }
-  .navbar-nav .dropdown:after {
-    display: none;
+  .navbar-left,.navbar-right {
+      float: none !important;
   }
-
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
   body {
-    padding-top: 83px;
-  }
-  .pio-docs-nav .navbar-toggle {
-    margin-top: 25px;
+    padding-top: 100px !important;
   }
 }
+
 .pantheon-logo {
   max-width: 215px;
 }
@@ -1073,7 +1097,7 @@ span#changelog-rsaquo {
     font-size:12px;
   }
 }
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 995px) {
   .pio-docs-nav .navbar-nav > li > a {
 
   }
@@ -1107,7 +1131,18 @@ span#changelog-rsaquo {
 }
 
 
-@media (max-width: 767px){
+@media (max-width: 995px){
+
+.sub-menu-top {
+  padding: 20px;
+  background: #181D21;
+  padding: 15px 20px;
+}
+.sub-menu-bottom {
+  background:#313945;
+  padding: 15px 20px;
+}
+
   .float-foot {
     height:110px !important;
   }
@@ -1515,7 +1550,7 @@ margin-bottom: 40px !important;  }
 .pio-docs-header .container {
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-docs-header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1591,7 +1626,7 @@ margin-bottom: 40px !important;  }
     margin-top: 30px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-docs-featurette {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1637,7 +1672,7 @@ margin-bottom: 40px !important;  }
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-docs-featured-sites .col-sm-3:first-child img {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -1842,7 +1877,7 @@ color: #222222;
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .back-to-top,
   .pio-docs-theme-toggle {
     display: block;
@@ -2023,7 +2058,7 @@ h1[id] {
   border-radius: 3px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .color-swatch {
     width: 100px;
     height: 100px;
@@ -2182,7 +2217,7 @@ h1[id] {
 }*/
 
 /* Make the examples and snippets not full-width */
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-example {
     margin-right: 0;
     margin-left: 0;
@@ -2599,7 +2634,7 @@ img.clippy {
 .pio-navbar-bottom-example .navbar {
   margin-bottom: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-navbar-top-example .navbar-fixed-top,
   .pio-navbar-bottom-example .navbar-fixed-bottom {
     position: absolute;
@@ -2861,7 +2896,7 @@ pre code .hljs,
   background-color: #563d7c;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-glyphicons {
     margin-right: 0;
     margin-left: 0;
@@ -3049,7 +3084,7 @@ cursor: pointer;
   background-color: #d9534f;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .pio-brand-item {
     display: table-cell;
     width: 1%;
@@ -3092,7 +3127,7 @@ cursor: pointer;
   border-color: #563d7c;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .zero-clipboard {
     display: block;
   }
@@ -4527,7 +4562,7 @@ a.topic-info-link {
     background-position: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 995px) {
   .row-topics-list.row-topics-list-main {
     display:block;
   }
@@ -4942,18 +4977,6 @@ opacity: 0.9;
   }
 }
 
-@media (min-width: 768px) and (max-width: 998px) {
-  .navbar-nav .dropdown:after {
-    display: none;
-  }
-  .navbar-nav .dropdown > a:after {
-    display: none;
-  }
-  body {
-    padding-top: 160px;
-  }
-
-}
 @media (max-width: 400px) {
   .helpful__text {
     display: block;
@@ -4961,21 +4984,27 @@ opacity: 0.9;
   }
 }
 
-@media screen and (max-width : 767px) {
+@media screen and (max-width : 995px) {
   .manual-doc {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .navbar-nav .dropdown:hover .dropdown-menu li > a {
+  .navbar-nav .dropdown .dropdown-menu li > a {
     color: #fff;
-  }
-  #changelogs {
+    font-family: Avenir-Heavy;
+    font-size: 14px;
     color: #fff;
-    font-size: 16px !important;
-
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-transform: initial;
+    display: inline-block;
   }
-  #changelogs:hover {
-    color: #EFD01B !important;
+  .navbar-nav .dropdown .dropdown-menu li {
+    margin-bottom:15px;
+  }
+  .navbar-nav .dropdown .dropdown-menu {
+    width: 100%;
+    top: 20px;
 }
   a.cta {
     border: none !important;
@@ -4989,6 +5018,17 @@ opacity: 0.9;
     color: #EFD01B;
     background-color: #44525e;
     box-shadow: none !important;
+  }
+  .navbar-nav .dropdown:hover .dropdown-menu li > a:hover {
+    text-decoration: none;
+    color:#EFD01B;
+  }
+  .navbar-nav .dropdown .dropdown-menu li {
+    margin-bottom: 15px;
+    text-transform: initial;
+  }
+  .navbar-nav .dropdown .dropdown-menu li:last-child {
+    margin-bottom: 0px;
   }
   #dropmenu .active-trail {
     color:#EFD01B !important;
@@ -5049,9 +5089,6 @@ div.navsearch-container {
   .pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover {
     color: #EFD01B !important;
     box-shadow: none !important;
-  }
-  .navbar-nav .dropdown .dropdown-menu {
-    display: none;
   }
   .navbar-nav .dropdown > a {
     display: inline-block;
