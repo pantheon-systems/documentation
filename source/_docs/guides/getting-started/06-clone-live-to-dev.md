@@ -44,8 +44,6 @@ In this lesson, we’ll explore your Live site and add a page to simulate work o
 
       1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
       2. Click **Create New Backup**.
-
-     Paid plans can enable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day for your weekly backup.
      </div>
     </div>
 
