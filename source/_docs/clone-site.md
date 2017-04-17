@@ -20,7 +20,8 @@ After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/mi
 terminus drush <site>.<env> -- ard --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 ```
 
-This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`).
+This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
+
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
 <p markdown="1">We reccomend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates). We also advise prompt removal of archive files once you've completed the migration.</p>
