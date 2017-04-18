@@ -48,7 +48,7 @@ For details, see the [Optimize command](http://solarium.readthedocs.org/en/stabl
 ### Schema.xml
 Upon activation of the plugin on the Dev or Multidev environment, a default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document is automatically sent to the Solr server. The `schema.xml` file is submitted automatically when deploying the plugin to another environment on Pantheon.
 
-You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
+You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4><p markdown="1"> Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.</p>
