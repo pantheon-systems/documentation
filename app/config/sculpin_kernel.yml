@@ -41,3 +41,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    cachecontrolpages:
+        type: path
+        path: docs/cache-control
+        permalink: pretty
+        singular_name: gettingstartedpage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors

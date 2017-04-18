@@ -5,9 +5,9 @@
 <div class="col-md-12 mb-70 guide-nav">
   {% include("guide_navbar.html") %}
   {% if page.guidetoc %}
-    <div class="col-xs-12 col-md-7 guide-doc-body">
+    <div class="col-xs-12 col-md-6 guide-doc-body">
   {% else %}
-    <div class="col-xs-12 col-md-10 guide-doc-body">
+    <div class="col-xs-12 col-md-9 guide-doc-body">
   {% endif %}
     <header>
       <h1>{{ page.subtitle }}</h1>
@@ -61,10 +61,10 @@
       <div class="terminus-pager">
         <hr>
         {% if page.nexturl %}
-          <ul class="pagination pager-guides" style="float:right;"><li><a href="/docs/guides/{{ page.nexturl }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Continue</a></li></ul>
+          <ul class="pagination pager-guides" style="float:right;"><li><a href="/docs/{{ page.nexturl }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Continue</a></li></ul>
         {% endif %}
         {% if page.previousurl %}
-          <ul class="pagination pager-guides" style="float:left;"><li><a href="/docs/guides/{{ page.previousurl }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Previous</a></li></ul>
+          <ul class="pagination pager-guides" style="float:left;"><li><a href="/docs/{{ page.previousurl }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Previous</a></li></ul>
         {% endif %}
 
       </div>

@@ -10,9 +10,9 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/onserver-dev-part2/
-nexturl: getting-started/next-steps/
+nexturl: guides/getting-started/next-steps/
 nextpage: Next Steps
-previousurl: getting-started/onserver-dev-part1/
+previousurl: guides/getting-started/onserver-dev-part1/
 previouspage: On-Server Dev, Part 1
 editpath: 09-onserver-dev-part2.md
 image: getting-started-Largethumb

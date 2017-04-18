@@ -76,6 +76,19 @@ function setActivetrail() {
       if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
         $('#docs-guides-getting-started').removeClass('active-trail');
       }
+      if(/\/hit.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-cache').removeClass('active-trail');
+      }
+      if(/\/miss.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-cache').removeClass('active-trail');
+      }
+      if(/\/test.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-cache').removeClass('active-trail');
+      }
+      if(/\/cc.*/.test(aaObj[i].href)>=1) {
+        $('#docs-guides-cache').removeClass('active-trail');
+      }
+
     }
   }
 }
