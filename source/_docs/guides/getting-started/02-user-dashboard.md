@@ -32,11 +32,11 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
     SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience, and it makes life easier for people who prefer to use the command line.
 
-  Are you ready to add a SSH key? Expand the task below:
+  If you're ready to add an SSH key, just expand the task below:
 
     <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Generate and Add SSH Keys</h3></a>
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Generate and Add SSH Keys (optional)</h3></a>
       </div>
       <div id="ssh-task" class="collapse" style="padding:10px;">
         <script src="//fast.wistia.com/embed/medias/wwrjwsivwa.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
@@ -51,7 +51,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
     <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard</h3></a>
+        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Tour: User Dashboard (optional)</h3></a>
       </div>
     <div id="user-dashboard-tour" class="collapse" style="padding:10px;">
       <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
@@ -87,3 +87,5 @@ In this lesson, we’re going to explore the User Dashboard and add information 
     </div>
     </div>
 </div>
+
+Nice work! You just explored Pantheon's User Dashboard and updated your Profile. When you're ready, you may continue to the next lesson.
