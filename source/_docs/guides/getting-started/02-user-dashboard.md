@@ -32,7 +32,7 @@ In this lesson, we’re going to explore the User Dashboard and add information 
 
     SSH public-key authentication is optional, but it’s a best-practice way to securely authenticate with remote systems. It relies on a pair of unique encrypted keys for enhanced security and convenience, and it makes life easier for people who prefer to use the command line.
 
-  If you're ready to add a SSH key, just expand the task below:
+  If you're ready to add an SSH key, just expand the task below:
 
     <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
