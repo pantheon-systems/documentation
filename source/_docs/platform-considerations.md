@@ -144,3 +144,12 @@ See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) f
 Sandbox sites that are over a year old that have not had code commits or other Git activity for 6 months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
 You can reactivate a site with a single click. Simply visit the site's Dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard.
+
+## Emoji Support
+
+Emoji support is available on WordPress and Drupal 8. On Drupal 7 sites, emojis will return this database error:
+
+    PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x94\xB4\x0D\x0A...'
+
+The `utf8mb4` character encoding needed for emojis is not supported on Drupal 7 sites on our platform. The provided workaround on drupal.org is not possible on Pantheon as it would cause adverse effects on other sites, since all sites share the same `my.cnf` configuration. To resolve this issue, consider the [Strip 4-byte UTF8](https://www.drupal.org/project/strip_utf8mb4) module to reject overly long byte sequences.
+ 
