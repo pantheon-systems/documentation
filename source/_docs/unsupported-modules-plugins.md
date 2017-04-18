@@ -326,7 +326,9 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
-
+### [Visual Composer: Page Builder](https://vc.wpbakery.com/)
+**Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
+<hr>
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
 **Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
