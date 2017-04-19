@@ -3,6 +3,9 @@
 
 <html itemscope itemtype="http://schema.org/Article">
 <head>
+    <!-- Asks bots not to index  -->
+    <meta name="robots" content="noindex, nofollow">
+
     <!-- Quickie redirection to https and pantheon.io -->
     <script type="text/javascript">
   if (window.location.hostname == 'localhost' ||
@@ -37,7 +40,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}{{ page.title }} | {{ site.title }}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Schema.org markup for Google+ -->
