@@ -47,12 +47,6 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 8. We want to review the new theme with the content we added previously, so check the box for **Pull files and the database from the Live environment**.
 
-  <div class="alert alert-danger" role="alert">
-    <h4 class="info">Warning</h4>
-    <p>As intended, this action will overwrite your Test database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
-  </div>
-
-
 9. Consider creating a backup before proceeding:
 
   The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
@@ -60,6 +54,11 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
     1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab of your Site Dashboard.
     2. Click **Create New Backup**.
     <br><br>
+
+    <div class="alert alert-danger" role="alert">
+      <h4 class="info">Warning</h4>
+      <p>As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.</p>
+    </div>
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
