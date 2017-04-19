@@ -50,7 +50,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   # Update redirect logic for the Multidev environment
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+  sed -i '12i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
