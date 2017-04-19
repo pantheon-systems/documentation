@@ -37,7 +37,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 1.  When you first load the Pingdom dashboard, it will try to guide you through adding your website, and creating checks. Because this guide explains how to manually create checks, we suggest you skip this.
 
-2.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation's **Monitoring** > **Uptime** sub-menu, click on **Add Uptime Check**:
+2.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation's **Monitoring** > **Uptime** sub-menu, click on **Add uptime check**:
 
     ![My.pingdom.com dashboard](/source/docs/assets/images/integrations/dashboard.png)
 
