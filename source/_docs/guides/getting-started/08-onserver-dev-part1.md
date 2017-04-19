@@ -47,29 +47,24 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 8. We want to review the new theme with the content we added previously, so check the box for **Pull files and the database from the Live environment**.
 
-9. Consider creating a backup before proceeding. Open the task below to learn how.
+9. Consider creating a backup before proceeding:
 
-    <div class="panel panel-video panel-guide" id="accordion">
-      <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#backup-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
-      </div>
-      <div id="backup-task" class="collapse" style="padding:10px" markdown="1;">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+  The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-      1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab of your Site Dashboard.
-      2. Click **Create New Backup**.
-     </div>
-   </div>
+    1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab of your Site Dashboard.
+    2. Click **Create New Backup**.
+    <br><br>
 
     <div class="alert alert-danger" role="alert">
       <h4 class="info">Warning</h4>
-      <p>As intended, this action will overwrite your Test database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
+      <p>As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.</p>
     </div>
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
     <div class="panel panel-video panel-guide" id="accordion">
        <div class="panel-heading panel-video-heading">
-          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Understand: Deploy Commits to Test</h3></a>
+          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Deploy Commits to Test</h3></a>
         </div>
         <div id="understand-deploy" class="collapse" style="padding:10px;">
           <p markdown="1">Test is a separate environment from Dev, with its own codebase, database, and media files.  When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.</p>
