@@ -99,8 +99,8 @@ Start a chat with our Support Team to request assistance on issues within our [s
  - Links to screenshots or screencasts of the behavior, if necessary.
 
 <div class="alert alert-info" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">Some ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.</p>
+<h4 class="info">Note</h4>
+<p markdown="1">Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.</p>
 </div>
 
 ## Ticket Support
