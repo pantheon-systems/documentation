@@ -19,7 +19,7 @@ editpath: 04-site-dashboard.md
 
 In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Test, Live workflow.
 
-1. Navigate to the Site Dashboard.
+1. Navigate back to the Pantheon **Site Dashboard**.
 
   Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
@@ -55,7 +55,7 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
       <hr>
       <div markdown="1">- **Workflows:** View workflows that are active or recently completed.
 
-      - **<span class="glyphicons glyphicons-group" aria-hidden="true"></span> Teams:** Add or remove Team Members, as well as Supporting Organizations.
+      - **<span class="glyphicons glyphicons-group" aria-hidden="true"></span> Team:** Add or remove Team Members, as well as Supporting Organizations.
 
       - **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span> Settings:** Select or modify a plan. Invite a business owner to pay for this plan. Add billing information. Enable or disable add-ons, including Solr and Redis. Delete your site, or view basic information about site, including PHP version.
 
@@ -71,11 +71,11 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
     <hr>
      The following links are located within your Dev, Test, and Live environment tabs:
 
-      - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment.
+      - **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment. (This link is only accessible within your Dev environment.)
       
-      - **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
+        - **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
       
-      - **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys:** View a deploy log for the environment.
+      - **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys:** View a deploy log for the environment. (This link is only accessible within your Test and Live environments.)
       
       - **<span class="glyphicons glyphicons-git-branch" aria-hidden="true"></span> Merge:** If you have a Multidev environment, use this tab to merge branches into your master branch. (This tab is only accessible within your Dev environment.)
       
@@ -97,7 +97,7 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
       
       - **<span class="glyphicons glyphicons-lock" aria-hidden="true"></span> HTTPS:** Enable SSL and manage a certificate. (This feature is only available on paid plans.)
       
-      - **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups:** Create a back of the environment.
+      - **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups:** Create a backup of the environment.
       
         - **Backup Log:** View existing backups of the environment. Click the <span class="glyphicons glyphicons-download-alt" aria-hidden="true"></span> download icon to download individual archives within a backup.
         
