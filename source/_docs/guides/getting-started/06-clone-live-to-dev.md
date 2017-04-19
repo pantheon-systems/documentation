@@ -34,18 +34,13 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
 
-4. Consider creating a backup before proceeding. Open the task below to learn how.
+4. Consider creating a backup before proceeding:
 
-    <div class="panel panel-video panel-guide" id="accordion">
-      <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#backup-task"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Task: Create a backup</h3></a>
-      </div>
-      <div id="backup-task" class="collapse" style="padding:10px" markdown="1;">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+  The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-      1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
-      2. Click **Create New Backup**.
-     </div>
-    </div>
+    1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+    2. Click **Create New Backup**.
+    <br><br>
 
 5. On the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard click **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files**.
 

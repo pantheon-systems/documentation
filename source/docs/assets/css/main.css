@@ -2377,14 +2377,14 @@ a.panel-video-title {
     font-family: 'Glyphicons Halflings';
     content: "\e114";
     float: left;
-    line-height: .75;
+    line-height: .65;
     padding-right: 10px;
     color: #222;
 }
 .panel-heading .accordion-toggle.collapsed:before {
     content: "\e080";
     float: left;
-    line-height: .75;
+    line-height: .65;
     padding-right: 10px;
     color: #222;
 }
