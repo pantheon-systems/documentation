@@ -160,7 +160,7 @@ Requests received after 30 days will require loading a certificate and private k
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Follow the steps to upgrade and send the [HSTS header](/docs/hsts/) as described above.
+Follow the steps to upgrade and send the [HSTS header](/docs/hsts/) as described.
 
 ### Are wildcard certificates supported?
 No, but you don’t need a wildcard certificate to secure communications for multiple domains because we will automatically deploy certificates for all domains on your site.
