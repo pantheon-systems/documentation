@@ -86,12 +86,12 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
 
 For more information see the FAQ section below in this document.
 
-# Enabling Next Generation HTTPS Service
+## Enabling Next Generation HTTPS Service
 
-## Find Eligible Sites in the Dashboard
+### Find Eligible Sites in the Dashboard
 Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dashboard or use the **HTTPS Upgrade** search facet in the [Organization Dashboard](/docs/organization-dashboard/#filter-sites) to filter eligible sites.
 
-## Upgrade Your Site
+### Upgrade Your Site
 
 1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
 2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait an additional 60 minutes before updating DNS.
@@ -128,8 +128,6 @@ Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.co
       <h4 class="info">Pro Tip</h4>
 Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
-
-## Troubleshooting
 
 ## Frequently Asked Questions
 
