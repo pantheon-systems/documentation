@@ -84,7 +84,9 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
   </tbody>
 </table>
 
-# Next Generation HTTPS Service
+For more information see the FAQ section below in this document.
+
+# Enabling Next Generation HTTPS Service
 
 ## Find Eligible Sites in the Dashboard
 Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dashboard or use the **HTTPS Upgrade** search facet in the [Organization Dashboard](/docs/organization-dashboard/#filter-sites) to filter eligible sites.
@@ -169,7 +171,10 @@ No, but you don’t need a wildcard certificate to secure communications for mul
 No, please take a moment to fill out the [HTTPS survey](https://www.getfeedback.com/r/LETtb3QV) if you require Extended Validation.
 
 ### Is the CDN configurable? Do I get access to hit rates or other statistics?
-No, we pre-configured the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not available.
+No, we pre-configured the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not currently available.
+
+### What About Personal Plans?
+We share Let's Encrypt's goal of making HTTPS the standard for all sites on the internet, which means making it the standard for all sites on Pantheon. However, at this time we are focused on our existing HTTPS customers (Pro plans and above), and there's a considerable amount of work in making sure the new solution meets their needs, and that we are able to deprecate the legacy edge. There is not yet a timeline for providing HTTPS service to Personal plans.
 
 ## Glossary
 
