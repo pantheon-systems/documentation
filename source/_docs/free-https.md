@@ -118,14 +118,14 @@ Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dash
 3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
 
     <div class="alert alert-info">
-    <h3 class="info">Pro Tip</h3>
+    <h4 class="info">Pro Tip</h4>
 Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
 </div>
 
-DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propogation.
+  DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propogation.
 
       <div class="alert alert-info">
-      <h3 class="info">Pro Tip</h3>
+      <h4 class="info">Pro Tip</h4>
 Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
 
