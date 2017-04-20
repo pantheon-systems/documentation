@@ -1,6 +1,6 @@
 ---
 title: Require HTTPS with the HSTS Header
-description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
+description: Enforce HTTPS communications on supported browsers using the HTTP Strict Transport Security header.
 tags: [security]
 ---
 Set the HTTP Strict Transport Security (HSTS) header to send all communications over HTTPS and prevent use of HTTP. Not only does this help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/), it will help protect your website against protocol downgrade attacks and cookie hijacking. For additional details on this header, see [HTTP Strict Transport Security Cheat Sheet](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet).		
