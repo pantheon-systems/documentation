@@ -96,11 +96,11 @@ Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dash
 
   ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
 
-If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change.
+  If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change.
 
     <div class="panel panel-default">
       <div class="panel-heading">
-      <a data-proofer-ignore data-toggle="collapse" data-target="#test-locally"><h3 class="panel-title" style="cursor:pointer;">Test Certificate Locally (Optional) <span class="caret"></h3></a>
+      <a data-proofer-ignore data-toggle="collapse" data-target="#test-locally"><h3 class="panel-title" style="cursor:pointer;">Test Certificate Locally (Optional) <span class="caret"></span></h3></a>
       </div>
       <div id="test-locally" class="collapse" style="padding:10px;">
       <p>If you would like to test locally before configuring your domain's DNS to use Pantheon's Free and Automated HTTPS:</p>
