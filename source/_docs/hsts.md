@@ -37,14 +37,14 @@ strict-transport-security: max-age=31536000
 
 ## Drupal 7
 
-1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules)> or with [Terminus](/docs/terminus):
+1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/docs/terminus):
 
   ```bash
   terminus remote:drush <site>.<env> -- pm-enable hsts --yes
   ```
 
 2. Visit the module configuration page (`/admin/config/security/hsts`).
-3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age<** to **15552000** and click **Save Configuration**.
+3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to **15552000** and click **Save Configuration**.
 
 Once installed and configured, the following header will be sent in responses:
 
