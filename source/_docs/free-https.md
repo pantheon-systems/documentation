@@ -3,13 +3,13 @@ title: Early Access: Free and Automated HTTPS
 earlyaccess: true
 description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
 ---
-Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This includes the addition of a global CDN (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features. 
+Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This includes the addition of a global CDN (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features.
 
 ## Let's Encrypt Certificates
-Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge. 
+Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge.
 
 ## Global CDN
-The new service terminates HTTPS and serves all traffic through our new globally distributed content delivery network (CDN). This means that many if not most requests for resources on Pantheon can be served from a location much closer to the end-user, which can speed up the time to render a web-page significantly. The impact will vary depending on the site and where the user is, but we expect almost all users to see at least some benefit. 
+The new service terminates HTTPS and serves all traffic through our new globally distributed content delivery network (CDN). This means that many if not most requests for resources on Pantheon can be served from a location much closer to the end-user, which can speed up the time to render a web-page significantly. The impact will vary depending on the site and where the user is, but we expect almost all users to see at least some benefit.
 
 ## Eligibility
 As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are elegible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
@@ -59,7 +59,7 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
     <tr>
       <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
       <td>A</td>
-      <td>A+ <a href="#http-strict-transport-security-header">with HSTS</a></td>
+      <td>A+ <a href="/docs/hsts/">with HSTS</a></td>
     </tr>
     <tr>
       <th>Protocol</th>
@@ -162,7 +162,7 @@ Requests received after 30 days will require loading a certificate and private k
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Follow the steps to upgrade and send the [HSTS header](#http-strict-transport-security-header) as described above.
+Follow the steps to upgrade and send the [HSTS header](/docs/hsts/) as described above.
 
 ### Are wildcard certificates supported?
 No, but you don’t need a wildcard certificate to secure communications for multiple domains because we will automatically deploy certificates for all domains on your site.
