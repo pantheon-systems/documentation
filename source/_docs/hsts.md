@@ -7,6 +7,7 @@ Set the HTTP Strict Transport Security (HSTS) header to send all communications 
 
 ## WordPress
 1. Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus):
+
   ```bash
   terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate
   ```
@@ -19,6 +20,7 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 ## Drupal 8
 1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/docs/terminus):
+
   ```bash
   terminus remote:drush <site>.<env> -- pm-enable hsts --yes
   ```    
