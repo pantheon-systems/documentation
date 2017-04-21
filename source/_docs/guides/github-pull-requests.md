@@ -201,7 +201,7 @@ In this workflow, Composer should also always be used to install new modules and
     terminus drush my-pantheon-project.pr-slogan -- pm-enable pathauto --yes
     ```
 
-3.  In Drupal 8, the set of enabled modules is also part of the exportable configuration set. That means we can track enabled modules in Composer with the  **Update** tab in the **Configuration Synchronization** section of the Drupal admin interface, as we did in step 2 of the [Configure Your Site Through Drupal's Admin Interface](#configure-your-site-through-drupal%27s-admin-interface) section. Alternately, this same operation may be done from the command line using Terminus and Drush:
+3.  In Drupal 8, the set of enabled modules is also part of the exportable configuration set. That means we can track enabled modules in Composer with the  **Update** tab in the **Configuration Synchronization** section of the Drupal admin interface, as we did in step 2 of the [Configure Your Site Through Drupal's Admin Interface](#configure-your-site-through-drupals-admin-interface) section. Alternately, this same operation may be done from the command line using Terminus and Drush:
 
     ```bash
     terminus drush my-pantheon-project.pr-slogan -- config-export --yes
