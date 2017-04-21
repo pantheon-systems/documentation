@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/14/2017
-
+contributors: scottmassey
 ---
 
 Monitoring services, such as [Pingdom](https://www.pingdom.com/), allow those responsible for site performance and uptime to know when a website is having problems delivering content. Pingdom provides several different types of uptime and performance checks.
