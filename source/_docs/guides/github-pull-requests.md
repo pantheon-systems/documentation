@@ -1,14 +1,15 @@
 ---
-title: Using GitHub Pull Requests with Composer on Pantheon
+title: Using GitHub Pull Requests with Composer and Drupal 8
 description: Use GitHub and Composer to manage modules and other dependencies for Drupal 8 sites on Pantheon.
 tags: [workflow]
 categories: [drupal8]
+permalink: docs/guides/:basename/
 contributors:
   - greg-1-anderson
   - stevector
 ---
 
-This guide describes how to use GitHub and Circle CI with Composer to implement a collaborative team-based Continuous Integration workflow using pull requests for a Drupal 8 site on Pantheon.
+This guide describes how to use GitHub and Circle CI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for a Drupal 8 site on Pantheon.
 
 <div class="row">
   <div style="margin-bottom:30px;" class="col-md-4">
@@ -19,7 +20,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
       </div>
       <div class="terminus-plugin">
         <h3 class="plugin-title">GitHub</h3>
-          <p class="topic-info__description"><a href="https://github.org">GitHub</a> is an online service that provides cloud storage Git repositories that may be cloned and used locally or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
+          <p class="topic-info__description"><a href="https://github.org">GitHub</a> is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
       </div>
     </div>
   </div>
@@ -49,7 +50,9 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
   </div>
 </div>
 
-*Pull requests* are a formalized way of reviewing and merging a proposed set of changes to a codebase. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before *merging* the pull request. In the workflow set up in this guide, a multidev environment is created for each pull request branch. Work in these environments can also be committed back to the same branch for review on GitHub. When done, the result is merged into the dev environment.
+*Pull requests* are a formalized way of reviewing and merging a proposed set of changes to a codebase. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before *merging* the pull request.
+
+In the workflow set up in this guide, a multidev environment is created for each pull request branch. Work in these environments can also be committed back to the same branch for review on GitHub. When done, the result is merged into the dev environment.
 
 ![Multidev PR workflow](/source/docs/assets/images/pr-workflow/multidev-git-pr-workflow.png)
 
@@ -73,7 +76,7 @@ Generally, use of Composer is optional; however, some Drupal modules, such as th
     - The [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin#installation).
     - The [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin#installation).
 
-<br>
+    <br>
 2.  Generate a [machine token](/docs/machine-tokens/) and [log in with Terminus](/docs/terminus/install/#authenticate).
 
 ## Set Up a New Project
@@ -82,27 +85,27 @@ Setting up multiple distributed services can be complicated, and, at the moment,
 
 In this section we'll create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
 
-1.  To begin, create a new project:
+To begin, create a new project:
 
-    ```bash
-    terminus build-env:create-project my-pantheon-project
-    ```
+```bash
+terminus build-env:create-project my-pantheon-project
+```
 Replace `my-pantheon-project` with the name of your new site.
 
-2.  The `create-project` command will prompt for any additional information it may need to set up the build workflow. The required information needed includes:
+The `create-project` command will prompt for any additional information it may need to set up the build workflow. The required information needed includes:
 
-    - GitHub [personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
-    - Circle CI [personal API token](https://circleci.com/account/api).
-    - Password for the CMS admin account, used to log in to your test environments.
-    - The Pantheon team the site should be associated with (recommended).
+- GitHub [personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
+- Circle CI [personal API token](https://circleci.com/account/api).
+- Password for the CMS admin account, used to log in to your test environments.
+- The Pantheon team the site should be associated with (recommended).
 
-    Answer the questions when prompted, as shown below:
+Answer the questions when prompted, as shown below:
 
-    ![Create Project Prompts](/source/docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
+![Create Project Prompts](/source/docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
 
-    You can avoid prompting by providing the necessary information either via [environment variables](https://github.com/pantheon-systems/terminus-build-tools-plugin#credentials) or command line options. Run `terminus help build-env:create-project`, or see the [Terminus Build Tools Plugin project page](https://github.com/pantheon-systems/terminus-build-tools-plugin) for more information.
+You can avoid prompting by providing the necessary information either via [environment variables](https://github.com/pantheon-systems/terminus-build-tools-plugin#credentials) or command line options. Run `terminus help build-env:create-project`, or see the [Terminus Build Tools Plugin project page](https://github.com/pantheon-systems/terminus-build-tools-plugin) for more information.
 
-    Once you have provided the required information, the rest of the process is automatic. Once your site is ready, the URL to your project page on GitHub will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project.
+Once you have provided the required information, the rest of the process is automatic. Once your site is ready, the URL to your project page on GitHub will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project.
 
 ## Your Project Page
 
@@ -133,7 +136,7 @@ When using the Composer pull request workflow, you should never modify your dev 
 3.  Once you are finished editing the configuration file, describe the change you made in the "Commit Changes" area. Then, click on the radio button to create a new branch and give it a short name, like `slogan`. Click on `Propose file change`:
 
     ![Create slogan branch](/source/docs/assets/images/pr-workflow/create-slogan-branch.png)
-    
+
     Always select a unique branch name; the multidev environment created will be named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon multidev name, your environments may conflict if you always use the branch name that GitHub suggests.
 
 4.  On the pull request page, click on `Create pull request`.
@@ -148,7 +151,7 @@ When using the Composer pull request workflow, you should never modify your dev 
 
     ![Site initial login](/source/docs/assets/images/pr-workflow/pr-slogan-site.png)
 
-    This site will persist for as long as the branch exists.
+    This site will persist for as long as the pull request remains exists.
 
 ## Configure Site via the Admin Interface
 
@@ -168,19 +171,19 @@ While it is possible to configure your site by editing the exported configuratio
 
 Once the Pantheon dashboard finishes committing the code, visit your project page on GitHub. Go to your `slogan` pull request. Note that your commit has been added to this pull request, and the Circle CI status indicates that your tests are running. Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository. GitHub will then start a new Circle CI build, and the build results will once again be pushed to the existing multidev environment that was created for this branch. You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
 
-## Update your Project
+## Update Your Project
 
 When using the Composer workflow, you should *never* use the Pantheon dashboard to update changes from your upstream, nor should you ever merge code from one environment to another. All code updates will be done using Composer. Composer commands (e.g. `composer update`) may be run directly against your Pantheon multidev environments using the Terminus Composer plugin.
 
-If you would like to copy the commands used in the examples below directly into your terminal, export environment variables to define the site name and multidev environment that you are using:
+If you would like to copy the commands used in the examples below directly into your terminal, export environment variables to define your site name and multidev environment:
 ```
 export SITE=my-pantheon-project
 export ENV=pr-slogan
 ```
-1.  Use the following command, replacing `my-pantheon-project` with your site name, and `pr-slogan` with the branch name (if different):
+1.  Using Terminus, update your site with Composer:
 
     ```bash
-    terminus composer $SITE.$ENV --update
+    terminus composer $SITE.$ENV -- update
     ```
 
     The example below shows a site that was installed with Drupal 8.3.0, and updated to Drupal 8.3.1 after that version was released using Composer.
@@ -193,7 +196,7 @@ export ENV=pr-slogan
 
 ## Add a New Module
 
-In this workflow, Composer should also always be used to install new modules and themes on your site. Never use the Drupal **Extend** -> **Install new module** feature, nor should you use `drush pm-download`, as neither of these techniques modify the `composer.json` file, which means that modules added this way will disappear the next time the build artifacts are pushed to your Pantheon multidev environment.
+In this workflow, Composer should also always be used to install new modules and themes on your site. Never use the Drupal **Extend** -> **Install new module** feature or `drush pm-download`, as neither of these techniques modify the `composer.json` file. Modules added using these methods will disappear the next time the build artifacts are pushed to your Pantheon multidev environment.
 
 1.  In this example, we'll install [Pathauto](https://www.drupal.org/project/pathauto) on a Pantheon multidev environment using the Terminus Composer Plugin.
 
@@ -227,90 +230,113 @@ In this workflow, Composer should also always be used to install new modules and
 
 ## Create a Custom Theme
 
-A custom theme is the most convenient way to add css styles or alter the markup produced by modules. Most Drupal sites will have a custom theme to customize the appearance of the site. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on drupal.org; however, simple theme may be created quite easily using Drupal Console. The example below creates a subtheme of Bartik to allow for simple css changes for demonstration purposes. Note that usually, themes will subclass either `classy` or `stable`, which provide a blank slate to start from.
+A custom theme is the most convenient way to add css styles or alter the markup produced by modules. Most Drupal sites will have a custom theme to differentiate the appearance of the site. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on drupal.org.
 
-Run the `generate:theme` command as shown below to start the process of creating a subtheme.
-```
-terminus drupal $SITE.$ENV -- generate:theme
-```
-Drupal Console will ask a series of questions about your theme. Answer these quesions as follows:
+A simple theme may be created quite easily using Drupal Console. The example below creates a subtheme of [Bartik](https://www.drupal.org/project/bartik) to allow for simple css changes for demonstration purposes. Note that usually, themes will subclass either `classy` or `stable`, which provide a blank slate to start from.
 
-- Theme: Amazing Theme
-- Base theme: bartik
-- Enter 'no' to generate theme regions and theme breakpoints
+1.  Run the `generate:theme` command as shown below to start the process of creating a subtheme.
 
-Select the default answer for all other questions, and enter `yes` when asked to confirm generation of the theme. Once you do this, the files for your new theme will be written to the directory `themes/custom/amazing_theme`. If you gave your theme a different name, replace `amazing_theme` with the appropriate name for your theme.
+    ```
+    terminus drupal $SITE.$ENV -- generate:theme
+    ```
+    Drupal Console will ask a series of questions about your theme. For many of them you can use the default value by just hitting **Enter**. Answer these quesions as follows:
 
-Use an SFTP client to access the generated theme files in [Pantheon's on-server development mode](https://pantheon.io/docs/sftp/). Find the file `core/theme/bartik/bartik.info.yml`, and open it in an editor. Copy all of the regions from this file, and paste them into the file `amazing_theme.info.yml`. Optionally, you might also want to copy the file `core/theme/bartik/logo.svg` into your theme folder.
+    - Theme: Amazing Theme
+    - Base theme: bartik
+    - Enter 'no' to generate theme regions and theme breakpoints
 
-Next, create a file named `amazing_theme.libraries.yml`, and put the following contents in it:
-```
-global-styling:
-  version: VERSION
-  css:
-    theme:
-      css/main.css: {}
-```
-Create a folder named `css` in your theme directory and create a file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as the red border around the content region shown in the example below:
-```
-#content {
-  border: 4px solid red;
-}
-```
-Use Terminus with Drupal Console and Drush to active your new theme and rebuild the cache:
-```
-terminus drupal $SITE.$ENV theme:install --set-default amazing_theme
-terminus drush $SITE.$ENV -- cache-rebuild
-```
-When you view your site in the web browser, it should reflect the change provided by the custom theme.
+    Type `yes` when asked to confirm generation of the theme. Once you do this, the files for your new theme will be written to the directory `code/web/themes/custom/amazing_theme`. If you gave your theme a different name, replace `amazing_theme` with the appropriate name for your theme.
 
-![Modified css](/source/docs/assets/images/pr-workflow/modified-css.png)
+2.  Use an SFTP client to access the generated theme files in [Pantheon's on-server development mode](https://pantheon.io/docs/sftp/). Find the file `code/web/core/theme/bartik/bartik.info.yml`, and open it in an editor. Copy the `regions:` section, and paste it into the file `code/web/themes/custom/amazing_theme/amazing_theme.info.yml`. Optionally, you might also want to copy the file `code/web/core/theme/bartik/logo.svg` into your theme folder.
 
-Visit your Pantheon dashboard and commit your change.
+3.  In your new theme's directory, create a file named `amazing_theme.libraries.yml`, and put the following contents in it:
+
+    ```
+    global-styling:
+      version: VERSION
+      css:
+        theme:
+          css/main.css: {}
+    ```
+4.  Create a folder named `css` in your theme directory and create a file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as the red border around the content region shown in the example below:
+
+    ```
+    #content {
+      border: 4px solid red;
+    }
+    ```
+
+    Remember to upload your updated files back to the server over SFTP.
+
+5.  Use Terminus with Drupal Console and Drush to active your new theme and rebuild the cache:
+
+    ```
+    terminus drupal $SITE.$ENV -- theme:install --set-default amazing_theme
+    ```
+
+    When you view your site in the web browser, it should reflect the change provided by the custom theme.
+
+    ![Modified css](/source/docs/assets/images/pr-workflow/modified-css.png)
+
+6.  Export your configuration, and visit your multidev Site dashboard and commit your changes.
 
 ## Behat Tests
 
-As you have already seen, the template project used to create your site included some basic Behat tests that cover some of Drupal's basic capabilities. You can customize these tests or add more to suit your purposes. The file `tests/behat-pantheon.yml` controls where tests files may be stored. By default, `tests/features` and `tests/site-features` are the defined search location, but you may add more directories if you would like to organize your tests. Any file with a `.feature` suffix will be executed as part of the standard test run.
+As you have already seen, the template project used to create your site included some basic [Behat](http://behat.org/en/latest/) tests that cover some of Drupal's basic capabilities. You can customize these tests or add more to suit your purposes. The file `code/tests/behat-pantheon.yml` controls where tests files are stored. By default, `code/tests/features` and `code/tests/site-features` are the defined search location, but you may add more directories if you would like to organize your tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run.
 
-To confirm that your site's configuration has been applied to the test site, you could add a test to check that the site slogan is correct. Create the directory `tests/site-features` and create a new file inside it called `slogan.feature`. Give it the following contents:
-```bash
-Feature: Confirm that configuration was applied
-  In order to know that the Drupal configuration was correctly applied for the tests
-  As a website developer
-  I need to be able to confirm that the site slogan is correct
+To confirm that your site's configuration has been applied to the test site, add a test to check that the site slogan is correct.
 
-  @api
-  Scenario: Add a basic page
-    Given I am on "/"
-    Then I should see "Making the world amazing"
-```
-It is a relatively simple tasks to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site. Create a new file called “content-ui.feature”, and save it in the tests/site-features folder. Give it the following contents:
-```bash
-Feature: Create Content through Drupal Content UI
-  In order to know that the Drupal content UI is working
-  As a website administrator
-  I need to be able to add a basic page
+1.  Create the directory `code/tests/site-features` and create a new file inside it called `slogan.feature`. Add the following contents:
 
-  @api
-  Scenario: Add a basic page
-    Given I am logged in as a user with the "administrator" role
-    And I am on "/node/add/page"
-    And I enter "Test Page" for "Title"
-    And I press "Save and publish"
-    Then I should see "Basic page Test Page has been created."
-```
-By following this pattern, you can add similar tests to confirm that the most important features of your site remain functional. To save time on test runs, remove the example tests that cover basic Drupal features, and only run tests on your core functionality.
+    ```bash
+    Feature: Confirm that configuration was applied
+      In order to know that the Drupal configuration was correctly applied for the tests
+      As a website developer
+      I need to be able to confirm that the site slogan is correct
 
-Note, however, that if you create content through a Behat `and I press` phrase, it will not automatically be deleted when your test run is complete. If you write these sorts of tests, you might want to also consider writing tests that delete that content you created, to avoid many copies of the same test content from piling up in your multidev environment. If you do not do this, though, this test content will disappear after your pull request is closed or merged.
+      @api
+      Scenario: Add a basic page
+        Given I am on "/"
+        Then I should see "Making the world amazing"
+    ```
+It's a relatively simple tasks to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
+
+2.  Create a new file called `content-ui.feature`, and save it in the `code/tests/site-features` folder. Give it the following contents:
+
+    ```bash
+    Feature: Create Content through Drupal Content UI
+      In order to know that the Drupal content UI is working
+      As a website administrator
+      I need to be able to add a basic page
+
+      @api
+      Scenario: Add a basic page
+        Given I am logged in as a user with the "administrator" role
+        And I am on "/node/add/page"
+        And I enter "Test Page" for "Title"
+        And I press "Save and publish"
+        Then I should see "Basic page Test Page has been created."
+    ```
+    By following this pattern, you can add similar tests to confirm that the most important features of your site remain functional. To save time on test runs, remove the example tests that cover basic Drupal features, and only run tests on your core functionality.
+
+3.  Upload your new tests over SFTP, and commit them on the multidev Site Dashboard.
+
+### Behat Test Artifacts
+
+If you create content through a Behat `And I press` phrase, it usually will not be automatically deleted when your test run is complete. Tests that execute custom or non-standard forms may create content that Behat does not know how to remove automatically, and tests that are validated by the existence of this content may show false positives on multiple runs, since the content was created previously.
+
+If you write these sorts of tests, consider writing tests to delete the content they create, to avoid many copies of the same test content from piling up in your multidev environment.
 
 ## Merge your Pull Request
 
-Once you have done enough work on your pull request, eventually it will be complete and will be ready to merge back in to the master branch. Go to your GitHub project page, click on the `Pull Request` tab and open your pull request. Note that your tests have completed, and the test results are green.
+Once you have completed work on your pull request, it will be ready to merge back in to the master branch.
 
-![Passed pull request](/source/docs/assets/images/pr-workflow/slogan-pr-passed.png)
+1.  Go to your GitHub project page, click on the **Pull requests** tab and open your pull request. Check if your tests have completed, and the test results are green If they haven't completed, just wait a few minutes. If they failed, go back and review the changes you made.
 
-Once your tests have passed, and there is nothing else that you wish to add to this particular feature, you should merge the pull request. Click on the `Merge pull request` button to do this.
+    ![Passed pull request](/source/docs/assets/images/pr-workflow/slogan-pr-passed.png)
 
-When your pull request is merged, one more test run will be started to test the result of combining the code and configuration from your pull request with the master branch. Once this test also passes, the configuration for your site will be applied to the dev environment, your PR multidev environment will be deleted. Note that database content is not merged; make sure that you have exported your configuration before merging your pull request to ensure that configuration changes are not lost.
+2.  Once your tests have passed, and there is nothing else that you wish to add to this particular feature, click on the **Merge pull request**.
+
+    When your pull request is merged, one more test run will be started to test the result of combining the code and configuration from your pull request with the master branch. Once this test passes, the configuration for your site will be applied to the dev environment, and your PR multidev environment will be deleted. Note that database content is not merged; make sure that you have exported your configuration before merging your pull request to ensure that configuration changes are not lost.
 
 You may now use the [Pantheon dev / test / live workflow](https://pantheon.io/docs/pantheon-workflow/) to deploy your site as usual.
