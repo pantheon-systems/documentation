@@ -5,7 +5,7 @@ tags: [create]
 categories: [wordpress]
 ---
 
-You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
+WordPress site networks are accessible for Elite plans. Contact your EOM to enable a new network. You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
 
 ## Migrating Site Networks to Pantheon
 
