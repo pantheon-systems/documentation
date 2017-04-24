@@ -31,13 +31,13 @@ The Site Dashboard runs `wp search-replace` during the cloning workflow to updat
 
 To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning:
 ```
-terminus wp:remote <env>.<site> -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
+terminus remote:wp <env>.<site> -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
 ```
 
 The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
 
 ```
-terminus wp:remote <env>.<site> -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
+terminus remote:wp <env>.<site> -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
 ```
 
 ### Base table or view not found
