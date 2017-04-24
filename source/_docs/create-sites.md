@@ -8,17 +8,18 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 ## Create a Site
 
-1. From your User Dashboard, click **Create New Site**.
-2. Name your site. 
-  <div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p>The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
-  </p></div>
-3. If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
-4. Click **Create Site**.
-5. Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [private distributions](/docs/custom-upstream) available on the platform.
-6. Click **Visit your Pantheon Dashboard**.
-7. Click **Visit Development Site** and complete the installation process for the selected framework.
+1.  From your User Dashboard, click **Create New Site**.
+2.  Name your site.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p>The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
+    </p></div>
+3.  If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
+4.  Click **Create Site**.
+5.  Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [private distributions](/docs/custom-upstream) available on the platform.
+6.  Click **Visit your Pantheon Dashboard**.
+7.  Click **Visit Development Site** and complete the installation process for the selected framework.
  ![Visit development site button](/source/docs/assets/images/dashboard/visit-development-site.png)
 
 ## Free Sites
