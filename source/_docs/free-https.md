@@ -12,7 +12,7 @@ Let's Encrypt is a free, automated, and open certificate authority that aims to 
 The new service terminates HTTPS and serves all traffic through our new globally distributed content delivery network (CDN). This means that many if not most requests for resources on Pantheon can be served from a location much closer to the end-user, which can speed up the time to render a web-page significantly. The impact will vary depending on the site and where the user is, but we expect almost all users to see at least some benefit.
 
 ## Eligibility
-As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are elegible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
+As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are eligible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
 
 ## Next Generation vs Legacy HTTPS
 <table class="table  table-bordered table-responsive">
