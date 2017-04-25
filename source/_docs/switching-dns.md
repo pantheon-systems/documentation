@@ -12,18 +12,16 @@ There are some scenarios (e.g. a redesigned site) where you may want to switch a
 </div>
 
 
-## 1) Prepare the New Site, once it is ready for launch
+## Prepare The New Site
+
 For information on preparing your site for launch, please review our [Going Live best practices](/docs/going-live/).
 
 ### Select a site plan
-<div>
-<ol>
-<li>Go to the Site Dashboard of your New Site.</li>
-<li> Navigate to <b>Settings<b> > <b>Billing</b> </li>
-<li> Select existing credit card on file or add a new credit card.</li>
-<li>To select a paid plan, navigate to <b>Plan</b>, select a paid plan and click <b>Update Plan</b>.</li>
-</ol>
-</div>
+
+1.  Go to the Site Dashboard of your New Site.
+2.  Navigate to **Settings** > **Billing**
+3.  Select existing credit card on file or add a new credit card.
+4.  To select a paid plan, navigate to **Plan**, select a paid plan and click **Update Plan**.
 
 ### Enable HTTPS (Optional)
 If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) on the new site before proceeding.
@@ -38,23 +36,23 @@ Since the same domain cannot be added to more than one environment, you will nee
 <p>The temporary domain you add within the new site does not need to be a registered domain. It's purpose is to determine the new DNS values required when switching the domain.</p>
 </div>
 
-## 2) Prepare your DNS Settings
+## Prepare your DNS Settings
 ### Lower the Time to Live (TTL)
-The TTL dictates the lifespan of a DNS record - a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds - a few common ones are 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour). 
+The TTL dictates the lifespan of a DNS record - a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds - a few common ones are 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
 When you make a change to the TTL you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere.
 
 * Log in to the DNS host for your domain and lower the TTL of the bare domain and www records. If possible, set the TTL to "automatic" or "0 seconds" for more efficient propagation.
 
-## 3) Switch the Domains
+## Switch the Domains
 
-In order to minimize a disruption in site access, open the Dashboard for both the currently launched site and the new site so you can quickly delete and add. 
+In order to minimize a disruption in site access, open the Dashboard for both the currently launched site and the new site so you can quickly delete and add.
 
 ### Remove the Domain(s) from the Launched Site
-* From the Site Dashboard of the old site, go to the Live Environment and to the Domains tab. 
+* From the Site Dashboard of the old site, go to the Live Environment and to the Domains tab.
 * Remove the domain and subdomains you will be moving to the new site.
 
 ### Add the Domain(s) to the New Site
-* From the Site Dashbard of the new site, go to the Live Environment and to the Domains tab. 
+* From the Site Dashbard of the new site, go to the Live Environment and to the Domains tab.
 * Add the custom domains
 * Under DNS Recommendations, quickly verify that you have the correct DNS records
 * For more information on adding domains, refer to our guide on [Domains](/docs/domains/)
@@ -63,7 +61,7 @@ In order to minimize a disruption in site access, open the Dashboard for both th
 * Update your DNS provider with the recommended records from above.
 
 
-## 4) Verify your changes
+## Verify Your changes
 
 Your New Site is now live and receiving web traffic (although it may take a bit for the DNS settings to propagate)
 You can verify the changes by using dig:
@@ -71,21 +69,20 @@ You can verify the changes by using dig:
 ```bash
 $ dig +short sitename.com
 93.184.216.34
-$ dig +short sitename.com
-live-sitename.pantheonsite.io
-
- ```
+$ dig +short www.sitename.com
+fe3.edge.pantheon.io.
+```
 or by visiting [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
 
-## 5) Downgrade Old Site
+## Downgrade Old Site
 
-* Once you've confirmed that the new site is live, you can return to old site and downgrade the plan to *sandbox (free)".
+- Once you've confirmed that the new site is live, you can return to old site and downgrade the plan to **sandbox (free)**.
 
-If you're using an existing credit card profile for billing, the credit from the sandbox downgrade will apply as a prorated payment for your new site. 
-As long as you use the same card/site owner the credit will be carried over automatically. 
+If you're using an existing credit card profile for billing, the credit from the sandbox downgrade will apply as a prorated payment for your new site.
+As long as you use the same card/site owner the credit will be carried over automatically.
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>If you are changing the card or the site owner, <a href="https://pantheon.io/support" target="_blank">let us know</a> when everything is switched over, and we'll apply that credit to the new account. 
+<p markdown="1">If you are changing the card or the site owner, [let us know](https://pantheon.io/support) when everything is switched over, and we'll apply that credit to the new account.
 Please do not remove the old credit card from your account until after the transfer has been made.</p>
 </div>
