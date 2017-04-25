@@ -329,6 +329,20 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 ### [Visual Composer: Page Builder](https://vc.wpbakery.com/)
 **Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
 <hr>
+### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
+**Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
+
+![WooZone Error](/source/docs/assets/images/woozone-error.png)
+
+**Solution**: Add the following line to `wp-config.php`:
+
+    define('WP_MEMORY_LIMIT', '256M');
+
+**Issue #2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editible in Test and Live
+
+**Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
+
+<hr>
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
 **Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
