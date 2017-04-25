@@ -6,21 +6,18 @@ type: guide
 permalink: docs/:basename/
 draft: true
 date: 4/25/2017
-
 ---
-
-## CircleCI
 
 Continuous Integration services such as [CircleCI](https://circleci.com) allow developers to automate the process of testing code. This insures that, if a thorough testing suite is defined, errors are caught before the code is deployed.
 
-## What you will build
+## What You Will Build
 
 In this guide, we will start with a [repository](https://github.com/pantheon-systems/example-drops-8-composer) containing the configuration for Drupal 8, [Drush](http://docs.drush.org/en/master), [Drupal Console](https://drupalconsole.com), all of which [Composer](https://getcomposer.org) will install. Also included is a simple example of a Behat [test suite](https://github.com/pantheon-systems/example-drops-8-composer/tree/master/tests) and other required configuration files. We will move this to a new GitHub repository and configure CircleCI.
 
 When code is submitted for deployment, CircleCI will create a testing environment and run a suite of tests. If tests pass, the code can be merged into the master branch of the codebase. Before this merge happens, CircleCI will repeat the testing process against the production branch.
- 
 
-## What you’ll need
+
+## What You’ll Need
 
 - Composer, git and [Terminus](https://pantheon.io/docs/terminus) running on your local computer.
 - A GitHub account
@@ -28,52 +25,52 @@ When code is submitted for deployment, CircleCI will create a testing environmen
 - A free [CircleCI](https://circleci.com) account
 
 
-## Step 1: Clone the example repository
+## Clone the example repository
 
 1. From your terminal, use composer to make a new local project, called "circle," based on our example repo:
 
-```nohighlight
-composer create-project pantheon-systems/example-drops-8-composer circle
-```
+    ```nohighlight
+    composer create-project pantheon-systems/example-drops-8-composer circle
+    ```
 
-2. Initialize a local Git repository for your project. 
+2. Initialize a local Git repository for your project.
 
-```nohighlight
-cd circle
-git init
-git add --force -A .
-git commit -m "Initial commit."
+    ```nohighlight
+    cd circle
+    git init
+    git add --force -A .
+    git commit -m "Initial commit."
 
-```
-    
-## Step 2: Create A New GitHub Repository
+    ```
+
+## Create A New GitHub Repository
 
 1. Create a new GitHub repository.
 
-![Github Dashboard](/source/docs/assets/images/integrations/github_repos.png)
+    ![Github Dashboard](/source/docs/assets/images/integrations/github_repos.png)
 
-We already created a README, etc. in the previous steps so don't check the box to create a new one. Privacy options are up to you.
+    We already created a README, etc. in the previous steps so don't check the box to create a new one. Privacy options are up to you.
 
-![New empty repository](/source/docs/assets/images/integrations/new_repo.png)
+    ![New empty repository](/source/docs/assets/images/integrations/new_repo.png)
 
 
 2. Next, follow the instructions GitHub presents to push the code to the new remote repository:
 
-```nohighlight
-git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT
-git push -u origin master
-```
+    ```nohighlight
+    git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT
+    git push -u origin master
+    ```
 
 3. Reload the browser, and you should see your files in the repository.
 
-![Initial commit to new repo](/source/docs/assets/images/integrations/first_commit.png)
+    ![Initial commit to new repo](/source/docs/assets/images/integrations/first_commit.png)
 
 4. Create a GitHub token. You will save this for the CircleCI configuration step
 
-Generate one of these as shown in the [GitHub documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/), and give it either the “repo” or the “public repo” scope as needed.
+    Generate one of these as shown in the [GitHub documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/), and give it either the “repo” or the “public repo” scope as needed.
 
 
-## Step 3: Create A New Site On Pantheon and Push Initial GitHub Commit
+## Create A New Site On Pantheon and Push Initial GitHub Commit
 Now we will spin up a Drupal 8 site, then overwrite the default install with the code from our github repo.
 
 1. From your User or Agency dashboard, [create a vanilla Drupal 8 site](https://pantheon.io/docs/create-sites).
@@ -84,33 +81,33 @@ Now we will spin up a Drupal 8 site, then overwrite the default install with the
 
 4. From the site dashboard Connection Info, copy the SSH Clone URL
 
-![SSH Clone URL from dashboard](/source/docs/assets/images/integrations/ssh_url.png)
+    ![SSH Clone URL from dashboard](/source/docs/assets/images/integrations/ssh_url.png)
 
 5. Paste it to a text editor and copy the git repository URL; it's the middle part which begins “ssh://” and ends with “.git”:
 
-![SSH Clone URL Detail](/source/docs/assets/images/integrations/ssh_url_det.png)
+    ![SSH Clone URL Detail](/source/docs/assets/images/integrations/ssh_url_det.png)
 
 6. With that URL, create this git command and execute in the terminal:
 
-```
-git remote add pantheon ssh://codeserver...drush.in:2222/~/repository.git
-```
+    ```
+    git remote add pantheon ssh://codeserver...drush.in:2222/~/repository.git
+    ```
 
-This will create a second remote, called "pantheon". 
+    This will create a second remote, called "pantheon".
 
 7. Push your code to this remote.
 
-```
-git push --force pantheon master
-```
+    ```
+    git push --force pantheon master
+    ```
 
-In the terminal, you should see Pantheon applying the pantheon.yml file configuration. When this is complete, the site should have a single commit, and be in sync with the GitHub repo.
+    In the terminal, you should see Pantheon applying the pantheon.yml file configuration. When this is complete, the site should have a single commit, and be in sync with the GitHub repo.
 
-![Updated Site Dashboard](/source/docs/assets/images/integrations/updated.png)
+    ![Updated Site Dashboard](/source/docs/assets/images/integrations/updated.png)
 
-## Step 4: Create CircleCI Authentication
+## Create CircleCI Authentication
 
-Next, we will connect CircleCI to access both GitHub and Pantheon. For security purposes, we will create and configure a Pantheon user solely for CircleCI continuous integration purposes.  
+Next, we will connect CircleCI to access both GitHub and Pantheon. For security purposes, we will create and configure a Pantheon user solely for CircleCI continuous integration purposes.
 
 1. Using a unique email address, create a new Pantheon user from the [Pantheon home page](https://pantheon.io/).
 
@@ -118,16 +115,16 @@ Next, we will connect CircleCI to access both GitHub and Pantheon. For security 
 
 3. [Add this SSH public key](https://pantheon.io/docs/ssh-keys/#add-your-ssh-key-to-pantheon) to the user's dashboard.
 
-![Add the public key to user dashboard](/source/docs/assets/images/integrations/ssh_key.png)
+    ![Add the public key to user dashboard](/source/docs/assets/images/integrations/ssh_key.png)
 
 4. Add this user to your site's team.
 
 5. On this user's account page, go to the Machine Token tab on the left navigation, and create a machine token, which is a string of text, for CircleCI to authenticate with. Save this token somewhere temporarily.
 
-![Create a machine token from user dashboard](/source/docs/assets/images/integrations/machine_token.png)
+    ![Create a machine token from user dashboard](/source/docs/assets/images/integrations/machine_token.png)
 
 
-## Step 5: Configure CircleCI
+## Configure CircleCI
 
 1. In CircleCI, log in with your GitHub account.
 
@@ -136,23 +133,23 @@ Next, we will connect CircleCI to access both GitHub and Pantheon. For security 
 
 3. Add the CircleCI user's private key to the SSH Permissions tab in the project.
 
-![Add private key](/source/docs/assets/images/integrations/private_key.png)
+    ![Add private key](/source/docs/assets/images/integrations/private_key.png)
 
 4. Create the following environmental variables within the project:
 
-- TERMINUS_SITE: The name of the Pantheon site.
-- TERMINUS_TOKEN: The Terminus Machine token that you created.
-- TEST_SITE_NAME: Used to set the name of the test site when installing Drupal.
-- ADMIN_EMAIL: Used to configure the email address to use when installing Drupal.
-- ADMIN_PASSWORD: Used to set the password for the UID 1 user during site installation.
-- GIT_EMAIL: Used to configure the git user’s email address for commits we make.
-- GITHUB_TOKEN: Used by CircleCI to post comments on pull requests
+    - TERMINUS_SITE: The name of the Pantheon site.
+    - TERMINUS_TOKEN: The Terminus Machine token that you created.
+    - TEST_SITE_NAME: Used to set the name of the test site when installing Drupal.
+    - ADMIN_EMAIL: Used to configure the email address to use when installing Drupal.
+    - ADMIN_PASSWORD: Used to set the password for the UID 1 user during site installation.
+    - GIT_EMAIL: Used to configure the git user’s email address for commits we make.
+    - GITHUB_TOKEN: Used by CircleCI to post comments on pull requests
 
-Now you can rerun the failed job again from the Builds tab in CircleCI and you can follow the build from the dashboard. This time it should pass. 
+    Now you can rerun the failed job again from the Builds tab in CircleCI and you can follow the build from the dashboard. This time it should pass.
 
-![Running tests](/source/docs/assets/images/integrations/running.png)
+    ![Running tests](/source/docs/assets/images/integrations/running.png)
 
-## Final Step: Test the New Workflow
+## Test the New Workflow
 Now try to submit a pull request. Let's add something to the repo and test the workflow. From the terminal:
 
 ```
