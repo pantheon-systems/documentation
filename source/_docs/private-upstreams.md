@@ -4,14 +4,14 @@ description: Learn upstream terminology and how to use private upstreams to free
 tags: [tools, workflow]
 categories: []
 ---
-Agencies can create and update sites from a common codebase using a Private Upstream, which can be selected by members of an organization during site creation instead of the default [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8) upstreams. If you don’t have a Pantheon for Agencies account you can [create one for free here](https://dashboard.pantheon.io/organizations/create-agency).
+Agencies can create and update sites from a common codebase using a Private Upstream, which can be selected by members of an organization during site creation instead of the default [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8) upstreams. If you don’t have a Pantheon for Agencies account you can [create one for free](https://dashboard.pantheon.io/organizations/create-agency).
 
 ![upstreams](/source/docs/assets/images/upstreams.png)
 
 ## Benefits
 
 ### Save Developer Time
-Private Upstreams act as a scaffold for new sites in your organization so you don't have to start from scratch. Instead of repeating the same technical work over and over, developers of any experience level can kickoff new projects at warp speed using a common start state.
+Private Upstreams act as a scaffold for new sites in your organization so you don't have to start from scratch. Instead of repeating the same technical work over and over, developers of any experience level can kickoff new projects at warp speed using a common start state. [See how ASU does it](https://pantheon.io/resources/asu-launches-2000-sites-without-hosting-case-study).
 
 ### Long Term Sustainability
 This provides your team with a centralized distribution strategy to reuse code between projects which will greatly reduce the burden of support and maintenance over time. Instead of updating sites individually, you can make an update once in the Private Upstream repository then push it out to all your sites.
@@ -42,14 +42,13 @@ The second level repository is a Private Upstream, where core updates from Panth
 <p markdown="1">Maintainer(s) of Private Upstreams bear the responsibility of pulling in core updates from Pantheon. Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
 </div>
 
-
 ### Level Three: Site Codebase
 Finally, core updates and changes to the common codebase make their way down to the site level repository for each site that uses the Private Upstream. The site level repository allows separation between common code across all sites, tracked in the Private Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily:
 
 ![Site Updates Available](/source/docs/assets/images/dashboard/updates-available-2.png)
 
 ## Connect a Private Upstream with Pantheon
-The following steps will help you get a Private Upstream ready for prime time within your organization. Once completed, you'll be able to create new sites from the common codebase.
+The following steps will help you get a Private Upstream ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase.
 
 ### Create and Host the Repository Remotely
 Private Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
@@ -61,16 +60,19 @@ This remote repository serves as the central location for the development and ma
 <p markdown="1">Private Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.</p>
 </div>
 
-Once you have the repository hosted remotely, clone it to your local. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
+You can start by creating an empty repository on your preferred git hosting provider, or you can use an existing repository. Once you have the repository hosted remotely, clone it to your local. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
 
 
-### Grant Pantheon Access (Private Repositories Only)
+### Grant Pantheon Access (Privately Hosted Repositories Only)
 For privately hosted repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters.
 
 For private GitLab repositories, please ensure the user has the ["reporter" permissions level](https://docs.gitlab.com/ce/user/permissions.html#permissions).
 
+
+If your repository is publicly accessible, you can skip this step.
+
 ### Pull in Core from Pantheon's Upstream
-To avoid conflicts and incompatibilities, it's highly recommended that you track Pantheon's corresponding upstream repository within any Private Upstream.
+To avoid incompatibilities, it's highly recommended that you track Pantheon's corresponding upstream repository within the Private Upstream.
 
 Navigate to the Private Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
 <!-- Nav tabs -->
@@ -137,6 +139,19 @@ git push origin master</code></pre>
 - **Visibility**: Public (allow this upstream to be used by any Pantheon user) or Private (only allow members of your organization to use this upstream)
 - **Initial Connection Mode**: Git or SFTP
 - **Framework**: Drupal 6, Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
+
+## Pro Tips for Private Upstreams
+### WordPress
+* Reusable parent theme and branding
+* Recommended Plugins:
+  * [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+  * [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
+  * [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/)
+  * [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
+  * [WP-CFM](https://wordpress.org/plugins/wp-cfm/) - Use this plugin to manage configurations in code. Even better, [add a must-use plugin to modify WP-CFM's path for configuration files](https://github.com/pantheon-systems/quicksilver-examples/tree/master/wp_cfm_import#hiding-configuration-files) so they're not web accessible.
+### Drupal 8
+* Reusable theme and branding
+* Recommended Modules:
 
 
 ## Next Steps

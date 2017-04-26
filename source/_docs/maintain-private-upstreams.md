@@ -6,12 +6,15 @@ categories: []
 ---
 Maintainer(s) of Private Upstreams bear the responsibility of pulling in core updates from Pantheon. Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
 
+## Automatically Test and Distribute Updates
+TODO: How should users automate updates for a private upstream? The following can be set up on individual sites, but what's our happy path for achieving this on custom upstreams? The org would need a test site - maybe one for WordPress and one for Drupal - and the result of the script needs to push a commit to the remote repository, not Pantheon.
 
-## Designated Test Site
+[Pantheon WordPress Auto Update](https://github.com/ataylorme/wordpress-at-scale-auto-update)
 
-1.
+[Pantheon Drupal Auto Update](https://github.com/populist/drupal-auto-update)
 
-## Distribute Core Updates Downstream
+
+## Manually Distribute Updates
 1. Add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) within a local clone of your Private Upstream repository if you haven't done so already:
 
     <!-- Nav tabs -->
@@ -65,21 +68,4 @@ Maintainer(s) of Private Upstreams bear the responsibility of pulling in core up
   git push origin master
   ```
 
-You can now apply updates to sites running the Private Upstream within your Organization using the Site Dashboard. Or you can apply the updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
-
-## Automatically Test and Deploy Core Updates
-
-[Pantheon WordPress Auto Update](https://github.com/ataylorme/wordpress-at-scale-auto-update)
-
-1. Create a [CircleCI](https://circleci.com/) project
-2. Add [environment variables to CircleCI](https://circleci.com/docs/environment-variables/) for the following:
-  - `SITE_UUID`: [The Pantheon site UUID](/docs/sites/#site-uuid)
-  - `TERMINUS_MACHINE_TOKEN`: [A Pantheon Terminus machine token with access to the site](/docs/machine-tokens)
-  - `SLACK_HOOK_URL`: The [Slack incoming webhook](https://api.slack.com/incoming-webhooks) URL
-  - `SLACK_CHANNEL`: The Slack channel to post notifications to
-  - `SLACK_USERNAME`: The username to post to Slack with
-3. Add an [SSH key](/docs/ssh-keys) to Pantheon and [to the CircleCI project](https://circleci.com/docs/permissions-and-access-during-deployment/).
-4. Update the site UUID in the `.env` file
-5. Update scenarios in `backstop.js` with URLs for pages you wish to check with visual regression
-  - `url` refers to the live URL and `referenceUrl` refers to the same page on the Pantheon Multidev environment
-6. Ping the [CircleCI API](https://circleci.com/docs/api/) at the desired frequency, e.g. daily, to run the script
+Updates will become available within an hour of being pushed to the remote repository on sites running the Private Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
