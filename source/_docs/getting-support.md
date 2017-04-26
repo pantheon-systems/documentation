@@ -144,6 +144,18 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
 
+## Feature Requests
+
+We value your feedback! If you feel there's something we can do to improve our platform, like adding a new [external Library](/docs/external-libraries), or a dashboard feature, contact support and let us know. Include a description of your use case, and a link to the website for any library or other third-party included in your request.
+
+All feature requests will evaluated by Pantheon's Operations Team on a case-by-case basis.
+
+
+### How long does the process take?
+This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.
+
+It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
+
 
 ## FAQs
 #### Is there a support number we can call? If so, is this service available for every plan?
