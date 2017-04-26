@@ -94,28 +94,28 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 ### New Relic Access
 
-Once you have successfully accessed the New Relic Dashboard, you may use the environment links directly to their corresponding New Relic page. Your first vist must be via the **Go to New Relic** button.
+Your first visit to New Relic must be via the **Go to New Relic** button. Once you have successfully accessed the New Relic Dashboard, you may use the environment links to go directly to their corresponding New Relic page.
 
-#### If you are taken to the New Relic Dashboard and see a "You do not have permission to view this account" message
-- From the New Relic Dashboard, click on the User Account to the Right
-- From the Dropdown, select Log Out
-- Back on the Pantheon Site Dashboard, click the **Go to New Relic** button
+#### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
+1. From the New Relic Dashboard, click on the User Account to the right.
+2. From the Dropdown, click **Log Out**.
+3. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
 
-#### If you click the **Go to New Relic** button and are instead sent to a log in screen 
-- Close all of your open New Relic tabs
-- Delete all of your New Relic cookies from your browser
-- Reload your Pantheon Dashboard
-- Click the **Go to New Relic** button
+#### If you click the Go to New Relic button and are instead sent to a log in screen
+1. Close all of your open New Relic tabs.
+2. Delete all of the New Relic cookies from your browser.
+3. Reload your Pantheon Dashboard.
+4. Click the **Go to New Relic** button.
 
 #### If you are prompted to Set Up New Relic
-- If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
-- Visit one of your site pages
-- Close the tab, wait for the New Relic data table to appear in your Pantheon Dashboard
-- Click the **Go to New Relic** button
+If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
+
+1. Visit one of your site pages.
+2. Close the tab, wait for the New Relic data table to appear in your Pantheon Site Dashboard, under the **New Relic** tab.
+3. Click the **Go to New Relic** button.
 
 ### New Relic data is not showing on the Pantheon Site Dashboard
-- Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/) may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. 
-- Disable the extension or add the following sites as trusted within the extension:
+Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
 
  - dashboard.pantheon.io
  - rpm.newrelic.com
