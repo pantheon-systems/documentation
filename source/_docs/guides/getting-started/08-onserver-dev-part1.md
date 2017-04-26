@@ -21,7 +21,7 @@ In this lesson, we’ll make changes to our Dev site, review these changes on ou
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
-2. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Admin** button.
+2. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button.
 
 3. Install a _new_ theme (i.e., not a theme that came pre-packaged with your site).
 
