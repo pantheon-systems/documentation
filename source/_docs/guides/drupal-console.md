@@ -1,10 +1,11 @@
 ---
-title: Using The Drupal Console on Pantheon.
-description:
+title: Using The Drupal Console on Pantheon
+description: Interacting with the Drupal Console on Pantheon.
 draft: true
 contributors:
-  - alexfornuto
   - greg-1-anderson
+  - alexfornuto
+permalink: docs/guides/:basename/
 ---
 
 The [Drupal Console](https://drupalconsole.com/) is a CLI for Drupal, from which you can interact directly with your Drupal site. Pantheon has integrated the Drupal Console for all Drupal 8 sites, accessible through [Terminus](/docs/terminus).
@@ -16,10 +17,11 @@ The [Drupal Console](https://drupalconsole.com/) is a CLI for Drupal, from which
 
 ## Before You Begin
 
-The methods described in this guide involve Composer. If you're not already using composer to manage Terminus or Drupal code, first check out:
+The methods described in this guide use Composer heavily. If you're not already using composer to manage Terminus or Drupal code, first check out:
 
  - The [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository on GitHub
  - [Using Drupal 8 and Composer](/docs/composer-drupal-8/)
+ - [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/)
 
 ## Install Drupal Console
 
