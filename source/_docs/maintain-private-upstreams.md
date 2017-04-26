@@ -14,7 +14,11 @@ TODO: How should users automate updates for a private upstream? The following ca
 [Pantheon Drupal Auto Update](https://github.com/populist/drupal-auto-update)
 
 
-## Manually Distribute Updates
+## Manually Test and Distribute Updates
+### Test Updates
+TODO: Should users have a test site and use a branch release strategy as previously documented? Should we recommend using Multidev? Do all orgs have access to Multidev or does it differ based on org type (e.g. partner, reseller, etc.).
+
+### Distribute Updates Downstream
 1. Add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) within a local clone of your Private Upstream repository if you haven't done so already:
 
     <!-- Nav tabs -->
