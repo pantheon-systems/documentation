@@ -26,7 +26,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
     <p>Your WordPress or Drupal username and password are the same set you created when you installed your Dev site for the first time.
     </p></div>
 
-2. Now let’s create a new Drupal article or WordPress post! If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Posts/) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article.  When finished, visit the front page of your site and confirm that you can see the new content.
+2. Now let’s create a new Drupal article or WordPress post! If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article.  When finished, visit the front page of your site and confirm that you can see the new content.
 
 3. When you’re done, navigate back to your Site Dashboard. Click the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab, and open your Dev site by clicking **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Development Site**.
 
