@@ -154,3 +154,19 @@ There are multiple reasons that 503 errors might occur when updating:
 - PHP segfault: These are tricky to troubleshoot because very little debugging information is present. A temporary fix is available. Contact Pantheon Customer Support if you think you have been affected.
 
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
+
+### Upstream does not match Pantheon, but Process to Resolve Conflicts Locally responds with 'Already-up-to-date'.
+
+If you know that the core codebase does not match Pantheon, but attempts to resolve it locally do not work because the codebase is seen as up-to-date, you may need to manually overwrite the code locally and push the code back to Pantheon.
+
+1. Download the upstream from the Pantheon repo that corresponds to your CMS.
+2. Using a file manager (Finder for MacOS or </something> for Windows) copy all of the contents of the downloaded upstream to your branch excluding the paths where custom code is set.   
+
+Drupal 7 /sites
+Drupal 8 /sites and /modules
+Wordpress /wp-content and wp-config.php
+
+3. Add and Commit the files using Git.
+4. Push the code back to Pantheon using git push origin <branchname>.
+
+
