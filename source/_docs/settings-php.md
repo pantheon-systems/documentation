@@ -48,12 +48,12 @@ Configure environment-specific settings within the `settings.local.php` file, wh
 
 The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
-To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/terminus):
+This remark... >> To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/terminus):
 ```
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
-Drupal 8 will not run locally without a hash salt, so make sure to set one in `settings.local.php` :
+...contradicted by this remark >> Drupal 8 will not run locally without a hash salt, so make sure to set one in `settings.local.php` :
 ```
 $settings['hash_salt'] = '$HASH_SALT';
 ```
