@@ -171,6 +171,12 @@ No, please take a moment to fill out the [HTTPS survey](https://www.getfeedback.
 ### Is the CDN configurable? Do I get access to hit rates or other statistics?
 No, we pre-configured the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not currently available.
 
+### Why does the Domains and HTTPS tool indicate action required even though I've updated DNS records?
+The action required message may be due to one of the following:
+  - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
+  -  **AAAA records not detected:**: Ensure you've added two AAAA records for bare domains like example.com, which are required to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability. 
+  - **Old DNS records detected:** If in addtion to the correct DNS records, you also have old records, make sure to delete the old records.
+  
 ### What About Personal Plans?
 We share Let's Encrypt's goal of making HTTPS the standard for all sites on the internet, which means making it the standard for all sites on Pantheon. However, at this time we are focused on our existing HTTPS customers (Pro plans and above), and there's a considerable amount of work in making sure the new solution meets their needs, and that we are able to deprecate the legacy edge. There is not yet a timeline for providing HTTPS service to Personal plans.
 
