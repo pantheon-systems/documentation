@@ -7,7 +7,7 @@ categories: []
 There are some scenarios (e.g. a redesigned site) where you may want to switch a domain's DNS between Pantheon sites. While each environment can configure its own custom domain, the same domain cannot be added to more than one environment. However, it's possible to point a domain to another site with minimal impact to visitors.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>Only the Site Owner, or if the site is owned by an Organization - the Organization's Administrators, can change the Site's Plan. If you are not the owner, you will not see the options discussed below.</p>
 </div>
 
@@ -32,7 +32,7 @@ Also, check `settings.php` or `wp-config.php` and comment out any hardcoded redi
 Since the same domain cannot be added to more than one environment, you will need to use a temporary domain name to determine the DNS records. If the launched site has `example.com` configured, temporarily add something like `example-new.com` to the new site's Live environment and click **Show recommended DNS records** for both the bare domain and www.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p>The temporary domain you add within the new site does not need to be a registered domain. It's purpose is to determine the new DNS values required when switching the domain.</p>
 </div>
 
@@ -82,7 +82,7 @@ If you're using an existing credit card profile for billing, the credit from the
 As long as you use the same card/site owner the credit will be carried over automatically.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">If you are changing the card or the site owner, [let us know](https://pantheon.io/support) when everything is switched over, and we'll apply that credit to the new account.
 Please do not remove the old credit card from your account until after the transfer has been made.</p>
 </div>
