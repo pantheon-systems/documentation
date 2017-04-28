@@ -64,7 +64,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 ```
 
 ## Drupal: Environment Indicator
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites. It's currently being ported to Drupal 8, but is not usable yet. For updates, see [this issue](https://www.drupal.org/node/2605572).
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites and Drupal 8.
 
 
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
