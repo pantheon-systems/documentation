@@ -9,23 +9,65 @@ date: 5/14/2017
 
 ---
 
-## Pingdom Uptime Monitoring
+## Continuous Integration with Jenkins
 
-Monitoring services such as Pingdom allow those responsible for site performance and uptime to know when a website is having problems delivering content. Pingdom provides several different types of uptime and performance checks. 
+Jenkins is an open source Continuous Integration server which can be used to test and deploy application changes for Drupal and WordPress websites on Pantheon. 
 
 ## What you will build
 
-In this guide, we will create and configure the simplest check for a website: an [Uptime Check](https://www.pingdom.com/product/uptime-monitoring), which pings a page and verifies a response. Other checks are available: a [Page Speed](https://www.pingdom.com/product/page-speed) check, which tracks page load time; and [Real User Monitoring](https://www.pingdom.com/product/performance-monitoring), which measures other important performance metrics.
+This guide will cover how to install and configure an externally hosted Jenkins server to work with sites on the Pantheon platform.
 
 ## What you’ll need
 
-- At least a paid starter account on Pingdom.
-- A Drupal or Wordpress website on Pantheon to monitor.
+- Root access to a server. This server in this guide is running Ubuntu 16 x64.
+- A Drupal or Wordpress website on Pantheon.
 
-## Step 1: Create your Pingdom account
+## Step 1: Install Jenkins
 
-1.  On [Pingdom's homepage](https://www.pingdom.com), click “Sign Up” or if available, “Start your Free 14-Day Trial.”
+1.  As a root user, log into your remote server and add the Jenkins key and sources, to download the application.
 
+```
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
+echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
+apt-get update
+```
+
+2. Then you can download the application:
+
+```
+apt-get install jenkins
+```
+
+3. After install, you should be able to load the application on your remote server, either on port 8080 of the server's IP address or if you can assign it a domain name, e.g. ci.yoursite.com:8080
+
+4. You can select the "Install standard plugins" option to complete the install. Create an administrative user. 	
+GitHub Authentication plugin
+terminus auth:login --machine-token=aWGN_CMQtd1JP4BMBcaI2UpIO5SnWBttZc0t6G39UGlgi
+
+5. Enable security by navigating to Manage Jenkins (a), then Security (b).
+
+6. Authorization make sure Anonymous can View on the Read column.
+
+
+Then check "enable security"
+
+
+Set Jenkins's to use user database and enable sign ups.
+
+Create a new user
+
+
+Next, go back to admin, check Matrix-based security, disable signups;
+
+
+Make sure Anonymous only has the Read right under the View group (Jenkins crashes when it doesn't have that set) and add your user with admin rights. Save and log in as that user.
+
+//https://gist.github.com/gmhawash/4043232
+
+
+Click save at the bottom of the page. After the page load, you'll see a login form, ignore that, go to ci.company.net:8080 again instead. You'll see this sign up form:
+
+`
 ![Pingdom.com home page](/source/docs/assets/images/integrations/pingdom_hp.png)
 
 2.  Review and choose from available plans and select either monthly or discounted annual billing. For this guide, I selected the “Starter Plan.” Plans can be upgraded at anytime. Add your credit card information. If you chose the free trial, you have until the end of the trial time to try Pingdom before the card is billed.
