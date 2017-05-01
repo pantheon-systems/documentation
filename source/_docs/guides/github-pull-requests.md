@@ -29,11 +29,11 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
     <div class="plugin-dir">
       <div class="pantheon-official">
         <div class="main-topic-info__plugin-image" style="background-image:url(/source/docs/assets/images/circleci-logo.svg)"></div>
-        <p>Circle CI</p>
+        <p>CircleCI</p>
       </div>
       <div class="terminus-plugin">
-        <h3 class="plugin-title">Circle CI</h3>
-        <p class="topic-info__description"><a href="https://circleci.com">Circle CI</a> provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
+        <h3 class="plugin-title">CircleCI</h3>
+        <p class="topic-info__description"><a href="https://circleci.com">CircleCI</a> provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ In the workflow set up in this guide, a multidev environment is created for each
 
 It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
-When using GitHub and Composer to manage a Drupal site, only those files unique to the project are part of the project's main repository. Composer is used to fetch the external code needed by the project; a process running on Circle CI executes Composer, and ensures that the final composed build results are installed on Pantheon:
+When using GitHub and Composer to manage a Drupal site, only those files unique to the project are part of the project's main repository. Composer is used to fetch the external code needed by the project; a process running on CircleCI executes Composer, and ensures that the final composed build results are installed on Pantheon:
 
 ![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)
 
@@ -96,7 +96,7 @@ Replace `my-pantheon-project` with the name of your new site.
 The `create-project` command will prompt for any additional information it may need to set up the build workflow. The required information needed includes:
 
 - GitHub [personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
-- Circle CI [personal API token](https://circleci.com/account/api).
+- CircleCI [personal API token](https://circleci.com/account/api).
 - Password for the CMS admin account, used to log in to your test environments.
 - The Pantheon team the site should be associated with (recommended).
 
@@ -116,11 +116,11 @@ Your project page will start off with a README file that is initially blank, sav
 
 The badges on your project page are linked to locations you will frequently visit while working on your site.
 
-- The Circle CI page for your project
+- The CircleCI page for your project
 - Your Pantheon dashboard
 - Your test site
 
-Click on these badges to quickly navigate to the different components used to manage your site. If you click on the Circle CI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange Circle CI "no tests" badge will become a green "passing" badge.
+Click on these badges to quickly navigate to the different components used to manage your site. If you click on the CircleCI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange CircleCI "no tests" badge will become a green "passing" badge.
 
 ## Create a Pull Request
 
@@ -144,7 +144,7 @@ When using the Composer pull request workflow, you should never modify your dev 
 
     ![Slogan pull request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
 
-    As soon as you commited your change to a new branch, Circle CI built a new multidev environment and began installing a site that you can use to preview the change. Once the multidev environment has been created, the build script will add a comment to the commit with links to the dashboard panel for the environment, and to the test site created on Pantheon. The pull request page conveniently shows the messages from each commit on the branch:
+    As soon as you commit your change to a new branch, CircleCI builds a new multidev environment and begins installing a site that you can use to preview the change. Once the multidev environment has been created, the build script will add a comment to the commit with links to the dashboard panel for the environment, and to the test site created on Pantheon. The pull request page conveniently shows the messages from each commit on the branch:
 
     ![Passed pull request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
@@ -152,7 +152,7 @@ When using the Composer pull request workflow, you should never modify your dev 
 
     ![Site initial login](/source/docs/assets/images/pr-workflow/pr-slogan-site.png)
 
-    This site will persist for as long as the pull request remains exists.
+    This site will persist for as long as the pull request remains open.
 
 ## Configure Site via the Admin Interface
 
@@ -170,7 +170,7 @@ While it is possible to configure your site by editing the exported configuratio
 
     Visit your site's Pantheon dashboard, and go to the `pr-slogan` multidev page. Note that there are a handful of modified files here ready to be committed now. Type in a brief description of what you changed, and click **Commit**.
 
-Once the Pantheon dashboard finishes committing the code, visit your project page on GitHub. Go to your `slogan` pull request. Note that your commit has been added to this pull request, and the Circle CI status indicates that your tests are running. Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository. GitHub will then start a new Circle CI build, and the build results will once again be pushed to the existing multidev environment that was created for this branch. You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
+Once the Pantheon dashboard finishes committing the code, visit your project page on GitHub. Go to your `slogan` pull request. Note that your commit has been added to this pull request, and the CircleCI status indicates that your tests are running. Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository. GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing multidev environment that was created for this branch. You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
 
 ## Update Your Project
 
