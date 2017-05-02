@@ -10,20 +10,21 @@ Agencies can create and update sites from a common codebase using a Private Upst
 
 ## Benefits
 
-### Save Developer Time
+### Save Developer Time with Turnkey Sites
 Private Upstreams act as a scaffold for new sites in your organization so you don't have to start from scratch. Instead of repeating the same technical work over and over, developers of any experience level can kickoff new projects at warp speed using a common start state. [See how ASU does it](https://pantheon.io/resources/asu-launches-2000-sites-without-hosting-case-study).
 
 ### Long Term Sustainability
-This provides your team with a centralized distribution strategy to reuse code between projects which will greatly reduce the burden of support and maintenance over time. Instead of updating sites individually, you can make an update once in the Private Upstream repository then push it out to all your sites.
+This provides your team with a centralized distribution strategy to reuse and update code across projects which will greatly reduce the burden of support and maintenance over time. Instead of updating sites individually, you can make an update once in the Private Upstream repository then push it out to all your sites.
 
 ## Terminology
 Let's agree on definitions for some commonly used terms:
 
+* **Upstream**: An additional repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress).
+* **Private Upstream**: Repository that is restricted to members of an organization which contains a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+* **Public Upstream**: Repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
 * **Repository**: Collection of files that are packaged in a single directory.
 * **Remote Repository**: Collection of files that are stored in a remote and central location.
-* **Upstream**: An additional repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress).
 * **Upstream Updates**: Code changes that are made once in the parent repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-* **Private Upstream**: Repository that is restricted to members of an organization which contains a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 * **Site Level Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Workflow Overview
