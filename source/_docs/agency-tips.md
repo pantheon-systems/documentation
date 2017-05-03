@@ -65,9 +65,9 @@ Quicksilver Platform Hooks allow you to automate actions in response to activity
 ### Pantheon Configuration File
 Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, [nested docroot](/docs/nested-docroot/) and more. For details, see [The pantheon.yml Configuration File](/docs/pantheon-yml/).
 
-### New Relic AMP Pro
+### New Relic APM Pro
 
-New Relic AMP Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/docs/new-relic/). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/docs/new-relic/). The following blog posts are also a great reference:
 
 - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - [New Relic &amp; Drupal: Find Your Site&#39;s Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
