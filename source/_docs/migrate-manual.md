@@ -135,7 +135,7 @@ If something didn't work and you'd like to start over, you can cancel the site m
 You can import a WordPress or Drupal site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 #### How do I migrate a Drupal 6 site to Pantheon?
