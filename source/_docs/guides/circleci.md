@@ -135,7 +135,7 @@ Next, we'll create a new project on CircleCI and authenticate the machine user's
 
 2. Click on **Projects** on the left navigation bar. Find your new GitHub repo, and click on **Build project**. Our first build will fail.
 
-3. Go to **Project Settings** by clicking on the gear in the upper right-hand corner.  On the left, under **Permissions** click on **SSH Permissions**. Click **Add SSH Key** and add the machine user's *private* key, created in [step 2 above](#create-circleci-authentication):
+3. Go to **Project Settings** by clicking on the gear in the upper right-hand corner.  On the left, under **Permissions** click on **SSH Permissions**. Click **Add SSH Key** and add the machine user's *private* key, created in [step 2 above](#create-circleci-project-and-authenticate):
 
     ![Add private key](/source/docs/assets/images/integrations/private_key.png)
 
