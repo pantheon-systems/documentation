@@ -354,9 +354,10 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 <hr>
 
 ### [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
-**Issue**: This plugin attempts to access PHP native sessions before WordPress has been bootstrapped which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
 
-**Solution** (not recommended): Add the following lines to `wp-config.php` before the first call to `session_start`:
+**Issue #1**: This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/), which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
+
+**Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
 ```
 if (defined( "$PANTHEON_BINDING" )) { 
@@ -364,7 +365,10 @@ if (defined( "$PANTHEON_BINDING" )) {
 }
 ```
 
-**Please note:** You will need to make this change every time that the plugin is updated.
+**Please note:** You will need to make this change every timethat the plugin is updated.
+
+**Issue #2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
+
 <hr>
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
