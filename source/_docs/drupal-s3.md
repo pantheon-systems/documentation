@@ -38,17 +38,18 @@ If you do not have an existing bucket for your Drupal site, create one:
 
 4. Select a region and click **Create**.
 5. Select **Permissions** within the bucket properties and click **Add more permissions**.
-6. Assign **Any Authenticated AWS User** for the **Grantee** and tick the box for **Upload/Delete**, then click **Save**.
+6. Choose a user and tick the boxes for **Read** and **Write** for both **Object access** and **Permissions Access**, then click **Save**.
 
 ### Create an Identity and Access Management Policy
 [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
 
-1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
+1. From your [AWS Console](https://console.aws.amazon.com), click the **IAM** link.
 2. Go to **Policies** and click **Create Policy**.
-3. Click **Select** within the Policy Generator section.
-4. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket (e.g. `arn:aws:s3:::bucket_name`), and click **Next Step**.
-5. Edit the policy name and description (optional).
-6. Click **Create Policy**.
+3. Select **Create your Own Policy**.
+4. Give it a name and Use the code example code provided in Amazon's [Policy Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
+5. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket, and click **Next Step**.
+6. Edit the policy name and description (optional).
+7. Click **Create Policy**.
 
 For details, see [Example Policies for Administering AWS Resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
 
