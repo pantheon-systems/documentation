@@ -4,17 +4,33 @@ description: Learn upstream terminology and how to use private upstreams to free
 tags: [tools, workflow]
 categories: []
 ---
-Agencies can create and update sites from a common codebase using a Private Upstream, which can be selected by members of an organization during site creation instead of the default [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8) upstreams. If you don’t have a Pantheon for Agencies account you can [create one for free](https://dashboard.pantheon.io/organizations/create-agency).
+Agency and EDU organizations can create and update sites from a common codebase using a Private Upstream, which can be selected by members of an organization during site creation. If you don’t have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) or [EDU](https://pantheon.io/edu) account you can create one for free.
 
 ![upstreams](/source/docs/assets/images/upstreams.png)
 
 ## Benefits
 
-### Save Developer Time with Turnkey Sites
-Private Upstreams act as a scaffold for new sites in your organization so you don't have to start from scratch. Instead of repeating the same technical work over and over, developers of any experience level can kickoff new projects at warp speed using a common start state. [See how ASU does it](https://pantheon.io/resources/asu-launches-2000-sites-without-hosting-case-study).
+### Standardize Design and Functionality Across Many Sites
+Private Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level the ability kickoff projects at warp speed.
 
-### Long Term Sustainability
-This provides your team with a centralized distribution strategy to reuse and update code across projects which will greatly reduce the burden of support and maintenance over time. Instead of updating sites individually, you can make an update once in the Private Upstream repository then push it out to all your sites.
+Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once from a single source.
+
+Learn how the web team at Weill Cornell Medical College used Private Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
+
+### Efficient Update Strategy
+Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updating across massive site portfolios.
+
+New features and functionality can be continuously developed in the Private Upstream repository overtime then distributed to each individual site where they can be applied with a single click by site owners:
+
+![EDU Upstream Flow](/source/docs/assets/images/edu-upstream-repository.jpg)
+
+See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+
+### Scale Client Services
+Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Private Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
+
+Hear from Mike Pirog of [Kalamuna](http://www.kalamuna.com/) how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
+
 
 ## Terminology
 Let's agree on definitions for some commonly used terms:
