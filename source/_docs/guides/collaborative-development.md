@@ -138,7 +138,7 @@ Automatic merge went well; stopped before committing as requested
 2. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
 `git add -A`
 `git commit -m "Adding Pantheon core files"`
-3. Now pull from your Pantheon repository master branch: `git pull pantheon master`. Handle any conflicts as needed.
+3. Now pull from your Pantheon repository master branch: `git pull pantheon master --allow-unrelated-histories`. Handle any conflicts as needed.
 4. Git push back to your Pantheon site repository: `git push pantheon master`
 5. Go to the **Code tab** of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
 6. Push the repo with the newly updated core files to GitHub.
