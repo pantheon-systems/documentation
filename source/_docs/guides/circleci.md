@@ -17,12 +17,13 @@ Continuous Integration service providers such as [CircleCI](https://circleci.com
 
 When code is submitted to GitHub for deployment, CircleCI will create a testing environment and run a suite of tests. If tests pass, the code can be merged into the master branch of the codebase. Before this merge is deployed, CircleCI will repeat the testing process against the production branch.
 
+If you're already familiar with continuous integration and a GitHub workflow, consider reviewing [this guide](/docs/guides/github-pull-requests/), which automates the build process and focuses on Pantheon and Drupal specific workflow techniques.
 
 ## What You’ll Need
 
-- [Composer](https://getcomposer.org/), [Git](https://git-scm.com/download/) and [Terminus](/docs/terminus) running on your local computer.
+- [Composer](https://getcomposer.org/) and [Git](https://git-scm.com/download/) running on your local computer. [Terminus](/docs/terminus) is recommended for additional scripting options, but not required.
 - A GitHub account
-- A [Multidev](/docs/multidev/) enabled site on Pantheon. Signup at [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) (free) to enable Multidev.
+- A Pantheon For Agencies account, needed to create [multidev](/docs/multidev/) sites. Signup at [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) (free) to enable multidev.
 - A free [CircleCI](https://circleci.com) account
 
 
@@ -116,7 +117,16 @@ Next, we will create a new Pantheon machine user to associate with our CircleCI 
 
 1. Using a unique email address, create a new Pantheon user from the [Pantheon home page](https://pantheon.io/) and log in. For example, this site uses `docs@pantheon.io` for our machine user.  
 
-2. [Create an SSH key](/docs/ssh-keys) for this user. Be careful not to overwrite any existing SSH keys.
+2. [Create an SSH key](/docs/ssh-keys) for this user.
+
+    <div class="alert alert-danger" role="alert">
+    <h4 class="info">Warning</h4><p markdown="1">Be careful not to overwrite any existing SSH keys on your local computer. Enter a non-standard file name and/or location at this prompt:</p>
+
+    <p markdown="1">
+    ```
+    Enter file in which to save the key (~/.ssh/id_rsa):
+    ```
+    </p></div>
 
 3. [Add this SSH public key](/docs/ssh-keys/#add-your-ssh-key-to-pantheon) to Pantheon on the User Dashboard.
 
@@ -222,14 +232,20 @@ Now make a change and submit a pull request to take your new workflow for a spin
     git push origin new-feature
     ```
 
-4. From your GitHub repo, go to the new branch and open a Pull Request:
+4. From your GitHub repository, go to the new branch and open a Pull Request:
 
     ![New PR](/source/docs/assets/images/integrations/new_pr.png)
 
     Commits pushed to GitHub will initiate a new build with CircleCI. This is a simple change, so all tests should pass. The tests run on GitHub and then are pushed to a Multidev environment on Pantheon.
 
-If you are satisfied with the change, merge your pull request. This will cause another test to run on CircleCI against the master branch. Once these tests pass, your pull request will be merged and the changes will be available on your development site. Use the [Pantheon workflow](/docs/pantheon-workflow/) to merge into Dev and deploy to Test then up to Live, either with Terminus or on the Site Dashboard.
+5. From the Pantheon Site Dashboard, you can visit the new multidev environment to inspect your changes in action.
 
-## Conclusion
+6. If you're satisfied with the change, merge your pull request. This will cause another test to run on CircleCI against the master branch. Once these tests pass, CircleCI will merge your pull request on GitHub, and the changes will be available on your development environment.
 
-The Behat tests in the repo are just an example of what you can do, and it's simple to add more tests as you build new features. CircleCI can also be configured to send notifications to messaging apps so your entire team is aware of changes made to the codebase. This can be easily adapted for WordPress sites, or BitBucket code repositories. Please use this example as a foundation to augment your testing process.
+7. Use the [Pantheon workflow](/docs/pantheon-workflow/) to merge into Dev and deploy to Test then up to Live, either with Terminus or on the Site Dashboard.
+
+## Next Steps 
+
+ - Consider following the steps in [this guide](/docs/guides/github-pull-requests/#configure-site-via-the-admin-interface) to learn how to commit changes made from within Drupal, and how to create your own Behat tests.
+
+ - CircleCI can also be configured to send notifications to messaging apps so your entire team is aware of changes made to the codebase. This can be easily adapted for WordPress sites, or BitBucket code repositories. Please use this example as a foundation to augment your testing process.
