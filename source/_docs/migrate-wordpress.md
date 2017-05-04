@@ -70,7 +70,7 @@ This error can occur on sites using a content delivery network (CDN) service tha
 You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
