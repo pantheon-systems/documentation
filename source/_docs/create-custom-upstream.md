@@ -5,7 +5,7 @@ tags: [tools, workflow]
 categories: []
 ---
 
-The following steps will help you get a [Custom Upstream](/docs/custom-upstreams) ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase.
+The following steps will help you get a Custom Upstream ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
 ### Create and Host the Repository Remotely
 Custom Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
@@ -21,7 +21,7 @@ You can start by creating an empty repository on your preferred git hosting prov
 
 
 ### Pull in Core from Pantheon's Upstream
-To avoid incompatibilities, it's highly recommended that you track Pantheon's corresponding upstream repository within the Custom Upstream.
+To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
 
 Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
 <!-- Nav tabs -->

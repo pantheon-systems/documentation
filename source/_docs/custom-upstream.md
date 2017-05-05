@@ -6,8 +6,6 @@ categories: []
 ---
 Agency and EDU organizations can create and update sites from a common codebase using a Custom Upstream, which can be selected by members of an organization during site creation. If you don’t have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) or [EDU](https://pantheon.io/edu) account you can create one for free.
 
-![upstreams](/source/docs/assets/images/upstreams.png)
-
 ## Benefits
 
 ### Standardize Design and Functionality Across Many Sites
@@ -54,10 +52,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 ### Level Two: Your Custom Upstream
 The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Maintainer(s) of Custom Upstreams bear the responsibility of pulling in core updates from Pantheon. Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
-</div>
+![Create custom upstream](/source/docs/assets/images/empty-state-diagram.svg)
+
+Your Custom Upstream will be hosted remotely, then connected with Pantheon to create new sites fast.
 
 ### Level Three: Site Codebase
 Finally, core updates and changes to the common codebase make their way down to the site level repository for each site that uses the Custom Upstream.

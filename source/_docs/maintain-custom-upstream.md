@@ -4,11 +4,14 @@ description: Detailed information on how to merge updates to core, extensions, a
 tags: [tools, workflow]
 categories: []
 ---
-Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon.
+Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. We recommend the following workflow to maintain Custom Upstreams on Pantheon.
 
-Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
+</div>
 
-## Test and Distribute Updates
+## Test and Release Upstreams
 
 ![Upstream Workflow](/source/docs/assets/images/custom-upstream-workflow-chart.png)
 
