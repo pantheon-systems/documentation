@@ -1,25 +1,18 @@
 ---
-title: Best Practices for Maintaining Private Upstreams
+title: Best Practices for Maintaining Custom Upstreams
 description: Detailed information on how to merge updates to core, extensions, and themes running on Pantheon.
 tags: [tools, workflow]
 categories: []
 ---
-Maintainer(s) of Private Upstreams bear the responsibility of pulling in core updates from Pantheon. Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
+Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon.
 
-## Automatically Test and Distribute Updates
-TODO: How should users automate updates for a private upstream? The following can be set up on individual sites, but what's our happy path for achieving this on custom upstreams? The org would need a test site - maybe one for WordPress and one for Drupal - and the result of the script needs to push a commit to the remote repository, not Pantheon.
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
 
-[Pantheon WordPress Auto Update](https://github.com/ataylorme/wordpress-at-scale-auto-update)
+## Test and Distribute Updates
 
-[Pantheon Drupal Auto Update](https://github.com/populist/drupal-auto-update)
+![Upstream Workflow](/source/docs/assets/images/custom-upstream-workflow-chart.png)
 
-
-## Manually Test and Distribute Updates
-### Test Updates
-TODO: Should users have a test site and use a branch release strategy as previously documented? Should we recommend using Multidev? Do all orgs have access to Multidev or does it differ based on org type (e.g. partner, reseller, etc.).
-
-### Distribute Updates Downstream
-1. Add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) within a local clone of your Private Upstream repository if you haven't done so already:
+1. Add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) within a local clone of your Custom Upstream repository if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -66,13 +59,13 @@ TODO: Should users have a test site and use a branch release strategy as previou
      </div>
      </div><br>
 
-3. Push to the Private Upstream's remote repository:
+3. Push to the Custom Upstream's remote repository:
 
   ```nohighlight
   git push origin master
   ```
 
-Updates will become available within an hour of being pushed to the remote repository on sites running the Private Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
+Updates will become available within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
 
 
 ## Troubleshoot
@@ -81,7 +74,7 @@ Updates will become available within an hour of being pushed to the remote repos
 #### Automatically Resolve
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
-1. Navigate to the Private Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to the Custom Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -134,7 +127,7 @@ Double-check the conflicted files before going forward to make sure no bugs were
 #### Manually Resolve
 If attempts to automatically resolve conflicts fail or if you want your changes to persist instead of the upstreams, you'll need to manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to the Private Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to the Custom Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -203,7 +196,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   In this example, you would open `wp-admin/about.php` in your preferred text editor.
 
-  Then look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Private Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+  Then look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
 
   Finally, delete the conflict markers and double-check the changes.
 
