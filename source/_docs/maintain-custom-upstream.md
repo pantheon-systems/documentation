@@ -11,9 +11,19 @@ Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibili
 <p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
 </div>
 
-## Test and Release Upstreams
+Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to other sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please do so now following the [steps here](/docs/create-custom-upstream).
 
-![Upstream Workflow](/source/docs/assets/images/custom-upstream-workflow-chart.png)
+## Create Test Site on Pantheon
+
+1. From your User Dashboard, click **Create New Site**.
+2. Name your site.
+3. Select your organization from the dropdown menu.
+4. Click **Create Site**.
+5. Select your Custom Upstream from the Organization Distribution framework options.
+6. Click **Visit your Pantheon Dashboard**.
+7. Click **Visit Development Site** and complete the installation process for the selected framework.
+
+## Test and Release Pantheon Core Updates
 
 1. Add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) within a local clone of your Custom Upstream repository if you haven't done so already:
 
@@ -37,7 +47,29 @@ Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibili
     </div>
     </div><br>
 
-2. Pull down changes from the appropriate upstream:
+2. We'll need to do the same for your new test site on Pantheon. Let's grab the site's repository URL on Pantheon using [Terminus](/docs/terminus):
+
+    ```
+    terminus connection:info <site>.<dev> --field=git_url
+    ```
+
+
+  Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote):
+
+    ```
+    git remote add pantheon-test <git_url>
+    ```
+
+
+3. Checkout a new branch:
+
+    ```nohighlight
+    git checkout -b core-update
+    ```
+
+    It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives us a chance to reveal issues before distributing updates.
+
+4. Pull down Pantheon's core updates from the appropriate upstream:
 
      <!-- Nav tabs -->
      <ul class="nav nav-tabs" role="tablist">
@@ -62,13 +94,27 @@ Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibili
      </div>
      </div><br>
 
-3. Push to the Custom Upstream's remote repository:
+5. Push to your new test site on Pantheon:
 
   ```nohighlight
-  git push origin master
+  git push pantheon-test core-update
   ```
 
-Updates will become available within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
+6. Navigate to the Multidev overview tab in the Site Dashboard of your test site and click **Git Branches**.
+
+7. Click the **Create Environment** button next to the `core-update` branch.
+
+8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Gitbucket.  
+
+Updates will become available to sites downstream within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
+
+## Tips and Tricks
+### Use the Pantheon Workflow
+Create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout [our guide](/docs/guides/drupal8-commandline/#managing-content,-configuration,-and-code-across-environments) for an example of generating content from the command line.
+
+### Sample a Few Sites
+For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
+
 
 
 ## Troubleshoot
