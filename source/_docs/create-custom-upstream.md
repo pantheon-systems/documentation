@@ -7,7 +7,7 @@ categories: []
 
 The following steps will help you get a Custom Upstream ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
-### Create and Host the Repository Remotely
+## Create and Host the Repository Remotely
 Custom Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
 
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Updates are tracked here and distributed downstream to sites within your organization.
@@ -20,7 +20,7 @@ This remote repository serves as the central location for the development and ma
 You can start by creating an empty repository on your preferred git hosting provider, or you can use an existing repository. Once you have the repository hosted remotely, clone it to your local. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
 
 
-### Pull in Core from Pantheon's Upstream
+## Pull in Core from Pantheon's Upstream
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
 
 Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
@@ -74,7 +74,7 @@ git push origin master</code></pre>
 </div>
 </div>
 
-### Grant Pantheon Access (Privately Hosted Repositories Only)
+## Grant Pantheon Access (Privately Hosted Repositories Only)
 For privately hosted repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters.
 
 For private GitLab repositories, please ensure the user has the ["reporter" permissions level](https://docs.gitlab.com/ce/user/permissions.html#permissions).
@@ -82,7 +82,7 @@ For private GitLab repositories, please ensure the user has the ["reporter" perm
 
 If your repository is publicly accessible, you can skip this step.
 
-### Submit Upstream Information
+## Submit Upstream Information
 [Contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
 
 - **Upstream Name**
