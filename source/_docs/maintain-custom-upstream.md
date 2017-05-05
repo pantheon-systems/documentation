@@ -110,7 +110,7 @@ Updates will become available to sites downstream within an hour of being pushed
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
-Create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout [our guide](/docs/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+Create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout [our guide](docs/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
