@@ -1,26 +1,26 @@
 ---
-title: Pingdom Uptime Check
-description: How to create and configure a Pingdom Uptime check on a Pantheon site.
+title: Jira Integration
+description: How to connect Atlassian Jira issue tracking to a Drupal or WordPress site on Pantheon.
 tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
-date: 5/14/2017
+date: 5/4/2017
 contributors: scottmassey
 ---
 
-Monitoring services, such as [Pingdom](https://www.pingdom.com/), allow those responsible for site performance and uptime to know when a website is having problems delivering content. Pingdom provides several different types of uptime and performance checks.
+Atlassian's suite of developer tools is well known.
 
-In this guide, we will create and configure the simplest check for a website, an [Uptime Check](https://www.pingdom.com/product/uptime-monitoring), which pings a page and verifies a response. Additional checks include a [Page Speed](https://www.pingdom.com/product/page-speed) check, which tracks page load time, and [Real User Monitoring](https://www.pingdom.com/product/performance-monitoring), which measures other important performance metrics.
+In this guide, we will create and configure the Jira to a site on Pantheon. This will allow
 
 ## What You’ll Need
 
-- At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic](/docs/new-relic#configure-ping-monitors-for-availability).
+- A Jira Instance.
 
-- A Drupal or Wordpress site on Pantheon to monitor.
+- A Drupal or Wordpress site on Pantheon.
 
-## Create a Pingdom Account
+## Create a Jira Instance
 
-1.  On [Pingdom's homepage](https://www.pingdom.com), click **Sign Up** or if available, **Start your Free 14-Day Trial**.
+1.  On [Atlassian's website](https://www.atlassian.com/software/jira), sign up for Jira, the issues tracking application. Optionally, at this time, you can can sign up for Confluence, which is a documentation hub, as well as Jira Service Desk, a customer-facing helpdesk. These can be added later and are not in scope for this guide.
 
 2.  Review and choose from available plans and select either monthly or discounted annual billing. For this guide, we selected the **Pingdom Starter account**. Plans can be upgraded at anytime.
 
