@@ -360,8 +360,8 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
 ```
-if (defined( "$PANTHEON_BINDING" )) { 
-  include_once( "/srv/bindings/". $PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
+if (defined( "PANTHEON_BINDING" )) { 
+  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
 }
 ```
 
