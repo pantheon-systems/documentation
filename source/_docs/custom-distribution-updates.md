@@ -66,6 +66,5 @@ After testing to ensure everything looks good, deploy the updates to Test and Li
 It's important to relay the need for updating core to distribution maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your distribution and reach out to a maintainer. Even better - submit a pull request for the update.
 
 ## See Also
-- [Managing Upstreams](/docs/running-custom-upstream/)
+- [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream/)
 - [Applying Upstream Updates](/docs/upstream-updates)
-- [Undo Git Commits](/docs/upstream-updates)
