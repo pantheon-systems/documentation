@@ -18,9 +18,7 @@ Learn how the web team at Weill Cornell Medical College used Custom Upstreams to
 ### Efficient Update Strategy
 Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updating across massive site portfolios.
 
-New features and functionality can be continuously developed in the Custom Upstream repository overtime then distributed to each individual site where they can be applied with a single click by site owners:
-
-![EDU Upstream Flow](/source/docs/assets/images/edu-upstream-repository.jpg)
+New features and functionality can be continuously developed in the Custom Upstream repository overtime then distributed to each individual site where they can be applied with a single click by site owners.
 
 See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
@@ -42,9 +40,7 @@ Let's agree on definitions for some commonly used terms:
 * **Site Level Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Workflow Overview
-There are three levels of repositories in play here, and updates flow "downstream" from one level to another. Here's an example workflow for a Custom Upstream based on WordPress:
-
-![WordPress Custom Upstream Example Flow](/source/docs/assets/images/upstream-flow.png)
+There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
 
 ### Level One: Pantheon's Core Upstream
 The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
