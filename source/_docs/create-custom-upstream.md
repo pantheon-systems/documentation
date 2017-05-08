@@ -12,11 +12,6 @@ Custom Upstream repositories must be hosted outside of Pantheon using a provider
 
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Updates are tracked here and distributed downstream to sites within your organization.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.</p>
-</div>
-
 You can start by creating an empty repository on your preferred git hosting provider, or you can use an existing repository. Once you have the repository hosted remotely, clone it to your local. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
 
 
