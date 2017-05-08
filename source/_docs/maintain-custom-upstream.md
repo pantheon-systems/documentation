@@ -11,9 +11,9 @@ Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibili
 <p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
 </div>
 
-Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to other sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please do so now following the [steps here](/docs/create-custom-upstream).
+Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to other sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please [do so now](/docs/create-custom-upstream).
 
-## Create Test Site on Pantheon
+## Create a Test Site on Pantheon
 
 1. From your User Dashboard, click **Create New Site**.
 2. Name your site.
@@ -100,7 +100,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
   git push pantheon-test core-update
   ```
 
-6. Navigate to the Multidev overview tab in the Site Dashboard of your test site and click **Git Branches**.
+6. Back on the Site Dashboard for your test site, navigate to the Multidev overview tab and click **Git Branches**.
 
 7. Click the **Create Environment** button next to the `core-update` branch.
 
@@ -116,7 +116,7 @@ Updates will become available to sites downstream within an hour of being pushed
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
-Create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
@@ -129,7 +129,7 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 #### Automatically Resolve
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
-1. Navigate to the Custom Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -182,7 +182,8 @@ Double-check the conflicted files before going forward to make sure no bugs were
 #### Manually Resolve
 If attempts to automatically resolve conflicts fail or if you want your changes to persist instead of the upstreams, you'll need to manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to the Custom Upstream's root directory using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+
+1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -231,7 +232,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
 3. If a conflict is introduced, the output provides all the details we need in order to resolve. For example:
 
-  ```command
+  ```bash
   $ git rebase pantheon-wordpress/master
   First, rewinding head to replay your work on top of it...
   Applying: Adjust rendering of version release notes
