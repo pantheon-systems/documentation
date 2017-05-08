@@ -1,6 +1,6 @@
 ---
 title: Introduction to Custom Upstreams
-description: Learn how to use custom upstreams to free up developer time.
+description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---

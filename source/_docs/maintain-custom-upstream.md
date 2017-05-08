@@ -1,6 +1,6 @@
 ---
 title: Best Practices for Maintaining Custom Upstreams
-description: Detailed information on how to merge updates to core, extensions, and themes running on Pantheon.
+description: Detailed information on how to maintain Custom Upstreams and distribute updates downstream.
 tags: [tools, workflow]
 categories: []
 ---
