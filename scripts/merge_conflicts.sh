@@ -4,11 +4,11 @@ path=$(dirname "$0")
 base=$(cd $path/.. && pwd)
 
 cd $base/output_dev/docs
-if grep -q "&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD" $(find . -type f); then
+if grep -q --exclude="upstream-updates/index.html" --exclude="maintain-custom-upstream/index.html" "&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD" $(find . -type f); then
   echo 'Merge HEAD hash: fail' && exit 1
-elif grep -q "<<<<<<< HEAD" $(find . -type f); then
+elif grep -q --exclude="upstream-updates/index.html" --exclude="maintain-custom-upstream/index.html" "<<<<<<< HEAD" $(find . -type f); then
   echo 'Merge HEAD hash: fail' && exit 1
-elif grep -q "=======" $(find . -not -path "./assets/*" -type f ); then
+elif grep -q --exclude="upstream-updates/index.html" --exclude="maintain-custom-upstream/index.html" "=======" $(find . -not -path "./assets/*" -type f ); then
   echo 'Merge equal signs: fail' && exit 1
 else
   echo 'Merge conflict: pass' && exit 0

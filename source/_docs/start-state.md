@@ -4,7 +4,7 @@ description: See available options for starting new Drupal or WordPress sites an
 tags: [create]
 categories: []
 ---
-The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/running-custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
+The site's framework is designated during the creation process on Pantheon. Available installations include WordPress and Drupal core, in addition to several publicly maintained distributions. [Organizational and partner upstreams](/docs/custom-upstream/) that have been added to the platform will be available to members when an organization affiliation has been set.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

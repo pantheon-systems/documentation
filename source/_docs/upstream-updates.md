@@ -1,21 +1,30 @@
 ---
-title: Applying Upstream Updates
-description: Detailed information on applying and debugging upstream updates, such as Drupal and WordPress releases.
+title: Apply Upstream Updates
+description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 tags: [dashboard, devterminus, git]
 categories: []
 ---
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support).
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7)) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/docs/maintain-custom-upstream/), become available downstream as a one-click update.
 
-## Apply Upstream Updates via the Dashboard
+Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/docs/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support).
 
-1. Check the options you want to run after pulling the update.
-2. Click **Apply Updates**.
-3. Click **Visit Development Site** in the Development Environment to test it, or run your automatic user acceptance tests.
-4. If you find errors, you can [<u>revert to the last stable commit</u>](/docs/undo-commits) using Git.
-5. Deploy the upstream updates to your Test Environment by clicking **Pull (Content from Live and) Code from Development** in the Code workspace in the Test Environment.
-6. Click **Visit Testing Environment** to test the update against your Live site’s content base.
-7. Deploy the upstream updates to your Live environment by clicking **Pull Code from Testing** in the Code workspace in the Live environment.
-8. Click **Visit Live Site**, and verify the update is live.
+## Apply Upstream Updates via the Site Dashboard
+1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
+
+  ![upstream updates](/source/docs/assets/images/dashboard/updates-available-2.png)
+
+2. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
+3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
+4. Click **Apply Updates**.
+5. Click **Visit Development Site** in the Development Environment to test and QA the site.
+5. Follow the standard [Pantheon Workflow](/docs/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
+
+### Auto-Resolve Conflicts
+
+In the event that the update fails, you may see an error indicating a conflict with some files in core. Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository. This does not solve all problems that may arise, but it should take care of most situations.
+
+If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site. This does not solve all problems that may arise, but it should take care of most situations.
+
 
 ## Apply Upstream Updates via Terminus
 
@@ -37,130 +46,106 @@ terminus sites:mass-update:apply
 
 For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
 
-### Further Considerations
-- ​If you have updates on Dev or Test that are not ready to be deployed to Live with your upstream updates, see [Undo Git Commits](/docs/undo-commits).
-- If the Development environment is in SFTP mode with pending changes that you are ready to deploy to Live, commit code changes.
-- If you are not ready to deploy to Live, use an SFTP connection to copy the files locally.
-- Core updates appear in your code workspace beneath the Connection Mode bar when they are available. Due to platform-wide codeserver caching settings, update notifications may appear on different Site Dashboards running the same upstream up to two hours apart.
-- Core updates for alternate distributions (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please contact them directly regarding expected updates.
-- Sometimes we will add new features to the Pantheon API module and deploy bug fixes ahead of a core release. If you are observing good development practices and not modifying core, merging an available update is your best course of action.
+## Apply Upstream Updates Manually from the Command Line and Resolve Merge Conflicts
+If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You'll need to manually resolve the conflict using the command line and a text editor.
 
-## Debug Failed Merges
+1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
-If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. Usually these are easy to resolve.
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li id="wptab-1conflict" role="presentation" class="active"><a href="#wp-1conflict" aria-controls="wp-1conflict" role="tab" data-toggle="tab">WordPress</a></li>
+      <li id="d8tab-1conflict" role="presentation"><a href="#d8-1conflict" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
+      <li id="d7tab-1conflict" role="presentation"><a href="#d7-1conflict" aria-controls="d7-1conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
+    </ul>
 
-### Auto-Resolve Conflicts
+    <!-- Tab panes -->
+    <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="wp-1conflict">
+    <pre id="git-pull-wp"><code class="command hljs" data-lang="">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="d8-1conflict">
+    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="d7-1conflict">
+    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    </div>
+    </div><br>
 
-In the event that the update fails, you may see an error indicating a conflict with some files in core. Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository. This does not solve all problems that may arise, but it should take care of most situations.
+2. Pull down changes from the appropriate upstream:
 
-If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site. This does not solve all problems that may arise, but it should take care of most situations.
+     <!-- Nav tabs -->
+     <ul class="nav nav-tabs" role="tablist">
+     <li role="presentation" class="active"><a href="#wp-2conflict" aria-controls="wp-2conflict" role="tab" data-toggle="tab">WordPress</a></li>
+     <li role="presentation"><a href="#d8-2conflict" aria-controls="d8-2conflict" role="tab" data-toggle="tab">Drupal 8</a></li>
+     <li role="presentation"><a href="#d7-2conflict" aria-controls="d7-2conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
+     </ul>
 
+     <!-- Tab panes -->
+     <div class="tab-content">
+     <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
+     <pre><code class="command hljs">git fetch pantheon-wordpress
+    git rebase pantheon-wordpress/master</code></pre>
+     </div>
+     <div role="tabpanel" class="tab-pane" id="d8-2conflict">
+     <pre><code class="command hljs">git fetch pantheon-drops-8
+    git rebase pantheon-drops-8/master</code></pre>
+     </div>
+     <div role="tabpanel" class="tab-pane" id="d7-2conflict">
+     <pre><code class="command hljs">git fetch pantheon-drops-7
+    git rebase pantheon-drops-7/master</code></pre>
+     </div>
+     </div><br>
 
-### Resolve Conflicts Locally
+3. If a conflict is introduced, use the output provided to resolve. For example:
 
-Select the appropriate framework below for your web application, then execute the commands from within an up-to-date Git clone on your local machine. The `Xtheirs` flag will attempt to automatically resolve conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with .gitignore).
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+  ```command
+  $ git rebase pantheon-wordpress/master
+  First, rewinding head to replay your work on top of it...
+  Applying: Adjust rendering of version release notes
+  Using index info to reconstruct a base tree...
+  M	wp-admin/about.php
+  Falling back to patching base and 3-way merge...
+  Auto-merging wp-admin/about.php
+  CONFLICT (content): Merge conflict in wp-admin/about.php
+  error: Failed to merge in the changes.
+  Patch failed at 0001 Adjust rendering of version release notes
+  The copy of the patch that failed is found in: .git/rebase-apply/patch
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
-  <pre><code class="bash hljs">
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
-  <pre><code class="bash hljs">
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d6">
-  <pre><code class="bash hljs">
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-  <pre><code class="bash hljs">
-  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
-  </div>
-</div>
+  When you have resolved this problem, run "git rebase --continue".
+  If you prefer to skip this patch, run "git rebase --skip" instead.
+  To check out the original branch and stop rebasing, run "git rebase --abort".
+  ```
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your Site Dashboard to find your upstream URL.</p></div>
+  In this example, you would open `wp-admin/about.php` in your preferred text editor.
+
+  Then look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+
+  Delete the conflict markers and double-check the changes.
+
+  Run `git status` to see conflicting files in the current index again. Once all conflicts have been addressed, you can add them to your index and continue pulling in updates:
+
+  ```command
+  git add .
+  git rebase --continue
+  ```
+
+4. Push updates to the Site Dashboard on Pantheon:
+
+  ```command
+  git origin master
+  ```
 
 ## Troubleshooting
 
 ### One-Click Updates Do Not Appear After Rewriting Git History
 Squashing and rewriting history may cause one-click updates to break, meaning updates will no longer appear on your Site Dashboard once available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashboard and prevents conflicts with our one-click updates.
 
-### Manually Resolving Conflicts
+### One-Click Update Not Available for Sites Using a Public Upstream
+Core updates for Public Upstreams (Open Atrium, Commerce Kickstart, etc.) are initiated by the maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
-Conflicts can occur when the upstream you are trying to merge your code with has made alterations to files.
+It's important to relay the need for updating core to distribution maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your distribution and reach out to a maintainer. Even better - submit a pull request for the update.
 
-_"When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge."_ - Git Manual
-
-For more information on resolving conflicts, see [Git FAQs](/docs/git-faq#how-can-i-manually-resolve-conflicts%3F).
-
-
-### Delete Merge Conflicts
-
-If you have overwritten core, see [Undo Git Commits](/docs/undo-commits).
-
-To manually delete merge conflicts from the terminal, use the following commands in sequence:
-
-1. Identify the file that is generating a delete error. For example, the Git log may contain an entry similar to the following:
-
- ```nohighlight
- CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
- ```
-2. From your local repository, run the following Git command to get a copy of the file in conflict:
-
- ```bash
- git checkout <commitid> -- <file>
- ```
-For example:
- ```nohighlight
- git checkout 72faeeff1c9356221694d1351cdb2000ab3c5d1c -- run-tests.sh
- ```
-3. When looking for a commit ID, find the last instance where the missing file was in the repository. Run “git status” and verify there is a new file to add to the repository:
-
- ```bash
- git status
- On branch master
- Changes to be committed:
- (use "git reset HEAD ..." to unstage)
- new file: README.txt
- ```
-
-4. Next, run:
- ```bash
- git add .
- ```
-5. After performing the add, commit the file with a commit message.
-
- ```bash
- git commit -am "verifying missing README.txt"
- ```
-6. After you receive confirmation from Git that the file was committed, run:
-
- ```bash
- git push origin master
- ```
+Once you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts).
 
 ### 503 Errors When Running Update.php and Installing Modules
 
