@@ -106,7 +106,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
 
 8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Gitbucket.  
 
-Updates will become available to sites downstream within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin.
+Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [Apply Upstream Updates](/docs/upstream-updates).
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
@@ -114,19 +114,16 @@ Updates will become available to sites downstream within an hour of being pushed
 </div>
 
 
-## Tips and Tricks
-### Use the Pantheon Workflow
+### Tips and Tricks
+#### Use the Pantheon Workflow
 To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
 
-### Sample a Few Sites
+#### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
 
-
-
 ## Troubleshoot
-
 ### Resolve Conflicts
-#### Automatically Resolve
+#### Automatically Resolve from the Command Line
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
@@ -179,7 +176,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
 
-#### Manually Resolve
+#### Manually Resolve from the Command Line
 If attempts to automatically resolve conflicts fail or if you want your changes to persist instead of the upstreams, you'll need to manually resolve the conflict using the command line and a text editor.
 
 
