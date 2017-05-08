@@ -1,6 +1,6 @@
 ---
 title: Introduction to Custom Upstreams
-description: Learn upstream terminology and how to use custom upstreams to free up developer time.
+description: Learn how to use custom upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
@@ -13,31 +13,31 @@ Custom Upstreams act as a scaffold for new sites, allowing developers and site o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once in a single source.
 
-Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
+> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
 
 ### Efficient Update Strategy
 Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updating across massive site portfolios.
 
-New features and functionality can be continuously developed in the Custom Upstream repository overtime then distributed to each individual site where they can be applied with a single click by site owners.
+New features and functionality can be continuously developed in the Custom Upstream repository over time then distributed to each individual site where they can be applied with a single click by site owners.
 
-See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
 ### Scale Client Services
 Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
-Hear from Mike Pirog of Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
+> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
 
 
 ## Terminology
-Let's agree on definitions for some commonly used terms:
+Here are definitions for commonly used terms:
 
 * **Upstream**: An additional repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress).
 * **Custom Upstream**: Repository that is restricted to members of an organization which contains a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 * **Public Upstream**: Repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
 * **Repository**: Collection of files that are packaged in a single directory.
 * **Remote Repository**: Collection of files that are stored in a remote and central location.
-* **Upstream Updates**: Code changes that are made once in the parent repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-* **Site Level Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
+* **Upstream Updates**: Code changes that are made once in a parent repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
+* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Workflow Overview
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
@@ -48,14 +48,14 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 ### Level Two: Your Custom Upstream
 The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/). It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites:
+
 ![Create custom upstream](/source/docs/assets/images/empty-state-diagram.svg)
 
-Your Custom Upstream will be hosted remotely, then connected with Pantheon to create new sites fast.
+### Level Three: Site Repository
+Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
 
-### Level Three: Site Codebase
-Finally, core updates and changes to the common codebase make their way down to the site level repository for each site that uses the Custom Upstream.
-
-The site level repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily:
+The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily:
 
 ![Site Updates Available](/source/docs/assets/images/dashboard/updates-available-2.png)
 

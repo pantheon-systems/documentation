@@ -34,13 +34,13 @@ Navigate to the Custom Upstream's root directory using the command line, then ad
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="wp1">
-<pre id="git-pull-wp"><code class="command nohighlight" data-lang="bash">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+<pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
 </div>
 <div role="tabpanel" class="tab-pane" id="d81">
-<pre id="git-pull-drops-8"><code class="command nohighlight" data-lang="bash">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+<pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
 </div>
 <div role="tabpanel" class="tab-pane" id="d71">
-<pre id="git-pull-drops-7"><code class="command nohighlight" data-lang="bash">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+<pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
 </div>
 </div><br>
 
@@ -55,19 +55,19 @@ Now that the Custom Upstream repository is tracking the corresponding Pantheon c
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="wp">
-<pre id="git-pull-wp"><code class="command nohighlight" data-lang="bash">git checkout master
+<pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git checkout master
 git fetch pantheon-wordpress
 git merge pantheon-wordpress/master
 git push origin master</code></pre>
 </div>
 <div role="tabpanel" class="tab-pane" id="d8">
-<pre id="git-pull-drops-8"><code class="command nohighlight" data-lang="bash">git checkout master
+<pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git checkout master
 git fetch pantheon-drops-8
 git merge pantheon-drops-8/master
 git push origin master</code></pre>
 </div>
 <div role="tabpanel" class="tab-pane" id="d7">
-<pre id="git-pull-drops-7"><code class="command nohighlight" data-lang="bash">git checkout master
+<pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git checkout master
 git fetch pantheon-drops-7
 git merge pantheon-drops-7/master
 git push origin master</code></pre>
