@@ -35,7 +35,7 @@ In this lesson, we’re going to create and install a new WordPress or Drupal si
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>Organizations can add their own sites to this list! We call these Private Upstreams, and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+    <p>Organizations can add their own sites to this list! We call these Custom Upstreams, and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
     </p></div>
 
 4. For the purpose of this guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
@@ -49,7 +49,7 @@ In this lesson, we’re going to create and install a new WordPress or Drupal si
          <ul markdown="1">
          * Our platform first creates [fresh containers](https://pantheon.io/platform/why-containers), just for your site.
          * We then install PHP, NginX, and MariaDB.
-         * Finally we pull the latest version of your Content Management System (CMS) from either our upstream repository or your Private Upstream.
+         * Finally we pull the latest version of your Content Management System (CMS) from either our upstream repository or your Custom Upstream.
          </ul>
        </div>
      </div>
