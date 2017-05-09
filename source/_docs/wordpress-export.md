@@ -5,15 +5,9 @@ tags: [export]
 categories: [wordpress]
 ---
 
-Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
+The process of [manually migrating](/docs/migrate-manual/) a WordPress site to Pantheon requires a copy of your site code, files, and database. Depending on the limitations of your previous host, you may find it helpful to create archives files to copy locally before importing to Pantheon. This page covers how to create those archives.
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
-
-- You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/wordpress-site-networks)
-- You can't install a plugin on your existing site (e.g. WordPress.com)
-- [Your site doesn't have a public URL (e.g. a local installation) and it's archive exceeds 500MB.](/docs/migrate-wordpress/#frequently-asked-questions)
-
+## Archive Types
 
 There are three major components of a WordPress site:
 
@@ -66,9 +60,10 @@ cd $SOURCE
 # Create an archive that excludes `wp-content/uploads`.
 tar -czf $TARGET/wordpress.tar.gz --exclude=wp-content/uploads* .
 ```
-### Create WordPress Database Archive
+## Database
 
 This is optional, but recommended. The easiest method is to use the [mysqldump](https://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
+
 ```php
 # Specify the destination folder.
 TARGET=~/Desktop
@@ -77,24 +72,18 @@ mysqldump -uUSERNAME -pPASSWORD DATABASENAME > $TARGET/db.sql
 # Compress the backup.
 gzip $TARGET/db.sql
 ```
-### Export WordPress Files
+## Files
 Export a tar.gz or .zip file of your files directory, which was intentionally omitted from the codebase import. These files are not tracked in Git; instead, they are stored in Valhalla, our network file system.
+
 ```php
 TARGET=~/Desktop
 SOURCE=~/Projects/mysite
 cd $SOURCE/wp-content/uploads
 tar -czf $TARGET/files.tar.gz .
 ```
-## Prepare Your Archive for Import
-You now have three individual files that make one complete archive of your WordPress site. The import screen allows you to toggle between uploading your archive files or supplying a remote URL (e.g. Amazon S3, Dropbox, your existing server, etc.) to fetch the archives.
+## Next Steps
 
-You can upload each of your archive files separately, or package the archives within a single file. The max file upload import size is 100MB total. URL imports are limited to 500MB per input.
-
-
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4><p>Modify Dropbox URLs to end in <code>dl=1</code> instead of the default <code>dl=0</code>. This forces a download of your archive and avoids the Dropbox landing page.</p></div>
-
-Only provide one `.sql` file; if multiple are present the import will fail.
+Depending on your previous hosting platform, you can use tools like `rsync` or SFTP to copy these archive files locally. Follow any of the guides below to manually migrate your site.
 
 ## See Also
 * <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
