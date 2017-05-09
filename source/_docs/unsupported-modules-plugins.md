@@ -364,7 +364,7 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 
 ### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
 
-**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, for example, `install_plugins`, is not supported.
+**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, for example, 'install_plugins', is not supported.
 
 The 'install_plugins' capability isn't present on the Test or Live environment and therefore the menu will not display. 
 For example:
