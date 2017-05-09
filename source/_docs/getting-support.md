@@ -160,9 +160,9 @@ It is very important to note, these requests are not guaranteed and it is possib
 
 Keep the following tips in mind when opening a new support ticket or chat:
 
- - **One ticket per issue**: opening multiple tickets on the same issue will only impeded our ability to provide timely and concise assistance. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
- 
- - **Reproduction Steps**: One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to reproduce the issue. If we can't see it, we can't debug it.
+ - **One ticket per issue**: Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+
+ - **Replication Steps**: One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
 
  - **Specifics**: Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
 
