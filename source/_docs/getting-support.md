@@ -156,6 +156,19 @@ This depends on the feature requested, the impact it could possibly have on a sy
 
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
+## Help Us Help You
+
+Keep the following tips in mind when opening a new support ticket or chat:
+
+ - **One ticket per issue**: opening multiple tickets on the same issue will only impeded our ability to provide timely and concise assistance. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+ 
+ - **Reproduction Steps**: One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to reproduce the issue. If we can't see it, we can't debug it.
+
+ - **Specifics**: Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+
+ - **Custom Access**: If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
+
+ - **Clarification**: We're all of us only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense. Don't be afraid to correct us, or to ask for clarification if we don't seem to make sense.
 
 ## FAQs
 #### Is there a support number we can call? If so, is this service available for every plan?
