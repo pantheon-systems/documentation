@@ -273,4 +273,13 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `settings.php`:
 
-```ini_set('arg_separator.output', '&');```
+    ini_set('arg_separator.output', '&');
+
+#### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
+
+```bash
+Could not find a Drupal settings.php file at ./sites/default/settings.php
+```
+
+To resolve, add a default or empty `sites/default/settings.php` to your site's code.
+
