@@ -19,24 +19,26 @@ In this guide, we will connect a Jira instance to a site on Pantheon. When chang
 
 - A Drupal or Wordpress site on Pantheon.
 
+- Optional: [Terminus](https://pantheon.io/docs/terminus) installed locally.
+
 ## Create a Jira Service Account
 
-1. For security and isolation, from the Jira user administration dashboard, create a user with standard permissions.
+1. For security and isolation, on the Jira user administration dashboard, create a user with standard permissions.
 
 ![Service account creation](/source/docs/assets/images/integrations/jira/service_account.png)
 
 ## Create a private folder for this accounts credentials.
 
-1. Use the following php command to create a JSON file, useing your Jira url and the service account's Jira username and password.
+1. From your local terminal, use the following php command to create a JSON file, substituting the below values with your Jira url and the service account's Jira username and password.
 ```
   $> php -r "print json_encode(['jira_url'=>'https://myjira.atlassian.net','jira_user'=>'serviceaccount','jira_pass'=>'secret']);" > secrets.json
 ```
  
-2. FTP this file to a directory you will create in your Pantheon /files directory called secrets. This exact naming convention ensures its contents are not web-accesible. Repeat this process for any existing environments. Each environment should have a file similar to this:
+2. In your Pantheon **files** directory, create a directory called private, if it doesn't exist already. This exact naming convention ensures its contents are not web-accessible. FTP this JSON file to the files/private directory. Repeat this process for all of the sites environments. Each environment should look similar to this:
 
 ![Secrets folder](/source/docs/assets/images/integrations/jira/secrets.png)
 
-This can also be done quickly with [Terminus](https://pantheon.io/docs/terminus) if it is installed locally.
+This upload can also be done quickly with [Terminus](https://pantheon.io/docs/terminus) if it is installed and SFTP commands:
 
 ```
 $> `terminus site connection-info --env=dev --site=your-site --field=sftp_command`
@@ -72,11 +74,10 @@ $ ls
 jira_integration.php
 ```
 
-    Now we will log in and set up monitoring. Click the **SET UP YOUR MONITORING** button to go directly to the Pingdom dashboard.
 
-2. Add the example jira_integration.php script to the private directory of your code repository.
+4. Add the example jira_integration.php script to the private directory of your code repository.
 
-3. Add a Quicksilver operation to your pantheon.yml to fire the script after a deploy.
+5. Add a Quicksilver operation to your pantheon.yml to fire the script after a deploy.
    
 ```
 #always include the api version
@@ -89,15 +90,15 @@ workflows:
         description: Jira Integration
         script: private/jira_integration.php
 ```
-4. Test
+## Test
 
-Now if you push code with a commit message containing a Jira issue ID, the jira_integration.php script with parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket. You can also reference multiple commits:
+Now if you push code with a commit message containing a Jira issue ID, the jira_integration.php script will parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket. You can also reference multiple commits and it will link to them:
 
 ```
 git commit -m "WEB-113: This commit also fixes WEB-294 and INF-3"
 ```
 
-When testing, you can use the **terminus workflows:watch** command with the Pantheon site ID to see the integration in real time:
+When testing, use the **terminus workflows:watch** command with the Pantheon site ID to see the integration in real time:
 
 ```
 $ git commit -am "WEB-13: adding CSS changes, also closes WEB-6 and WEB-5"
