@@ -8,16 +8,10 @@ date: 5/4/2017
 contributors: scottmassey
 ---
 
-Atlassian's suite of developer tools is well known.
+Atlassian's Jira issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a larger suite of tools which includes Bitbucket, a code repository, and Hipchat, a team messaging and collaboration application. Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
-In this guide, we will create and configure the Jira to a site on Pantheon. 
+In this guide, we will connect a Jira instance to a site on Pantheon. When changes are pushed to Pantheon that reference a jira issue ID, the commit message will appear in the Jira issue's activity log.
 
-After deploy, automation updates jira tickets
-
-
-SAML??
-
-secrets.json got to files/private
 
 ## What You’ll Need
 
@@ -122,12 +116,5 @@ When we return to Jira, we can see the commit message in the activity tab of the
 
 ![Jira issue](/source/docs/assets/images/integrations/jira/jira_log.png)
 
-If we have the development panel viewable in Jira, we can also see the activity there.
-
-
-
-
 ## Conclusion
-Pingdom has a few more checks and features we did not cover. Depending on your plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.
-
-When a site is having issues, Pingdom lets the right people know quickly and provides good data to help find solutions. It's a good practice to use services like Pingdom on all high-value sites.
+In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassians's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
