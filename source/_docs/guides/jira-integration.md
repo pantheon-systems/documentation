@@ -10,7 +10,14 @@ contributors: scottmassey
 
 Atlassian's suite of developer tools is well known.
 
-In this guide, we will create and configure the Jira to a site on Pantheon. This will allow
+In this guide, we will create and configure the Jira to a site on Pantheon. 
+
+After deploy, automation updates jira tickets
+
+
+SAML??
+
+secrets.json got to files/private
 
 ## What You’ll Need
 
@@ -18,74 +25,106 @@ In this guide, we will create and configure the Jira to a site on Pantheon. This
 
 - A Drupal or Wordpress site on Pantheon.
 
-## Create a Jira Instance
+## Create a Jira Service Account
 
-1.  On [Atlassian's website](https://www.atlassian.com/software/jira), sign up for Jira, the issues tracking application. Optionally, at this time, you can can sign up for Confluence, which is a documentation hub, as well as Jira Service Desk, a customer-facing helpdesk. These can be added later and are not in scope for this guide.
+1. For security and isolation, from the Jira user administration dashboard, create a user with standard permissions.
 
-2.  Review and choose from available plans and select either monthly or discounted annual billing. For this guide, we selected the **Pingdom Starter account**. Plans can be upgraded at anytime.
+![Service account creation](/source/docs/assets/images/integrations/jira/service_account.png)
 
-    Add your credit card information. If you chose the free trial, you have until the end of the trial time to try Pingdom before the card is billed. Once you've read and agreed to Pingdom's [services agreement](https://www.pingdom.com/legal/software-service-agreement), click **START FREE TRIAL** to continue.
+## Create a private folder for this accounts credentials.
+
+1. Use the following php command to create a JSON file, useing your Jira url and the service account's Jira username and password.
+```
+  $> php -r "print json_encode(['jira_url'=>'https://myjira.atlassian.net','jira_user'=>'serviceaccount','jira_pass'=>'secret']);" > secrets.json
+```
+ 
+2. FTP this file to a directory you will create in your Pantheon /files directory called secrets. This exact naming convention ensures its contents are not web-accesible. Repeat this process for any existing environments. Each environment should have a file similar to this:
+
+![Secrets folder](/source/docs/assets/images/integrations/jira/secrets.png)
+
+This can also be done quickly with [Terminus](https://pantheon.io/docs/terminus) if it is installed locally.
+
+```
+$> `terminus site connection-info --env=dev --site=your-site --field=sftp_command`
+      Connected to appserver.dev.000000-0000-0000-0000-000000000.drush.in.
+  sftp> cd files
+  sftp> mkdir private
+  sftp> cd private
+  sftp> put secrets.json
+ ```
+
+## Configure Quicksilver Integration
+ 
+1. Clone Pantheon's [Quicksilver Example Repo](https://github.com/pantheon-systems/quicksilver-examples)to your local computer.
+
+```
+git clone https://github.com/pantheon-systems/quicksilver-examples.git quicksilver-examples
+
+```
+
+2. Locate your local copy of your Pantheon site's repository, or clone it if you haven't already.
+
+```
+git clone git clone ssh://codeserver.dev.000000-0000-0000-0000-000000000@codeserver.dev.000000-0000-0000-0000-000000000.drush.in:2222/~/repository.git astro-mktg
+```
+
+3. From the root directory of your local copy (at the same level as index.php), create a directory named "private" and copy jira_integration.php script to it.
+
+```
+$ mkdir private
+$ cd private
+$ cp /path/to/your/quicksilver-examples/jira_integration/jira_integration.php .
+$ ls
+jira_integration.php
+```
 
     Now we will log in and set up monitoring. Click the **SET UP YOUR MONITORING** button to go directly to the Pingdom dashboard.
 
-## Create a Basic Uptime Check
+2. Add the example jira_integration.php script to the private directory of your code repository.
 
-1.  When you first load the Pingdom dashboard, it will try to guide you through adding your website, and creating checks. Because this guide explains how to manually create checks, we suggest you skip this.
+3. Add a Quicksilver operation to your pantheon.yml to fire the script after a deploy.
+   
+```
+#always include the api version
+api_version: 1
 
-2.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation's **Monitoring** > **Uptime** sub-menu, click on **Add uptime check**:
+workflows:
+  sync_code:
+    after:
+      - type: webphp
+        description: Jira Integration
+        script: private/jira_integration.php
+```
+4. Test
 
-    ![My.pingdom.com dashboard](/source/docs/assets/images/integrations/dashboard.png)
+Now if you push code with a commit message containing a Jira issue ID, the jira_integration.php script with parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket. You can also reference multiple commits:
 
-3.  In the modal that opens, add the following information where indicated:
+```
+git commit -m "WEB-113: This commit also fixes WEB-294 and INF-3"
+```
 
-    - **Name of Check:** An easily recognizable name for the check, e.g. "www.example.com Home Page.”
+When testing, you can use the **terminus workflows:watch** command with the Pantheon site ID to see the integration in real time:
 
-    - **Check Interval:** How often Pingdom will check the site. While one minute is the minimum and acceptable to use, often a check every 5 minutes or more is adequate, and will allow for brief network throughput issues. Remember, these checks also will appear in web access logs, so too many checks may make it harder to debug other issues.
+```
+$ git commit -am "WEB-13: adding CSS changes, also closes WEB-6 and WEB-5"
+$ terminus workflow:watch 00000000-0000-0000-0000-000000000000
 
-    - **Check Type:** You can monitor several different things with Pingdom: email services, network components such as DNS or specific ports, or a website. Choose **Web**.
+ [notice] Started ed033e5a-3526-11e7-a3b7-bc764e105ecb Sync code on "dev" (dev) at 2017-05-10 02:18:16
+ [notice] Finished workflow ed033e5a-3526-11e7-a3b7-bc764e105ecb Sync code on "dev" (dev) at 2017-05-10 02:18:38
+ [notice] ------ Operation: Jira Integration finished in 5s (dev) ------
 
-    - **URL/IP:** On the **Required** tab, enter the URL for the website. If your site is using HTTPS, select that dropdown option. From the **Optional** tab, you can add user credentials and expected response text. This is very useful if you are using Varnish to cache a site; you can create a simple PHP script which queries the database and returns a specific value to determine if the site is functioning as expected.
+==== Posting to Jira ====
+RESULT: {"self":"https://myjira.atlassian.net/rest/api/2/issue/10012/comment/10101","id":"10101","author":{"self":"https://myjira.atlassian.net/rest/api/2/user?username=circle","name":"circle","key":"circle","emailAddress":"circle@myagency.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=48","24x24":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=24","16x16":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=16","32x32":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=32"},"displayName":"Pantheon Automation","active":true,"timeZone":"Asia/Tokyo"},"body":"{panel:title=Commit: 6e7425d3b5 [dev]|borderStyle=dashed|borderColor=#ccc|titleBGColor=#e5f2ff|bgColor=#f2f2f2}\n    WEB-13: adding CSS changes, also closes WEB-6 and WEB-5\n    ~Author: Scott Massey <scott.massey@myagency.com> - Date:   Wed May 10 11:18:01 2017 +0900~\n    {panel}","updateAuthor":{"self":"https://myjira.atlassian.net/rest/api/2/user?username=circle","name":"circle","key":"circle","emailAddress":"circle@myagency.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=48","24x24":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=24","16x16":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=16","32x32":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=32"},"displayName":"Pantheon Automation","active":true,"timeZone":"Asia/Tokyo"},"created":"2017-05-10T11:18:36.269+0900","updated":"2017-05-10T11:18:36.269+0900"}
+===== Post Complete! =====
+```
 
-    - **Test From:** Select the region. We suggest you select the region where the majority of the site's users are located.
+When we return to Jira, we can see the commit message in the activity tab of the issue:
 
-    - **Alerting Settings:** You can create teams, or assign alerts directly to users. It's better to create teams within Pingdom, rather than a forwarding email address (e.g. monitoring@example.com), as each user can set up their own alerting preferences. For now, select yourself.
+![Jira issue](/source/docs/assets/images/integrations/jira/jira_log.png)
 
-    - **When down, alert after:** 1-5 minutes, depending on the risk of false positives. If you are aware your site is having performance issues, it isn’t helpful to be reminded constantly, so sometimes a longer time period before being alerted ensures you are only notified of a severe failure.
+If we have the development panel viewable in Jira, we can also see the activity there.
 
-    - **Resend alert every:** This controls how often alerts are repeated. Never, 1 or 2 down cycles is adequate for most developers. It’s assumed that you will be working on the issue, and won't need to be alerted to an issue you're currently handling. It becomes noise during a potentially stressful time.
 
-    - **Alert when back up.** Leave this checked. You may not be the one responding to the issue, but you probably want to know when it’s back up. Sometimes intermittent issues result in a site going up and down within a few minute period.
-
-3.  Click **Create check** when you are done. You will now see a new check in the dashboard, from the **Uptime** page:
-
-    ![Pingdom.com uptime check](/source/docs/assets/images/integrations/complete_check.png)
-
-## Review your Check
-Let the check run a while (a few hours), then you can access reports for each site in either the left navigation menu or the individual check dropdown menu.
-
-![Pingdom reports](/source/docs/assets/images/integrations/reporting_options.png)
-
-Let’s look at a site that is having some trouble to see how Pingdom can help.
-
-![Downtime modal](/source/docs/assets/images/integrations/downtime_modal.png)
-
-- Item 1 tells us when the issue started occurring, which we can attempt to correlate to any recent changes or external events.
-
-- Item 2 provides the site's response to the check and Pingdom’s attempt to determine the root cause of the downtime. In this case, we see that the site returned a 200, which is a successful response, but took so long that Pingdom considered it a timeout:
-
-    ![Root cause analysis](/source/docs/assets/images/integrations/root_cause.png)
-
-This could point to a scaling, performance, or something simple, like lack of caching. Sometimes a server error will be returned, which can be connected to a PHP or permissions error.
-
-The Test Log Results will also display which regions encountered downtime. Sometimes the root cause of downtime is not related to site performance, as when a regional DNS server encounters issues. This report is helpful determining an incident when a certain region of users encounter downtime while others do not.
-
-![Test log results](/source/docs/assets/images/integrations/test_result.png)
-
-## Customize Alerts
-
-Before finishing, each user should customize how they receive alerts. Here I added my mobile telephone number, so I also get text alerts as well as email notifications.
-
-![User configuration page](/source/docs/assets/images/integrations/user_config.png)
 
 
 ## Conclusion
