@@ -31,6 +31,8 @@ If you've already installed WordPress, you can convert it to a network with: [`w
 
 ## Add Custom Hostnames to Dev, Test, and Live
 
+(This section should potentially contain wording to explain that multidevs need domain setup, too.)
+
 <div class="alert alert-info" role="alert">
 <h4 class="info">Subdomains Note</h4>
 <p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
