@@ -31,7 +31,7 @@ Use these configuration snippets to specify a local configuration that will be i
 ### Drupal 8
 Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
-    ​// Local development configuration.
+    // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
       // Database.
       $databases['default']['default'] = array(
@@ -62,7 +62,7 @@ $settings['hash_salt'] = '$HASH_SALT';
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
+<p markdown="1">Replace `^www\.yoursite\.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -82,7 +82,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Drupal 7
 
-    ​// Local development configuration.
+    // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
       // Database.
       $databases['default']['default'] = array(
@@ -112,27 +112,29 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 #### How can I write logic based on the Pantheon server environment?
 
-Depending on your use case, there are two possibilities:
+Depending on your use case, there are three possibilities:
 
-For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+ - For web only actions, like redirects, check for the existence of `$\_SERVER['PANTHEON\_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live):
 
-    // Pantheon - web only.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-      // Only on dev web environment.
-      if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
-        // Custom code.
-      }
-    }
+        // Pantheon - web only.
+        if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+          // Only on dev web environment.
+          if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
+            // Custom code.
+          }
+        }
 
-For actions that should take place on every environment, such as Redis caching, use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON\_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
 
-    // Pantheon - all operations.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Only on dev environment.
-      if (PANTHEON_ENVIRONMENT == 'dev') {
-        // Custom code.
-      }
-    }
+        // Pantheon - all operations.
+        if (defined('PANTHEON_ENVIRONMENT')) {
+          // Only on dev environment.
+          if (PANTHEON_ENVIRONMENT == 'dev') {
+            // Custom code.
+          }
+        }
+
+ - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://drupal.org/node/1525472).
 
