@@ -27,9 +27,9 @@ In this guide, we will connect a Jira instance to a site on Pantheon. When chang
 
 ![Service account creation](/source/docs/assets/images/integrations/jira/service_account.png)
 
-## Create a private folder for this accounts credentials.
+## Create a Private Folder for Account Credentials.
 
-1. From your local terminal, use the following php command to create a JSON file, substituting the below values with your Jira url and the service account's Jira username and password.
+1. From your local terminal, use the following PHP command to create a JSON file, substituting the below values with your Jira url and the service account's Jira username and password.
 ```
   $> php -r "print json_encode(['jira_url'=>'https://myjira.atlassian.net','jira_user'=>'serviceaccount','jira_pass'=>'secret']);" > secrets.json
 ```
@@ -47,7 +47,7 @@ $> `terminus site connection-info --env=dev --site=your-site --field=sftp_comman
   sftp> mkdir private
   sftp> cd private
   sftp> put secrets.json
- ```
+```
 
 ## Configure Quicksilver Integration
  
@@ -61,7 +61,7 @@ git clone https://github.com/pantheon-systems/quicksilver-examples.git quicksilv
 2. Locate your local copy of your Pantheon site's repository, or clone it if you haven't already.
 
 ```
-git clone git clone ssh://codeserver.dev.000000-0000-0000-0000-000000000@codeserver.dev.000000-0000-0000-0000-000000000.drush.in:2222/~/repository.git astro-mktg
+git clone ssh://codeserver.dev.000000-0000-0000-0000-000000000@codeserver.dev.000000-0000-0000-0000-000000000.drush.in:2222/~/repository.git astro-mktg
 ```
 
 3. From the root directory of your local copy (at the same level as index.php), create a directory named "private" and copy jira_integration.php script to it.
@@ -74,10 +74,11 @@ $ ls
 jira_integration.php
 ```
 
-
 4. Add the example jira_integration.php script to the private directory of your code repository.
 
-5. Add a Quicksilver operation to your pantheon.yml to fire the script after a deploy.
+5. Create a pantheon.yml file if one doesn't already exist in your root directory.
+
+6. Add a Quicksilver operation to the pantheon.yml to fire the script after a code push.
    
 ```
 #always include the api version
@@ -90,12 +91,15 @@ workflows:
         description: Jira Integration
         script: private/jira_integration.php
 ```
-## Test
+
+7. Push this YAML file to all environments.
+
+## Test a Code Push
 
 Now if you push code with a commit message containing a Jira issue ID, the jira_integration.php script will parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket. You can also reference multiple commits and it will link to them:
 
 ```
-git commit -m "WEB-113: This commit also fixes WEB-294 and INF-3"
+git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
 ```
 
 When testing, use the **terminus workflows:watch** command with the Pantheon site ID to see the integration in real time:
