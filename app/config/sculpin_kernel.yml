@@ -43,9 +43,9 @@ sculpin_content_types:
             - contributors
     cachecontrolpages:
         type: path
-        path: docs/cache-control
+        path: docs/guides/cache-control
         permalink: pretty
-        singular_name: gettingstartedpage
+        singular_name: cachecontrolpage
         enabled: true
         layout: guide
         taxonomies:

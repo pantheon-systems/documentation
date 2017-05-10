@@ -9,10 +9,10 @@ pagination:
     provider: data.cachecontrolpages
 use:
     - cachecontrolpages
-permalink: docs/cache/test/
-nexturl: cache/cc/
+permalink: docs/guides/cache/test/
+nexturl: guides/cache/cc/
 nextpage: Clear Cache
-previousurl: cache/miss/
+previousurl: guides/cache/miss/
 previouspage: Exclude a Page from Cache
 editpath: 04-test.md
 ---
@@ -79,3 +79,16 @@ x-timer: S1492512889.436208,VS0,VE2
 vary: Accept-Encoding, Cookie, Cookie</code></pre>
 
 Once the max age of 600 seconds has been reached, the next request gets routed to an application container to be processed. On it's back to the browser the response is cached.
+
+
+## Ignoring GET Parameters
+
+For the purpose of optimizing cache hits for identical content, our edge ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server.
+
+The double-underscore prefix for parameter keys and cookie names is a standard convention used by front-end code to indicate a value that can be safely ignored on the back-end.
+
+For example, **?__dynamic_id=1234** is ignored, while **?dynamic_id=1234** and **?_dynamic_id** are considered distinct pages because they do not use one of the standard conventions (either `utm_` or `__`).
+
+The query parameters are still passed to the application server; however, the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheon_stripped).
