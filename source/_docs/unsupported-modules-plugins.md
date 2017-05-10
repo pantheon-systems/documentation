@@ -364,10 +364,9 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 
 ### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
 
-**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, for example, 'install_plugins', is not supported.
+**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, is not supported.
 
-The 'install_plugins' capability isn't present on the Test or Live environment and therefore the menu will not display. 
-For example:
+For example, the `install_plugins` capability isn't present on the Test or Live environment, therefore  menus created with it will not display. For example:
 
 ```
 hook = add_management_page( 'My WP Tool Page', 'My WP Tool', 
@@ -378,21 +377,21 @@ add_action( "load-$hook", array( $this, 'admin_page_load' ) );
 
 This is because write permissions are restricted in Test and Live per the [Pantheon Workflow](/docs/pantheon-workflow/#understanding-write-permissions-in-test-and-live).
 
-**Solution**: You can use another capability such as 'read_private_posts' instead and the menu should show.
+**Solution**: You can use another capability such as `read_private_posts` instead.
 
 The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles_and_Capabilities) that should not be relied upon include:
 
-* update_core
-* update_plugins
-* update_themes
-* install_plugins
-* install_themes
-* upload_plugins
-* upload_themes
-* delete_themes
-* delete_plugins
-* edit_plugins
-* edit_themes
+* `update_core`
+* `update_plugins`
+* `update_themes`
+* `install_plugins`
+* `install_themes`
+* `upload_plugins`
+* `upload_themes`
+* `delete_themes`
+* `delete_plugins`
+* `edit_plugins`
+* `edit_themes`
 
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
