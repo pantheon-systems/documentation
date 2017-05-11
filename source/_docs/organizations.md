@@ -5,7 +5,7 @@ tags: [manage]
 categories: []
 ---
 
-Pantheon Organizations bring together users, sites, custom upstreams, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
+Pantheon Organizations bring together users, sites, Custom Upstream, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
 ## Create an Organization
 Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
 
@@ -56,7 +56,7 @@ If you need expedited, on-call support, and are an Enterprise customer, Pantheon
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All organizations have Multidev and Change Management. Ally Partners and Pantheon EDU customers do not qualify for custom upstreams, custom Vanity domains, email domains, or single sign-on (SSO).
+All organizations have Multidev and Change Management. Ally Partners and Pantheon EDU customers do not qualify for Custom Upstreams, custom Vanity domains, email domains, or single sign-on (SSO).
 
 ### Multidev for All Sites
 All sites associated with any organization will have [Multidev](/docs/multidev) enabled with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments, unless the site service level includes it (Business and Elite sites, and those owned by an Enterprise organization).

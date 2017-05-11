@@ -20,7 +20,7 @@ From your Pantheon Dashboard:
 
 1. Choose **Migrate Existing Site**.
 2. Enter your current website URL.
-3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [custom upstream](/docs/custom-upstream/).
+3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [Custom Upstream](/docs/custom-upstream/).
 4. Click **Continue**.
 5. Name your new Pantheon site.
 6. Select an organization for the site (optional).

@@ -44,7 +44,7 @@ If the migration is not successful, contact <migrations@pantheon.io> and include
 </div>
 
 ### Migrate Site that Requires a Custom Upstream
-If you'd like your existing WordPress site to get one-click updates from your [custom upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as outlined above, but start with **Create New Site** instead of **Migrate existing site** then select your custom upstream as the site type. You'll need to manually generate a [machine token](/docs/machine-tokens/) to use with the [Pantheon Migrations plugin](https://wordpress.org/plugins/bv-pantheon-migration/).
+If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as outlined above, but start with **Create New Site** instead of **Migrate existing site** then select your custom upstream as the site type. You'll need to manually generate a [machine token](/docs/machine-tokens/) to use with the [Pantheon Migrations plugin](https://wordpress.org/plugins/bv-pantheon-migration/).
 
 
 ## Troubleshooting
