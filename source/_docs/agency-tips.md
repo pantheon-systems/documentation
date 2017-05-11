@@ -83,7 +83,7 @@ Pantheon does not provide a way to set custom scheduling for cron jobs. For deta
 ## Advanced Workflows
 
 ### Custom Upstreams
-In addition to the [frameworks offered by Pantheon during the site creation process](/docs/start-state), Custom Upstreams add a private installation option for all team members of an organization. A Custom Upstreams is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/docs/custom-upstream/). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
+In addition to the [frameworks offered by Pantheon during the site creation process](/docs/start-state), Custom Upstreams add a private installation option for all team members of an organization. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/docs/custom-upstream/). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ### Build Steps
 

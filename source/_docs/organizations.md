@@ -5,7 +5,7 @@ tags: [manage]
 categories: []
 ---
 
-Pantheon Organizations bring together users, sites, Custom Upstream, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
+Pantheon Organizations bring together users, sites, Custom Upstreams, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
 ## Create an Organization
 Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
 
