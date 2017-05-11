@@ -52,6 +52,11 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 
 ![Create custom upstream](/source/docs/assets/images/empty-state-diagram.svg)
 
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
+</div>
+
 ### Level Three: Site Repository
 Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
 
