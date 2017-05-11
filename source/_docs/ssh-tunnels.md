@@ -53,7 +53,7 @@ Open a mysql connection to a site.
     terminus env:wake $SITE.$ENV
   fi
 
-  $(terminus connection:info $SITE.$ENV --fields=mysql_command) -A --ssl
+  $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string) -A --ssl
 }
 alias tsqlc=terminus-sql-cli
 ```
