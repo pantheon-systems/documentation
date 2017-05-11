@@ -16,7 +16,7 @@ This is especially useful for third party dependencies, such as those installed 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">custom upstream</a>.</p>
+<p>One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">Custom Upstream</a>.</p>
 </div>
 
 ## One-Time Setup
@@ -42,7 +42,7 @@ Below we recommend using Git, but you can also use SFTP to set your site up for 
 5. Add, commit, and push the `pantheon.yml` file with Git.
 
 ### Create a New Site with a Nested Docroot
-If your site utilizes a [custom upstream](/docs/custom-upstream/) with a `pantheon.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
+If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site to Use a Nested Docroot
 
