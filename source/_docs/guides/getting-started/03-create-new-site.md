@@ -28,9 +28,9 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 1. Log in to your Pantheon account. By default you land on the **Sites** tab of your User Dashboard. Here you’ll see the sites you’ve created or the sites you’ve been added to. If you just created your account you may not see any sites.
 
-<div class="alert alert-info">
+    <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.
+    <p markdown="1">If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.
     </p></div>
 
 2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
@@ -61,5 +61,5 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
     <h4 class="info">Note</h4>
     <p>Record your new username and password. You’ll need this information again soon.
     </p></div>
-    
+
 Congratulations! You just installed a new site on Pantheon. When you're ready, you may continue to the next lesson.
