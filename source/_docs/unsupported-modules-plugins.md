@@ -360,6 +360,39 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 
 **Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
 
+## WordPress Functions
+
+### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
+
+**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, is not supported.
+
+For example, the `install_plugins` capability isn't present on the Test or Live environment, therefore  menus created with it will not display. For example:
+
+```
+hook = add_management_page( 'My WP Tool Page', 'My WP Tool', 
+  'install_plugins', 'mywptool', array( $this, 'admin_page' ), '' );
+
+add_action( "load-$hook", array( $this, 'admin_page_load' ) );
+```
+
+This is because write permissions are restricted in Test and Live per the [Pantheon Workflow](/docs/pantheon-workflow/#understanding-write-permissions-in-test-and-live).
+
+**Solution**: You can use another capability such as `read_private_posts` instead.
+
+The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles_and_Capabilities) that should not be relied upon include:
+
+* `update_core`
+* `update_plugins`
+* `update_themes`
+* `install_plugins`
+* `install_themes`
+* `upload_plugins`
+* `upload_themes`
+* `delete_themes`
+* `delete_plugins`
+* `edit_plugins`
+* `edit_themes`
+
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
 
