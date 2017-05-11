@@ -95,6 +95,14 @@ No, after you update your DNS records, traffic will gracefully switch over and i
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
+### Can I continue to use CloudFlare 
+Yes, you can continue to use Cloudflare. 
+Unless you require a special feature from Cloudflare (e.g. WAF) then we recommend using Cloudflare for DNS-only:
+  - add your domains, matching the recommendations on your Dashboard
+  - click the cloud to the right of the domain, to turn it grey, rather than orange. This will cause the domain traffic to go straight to Pantheon, bypassing CloudFlare's services
+
+You can also keep using Cloudflare as a CDN on top of the Pantheon CDN, following our [CloudFlare configuration recommendations](/docs/guides/cloudflare-enable-https/#dns-configuration) in which case the Pantheon Domains tool will show action required because the DNS detected will be Cloudflare IP addresses and not match our recommendations. As long as your DNS is no longer routing to a legacy loadbalancer, you can safely ignore the action required warning.
+
 ### When will I stop being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing 30-60 days after upgrading.
 
