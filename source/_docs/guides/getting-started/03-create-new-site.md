@@ -35,7 +35,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
 
-3. Select **Continue** and explore the available site types and pre-packaged distributions.
+3. Select **Continue** and explore the available site types and Custom Upstreams for public distributions.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>

@@ -78,7 +78,7 @@ For private GitLab repositories, please ensure the user has the ["reporter" perm
 If your repository is publicly accessible, you can skip this step.
 
 ## Submit Upstream Information
-[Contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the distribution:
+[Contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the Custom Upstream:
 
 - **Upstream Name**
 - **Description**: (Optional) Less than 200 characters, plain text
