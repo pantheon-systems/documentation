@@ -80,8 +80,8 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 4. Use the following within SMTP Server Settings:
 
  **SMTP server**: smtp.sendgrid.net <br>
- **SMTP port**: 465<br>
- **Use encrypted protocol**: Use SSL<br>
+ **SMTP port**: 2525<br>
+ **Use encrypted protocol**: Either No Encryption or TLS<br>
 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.  
 
