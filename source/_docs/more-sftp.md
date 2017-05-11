@@ -115,3 +115,20 @@ Plugin installed successfully.
 ### I can't write to my codebase on Test or Live.
 
 This is by design. Please read [this section](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) of our Pantheon Workflow article to understand why.
+
+### Unable to Install Plugins on Migrated Sites
+
+On some WordPress sites migrated from other hosting platforms, when installing or updating plugins you may see an error like this:
+
+![Failed Plugin Installation](/source/docs/assets/images/wp-plugin-failed.png)
+
+This is usually caused by the following lines in `wp-config.php`, added by your former host:
+
+```
+define('FS_METHOD', 'direct');
+define('FS_CHMOD_DIR', 755);
+define('FS_CHMOD_FILE', 644);
+```
+
+Remove these lines to resolve.
+
