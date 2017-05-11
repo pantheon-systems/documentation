@@ -11,11 +11,11 @@ date: 5/14/2017
 
 ## Continuous Integration with Jenkins
 
-Jenkins is an open source Continuous Integration server which can be used to test and deploy application changes for Drupal and WordPress websites on Pantheon. 
+Jenkins is an open source Continuous Integration server which can be used to build, test, and deploy application changes for Drupal and WordPress websites on Pantheon. Jenkins is to execute a predefined list of steps. The trigger for this execution can be time or event based. For example, every 20 minutes or after a new commit in a Git repository.
 
 ## What you will build
 
-This guide will cover how to install and configure an externally hosted Jenkins server to work with sites on the Pantheon platform.
+This guide will cover how to install and configure an externally hosted Jenkins server to work with sites on the Pantheon platform. We will configure Jenkins to test our code changes and let us know if changes have passed and are ready to deploy.
 
 ## What you’ll need
 
@@ -48,6 +48,25 @@ terminus auth:login --machine-token=aWGN_CMQtd1JP4BMBcaI2UpIO5SnWBttZc0t6G39UGlg
 
 6. Authorization make sure Anonymous can View on the Read column.
 
+7. Add a service permission that can do everything
+ 
+8. then create a user who has that permission
+
+9. Install git plugin?
+https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin
+https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin
+Jenkins supports the Git version control system via a plugin. Select the Manage Jenkins ▸ Manager Plugins link. Here you have to install the Git Plugin. It may be installed already.
+
+To clone a Git repostory via Jenkins you need to enter the email and user name for your Jenkins system. For this switch into your job directory and run the git config command.
+
+# Need to configure the Git email and user for the Jenkins job
+
+# switch to the job directory
+cd /var/lib/jenkins/jobs/Android/workspace
+
+# setup name and email
+sudo git config user.name "jenkins"
+sudo git config user.email "test@gmail.com"
 
 Then check "enable security"
 
@@ -67,16 +86,20 @@ Make sure Anonymous only has the Read right under the View group (Jenkins crashe
 
 Click save at the bottom of the page. After the page load, you'll see a login form, ignore that, go to ci.company.net:8080 again instead. You'll see this sign up form:
 
-`
-![Pingdom.com home page](/source/docs/assets/images/integrations/pingdom_hp.png)
 
-2.  Review and choose from available plans and select either monthly or discounted annual billing. For this guide, I selected the “Starter Plan.” Plans can be upgraded at anytime. Add your credit card information. If you chose the free trial, you have until the end of the trial time to try Pingdom before the card is billed.
 
-![Pingdom.com choose plan](/source/docs/assets/images/integrations/choose_plan.png)
+## Step 2: Add job to pantheon.yml
 
-Now we will log in and set up monitoring.
-    
-## Step 2: Create a Basic Uptime Check
+```
+api_version: 1
+
+workflows:
+  deploy:
+    after:
+        - type: webphp
+          description: Integrate With Jenkins
+          script: private/scripts/jenkins_integration.php
+```
 
 1.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation Monitoring > Uptime sub-menu, select “Add Uptime Check.”
 
