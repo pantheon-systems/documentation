@@ -79,10 +79,12 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 3. From within Install Options, select **On**.
 4. Use the following within SMTP Server Settings:
 
- **SMTP server**: smtp.sendgrid.net <br>
- **SMTP port**: 465<br>
- **Use encrypted protocol**: Use SSL<br>
-
+   **SMTP server**: smtp.sendgrid.net 
+ 
+   **SMTP port**: 2525
+ 
+   **Use encrypted protocol**: We strongly reccomend selecting **TLS**
+ 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.  
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
