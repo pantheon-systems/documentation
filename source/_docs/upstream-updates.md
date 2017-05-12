@@ -132,7 +132,7 @@ If the automated core update doesn't appear to be working, it's possible there a
 4. Push updates to the Site Dashboard on Pantheon:
 
   ```command
-  git origin master
+  git push origin master
   ```
 
 ## Troubleshooting
