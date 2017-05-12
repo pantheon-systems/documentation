@@ -43,22 +43,15 @@ In this lesson, we’re going to point a domain name that you own to Pantheon an
         * This will place you on the “Domains / DNS Settings For (yourdomain)” screen.  You will see two DNS records created:
               * The A record
               * The AAAA record
-        * In a separate window, go to your DNS Hosting Provider’s administration window and configure the A and AAAA with the address provided in previous step.
+        * In a separate window, go to your DNS Hosting Provider’s administration window and configure the A and AAAA with the address provided in previous step. See the following resources for help configuring DNS using your specific hosting provider:
 
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a data-proofer-ignore data-toggle="collapse" data-target="#dns-providers"><h3 class="panel-title" style="cursor:pointer;">DNS Host-specific Instructions<span class="caret"></h3></a>
-              </div>
-              <div id="dns-providers" class="collapse" style="padding:10px;">
-                <ul class="top-docs top-docs-2col">
-                  {% for doc in data.docs_tags.providers %}
-                    {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-                      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
+            <ul class="top-docs top-docs-2col">
+              {% for doc in data.docs_tags.providers %}
+                {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+                  <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
 
         * Use the check “Verify that your current DNS points to Pantheon” tool on the right hand side to see if this change has taken effect. Once this check is successful, your site can then be reached by using your domain address.  There is no need for this step to complete before moving on to the next step in the process “Enabling HTTPS”.
 
