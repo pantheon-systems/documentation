@@ -17,9 +17,9 @@ previousurl: guides/cache/hit/
 previouspage: Cache a Page
 editpath: cache/03-miss.md
 ---
-There are a few ways to exclude a page from being cached and render content dynamically. By default, Drupal and WordPress set cache busting cookies that bypass cache to render content dynamically for authenticated users. If a user is logged in, they won't see cached content by default.
+By default, Drupal and WordPress set cache busting cookies that bypass cache to render content dynamically for authenticated users. If a user is logged in, they won't see cached content by default.
 
-For finer control, you can programmatically exclude a page from being cached via PHP. The easiest way to do this is by setting the `Cache Control` HTTP header to `private`.
+For finer control, you can programmatically exclude a page from being cached via PHP. The recommended method to do this is by setting the `Cache Control` HTTP header to `private`.
 
 ## Using HTTP Headers in PHP (Recommended)
 Set the the `Cache Control` header to `private` if you don't want a certain page cached. This is the most reliable way to ensure the page is excluded:
@@ -79,13 +79,18 @@ if ((preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
   setcookie('NO_CACHE', '1', time()+0, $_SERVER['REQUEST_URI'], $domain);
 }
 ```
+### Cache-Busting Cookie Patterns
+Pantheon passes all cookies beginning with `SESS` that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, Pantheon's Global CDN will not try to respond to the request from its cache or store the response.
+
+The following "Cache-Busting Cookie Patterns" are used in Pantheon's CDN configuration. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns Pantheon's Global CDN will not cache:
+
 <div class="panel panel-default">
   <div class="panel-heading">
   <a data-proofer-ignore data-toggle="collapse" data-target="#cache-busting-cookies"><h3 class="panel-title" style="cursor:pointer;">Cache-Busting Cookie Patterns (Advanced) <span class="caret"></h3></a>
   </div>
   <div id="cache-busting-cookies" class="collapse" style="padding:10px;">
   <p>Pantheon's Global Edge will not cache cookies with patterns that match the following:</p>
-  <pre><code>​NO_CACHE
+  <pre><code>​​NO_CACHE
 S+ESS[a-z0-9]+
 fbs[a-z0-9_]+
 SimpleSAML[A-Za-z]+
@@ -98,8 +103,7 @@ duo_secure_wordpress_auth_cookie
 bp_completed_create_steps # BuddyPress cookie used when creating groups
 bp_new_group_id # BuddyPress cookie used when creating groups
 wp-resetpass-[A-Za-z0-9_]+
-(wp_)?woocommerce[A-Za-z0-9_-]+
-</code></pre>
+(wp_)?woocommerce[A-Za-z0-9_-]+</code></pre>
   </div>
 </div>
 
@@ -107,3 +111,12 @@ wp-resetpass-[A-Za-z0-9_]+
 The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped, and the request will be processed as if there was no cookie sent. The header `X-Cookies-Dropped: 1` will be added to the request and response, indicating that they have been truncated.
 
 Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
+
+### Session and Cookie Lifetime
+Pantheon allows developers to control the length of sessions. There are two pieces; the lifetime of the cookie and the lifetime of the session itself.  
+
+The cookie lifetime is configured using the PHP setting [session.cookie\_lifetime](http://www.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime). If set to 0, the cookie is deleted when the user closes their browser. Set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+
+Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7) uses the PHP setting [session.gc\_maxlifetime](http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime) when deleting expired sessions from the sessions database table. Set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+
+For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).

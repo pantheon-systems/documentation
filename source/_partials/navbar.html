@@ -97,10 +97,12 @@
           if(/\/test.*/.test(aaObj[i].href)>=1) {
             $('#docs-guides-cache').removeClass('active-trail');
           }
+          if(/\/troubleshoot.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-cache').removeClass('active-trail');
+          }
           if(/\/cc.*/.test(aaObj[i].href)>=1) {
             $('#docs-guides-cache').removeClass('active-trail');
           }
-
         }
       }
     }
@@ -121,6 +123,9 @@
             $('#docs-guides-introduction').removeClass('active-trail');
           }
           if(/\/https.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/redirects.*/.test(aaObj[i].href)>=1) {
             $('#docs-guides-introduction').removeClass('active-trail');
           }
           if(/\/launch-check.*/.test(aaObj[i].href)>=1) {

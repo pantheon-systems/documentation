@@ -8,7 +8,6 @@ type: guide
 anchorid: introduction
 golive: true
 generator: pagination
-contributors: [rachelwhitton, dwayne]
 pagination:
     provider: data.goinglivepages
 use:

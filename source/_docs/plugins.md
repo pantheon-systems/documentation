@@ -29,7 +29,7 @@ We recommend setting **Default Time to Live (TTL)** to 600 seconds.
 ## [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 Automatically clear related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
-
+For additional information on how to manage caching behaviors, see the [Cache Control Manual](/docs/guides/cache/).
 
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 Resolve errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).

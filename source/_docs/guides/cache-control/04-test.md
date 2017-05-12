@@ -10,13 +10,39 @@ pagination:
 use:
     - cachecontrolpages
 permalink: docs/guides/cache/test/
-nexturl: guides/cache/cc/
-nextpage: Clear Cache
+nexturl: guides/cache/troubleshoot/
+nextpage: Troubleshoot
 previousurl: guides/cache/miss/
 previouspage: Exclude a Page from Cache
 editpath: cache/04-test.md
 ---
-To test whether or not a page is being served from Pantheon's edge caching layer, examine the HTTP headers from a response using curl (replace `https://www.example.com` with your site's URL):
+Every response served by the platform is accompanied by a number of headers. These are the same headers that Pantheon's Global CDN uses when determining if and for how long to cache content.
+
+<div class="panel panel-video panel-guide">
+  <script src="//fast.wistia.com/embed/medias/pugjxn19gi.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pugjxn19gi videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
+
+<div class="panel panel-video panel-guide" id="accordion">
+  <div class="panel-heading panel-video-heading">
+    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#http-headers"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> HTTP Header Glossary (Optional)</h3></a>
+  </div>
+  <div id="http-headers" class="collapse" style="padding:10px;">
+    <div markdown="1">
+      - **Cache-Control: public, max-age=600**
+        - `max-age` is the number of seconds that content can remain in cache before being refreshed.
+
+      - **X-Pantheon-Environment**
+      - **X-Pantheon-phpreq**
+      - **X-Pantheon-Site**
+      - **X-Pantheon-Styx-Hostname**
+      - **age**
+        - Number of seconds that content has been stored in cache. If 0, it wasn't found in cache at all (miss).
+    </div>
+  </div>
+</div>
+
+## curl
+One of the simplest ways to test whether or not a page is being served from Pantheon's CDN is to examine the HTTP headers from a response using curl (replace `https://www.example.com` with your site's URL):
 
 <pre><code class="http hljs">$ curl -I https://www.example.com
 HTTP/1.1 200 OK
@@ -81,14 +107,17 @@ vary: Accept-Encoding, Cookie, Cookie</code></pre>
 Once the max age of 600 seconds has been reached, the next request gets routed to an application container to be processed. On it's back to the browser the response is cached.
 
 
-## Ignoring GET Parameters
+## Firefox
 
-For the purpose of optimizing cache hits for identical content, our edge ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server.
+1. Install [Firebug](http://getfirebug.com/), the in-browser debugging plugin.
+2. Go to your Pantheon hosted domain and click the Firebug icon in Firefox. 
+3. Click the **Network** tab, then **HTML** to see the headers.
 
-The double-underscore prefix for parameter keys and cookie names is a standard convention used by front-end code to indicate a value that can be safely ignored on the back-end.
+## Chrome
 
-For example, **?__dynamic_id=1234** is ignored, while **?dynamic_id=1234** and **?_dynamic_id** are considered distinct pages because they do not use one of the standard conventions (either `utm_` or `__`).
+Right-click anywhere on the page, and select the **Inspect Element** option.
 
-The query parameters are still passed to the application server; however, the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
+## Internet Explorer
 
-For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheon_stripped).
+1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
+2. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
