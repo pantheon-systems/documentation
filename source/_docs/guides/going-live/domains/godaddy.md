@@ -2,6 +2,6 @@
 title: GoDaddy
 description: Learn how to configure DNS for domains managed on GoDaddy.
 tags: [providers]
-permalink: docs/guides/going-live/domains/:basename/
+permalink: docs/:basename/
 ---
 Placeholder to create index.
