@@ -17,7 +17,7 @@ For outgoing email, your site can send mail immediately using the local MTA (pos
 
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/). Keep in mind that SendGrid has a provisioning process (not all requests to use SendGrid are automatically approved) that can take from a couple of hours to a couple of days. If you need email when your site launches and you plan on using SendGrid, be sure to get started before your launch date. See [Provisioning at the SendGrid website](https://sendgrid.com/docs/Glossary/provisioning.html).
 
-We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails such as account registration, forgot password, etc., you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.
+We recommend using an external SMTP server or service for all use-cases. 
 
 Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
 
