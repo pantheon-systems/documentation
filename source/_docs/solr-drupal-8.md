@@ -69,7 +69,7 @@ After adding fields the configuration, make sure the index is full by clicking *
 It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/docs/terminus):
 
 ```
-terminus <site>.dev drush "config-export -y"
+terminus drush <site>.dev -- config-export -y
 ```
 
 #### Search the Index

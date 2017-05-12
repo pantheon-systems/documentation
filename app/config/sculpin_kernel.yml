@@ -1,4 +1,5 @@
 sculpin:
+    ignore: ["*.swp"]
 sculpin_theme:
     theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
@@ -24,6 +25,18 @@ sculpin_content_types:
             - contributors
     videos:
         type: meta
+        taxonomies:
+            - categories
+            - tags
+            - contributors
+
+    gettingstartedpages:
+        type: path
+        path: docs/guides/getting-started
+        permalink: pretty
+        singular_name: gettingstartedpage
+        enabled: true
+        layout: guide
         taxonomies:
             - categories
             - tags

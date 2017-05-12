@@ -3,7 +3,6 @@ title: Cron for WordPress
 description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress site.
 tags: [services]
 categories: [wordpress]
-keywords: wordpress, cron, wp-cron
 ---
 ## WP-Cron Overview
 WP-Cron executes specific tasks for WordPress powered sites. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Whether it's routine maintenance or scheduled alerts, any command that can be executed on Unix without user intervention can be scheduled as a Cron task.

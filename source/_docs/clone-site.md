@@ -20,7 +20,14 @@ After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/mi
 terminus drush <site>.<env> -- ard --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 ```
 
-This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). Click **Continue Migration** and follow all remaining instructions within the guided migration process.
+This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
+
+<div class="alert alert-danger" role="alert">
+<h4 class="info">Warning</h4>
+<p markdown="1">We reccomend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates). We also advise prompt removal of archive files once you've completed the migration.</p>
+</div>
+
+Click **Continue Migration** and follow all remaining instructions within the guided migration process.
 
 ### Troubleshooting
 If your archive is larger than 256MB the operation will fail, resulting in the following error:
@@ -31,8 +38,9 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the following steps, otherwise [manually migrate](/docs/migrate-manual) the site.
 
-<ol><li>Use <a href="/docs/terminus">Terminus</a> and the <code>--tar-options</code> flag:<br><br>
-<pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; <span class="hljs-string">ard <b>--tar-options="--exclude=code/sites/default/files"</b> --destination=code/sites/default/files/&lt;RANDOM_HASH&gt;.tgz</span></code></pre></li></ol>
+1. Use [Terminus](/docs/terminus) and the `--tar-options` flag:
+
+        terminus drush <site>.<env> ard --tar-options="--exclude=code/sites/default/files" --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.

@@ -18,7 +18,7 @@ While Pantheon provides Git repositories for all sites on the platform, many tea
 The codebase for your site is stored in a Git repository. This includes our versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
 This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"),
-or one of their forks that our users manage as [custom upstreams](/docs/running-custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location.
+or one of their forks that our users manage as [custom upstreams](/docs/custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location.
 
 These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with GitHub.
 
@@ -138,7 +138,7 @@ Automatic merge went well; stopped before committing as requested
 2. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:
 `git add -A`
 `git commit -m "Adding Pantheon core files"`
-3. Now pull from your Pantheon repository master branch: `git pull pantheon master`. Handle any conflicts as needed.
+3. Now pull from your Pantheon repository master branch: `git pull pantheon master --allow-unrelated-histories`. Handle any conflicts as needed.
 4. Git push back to your Pantheon site repository: `git push pantheon master`
 5. Go to the **Code tab** of your Dev environment. You should now see your site's pre-existing code commit history, plus the most recent commits adding Pantheon's core files.
 6. Push the repo with the newly updated core files to GitHub.

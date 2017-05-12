@@ -4,7 +4,6 @@ description: Debug and fix "Deprecated Constructor" notices in your Pantheon sit
 categories: []
 tags: [debugcode]
 contributors: greg-1-anderson
-keywords: debug, php 7, php error, php errors, php fpm error log, fpm error log, php log, php execution, execute php, caching, cache, php exception, exceptions, errors
 ---
 
 PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/docs/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.

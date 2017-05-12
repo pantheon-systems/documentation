@@ -67,7 +67,7 @@ For information on troubleshooting failed migrations, please see [Migrate Sites 
 You can import a WordPress or Drupal site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.

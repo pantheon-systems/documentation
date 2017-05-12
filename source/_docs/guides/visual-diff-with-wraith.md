@@ -19,13 +19,13 @@ In the following example, the accidental removal of the date field on the lower 
 ![Visual Regression Date Change](/source/docs/assets/images/visual-date-diff.png)
 
 
-## Install
+## Installation
 
 To begin, you will need to install a scriptable browser without a viewport which allows Wraith to crawl websites and take screenshots. Wraith fully supports PhantomJS for versions between 1.82 and 1.9.8.
 
 Wraith needs the ImageMagick library to do image comparisons. Additionally, Wraith can use CasperJS to isolate and compare portions of a website with CSS selectors. This is super useful for comparing sites with dynamic content. When installing CasperJS, it's important to use the latest version.
 
-### OS X
+### Install Wraith on OS X
 
 Install via [Homebrew](http://brew.sh/):
 
@@ -35,7 +35,7 @@ brew install imagemagick
 brew install casperjs --devel
 ```
 
-### Linux:
+### Install Wraith on Linux
 
 On Ubuntu:
 
@@ -74,6 +74,10 @@ $ wraith
     wraith setup_folders [config_name]        # create folders for images
     wraith validate [config_name]             # checks your configuration and validates that all required properties exist
 ```
+
+### Install Wraith on Windows
+
+See Wraith's [installation guide](http://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
 
 ## Configure and Run Wraith
 
@@ -156,7 +160,7 @@ open shots/gallery.html
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above <a href="#install">Install</a> section for instructions.</p></div>
+<p markdown="1">The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above [Install](#installation) section for instructions.</p></div>
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
 ```yaml

@@ -3,9 +3,8 @@ title: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
 tags: [debugfiles]
 categories: []
-keywords: restore backup, restore environment, restore, how to restore backup, how to restore, restore from another environment, restore any environment backup, restore environment backup, restores, backups
 ---
-Each site environment's backups are located on the Backups tab for the environment in the Pantheon Dashboard.  
+Each site environment's backups are located on the Backups tab for the environment in the Pantheon Dashboard.
 
 ![Backup tool](/source/docs/assets/images/dashboard/backup-tool.png)
 
@@ -27,7 +26,7 @@ From within the source environment, find the backup you want to restore and clic
 
 ![Temporary backup link](/source/docs/assets/images/dashboard/direct-download-archive.png)
 
-This provides a temporary private link directly from Amazon S3, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.  
+This provides a temporary private link directly from Amazon S3, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
 If you want to download a backup using wget, put the provided temporary link in double quotes:
 
@@ -36,8 +35,8 @@ If you want to download a backup using wget, put the provided temporary link in
 ### Restore Database and Files
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
 
-If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.  
-![Workflow Tab](/source/docs/assets/images/dashboard/workflow-tab.png)  
+If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
+![Workflow Tab](/source/docs/assets/images/dashboard/workflow-tab.png)
 
 ### Restore Code
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment. However, if you would like to rewind an environment's codebase to a previous state we recommend using `git revert` or `git reset` instead of a code archive.

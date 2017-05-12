@@ -23,7 +23,7 @@ Composer's purpose is managing dependencies. To perform this task, Composer need
 
 ### List Dependencies with composer.json and composer.lock
 
-Composer lists dependencies with its `composer.json` file. A very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
+Composer lists dependencies with its `composer.json` file. For example, a very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
 
 ```json
 {

@@ -4,7 +4,7 @@ description: Learn to redirect requests to an alternate Drupal or WordPress doma
 tags: [redirects, variables]
 categories: []
 ---
-It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.  
+It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
 <p>When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.</p>
@@ -13,7 +13,7 @@ It's often useful to redirect requests to a different domain or path. While it's
 
 ## Redirecting via PHP instead of .htaccess
 
-Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.  
+Pantheon uses nginx webservers for optimal performance. While completely compatible with Drupal or WordPress, nginx does not recognize or parse Apache's directory-level configuration files, known as `.htaccess` files. Instead, redirect logic should be stored in the site's `settings.php` for Drupal or `wp-config.php` for WordPress.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -47,7 +47,7 @@ While it’s good for visitors and DNS to resolve both www and the domain itself
   <div class="panel-heading panel-video-heading">
     <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#redirects-video"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Show me how </h3></a>
   </div>
-  <div id="redirects-video" class="collapse" style="padding:10px;">
+  <div id="redirects-video" class="collapse">
     <script src="//fast.wistia.com/embed/medias/fof9qie645.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_fof9qie645 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
   </div>
 </div>
@@ -184,6 +184,11 @@ To use HTTPS for everything except some specific pages, such as an RSS feed:
       }
     }
 
+### Troubleshooting
+#### Infinite Redirect Loops
+Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/docs/redirects/#require-https-and-standardize-domain) and for your specific use case.
+
+
 ## Redirect to Subdirectories or Specific URLs
 
 To redirect from a subdomain to a specific area of the site, use the following:
@@ -250,7 +255,9 @@ When transitioning from a system that used a tilde to indicate a home directory,
     }
 
 ## Redirect to Force Lowercase Letters
-WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core. Drupal sites can force lowercase letters using the following:
+WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
+
+Drupal sites can force lowercase letters using the following:
 
 1. Set general automatic alias settings  to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto) module configuration (`/admin/build/path/pathauto`).
 2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect) module configuration (`/admin/settings/globalredirect`).

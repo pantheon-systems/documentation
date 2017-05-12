@@ -20,12 +20,14 @@ From your Pantheon Dashboard:
 
 1. Choose **Migrate Existing Site**.
 2. Enter your current website URL.
-3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [custom upstream](/docs/custom-upstream/).
+3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [Custom Upstream](/docs/custom-upstream/).
 4. Click **Continue**.
-3. Name your new Pantheon site.
-4. Select an organization for the site (optional).
-5. Click **Create Site**.
-6. Click **Migrate Manually** and select **Yes** in the confirmation box.
+5. Name your new Pantheon site.
+6. Select an organization for the site (optional).
+7. Click **Create Site**.
+8. **WordPress**: Click **Migrate Manually** and select **Yes** in the confirmation box.
+
+   **Drupal**: Find the line "If your site archive is larger than 500MB it must be **manually migrated**." Click the link, then select **Yes** in the confirmation box.
 
 
 ## Step 2: Import your Code
@@ -133,7 +135,7 @@ If something didn't work and you'd like to start over, you can cancel the site m
 You can import a WordPress or Drupal site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 #### How do I migrate a Drupal 6 site to Pantheon?

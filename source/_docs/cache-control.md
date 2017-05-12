@@ -29,7 +29,7 @@ $build['#cache']['max-age'] = 0;
   <p>Here is an example of a global way to determine a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
   <pre><code class="php hljs">
   // Set or replace $regex_path_match accordingly.
-  if ((preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+  if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
     drupal_page_is_cacheable(FALSE);
     $conf['page_cache_maximum_age'] = 0;
   }

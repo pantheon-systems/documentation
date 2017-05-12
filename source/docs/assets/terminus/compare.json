@@ -148,7 +148,7 @@
     },
     {
       "zerox" : "site clone-content --site=<site> --to-env=<to_env> --from-env=<from_env>  --db-only --files-only",
-      "onex" : "env:clone <site>.<from_env> <to_env> --db-only --files-only"
+      "onex" : "env:clone-content <site>.<from_env> <to_env> --db-only --files-only"
 
     },
     {

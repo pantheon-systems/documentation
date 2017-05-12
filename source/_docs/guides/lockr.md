@@ -67,7 +67,7 @@ The Lockr plugin contains a number of WP-CLI commands to quickly register a site
 ```nohighlight
 terminus wp <site>.<env> -- lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]
 ```
-This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a custom upstream using [Quicksilver](/docs/quicksilver).
+This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/docs/quicksilver).
 
 
 ```nohighlight
@@ -124,7 +124,7 @@ terminus drush <site>.<env> -- en lockr
 ```nohighlight
 terminus drush <site>.<env> -- lockr-register --email=[<Lockr account email >] --password=[<Lockr account password>]
 ```
-This command registers the site with Lockr to the email address provided. The password is only necessary for email addresses already with a Lockr account. This is useful for automated deployment from a custom upstream using Quicksilver.
+This command registers the site with Lockr to the email address provided. The password is only necessary for email addresses already with a Lockr account. This is useful for automated deployment from a Custom Upstream using Quicksilver.
 
 ```nohighlight
 terminus drush <site>.<env> -- lockr-lockdown

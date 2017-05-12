@@ -37,7 +37,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}{{ page.title }} | {{ site.title }}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ site.site_url}}{{ page.url }}/" />
 
@@ -55,7 +54,7 @@
     {% endif %}{% endfor %}{% endif %}{% endif %}
 
     <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="{{ page.image }}">
+    <meta name="twitter:image" content="https://pantheon.io/sites/default/files/drupal-wordpress-hosting.png" />
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page.title}}" />
     <meta property="og:type" content="article" />
@@ -92,10 +91,15 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
-
-
     <!-- container -->
     <div class="container content">
+      {% if page.earlyaccess %}
+      <div class="alert devbar alert-dismissible" role="alert">
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h3 class="devbar">Early Access Doc</h3>
+         <p class="devbar">The documentation on this page discusses features and options that are not available across the entire platform. Early access to Free and Automated HTTPS is currently invite only.<p>
+       </div>
+      {% endif %}
       {% if page.home is not defined %}
         <div class="row">
         {% endif %}
