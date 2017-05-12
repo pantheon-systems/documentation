@@ -5,97 +5,136 @@
 <script src="/docs/assets/js/node_modules/angular-animate/angular-animate.min.js"></script>
 <script src="/docs/assets/js/node_modules/angular-aria/angular-aria.min.js"></script>
 {% if page.terminuspage %}
-
-<script type="text/javascript">
-function setActivetrail() {
-  aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
-  for(i=0;i<aaObj.length;i++) {
-    if(document.location.href.indexOf(aaObj[i].href)>=0 ){
-      aaObj[i].className='active-trail';
-      if(/\/install.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
-      }
-      if(/\/examples.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
-      }
-      if(/\/commands.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
-      }
-      if(/\/releases.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
-      }
-      if(/\/plugins.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
-      }
-      if(/\/directory.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus-plugins').removeClass('active-trail');
-      }
-      if(/\/create.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus-plugins').removeClass('active-trail');
-      }
-      if(/\/updates.*/.test(aaObj[i].href)>=1) {
-        $('#docs-terminus').removeClass('active-trail');
+  <script type="text/javascript">
+    function setActivetrail() {
+      aaObj = document.getElementById('manual-toc').getElementsByTagName('a');
+      for(i=0;i<aaObj.length;i++) {
+        if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+          aaObj[i].className='active-trail';
+          if(/\/install.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+          if(/\/examples.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+          if(/\/commands.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+          if(/\/releases.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+          if(/\/plugins.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+          if(/\/directory.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus-plugins').removeClass('active-trail');
+          }
+          if(/\/create.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus-plugins').removeClass('active-trail');
+          }
+          if(/\/updates.*/.test(aaObj[i].href)>=1) {
+            $('#docs-terminus').removeClass('active-trail');
+          }
+        }
       }
     }
-  }
-}
-window.addEventListener("load", setActivetrail);
-</script>
+    window.addEventListener("load", setActivetrail);
+  </script>
 {% endif %}
-{% if page.guidepage %}
-<script type="text/javascript">
-function setActivetrail() {
-  aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
-  for(i=0;i<aaObj.length;i++) {
-    if(document.location.href.indexOf(aaObj[i].href)>=0 ){
-      aaObj[i].className='active-trail';
-      if(/\/user-dashboard.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
+{% if page.getstarted %}
+  <script type="text/javascript">
+    function setActivetrail() {
+      aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
+      for(i=0;i<aaObj.length;i++) {
+        if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+          aaObj[i].className='active-trail';
+          if(/\/user-dashboard.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/create-new-site.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/site-dashboard.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/create-test-live.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/clone-live-to-dev.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/connection-modes.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/onserver-dev-part1.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/onserver-dev-part2.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+          if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-getting-started').removeClass('active-trail');
+          }
+        }
       }
-      if(/\/create-new-site.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/site-dashboard.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/create-test-live.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/clone-live-to-dev.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/connection-modes.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/onserver-dev-part1.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/onserver-dev-part2.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-getting-started').removeClass('active-trail');
-      }
-      if(/\/hit.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-cache').removeClass('active-trail');
-      }
-      if(/\/miss.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-cache').removeClass('active-trail');
-      }
-      if(/\/test.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-cache').removeClass('active-trail');
-      }
-      if(/\/cc.*/.test(aaObj[i].href)>=1) {
-        $('#docs-guides-cache').removeClass('active-trail');
-      }
-
     }
-  }
-}
-window.addEventListener("load", setActivetrail);
-</script>
+    window.addEventListener("load", setActivetrail);
+  </script>
 {% endif %}
+{% if page.cache %}
+  <script type="text/javascript">
+    function setActivetrail() {
+      aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
+      for(i=0;i<aaObj.length;i++) {
+        if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+          aaObj[i].className='active-trail';
+          if(/\/hit.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-cache').removeClass('active-trail');
+          }
+          if(/\/miss.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-cache').removeClass('active-trail');
+          }
+          if(/\/test.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-cache').removeClass('active-trail');
+          }
+          if(/\/cc.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-cache').removeClass('active-trail');
+          }
 
+        }
+      }
+    }
+    window.addEventListener("load", setActivetrail);
+  </script>
+{% endif %}
+{% if page.golive %}
+  <script type="text/javascript">
+    function setActivetrail() {
+      aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
+      for(i=0;i<aaObj.length;i++) {
+        if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+          aaObj[i].className='active-trail';
+          if(/\/plans.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/domains.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/https.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/launch-check.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+        }
+      }
+    }
+    window.addEventListener("load", setActivetrail);
+  </script>
+{% endif %}
 <script>
 var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
 var terminusLatestRelease = angular.module("terminusLatestReleaseApp", ['yaru22.md']);

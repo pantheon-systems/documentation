@@ -1,7 +1,7 @@
 ---
 title: Cache Control Manual
 subtitle: Don't Cache a Page
-guidepage: true
+cache: true
 guidetoc: true
 anchorid: miss
 generator: pagination
@@ -15,7 +15,7 @@ nexturl: guides/cache/test/
 nextpage: Test Cache Configurations
 previousurl: guides/cache/hit/
 previouspage: Cache a Page
-editpath: 03-miss.md
+editpath: cache/03-miss.md
 ---
 There are a few ways to exclude a page from being cached and render content dynamically. By default, Drupal and WordPress set cache busting cookies that bypass cache to render content dynamically for authenticated users. If a user is logged in, they won't see cached content by default.
 

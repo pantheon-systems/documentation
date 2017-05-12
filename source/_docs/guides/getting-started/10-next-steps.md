@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Next Steps
-guidepage: true
+getstarted: true
 anchorid: next-steps
 generator: pagination
 layout: guide
@@ -12,7 +12,7 @@ use:
 permalink: docs/guides/getting-started/next-steps/
 previousurl: guides/getting-started/onserver-dev-part2
 previouspage: On-Server Dev, Part 2
-editpath: 10-next-steps.md
+editpath: getting-started/10-next-steps.md
 image: getting-started-Largethumb
 ---
 

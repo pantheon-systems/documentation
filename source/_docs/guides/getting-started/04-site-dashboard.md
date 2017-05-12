@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Site Dashboard
-guidepage: true
+getstarted: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
@@ -14,7 +14,7 @@ nexturl: guides/getting-started/create-test-live/
 nextpage: Create Test & Live
 previousurl: guides/getting-started/create-new-site/
 previouspage: Create New Site
-editpath: 04-site-dashboard.md
+editpath: getting-started/04-site-dashboard.md
 image: getting-started-Largethumb
 ---
 

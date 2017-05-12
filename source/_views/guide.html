@@ -24,7 +24,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               {% if page.editpath %}
-                <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/_docs/guides/getting-started/{{ page.editpath }}" target="blank">Edit This Page</a></li>
+                <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/_docs/guides/{{ page.editpath }}" target="blank">Edit This Page</a></li>
               {% else %}
                 <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/{{ fullpath |trim('/')}}.md" target="blank">Edit This Page</a></li>
               {% endif %}

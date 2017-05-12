@@ -3,7 +3,7 @@ title: Cache Control Manual
 subtitle: Cache a Page
 layout: guide
 anchorid: hit
-guidepage: true
+cache: true
 guidetoc: true
 generator: pagination
 pagination:
@@ -15,7 +15,7 @@ nexturl: guides/cache/miss/
 nextpage: Cache a Page
 previousurl: guides/cache/
 previouspage: Pantheon's Global CDN
-editpath: 02-hit.md
+editpath: cache/02-hit.md
 ---
 Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application server, which in turns frees up resources to build more dynamic requests.
 

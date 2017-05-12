@@ -1,7 +1,7 @@
 ---
 title: Cache Control Manual
 subtitle: Test Configuration
-guidepage: true
+cache: true
 anchorid: test
 generator: pagination
 layout: guide
@@ -14,7 +14,7 @@ nexturl: guides/cache/cc/
 nextpage: Clear Cache
 previousurl: guides/cache/miss/
 previouspage: Exclude a Page from Cache
-editpath: 04-test.md
+editpath: cache/04-test.md
 ---
 To test whether or not a page is being served from Pantheon's edge caching layer, examine the HTTP headers from a response using curl (replace `https://www.example.com` with your site's URL):
 

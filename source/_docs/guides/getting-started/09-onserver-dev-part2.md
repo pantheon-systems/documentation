@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: On-Server Dev, Part 2
-guidepage: true
+getstarted: true
 anchorid: onserver-dev-part2
 generator: pagination
 layout: guide
@@ -14,7 +14,7 @@ nexturl: guides/getting-started/next-steps/
 nextpage: Next Steps
 previousurl: guides/getting-started/onserver-dev-part1/
 previouspage: On-Server Dev, Part 1
-editpath: 09-onserver-dev-part2.md
+editpath: getting-started/09-onserver-dev-part2.md
 image: getting-started-Largethumb
 ---
 

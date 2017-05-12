@@ -7,7 +7,7 @@ layout: guide
 type: guide
 guidetoc: true
 anchorid: cache
-guidepage: true
+cache: true
 generator: pagination
 pagination:
     provider: data.cachecontrolpages
@@ -16,7 +16,7 @@ use:
 permalink: docs/guides/cache/
 nexturl: guides/cache/hit/
 nextpage: Cache a Page
-editpath: 01-cache.md
+editpath: cache/01-cache.md
 ---
 
 Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CDN) with performance and security benefits for every site, regardless of service level. This allows sites to scale for higher traffic with faster response times by serving anonymous visitors cached content from the closest point of presence (POP) instead of processing the request at the application level.

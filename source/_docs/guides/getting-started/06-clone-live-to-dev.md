@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Clone Live to Dev
-guidepage: true
+getstarted: true
 anchorid: clone-live-to-dev
 generator: pagination
 layout: guide
@@ -14,7 +14,7 @@ nexturl: guides/getting-started/connection-modes/
 nextpage: Connection Modes
 previousurl: guides/getting-started/create-test-live/
 previouspage: Create Test & Live
-editpath: 06-clone-live-to-dev.md
+editpath: getting-started/06-clone-live-to-dev.md
 image: getting-started-Largethumb
 ---
 

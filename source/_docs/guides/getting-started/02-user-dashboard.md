@@ -3,7 +3,7 @@ title: Getting Started
 subtitle: User Dashboard
 anchorid: user-dashboard
 layout: guide
-guidepage: true
+getstarted: true
 generator: pagination
 pagination:
     provider: data.gettingstartedpages
@@ -14,7 +14,7 @@ nexturl: guides/getting-started/create-new-site/
 nextpage: Create New Site
 previousurl: guides/getting-started/
 previouspage: Introduction
-editpath: 02-user-dashboard.md
+editpath: getting-started/02-user-dashboard.md
 image: getting-started-Largethumb
 ---
 In this lesson, we’re going to explore the User Dashboard.

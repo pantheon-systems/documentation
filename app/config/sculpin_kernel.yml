@@ -52,3 +52,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    goinglivepages:
+        type: path
+        path: docs/guides/going-live
+        permalink: pretty
+        singular_name: goinglivepage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors
