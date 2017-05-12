@@ -3,6 +3,7 @@ title: GoDaddy
 description: Learn how to configure DNS for domains managed on GoDaddy.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/godaddy.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

@@ -3,6 +3,7 @@ title: Enom
 description: Learn how to configure DNS for domains managed on Enom.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/enom.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

@@ -3,6 +3,7 @@ title: Gandi
 description: Learn how to configure DNS for domains managed on Gandi.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/gandi.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

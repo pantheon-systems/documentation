@@ -3,6 +3,7 @@ title: Register.com
 description: Learn how to configure DNS for domains managed on Register.com.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/register-com.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

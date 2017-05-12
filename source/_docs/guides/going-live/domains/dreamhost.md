@@ -3,6 +3,7 @@ title: DreamHost
 description: Learn how to configure DNS for domains managed on DreamHost.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/dreamhost.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

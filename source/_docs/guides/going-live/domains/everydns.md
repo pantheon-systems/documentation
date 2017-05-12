@@ -3,6 +3,7 @@ title: EveryDNS
 description: Learn how to configure DNS for domains managed on EveryDNS.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/everydns.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS

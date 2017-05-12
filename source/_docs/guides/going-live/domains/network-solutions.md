@@ -3,6 +3,7 @@ title: Network Solutions
 description: Learn how to configure DNS for domains managed on Network Solutions.
 tags: [providers]
 permalink: docs/:basename/
+editpath: going-live/domains/network-solutions.md/
 ---
 Placeholder to create index.
 ## Step to Configure DNS
