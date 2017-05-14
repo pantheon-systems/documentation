@@ -68,6 +68,8 @@ From your Site Dashboard, click **Settings**. Select a plan, and click **Update 
 ####Can I update or change the payment method?
 You can update the payment method in the **Settings** page. For detailed instructions, see [Updating Payment Methods](/docs/update-payment-method/).
 
+####Can I pay for my site on an annual or quarterly basis instead of monthly?
+Annual invoicing is only available for Elite customers. Every other plan is on a monthly basis.
 
 ####Can I transfer ownership of a site to someone else?
 
