@@ -3628,9 +3628,11 @@ p.devbar>a:hover{
   display: inline-block !important;
   vertical-align: top !important;
   margin-left: 4px;
+  padding: .2em .6em .2em;
 }
-
-
+.label-info {
+  background-color: #0093c9;
+}
 
 
 
