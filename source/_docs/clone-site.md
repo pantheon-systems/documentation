@@ -30,6 +30,9 @@ This operation writes the archive to Pantheon's filesystem in a web accessible l
 Click **Continue Migration** and follow all remaining instructions within the guided migration process.
 
 ### Troubleshooting
+
+#### Connection was closed by remote host
+
 If your archive is larger than 256MB the operation will fail, resulting in the following error:
 
 ```bash
@@ -55,6 +58,11 @@ If your database and code compressed are less than 256MB you can exclude the fil
  <p>URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.</p>
  </div>
 </li></ol>
+
+#### HTTP 404 error: Unable to download the archive 
+
+Go to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. Re-run "drush ard" if you can't find the site archive.
+
 ## See Also
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
