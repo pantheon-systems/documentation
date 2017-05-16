@@ -52,7 +52,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div class="upstream-overview-outter-clear">
   <div class="upstream-overview-outter">
     <div class="upstream-content-inner-icon">
-      <img style="padding-left:10px;" src="/source/docs/assets/images/levelone-icon.svg">
+      <img alt="Parent upstream level" style="padding-left:10px;" src="/source/docs/assets/images/levelone-icon.svg">
       <ul class="upstream" style="margin-right:40px;display:inline-flex;">
         <li>Core Updates</li>
       </ul>
@@ -66,7 +66,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div class="upstream-overview-outter-clear">
   <div class="upstream-overview-outter">
     <div class="upstream-content-inner-icon">
-      <img style="padding-left:10px;" src="/source/docs/assets/images/leveltwo-icon.svg">
+      <img alt="Custom upstream level" style="padding-left:10px;" src="/source/docs/assets/images/leveltwo-icon.svg">
       <ul class="upstream">
         <li>Parent Theme</li>
         <li>Common plugins / Contrib modules</li>
@@ -82,7 +82,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 </div>
   <div class="upstream-overview-outter">
     <div class="upstream-content-inner-icon">
-      <img style="padding-left:10px;" src="/source/docs/assets/images/levelthree-icon.svg">
+      <img alt="site upstream level" style="padding-left:10px;" src="/source/docs/assets/images/levelthree-icon.svg">
       <ul class="upstream">
         <li>Child Theme</li>
         <li>Site-specific plugins / Custom code</li>
