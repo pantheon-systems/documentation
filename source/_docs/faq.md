@@ -155,6 +155,6 @@ See [Getting Support](/docs/getting-support/) and explore our [support features]
 
 ## Security
 
-### Is the Pantheon platform PCI compliant?
+### PCI Compliance on Pantheon
 
-Because PCI certifications have yet to catch up to modern cloud infrastructures, Pantheon cannot currently offer PCI compliance out of the box. If this is a hard requirement for your project, please contact us to discuss details.
+Since you can alter your code on Pantheon, you must certify your own applications. PCI compliance for applications deployed on any platform cannot be guaranteed by the platform alone. We recommend architectures designed to work with PCI SAQ-A to minimize both risk and compliance efforts.
