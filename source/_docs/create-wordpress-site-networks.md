@@ -195,7 +195,7 @@ If you visit the Test environment at this point, it will show a database connect
 
 ```bash
 ## NOTE: the www. is necessary if the Dev, Test, and Live environments use it.
-terminus wp <site>.test 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network'
+terminus wp <site>.test -- search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network
 ```
 ### wp search-replace Fundamentals
 **Pro tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
