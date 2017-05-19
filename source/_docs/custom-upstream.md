@@ -26,8 +26,9 @@ Not only does this workflow free up developer time, it establishes a sustainable
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
+<p style="text-align:center" markdown="1">
 ![Custom upstream update strategy](/source/docs/assets/images/update-diagram.svg)
-
+</p>
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
 ### Scale Client Services
@@ -58,7 +59,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
       </ul>
     </div>
     <div class="upstream-content-inner-content">
-      <h3>Level One: Pantheon's Core Upstream</h3>
+      <h3>Level 1: Pantheon's Core Upstream</h3>
       <p markdown="1">The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.</p>
     </div>
   </div>
@@ -73,7 +74,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
       </ul>
     </div>
     <div class="upstream-content-inner-content">
-      <h3>Level Two: Your Custom Upstream</h3>
+      <h3>Level 2: Your Custom Upstream</h3>
       <p>The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).</p>
 
       <p markdown="1">The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/). It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.</p>
@@ -89,7 +90,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
       </ul>
     </div>
     <div class="upstream-content-inner-content">
-      <h3>Level Three: Site Repository</h3>
+      <h3>Level 3: Site Repository</h3>
       <p>Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
 
       The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.</p>
