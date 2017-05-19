@@ -20,9 +20,9 @@ editpath: 08-onserver-dev-part1.md
 In this lesson, we’re going to work directly on the server. We’ll make changes to our Dev site, review them on our Test site, then deploy them to Live.
 
 **Watch the video:**
-
-<script src="//fast.wistia.com/embed/medias/s5be7ic569.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-
+<div class="panel panel-video panel-guide">
+<script src="//fast.wistia.com/embed/medias/s5be7ic569.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_s5be7ic569 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
 
 **Try it yourself:**
 
@@ -50,8 +50,8 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
     <p>In the Dev environment, you can’t make a commit without first adding a commit message.
     </p></div>
 
-    Ok, now let’s review the new theme in your Test environment. 
-    
+    Ok, now let’s review the new theme in your Test environment.
+
 7. Navigate to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab and click **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.  
 
 8. Let’s review the new theme with the new content we added in the Live environment. Check the box for **Pull files and the database from the Live environment**.
