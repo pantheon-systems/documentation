@@ -17,6 +17,7 @@ nexturl: getting-started/user-dashboard/
 nextpage: User Dashboard
 editpath: 01-introduction.md
 completiontime: 1 hour
+image: getting-started-Largethumb
 ---
 Welcome! This guide is designed to get you started on Pantheon.
 

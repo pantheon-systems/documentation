@@ -2,10 +2,12 @@
 title:  Terminus Manual
 subtitle: Get Started
 terminuspage: true
+description: Manual for our command line interface, Terminus, for advanced interaction with Pantheon.
 type: terminuspage
 layout: terminuspage
 tags: [devterminus]
 permalink: docs/:basename/
+image: terminus-Largethumb
 ---
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
