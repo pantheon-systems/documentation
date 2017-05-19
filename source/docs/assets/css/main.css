@@ -5148,7 +5148,7 @@ div.navsearch-container {
 .upstream-overview-outter {
   padding: 25px;
   border-radius: 5px;
-  border: solid #0A6BB5 2px;
+  border: solid #0093C9 2px;
   display: inline-flex;
 }
 
@@ -5176,4 +5176,5 @@ div.navsearch-container {
 }
 .upstream li {
   line-height: 1.35;
+  padding-bottom: 4px;
 }
