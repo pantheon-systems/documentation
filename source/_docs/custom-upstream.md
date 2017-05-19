@@ -4,7 +4,7 @@ description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
-Agency and EDU organizations can create and update sites from a common codebase using a Custom Upstream, which can be selected by members of an organization during site creation. If you don’t have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) or [EDU](https://pantheon.io/edu) account you can create one for free.
+Enterprise, Agency, and EDU organizations can create and update sites from a common codebase using a Custom Upstream, which can be selected by members of an organization during site creation. If you don’t have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) or [EDU](https://pantheon.io/edu) account you can create one for free. Customers interested in [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) can [reach out](https://pantheon.io/pantheon-enterprise) to our accounts team.
 
 ## Benefits
 
@@ -34,8 +34,8 @@ Here are definitions for commonly used terms:
 * **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
 * **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 * **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-* **Repository**: A collection of files packaged in a single directory, usually version controlled.
-* **Remote Repository**: A collection of files that are stored in a remote and central location.
+* **Repository**: A collection of files packaged in a single directory under version control.
+* **Remote Repository**: A remote version control location, e.g. residing on GitHub or BitBucket.
 * **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
 * **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
@@ -54,7 +54,7 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
+<p markdown="1">Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
 </div>
 
 ### Level Three: Site Repository
