@@ -47,14 +47,19 @@ While many providers have standalone modules/plugins, you may want or need to in
 
 ## Troubleshooting
 
-#### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
+#### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`
 
 This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
-1. Copy the file from .../files/mailsystem/filename.inc
-2. Place in a custom module's includes dir and .info file using files[] = includes/filename.inc
-3. Remove original file from {registry} table DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
-4. [`terminus drush <site>.<env> -- cc all`](https://github.com/pantheon-systems/cli)
+1. Copy the file from `.../files/mailsystem/filename.inc`
+2. Place in a custom module's includes dir and .info file using `files[] = includes/filename.inc`.
+3. Remove the original file from the `{registry}` table:
+
+        DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
+
+4. [Clear the cache](https://github.com/pantheon-systems/cli):
+
+        terminus drush <site>.<env> -- cc all
 
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
