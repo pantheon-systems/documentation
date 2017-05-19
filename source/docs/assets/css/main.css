@@ -5145,3 +5145,36 @@ div.navsearch-container {
   flex-basis: 33.3%;
   max-width:33.3%;
 }
+.upstream-overview-outter {
+  padding: 25px;
+  border-radius: 5px;
+  border: solid #0093C9 2px;
+  display: inline-flex;
+}
+
+.upstream-content-inner-icon {
+    text-align: left;
+    margin-left: 10px;
+    display: block;
+}
+.upstream-content-inner-content {
+  text-align: left;
+  margin-left: 10px;
+  display: block;
+  width: 90%;
+  margin-top:-10px;
+}
+.upstream-overview-outter-clear::after {
+  content: url('/docs/assets/images/arrow.svg');
+}
+.upstream-overview-outter-clear {
+  text-align: center;
+}
+.upstream {
+  padding-left:10px;
+  font-size:small;
+}
+.upstream li {
+  line-height: 1.35;
+  padding-bottom: 4px;
+}
