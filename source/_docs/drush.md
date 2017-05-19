@@ -168,6 +168,12 @@ Alternately, to run a single SQL query:
 echo 'show tables;' | $(drush @pantheon.SITENAME.ENV sql-connect)
 ```
 
+Or, you can use Terminus as follows:
+
+```bash
+terminus drush SITENAME.ENV sql-query "SELECT * FROM users WHERE uid=1"
+```
+
 ## Execute PHP Code Using Drush on Pantheon
 
 The `drush php-eval` command is not supported on Pantheon. You can run PHP commands after bootstrapping Drupal on Pantheon via the following workaround:
