@@ -30,8 +30,7 @@ While many providers have standalone modules/plugins, you may want or need to in
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane" id="drupal">
-    <br>
+  <div role="tabpanel" class="tab-pane active" id="drupal">
     Once you have chosen your SMTP provider, install and configure Drupal's <a href="https://drupal.org/project/smtp">SMTP Authentication Support</a> module.
 
     <div class="alert alert-info" role="alert">
@@ -40,7 +39,6 @@ While many providers have standalone modules/plugins, you may want or need to in
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
-    <br>
     Once you have chosen your SMTP provider, install and configure Wordpress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
   </div>
 </div>
