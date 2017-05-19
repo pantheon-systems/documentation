@@ -195,7 +195,7 @@ If you visit the Test environment at this point, it will show a database connect
 
 ```bash
 ## NOTE: the www. is necessary if the Dev, Test, and Live environments use it.
-terminus wp <site>.test 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network'
+terminus wp <site>.test -- search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network
 ```
 ### wp search-replace Fundamentals
 **Pro tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
@@ -307,6 +307,6 @@ Now that you’ve performed the search and replace on your database, WordPress w
 ```bash
 terminus env:deploy <site>.live
 # NOTE: delete "www." if using the bare domain.
-terminus wp <site>.<env> 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network'
+terminus wp <site>.<env> -- search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network
 ```
 Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/managing-wordpress-site-networks/), and pick up a few additional [tips and tricks](/docs/managing-wordpress-site-networks#network-tips-and-tricks-with-wp-cli).
