@@ -40,13 +40,12 @@ Below we recommend using Git, but you can also use SFTP to set your site up for 
   ```
 
 5. Add, commit, and push the `pantheon.yml` file with Git.
+6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site-with-a-nested-docroot) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site-to-use-a-nested-docroot) below.
 
 ### Create a New Site with a Nested Docroot
 If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site to Use a Nested Docroot
-
-
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below:
 
 <!-- Nav tabs -->
