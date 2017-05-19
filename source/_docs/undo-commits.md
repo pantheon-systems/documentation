@@ -91,7 +91,7 @@ Identify the most recent commit deployed to Live and overwrite history on Dev's 
 git reset --hard `terminus env:code-log <site>.live --format=string | grep -m1 'live' | cut -f 4`
 git push origin master -f
 ```
-## What if Dev is behind Test and Live
+## What if Dev is behind Test and Live?
 This happens if you **reset** Dev to an earlier commit, rather than using **revert**.
 To bring everything back in sync and to the same commit, you will need to make a commit on Dev. This can be a 'dummy' commit - that is, just a space or extra line added to a comment within a file.
 Once you commit that change, you'll see the commit available for deployment on Test, and then on Live.
