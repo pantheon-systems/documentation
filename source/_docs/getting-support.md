@@ -132,7 +132,7 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 - Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](https://pantheon.io/docs/tags/debug/) to get you underway.
 
-- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](http://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
+- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
 
 - Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/docs/errors-and-server-responses/) in your Development environment. If you [contact support](/docs/getting-support), include your findings and attach screenshots whenever possible.
 

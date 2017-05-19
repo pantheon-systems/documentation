@@ -58,7 +58,7 @@ All organization members have access to the site, with permissions determined by
 Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
 
 ### Do you have a status page?
-Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.getpantheon.com](http://status.getpantheon.com).
+Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.pantheon.io](https://status.pantheon.io/).
 
 ### How do I submit a support request when the Dashboard is down?
 If you need to submit a support request and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
