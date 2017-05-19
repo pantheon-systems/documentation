@@ -7,7 +7,7 @@ type: terminuspage
 layout: terminuspage
 tags: [devterminus]
 permalink: docs/:basename/
-image: terminus-Largethumb
+image: terminus-thumbLarge
 ---
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
