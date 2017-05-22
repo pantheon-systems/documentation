@@ -61,4 +61,5 @@ The TXT record is only required if you need to prove ownership of your domain in
 
 ## Next Steps
 
-[Going Live Guide: Enable HTTPS](/docs/guides/going-live/https/)
+* [Going Live: Domains & HTTPS](/docs/guides/going-live/domains-https/)
+* [Going Live: Redirect to a Primary Domain](/docs/guides/going-live/redirects/)

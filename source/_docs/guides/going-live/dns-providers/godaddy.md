@@ -65,4 +65,5 @@ If you receive an error message that says `The specified record already exists`,
 
 ## Next Steps
 
-[Going Live Guide: Enable HTTPS](/docs/guides/going-live/https/)
+* [Going Live: Domains & HTTPS](/docs/guides/going-live/domains-https/)
+* [Going Live: Redirect to a Primary Domain](/docs/guides/going-live/redirects/)

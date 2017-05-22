@@ -30,10 +30,6 @@ This automated report checks for exploited patterns in code, shows database stat
 
 **Shoot for all green, but at the very least be sure and fix all errors and review every notice.**
 
-![Launch check error example](/source/docs/assets/images/dashboard/launch-check-cache-warnings.png)
-
-![Launch check warning example](/source/docs/assets/images/dashboard/launch-check-security-error.png)
-
 <div class="panel panel-video panel-guide" id="accordion">
   <div class="panel-heading panel-video-heading">
     <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Maximize Performance by Configuring Cache (Optional)</h3></a>

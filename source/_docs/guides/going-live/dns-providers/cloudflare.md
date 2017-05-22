@@ -14,14 +14,6 @@ Be sure that you have a:
 - [Paid Pantheon plan](/docs/guides/going-live/plans/)
 - [Domain connected](/docs/guides/going-live/domains/) to the target Pantheon environment (typically Live)
 
-## Locate Pantheon's DNS Values
-Identify DNS values to point your domain to Pantheon:
-
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-home"></span> Domains & HTTPS**.
-2. Click the **DNS Recommendations** button next to your domain.
-
-Keep this page open and login to your <a href="https://www.cloudflare.com/a/login/" target="blank">Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
-
 ## Configure DNS Records on Cloudflare
 ### A Record
 1. Click **DNS** in the menu bar.
@@ -63,4 +55,5 @@ The TXT record is only required if you need to prove ownership of your domain in
 
 ## Next Steps
 
-[Going Live Guide: Enable HTTPS](/docs/guides/going-live/https/)
+* [Going Live: Domains & HTTPS](/docs/guides/going-live/domains-https/)
+* [Going Live: Redirect to a Primary Domain](/docs/guides/going-live/redirects/)
