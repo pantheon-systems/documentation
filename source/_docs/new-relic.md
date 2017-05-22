@@ -114,6 +114,15 @@ If you try to access New Relic prior to any traffic reaching an environment, you
 2. Close the tab, wait for the New Relic data table to appear in your Pantheon Site Dashboard, under the **New Relic** tab.
 3. Click the **Go to New Relic** button.
 
+#### If you see "We're sorry, you haven't verified your email address yet."
+After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
+
+If the site owner did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
+
+1. On New Relic's login page, click **Forgot your password?**.
+2. Enter the email address of the site owner.
+3. Click **Send my reset link**.
+
 ### New Relic data is not showing on the Pantheon Site Dashboard
 Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
 
