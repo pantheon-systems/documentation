@@ -61,7 +61,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
 
 #### HTTP 404 error: Unable to download the archive 
 
-Go to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. Re-run "drush ard" if you can't find the site archive.
+Go the to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command from [above](#drupal) again if you can't find the site archive.
 
 ## See Also
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
