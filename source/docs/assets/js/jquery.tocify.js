@@ -376,7 +376,7 @@
 
             }
 
-            hashValue = this._generateHashValue(arr, self, index).replace(/\?/g, "").replace(/\(/g, "").replace(/\)/g, "").replace(/\'/g, "").replace(/\,/g, "").replace(/\&-/g, "");
+            hashValue = this._generateHashValue(arr, self, index).replace(/\?/g, "").replace(/\(/g, "").replace(/\)/g, "").replace(/\'/g, "").replace(/\,/g, "").replace(/\//g, "").replace(/\&/g, "and");
 
             // Appends a list item HTML element to the last unordered list HTML element found within the HTML element calling the plugin
             item = $("<li/>", {

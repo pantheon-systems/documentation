@@ -48,7 +48,7 @@ In this lesson, we’re going to point a domain name that you own to Pantheon an
             <ul class="top-docs top-docs-2col">
               {% for doc in data.docs_tags.providers %}
                 {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-                  <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+                  <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
                 {% endif %}
               {% endfor %}
             </ul>
