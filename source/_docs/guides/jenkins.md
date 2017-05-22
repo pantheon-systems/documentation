@@ -19,7 +19,11 @@ This guide will cover how to install and configure an externally hosted Jenkins 
 
 ## What you’ll need
 
-- Root access to a server. This server in this guide is running Ubuntu 16 x64.
+- Root access to a server with Jenkins. This server in this guide is running Ubuntu 16 x64.
+- An externally hosted server with:
+    - Drush (for this guide)
+    - Terminus
+    - Jenkins
 - A Drupal or Wordpress website on Pantheon.
 
 ## Step 1: Install Jenkins
@@ -41,8 +45,25 @@ apt-get install jenkins
 3. After install, you should be able to load the application on your remote server, either on port 8080 of the server's IP address or if you can assign it a domain name, e.g. ci.yoursite.com:8080
 
 4. You can select the "Install standard plugins" option to complete the install. Create an administrative user. 	
-GitHub Authentication plugin
-terminus auth:login --machine-token=aWGN_CMQtd1JP4BMBcaI2UpIO5SnWBttZc0t6G39UGlgi
+
+Server must have 
+PATH: $PATH:~/.composer/vendor/bin:~/.config/composer/vendor/bin:tests/scripts
+composer global require -n "hirak/prestissimo:^0.3"
+    - composer global require -n "consolidation/cgr"
+    - cgr "pantheon-systems/terminus:^1"
+    - terminus --version
+    - cgr "drush/drush:~8"
+    - mkdir -p ~/.terminus/plugins
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
+    
+    get machine token:
+
+terminus auth:login --machine-token=bwqJiSKLZ-uvAH2fqcCYbg3cQ5JfscwZBAaHZO5LsAOOw
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgE2SK6f28WGL3wpxWve2LE98U393bBp86oIks/aDNuM607WiBRevdpBL/3iCM0zo+7qyD4gD7pLkqnguWBHbtNGlC/yqQqnPhNsFa+IwkITtZzJG+Y//nEpsFamcFfQQIBFMakrfAZOTJ/F+qwKuqYjs4yQCngBTFKdyhyATM/US5r45k6SNzSZkjzi692n627sd4kr8GSWaGvRweMQLiUPcUonCFcQ8Llu/mJd2vpKaecPBYopG/55j4BSHNBEnDvl8jqTZdMHt/20khE9lBUwnBsdcOWMTZbUok+LsPGDAS6COb5ZFB0nbM7JPoIj8evfokZgroK9kj8WpC4kex jenkins@CI
+
+# terminus auth:login --machine-token=aWGN_CMQtd1JP4BMBcaI2UpIO5SnWBttZc0t6G39UGlgi
 
 5. Enable security by navigating to Manage Jenkins (a), then Security (b).
 
@@ -69,28 +90,64 @@ sudo git config user.name "jenkins"
 sudo git config user.email "test@gmail.com"
 
 Then check "enable security"
-
-
 Set Jenkins's to use user database and enable sign ups.
 
 Create a new user
-
-
 Next, go back to admin, check Matrix-based security, disable signups;
-
-
 Make sure Anonymous only has the Read right under the View group (Jenkins crashes when it doesn't have that set) and add your user with admin rights. Save and log in as that user.
-
-//https://gist.github.com/gmhawash/4043232
-
+https://gist.github.com/gmhawash/4043232
 
 Click save at the bottom of the page. After the page load, you'll see a login form, ignore that, go to ci.company.net:8080 again instead. You'll see this sign up form:
 
 
+$ SITE="my-site"
+$ terminus site:create $SITE "My Site" "Drupal 8" --org="My Team"
+$ composer create-project pantheon-systems/example-drops-8-composer $SITE
+$ cd $SITE
+$ composer prepare-for-pantheon
+$ git init
+$ git add -A .
+$ git commit -m "Initial commit"
+$ terminus  connection:set $SITE.dev git
+$ PANTHEON_REPO=$(terminus connection:info $SITE.dev --field=git_url)
+$ git remote add origin $PANTHEON_REPO
+$ git push --force origin master
+$ terminus drush $SITE.dev -- site-install --site-name="My Drupal Site"
+$ terminus dashboard:view $SITE
 
-## Step 2: Add job to pantheon.yml
+## Configure Quicksilver Integration
+ 
+1. Clone Pantheon's [Quicksilver Example Repo](https://github.com/pantheon-systems/quicksilver-examples)to your local computer.
 
 ```
+git clone https://github.com/pantheon-systems/quicksilver-examples.git quicksilver-examples
+
+```
+
+2. Locate your local copy of your Pantheon site's repository, or clone it if you haven't already.
+
+```
+git clone ssh://codeserver.dev.000000-0000-0000-0000-000000000@codeserver.dev.000000-0000-0000-0000-000000000.drush.in:2222/~/repository.git astro-mktg
+```
+
+3. From the root directory of your local copy (at the same level as index.php), create a directory named "private" and copy jira_integration.php script to it.
+
+```
+$ mkdir private
+$ cd private
+$ cp /path/to/your/quicksilver-examples/jira_integration/jira_integration.php .
+$ ls
+jira_integration.php
+```
+
+4. Add the example jira_integration.php script to the private directory of your code repository.
+
+5. Create a pantheon.yml file if one doesn't already exist in your root directory.
+
+6. Add a Quicksilver operation to the pantheon.yml to fire the script after a code push.
+   
+```
+#always include the api version
 api_version: 1
 
 workflows:
@@ -101,52 +158,17 @@ workflows:
           script: private/scripts/jenkins_integration.php
 ```
 
-1.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation Monitoring > Uptime sub-menu, select “Add Uptime Check.”
+7. Push this YAML file to all environments.
 
-![My.pingdom.com dashboard](/source/docs/assets/images/integrations/dashboard.png)
+8. Test a code change. This should kick off a build. Currently the build isn't doing anything, so let's add some tasks to the build.
 
-In the modal that opens, add this information where indicated:
+http://jenkins-le-guide-complet.github.io/html/sect-first-steps-first-job.html
 
-- **Name of Check:** An easily recognizable name for the check, e.g. “mysite.com Home Page.”
-- **Check Interval:** How often Pingdom will check the site. While one minute is the minimum and acceptable to use, often a check every 5 minutes or more is adequate, and will allow for brief network throughput issues. Remember, these checks also will appear in web access logs, so too many checks may make it harder to debug other issues.
-- **Check Type:** You can monitor several different things with Pingdom: email services, network components such as DNS or specific ports, or a website. Choose “Web.”
-- **URL/IP:** On the “Required” tab, enter the URL for the website. If your site is using HTTPS, select that dropdown option. You can optionally add user credentials and expected response text. This is very useful if you are using Varnish to cache a site; you can create a simple PHP script which queries the database and returns a specific value to determine if the site is functioning as expected.
-- **Test From:** Select the region. We suggest you select the region where the majority of the site's users are located.
-- **Alerting Settings:** You can create teams, or assign alerts directly to users. It's better to create teams within Pingdom, rather than a forwarding email address (e.g. monitoring@mysite.com), as each user can set up their own alerting preferences. For now, select yourself.
-- **When down, alert after:** 1-5 minutes, depending on the risk of false positives. If you are aware your site is having performance issues, it isn’t helpful to be reminded constantly, so sometimes a longer time period before being alerted ensures you are only notified of a severe failure.
-- **Resend alert every:** Never, 1 or 2 down cycles is adequate. It’s assumed that you will be working on the issue, so you don’t need to be alerted to an issue you are currently handling. It becomes noise during a potentially stressful time.
-- **Alert when back up.** Leave this checked. You may not be the one responding to the issue, but you probably want to know when it’s back up. Sometimes intermittent issues result in a site going up and down within a few minute period.
+https://github.com/pantheon-systems/quicksilver-examples/tree/master/jenkins
 
-When you are done, you will see a new check in the dashboard.
+http://www.vogella.com/tutorials/Jenkins/article.html
 
-![Pingdom.com uptime check](/source/docs/assets/images/integrations/complete_check.png)
-
-## Step 3: Checking your Check
-Let the check run a while (a few hours), then you can access reports for each site in either the left navigation menu or the individual check dropdown menu.
-
-![Pingdom reports](/source/docs/assets/images/integrations/reporting_options.png)
-
-Let’s look at a site that is having some trouble to see how Pingdom can help.
-
-![Downtime modal](/source/docs/assets/images/integrations/downtime_modal.png)
-
-- Item 1 tells us when the issue started occurring, which we can attempt to correlate to any recent changes or external events.
-- Item 2 provides the site's response to the check and Pingdom’s attempt to determine the root cause of the downtime. In this case, we see that the site returned a 200, which is a successful response, but took so long that Pingdom considered it a timeout.
-
-![Root cause analysis](/source/docs/assets/images/integrations/root_cause.png)
-
-This could point to a scaling, performance, or something simple, like lack of caching. Sometimes a server error will be returned, which can be connected to a PHP or permissions error.
-
-The Test Log Results will also display which regions encountered downtime. Sometimes the root cause of downtime is not related to site performance, as when a regional DNS server encounters issues. This report is helpful determining an incident when a certain region of users encounter downtime while others do not.
-
-![Test log results](/source/docs/assets/images/integrations/test_result.png)
-
-## Step 4: Customize Alerts
-
-Before finishing, each user should customize how they receive alerts. Here I added my mobile telephone number, so I also get text alerts as well as email notifications.
-
-![User configuration page](/source/docs/assets/images/integrations/user_config.png)
-
+https://www.slideshare.net/philipnorton42/getting-started-with-jenkins-and-drupal
 
 ## Conclusion
 Pingdom has a few more checks and features we did not cover. Depending on plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.
