@@ -27,13 +27,13 @@ Update WordPress plugins by running `terminus wp` the site name and environment,
 
 Terminus also makes it easy to automate tasks. In this example, we’ve scripted a set of Terminus commands to identify, install, and test WordPress updates. If the tests pass, as they do here, our script pushes the WordPress updates to our Live environment.
 
-You can write scripts in Terminus to automate numerous other tasks for both WordPress and Drupal. You can find this script by going to pantheon.io and searching for automating security updates.
+You can write scripts in Terminus to automate numerous other tasks for both WordPress and Drupal. You can find this script by going to pantheon.io and searching for [automating security updates](https://pantheon.io/blog/automating-security-updates-scalewpio).
 
 Terminus can help you access extra data and functionality that isn’t available in the Pantheon dashboard. For example, we can run the command `terminus workflow:watch` to stream workflow data on the `drushme` site.
 
 In this example, I am switching the connection mode from SFTP to Git. And now I’m running a backup from the dashboard.
 
 
-You can also add commands to Terminus by installing plugins. Official Pantheon plugins can be downloaded from our website or you can write your own.
+You can also add commands to Terminus by [installing plugins](/docs/terminus/plugins/). [Official Pantheon plugins](/docs/terminus/plugins/directory/) can be downloaded from our website or you can [write your own](/docs/terminus/plugins/create/).
 
 That was a quick introduction to our command line tool, Terminus. Use it to script repetitive tasks or just use it to develop faster without touching your mouse.
