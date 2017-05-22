@@ -1,6 +1,7 @@
 ---
 title: eNom Domain Configuration
 provider: eNom
+dnsprovider: true
 description: Learn how to point your eNom domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -40,6 +41,13 @@ The CNAME record is only required if you wish to include `www` within your site'
 1. Click **New Row**.
 2. Enter **www** in the **Host Name** field, select **CNAME** for the **Record Type** then enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Address** field.
 4. Click **Save**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Click **New Row**.
+2. Leave the **Host Name** field blank, select **TXT** for the **Record Type** then enter the record value provided by Pantheon in the **Address** field.
+3. Click **Save**.
 
 ## eNom Docs
 

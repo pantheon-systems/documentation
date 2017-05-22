@@ -1,6 +1,7 @@
 ---
 title: Cloudflare Domain Configuration
 provider: Cloudflare
+dnsprovider: true
 description: Learn how to point your Cloudflare domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -46,6 +47,14 @@ The CNAME record is only required if you wish to include `www` within your site'
 3. Set the TTL to **30 minutes**.
 4. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 5. Click **Add Record**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Select **TXT** from the dropdown menu.
+2. Leave the **Name** field blank and enter the record value provided by Pantheon in the **TXT Content** field.
+3. Set the TTL to **30 minutes**.
+4. Click **Add Record**.
 
 ## Cloudflare Docs
 

@@ -1,6 +1,7 @@
 ---
 title: 1&1 Domain Configuration
 provider: 1&1
+dnsprovider: true
 description: Learn how to point your 1&1 domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -12,14 +13,6 @@ Be sure that you have a:
 - Registered domain name using 1&1 to host DNS
 - [Paid Pantheon plan](/docs/guides/going-live/plans/)
 - [Domain connected](/docs/guides/going-live/domains/) to the target Pantheon environment (typically Live)
-
-## Locate Pantheon's DNS Values
-Identify DNS values to point your domain to Pantheon:
-
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-home"></span> Domains & HTTPS**.
-2. Click the **DNS Recommendations** button next to your domain.
-
-Keep this page open and login to your <a href="https://account.1and1.com/" target="blank">1&1 account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
 ## Configure DNS Records on 1&1
 ### A/AAAA Records
@@ -40,6 +33,16 @@ The CNAME record is only required if you wish to include `www` within your site'
 6. Select CNAME and enter the record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Alias** field.
 7. Check "I am aware and accept that all current DNS settings, e-mail addresses and redirects will be disabled".
 8. Click **Save**, then **Yes** to confirm.
+
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Click **Domain Center** from the Domains panel.
+2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
+3.
+4. Enter the TXT record value provided by Pantheon
+
 
 ## 1&1 Docs
 

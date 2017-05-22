@@ -1,6 +1,7 @@
 ---
 title: GoDaddy Domain Configuration
 provider: GoDaddy
+dnsprovider: true
 description: Learn how to point your GoDaddy domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -42,6 +43,14 @@ The CNAME record is only required if you wish to include `www` within your site'
 
 1. Click the **Add** button and select **CNAME** from the Type dropdown menu.
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Points to** field.
+3. Set the TTL to **1/2 Hour**.
+4. Click **Save**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Click the **Add** button and select **TXT** from the type dropdown menu.
+2. Leave the **Host** field blank and enter the record value provided by Pantheon in the **Points to** field.
 3. Set the TTL to **1/2 Hour**.
 4. Click **Save**.
 

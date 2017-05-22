@@ -1,6 +1,7 @@
 ---
 title: Network Solutions Domain Configuration
 provider: Network Solutions
+dnsprovider: true
 description: Learn how to point your Network Solutions domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -45,6 +46,15 @@ The CNAME record is only required if you wish to include `www` within your site'
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Aliases** field.
 3. Set the TTL to **1/2 Hour**.
 4. Click **Continue**, then **Save Changes**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Click the **Add New Record** button and select **TXT** from the type dropdown menu.
+2. Leave the **Host** field blank and enter the record value provided by Pantheon in the **Value** field.
+3. Set the TTL to **1/2 Hour**.
+4. Click **Save**.
+
 
 ## Network Solutions Docs
 

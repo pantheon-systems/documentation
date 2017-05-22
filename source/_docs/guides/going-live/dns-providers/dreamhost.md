@@ -1,6 +1,7 @@
 ---
 title: DreamHost Domain Configuration
 provider: DreamHost
+dnsprovider: true
 description: Learn how to point your DreamHost domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -37,6 +38,13 @@ The CNAME record is only required if you wish to include `www` within your site'
 
 1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
 2. Leave the **Name** field blank, select CNAME from the Type dropdown menu, and enter the enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
+3. Click **Add record now!**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
+2. Leave the **Name** field blank, select TXT from the Type dropdown menu, and enter the record value provided by Pantheon in the **Value** field.
 3. Click **Add record now!**.
 
 ## DreamHost Docs

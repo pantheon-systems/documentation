@@ -1,6 +1,7 @@
 ---
 title: Gandi Domain Configuration
 provider: Gandi
+dnsprovider: true
 description: Learn how to point your Gandi domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -44,6 +45,14 @@ The CNAME record is only required if you wish to include `www` within your site'
 3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
 4. Click **Submit**.
 5. Click the **Activate this version** button.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Click the **Add** button and select **TXT** from the type dropdown menu.
+2. Set the TTL to **1/2 Hour**.
+3. Leave the **Name** field blank and enter the record value provided by Pantheon in the **Value** field.
+4. Click **Submit**.
 
 ## Gandi Docs
 

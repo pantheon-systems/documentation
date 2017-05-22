@@ -1,6 +1,7 @@
 ---
 title: Dyn Domain Configuration
 provider: Dyn
+dnsprovider: true
 description: Learn how to point your Dyn domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
@@ -42,6 +43,14 @@ The CNAME record is only required if you wish to include `www` within your site'
 
 1. Select **CNAME** from the record type dropdown menu.
 2. Enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Cname** field.
+3. Set the TTL to **1/2 Hour**.
+4. Click **Add**.
+
+### TXT Record
+The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
+
+1. Select **TXT** from the record type dropdown menu.
+2. Enter the record value provided by Pantheon in the **Value** field.
 3. Set the TTL to **1/2 Hour**.
 4. Click **Add**.
 

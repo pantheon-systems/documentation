@@ -30,3 +30,11 @@ If you use the platform in this way, you cannot use legacy platform domains and 
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to replace `pantheonsite.io` for each environment on every site they run with a custom vanity domain.
 
 For details, see [Vanity Domains](/docs/vanity-domains/).
+
+### Why is robots.txt is disallowing crawlers to my Live environment?
+
+Pantheon serves a default robots.txt that disallows crawlers for any platform-issued domains (`/*.pantheonsite.io`, `/*.pantheon.io`, `/*.gotpantheon.com`, and `/*.sites.my-agency.com`) . Once a domain has been associated with a live site environment and the site is accessed using that domain, the robots.txt from your site code will be served normally and the site will be crawled.
+
+If you attempt to access your live environment with a platform-issued domain, even if you have a domain associated with the environment, the default robots.txt will be served.
+
+Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a custom domain to an environment other than Live will not permit crawlers to that environment.
