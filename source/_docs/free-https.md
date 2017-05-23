@@ -2,25 +2,20 @@
 title: Early Access: Free and Automated HTTPS
 earlyaccess: true
 description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
-Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This includes the addition of a global CDN (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features.
-
-## Let's Encrypt Certificates
-Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge.
-
-## Global CDN
-The new service terminates HTTPS and serves all traffic through our new globally distributed content delivery network (CDN). This means that many if not most requests for resources on Pantheon can be served from a location much closer to the end-user, which can speed up the time to render a web-page significantly. The impact will vary depending on the site and where the user is, but we expect almost all users to see at least some benefit.
+Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This is deployed as part of our new [Global CDN](/docs/global-cdn) (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features.
 
 ## Eligibility
-As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are eligible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
+Sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are eligible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
 
-## Next Generation vs Legacy HTTPS
+## Managed HTTPS vs Legacy
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
       <th></th>
       <th>Legacy</th>
-      <th>Next Generation</th>
+      <th>Managed</th>
     </tr>
   </thead>
   <tbody>
@@ -41,13 +36,13 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
     </tr>
     <tr>
       <th>Renewal</th>
-      <td>Manual</td>
-      <td>Automatic</td>
+      <td>Up to you</td>
+      <td>Pantheon does it</td>
     </tr>
     <tr>
       <th>Inbound IP</th>
-      <td>Unique</td>
-      <td>Shared</td>
+      <td>Static (unique)</td>
+      <td>Static (shared)</td>
     </tr>
     <tr>
       <th>Client Support</th>
@@ -74,67 +69,20 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
     <tr>
       <th>Delivery</th>
       <td>ORD Datacenter</td>
-      <td>Global CDN</td>
-    </tr>
-    <tr>
-      <th><a href="/docs/timeouts/#timeouts-that-are-not-configurable">Request Timeouts</a></th>
-      <td>120 seconds</td>
-      <td>60 seconds</td>
+      <td>[Global CDN](/docs/global-cdn)</td>
     </tr>
   </tbody>
 </table>
 
-For more information see the FAQ section below in this document.
-
-## Enabling Next Generation HTTPS Service
-
-### Find Eligible Sites in the Dashboard
-Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dashboard or use the **HTTPS Upgrade** search facet in the [Organization Dashboard](/docs/organization-dashboard/#filter-sites) to filter eligible sites.
-
-### Upgrade Your Site
-
-1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
-2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait an additional 60 minutes before updating DNS.
-
-  ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
-
-  If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change.
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-      <a data-proofer-ignore data-toggle="collapse" data-target="#test-locally"><h3 class="panel-title" style="cursor:pointer;">Test Certificate Locally (Optional) <span class="caret"></span></h3></a>
-      </div>
-      <div id="test-locally" class="collapse" style="padding:10px;">
-      <p>If you would like to test locally before configuring your domain's DNS to use Pantheon's Free and Automated HTTPS:</p>
-        <ol>
-          <li>Copy the A record value provided for the site's bare domain.</li>
-          <li>Add a line to your <a href="https://en.wikipedia.org/wiki/Hosts_(file)">local hosts</a> file which includes the IP address followed by the domain, for example:
-          <pre><code>192.123.456.789 example.com</code></pre></li>
-          <li>Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.</li>
-        </ol>
-      </div>
-    </div>
-
-3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
-
-    <div class="alert alert-info">
-    <h4 class="info">Pro Tip</h4>
-Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
-</div>
-
-  DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propogation.
-
-      <div class="alert alert-info">
-      <h4 class="info">Pro Tip</h4>
-Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
-</div>
+## Let's Encrypt Certificates
+Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge.
 
 ## Frequently Asked Questions
 
 ### Does upgrading involve HTTPS interruptions or downtime?
 No, after you update your DNS records, traffic will gracefully switch over and involves no downtime or HTTPS interruption.
 
-**Caveat:** If after upgrading you add a new domain that is not already routed to Pantheon, then it will take up to an hour for HTTPS to be ready for that new domain. Pre-provisioning HTTPS for new domains is planned after early access, with the full release.
+**Caveat:** If after upgrading you add a new domain that is not already routed to Pantheon, then it will take up to an hour for HTTPS to provision for that new domain. Pre-provisioning HTTPS for new domains is planned after early access.
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
@@ -167,16 +115,6 @@ No, but you don’t need a wildcard certificate to secure communications for mul
 
 ### Is Extended Validation supported?
 No, please take a moment to fill out the [HTTPS survey](https://www.getfeedback.com/r/LETtb3QV) if you require Extended Validation.
-
-### Is the CDN configurable? Do I get access to hit rates or other statistics?
-No, we pre-configured the CDN so you don’t have to hassle with configuration. We’ve optimized configuration for Drupal and WordPress sites. Hit rates or other statistics are not currently available.
-
-### Why does the Domains and HTTPS tool indicate action required even though I've updated DNS records?
-The action required message may be due to one of the following:
-
-  - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
-  -  **AAAA records not detected:**: Ensure you've added both AAAA records for the bare domain (e.g. `example.com`) to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability.
-  - **Old DNS records detected:** If in addition to the correct DNS records, you also have old records, make sure to delete the old records.
 
 ### What About Personal Plans?
 We share Let's Encrypt's goal of making HTTPS the standard for all sites on the internet, which means making it the standard for all sites on Pantheon. However, at this time we are focused on our existing HTTPS customers (Pro plans and above), and there's a considerable amount of work in making sure the new solution meets their needs, and that we are able to deprecate the legacy edge. There is not yet a timeline for providing HTTPS service to Personal plans.
