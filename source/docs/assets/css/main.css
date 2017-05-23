@@ -3615,6 +3615,7 @@ li.terminus-usage {
 }
 .devbar h3, .devbar p {
   color: #fff;
+  margin-top: 10px;
 }
 p.devbar>a{
   color:#fff!important;
@@ -3623,6 +3624,13 @@ p.devbar>a{
 }
 p.devbar>a:hover{
   opacity: 0.65;
+}
+#earlyaccessoutter {
+  padding: 25px;
+  margin-bottom: 30px;
+}
+.alert-dismissable, .alert-dismissible {
+  padding-right: 45px !important;
 }
 .label {
   display: inline-block !important;

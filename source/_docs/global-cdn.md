@@ -2,6 +2,7 @@
 title: Early Access: Pantheon Global CDN
 earlyaccess: true
 description: Improve Site Performance and Security
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform. 
 ---
 
 Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus free managed HTTPS using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing HTTPS customers can opt-in to this new set of features.

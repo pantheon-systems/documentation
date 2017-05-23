@@ -2,6 +2,7 @@
 title: Early Access: Free and Automated HTTPS
 earlyaccess: true
 description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform. Early access to Free and Automated HTTPS is currently invite only.
 ---
 Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This includes the addition of a global CDN (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features.
 
