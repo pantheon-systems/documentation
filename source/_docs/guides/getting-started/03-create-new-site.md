@@ -15,6 +15,7 @@ nextpage: Site Dashboard
 previousurl: getting-started/user-dashboard/
 previouspage: User Dashboard
 editpath: 03-create-new-site.md
+image: getting-started-Largethumb
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 
@@ -36,7 +37,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
 
 3. Select **Continue** to choose from the available default site frameworks and public distributions.
-    
+
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p>Organizations can add their own sites to this list! We call these Custom Upstreams, and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.

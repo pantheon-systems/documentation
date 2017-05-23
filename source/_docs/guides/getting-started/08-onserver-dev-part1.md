@@ -15,6 +15,7 @@ nextpage: On-Server Dev, Part 2
 previousurl: getting-started/connection-modes/
 previouspage: Connection Modes
 editpath: 08-onserver-dev-part1.md
+image: getting-started-Largethumb
 ---
 
 In this lesson, we’re going to work directly on the server. We’ll make changes to our Dev site, review them on our Test site, then deploy them to Live.

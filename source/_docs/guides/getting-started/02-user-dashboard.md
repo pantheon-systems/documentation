@@ -15,6 +15,7 @@ nextpage: Create New Site
 previousurl: getting-started/
 previouspage: Introduction
 editpath: 02-user-dashboard.md
+image: getting-started-Largethumb
 ---
 In this lesson, we’re going to explore the User Dashboard.
 

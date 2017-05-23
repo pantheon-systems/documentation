@@ -6,6 +6,7 @@ terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+image: terminus-thumbLarge
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
   <h2>Update to the Current Release {[{releases[0].name}]}</h2>

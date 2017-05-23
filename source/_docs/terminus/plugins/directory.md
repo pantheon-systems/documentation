@@ -5,6 +5,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/plugins/:basename/
+image: terminus-thumbLarge
 ---
 Extend the functionality of Terminus and add commands by installing third party plugins.
 

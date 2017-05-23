@@ -6,6 +6,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+image: terminus-thumbLarge
 ---
 Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Requirements

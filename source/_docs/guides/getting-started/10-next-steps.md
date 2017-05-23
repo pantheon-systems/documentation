@@ -13,6 +13,7 @@ permalink: docs/guides/getting-started/next-steps/
 previousurl: getting-started/onserver-dev-part2
 previouspage: On-Server Dev, Part 2
 editpath: 10-next-steps.md
+image: getting-started-Largethumb
 ---
 
 Congratulations! You created and made code changes to your Pantheon site. You should now feel comfortable with the best-practice development workflow that serves as the foundation of our platform.

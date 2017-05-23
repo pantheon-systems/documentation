@@ -15,6 +15,7 @@ nextpage: Clone Live to Dev
 previousurl: getting-started/site-dashboard/
 previouspage: Site Dashboard
 editpath: 05-create-test-live.md
+image: getting-started-Largethumb
 ---
 In this lesson, we’re going to to create our Test site and our Live site, which we just learned about in the previous lesson.
 
