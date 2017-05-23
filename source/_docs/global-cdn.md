@@ -23,7 +23,11 @@ Finally, the Global CDN includes interfaces to dynamically expire selected conte
 
 In early testing we saw multi-second speedups even within the continental US. International users will benefit even more:
 
-CHART
+<iframe src="http://speedtest.pantheon.website/video/view.php?id=170509_0b7008bcd3803a049ae94bfa01ef9feaaef6f007&embed=1&width=816&height=384" width="816" height="384"></iframe>
+
+Here's an example of the load time chart. See more at the [full speedtest report](http://speedtest.pantheon.website/video/compare.php?tests=170509_VC_3-l%3AGlobal+CDN%2C170509_BG_2-l%3ALegacy&thumbSize=200&ival=100&end=doc).
+
+[![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)]()
 
 ## Eligibility
 Upgrading to the Global CDN is available for most Professional and Business level sites.
