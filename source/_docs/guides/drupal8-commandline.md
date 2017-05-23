@@ -245,7 +245,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
         terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
 
-        terminus drush $TERMINUS_SITE.test -- config-import -y
+        terminus drush $TERMINUS_SITE.live -- config-import -y
 
   With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).
 
