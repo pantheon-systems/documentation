@@ -1,19 +1,15 @@
 ---
-title: Early Access: Free and Automated HTTPS
+title: Early Access: Managed HTTPS
 earlyaccess: true
-description: Upgrade to Free and Automated HTTPS, powered by Let's Encrypt
-earlynote: The documentation on this page discusses features and options that are not available across the entire platform. Early access to Free and Automated HTTPS is currently invite only.
+description: Learn about Managed HTTPS, powered by Pantheon's new Global CDN using Let's Encrypt.
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
-Pantheon is rolling out a new feature to manage HTTPS for customers using [Let's Encrypt](https://letsencrypt.org). This includes the addition of a global CDN (content delivery network) which can significantly improve website performance. This doc describes the early access program for eligible customers to opt-in to this new set of features.
+Pantheon is rolling out a new integrated Global CDN service offering, with improved performance and security for customer sites. The Global CDN features Managed HTTPS using Let's Encrypt to automatically support HTTPS for free. This page describes Managed HTTPS (powered by the new Global CDN) in comparison to our Legacy HTTPS service.
+
+For information on the Global CDN service, early access eligibility, and steps to upgrade see [Early Access: Pantheon Global CDN](/docs/global-cdn/).
 
 ## Let's Encrypt Certificates
 Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge.
-
-## Global CDN
-The new service terminates HTTPS and serves all traffic through our new globally distributed content delivery network (CDN). This means that many if not most requests for resources on Pantheon can be served from a location much closer to the end-user, which can speed up the time to render a web-page significantly. The impact will vary depending on the site and where the user is, but we expect almost all users to see at least some benefit.
-
-## Eligibility
-As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are eligible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
 
 ## Next Generation vs Legacy HTTPS
 <table class="table  table-bordered table-responsive">
@@ -84,47 +80,6 @@ As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit c
     </tr>
   </tbody>
 </table>
-
-For more information see the FAQ section below in this document.
-
-## Enabling Next Generation HTTPS Service
-
-### Find Eligible Sites in the Dashboard
-Look for site thumbnails that show **HTTPS Upgrade Available** in your User Dashboard or use the **HTTPS Upgrade** search facet in the [Organization Dashboard](/docs/organization-dashboard/#filter-sites) to filter eligible sites.
-
-### Upgrade Your Site
-
-1. Click the **Start HTTPS Upgrade** button from the Site Dashboard.
-2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait an additional 60 minutes before updating DNS.
-
-  ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
-
-  If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
-
-      1. Copy the A record value provided for the site's bare domain.
-      2. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file which includes the IP address followed by the domain, for example:
-
-        ```
-        192.123.456.789 example.com
-        ```
-
-      3. Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
-
-
-
-3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
-
-    <div class="alert alert-info">
-    <h4 class="info">Pro Tip</h4>
-Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
-</div>
-
-  DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propogation.
-
-      <div class="alert alert-info">
-      <h4 class="info">Pro Tip</h4>
-Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
-</div>
 
 ## Frequently Asked Questions
 

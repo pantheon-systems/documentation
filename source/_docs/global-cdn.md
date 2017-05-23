@@ -2,10 +2,9 @@
 title: Early Access: Pantheon Global CDN
 earlyaccess: true
 description: Improve Site Performance and Security
-earlynote: The documentation on this page discusses features and options that are not available across the entire platform. 
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
-
-Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus free managed HTTPS using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing HTTPS customers can opt-in to this new set of features.
+Pantheon is rolling out a new integrated Global CDN service offering, with improved performance and security for customer sites. This doc describes the features of this new service and how existing HTTPS customers can opt-in.
 
 ## Pantheon's Global CDN
 Research has shown that each second of latency in rendering a site results in approxomately a 10% drop-off in user engagement. With more and more traffic coming through mobile devices (and their networks), meeting user expectations for performance can be a real challenge.
@@ -13,6 +12,8 @@ Research has shown that each second of latency in rendering a site results in ap
 On top of that, Google and others are now directly factoring in performance and security as part of their SEO weighting algorithms. Browser makers are beginning to show obtrusive warnings for any login page or other form submission that happens "in the clear" over plain HTTP.
 
 Pantheon is helping developers solve both of these challenges with one elegant solution: an integrated performance-first content delivery network which includes free managed HTTPS service. Faster pages, all HTTPS, all the time.
+
+For more information on the Managed HTTPS feature, see [Early Access: Managed HTTPS](/docs/managed-https/).
 
 ## How Does It Work?
 This new service takes Pantheon's traditional high-performance cache system and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we can now terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
@@ -26,7 +27,8 @@ In early testing we saw multi-second speedups even within the continental US. In
 CHART
 
 ## Eligibility
-Upgrading to the Global CDN is available for most Professional and Business level sites.
+As of April 20th 2017, sites currently paying a $30 HTTPS surcharge via credit card on a Professional or Business plan — and with 10 or fewer custom domains — are eligible today. If you are not in this group but are eager to try it out for a specific project, you can [request early access](http://learn.pantheon.io/201701-HTTPS-Reg.html) and we will consider this on a case-by-case basis.
+
 ## Global CDN vs Legacy
 <table class="table  table-bordered table-responsive">
   <thead>
@@ -78,19 +80,20 @@ Look for site thumbnails that show **Global CDN Upgrade Available** in your User
 
   ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
 
-  If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
+3. If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change (optional):
 
-      1. Copy the A record value provided for the site's bare domain.
-      2. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file which includes the IP address followed by the domain, for example:
+    * Copy the A record value provided for the site's bare domain.
 
-        ```
-        192.123.456.789 example.com
-        ```
+    * Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file which includes the IP address followed by the domain, for example:
 
-      3. Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
+      ```
+      23.285.0.X example.com
+      ```
+
+    * Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
 
 
-3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
+4. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
 
     <div class="alert alert-info">
     <h4 class="info">Pro Tip</h4>
