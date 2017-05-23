@@ -19,6 +19,14 @@ editpath: 06-clone-live-to-dev.md
 
 In this lesson, we’ll explore your Live site and add an article or post to simulate working on a real production site. Then we’ll clone your Live site “down” to your Dev site.
 
+**Watch the video:**
+
+<div class="panel panel-video panel-guide">
+<script src="//fast.wistia.com/embed/medias/wvj88wfy1x.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wvj88wfy1x videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
+
+**Try it yourself:**
+
 1. Click the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
 
     <div class="alert alert-info">
