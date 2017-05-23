@@ -27,13 +27,14 @@ CHART
 
 ## Eligibility
 Upgrading to the Global CDN is available for most Professional and Business level sites.
+
 ## Global CDN vs Legacy
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
       <th></th>
-      <th>Global CDN</th>
       <th>Legacy</th>
+      <th>Global CDN</th>
     </tr>
   </thead>
   <tbody>
@@ -44,27 +45,35 @@ Upgrading to the Global CDN is available for most Professional and Business leve
     </tr>
     <tr>
       <th>Price</th>
-      <td>Included</td>
       <td>$30/mo surcharge</td>
+      <td>Included</td>
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>Global Distribution</td>
       <td>ORD Datacenter</td>
+      <td>Global Distribution</td>
     </tr>
     <tr>
-      <th>Cache Sharding</th>
-      <td>None</td>
+      <th>Cache Shards</th>
       <td>3-4 per site</td>
+      <td>None</td>
     </tr>
     <tr>
       <th>Cache Clearing</th>
-      <td>Granular</td>
       <td>Flush All</td>
+      <td>Granular</td>
     </tr>
   </tbody>
 </table>
 
+## Granular Cache Clearing
+
+Developers looking to take advantage of the granular cache clearing capabilities of the Global CDN are encouraged to start with our CMS integrations:
+
+- WordPress: [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache)
+- Drupal: D7 and D8 modules coming soon
+
+Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon) if you are interested in implementing a custom cache strategy.
 
 ## Enabling the Global CDN
 
@@ -104,4 +113,38 @@ Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.co
 Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
 
-For more information see our detailed docs on the Let's Encrypt HTTPS solution, as well as the Global CDN FAQ.
+For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/free-https).
+
+## Frequently Asked Quesitons
+
+### I already have a CDN - should I switch?
+Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
+
+1. It includes [free and automatic HTTPS service](/docs/free-https)
+2. It is heavily optimized for website performance
+3. It is configured, maintained, and supported by Pantheon
+4. It is available at no additional cost
+
+Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
+
+### What about CloudFlare?
+Many customers currently take advantage of CloudFlare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using CloudFlare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
+
+However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering CloudFlare and the Global CDN together.
+
+### Is the Global CDN mandatory?
+Currently we are in the early access phase, but ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes. 
+
+### Is the CDN configurable? 
+No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
+
+### Do I get access to hit rates or other statistics?
+Hit rates or other statistics are not currently available.
+
+### Why does the Domains and HTTPS tool indicate action required even though I've updated DNS records?
+The action required message may be due to one of the following:
+
+  - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
+  -  **AAAA records not detected:**: Ensure you've added both AAAA records for the bare domain (e.g. `example.com`) to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability. They may look similar, but the addresses are distinct.
+  - **Old DNS records detected:** If you also have old records in addition to the new ones, make sure to delete the old records.
+
