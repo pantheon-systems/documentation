@@ -70,7 +70,7 @@ All `terminus wp` commands require a site name and environment to operate.
 
 If you want to keep an eye on WP-Cron but don't like the command line, there are several plugins you can use. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, will show you all of the events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
 
-[WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") will do a similar job with a slightly different UI. This plugin requires you to do a one-time installation the WPX framework, which you can do straight from the plugin manager page.
+[WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") will do a similar job with a slightly different UI. This plugin requires you to do a one-time installation of the WPX framework, which you can do straight from the plugin manager page.
 
 
 ## Manage WP-Cron Externally
