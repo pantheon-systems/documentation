@@ -2,7 +2,7 @@
 title: Early Access: Pantheon Global CDN
 earlyaccess: true
 description: Improve Site Performance and Security
-earlynote: The documentation on this page discusses features and options that are not available across the entire platform. 
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 
 Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus free managed HTTPS using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing HTTPS customers can opt-in to this new set of features.
@@ -25,7 +25,7 @@ In early testing we saw multi-second speedups even within the continental US. In
 
 <iframe src="http://speedtest.pantheon.website/video/view.php?id=170509_0b7008bcd3803a049ae94bfa01ef9feaaef6f007&embed=1&width=816&height=384" width="816" height="384"></iframe>
 
-Here's an example of the load time chart. See more at the [full speedtest report](http://speedtest.pantheon.website/video/compare.php?tests=170509_VC_3-l%3AGlobal+CDN%2C170509_BG_2-l%3ALegacy&thumbSize=200&ival=100&end=doc).
+Here's an example of the load time chart. See more at the <a href="http://speedtest.pantheon.website/video/compare.php?tests=170509_VC_3-l%3AGlobal+CDN%2C170509_BG_2-l%3ALegacy&thumbSize=200&ival=100&end=doc">full speedtest report</a>.
 
 [![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)]()
 
@@ -137,9 +137,9 @@ Many customers currently take advantage of CloudFlare's awesome Universal SSL of
 However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering CloudFlare and the Global CDN together.
 
 ### Is the Global CDN mandatory?
-Currently we are in the early access phase, but ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes. 
+Currently we are in the early access phase, but ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
 
-### Is the CDN configurable? 
+### Is the CDN configurable?
 No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
 
 ### Do I get access to hit rates or other statistics?
@@ -151,4 +151,3 @@ The action required message may be due to one of the following:
   - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
   -  **AAAA records not detected:**: Ensure you've added both AAAA records for the bare domain (e.g. `example.com`) to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability. They may look similar, but the addresses are distinct.
   - **Old DNS records detected:** If you also have old records in addition to the new ones, make sure to delete the old records.
-
