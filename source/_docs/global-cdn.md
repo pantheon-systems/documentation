@@ -79,14 +79,14 @@ Look for site thumbnails that show **Global CDN Upgrade Available** in your User
 
   If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
 
-      * Copy the A record value provided for the site's bare domain.
-      * Add a line to your <a href="https://en.wikipedia.org/wiki/Hosts_(file)">local hosts</a> file which includes the IP address followed by the domain, for example:
+      1. Copy the A record value provided for the site's bare domain.
+      2. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file which includes the IP address followed by the domain, for example:
 
-          ```
-          192.123.456.789 example.com
-          ```
+        ```
+        192.123.456.789 example.com
+        ```
 
-      * Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
+      3. Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
 
 
 3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
