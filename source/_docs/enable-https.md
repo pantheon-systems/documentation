@@ -191,6 +191,17 @@ Use it as the intermediary certificate.
 
 Visit Comodo's support site to read about [SSL packs](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/620/1/).
 
+### How do I add a renewed certificate?
+
+Updating a renewed certificate is much like installing it initially. 
+
+1.  From your Site Dashboard, select Dev, Test, or Live (most commonly Live).
+2.  Select **HTTPS**.
+3.  Click on the link "Update your certificate for the Live environment"
+
+Paste the certificates and private key to the appropriate fields, including the header and footer. 
+Click **Add Cert**
+
 ### How do I fix a chain file signing key mismatch?
 
 `400: Error the cert at line 1 of the chain file does not sign the main cert, Signing key mismatch`  
