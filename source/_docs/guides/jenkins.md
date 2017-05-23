@@ -170,7 +170,7 @@ http://www.vogella.com/tutorials/Jenkins/article.html
 
 https://www.slideshare.net/philipnorton42/getting-started-with-jenkins-and-drupal
 
-## Conclusion
-Pingdom has a few more checks and features we did not cover. Depending on plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.
+calendar.google.com/calendar/b/2/render#main_7
 
-When a site is having issues, Pingdom lets the right people know quickly and provides good data to help find solutions. It's a good practice to use services like Pingdom on all high-value sites.
+## Conclusion
+solutions. It's a good practice to use services like Pingdom on all high-value sites.
