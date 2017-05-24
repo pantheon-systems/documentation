@@ -27,9 +27,9 @@ Be sure that you:
 ## Create Jira Machine User
 Start by creating a new machine user in your Jira instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon.
 
-1. <a href="https://www.atlassian.com/software/jira/try" target=blank>Sign up for a Jira account now <span class="glyphicons glyphicons-new-window-alt"></span></a>.
+1. <a href="https://www.atlassian.com/software/jira/try" target=blank>Sign up for an Atlassian Cloud account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already.
 
-2. Login to your Jira administration panel and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
+2. Login to your Atlassian Cloud instance and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
 
 3. Enter a username and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
 
