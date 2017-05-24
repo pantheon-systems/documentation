@@ -15,7 +15,7 @@ Jenkins is an open source Continuous Integration server which can be used to bui
 
 ## What you will build
 
-This guide will cover how to install and configure an externally hosted Jenkins server to work with sites on the Pantheon platform. We will configure Jenkins to test our code changes and let us know if changes have passed and are ready to deploy.
+This guide will cover how to configure an externally hosted Jenkins server to work with sites on the Pantheon platform. We will configure Jenkins to test our code changes and let us know if changes have passed and are ready to deploy.
 
 ## What you’ll need
 
@@ -26,23 +26,48 @@ This guide will cover how to install and configure an externally hosted Jenkins 
     - Jenkins
 - A Drupal or Wordpress website on Pantheon.
 
-## Step 1: Install Jenkins
+## Step 1: Local Project instantiation
 
-1.  As a root user, log into your remote server and add the Jenkins key and sources, to download the application.
+1. From your terminal, use composer to make a new local project, called "circle," based on our example repo:
 
-```
-wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
-echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
-apt-get update
+```nohighlight
+composer create-project pantheon-systems/example-drops-8-composer circle
 ```
 
-2. Then you can download the application:
+2. Initialize a local Git repository for your project. 
+
+```nohighlight
+cd circle
+git init
+git add --force -A .
+git commit -m "Initial commit."
 
 ```
-apt-get install jenkins
+    
+## Step 2: Create an Origin GitHub Repository
+
+1. Create a new GitHub repository.
+
+![Github Dashboard](/source/docs/assets/images/integrations/github_repos.png)
+
+We already created a README, etc. in the previous steps so don't check the box to create a new one. Privacy options are up to you.
+
+![New empty repository](/source/docs/assets/images/integrations/new_repo.png)
+
+
+2. Next, follow the instructions GitHub presents to push the code to the new remote repository:
+
+```nohighlight
+git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT
+git push -u origin master
 ```
 
-3. After install, you should be able to load the application on your remote server, either on port 8080 of the server's IP address or if you can assign it a domain name, e.g. ci.yoursite.com:8080
+At this point you can add a branch and push and open a pull request successfully.
+
+## Step 3 Setup a Pantheon Site
+
+
+
 
 4. You can select the "Install standard plugins" option to complete the install. Create an administrative user. 	
 
