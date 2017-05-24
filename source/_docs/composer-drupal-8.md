@@ -7,7 +7,31 @@ contributors:
   - stevector
 ---
 
-[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
+[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages, using Composer. For example, Drupal's function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
+
+## Caveats
+
+As [discussed](#is-your-project-drupal-or-is-drupal-a-dependency-of-your-project%3F) in our FAQ below, The use of Composer to manage dependancies for both Drupal core _and_ custom development has raised some issues. This section covers known issues between the Composer methodology and the expected workflow on Pantheon.
+
+If you're already familiar with Composer on Pantheon, you can move on to [Install Composer Locally](#install-composer-locally). Otherwise, read on.
+
+### Workflow and Nested Docroot
+
+Before using Composer to manage your site development you should choose a workflow. By default, Pantheon controls and distributes core updates via git commits, which can cause conflicts with files updated by Composer. Two common workflows around this issue are:
+
+ - Use Pantheon as a build environment, and managing development changes with an externally (or locally) hosted repository.
+
+ - Set a custom upstream (available to organizations), and manage core updates manually.
+
+We suggest developers using Composer install their sites with the [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository, which moves Drupal to a "nested docroot". The repository README file covers the two common methods of deployment.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4><p markdown="1">
+The methods described by the Example Drops 8 Composer repository replace the standard Drupal 8 upstream. By choosing this method, you become responsible for ensuring that your core remains up to date, per our [scope of support](/docs/getting-support/#scope-of-support)
+</p>
+</div>
+
+If you'd instead prefer to the default Drupal 8 installation provided by Pantheon, the [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin), will parse multiple `composer.json` files into a single version when running updates. This method is the most likely to see merge conflicts, as core updates will overwrite `composer.lock` and the contents of `/vendor/`. This can be resolved at the command line by running `composer update` after a core update.
 
 ## Install Composer Locally
 For details, see Composer's documentation on [Installation - Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
