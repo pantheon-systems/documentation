@@ -1,6 +1,6 @@
 ---
-title: Sync Activity from the Pantheon Dashboard in Jira
-description: How to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
+title: Integrate Jira on Pantheon with Quicksilver Hooks
+description: Learn how to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
 tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
@@ -11,83 +11,90 @@ contributors: scottmassey
 Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a larger suite of tools which includes [Bitbucket](https://bitbucket.org/), a code repository platform, and [HipChat](https://www.hipchat.com/), a team messaging and collaboration application. Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
 In this guide, we'll connect a Jira instance to a site on Pantheon. When changes are pushed to Pantheon that reference a Jira issue ID, the commit message will appear in the Jira issue's activity log.
-
-
 ## Before You Begin
+Be sure that you:
 
-Be sure that you have:
+- Have a Drupal or WordPress site on Pantheon
+- Install [Terminus](/docs/terminus):
 
-- A [Jira Instance](https://www.atlassian.com/software/jira/try)
-- A Drupal or WordPress site on Pantheon
-- [Terminus](/docs/terminus) (optional).
+        curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
 
-## Create a Jira Service Account
+        terminus auth:login --machine-token=‹machine-token›
+- Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
-1. When you first create a Jira account, you'll need to create a new project:
+        curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
+## Create Jira Machine User
+Start by creating a new machine user in your Jira instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon.
 
-    ![Create a new project](/source/docs/assets/images/integrations/jira-new-project.png)
+1. <a href="https://www.atlassian.com/software/jira/try" target=blank>Sign up for a Jira account now <span class="glyphicons glyphicons-new-window-alt"></span></a>.
 
-    Jira will offer a variety of project templates. Choose the one that best fits your project's needs.
+2. Login to your Jira administration panel and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The process of creating users and assigning roles may differ depending on your project type. If the steps below don't match what you see, refer to Atlassian's [User management documentation](https://confluence.atlassian.com/adminjiraserver073/user-management-861253163.html).</p>
-    </div>
+3. Enter a username and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
 
-2. Click on <i class="fa fa-gear"></i> in the upper panel to go to **User management** under **SITE ADMINISTRATION**. Under **Create new users**, create an "automation" user. This user will act as the intermediary between Jira and your site. We do this for security and isolation:
+  We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Bot`. The email needs to be an account you have access to:
 
     ![Create an automation user](/source/docs/assets/images/integrations/jira-new-user.png)
 
-    Use the email sent to your automation user's address to set the user password.
+4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine users password.
 
-## Create a Private File for Jira Secrets
+## Privately Store Account Credentials on Pantheon
+Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
-1. Run the following command to create a new `secrets.json` file to store your Jira URL and user credentials (replace `<url>`,`<username>`, and `<password>`):
+1. First, let's check for existing secrets using Terminus(replace `<site>`):
 
-        php -r "print json_encode(['jira_url'=>'<url>','jira_user'=>'<username>','jira_pass'=>'<password>']);" > secrets.json
+        terminus secrets:list <site>.dev
 
-2. Run the following Terminus command to open an SFTP connection with the Dev environment (replace `<site>`):
+  If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon (replace `<site>`):
 
-        `terminus connection:info <site>.dev --field=sftp_command`
+        $ echo '{}' > secrets.json
+        $ `terminus connection:info <site>.dev --field=sftp_command`
+        sftp> put ./files/private secrets.json
+        sftp> bye
+        $ rm secrets.json
 
-3. Navigate to the `files/private` directory, upload the `secrets.json` file, then close the SFTP connection:
+  Otherwise, continue to the next step.
 
-        cd files
-        mkdir private
-        cd private
-        put secrets.json
-        bye
+2. Use Terminus to write your Jira URL value in the private `secrets.json` file (replace `<site>` and `<example>`):
 
-4. Now that `secrets.json` file has been uploaded to the Dev environment, delete it from your local working directory:
+        terminus secrets:set <site>.dev jira_url 'https://<example>.atlassian.net'
 
-        rm secrets.json
+3. Write the machine username to the private `secrets.json` file (replace `<site>` and `<user>`):
+
+        terminus secrets:set <site>.dev jira_user <user>
+
+4. Add the machine user's password to the private `secrets.json` file (replace `<site>` and `<password>`):
+
+        terminus secrets:set <site>.dev jira_pass <password>
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.</p>
+</div>
 
 ## Configure Quicksilver Integration
+The next step is to add Pantheon's Jira integration script to the [private path](/docs/private-paths/#private-path-for-files) of your site's codebase. The private path within the site repository is tracked in version control and is accessible by PHP, but not the web.
 
-1. Clone Pantheon's [Quicksilver Example Repo](https://github.com/pantheon-systems/quicksilver-examples)to your local computer.
+1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory (replace `<site>`):
 
+        `terminus connection:info <site>.dev --fields='Git Command' --format=string`
+        cd <site>
 
-        git clone https://github.com/pantheon-systems/quicksilver-examples.git quicksilver-examples
+2. Set the connection mode to Git (replace `<site>`):
 
-    The following steps assume you cloned this repository to your home directory (`~/`). Adjust the paths in the following commands to match your directory path.
+        terminus connection:set <site>.dev git
 
-2. Locate your local copy of your Pantheon site's repository, or clone it if you haven't already. See our [Starting with Git](/docs/git/) guide for more information.
-
-
-3. From the root directory of your local copy (at the same level as `index.php`), create a directory named "private" and copy `jira_integration.php` script to it.
+3. Create a copy of [Pantheon's `jira_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/jira_integration) in the project's private path:
 
     ``` bash
     mkdir private
-    cd private
-    cp ~/quicksilver-examples/jira_integration/jira_integration.php .
-    ls
-    jira_integration.php
+    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/jira_integration/jira_integration.php --output ./private/jira_instreation.php
     ```
 
 4. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
-5. Add a Quicksilver operation to the `pantheon.yml` to fire the script after a code push.
-
+5. Paste the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Jira integration script:
 
         #always include the api version
         api_version: 1
@@ -100,37 +107,25 @@ Be sure that you have:
                 script: private/jira_integration.php
 
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The `api_version` should always be set in `pantheon.yml`, but isn't part of this code snippet. If you have an existing `pantheon.yml` file with this line, don't add it again.</p>
-    </div>
+6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) your changes to all environments.
+          git commit -am "Create private/jira_integration.php and configure platform hooks"
+          git push origin master
 
-## Test a Code Push
 
-1. Create a test issue in your new Jira project, and take note of the issue ID.
+## Test Jira Integration on Pantheon
 
-2. Push code with a commit message containing that Jira issue ID. The `jira_integration.php` script will parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket.
+1. Create a test issue in an existing or new Jira project. Take note of the issue ID.
 
-    You can also reference multiple commits and it will link to them:
+2. In a separate terminal window, run `terminus workflow:watch` to see the next process unfold in realtime (optional).
+
+3. Push a code change that contains the Jira issue ID in the commit message. This workflow will trigger `jira_integration.php` script, which will search commits for possible issue IDs and comment in Jira when found.
+
+    You can also reference multiple issue IDs in a single commit:
 
         git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
 
-    When testing, you can use the `terminus workflows:watch` command with the Pantheon site ID to see the integration in real time:
-
-        git commit -am "WEB-13: adding CSS changes, also closes WEB-6 and WEB-5"
-        terminus workflow:watch 00000000-0000-0000-0000-000000000000
-
-        [notice] Started ed033e5a-3526-11e7-a3b7-bc764e105ecb Sync code on "dev" (dev) at 2017-05-10 02:18:16
-        [notice] Finished workflow ed033e5a-3526-11e7-a3b7-bc764e105ecb Sync code on "dev" (dev) at 2017-05-10 02:18:38
-        [notice] ------ Operation: Jira Integration finished in 5s (dev) ------
-
-        ==== Posting to Jira ====
-        RESULT: {"self":"https://myjira.atlassian.net/rest/api/2/issue/10012/comment/10101","id":"10101","author":{"self":"https://myjira.atlassian.net/rest/api/2/user?username=circle","name":"circle","key":"circle","emailAddress":"circle@myagency.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=48","24x24":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=24","16x16":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=16","32x32":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=32"},"displayName":"Pantheon Automation","active":true,"timeZone":"Asia/Tokyo"},"body":"{panel:title=Commit: 6e7425d3b5 [dev]|borderStyle=dashed|borderColor=#ccc|titleBGColor=#e5f2ff|bgColor=#f2f2f2}\n    WEB-13: adding CSS changes, also closes WEB-6 and WEB-5\n    ~Author: Scott Massey <scott.massey@myagency.com> - Date:   Wed May 10 11:18:01 2017 +0900~\n    {panel}","updateAuthor":{"self":"https://myjira.atlassian.net/rest/api/2/user?username=circle","name":"circle","key":"circle","emailAddress":"circle@myagency.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=48","24x24":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=24","16x16":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=16","32x32":"https://secure.gravatar.com/avatar/bacfe00bab4fbbd429a38bf280bff147?d=mm&s=32"},"displayName":"Pantheon Automation","active":true,"timeZone":"Asia/Tokyo"},"created":"2017-05-10T11:18:36.269+0900","updated":"2017-05-10T11:18:36.269+0900"}
-        ===== Post Complete! =====
-
-3. When we return to Jira, we can see the commit message in the activity tab of the issue:
+4. Return to the issue in Jira to see a message from our machine user:
 
     ![Jira issue](/source/docs/assets/images/integrations/jira_log.png)
 
