@@ -1,6 +1,6 @@
 ---
-title: Jira Integration
-description: How to connect Atlassian Jira issue tracking to a Drupal or WordPress site on Pantheon.
+title: Sync Activity from the Pantheon Dashboard in Jira
+description: How to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
 tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
@@ -8,18 +8,18 @@ date: 5/4/2017
 contributors: scottmassey
 ---
 
-Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a larger suite of tools which includes [Bitbucket](https://bitbucket.org/), a code repository, and [HipChat](https://www.hipchat.com/), a team messaging and collaboration application. Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
+Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a larger suite of tools which includes [Bitbucket](https://bitbucket.org/), a code repository platform, and [HipChat](https://www.hipchat.com/), a team messaging and collaboration application. Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
 In this guide, we'll connect a Jira instance to a site on Pantheon. When changes are pushed to Pantheon that reference a Jira issue ID, the commit message will appear in the Jira issue's activity log.
 
 
-## What You’ll Need
+## Before You Begin
 
-- A [Jira Instance](https://www.atlassian.com/software/jira/try).
+Be sure that you have:
 
-- A Drupal or WordPress site on Pantheon.
-
-- **Optional**: [Terminus](/docs/terminus) installed locally.
+- A [Jira Instance](https://www.atlassian.com/software/jira/try)
+- A Drupal or WordPress site on Pantheon
+- [Terminus](/docs/terminus) (optional).
 
 ## Create a Jira Service Account
 
@@ -34,36 +34,36 @@ In this guide, we'll connect a Jira instance to a site on Pantheon. When changes
     <p markdown="1">The process of creating users and assigning roles may differ depending on your project type. If the steps below don't match what you see, refer to Atlassian's [User management documentation](https://confluence.atlassian.com/adminjiraserver073/user-management-861253163.html).</p>
     </div>
 
-2. Click on <i class="fa fa-gear"></i> in the upper panel to go to **User management** under **SITE ADMINISTRATION**. Under **Create new users**, create an "automation" user. This user will act as the intermediary between Jira and your site. We do this for security and isolation: 
+2. Click on <i class="fa fa-gear"></i> in the upper panel to go to **User management** under **SITE ADMINISTRATION**. Under **Create new users**, create an "automation" user. This user will act as the intermediary between Jira and your site. We do this for security and isolation:
 
     ![Create an automation user](/source/docs/assets/images/integrations/jira-new-user.png)
 
     Use the email sent to your automation user's address to set the user password.
 
-## Create a Private Folder for Account Credentials.
+## Create a Private File for Jira Secrets
 
-1. From your local terminal, use the following PHP command to create a JSON file. Substitute the values for `jira_url` and `jira_pass`  with your Jira URL and the service account's Jira username and password.
+1. Run the following command to create a new `secrets.json` file to store your Jira URL and user credentials (replace `<url>`,`<username>`, and `<password>`):
 
-        php -r "print json_encode(['jira_url'=>'https://myjira.atlassian.net','jira_user'=>'automator','jira_pass'=>'secret']);" > secrets.json
- 
-2. In your Pantheon **files** directory, create a directory called private, if it doesn't exist already. This exact naming convention ensures its contents are not web-accessible. Using SFTP, copy this JSON file to the files/private directory. Repeat this process for any multidev environments.
+        php -r "print json_encode(['jira_url'=>'<url>','jira_user'=>'<username>','jira_pass'=>'<password>']);" > secrets.json
 
-    This upload can also be done quickly with [Terminus](https://pantheon.io/docs/terminus) (if installed) and SFTP commands:
+2. Run the following Terminus command to open an SFTP connection with the Dev environment (replace `<site>`):
 
+        `terminus connection:info <site>.dev --field=sftp_command`
 
-        `terminus connection:info site.dev --field=sftp_command`
-        Connected to appserver.dev.00000000-0000-0000-0000-000000000000.drush.in.
-        sftp> cd files
-        sftp> mkdir private
-        sftp> cd private
-        sftp> put secrets.json
+3. Navigate to the `files/private` directory, upload the `secrets.json` file, then close the SFTP connection:
 
-    Note the backticks (`) around the Terminus command.
+        cd files
+        mkdir private
+        cd private
+        put secrets.json
+        bye
 
-    You can also use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage this directory.
+4. Now that `secrets.json` file has been uploaded to the Dev environment, delete it from your local working directory:
+
+        rm secrets.json
 
 ## Configure Quicksilver Integration
- 
+
 1. Clone Pantheon's [Quicksilver Example Repo](https://github.com/pantheon-systems/quicksilver-examples)to your local computer.
 
 
@@ -87,7 +87,7 @@ In this guide, we'll connect a Jira instance to a site on Pantheon. When changes
 4. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
 5. Add a Quicksilver operation to the `pantheon.yml` to fire the script after a code push.
-   
+
 
         #always include the api version
         api_version: 1
@@ -109,9 +109,9 @@ In this guide, we'll connect a Jira instance to a site on Pantheon. When changes
 
 ## Test a Code Push
 
-1. Create a test issue in your new Jira project, and take note of the issue ID. 
+1. Create a test issue in your new Jira project, and take note of the issue ID.
 
-2. Push code with a commit message containing that Jira issue ID. The `jira_integration.php` script will parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket. 
+2. Push code with a commit message containing that Jira issue ID. The `jira_integration.php` script will parse the commits, searching within the commit message for an alphabetical string and a numeric string, separated by a hyphen ("WEB-123"), and attempt to post it to the relevant ticket.
 
     You can also reference multiple commits and it will link to them:
 
