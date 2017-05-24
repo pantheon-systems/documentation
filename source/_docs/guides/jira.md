@@ -24,8 +24,8 @@ Be sure that you:
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
         curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
-## Create Jira Machine User
-Start by creating a new machine user in your Jira instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon.
+## Create a Machine User in Atlassian
+Start by creating a new machine user in your Atlassian Cloud instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
 1. <a href="https://www.atlassian.com/software/jira/try" target=blank>Sign up for an Atlassian Cloud account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already.
 
