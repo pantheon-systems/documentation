@@ -47,9 +47,13 @@ If you'd like to retain existing Git History, see [Migrating Sites to Pantheon: 
 
 ## Step 3: Add Database
 
+**Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
+
 Your site's database should already be backed up into a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, we recommend that you remove data from cache tables to make the `.sql` file smaller, which helps ensure a quick and successful import. If you're using WP-CLI, you can flush the cache easily with `wp cache flush` before creating the dump file.
 
 You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+
+If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 ### Import Database using the Pantheon Dashboard
 
