@@ -132,7 +132,7 @@ In this guide, we'll connect a Jira instance to a site on Pantheon. When changes
 
 3. When we return to Jira, we can see the commit message in the activity tab of the issue:
 
-    ![Jira issue](/source/docs/assets/images/integrations/jira/jira_log.png)
+    ![Jira issue](/source/docs/assets/images/integrations/jira_log.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
