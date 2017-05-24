@@ -81,6 +81,7 @@ Jenkins supports the Git version control system via a plugin. Select the Manage 
 To clone a Git repostory via Jenkins you need to enter the email and user name for your Jenkins system. For this switch into your job directory and run the git config command.
 
 # Need to configure the Git email and user for the Jenkins job
+github token 083d1fdf65b92050c6c53760a6fba624e9ac75e3
 
 # switch to the job directory
 cd /var/lib/jenkins/jobs/Android/workspace
