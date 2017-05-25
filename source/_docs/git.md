@@ -10,8 +10,8 @@ Git is the version control tool at the heart of the Pantheon workflow. If you're
 
 Select your operating system and the download will automatically begin:
 
-[Mac OS](http://git-scm.com/download/mac)  
-[Windows](http://git-scm.com/download/win)  
+[Mac OS](https://git-scm.com/download/mac)  
+[Windows](https://git-scm.com/download/win)  
 [Linux](https://git-scm.com/download/linux)  
 
 ## Clone Your Site Codebase
@@ -42,7 +42,7 @@ If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup
 
 ### Step 1: Edit a File
 
-You can now edit your site code using any text editor. We recommend using [a butterfly](http://xkcd.com/378/).
+You can now edit your site code using any text editor. We recommend using [a butterfly](https://xkcd.com/378/).
 
 ### Step 2: Add a File
 
@@ -105,15 +105,15 @@ Your SSH connection may be using a slow encryption protocol. Configuring your SS
 
 For further learning, we recommend the following resources:
 
-- [Git Documentation](http://git-scm.com/documentation)
-- [Pro Git Book](http://git-scm.com/book)
-- [First Aid Git](http://firstaidgit.io/#/)
+- [Git Documentation](https://git-scm.com/documentation)
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [First Aid Git](https://github.com/magalhini/firstaidgit)
 - [Git Reference](http://gitref.org/)
-- [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html)
+- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
 - [Git Immersion](http://gitimmersion.com/)
-- [Code School - Try Git](http://try.github.io/levels/1/challenges/1)
+- [Code School - Try Git](https://try.github.io/levels/1/challenges/1)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
-- [SourceTree - Git GUI Client](http://www.sourcetreeapp.com/)
+- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
 - [GitKraken - Git GUI Client](https://www.gitkraken.com/)
 - [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
 

@@ -15,7 +15,7 @@ categories: []
 * Port number
 * Name to identify connection
    - Uppercase letters and underscores allowed
-  -  Used for [PHP Constant](http://php.net/manual/en/language.constants.php) that will replace the numeric port number in your code
+  -  Used for [PHP Constant](https://secure.php.net/manual/en/language.constants.php) that will replace the numeric port number in your code
 
 Once setup is complete on our end, we'll provide you with the information you need to use the Pantheon Enterprise Gateway.
 
@@ -39,10 +39,10 @@ Secure integration with Pantheon Enterprise Gateway:
 
 <div class="alert alert-info" markdown="1">
 ### Note {.info}
-It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway, since [normal PHP timeouts](http://php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
+It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway, since [normal PHP timeouts](https://secure.php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
 </div>
 
-Set reasonable timeouts using [PHP's cURL functions](http://php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
+Set reasonable timeouts using [PHP's cURL functions](https://secure.php.net/manual/en/function.curl-setopt.php) by setting `CURLOPT_TIMEOUT` and `CURLOPT_CONNECTTIMEOUT`. For a more complete example, see: [Single-origin IP example code](https://github.com/pantheon-systems/soip-example).
 
 WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
@@ -54,4 +54,4 @@ Yes, it's configured on a site-by-site basis and works from all environments (De
 
 ### Is Pantheon Enterprise Gateway a replacement for authentication?
 
-No, Pantheon Enterprise Gateway is not a replacement for authentication, but rather is a [defense-in-depth](http://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.
+No, Pantheon Enterprise Gateway is not a replacement for authentication, but rather is a [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29) measure.

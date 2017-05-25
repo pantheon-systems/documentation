@@ -9,7 +9,7 @@ Pantheon sites use [NGINX](https://www.nginx.com/resources/wiki/#) to concurrent
 For more details on the performance impacts of `.htaccess` files, see the [NGINX documentation](https://www.nginx.com/resources/wiki/start/topics/examples/likeapache-htaccess/).
 
 ## Manage Configuration with PHP
-Using `.htaccess` is generally not recommended - even for sites running  [Apache](http://httpd.apache.org/docs/trunk/howto/htaccess.html#when). As a rule of thumb, we recommend using PHP logic to accomplish configuration changes instead.
+Using `.htaccess` is generally not recommended - even for sites running  [Apache](https://httpd.apache.org/docs/trunk/howto/htaccess.html#when). As a rule of thumb, we recommend using PHP logic to accomplish configuration changes instead.
 
 Some advantages of redirecting via PHP instead of `.htaccess` include:
 

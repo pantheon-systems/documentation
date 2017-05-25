@@ -20,7 +20,7 @@ After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/mi
 terminus drush <site>.<env> -- ard --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 ```
 
-This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
+This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `https://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
@@ -46,7 +46,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
         terminus drush <site>.<env> ard --tar-options="--exclude=code/sites/default/files" --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 
 2. Click **Continue Migration**.
-3. Provide the web accessible URL for your site archive (e.g. `http://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
+3. Provide the web accessible URL for your site archive (e.g. `https://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
 4. Once the migration is complete, click **Visit the Site Dashboard**.
 5. Open a new tab and go to the Site Dashboard for your existing Pantheon site.
 6. Within the target environment (typically Live), select the **Backups** tab and click **Create New Backup**.
@@ -59,7 +59,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
  </div>
 </li></ol>
 
-#### HTTP 404 error: Unable to download the archive 
+#### HTTP 404 error: Unable to download the archive
 
 Go the to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command from [above](#drupal) again if you can't find the site archive.
 

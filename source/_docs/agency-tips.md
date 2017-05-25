@@ -91,7 +91,7 @@ Pantheon currently does not support a code build step, which includes tasks such
 
 If a project needs a build step the recommended method is a two repository model where you have an external Git repository hosted outside of Pantheon with an intermittent build step, then deploy the build artifact to Pantheon. Some samples are:
 
-- Host a Git repository on GitLab and use their [continuous integration tools](http://docs.gitlab.com/ce/ci/yaml/README.html).
+- Host a Git repository on GitLab and use their [continuous integration tools](https://docs.gitlab.com/ce/ci/yaml/README.html).
 - Host a Git repository externally and use a tool such as [DeployBot to manage the build step](https://deploybot.com/guides/building-assets-with-grunt-or-gulp-during-deployment) and deployment to Pantheon
 - Host a repository on GitHub and manage the build step and deployment with a continuous integration server. An example repository with GitHub, WordPress and CircleCI can be found [here](https://github.com/ataylorme/Advanced-WordPress-on-Pantheon/).
 

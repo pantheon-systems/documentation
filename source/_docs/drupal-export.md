@@ -31,7 +31,7 @@ Create single-file archives for sites hosted elsewhere or locally with the [Back
 
 ## Create Archive Using Drush
 
-One of the easiest ways to move an existing Drupal site to Pantheon is to create a [Drush archive file](http://drush.ws/#archive-dump).
+One of the easiest ways to move an existing Drupal site to Pantheon is to create a [Drush archive file](https://github.com/drush-ops/drush#archive-dump).
 
 ### Before You Begin
 
@@ -97,7 +97,7 @@ tar -czf $TARGET/drupal.tar.gz --exclude=sites/default/files* .
 ```
 ### Export the Database
 
-This is optional, but recommended. The easiest method is to use the [mysqldump](http://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
+This is optional, but recommended. The easiest method is to use the [mysqldump](https://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
 ```php
 # Specify the destination folder.
 TARGET=~/Desktop

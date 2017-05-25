@@ -3,7 +3,7 @@ use: [docs,guides,posts]
 permalink: docs/sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/">
   <url>
     <loc>{{ site.site_url }}{{ site.url }}</loc>
     <changefreq>daily</changefreq>

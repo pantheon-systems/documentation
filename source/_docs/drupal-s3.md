@@ -15,7 +15,7 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 Be sure that you have:
 
 - An existing Drupal site or [create](https://dashboard.pantheon.io/sites/create) one
-- Set up an account with [Amazon Web Services (AWS)](http://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- Set up an account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -41,16 +41,16 @@ If you do not have an existing bucket for your Drupal site, create one:
 6. Assign **Any Authenticated AWS User** for the **Grantee** and tick the box for **Upload/Delete**, then click **Save**.
 
 ### Create an Identity and Access Management Policy
-[Identity and Access Management (IAM)](http://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
+[Identity and Access Management (IAM)](https://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
 2. Go to **Policies** and click **Create Policy**.
 3. Click **Select** within the Policy Generator section.
-4. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket (e.g. `arn:aws:s3:::bucket_name`), and click **Next Step**.
+4. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket (e.g. `arn:aws:s3:::bucket_name`), and click **Next Step**.
 5. Edit the policy name and description (optional).
 6. Click **Create Policy**.
 
-For details, see [Example Policies for Administering AWS Resources](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
+For details, see [Example Policies for Administering AWS Resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
 
 ### Create an Identity and Access Management Group
 We recommend that you do not access an S3 bucket using your AWS root user credentials. Instead, create an IAM group and user:

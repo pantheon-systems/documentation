@@ -107,7 +107,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The best way to do this by calling the PHP function [set\_time\_limit()](http://php.net/manual/en/function.set-time-limit.php) in your routine that takes more time.
+The best way to do this by calling the PHP function [set\_time\_limit()](https://secure.php.net/manual/en/function.set-time-limit.php) in your routine that takes more time.
 
 ### Can I Host a Multilingual Site?
 
@@ -115,7 +115,7 @@ Pantheon is home to many polylingual and non-English sites, and hosting a multi-
 
 For detailed information on how to configure a multilingual Drupal site, see the [Multilingual Guide on Drupal.org](https://drupal.org/documentation/multilingual).
 
-Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](http://googlewebmastercentral.blogspot.com/2010/03/working-with-multi-regional-websites.html) from The Google Webmaster Central Blog has some fantastic recommendations.
+Pantheon doesn’t enforce any particular site layout or architecture for multilingual sites, but the blog entry [Working with multi-regional websites](https://webmasters.googleblog.com/2010/03/working-with-multi-regional-websites.html) from The Google Webmaster Central Blog has some fantastic recommendations.
 
 It’s possible to specify a site language given a particular domain or path. In order of preference:
 

@@ -53,7 +53,7 @@ If everything works correctly, the result looks like this:
 Success: WP-Cron spawning is working as expected.
 ````
 
-This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](http://wp-cli.org/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/terminus/). The command format is as follows:
+This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/terminus/). The command format is as follows:
 
 ````nohighlight
 $ terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
@@ -92,13 +92,13 @@ Once you have disabled WP-Cron, you will need a service that calls a URL at regu
 
  - [EasyCron](https://www.easycron.com/)
  - [Set Cron Job](https://www.setcronjob.com/)
- - [My Cron](http://www.mywebcron.com/)
+ - [My Cron](https://www.mywebcron.com/)
  - [cron-job](https://cron-job.org/en/)
 
 Any of the above services will get the job done. By disabling WP-Cron, you have turned off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. With most of them, it is as easy as this:
 
 1. Set up an account
-2. Set up a job that calls `http://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
+2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

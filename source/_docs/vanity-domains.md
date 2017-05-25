@@ -46,7 +46,7 @@ If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.c
 For SEO and to prevent duplicate content, the robots.txt file attached to the custom Vanity domain will contain the following by default:
 
 ```
-# http://live-sitename.agencyname.com/robots.txt
+# https://live-sitename.agencyname.com/robots.txt
 User-agent: *
 Disallow: /
 ```

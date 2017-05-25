@@ -47,9 +47,9 @@ Sites currently paying a $30 HTTPS surcharge via credit card on a Professional o
     <tr>
       <th>Client Support</th>
       <td>94.58% of browsers<br />Some very old browsers not supported
-      <sup><a href="http://caniuse.com/#search=TLS%201.1">1</a></sup></td>
+      <sup><a href="https://caniuse.com/#search=TLS%201.1">1</a></sup></td>
       <td>94.33% of browsers<br />Some very old browsers not supported
-      <sup><a href="http://caniuse.com/#search=TLS%201.2">1 <a href="http://caniuse.com/#search=SNI">2</a></sup></td>
+      <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup></td>
     </tr>
     <tr>
       <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>

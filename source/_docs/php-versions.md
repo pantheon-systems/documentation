@@ -75,7 +75,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 ### Resolve PHP Version Compatibility Issues
 
-We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the corresponding Backward Incompatible Changes documentation in the [PHP Manual](http://php.net/manual/en/appendices.php) for migrating from one PHP version to another.
+We recommend working with theme, module, or plugin maintainers to resolve any issues upstream. For custom code, see the corresponding Backward Incompatible Changes documentation in the [PHP Manual](https://secure.php.net/manual/en/appendices.php) for migrating from one PHP version to another.
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
@@ -85,11 +85,11 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 
 ## See Also
 
-* [PHP Supported Versions](http://php.net/supported-versions.php)
+* [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
 * [Log Files on Pantheon](/docs/logs)
 * [PHP Errors and Exceptions](/docs/php-errors/)
 * [The pantheon.yml Configuration File](/docs/pantheon-yml/)
 * [Securely Working with phpinfo](/docs/phpinfo/)
-* [php.net - Backward Incompatible Changes](http://php.net/manual/en/migration70.incompatible.php)
+* [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
 * [Debug Intermittent PHP 7 Notices](/docs/deprecated-constructor-notices)

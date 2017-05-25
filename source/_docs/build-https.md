@@ -5,7 +5,7 @@ tags: [security]
 categories: [golive]
 ---
 ## Switch to HTTPS
-Every free Pantheon development site comes ready to roll with HTTPS for development. If you're viewing your site at `http://dev-yoursite.pantheonsite.io`, simply switch your connection mode to HTTPS by visiting `https://dev-yoursite.pantheonsite.io`.
+Every free Pantheon development site comes ready to roll with HTTPS for development. If you're viewing your site at `https://dev-yoursite.pantheonsite.io`, simply switch your connection mode to HTTPS by visiting `https://dev-yoursite.pantheonsite.io`.
 
 To make sure that HTTPS is used every time you visit a site, add logic to `settings.php` or `wp-config.php` to [redirect all incoming requests to HTTPS](/docs/redirects/).
 

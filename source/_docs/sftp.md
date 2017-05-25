@@ -131,7 +131,7 @@ This is a known limitation of using SFTP for on-server development on the platfo
 
 Trouble resolving the server hostname or other DNS-related issues can generally be resolved by using Google's Public DNS service in place of your ISP's name servers. See [Google's Public DNS](https://developers.google.com/speed/public-dns/) for instructions.
 
-If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, Cyberduck (or another client) will. View a list of [SFTP clients](http://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
+If you're already using Google's DNS, or you're still having connection issues after updating your name-servers, consider trying an alternative SFTP client. Many times when FileZilla won't connect, Cyberduck (or another client) will. View a list of [SFTP clients](https://en.wikipedia.org/wiki/Comparison_of_FTP_client_software).
 
 ### DNS Hijacking Issues
 There have been observed cases in which Internet Service Providers (specifically Indonesian Telecom) hijack DNS, leaving you unable to connect via SFTP due to a timeout error:
@@ -151,7 +151,7 @@ The returned IP is found within the ANSWER portion of the output:
 Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lookup/) and review the results. The following is an example of DNS hijacking:
 
     % [whois.apnic.net]
-    % Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+    % Whois data copyright terms    https://www.apnic.net/manage-ip/using-whois/bulk-access/copyright/
 
     % Information related to 'xx.xx.xx.0 - xx.xx.xx.255'
 

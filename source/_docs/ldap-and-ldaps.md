@@ -4,7 +4,7 @@ description: Detailed information on how to configure LDAP and LDAPS on your Pan
 tags: [siteintegrations]
 categories: []
 ---
-[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+[Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer
 
@@ -29,7 +29,7 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 ## OpenLDAP Configuration for Client Certificates for LDAPS
 
-Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).
+Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](https://secure.php.net/manual/en/function.putenv.php).
 
 If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/private-paths) in your codebase: `SITEROOT/private`.
 

@@ -36,7 +36,7 @@ Using Terminus, you can complete the above process from the command line.
 2.  `terminus env:commit <site>.dev --message="Export configuration to code"`
 3.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
 4.  `terminus drush <site>.<env> -- cim -y`
-5.  `open http://test-mysite.pantheonsite.io`
+5.  `open https://test-mysite.pantheonsite.io`
 6.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
 7.  `terminus drush <site>.live -- cim -y`
 8.  `open live-mysite.pantheonsite.io`

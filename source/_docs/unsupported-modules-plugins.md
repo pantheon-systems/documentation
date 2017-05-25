@@ -165,7 +165,7 @@ You can modify this patch according to your needs, such as performing an operati
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
-**Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+**Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export//), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 <hr>
@@ -230,7 +230,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
-**Issue**:  This module uses [`php-intl`]( http://php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+**Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr>
 
 ### [Varnish](https://www.drupal.org/project/varnish)
@@ -321,7 +321,7 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 ### [Timthumb](https://code.google.com/p/timthumb/)
 **Issue**: TimThumb is no longer supported or maintained.
 <hr>
-### [TubePress Pro](http://tubepress.com/)
+### [TubePress Pro](https://tubepress.com/)
 **Issue**: Sites running PHP version 5.3 produce a WSOD after activating this plugin.
 
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
@@ -369,7 +369,7 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 For example, the `install_plugins` capability isn't present on the Test or Live environment, therefore  menus created with it will not display. For example:
 
 ```
-hook = add_management_page( 'My WP Tool Page', 'My WP Tool', 
+hook = add_management_page( 'My WP Tool Page', 'My WP Tool',
   'install_plugins', 'mywptool', array( $this, 'admin_page' ), '' );
 
 add_action( "load-$hook", array( $this, 'admin_page_load' ) );

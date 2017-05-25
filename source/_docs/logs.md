@@ -37,7 +37,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
       <tr>
         <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="The PHP error log is provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
         <td>1MB of log data</td>
-        <td>PHP <a href="http://php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Errors from this log are also shown in the Dashboard.</td>
+        <td>PHP <a href="https://secure.php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Errors from this log are also shown in the Dashboard.</td>
       </tr>
       <tr>
         <th>php-fpm-error.log</th>
@@ -180,7 +180,7 @@ The client IP for the following example is `122.248.101.126`:
 
 #### Can I log to the system logger and access syslog?
 
-No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](http://php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them.  You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 #### Can I access Apache Solr logs?
 

@@ -84,10 +84,10 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
   You'll need this to fill out the `--url` option in the next step.
 
-4. Use the [WP-CLI `core install`](http://wp-cli.org/commands/core/install/) command to install WordPress on the Dev environment:
+4. Use the [WP-CLI `core install`](https://developer.wordpress.org/cli/commands/core/install/) command to install WordPress on the Dev environment:
 
   ```
-  terminus wp tessa-site-wp.dev -- core install --url=http://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
+  terminus wp tessa-site-wp.dev -- core install --url=https://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
 
   As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
@@ -223,7 +223,7 @@ Now that you have WordPress installed, let's make it look a little better by add
   terminus env:commit $TERMINUS_SITE.dev --message="Install shapely theme"
   ```
 
-4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](http://wp-cli.org/commands/scaffold/child-theme/) (replace `Tessa-child-theme` and `shapely`):
+4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](https://developer.wordpress.org/cli/commands/scaffold/child-theme/) (replace `Tessa-child-theme` and `shapely`):
 
   ```
   terminus wp $TERMINUS_SITE.dev -- scaffold child-theme Tessa-child-theme --parent_theme=shapely

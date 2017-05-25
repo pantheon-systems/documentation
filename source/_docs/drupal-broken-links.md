@@ -4,7 +4,7 @@ description: Learn how to update Drupal site links so the URL references the cor
 tags: [debugcode]
 categories: [drupal]
 ---
-When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as http://192.237.142.203:5555/files/cernettes.gif instead of http://www.example.com/files/cernettes.gif.
+When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as https://192.237.142.203:5555/files/cernettes.gif instead of https://www.example.com/files/cernettes.gif.
 
 The link may work at first, but will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
@@ -27,13 +27,13 @@ Here is an example of a code snippet to set the `$base_url` per environment:
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
   switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
     case 'dev':
-      $base_url = 'http://dev-example.pantheonsite.io'; // NO trailing slash!
+      $base_url = 'https://dev-example.pantheonsite.io'; // NO trailing slash!
       break;
     case 'test':
-      $base_url = 'http://test-example.pantheonsite.io'; // NO trailing slash!
+      $base_url = 'https://test-example.pantheonsite.io'; // NO trailing slash!
       break;
     case 'live':
-      $base_url = 'http://www.example.tld'; // NO trailing slash!
+      $base_url = 'https://www.example.tld'; // NO trailing slash!
       break;
     }
 }

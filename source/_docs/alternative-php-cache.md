@@ -4,9 +4,9 @@ description: Understand Alternative PHP Cache and its uses within the Pantheon W
 tags: [cacheapp]
 categories: []
 ---
-APC stands for the [Alternative PHP Cache](http://php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a dynamic language that is compiled on-demand into bytecode at execution time. To improve performance, APC stores this bytecode so that it can be reused instead of having to be recompiled each time.
+APC stands for the [Alternative PHP Cache](https://secure.php.net/manual/en/book.apc.php "Alternative PHP Cache manual on php.net"). PHP is a dynamic language that is compiled on-demand into bytecode at execution time. To improve performance, APC stores this bytecode so that it can be reused instead of having to be recompiled each time.
 
-Pantheon provides APC by default across all plans, but the size of the APC memory cache ([apc.shm\_size](http://www.php.net/manual/en/apc.configuration.php#ini.apc.shm-size "apc.shm\_size reference")) varies depending on the service level.
+Pantheon provides APC by default across all plans, but the size of the APC memory cache ([apc.shm\_size](https://secure.php.net/manual/en/apc.configuration.php#ini.apc.shm-size "apc.shm\_size reference")) varies depending on the service level.
 
 ## Frequently Asked Questions
 
@@ -39,7 +39,7 @@ No, as this is not a runtime configuration, the <tt>shm_size</tt> cannot be chan
 
 ### I got a fatal error about redeclaring a class in Drupal core; what should I do?
 
-In some rare cases, there is a [known issue with APC](http://drupal.org/node/838744 "Opcode (APC) and drupal autoloader") where it attempts to load a file that has already been cached. For example:
+In some rare cases, there is a [known issue with APC](https://www.drupal.org/node/838744 "Opcode (APC) and drupal autoloader") where it attempts to load a file that has already been cached. For example:
 
 ```php
 Fatal error: Cannot redeclare class InsertQuery_mysql in ... on line 87
@@ -68,7 +68,7 @@ To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in 
 <?php
 apc_clear_cache();
 ```
-Then browse to `http://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.</yoursite>
+Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.</yoursite>
 
 #### Dashboard
 
