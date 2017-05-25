@@ -68,7 +68,7 @@ Sites currently paying a $30 HTTPS surcharge via credit card on a Professional o
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>ORD Datacenter</td>
+      <td>US Datacenter</td>
       <td markdown="1">[Global CDN](/docs/global-cdn)</td>
     </tr>
     <tr>

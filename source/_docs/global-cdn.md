@@ -50,7 +50,7 @@ Upgrading to the Global CDN is available for most Professional and Business leve
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>ORD Datacenter</td>
+      <td>US Datacenter</td>
       <td>Global Distribution</td>
     </tr>
     <tr>
@@ -66,7 +66,7 @@ Upgrading to the Global CDN is available for most Professional and Business leve
     <tr>
       <th>HTTPS Service</th>
       <td>BYO Cert</td>
-      <td>[Free and Managed](/docs/free-https)</td>
+      <td markdown="1">[Free and Managed](/docs/free-https)</td>
     </tr>
   </tbody>
 </table>
