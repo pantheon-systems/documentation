@@ -31,16 +31,18 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 
 2. Login to your Atlassian Cloud instance and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
 
-3. Enter a username and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
+3. Enter a name and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
 
-  We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Bot`. The email needs to be an account you have access to:
+  We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
 
     ![Create an automation user](/source/docs/assets/images/integrations/jira-new-user.png)
 
 4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine users password.
 
-## Privately Store Account Credentials on Pantheon
+## Securely Store User Credentials on Pantheon
 Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
+
+We use the private path of filesystem in this section because we don't want to track sensitive data like passwords in the codebase with git.  
 
 1. First, let's check for existing secrets using Terminus(replace `<site>`):
 
@@ -74,7 +76,7 @@ Next, we need to provide Pantheon with the credentials for our new machine user.
 </div>
 
 ## Configure Quicksilver Integration
-The next step is to add Pantheon's Jira integration script to the [private path](/docs/private-paths/#private-path-for-files) of your site's codebase. The private path within the site repository is tracked in version control and is accessible by PHP, but not the web.
+The next step is to add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Jira to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory (replace `<site>`):
 
