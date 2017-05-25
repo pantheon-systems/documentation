@@ -35,7 +35,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
-2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
+2. [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
   ```
   terminus auth:login --machine-token=‹machine-token›
