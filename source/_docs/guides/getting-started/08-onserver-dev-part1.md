@@ -59,12 +59,18 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
 
 9. Again, consider creating a backup before proceeding:
 
-  The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
-
-    1. On the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab of your Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups**.
-    2. Click **Create New Backup**.
-    3. Click **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys** to return to the lesson.
-    <br><br>
+ <div class="panel panel-video panel-guide" id="accordion">
+       <div class="panel-heading panel-video-heading">
+          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
+        </div>
+        <div id="create-backup" class="collapse" style="padding:10px;">
+          <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+ 
+  1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+     2. Click **Create New Backup**.</p>
+     3. Click **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys** to return to the lesson.
+        </div>
+      </div>
 
     <div class="alert alert-danger" role="alert">
       <h4 class="info">Warning</h4>
