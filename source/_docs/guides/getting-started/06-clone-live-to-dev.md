@@ -45,18 +45,18 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 4. Consider creating a backup before proceeding:
 
-
-<div class="panel panel-video panel-guide" id="accordion">
+    <div class="panel panel-video panel-guide" id="accordion">
       <div class="panel-heading panel-video-heading">
          <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
-       </div>
-       <div id="create-backup" class="collapse" style="padding:10px;">
-         <p markdown="1">The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+      </div>
+      <div id="create-backup" class="collapse" style="padding:10px;" markdown="1">
+        The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
- 1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
-    2. Click **Create New Backup**.</p>
-       </div>
+        1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+        2. Click **Create New Backup**.
+        3. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
      </div>
+    </div>
 
 5. On the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard click **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files**.
 
