@@ -6,8 +6,8 @@ categories: []
 ---
 There are many cases in which a user needs to use two different, disparate systems on a single common domain. For example, using one system as a front end for marketing efforts or custom applications, while using another for blog content or as a custom application. This typically looks something like:
 
-* Main Site: http://www.example-site.com/
-* Blog: http://www.example-site.com/blog/
+* Main Site: https://www.example-site.com/
+* Blog: https://www.example-site.com/blog/
 
 In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have it's own unique domain. However, this can be attained by using an external service such as Fastly.  [Fastly](https://www.fastly.com) is a high power, industrial CDN that allows users a high degree of granular control over their Varnish VCL file through the Dashboard. It's free to register and start using Fastly.
 
@@ -22,7 +22,7 @@ Be sure that you have:
 - A Fastly [account](https://www.fastly.com/signup/)
 
 ## Pantheon Setup
-1. In the Dashboard of the Pantheon site you want to use to serve the Vanity domain, ex. http://www.example-site.com/, go to its Live environment and select the **Domains/HTTPS** tab.
+1. In the Dashboard of the Pantheon site you want to use to serve the Vanity domain, ex. https://www.example-site.com/, go to its Live environment and select the **Domains/HTTPS** tab.
 2. Enter the main domain as well as its "www" prefix.
 3. In the Pantheon site you want to act as the secondary content source, ensure that you have a Live environment setup.
 
@@ -82,4 +82,4 @@ Click **Create**. Once saved, click on the gear icon next to the Main_Server_Hos
 
 ## Test The Setup
 
-Open a new browser tab and load the main URL. For example: http://www.example-site.com/. After it loads properly, append the directory that serves the second Pantheon site to the end of the main URL. Example:  http://www.example-site.com/blog/. The content from the WordPress site should now be served.
+Open a new browser tab and load the main URL. For example: https://www.example-site.com/. After it loads properly, append the directory that serves the second Pantheon site to the end of the main URL. Example:  https://www.example-site.com/blog/. The content from the WordPress site should now be served.

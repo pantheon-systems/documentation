@@ -137,7 +137,7 @@ Now that you have created the archive files, check out how to [restore an enviro
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</p></div>
+<p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="https://stackoverflow.com/questions/4643328/amazon-s3-expiration-date/4649553#4649553">See this documentation for more information about signed URLS</a>.</p></div>
 
 
 ## Restore From an Existing Backup

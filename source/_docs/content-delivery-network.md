@@ -22,7 +22,7 @@ If you don't meet those specific criteria, strongly consider just using Pantheon
 
 <dl>
 	<dt>
-<a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
+<a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> (CDN)</dt>
 	<dd>A system of distributed servers to serve and stream content.</dd><br>
 	<dt>Origin Pull</dt>
 	<dd>A request is made to CDN; if a fresh cache is not available, request is made to origin (your site), the result is cached and delivered; subsequent requests will return cached content and do not access your site. Easiest to configure.</dd><br>
@@ -111,7 +111,7 @@ unset beresp.http.X-Robots-Tag;
 
 ## Resources
 
-- [CDN module](http://drupal.org/project/cdn)
-- [Amazon S3 module](http://drupal.org/project/amazons3)
-- [Rackspace Cloud Files](http://www.rackspace.com/cloud/files/)
-- [Amazon CloudFront](http://aws.amazon.com/cloudfront/)
+- [CDN module](https://www.drupal.org/project/cdn)
+- [Amazon S3 module](https://www.drupal.org/project/amazons3)
+- [Rackspace Cloud Files](https://www.rackspace.com/cloud/files)
+- [Amazon CloudFront](https://aws.amazon.com/cloudfront/)

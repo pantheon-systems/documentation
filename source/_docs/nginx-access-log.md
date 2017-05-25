@@ -21,8 +21,8 @@ Be sure that you have:
 
 - [Terminus](/docs/terminus)
 - [GoAccess](https://goaccess.io/download)
- - **Mac OS X**: Install via [Homebrew](http://brew.sh/)
- - **Windows**: Use [Cygwin](http://cygwin.com/install.html)
+ - **Mac OS X**: Install via [Homebrew](https://brew.sh/)
+ - **Windows**: Use [Cygwin](https://cygwin.com/install.html)
 
 ## Edit GoAccess Configuration
 
@@ -59,7 +59,7 @@ case $i in
     ;;
     -u=*|--url=*)
 	URL="${i#*=}"
-		shift # --url=http://dev-ac2-d7-import-b.pantheonsite.io/
+		shift # --url=https://dev-ac2-d7-import-b.pantheonsite.io/
     ;;
     -d=*|--dir=*)
     	DIR="${i#*=}"

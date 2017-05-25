@@ -131,7 +131,7 @@ Also, you may have a number of stored references to `http` links stored in your 
 terminus wp <site>.<env> -- search-replace http://www.mysite.com https://www.mysite.com
 ```
 
-You can find more about the power of WP-CLI's features at [wp-cli.org](http://wp-cli.org/).
+You can find more about the power of WP-CLI's features at [wp-cli.org](https://make.wordpress.org/cli/handbook/).
 
 ## Standardizing All Traffic On HTTPS
 
@@ -176,7 +176,7 @@ Although SNI allows services like Cloudflare to economically offer HTTPS for fre
 * Versions of Android 2.x and older
 * The New Relic Pro [availability monitoring service](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits)
 
-Or check this [more complete compatibility list](http://en.wikipedia.org/wiki/Server_Name_Indication#Implementation).
+Or check this [more complete compatibility list](https://en.wikipedia.org/wiki/Server_Name_Indication#Implementation).
 
 ## Alternative Methods For HTTPS
 

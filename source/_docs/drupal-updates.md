@@ -53,7 +53,7 @@ The critical commands are:
 
 
 ```
-terminus drush my-drupal-8-site.dev -- migrate-upgrade --legacy-db-key=drupal_7 --configure-only --legacy-root=http://drupal7.example.com
+terminus drush my-drupal-8-site.dev -- migrate-upgrade --legacy-db-key=drupal_7 --configure-only --legacy-root=https://drupal7.example.com
 ```
 This command configures (but does not run) the migrations from Drupal 6 or 7 to Drupal 8. In this example, the Drupal 8 site is named `my-drupal-8-site` and the command is running on the `dev` environment. The `--legacy-db-key` parameter indicates how to get the login credentials to the source Drupal 6 or 7 database. In our example, we use the [Terminus secrets](https://github.com/pantheon-systems/terminus-secrets-plugin) plugin to supply the connection info. [See our blog post for more information on how this flag is used](https://pantheon.io/blog/running-drupal-8-data-migrations-pantheon-through-drush). The `--legacy-root` flag lets Drupal 8 know from where it can grab images and other uploaded media assets.
 

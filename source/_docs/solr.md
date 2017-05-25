@@ -46,7 +46,7 @@ Some customers have reported success using external Solr service providers for t
 	<dt>bias</dt>
 	<dd>Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.</dd>
 	<dt>core</dt>
-	<dd>A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see <a href="http://wiki.apache.org/solr/CoreAdmin">http://wiki.apache.org/solr/CoreAdmin</a>.
+	<dd>A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see <a href="https://wiki.apache.org/solr/CoreAdmin">https://wiki.apache.org/solr/CoreAdmin</a>.
 </dd>
 	<dt>document</dt>
 	<dd>A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.</dd>
@@ -57,7 +57,7 @@ Some customers have reported success using external Solr service providers for t
 	<dt>score</dt>
 	<dd>calculated relevance of matches influenced by bias, represented as a float.</dd>
 	<dt>schema.xml</dt>
-	<dd>Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see <a href="http://wiki.apache.org/solr/SchemaXml">http://wiki.apache.org/solr/SchemaXml</a>.
+	<dd>Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see <a href="https://wiki.apache.org/solr/SchemaXml">https://wiki.apache.org/solr/SchemaXml</a>.
 </dd>
 </dl>
 #### Check Index and Batch Sizes

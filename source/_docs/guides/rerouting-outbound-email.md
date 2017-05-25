@@ -92,9 +92,9 @@ A few notes:
 - In order for the snippet to work as intended, **the module must be enabled in all environments.**
 - The config in settings.php overrides any settings in the Drupal Admin UI.
 - The PANTHEON_ENVIRONMENT variable changes the reroute_email settings based on environment.
-- If you're site isn't on Pantheon look for available [Superglobals](http://php.net/manual/en/language.variables.superglobals.php) to aid in configuration.
+- If you're site isn't on Pantheon look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in configuration.
 - For the email address, I chose to not create several new email addresses, although you can definitely do that.
-- I used my existing email address, taking advantage of the plus sign so I can have “extra” email addresses that are all delivered to my existing email address. It’s not a new trick, but it’s a handy feature [baked into Gmail](http://gmailblog.blogspot.com/2008/03/2-hidden-ways-to-get-more-from-your.html) and some other mail services. If you’re taking this route, you’ll also want to set up [email filters](https://support.google.com/mail/answer/6579?hl=en) to skip the inbox and label it appropriately based on the `To:` header.
+- I used my existing email address, taking advantage of the plus sign so I can have “extra” email addresses that are all delivered to my existing email address. It’s not a new trick, but it’s a handy feature [baked into Gmail](https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html) and some other mail services. If you’re taking this route, you’ll also want to set up [email filters](https://support.google.com/mail/answer/6579?hl=en) to skip the inbox and label it appropriately based on the `To:` header.
 
 For more about Reroute Email’s settings, see the README.txt that ships with the module.
 

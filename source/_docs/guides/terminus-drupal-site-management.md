@@ -78,7 +78,7 @@ Installation complete.  User name: admin  User password: ********         [ok]
 You should now be able to open a web browser and see your brand new Drupal site! For fun, you can at any time use an "open" command to see an environment in your default browser.
 
 ```bash
-open http://dev-terminus-cli-create.pantheon.io
+open https://dev-terminus-cli-create.pantheon.io
 ```
 
 ![Dev environment in browser](/source/docs/assets/images/terminus-cli-open-http.png)

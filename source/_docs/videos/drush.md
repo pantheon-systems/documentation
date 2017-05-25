@@ -9,9 +9,9 @@ type: video
 categories: [drupal]
 layout: video
 ---
-[Drush](http://www.drush.org/en/master/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
+[Drush](https://github.com/drush-ops/drush/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
 
-Drush can be installed locally in various ways. You can find [instructions](http://www.drush.org/en/master/install/) at drush.org. Just be sure to use the version that corresponds to your Drupal installation and operating system.
+Drush can be installed locally in various ways. You can find [instructions](https://drushcommands.com/drush-8x/core/site-install/) at drush.org. Just be sure to use the version that corresponds to your Drupal installation and operating system.
 
 If you install Pantheon’s command line tool, [Terminus](https://pantheon.io/docs/terminus/install/), you can run Drush commands from your local environment, as well as Pantheon-specific commands. I’ll be using Terminus in this video.
 

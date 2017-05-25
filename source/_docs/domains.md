@@ -10,7 +10,7 @@ Associating your Pantheon site with a domain name requires modifying the DNS con
 
 ## Determine the URL to Serve From
 
-We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](http://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
+We recommend using the [HTTPS protocol](https://en.wikipedia.org/wiki/HTTPS) and the www subdomain prefix for all sites. See [this article](https://www.yes-www.org/why-use-www/) for information on why www is recommended with modern platform providers.
 
 If you are using the HTTPS protocol with your own certificate, [enable HTTPS](/docs/enable-https/) before adding the domain to the Site Dashboard and before configuring DNS. If you are going to use [Cloudflare's free Universal SSL service](/docs/guides/cloudflare-enable-https/), set up DNS as described here first.
 
@@ -81,7 +81,7 @@ To serve your site from the bare domain (example.com), [enable HTTPS](/docs/enab
 #### Method 2: Use CNAME flattening
 As an alternative to enabling HTTPS, you can use CNAME flattening to serve the site from the bare domain with HTTP or configure [Cloudflare's free Universal SSL service](/docs/guides/cloudflare-enable-https/):
 
-1. Select a DNS provider that supports CNAME flattening, such as [Dyn](http://dyn.com/managed-dns/alias/), [Cloudflare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
+1. Select a DNS provider that supports CNAME flattening, such as [Dyn](https://dyn.com/managed-dns/alias/), [Cloudflare (recommended)](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root), [ClouDNS](https://www.cloudns.net/features/), or [NameCheap](https://www.namecheap.com/domains/freedns.aspx).
 2. Do not add the recommended DNS entries from the Dashboard. Instead, create 2 CNAME records:
 
  ```bash

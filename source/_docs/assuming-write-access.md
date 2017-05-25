@@ -46,4 +46,4 @@ The best solution is to communicate with the maintainer of the module or plugin 
 Some modules and plugins verify that the target directory exists using `is_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `is_link()` instead of `is_dir()`.
 
 ## See Also		
-For more details on creating symbolic links on Mac/Linux, see [this thread](http://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).		
+For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).		

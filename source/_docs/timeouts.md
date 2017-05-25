@@ -19,7 +19,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 		</tr>
 	</thead><tbody>
   <tr>
-    <td><a href="http://php.net/manual/en/info.configuration.php#ini.max-execution-time">PHP max_execution_time</a></td>
+    <td><a href="https://secure.php.net/manual/en/info.configuration.php#ini.max-execution-time">PHP max_execution_time</a></td>
     <td>120 seconds</td>
     <td>Maximum time a script can run before being terminated by the parser. Helps prevent poorly written scripts from tying up your application container's PHP workers.
     <br/><br/>
@@ -65,7 +65,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 		</tr>
 
 		<tr>
-			<td><a href="http://www.php.net/manual/en/function.set-time-limit.php">PHP set_time_limit</a></td>
+			<td><a href="https://secure.php.net/manual/en/function.set-time-limit.php">PHP set_time_limit</a></td>
 			<td>120 seconds</td>
 			<td>Number of seconds a script can run. If reached, the script returns a fatal error.</td>
 		</tr>
@@ -83,27 +83,27 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 		</tr>
 
 		<tr>
-			<td><a href="http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout">MySQL net_write_timeout</a></td>
+			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout">MySQL net_write_timeout</a></td>
 			<td>90 seconds</td>
 			<td>Number of seconds to wait for a block to be written to a connection before aborting the write.</td>
 		</tr>
 		<tr>
-			<td><a href="http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_read_timeout">MySQL net_read_timeout</a></td>
+			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_read_timeout">MySQL net_read_timeout</a></td>
 			<td>90 seconds</td>
 			<td>Number of seconds to wait for more data from a connection before aborting the read.</td>
 		</tr>
 		<tr>
-			<td><a href="http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout">MySQL wait_timeout</a></td>
+			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout">MySQL wait_timeout</a></td>
 			<td>420 seconds</td>
 			<td>Number of seconds the server waits for activity on a noninteractive connection before closing it.</td>
 		</tr>
 		<tr>
-			<td><a href="http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_interactive_timeout">MySQL interactive_timeout</a></td>
+			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_interactive_timeout">MySQL interactive_timeout</a></td>
 			<td>420 seconds</td>
 			<td>Number of seconds the server waits for activity on an interactive connection before closing it.</td>
 		</tr>
 		<tr>
-			<td><a href="http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_read_timeout">Nginx fastcgi_read_timeout</a></td>
+			<td><a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_read_timeout">Nginx fastcgi_read_timeout</a></td>
 			<td>900 seconds</td>
 			<td>PHP won't run forever.</td>
 		</tr>

@@ -27,7 +27,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 ### Install Wraith on OS X
 
-Install via [Homebrew](http://brew.sh/):
+Install via [Homebrew](https://brew.sh/):
 
 ```nohighlight
 brew install phantomjs198
@@ -77,7 +77,7 @@ $ wraith
 
 ### Install Wraith on Windows
 
-See Wraith's [installation guide](http://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
+See Wraith's [installation guide](https://bbc-news.github.io/wraith/os-install.html#InstallonWindows) to install on Windows.
 
 ## Configure and Run Wraith
 
@@ -125,8 +125,8 @@ Next, the `configs/capture.yaml` file will need to be modified to crawl and capt
 Open `configs/capture.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
 ```yaml
 domains:
-  dev: "http://dev-panopoly-dreams.pantheon.io"
-  test: "http://test-panopoly-dreams.pantheon.io"
+  dev: "https://dev-panopoly-dreams.pantheon.io"
+  test: "https://test-panopoly-dreams.pantheon.io"
 ```
 You also need to add navigation paths in `configs/capture.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `about` and `contact` items and added some additional pages for Wraith to compare.
 ```yaml
@@ -171,8 +171,8 @@ browser: "casperjs"
 Edit the new configuration file, `configs/capture.yaml`, to add selectors to the paths.  Note the path format has changed to support URL components with selectors.
 ```yaml
 domains:
-  dev: "http://dev-panopoly-dreams.pantheon.io"
-  test: "http://test-panopoly-dreams.pantheon.io"
+  dev: "https://dev-panopoly-dreams.pantheon.io"
+  test: "https://test-panopoly-dreams.pantheon.io"
 
 ...
 
@@ -210,7 +210,7 @@ Wraith supports capturing and comparing a single website against previous revisi
 
 ```yaml
 domains:
-  dev: "http://dev-panopoly-dreams.pantheon.io"
+  dev: "https://dev-panopoly-dreams.pantheon.io"
 
 ...
 

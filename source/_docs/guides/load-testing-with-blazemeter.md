@@ -9,7 +9,7 @@ contributors:
   - jessifischer
 date: 2/25/2015
 ---
-Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Elite site is load tested before going live, and [BlazeMeter](http://blazemeter.com) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
+Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Elite site is load tested before going live, and [BlazeMeter](https://www.blazemeter.com/) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
 
 ##The Importance of Identifying Performance Hits
 
@@ -40,7 +40,7 @@ Aside from concurrent users, you’ll want to map out user behavior and time spe
 
 ##Your First Load Test
 
-First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/blazemetertheloadtesti/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=en) on your Chrome browser and [register for a free account with Blazemeter](http://blazemeter.com). Next, navigate to the site you'd like to test and click the BlazeMeter icon to open settings and begin recording. You'll have several configuration options:
+First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/blazemetertheloadtesti/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=en) on your Chrome browser and [register for a free account with Blazemeter](https://www.blazemeter.com/). Next, navigate to the site you'd like to test and click the BlazeMeter icon to open settings and begin recording. You'll have several configuration options:
 
 - Record/Follow Me: Select **Record**
 - Name of the test: Name your test configuration in a brief, client-specific way  
@@ -48,7 +48,7 @@ First, [install the Chrome plugin](https://chrome.google.com/webstore/detail/bla
 - Load Origin: Dependent on project and traffic as outlined by client
 - User Agent: Default
 - Filter Pattern: The default filter pattern will be set to include `http://*/*` and `https://*/*` You'll want to designate the top level domain.  
-Example: `http://livesitename.pantheonsite.io/` and add an asterisk at the end so it looks like `http://livesitename.pantheonsite.io/*` so that all pages on the top level domain are captured.
+Example: `https://livesitename.pantheonsite.io/` and add an asterisk at the end so it looks like `https://livesitename.pantheonsite.io/*` so that all pages on the top level domain are captured.
 - Advanced Options: Select **Record only Top Level Requests** and **Disable Browser Cache**
 
 Here is an example of what these settings would look like if we were to test our own site:

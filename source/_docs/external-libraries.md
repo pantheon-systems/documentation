@@ -7,7 +7,7 @@ categories: []
 There are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available on the platform.
 
 
-<!-- h2 id="pdftk"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit">PDFTK - PDF Tool Kit</a></h2>
+<!-- h2 id="pdftk"><a href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDFTK - PDF Tool Kit</a></h2>
 
 
 
@@ -28,7 +28,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 </pre // -->
 ## WKHTMLtoPDF
 
-[WebKit HTML](http://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
+[WebKit HTML](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
 WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
 
@@ -50,7 +50,7 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 ## PhantomJS
 
-In its own words, [PhantomJS](http://phantomjs.org/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
+In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
 PhantomJS is located at `/srv/bin/phantomjs` on your application server.
 
@@ -63,7 +63,7 @@ Once you have downloaded and enabled the PhantomJS Capture module, you'll need t
 
 ## Apache Tika
 
-The [Apache Tika](http://tika.apache.org/) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+The [Apache Tika](https://tika.apache.org//) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
@@ -86,7 +86,7 @@ There are no known plugins in the WordPress.org repository that will enable the 
 
 ## ImageMagick
 
-[ImageMagick](http://www.imagemagick.org) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](http://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](http://www.imagemagick.org/script/motion-picture.php),  [EXR](http://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
+[ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php),  [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
 
 Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
 

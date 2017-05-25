@@ -62,7 +62,7 @@ If the SSL provider asks you to select a web host server type, look for an optio
 
 ### Multiple Domains with Subject Alternative Names (SANs)
 
-A Subject Alternative Name is a public key certificate that is permitted to identify more than one entity or device. SANs may be the right choice if you need to manage multiple domains with a single certificate. For more information, see [SAN Certificates](http://www.digicert.com/subject-alternative-name.htm).
+A Subject Alternative Name is a public key certificate that is permitted to identify more than one entity or device. SANs may be the right choice if you need to manage multiple domains with a single certificate. For more information, see [SAN Certificates](https://www.digicert.com/subject-alternative-name.htm).
 
 ### Wildcard
 
@@ -88,16 +88,16 @@ While all will function on Pantheon, selecting **SHA256 cert and root** will pre
 
 We don't specifically recommend one, but here are a few of many SSL providers:
 
-- [Comodo](http://www.comodo.com/ "Comodo Group")
-- [DigiCert](http://www.digicert.com/ "DigiCert")
-- [Entrust](http://www.entrust.com/ "Entrust")
-- [GeoTrust](http://www.geotrust.com/ "GeoTrust")
-- [GoDaddy](http://www.godaddy.com/ "GoDaddy")
+- [Comodo](https://www.comodo.com "Comodo Group")
+- [DigiCert](https://www.digicert.com/ "DigiCert")
+- [Entrust](https://www.entrust.com/ "Entrust")
+- [GeoTrust](https://www.geotrust.com/ "GeoTrust")
+- [GoDaddy](https://www.godaddy.com/ "GoDaddy")
 - [Let's Encrypt](https://letsencrypt.org/ "Let's Encrypt")
-- [SSLMate](http://sslmate.com/ "SSLMate")
-- [Thawte](http://www.thawte.com/ "Thawte")
+- [SSLMate](https://sslmate.com/ "SSLMate")
+- [Thawte](https://www.thawte.com/ "Thawte")
 - [TrustWave](https://ssl.trustwave.com/support/install-certificate-cpanel.php "TrustWave")
-- [VeriSign](http://www.verisigninc.com/ "VeriSign")
+- [VeriSign](https://www.verisign.com/ "VeriSign")
 
 ## Load Certificate into Pantheon
 
@@ -198,7 +198,7 @@ Updating a renewed certificate is much like installing it initially:
 1. From your Site Dashboard, select Dev, Test, or Live (most commonly Live).
 2. Select **HTTPS**.
 3. Click on the link **Update your certificate for the Live environment**.
-4. Paste the certificates and private key to the appropriate fields, including the header and footer. 
+4. Paste the certificates and private key to the appropriate fields, including the header and footer.
 5. Click **Add Cert**.
 
 ### How do I fix a chain file signing key mismatch?
@@ -210,7 +210,7 @@ This indicates that some part of the chain is out of order. Check that you have 
 
 If you receive SSL chain errors, on a mobile device for example, make sure that the certificate has a certificate authority that supports your use case.
 
-Using an SSL checker (http://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
+Using an SSL checker (https://www.sslshopper.com/ssl-checker.html) will perform a number of tests, such as the validity of the certificate, expiration date, certificate authority, and validity of the SSL chain. If the certificate is valid, all the responses should be green with no breaks in the SSL chain.
 
 If the SSL chain is broken or you experience issues with mobile versions of the site, we recommend getting an SSL certificate from a different provider or attempting to correct the chain with [https://whatsmychaincert.com/](https://whatsmychaincert.com/).
 

@@ -8,7 +8,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p>This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the <a href="http://drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from Drupal.org, or with their WordPress site using the <a href="https://wordpress.org/plugins/wp-saml-auth/">WP SAML Auth</a> plugin from WordPress.org.</p>
+  <p>This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the <a href="https://www.drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from Drupal.org, or with their WordPress site using the <a href="https://wordpress.org/plugins/wp-saml-auth/">WP SAML Auth</a> plugin from WordPress.org.</p>
 </div>
 
 ## Install SimpleSAMLphp
@@ -28,7 +28,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
         git add simplesaml
         git commit -am "Adding SimpleSAML symlink"
 
-3. [Generate or install certs](http://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to the repository in `/private/simplesamlphp-1.14.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to the repository in `/private/simplesamlphp-1.14.x/cert`.
 
 ## Configure SimpleSAMLphp
 
@@ -66,7 +66,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 3. With the basic variables defined, set up base config:
 
         $config = array (
-          'baseurlpath' => 'http://'. $host .'/simplesaml/',
+          'baseurlpath' => 'https://'. $host .'/simplesaml/',
           'certdir' => 'cert/',
           'loggingdir' => 'log/',
           'datadir' => 'data/',

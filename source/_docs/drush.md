@@ -4,7 +4,7 @@ description: Administer and maintain your Pantheon site from your local Drupal D
 tags: [devdrush]
 categories: [drupal]
 ---
-[Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
+[Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
 Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/docs/sftp) or [Git](/docs/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/settings-php/).
 
@@ -233,7 +233,7 @@ drush @pantheon.SITENAME.dev up --no-core
 
 ## Troubleshooting
 
-If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](http://drupal.stackexchange.com/questions/tagged/drush)
+If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](https://drupal.stackexchange.com/questions/tagged/drush)
 
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus remote:drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:

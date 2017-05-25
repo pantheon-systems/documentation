@@ -12,7 +12,7 @@ contributors: mrfelton
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;"><img src="/source/docs/assets/images/icon-version-control.svg
-" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="http://www.kernel.org/pub/software/scm/git/docs/v1.9.5/user-manual.html#resolving-a-merge">Git Manual</a></em><br />
+" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;"><br /><em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - <a href="https://www.kernel.org/pub/software/scm/git/docs/">Git Manual</a></em><br />
 </p>
 
 ### How do I resolve conflicts when updating Core?
@@ -134,11 +134,11 @@ See [Undo Git commits like overwriting Drupal core](/docs/undo-commits).
 
 If you want to patch core or a module, you should use Git. You will need to switch from On Server Development if it's enabled.
 
-Drupal.org has very good instructions about [applying patches with Git](http://drupal.org/node/1399218).
+Drupal.org has very good instructions about [applying patches with Git](https://www.drupal.org/node/1399218).
 
 From your local clone, run the `git apply` command as per Drupal.org, commit your change, and push back to Pantheon. A best practice is to include a link to the issue/comment where the patch came from in your commit message.
 
-Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](http://drupal.org/node/707484).
+Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
 For detailed instructions, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
@@ -155,7 +155,7 @@ We are currently running Git 1.9.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
 
-If you find that you're running into issues with commits that reference `sites/default/files`, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](http://help.github.com/remove-sensitive-data/).
+If you find that you're running into issues with commits that reference `sites/default/files`, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](https://help.github.com/articles/removing-sensitive-data-from-a-repository/).
 
 From within the Drupal root of your site:
 
@@ -264,7 +264,7 @@ git log --first-parent
 
 According to the Git Manual, "this option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge."
 
-Pantheon does this so upstream updates or merges from Multidev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](http://www.sourcetreeapp.com/), or visualize the full history with:
+Pantheon does this so upstream updates or merges from Multidev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](https://www.sourcetreeapp.com/), or visualize the full history with:
 
 ```
 git log --graph

@@ -63,7 +63,7 @@ If you are logged in with one identity and re-authenticate a different account, 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
 ### Import Failed
-This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restart the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
+This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restart the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
 ## Frequently Asked Questions
 
 #### How do I migrate a local site to Pantheon?

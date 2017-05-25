@@ -4,7 +4,7 @@ description: Detailed information on outgoing mail and email hosting for your Pa
 tags: [services]
 categories: []
 ---
-Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](https://gsuite.google.com/index.html) as an adjunct to our service.
 
 ## Outgoing Email
 

@@ -50,7 +50,7 @@
                   return t;
               }(document, "script", "twitter-wjs"));
             </script>
-            <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
+            <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}?text=%40getpantheon%20doc%3A%20{{ page.title|url_encode }}"></a>
             <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
             {% if page.completiontime %}
             <div style="float:left;"><small><strong><span style="line-height:1.65em;" class="glyphicons glyphicons-clock" aria-hidden="true"></span> Time to complete:</strong> {{ page.completiontime }}</small></div><br>

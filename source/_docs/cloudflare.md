@@ -86,7 +86,7 @@ MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="qA7D'DGwpMH,)x"
 
 --qA7D'DGwpMH,)x
-X-Cf-Url: http://www.domain.com/sites/all/modules/admin_menu/admin_menu.js?nvql2t
+X-Cf-Url: https://www.domain.com/sites/all/modules/admin_menu/admin_menu.js?nvql2t
 X-Cf-Status: 403
 Content-Transfer-Encoding: binary
 X-Cf-Max-Age: 7200

@@ -36,7 +36,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-2. Add the [Redis](http://drupal.org/project/redis) module from Drupal.org.
+2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
 3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
@@ -69,7 +69,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-2. Add the [Redis](http://drupal.org/project/redis) module from Drupal.org.
+2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
 
 3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
  - `redis_client_host`
@@ -112,7 +112,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 ## Use the Redis Command-Line Client
 
-You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis locally. You can download it at  [http://redis.io/download](http://redis.io/download).
+You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis locally. You can download it at  [https://redis.io/download](https://redis.io/download).
 
 To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
 ```
@@ -253,11 +253,11 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 
 #### What happens when Redis reaches maxmemory?
 
-The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](http://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
 #### Is Redis set up as an LRU cache?
 
-We are using [allkeys-lru](http://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
+We are using [allkeys-lru](https://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
 
 ```nohighlight
 cat redis.conf

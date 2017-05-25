@@ -3,7 +3,7 @@ use: ["posts"]
 permalink: atom.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
     <title><![CDATA[{{ site.title }}]]></title>
     <link href="{{ site.url }}/atom.xml" rel="self"/>
     <link href="{{ site.url }}/"/>
@@ -15,7 +15,7 @@ permalink: atom.xml
             {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
         </contributor>
     {% endif %}
-    <generator uri="http://sculpin.io/">Sculpin</generator>
+    <generator uri="https://sculpin.io/">Sculpin</generator>
     {% for post in data.posts|slice(0, 10) %}
         <entry>
             <title type="html"><![CDATA[{{ post.title }}]]></title>

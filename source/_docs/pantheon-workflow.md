@@ -70,14 +70,14 @@ Dealing with changes to your site's configuration, stored in the database, can b
 ### WordPress
 
 * [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`
-* [Advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
+* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 
 ### Drupal
 
-* [hook\_update\_N()](http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7): Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Views: Export to code](https://www.chapterthree.com/blog/howto-best-practices-for-embedding-views-code)
-* [Features](http://drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
+* [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
 * Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/docs/drupal-8-configuration-management/).
 
 ## Understanding Write Permissions in Test and Live
