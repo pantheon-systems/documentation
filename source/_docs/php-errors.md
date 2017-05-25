@@ -101,7 +101,7 @@ If database logging is enabled, your site will be even slower, requiring a datab
 Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.  
 
 
-See [https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185](stackoverflow) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
+See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## PHP Unhandled Exceptions on Pantheon
 
