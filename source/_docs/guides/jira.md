@@ -37,18 +37,20 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 
     ![Create an automation user](/source/docs/assets/images/integrations/jira-new-user.png)
 
-4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine users password.
+4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
 ## Securely Store User Credentials on Pantheon
 Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
-We use the private path of filesystem in this section because we don't want to track sensitive data like passwords in the codebase with git.  
+We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
-1. First, let's check for existing secrets using Terminus(replace `<site>`):
+In the commands below, replace `<site>` with your site name, `<example>` with your Atlassian project name, `<user>` with your machine account username in Jira, and `<password>` with its password.
+
+1. First, let's check for existing secrets using Terminus:
 
         terminus secrets:list <site>.dev
 
-  If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon (replace `<site>`):
+  If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
 
         $ echo '{}' > secrets.json
         $ `terminus connection:info <site>.dev --field=sftp_command`
@@ -58,15 +60,15 @@ We use the private path of filesystem in this section because we don't want to t
 
   Otherwise, continue to the next step.
 
-2. Use Terminus to write your Jira URL value in the private `secrets.json` file (replace `<site>` and `<example>`):
+2. Use Terminus to write your Jira URL value in the private `secrets.json` file:
 
         terminus secrets:set <site>.dev jira_url 'https://<example>.atlassian.net'
 
-3. Write the machine username to the private `secrets.json` file (replace `<site>` and `<user>`):
+3. Write the machine username to the private `secrets.json` file:
 
         terminus secrets:set <site>.dev jira_user <user>
 
-4. Add the machine user's password to the private `secrets.json` file (replace `<site>` and `<password>`):
+4. Add the machine user's password to the private `secrets.json` file:
 
         terminus secrets:set <site>.dev jira_pass <password>
 
@@ -76,14 +78,16 @@ We use the private path of filesystem in this section because we don't want to t
 </div>
 
 ## Configure Quicksilver Integration
-The next step is to add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Jira to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Jira to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory (replace `<site>`):
+In the commands below, replace `<site>` with your Pantheon site name.
+
+1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info <site>.dev --fields='Git Command' --format=string`
         cd <site>
 
-2. Set the connection mode to Git (replace `<site>`):
+2. Set the connection mode to Git:
 
         terminus connection:set <site>.dev git
 
@@ -108,18 +112,22 @@ The next step is to add Pantheon's example [Quicksilver](/docs/quicksilver) inte
                 description: Jira Integration
                 script: private/jira_integration.php
 
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+    </div>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-          git commit -am "Create private/jira_integration.php and configure platform hooks"
-          git push origin master
+        git commit -am "Create private/jira_integration.php and configure platform hooks"
+        git push origin master
 
 
 ## Test Jira Integration on Pantheon
 
 1. Create a test issue in an existing or new Jira project. Take note of the issue ID.
 
-2. In a separate terminal window, run `terminus workflow:watch` to see the next process unfold in realtime (optional).
+2. Optional: In a separate terminal window, run `terminus workflow:watch` to see the next process unfold in real time.
 
 3. Push a code change that contains the Jira issue ID in the commit message. This workflow will trigger `jira_integration.php` script, which will search commits for possible issue IDs and comment in Jira when found.
 
@@ -133,3 +141,4 @@ The next step is to add Pantheon's example [Quicksilver](/docs/quicksilver) inte
 
 ## Conclusion
 In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
+
