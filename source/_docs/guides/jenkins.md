@@ -64,9 +64,46 @@ git push -u origin master
 
 At this point you can add a branch and push and open a pull request successfully.
 
-## Step 3 Setup a Pantheon Site
+## Step 3 Create a Pantheon Site
 
+Now we will spin up a Drupal 8 site, then overwrite the default install with the code from our github repo.
 
+1. Use terminus to create a site:
+terminus site:create jenkins-001-001 "Jenkins FTW" 8a129104-9d37-4082-aaf8-e6f31154644e
+terminus connection:set jenkins-001-001.dev git
+
+2. Then install
+terminus build-env:site-install --site-mail="scott.massey@gmail.com" --site-name="jenkins001-001 site" --account-mail="scott.massey@gmail.com" --account-name="admin" jenkins-001-001.dev
+
+---
+
+3. Commit your settings.php change from the dashboard and change the connection mode to Git.
+
+4. From the site dashboard Connection Info, copy the SSH Clone URL
+
+![SSH Clone URL from dashboard](/source/docs/assets/images/integrations/ssh_url.png)
+
+5. Paste it to a text editor and copy the git repository URL; it's the middle part which begins “ssh://” and ends with “.git”:
+
+![SSH Clone URL Detail](/source/docs/assets/images/integrations/ssh_url_det.png)
+
+6. With that URL, create this git command and execute in the terminal:
+
+```
+git remote add pantheon ssh://codeserver...drush.in:2222/~/repository.git
+```
+
+This will create a second remote, called "pantheon". 
+
+7. Push your code to this remote.
+
+```
+git push --force pantheon master
+```
+
+In the terminal, you should see Pantheon applying the pantheon.yml file configuration. When this is complete, the site should have a single commit, and be in sync with the GitHub repo.
+
+![Updated Site Dashboard](/source/docs/assets/images/integrations/updated.png)
 
 
 4. You can select the "Install standard plugins" option to complete the install. Create an administrative user. 	
