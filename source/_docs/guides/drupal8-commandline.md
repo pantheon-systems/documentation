@@ -1,4 +1,4 @@
-https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/---
+---
 title: Create a Drupal 8 Site From the Command Line Using Terminus and Drush
 description: Learn how to add modules, and manage configuration between Pantheon environments.
 tags: [devterminus, create]
