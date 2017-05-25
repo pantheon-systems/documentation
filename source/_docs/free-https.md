@@ -68,8 +68,13 @@ Sites currently paying a $30 HTTPS surcharge via credit card on a Professional o
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>ORD Datacenter</td>
+      <td>US Datacenter</td>
       <td markdown="1">[Global CDN](/docs/global-cdn)</td>
+    </tr>
+    <tr>
+      <th>Encryption Endpoint</th>
+      <td>Load Balancer</td>
+      <td>Application Container</td>
     </tr>
   </tbody>
 </table>
@@ -78,6 +83,9 @@ Sites currently paying a $30 HTTPS surcharge via credit card on a Professional o
 Let's Encrypt is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a long-term goal we share. Using their service, Pantheon can automatically add your site's domains to a shared certificate. This allows us to obtain, deploy, and manage certificates for HTTPS service for customers without an additional $30 surcharge.
 
 ## Frequently Asked Questions
+
+### Is HTTPS encryption end-to-end?
+Yes! HTTPS is terminated at the CDN edge, but traffic is encrypted all the way to the individual application container. This is an incremental improvement over our legacy system which terminated all encryption at the loadbalancer (inside the datacenter), and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
 
 ### Does upgrading involve HTTPS interruptions or downtime?
 No, after you update your DNS records, traffic will gracefully switch over and involves no downtime or HTTPS interruption.
