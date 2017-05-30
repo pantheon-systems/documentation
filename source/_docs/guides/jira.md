@@ -95,7 +95,8 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     ``` bash
     mkdir private
-    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/jira_integration/jira_integration.php --output ./private/jira_instreation.php
+    mkdir private/scripts
+    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/jira_integration/jira_integration.php --output ./private/scripts/jira_integration.php
     ```
 
 4. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
@@ -110,7 +111,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
             after:
               - type: webphp
                 description: Jira Integration
-                script: private/jira_integration.php
+                script: private/scripts/jira_integration.php
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
@@ -141,4 +142,3 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 ## Conclusion
 In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
-
