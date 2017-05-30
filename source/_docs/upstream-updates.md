@@ -61,13 +61,13 @@ If the automated core update doesn't appear to be working, it's possible there a
     <!-- Tab panes -->
     <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="wp-1conflict">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <pre id="git-pull-wp"><code>git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane" id="d8-1conflict">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+    <pre id="git-pull-drops-8"><code data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane" id="d7-1conflict">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <pre id="git-pull-drops-7"><code data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
     </div>
     </div><br>
 
@@ -83,23 +83,23 @@ If the automated core update doesn't appear to be working, it's possible there a
      <!-- Tab panes -->
      <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-wordpress
-    git rebase pantheon-wordpress/master</code></pre>
+     <pre><code>git fetch pantheon-wordpress
+     git rebase pantheon-wordpress/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d8-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-drops-8
+     <pre><code>git fetch pantheon-drops-8
     git rebase pantheon-drops-8/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d7-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-drops-7
+     <pre><code>git fetch pantheon-drops-7
     git rebase pantheon-drops-7/master</code></pre>
      </div>
      </div><br>
 
 3. If a conflict is introduced, use the output provided to resolve. For example:
 
-  ```command
-  $ git rebase pantheon-wordpress/master
+  ```
+  git rebase pantheon-wordpress/master
   First, rewinding head to replay your work on top of it...
   Applying: Adjust rendering of version release notes
   Using index info to reconstruct a base tree...
@@ -124,14 +124,14 @@ If the automated core update doesn't appear to be working, it's possible there a
 
   Run `git status` to see conflicting files in the current index again. Once all conflicts have been addressed, you can add them to your index and continue pulling in updates:
 
-  ```command
+  ```
   git add .
   git rebase --continue
   ```
 
 4. Push updates to the Site Dashboard on Pantheon:
 
-  ```command
+  ```
   git push origin master
   ```
 
