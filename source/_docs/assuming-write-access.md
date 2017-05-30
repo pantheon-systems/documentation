@@ -10,7 +10,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>The instructions for creating a symlink are supported on Mac and Linux machines only. Windows users should create symlinks within a virtual machine.</p>
+<p>The instructions for creating a symlink are supported on Mac and Linux machines only. Windows users may follow Microsoft documentation for [creating symlinks using mklink /j](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.</p>
 </div>
 ## Create a Symbolic Link
 
