@@ -3481,6 +3481,33 @@ display: block;
 
 }
 
+
+.manual-toc .active-trail > li > a:hover {
+  background-color: #EEF2F3 !important;
+
+}
+.manual-toc .active-trail {
+  font-weight:bold;
+  background-color: #EEF2F3;
+  color: #44525E;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
+
+
+}
+.manual-toc .active-trail > li > a:hover {
+  background-color: #EEF2F3 !important;
+
+}
+.manual-toc .active-trail {
+  font-weight:bold;
+  background-color: #EEF2F3;
+  color: #44525E;
+  border-right: 4px solid #DDE5E7;
+  padding:10px 10px 10px 30px;
+
+
+}
 .panel-default>.panel-heading {
   background-color: #fff !important;
 
