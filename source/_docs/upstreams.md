@@ -1,6 +1,7 @@
 ---
 title: Early Access: Upstreams
 earlyaccess: true
+noindex: true
 description: Learn how to create and manage Custom Upstreams in the Organization Dashboard.
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---

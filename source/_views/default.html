@@ -93,6 +93,10 @@
     ga('send', 'pageview');
     </script>
 
+    {% if page.noindex %}
+    <meta name="robots" content="noindex"/>
+    {% endif %}
+
   </head>
 <body>
   <!-- Google Tag Manager -->
