@@ -21,11 +21,11 @@ Both LDAP and LDAPS are supported on Pantheon. For more information, see [LDAP a
 
 ## Shibboleth and SimpleSAMLphp
 
-[Shibboleth](http://shibboleth.net/) is an open-source single sign-on solution. Use [SimpleSAMLphp](http://simplesamlphp.org/) as a service provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see [Using SimpleSAMLphp](/docs/shibboleth-sso).
+[Shibboleth](https://shibboleth.net/) is an open-source single sign-on solution. Use [SimpleSAMLphp](https://simplesamlphp.org/) as a service provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see [Using SimpleSAMLphp](/docs/shibboleth-sso).
 
 ## OAuth
 
-[OAuth](http://oauth.net/) is an open authorization standard and customers have reported success using it.  
+[OAuth](https://oauth.net/) is an open authorization standard and customers have reported success using it.  
 
 Also, Pantheon includes the [PECL OAuth](http://us.php.net/oauth) PHP extension. If you need a different version, you can download the library and rename the class to avoid a naming conflict.
 

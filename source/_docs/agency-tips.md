@@ -65,9 +65,9 @@ Quicksilver Platform Hooks allow you to automate actions in response to activity
 ### Pantheon Configuration File
 Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, [nested docroot](/docs/nested-docroot/) and more. For details, see [The pantheon.yml Configuration File](/docs/pantheon-yml/).
 
-### New Relic AMP Pro
+### New Relic APM Pro
 
-New Relic AMP Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/docs/new-relic/). The following blog posts are also a great reference:
+New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/docs/new-relic/). The following blog posts are also a great reference:
 
 - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
 - [New Relic &amp; Drupal: Find Your Site&#39;s Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
@@ -83,7 +83,7 @@ Pantheon does not provide a way to set custom scheduling for cron jobs. For deta
 ## Advanced Workflows
 
 ### Custom Upstreams
-In addition to the [frameworks offered by Pantheon during the site creation process](/docs/start-state), custom upstreams add a private installation option for all team members of an organization. A custom upstream is a Github or BitBucket repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Create a Custom Upstream](/docs/custom-upstream/). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
+In addition to the [frameworks offered by Pantheon during the site creation process](/docs/start-state), Custom Upstreams add a private installation option for all team members of an organization. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/docs/custom-upstream/). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ### Build Steps
 
@@ -91,7 +91,7 @@ Pantheon currently does not support a code build step, which includes tasks such
 
 If a project needs a build step the recommended method is a two repository model where you have an external Git repository hosted outside of Pantheon with an intermittent build step, then deploy the build artifact to Pantheon. Some samples are:
 
-- Host a Git repository on GitLab and use their [continuous integration tools](http://docs.gitlab.com/ce/ci/yaml/README.html).
+- Host a Git repository on GitLab and use their [continuous integration tools](https://docs.gitlab.com/ce/ci/yaml/README.html).
 - Host a Git repository externally and use a tool such as [DeployBot to manage the build step](https://deploybot.com/guides/building-assets-with-grunt-or-gulp-during-deployment) and deployment to Pantheon
 - Host a repository on GitHub and manage the build step and deployment with a continuous integration server. An example repository with GitHub, WordPress and CircleCI can be found [here](https://github.com/ataylorme/Advanced-WordPress-on-Pantheon/).
 

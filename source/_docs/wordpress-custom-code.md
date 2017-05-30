@@ -33,7 +33,7 @@ For more details on separating custom code, see this related [blog post](https:/
   Version:           1.0.0
   Author:            Andy Fragen
   License:           GNU General Public License v2
-  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+  License URI:       https://www.gnu.org/licenses/gpl-2.0.html
   Domain Path:       /languages
   Text Domain:       github-updater
   <b>GitHub Plugin URI: https://github.com/afragen/github-updater

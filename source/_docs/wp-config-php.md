@@ -38,7 +38,7 @@ For actions that should take place on both web requests _and_ wp-cli commands (e
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/web-cli-environment?footer=minimal"></script>
 
-As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](http://codex.wordpress.org/Editing_wp-config.php).
+As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php).
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
 ### How can I read the Pantheon environmental configuration, like database credentials?

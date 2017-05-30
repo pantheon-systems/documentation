@@ -20,7 +20,7 @@ From your Pantheon Dashboard:
 
 1. Choose **Migrate Existing Site**.
 2. Enter your current website URL.
-3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [custom upstream](/docs/custom-upstream/).
+3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [Custom Upstream](/docs/custom-upstream/).
 4. Click **Continue**.
 5. Name your new Pantheon site.
 6. Select an organization for the site (optional).
@@ -47,9 +47,13 @@ If you'd like to retain existing Git History, see [Migrating Sites to Pantheon: 
 
 ## Step 3: Add Database
 
+**Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
+
 Your site's database should already be backed up into a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, we recommend that you remove data from cache tables to make the `.sql` file smaller, which helps ensure a quick and successful import. If you're using WP-CLI, you can flush the cache easily with `wp cache flush` before creating the dump file.
 
 You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+
+If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 ### Import Database using the Pantheon Dashboard
 
@@ -135,11 +139,11 @@ If something didn't work and you'd like to start over, you can cancel the site m
 You can import a WordPress or Drupal site archive via URL (within file size limits) using [Terminus](/docs/terminus):
 
 ```bash
-terminus import <site> <url>
+terminus site:import <site> <url>
 ```
 
 #### How do I migrate a Drupal 6 site to Pantheon?
-Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](http://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
+Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](https://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
 
 ## See Also
 * [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)

@@ -4,7 +4,7 @@ description: Detailed information on how to configure LDAP and LDAPS on your Pan
 tags: [siteintegrations]
 categories: []
 ---
-[Lightweight Directory Access Protocol](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+[Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer
 
@@ -29,11 +29,11 @@ WordPress has several [LDAP plugins](https://wordpress.org/plugins/search.php?q=
 
 ## OpenLDAP Configuration for Client Certificates for LDAPS
 
-Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](http://php.net/manual/en/function.putenv.php).
+Developers do not have access to edit the OpenLDAP ldap.conf configuration. Instead, specify LDAP configuration with the function [putenv()](https://secure.php.net/manual/en/function.putenv.php).
 
 If your LDAP server uses security certificate(s), place them in the [private file directory](/docs/private-paths) in your codebase: `SITEROOT/private`.
 
-Then, specify the location of the certificate file(s) in `sites/default/settings.ph`p using `putenv`. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with `settings.php`, see [configuring settings.php](/docs/settings-php/).
+Then, specify the location of the certificate file(s) in `sites/default/settings.php` using `putenv`. You may need some or all of these settings depending on your configuration. If you don't need a particular settings, don't include it; there's a strong probability that unnecessary directives will prevent communication. Therefore, use your best judgement and knowledge of your infrastructure and choose accordingly.  For more information about working with `settings.php`, see [configuring settings.php](/docs/settings-php/).
 
 Ensure that your certificates do **not** have a password. There is an extremely strong probability that these certificates are different than the certificates used to secure a site environment using HTTPS. If you're unsure, check with your sever administrator to make sure that you are using the correct TLS certificates to communicate with your LDAP server.
 

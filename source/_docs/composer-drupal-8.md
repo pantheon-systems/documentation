@@ -7,7 +7,7 @@ contributors:
   - stevector
 ---
 
-[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](http://guzzlephp.org/). Guzzle is included in Drupal 8 via Composer.
+[Composer](https://getcomposer.org/) is a dependency management tool that allows PHP code to be more easily shared across projects. As Drupal 8 was written, many of its subsystems written specifically for Drupal were replaced by more widely used packages. For instance, Drupal's notoriously unwieldy function for making external requests, `drupal_http_request()`, [was replaced](https://www.drupal.org/node/1862446) by [Guzzle](https://github.com/guzzle/guzzle/). Guzzle is included in Drupal 8 via Composer.
 
 ## Install Composer Locally
 For details, see Composer's documentation on [Installation - Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
@@ -23,7 +23,7 @@ Composer's purpose is managing dependencies. To perform this task, Composer need
 
 ### List Dependencies with composer.json and composer.lock
 
-Composer lists dependencies with its `composer.json` file. A very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
+Composer lists dependencies with its `composer.json` file. For example, a very simple (and still valid) `composer.json` might list only the logging tool, [Monolog](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md).
 
 ```json
 {

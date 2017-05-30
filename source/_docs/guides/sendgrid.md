@@ -79,9 +79,11 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 3. From within Install Options, select **On**.
 4. Use the following within SMTP Server Settings:
 
- **SMTP server**: smtp.sendgrid.net <br>
- **SMTP port**: 465<br>
- **Use encrypted protocol**: Use SSL<br>
+   **SMTP server**: smtp.sendgrid.net
+
+   **SMTP port**: 2525
+
+   **Use encrypted protocol**: We strongly reccomend selecting **TLS**
 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.  
 
@@ -100,7 +102,7 @@ You can explore the Statistics and Email Reports from within your site's account
 
 ## Congratulations!
 
-You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](http://resources.sendgrid.com/email-infrastructure-guide/) for advanced tips on how to create and publish DNS records for increased deliverability.
+You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/email-infrastructure-guide/) for advanced tips on how to create and publish DNS records for increased deliverability.
 
 ## Troubleshooting
 In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.  One such plugin is called [iLightBox](https://codecanyon.net/item/ilightbox-revolutionary-lightbox-for-wordpress/3939523).

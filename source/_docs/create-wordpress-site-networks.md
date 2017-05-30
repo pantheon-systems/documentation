@@ -5,7 +5,7 @@ tags: [create]
 categories: [wordpress]
 ---
 
-You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
+WordPress site networks are accessible for Elite plans. Contact your Enterprise Onboarding Manager to enable a new network. You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
 
 ## Migrating Site Networks to Pantheon
 
@@ -19,7 +19,7 @@ Before you begin, set the [connection mode to SFTP](/docs/sftp#sftp-mode) for th
 
 **Before you begin, make sure that [Terminus](/docs/terminus) is configured locally and you’re authenticated with Pantheon.**
 
-Install WordPress and enable the Multisite feature with the [`wp core multisite-install`](http://wp-cli.org/commands/core/multisite-install/) command.
+Install WordPress and enable the Multisite feature with the [`wp core multisite-install`](https://developer.wordpress.org/cli/commands/core/multisite-install/) command.
 
 This command installs and enables multisite by default with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` option.
 
@@ -27,7 +27,7 @@ This command installs and enables multisite by default with the subdirectory con
 terminus remote:wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_password=<password> --admin_email=<email> --url=<url>
 ```
 
-If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](http://wp-cli.org/commands/core/multisite-convert).
+If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](https://developer.wordpress.org/cli/commands/core/multisite-convert/).
 
 ## Add Custom Hostnames to Dev, Test, and Live
 
@@ -103,7 +103,7 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 ```
 ### Caveats for Creating a Network through WordPress Dashboard
 
-WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](http://codex.wordpress.org/Create_A_Network).
+WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](https://codex.wordpress.org/Create_A_Network).
 
 Once you’ve created the network, you’ll be taken to a new page:
 
@@ -127,7 +127,7 @@ When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu 
 
 ![WordPress Site Network Dashboard](/source/docs/assets/images/wp-network-admin-sites.png)
 
-You will have one site. To add another, use [`wp site create`](http://wp-cli.org/commands/site/create/).
+You will have one site. To add another, use [`wp site create`](https://developer.wordpress.org/cli/commands/site/create/).
 ```bash
 # Create the site on dev.
 terminus wp <site>.dev -- site create --slug=$SLUG
@@ -138,7 +138,7 @@ terminus domain:add <site>.dev $SLUG.$DEVDOMAIN
 terminus domain:add <site>.test $SLUG.$TESTDOMAIN
 terminus domain:add <site>.live $SLUG.$DOMAIN
 # Open the site.
-open http://$SLUG.$DEVDOMAIN
+open https://$SLUG.$DEVDOMAIN
 ```
 Spend a little time exploring the WordPress Network Dashboard to become familiar with the variety of additional settings you now have. Take a look at what options are available for each site you create, how to manage users across WordPress Multisite, and the grab bag of network settings.
 
@@ -195,7 +195,7 @@ If you visit the Test environment at this point, it will show a database connect
 
 ```bash
 ## NOTE: the www. is necessary if the Dev, Test, and Live environments use it.
-terminus wp <site>.test 'search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network'
+terminus wp <site>.test -- search-replace $DEVDOMAIN $TESTDOMAIN --url=www.$DEVDOMAIN --network
 ```
 ### wp search-replace Fundamentals
 **Pro tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
@@ -307,6 +307,6 @@ Now that you’ve performed the search and replace on your database, WordPress w
 ```bash
 terminus env:deploy <site>.live
 # NOTE: delete "www." if using the bare domain.
-terminus wp <site>.<env> 'search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network'
+terminus wp <site>.<env> -- search-replace $TESTDOMAIN $DOMAIN --url=www.$TESTDOMAIN --network
 ```
 Once you feel comfortable with the WordPress Network Dashboard, you’ll be ready to learn how to use the [Pantheon Workflow with WordPress Multisite](/docs/managing-wordpress-site-networks/), and pick up a few additional [tips and tricks](/docs/managing-wordpress-site-networks#network-tips-and-tricks-with-wp-cli).

@@ -1,13 +1,12 @@
 ---
 title: Testing Varnish
 description: Detailed information on how to determine if Drupal Varnish is working on your site.
-keywords: varnish, HTTP headers, styx, nginx, drupal, wordpress, testing, testing varnish
 tags: [cacheedge]
 categories: []
 ---
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the [web utility](http://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utillity does not check for cookies that are set in your front-end code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/getting-support).
+Use the [web utility](https://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utillity does not check for cookies that are set in your front-end code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/getting-support).
 
 ## Test If Varnish Is Working by Reading HTTP Headers
 
@@ -28,7 +27,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 - **X-Drupal-Cache: HIT**
   - Drupal anonymous page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information.  **Drupal Only**
 
-- **X-Generator: Drupal 7 (http://drupal.org)**
+- **X-Generator: Drupal 7 (https://www.drupal.org/)**
   - Drupal built the page. **Drupal Only**
 
 
@@ -47,7 +46,7 @@ Two of the headers listed above are Drupal specific. By default, WordPress does 
 
 ### Test Varnish with Firefox
 
-1. Install [Firebug](http://getfirebug.com/), the in-browser debugging plugin.
+1. Install [Firebug](https://getfirebug.com/), the in-browser debugging plugin.
 2. Go to your Pantheon hosted domain and click the Firebug icon in Firefox. 
 3. Click the **Network** tab, then **HTML** to see the headers.
 
@@ -56,7 +55,7 @@ Two of the headers listed above are Drupal specific. By default, WordPress does 
 1. Open a terminal.
 2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag displays only the HTTP headers for the URL you specify.
 ```
-    $ curl -I http://dev.pantheon.pantheon.io/
+    $ curl -I https://dev.pantheon.pantheon.io/
     HTTP/1.1 200 OK
     server: nginx/1.0.12
     content-type: text/html; charset=utf-8
@@ -66,7 +65,7 @@ Two of the headers listed above are Drupal specific. By default, WordPress does 
     cache-control: no-cache, must-revalidate, post-check=0, pre-check=0
     etag: "1331835393"
     content-language: en
-    x-generator: Drupal 7 (http://drupal.org)
+    x-generator: Drupal 7 (https://www.drupal.org/)
     Content-Length: 54832
     Date: Thu, 15 Mar 2012 18:16:34 GMT
     X-Varnish: 968524869

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<html itemscope itemtype="http://schema.org/Article">
+<html itemscope itemtype="https://schema.org/Article">
 <head>
+    <!-- Asks bots not to index  -->
+    <meta name="robots" content="noindex, nofollow">
+
     <!-- Quickie redirection to https and pantheon.io -->
     <script type="text/javascript">
   if (window.location.hostname == 'localhost' ||
@@ -24,7 +27,7 @@
     </script>
   <!-- Name the site for mobile search -->
     <script type="application/ld+json">
-     {  "@context" : "http://schema.org",
+     {  "@context" : "https://schema.org/",
         "@type" : "WebSite",
         "name" : "Pantheon",
         "alternateName" : "Pantheon Website Management Platform",
@@ -36,30 +39,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}{{ page.title }} | {{ site.title }}{% endblock %}</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ page.title}}">
-    <meta itemprop="description" content="{{ page.description }}">
-    <meta itemprop="image" content="{{ page.image }}">
+
+    {% if page.image %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="/docs/assets/images/{{ page.image }}.png" />
+    <meta itemprop="image" content="/docs/assets/images/{{ page.image }}.png">
+    <meta name="twitter:image" content="/docs/assets/images/{{ page.image }}.png" />
+    {% else %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="/docs/assets/images/default-thumb.png" />
+    <meta itemprop="image" content="/docs/assets/images/default-thumb.png">
+    <meta name="twitter:image" content="/docs/assets/images/default-thumb.png" />
+    {% endif %}
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@getpantheon">
     <meta name="twitter:title" content="{{ page.title}}">
-    <meta name="twitter:description" content="{{ page.description }}">
+    {% if page.description %}
+    <meta name="twitter:text:description" content="{{ page.description }}">
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta name="description" content="{{ page.description }}">
+    {% else %}
+    <meta name="twitter:text:description" content="Training guides and support docs">
+    <meta property="og:description" content="Training guides and support docs"/>
+    <meta itemprop="description" content="Training guides and support docs">
+    <meta name="description" content="Training guides and support docs">
+    {% endif %}
+
     {% if page.contributors %}{% set contributor_list = page.contributors %}{% if contributor_list %}{% for contributorhandle in contributor_list %}{% if site.contributors[contributorhandle] %}{% set contributor = site.contributors[contributorhandle] %}<meta name="twitter:creator" content="@{{ contributor.twitter }}">
     {% endif %}{% endfor %}{% endif %}{% endif %}
 
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="{{ page.image }}">
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page.title}}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ site.site_url}}{{ page.url }}" />
-    <meta property="og:image" content="{{ page.image }}" />
     <meta property="og:description" content="{{ page.description }}" />
     <meta property="og:site_name" content="Pantheon Documentation" />
     <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
@@ -86,7 +105,7 @@
     <p class="browsehappy">
     You are using an <strong>outdated</strong>
     browser. Please
-    <a href="http://browsehappy.com/">upgrade your browser</a>
+    <a href="https://browsehappy.com/">upgrade your browser</a>
     to improve your experience.
     </p>
     <![endif]-->

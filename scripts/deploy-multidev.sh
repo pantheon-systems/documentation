@@ -50,16 +50,19 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   # Update redirect logic for the Multidev environment
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
+  sed -i '12i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
+  sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
   sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
   sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
   sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
+  sed -i '27s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+  sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
   sed -i '20i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
   sed -i '35i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
   sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
+  sed -i '32i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/guide.html
 
 
   # Regenerate sculpin to reflect new redirect logic

@@ -4,7 +4,7 @@ description: Detailed information about the Pantheon SFTP connection WinSCP SFTP
 tags: [sftpfiles]
 categories: []
 ---
-[WinSCP](http://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
+[WinSCP](https://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ Make sure you have the Pantheon SFTP connection information for your site ready.
 
 ## Download WinSCP
 
-If you do not have WinSCP installed, [download and install the latest version](http://winscp.net/eng/index.php).
+If you do not have WinSCP installed, [download and install the latest version](https://winscp.net/eng/index.php).
 
 ## Start the WinSCP Client
 

@@ -4,7 +4,7 @@ description: Learn how to backup your Drupal or WordPress site on Pantheon.
 tags: [getstarted]
 categories: []
 ---
-The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service. A backup contains three separate archives: a database backup, a files backup, and a code backup.
+The Backups tab is where you manage all the details for your site's backup. A backup is made up of three separate archives: a database backup, a files backup, and a code backup. Backups are stored with Amazon's multi-datacenter Simple Storage Solution service.
 
 We strongly urge you to backup your site regularly.
 
@@ -137,7 +137,7 @@ Now that you have created the archive files, check out how to [restore an enviro
 
 <div class="alert alert-info" role="alert">
 <h3 class="info">Note</h3>
-<p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</p></div>
+<p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="https://stackoverflow.com/questions/4643328/amazon-s3-expiration-date/4649553#4649553">See this documentation for more information about signed URLS</a>.</p></div>
 
 
 ## Restore From an Existing Backup
@@ -225,3 +225,16 @@ Additionally, you can manually trigger a full Pantheon backup job for any site e
 ```bash
 terminus backup:get <site>.<env> --file=<filename> --element=<element>
 ```
+### What Can I Do During Backups?
+
+From the Backup Log tab on the Site Dashboard, you can see the status of currently running backups for your code, database, and files:
+
+![Backups in progress](/source/docs/assets/images/backup-progress.png)
+
+ - **Code** is anything version controlled and commited via the Site Dashboard.
+ - **Database** is a `mysqldump` of your site's db.
+ - **Files** refers to static files that are not version controlled (e.g. `wp-content/uploads` directory for WordPress, and `sites/default/files` for Drupal).
+
+If your **Code** or **Database** backup is taking an inordinantly long time to complete, we suggest you [contact support](/docs/getting-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can detroy the integrity of the backup or cause it to fail.
+
+If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a [CDN](/docs/content-delivery-network/). Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.

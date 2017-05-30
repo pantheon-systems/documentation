@@ -4,7 +4,7 @@ description: Detailed information on outgoing mail and email hosting for your Pa
 tags: [services]
 categories: []
 ---
-Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](http://www.google.com/intl/en/enterprise/apps/business/index.html) as an adjunct to our service.
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](https://gsuite.google.com/index.html) as an adjunct to our service.
 
 ## Outgoing Email
 
@@ -17,27 +17,47 @@ For outgoing email, your site can send mail immediately using the local MTA (pos
 
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/). Keep in mind that SendGrid has a provisioning process (not all requests to use SendGrid are automatically approved) that can take from a couple of hours to a couple of days. If you need email when your site launches and you plan on using SendGrid, be sure to get started before your launch date. See [Provisioning at the SendGrid website](https://sendgrid.com/docs/Glossary/provisioning.html).
 
-We recommend using an external SMTP server or service for all production use-cases. For low-volume transactional emails such as account registration, forgot password, etc., you may be able to use whatever email service you use for inbound email (including Gmail). For high-volume email, you should integrate with a volume email gateway.
+We recommend using an external SMTP server or service for all use-cases.
 
 Some customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
 
-Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](http://drupal.org/project/smtp) module.
+While many providers have standalone modules/plugins, you may want or need to integrate with your provider via standard SMTP authentication. Fortunately, both Drupal and WordPress can be configured for this:
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.</p>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="drupal">
+    Once you have chosen your SMTP provider, install and configure Drupal's <a href="https://drupal.org/project/smtp">SMTP Authentication Support</a> module.
+
+    <div class="alert alert-info" role="alert">
+      <h4 class="info">Note</h4>
+        <p>Support for Drupal 8 is not yet available for the <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module. However, <a href="https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM"> some users</a> have reported success with the pre-release version. For details, see <a href="/docs/guides/sendgrid/#sendgrid-smtp-integration"> this article</a>.</p>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+    Once you have chosen your SMTP provider, install and configure Wordpress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
+  </div>
 </div>
 
 ## Troubleshooting
 
-#### Failed Opening MimeMailSystem\_\_SmtpMailSystem.mail.inc or HTMLMailSystem\_\_SmtpMailSystem.mail.inc
+#### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`
 
 This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
-1. Copy the file from .../files/mailsystem/filename.inc
-2. Place in a custom module's includes dir and .info file using files[] = includes/filename.inc
-3. Remove original file from {registry} table DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
-4. [`terminus drush <site>.<env> -- cc all`](https://github.com/pantheon-systems/cli)
+1. Copy the file from `.../files/mailsystem/filename.inc`
+2. Place in a custom module's includes dir and .info file using `files[] = includes/filename.inc`.
+3. Remove the original file from the `{registry}` table:
+
+        DELETE FROM registry WHERE name='[appropriate-name]' AND module='mailsystem';
+
+4. [Clear the cache](https://github.com/pantheon-systems/cli):
+
+        terminus drush <site>.<env> -- cc all
 
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 

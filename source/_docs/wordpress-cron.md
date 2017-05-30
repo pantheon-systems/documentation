@@ -3,7 +3,6 @@ title: Cron for WordPress
 description: Configuring and optimizing the WP-Cron feature on your Pantheon WordPress site.
 tags: [services]
 categories: [wordpress]
-keywords: wordpress, cron, wp-cron
 ---
 ## WP-Cron Overview
 WP-Cron executes specific tasks for WordPress powered sites. The name Cron comes from the Unix system for scheduling jobs, ranging from once a minute to once a year. Whether it's routine maintenance or scheduled alerts, any command that can be executed on Unix without user intervention can be scheduled as a Cron task.
@@ -54,7 +53,7 @@ If everything works correctly, the result looks like this:
 Success: WP-Cron spawning is working as expected.
 ````
 
-This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](http://wp-cli.org/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/terminus/). The command format is as follows:
+This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/terminus/). The command format is as follows:
 
 ````nohighlight
 $ terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
@@ -71,7 +70,7 @@ All `terminus wp` commands require a site name and environment to operate.
 
 If you want to keep an eye on WP-Cron but don't like the command line, there are several plugins you can use. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, will show you all of the events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
 
-[WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") will do a similar job with a slightly different UI. This plugin requires you to do a one-time installation the WPX framework, which you can do straight from the plugin manager page.
+[WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") will do a similar job with a slightly different UI. This plugin requires you to do a one-time installation of the WPX framework, which you can do straight from the plugin manager page.
 
 
 ## Manage WP-Cron Externally
@@ -93,13 +92,13 @@ Once you have disabled WP-Cron, you will need a service that calls a URL at regu
 
  - [EasyCron](https://www.easycron.com/)
  - [Set Cron Job](https://www.setcronjob.com/)
- - [My Cron](http://www.mywebcron.com/)
+ - [My Cron](https://www.mywebcron.com/)
  - [cron-job](https://cron-job.org/en/)
 
 Any of the above services will get the job done. By disabling WP-Cron, you have turned off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. With most of them, it is as easy as this:
 
 1. Set up an account
-2. Set up a job that calls `http://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
+2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

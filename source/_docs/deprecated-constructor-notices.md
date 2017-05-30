@@ -4,7 +4,6 @@ description: Debug and fix "Deprecated Constructor" notices in your Pantheon sit
 categories: []
 tags: [debugcode]
 contributors: greg-1-anderson
-keywords: debug, php 7, php error, php errors, php fpm error log, fpm error log, php log, php execution, execute php, caching, cache, php exception, exceptions, errors
 ---
 
 PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/docs/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
@@ -24,7 +23,7 @@ This error is caused by a combination of two factors:
 - PHP notices generated during source code parsing
 - PHP opcache is in use
 
-To fix these errors, convert your class constructor to `__construct()`. See [deprecation notice for PHP-4-style constructors](http://php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) for more information.
+To fix these errors, convert your class constructor to `__construct()`. See [deprecation notice for PHP-4-style constructors](https://secure.php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) for more information.
 
 ## Finding PHP Files Containing Parse-Time Notices
 
@@ -58,7 +57,7 @@ Adjust the regular expression as needed to scan other file extensions that may c
 
 ## Explanation
 
-[Deprecation notices for deprecated constructors](http://php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) are emitted if a class contains a method with the same name as the class name. This was the recommended way to declare class constructors in PHP 4, but it was not until PHP 7 that this form actually started producing a notice. At this time, the PHP-4-style constructor is the only deprecation notice that is reported during source code parsing. In theory, this structure should only be encountered in very old code; in practice, though, some projects may have continued using the deprecated form, so it may be encountered from time to time.
+[Deprecation notices for deprecated constructors](https://secure.php.net/manual/en/migration70.deprecated.php#migration70.deprecated.php4-constructors) are emitted if a class contains a method with the same name as the class name. This was the recommended way to declare class constructors in PHP 4, but it was not until PHP 7 that this form actually started producing a notice. At this time, the PHP-4-style constructor is the only deprecation notice that is reported during source code parsing. In theory, this structure should only be encountered in very old code; in practice, though, some projects may have continued using the deprecated form, so it may be encountered from time to time.
 
 Opcache is always enabled on Pantheon. When opcache is in use, PHP will print any notice emitted during source code processing directly to the standard output, ignoring any error handler that may be set. These notices may still be disabled by setting `error_reporting` to ignore E_DEPRECATED; however, Drupal always enables E_DEPRECATED in `error_reporting` early in its bootstrap process, so these notices will be printed if `display_errors` is set to `on`.
 

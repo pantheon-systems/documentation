@@ -104,7 +104,7 @@ This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using S
 
 ## Use the Redis Command-Line Client
 
-1. [Install Redis locally](http://redis.io/download).
+1. [Install Redis locally](https://redis.io/download).
 2. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
 3. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
 

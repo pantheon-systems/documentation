@@ -25,7 +25,7 @@ If you redirect a request that contains `utm_` parameters, Pantheon's edge shoul
 You can see this for yourself by testing how Pantheon's own public facing website behaves. Try requesting the homepage over http with a `utm_campaign` parameter:
 
 ```
-curl -I http://pantheon.io/?utm_campaign=documentation_example
+curl -I https://pantheon.io/?utm_campaign=documentation_example
 HTTP/1.1 301 Moved Permanently
 Cache-Control: max-age=3600
 Content-Type: text/html
@@ -54,7 +54,7 @@ However, as far as Pantheon's application environments are concerned, the value 
 Query keys will still be passed to the application server, but the values will be changed to PANTHEON_STRIPPED to indicate that the URL is being altered. Looking in the `nginx-access.log` you would see something like this:
 
 ```
-nginx-access.log:10.223.193.24 - - [26/Jun/2015:17:12:52 +0000]  "GET /utm_campaign=PANTHEON_STRIPPED HTTP/1.1" 301 5 "http://www.google.com/aclk?sa=l&&ctype=4&clui=3&rct=j&q=&ved=0CB4QwgUoAg&adurl=http://example.com/features%3Futm_source%3Dgoogle_adwords%26utm_medium%3Dcpc%26utm_term%3Dmam%26utm_campaign%3Drlsa_mam%26utm_content%3Drlsa_mam_broad" "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4" 0.002 "108.87.108.187, 184.106.100.21, 10.189.246.4"
+nginx-access.log:10.223.193.24 - - [26/Jun/2015:17:12:52 +0000]  "GET /utm_campaign=PANTHEON_STRIPPED HTTP/1.1" 301 5 "https://www.google.com/aclk?sa=l&&ctype=4&clui=3&rct=j&q=&ved=0CB4QwgUoAg&adurl=https://example.com/features%3Futm_source%3Dgoogle_adwords%26utm_medium%3Dcpc%26utm_term%3Dmam%26utm_campaign%3Drlsa_mam%26utm_content%3Drlsa_mam_broad" "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4" 0.002 "108.87.108.187, 184.106.100.21, 10.189.246.4"
 ```
 
 Please note that this behavior only holds for HTTP redirects with a status code of 301 or 302, and only if the resulting redirect URLs parameters remain the same as on the way in. It is possible for your PHP code or CMS to pick up `PANTHEON_STRIPPED` and place it in a link that users are invited to click, or to issue a redirect that re-formulates the structure of the url to the point that we cannot restore the original parameters.
@@ -83,8 +83,8 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 
 #### How do I test my Google Analytics or AdWords URLs on Pantheon?
 
-You can use [curl](http://curl.haxx.se/) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
+You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
 ```shell
 # example using curl and grep
-curl -i "http://live-mysite.pantheon.io/landing_page.html?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
+curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
 ```

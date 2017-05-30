@@ -4,7 +4,7 @@ description: Features and benefits of role-based permissions for Pantheon Drupal
 tags: [tools]
 categories: []
 ---
-Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/pantheon-partners), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
+Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/agencies/pantheon-for-agencies), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
 
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
@@ -12,7 +12,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new sandboxes at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels. 
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new sandboxes at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
 ###Enterprise and Partner Organizations: Roles and Permissions
 

@@ -4,7 +4,7 @@ description: Administer and maintain your Pantheon site from your local Drupal D
 tags: [devdrush]
 categories: [drupal]
 ---
-[Drush](http://drush.org) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
+[Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
 Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/docs/sftp) or [Git](/docs/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/docs/settings-php/).
 
@@ -168,6 +168,12 @@ Alternately, to run a single SQL query:
 echo 'show tables;' | $(drush @pantheon.SITENAME.ENV sql-connect)
 ```
 
+Or, you can use Terminus as follows:
+
+```bash
+terminus drush SITENAME.ENV sql-query "SELECT * FROM users WHERE uid=1"
+```
+
 ## Execute PHP Code Using Drush on Pantheon
 
 The `drush php-eval` command is not supported on Pantheon. You can run PHP commands after bootstrapping Drupal on Pantheon via the following workaround:
@@ -206,7 +212,7 @@ If you have successfully set up [Terminus](/docs/terminus/), you can get your Dr
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.in` to change the URI for your specific Pantheon site:
+If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
   // Provide the correct 'uri' for a specific site
@@ -227,7 +233,7 @@ drush @pantheon.SITENAME.dev up --no-core
 
 ## Troubleshooting
 
-If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](http://drupal.stackexchange.com/questions/tagged/drush)
+If you experience problems with any Drush commands, try executing them with the `-vd` options, for more verbose debugging information. While we can't support local Drush installations or aliases, you can ask about your specific configuration in the [community forum.](https://drupal.stackexchange.com/questions/tagged/drush)
 
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus remote:drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:

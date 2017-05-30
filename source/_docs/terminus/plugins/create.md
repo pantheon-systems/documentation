@@ -7,6 +7,7 @@ terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/plugins/:basename/
+image: terminus-thumbLarge
 ---
 Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
 

@@ -78,7 +78,7 @@ Installation complete.  User name: admin  User password: ********         [ok]
 You should now be able to open a web browser and see your brand new Drupal site! For fun, you can at any time use an "open" command to see an environment in your default browser.
 
 ```bash
-open http://dev-terminus-cli-create.pantheon.io
+open https://dev-terminus-cli-create.pantheon.io
 ```
 
 ![Dev environment in browser](/source/docs/assets/images/terminus-cli-open-http.png)
@@ -173,6 +173,6 @@ $ terminus env:deploy <site>.test --sync-content --cc --updatedb
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
 ##  Next Steps
-- Do you use WordPress? Try [Using WP-CLI on Pantheon](/docs/guides/wordpress-commandline).
+- Learn more about [Drush](/docs/drush/).
 
 - After you've mastered Terminus, take it a step further with [Continuous Integration](/docs/continuous-integration).

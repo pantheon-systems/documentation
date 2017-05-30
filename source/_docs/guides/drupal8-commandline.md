@@ -32,7 +32,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
         cd $HOME/terminus
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 
-2.  [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
+2.  [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
         terminus auth:login --machine-token=‹machine-token›
 
@@ -245,7 +245,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 
         terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
 
-        terminus drush $TERMINUS_SITE.test -- config-import -y
+        terminus drush $TERMINUS_SITE.live -- config-import -y
 
   With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).
 

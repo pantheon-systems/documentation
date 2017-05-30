@@ -68,7 +68,7 @@ tar -czf $TARGET/wordpress.tar.gz --exclude=wp-content/uploads* .
 ```
 ### Create WordPress Database Archive
 
-This is optional, but recommended. The easiest method is to use the [mysqldump](http://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
+This is optional, but recommended. The easiest method is to use the [mysqldump](https://dev.mysql.com/doc/refman/5.5/en/mysqldump.html) utility to export your archive, then compress the result with gzip.
 ```php
 # Specify the destination folder.
 TARGET=~/Desktop

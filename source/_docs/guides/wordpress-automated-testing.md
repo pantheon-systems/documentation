@@ -84,14 +84,14 @@ cp behat.local.yml.sample behat.local.yml
 ```
 We'll return to `behat.local.yml` in a bit, where we'll add passwords to be able to log in as various WordPress users.
 
-If you look at the `composer.json` file, you'll see a list of software packages to install with Composer. If you have [Composer](http://getcomposer.org) installed globally run:
+If you look at the `composer.json` file, you'll see a list of software packages to install with Composer. If you have [Composer](https://getcomposer.org/) installed globally run:
 ```bash
 composer install
 ```
-Or to download and run [Composer](http://getcomposer.org) in the current directory:
+Or to download and run [Composer](https://getcomposer.org/) in the current directory:
 
 ```bash
-curl -s http://getcomposer.org/composer.phar > composer.phar
+curl -s https://getcomposer.org/composer.phar > composer.phar
 php composer.phar install
 ```
 Downloading everything may take a while, with a lot of output. We used Composer to install Behat, Mink, and two browser drivers for Mink. **Behat** is the testing framework, written in PHP. **Mink** extends Behat and lets you work with web applications. The two browser drivers we installed for Mink are **Goutte**, which is fast, and **Selenium**, which is slower than Goutte, but supports Javascript.
@@ -125,7 +125,7 @@ Now that we've installed Behat locally, we can configure it for your WordPress s
 
 The starter kit comes with a `behat.yml` file that configured Behat to use Mink (browser drivers) and a placeholder `base_url` for the site we want to run tests on.
 
-Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](http://www.vim.org) or [Atom](http://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheonsite.io` to the URL of the site you want to test, and then save.
+Open `behat.yml` with your text editor or IDE of choice (lately I've been using [Vim](http://www.vim.org) or [Atom](https://atom.io/)) and change the `base_url` under the `default` profile from `https://dev-mysite.pantheonsite.io` to the URL of the site you want to test, and then save.
 
 Verify your changes look good with `git diff` and then commit your changes:
 
@@ -175,7 +175,7 @@ Although not shown above, the output will be color-coded so you can quickly see 
 After seeing that the test failed, I visited the home page and realized it was because WordPress isn't installed yet. Even though I created the Dev environment I never actually installed WordPress. I could visit the home page to do the famous 5-minute install, but I decided to use [terminus and wp cli](/docs/guides/wordpress-commandline/) to install from the command line:
 
 ```nohighlight
-terminus wp <site>.<env> -- core install --url=http://test-withrobots.pantheonsite.io \
+terminus wp <site>.<env> -- core install --url=https://test-withrobots.pantheonsite.io \
                            --title="Test With Robots" \
                            --admin_user=admin --admin_password=something_incredibly_secure \  
                            --admin_email=test@example.com
@@ -274,7 +274,7 @@ You can use existing step definitions to write more features. Going forward, you
 * Add Behat tests to continuous integration/continuous deployment pipeline.
 * Do more than "black box" testing. Extend Behat to interact with the WordPress API or DB directly.
 * The Behat [DrupalExtension](https://github.com/jhedstrom/drupalextension) is actively maintained and could serve as inspiration for a WordPress Behat Extension.
-* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/integrate/php) and [Sauce Labs](http://sauceio.com/index.php/2012/01/adding-sauce-to-behat/) to test browsers you don't run natively.
+* Run Behat in the cloud with services like [Browserstack](https://www.browserstack.com/integrate/php) and [Sauce Labs](https://saucelabs.com/blog/adding-sauce-to-behat/) to test browsers you don't run natively.
 
 Adding automated testing into your development workflow will help you deliver higher quality WordPress sites and set you apart from other agencies. Every time you add a feature, you've removed the burden of manual testing, while adding peace of mind for the next time you deploy.
 
@@ -288,7 +288,7 @@ Happy automated testing!
 * [Mink](http://mink.behat.org/)
 * [Selenium Server](http://www.seleniumhq.org/download/)
 * [Writing Features](http://docs.behat.org/en/latest/guides/1.gherkin.html)
-* [What's in a story?](http://dannorth.net/whats-in-a-story/)
+* [What's in a story?](https://dannorth.net/whats-in-a-story//)
 * [Behat Drupal Extension](https://github.com/jhedstrom/drupalextension)
 * [Drupal.org BDD](https://www.drupal.org/project/doobie)
 * WordPress Behat projects:

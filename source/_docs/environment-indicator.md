@@ -8,7 +8,7 @@ Each site on Pantheon comes with three environments: Dev, Test, and Live. This a
 
 For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 
-## Wordpress: Pantheon HUD
+## WordPress: Pantheon HUD
 The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
 
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
@@ -64,7 +64,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 ```
 
 ## Drupal: Environment Indicator
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites. It's currently being ported to Drupal 8, but is not usable yet. For updates, see [this issue](https://www.drupal.org/node/2605572).
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
 
 
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
@@ -76,42 +76,78 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 2. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
  ```nohighlight
- terminus drush <site>.dev -- en environment_indicator
+ terminus drush <site>.dev -- en environment_indicator -y
  ```
 
 3. Add the following within `settings.php`:
 
- ```php
- $conf['environment_indicator_overwrite'] = TRUE;
- $conf['environment_indicator_overwritten_position'] = 'top';
- $conf['environment_indicator_overwritten_fixed'] = FALSE;
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li id="d8tab" role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+    <li id="d7tab" role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  </ul>
 
- if (!defined('PANTHEON_ENVIRONMENT')) {
-       $conf['environment_indicator_overwritten_name'] = 'Local';
-       $conf['environment_indicator_overwritten_color'] = '#808080';
-       $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
- }
- // Pantheon Env Specific Config
- if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-       switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
-         case 'dev':
-           $conf['environment_indicator_overwritten_name'] = 'Dev';
-           $conf['environment_indicator_overwritten_color'] = '#d25e0f';
-           $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-           break;
-         case 'test':
-           $conf['environment_indicator_overwritten_name'] = 'Test';
-           $conf['environment_indicator_overwritten_color'] = '#c50707';
-           $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-           break;
-         case 'live':
-           $conf['environment_indicator_overwritten_name'] = 'Live!';
-           $conf['environment_indicator_overwritten_color'] = '#4C742C';
-           $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-           break;
-       }
- }
- ```
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre id="d8-env-config"><code class="php hljs" data-lang="hljs">if (!defined('PANTHEON_ENVIRONMENT')) {
+   $config['environment_indicator.indicator']['name'] = 'Local';
+   $config['environment_indicator.indicator']['bg_color'] = '#808080';
+   $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+}
+// Pantheon Env Specific Config
+if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+   switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
+     case 'dev':
+       $config['environment_indicator.indicator']['name'] = 'Dev';
+       $config['environment_indicator.indicator']['bg_color'] = '#d25e0f';
+       $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+       break;
+     case 'test':
+       $config['environment_indicator.indicator']['name'] = 'Test';
+       $config['environment_indicator.indicator']['bg_color'] = '#c50707';
+       $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+       break;
+     case 'live':
+       $config['environment_indicator.indicator']['name'] = 'Live!';
+       $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
+       $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+       break;
+   }
+}</code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre id="env-config-d7"><code class="php hljs" data-lang="hljs">$conf['environment_indicator_overwrite'] = TRUE;
+$conf['environment_indicator_overwritten_position'] = 'top';
+$conf['environment_indicator_overwritten_fixed'] = FALSE;
+
+if (!defined('PANTHEON_ENVIRONMENT')) {
+     $conf['environment_indicator_overwritten_name'] = 'Local';
+     $conf['environment_indicator_overwritten_color'] = '#808080';
+     $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+}
+// Pantheon Env Specific Config
+if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+     switch ($_SERVER['PANTHEON_ENVIRONMENT']) {
+       case 'dev':
+         $conf['environment_indicator_overwritten_name'] = 'Dev';
+         $conf['environment_indicator_overwritten_color'] = '#d25e0f';
+         $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+         break;
+       case 'test':
+         $conf['environment_indicator_overwritten_name'] = 'Test';
+         $conf['environment_indicator_overwritten_color'] = '#c50707';
+         $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+         break;
+       case 'live':
+         $conf['environment_indicator_overwritten_name'] = 'Live!';
+         $conf['environment_indicator_overwritten_color'] = '#4C742C';
+         $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+         break;
+     }
+}</code></pre>
+  </div>
+  </div><br>
 
 4. Deploy the module to the Test environment within the Site Dashboard or with Terminus:
 

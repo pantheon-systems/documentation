@@ -64,4 +64,4 @@ Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/up
 ## Known Issues
 
 ### Uploading to the Files Directory
-Filezilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
+Filezilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).

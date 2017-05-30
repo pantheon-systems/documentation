@@ -165,7 +165,7 @@ You can modify this patch according to your needs, such as performing an operati
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
-**Solution**: Use [drush](http://www.drush.org/en/master/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+**Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export//), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 <hr>
@@ -230,7 +230,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
-**Issue**:  This module uses [`php-intl`]( http://php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+**Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr>
 
 ### [Varnish](https://www.drupal.org/project/varnish)
@@ -321,12 +321,28 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 ### [Timthumb](https://code.google.com/p/timthumb/)
 **Issue**: TimThumb is no longer supported or maintained.
 <hr>
-### [TubePress Pro](http://tubepress.com/)
+### [TubePress Pro](https://tubepress.com/)
 **Issue**: Sites running PHP version 5.3 produce a WSOD after activating this plugin.
 
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
+### [Visual Composer: Page Builder](https://vc.wpbakery.com/)
+**Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
+<hr>
+### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
+**Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
+![WooZone Error](/source/docs/assets/images/woozone-error.png)
+
+**Solution**: Add the following line to `wp-config.php`:
+
+    define('WP_MEMORY_LIMIT', '256M');
+
+**Issue #2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editible in Test and Live
+
+**Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
+
+<hr>
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
 **Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
@@ -343,6 +359,39 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
 **Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
+
+## WordPress Functions
+
+### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
+
+**Issue**: Adding a submenu page to the Tools main menu using WordPress roles and capabilities that would read or write files to core, themes, or plugins, is not supported.
+
+For example, the `install_plugins` capability isn't present on the Test or Live environment, therefore  menus created with it will not display. For example:
+
+```
+hook = add_management_page( 'My WP Tool Page', 'My WP Tool',
+  'install_plugins', 'mywptool', array( $this, 'admin_page' ), '' );
+
+add_action( "load-$hook", array( $this, 'admin_page_load' ) );
+```
+
+This is because write permissions are restricted in Test and Live per the [Pantheon Workflow](/docs/pantheon-workflow/#understanding-write-permissions-in-test-and-live).
+
+**Solution**: You can use another capability such as `read_private_posts` instead.
+
+The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles_and_Capabilities) that should not be relied upon include:
+
+* `update_core`
+* `update_plugins`
+* `update_themes`
+* `install_plugins`
+* `install_themes`
+* `upload_plugins`
+* `upload_themes`
+* `delete_themes`
+* `delete_plugins`
+* `edit_plugins`
+* `edit_themes`
 
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.

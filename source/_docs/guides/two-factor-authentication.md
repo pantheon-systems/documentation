@@ -9,7 +9,7 @@ contributors:
   - populist
 date: 4/13/2015
 ---
-Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see [Multi Factor Authentication in Drupal Watchdog](http://drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and [Two Step Authentication on WordPress.org](http://codex.wordpress.org/Two_Step_Authentication).
+Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in. The two most common methods involve authentication through an SMS message, or a one-time code generated via an application on a user’s mobile phone. More advanced methods such as using a biometric information, location through GPS, or a hardware token are also possible. For more information, see [Multi Factor Authentication in Drupal Watchdog](https://www.drupalwatchdog.com/volume-2/issue-2/multi-factor-authentication) and [Two Step Authentication on WordPress.org](https://codex.wordpress.org/Two_Step_Authentication).
 
 ## Benefits of Two-Factor Authentication
 
@@ -17,16 +17,30 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 ## Set Up Two-Factor Authentication With WordPress (Single Site)
 
-For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. One of the most popular is the [Clef Two-Factor Authentication](https://wordpress.org/plugins/wpclef/) plugin, which makes it easy to set up two-factor authentication on your WordPress site.
+For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. A popular plugin is [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/), which makes it easy to set up two-factor authentication on your WordPress site.
 
-1. Install and activate the [Clef Two-Factor Authentication](https://wordpress.org/plugins/wpclef/) plugin on your WordPress site.
-2. Download and set up the [Clef mobile app](https://getclef.com/apps/) on either iOS or Android.
-3. Use the app on your mobile phone to scan the “wave” provided by Clef to connect your mobile phone to the website.
-![TFA Wave Setup](/source/docs/assets/images/tfa-wave-setup.png)
-4. Configure the [Clef security settings](http://support.getclef.com/article/60-recommended-password-settings-for-clef-wordpress-plugin) to **Disable passwords for Clef users** and create a private **Override URL**, which allows users to log in with their passwords if needed.
-5. Log in to your WordPress site by using the Clef mobile app to scan the “wave” provided on the WordPress login form.
-![TFA Wave Login](/source/docs/assets/images/tfa-wave-login.png)
+1. [Sign up for a Duo account.](https://signup.duo.com/)
+2. Log in to the [Duo Admin Panel](https://admin.duosecurity.com/) and navigate to **Applications**.
+3. Click **Protect an Application** and locate **WordPress** in the applications list. Click **Protect this Application** to get your **integration key**, **secret key**, and **API hostname**.
+4. Install and activate the [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/) plugin on your WordPress site. You can do this through the WordPress admin panel, or with Terminus:
 
+        terminus remote:wp $SITENAME.dev -- plugin install duo-wordpress --activate
+
+
+5. Open the settings page for the Duo plugin. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
+    ![TFA Duo Configuration](/source/docs/assets/images/duo-settings.png)
+    Click **Save Changes**.
+6. The page will be automatically redirected to the Duo setup wizard. Follow the on-screen instructions to configure an authentication device to your site and test it. Once complete, your browser will be redirected back to the plugin settings page.
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can: </p>
+
+<p markdown="1">
+ - synchronize and import your database<br>
+ - use a tool like [WP-CFM](/docs/wp-cfm/)<br>
+ - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.</p>
+</div>
 
 ## Set Up Two-Factor Authentication With WordPress (Organization)
 
@@ -89,13 +103,13 @@ For an organization-wide solution, there are many different [Drupal modules for 
 ### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin SAML](https://github.com/onelogin/drupal-saml) module on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
-2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.   
+2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
 3. Configure the OneLogin SAML module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
 ![TFA OneLogin Options](/source/docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
 
 ##See Also
 - [Security on Pantheon](https://pantheon.io/security)
-- [WordPress Two Step Authentication](http://codex.wordpress.org/Two_Step_Authentication)
+- [WordPress Two Step Authentication](https://codex.wordpress.org/Two_Step_Authentication)
 - [Drupal Modules For Two-Factor Authentication](https://groups.drupal.org/node/235938)
 - [Configuring SAML for Pantheon's Dashboard with OneLogin](https://onelogin.zendesk.com/hc/en-us/articles/204356174-Configuring-SAML-for-Pantheon)

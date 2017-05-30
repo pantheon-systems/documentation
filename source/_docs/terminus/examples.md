@@ -7,6 +7,7 @@ terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+image: terminus-thumbLarge
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.

@@ -98,6 +98,11 @@ Start a chat with our Support Team to request assistance on issues within our [s
  - Error messages received, if applicable.
  - Links to screenshots or screencasts of the behavior, if necessary.
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.</p>
+</div>
+
 ## Ticket Support
 The ticket support feature is available to certain plans and account types. For details, refer to the [support feature table above](#support-features-and-response-times).
 
@@ -117,17 +122,17 @@ The ticket support feature is available to certain plans and account types. For 
 We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and review support features, visit [Getting Support](/docs/getting-support).
 
 - We don't touch client code.
-Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](https://pantheon.io/docs/upstream-updates/#debug-failed-merges) with Git.
+Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts) with Git.
 
-- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [custom upstream must be updated](/docs/managing-upstreams/) by the upstream maintainer each time the project releases a new version.
+- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
 
 - We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 - We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
-- Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](https://pantheon.io/docs/tags/debug/) to get you underway.
+- Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway.
 
-- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](http://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
+- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
 
 - Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/docs/errors-and-server-responses/) in your Development environment. If you [contact support](/docs/getting-support), include your findings and attach screenshots whenever possible.
 
@@ -138,6 +143,18 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
 If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
+
+## Feature Requests
+
+We value your feedback! If you feel there's something we can do to improve our platform, like adding a new [external Library](/docs/external-libraries), or a dashboard feature, contact support and let us know. Include a description of your use case, and a link to the website for any library or other third-party included in your request.
+
+All feature requests will evaluated by Pantheon's Operations Team on a case-by-case basis.
+
+
+### How long does the process take?
+This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.
+
+It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
 
 ## FAQs

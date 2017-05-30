@@ -33,7 +33,7 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
 
 Pantheon supports designated use cases for [WordPress Site Networks](/docs/wordpress-site-networks) created by WordPress' Multisite feature.
 
-We do not support [Drupal Multisite](http://drupal.org/documentation/install/multi-site). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
+We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
 ## One Application per Site
 
@@ -44,6 +44,8 @@ Each site supports a single Drupal or WordPress application. Placing a WordPress
 If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
 
 Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
+
+Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
 
 ## Email and Deliverability
 
@@ -98,11 +100,11 @@ Pantheon does not and will not support Server Side Includes. We recommend conver
 
 ## PHP Short Tags
 
-PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](http://www.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
+PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
 
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [http://enable-cors.org/server\_php.html](http://enable-cors.org/server_php.html)
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server\_php.html](https://enable-cors.org/server_php.html)
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
@@ -144,3 +146,11 @@ See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) f
 Sandbox sites that are over a year old that have not had code commits or other Git activity for 6 months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
 You can reactivate a site with a single click. Simply visit the site's Dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard.
+
+## Emoji Support
+
+Emoji support is available on WordPress and Drupal 8. On Drupal 7 sites, emojis will return this database error:
+
+    PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x94\xB4\x0D\x0A...'
+
+The `utf8mb4` character encoding needed for emojis is not supported on Drupal 7 sites on our platform. The provided workaround on drupal.org is not possible on Pantheon as it would cause adverse effects on other sites, since all sites share the same `my.cnf` configuration. To resolve this issue, consider the [Strip 4-byte UTF8](https://www.drupal.org/project/strip_utf8mb4) module to reject overly long byte sequences.

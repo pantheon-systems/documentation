@@ -6,18 +6,19 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+image: terminus-thumbLarge
 ---
 Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Requirements
 
-* PHP Version 5.5.9 or later (must include the [php-xml extension](http://php.net/manual/en/dom.setup.php))
+* PHP Version 5.5.9 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php))
 * [PHP-CLI](http://www.php-cli.com/)
-* [PHP-CURL](http://php.net/manual/en/curl.setup.php)
+* [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 * [Composer](https://getcomposer.org/download/)
 * Windows Only: A command line emulator such as [Git Bash](https://git-for-windows.github.io/) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) (Windows 10 only).
 
 ## Install
-<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> diretory in your <code>$HOME</code> and install there:</p>
+<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>$HOME</code> and install there:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
@@ -26,7 +27,7 @@ Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Authenticate
 Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/docs/machine-tokens).
 
-First, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**.
+First, [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
 <p class="instruction">Once the token has been created, use it to authenticate Terminus by running the following command:</p>
 <div class="copy-snippet">
@@ -69,7 +70,7 @@ The `php-xml` extension is typically included and enabled by default when instal
 PHP Fatal error: Uncaught exception 'ReflectionException' with message 'Class DOMDocument does not exist' in /root/vendor/consolidation/output-formatters/src/Transformations/DomToArraySimplifier.php:24
 ```
 
-To resolve this error, install the [`php-xml` extension](http://php.net/manual/en/dom.setup.php).
+To resolve this error, install the [`php-xml` extension](https://secure.php.net/manual/en/dom.setup.php).
 ### curl: (60) SSL certificate problem
 The following error occurs when curl is unable to verify the local issuer certificate:
 
