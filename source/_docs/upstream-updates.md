@@ -84,7 +84,7 @@ If the automated core update doesn't appear to be working, it's possible there a
      <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
      <pre><code>git fetch pantheon-wordpress
-     git rebase pantheon-wordpress/master</code></pre>
+    git rebase pantheon-wordpress/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d8-2conflict">
      <pre><code>git fetch pantheon-drops-8
