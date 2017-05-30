@@ -12,7 +12,7 @@ The following feature has not yet been released across the entire platform and i
 There are three preparatory steps to complete before you'll be ready to connect a custom Upstream in your Organization Dashboard. Complete each of the following before continuing:
 
 1. [Create and Host the Repository Remotely](/docs/create-custom-upstream/#create-and-host-the-repository-remotely)
-2. [Pull in Core from Pantheon's Upstream](/docs/create-custom-upstream/#pull-in-core-from-pantheons-upstream)
+2. <a href="/docs/create-custom-upstream/#pull-in-core-from-pantheons-upstream" data-proofer-ignore>Pull in Core from Pantheon's Upstream</a>
 3. [Grant Pantheon Access (Privately Hosted Repositories Only)](/docs/create-custom-upstream/#grant-pantheon-access-privately-hosted-repositories-only)
 
 ### Connect the Repository to Pantheon
@@ -24,7 +24,7 @@ There are three preparatory steps to complete before you'll be ready to connect 
     - **Description**: (Optional) Less than 200 characters, plain text
     - **Upstream Repository URL**: Must end in `.git` (Example: `user@repovendor.com:sub/file.git`)
     - **Repository Authentication**: Only required if the repository is hosted privately
-     - Refer to the user [created above](#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
+     - Refer to the user [created above](/docs/create-custom-upstream/#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
     - **Initial Connection Mode**: Git or SFTP
     - **Framework**: Drupal 6 / Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
 
