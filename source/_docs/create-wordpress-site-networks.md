@@ -29,11 +29,11 @@ terminus remote:wp <site>.<env> -- core multisite-install --title=<site-title> -
 
 If you've already installed WordPress, you can convert it to a network with: [`wp core multisite-convert`](https://developer.wordpress.org/cli/commands/core/multisite-convert/).
 
-## Add Custom Hostnames to Dev, Test, and Live
+## Add Custom Hostnames to All Environments
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Subdomains Note</h4>
-<p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment, in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
+<p>Subdomain-configured site networks require unique hostnames for each site in the network added to each environment (including multidevs), in addition to requisite DNS settings at your DNS host, in order for the sites to be accessible in each environment.</p>
 <p>You cannot add custom hostnames to an environment's automatically configured env-example-network.pantheonsite.io hostname, such as example-site.dev.example-network.pantheonsite.io. Therefore, you should add a custom primary domain for each environment at this point.
 </p>
 <h4 class="info">Subdirectory Note</h4>
