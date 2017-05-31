@@ -28,16 +28,16 @@ The procedure for executing a load test and a performance test are similar:
 
 2. Select a load testing tool:
 
- * SaaS Solutions
-  * [Blazemeter](https://www.blazemeter.com)
-  * [Load Impact](https://loadimpact.com)
- * Open Source tools
-  * [Jmeter](https://jmeter.apache.org/)
-  * [Locust](http://locust.io/)
+   * SaaS Solutions
+     * [Blazemeter](https://www.blazemeter.com)
+     * [Load Impact](https://loadimpact.com)
+   * Open Source tools
+     * [Jmeter](https://jmeter.apache.org/)
+     * [Locust](http://locust.io/)
 
-  The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predifined URLs.
+The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predifined URLs.
 
-  Ultimately, it doesn't matter what tool you use as long as you to test your site properly. Be sure to allow for any authenticated traffic as well as anonymous.  
+Ultimately, it doesn't matter what tool you use as long as you to test your site properly. Be sure to allow for any authenticated traffic as well as anonymous.  
 
 3. Determine how much load to apply.
 
