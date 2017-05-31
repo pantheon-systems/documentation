@@ -309,3 +309,6 @@ drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
 sftp> ls -la logs/
 -rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log sftp>
 ```
+#### I just restored my site (or imported a database backup) and now my site won't come back
+
+When you replace the database with one that doesn't match the redis cache, it will cause database errors on the site and you will be unable to clear the cache via the dashboard. To resolve the issue, [flush your redis cache](#clear-cache).
