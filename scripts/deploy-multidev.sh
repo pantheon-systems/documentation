@@ -122,25 +122,34 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
       export changelog_path="^(.*_changelogs.*)(.*\.md)"
       export doc_path="^(.*_docs.*)(.*\.md)"
       if [[ $doc =~ $doc_path ]]
-      then
-        export guide=${doc:13: -3}
-        if ls -a output_dev/docs/guides | grep '^\<'"$guide"'\>'
         then
-          grep -- '\<'guides/"$guide"'\>' comment.txt || echo -n "-\u0020[docs/guides/"$guide"]("$url"/docs/guides/"$guide")\n" >> comment.txt
-        else
-          grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020["${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+        export guide=${doc:13: -3}
+        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>'
+          then
+            export guide_file=${guide##*/}
+            if [[ ${guide_file:0:2}  == 01 ]]
+              then
+                grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"]("$url"/docs/"${guide%/*}")\n" >> comment.txt
+            elif [[ ${guide_file:0:2}  =~ [0-9] ]]
+              then
+              grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"/"${guide_file:3}"]("$url"/docs/"${guide%/*}"/"${guide_file:3}")\n" >> comment.txt
+              else
+            grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
+            fi
+          else
+            grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
         fi
-      elif [[ $doc =~ $changelog_path ]]
-      then
-        export changelog=docs/changelog/${doc:19: 4}/${doc:24: 2}
-        grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020["$changelog"]("$url"/"$changelog")\n" >> comment.txt
-      else
-        grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
-      fi
+    elif [[ $doc =~ $changelog_path ]]
+    then
+      export changelog=docs/changelog/${doc:19: 4}/${doc:24: 2}
+      grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020["$changelog"]("$url"/"$changelog")\n" >> comment.txt
     else
       grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
     fi
-    done < modified_files.txt
+  else
+    grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
+  fi
+  done < modified_files.txt
 
   #Create new comment on new commit, so when PR is open only one comment is present
   export comment=`cat comment.txt`
