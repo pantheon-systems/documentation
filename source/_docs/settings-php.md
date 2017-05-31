@@ -19,7 +19,7 @@ For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server 
 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
-- [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain\_access)
+- [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
 - [Redis as a Caching Backend](/docs/redis)
 - [Redirect incoming requests](/docs/redirects) (including WWW and non-WWW, requiring HTTPS)
 - [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
@@ -62,7 +62,7 @@ $settings['hash_salt'] = '$HASH_SALT';
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Replace `^www\.yoursite\.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
+<p markdown="1">Replace `^www.yoursite.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -73,8 +73,8 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";
 
     # Replace value with custom domain(s) added in the site Dashboard
-    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
-    $settings['trusted_host_patterns'][] = '^yoursite\.com$';
+    $settings['trusted_host_patterns'][] = '^.+.yoursite.com$';
+    $settings['trusted_host_patterns'][] = '^yoursite.com$';
   }
 }
 ```
@@ -114,7 +114,7 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$\_SERVER['PANTHEON\_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live):
+ - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live):
 
         // Pantheon - web only.
         if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -124,7 +124,7 @@ Depending on your use case, there are three possibilities:
           }
         }
 
- - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON\_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
 
         // Pantheon - all operations.
         if (defined('PANTHEON_ENVIRONMENT')) {
