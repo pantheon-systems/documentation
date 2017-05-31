@@ -168,7 +168,7 @@ Keep the following tips in mind when opening a new support ticket or chat:
 
  - **Custom Access**: If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
 
- - **Clarification**: We're all of us only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense. Don't be afraid to correct us, or to ask for clarification if we don't seem to make sense.
+ - **Clarification**: We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ## FAQs
 #### Is there a support number we can call? If so, is this service available for every plan?
