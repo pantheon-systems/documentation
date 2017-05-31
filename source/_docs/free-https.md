@@ -95,13 +95,10 @@ No, after you update your DNS records, traffic will gracefully switch over and i
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
-### Can I continue to use CloudFlare 
-Yes, you can continue to use Cloudflare. 
-Unless you require a special feature from Cloudflare (e.g. WAF) then we recommend using Cloudflare for DNS-only:
-  - add your domains, matching the recommendations on your Dashboard
-  - click the cloud to the right of the domain, to turn it grey, rather than orange. This will cause the domain traffic to go straight to Pantheon, bypassing CloudFlare's services
+### What about CloudFlare?
+Many customers currently take advantage of CloudFlare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using CloudFlare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
 
-You can also keep using Cloudflare as a CDN on top of the Pantheon CDN, following our [CloudFlare configuration recommendations](/docs/guides/cloudflare-enable-https/#dns-configuration) in which case the Pantheon Domains tool will show action required because the DNS detected will be Cloudflare IP addresses and not match our recommendations. As long as your DNS is no longer routing to a legacy loadbalancer, you can safely ignore the action required warning.
+However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering CloudFlare and the Global CDN together. Ignore the DNS recommendations and action required notices from the Site Dashboard, and use the [configuration described in our related guide](/docs/guides/cloudflare-enable-https/) instead.
 
 ### When will I stop being billed $30/month?
 Pantheon will remove legacy load balancers and stop billing 30-60 days after upgrading.
