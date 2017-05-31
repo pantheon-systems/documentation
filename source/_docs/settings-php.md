@@ -120,10 +120,6 @@ Depending on your use case, there are three possibilities:
 
  - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information.
 
-#### How can I read the Pantheon environmental configuration, like database credentials?
-
-See [Reading the Pantheon Environment Configuration](/docs/read-environment-config).
-
 #### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
 If you do not have a `settings.php` file in your codebase, you'll see the following message on `/admin/reports/status`:
